@@ -50,7 +50,10 @@ function renderObjective() {
 
   if (chapterEl) chapterEl.textContent = `Kap ${getCurrentChapterLabel()}`;
   if (textEl)    textEl.textContent    = getObjectiveText();
-  if (chronikBtn) chronikBtn.classList.toggle('active', currentContent === 'chronik');
+  if (chronikBtn) {
+    chronikBtn.classList.toggle('active', currentContent === 'chronik');
+    chronikBtn.classList.toggle('chronik-btn-new', chronikButtonUnseen);
+  }
 
   if (clockEl) {
     const night = isNight();

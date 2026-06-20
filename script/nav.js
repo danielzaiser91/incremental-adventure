@@ -145,6 +145,11 @@ function showContent(id) {
 
   currentContent = id;
 
+  // Chronik-Button-Hervorhebung (siehe objective.js) verschwindet bereits
+  // beim Öffnen der Seite — die einzelnen NEUEN Einträge darin bleiben
+  // davon unberührt und verschwinden erst je einzeln per Hover.
+  if (id === 'chronik') chronikButtonUnseen = false;
+
   if (TOWN_CONTENT_IDS.includes(id)) {
     navLevel = 2;
   }

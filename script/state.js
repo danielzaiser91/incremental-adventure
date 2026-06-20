@@ -237,6 +237,23 @@ let dialogHistory = [];
 /* Welche einmaligen Story-Dialoge wurden bereits gezeigt (IDs aus story.js) */
 let shownDialogs = [];
 
+/* Hervorhebung des Chronik-Buttons in der Zielleiste (siehe objective.js) —
+   wird auf `true` gesetzt, sobald ein NEUER Story-Eintrag freigeschaltet
+   wird (story.js, maybeShowStoryDialog()), und erst beim Klick auf genau
+   diesen Button wieder auf `false` (siehe nav.js, showContent()). Bewusst
+   getrennt von `chronikUnseenEntryIds` unten: der Button merkt sich nur
+   "wurde die Chronik seit der letzten Neuigkeit überhaupt geöffnet?",
+   während einzelne Einträge sich erst durch Hover als gesehen markieren. */
+let chronikButtonUnseen = false;
+
+/* IDs neu hinzugekommener Chronik-Einträge, die in der Chronik-Liste noch
+   nicht per Hover als "gesehen" markiert wurden (siehe content.js,
+   renderChronik()/markChronikEntrySeen()). Jeder Eintrag verschwindet aus
+   dieser Liste einzeln, sobald der Spieler mit der Maus darüber fährt —
+   unabhängig vom Chronik-Button oben, der schon beim bloßen Öffnen der
+   Chronik-Seite verschwindet. */
+let chronikUnseenEntryIds = [];
+
 /* ── UI-State ─────────────────────────────────────────────── */
 let navLevel       = 0;            // 0=Hauptmenü | 1=Weltkarte | 2=Treutheim
 let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' | 'arbeitsplatz' | 'marktplatz' |

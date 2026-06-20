@@ -938,6 +938,13 @@ html, body {
   background: var(--accent-glow);
 }
 
+/* Hervorhebung für noch nicht per Hover gesehene neue Chronik-Einträge —
+   verschwindet dauerhaft beim ersten Hover (siehe content.js,
+   markChronikEntrySeen()), nicht erst beim Schließen der Seite. */
+.chronik-entry-new {
+  animation: action-card-pulse 1.8s ease-in-out infinite;
+}
+
 .chronik-entry-id {
   font-size: 11px;
   color: var(--accent);
@@ -1267,6 +1274,14 @@ html, body {
 
 .objective-chronik-btn:hover { color: var(--text-mid); background: var(--bg-hover); }
 .objective-chronik-btn.active { color: var(--accent); background: var(--accent-glow); }
+
+/* Hervorhebung, solange ein neuer Chronik-Eintrag noch nie über diesen
+   Button angesehen wurde (siehe chronikButtonUnseen, state.js) —
+   verschwindet bereits beim bloßen Öffnen der Chronik-Seite. */
+.objective-chronik-btn.chronik-btn-new {
+  color: var(--accent);
+  animation: action-card-pulse 1.8s ease-in-out infinite;
+}
 
 .objective-chapter {
   color: var(--accent);

@@ -42,6 +42,8 @@ function saveGame(opts = {}) {
       questItems,
       gameFlags:      { ...gameFlags, isWorking: false }, // Laufende Arbeit nicht speichern
       shownDialogs,
+      chronikButtonUnseen,
+      chronikUnseenEntryIds,
       navLevel,
       currentContent: currentContent === 'settings' ? 'geschichte' : currentContent,
       savedAt:        Date.now()
@@ -123,6 +125,8 @@ function applySaveData(save) {
     ...save.gameFlags, isWorking: false
   };
   shownDialogs   = save.shownDialogs ?? [];
+  chronikButtonUnseen   = save.chronikButtonUnseen ?? false;
+  chronikUnseenEntryIds = save.chronikUnseenEntryIds ?? [];
   navLevel       = save.navLevel       ?? 0;
   currentContent = save.currentContent ?? 'geschichte';
   marketVendor   = null;
@@ -379,6 +383,8 @@ function performHardReset() {
     isWorking: false
   };
   shownDialogs   = [];
+  chronikButtonUnseen   = false;
+  chronikUnseenEntryIds = [];
   navLevel       = 0;
   currentContent = 'geschichte';
   marketVendor   = null;

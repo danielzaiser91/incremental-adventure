@@ -1071,6 +1071,32 @@ existierendes Feature verweist, IMMER einen echten Button mit
 im Fließtext zu kursivieren — Spieler raten nicht, wo ein Feature
 sitzt, nur weil es erwähnt wird.
 
+## Zwei getrennte "ungesehen"-Zustände für den Chronik-Button vs. seine Einträge
+
+Der Chronik-Button in der Zielleiste (objective.js) und die einzelnen
+Einträge in der Chronik-Liste (content.js) brauchten UNTERSCHIEDLICHE
+"gesehen"-Bedingungen, deshalb zwei separate State-Felder (state.js)
+statt einem gemeinsamen:
+- `chronikButtonUnseen` (bool) — wird `true`, sobald `maybeShowStoryDialog()`
+  (story.js) einen neuen Eintrag freischaltet; wird wieder `false`, sobald
+  der Spieler die Chronik-Seite überhaupt ÖFFNET (`showContent('chronik')`,
+  siehe nav.js). Steuert nur das Leuchten des Buttons selbst.
+- `chronikUnseenEntryIds` (Array von Eintrags-IDs) — jede neue ID wird
+  beim Freischalten ergänzt und verschwindet erst EINZELN, sobald der
+  Spieler mit der Maus über genau DIESEN Eintrag fährt
+  (`markChronikEntrySeen()`, per `onmouseenter` direkt im DOM, ohne
+  vollständigen `render()` — ein Hover rechtfertigt keinen Neuaufbau der
+  ganzen Seite). Öffnet der Spieler die Chronik nur, ohne zu hovern,
+  bleiben einzelne Einträge weiter hervorgehoben.
+Beide Felder werden wie der übrige State gespeichert/geladen/zurückgesetzt
+(save.js). Wichtige Falle, auf die ich hier gestoßen bin: `enterCity()`
+(actions.js) ruft `render()` VOR `maybeShowStoryDialog('1.1')` auf — die
+neu gesetzten Flags wären sonst erst beim nächsten ohnehin fälligen
+Render sichtbar geworden. Lösung: `maybeShowStoryDialog()` selbst ruft
+nach dem Setzen der Flags zusätzlich `render()` auf, bevor es den Dialog
+öffnet (das Dialog-Overlay liegt sowieso über der Zielleiste und stört
+dabei nicht).
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

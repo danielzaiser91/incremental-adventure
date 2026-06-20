@@ -97,6 +97,16 @@ function maybeShowStoryDialog(id, onClose) {
     return;
   }
   shownDialogs.push(id);
+
+  // Macht den Chronik-Button + den neuen Eintrag in der Chronik-Liste
+  // hervorgehoben, bis der Spieler sie jeweils bemerkt (siehe state.js).
+  // render() erneut aufrufen, weil der vorausgehende Aufruf (z.B. in
+  // enterCity()) bereits VOR diesen Flags lief — der Dialog selbst stört
+  // dabei nicht, er liegt als eigenes Overlay über der Zielleiste.
+  chronikButtonUnseen = true;
+  if (!chronikUnseenEntryIds.includes(id)) chronikUnseenEntryIds.push(id);
+  render();
+
   showStoryEntryDialog(entry, onClose);
 }
 

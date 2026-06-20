@@ -503,13 +503,16 @@ function renderChronik(el) {
     return;
   }
 
-  const items = entries.map(e => `
-    <button class="chronik-entry" onclick="reopenStoryEntry('${e.id}')">
+  const items = entries.map(e => {
+    const isNew = chronikUnseenEntryIds.includes(e.id);
+    return `
+    <button class="chronik-entry ${isNew ? 'chronik-entry-new' : ''}" onmouseenter="markChronikEntrySeen('${e.id}', this)" onclick="reopenStoryEntry('${e.id}')">
       <span class="chronik-entry-id">${e.id}</span>
       <span class="chronik-entry-title">${e.title}</span>
       <span class="chronik-entry-arrow">›</span>
     </button>
-  `).join('');
+  `;
+  }).join('');
 
   el.innerHTML = `
     <div class="feature-stage">
@@ -523,6 +526,17 @@ function renderChronik(el) {
 function reopenStoryEntry(id) {
   const entry = getStoryEntry(id);
   if (entry) showStoryEntryDialog(entry);
+}
+
+/** Markiert einen Chronik-Eintrag als gesehen (Hover) — entfernt seine
+    Leucht-Hervorhebung dauerhaft. Direkter DOM-Eingriff statt render(),
+    weil ein Hover-Effekt keinen vollständigen Neuaufbau der Seite
+    rechtfertigt. */
+function markChronikEntrySeen(id, el) {
+  const idx = chronikUnseenEntryIds.indexOf(id);
+  if (idx === -1) return;
+  chronikUnseenEntryIds.splice(idx, 1);
+  if (el) el.classList.remove('chronik-entry-new');
 }
 
 /* ── Einstellungen ────────────────────────────────────────── */
