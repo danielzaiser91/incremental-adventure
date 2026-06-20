@@ -327,9 +327,14 @@ html, body {
   flex-direction: column;
   gap: 12px;
   /* Bleibt beim Scrollen von #content-section (dem scrollenden Ahnen)
-     sichtbar oben stehen, statt mit dem Skillbaum nach oben wegzulaufen. */
+     sichtbar oben stehen, statt mit dem Skillbaum nach oben wegzulaufen.
+     `top` entspricht dem oberen Padding von #content-area (siehe
+     `padding: 24px ...` dort) — sonst "springt" die Spalte beim
+     Reinrutschen in den Sticky-Zustand um genau dieses Padding nach
+     oben, weil `top: 0` sich auf #content-section ohne dessen Padding
+     bezieht, das selbst Teil des scrollenden Inhalts ist. */
   position: sticky;
-  top: 0;
+  top: 24px;
 }
 
 .erfahrung-main {

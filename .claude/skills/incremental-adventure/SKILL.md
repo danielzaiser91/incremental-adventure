@@ -1150,6 +1150,18 @@ Kind sein (hier: erstes Element innerhalb `.erfahrung-sidebar`), sonst
 scrollt es unabhängig davon weg, auch wenn es optisch direkt darüber
 sitzt.
 
+`position: sticky; top: 0` reichte danach noch nicht: `top` bezieht
+sich auf die Scrollport-Kante von `#content-section`, NICHT auf das
+obere Padding von `#content-area` (24px, siehe `padding: 24px ...`
+dort) — das Padding selbst ist Teil des scrollenden Inhalts und
+verschwindet beim Scrollen. Ergebnis war ein sichtbarer "Sprung" nach
+oben um genau diese 24px, sobald die Sidebar in den sticky-Zustand
+wechselte. Fix: `top: 24px` statt `top: 0`, damit der Abstand exakt so
+groß bleibt wie vor dem Scrollen — generelle Regel für jedes künftige
+`position: sticky` innerhalb eines gepolsterten Scroll-Containers: der
+sticky-`top`-Wert muss das Padding des NICHT-scrollenden Vorfahren
+nachbilden, nicht einfach `0` sein.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-
