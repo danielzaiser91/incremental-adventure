@@ -425,7 +425,7 @@ function renderSchlafplatz(el) {
   const tier  = getTirednessTier(needs.tiredness);
   const dayLockReason = (tier.id === 'frisch' || tier.id === 'muede')
     ? 'Der Tag ist noch nicht vorbei. Ich sollte die Zeit nutzen, solange ich kann.'
-    : 'Ich bin hundemüde — aber die Sonne steht noch hoch. Jetzt schon zu schlafen wäre vergeudete Zeit.';
+    : 'Ich bin hundemüde — aber es ist noch nicht spät genug, um schlafen zu gehen. Das wäre vergeudete Zeit.';
 
   const recoveryMult = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
   const debuffNote = night && nightFlags.recoveryDebuff
@@ -547,6 +547,19 @@ function renderSettings(el) {
           >
             📂 Spielstand laden${hasSave ? '' : ' — (kein Spielstand)'}
           </button>
+        </div>
+        <div class="settings-buttons-row" style="margin-top: 6px;">
+          <button
+            class="action-btn settings-btn-option ${hasSave ? '' : 'btn-disabled'}"
+            onclick="exportSaveToClipboard()"
+            ${hasSave ? '' : 'disabled'}
+            title="Kopiert den gespeicherten Spielstand als Text in die Zwischenablage"
+          >📋 Exportieren</button>
+          <button
+            class="action-btn settings-btn-option"
+            onclick="importSaveFromClipboard()"
+            title="Lädt einen Spielstand aus der Zwischenablage"
+          >📥 Importieren</button>
         </div>
         <div class="settings-buttons" style="margin-top: 10px;">
           <button class="action-btn settings-btn" onclick="setAutoSaveEnabled(${!settings.autoSave.enabled})">

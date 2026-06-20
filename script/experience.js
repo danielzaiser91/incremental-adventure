@@ -57,7 +57,7 @@ const EP_SKILL_TREE = [
   },
   {
     id: 'thrift', name: 'Sparsamkeit', icon: '🪙',
-    requires: 'jobLeveling', maxLevel: 2, costs: [10, 16],
+    requires: 'jobLeveling', maxLevel: 2, costs: [4, 8],
     desc: 'Ich weiß inzwischen, wo man beim Krämer ein gutes Wort einlegt.',
     effect: 'Marktplatz-Preise −10 % je Stufe (max. −20 %).'
   },

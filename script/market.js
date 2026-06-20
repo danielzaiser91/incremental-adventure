@@ -99,10 +99,12 @@ function renderMarktplatzHub(el) {
           <button class="action-btn btn-disabled" disabled>${v.lockReason || 'Gesperrt'}</button>
         </div>`;
     }
-    // Solange der Spieler zum Essen gezwungen ist (mustEatBread), zeigt der
-    // Krämer eine Hervorhebung — er ist schließlich der einzige Ort, der das
-    // Problem lösen kann (siehe SKILL.md, "erzwungene Käufe").
-    const needsBreadHighlight = v.id === 'kraemer' && gameFlags.mustEatBread;
+    // Solange der Spieler zum Essen gezwungen ist (mustEatBread) UND noch
+    // kein Brot besitzt, zeigt der Krämer eine Hervorhebung — sobald ein
+    // Brot im Inventar liegt, ist die FÜHRUNG erledigt (der harte
+    // Arbeits-Block bleibt bis zum tatsächlichen Essen bestehen, siehe
+    // useFood(), aber die Hervorhebung hat ihren Zweck schon erfüllt).
+    const needsBreadHighlight = v.id === 'kraemer' && gameFlags.mustEatBread && (resources.inventory.brot || 0) === 0;
     return `
       <div class="action-card${nightClosed ? ' action-card-locked' : ''}${needsBreadHighlight ? ' action-card-highlight' : ''}">
         <div class="action-card-icon">${v.icon}</div>
@@ -150,7 +152,7 @@ function renderVendorKraemer(el) {
     let buttonLabel = 'Kaufen';
     if (nightClosed) buttonLabel = 'Geschlossen';
     else if (limitReached) buttonLabel = 'Heute ausverkauft';
-    const needsBreadHighlight = item.id === 'brot' && gameFlags.mustEatBread;
+    const needsBreadHighlight = item.id === 'brot' && gameFlags.mustEatBread && owned === 0;
     return `
       <div class="action-card${needsBreadHighlight ? ' action-card-highlight' : ''}">
         <div class="action-card-icon">${item.icon}</div>

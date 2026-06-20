@@ -170,6 +170,45 @@ function showIncompatibleSaveDialog() {
   });
 }
 
+/** Kopiert den aktuell gespeicherten Spielstand als JSON in die
+    Zwischenablage — exportiert bewusst das, was zuletzt GESPEICHERT
+    wurde (`localStorage`), nicht den gerade laufenden Zustand, damit
+    Export/Import exakt denselben Weg wie Speichern/Laden nehmen. */
+async function exportSaveToClipboard() {
+  const raw = localStorage.getItem(SAVE_KEY);
+  if (!raw) {
+    showToast('Kein Spielstand zum Exportieren vorhanden — erst speichern.', 'error');
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(raw);
+    showToast('📋 Spielstand in die Zwischenablage kopiert.', 'info');
+  } catch (e) {
+    showToast('⚠ Export fehlgeschlagen — Zwischenablage nicht verfügbar.', 'error');
+  }
+}
+
+/** Liest einen Spielstand aus der Zwischenablage und lädt ihn — nutzt
+    dieselbe Validierung/Inkompatibilitäts-Behandlung wie loadGame(),
+    indem der Text einfach an dieselbe Stelle in localStorage geschrieben
+    und dann ganz normal geladen wird. */
+async function importSaveFromClipboard() {
+  let text;
+  try {
+    text = await navigator.clipboard.readText();
+  } catch (e) {
+    showToast('⚠ Import fehlgeschlagen — Zwischenablage nicht verfügbar.', 'error');
+    return;
+  }
+  if (!text || !text.trim()) {
+    showToast('Zwischenablage ist leer.', 'error');
+    return;
+  }
+
+  localStorage.setItem(SAVE_KEY, text);
+  loadGame();
+}
+
 /** Prüft beim Programmstart, ob automatisch geladen werden soll — liest
     dafür NUR die Einstellung direkt aus dem rohen JSON, ohne den
     Spielstand schon anzuwenden (sonst müsste man erst laden, um zu

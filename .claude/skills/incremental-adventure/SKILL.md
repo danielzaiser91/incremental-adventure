@@ -974,6 +974,30 @@ beide trotzdem in EINEM "Verlauf"-Bereich, umschaltbar per Tab-Leiste
 getrennte Datenhaltung und gemeinsame Präsentation sind hier zwei
 unabhängige Entscheidungen.
 
+## Hervorhebung beenden ≠ Block beenden — zwei verschiedene Bedingungen
+
+Die Brot-Hervorhebung (Marktplatz→Krämer→Brot) und der harte Arbeits-
+Block (`mustEatBread`) sahen anfangs wie dieselbe Bedingung aus, sind es
+aber nicht: die Hervorhebung soll verschwinden, sobald der Spieler Brot
+BESITZT (er hat gefunden, was er sucht), der Block bleibt aber bestehen,
+bis er es tatsächlich ISST (`useFood()`). Lektion: wenn eine UI-Führung
+(Hervorhebung) und eine Spielmechanik-Sperre (Block) zufällig an
+derselben Flag hängen, sind das oft zwei Bedingungen, die nur zufällig
+zeitlich zusammenfallen — sobald der User-Test zeigt, dass sie
+unterschiedlich lange gelten sollen, getrennt auswerten, nicht eine
+zweite Flag für denselben Zustand einführen.
+
+## Export/Import über denselben Speicherpfad wie Speichern/Laden
+
+`exportSaveToClipboard()`/`importSaveFromClipboard()` (`save.js`) lesen/
+schreiben direkt `localStorage[SAVE_KEY]` und rufen danach `loadGame()`
+ganz normal auf — kein eigener Parse-/Validierungspfad. Dadurch profitiert
+der Import automatisch von derselben Inkompatibilitäts-Behandlung wie
+ein normales Laden (`showIncompatibleSaveDialog()` bei kaputtem Text aus
+der Zwischenablage). Die Clipboard-API erfordert einen sicheren Kontext
+(HTTPS oder localhost) — schlägt `navigator.clipboard.*` fehl, einfach
+einen Toast zeigen, kein harter Fehler.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

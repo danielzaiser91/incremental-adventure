@@ -202,7 +202,8 @@ const NPCS = {
       explain: {
         text: [
           '"Beweise erstmal, dass du wach bleiben kannst, wenn es drauf ankommt", sagt er trocken. ' +
-          '"Halte heute Nacht Wache vor dem Stadttor. Schaffst du das, sprich wieder mit mir."'
+          '"Halte heute Nacht Wache vor dem Stadttor. Schaffst du das, sprich wieder mit mir."',
+          '"Und komm nicht zu früh — die Wachen wechseln erst um 22 Uhr, wenn die Nacht richtig einbricht. Vorher lässt dich am Tor sowieso keiner ran."'
         ],
         options: [
           {
@@ -454,12 +455,39 @@ const NPCS = {
         ],
         options: [
           { label: '"Nur einen Drink."', next: null },
-          { label: '"Wer bist du?"', next: 'who' }
+          { label: '"Wer bist du?"', next: 'who' },
+          { label: '"Du beobachtest mich. Warum?"', next: 'watching' }
         ]
       },
       who: {
-        text: ['Er grinst schief. "Niemand Wichtiges. Noch nicht."'],
-        options: [{ label: '...', next: null }]
+        text: [
+          'Er grinst schief. "Niemand Wichtiges. Noch nicht." Er lässt das Wort einen Moment in der Luft hängen, als wollte er sehen, ob ich verstehe, was er meint.'
+        ],
+        options: [
+          { label: '"Was soll das heißen?"', next: 'cryptic' },
+          { label: '...', next: null }
+        ]
+      },
+      cryptic: {
+        text: [
+          '"Manche Leute laufen durch diese Stadt und merken gar nicht, wie viel Aufmerksamkeit sie erregen", sagt er leise, ohne mich anzusehen.',
+          '"Pass besser auf, was du mit dir herumträgst. Nicht jeder hier ist so... gesprächig wie ich."'
+        ],
+        options: [
+          { label: '"War das ein Rat — oder eine Drohung?"', next: 'threat' },
+          { label: '...', next: null }
+        ]
+      },
+      threat: {
+        text: ['Er lacht trocken, kein Funken Wärme darin. "Nenn es, wie du willst. Ich hab nur gesagt, was ich gesehen habe."'],
+        options: [{ label: 'Ich werde es nicht vergessen.', next: null }]
+      },
+      watching: {
+        text: [
+          'Er hebt beide Hände, gespielt unschuldig. "Beobachten? Ich sitze hier und trinke. Weiter nichts."',
+          'Aber sein Blick sagt etwas anderes — und er senkt ihn keine Sekunde zu früh.'
+        ],
+        options: [{ label: 'Wenn du meinst.', next: null }]
       }
     }
   }
