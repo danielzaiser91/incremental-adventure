@@ -1017,6 +1017,36 @@ rückwirkend für Version 4 nötig war (mehrere Feature-Runden, die vor
 Einführung dieses Systems alle denselben hartcodierten `version: 3`
 geschrieben haben).
 
+## Spoiler sind eine Eigenschaft des EINTRAGS, nicht der Versionsnummer
+
+`SAVE_CHANGELOG`-Einträge sind Objekte (`{ cat, text, spoiler? }`) statt
+roher Strings — `spoiler` ist eine FUNKTION, die zur Anzeigezeit geprüft
+wird (`quests.kraemerinBusiness.state === 'unstarted'` usw.), nicht ein
+statisches Flag zur Schreibzeit. Dadurch zeigt derselbe Changelog-Eintrag
+für zwei verschiedene Spieler unterschiedlich an: wer Greta/den
+Sammelplatz/den Kommandanten schon erreicht hat, sieht den Klartext;
+wer nicht, sieht eine verschwommene "Spoiler"-Markierung mit Klick-zum-
+Aufdecken (`.changelog-spoiler`/`.revealed`, reiner CSS-`filter:blur()`-
+Toggle per `classList.toggle()`, kein JS-State nötig). Lektion: nur
+echte CONTENT-Spoiler (neue Charaktere/Orte/Quests) bekommen ein
+`spoiler`; Mechanik-/Balance-/UI-Änderungen nie, egal wie weit der
+Spieler ist — sonst verschwimmt die Grenze zwischen "verrät die Story"
+und "ist einfach neu".
+
+## `showDialog()` kann jetzt auch rohes HTML statt nur Absatz-Text
+
+Der Changelog-Dialog brauchte kategorisierte Listen mit Klick-Handlern
+pro Eintrag — das geht nicht über die normale `text: string[]`-Schiene
+(jeder Eintrag wird stur in `<p>` gewrappt). Statt einen zweiten,
+parallelen Dialog-Mechanismus zu bauen, bekam `showDialog()` ein
+optionales `html`-Feld (überschreibt nur die ANZEIGE) plus `boxClass`
+(zusätzliche CSS-Klasse auf `#dialog-box`, z.B. für die 90vw/90vh-
+Großvariante). Beides wird bei JEDEM `showDialog()`-Aufruf zurückgesetzt
+(`box.className = 'dialog-box' + ...`), damit eine große/HTML-Variante
+nie in den nächsten, unabhängigen Dialog durchsickert. `dialogHistory`
+loggt weiterhin `text` (falls angegeben), auch wenn `html` die Anzeige
+übernimmt — Verlauf und Darstellung sind bewusst getrennte Felder.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

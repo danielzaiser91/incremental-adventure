@@ -1396,6 +1396,28 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   transform: translateY(0) scale(1);
 }
 
+/* Größere Variante für inhaltsreiche, nicht paginierte Dialoge (z.B. der
+   Changelog-Dialog, siehe save.js) — eigene Flex-Spalte, damit nur der
+   Textbereich wächst/scrollt, Titel und Buttons bleiben fix. */
+.dialog-box.dialog-box-large {
+  width: 90vw;
+  max-width: 90vw;
+  height: 90vh;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-box.dialog-box-large .dialog-text {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+}
+
+.dialog-box.dialog-box-large .dialog-actions {
+  flex-shrink: 0;
+}
+
 .dialog-title {
   font-family: var(--font-title);
   font-size: 16px;
@@ -1448,4 +1470,72 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   font-size: 10px;
   font-weight: 400;
   color: var(--c-event);
+}
+
+/* ── CHANGELOG-DIALOG: kategorisierte Liste + Spoiler-Markierung
+   (siehe save.js, showSaveChangelogDialog()) ── */
+.changelog-category {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin: 16px 0 6px;
+}
+
+.changelog-category:first-of-type { margin-top: 14px; }
+
+.changelog-list {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.changelog-entry {
+  position: relative;
+  padding-left: 14px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.changelog-entry::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-lo);
+}
+
+.changelog-spoiler {
+  cursor: pointer;
+}
+
+.changelog-spoiler-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-event);
+  background: rgba(255, 184, 113, 0.12);
+  border: 1px solid rgba(255, 184, 113, 0.3);
+  padding: 1px 6px;
+  border-radius: var(--rad-sm);
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.changelog-spoiler-text {
+  filter: blur(5px);
+  user-select: none;
+  transition: filter 0.15s ease;
+}
+
+.changelog-spoiler.revealed .changelog-spoiler-tag { opacity: 0.45; }
+
+.changelog-spoiler.revealed .changelog-spoiler-text {
+  filter: none;
+  user-select: text;
 }

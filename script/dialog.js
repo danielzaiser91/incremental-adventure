@@ -63,30 +63,43 @@ function showPaginatedDialog(title, pages, finalButtons) {
 
 /**
  * Öffnet das modale Story-/Dialogfenster.
- * @param {{ title: string, text: string[]|string,
- *   buttons: {label:string, onClick:Function, disabled?:boolean, reason?:string}[] }} opts
+ * @param {{ title: string, text?: string[]|string, html?: string,
+ *   buttons: {label:string, onClick:Function, disabled?:boolean, reason?:string}[],
+ *   boxClass?: string }} opts
  *
  * `disabled` + `reason` erlauben sichtbare, aber gesperrte Antwortoptionen
  * (z.B. NPC-Dialogoptionen, die eine Bedingung wie Gold oder ein Item
  * voraussetzen) — der Grund erscheint als Tooltip auf dem Button.
+ *
+ * `html` ist ein Hintertürchen für Dialoge mit eigenem Markup (z.B. der
+ * kategorisierte Changelog-Dialog, siehe save.js) — überschreibt `text`
+ * für die ANZEIGE, `text` wird trotzdem (falls angegeben) fürs
+ * `dialogHistory`-Log verwendet. `boxClass` setzt eine zusätzliche Klasse
+ * auf `#dialog-box` (z.B. für eine größere Variante) — wird bei JEDEM
+ * Aufruf zurückgesetzt, damit sie nicht in den nächsten, unabhängigen
+ * Dialog durchsickert.
  */
-function showDialog({ title, text, buttons }) {
+function showDialog({ title, text, html, buttons, boxClass }) {
   const overlay   = document.getElementById('dialog-overlay');
+  const box       = document.getElementById('dialog-box');
   const titleEl   = document.getElementById('dialog-title');
   const textEl    = document.getElementById('dialog-text');
   const actionsEl = document.getElementById('dialog-actions');
   if (!overlay || !titleEl || !textEl || !actionsEl) return;
 
   titleEl.textContent = title;
+  if (box) box.className = 'dialog-box' + (boxClass ? ` ${boxClass}` : '');
 
-  const paragraphs = Array.isArray(text) ? text : [text];
-  textEl.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+  const paragraphs = text ? (Array.isArray(text) ? text : [text]) : [];
+  textEl.innerHTML = html ?? paragraphs.map(p => `<p>${p}</p>`).join('');
 
   // Jede gezeigte Dialogseite ist ein eigener Verlaufseintrag (siehe
   // dialogHistory, state.js) — getrennt von toastHistory, damit beide im
   // Einstellungs-Verlauf per Filter sauber unterscheidbar bleiben.
-  dialogHistory.unshift({ title, text: paragraphs, at: Date.now() });
-  if (dialogHistory.length > DIALOG_HISTORY_LIMIT) dialogHistory.length = DIALOG_HISTORY_LIMIT;
+  if (paragraphs.length) {
+    dialogHistory.unshift({ title, text: paragraphs, at: Date.now() });
+    if (dialogHistory.length > DIALOG_HISTORY_LIMIT) dialogHistory.length = DIALOG_HISTORY_LIMIT;
+  }
 
   actionsEl.innerHTML = '';
   (buttons && buttons.length ? buttons : [{ label: 'Weiter', onClick: closeDialog }])

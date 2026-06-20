@@ -22,21 +22,30 @@ const CURRENT_SAVE_VERSION = 5;
    Versionsnummer, AB der diese Punkte gelten (siehe
    showSaveChangelogDialog() in save.js). Ältere Inhalts-Updates, die vor
    Einführung dieses Systems ohne Versionssprung auskamen, sind gesammelt
-   unter der ersten Nummer hinterlegt, bei der sauber mitgezählt wurde. */
+   unter der ersten Nummer hinterlegt, bei der sauber mitgezählt wurde.
+   Jeder Eintrag: `cat` (Neuerung/Änderung/Bugfix, frei erweiterbar),
+   `text` (kurz!), optional `spoiler` — eine Funktion, die `true` liefert,
+   solange der Spieler den betroffenen Inhalt noch nicht erreicht hat.
+   Nur echte CONTENT-Spoiler (neue Charaktere/Orte/Quests) bekommen ein
+   `spoiler`; reine Mechanik-/Balance-/UI-Änderungen nie, unabhängig vom
+   Fortschritt. */
 const SAVE_CHANGELOG = {
   4: [
-    'Neue Charaktere: Greta (Krämerin) mit eigener Sammel-Questkette, Kommandant Roswald.',
-    'Neuer Sammelplatz: Holz, Stein und Wildkraut sammeln (Werkzeug beim Krämer kaufen).',
-    'Nachtwache hat jetzt ein eigenes Level-System und einen Weg zur Stadtwache.',
-    'Erfahrungs-Skillbaum auf drei Äste erweitert, mit Tab-Ansicht für Skillbaum/Lebenserfahrungen.',
-    'Feldarbeits-Boni neu kalibriert (Hunger/Müdigkeit ausgewogener gestaffelt).',
-    'Automatisches Speichern/Laden sowie Export/Import über die Zwischenablage.',
-    'Getrennter Verlauf für Meldungen und Dialoge in den Einstellungen.'
+    { cat: 'Neuerung', text: 'Greta, die Krämerin, hat eine eigene Sammel-Questkette.',
+      spoiler: () => quests.kraemerinBusiness.state === 'unstarted' },
+    { cat: 'Neuerung', text: 'Neuer Sammelplatz für Rohstoffe (Holz, Stein, Wildkraut).',
+      spoiler: () => !gameFlags.resourceGatheringUnlocked },
+    { cat: 'Neuerung', text: 'Kommandant Roswald und eine Nachtwache-Karriere.',
+      spoiler: () => quests.commanderTraining.state === 'unstarted' },
+    { cat: 'Änderung', text: 'Erfahrungs-Skillbaum auf drei Äste erweitert, mit Tab-Ansicht.' },
+    { cat: 'Änderung', text: 'Feldarbeits-Boni neu kalibriert (Hunger/Müdigkeit ausgewogener).' },
+    { cat: 'Neuerung', text: 'Automatisches Speichern/Laden, Export/Import per Zwischenablage.' },
+    { cat: 'Neuerung', text: 'Getrennter Verlauf für Meldungen und Dialoge.' }
   ],
   5: [
-    'EP-Skills zeigen jetzt einen Hinweis, wenn sie weitere Fähigkeiten freischalten.',
-    'Kleinere Balance- und Dialog-Verbesserungen (u.a. günstigere Sparsamkeit, mehr NPC-Tiefe).',
-    'Dieser Update-Hinweis beim Laden eines älteren Spielstands ist selbst neu.'
+    { cat: 'Neuerung', text: 'EP-Skills zeigen einen Hinweis auf weitere Folge-Skills.' },
+    { cat: 'Bugfix',   text: 'Diverse Balance- und Dialog-Korrekturen.' },
+    { cat: 'Neuerung', text: 'Dieser Update-Hinweis beim Laden alter Spielstände.' }
   ]
 };
 
