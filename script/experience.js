@@ -136,6 +136,13 @@ function getNodeRequirements(node) {
   return node.requiresAll || (node.requires ? [node.requires] : []);
 }
 
+/** Hat irgendein anderer Knoten diesen hier (mit-)zur Voraussetzung? Dient
+    nur dem Hinweistext "schaltet weitere Fähigkeiten frei" — die
+    eigentliche Sichtbarkeitslogik (renderSkillTree()) bleibt unberührt. */
+function nodeUnlocksMoreSkills(id) {
+  return EP_SKILL_TREE.some(n => getNodeRequirements(n).includes(id));
+}
+
 /** Kauft die nächste Stufe eines Skills, falls Voraussetzung(en) sowie EP
     (und ggf. Gold, siehe `goldCosts`) reichen. */
 function buyNextSkillLevel(id) {
@@ -294,6 +301,11 @@ function epNodeCardHtml(node) {
   const levelLabel = node.maxLevel > 1 ? ` (Stufe ${level}/${node.maxLevel})` : '';
   const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
+  // Solange der Skill noch auf Stufe 0 ist, weiß der Spieler nicht, dass
+  // hinter ihm (noch unsichtbar) weitere Knoten warten — ein kurzer
+  // Hinweis statt der Baum einfach kommentarlos wächst, sobald gekauft.
+  const unlocksMore = level === 0 && nodeUnlocksMoreSkills(node.id);
+
   let buttonHtml;
   if (maxed) {
     buttonHtml = `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`;
@@ -309,6 +321,7 @@ function epNodeCardHtml(node) {
       <div class="action-card-name">${node.name}${levelLabel}</div>
       <p class="action-card-desc">${node.desc}</p>
       <div class="action-card-effect">${node.effect}</div>
+      ${unlocksMore ? `<div class="action-card-hint">🔓 Schaltet weitere Fähigkeiten frei</div>` : ''}
       ${buttonHtml}
     </div>`;
 }

@@ -447,6 +447,15 @@ html, body {
   margin-top: 4px;
 }
 
+/* Kurzer Hinweis, dass ein (noch ungekaufter) Skill weitere, aktuell
+   unsichtbare Knoten freischaltet (siehe experience.js, epNodeCardHtml()). */
+.action-card-hint {
+  font-size: 10px;
+  color: var(--accent-dim);
+  font-style: italic;
+  margin-top: 6px;
+}
+
 .action-card-warning {
   font-size: 11px;
   color: var(--c-event);
