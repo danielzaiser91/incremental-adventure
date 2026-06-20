@@ -290,7 +290,13 @@ function shouldAutoLoad() {
 function setupAutoSave() {
   if (autoSaveTimerId) { clearInterval(autoSaveTimerId); autoSaveTimerId = null; }
   if (!settings.autoSave.enabled) return;
-  autoSaveTimerId = setInterval(() => saveGame({ silent: true }), settings.autoSave.intervalMinutes * 60 * 1000);
+  autoSaveTimerId = setInterval(() => {
+    // Während ein Dialog/Overlay offen ist (z.B. der Changelog-Hinweis beim
+    // Laden), nicht automatisch speichern — sonst würde mitten in einer
+    // Ich-Monolog-Seite oder einem noch unbestätigten Hinweis gespeichert.
+    if (document.body.classList.contains('dialog-open')) return;
+    saveGame({ silent: true });
+  }, settings.autoSave.intervalMinutes * 60 * 1000);
 }
 
 function setAutoSaveEnabled(enabled) {

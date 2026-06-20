@@ -58,8 +58,9 @@ function renderGeschichte(el) {
         <div class="location-card">
           <div class="location-card-title">Ich bin nicht mehr dieselbe Person</div>
           <p class="location-card-desc">
-            Mehr folgt in Kürze. Sieh in der <em>Chronik</em> nach, was bisher geschah.
+            Wie es weitergeht, schreibt sich noch. Bis dahin lässt sich nachlesen, was bisher geschah.
           </p>
+          <button class="action-btn" onclick="showContent('chronik')">📜 Zur Chronik</button>
         </div>
       </div>
     `;

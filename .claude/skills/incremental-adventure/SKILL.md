@@ -1047,6 +1047,30 @@ nie in den nächsten, unabhängigen Dialog durchsickert. `dialogHistory`
 loggt weiterhin `text` (falls angegeben), auch wenn `html` die Anzeige
 übernimmt — Verlauf und Darstellung sind bewusst getrennte Felder.
 
+## Autospeichern pausiert, solange ein Dialog offen ist
+
+`setupAutoSave()` (save.js) prüft in seinem Intervall-Callback
+`document.body.classList.contains('dialog-open')` und überspringt den
+Speichervorgang stillschweigend, statt zu speichern — der Timer läuft
+einfach unverändert weiter und greift beim nächsten Intervall erneut.
+Grund: während z.B. der Changelog-Hinweis nach einem Versions-Update
+oder ein Ich-Monolog noch offen ist, soll kein Hintergrund-Save
+mittendrin passieren. Das ist eine globale Regel (JEDER offene Dialog
+blockiert), nicht nur für den Changelog-Dialog — einfacher und
+konsistenter als ein Sonderfall nur für diesen einen Aufrufer.
+
+## Locked-aber-erreichbares Feature: Button statt nur Text-Verweis
+
+Die "Treutheim — danach"-Karte (content.js, `storyState >= 20100`)
+verwies früher nur in Fließtext auf "die Chronik", obwohl die Chronik
+als kleiner Buch-Button in der Zielleiste (objective.js/index.html)
+ohnehin schon existiert — Spieler haben den Verweis nicht als
+navigierbaren Pfad erkannt. Lehre: wenn ein Text auf ein bereits
+existierendes Feature verweist, IMMER einen echten Button mit
+`onclick="showContent(...)"` daneben setzen statt nur `<em>Name</em>`
+im Fließtext zu kursivieren — Spieler raten nicht, wo ein Feature
+sitzt, nur weil es erwähnt wird.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

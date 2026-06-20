@@ -439,6 +439,7 @@ function renderErfahrung(el) {
   const hasLessons = gameFlags.foremanBonusGiven;
 
   const lifeLessonsHtml = () => `
+    <p class="location-card-desc" style="max-width: 480px;">Was das Leben mich gelehrt hat, ganz ohne bewusste Entscheidung:</p>
     <div class="action-grid">
       <div class="action-card quest-card-done">
         <div class="action-card-icon">🍺</div>
@@ -450,19 +451,22 @@ function renderErfahrung(el) {
 
   // Beide Bereiche gleichzeitig sichtbar → echte Tabs zum Umschalten
   // (siehe erfahrungTab, state.js). Ist nur einer der beiden relevant,
-  // braucht es keine Tab-Leiste — eine einzelne Sektion reicht.
+  // braucht es keine Tab-Leiste — eine einzelne Sektion reicht. Die Labels
+  // sind bewusst auf je ein Wort gekürzt (Tab-Leiste/Sektion-Label haben
+  // keinen Platz für ganze Sätze) — der volle Satz "Was das Leben mich
+  // gelehrt hat" steht stattdessen als Einleitung in lifeLessonsHtml().
   let lowerSection = '';
   if (hasTree && hasLessons) {
     lowerSection = `
       <div class="tab-bar" style="margin-top: 24px;">
         <button class="tab-btn ${erfahrungTab === 'skills' ? 'active' : ''}" onclick="setErfahrungTab('skills')">Skillbaum</button>
-        <button class="tab-btn ${erfahrungTab === 'lessons' ? 'active' : ''}" onclick="setErfahrungTab('lessons')">Was das Leben mich gelehrt hat</button>
+        <button class="tab-btn ${erfahrungTab === 'lessons' ? 'active' : ''}" onclick="setErfahrungTab('lessons')">Lektionen</button>
       </div>
       <div class="tab-panel">${erfahrungTab === 'skills' ? renderSkillTree() : lifeLessonsHtml()}</div>`;
   } else if (hasTree) {
     lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Was ich bewusst gelernt habe</div>${renderSkillTree()}`;
   } else if (hasLessons) {
-    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Was das Leben mich gelehrt hat</div>${lifeLessonsHtml()}`;
+    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Lektionen</div>${lifeLessonsHtml()}`;
   }
 
   el.innerHTML = `
