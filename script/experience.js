@@ -52,6 +52,17 @@ const EP_SKILL_TREE = [
     requires: 'clearMind', maxLevel: 1, costs: [15],
     desc: 'Ich verstehe jetzt, dass mehr zurückgelassenes Gold auch mehr lehrt — nicht nur, OB ich eine Grenze überschritten habe.',
     effect: `Bei einem Neuanfang zählt jeder erreichte Gold-Meilenstein (${GOLD_MILESTONE_THRESHOLD}, ${GOLD_MILESTONE_THRESHOLD * 2}, ${GOLD_MILESTONE_THRESHOLD * 4}, …) als zusätzliche Erfahrung.`
+  },
+  {
+    // Einziger Knoten, der BEIDE Äste als Voraussetzung hat (`requiresAll`
+    // statt `requires`) UND zusätzlich Gold statt nur EP kostet
+    // (`goldCosts`) — siehe buyNextSkillLevel()/epNodeCardHtml(). Schaltet
+    // keinen Spielmechanik-Bonus frei, sondern eine Story-Konsequenz: Brakka
+    // erklärt danach endlich den Weg zur Abenteurergilde (siehe npc.js).
+    id: 'guildPrep', name: 'Vorbereitung auf die Gilde', icon: '⚔',
+    requiresAll: ['nightWatchLeveling', 'goldBreakthrough'], maxLevel: 1, costs: [100], goldCosts: [1000],
+    desc: 'Reichtum und Routine allein machen noch keinen Abenteurer — aber sie sind ein Anfang.',
+    effect: 'Schaltet den Weg zur Abenteurergilde frei. Brakka weiß mehr darüber.'
   }
 ];
 
@@ -92,23 +103,44 @@ function applyThrift(cost) {
   return Math.max(1, Math.round(cost * getThriftMult()));
 }
 
-/** Kauft die nächste Stufe eines Skills, falls Voraussetzung + EP reichen. */
+/** Liefert die Liste der Voraussetzungs-Skill-IDs eines Knotens — ein
+    einzelner Ast normalerweise (`requires`), oder beide Äste bei einem
+    Konvergenz-Knoten wie "guildPrep" (`requiresAll`). */
+function getNodeRequirements(node) {
+  return node.requiresAll || (node.requires ? [node.requires] : []);
+}
+
+/** Kauft die nächste Stufe eines Skills, falls Voraussetzung(en) sowie EP
+    (und ggf. Gold, siehe `goldCosts`) reichen. */
 function buyNextSkillLevel(id) {
   const node = EP_SKILL_TREE.find(n => n.id === id);
   if (!node) return;
 
   const level = getSkillLevel(id);
   if (level >= node.maxLevel) return;
-  if (node.requires && getSkillLevel(node.requires) < 1) return;
+  if (getNodeRequirements(node).some(reqId => getSkillLevel(reqId) < 1)) return;
 
-  const cost = node.costs[level];
-  if (experience.points < cost) {
-    showToast(`Nicht genug Erfahrung — benötigt: ${cost} EP.`, 'error');
+  const epCost   = node.costs[level];
+  const goldCost = node.goldCosts ? node.goldCosts[level] : 0;
+  if (experience.points < epCost) {
+    showToast(`Nicht genug Erfahrung — benötigt: ${epCost} EP.`, 'error');
+    return;
+  }
+  if (resources.gold < goldCost) {
+    showToast(`Nicht genug Gold — benötigt: ${goldCost} Gold.`, 'error');
     return;
   }
 
-  experience.points -= cost;
+  experience.points -= epCost;
+  resources.gold    -= goldCost;
   setSkillLevel(id, level + 1);
+
+  // "guildPrep" hat keinen Spielmechanik-Effekt, sondern stößt direkt
+  // Brakkas Gilden-Questkette an (siehe npc.js).
+  if (id === 'guildPrep') {
+    quests.guildRegistration.state = 'active';
+    navUnseen.taverne = true;
+  }
 
   const levelNote = node.maxLevel > 1 ? ` (Stufe ${level + 1})` : '';
   showToast(`${node.name}${levelNote} erlernt.`, 'event');
@@ -203,13 +235,15 @@ function startManualReset() {
 function epNodeCardHtml(node) {
   const level = getSkillLevel(node.id);
   const maxed = level >= node.maxLevel;
-  const cost  = maxed ? null : node.costs[level];
-  const canBuy = !maxed && experience.points >= cost;
+  const epCost   = maxed ? null : node.costs[level];
+  const goldCost = maxed ? null : (node.goldCosts ? node.goldCosts[level] : 0);
+  const canBuy = !maxed && experience.points >= epCost && resources.gold >= goldCost;
   const levelLabel = node.maxLevel > 1 ? ` (Stufe ${level}/${node.maxLevel})` : '';
+  const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
   const buttonHtml = maxed
     ? `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`
-    : `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>Erlernen (${cost} EP)</button>`;
+    : `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>Erlernen (${costLabel})</button>`;
 
   return `
     <div class="action-card skill-node-card${maxed ? ' quest-card-done' : ''}">
@@ -259,6 +293,19 @@ function renderSkillTree() {
       <div class="skill-tree-cell">${leftVisible ? epNodeCardHtml(leftNode) : ''}</div>
       <div class="skill-tree-cell">${rightVisible ? epNodeCardHtml(rightNode) : ''}</div>
     </div>`;
+  }
+
+  // Konvergenz-Knoten: erscheint erst, sobald BEIDE Äste ihr letztes Blatt
+  // erlernt haben — gespiegelte Gabel-Grafik (zwei Stämme laufen zu einem
+  // zusammen), siehe .skill-connector-merge in style.css.
+  const guildNode = EP_SKILL_TREE.find(n => n.id === 'guildPrep');
+  const guildVisible = getNodeRequirements(guildNode).every(reqId => getSkillLevel(reqId) >= 1);
+  if (guildVisible) {
+    html += `<div class="skill-connector skill-connector-merge">
+               <div class="stl-stem-left"></div><div class="stl-stem-right"></div>
+               <div class="stl-bar"></div><div class="stl-stem-bottom"></div>
+             </div>
+             <div class="skill-tree-row-root">${epNodeCardHtml(guildNode)}</div>`;
   }
 
   return html + `</div>`;

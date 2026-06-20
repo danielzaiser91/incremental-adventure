@@ -166,8 +166,16 @@ const NPCS = {
     tagline: 'Trockener Humor, ein Herz aus Eisen — und Eisen für alle anderen.',
     questId: 'nightWatch', // steuert das Ausrufezeichen-Badge, solange die Quest unstarted ist
     questAvailable: () => gameClock.day >= 2,
+    // Zweites, unabhängiges Signal fürs Ausrufezeichen: die Gilden-Quest
+    // (siehe experience.js, Skill "guildPrep") hat ihren eigenen
+    // Frage-Status, der nichts mit der Nachtwache zu tun hat.
+    hasHint: () => quests.guildRegistration.state === 'active',
     start: () => {
       if (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
+      if (quests.guildRegistration.state === 'active') {
+        return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
+      }
+      if (quests.guildRegistration.state === 'rewarded') return 'guildFinished';
       switch (quests.nightWatch.state) {
         case 'unstarted': return gameClock.day >= 2 ? 'offer' : 'tooSoon';
         case 'active':    return 'waiting';
@@ -231,7 +239,51 @@ const NPCS = {
       },
       idle: {
         text: ['Brakka hebt seinen Krug, ohne aufzusehen. "Schon wieder wach geblieben letzte Nacht? Du wirst noch zur Eule, Fremder."'],
-        options: [{ label: 'Vielleicht.', next: null }]
+        options: [
+          { label: 'Und die Sache mit der Abenteurergilde?', next: 'guildPending' },
+          { label: 'Vielleicht.', next: null }
+        ]
+      },
+      guildPending: {
+        text: ['Brakka winkt ab. "Eine Sache nach der anderen. Du merkst schon, wann es Zeit ist — vorher kann ich dir auch nicht weiterhelfen."'],
+        options: [{ label: 'Na gut.', next: null }]
+      },
+      guildExplain: {
+        text: [
+          'Brakka stellt seinen Krug ab, diesmal ohne den üblichen Spott. "Du willst also wirklich zur Gilde."',
+          '"Dann hör zu: die nehmen niemanden, der nicht zumindest ordentliche Ausrüstung mitbringt — und den Kopf klar genug hat, um nicht beim ersten Auftrag zu sterben."',
+          '"Beschaff dir, was du brauchst. Bereite dich vor — wirklich vorbereiten, nicht nur einen Tag früher aufstehen. Wenn du meinst, dass es Zeit ist, komm wieder zu mir."'
+        ],
+        options: [{
+          label: 'Verstanden.',
+          next: null,
+          action: () => {
+            gameFlags.guildExplainedByBrakka = true;
+            showToast('Aufgabe: Bereite dich auf die Gildenprüfung vor — sprich wieder mit Brakka, wenn du bereit bist.', 'event');
+          }
+        }]
+      },
+      guildReadyCheck: {
+        text: ['Brakka mustert dich von oben bis unten. "Na? Bereit, oder verschwendest du nur meine Zeit?"'],
+        options: [
+          { label: 'Noch nicht.', next: null },
+          {
+            label: 'Ja. Ich bin bereit.',
+            next: 'guildEnd',
+            action: () => { quests.guildRegistration.state = 'rewarded'; }
+          }
+        ]
+      },
+      guildEnd: {
+        text: [
+          'Brakka nickt knapp. "Dann ist es Zeit, Fremder. Die Gilde wird von dir hören."',
+          '— Hier endet die Geschichte vorerst. Mehr vom Weg zur Abenteurergilde folgt in einem zukünftigen Update. Danke, dass du bis hierher gespielt hast! Neuigkeiten zu kommenden Updates gibt es bald auch auf unserem Discord (Link folgt). —'
+        ],
+        options: [{ label: 'Zur Kenntnis genommen.', next: null }]
+      },
+      guildFinished: {
+        text: ['Brakka hebt sein Glas. "Geh und mach uns stolz, Fremder."'],
+        options: [{ label: 'Werde ich.', next: null }]
       },
       receiveLetter: {
         text: [
@@ -260,17 +312,20 @@ const NPCS = {
     tagline: 'Wortkarg, aber fair — wer ordentlich schuftet, hat seinen Respekt.',
     questId: 'foremanRaise',
     badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
-    locked: () => quests.foremanRaise.state === 'unstarted',
+    // Er hat den Spieler ausdrücklich für ABENDS in die Taverne eingeladen
+    // (siehe maybeTriggerForemanBonusDialog()) — tagsüber ist er auf dem Feld.
+    locked: () => quests.foremanRaise.state === 'unstarted' || !isNight(),
     start: () => (quests.foremanRaise.state === 'active' ? 'praise' : 'idle'),
     nodes: {
       praise: {
         text: [
           'Der Vorarbeiter winkt mich zu seinem Tisch und stellt sein Bier ab. "Da bist du ja. Setz dich."',
-          'Er hebt sein Glas. "Du schuftest ordentlich, ohne zu meckern. Das sieht man nicht oft. Ich hab ein gutes Wort für dich eingelegt." Er grinst kurz. "Ab jetzt gibt\'s ein, zwei Groschen mehr pro Stunde für dich."'
+          'Er hebt sein Glas. "Du schuftest ordentlich, ohne zu meckern. Das sieht man nicht oft."',
+          '"Die meisten hier jammern beim ersten Sonnenbrand oder schleichen sich davon, sobald keiner hinsieht. Du nicht. Verlässliche Leute sind selten — und die bezahle ich auch dafür, dass sie bleiben." Er grinst kurz. "Ab jetzt gibt\'s ein, zwei Groschen mehr pro Stunde für dich."'
         ],
         options: [{
           label: 'Danke, das weiß ich zu schätzen.',
-          next: null,
+          next: 'praiseFarewell',
           action: () => {
             gameFlags.foremanBonusGiven = true;
             resources.gold            += FOREMAN_BONUS_GOLD;
@@ -280,9 +335,72 @@ const NPCS = {
           }
         }]
       },
+      praiseFarewell: {
+        text: ['Er hebt sein Glas mir zu. "Bis morgen auf dem Feld. Und lass dir die Münzen nicht gleich wieder abnehmen."'],
+        options: [{ label: 'Bis morgen.', next: null }]
+      },
       idle: {
         text: ['Der Vorarbeiter nickt mir knapp zu und trinkt in Ruhe weiter.'],
         options: [{ label: 'Nicken.', next: null }]
+      }
+    }
+  },
+
+  greta: {
+    name: 'Greta, die Krämerin', icon: '🧺',
+    tagline: 'Geschäftstüchtig und freundlich — hat immer eine neue Idee im Kopf.',
+    questId: 'kraemerinBusiness',
+    badgeOnActive: true,
+    locked: () => quests.kraemerinBusiness.state === 'unstarted',
+    start: () => {
+      switch (quests.kraemerinBusiness.state) {
+        case 'invited': return 'offer';
+        case 'active':  return hasEnoughResourcesForQuest() ? 'turnIn' : 'reminder';
+        default:        return 'idle'; // 'rewarded'
+      }
+    },
+    nodes: {
+      offer: {
+        text: [
+          '"Da bist du ja!" Greta rückt einen Hocker zurecht. "Also, meine Idee: Ich will mein Sortiment erweitern — Werkzeug, bessere Ausrüstung, solche Sachen."',
+          '"Dafür brauche ich Rohstoffe: Holz, Stein und ein paar Kräuter. Sammelst du mir davon je fünf, helfe ich dir dafür weiter."',
+          '"Werkzeug dafür findest du bei mir im Laden, sobald du weißt, wonach du suchst."'
+        ],
+        options: [{
+          label: 'Ich kümmere mich darum.',
+          next: null,
+          action: () => {
+            quests.kraemerinBusiness.state = 'active';
+            gameFlags.resourceGatheringUnlocked = true;
+            navUnseen.rohstoffe = true;
+            showToast('Quest erhalten: Rohstoffe für Greta sammeln.', 'event');
+          }
+        }]
+      },
+      reminder: {
+        text: () => [`"Na, schon was gesammelt?" ${kraemerinProgressText()}`],
+        options: [{ label: 'Ich bin dran.', next: null }]
+      },
+      turnIn: {
+        text: [
+          'Greta strahlt, als du ihr die Rohstoffe zeigst. "Genau richtig! Damit kann ich arbeiten."',
+          '"Ich verkaufe das an ein paar Handwerker, die mir dafür fertige Ware machen — und die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei."'
+        ],
+        options: [{
+          label: 'Bin gespannt.',
+          next: null,
+          action: () => {
+            Object.entries(KRAEMERIN_QUEST_NEED).forEach(([id, qty]) => {
+              resources.inventory[id] = Math.max(0, (resources.inventory[id] || 0) - qty);
+            });
+            quests.kraemerinBusiness.state = 'rewarded';
+            showToast('Rohstoffe abgegeben. Greta erweitert ihr Sortiment.', 'reward');
+          }
+        }]
+      },
+      idle: {
+        text: ['Greta nickt dir zu. "Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab."'],
+        options: [{ label: 'Mach ich.', next: null }]
       }
     }
   },

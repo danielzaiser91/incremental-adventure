@@ -58,6 +58,41 @@ const SLEEP_OPTIONS = [
   }
 ];
 
+/* ── Sammelplatz: Rohstoffe für Gretas Auftrag (siehe npc.js/market.js) ──
+   Bewusst simpel gehalten — fester Ertrag pro Klick, kein eigenes
+   Level-System wie bei Feldarbeit/Nachtwache, weil es sich um eine
+   befristete Nebenaktivität für EINE Quest handelt, nicht um einen
+   dauerhaften Kern-Loop. */
+const RESOURCE_GATHER_AMOUNT    = 1;
+const RESOURCE_GATHER_TIREDNESS = 5;
+const RESOURCE_GATHER_HUNGER    = 3;
+const RESOURCE_GATHER_MINUTES   = 20;
+
+const RESOURCE_GATHER_LABELS = { holz: 'Holz hacken', stein: 'Steine sammeln', pflanze: 'Wildkraut sammeln' };
+const RESOURCE_GATHER_DESC = {
+  holz:    'Junge Bäume am Waldrand — genug für ein paar gute Scheite.',
+  stein:   'Geröll am Hang, leicht zu lösen mit der richtigen Spitzhacke.',
+  pflanze: 'Wildkraut am Wegrand, das Greta brauchen kann.'
+};
+
+/** Sammelt einen Rohstoff am Sammelplatz — erfordert das passende Werkzeug,
+    blockiert nachts UND solange `mustEatBread` gilt (auch Sammeln ist
+    körperliche Arbeit). */
+function gatherResource(resourceId) {
+  if (isNight() || gameFlags.mustEatBread) return;
+  const tool = TOOL_ITEMS.find(t => t.resource === resourceId);
+  if (!tool || (resources.inventory[tool.id] || 0) <= 0) return;
+
+  grantItem(resourceId, RESOURCE_GATHER_AMOUNT);
+  adjustTiredness(RESOURCE_GATHER_TIREDNESS);
+  adjustHunger(RESOURCE_GATHER_HUNGER);
+  advanceClock(RESOURCE_GATHER_MINUTES);
+
+  const resourceName = RESOURCE_ITEMS.find(r => r.id === resourceId).name;
+  showToast(`+${RESOURCE_GATHER_AMOUNT} ${resourceName}.`, 'reward');
+  render();
+}
+
 /* Erfahrungs-Level für Feldarbeit: je öfter verrichtet, desto besser darin.
    `goldBase` verdoppelt sich pro Stufe (1 → 2 → 4 → 8 → 16 → 32), Dauer und
    Müdigkeitskosten sinken gleichzeitig. Die Schwellen für Stufe 4/5 sind
@@ -111,6 +146,7 @@ function getWorkReward(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
   let reward = level.goldBase
     + (equipment.hands === 'ledergloves' ? 1 : 0)
+    + (equipment.guertel === 'arbeitsguertel' ? 1 : 0)
     + (gameFlags.foremanBonusGiven ? 1 : 0);
   reward *= getHungerTier(needs.hunger).rewardMult; // nur Hunger schwächt den Ertrag, Müdigkeit nur die Dauer
   return Math.max(1, Math.round(reward));
@@ -281,7 +317,8 @@ const NAV_INTRO_TEXT = {
   schlafplatz:  ['Hier kann ich mich für die Nacht niederlegen.'],
   quests:       ['Aufgaben, die ich angenommen habe, sollte ich im Auge behalten.'],
   inventar:     ['Was ich bei mir trage, sollte ich griffbereit haben.'],
-  erfahrung:    ['Hier könnte ich festhalten, was ich aus allem gelernt habe.']
+  erfahrung:    ['Hier könnte ich festhalten, was ich aus allem gelernt habe.'],
+  rohstoffe:    ['Holz, Stein, Kräuter — wenn ich das hier sammle, kann Greta mehr für mich tun.']
 };
 
 /** Zeigt die Kurzbemerkung zu einem Nav-Element, falls eine existiert. */

@@ -814,6 +814,59 @@ verschwinden lässt, bis sie relevant werden, muss ihr Wieder-Erscheinen
 über einen anderen Kanal ankündigen, sonst übersieht der Spieler sie
 einfach.
 
+## Konvergenz-Knoten im Skillbaum: zwei Voraussetzungen, zwei Kostenarten
+
+"Vorbereitung auf die Gilde" (`guildPrep`, `experience.js`) ist der erste
+EP-Skill, der BEIDE Äste als Voraussetzung braucht statt nur einen.
+Statt `requires` (eine ID) gibt es dafür `requiresAll` (ein Array);
+`getNodeRequirements(node)` normalisiert beides auf eine einheitliche
+Liste, damit `buyNextSkillLevel()` nicht zwischen beiden Fällen
+unterscheiden muss. Derselbe Knoten ist außerdem der erste mit echten
+Gold-Kosten zusätzlich zu EP (`goldCosts`, parallel zu `costs`) — auch
+hier: ein optionales Feld, das bei Abwesenheit auf 0 zusammenfällt,
+statt einen zweiten Kauf-Pfad zu bauen. Visuell bekommt ein
+Konvergenz-Knoten eine gespiegelte Gabel-Verbindung (`.skill-connector-
+merge`) unterhalb der letzten Baumzeile, sichtbar erst wenn ALLE
+Voraussetzungen erfüllt sind.
+
+## Story-Enden brauchen einen Sammelplatz, sonst gehen sie im Dialogtext unter
+
+Lose Fäden wie "Brakka erklärt nie, wie man Abenteurer wird" fallen nur
+auf, wenn man sie aktiv sucht — sie sind keine Fehler, die ein Test
+findet. `notes/lose-enden.md` ist jetzt der feste Ort dafür: jeder
+offene Faden bekommt einen Eintrag mit Status (offen / in Bearbeitung /
+absichtliches Foreshadowing) und ggf. Integrations-Vorschlägen. Bei
+jeder neuen Dialog-Runde kurz gegenchecken, ob sich ein Punkt erledigt
+hat. Wichtig: ein halb gelöster Faden (wie hier die Gilde) bekommt
+einen klar markierten Vertröstungs-Dialog ("Eine Sache nach der
+anderen"), bis die richtige Lösung steht — nie einfach unkommentiert
+unbeantwortet stehen lassen.
+
+## NPCs mit zeitabhängiger Sichtbarkeit: `locked` darf mehrere Bedingungen kombinieren
+
+Der Vorarbeiter ist nicht nur an die Quest gebunden, sondern zusätzlich
+an `!isNight()` — er hat den Spieler ausdrücklich für ABENDS in die
+Taverne eingeladen, der Dialogtext sagt das auch explizit. `locked` ist
+einfach eine Funktion, die beliebig viele Bedingungen kombinieren kann
+(`quests.x.state === 'unstarted' || !isNight()`); es gibt keinen Grund,
+dafür ein zweites Feld einzuführen. Lektion: wenn ein NPC im Text einen
+Zeitpunkt nennt ("komm heute Abend"), muss `locked()` diesen Zeitpunkt
+auch tatsächlich durchsetzen — sonst klafft Text und Mechanik auseinander.
+
+## Mehrstufige Sammel-/Verkaufs-Ketten: Zwischenzustände explizit benennen
+
+Gretas Questkette (`kraemerinBusiness`) hat VIER Zustände statt der
+üblichen drei: `unstarted` → `invited` (nach dem Theken-Gespräch beim
+Krämer) → `active` (nach dem Taverne-Gespräch, Sammelplatz freigeschaltet)
+→ `rewarded` (nach Abgabe, Verkauf + neue Ausrüstung freigeschaltet).
+Der zusätzliche `invited`-Zustand existiert, weil zwei UNABHÄNGIGE
+Auslöser (Markt-Dialog vs. Taverne-NPC) beteiligt sind — ohne ihn könnte
+man nicht unterscheiden "noch nicht eingeladen" von "eingeladen, aber
+noch nicht das eigentliche Angebot gehört". Lektion: sobald eine
+Quest über mehr als einen Ort/NPC läuft, braucht jeder Übergabepunkt
+seinen eigenen Zustand, auch wenn das mehr ist als das übliche
+unstarted/active/rewarded.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

@@ -22,6 +22,7 @@ function renderContent() {
       else                           renderMarktplatzHub(area);
       break;
     case 'schlafplatz':   renderSchlafplatz(area);  break;
+    case 'rohstoffe':     renderRohstoffe(area);    break;
     case 'taverne':       renderTaverne(area);      break;
     case 'inventar':      renderInventar(area);     break;
     case 'quests':        renderQuests(area);       break;
@@ -130,7 +131,9 @@ function renderTreutheim(el) {
     { id: 'taverne',      icon: '🍺', name: 'Die Taverne',
       desc: 'Hinter verrauchten Fenstern hallen Stimmen und Gelächter. Hier hört man, was wirklich in der Stadt los ist.' },
     ...(gameFlags.firstNightDialogShown ? [{ id: 'schlafplatz', icon: '🛏', name: 'Ein Platz zum Schlafen',
-      desc: 'Wenn die Nacht kommt, brauche ich irgendwo ein Dach über dem Kopf — oder zumindest eine ruhige Ecke.' }] : [])
+      desc: 'Wenn die Nacht kommt, brauche ich irgendwo ein Dach über dem Kopf — oder zumindest eine ruhige Ecke.' }] : []),
+    ...(gameFlags.resourceGatheringUnlocked ? [{ id: 'rohstoffe', icon: '🌲', name: 'Sammelplatz',
+      desc: 'Jenseits der Felder liegt ein Streifen Wildnis — Holz, Stein und Kräuter für jeden, der sie sammeln will.' }] : [])
   ];
 
   const cards = places.map(p => `
@@ -299,7 +302,11 @@ function renderArbeitsplatz(el) {
   }
 
   let nightWatchCard = '';
-  if (night) {
+  // Solange Brakka die Nachtwache nie erwähnt hat (Quest "unstarted"), gibt
+  // es für die Figur keinen Grund, überhaupt zu wissen, dass das eine
+  // Option ist — kein gesperrter Platzhalter mehr (Progressive Disclosure,
+  // siehe philosophie.md Punkt 6 / SKILL.md).
+  if (night && quests.nightWatch.state !== 'unstarted') {
     const state = quests.nightWatch.state;
     const used  = nightFlags.nightActivityUsedToday;
     const reward = getNightWatchReward();
@@ -308,15 +315,7 @@ function renderArbeitsplatz(el) {
     const levelNote = nwLevelingUnlocked
       ? `<div class="action-card-effect">Lvl ${nwLevel} — ${NIGHTWATCH_LEVELS[nwLevel].label}</div>` : '';
 
-    if (state === 'unstarted') {
-      nightWatchCard = `
-        <div class="action-card action-card-locked">
-          <div class="action-card-icon">🌙</div>
-          <div class="action-card-name">Nachtwache halten</div>
-          <p class="action-card-desc">Du müsstest erst lernen, wie man hier Wache hält. Vielleicht weiß man in der Taverne mehr.</p>
-          <button class="action-btn btn-disabled" disabled>Unbekannt</button>
-        </div>`;
-    } else if (state === 'done') {
+    if (state === 'done') {
       nightWatchCard = `
         <div class="action-card action-card-locked">
           <div class="action-card-icon">🌙</div>
@@ -353,6 +352,61 @@ function renderArbeitsplatz(el) {
       <div class="action-grid">
         ${nightWatchCard}
       </div>
+    </div>
+  `;
+}
+
+/* ── Sammelplatz: Rohstoffe für Gretas Auftrag ───────────────
+   Bewusst schlank gehalten — drei gleichwertige Sammel-Aktionen, jede
+   erst sichtbar/nutzbar, sobald das passende Werkzeug beim Krämer
+   gekauft wurde (siehe TOOL_ITEMS, market.js). */
+function renderRohstoffe(el) {
+  const night = isNight();
+  if (night) {
+    el.innerHTML = `
+      <div class="feature-stage">
+        <div class="feature-stage-label">Sammelplatz</div>
+        <div class="location-card">
+          <p class="location-card-desc">Im Dunkeln findet man hier nichts. Komm bei Tageslicht wieder.</p>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const blocked = gameFlags.mustEatBread;
+  const cards = TOOL_ITEMS.map(tool => {
+    const owned = (resources.inventory[tool.id] || 0) > 0;
+    const resourceItem = RESOURCE_ITEMS.find(r => r.id === tool.resource);
+    if (!owned) {
+      return `
+        <div class="action-card action-card-locked">
+          <div class="action-card-icon">${resourceItem.icon}</div>
+          <div class="action-card-name">${RESOURCE_GATHER_LABELS[tool.resource]}</div>
+          <p class="action-card-desc">Dafür brauche ich erst ${tool.name === 'Axt' ? 'eine' : 'einen'} ${tool.name} vom Krämer.</p>
+          <button class="action-btn btn-disabled" disabled>Werkzeug fehlt</button>
+        </div>`;
+    }
+    const have = resources.inventory[tool.resource] || 0;
+    return `
+      <div class="action-card${blocked ? ' action-card-locked' : ''}">
+        <div class="action-card-icon">${resourceItem.icon}</div>
+        <div class="action-card-name">${RESOURCE_GATHER_LABELS[tool.resource]} <span class="inventory-count">×${have}</span></div>
+        <p class="action-card-desc">${RESOURCE_GATHER_DESC[tool.resource]}</p>
+        ${blocked ? `<p class="action-card-warning">🍞 Zu schwach vor Hunger — erst Brot vom Marktplatz essen.</p>` : ''}
+        <button class="action-btn ${blocked ? 'btn-disabled' : ''}" onclick="gatherResource('${tool.resource}')" ${blocked ? 'disabled' : ''}>
+          Sammeln
+        </button>
+        <div class="action-card-effect">
+          🕐 Spielzeit: +${RESOURCE_GATHER_MINUTES} Min · 😴 Müdigkeit: +${RESOURCE_GATHER_TIREDNESS}% · 🍞 Hunger: +${RESOURCE_GATHER_HUNGER}%
+        </div>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Sammelplatz vor den Stadtmauern</div>
+      <div class="action-grid">${cards}</div>
     </div>
   `;
 }

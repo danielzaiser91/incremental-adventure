@@ -12,17 +12,37 @@ const EQUIPMENT_ITEMS = [
   {
     id: 'ledergloves', name: 'Lederhandschuhe', icon: '🧤', slot: 'hands', slotLabel: 'Hände',
     desc: 'Schonen die Hände, erlauben kräftigeres Zupacken.', effect: '+1 Gold pro Feldarbeit'
+  },
+  {
+    id: 'arbeitsguertel', name: 'Arbeitsgürtel', icon: '🪢', slot: 'guertel', slotLabel: 'Gürtel',
+    desc: 'Handwerksarbeit aus Gretas neuem Sortiment. Verteilt das Gewicht besser, schont den Rücken.',
+    effect: '+1 Gold pro Feldarbeit'
   }
 ];
 
-const EQUIPMENT_SLOTS = ['hands'];
+const EQUIPMENT_SLOTS = [
+  { id: 'hands',   label: 'Hände',  emptyIcon: '✋' },
+  { id: 'guertel', label: 'Gürtel', emptyIcon: '➖' }
+];
+
+/* Rohstoffe für Gretas Auftrag (siehe npc.js, market.js) — eigene Registry,
+   weil sie weder Verbrauchsgut (kein "Verzehren") noch Ausrüstung sind. */
+const RESOURCE_ITEMS = [
+  { id: 'holz',    name: 'Holz',     icon: '🪵' },
+  { id: 'stein',   name: 'Stein',    icon: '🪨' },
+  { id: 'pflanze', name: 'Wildkraut', icon: '🌿' }
+];
 
 /** Anzahl belegter Inventar-Plätze — ein Platz pro BESESSENEM Gegenstands-
-    TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT. */
+    TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT. Zählt
+    auch Werkzeuge (TOOL_ITEMS, market.js) und Rohstoffe mit, da beide
+    ebenfalls in `resources.inventory` liegen. */
 function getUsedInventorySlots() {
-  const food  = FOOD_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  const equip = EQUIPMENT_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  return food + equip;
+  const food      = FOOD_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const equip     = EQUIPMENT_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const res       = RESOURCE_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const tools     = TOOL_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  return food + equip + res + tools;
 }
 
 /**
@@ -63,7 +83,8 @@ function moveFromOverflow(itemId) {
 /** Findet Name/Icon eines Gegenstands über Food- oder Ausrüstungs-Registry
     (für die Anzeige im überzähligen Beutel, der beide Arten enthalten kann). */
 function findItemMeta(itemId) {
-  return FOOD_ITEMS.find(i => i.id === itemId) || EQUIPMENT_ITEMS.find(i => i.id === itemId);
+  return FOOD_ITEMS.find(i => i.id === itemId) || EQUIPMENT_ITEMS.find(i => i.id === itemId) ||
+    RESOURCE_ITEMS.find(i => i.id === itemId) || TOOL_ITEMS.find(i => i.id === itemId);
 }
 
 /** Rendert die Inventar-Seite: Slot-Übersicht, Ausrüstung, Verbrauchsgüter,
@@ -71,11 +92,19 @@ function findItemMeta(itemId) {
 function renderInventar(el) {
   const ownedFood   = FOOD_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
   const ownedEquip  = EQUIPMENT_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
-  const hasAnyGear  = ownedEquip.length > 0 || EQUIPMENT_SLOTS.some(slot => equipment[slot]);
+  // Ein Slot erscheint nur, sobald der Spieler je Zugriff auf einen
+  // passenden Gegenstand hatte — sonst wäre ein leerer "Gürtel"-Platz ein
+  // Spoiler für eine Mechanik, die er noch gar nicht kennt.
+  const relevantSlots = EQUIPMENT_SLOTS.filter(slot =>
+    equipment[slot.id] || EQUIPMENT_ITEMS.some(i => i.slot === slot.id && (resources.inventory[i.id] || 0) > 0));
+  const hasAnyGear  = relevantSlots.length > 0;
   const ownedQuestItems = QUEST_ITEMS.filter(qi => (questItems[qi.id] || 0) > 0);
+  const ownedResources = RESOURCE_ITEMS.filter(r => (resources.inventory[r.id] || 0) > 0);
+  const ownedTools  = TOOL_ITEMS.filter(t => (resources.inventory[t.id] || 0) > 0);
   const overflowEntries = Object.entries(overflowBag).filter(([, qty]) => qty > 0);
 
-  if (ownedFood.length === 0 && !hasAnyGear && ownedQuestItems.length === 0 && overflowEntries.length === 0) {
+  if (ownedFood.length === 0 && !hasAnyGear && ownedQuestItems.length === 0 &&
+      ownedResources.length === 0 && ownedTools.length === 0 && overflowEntries.length === 0) {
     el.innerHTML = `
       <div class="feature-stage">
         <div class="feature-stage-label">Inventar</div>
@@ -98,8 +127,8 @@ function renderInventar(el) {
 
   let equipmentSection = '';
   if (hasAnyGear) {
-    const slotCards = EQUIPMENT_SLOTS.map(slot => {
-      const equippedId   = equipment[slot];
+    const slotCards = relevantSlots.map(slot => {
+      const equippedId   = equipment[slot.id];
       const equippedItem = equippedId ? EQUIPMENT_ITEMS.find(i => i.id === equippedId) : null;
       if (equippedItem) {
         return `
@@ -107,13 +136,13 @@ function renderInventar(el) {
             <div class="action-card-icon">${equippedItem.icon}</div>
             <div class="action-card-name">${equippedItem.slotLabel}: ${equippedItem.name}</div>
             <div class="action-card-effect">${equippedItem.effect}</div>
-            <button class="action-btn" onclick="unequipItem('${slot}')">Ablegen</button>
+            <button class="action-btn" onclick="unequipItem('${slot.id}')">Ablegen</button>
           </div>`;
       }
       return `
         <div class="action-card action-card-compact action-card-locked">
-          <div class="action-card-icon">✋</div>
-          <div class="action-card-name">Hände: leer</div>
+          <div class="action-card-icon">${slot.emptyIcon}</div>
+          <div class="action-card-name">${slot.label}: leer</div>
         </div>`;
     }).join('');
 
@@ -151,6 +180,18 @@ function renderInventar(el) {
       <p class="action-card-desc">${qi.desc}</p>
     </div>`).join('');
 
+  const resourceCards = ownedResources.map(r => `
+    <div class="action-card action-card-compact">
+      <div class="action-card-icon">${r.icon}</div>
+      <div class="action-card-name">${r.name} <span class="inventory-count">×${resources.inventory[r.id]}</span></div>
+    </div>`).join('');
+
+  const toolCards = ownedTools.map(t => `
+    <div class="action-card action-card-compact">
+      <div class="action-card-icon">${t.icon}</div>
+      <div class="action-card-name">${t.name}</div>
+    </div>`).join('');
+
   const overflowCards = overflowEntries.map(([itemId, qty]) => {
     const meta = findItemMeta(itemId);
     if (!meta) return '';
@@ -169,6 +210,8 @@ function renderInventar(el) {
       ${equipmentSection}
       ${foodCards ? `<div class="market-section-label">Verbrauchsgüter</div><div class="action-grid">${foodCards}</div>` : ''}
       ${equipBagCards ? `<div class="market-section-label">Im Beutel</div><div class="action-grid">${equipBagCards}</div>` : ''}
+      ${toolCards ? `<div class="market-section-label">Werkzeug</div><div class="action-grid">${toolCards}</div>` : ''}
+      ${resourceCards ? `<div class="market-section-label">Rohstoffe</div><div class="action-grid">${resourceCards}</div>` : ''}
       ${questCards ? `<div class="market-section-label">Questgegenstände</div><div class="action-grid">${questCards}</div>` : ''}
       ${overflowCards ? `
         <div class="market-section-label">Zusätzlich bei mir (Beutel voll)</div>

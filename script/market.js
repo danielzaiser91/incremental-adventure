@@ -8,6 +8,40 @@
 'use strict';
 
 const LEDERGLOVES_COST = 16;
+const ARBEITSGUERTEL_COST = 30;
+const RESOURCE_SELL_THRESHOLD = 20; // kumulativ verkaufte Rohstoff-Einheiten, schaltet den Gürtel kaufbar
+const RESOURCE_SELL_RATE = 1;       // Gold pro verkaufter Rohstoff-Einheit
+
+/* Werkzeuge für den Sammelplatz (siehe content.js, renderRohstoffe()) —
+   Kauf = sofortige Freischaltung der zugehörigen Sammel-Aktion, kein
+   eigener Ausrüstungs-Schritt nötig (anders als Ledergloves/Gürtel,
+   die einen spürbaren Effekt auf die Feldarbeit haben; Werkzeuge sind
+   reine Zugangsvoraussetzungen). */
+const TOOL_ITEMS = [
+  { id: 'axt', name: 'Axt', icon: '🪓', cost: 10, resource: 'holz',
+    desc: 'Zum Holzhacken am Waldrand.' },
+  { id: 'spitzhacke', name: 'Spitzhacke', icon: '⛏', cost: 12, resource: 'stein',
+    desc: 'Zum Lösen von Steinen im Geröll.' },
+  { id: 'sichel', name: 'Sichel', icon: '🌾', cost: 8, resource: 'pflanze',
+    desc: 'Zum Ernten von Wildkraut am Wegrand.' }
+];
+
+/* Gretas Sammel-Auftrag: wie viel von jedem Rohstoff sie für ihre
+   Geschäftsidee braucht (siehe npc.js, NPC "greta"). */
+const KRAEMERIN_QUEST_NEED = { holz: 5, stein: 5, pflanze: 5 };
+
+function hasEnoughResourcesForQuest() {
+  return Object.entries(KRAEMERIN_QUEST_NEED).every(([id, qty]) => (resources.inventory[id] || 0) >= qty);
+}
+
+/** Baut den Live-Fortschritt für Gretas "reminder"-Dialogknoten. */
+function kraemerinProgressText() {
+  return Object.entries(KRAEMERIN_QUEST_NEED).map(([id, qty]) => {
+    const have = resources.inventory[id] || 0;
+    const item = RESOURCE_ITEMS.find(r => r.id === id);
+    return `${item.icon} ${item.name}: ${have}/${qty}`;
+  }).join(' · ');
+}
 
 const VENDORS = [
   { id: 'kraemer',       name: 'Krämer',        icon: '🧺', tagline: 'Verpflegung und kleine Ausrüstung für den Alltag.' },
@@ -42,6 +76,7 @@ const FOOD_ITEMS = [
 function openVendor(id) {
   marketVendor = id;
   render();
+  if (id === 'kraemer') maybeTriggerKraemerinDialog();
 }
 
 /** Zurück zur Marktplatz-Übersicht. */
@@ -131,7 +166,7 @@ function renderVendorKraemer(el) {
   }).join('');
 
   let gearSection = '';
-  if (meta.resets >= 1) {
+  if (gameFlags.kraemerinDialogShown) {
     const alreadyHave = (resources.inventory.ledergloves || 0) > 0 || equipment.hands === 'ledergloves';
     const price = applyThrift(LEDERGLOVES_COST);
     const canBuy = !alreadyHave && resources.gold >= price && !nightClosed;
@@ -152,6 +187,63 @@ function renderVendorKraemer(el) {
       </div>`;
   }
 
+  let toolSection = '';
+  if (gameFlags.resourceGatheringUnlocked) {
+    const toolCards = TOOL_ITEMS.map(tool => {
+      const owned = (resources.inventory[tool.id] || 0) > 0;
+      const price = applyThrift(tool.cost);
+      const canBuy = !owned && resources.gold >= price && !nightClosed;
+      return `
+        <div class="action-card">
+          <div class="action-card-icon">${tool.icon}</div>
+          <div class="action-card-name">${tool.name}</div>
+          <p class="action-card-desc">${tool.desc}</p>
+          ${owned
+            ? `<div class="action-card-cost cost-ok">Erworben ✓</div><button class="action-btn btn-disabled" disabled>Erworben</button>`
+            : `<div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${price} Gold</div>
+               <button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyTool('${tool.id}')" ${canBuy ? '' : 'disabled'}>${nightClosed ? 'Geschlossen' : 'Kaufen'}</button>`
+          }
+        </div>`;
+    }).join('');
+    toolSection = `<div class="market-section-label">Werkzeug</div><div class="action-grid">${toolCards}</div>`;
+  }
+
+  let gretaSection = '';
+  if (quests.kraemerinBusiness.state === 'rewarded') {
+    const totalOnHand = RESOURCE_ITEMS.reduce((sum, r) => sum + (resources.inventory[r.id] || 0), 0);
+    const sellCard = `
+      <div class="action-card">
+        <div class="action-card-icon">💰</div>
+        <div class="action-card-name">Rohstoffe verkaufen</div>
+        <p class="action-card-desc">Greta kauft, was du gesammelt hast, und verkauft es an die Handwerker weiter.</p>
+        <div class="action-card-effect">Vorrat: ${totalOnHand} Einheiten · insgesamt verkauft: ${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD}</div>
+        <button class="action-btn ${totalOnHand > 0 ? '' : 'btn-disabled'}" onclick="sellResources()" ${totalOnHand > 0 ? '' : 'disabled'}>
+          Verkaufen (+${totalOnHand * RESOURCE_SELL_RATE} Gold)
+        </button>
+      </div>`;
+
+    const alreadyHaveGuertel = (resources.inventory.arbeitsguertel || 0) > 0 || equipment.guertel === 'arbeitsguertel';
+    const enoughSold = resources.totalResourcesSold >= RESOURCE_SELL_THRESHOLD;
+    const guertelPrice = applyThrift(ARBEITSGUERTEL_COST);
+    const canBuyGuertel = !alreadyHaveGuertel && enoughSold && resources.gold >= guertelPrice && !nightClosed;
+    const guertelCard = `
+      <div class="action-card${enoughSold ? '' : ' action-card-locked'}">
+        <div class="action-card-icon">🪢</div>
+        <div class="action-card-name">Arbeitsgürtel</div>
+        <p class="action-card-desc">Handwerksarbeit aus Gretas neuem Sortiment. Verteilt das Gewicht besser, schont den Rücken.</p>
+        <div class="action-card-effect">+1 Gold pro Feldarbeit, sobald ausgerüstet</div>
+        ${alreadyHaveGuertel
+          ? `<div class="action-card-cost cost-ok">Erworben ✓</div><button class="action-btn btn-disabled" disabled>Erworben</button>`
+          : enoughSold
+            ? `<div class="action-card-cost ${canBuyGuertel ? 'cost-ok' : 'cost-too-high'}">${guertelPrice} Gold</div>
+               <button class="action-btn ${canBuyGuertel ? '' : 'btn-disabled'}" onclick="buyArbeitsguertel()" ${canBuyGuertel ? '' : 'disabled'}>${nightClosed ? 'Geschlossen' : 'Kaufen'}</button>`
+            : `<div class="action-card-cost">Erfordert ${RESOURCE_SELL_THRESHOLD} verkaufte Rohstoffe (${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD})</div>
+               <button class="action-btn btn-disabled" disabled>Noch nicht verfügbar</button>`}
+      </div>`;
+
+    gretaSection = `<div class="market-section-label">Gretas Werkstatt</div><div class="action-grid">${sellCard}${guertelCard}</div>`;
+  }
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Krämer — Verpflegung &amp; Kleinkram</div>
@@ -160,6 +252,8 @@ function renderVendorKraemer(el) {
       <div class="market-section-label">Verpflegung</div>
       <div class="action-grid">${foodCards}</div>
       ${gearSection}
+      ${toolSection}
+      ${gretaSection}
     </div>
   `;
 }
@@ -249,4 +343,97 @@ function buyLedergloves() {
   grantItem('ledergloves', 1);
   showToast(`Lederhandschuhe erworben (−${price} Gold). Im Inventar ausrüsten, damit sie wirken.`, 'purchase');
   render();
+}
+
+/** Kauft ein Werkzeug für den Sammelplatz — schaltet sofort die zugehörige
+    Sammel-Aktion frei (siehe content.js, renderRohstoffe()). */
+function buyTool(itemId) {
+  const tool = TOOL_ITEMS.find(t => t.id === itemId);
+  if (!tool) return;
+
+  const alreadyHave = (resources.inventory[itemId] || 0) > 0;
+  const price = applyThrift(tool.cost);
+
+  if (isNight()) {
+    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    return;
+  }
+  if (alreadyHave || resources.gold < price) {
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für ${tool.name}.`, 'error');
+    return;
+  }
+
+  resources.gold -= price;
+  grantItem(itemId, 1);
+  showToast(`${tool.name} erworben (−${price} Gold).`, 'purchase');
+  render();
+}
+
+/** Verkauft alle gesammelten Rohstoffe an Greta — pauschal, kein Auswählen
+    einzelner Mengen (Effekt: einfacher "alles zu Gold machen"-Klick). */
+function sellResources() {
+  const total = RESOURCE_ITEMS.reduce((sum, r) => sum + (resources.inventory[r.id] || 0), 0);
+  if (total <= 0) {
+    showToast('Nichts zu verkaufen.', 'error');
+    return;
+  }
+
+  RESOURCE_ITEMS.forEach(r => { resources.inventory[r.id] = 0; });
+  const gain = total * RESOURCE_SELL_RATE;
+  resources.gold              += gain;
+  resources.totalGoldEarned   += gain;
+  resources.totalResourcesSold = (resources.totalResourcesSold || 0) + total;
+
+  showToast(`${total} Rohstoffe verkauft (+${gain} Gold).`, 'purchase');
+  render();
+}
+
+/** Kauft den Arbeitsgürtel — Gretas erstes Ausrüstungsstück, erst kaufbar
+    nach genug verkauften Rohstoffen (siehe RESOURCE_SELL_THRESHOLD). */
+function buyArbeitsguertel() {
+  const alreadyHave = (resources.inventory.arbeitsguertel || 0) > 0 || equipment.guertel === 'arbeitsguertel';
+  const enoughSold = resources.totalResourcesSold >= RESOURCE_SELL_THRESHOLD;
+  const price = applyThrift(ARBEITSGUERTEL_COST);
+
+  if (isNight()) {
+    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    return;
+  }
+  if (!enoughSold) {
+    showToast(`Greta braucht erst noch mehr verkaufte Rohstoffe (${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD}).`, 'error');
+    return;
+  }
+  if (alreadyHave || resources.gold < price) {
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für den Arbeitsgürtel.`, 'error');
+    return;
+  }
+
+  resources.gold -= price;
+  grantItem('arbeitsguertel', 1);
+  showToast(`Arbeitsgürtel erworben (−${price} Gold). Im Inventar ausrüsten, damit er wirkt.`, 'purchase');
+  render();
+}
+
+/** Ladentheken-Gespräch beim ersten Besuch des Krämers NACH dem ersten
+    Neuanfang — dankt für die Treue, lenkt auf die Lederhandschuhe und lädt
+    in die Taverne ein, wo Greta ihre eigentliche Geschäftsidee vorstellt
+    (siehe npc.js, NPC "greta"). */
+function maybeTriggerKraemerinDialog() {
+  if (gameFlags.kraemerinDialogShown || meta.resets < 1) return;
+  gameFlags.kraemerinDialogShown = true;
+
+  const pages = [
+    '"Du bist mir schon aufgefallen", sagt die Krämerin und wischt die Theke ab. "Kommst öfter vorbei als die meisten — und gehst nie ohne was zu kaufen."',
+    'Sie deutet auf deine Hände. "Ist das nicht hart? Mit bloßen Händen auf dem Feld?" Sie zeigt zu einem Regal hinter sich. "Schau dir ruhig mein restliches Angebot an — manches davon könnte dir die Arbeit erleichtern."',
+    '"Und wenn du mal Zeit hast — komm in die Taverne. Ich hab da eine Geschäftsidee, bei der du mir vielleicht helfen könntest."'
+  ];
+
+  showPaginatedDialog('Greta, die Krämerin', splitLongDialogPages(pages), [{
+    label: 'Ich höre zu.',
+    onClick: () => closeDialog(() => {
+      quests.kraemerinBusiness.state = 'invited';
+      navUnseen.taverne = true;
+      render();
+    })
+  }]);
 }

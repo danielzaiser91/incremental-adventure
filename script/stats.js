@@ -18,6 +18,14 @@ function renderStats() {
     ? `<div class="needs-note">⚠ ${tier.label}: ${Math.round((tier.durationMult - 1) * 100)}% längere Arbeit</div>`
     : '';
 
+  // Stärke-Stufe (0–3) bestimmt sowohl die Farbabstufung (je höher, je
+  // dunkler/dringlicher) als auch die "X/3"-Kennzahl daneben — der reine
+  // Prozentwert allein sagt nicht, WIE schwer der aktuelle Debuff wiegt.
+  const hungerStep    = getHungerTierIndex(needs.hunger);
+  const tirednessStep = getTirednessTierIndex(needs.tiredness);
+  const stepBadge = (step) => step > 0
+    ? `<span class="needs-step-badge">${step}/${NEEDS_TIER_MAX}</span>` : '';
+
   el.innerHTML = `
     <div class="stat-group">
       <div class="stat-section-label">Ressourcen</div>
@@ -35,12 +43,12 @@ function renderStats() {
       <div class="stat-section-label">Bedürfnisse</div>
       <div class="stat-row">
         <span class="stat-label">Hunger</span>
-        <span class="stat-value ${needsSeverityClass(needs.hunger)}">${needs.hunger}%</span>
+        <span class="stat-value needs-tier-${hungerStep}">${needs.hunger}% ${stepBadge(hungerStep)}</span>
       </div>
       ${hungerWarning}
       <div class="stat-row">
         <span class="stat-label">Müdigkeit</span>
-        <span class="stat-value ${needsSeverityClass(needs.tiredness)}">${needs.tiredness}%</span>
+        <span class="stat-value needs-tier-${tirednessStep}">${needs.tiredness}% ${stepBadge(tirednessStep)}</span>
       </div>
       ${tirednessWarning}
     </div>

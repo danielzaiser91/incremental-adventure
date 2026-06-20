@@ -38,6 +38,27 @@ const QUEST_DEFS = [
       active:    'Der Vorarbeiter hat mich heute Abend in die Taverne eingeladen.',
       rewarded:  'Abgeschlossen — mein Lohn ist dauerhaft gestiegen.'
     }
+  },
+  {
+    id:    'kraemerinBusiness',
+    title: 'Gretas Geschäftsidee',
+    icon:  '🧺',
+    descByState: {
+      unstarted: 'Noch nicht begonnen.',
+      invited:   'Greta hat mich in die Taverne eingeladen, um über eine Geschäftsidee zu reden.',
+      active:    'Greta braucht je 5 Holz, Stein und Wildkraut vom Sammelplatz, um ihr Sortiment zu erweitern.',
+      rewarded:  'Abgeschlossen — Greta verkauft jetzt Rohstoffe und neue Ausrüstung.'
+    }
+  },
+  {
+    id:    'guildRegistration',
+    title: 'Der Weg zur Abenteurergilde',
+    icon:  '⚔',
+    descByState: {
+      unstarted: 'Noch nicht begonnen.',
+      active:    'Brakka erklärt, was es für die Registrierung als Abenteurer braucht. Mit ihm sprechen, wenn ich bereit bin.',
+      rewarded:  'Abgeschlossen — vorerst. Mehr dazu in einem zukünftigen Update.'
+    }
   }
 ];
 
@@ -53,6 +74,7 @@ const QUEST_ITEMS = [
 
 const QUEST_STATE_LABELS = {
   unstarted: 'Unbekannt',
+  invited:   'Einladung erhalten',
   active:    'In Arbeit',
   done:      'Bereit zur Abgabe',
   rewarded:  'Abgeschlossen'

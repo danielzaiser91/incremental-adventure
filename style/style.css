@@ -582,6 +582,7 @@ html, body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+  padding-bottom: 24px;
 }
 
 .skill-tree-row-root {
@@ -665,6 +666,45 @@ html, body {
 
 .skill-connector-plain .stl-stem-hidden {
   visibility: hidden;
+}
+
+/* Gespiegelte Gabel: zwei Stämme (Arbeit + Wirtschaft) laufen zu einem
+   einzigen Konvergenz-Knoten zusammen (siehe experience.js, "guildPrep"). */
+.skill-connector-merge .stl-stem-left {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  height: 11px;
+  width: 1px;
+  background: var(--border);
+}
+
+.skill-connector-merge .stl-stem-right {
+  position: absolute;
+  right: 25%;
+  top: 0;
+  height: 11px;
+  width: 1px;
+  background: var(--border);
+}
+
+.skill-connector-merge .stl-bar {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 11px;
+  height: 1px;
+  background: var(--border);
+}
+
+.skill-connector-merge .stl-stem-bottom {
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  transform: translateX(-50%);
 }
 
 /* ── JOB-KACHEL: vertikale Erfahrungsleiste + ausklappbares Info-Panel ──
@@ -937,6 +977,7 @@ html, body {
 }
 
 .quest-status-unstarted { color: var(--text-lo);  background: var(--bg); }
+.quest-status-invited   { color: var(--c-story);  background: rgba(210, 168, 255, 0.1); }
 .quest-status-active    { color: var(--c-info);   background: rgba(121, 192, 255, 0.1); }
 .quest-status-done      { color: var(--c-event);  background: rgba(255, 184, 113, 0.12); }
 .quest-status-rewarded  { color: var(--c-reward); background: rgba(107, 223, 126, 0.1); }
@@ -1106,9 +1147,21 @@ html, body {
   margin: 14px 0;
 }
 
-.needs-ok       { color: var(--text-hi); }
-.needs-warning  { color: var(--c-event); }
-.needs-critical { color: var(--c-error); }
+/* Vier Stärke-Stufen (0 = kein Debuff) für Hunger/Müdigkeit — je höher,
+   desto dunkler/dringlicher die Farbe (siehe stats.js, getHungerTierIndex()/
+   getTirednessTierIndex()). Stufe 0 bleibt bewusst neutral (Normalzustand),
+   nicht grün — "alles in Ordnung" ist kein Erfolg, der gefeiert werden muss. */
+.needs-tier-0 { color: var(--text-hi); }
+.needs-tier-1 { color: #e2a33d; }
+.needs-tier-2 { color: #c97a2e; }
+.needs-tier-3 { color: #b33a3a; }
+
+.needs-step-badge {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-left: 2px;
+}
 
 .needs-note {
   font-size: 10px;

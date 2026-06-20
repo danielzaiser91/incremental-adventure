@@ -57,19 +57,20 @@ function loadGame() {
     const save = JSON.parse(raw);
 
     storyState     = save.storyState;
-    resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, ...save.resources };
+    resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0, ...save.resources };
     meta           = { resets: 0, fasterWorkUnlocked: false, ...save.meta };
-    equipment      = { hands: null, ...save.equipment };
+    equipment      = { hands: null, guertel: null, ...save.equipment };
     experience     = { points: 0, totalEarned: 0, ...save.experience };
     skills         = {
       jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-      thrift: 0, clearMind: false, goldBreakthrough: false, ...save.skills
+      thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false, ...save.skills
     };
     needs          = { hunger: 15, tiredness: 0, ...save.needs };
     gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
     nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false, ...save.nightFlags };
     quests         = {
       nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
+      kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
       ...save.quests
     };
     npcFlags       = { miraDrinkGiven: false, ...save.npcFlags };
@@ -79,7 +80,7 @@ function loadGame() {
     toastHistory   = save.toastHistory ?? [];
     navUnseen      = {
       arbeitsplatz: true, marktplatz: true, schlafplatz: true,
-      quests: true, inventar: true, erfahrung: true, taverne: false,
+      quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
       ...save.navUnseen
     };
     dailyPurchases = save.dailyPurchases ?? {};
@@ -92,6 +93,7 @@ function loadGame() {
       firstNightDialogShown: false, hungerDialogShown: false, everOwnedItem: false,
       resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
       foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
+      kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
       ...save.gameFlags, isWorking: false
     };
     shownDialogs   = save.shownDialogs ?? [];
@@ -119,19 +121,20 @@ function resetGame() {
   if (workRafId) { cancelAnimationFrame(workRafId); workRafId = null; }
 
   storyState     = 10100;
-  resources      = { gold: 0, totalGoldEarned: 0, inventory: {} };
+  resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0 };
   meta           = { resets: 0, fasterWorkUnlocked: false };
-  equipment      = { hands: null };
+  equipment      = { hands: null, guertel: null };
   experience     = { points: 0, totalEarned: 0 };
   skills         = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-    thrift: 0, clearMind: false, goldBreakthrough: false
+    thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false
   };
   needs          = { hunger: 15, tiredness: 0 };
   gameClock      = { day: 1, hour: 7, minute: 0 };
   nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false };
   quests         = {
-    nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' }
+    nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
+    kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' }
   };
   npcFlags       = { miraDrinkGiven: false };
   workStats      = { count: 0 };
@@ -140,7 +143,7 @@ function resetGame() {
   toastHistory   = [];
   navUnseen      = {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
-    quests: true, inventar: true, erfahrung: true, taverne: false
+    quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true
   };
   dailyPurchases = {};
   overflowBag    = {};
@@ -152,6 +155,7 @@ function resetGame() {
     firstNightDialogShown: false, hungerDialogShown: false, everOwnedItem: false,
     resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
     foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
+    kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
     isWorking: false
   };
   shownDialogs   = [];

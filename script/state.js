@@ -23,9 +23,10 @@ const INVENTORY_SLOT_COUNT = 12;
 let storyState = 10100;
 
 let resources = {
-  gold:            0,
-  totalGoldEarned: 0,  // Lebenszeit-Gold, übersteht Kapitel-Resets
-  inventory:       {}  // itemId -> Anzahl, z.B. { brot: 2 }
+  gold:               0,
+  totalGoldEarned:    0,  // Lebenszeit-Gold, übersteht Kapitel-Resets
+  inventory:          {}, // itemId -> Anzahl, z.B. { brot: 2 }
+  totalResourcesSold: 0   // Lebenszeit-Zähler verkaufter Rohstoffe (Greta), siehe market.js
 };
 
 /* Fortschritt, der Kapitel-Resets überlebt (Meta-Progression) */
@@ -38,7 +39,8 @@ let meta = {
    Spiel aus (siehe getWorkReward()), unausgerüstetes liegt nur im
    Inventar (siehe EQUIPMENT_ITEMS in inventory.js). */
 let equipment = {
-  hands: null
+  hands:  null,
+  guertel: null
 };
 
 /* Erfahrung (EP) — die Prestige-Währung des manuellen Neuanfangs (siehe
@@ -59,7 +61,8 @@ let skills = {
   nightWatchLeveling: false, // Schaltet ein Erfahrungs-Level-System für die Nachtwache frei
   thrift:           0,     // Marktplatz-Preise -10% je Stufe (max. Stufe 2)
   clearMind:        false, // +1 EP bei jedem zukünftigen Neuanfang
-  goldBreakthrough: false  // Gold-Meilensteine zählen einzeln statt nur "Grenze erreicht?"
+  goldBreakthrough: false, // Gold-Meilensteine zählen einzeln statt nur "Grenze erreicht?"
+  guildPrep:        false  // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei
 };
 
 let gameFlags = {
@@ -81,6 +84,9 @@ let gameFlags = {
   foremanBonusGiven:           false, // Erst NACH dem Gespräch mit dem Vorarbeiter: +1 Gold dauerhaft
   mustEatBread:                false, // Blockiert Arbeit, bis nach dem 1. Hunger-Debuff Brot gegessen wurde
   workBlockedDialogShown:      false, // Erklär-Monolog beim 1. Mal, dass Arbeit wegen Hunger blockiert ist
+  kraemerinDialogShown:        false, // Ladentheken-Gespräch nach dem 1. Neuanfang; schaltet Lederhandschuhe frei
+  resourceGatheringUnlocked:   false, // Nach Gretas Taverne-Gespräch -> Sammelplatz-Nav erscheint
+  guildExplainedByBrakka:      false, // Unterscheidet 1. Erklärung von späteren "bist du bereit?"-Nachfragen
   isWorking:                   false
 };
 
@@ -95,7 +101,8 @@ let navUnseen = {
   quests:       true,
   inventar:     true,
   erfahrung:    true,
-  taverne:      false // wird ab Tag 2 erneut auf true gesetzt, siehe clock.js
+  taverne:      false, // wird ab Tag 2 erneut auf true gesetzt, siehe clock.js
+  rohstoffe:    true
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -138,9 +145,11 @@ let nightFlags = {
 
 /* Quest-Fortschritt. Zustände je Quest: 'unstarted' | 'active' | 'done' | 'rewarded' */
 let quests = {
-  nightWatch:   { state: 'unstarted' },
-  miraLetter:   { state: 'unstarted' },
-  foremanRaise: { state: 'unstarted' }
+  nightWatch:       { state: 'unstarted' },
+  miraLetter:       { state: 'unstarted' },
+  foremanRaise:     { state: 'unstarted' },
+  kraemerinBusiness: { state: 'unstarted' }, // 'unstarted' -> 'invited' -> 'active' -> 'rewarded'
+  guildRegistration: { state: 'unstarted' }
 };
 
 /* Einmalige NPC-Interaktionen, die sich dauerhaft auf den Dialog auswirken */

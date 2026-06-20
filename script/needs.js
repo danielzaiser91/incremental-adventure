@@ -47,6 +47,23 @@ function isStarving() {
   return getHungerTier(needs.hunger).id !== 'satt';
 }
 
+/* Reihenfolge der Tier-IDs, 0 = kein Debuff. Dient nur der Stärke-Anzeige
+   ("Müdigkeit 3/3", siehe stats.js) — die eigentlichen Spielwerte kommen
+   weiterhin aus getHungerTier()/getTirednessTier(). */
+const HUNGER_TIER_IDS     = ['satt', 'hungrig', 'sehr-hungrig', 'verhungernd'];
+const TIREDNESS_TIER_IDS  = ['frisch', 'muede', 'sehr-muede', 'erschoepft'];
+const NEEDS_TIER_MAX      = HUNGER_TIER_IDS.length - 1; // = TIREDNESS_TIER_IDS.length - 1
+
+/** Liefert 0–3: wie stark der aktuelle Hunger-Debuff ist (0 = "Satt"). */
+function getHungerTierIndex(hunger) {
+  return HUNGER_TIER_IDS.indexOf(getHungerTier(hunger).id);
+}
+
+/** Liefert 0–3: wie stark der aktuelle Müdigkeits-Debuff ist (0 = "Ausgeruht"). */
+function getTirednessTierIndex(tiredness) {
+  return TIREDNESS_TIER_IDS.indexOf(getTirednessTier(tiredness).id);
+}
+
 /**
  * Gestaffelter Müdigkeits-Debuff. Blockiert nie, verlängert aber die
  * Arbeitsdauer, je höher die Müdigkeit ist — der Ertrag pro Durchgang
@@ -67,9 +84,3 @@ function getTirednessTier(tiredness) {
   return { id: 'frisch', label: 'Ausgeruht', durationMult: 1 };
 }
 
-/** Liefert eine CSS-Klasse passend zum Schweregrad eines Bedürfniswerts. */
-function needsSeverityClass(value) {
-  if (value >= 80) return 'needs-critical';
-  if (value >= 50) return 'needs-warning';
-  return 'needs-ok';
-}
