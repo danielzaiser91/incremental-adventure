@@ -1600,3 +1600,18 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   filter: none;
   user-select: text;
 }
+
+/* Kleines Badge je Changelog-Punkt: signalisiert per gestricheltem Rahmen
+   + Hilfe-Cursor, dass sich GENAU dieser Eintrag hovern lässt, um per
+   nativem Tooltip (`title`) zu sehen, aus welcher Version er stammt. */
+.changelog-version-tag {
+  display: inline-block;
+  font-size: 8.5px;
+  color: var(--text-lo);
+  border: 1px dotted var(--border);
+  border-radius: var(--rad-sm);
+  padding: 0 5px;
+  margin-left: 7px;
+  cursor: help;
+  vertical-align: middle;
+}

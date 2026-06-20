@@ -1113,6 +1113,30 @@ direkt im scrollenden `#content-section` liegt; sticky bezieht sich
 automatisch auf diesen nächsten scrollenden Vorfahren, ganz ohne
 JS-Scroll-Listener.
 
+## Changelog-Dialog: Titel/Button dürfen den Speichervorgang nicht vorwegnehmen
+
+Der Changelog-Dialog (save.js, `showSaveChangelogDialog()`) hieß zuerst
+"Spielstand aktualisiert" — falsch, denn die Versionsnummer im
+`localStorage` wird erst beim NÄCHSTEN `saveGame()`-Aufruf gestempelt,
+nicht beim bloßen Anzeigen des Dialogs. Lehre: wenn ein Dialogtitel
+einen abgeschlossenen Zustand behauptet ("aktualisiert"), muss der Code
+das im selben Atemzug auch wirklich herstellen — sonst klafft Anzeige
+und Datenlage auseinander (z.B. bei einem Browser-Crash zwischen
+Dialog-Anzeige und nächstem Autosave). Lösung: Titel beschreibt jetzt
+nur den Versionssprung selbst ("Changelog von Version X zu Version Y"),
+und der einzige Button heißt "Spielstand aktualisieren und
+weiterspielen" UND ruft beim Klick (`closeDialog(() => saveGame())`)
+explizit `saveGame()` auf — der Speichervorgang passiert also exakt in
+dem Moment, den der Button-Text verspricht, nicht erst beim nächsten
+ohnehin fälligen Save.
+
+Jeder Changelog-Eintrag bekam außerdem ein kleines gestricheltes
+Versions-Badge (`.changelog-version-tag`, eigenes `title`-Tooltip) —
+dafür musste `allEntries` die Versionsnummer pro Eintrag mitführen
+(`SAVE_CHANGELOG[v].map(e => ({ ...e, _version: v }))`), weil
+`Object.values(SAVE_CHANGELOG).flatMap()` sie sonst verwirft, sobald
+mehrere Versionen zu einer Liste zusammengeführt werden.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

@@ -170,22 +170,27 @@ const SAVE_CHANGELOG_CATEGORY_ORDER = ['Neuerung', 'Änderung', 'Bugfix'];
 /** Baut die HTML-Zeile eines einzelnen Changelog-Punkts. Spoiler-Einträge
     (Inhalt, den der Spieler laut `entry.spoiler()` noch nicht erreicht
     hat) werden verschwommen mit einer Spoiler-Markierung dargestellt —
-    ein Klick deckt sie auf (`revealed`-Klasse, siehe style.css). */
+    ein Klick deckt sie auf (`revealed`-Klasse, siehe style.css). Jeder
+    Eintrag bekommt zusätzlich ein kleines, gestrichelt umrahmtes
+    Versions-Badge (eigenes `title`-Tooltip) als Hinweis, dass sich genau
+    dieser Punkt hovern lässt, um zu sehen, aus welcher Version er stammt —
+    unabhängig vom Spoiler-Klick, der den TEXT selbst betrifft. */
 function changelogEntryHtml(entry) {
+  const versionTag = `<span class="changelog-version-tag" title="Aus Version ${entry._version}">v${entry._version}</span>`;
   const isSpoiler = typeof entry.spoiler === 'function' && entry.spoiler();
-  if (!isSpoiler) return `<li class="changelog-entry">${entry.text}</li>`;
+  if (!isSpoiler) return `<li class="changelog-entry">${entry.text}${versionTag}</li>`;
 
   return `
     <li class="changelog-entry changelog-spoiler" onclick="this.classList.toggle('revealed')" title="Spoiler — zum Anzeigen klicken">
-      <span class="changelog-spoiler-tag">Spoiler</span><span class="changelog-spoiler-text">${entry.text}</span>
+      <span class="changelog-spoiler-tag">Spoiler</span><span class="changelog-spoiler-text">${entry.text}</span>${versionTag}
     </li>`;
 }
 
 /** Zeigt einmalig (direkt nach dem Laden) eine kurze, nach Kategorie
     gruppierte Zusammenfassung dessen, was sich seit der im Spielstand
-    vermerkten Version geändert hat — der nächste Speichervorgang
-    stempelt ohnehin wieder die aktuelle Nummer, daher taucht dieser
-    Hinweis pro altem Spielstand nur einmal auf. */
+    vermerkten Version geändert hat. Der Titel "Spielstand aktualisiert"
+    wäre an dieser Stelle falsch — aktualisiert ist er erst, NACHDEM der
+    Spieler den Button gedrückt hat (siehe unten, saveGame()-Aufruf). */
 function showSaveChangelogDialog(loadedVersion) {
   const versions = Object.keys(SAVE_CHANGELOG)
     .map(Number)
@@ -193,7 +198,7 @@ function showSaveChangelogDialog(loadedVersion) {
     .sort((a, b) => a - b);
   if (versions.length === 0) return;
 
-  const allEntries = versions.flatMap(v => SAVE_CHANGELOG[v]);
+  const allEntries = versions.flatMap(v => SAVE_CHANGELOG[v].map(e => ({ ...e, _version: v })));
   const categories = [...new Set([
     ...SAVE_CHANGELOG_CATEGORY_ORDER,
     ...allEntries.map(e => e.cat)
@@ -208,10 +213,17 @@ function showSaveChangelogDialog(loadedVersion) {
     `).join('');
 
   showDialog({
-    title: 'Spielstand aktualisiert',
-    html: `<p>Dein Spielstand stammt von Version ${loadedVersion} — aktuell ist Version ${CURRENT_SAVE_VERSION}.</p>${sectionsHtml}`,
+    title: `Changelog von Version ${loadedVersion} zu Version ${CURRENT_SAVE_VERSION}`,
+    html: sectionsHtml,
     text: allEntries.map(e => e.text), // fürs dialogHistory-Log (siehe dialog.js)
-    buttons: [{ label: 'Weiterspielen', onClick: () => closeDialog() }],
+    buttons: [{
+      label: 'Spielstand aktualisieren und weiterspielen',
+      // Schreibt JETZT explizit die aktuelle Versionsnummer fest, statt
+      // erst beim nächsten ohnehin fälligen Speichervorgang — der
+      // Dialog-Titel verspricht "aktualisieren", also muss der Klick das
+      // auch sofort einlösen.
+      onClick: () => closeDialog(() => saveGame())
+    }],
     boxClass: 'dialog-box-large'
   });
 }
