@@ -72,7 +72,6 @@ const NPCS = {
     name: 'Mira', icon: '💃',
     tagline: 'Charmant und gewitzt — weiß immer mehr, als sie zugibt.',
     locked: () => !gameFlags.firstNightDialogShown,
-    lockReason: 'Sie taucht hier wohl erst nach Einbruch der Dunkelheit auf.',
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
     start: () => {
@@ -262,7 +261,6 @@ const NPCS = {
     questId: 'foremanRaise',
     badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
     locked: () => quests.foremanRaise.state === 'unstarted',
-    lockReason: 'Ich habe gerade nichts mit ihm zu klären.',
     start: () => (quests.foremanRaise.state === 'active' ? 'praise' : 'idle'),
     nodes: {
       praise: {
@@ -293,7 +291,6 @@ const NPCS = {
     name: 'Ein zwielichtiger Mann', icon: '🥷',
     tagline: 'Sitzt allein am Rand des Schankraums, sein Blick wandert ständig.',
     locked: () => storyState < 10102,
-    lockReason: 'Er scheint mich gar nicht wahrzunehmen.',
     start: 'greet',
     nodes: {
       greet: {
@@ -361,18 +358,17 @@ function openNpcDialog(npcId, nodeId) {
 }
 
 /* ── Taverne: Ortsansicht mit anklickbaren NPCs ──────────────── */
+/* Gäste, deren Bedingung (noch) nicht erfüllt ist, erscheinen gar nicht
+   erst — kein "Nicht ansprechbar"-Platzhalter mehr (Progressive
+   Disclosure, siehe philosophie.md Punkt 6). Der Moment, in dem ein Gast
+   neu hinzukommt, wird stattdessen über die Nav-Hervorhebung der Taverne
+   selbst signalisiert (siehe `navUnseen.taverne`, gesetzt an den
+   jeweiligen Freischalt-Stellen in actions.js). */
 function renderTaverne(el) {
-  const cards = Object.entries(NPCS).map(([id, npc]) => {
-    const locked = typeof npc.locked === 'function' ? npc.locked() : !!npc.locked;
-    if (locked) {
-      return `
-        <div class="action-card action-card-locked">
-          <div class="action-card-icon">${npc.icon}</div>
-          <div class="action-card-name">${npc.name}</div>
-          <p class="action-card-desc">${npc.lockReason || npc.tagline}</p>
-          <button class="action-btn btn-disabled" disabled>Nicht ansprechbar</button>
-        </div>`;
-    }
+  const visibleNpcs = Object.entries(NPCS).filter(([, npc]) =>
+    !(typeof npc.locked === 'function' ? npc.locked() : !!npc.locked));
+
+  const cards = visibleNpcs.map(([id, npc]) => {
     const hasOfferableQuest = npc.questId && quests[npc.questId].state === 'unstarted' &&
       (typeof npc.questAvailable !== 'function' || npc.questAvailable());
     const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId].state === 'active';

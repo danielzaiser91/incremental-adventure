@@ -213,6 +213,7 @@ function toggleJobInfoPanel() {
 function maybeTriggerFirstNightDialog(onDone = () => {}) {
   if (gameFlags.firstNightDialogShown || !isNight()) { onDone(); return; }
   gameFlags.firstNightDialogShown = true;
+  navUnseen.taverne = true; // Mira ist ab jetzt in der Taverne ansprechbar
 
   showMonologue('Die Nacht bricht an', [
     'Die Sonne ist verschwunden. Es wird kalt, und meine Augen werden schwer.',
@@ -260,6 +261,7 @@ function maybeTriggerForemanBonusDialog(onDone = () => {}) {
   if (gameFlags.foremanInviteShown || workStats.count < FOREMAN_BONUS_THRESHOLD) { onDone(); return; }
   gameFlags.foremanInviteShown = true;
   quests.foremanRaise.state    = 'active';
+  navUnseen.taverne = true; // Der Vorarbeiter wartet jetzt in der Taverne
 
   showMonologue('Ein Wort des Vorarbeiters', [
     'Nach Feierabend hält mich eine schwielige Hand am Ärmel fest — der Vorarbeiter.',
@@ -301,6 +303,7 @@ function checkMilestones() {
   ) {
     gameFlags.milestoneStrangerTriggered = true;
     storyState = 10102;
+    navUnseen.taverne = true; // Der zwielichtige Mann sitzt jetzt in der Taverne
     render();
     maybeShowStoryDialog('1.2');
   }

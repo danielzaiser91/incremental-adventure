@@ -788,6 +788,32 @@ verschwinden lässt, fühlt sich nach einem Bug an, selbst wenn es
 "technisch korrekt" ist — ein Überlauf-Fach ist fast immer die bessere
 UX als ein blockierter Erwerb.
 
+## NPCs mit Bedingung: ausblenden statt "Nicht ansprechbar" zeigen
+
+Mira (vor der ersten Nacht), der zwielichtige Mann (vor `storyState
+10102`) und der Vorarbeiter (vor `quests.foremanRaise.state === 'active'`)
+zeigten anfangs eine ausgegraute "Nicht ansprechbar"-Karte, solange ihre
+Bedingung nicht erfüllt war. Auf User-Wunsch konsequent zu Progressive
+Disclosure (Punkt 6) umgestellt: `renderTaverne()` filtert NPCs mit
+`locked() === true` jetzt komplett aus der Liste heraus, statt sie
+gesperrt anzuzeigen — ein Gast existiert für den Spieler erst, sobald er
+ihn tatsächlich treffen kann, kein Vorab-Teaser über sein Dasein.
+
+Weil ein neuer Gast dadurch ohne jede Karte einfach "da" ist, sobald man
+die Taverne erneut öffnet, braucht der Spieler ein anderes Signal dafür,
+dass sich dort etwas geändert hat: an JEDER Stelle, die eine
+NPC-Bedingung umschaltet (z.B. `gameFlags.firstNightDialogShown = true`
+in `maybeTriggerFirstNightDialog()`, `quests.foremanRaise.state =
+'active'` in `maybeTriggerForemanBonusDialog()`, `storyState = 10102` in
+`checkMilestones()`), wird zusätzlich `navUnseen.taverne = true` gesetzt
+— dieselbe Hervorhebungs-Mechanik wie bei brandneuen Nav-Einträgen (siehe
+Punkt "Sichtbarkeits-Hervorhebung für neue Nav-Elemente" oben), nur ohne
+zwingenden Intro-Monolog. Lektion: ausblenden statt sperren UND erneut
+hervorheben sind zwei Seiten derselben Medaille — wer NPCs/Inhalte
+verschwinden lässt, bis sie relevant werden, muss ihr Wieder-Erscheinen
+über einen anderen Kanal ankündigen, sonst übersieht der Spieler sie
+einfach.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-
