@@ -998,6 +998,25 @@ der Zwischenablage). Die Clipboard-API erfordert einen sicheren Kontext
 (HTTPS oder localhost) — schlägt `navigator.clipboard.*` fehl, einfach
 einen Toast zeigen, kein harter Fehler.
 
+## Changelog-Dialog: Versionsnummer als reiner Vergleichswert, nicht als Migrationslogik
+
+`CURRENT_SAVE_VERSION` + `SAVE_CHANGELOG` (`state.js`) beantworten NUR
+die Frage "was sollte der Spieler über die Zeit zwischen seinem
+Spielstand und jetzt wissen" — sie haben nichts mit der Lade-Validierung
+zu tun (die bleibt vollständig Form-basiert, siehe den Eintrag weiter
+oben zu `applySaveData()`). `showSaveChangelogDialog()` sammelt einfach
+alle `SAVE_CHANGELOG`-Einträge mit `version > geladene Version`,
+flacht sie zu einer Liste ab und zeigt sie EINMALIG nach erfolgreichem
+Laden — der nächste Speichervorgang stempelt automatisch die aktuelle
+Nummer, daher kein eigener "schon gesehen"-Flag nötig. Wichtige Regel
+für die Zukunft: bei jedem inhaltlich spürbaren Update `CURRENT_SAVE_
+VERSION` um 1 erhöhen UND einen neuen `SAVE_CHANGELOG`-Eintrag mit
+2–4 sehr kurzen Stichpunkten ergänzen — sonst sammelt sich unter einer
+Versionsnummer wieder ein ganzer Rattenschwanz an Änderungen, wie es
+rückwirkend für Version 4 nötig war (mehrere Feature-Runden, die vor
+Einführung dieses Systems alle denselben hartcodierten `version: 3`
+geschrieben haben).
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

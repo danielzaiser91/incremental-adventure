@@ -1412,8 +1412,13 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   line-height: 1.75;
   /* Jede Seite zeigt höchstens einen Absatz bis DIALOG_MAX_PAGE_LENGTH
      Zeichen (siehe dialog.js) — eine feste Mindesthöhe reicht deshalb,
-     um den Button-Bereich darunter nicht mehr spürbar "hüpfen" zu lassen. */
+     um den Button-Bereich darunter nicht mehr spürbar "hüpfen" zu lassen.
+     Ausnahme: Mehrpunkt-Listen wie der Changelog-Dialog (save.js) sind
+     NICHT paginiert und können länger werden — max-height + Scroll
+     verhindert, dass die Box den Viewport sprengt. */
   min-height: 64px;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .dialog-text p { margin-bottom: 10px; }

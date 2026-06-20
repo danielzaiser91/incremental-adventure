@@ -8,11 +8,37 @@
 const SAVE_KEY = 'chronicles_v1';
 const WORK_DURATION_BASE_MS = 2000;
 
-/* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient nur der
-   Nachvollziehbarkeit im gespeicherten JSON — die eigentliche
-   Zukunftssicherheit kommt aus den Default-Merges in loadGame() und der
-   Formvalidierung in applySaveData(), nicht aus Versions-Vergleichen. */
-const CURRENT_SAVE_VERSION = 4;
+/* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient NICHT der
+   Zukunftssicherheit selbst (die kommt aus den Default-Merges in
+   loadGame()/applySaveData()), sondern als Vergleichswert für
+   SAVE_CHANGELOG: lädt ein Spielstand mit einer älteren Nummer, zeigt
+   showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
+   seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
+   erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
+const CURRENT_SAVE_VERSION = 5;
+
+/* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
+   Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
+   Versionsnummer, AB der diese Punkte gelten (siehe
+   showSaveChangelogDialog() in save.js). Ältere Inhalts-Updates, die vor
+   Einführung dieses Systems ohne Versionssprung auskamen, sind gesammelt
+   unter der ersten Nummer hinterlegt, bei der sauber mitgezählt wurde. */
+const SAVE_CHANGELOG = {
+  4: [
+    'Neue Charaktere: Greta (Krämerin) mit eigener Sammel-Questkette, Kommandant Roswald.',
+    'Neuer Sammelplatz: Holz, Stein und Wildkraut sammeln (Werkzeug beim Krämer kaufen).',
+    'Nachtwache hat jetzt ein eigenes Level-System und einen Weg zur Stadtwache.',
+    'Erfahrungs-Skillbaum auf drei Äste erweitert, mit Tab-Ansicht für Skillbaum/Lebenserfahrungen.',
+    'Feldarbeits-Boni neu kalibriert (Hunger/Müdigkeit ausgewogener gestaffelt).',
+    'Automatisches Speichern/Laden sowie Export/Import über die Zwischenablage.',
+    'Getrennter Verlauf für Meldungen und Dialoge in den Einstellungen.'
+  ],
+  5: [
+    'EP-Skills zeigen jetzt einen Hinweis, wenn sie weitere Fähigkeiten freischalten.',
+    'Kleinere Balance- und Dialog-Verbesserungen (u.a. günstigere Sparsamkeit, mehr NPC-Tiefe).',
+    'Dieser Update-Hinweis beim Laden eines älteren Spielstands ist selbst neu.'
+  ]
+};
 
 /* Gemeinsame Gold-Schwelle für den Raub UND das Minimum, ab dem ein
    Neuanfang überhaupt Erfahrung bringt (siehe actions.js/experience.js).

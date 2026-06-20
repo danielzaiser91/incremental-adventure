@@ -142,16 +142,41 @@ function loadGame() {
 
   try {
     const save = JSON.parse(raw);
+    const loadedVersion = typeof save.version === 'number' ? save.version : 0;
     applySaveData(save);
 
     const dateStr = new Date(save.savedAt).toLocaleString('de-DE');
     showToast(`📂 Spielstand geladen (gespeichert: ${dateStr})`, 'info');
     render();
 
+    if (loadedVersion < CURRENT_SAVE_VERSION) showSaveChangelogDialog(loadedVersion);
+
   } catch (e) {
     showIncompatibleSaveDialog();
     render(); // Hintergrund-UI trotzdem mit dem aktuellen (Default-)Zustand zeichnen
   }
+}
+
+/** Zeigt einmalig (direkt nach dem Laden) eine kurze Zusammenfassung
+    dessen, was sich seit der im Spielstand vermerkten Version geändert
+    hat — der nächste Speichervorgang stempelt ohnehin wieder die
+    aktuelle Nummer, daher taucht dieser Hinweis pro altem Spielstand nur
+    einmal auf. */
+function showSaveChangelogDialog(loadedVersion) {
+  const versions = Object.keys(SAVE_CHANGELOG)
+    .map(Number)
+    .filter(v => v > loadedVersion && v <= CURRENT_SAVE_VERSION)
+    .sort((a, b) => a - b);
+  if (versions.length === 0) return;
+
+  const bullets = versions.flatMap(v => SAVE_CHANGELOG[v]);
+  const intro = `Dein Spielstand stammt von Version ${loadedVersion} — aktuell ist Version ${CURRENT_SAVE_VERSION}. Das hat sich seitdem getan:`;
+
+  showDialog({
+    title: 'Spielstand aktualisiert',
+    text: [intro, ...bullets.map(b => `• ${b}`)],
+    buttons: [{ label: 'Weiterspielen', onClick: () => closeDialog() }]
+  });
 }
 
 /** Zeigt einen Dialog, dass der gespeicherte Spielstand nicht geladen
