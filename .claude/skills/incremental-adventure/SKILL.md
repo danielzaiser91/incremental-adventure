@@ -935,6 +935,45 @@ UI-Struktur "geht von 2 auf N" droht, lohnt sich die generische Variante
 sofort — der Umbau auf 3 Spalten hätte sonst dieselbe Arbeit nochmal für
 4 Spalten erfordert.
 
+## Speicherstand-Zukunftssicherheit: Validierung + Defaults, kein Versions-Branching
+
+`applySaveData()` (`save.js`) wirft NUR, wenn die Grundform unbrauchbar
+ist (kein Objekt, `storyState`/`resources` fehlen) — alles andere wird
+mit `{ ...defaults, ...save.feld }` aufgefüllt. Das bedeutet: ein alter
+Spielstand, dem ein neues Feld fehlt, lädt einfach mit dem Default für
+dieses Feld, ohne dass man jemals `if (save.version < X)`-Migrations-
+code schreiben muss. Schlägt das Laden trotzdem fehl (korruptes JSON,
+fundamental andere Form), zeigt `showIncompatibleSaveDialog()` einen
+Dialog mit "Neu anfangen" statt eines stillen Fehlers oder eines
+halb kaputten Zustands. `performHardReset()` ist bewusst aus
+`resetGame()` herausgezogen (ohne das native `confirm()`), damit der
+Inkompatibilitäts-Dialog (der bereits eine eigene Bestätigung ist) nicht
+noch ein zweites, hässliches Browser-Popup obendrauf zeigt.
+
+## Auto-Load braucht die Einstellung VOR dem eigentlichen Laden
+
+`shouldAutoLoad()` liest `settings.autoLoad` direkt aus dem rohen JSON
+in `localStorage`, OHNE den Spielstand schon über `applySaveData()`
+anzuwenden — sonst bräuchte man ein Henne-Ei-Problem ("um zu wissen, ob
+ich laden soll, muss ich erst laden"). Bei kaputtem JSON liefert die
+Funktion bewusst `true` zurück (nicht `false`): der Spieler soll den
+Inkompatibilitäts-Dialog sehen, statt dass das Problem einfach
+verschwiegen wird, weil das Parsen schon beim Sichtbarkeits-Check
+fehlschlug.
+
+## Zwei getrennte Verläufe, ein gemeinsamer Filter
+
+Toast- und Dialog-Verlauf (`toastHistory`/`dialogHistory`, beide max.
+100 Einträge) sind bewusst zwei separate Arrays mit eigenem Logging-Ort
+(`toast.js` bzw. `dialog.js`, jeweils an der einen Stelle, durch die
+JEDE Toast-/Dialog-Anzeige läuft) — eine gemeinsame Liste hätte bedeutet,
+dass ein Schwall Toasts die letzten paar Dialogzeilen aus dem
+Sichtfenster drängt. Die UI (`content.js`, `renderSettings()`) zeigt
+beide trotzdem in EINEM "Verlauf"-Bereich, umschaltbar per Tab-Leiste
+(`historyFilter`, dieselbe `.tab-bar`-Komponente wie im Erfahrungs-Tab) —
+getrennte Datenhaltung und gemeinsame Präsentation sind hier zwei
+unabhängige Entscheidungen.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

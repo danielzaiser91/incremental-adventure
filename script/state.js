@@ -8,6 +8,12 @@
 const SAVE_KEY = 'chronicles_v1';
 const WORK_DURATION_BASE_MS = 2000;
 
+/* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient nur der
+   Nachvollziehbarkeit im gespeicherten JSON — die eigentliche
+   Zukunftssicherheit kommt aus den Default-Merges in loadGame() und der
+   Formvalidierung in applySaveData(), nicht aus Versions-Vergleichen. */
+const CURRENT_SAVE_VERSION = 4;
+
 /* Gemeinsame Gold-Schwelle für den Raub UND das Minimum, ab dem ein
    Neuanfang überhaupt Erfahrung bringt (siehe actions.js/experience.js).
    Eine Konstante statt zwei, damit beide immer zusammenpassen. */
@@ -176,11 +182,22 @@ let settings = {
   // startManualReset()). Aktuell gibt es nur die Kapitel-1-Ebene
   // ("erfahrung"), das Objekt ist aber bewusst erweiterbar für spätere
   // Akt-Übergänge.
-  warnBeforeReset: { erfahrung: true }
+  warnBeforeReset: { erfahrung: true },
+  // Periodisches automatisches Speichern (siehe save.js, setupAutoSave()).
+  autoSave: { enabled: true, intervalMinutes: 5 },
+  // Lädt beim Start automatisch den letzten Spielstand, falls vorhanden
+  // (siehe save.js, shouldAutoLoad(), aufgerufen aus main.js init()).
+  autoLoad: true
 };
 
-/* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 10) */
+/* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 100). */
 let toastHistory = [];
+
+/* Verlauf der letzten Dialogseiten (neueste zuerst, max. 100) — bewusst
+   GETRENNT von toastHistory (siehe Einstellungen, Verlaufs-Filter):
+   Toasts sind kurze Reaktionen, Dialoge sind erzählte Szenen, beide
+   gemeinsam in einer Liste wären unübersichtlich. */
+let dialogHistory = [];
 
 /* Welche einmaligen Story-Dialoge wurden bereits gezeigt (IDs aus story.js) */
 let shownDialogs = [];
@@ -192,6 +209,7 @@ let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' |
 let marketVendor   = null;         // null=Markt-Übersicht | 'kraemer' | 'schmiede'
 let jobInfoPanelOpen = false;      // UI-Klapp-Zustand des Level-Info-Panels auf der Job-Kachel
 let erfahrungTab     = 'skills';   // 'skills' | 'lessons' — siehe experience.js, renderErfahrung()
+let historyFilter    = 'toasts';   // 'toasts' | 'dialoge' — siehe content.js, renderSettings()
 
 /* ── Arbeits-Animation State ──────────────────────────────── */
 let workProgress  = 0;

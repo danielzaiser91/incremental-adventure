@@ -10,6 +10,7 @@
    splitLongDialogPages()) — das hält die Dialogbox in einer vorhersehbaren
    Höhenspanne, statt bei jedem Knoten/jeder Seite spürbar zu "hüpfen". */
 const DIALOG_MAX_PAGE_LENGTH = 200;
+const DIALOG_HISTORY_LIMIT   = 100;
 
 /** Teilt zu lange Textseiten an Satzgrenzen in mehrere kürzere Seiten auf.
     Kurze Seiten bleiben unverändert. */
@@ -80,6 +81,12 @@ function showDialog({ title, text, buttons }) {
 
   const paragraphs = Array.isArray(text) ? text : [text];
   textEl.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+
+  // Jede gezeigte Dialogseite ist ein eigener Verlaufseintrag (siehe
+  // dialogHistory, state.js) — getrennt von toastHistory, damit beide im
+  // Einstellungs-Verlauf per Filter sauber unterscheidbar bleiben.
+  dialogHistory.unshift({ title, text: paragraphs, at: Date.now() });
+  if (dialogHistory.length > DIALOG_HISTORY_LIMIT) dialogHistory.length = DIALOG_HISTORY_LIMIT;
 
   actionsEl.innerHTML = '';
   (buttons && buttons.length ? buttons : [{ label: 'Weiter', onClick: closeDialog }])

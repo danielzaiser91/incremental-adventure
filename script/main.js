@@ -17,7 +17,9 @@ function render() {
 }
 
 function init() {
-  render();
+  if (shouldAutoLoad()) loadGame();
+  else render();
+  setupAutoSave();
 }
 
 document.addEventListener('DOMContentLoaded', init);

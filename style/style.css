@@ -1005,16 +1005,24 @@ html, body {
   color:        var(--accent);
 }
 
-.toast-history {
-  margin-top: 8px;
+/* Chat-artiger Verlauf für Meldungen UND Dialoge (siehe content.js,
+   renderSettings()) — per Filter-Tabs (.tab-bar) sauber getrennt, damit
+   ein Schwall Toasts nie die letzten Dialogzeilen aus dem Sichtfeld
+   drängt (beide haben ihre eigene Liste, ihr eigenes Scroll-Fenster). */
+.history-panel {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  max-height: 160px;
+  max-height: 260px;
   overflow-y: auto;
+  max-width: 420px;
 }
 
-.toast-history-item {
+.history-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   font-size: 11px;
   padding: 6px 8px;
   background: var(--bg);
@@ -1023,11 +1031,28 @@ html, body {
   color: var(--text-mid);
 }
 
-.toast-history-reward   { border-left-color: var(--c-reward);   }
-.toast-history-purchase { border-left-color: var(--c-purchase); }
-.toast-history-error    { border-left-color: var(--c-error);    }
-.toast-history-info     { border-left-color: var(--c-info);     }
-.toast-history-event    { border-left-color: var(--c-event);    }
+.history-entry-time {
+  font-size: 9px;
+  color: var(--text-lo);
+}
+
+.history-entry-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.history-entry-text {
+  display: block;
+  font-style: italic;
+}
+
+.history-entry-reward   { border-left-color: var(--c-reward);   }
+.history-entry-purchase { border-left-color: var(--c-purchase); }
+.history-entry-error    { border-left-color: var(--c-error);    }
+.history-entry-info     { border-left-color: var(--c-info);     }
+.history-entry-event    { border-left-color: var(--c-event);    }
+.history-entry-dialog   { border-left-color: var(--c-story);    }
 
 .btn-load {
   border-color: #3b6eaf;

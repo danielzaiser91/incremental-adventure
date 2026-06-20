@@ -295,7 +295,7 @@ function renderArbeitsplatz(el) {
             Belohnung: <span class="gold-amount">+${reward} Gold</span> pro Durchgang
           </div>
           <div class="action-card-effect">
-            ⏱ Dauer: ${durationS}s · 🕐 Spielzeit: +${WORK_CLOCK_MINUTES} Min · 😴 Müdigkeit: +${tirednessGain}% · 🍞 Hunger: +${hungerGain}%
+            ⏱ Dauer: ${durationS}s · 🕐 Arbeitszeit: +${WORK_CLOCK_MINUTES} Min · 😴 Müdigkeit: +${tirednessGain}% · 🍞 Hunger: +${hungerGain}%
           </div>
         </div>
         ${jobInfoPanel}
@@ -548,6 +548,24 @@ function renderSettings(el) {
             📂 Spielstand laden${hasSave ? '' : ' — (kein Spielstand)'}
           </button>
         </div>
+        <div class="settings-buttons" style="margin-top: 10px;">
+          <button class="action-btn settings-btn" onclick="setAutoSaveEnabled(${!settings.autoSave.enabled})">
+            ${settings.autoSave.enabled ? '☑' : '☐'} Automatisch speichern
+          </button>
+          ${settings.autoSave.enabled ? `
+            <div class="settings-buttons-row" style="margin-top: 4px;">
+              ${[1, 2, 5, 10].map(min => `
+                <button
+                  class="action-btn settings-btn-option ${settings.autoSave.intervalMinutes === min ? 'active' : ''}"
+                  onclick="setAutoSaveInterval(${min})"
+                >${min} Min</button>
+              `).join('')}
+            </div>
+          ` : ''}
+          <button class="action-btn settings-btn" onclick="setAutoLoad(${!settings.autoLoad})">
+            ${settings.autoLoad ? '☑' : '☐'} Beim Start automatisch laden
+          </button>
+        </div>
       </div>
 
       <div class="settings-group">
@@ -560,13 +578,6 @@ function renderSettings(el) {
             >${ms / 1000}s</button>
           `).join('')}
         </div>
-        <div class="settings-section-title" style="margin-top: 14px;">Letzte Meldungen</div>
-        <div class="toast-history">
-          ${toastHistory.length
-            ? toastHistory.map(t => `<div class="toast-history-item toast-history-${t.type}">${t.text}</div>`).join('')
-            : '<p class="chronik-empty" style="margin-top: 0;">Noch keine Meldungen.</p>'
-          }
-        </div>
       </div>
 
       <div class="settings-group">
@@ -577,6 +588,33 @@ function renderSettings(el) {
               ${settings.warnBeforeReset.erfahrung ? '☑' : '☐'} Vor Neuanfang (Erfahrung) warnen
             </button>
           ` : `<p class="chronik-empty" style="margin: 0;">Noch keine Reset-Ebene freigeschaltet.</p>`}
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <div class="settings-section-title">Verlauf</div>
+        <div class="tab-bar" style="max-width: 420px;">
+          <button class="tab-btn ${historyFilter === 'toasts' ? 'active' : ''}" onclick="setHistoryFilter('toasts')">Meldungen (${toastHistory.length})</button>
+          <button class="tab-btn ${historyFilter === 'dialoge' ? 'active' : ''}" onclick="setHistoryFilter('dialoge')">Dialoge (${dialogHistory.length})</button>
+        </div>
+        <div class="history-panel">
+          ${historyFilter === 'toasts'
+            ? (toastHistory.length
+                ? toastHistory.map(t => `
+                    <div class="history-entry history-entry-${t.type}">
+                      <span class="history-entry-time">${new Date(t.at).toLocaleTimeString('de-DE')}</span>
+                      <span class="history-entry-text">${t.text}</span>
+                    </div>`).join('')
+                : '<p class="chronik-empty" style="margin-top: 0;">Noch keine Meldungen.</p>')
+            : (dialogHistory.length
+                ? dialogHistory.map(d => `
+                    <div class="history-entry history-entry-dialog">
+                      <span class="history-entry-time">${new Date(d.at).toLocaleTimeString('de-DE')}</span>
+                      <span class="history-entry-title">${d.title}</span>
+                      ${d.text.map(p => `<span class="history-entry-text">${p}</span>`).join('')}
+                    </div>`).join('')
+                : '<p class="chronik-empty" style="margin-top: 0;">Noch keine Dialoge.</p>')
+          }
         </div>
       </div>
 
@@ -615,7 +653,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Version</span>
-            <span class="info-value">0.8.0-alpha</span>
+            <span class="info-value">0.9.0-alpha</span>
           </div>
         </div>
       </div>
@@ -631,4 +669,10 @@ function renderSettings(el) {
 
     </div>
   `;
+}
+
+/** Wechselt zwischen Meldungs- und Dialog-Verlauf in den Einstellungen. */
+function setHistoryFilter(filter) {
+  historyFilter = filter;
+  render();
 }

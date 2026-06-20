@@ -7,7 +7,7 @@
 'use strict';
 
 const TOAST_ANIM_MS       = 280;
-const TOAST_HISTORY_LIMIT = 10;
+const TOAST_HISTORY_LIMIT = 100;
 
 /**
  * Zeigt eine kurze Reaktions-Benachrichtigung an.
