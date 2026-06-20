@@ -166,10 +166,11 @@ const NPCS = {
     tagline: 'Trockener Humor, ein Herz aus Eisen — und Eisen für alle anderen.',
     questId: 'nightWatch', // steuert das Ausrufezeichen-Badge, solange die Quest unstarted ist
     questAvailable: () => gameClock.day >= 2,
-    // Zweites, unabhängiges Signal fürs Ausrufezeichen: die Gilden-Quest
-    // (siehe experience.js, Skill "guildPrep") hat ihren eigenen
-    // Frage-Status, der nichts mit der Nachtwache zu tun hat.
-    hasHint: () => quests.guildRegistration.state === 'active',
+    // Zweites/drittes, unabhängiges Signal fürs Ausrufezeichen: die
+    // Gilden-Quest (siehe experience.js, Skill "guildPrep") UND "Nachtwache
+    // bereits gehalten, muss noch berichtet werden" — beide unabhängig von
+    // der questId-basierten "neue Aufgabe verfügbar"-Logik oben.
+    hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done',
     start: () => {
       if (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
       if (quests.guildRegistration.state === 'active') {
@@ -232,6 +233,7 @@ const NPCS = {
               resources.gold            += NIGHTWATCH_QUEST_REWARD;
               resources.totalGoldEarned += NIGHTWATCH_QUEST_REWARD;
               quests.nightWatch.state = 'rewarded';
+              checkMilestones(); // Gold-Gewinne außerhalb von completeWork()/nightWatch() müssen denselben Check auslösen
               showToast(`Aufgabe abgeschlossen: Nachtwache (+${NIGHTWATCH_QUEST_REWARD} Gold). Ab jetzt jede Nacht möglich.`, 'reward');
             }
           }
@@ -299,6 +301,7 @@ const NPCS = {
               quests.miraLetter.state = 'rewarded';
               resources.gold            += 6;
               resources.totalGoldEarned += 6;
+              checkMilestones();
               showToast('Brief überbracht (+6 Gold).', 'reward');
             }
           }
@@ -331,6 +334,7 @@ const NPCS = {
             resources.gold            += FOREMAN_BONUS_GOLD;
             resources.totalGoldEarned += FOREMAN_BONUS_GOLD;
             quests.foremanRaise.state = 'rewarded';
+            checkMilestones();
             showToast(`+${FOREMAN_BONUS_GOLD} Gold und dauerhaft +1 Gold pro Feldarbeit.`, 'reward');
           }
         }]
@@ -401,6 +405,38 @@ const NPCS = {
       idle: {
         text: ['Greta nickt dir zu. "Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab."'],
         options: [{ label: 'Mach ich.', next: null }]
+      }
+    }
+  },
+
+  kommandant: {
+    name: 'Kommandant Roswald', icon: '🎖',
+    tagline: 'Stramm, diszipliniert — und nicht großzügig mit Lob, wenn es nicht verdient ist.',
+    questId: 'commanderTraining',
+    badgeOnActive: true,
+    locked: () => quests.commanderTraining.state === 'unstarted',
+    start: () => (quests.commanderTraining.state === 'active' ? 'offer' : 'idle'),
+    nodes: {
+      offer: {
+        text: [
+          'Roswald nickt mir knapp zu, ohne aufzustehen. "Drei Nächte Wache, ohne dass mir jemand was Schlechtes über dich erzählt hat. Das ist mehr, als ich von den meisten Neuen sage."',
+          '"Ich kann dir zeigen, wie man es richtig macht — wo man hinschaut, wann man die Runde wechselt. Das spart dir Kraft UND bringt dir mehr Lohn. Interesse?"'
+        ],
+        options: [
+          {
+            label: 'Zeig es mir.',
+            next: null,
+            action: () => {
+              quests.commanderTraining.state = 'rewarded';
+              showToast('Roswald hat dir die Grundlagen gezeigt. Im Erfahrungsbaum kannst du jetzt für die Nachtwache aufleveln.', 'event');
+            }
+          },
+          { label: 'Vielleicht ein anderes Mal.', next: null }
+        ]
+      },
+      idle: {
+        text: ['Roswald hebt zwei Finger zum Gruß, mehr nicht. Männer wie er verschwenden keine Worte.'],
+        options: [{ label: 'Verstanden.', next: null }]
       }
     }
   },

@@ -63,7 +63,8 @@ function loadGame() {
     experience     = { points: 0, totalEarned: 0, ...save.experience };
     skills         = {
       jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-      thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false, ...save.skills
+      thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
+      inventoryKeeper: false, sleepLikeARock: false, ...save.skills
     };
     needs          = { hunger: 15, tiredness: 0, ...save.needs };
     gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
@@ -71,12 +72,14 @@ function loadGame() {
     quests         = {
       nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
       kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
+      commanderTraining: { state: 'unstarted' },
       ...save.quests
     };
     npcFlags       = { miraDrinkGiven: false, ...save.npcFlags };
     workStats      = { count: 0, ...save.workStats };
     nightWatchStats = { count: 0, ...save.nightWatchStats };
-    settings       = { toastDurationMs: 2600, ...save.settings };
+    settings       = { toastDurationMs: 2600, warnBeforeReset: { erfahrung: true }, ...save.settings,
+      warnBeforeReset: { erfahrung: true, ...save.settings?.warnBeforeReset } };
     toastHistory   = save.toastHistory ?? [];
     navUnseen      = {
       arbeitsplatz: true, marktplatz: true, schlafplatz: true,
@@ -94,6 +97,7 @@ function loadGame() {
       resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
       foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
       kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
+      commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
       ...save.gameFlags, isWorking: false
     };
     shownDialogs   = save.shownDialogs ?? [];
@@ -127,19 +131,21 @@ function resetGame() {
   experience     = { points: 0, totalEarned: 0 };
   skills         = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-    thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false
+    thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
+    inventoryKeeper: false, sleepLikeARock: false
   };
   needs          = { hunger: 15, tiredness: 0 };
   gameClock      = { day: 1, hour: 7, minute: 0 };
   nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false };
   quests         = {
     nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
-    kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' }
+    kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
+    commanderTraining: { state: 'unstarted' }
   };
   npcFlags       = { miraDrinkGiven: false };
   workStats      = { count: 0 };
   nightWatchStats = { count: 0 };
-  settings       = { toastDurationMs: 2600 };
+  settings       = { toastDurationMs: 2600, warnBeforeReset: { erfahrung: true } };
   toastHistory   = [];
   navUnseen      = {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
@@ -156,6 +162,7 @@ function resetGame() {
     resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
     foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
     kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
+    commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
     isWorking: false
   };
   shownDialogs   = [];

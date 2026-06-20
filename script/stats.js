@@ -43,12 +43,12 @@ function renderStats() {
       <div class="stat-section-label">Bedürfnisse</div>
       <div class="stat-row">
         <span class="stat-label">Hunger</span>
-        <span class="stat-value needs-tier-${hungerStep}">${needs.hunger}% ${stepBadge(hungerStep)}</span>
+        <span class="stat-value needs-tier-${hungerStep}">${Math.round(needs.hunger)}% ${stepBadge(hungerStep)}</span>
       </div>
       ${hungerWarning}
       <div class="stat-row">
         <span class="stat-label">Müdigkeit</span>
-        <span class="stat-value needs-tier-${tirednessStep}">${needs.tiredness}% ${stepBadge(tirednessStep)}</span>
+        <span class="stat-value needs-tier-${tirednessStep}">${Math.round(needs.tiredness)}% ${stepBadge(tirednessStep)}</span>
       </div>
       ${tirednessWarning}
     </div>

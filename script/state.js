@@ -62,7 +62,9 @@ let skills = {
   thrift:           0,     // Marktplatz-Preise -10% je Stufe (max. Stufe 2)
   clearMind:        false, // +1 EP bei jedem zukünftigen Neuanfang
   goldBreakthrough: false, // Gold-Meilensteine zählen einzeln statt nur "Grenze erreicht?"
-  guildPrep:        false  // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei
+  guildPrep:        false, // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei
+  inventoryKeeper:  false, // Inventar/Ausrüstung übersteht künftig einen Neuanfang
+  sleepLikeARock:   false  // +1 Schlafqualitäts-Stufe bei jedem Schlafplatz
 };
 
 let gameFlags = {
@@ -87,6 +89,9 @@ let gameFlags = {
   kraemerinDialogShown:        false, // Ladentheken-Gespräch nach dem 1. Neuanfang; schaltet Lederhandschuhe frei
   resourceGatheringUnlocked:   false, // Nach Gretas Taverne-Gespräch -> Sammelplatz-Nav erscheint
   guildExplainedByBrakka:      false, // Unterscheidet 1. Erklärung von späteren "bist du bereit?"-Nachfragen
+  commanderInviteShown:        false, // Einladungs-Monolog nach 3x Nachtwache
+  firstNightWatchLevelUpShown: false, // Monolog beim 1. Nachtwache-Level-Up
+  commanderRecruitmentShown:   false, // Stadtwache-Beitritts-Angebot nach 1. Arbeit auf Nachtwache-Lvl 3
   isWorking:                   false
 };
 
@@ -149,7 +154,8 @@ let quests = {
   miraLetter:       { state: 'unstarted' },
   foremanRaise:     { state: 'unstarted' },
   kraemerinBusiness: { state: 'unstarted' }, // 'unstarted' -> 'invited' -> 'active' -> 'rewarded'
-  guildRegistration: { state: 'unstarted' }
+  guildRegistration: { state: 'unstarted' },
+  commanderTraining: { state: 'unstarted' }
 };
 
 /* Einmalige NPC-Interaktionen, die sich dauerhaft auf den Dialog auswirken */
@@ -164,7 +170,13 @@ let workStats = {
 
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */
 let settings = {
-  toastDurationMs: 2600
+  toastDurationMs: 2600,
+  // Pro Reset-"Ebene" einzeln umschaltbar, ob vor dem Klick auf "Neu
+  // anfangen" noch ein Bestätigungsdialog kommt (siehe experience.js,
+  // startManualReset()). Aktuell gibt es nur die Kapitel-1-Ebene
+  // ("erfahrung"), das Objekt ist aber bewusst erweiterbar für spätere
+  // Akt-Übergänge.
+  warnBeforeReset: { erfahrung: true }
 };
 
 /* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 10) */
@@ -179,6 +191,7 @@ let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' |
                                     // 'taverne' | 'schlafplatz' | 'inventar' | 'quests' | 'chronik' | 'settings'
 let marketVendor   = null;         // null=Markt-Übersicht | 'kraemer' | 'schmiede'
 let jobInfoPanelOpen = false;      // UI-Klapp-Zustand des Level-Info-Panels auf der Job-Kachel
+let erfahrungTab     = 'skills';   // 'skills' | 'lessons' — siehe experience.js, renderErfahrung()
 
 /* ── Arbeits-Animation State ──────────────────────────────── */
 let workProgress  = 0;

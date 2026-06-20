@@ -867,6 +867,74 @@ Quest über mehr als einen Ort/NPC läuft, braucht jeder Übergabepunkt
 seinen eigenen Zustand, auch wenn das mehr ist als das übliche
 unstarted/active/rewarded.
 
+## Gain-Werte erst spät runden, sonst frisst die Rundung die Kalibrierung
+
+Hunger-/Müdigkeitskosten der Feldarbeit wurden so kalibriert, dass 4
+Durchgänge auf einer Stufe exakt einen Ziel-Prozentsatz ergeben (50%,
+40%, 30%, …). `getWorkTirednessGain()`/`getWorkHungerGain()` geben dafür
+bewusst UNGERUNDETE Floats zurück — `Math.round()` passiert erst an der
+Anzeige-Stelle (`content.js`), nie am eigentlichen State-Update
+(`adjustHunger()`/`adjustTiredness()`). Würde man pro Aufruf runden,
+würde sich der Rundungsfehler über mehrere Durchgänge aufsummieren und
+die sorgfältig kalibrierten Zielwerte verfehlen. Lektion: bei jeder
+Größe, die sich über mehrere Schritte aufaddiert UND einen exakten
+Long-Term-Zielwert haben soll, so spät wie möglich runden.
+
+## Ein UI-Wert, zwei Anzeigeorte — beide müssen dieselbe Funktion aufrufen
+
+Konkreter Bug: die Job-Kachel zeigte den Hunger-Zuwachs als rohen
+Konstanten-Wert (`WORK_HUNGER_GAIN`), während das Info-Panel direkt
+daneben den tatsächlich LEVEL-ABHÄNGIGEN Wert (`getWorkHungerGain()`)
+zeigte — zwei verschiedene Zahlen für dieselbe Sache auf derselben
+Seite. Passiert leicht, wenn ein Wert zuerst als Konstante gebaut wird
+und erst später levelabhängig gemacht wird, aber nicht JEDE
+Anzeigestelle mitgezogen wird. Lektion: sobald ein Basiswert eine
+abgeleitete Funktion bekommt, alle Vorkommen der ursprünglichen
+Konstante im UI suchen und ersetzen — eine Konstante, die noch an einer
+Stelle direkt verwendet wird, während eine Funktion sie anderswo schon
+ersetzt hat, ist ein Garant für genau diesen Bug.
+
+## Verzögerte Hervorhebung: Bedingung ≠ Sichtbarkeits-Bedingung
+
+Der Vorarbeiter wartet nur ABENDS in der Taverne — die Hervorhebung der
+Taverne-Navigation darf deshalb nicht beim Auslösen seiner Einladung
+(tagsüber, nach der 10. Feldarbeit) erscheinen, sondern erst, wenn
+`isNight()` tatsächlich zutrifft. Da Zeit nur durch Spieleraktionen
+vergeht (kein Hintergrund-Timer), reicht ein einfacher Check bei jedem
+`render()` (`checkEveningArrivals()`, aufgerufen aus `main.js`) — kein
+Event-System nötig. Lektion: wenn ein NPC im Text einen Zeitpunkt nennt,
+muss JEDE davon abhängige UI-Reaktion (nicht nur seine eigene
+`locked()`-Bedingung) denselben Zeitpunkt prüfen, nicht den Moment, in
+dem die zugehörige Quest aktiviert wurde.
+
+## Gold-Gewinne außerhalb des Kern-Loops müssen denselben Meilenstein-Check auslösen
+
+`checkMilestones()` lief nur in `completeWork()`/`nightWatch()` — Gold
+aus NPC-Dialog-Belohnungen (Brakka, Vorarbeiter, Mira/Brakka-Brief) lief
+daran vorbei. Folge: der Raub-Trigger (Gold-Schwelle + storyState) konnte
+sich verzögern, je nachdem, ÜBER WELCHEN WEG der Spieler die
+Gold-Schwelle erreichte — für den Spieler nicht nachvollziehbar, wirkte
+wie ein zufälliger Bug ("der Trigger wurde übersprungen"). Lektion: JEDE
+Stelle, die `resources.totalGoldEarned` erhöht, muss densel­ben
+zentralen Konsistenz-Check aufrufen — nicht nur die "offensichtlichen"
+Haupt-Loops. Suche dafür gezielt nach allen `totalGoldEarned +=`-Stellen,
+wenn ein neuer Gold-Gewinn-Pfad hinzukommt.
+
+## Generischer N-Spalten-Baum statt fest codierter 2-Spalten-Logik
+
+Der Skillbaum musste von 2 auf 3 Äste wachsen (neuer mittlerer Ast:
+Besitz/Schlaf). Die ursprüngliche Implementierung hatte feste
+`left`/`right`-Variablen und CSS-Klassen für genau 2 Spalten — das hätte
+sich nicht erweitert, sondern hätte für jede neue Spaltenzahl neue
+Spezialfälle gebraucht. Die generelle Lösung: `EP_TREE_BRANCHES` ist ein
+Array von Ketten (beliebig viele, beliebig lang), `columnCenterPct(i,
+total)` übersetzt "Spalte i von total" in eine Prozent-Position, und
+Connector-Linien (`.stl-stem`/`.stl-bar`) werden per Inline-Style
+positioniert statt über feste CSS-Klassen. Lektion: sobald eine
+UI-Struktur "geht von 2 auf N" droht, lohnt sich die generische Variante
+sofort — der Umbau auf 3 Spalten hätte sonst dieselbe Arbeit nochmal für
+4 Spalten erfordert.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

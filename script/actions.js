@@ -5,26 +5,30 @@
 'use strict';
 
 /* Basiswerte pro Arbeitsgang — auch von content.js für die
-   Transparenz-Anzeige ("Dauer: ... · Müdigkeit: +...%") genutzt. */
-const WORK_TIREDNESS_GAIN      = 15;
-const WORK_HUNGER_GAIN         = 8;
+   Transparenz-Anzeige ("Dauer: ... · Müdigkeit: +...%") genutzt. Hunger
+   und Müdigkeit haben bewusst denselben Basiswert: Ziel ist, dass beide
+   nach genau 4 Durchgängen denselben Ziel-Prozentsatz erreichen (siehe
+   WORK_LEVELS.gainMod — 50% auf Stufe 0, danach −10%-Punkte je Stufe). */
+const WORK_TIREDNESS_GAIN      = 12.5;
+const WORK_HUNGER_GAIN         = 12.5;
 const WORK_CLOCK_MINUTES       = 60;
 const FOREMAN_BONUS_THRESHOLD  = 10; // Feldarbeiten bis zum Vorarbeiter-Bonus
 const FOREMAN_BONUS_GOLD       = 5;  // Einmalige Gold-Gabe beim Auslösen
 
 const NIGHTWATCH_RECOVERY_PENALTY = 0.4; // nächster Schlaf erholt 40% schlechter
 const NIGHTWATCH_QUEST_REWARD     = 15;
+const COMMANDER_INVITE_THRESHOLD  = 3; // Nachtwachen bis zur Einladung des Kommandanten
 
 /* Erfahrungs-Level für die Nachtwache — analog zur Feldarbeit, aber erst
    nach dem Skill "Nächtliche Routine" relevant (siehe experience.js).
    Ohne den Skill bleibt sie auf Stufe 0 (Basis-Lohn), genau wie Feldarbeit
-   ohne "Lehrreiche Rückschläge". */
-const NIGHTWATCH_LEVEL_THRESHOLDS = [0, 5, 15, 40];
+   ohne "Lehrreiche Rückschläge". Bewusst nur 3 Stufen (5x/10x Nachtwache) —
+   die Stadtwache ist (noch) eine Nebentätigkeit, kein eigener Karriereweg. */
+const NIGHTWATCH_LEVEL_THRESHOLDS = [0, 5, 10];
 const NIGHTWATCH_LEVELS = [
-  { label: 'Unerfahrene Wache',  goldBase: 10 },
-  { label: 'Aufmerksame Wache',  goldBase: 13 },
-  { label: 'Erfahrene Wache',    goldBase: 17 },
-  { label: 'Routinierte Wache',  goldBase: 22 }
+  { label: 'Unerfahrene Wache', goldBase: 10 },
+  { label: 'Erfahrene Wache',   goldBase: 14 },
+  { label: 'Routinierte Wache', goldBase: 20 }
 ];
 
 function getNightWatchLevel(count) {
@@ -40,19 +44,37 @@ function getNightWatchReward() {
   return NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase;
 }
 
-/* Schlafqualität je Ort: niedrigerer Faktor heißt, dass eine Nacht die
-   Müdigkeit nicht vollständig auf 0% senkt — die Straße ist bewusst die
-   schlechteste, kostenlose Option, eine Absteige erholt vollständig.
-   Auf der Straße ist anfangs die EINZIGE Option (siehe renderSchlafplatz) —
-   erst nachdem die Figur weiß, wie schlecht sich das anfühlt, erscheint
+/* Schlafqualität als Stufen (1–3) statt rohem Faktor — analog zu den
+   Hunger-/Müdigkeits-Stufen (siehe needs.js): leichter zu kommunizieren
+   ("Schlafqualität 1/3") als ein nackter Prozentwert. Die Straße startet
+   bewusst auf der schlechtesten Stufe, die Absteige bereits auf der
+   besten — der Skill "Ich schlafe wie ein Stein" (experience.js) hebt
+   JEDEN Ort um eine Stufe an (gekappt auf die beste Stufe), was bei der
+   Absteige also wirkungslos bleibt, aber die Straße deutlich aufwertet. */
+const SLEEP_QUALITY_TIERS = [0.6, 0.8, 1.0];
+const SLEEP_QUALITY_MAX   = SLEEP_QUALITY_TIERS.length;
+
+/** Tatsächliche Schlafqualitäts-Stufe (1–3) eines Orts inkl. Skill-Bonus. */
+function getSleepQualityTier(option) {
+  const bonus = skills.sleepLikeARock ? 1 : 0;
+  return Math.min(SLEEP_QUALITY_MAX, option.qualityTier + bonus);
+}
+
+/** Faktor (0–1) für die tatsächliche Müdigkeits-Erholung dieses Orts. */
+function getSleepQualityFactor(option) {
+  return SLEEP_QUALITY_TIERS[getSleepQualityTier(option) - 1];
+}
+
+/* Auf der Straße ist anfangs die EINZIGE Option (siehe renderSchlafplatz)
+   — erst nachdem die Figur weiß, wie schlecht sich das anfühlt, erscheint
    die Absteige als bewusste Alternative. */
 const SLEEP_OPTIONS = [
   {
-    id: 'street', name: 'Auf der Straße schlafen', icon: '🌌', cost: 0, quality: 0.6,
+    id: 'street', name: 'Auf der Straße schlafen', icon: '🌌', cost: 0, qualityTier: 1,
     desc: 'Kostenlos, aber hart und kalt. Ich schlafe nie wirklich tief.', hungerPenalty: 10
   },
   {
-    id: 'inn', name: 'Schäbige Absteige', icon: '🛏', cost: 5, quality: 1.0,
+    id: 'inn', name: 'Schäbige Absteige', icon: '🛏', cost: 5, qualityTier: 3,
     desc: 'Ein Strohsack unter einem Dach. Ich erhole mich vollständig.', hungerPenalty: 0,
     requiresFlag: 'firstSleepTriggered'
   }
@@ -94,18 +116,23 @@ function gatherResource(resourceId) {
 }
 
 /* Erfahrungs-Level für Feldarbeit: je öfter verrichtet, desto besser darin.
-   `goldBase` verdoppelt sich pro Stufe (1 → 2 → 4 → 8 → 16 → 32), Dauer und
-   Müdigkeitskosten sinken gleichzeitig. Die Schwellen für Stufe 4/5 sind
-   absichtlich absurd hoch — praktisch unerreichbar ohne ein zukünftiges
-   Feature, das den Fortschritt beschleunigt (siehe SKILL.md). */
+   `goldBase` verdoppelt sich pro Stufe (1 → 2 → 4 → 8 → 16 → 32), Dauer
+   sinkt gleichzeitig. `gainMod` ist so kalibriert, dass OHNE jeden Debuff
+   genau 4 Durchgänge auf einer Stufe Hunger UND Müdigkeit exakt auf den
+   Zielwert bringen: Stufe 0 → 50%, Stufe 1 → 40%, … Stufe 4 → 10% (je
+   −10 Prozentpunkte). Stufe 5 ("Legende") setzt das Muster fort (0%) —
+   praktisch irrelevant, da ihre Schwelle ohnehin absurd hoch ist. Die
+   Schwellen für Stufe 4/5 sind absichtlich absurd hoch — praktisch
+   unerreichbar ohne ein zukünftiges Feature, das den Fortschritt
+   beschleunigt (siehe SKILL.md). */
 const WORK_LEVEL_THRESHOLDS = [0, 5, 10, 50, 500000, 100000000];
 const WORK_LEVELS = [
-  { label: 'Ungeübt',                   goldBase: 1,  durationMod: 1.00, gainMod: 1.00 },
-  { label: 'Angehender Feldarbeiter',   goldBase: 2,  durationMod: 0.90, gainMod: 0.75 },
-  { label: 'Erfahrener Feldarbeiter',   goldBase: 4,  durationMod: 0.80, gainMod: 0.55 },
-  { label: 'Gewiefter Feldarbeiter',    goldBase: 8,  durationMod: 0.65, gainMod: 0.40 },
-  { label: 'Meister des Feldes',        goldBase: 16, durationMod: 0.50, gainMod: 0.25 },
-  { label: 'Legende der Felder',        goldBase: 32, durationMod: 0.35, gainMod: 0.15 }
+  { label: 'Ungeübt',                   goldBase: 1,  durationMod: 1.00, gainMod: 1.0 },
+  { label: 'Angehender Feldarbeiter',   goldBase: 2,  durationMod: 0.90, gainMod: 0.8 },
+  { label: 'Erfahrener Feldarbeiter',   goldBase: 4,  durationMod: 0.80, gainMod: 0.6 },
+  { label: 'Gewiefter Feldarbeiter',    goldBase: 8,  durationMod: 0.65, gainMod: 0.4 },
+  { label: 'Meister des Feldes',        goldBase: 16, durationMod: 0.50, gainMod: 0.2 },
+  { label: 'Legende der Felder',        goldBase: 32, durationMod: 0.35, gainMod: 0.0 }
 ];
 
 /** Ermittelt die aktuelle Feldarbeits-Stufe anhand der Gesamtzahl an Durchgängen.
@@ -154,19 +181,21 @@ function getWorkReward(levelOverride) {
 
 /** Wie viel Müdigkeit eine einzelne Arbeit gerade kosten würde (Hunger
     beschleunigt das — der Skill "Eiserner Wille" dämpft diese Beschleunigung
-    um die Hälfte, lässt die Basis-Kosten aber unangetastet). */
+    um die Hälfte, lässt die Basis-Kosten aber unangetastet). Bewusst OHNE
+    Rundung — die exakte Kalibrierung (siehe WORK_LEVELS) geht sonst beim
+    Aufaddieren über mehrere Durchgänge verloren. Anzeigen runden selbst. */
 function getWorkTirednessGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
   const hungerMult = getHungerTier(needs.hunger).tirednessGainMult;
   const effectiveHungerMult = 1 + (hungerMult - 1) * (skills.ironWill ? 0.5 : 1);
-  return Math.round(WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod);
+  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod;
 }
 
 /** Wie viel Hunger eine einzelne Arbeit gerade kosten würde — für die
-    Job-Info-Panel-Vorschau (siehe content.js). */
+    Job-Info-Panel-Vorschau (siehe content.js). Ebenfalls ungerundet. */
 function getWorkHungerGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
-  return Math.round(WORK_HUNGER_GAIN * level.gainMod);
+  return WORK_HUNGER_GAIN * level.gainMod;
 }
 
 /* ── Stadttor betreten (State 10100 → 10101) ──────────────── */
@@ -297,12 +326,66 @@ function maybeTriggerForemanBonusDialog(onDone = () => {}) {
   if (gameFlags.foremanInviteShown || workStats.count < FOREMAN_BONUS_THRESHOLD) { onDone(); return; }
   gameFlags.foremanInviteShown = true;
   quests.foremanRaise.state    = 'active';
-  navUnseen.taverne = true; // Der Vorarbeiter wartet jetzt in der Taverne
+  // KEIN navUnseen.taverne hier — er ist nur ABENDS dort (siehe
+  // checkEveningArrivals(), aufgerufen aus main.js render()).
 
   showMonologue('Ein Wort des Vorarbeiters', [
     'Nach Feierabend hält mich eine schwielige Hand am Ärmel fest — der Vorarbeiter.',
     '"Du schuftest ordentlich, das ist mir aufgefallen", sagt er. "Komm heute Abend in die Taverne, ich will mit dir reden."'
   ], () => { render(); onDone(); });
+}
+
+/** Monolog nach 3x Nachtwache: der Kommandant der Stadtwache wird auf den
+    Spieler aufmerksam und lädt ihn in die Taverne ein (siehe npc.js,
+    NPC "kommandant"). Schaltet noch nichts frei — das Gespräch selbst
+    macht das (Quest "commanderTraining" wird dort erst aktiv). */
+function maybeTriggerCommanderArrival(onDone = () => {}) {
+  if (gameFlags.commanderInviteShown || nightWatchStats.count < COMMANDER_INVITE_THRESHOLD) { onDone(); return; }
+  gameFlags.commanderInviteShown = true;
+  quests.commanderTraining.state = 'active';
+  navUnseen.taverne = true;
+
+  showMonologue('Ein wachsames Auge', [
+    'Eine Gestalt in Uniform beobachtet mich vom Stadttor aus, schon die dritte Nacht in Folge.',
+    '"Du da", ruft sie schließlich. "Komm mal in die Taverne, wenn du Zeit hast. Ich will mit dir reden."'
+  ], () => { render(); onDone(); });
+}
+
+/** Monolog beim ersten Nachtwache-Level-Up: zeigt, dass auch hier
+    Routine etwas bringt, analog zu maybeTriggerFirstLevelUpDialog(). */
+function maybeTriggerFirstNightWatchLevelUpDialog(onDone = () => {}) {
+  if (gameFlags.firstNightWatchLevelUpShown || getNightWatchLevel(nightWatchStats.count) < 1) { onDone(); return; }
+  gameFlags.firstNightWatchLevelUpShown = true;
+
+  showMonologue('Routine in der Dunkelheit', [
+    'Die Nacht fühlt sich anders an als beim ersten Mal — ich weiß jetzt, wo ich hinschauen muss.',
+    'Es wird leichter, je öfter ich es tue. Und es zahlt sich auch in Gold aus.'
+  ], () => { render(); onDone(); });
+}
+
+/** Monolog nach der ersten Feldarbeit auf Nachtwache-Level 3: der
+    Kommandant fragt, ob der Spieler der Stadtwache beitreten will. Stößt
+    (noch) keinen eigenen Arbeitsplatz an — siehe notes/lose-enden.md für
+    den nächsten Ausbauschritt ("neuer Arbeitsplatz Nachtwache"). */
+function maybeTriggerCommanderRecruitment(onDone = () => {}) {
+  if (gameFlags.commanderRecruitmentShown || getNightWatchLevel(nightWatchStats.count) < 2) { onDone(); return; }
+  gameFlags.commanderRecruitmentShown = true;
+
+  showMonologue('Ein Angebot', [
+    'Der Kommandant erwartet mich schon am Tor. "Du machst das inzwischen besser als die Hälfte meiner Leute."',
+    '"Ich könnte einen wie dich in der Stadtwache brauchen — fest, nicht nur nachts nebenbei. Überleg es dir."'
+  ], () => { render(); onDone(); });
+}
+
+/** Schaltet die Vorarbeiter-Hervorhebung der Taverne erst frei, wenn er
+    dort tatsächlich anzutreffen ist (er ist nur ABENDS dort, siehe
+    npc.js, NPC "vorarbeiter") — bei jedem render() günstig genug, um
+    einfach den aktuellen Zustand zu prüfen statt ein Zeit-Ereignis zu
+    verfolgen. */
+function checkEveningArrivals() {
+  if (quests.foremanRaise.state === 'active' && isNight() && !navUnseen.taverne) {
+    navUnseen.taverne = true;
+  }
 }
 
 /* Kurze Ich-Bemerkungen beim allerersten Anklicken eines neu erschienenen
@@ -447,7 +530,9 @@ function completeWork() {
     maybeTriggerHungerDialog(() => {
       maybeTriggerFirstLevelUpDialog(() => {
         maybeTriggerForemanBonusDialog(() => {
-          maybeTriggerFirstNightDialog();
+          maybeTriggerCommanderRecruitment(() => {
+            maybeTriggerFirstNightDialog();
+          });
         });
       });
     });
@@ -476,6 +561,7 @@ function nightWatch() {
 
   if (state === 'active') {
     quests.nightWatch.state = 'done';
+    navUnseen.taverne = true; // Jetzt gibt es wirklich etwas bei Brakka zu berichten
     showToast(`Nachtwache gehalten (+${reward} Gold). Erzähl Brakka davon!`, 'reward');
   } else {
     showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, 'reward');
@@ -483,6 +569,10 @@ function nightWatch() {
 
   checkMilestones();
   render();
+
+  maybeTriggerCommanderArrival(() => {
+    maybeTriggerFirstNightWatchLevelUpDialog();
+  });
 }
 
 /* ── Schlafen: beendet den Spieltag ───────────────────────── */
@@ -494,7 +584,7 @@ function sleep(optionId) {
   if (option.requiresFlag && !gameFlags[option.requiresFlag]) return;
 
   const recoveryMult    = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
-  const tirednessRelief = 100 * recoveryMult * option.quality;
+  const tirednessRelief = 100 * recoveryMult * getSleepQualityFactor(option);
 
   if (option.cost > 0) {
     if (resources.gold < option.cost) {

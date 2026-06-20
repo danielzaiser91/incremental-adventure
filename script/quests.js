@@ -59,6 +59,16 @@ const QUEST_DEFS = [
       active:    'Brakka erklärt, was es für die Registrierung als Abenteurer braucht. Mit ihm sprechen, wenn ich bereit bin.',
       rewarded:  'Abgeschlossen — vorerst. Mehr dazu in einem zukünftigen Update.'
     }
+  },
+  {
+    id:    'commanderTraining',
+    title: 'Lehrgang beim Kommandanten',
+    icon:  '🎖',
+    descByState: {
+      unstarted: 'Noch nicht begonnen.',
+      active:    'Kommandant Roswald hat mich in die Taverne eingeladen, um über die Nachtwache zu reden.',
+      rewarded:  'Abgeschlossen — ich kann jetzt für die Nachtwache aufleveln (siehe Erfahrung).'
+    }
   }
 ];
 

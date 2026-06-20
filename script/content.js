@@ -176,7 +176,8 @@ function renderArbeitsplatz(el) {
   const reward     = getWorkReward();
   const tier       = getTirednessTier(needs.tiredness);
   const durationS  = (getWorkDurationMs() / 1000).toFixed(1);
-  const tirednessGain = getWorkTirednessGain();
+  const tirednessGain = Math.round(getWorkTirednessGain());
+  const hungerGain     = Math.round(getWorkHungerGain());
 
   const levelingUnlocked = skills.jobLeveling;
   const workLevel  = getWorkLevel(workStats.count);
@@ -199,8 +200,8 @@ function renderArbeitsplatz(el) {
   if (nextDef) {
     const afterReward    = getWorkReward(workLevel + 1);
     const afterDurationS = (getWorkDurationMs(workLevel + 1) / 1000).toFixed(1);
-    const afterTiredness = getWorkTirednessGain(workLevel + 1);
-    const afterHunger    = getWorkHungerGain(workLevel + 1);
+    const afterTiredness = Math.round(getWorkTirednessGain(workLevel + 1));
+    const afterHunger    = Math.round(getWorkHungerGain(workLevel + 1));
 
     const baseGoldDelta     = nextDef.goldBase - currentDef.goldBase;
     const baseDurationDelta = Math.round((1 - nextDef.durationMod) * 100);
@@ -212,7 +213,7 @@ function renderArbeitsplatz(el) {
       <div class="job-info-next-label">Nächste Stufe: Lvl ${workLevel + 1} — ${nextDef.label}</div>
       <div class="job-info-compare-row"><span>Ertrag</span><span>${reward}g → <strong>${afterReward}g</strong></span></div>
       <div class="job-info-compare-row"><span>Müdigkeit/Arbeit</span><span>${tirednessGain}% → <strong>${afterTiredness}%</strong></span></div>
-      <div class="job-info-compare-row"><span>Hunger/Arbeit</span><span>${getWorkHungerGain()}% → <strong>${afterHunger}%</strong></span></div>
+      <div class="job-info-compare-row"><span>Hunger/Arbeit</span><span>${hungerGain}% → <strong>${afterHunger}%</strong></span></div>
       <div class="job-info-compare-row"><span>Dauer</span><span>${durationS}s → <strong>${afterDurationS}s</strong></span></div>
       <div class="job-info-base-note" title="${baseTooltip}">Basiswerte ⓘ</div>`;
   } else {
@@ -294,7 +295,7 @@ function renderArbeitsplatz(el) {
             Belohnung: <span class="gold-amount">+${reward} Gold</span> pro Durchgang
           </div>
           <div class="action-card-effect">
-            ⏱ Dauer: ${durationS}s · 🕐 Spielzeit: +${WORK_CLOCK_MINUTES} Min · 😴 Müdigkeit: +${tirednessGain}% · 🍞 Hunger: +${WORK_HUNGER_GAIN}%
+            ⏱ Dauer: ${durationS}s · 🕐 Spielzeit: +${WORK_CLOCK_MINUTES} Min · 😴 Müdigkeit: +${tirednessGain}% · 🍞 Hunger: +${hungerGain}%
           </div>
         </div>
         ${jobInfoPanel}
@@ -312,8 +313,11 @@ function renderArbeitsplatz(el) {
     const reward = getNightWatchReward();
     const nwLevelingUnlocked = skills.nightWatchLeveling;
     const nwLevel = getNightWatchLevel(nightWatchStats.count);
+    const nwNextDef = NIGHTWATCH_LEVELS[nwLevel + 1];
     const levelNote = nwLevelingUnlocked
-      ? `<div class="action-card-effect">Lvl ${nwLevel} — ${NIGHTWATCH_LEVELS[nwLevel].label}</div>` : '';
+      ? `<div class="action-card-effect">Lvl ${nwLevel} — ${NIGHTWATCH_LEVELS[nwLevel].label}</div>
+         ${nwNextDef ? `<div class="action-card-effect">Nächste Stufe: Lohn ${reward}g → <strong>${nwNextDef.goldBase}g</strong></div>` : ''}`
+      : '';
 
     if (state === 'done') {
       nightWatchCard = `
@@ -412,27 +416,19 @@ function renderRohstoffe(el) {
 }
 
 /* ── Schlafplatz ──────────────────────────────────────────── */
+/* Zeigt jeden bereits freigeschalteten Schlafplatz immer (auch tagsüber)
+   — nur das eigentliche Schlafen selbst ist nachts vorbehalten. Tagsüber
+   werden die Karten als gesperrt mit Erklärung angezeigt, statt die ganze
+   Seite hinter einer einzigen Textzeile zu verstecken. */
 function renderSchlafplatz(el) {
   const night = isNight();
-
-  if (!night) {
-    const tier = getTirednessTier(needs.tiredness);
-    const dayText = (tier.id === 'frisch' || tier.id === 'muede')
-      ? 'Der Tag ist noch nicht vorbei. Ich sollte die Zeit nutzen, solange ich kann.'
-      : 'Ich bin hundemüde — aber die Sonne steht noch hoch. Jetzt schon zu schlafen wäre vergeudete Zeit.';
-    el.innerHTML = `
-      <div class="feature-stage">
-        <div class="feature-stage-label">Schlafplatz</div>
-        <div class="location-card">
-          <p class="location-card-desc">${dayText}</p>
-        </div>
-      </div>
-    `;
-    return;
-  }
+  const tier  = getTirednessTier(needs.tiredness);
+  const dayLockReason = (tier.id === 'frisch' || tier.id === 'muede')
+    ? 'Der Tag ist noch nicht vorbei. Ich sollte die Zeit nutzen, solange ich kann.'
+    : 'Ich bin hundemüde — aber die Sonne steht noch hoch. Jetzt schon zu schlafen wäre vergeudete Zeit.';
 
   const recoveryMult = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
-  const debuffNote = nightFlags.recoveryDebuff
+  const debuffNote = night && nightFlags.recoveryDebuff
     ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(NIGHTWATCH_RECOVERY_PENALTY * 100)}% schlechter.</p>`
     : '';
 
@@ -441,14 +437,29 @@ function renderSchlafplatz(el) {
   // (siehe SLEEP_OPTIONS, `requiresFlag`).
   const visibleOptions = SLEEP_OPTIONS.filter(o => !o.requiresFlag || gameFlags[o.requiresFlag]);
   const cards = visibleOptions.map(o => {
-    const reliefPct = Math.round(100 * recoveryMult * o.quality);
+    const qualityTier = getSleepQualityTier(o);
+    const reliefPct = night ? Math.round(100 * recoveryMult * getSleepQualityFactor(o)) : Math.round(100 * getSleepQualityFactor(o));
     const canAfford = resources.gold >= o.cost;
     const hungerEffect = o.hungerPenalty ? `🍞 Hunger +${o.hungerPenalty}%` : '🍞 Hunger ±0%';
+    const qualityBadge = `<div class="sleep-quality-badge">Schlafqualität ${qualityTier}/${SLEEP_QUALITY_MAX}</div>`;
+
+    if (!night) {
+      return `
+        <div class="action-card action-card-locked">
+          <div class="action-card-icon">${o.icon}</div>
+          <div class="action-card-name">${o.name}</div>
+          <p class="action-card-desc">${dayLockReason}</p>
+          ${qualityBadge}
+          <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · ${hungerEffect}</div>
+          <button class="action-btn btn-disabled" disabled>Erst nachts möglich</button>
+        </div>`;
+    }
     return `
       <div class="action-card">
         <div class="action-card-icon">${o.icon}</div>
         <div class="action-card-name">${o.name}</div>
         <p class="action-card-desc">${o.desc}</p>
+        ${qualityBadge}
         <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · ${hungerEffect}</div>
         <div class="action-card-cost ${canAfford ? 'cost-ok' : 'cost-too-high'}">${o.cost > 0 ? o.cost + ' Gold' : 'Kostenlos'}</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}" onclick="sleep('${o.id}')" ${canAfford ? '' : 'disabled'}>
@@ -559,6 +570,17 @@ function renderSettings(el) {
       </div>
 
       <div class="settings-group">
+        <div class="settings-section-title">Warnungen</div>
+        <div class="settings-buttons">
+          ${gameFlags.resetLayerUnlocked ? `
+            <button class="action-btn settings-btn" onclick="toggleResetWarning('erfahrung')">
+              ${settings.warnBeforeReset.erfahrung ? '☑' : '☐'} Vor Neuanfang (Erfahrung) warnen
+            </button>
+          ` : `<p class="chronik-empty" style="margin: 0;">Noch keine Reset-Ebene freigeschaltet.</p>`}
+        </div>
+      </div>
+
+      <div class="settings-group">
         <div class="settings-section-title">Debug-Info</div>
         <div class="settings-info">
           <div class="info-row">
@@ -577,7 +599,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Hunger / Müdigkeit</span>
-            <span class="info-value">${needs.hunger}% / ${needs.tiredness}%</span>
+            <span class="info-value">${Math.round(needs.hunger)}% / ${Math.round(needs.tiredness)}%</span>
           </div>
           <div class="info-row">
             <span class="info-label">Gold (gesamt verdient)</span>
@@ -593,7 +615,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Version</span>
-            <span class="info-value">0.7.0-alpha</span>
+            <span class="info-value">0.8.0-alpha</span>
           </div>
         </div>
       </div>

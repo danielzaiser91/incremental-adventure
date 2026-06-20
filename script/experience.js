@@ -30,10 +30,30 @@ const EP_SKILL_TREE = [
     effect: 'Hunger beschleunigt den Müdigkeitsaufbau nur noch halb so stark.'
   },
   {
+    // `extraLock` ist eine zusätzliche Bedingung NEBEN der normalen
+    // Ast-Voraussetzung — der Knoten ist (über `ironWill`) zwar sichtbar,
+    // aber erst kaufbar, nachdem Kommandant Roswald den Lehrgang gegeben
+    // hat (siehe npc.js, NPC "kommandant"). So bleibt die Sichtbarkeits-
+    // Logik des Baums unverändert, während der Kauf selbst zusätzlich an
+    // ein Story-Ereignis gebunden ist.
     id: 'nightWatchLeveling', name: 'Nächtliche Routine', icon: '🌒',
     requires: 'ironWill', maxLevel: 1, costs: [4],
     desc: 'Auch die Nacht lehrt mich etwas, wenn ich nur aufmerksam genug bin.',
-    effect: 'Schaltet ein Erfahrungs-Level-System für die Nachtwache frei.'
+    effect: 'Schaltet ein Erfahrungs-Level-System für die Nachtwache frei.',
+    extraLock: () => quests.commanderTraining.state !== 'rewarded',
+    extraLockReason: 'Erfordert die Unterweisung durch Kommandant Roswald'
+  },
+  {
+    id: 'inventoryKeeper', name: 'Fest verschnürt', icon: '🎒',
+    requires: 'jobLeveling', maxLevel: 1, costs: [12],
+    desc: 'Was ich mir mühsam zusammengetragen habe, lasse ich nicht einfach so zurück.',
+    effect: 'Inventar UND Ausrüstung überstehen künftig einen Neuanfang.'
+  },
+  {
+    id: 'sleepLikeARock', name: 'Ich schlafe wie ein Stein', icon: '🪨',
+    requires: 'inventoryKeeper', maxLevel: 1, costs: [10],
+    desc: 'Man sagt mir nach, ich schlafe wie ein Stein — früher war das kein Kompliment. Inzwischen hilft es mir.',
+    effect: '+1 Schlafqualitäts-Stufe an jedem Schlafplatz (max. 3/3).'
   },
   {
     id: 'thrift', name: 'Sparsamkeit', icon: '🪙',
@@ -66,12 +86,18 @@ const EP_SKILL_TREE = [
   }
 ];
 
-/* Die zwei Äste des Baums, von der Wurzel "Lehrreiche Rückschläge" aus
-   nach unten wachsend (siehe renderSkillTree()): Arbeit (links) und
-   Wirtschaft (rechts). Jeder Eintrag ist nur sichtbar, sobald sein
-   Vorgänger erlernt wurde — die Wurzel selbst ist immer sichtbar. */
-const EP_TREE_LEFT_BRANCH  = ['fieldworkMemory', 'ironWill', 'nightWatchLeveling'];
-const EP_TREE_RIGHT_BRANCH = ['thrift', 'clearMind', 'goldBreakthrough'];
+/* Die Äste des Baums, von der Wurzel "Lehrreiche Rückschläge" aus nach
+   unten wachsend (siehe renderSkillTree()): Arbeit (links), Besitz
+   (Mitte), Wirtschaft (rechts). Jeder Eintrag ist nur sichtbar, sobald
+   sein Vorgänger erlernt wurde — die Wurzel selbst ist immer sichtbar.
+   Äste dürfen unterschiedlich lang sein (siehe Mitte, nur 2 Einträge) —
+   renderSkillTree() iteriert bis zur längsten Kette und lässt kürzere
+   Äste einfach leer auslaufen. */
+const EP_TREE_BRANCHES = [
+  ['fieldworkMemory', 'ironWill', 'nightWatchLeveling'],
+  ['inventoryKeeper', 'sleepLikeARock'],
+  ['thrift', 'clearMind', 'goldBreakthrough']
+];
 
 /* Mindest-Gold für überhaupt irgendeine Erfahrung bei einem (nicht-ersten)
    Neuanfang — bewusst identisch mit der Raub-Schwelle (siehe state.js):
@@ -119,6 +145,7 @@ function buyNextSkillLevel(id) {
   const level = getSkillLevel(id);
   if (level >= node.maxLevel) return;
   if (getNodeRequirements(node).some(reqId => getSkillLevel(reqId) < 1)) return;
+  if (typeof node.extraLock === 'function' && node.extraLock()) return;
 
   const epCost   = node.costs[level];
   const goldCost = node.goldCosts ? node.goldCosts[level] : 0;
@@ -187,6 +214,16 @@ function performManualReset() {
   resources.gold = 0;
   if (!skills.fieldworkMemory) workStats.count = 0;
   nightWatchStats.count = 0; // Nachtwache-Routine kennt (noch) kein Memory-Pendant
+  if (!skills.inventoryKeeper) {
+    // Ausrüstung MUSS vor dem Leeren von resources.inventory abgelegt
+    // werden, sonst zeigt equipment.* danach auf eine ID, die es im
+    // (jetzt leeren) Inventar nie mehr gab — kein Bug, aber ein
+    // inkonsistenter Zustand, den equipItem()/unequipItem() so nie
+    // erzeugen würden.
+    equipment = { hands: null, guertel: null };
+    resources.inventory = {};
+    overflowBag = {};
+  }
   if (storyState < 20100) storyState = 20100;
   currentContent = 'erfahrung';
   navLevel       = 0;
@@ -216,16 +253,31 @@ function startManualReset() {
       : [{ label: 'Verstanden.', onClick: () => closeDialog() }]
   });
 
+  // Die ausführliche Erklärung kommt immer beim 1. Mal (Bildung, kein
+  // Sicherheits-Schritt). Der eigentliche Bestätigungsdialog danach ist
+  // optional — siehe Einstellungen, "Vor Neuanfang warnen".
+  const proceed = () => {
+    if (settings.warnBeforeReset.erfahrung) showConfirm();
+    else performManualReset();
+  };
+
   if (!gameFlags.firstManualResetExplained) {
     gameFlags.firstManualResetExplained = true;
     showMonologue('Ein neuer Anfang', [
       'Mein Gold ist weg, kaum dass ich es verdient hatte. Münzen kann man mir nehmen.',
       'Aber was ich gelernt habe — wie man zupackt, wie man durchhält — das bleibt. Vielleicht sollte ich genau darauf setzen.',
       'Wenn ich jetzt alles aufgebe, was ich besitze, und ganz neu anfange — bringt mich das weiter, als es das Gold je könnte?'
-    ], showConfirm);
+    ], proceed);
   } else {
-    showConfirm();
+    proceed();
   }
+}
+
+/** Schaltet um, ob vor einem Neuanfang dieser Reset-"Ebene" noch ein
+    Bestätigungsdialog kommt (siehe Einstellungen). */
+function toggleResetWarning(id) {
+  settings.warnBeforeReset[id] = !settings.warnBeforeReset[id];
+  render();
 }
 
 /** Baut die Karte EINES Skill-Knotens. Wird nur für bereits SICHTBARE
@@ -237,13 +289,19 @@ function epNodeCardHtml(node) {
   const maxed = level >= node.maxLevel;
   const epCost   = maxed ? null : node.costs[level];
   const goldCost = maxed ? null : (node.goldCosts ? node.goldCosts[level] : 0);
-  const canBuy = !maxed && experience.points >= epCost && resources.gold >= goldCost;
+  const extraLocked = !maxed && typeof node.extraLock === 'function' && node.extraLock();
+  const canBuy = !maxed && !extraLocked && experience.points >= epCost && resources.gold >= goldCost;
   const levelLabel = node.maxLevel > 1 ? ` (Stufe ${level}/${node.maxLevel})` : '';
   const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
-  const buttonHtml = maxed
-    ? `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`
-    : `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>Erlernen (${costLabel})</button>`;
+  let buttonHtml;
+  if (maxed) {
+    buttonHtml = `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`;
+  } else if (extraLocked) {
+    buttonHtml = `<button class="action-btn btn-disabled" disabled>🔒 ${node.extraLockReason}</button>`;
+  } else {
+    buttonHtml = `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>Erlernen (${costLabel})</button>`;
+  }
 
   return `
     <div class="action-card skill-node-card${maxed ? ' quest-card-done' : ''}">
@@ -255,55 +313,76 @@ function epNodeCardHtml(node) {
     </div>`;
 }
 
+/** Mittelpunkt einer von `total` gleich breiten Spalten, in Prozent —
+    einzige Stelle, die "wo sitzt Spalte i" in eine Koordinate übersetzt,
+    damit Fork-/Kettenlinien und Konvergenz-Linien dieselbe Geometrie
+    benutzen, unabhängig von der Anzahl der Äste. */
+function columnCenterPct(index, total) {
+  return ((index + 0.5) / total) * 100;
+}
+
 /**
  * Baut den Skillbaum als echten Baum: Wurzel oben zentral, darunter Zeile
- * für Zeile zwei Äste (Arbeit links, Wirtschaft rechts). Eine Zeile (und
+ * für Zeile N gleich breite Äste (siehe EP_TREE_BRANCHES). Eine Zeile (und
  * ihre Verbindungslinien) erscheint erst, sobald mindestens einer ihrer
- * beiden Vorgänger erlernt wurde — pro Spalte unabhängig, siehe User-
- * Vorgabe: "Lernt man Geschickte Hände, wird Eiserner Wille sichtbar".
+ * Vorgänger erlernt wurde — pro Spalte unabhängig, siehe User-Vorgabe:
+ * "Lernt man Geschickte Hände, wird Eiserner Wille sichtbar". Äste dürfen
+ * unterschiedlich lang sein; kürzere laufen einfach leer aus.
  */
 function renderSkillTree() {
+  const total = EP_TREE_BRANCHES.length;
   const root = EP_SKILL_TREE.find(n => n.id === 'jobLeveling');
   let html = `<div class="skill-tree">
     <div class="skill-tree-row-root">${epNodeCardHtml(root)}</div>`;
 
-  for (let i = 0; i < EP_TREE_LEFT_BRANCH.length; i++) {
-    const leftNode  = EP_SKILL_TREE.find(n => n.id === EP_TREE_LEFT_BRANCH[i]);
-    const rightNode = EP_SKILL_TREE.find(n => n.id === EP_TREE_RIGHT_BRANCH[i]);
-    const leftVisible  = getSkillLevel(leftNode.requires) >= 1;
-    const rightVisible = getSkillLevel(rightNode.requires) >= 1;
-    if (!leftVisible && !rightVisible) break; // Kette endet hier auf beiden Seiten
+  const maxRows = Math.max(...EP_TREE_BRANCHES.map(b => b.length));
 
-    html += i === 0
-      // Direkt unter der Wurzel verzweigt sich EIN Stamm in zwei Äste —
-      // an dieser Stelle sind beide Spalten IMMER gleichzeitig sichtbar
-      // (beide hängen an derselben Wurzel), daher feste Gabel-Grafik.
-      ? `<div class="skill-connector skill-connector-fork">
-           <div class="stl-stem-top"></div><div class="stl-bar"></div>
-           <div class="stl-stem-left"></div><div class="stl-stem-right"></div>
-         </div>`
+  for (let row = 0; row < maxRows; row++) {
+    const rowNodes = EP_TREE_BRANCHES.map(branch =>
+      branch[row] ? EP_SKILL_TREE.find(n => n.id === branch[row]) : null);
+    const visible = rowNodes.map(node => !!node && getSkillLevel(node.requires) >= 1);
+    if (!visible.some(Boolean)) break; // Kette endet hier auf allen Spalten
+
+    if (row === 0) {
+      // Direkt unter der Wurzel verzweigt sich EIN Stamm in alle Äste auf
+      // einmal — sie hängen alle an derselben Wurzel, werden also immer
+      // gleichzeitig sichtbar, sobald diese erlernt ist.
+      const stems = rowNodes.map((node, i) => node
+        ? `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%; top:11px; bottom:0;"></div>` : '').join('');
+      html += `<div class="skill-connector">
+        <div class="stl-stem" style="left:50%; top:0; height:11px;"></div>
+        <div class="stl-bar" style="left:${columnCenterPct(0, total)}%; right:${100 - columnCenterPct(total - 1, total)}%; top:11px;"></div>
+        ${stems}
+      </div>`;
+    } else {
       // Tiefere Zeilen sind reine Kettenfortsetzungen je Spalte, unabhängig
       // voneinander — daher pro Spalte eine eigene, ggf. fehlende Linie.
-      : `<div class="skill-connector skill-connector-plain">
-           <div class="stl-stem ${leftVisible ? '' : 'stl-stem-hidden'}"></div>
-           <div class="stl-stem ${rightVisible ? '' : 'stl-stem-hidden'}"></div>
-         </div>`;
+      const stems = visible.map((v, i) => v
+        ? `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%;"></div>` : '').join('');
+      html += `<div class="skill-connector">${stems}</div>`;
+    }
 
-    html += `<div class="skill-tree-row">
-      <div class="skill-tree-cell">${leftVisible ? epNodeCardHtml(leftNode) : ''}</div>
-      <div class="skill-tree-cell">${rightVisible ? epNodeCardHtml(rightNode) : ''}</div>
-    </div>`;
+    const cells = rowNodes.map((node, i) =>
+      `<div class="skill-tree-cell">${visible[i] ? epNodeCardHtml(node) : ''}</div>`).join('');
+    html += `<div class="skill-tree-row" style="grid-template-columns: repeat(${total}, 1fr);">${cells}</div>`;
   }
 
-  // Konvergenz-Knoten: erscheint erst, sobald BEIDE Äste ihr letztes Blatt
-  // erlernt haben — gespiegelte Gabel-Grafik (zwei Stämme laufen zu einem
-  // zusammen), siehe .skill-connector-merge in style.css.
+  // Konvergenz-Knoten: erscheint erst, sobald ALLE Voraussetzungen erlernt
+  // sind — gespiegelte Gabel-Grafik (zwei Stämme aus ihren jeweiligen
+  // Ästen laufen zu einem zusammen).
   const guildNode = EP_SKILL_TREE.find(n => n.id === 'guildPrep');
-  const guildVisible = getNodeRequirements(guildNode).every(reqId => getSkillLevel(reqId) >= 1);
+  const guildReqs = getNodeRequirements(guildNode);
+  const guildVisible = guildReqs.every(reqId => getSkillLevel(reqId) >= 1);
   if (guildVisible) {
-    html += `<div class="skill-connector skill-connector-merge">
-               <div class="stl-stem-left"></div><div class="stl-stem-right"></div>
-               <div class="stl-bar"></div><div class="stl-stem-bottom"></div>
+    const idxA = EP_TREE_BRANCHES.findIndex(b => b.includes(guildReqs[0]));
+    const idxB = EP_TREE_BRANCHES.findIndex(b => b.includes(guildReqs[1]));
+    const pctA = columnCenterPct(idxA, total);
+    const pctB = columnCenterPct(idxB, total);
+    html += `<div class="skill-connector">
+               <div class="stl-stem" style="left:${pctA}%; top:0; height:11px;"></div>
+               <div class="stl-stem" style="left:${pctB}%; top:0; height:11px;"></div>
+               <div class="stl-bar" style="left:${pctA}%; right:${100 - pctB}%; top:11px;"></div>
+               <div class="stl-stem" style="left:50%; top:11px; bottom:0;"></div>
              </div>
              <div class="skill-tree-row-root">${epNodeCardHtml(guildNode)}</div>`;
   }
@@ -343,23 +422,35 @@ function renderErfahrung(el) {
       </button>
     </div>`;
 
-  let lifeLessonsSection = '';
-  if (gameFlags.foremanBonusGiven) {
-    lifeLessonsSection = `
-      <div class="market-section-label" style="margin-top: 24px;">Was das Leben mich gelehrt hat</div>
-      <div class="action-grid">
-        <div class="action-card quest-card-done">
-          <div class="action-card-icon">🍺</div>
-          <div class="action-card-name">Anerkennung des Vorarbeiters</div>
-          <p class="action-card-desc">Harte Arbeit ist dem Vorarbeiter aufgefallen — und er hat ein gutes Wort für mich eingelegt.</p>
-          <div class="action-card-effect">+1 Gold pro Feldarbeit, dauerhaft</div>
-        </div>
-      </div>`;
-  }
+  const hasTree    = meta.resets > 0;
+  const hasLessons = gameFlags.foremanBonusGiven;
 
-  const treeSection = meta.resets > 0
-    ? `<div class="market-section-label" style="margin-top: 24px;">Was ich bewusst gelernt habe</div>${renderSkillTree()}`
-    : '';
+  const lifeLessonsHtml = () => `
+    <div class="action-grid">
+      <div class="action-card quest-card-done">
+        <div class="action-card-icon">🍺</div>
+        <div class="action-card-name">Anerkennung des Vorarbeiters</div>
+        <p class="action-card-desc">Harte Arbeit ist dem Vorarbeiter aufgefallen — und er hat ein gutes Wort für mich eingelegt.</p>
+        <div class="action-card-effect">+1 Gold pro Feldarbeit, dauerhaft</div>
+      </div>
+    </div>`;
+
+  // Beide Bereiche gleichzeitig sichtbar → echte Tabs zum Umschalten
+  // (siehe erfahrungTab, state.js). Ist nur einer der beiden relevant,
+  // braucht es keine Tab-Leiste — eine einzelne Sektion reicht.
+  let lowerSection = '';
+  if (hasTree && hasLessons) {
+    lowerSection = `
+      <div class="tab-bar" style="margin-top: 24px;">
+        <button class="tab-btn ${erfahrungTab === 'skills' ? 'active' : ''}" onclick="setErfahrungTab('skills')">Skillbaum</button>
+        <button class="tab-btn ${erfahrungTab === 'lessons' ? 'active' : ''}" onclick="setErfahrungTab('lessons')">Was das Leben mich gelehrt hat</button>
+      </div>
+      <div class="tab-panel">${erfahrungTab === 'skills' ? renderSkillTree() : lifeLessonsHtml()}</div>`;
+  } else if (hasTree) {
+    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Was ich bewusst gelernt habe</div>${renderSkillTree()}`;
+  } else if (hasLessons) {
+    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Was das Leben mich gelehrt hat</div>${lifeLessonsHtml()}`;
+  }
 
   el.innerHTML = `
     <div class="feature-stage">
@@ -372,8 +463,13 @@ function renderErfahrung(el) {
         Erfahrung: <span class="gold-amount">${experience.points} EP</span>
       </div>
       <div class="action-grid">${resetCard}</div>
-      ${lifeLessonsSection}
-      ${treeSection}
+      ${lowerSection}
     </div>
   `;
+}
+
+/** Wechselt zwischen Skillbaum und "Was das Leben mich gelehrt hat". */
+function setErfahrungTab(tab) {
+  erfahrungTab = tab;
+  render();
 }

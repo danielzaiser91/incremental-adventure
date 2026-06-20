@@ -23,6 +23,9 @@ function getObjectiveText() {
     return 'Arbeite auf dem Feld, um Gold zu verdienen.';
   }
   if (storyState === 10102) {
+    if (gameFlags.resetLayerUnlocked) {
+      return 'Mein Gold ist fort. Vielleicht ist es Zeit für einen Neuanfang — sieh dir "Erfahrung" an.';
+    }
     return 'Verdiene weiter Gold — auch wenn mich jemand beobachtet.';
   }
   if (storyState >= 20100) {

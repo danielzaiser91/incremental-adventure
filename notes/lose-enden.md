@@ -5,6 +5,20 @@ nicht eingelöst wurden, damit sie nicht in einzelnen Dialogtexten
 untergehen. Bei jeder neuen größeren Dialog-Runde hier kurz
 durchschauen, ob sich ein Punkt erledigt hat oder ein neuer dazukommt.
 
+## 0. "Neuer Arbeitsplatz Nachtwache" (Kommandant Roswald)
+
+Nach 3x Nachtwache lädt Kommandant Roswald den Spieler in die Taverne ein
+und gibt eine kurze Unterweisung, die das EP-Level-System für die
+Nachtwache freischaltet (Skill "Nächtliche Routine"). Erreicht der
+Spieler dort Stufe 3 (Lvl-Index 2, höchste Stufe) und arbeitet danach
+einmal auf dem Feld, fragt Roswald, ob der Spieler der Stadtwache fest
+beitreten möchte ("neuer Arbeitsplatz Nachtwache" laut Auftrag) —
+**bewusst nur als Einladungs-Monolog umgesetzt, kein eigener Arbeitsplatz
+gebaut.** Nächster Ausbauschritt: ein eigener "Stadtwache"-Arbeitsplatz
+analog zu den Feldern (eigene Mechanik/Belohnungskurve, eigener Ort in
+Treutheim), inklusive einer echten Annahme-/Ablehnungs-Entscheidung mit
+Konsequenz.
+
 ## 1. Abenteurergilde-Registrierung (Brakka)
 
 **Ursprünglicher loser Faden:** Brakka erwähnte beim ersten Gespräch

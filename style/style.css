@@ -580,7 +580,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 480px;
+  max-width: 640px;
   margin: 0 auto;
   padding-bottom: 24px;
 }
@@ -594,7 +594,7 @@ html, body {
 .skill-tree-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -604,107 +604,78 @@ html, body {
 }
 
 .skill-node-card {
-  max-width: 210px;
+  max-width: 190px;
   width: 100%;
 }
 
+/* Generischer Verbindungs-Container für eine beliebige Anzahl Äste (siehe
+   experience.js, EP_TREE_BRANCHES/renderSkillTree()). `.stl-stem`/`.stl-bar`
+   werden bewusst per Inline-Style positioniert (left/right/top/bottom),
+   weil ihre Anzahl und Position von der Astzahl abhängt — eine feste
+   CSS-Klasse pro Position würde nur 2 Äste unterstützen. */
 .skill-connector {
   position: relative;
   width: 100%;
   height: 26px;
 }
 
-.skill-connector-fork .stl-stem-top {
+.skill-connector .stl-stem {
   position: absolute;
-  left: 50%;
   top: 0;
-  height: 11px;
-  width: 1px;
-  background: var(--border);
-  transform: translateX(-50%);
-}
-
-.skill-connector-fork .stl-bar {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 11px;
-  height: 1px;
-  background: var(--border);
-}
-
-.skill-connector-fork .stl-stem-left {
-  position: absolute;
-  left: 25%;
-  top: 11px;
-  bottom: 0;
-  width: 1px;
-  background: var(--border);
-}
-
-.skill-connector-fork .stl-stem-right {
-  position: absolute;
-  right: 25%;
-  top: 11px;
-  bottom: 0;
-  width: 1px;
-  background: var(--border);
-}
-
-.skill-connector-plain {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-
-.skill-connector-plain .stl-stem {
-  width: 1px;
-  height: 100%;
-  margin: 0 auto;
-  background: var(--border);
-}
-
-.skill-connector-plain .stl-stem-hidden {
-  visibility: hidden;
-}
-
-/* Gespiegelte Gabel: zwei Stämme (Arbeit + Wirtschaft) laufen zu einem
-   einzigen Konvergenz-Knoten zusammen (siehe experience.js, "guildPrep"). */
-.skill-connector-merge .stl-stem-left {
-  position: absolute;
-  left: 25%;
-  top: 0;
-  height: 11px;
-  width: 1px;
-  background: var(--border);
-}
-
-.skill-connector-merge .stl-stem-right {
-  position: absolute;
-  right: 25%;
-  top: 0;
-  height: 11px;
-  width: 1px;
-  background: var(--border);
-}
-
-.skill-connector-merge .stl-bar {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 11px;
-  height: 1px;
-  background: var(--border);
-}
-
-.skill-connector-merge .stl-stem-bottom {
-  position: absolute;
-  left: 50%;
-  top: 11px;
   bottom: 0;
   width: 1px;
   background: var(--border);
   transform: translateX(-50%);
+}
+
+.skill-connector .stl-bar {
+  position: absolute;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── TAB-LEISTE: wie im Browser, für umschaltbare Unterbereiche
+   (siehe experience.js, Erfahrungs-Seite) ── */
+.tab-bar {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  max-width: 640px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--rad-sm) var(--rad-sm) 0 0;
+  color: var(--text-lo);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  cursor: pointer;
+  transform: translateY(1px);
+  transition: color var(--t), background var(--t), border-color var(--t);
+}
+
+.tab-btn:hover { color: var(--text-mid); background: var(--bg-hover); }
+
+.tab-btn.active {
+  color: var(--accent);
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  border-bottom: 1px solid var(--bg-elevated);
+}
+
+.tab-panel {
+  width: 100%;
+  padding-top: 18px;
+}
+
+/* Schlafqualitäts-Stärke (1-3), analog zur Hunger-/Müdigkeits-Anzeige. */
+.sleep-quality-badge {
+  font-size: 10px;
+  color: var(--text-lo);
 }
 
 /* ── JOB-KACHEL: vertikale Erfahrungsleiste + ausklappbares Info-Panel ──
