@@ -478,13 +478,17 @@ function renderErfahrung(el) {
   // EINSTIEG, nicht der Kern der Seite (das ist der Skillbaum/die
   // Lektionen darunter) — sie bekommen daher eine schmale, sticky
   // Seitenspalte links statt zentrierten Platz über der vollen Breite zu
-  // beanspruchen. `position: sticky` bezieht sich auf #content-section
-  // (siehe style.css), den scrollenden Ahnen dieser Seite.
+  // beanspruchen. Das Seiten-Label steht bewusst INNERHALB dieser
+  // sticky Spalte (nicht als Geschwister darüber) — sonst würde es beim
+  // Scrollen verschwinden, während die Box direkt darunter sichtbar
+  // bleibt, was wie zwei unabhängige, nicht zusammengehörige Elemente
+  // wirkt. `position: sticky` bezieht sich auf #content-section (siehe
+  // style.css), den scrollenden Ahnen dieser Seite.
   el.innerHTML = `
     <div class="feature-stage erfahrung-page">
-      <div class="feature-stage-label">Erfahrung</div>
       <div class="erfahrung-layout">
         <div class="erfahrung-sidebar">
+          <div class="feature-stage-label">Erfahrung</div>
           <p class="location-card-desc">
             Was nützt mir noch Gold, das mir ohnehin gestohlen werden kann? Vielleicht sollte ich
             lieber in mich selbst investieren — Fähigkeiten, die mir niemand wegnehmen kann.

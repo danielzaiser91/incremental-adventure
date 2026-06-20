@@ -1137,6 +1137,19 @@ dafür musste `allEntries` die Versionsnummer pro Eintrag mitführen
 `Object.values(SAVE_CHANGELOG).flatMap()` sie sonst verwirft, sobald
 mehrere Versionen zu einer Liste zusammengeführt werden.
 
+## Sticky-Inhalt: Seiten-Label gehört IN die sticky Spalte, nicht darüber
+
+Bei der Erfahrungs-Seite stand `.feature-stage-label` ("Erfahrung")
+zunächst als Geschwister-Element ÜBER `.erfahrung-layout`, während nur
+`.erfahrung-sidebar` darunter `position: sticky` hatte. Ergebnis: beim
+Scrollen verschwand das Label normal nach oben, während die Sidebar
+direkt darunter stehen blieb — wirkte wie zwei unabhängige Bereiche,
+die nicht zusammengehören. Lehre: ein Seiten-Label, das visuell zu
+einem sticky-gehaltenen Bereich gehört, muss auch STRUKTURELL dessen
+Kind sein (hier: erstes Element innerhalb `.erfahrung-sidebar`), sonst
+scrollt es unabhängig davon weg, auch wenn es optisch direkt darüber
+sitzt.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-
