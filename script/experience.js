@@ -439,7 +439,7 @@ function renderErfahrung(el) {
   const hasLessons = gameFlags.foremanBonusGiven;
 
   const lifeLessonsHtml = () => `
-    <p class="location-card-desc" style="max-width: 480px;">Was das Leben mich gelehrt hat, ganz ohne bewusste Entscheidung:</p>
+    <p class="erfahrung-section-intro">Was das Leben mich gelehrt hat, ganz ohne bewusste Entscheidung.</p>
     <div class="action-grid">
       <div class="action-card quest-card-done">
         <div class="action-card-icon">🍺</div>
@@ -448,6 +448,10 @@ function renderErfahrung(el) {
         <div class="action-card-effect">+1 Gold pro Feldarbeit, dauerhaft</div>
       </div>
     </div>`;
+
+  const skillTreeWithIntro = () => `
+    <p class="erfahrung-section-intro">Was ich mir bewusst beigebracht habe, und mir niemand mehr nehmen kann.</p>
+    ${renderSkillTree()}`;
 
   // Beide Bereiche gleichzeitig sichtbar → echte Tabs zum Umschalten
   // (siehe erfahrungTab, state.js). Ist nur einer der beiden relevant,
@@ -458,29 +462,38 @@ function renderErfahrung(el) {
   let lowerSection = '';
   if (hasTree && hasLessons) {
     lowerSection = `
-      <div class="tab-bar" style="margin-top: 24px;">
+      <div class="tab-bar">
         <button class="tab-btn ${erfahrungTab === 'skills' ? 'active' : ''}" onclick="setErfahrungTab('skills')">Skillbaum</button>
         <button class="tab-btn ${erfahrungTab === 'lessons' ? 'active' : ''}" onclick="setErfahrungTab('lessons')">Lektionen</button>
       </div>
-      <div class="tab-panel">${erfahrungTab === 'skills' ? renderSkillTree() : lifeLessonsHtml()}</div>`;
+      <div class="tab-panel">${erfahrungTab === 'skills' ? skillTreeWithIntro() : lifeLessonsHtml()}</div>`;
   } else if (hasTree) {
-    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Was ich bewusst gelernt habe</div>${renderSkillTree()}`;
+    lowerSection = skillTreeWithIntro();
   } else if (hasLessons) {
-    lowerSection = `<div class="market-section-label" style="margin-top: 24px;">Lektionen</div>${lifeLessonsHtml()}`;
+    lowerSection = lifeLessonsHtml();
   }
 
+  // Eigenes zweispaltiges Layout statt des sonst üblichen zentrierten
+  // `.feature-stage`-Inhalts: Intro-Text + Reset-Kachel sind hier nur der
+  // EINSTIEG, nicht der Kern der Seite (das ist der Skillbaum/die
+  // Lektionen darunter) — sie bekommen daher eine schmale, sticky
+  // Seitenspalte links statt zentrierten Platz über der vollen Breite zu
+  // beanspruchen. `position: sticky` bezieht sich auf #content-section
+  // (siehe style.css), den scrollenden Ahnen dieser Seite.
   el.innerHTML = `
-    <div class="feature-stage">
+    <div class="feature-stage erfahrung-page">
       <div class="feature-stage-label">Erfahrung</div>
-      <p class="location-card-desc" style="max-width: 480px; margin-bottom: 4px;">
-        Was nützt mir noch Gold, das mir ohnehin gestohlen werden kann? Vielleicht sollte ich
-        lieber in mich selbst investieren — Fähigkeiten, die mir niemand wegnehmen kann.
-      </p>
-      <div class="reward-info" style="margin-bottom: 18px;">
-        Erfahrung: <span class="gold-amount">${experience.points} EP</span>
+      <div class="erfahrung-layout">
+        <div class="erfahrung-sidebar">
+          <p class="location-card-desc">
+            Was nützt mir noch Gold, das mir ohnehin gestohlen werden kann? Vielleicht sollte ich
+            lieber in mich selbst investieren — Fähigkeiten, die mir niemand wegnehmen kann.
+          </p>
+          <div class="reward-info">Erfahrung: <span class="gold-amount">${experience.points} EP</span></div>
+          ${resetCard}
+        </div>
+        <div class="erfahrung-main">${lowerSection}</div>
       </div>
-      <div class="action-grid">${resetCard}</div>
-      ${lowerSection}
     </div>
   `;
 }

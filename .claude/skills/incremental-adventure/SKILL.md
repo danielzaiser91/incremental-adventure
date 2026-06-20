@@ -1097,6 +1097,22 @@ nach dem Setzen der Flags zusätzlich `render()` auf, bevor es den Dialog
 öffnet (das Dialog-Overlay liegt sowieso über der Zielleiste und stört
 dabei nicht).
 
+## Sticky Seitenspalte innerhalb von .feature-stage — Override statt neue Basisklasse
+
+Die Erfahrungs-Seite (experience.js, renderErfahrung()) ist die einzige
+Seite, deren Einstiegs-Block (Intro-Text + Reset-Kachel) klein/seitlich
+statt zentriert über voller Breite stehen soll — der Skillbaum/die
+Lektionen darunter sind der eigentliche Inhalt. Statt `.feature-stage`
+selbst zu ändern (zentriert auf JEDER anderen Seite, das bleibt so),
+bekam dieser eine Aufruf eine zusätzliche Klasse `.erfahrung-page`, die
+NUR `align-items`/`text-align` überschreibt; das eigentliche Zwei-Spalten-
+Layout (`.erfahrung-layout` → `.erfahrung-sidebar` + `.erfahrung-main`)
+sitzt darunter. Die Sidebar nutzt `position: sticky; top: 0` — das
+funktioniert hier, weil `#content-area` (ohne eigenes Overflow/Transform)
+direkt im scrollenden `#content-section` liegt; sticky bezieht sich
+automatisch auf diesen nächsten scrollenden Vorfahren, ganz ohne
+JS-Scroll-Listener.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

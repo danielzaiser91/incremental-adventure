@@ -307,6 +307,52 @@ html, body {
   margin-bottom: 22px;
 }
 
+/* Erfahrungs-Seite: schmale Seitenspalte (Intro + Reset-Kachel) statt
+   zentrierter Block über voller Breite — der Skillbaum/die Lektionen
+   darunter sind der eigentliche Seiteninhalt und bekommen den Großteil
+   der Breite. `align-items: flex-start` + `text-align: left` überschreibt
+   bewusst die zentrierte Grundausrichtung von .feature-stage NUR hier. */
+.erfahrung-page { align-items: stretch; text-align: left; }
+
+.erfahrung-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+.erfahrung-sidebar {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Bleibt beim Scrollen von #content-section (dem scrollenden Ahnen)
+     sichtbar oben stehen, statt mit dem Skillbaum nach oben wegzulaufen. */
+  position: sticky;
+  top: 0;
+}
+
+.erfahrung-main {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+/* Einleitender Satz vor Skillbaum/Lektionen — bewusst eigene, etwas
+   auffälligere Optik (Zitat-Strich + Kursivschrift) statt der unauffälligen
+   .location-card-desc, weil er hier den Einstieg in den jeweiligen
+   Abschnitt markiert, nicht nur Hintergrundtext ist. */
+.erfahrung-section-intro {
+  max-width: 480px;
+  margin: 0 auto 18px;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent-dim);
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--text-mid);
+  text-align: left;
+}
+
 /* Intro-Hero: das allererste klickbare Element des Spiels */
 .feature-hero {
   display: flex;
