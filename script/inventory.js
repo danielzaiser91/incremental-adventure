@@ -1,0 +1,229 @@
+/* ══════════════════════════════════════════════════════════════
+   inventory.js — Inventar des Spielers
+   Gekaufte Nahrungsmittel landen hier statt sofort verzehrt zu werden.
+   Ausrüstung landet hier ebenfalls unausgerüstet — erst das bewusste
+   "Ausrüsten" verbindet sie mit einem Charakter-Slot und damit ihrem
+   Effekt (siehe equipItem()).
+   ══════════════════════════════════════════════════════════════ */
+
+'use strict';
+
+const EQUIPMENT_ITEMS = [
+  {
+    id: 'ledergloves', name: 'Lederhandschuhe', icon: '🧤', slot: 'hands', slotLabel: 'Hände',
+    desc: 'Schonen die Hände, erlauben kräftigeres Zupacken.', effect: '+1 Gold pro Feldarbeit'
+  }
+];
+
+const EQUIPMENT_SLOTS = ['hands'];
+
+/** Anzahl belegter Inventar-Plätze — ein Platz pro BESESSENEM Gegenstands-
+    TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT. */
+function getUsedInventorySlots() {
+  const food  = FOOD_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const equip = EQUIPMENT_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  return food + equip;
+}
+
+/**
+ * Fügt einen Gegenstand ins Inventar ein — ob gekauft oder geschenkt.
+ * Ist kein Platz mehr frei (und der Spieler besitzt diesen Typ noch nicht),
+ * landet er stattdessen im `overflowBag`: aufgezwungene Gegenstände (z.B.
+ * NPC-Geschenke) dürfen nie einfach verloren gehen, auch wenn der reguläre
+ * Beutel voll ist.
+ */
+function grantItem(itemId, qty = 1) {
+  const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
+  if (!alreadyHasSlot && getUsedInventorySlots() >= INVENTORY_SLOT_COUNT) {
+    overflowBag[itemId] = (overflowBag[itemId] || 0) + qty;
+    showToast('Mein Beutel ist voll — das hier trage ich vorerst zusätzlich bei mir.', 'event');
+    return;
+  }
+  resources.inventory[itemId] = (resources.inventory[itemId] || 0) + qty;
+  gameFlags.everOwnedItem = true; // schaltet die Inventar-Navigation frei (siehe nav.js)
+}
+
+/** Versucht, einen Gegenstand aus dem überzähligen Beutel ins reguläre
+    Inventar einzusortieren — klappt nur, wenn inzwischen wieder Platz ist. */
+function moveFromOverflow(itemId) {
+  const qty = overflowBag[itemId] || 0;
+  if (qty <= 0) return;
+
+  const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
+  if (!alreadyHasSlot && getUsedInventorySlots() >= INVENTORY_SLOT_COUNT) {
+    showToast('Noch immer kein Platz im Beutel.', 'error');
+    return;
+  }
+
+  resources.inventory[itemId] = (resources.inventory[itemId] || 0) + qty;
+  delete overflowBag[itemId];
+  render();
+}
+
+/** Findet Name/Icon eines Gegenstands über Food- oder Ausrüstungs-Registry
+    (für die Anzeige im überzähligen Beutel, der beide Arten enthalten kann). */
+function findItemMeta(itemId) {
+  return FOOD_ITEMS.find(i => i.id === itemId) || EQUIPMENT_ITEMS.find(i => i.id === itemId);
+}
+
+/** Rendert die Inventar-Seite: Slot-Übersicht, Ausrüstung, Verbrauchsgüter,
+    Questgegenstände (separat) und ggf. den überzähligen Beutel. */
+function renderInventar(el) {
+  const ownedFood   = FOOD_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
+  const ownedEquip  = EQUIPMENT_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
+  const hasAnyGear  = ownedEquip.length > 0 || EQUIPMENT_SLOTS.some(slot => equipment[slot]);
+  const ownedQuestItems = QUEST_ITEMS.filter(qi => (questItems[qi.id] || 0) > 0);
+  const overflowEntries = Object.entries(overflowBag).filter(([, qty]) => qty > 0);
+
+  if (ownedFood.length === 0 && !hasAnyGear && ownedQuestItems.length === 0 && overflowEntries.length === 0) {
+    el.innerHTML = `
+      <div class="feature-stage">
+        <div class="feature-stage-label">Inventar</div>
+        <p class="chronik-empty">
+          Dein Inventar ist leer. Besuche einen Krämer, um Vorräte zu kaufen.
+        </p>
+      </div>
+    `;
+    return;
+  }
+
+  const usedSlots = getUsedInventorySlots();
+  const slotCells = Array.from({ length: INVENTORY_SLOT_COUNT }, (_, i) =>
+    `<div class="inv-slot-cell ${i < usedSlots ? 'filled' : 'empty'}"></div>`).join('');
+  const slotOverview = `
+    <div class="inv-slot-overview" title="${usedSlots} / ${INVENTORY_SLOT_COUNT} Plätze belegt">
+      ${slotCells}
+    </div>
+    <div class="inv-slot-label">${usedSlots} / ${INVENTORY_SLOT_COUNT} Plätze belegt</div>`;
+
+  let equipmentSection = '';
+  if (hasAnyGear) {
+    const slotCards = EQUIPMENT_SLOTS.map(slot => {
+      const equippedId   = equipment[slot];
+      const equippedItem = equippedId ? EQUIPMENT_ITEMS.find(i => i.id === equippedId) : null;
+      if (equippedItem) {
+        return `
+          <div class="action-card action-card-compact">
+            <div class="action-card-icon">${equippedItem.icon}</div>
+            <div class="action-card-name">${equippedItem.slotLabel}: ${equippedItem.name}</div>
+            <div class="action-card-effect">${equippedItem.effect}</div>
+            <button class="action-btn" onclick="unequipItem('${slot}')">Ablegen</button>
+          </div>`;
+      }
+      return `
+        <div class="action-card action-card-compact action-card-locked">
+          <div class="action-card-icon">✋</div>
+          <div class="action-card-name">Hände: leer</div>
+        </div>`;
+    }).join('');
+
+    equipmentSection = `
+      <div class="market-section-label">Ausrüstung</div>
+      <div class="action-grid">${slotCards}</div>`;
+  }
+
+  const foodCards = ownedFood.map(item => {
+    const count = resources.inventory[item.id];
+    const effectParts = [`🍞 −${item.hungerRelief}%`];
+    if (item.tirednessRelief) effectParts.push(`😴 −${item.tirednessRelief}%`);
+
+    return `
+      <div class="action-card action-card-compact">
+        <div class="action-card-icon">${item.icon}</div>
+        <div class="action-card-name">${item.name} <span class="inventory-count">×${count}</span></div>
+        <div class="action-card-effect">${effectParts.join(' · ')}</div>
+        <button class="action-btn" onclick="useFood('${item.id}')">Verzehren</button>
+      </div>`;
+  }).join('');
+
+  const equipBagCards = ownedEquip.map(item => `
+    <div class="action-card action-card-compact">
+      <div class="action-card-icon">${item.icon}</div>
+      <div class="action-card-name">${item.name}</div>
+      <div class="action-card-effect">${item.effect}</div>
+      <button class="action-btn" onclick="equipItem('${item.id}')">Ausrüsten</button>
+    </div>`).join('');
+
+  const questCards = ownedQuestItems.map(qi => `
+    <div class="action-card action-card-compact action-card-quest">
+      <div class="action-card-icon">${qi.icon}</div>
+      <div class="action-card-name">${qi.name} <span class="inventory-count">×${questItems[qi.id]}</span></div>
+      <p class="action-card-desc">${qi.desc}</p>
+    </div>`).join('');
+
+  const overflowCards = overflowEntries.map(([itemId, qty]) => {
+    const meta = findItemMeta(itemId);
+    if (!meta) return '';
+    return `
+      <div class="action-card action-card-compact">
+        <div class="action-card-icon">${meta.icon}</div>
+        <div class="action-card-name">${meta.name} <span class="inventory-count">×${qty}</span></div>
+        <button class="action-btn" onclick="moveFromOverflow('${itemId}')">Einsortieren</button>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Inventar</div>
+      ${slotOverview}
+      ${equipmentSection}
+      ${foodCards ? `<div class="market-section-label">Verbrauchsgüter</div><div class="action-grid">${foodCards}</div>` : ''}
+      ${equipBagCards ? `<div class="market-section-label">Im Beutel</div><div class="action-grid">${equipBagCards}</div>` : ''}
+      ${questCards ? `<div class="market-section-label">Questgegenstände</div><div class="action-grid">${questCards}</div>` : ''}
+      ${overflowCards ? `
+        <div class="market-section-label">Zusätzlich bei mir (Beutel voll)</div>
+        <div class="action-grid">${overflowCards}</div>` : ''}
+    </div>
+  `;
+}
+
+/** Rüstet einen Gegenstand aus dem Inventar in seinen Charakter-Slot aus.
+    Belegt der Slot bereits etwas anderes, wandert das zurück ins Inventar. */
+function equipItem(itemId) {
+  const item  = EQUIPMENT_ITEMS.find(i => i.id === itemId);
+  const owned = item ? (resources.inventory[itemId] || 0) : 0;
+  if (!item || owned <= 0) return;
+
+  const previous = equipment[item.slot];
+  if (previous) resources.inventory[previous] = (resources.inventory[previous] || 0) + 1;
+
+  resources.inventory[itemId] = owned - 1;
+  equipment[item.slot] = itemId;
+
+  showToast(`${item.name} ausgerüstet.`, 'purchase');
+  render();
+}
+
+/** Legt den Gegenstand aus einem Slot wieder ab — zurück ins Inventar. */
+function unequipItem(slot) {
+  const itemId = equipment[slot];
+  if (!itemId) return;
+
+  resources.inventory[itemId] = (resources.inventory[itemId] || 0) + 1;
+  equipment[slot] = null;
+  render();
+}
+
+/** Verzehrt ein Nahrungsmittel aus dem Inventar und wendet seine Effekte an. */
+function useFood(itemId) {
+  const item  = FOOD_ITEMS.find(i => i.id === itemId);
+  const count = resources.inventory[itemId] || 0;
+  if (!item || count <= 0) return;
+
+  resources.inventory[itemId] = count - 1;
+  adjustHunger(-item.hungerRelief);
+  if (item.tirednessRelief) adjustTiredness(-item.tirednessRelief);
+
+  // Brot hebt den harten Arbeits-Block auf, der seit dem ersten
+  // Hunger-Debuff gilt (siehe actions.js, startWork()/mustEatBread).
+  const resolvedWorkBlock = itemId === 'brot' && gameFlags.mustEatBread;
+  if (resolvedWorkBlock) gameFlags.mustEatBread = false;
+
+  showToast(
+    resolvedWorkBlock
+      ? `${item.name} verzehrt. Mit etwas im Magen kann ich wieder arbeiten.`
+      : `${item.name} verzehrt. Der Hunger lässt nach.`,
+    'purchase'
+  );
+  render();
+}

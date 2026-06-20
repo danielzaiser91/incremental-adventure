@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chroniken des vergessenen Weges</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- ══ TOAST-CONTAINER: ephemere Reaktionstexte, oben rechts ══ -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ══ DIALOG-OVERLAY: einmalige Story-Momente, modal ══════════ -->
+  <div id="dialog-overlay" class="dialog-overlay hidden">
+    <div class="dialog-box" id="dialog-box" role="dialog" aria-modal="true">
+      <div class="dialog-title" id="dialog-title"></div>
+      <div class="dialog-text" id="dialog-text"></div>
+      <div class="dialog-actions" id="dialog-actions"></div>
+    </div>
+  </div>
+
+  <div id="app">
+
+    <!-- ══ LINKE SPALTE: NAVIGATION ══════════════════════════ -->
+    <nav id="nav-panel" class="panel">
+
+      <!-- Game Branding -->
+      <div id="game-branding">
+        <div class="game-title">Chroniken</div>
+        <div class="game-subtitle">des vergessenen Weges</div>
+      </div>
+
+      <!-- Panel-Header -->
+      <div class="panel-header">
+        <span class="panel-label">Navigation</span>
+      </div>
+
+      <!-- Dynamischer Nav-Inhalt (wird per JS ersetzt) -->
+      <div id="nav-content" class="nav-content">
+        <!-- renderNav() -->
+      </div>
+
+      <!-- Einstellungen — permanent am unteren Rand fixiert -->
+      <div class="nav-footer">
+        <button class="nav-footer-btn" id="btn-settings" onclick="showSettings()">
+          ⚙ Einstellungen
+        </button>
+      </div>
+
+    </nav>
+
+    <!-- ══ MITTLERE SPALTE: INTERAKTIVER FEATURE-BEREICH ══════ -->
+    <main id="main-panel" class="panel">
+      <section id="content-section">
+        <div id="content-area">
+          <!-- renderContent() -->
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ RECHTE SPALTE: CHARAKTER-STATS ════════════════════ -->
+    <aside id="stats-panel" class="panel">
+      <div class="panel-header">
+        <span class="panel-label">Charakter</span>
+      </div>
+      <div id="stats-content">
+        <!-- renderStats() -->
+      </div>
+    </aside>
+
+    <!-- ══ UNTERE LEISTE: AKTUELLES ZIEL, immer sichtbar ══════ -->
+    <footer id="objective-bar">
+      <div class="objective-left">
+        <button class="objective-chronik-btn" id="objective-chronik-btn" onclick="showContent('chronik')" title="Chronik öffnen">📜</button>
+        <span class="objective-chapter" id="objective-chapter"></span>
+        <span class="objective-divider"></span>
+        <span class="objective-icon">◈</span>
+        <span class="objective-label">Ziel:</span>
+        <span class="objective-text" id="objective-text"></span>
+      </div>
+      <div class="objective-right">
+        <span class="objective-clock" id="objective-clock"></span>
+      </div>
+    </footer>
+
+  </div><!-- /#app -->
+
+  <script src="script/state.js"></script>
+  <script src="script/clock.js"></script>
+  <script src="script/needs.js"></script>
+  <script src="script/story.js"></script>
+  <script src="script/market.js"></script>
+  <script src="script/inventory.js"></script>
+  <script src="script/toast.js"></script>
+  <script src="script/dialog.js"></script>
+  <script src="script/npc.js"></script>
+  <script src="script/quests.js"></script>
+  <script src="script/experience.js"></script>
+  <script src="script/objective.js"></script>
+  <script src="script/nav.js"></script>
+  <script src="script/content.js"></script>
+  <script src="script/stats.js"></script>
+  <script src="script/actions.js"></script>
+  <script src="script/save.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

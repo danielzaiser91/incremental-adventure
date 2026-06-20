@@ -1,0 +1,1388 @@
+/* ══════════════════════════════════════════════════════════════
+   CHRONIKEN DES VERGESSENEN WEGES — style.css  v0.2.0-alpha
+   Design: Dark-Mode, Amber-Gold-Akzent, IBM Plex Mono / Cinzel
+   Fokus: interaktive Spielelemente im Zentrum, Text nur dosiert
+   (Toast für Reaktionen, Dialog-Popup für Story).
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── DESIGN TOKENS ────────────────────────────────────────────── */
+:root {
+  /* Hintergründe — bewusst heller als ein typisches Dark-Mode-Schwarz,
+     damit Text auch ohne maximale Monitorhelligkeit gut lesbar bleibt. */
+  --bg:          #1b212c;   /* App-Hintergrund */
+  --bg-panel:    #232a37;   /* Panel-Oberfläche */
+  --bg-elevated: #2c3442;   /* Karten, Inputs */
+  --bg-hover:    #323b4a;   /* Hover-Zustand */
+
+  /* Rahmen */
+  --border:      #4a5468;
+  --border-soft: #353e4d;
+
+  /* Text-Hierarchie (kontraststark genug für AA auf --bg / --bg-elevated) */
+  --text-hi:  #f3f6fa;   /* Hohe Priorität */
+  --text-mid: #c2cad6;   /* Mittlere Priorität */
+  --text-lo:  #9aa4b3;   /* Niedrig / gedämpft, aber noch gut lesbar */
+
+  /* Markenfarbe: Bernstein-Gold */
+  --accent:     #d9b65a;
+  --accent-dim: #a3884a;
+  --accent-glow: rgba(201, 168, 76, 0.10);
+  --accent-hi:   rgba(201, 168, 76, 0.22);
+
+  /* Reaktions-/Status-Farben */
+  --c-story:    #d2a8ff;
+  --c-event:    #ffb871;
+  --c-reward:   #6bdf7e;
+  --c-error:    #ff7b72;
+  --c-info:     #79c0ff;
+  --c-purchase: #d9b65a;
+
+  /* Layout */
+  --nav-w:        220px;
+  --stats-w:      200px;
+  --objective-h:  38px;
+  --pad:          16px;
+  --pad-sm:       10px;
+  --radius:       5px;
+  --rad-sm:       3px;
+
+  /* Schriften */
+  --font-title: 'Cinzel', 'Palatino Linotype', Georgia, serif;
+  --font-ui:    'IBM Plex Mono', 'Consolas', 'Courier New', monospace;
+
+  /* Übergänge */
+  --t: 0.13s ease;
+}
+
+/* ── RESET ────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-hi);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.65;
+  overflow: hidden;
+}
+
+/* ── UTILITY ──────────────────────────────────────────────────── */
+.hidden { display: none !important; }
+
+/* ── APP-ROOT — 3-Spalten-Grid + untere Zielleiste ───────────── */
+#app {
+  display: grid;
+  grid-template-columns: var(--nav-w) 1fr var(--stats-w);
+  grid-template-rows: 1fr var(--objective-h);
+  height: 100vh;
+  min-width: 760px;
+}
+
+/* ── GEMEINSAME PANEL-GRUNDLAGE ───────────────────────────────── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#nav-panel,
+#main-panel { border-right: 1px solid var(--border); }
+
+/* ── PANEL-HEADER ─────────────────────────────────────────────── */
+.panel-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 10px var(--pad);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.panel-label {
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.panel-sublabel {
+  font-size: 10px;
+  color: var(--text-lo);
+  font-style: italic;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   LINKE SPALTE: NAVIGATION
+   ══════════════════════════════════════════════════════════════ */
+
+#game-branding {
+  padding: 16px var(--pad) 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.game-title {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.game-subtitle {
+  font-family: var(--font-title);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-top: 3px;
+}
+
+.nav-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 10px 0 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.nav-level-label {
+  padding: 0 var(--pad) 7px;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  user-select: none;
+}
+
+.nav-btn {
+  display: block;
+  width: 100%;
+  padding: 8px var(--pad);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--text-mid);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background  var(--t),
+    border-color var(--t),
+    color        var(--t);
+}
+
+.nav-btn:hover {
+  background:       var(--bg-hover);
+  border-left-color: var(--accent-dim);
+  color: var(--text-hi);
+}
+
+.nav-btn.active {
+  background:       var(--accent-glow);
+  border-left-color: var(--accent);
+  color: var(--accent);
+}
+
+@keyframes nav-new-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 0 var(--accent-hi); }
+  50%      { box-shadow: inset 60px 0 0 0 var(--accent-glow); }
+}
+
+.nav-btn-new {
+  border-left-color: var(--accent);
+  color: var(--text-hi);
+  animation: nav-new-pulse 1.8s ease-in-out infinite;
+}
+
+.nav-btn-back {
+  color: var(--text-lo);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.nav-btn-back:hover {
+  color: var(--text-mid);
+  border-left-color: var(--border);
+}
+
+.nav-divider {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 6px var(--pad);
+}
+
+.nav-divider-strong {
+  border-top: 1px solid var(--border);
+  margin: 10px var(--pad);
+}
+
+.nav-footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 6px 0;
+  flex-shrink: 0;
+}
+
+.nav-footer-btn {
+  display: block;
+  width: 100%;
+  padding: 8px var(--pad);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--text-lo);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background  var(--t),
+    color        var(--t),
+    border-color var(--t);
+}
+
+.nav-footer-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-mid);
+}
+
+.nav-footer-btn.active {
+  background:       var(--accent-glow);
+  border-left-color: var(--accent);
+  color: var(--accent);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   MITTLERE SPALTE: INTERAKTIVER FEATURE-BEREICH
+   ══════════════════════════════════════════════════════════════ */
+
+#content-section {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#content-section::-webkit-scrollbar       { width: 4px; }
+#content-section::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+#content-area {
+  position: relative;
+  padding: 24px var(--pad) var(--pad);
+  height: 100%;
+}
+
+.feature-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.feature-stage-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 22px;
+}
+
+/* Intro-Hero: das allererste klickbare Element des Spiels */
+.feature-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.feature-hero-icon {
+  font-size: 52px;
+  filter: drop-shadow(0 0 18px var(--accent-hi));
+}
+
+/* Status-Badges (z.B. "wird beobachtet") */
+.status-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-style: italic;
+  padding: 4px 10px;
+  border-radius: var(--rad-sm);
+  margin-bottom: 10px;
+}
+
+.status-badge-warning {
+  color: var(--c-event);
+  background: rgba(255, 166, 87, 0.08);
+  border: 1px solid rgba(255, 166, 87, 0.25);
+}
+
+/* Standort-Karte (kurze Lageinfo, kein Fließtext-Log) */
+.location-card {
+  max-width: 360px;
+  padding: 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+}
+
+.location-card-title {
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--text-hi);
+  margin-bottom: 8px;
+}
+
+.location-card-desc {
+  font-size: 12px;
+  color: var(--text-lo);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.quick-links {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── ACTION-GRID: zentrale, klickbare Feature-Karten ─────────
+   Wächst von einer Karte (früh im Spiel) zu vielen Karten,
+   sobald weitere Mechaniken pro Feature freigeschaltet werden. */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+
+.action-card:hover { border-color: var(--border); }
+
+.action-card-primary {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 24px -8px var(--accent-hi);
+}
+
+.action-card-locked {
+  opacity: 0.55;
+}
+
+@keyframes action-card-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-hi); border-color: var(--border-soft); }
+  50%      { box-shadow: 0 0 18px 2px var(--accent-hi); border-color: var(--accent); }
+}
+
+/* Lenkt die Aufmerksamkeit auf eine erzwungene nächste Handlung (z.B. "ich
+   muss jetzt Brot kaufen") — analog zu .nav-btn-new, aber für Karten
+   innerhalb einer Seite statt für Navigationseinträge. */
+.action-card-highlight {
+  animation: action-card-pulse 1.8s ease-in-out infinite;
+}
+
+.action-card-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.action-card-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-hi);
+  margin-bottom: 6px;
+}
+
+.action-card-desc {
+  font-size: 11px;
+  color: var(--text-lo);
+  font-style: italic;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.action-card-cost {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Konkrete, nicht-erzählerische Effekt-/Kennwerte (Dauer, %-Werte) —
+   bewusst vom erzählerischen Beschreibungstext getrennt. */
+.action-card-effect {
+  font-size: 10.5px;
+  color: var(--text-mid);
+  margin-top: 4px;
+}
+
+.action-card-warning {
+  font-size: 11px;
+  color: var(--c-event);
+  margin-bottom: 10px;
+}
+
+.inventory-count {
+  font-size: 10px;
+  color: var(--text-lo);
+  font-weight: 400;
+}
+
+.npc-quest-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 14px;
+  filter: drop-shadow(0 0 4px rgba(255, 200, 87, 0.6));
+}
+
+/* Absolut positioniert statt im Layout-Fluss: das Erscheinen/Verschwinden
+   dieses Buttons (Hub <-> Vendor-Unterseite) darf nie alle Elemente
+   darunter nach unten verschieben — sonst landet der Mauszeiger nach der
+   Navigation nicht mehr über dem Button, den der Spieler gerade noch
+   gesehen hat (konkreter User-Befund: Marktplatz -> Krämer -> "Brot
+   kaufen" rutschte weg). */
+.vendor-back-btn {
+  position: absolute;
+  top: 20px;
+  left: var(--pad);
+  margin-bottom: 0;
+  font-size: 11px;
+  color: var(--text-lo);
+  border-color: var(--border);
+}
+
+.vendor-back-btn:hover {
+  color: var(--text-mid);
+  border-color: var(--border);
+  background: transparent;
+  box-shadow: none;
+}
+
+.market-section-label {
+  width: 100%;
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  text-align: left;
+  margin: 4px 0 10px;
+}
+
+.cost-ok        { color: var(--accent); }
+.cost-too-high  { color: var(--c-error); }
+
+/* ── INVENTAR: Platz-Übersicht + kompaktere Karten ──────────
+   Die Zellen-Reihe signalisiert die maximale Inventar-Kapazität, auch
+   wenn die meisten Zellen noch leer sind — die ausführlichen Karten
+   darunter bleiben dadurch bewusst kompakter (kleineres Icon, keine
+   Beschreibung), weil die Slot-Übersicht bereits die Kapazitätsfrage
+   beantwortet. */
+.inv-slot-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  max-width: 460px;
+  margin-bottom: 4px;
+}
+
+.inv-slot-cell {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--rad-sm);
+  border: 1px solid var(--border-soft);
+  background: transparent;
+}
+
+.inv-slot-cell.filled {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+}
+
+.inv-slot-label {
+  width: 100%;
+  font-size: 10px;
+  color: var(--text-lo);
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.action-card-compact {
+  padding: 12px 10px;
+}
+
+.action-card-compact .action-card-icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.action-card-compact .action-card-name {
+  font-size: 11.5px;
+  margin-bottom: 4px;
+}
+
+.action-card-compact .action-card-desc {
+  display: none;
+}
+
+.action-card-compact .action-card-effect {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.action-card-quest {
+  border-color: var(--c-story);
+}
+
+.action-card-quest .action-card-desc {
+  display: block;
+  font-size: 10px;
+}
+
+/* ── ERFAHRUNGS-SKILLBAUM: echter Baum statt Karten-Gitter ──
+   Wurzel oben zentral, darunter zwei Äste (Arbeit links, Wirtschaft
+   rechts) — jede Zeile erscheint erst, sobald ihr jeweiliger Vorgänger
+   erlernt wurde (siehe experience.js, renderSkillTree()). */
+.skill-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.skill-tree-row-root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.skill-tree-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+.skill-tree-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-node-card {
+  max-width: 210px;
+  width: 100%;
+}
+
+.skill-connector {
+  position: relative;
+  width: 100%;
+  height: 26px;
+}
+
+.skill-connector-fork .stl-stem-top {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 11px;
+  width: 1px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.skill-connector-fork .stl-bar {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 11px;
+  height: 1px;
+  background: var(--border);
+}
+
+.skill-connector-fork .stl-stem-left {
+  position: absolute;
+  left: 25%;
+  top: 11px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.skill-connector-fork .stl-stem-right {
+  position: absolute;
+  right: 25%;
+  top: 11px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.skill-connector-plain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.skill-connector-plain .stl-stem {
+  width: 1px;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--border);
+}
+
+.skill-connector-plain .stl-stem-hidden {
+  visibility: hidden;
+}
+
+/* ── JOB-KACHEL: vertikale Erfahrungsleiste + ausklappbares Info-Panel ──
+   Bar wächst von unten nach oben innerhalb der Kachel selbst (nie nur als
+   Tooltip — der Tooltip ergänzt nur die Erklärung). Das Info-Panel zeigt
+   die konkreten Stufen-Boni in grünem Text und schiebt sich seitlich aus
+   der Kachel heraus statt sie zu ersetzen. */
+.job-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.job-card-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.job-card {
+  position: relative;
+  padding-left: 28px;
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.job-xp-bar {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  bottom: 14px;
+  width: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.job-xp-bar-fill {
+  width: 100%;
+  background: linear-gradient(180deg, var(--accent), var(--accent-dim));
+  transition: height 0.25s ease;
+}
+
+.job-info-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--rad-sm);
+  color: var(--text-lo);
+  font-size: 11px;
+  cursor: pointer;
+  transition: color var(--t), border-color var(--t);
+}
+
+.job-info-toggle:hover { color: var(--text-mid); border-color: var(--accent-dim); }
+
+.job-info-panel {
+  width: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-left: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  transition: width 0.25s ease, opacity 0.25s ease, margin-left 0.25s ease;
+  align-self: stretch;
+}
+
+.job-info-panel.open {
+  width: 270px;
+  opacity: 1;
+  margin-left: 12px;
+  padding: 14px;
+}
+
+.job-info-title {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.job-info-current {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.job-info-xp {
+  font-size: 10.5px;
+  color: var(--text-mid);
+}
+
+.job-info-divider {
+  height: 1px;
+  background: var(--border-soft);
+  margin: 10px 0;
+}
+
+.job-info-next-label {
+  font-size: 10.5px;
+  color: var(--text-lo);
+  margin-bottom: 4px;
+  white-space: normal;
+}
+
+.job-info-bonus {
+  font-size: 10.5px;
+  color: var(--c-reward);
+  white-space: normal;
+}
+
+.job-info-compare-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--text-mid);
+  padding: 3px 0;
+}
+
+.job-info-compare-row strong {
+  color: var(--c-reward);
+  font-weight: 500;
+}
+
+.job-info-base-note {
+  margin-top: 6px;
+  font-size: 9.5px;
+  color: var(--text-lo);
+  text-decoration: underline dotted;
+  cursor: help;
+  width: fit-content;
+}
+
+/* ── ACTION-BUTTONS ───────────────────────────────────────── */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--rad-sm);
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background   var(--t),
+    border-color var(--t),
+    box-shadow   var(--t);
+}
+
+.action-btn:hover:not(:disabled):not(.btn-disabled) {
+  background:   var(--accent-hi);
+  border-color: var(--accent);
+  box-shadow:   0 0 10px var(--accent-glow);
+}
+
+.action-btn-primary {
+  padding: 12px 22px;
+  font-size: 13px;
+  border-width: 1.5px;
+}
+
+.action-btn:disabled,
+.action-btn.btn-disabled {
+  opacity: 0.33;
+  cursor: not-allowed;
+  border-color: var(--border);
+  color: var(--text-lo);
+}
+
+/* ── ARBEITSPLATZ: FORTSCHRITTSBALKEN ─────────────────────── */
+.work-btn { margin-bottom: 10px; }
+
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--rad-sm);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-dim) 0%, var(--accent) 100%);
+  border-radius: var(--rad-sm);
+  box-shadow: 2px 0 10px var(--accent-hi);
+}
+
+.progress-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-hi);
+  text-shadow: 0 0 6px rgba(0, 0, 0, .9);
+  pointer-events: none;
+}
+
+.reward-info  { font-size: 11px; color: var(--text-lo); }
+.gold-amount  { color: var(--c-reward); }
+
+/* ── CHRONIK ──────────────────────────────────────────────── */
+.chronik-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.chronik-entry {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  color: var(--text-hi);
+  font-family: var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--t), background var(--t);
+}
+
+.chronik-entry:hover {
+  border-color: var(--accent-dim);
+  background: var(--accent-glow);
+}
+
+.chronik-entry-id {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.chronik-entry-title { font-size: 13px; }
+.chronik-entry-arrow { color: var(--text-lo); }
+
+/* ── QUESTS ───────────────────────────────────────────────── */
+.quest-status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: var(--rad-sm);
+  margin-top: 4px;
+}
+
+.quest-status-unstarted { color: var(--text-lo);  background: var(--bg); }
+.quest-status-active    { color: var(--c-info);   background: rgba(121, 192, 255, 0.1); }
+.quest-status-done      { color: var(--c-event);  background: rgba(255, 184, 113, 0.12); }
+.quest-status-rewarded  { color: var(--c-reward); background: rgba(107, 223, 126, 0.1); }
+
+.quest-card-done { opacity: 0.7; }
+
+.chronik-empty {
+  color: var(--text-lo);
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+/* ── EINSTELLUNGEN ────────────────────────────────────────── */
+.settings-group {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.settings-section-title {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.settings-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-buttons-row {
+  flex-direction: row;
+}
+
+.settings-btn {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.settings-btn-option {
+  flex: 1;
+  justify-content: center;
+}
+
+.settings-btn-option.active {
+  background:   var(--accent-hi);
+  border-color: var(--accent);
+  color:        var(--accent);
+}
+
+.toast-history {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.toast-history-item {
+  font-size: 11px;
+  padding: 6px 8px;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+  border-radius: var(--rad-sm);
+  color: var(--text-mid);
+}
+
+.toast-history-reward   { border-left-color: var(--c-reward);   }
+.toast-history-purchase { border-left-color: var(--c-purchase); }
+.toast-history-error    { border-left-color: var(--c-error);    }
+.toast-history-info     { border-left-color: var(--c-info);     }
+.toast-history-event    { border-left-color: var(--c-event);    }
+
+.btn-load {
+  border-color: #3b6eaf;
+  color: var(--c-info);
+}
+
+.btn-load:hover:not(:disabled):not(.btn-disabled) {
+  background:   rgba(79, 192, 255, 0.08);
+  border-color: var(--c-info);
+  box-shadow:   0 0 10px rgba(79, 192, 255, 0.12);
+}
+
+.settings-info {
+  margin-top: 12px;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--rad-sm);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-label { font-size: 11px; color: var(--text-lo); }
+.info-value { font-size: 11px; color: var(--text-mid); font-weight: 500; }
+
+.danger-title { color: rgba(248, 81, 73, 0.65); }
+
+.btn-danger {
+  border-color: rgba(248, 81, 73, 0.4);
+  color: var(--c-error);
+}
+
+.btn-danger:hover:not(:disabled):not(.btn-disabled) {
+  background:   rgba(248, 81, 73, 0.07);
+  border-color: var(--c-error);
+  box-shadow:   0 0 10px rgba(248, 81, 73, 0.12);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   RECHTE SPALTE: CHARAKTER-STATS
+   ══════════════════════════════════════════════════════════════ */
+#stats-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--pad);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.stat-section-label {
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.stat-group { margin-bottom: 14px; }
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.stat-row:last-child { border-bottom: none; }
+
+.stat-label { font-size: 12px; color: var(--text-lo); }
+.stat-value { font-size: 15px; font-weight: 500; color: var(--text-hi); }
+.gold-value { color: var(--accent); }
+.gold-icon  { font-size: 9px; opacity: 0.6; margin-left: 2px; }
+
+.stat-divider {
+  height: 1px;
+  background: var(--border-soft);
+  margin: 14px 0;
+}
+
+.needs-ok       { color: var(--text-hi); }
+.needs-warning  { color: var(--c-event); }
+.needs-critical { color: var(--c-error); }
+
+.needs-note {
+  font-size: 10px;
+  color: var(--c-event);
+  padding: 2px 0 6px;
+  line-height: 1.4;
+}
+
+.state-display {
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--rad-sm);
+}
+
+.state-label {
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: 4px;
+}
+
+.state-value {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--accent-dim);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.state-decoded {
+  font-size: 10px;
+  color: var(--text-lo);
+  margin-top: 3px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   UNTERE ZIELLEISTE — immer sichtbar, zeigt das aktuelle Ziel
+   ══════════════════════════════════════════════════════════════ */
+#objective-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--objective-h);
+  padding: 0 var(--pad);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  user-select: none;
+}
+
+.objective-left,
+.objective-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  position: relative;
+}
+
+/* Schwebt kurz über der Uhrzeit auf, sobald Spielzeit vergeht — getrennt
+   vom normalen Toast-Strom oben rechts, der für Aktions-Feedback reserviert
+   bleibt (Gold, Käufe, etc.), nicht für reinen Zeitablauf. */
+.time-toast {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--c-info);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.time-toast.time-toast-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.objective-chronik-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-lo);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--rad-sm);
+  transition: color var(--t), background var(--t);
+  flex-shrink: 0;
+}
+
+.objective-chronik-btn:hover { color: var(--text-mid); background: var(--bg-hover); }
+.objective-chronik-btn.active { color: var(--accent); background: var(--accent-glow); }
+
+.objective-chapter {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.objective-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.objective-icon { color: var(--accent); font-size: 10px; }
+.objective-label {
+  color: var(--text-lo);
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+.objective-text {
+  color: var(--text-hi);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.objective-clock {
+  color: var(--text-mid);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.objective-clock-warning {
+  color: var(--c-event);
+  font-style: italic;
+}
+
+/* Während ein Dialog offen ist, tritt die Zielleiste optisch zurück */
+body.dialog-open #objective-bar { opacity: 0.25; }
+
+
+/* ══════════════════════════════════════════════════════════════
+   TOAST-BENACHRICHTIGUNGEN — Reaktionen auf Aktionen
+   Fahren von außerhalb des Bildschirms (oben rechts) ein,
+   bleiben kurz stehen, fahren wieder aus.
+   ══════════════════════════════════════════════════════════════ */
+/* Bewusst oberhalb des Dialog-Overlays (z-index 1000): Reaktionstexte
+   (z.B. Mira-Drink-Gold-Abzug) müssen auch lesbar sein, während ein
+   Dialogfenster offen ist. Rechte Begrenzung endet vor der Stats-Spalte,
+   damit Gold/Bedürfnisse immer ablesbar bleiben. */
+#toast-container {
+  position: fixed;
+  top: 16px;
+  left: var(--nav-w);
+  right: var(--stats-w);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 16px;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-dim);
+  border-radius: var(--rad-sm);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+  color: var(--text-hi);
+  cursor: pointer;
+  max-width: 360px;
+  transform: translateY(-120%);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.toast.toast-in  { transform: translateY(0); opacity: 1; }
+.toast.toast-out { transform: translateY(-120%); opacity: 0; }
+
+.toast-reward   { border-left-color: var(--c-reward);   }
+.toast-purchase { border-left-color: var(--c-purchase); }
+.toast-error    { border-left-color: var(--c-error);    color: var(--c-error); }
+.toast-info     { border-left-color: var(--c-info);     }
+.toast-event    { border-left-color: var(--c-event);    }
+
+
+/* ══════════════════════════════════════════════════════════════
+   DIALOG-OVERLAY — modale Story-Momente, voller Fokus
+   ══════════════════════════════════════════════════════════════ */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 10, 0.78);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.dialog-overlay.dialog-visible { opacity: 1; }
+
+.dialog-box {
+  width: 90%;
+  max-width: 480px;
+  padding: 28px 26px;
+  background: var(--bg-panel);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px -10px var(--accent-hi);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.2s ease;
+}
+
+.dialog-overlay.dialog-visible .dialog-box {
+  transform: translateY(0) scale(1);
+}
+
+.dialog-title {
+  font-family: var(--font-title);
+  font-size: 16px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.dialog-text {
+  color: var(--text-mid);
+  font-size: 13px;
+  line-height: 1.75;
+  /* Jede Seite zeigt höchstens einen Absatz bis DIALOG_MAX_PAGE_LENGTH
+     Zeichen (siehe dialog.js) — eine feste Mindesthöhe reicht deshalb,
+     um den Button-Bereich darunter nicht mehr spürbar "hüpfen" zu lassen. */
+  min-height: 64px;
+}
+
+.dialog-text p { margin-bottom: 10px; }
+.dialog-text p:last-child { margin-bottom: 0; }
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dialog-btn { padding: 8px 18px; }
+
+/* Gesperrte Dialogoptionen: Sperrgrund als eigene Zeile mit Schloss-Symbol,
+   getrennt vom Haupttext, nie nur im Tooltip (siehe SKILL.md). */
+.dialog-btn:has(.dialog-btn-reason) {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.dialog-btn-main { display: block; }
+
+.dialog-btn-reason {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--c-event);
+}
