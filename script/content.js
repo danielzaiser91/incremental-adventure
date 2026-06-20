@@ -33,6 +33,42 @@ function renderContent() {
   }
 }
 
+/* ── Generischer Werte-Modifikator-Tooltip ───────────────────────
+   Überall dort, wo ein angezeigter Wert (Preis, Ertrag, Dauer, …) vom
+   "neutralen" Basiswert abweicht, weil ein Skill/Debuff/Ausrüstungsstück
+   ihn verändert, bekommt der Wert einen dezenten Hover-Indikator
+   (gepunktete Unterstreichung). Im Tooltip steht der Basiswert, ein
+   Trennstrich, und darunter JEDER aktive Effekt einzeln — grün, wenn er
+   für den Spieler positiv ist (z.B. ein niedrigerer Preis), rot, wenn
+   negativ (z.B. ein Debuff). Ohne Effekte gibt es keinen Indikator —
+   ein unveränderter Basiswert braucht keinen Hinweis. */
+
+/** Baut EINEN Effekt-Eintrag fürs Tooltip.
+    @param {string} label - z.B. "Sparsamkeit" oder "Hungrig"
+    @param {string} value - z.B. "-10%" oder "×0,85"
+    @param {boolean} positive - bestimmt die Farbe (grün/rot) */
+function valueEffectHtml(label, value, positive) {
+  return `<div class="value-tooltip-effect ${positive ? 'value-tooltip-positive' : 'value-tooltip-negative'}">` +
+    `<span>${label}</span><span>${value}</span></div>`;
+}
+
+/**
+ * Umschließt einen bereits fertig formatierten Anzeige-String mit dem
+ * Hover-Indikator + Tooltip — oder gibt ihn unverändert zurück, wenn die
+ * Effekt-Liste leer ist (kein Unterschied zum Basiswert, kein Hinweis nötig).
+ * @param {string} displayHtml - der im Layout sichtbare Wert, z.B. "14 Gold"
+ * @param {string} baseLabel - z.B. "Basiskosten"
+ * @param {string} baseValue - z.B. "16g"
+ * @param {{label:string, value:string, positive:boolean}[]} effects
+ */
+function modifiedValueHtml(displayHtml, baseLabel, baseValue, effects) {
+  if (!effects.length) return displayHtml;
+  const effectRows = effects.map(e => valueEffectHtml(e.label, e.value, e.positive)).join('');
+  return `<span class="value-modified" tabindex="0">${displayHtml}<span class="value-tooltip">` +
+    `<div class="value-tooltip-base">${baseLabel}: ${baseValue}</div>` +
+    `<hr class="value-tooltip-sep">${effectRows}</span></span>`;
+}
+
 /* ── Geschichte: rein erzählerischer Innenwelt-Bildschirm ────── */
 function renderGeschichte(el) {
   if (storyState === 10100) {
@@ -188,38 +224,82 @@ function renderArbeitsplatz(el) {
 
   // Nur die nächste Stufe ist für die Entscheidung "weiterarbeiten?" relevant —
   // vergangene Boni hat der Spieler längst, künftige jenseits der nächsten
-  // Stufe sind noch zu weit weg, um sie aufzulisten (siehe SKILL.md). Gezeigt
-  // werden konkrete "Jetzt → Danach"-Werte unter den AKTUELLEN Hunger-/
-  // Müdigkeits-/Ausrüstungs-Bedingungen — die reine, modifikatorfreie
-  // Stufen-Grundverbesserung steckt nur noch im Tooltip, weil sie allein
-  // (ohne die tatsächlichen Werte) zu Verwirrung geführt hat.
+  // Stufe sind noch zu weit weg, um sie aufzulisten (siehe SKILL.md). Die
+  // Vergleichs-Zeilen zeigen bewusst NUR die reinen Stufen-Basiswerte (ohne
+  // Hunger/Müdigkeit/Ausrüstung) — Debuffs/Boni würden sonst den eigentlichen
+  // Stufensprung verschleiern. Die tatsächlich wirkenden Werte inkl. jedes
+  // einzelnen aktiven Effekts stehen separat unten in "Errechnete Werte".
   const xpLine = nextDef
     ? `${progress.into.toLocaleString('de-DE')} / ${progress.span.toLocaleString('de-DE')} Erfahrung`
     : 'Maximalstufe erreicht';
 
   let nextLevelBlock;
   if (nextDef) {
-    const afterReward    = getWorkReward(workLevel + 1);
-    const afterDurationS = (getWorkDurationMs(workLevel + 1) / 1000).toFixed(1);
-    const afterTiredness = Math.round(getWorkTirednessGain(workLevel + 1));
-    const afterHunger    = Math.round(getWorkHungerGain(workLevel + 1));
-
-    const baseGoldDelta     = nextDef.goldBase - currentDef.goldBase;
-    const baseDurationDelta = Math.round((1 - nextDef.durationMod) * 100);
-    const baseGainDelta     = Math.round((1 - nextDef.gainMod) * 100);
-    const baseTooltip = `Grundverbesserung ohne Hunger/Müdigkeit/Ausrüstung: +${baseGoldDelta}g Ertrag, ` +
-      `−${baseGainDelta}% Müdigkeits-/Hungeraufbau, −${baseDurationDelta}% Dauer.`;
+    const baseRewardNow     = currentDef.goldBase;
+    const baseRewardNext    = nextDef.goldBase;
+    const baseTirednessNow  = Math.round(WORK_TIREDNESS_GAIN * currentDef.gainMod);
+    const baseTirednessNext = Math.round(WORK_TIREDNESS_GAIN * nextDef.gainMod);
+    const baseHungerNow     = Math.round(WORK_HUNGER_GAIN * currentDef.gainMod);
+    const baseHungerNext    = Math.round(WORK_HUNGER_GAIN * nextDef.gainMod);
+    const baseDurationNow   = ((WORK_DURATION_BASE_MS * currentDef.durationMod) / 1000).toFixed(1);
+    const baseDurationNext  = ((WORK_DURATION_BASE_MS * nextDef.durationMod) / 1000).toFixed(1);
 
     nextLevelBlock = `
       <div class="job-info-next-label">Nächste Stufe: Lvl ${workLevel + 1} — ${nextDef.label}</div>
-      <div class="job-info-compare-row"><span>Ertrag</span><span>${reward}g → <strong>${afterReward}g</strong></span></div>
-      <div class="job-info-compare-row"><span>Müdigkeit/Arbeit</span><span>${tirednessGain}% → <strong>${afterTiredness}%</strong></span></div>
-      <div class="job-info-compare-row"><span>Hunger/Arbeit</span><span>${hungerGain}% → <strong>${afterHunger}%</strong></span></div>
-      <div class="job-info-compare-row"><span>Dauer</span><span>${durationS}s → <strong>${afterDurationS}s</strong></span></div>
-      <div class="job-info-base-note" title="${baseTooltip}">Basiswerte ⓘ</div>`;
+      <div class="job-info-compare-row"><span>Ertrag (Basis)</span><span>${baseRewardNow}g → <strong>${baseRewardNext}g</strong></span></div>
+      <div class="job-info-compare-row"><span>Müdigkeit/Arbeit (Basis)</span><span>${baseTirednessNow}% → <strong>${baseTirednessNext}%</strong></span></div>
+      <div class="job-info-compare-row"><span>Hunger/Arbeit (Basis)</span><span>${baseHungerNow}% → <strong>${baseHungerNext}%</strong></span></div>
+      <div class="job-info-compare-row"><span>Dauer (Basis)</span><span>${baseDurationNow}s → <strong>${baseDurationNext}s</strong></span></div>
+      ${nextDef.specialEffect ? `<div class="job-info-special">✦ ${nextDef.specialEffect}</div>` : ''}`;
   } else {
     nextLevelBlock = `<div class="job-info-next-label">Keine weitere Stufe in Sicht</div>`;
   }
+
+  // "Errechnete Werte": ganz unten im Panel, listet für jeden Wert, der
+  // GERADE JETZT von irgendetwas (Ausrüstung, Skill, Hunger-/Müdigkeits-
+  // Debuff, Stufen-Sonderbonus) abweicht, jeden einzelnen aktiven Effekt
+  // plus den daraus resultierenden tatsächlichen Wert — Werte ohne jede
+  // Abweichung tauchen hier gar nicht erst auf (siehe modifiedValueHtml()-
+  // Philosophie: kein Hinweis ohne tatsächlichen Unterschied).
+  const hungerTierNow = getHungerTier(needs.hunger);
+  const rewardEffects = [];
+  if (equipment.hands === 'ledergloves') rewardEffects.push({ label: 'Lederhandschuhe', value: '+1g', positive: true });
+  if (equipment.guertel === 'arbeitsguertel') rewardEffects.push({ label: 'Arbeitsgürtel', value: '+1g', positive: true });
+  if (gameFlags.foremanBonusGiven) rewardEffects.push({ label: 'Anerkennung des Vorarbeiters', value: '+1g', positive: true });
+  if (skills.fieldPay) rewardEffects.push({ label: 'Überzeugungskraft', value: '+1g', positive: true });
+  if (hungerTierNow.id !== 'satt') rewardEffects.push({ label: `Hunger (${hungerTierNow.label})`, value: `×${hungerTierNow.rewardMult}`, positive: false });
+  if (currentDef.specialRewardMult) rewardEffects.push({ label: currentDef.label, value: `×${currentDef.specialRewardMult}`, positive: true });
+  if (currentDef.specialFlatBonus) rewardEffects.push({ label: 'Legendärer Ruf', value: `+${currentDef.specialFlatBonus}g`, positive: true });
+
+  const tirednessEffects = [];
+  if (hungerTierNow.id !== 'satt') {
+    const dampened = skills.ironWill;
+    const effMult = 1 + (hungerTierNow.tirednessGainMult - 1) * (dampened ? 0.5 : 1);
+    tirednessEffects.push({
+      label: `Hunger (${hungerTierNow.label})${dampened ? ' · gedämpft durch Eisernen Willen' : ''}`,
+      value: `×${effMult.toFixed(2)}`, positive: false
+    });
+  }
+
+  const durationEffects = [];
+  if (meta.fasterWorkUnlocked) durationEffects.push({ label: 'Geübtere Hände (nach dem 1. Neuanfang)', value: '×0.6', positive: true });
+  if (tier.id !== 'frisch') durationEffects.push({ label: `Müdigkeit (${tier.label})`, value: `×${tier.durationMult}`, positive: false });
+
+  const computedRows = [
+    { label: 'Ertrag', target: `${reward}g`, effects: rewardEffects },
+    { label: 'Müdigkeit/Arbeit', target: `${tirednessGain}%`, effects: tirednessEffects },
+    { label: 'Dauer', target: `${durationS}s`, effects: durationEffects }
+  ].filter(row => row.effects.length > 0);
+
+  const computedBlock = computedRows.length ? `
+    <div class="job-info-computed">
+      <span class="value-modified" tabindex="0">ⓘ Errechnete Werte<span class="value-tooltip job-info-computed-tooltip">
+        ${computedRows.map(row => `
+          <div class="value-tooltip-row-title">${row.label}: <strong>${row.target}</strong></div>
+          ${row.effects.map(e => valueEffectHtml(e.label, e.value, e.positive)).join('')}
+        `).join('<hr class="value-tooltip-sep">')}
+      </span></span>
+    </div>` : '';
 
   const jobInfoPanel = levelingUnlocked ? `
     <div class="job-info-panel${jobInfoPanelOpen ? ' open' : ''}">
@@ -228,6 +308,7 @@ function renderArbeitsplatz(el) {
       <div class="job-info-xp">${xpLine}</div>
       <div class="job-info-divider"></div>
       ${nextLevelBlock}
+      ${computedBlock}
     </div>` : '';
 
   let fieldCard;

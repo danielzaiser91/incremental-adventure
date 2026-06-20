@@ -30,6 +30,16 @@ const EP_SKILL_TREE = [
     effect: 'Hunger beschleunigt den Müdigkeitsaufbau nur noch halb so stark.'
   },
   {
+    // Bewusst eine zweite, eigene Spalte mit derselben Voraussetzung wie
+    // "Eiserner Wille" (siehe EP_TREE_BRANCHES, vierter Ast beginnt erst
+    // in Zeile 1) — eine echte Verzweigung direkt aus "Geschickte Hände"
+    // heraus, kein verlängerter Ast.
+    id: 'fieldPay', name: 'Überzeugungskraft', icon: '🤝',
+    requires: 'fieldworkMemory', maxLevel: 1, costs: [10],
+    desc: 'Ich weiß inzwischen, wie ich auch für einfache Arbeit ein bisschen mehr heraushole.',
+    effect: '+1 Gold pro Feldarbeit, dauerhaft.'
+  },
+  {
     // `extraLock` ist eine zusätzliche Bedingung NEBEN der normalen
     // Ast-Voraussetzung — der Knoten ist (über `ironWill`) zwar sichtbar,
     // aber erst kaufbar, nachdem Kommandant Roswald den Lehrgang gegeben
@@ -60,6 +70,17 @@ const EP_SKILL_TREE = [
     requires: 'jobLeveling', maxLevel: 2, costs: [4, 8],
     desc: 'Ich weiß inzwischen, wo man beim Krämer ein gutes Wort einlegt.',
     effect: 'Marktplatz-Preise −10 % je Stufe (max. −20 %).'
+  },
+  {
+    // Eigener, günstiger Ast direkt von der Wurzel — bewusst NICHT an die
+    // anderen Äste gehängt, weil er allgemein die Feldarbeits-Erfahrung
+    // beschleunigt, nicht zu einem einzelnen Thema (Wirtschaft/Besitz/
+    // Ausdauer) gehört. 5 Stufen mit bewusst niedrigen, früh erreichbaren
+    // Kosten (siehe Auftrag: "relativ gering und erschwinglich").
+    id: 'quickLearner', name: 'Schneller Lerner', icon: '🎯',
+    requires: 'jobLeveling', maxLevel: 5, costs: [1, 2, 3, 4, 5],
+    desc: 'Jeder Handgriff sitzt beim nächsten Mal schon etwas sicherer.',
+    effect: '+10 % Job-Erfahrung pro Feldarbeit je Stufe (max. +50 %).'
   },
   {
     id: 'clearMind', name: 'Klarer Kopf', icon: '🧠',
@@ -96,7 +117,13 @@ const EP_SKILL_TREE = [
 const EP_TREE_BRANCHES = [
   ['fieldworkMemory', 'ironWill', 'nightWatchLeveling'],
   ['inventoryKeeper', 'sleepLikeARock'],
-  ['thrift', 'clearMind', 'goldBreakthrough']
+  ['thrift', 'clearMind', 'goldBreakthrough'],
+  // Eigene Spalte, aber ohne Zeile 0 — "Überzeugungskraft" verzweigt erst
+  // ab Zeile 1 aus "Geschickte Hände" heraus (dieselbe Voraussetzung wie
+  // "Eiserner Wille" in Spalte 0, nur eine eigene Spalte daneben), statt
+  // an einen der bestehenden Äste angehängt zu werden.
+  [undefined, 'fieldPay'],
+  ['quickLearner']
 ];
 
 /* Mindest-Gold für überhaupt irgendeine Erfahrung bei einem (nicht-ersten)
@@ -196,6 +223,14 @@ function computeEpGain(isFirstReset) {
     : 1;
   if (skills.clearMind) gain += 1;
   return gain;
+}
+
+/** Ist gerade ein lohnender Neuanfang möglich? Identisch zur Bedingung
+    des "Neu anfangen"-Buttons (siehe renderErfahrung()) — eigene Funktion,
+    damit auch der Nav-Button (nav.js) ohne Codeverdoppelung danach fragen
+    kann, ob er sich hervorheben soll. */
+function canPerformManualReset() {
+  return meta.resets === 0 || computeEpGain(false) > 0;
 }
 
 /** Nächste Gold-Schwelle, ab der ein Neuanfang einen zusätzlichen EP

@@ -51,12 +51,22 @@ function renderGlobalNavSection() {
 
   const hasAnyQuest = Object.values(quests).some(q => q.state !== 'unstarted');
 
+  // "Erfahrung" blinkt zusätzlich zur normalen Erstbesuchs-Hervorhebung
+  // (navUnseen), sobald ein lohnender Neuanfang bereit liegt — unabhängig
+  // davon, ob der Spieler den Tab schon mal besucht hat. Eigene Klasse statt
+  // navUnseen, weil sie sich (anders als navUnseen) jederzeit wieder
+  // ein- und ausschalten kann, je nachdem ob gerade genug Gold da ist.
+  const erfahrungReady = gameFlags.resetLayerUnlocked && canPerformManualReset();
+  const erfahrungBtn = gameFlags.resetLayerUnlocked
+    ? `<button class="nav-btn ${currentContent === 'erfahrung' ? 'active' : ''} ${navUnseen.erfahrung ? 'nav-btn-new' : ''} ${erfahrungReady ? 'nav-btn-reset-ready' : ''}" onclick="showContent('erfahrung')">✦ Erfahrung</button>`
+    : '';
+
   return `
     <div class="nav-level-label">Spieler</div>
     ${item('geschichte', '📖', 'Geschichte')}
     ${hasAnyQuest                  ? item('quests', '🗒', 'Quests')        : ''}
     ${gameFlags.everOwnedItem      ? item('inventar', '🎒', 'Inventar')    : ''}
-    ${gameFlags.resetLayerUnlocked ? item('erfahrung', '✦', 'Erfahrung')   : ''}
+    ${erfahrungBtn}
   `;
 }
 

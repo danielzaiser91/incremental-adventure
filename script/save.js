@@ -80,8 +80,8 @@ function applySaveData(save) {
   equipment      = { hands: null, guertel: null, ...save.equipment };
   experience     = { points: 0, totalEarned: 0, ...save.experience };
   skills         = {
-    jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-    thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
+    jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
+    thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false, ...save.skills
   };
   needs          = { hunger: 15, tiredness: 0, ...save.needs };
@@ -355,8 +355,8 @@ function performHardReset() {
   equipment      = { hands: null, guertel: null };
   experience     = { points: 0, totalEarned: 0 };
   skills         = {
-    jobLeveling: false, fieldworkMemory: false, ironWill: false, nightWatchLeveling: false,
-    thrift: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
+    jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
+    thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false
   };
   needs          = { hunger: 15, tiredness: 0 };

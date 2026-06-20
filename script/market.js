@@ -72,6 +72,21 @@ const FOOD_ITEMS = [
   }
 ];
 
+/** Baut den im Shop angezeigten Preis-Text — inkl. Hover-Tooltip, sobald
+    der Sparsamkeits-Skill ihn gegenüber dem Basispreis verändert hat
+    (siehe content.js, modifiedValueHtml()). Ohne den Skill bleibt der
+    Wert ein normaler Text ohne Indikator. */
+function priceDisplayHtml(baseCost) {
+  const price = applyThrift(baseCost);
+  const display = `${price} Gold`;
+  const thriftLevel = getSkillLevel('thrift');
+  if (thriftLevel <= 0) return display;
+
+  return modifiedValueHtml(display, 'Basiskosten', `${baseCost}g`, [
+    { label: `Sparsamkeit (Stufe ${thriftLevel})`, value: `-${thriftLevel * 10}%`, positive: true }
+  ]);
+}
+
 /** Öffnet die Detailansicht eines Händlers. */
 function openVendor(id) {
   marketVendor = id;
@@ -160,7 +175,7 @@ function renderVendorKraemer(el) {
         <p class="action-card-desc">${item.desc}</p>
         <div class="action-card-effect">${effectParts.join(' · ')}</div>
         ${limitNote}
-        <div class="action-card-cost ${canAfford ? 'cost-ok' : 'cost-too-high'}">${price} Gold</div>
+        <div class="action-card-cost ${canAfford ? 'cost-ok' : 'cost-too-high'}">${priceDisplayHtml(item.cost)}</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}" onclick="buyFood('${item.id}')" ${canAfford ? '' : 'disabled'}>
           ${buttonLabel}
         </button>
@@ -182,7 +197,7 @@ function renderVendorKraemer(el) {
           <div class="action-card-effect">+1 Gold pro Feldarbeit, sobald ausgerüstet</div>
           ${alreadyHave
             ? `<div class="action-card-cost cost-ok">Erworben ✓</div><button class="action-btn btn-disabled" disabled>Erworben</button>`
-            : `<div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${price} Gold</div>
+            : `<div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${priceDisplayHtml(LEDERGLOVES_COST)}</div>
                <button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyLedergloves()" ${canBuy ? '' : 'disabled'}>${nightClosed ? 'Geschlossen' : 'Kaufen'}</button>`
           }
         </div>
@@ -202,7 +217,7 @@ function renderVendorKraemer(el) {
           <p class="action-card-desc">${tool.desc}</p>
           ${owned
             ? `<div class="action-card-cost cost-ok">Erworben ✓</div><button class="action-btn btn-disabled" disabled>Erworben</button>`
-            : `<div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${price} Gold</div>
+            : `<div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${priceDisplayHtml(tool.cost)}</div>
                <button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyTool('${tool.id}')" ${canBuy ? '' : 'disabled'}>${nightClosed ? 'Geschlossen' : 'Kaufen'}</button>`
           }
         </div>`;
@@ -237,7 +252,7 @@ function renderVendorKraemer(el) {
         ${alreadyHaveGuertel
           ? `<div class="action-card-cost cost-ok">Erworben ✓</div><button class="action-btn btn-disabled" disabled>Erworben</button>`
           : enoughSold
-            ? `<div class="action-card-cost ${canBuyGuertel ? 'cost-ok' : 'cost-too-high'}">${guertelPrice} Gold</div>
+            ? `<div class="action-card-cost ${canBuyGuertel ? 'cost-ok' : 'cost-too-high'}">${priceDisplayHtml(ARBEITSGUERTEL_COST)}</div>
                <button class="action-btn ${canBuyGuertel ? '' : 'btn-disabled'}" onclick="buyArbeitsguertel()" ${canBuyGuertel ? '' : 'disabled'}>${nightClosed ? 'Geschlossen' : 'Kaufen'}</button>`
             : `<div class="action-card-cost">Erfordert ${RESOURCE_SELL_THRESHOLD} verkaufte Rohstoffe (${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD})</div>
                <button class="action-btn btn-disabled" disabled>Noch nicht verfügbar</button>`}

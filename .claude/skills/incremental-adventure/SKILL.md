@@ -1185,6 +1185,78 @@ automatisch auch hier das Autosave-Intervall (siehe save.js,
 [[autosave-pausiert-bei-dialog]]/`setupAutoSave()`), ohne dass dieser
 Code etwas von der Existenz dieser speziellen Animation wissen muss.
 
+## Eine Skill-Spalte ohne Zeile 0 — Geschwister-Verzweigung im Skillbaum
+
+`renderSkillTree()` (experience.js) ist als feste Spalten×Zeilen-Grid
+gebaut: `EP_TREE_BRANCHES[i][row]` ist die ID des Knotens in Spalte i,
+Zeile row. Für einen Skill, der dieselbe Voraussetzung wie ein
+BESTEHENDER Knoten teilt (hier: "Überzeugungskraft" verzweigt wie
+"Eiserner Wille" aus "Geschickte Hände"), reicht es, eine NEUE Spalte
+mit einer Lücke bei Zeile 0 anzulegen: `[undefined, 'fieldPay']` — die
+Sichtbarkeitsprüfung pro Zeile nutzt ohnehin `node.requires`, nicht die
+Spaltenposition, daher erscheint der Knoten exakt dann, wenn sein
+echtes Voraussetzungs-Skill gelernt ist, in einer eigenen Spalte daneben.
+Einziger kosmetischer Nebeneffekt: die leere Zelle in Zeile 0 dieser
+Spalte bleibt unsichtbar leer, kein Stamm wird fälschlich hineingezeichnet
+(die Stamm-Zeichnung in Zeile 0 hängt an `node` aus `branch[0]`, nicht an
+der Sichtbarkeit). Ein komplett eigenständiger, aber günstiger Skill ganz
+ohne Bezug zu den 3 ursprünglichen Themen-Ästen (hier: "Schneller Lerner")
+bekommt stattdessen einfach eine eigene VOLLE Spalte direkt von der
+Wurzel — keine Sonderbehandlung nötig, da `requires: 'jobLeveling'`
+identisch zu den bestehenden Spalten ist.
+
+## Job-Tab: Basiswerte vs. tatsächliche Werte sind zwei verschiedene Fragen
+
+Die Vergleichszeilen "Jetzt → nächste Stufe" im aufgeklappten Job-Info-
+Panel (content.js, `renderArbeitsplatz()`) zeigten vorher die mit Hunger/
+Müdigkeit/Ausrüstung bereits verrechneten Werte — das beantwortet aber
+zwei unterschiedliche Fragen gleichzeitig schlecht: "lohnt sich die
+nächste Stufe?" (will reine Stufenverbesserung sehen) vs. "was wirkt
+gerade auf mich ein?" (will jeden aktiven Effekt einzeln sehen). Jetzt
+trennt sich das: die Vergleichszeilen rechnen NUR mit den
+WORK_LEVELS-Basiswerten (`currentDef.goldBase` etc., ganz ohne
+Hunger-Tier/Ausrüstung/Sonderboni), während ein eigener "Errechnete
+Werte"-Block ganz unten im Panel (nur sichtbar, wenn mindestens EIN Wert
+gerade wirklich abweicht) jeden tatsächlich wirkenden Effekt einzeln
+auflistet — Lederhandschuhe, Vorarbeiter-Bonus, Hunger-Debuff (ggf. von
+"Eiserner Wille" gedämpft), Stufen-Sonderbonus — und den daraus
+resultierenden Zielwert. Lehre: wenn eine Zahl von MEHREREN unabhängigen
+Quellen beeinflusst wird, sind "Basiswert-Vergleich" und
+"Effekt-Transparenz" zwei separate UI-Bedürfnisse, keine einzelne Zahl,
+die beides gleichzeitig leisten muss.
+
+## Generischer Werte-Modifikator-Tooltip (`modifiedValueHtml()`, content.js)
+
+Wiederverwendbares Hover-Tooltip-Muster für JEDEN Wert, der vom
+Basiswert abweicht (Marktpreise durch Sparsamkeit, Job-Werte durch
+Debuffs/Boni, künftig denkbar für weitere Systeme): ein Wert bekommt nur
+dann einen Indikator (gepunktete Unterstreichung, `cursor: help`), wenn
+seine Effekt-Liste NICHT leer ist — ein unveränderter Basiswert bleibt
+unangetastet, ganz ohne Hinweis. Bewusst ein ECHTES DOM-Tooltip
+(`.value-tooltip`, CSS `:hover`/`:focus-within`) statt des nativen
+`title`-Attributs, weil der Auftrag farbige Effekt-Zeilen (grün = positiv
+für den Spieler, rot = negativ, via `--c-reward`/`--c-error`) verlangte —
+native Tooltips können kein HTML/CSS rendern. `valueEffectHtml()` baut
+eine einzelne Effekt-Zeile, `modifiedValueHtml()` umschließt einen
+fertigen Anzeige-String mit Indikator + Tooltip (Basiswert + Trennstrich
++ Effekt-Zeilen). Für mehrzeilige Blöcke mit je eigenem Zielwert (siehe
+"Errechnete Werte" oben) wird die Tooltip-Hülle direkt von Hand gebaut
+statt `modifiedValueHtml()` zu verwenden — die Funktion ist auf GENAU
+EINEN Basiswert ausgelegt, nicht auf mehrere Gruppen in einem Tooltip.
+
+## Inventar-Rückverkauf: halber BASIS-Preis, nicht halber AKTUELLER Preis
+
+`sellInventoryItem()` (inventory.js) verkauft Gegenstände für die Hälfte
+ihres Kaufpreises VOR Sparsamkeits-Rabatt (`item.cost`, nicht
+`applyThrift(item.cost)`) — sonst würde der Rückverkaufswert mit jeder
+gekauften Sparsamkeits-Stufe sinken, obwohl der Gegenstand sich nicht
+verändert hat. `getItemBaseCost()` sucht NUR in FOOD_ITEMS/TOOL_ITEMS/
+EQUIPMENT_ITEMS (jeweils um ein `cost`-Feld ergänzt) — Rohstoffe
+(RESOURCE_ITEMS) und Questgegenstände (QUEST_ITEMS) bleiben bewusst
+außen vor: Rohstoffe haben keinen Kaufpreis (sie werden gesammelt, nicht
+gekauft — eigener Verkaufsweg über Gretas "Rohstoffe verkaufen"-Karte,
+market.js), Questgegenstände sollen grundsätzlich nie verkäuflich sein.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

@@ -99,8 +99,10 @@ let skills = {
   jobLeveling:      false, // Grundvoraussetzung, damit Job-Level überhaupt wirken
   fieldworkMemory:  false, // Feldarbeits-Level übersteht einen Neuanfang
   ironWill:         false, // Hunger beschleunigt den Müdigkeitsaufbau nur noch halb so stark
+  fieldPay:         false, // +1 Gold pro Feldarbeit, dauerhaft
   nightWatchLeveling: false, // Schaltet ein Erfahrungs-Level-System für die Nachtwache frei
   thrift:           0,     // Marktplatz-Preise -10% je Stufe (max. Stufe 2)
+  quickLearner:     0,     // +10% Job-Erfahrung pro Feldarbeit je Stufe (max. Stufe 5)
   clearMind:        false, // +1 EP bei jedem zukünftigen Neuanfang
   goldBreakthrough: false, // Gold-Meilensteine zählen einzeln statt nur "Grenze erreicht?"
   guildPrep:        false, // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei

@@ -212,6 +212,14 @@ html, body {
   animation: nav-new-pulse 1.8s ease-in-out infinite;
 }
 
+/* Blinkt, solange ein lohnender Neuanfang bereitsteht (siehe nav.js,
+   canPerformManualReset()) — eigene (stärkere) Glüh-Animation statt der
+   gedeckten Inset-Pulse von .nav-btn-new, weil hier eine aktive
+   Spieler-Entscheidung wartet, nicht nur ein unbesuchtes Feature. */
+.nav-btn-reset-ready {
+  animation: action-card-pulse 1.8s ease-in-out infinite;
+}
+
 .nav-btn-back {
   color: var(--text-lo);
   font-size: 12px;
@@ -563,6 +571,62 @@ html, body {
 .cost-ok        { color: var(--accent); }
 .cost-too-high  { color: var(--c-error); }
 
+/* ── GENERISCHER WERTE-MODIFIKATOR-TOOLTIP (siehe content.js,
+   modifiedValueHtml()) — markiert Werte, die vom Basiswert abweichen. ── */
+.value-modified {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--text-lo);
+  cursor: help;
+}
+
+.value-modified .value-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: max-content;
+  max-width: 260px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  padding: 9px 11px;
+  font-size: 11px;
+  font-style: normal;
+  text-align: left;
+  white-space: normal;
+  cursor: default;
+}
+
+.value-modified:hover .value-tooltip,
+.value-modified:focus .value-tooltip,
+.value-modified:focus-within .value-tooltip {
+  display: block;
+}
+
+.value-tooltip-base {
+  color: var(--text-mid);
+}
+
+.value-tooltip-sep {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 6px 0;
+}
+
+.value-tooltip-effect {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  line-height: 1.5;
+}
+
+.value-tooltip-positive { color: var(--c-reward); }
+.value-tooltip-negative { color: var(--c-error); }
+
 /* ── INVENTAR: Platz-Übersicht + kompaktere Karten ──────────
    Die Zellen-Reihe signalisiert die maximale Inventar-Kapazität, auch
    wenn die meisten Zellen noch leer sind — die ausführlichen Karten
@@ -873,13 +937,36 @@ html, body {
   font-weight: 500;
 }
 
-.job-info-base-note {
-  margin-top: 6px;
-  font-size: 9.5px;
+.job-info-special {
+  margin-top: 8px;
+  font-size: 10.5px;
+  font-style: italic;
+  color: var(--c-event);
+  white-space: normal;
+}
+
+/* Ganz unten im Panel (siehe content.js, renderArbeitsplatz()) — bewusst
+   der letzte Eintrag, weil er nur die tatsächlich wirkenden Werte
+   ERKLÄRT, nicht die Stufen-Entscheidung selbst trägt (das tun die
+   Basiswert-Vergleichszeilen darüber). */
+.job-info-computed {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 10.5px;
   color: var(--text-lo);
-  text-decoration: underline dotted;
-  cursor: help;
-  width: fit-content;
+}
+
+.job-info-computed-tooltip {
+  max-width: 280px;
+  bottom: auto;
+  top: 130%;
+}
+
+.value-tooltip-row-title {
+  font-weight: 600;
+  color: var(--text-hi);
+  margin-bottom: 4px;
 }
 
 /* ── ACTION-BUTTONS ───────────────────────────────────────── */
@@ -905,6 +992,25 @@ html, body {
   background:   var(--accent-hi);
   border-color: var(--accent);
   box-shadow:   0 0 10px var(--accent-glow);
+}
+
+/* Zweiter, bewusst zurückhaltender Button neben einer Haupt-Aktion (siehe
+   inventory.js, sellInventoryItem()) — z.B. "Verzehren" bleibt die
+   naheliegende Aktion, "Verkaufen" eine Alternative, kein gleichwertiger
+   Zwilling. */
+.inv-sell-btn {
+  margin-top: 6px;
+  font-size: 10.5px;
+  padding: 6px 12px;
+  border-color: var(--border-soft);
+  color: var(--text-lo);
+}
+
+.inv-sell-btn:hover:not(:disabled):not(.btn-disabled) {
+  border-color: var(--border);
+  color: var(--text-mid);
+  background: var(--bg-hover);
+  box-shadow: none;
 }
 
 .action-btn-primary {

@@ -126,13 +126,27 @@ function gatherResource(resourceId) {
    unerreichbar ohne ein zukünftiges Feature, das den Fortschritt
    beschleunigt (siehe SKILL.md). */
 const WORK_LEVEL_THRESHOLDS = [0, 5, 10, 50, 500000, 100000000];
+/* Stufen 4/5 ("Meister"/"Legende") bekommen zusätzlich zur normalen
+   Basiswert-Progression einen eigenen Sonder-Bonus (`specialRewardMult`/
+   `specialXpMult`, siehe getWorkReward()/getWorkXpGain()) — beide Stufen
+   sind über ihre absurd hohen Schwellen ohnehin praktisch unerreichbar
+   ohne ein zukünftiges Beschleuniger-Feature (siehe SKILL.md), die Boni
+   liegen also schon bereit, bevor man sie je auslösen kann. */
 const WORK_LEVELS = [
   { label: 'Ungeübt',                   goldBase: 1,  durationMod: 1.00, gainMod: 1.0 },
   { label: 'Angehender Feldarbeiter',   goldBase: 2,  durationMod: 0.90, gainMod: 0.8 },
   { label: 'Erfahrener Feldarbeiter',   goldBase: 4,  durationMod: 0.80, gainMod: 0.6 },
   { label: 'Gewiefter Feldarbeiter',    goldBase: 8,  durationMod: 0.65, gainMod: 0.4 },
-  { label: 'Meister des Feldes',        goldBase: 16, durationMod: 0.50, gainMod: 0.2 },
-  { label: 'Legende der Felder',        goldBase: 32, durationMod: 0.35, gainMod: 0.0 }
+  {
+    label: 'Meister des Feldes', goldBase: 16, durationMod: 0.50, gainMod: 0.2,
+    specialRewardMult: 2, specialXpMult: 2,
+    specialEffect: 'Ich arbeite wie zwei Feldarbeiter zugleich: doppelter Ertrag, doppelte Job-Erfahrung pro Feldarbeit.'
+  },
+  {
+    label: 'Legende der Felder', goldBase: 32, durationMod: 0.35, gainMod: 0.0,
+    specialRewardMult: 3, specialXpMult: 3, specialFlatBonus: 5,
+    specialEffect: 'Mein Ruf eilt mir voraus: dreifacher Ertrag, dreifache Job-Erfahrung — und egal wie die Arbeit läuft, ich bekomme grundsätzlich 5 Gold extra.'
+  }
 ];
 
 /** Ermittelt die aktuelle Feldarbeits-Stufe anhand der Gesamtzahl an Durchgängen.
@@ -174,9 +188,22 @@ function getWorkReward(levelOverride) {
   let reward = level.goldBase
     + (equipment.hands === 'ledergloves' ? 1 : 0)
     + (equipment.guertel === 'arbeitsguertel' ? 1 : 0)
-    + (gameFlags.foremanBonusGiven ? 1 : 0);
+    + (gameFlags.foremanBonusGiven ? 1 : 0)
+    + (skills.fieldPay ? 1 : 0);
   reward *= getHungerTier(needs.hunger).rewardMult; // nur Hunger schwächt den Ertrag, Müdigkeit nur die Dauer
+  reward *= level.specialRewardMult || 1;
+  reward += level.specialFlatBonus || 0;
   return Math.max(1, Math.round(reward));
+}
+
+/** Wie viel Job-Erfahrung (workStats.count) eine einzelne Feldarbeit
+    gerade einbringen würde — normalerweise 1, erhöht durch den Skill
+    "Schneller Lerner" (+10 %/Stufe) UND den Sonderbonus der Stufen 4/5
+    (siehe WORK_LEVELS, specialXpMult). */
+function getWorkXpGain(levelOverride) {
+  const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
+  const skillMult = 1 + getSkillLevel('quickLearner') * 0.1;
+  return Math.max(1, Math.round(skillMult * (level.specialXpMult || 1)));
 }
 
 /** Wie viel Müdigkeit eine einzelne Arbeit gerade kosten würde (Hunger
@@ -511,7 +538,7 @@ function completeWork() {
   workProgress               = 0;
   resources.gold            += reward;
   resources.totalGoldEarned += reward;
-  workStats.count            += 1;
+  workStats.count            += getWorkXpGain(levelBefore);
 
   adjustHunger(getWorkHungerGain(levelBefore));
   adjustTiredness(tirednessGain);

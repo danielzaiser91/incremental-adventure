@@ -11,14 +11,48 @@
 const EQUIPMENT_ITEMS = [
   {
     id: 'ledergloves', name: 'Lederhandschuhe', icon: '🧤', slot: 'hands', slotLabel: 'Hände',
-    desc: 'Schonen die Hände, erlauben kräftigeres Zupacken.', effect: '+1 Gold pro Feldarbeit'
+    desc: 'Schonen die Hände, erlauben kräftigeres Zupacken.', effect: '+1 Gold pro Feldarbeit',
+    cost: LEDERGLOVES_COST
   },
   {
     id: 'arbeitsguertel', name: 'Arbeitsgürtel', icon: '🪢', slot: 'guertel', slotLabel: 'Gürtel',
     desc: 'Handwerksarbeit aus Gretas neuem Sortiment. Verteilt das Gewicht besser, schont den Rücken.',
-    effect: '+1 Gold pro Feldarbeit'
+    effect: '+1 Gold pro Feldarbeit', cost: ARBEITSGUERTEL_COST
   }
 ];
+
+/* Rückverkauf an Greta (siehe sellInventoryItem()) — bewusst die Hälfte
+   des BASIS-Kaufpreises (vor Sparsamkeits-Rabatt), nicht des aktuell
+   gültigen Preises, damit der Rückverkaufswert unabhängig vom jeweils
+   gerade aktiven Skill-Stand stabil bleibt. Questgegenstände (QUEST_ITEMS)
+   sind hier bewusst NICHT mit aufgeführt — sie haben keinen Kaufpreis und
+   sollen grundsätzlich nie verkäuflich sein. */
+function getItemBaseCost(itemId) {
+  const item = FOOD_ITEMS.find(i => i.id === itemId) ||
+    TOOL_ITEMS.find(i => i.id === itemId) ||
+    EQUIPMENT_ITEMS.find(i => i.id === itemId);
+  return item ? item.cost : null;
+}
+
+/** Verkauft EINEN Gegenstand aus dem Inventar an Greta, für die Hälfte
+    seines Basis-Kaufpreises (mind. 1 Gold). Ausgerüstete Gegenstände
+    müssen vorher abgelegt werden (siehe unequipItem()) — wer etwas trägt,
+    kann es nicht gleichzeitig im Beutel verkaufen. */
+function sellInventoryItem(itemId) {
+  const baseCost = getItemBaseCost(itemId);
+  const owned    = resources.inventory[itemId] || 0;
+  if (!baseCost || owned <= 0) return;
+
+  const price = Math.max(1, Math.floor(baseCost / 2));
+  resources.inventory[itemId] = owned - 1;
+  resources.gold            += price;
+  resources.totalGoldEarned += price;
+
+  const itemMeta = findItemMeta(itemId);
+  showToast(`${itemMeta.name} an Greta verkauft (+${price} Gold).`, 'purchase');
+  checkMilestones();
+  render();
+}
 
 const EQUIPMENT_SLOTS = [
   { id: 'hands',   label: 'Hände',  emptyIcon: '✋' },
@@ -155,6 +189,7 @@ function renderInventar(el) {
     const count = resources.inventory[item.id];
     const effectParts = [`🍞 −${item.hungerRelief}%`];
     if (item.tirednessRelief) effectParts.push(`😴 −${item.tirednessRelief}%`);
+    const sellPrice = Math.max(1, Math.floor(item.cost / 2));
 
     return `
       <div class="action-card action-card-compact">
@@ -162,16 +197,21 @@ function renderInventar(el) {
         <div class="action-card-name">${item.name} <span class="inventory-count">×${count}</span></div>
         <div class="action-card-effect">${effectParts.join(' · ')}</div>
         <button class="action-btn" onclick="useFood('${item.id}')">Verzehren</button>
+        <button class="action-btn inv-sell-btn" onclick="sellInventoryItem('${item.id}')">An Greta verkaufen (+${sellPrice}g)</button>
       </div>`;
   }).join('');
 
-  const equipBagCards = ownedEquip.map(item => `
+  const equipBagCards = ownedEquip.map(item => {
+    const sellPrice = Math.max(1, Math.floor(item.cost / 2));
+    return `
     <div class="action-card action-card-compact">
       <div class="action-card-icon">${item.icon}</div>
       <div class="action-card-name">${item.name}</div>
       <div class="action-card-effect">${item.effect}</div>
       <button class="action-btn" onclick="equipItem('${item.id}')">Ausrüsten</button>
-    </div>`).join('');
+      <button class="action-btn inv-sell-btn" onclick="sellInventoryItem('${item.id}')">An Greta verkaufen (+${sellPrice}g)</button>
+    </div>`;
+  }).join('');
 
   const questCards = ownedQuestItems.map(qi => `
     <div class="action-card action-card-compact action-card-quest">
@@ -186,11 +226,15 @@ function renderInventar(el) {
       <div class="action-card-name">${r.name} <span class="inventory-count">×${resources.inventory[r.id]}</span></div>
     </div>`).join('');
 
-  const toolCards = ownedTools.map(t => `
+  const toolCards = ownedTools.map(t => {
+    const sellPrice = Math.max(1, Math.floor(t.cost / 2));
+    return `
     <div class="action-card action-card-compact">
       <div class="action-card-icon">${t.icon}</div>
       <div class="action-card-name">${t.name}</div>
-    </div>`).join('');
+      <button class="action-btn inv-sell-btn" onclick="sellInventoryItem('${t.id}')">An Greta verkaufen (+${sellPrice}g)</button>
+    </div>`;
+  }).join('');
 
   const overflowCards = overflowEntries.map(([itemId, qty]) => {
     const meta = findItemMeta(itemId);
