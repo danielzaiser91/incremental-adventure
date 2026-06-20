@@ -208,6 +208,74 @@ function getNextEpGoldTarget() {
   return EP_GOLD_BREAKPOINTS.find(bp => bp > resources.gold) ?? null;
 }
 
+/* Zweiteiliger Ich-Monolog für die bildschirmfüllende Übergangs-Animation
+   beim Neuanfang (siehe playResetAnimation()) — bewusst kurz und ohne
+   Klick-Interaktion, weil die Texte automatisch weiterlaufen sollen wie
+   ein erzählter Moment, nicht wie ein weiterer Dialog. Erster Block:
+   der Verlust. Zweiter Block: die positive Wendung (was bleibt). */
+const RESET_ANIMATION_TEXTS = [
+  'Mein Gold ist fort — in einem Atemzug, als hätte ich es nie besessen. Der Beutel leer, die Hände leer.',
+  'Aber was ich unterwegs gelernt habe, kann mir niemand nehmen. Ich beginne nicht bei null. Ich beginne klüger.'
+];
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/** Spielt die zweistufige Reset-Animation ab: blendet das Overlay ein,
+    zeigt Textblock 1, blendet ihn aus, zeigt Textblock 2, blendet ihn
+    wieder aus — und lässt das (bereits dunkle) Overlay anschließend
+    sichtbar stehen, bis closeResetAnimation() es nach dem eigentlichen
+    State-Reset wieder wegblendet (siehe runManualResetWithAnimation()).
+    Ein `await wait(20)` vor dem ersten Klassenwechsel ist nötig, damit
+    der Browser die `hidden`-Entfernung erst rendert, bevor die
+    Opacity-Transition zur sichtbaren Klasse überhaupt etwas zu
+    animieren hat (sonst springt es ohne Übergang direkt auf "sichtbar"). */
+async function playResetAnimation() {
+  const overlay = document.getElementById('reset-overlay');
+  const textEl  = document.getElementById('reset-overlay-text');
+  if (!overlay || !textEl) return;
+
+  // Dieselbe Klasse, die auch das normale Dialog-Overlay setzt (siehe
+  // dialog.js) — pausiert dadurch automatisch das Autosave-Intervall
+  // (save.js, setupAutoSave()), ohne dass dieses extra wissen muss, dass
+  // es gerade KEIN gewöhnlicher Dialog, sondern diese Animation ist.
+  document.body.classList.add('dialog-open');
+  overlay.classList.remove('hidden');
+  await wait(20);
+  overlay.classList.add('reset-overlay-visible');
+  await wait(400);
+
+  for (const text of RESET_ANIMATION_TEXTS) {
+    textEl.textContent = text;
+    textEl.classList.add('reset-overlay-text-visible');
+    await wait(3400);
+    textEl.classList.remove('reset-overlay-text-visible');
+    await wait(600);
+  }
+}
+
+/** Blendet das Reset-Overlay wieder aus (siehe playResetAnimation()). */
+async function closeResetAnimation() {
+  const overlay = document.getElementById('reset-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('reset-overlay-visible');
+  await wait(500);
+  overlay.classList.add('hidden');
+  document.body.classList.remove('dialog-open');
+}
+
+/** Spielt die Übergangs-Animation ab, vollzieht ERST DANACH den
+    eigentlichen State-Reset (siehe performManualReset()) und blendet das
+    Overlay erst dann wieder aus — der Spieler sieht den neuen Zustand
+    (Gold weg, EP gutgeschrieben) also genau in dem Moment, in dem das
+    Overlay verschwindet, nicht schon währenddessen dahinter aufblitzend. */
+async function runManualResetWithAnimation() {
+  await playResetAnimation();
+  performManualReset();
+  await closeResetAnimation();
+}
+
 /** Tauscht das gesamte Gold gegen Erfahrung und beginnt von vorn. */
 function performManualReset() {
   const isFirstReset = meta.resets === 0;
@@ -255,7 +323,7 @@ function startManualReset() {
     buttons: epGain > 0
       ? [
           { label: 'Doch nicht.', onClick: () => closeDialog() },
-          { label: 'Ja. Neu anfangen.', onClick: () => closeDialog(performManualReset) }
+          { label: 'Ja. Neu anfangen.', onClick: () => closeDialog(runManualResetWithAnimation) }
         ]
       : [{ label: 'Verstanden.', onClick: () => closeDialog() }]
   });
@@ -265,7 +333,7 @@ function startManualReset() {
   // optional — siehe Einstellungen, "Vor Neuanfang warnen".
   const proceed = () => {
     if (settings.warnBeforeReset.erfahrung) showConfirm();
-    else performManualReset();
+    else runManualResetWithAnimation();
   };
 
   if (!gameFlags.firstManualResetExplained) {

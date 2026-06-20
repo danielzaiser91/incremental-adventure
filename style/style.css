@@ -1446,6 +1446,41 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 
 .dialog-overlay.dialog-visible { opacity: 1; }
 
+/* Bildschirmfüllende Übergangs-Animation beim manuellen Neuanfang (siehe
+   experience.js, playResetAnimation()) — bewusst KEIN .dialog-box-Inhalt
+   (kein Titel, keine Buttons, kein "Weiter"): die Texte wechseln von
+   selbst, ohne Spielereingabe, damit es wie ein erzählter Moment wirkt,
+   nicht wie ein weiterer Dialog zum Durchklicken. Höherer z-index als
+   .dialog-overlay, weil die Animation über dem bereits geschlossenen
+   Bestätigungsdialog liegt. */
+.reset-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12vw;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.reset-overlay.reset-overlay-visible { opacity: 1; }
+
+.reset-overlay-text {
+  max-width: 640px;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--text-hi);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.reset-overlay-text.reset-overlay-text-visible { opacity: 1; }
+
 .dialog-box {
   width: 90%;
   max-width: 480px;

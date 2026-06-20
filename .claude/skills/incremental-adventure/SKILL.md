@@ -1162,6 +1162,29 @@ groß bleibt wie vor dem Scrollen — generelle Regel für jedes künftige
 sticky-`top`-Wert muss das Padding des NICHT-scrollenden Vorfahren
 nachbilden, nicht einfach `0` sein.
 
+## Bildschirmfüllende Übergangs-Animation: eigenes Overlay statt showDialog()
+
+Die Reset-Animation beim manuellen Neuanfang (experience.js,
+`playResetAnimation()`) bekam bewusst ein EIGENES Overlay-Element
+(`#reset-overlay` in index.html), nicht das bestehende
+`#dialog-overlay`/`showDialog()`: die Texte sollen automatisch
+weiterlaufen (kein "Weiter"-Button, keine Spieler-Interaktion), volle
+Bildschirmbreite ohne Dialog-Box-Rahmen einnehmen, und mit reinem
+Opacity-Fade arbeiten statt Dialog-Seiten zu wechseln. Ablauf
+(`runManualResetWithAnimation()`): Overlay einblenden → Textblock 1 →
+ausblenden → Textblock 2 → ausblenden → ERST DANN `performManualReset()`
+(der eigentliche State-Reset) → Overlay erst danach wieder ausblenden.
+So sieht der Spieler den neuen Zustand (Gold weg, EP gutgeschrieben)
+exakt in dem Moment, in dem das Overlay verschwindet, nicht schon
+dahinter aufblitzend während die Texte noch laufen.
+
+Da dieses Overlay nicht über `showDialog()`/`closeDialog()` läuft,
+setzt/entfernt es die `dialog-open`-Klasse auf `<body>` selbst
+(dieselbe Klasse, die auch der normale Dialog setzt) — dadurch pausiert
+automatisch auch hier das Autosave-Intervall (siehe save.js,
+[[autosave-pausiert-bei-dialog]]/`setupAutoSave()`), ohne dass dieser
+Code etwas von der Existenz dieser speziellen Animation wissen muss.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-
