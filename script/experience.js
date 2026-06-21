@@ -613,7 +613,7 @@ function renderSkillTree() {
     // ── Konnektor-Reihe ──────────────────────────────────────
     if (row === 0) {
       // Gabel von der Wurzel zu allen Ästen auf Tiefe 0
-      const visibleCols = rowNodes.map((n, i) => n !== null ? i : -1).filter(i => i >= 0);
+      const visibleCols = rowNodes.map((n, i) => visible[i] ? i : -1).filter(i => i >= 0);
       if (visibleCols.length) {
         const left  = columnCenterPct(visibleCols[0], total);
         const right = columnCenterPct(visibleCols[visibleCols.length - 1], total);
