@@ -497,6 +497,7 @@ html, body {
   font-style: italic;
   margin-bottom: 12px;
   line-height: 1.5;
+  flex: 1;
 }
 
 .action-card-cost {
