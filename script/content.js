@@ -774,7 +774,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Version</span>
-            <span class="info-value">0.9.0-alpha</span>
+            <span class="info-value">0.10.0-alpha</span>
           </div>
         </div>
       </div>
