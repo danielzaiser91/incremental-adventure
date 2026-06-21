@@ -304,15 +304,16 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
     ).join('')}</ul>
   ` : '';
 
-  // Graceful-Reset-Option: nur anzeigen, wenn der Spieler bereits in Kapitel 2
-  // ist und einen sauberen Neustart für dieses Kapitel möchte.
-  const isInChapter2 = gameFlags.kapitel2Unlocked && !gameFlags.chapter2Complete;
-  const gracefulResetHtml = isInChapter2 ? `
+  // Sanfter Neustart nur anbieten, wenn der Spielstand repariert wurde —
+  // dann könnten Kapitel-2-Szenen verpasst worden sein.
+  const resetOffered = migrationFixes.length > 0 && gameFlags.kapitel2Unlocked && !gameFlags.chapter2Complete;
+  const gracefulResetHtml = resetOffered ? `
     <hr style="border-color:var(--border);margin:14px 0 10px">
     <p style="color:var(--text-lo);font-size:0.82em">
-      Möchtest du Kapitel 2 lieber von vorn erleben? Ein <strong>Sanfter Neustart</strong>
+      Da dein Spielstand automatisch korrigiert wurde, kann es sein, dass du einige
+      Kapitel-2-Szenen noch nicht erlebt hast. Ein <strong>Sanfter Neustart</strong>
       setzt nur den Kapitel-2-Fortschritt zurück — EP, Skills, Gold und alles andere
-      bleibt erhalten.
+      bleibt vollständig erhalten.
     </p>
   ` : '';
 
@@ -323,7 +324,7 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
     }
   ];
 
-  if (isInChapter2) {
+  if (resetOffered) {
     buttons.push({
       label: 'Sanfter Neustart (Kapitel 2)',
       onClick: () => {
