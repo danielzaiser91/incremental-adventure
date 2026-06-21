@@ -2379,8 +2379,8 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 
   /* ── APP-GRID: Single-Column + Top-Bar-Zeile ────────────── */
   #app {
-    grid-template-columns: 1fr;
-    grid-template-rows: var(--mobile-topbar-h) 1fr var(--objective-h);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--mobile-topbar-h) minmax(0, 1fr) var(--objective-h);
     min-width: 0;
     width: 100%;
     max-width: 100vw;
