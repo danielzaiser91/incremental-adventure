@@ -508,7 +508,7 @@ function renderSkillDetailPanel() {
   const goldCost = maxed ? null : (node.goldCosts ? node.goldCosts[level] : 0);
   const extraLocked = !maxed && typeof node.extraLock === 'function' && node.extraLock();
   const canBuy = !maxed && !extraLocked && experience.points >= epCost && resources.gold >= (goldCost || 0);
-  const levelLabel = node.maxLevel > 1 ? ` · Stufe ${level}/${node.maxLevel}` : (maxed ? ' · Erworben' : '');
+  const levelLabel = node.maxLevel > 1 ? ` · Stufe ${level}/${node.maxLevel}` : '';
   const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
   let actionHtml;
