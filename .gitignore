@@ -1,2 +1,8 @@
 .claude/settings.local.json
 prompt-history/
+
+# Node / Playwright (lokale Testumgebung, nicht Teil des Spiels)
+node_modules/
+package.json
+package-lock.json
+.package-lock.json
