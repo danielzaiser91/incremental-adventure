@@ -608,7 +608,7 @@ const NPCS = {
     nodes: {
       greet: {
         text: [
-          'Der alte Mann lehnt an seinem Besen und mustert mich kurz, bevor er weiterkehrt. "Bist du neu hier? Man sieht's noch an dir."',
+          'Der alte Mann lehnt an seinem Besen und mustert mich kurz, bevor er weiterkehrt. "Bist du neu hier? Man sieht’s noch an dir."',
           '"Ich kehr diese Gassen seit dreißig Jahren. Weißt du, was einem auffällt, wenn man so lange draußen ist, bevor die Stadt aufwacht? Die Leute in ihren warmen Betten denken, Treutheim ist eine Stadt. Ich sag dir: bei Nacht gehören die Gassen jemand anderem."',
           '"Ich hab Dinge gesehen, die kein Wirt und kein Händler je zu Gesicht kriegen. Manche scheu. Manche klug. Manche — wenn man ihnen Zeit lässt und sie nicht erschreckt — kommen sogar von selbst näher."',
           'Er kehrt weiter, ohne mich noch einmal anzusehen. "Aber das ist nichts für Ungeduldige."'
