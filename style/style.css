@@ -1400,6 +1400,21 @@ html, body {
   justify-content: flex-start;
 }
 
+.discord-link-btn {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             10px;
+  padding:         10px 16px;
+  border-radius:   8px;
+  background:      #5865F2;
+  color:           #fff;
+  font-weight:     600;
+  font-size:       0.9em;
+  text-decoration: none;
+  transition:      background 0.15s;
+}
+.discord-link-btn:hover { background: #4752c4; }
+
 .settings-btn-option {
   flex: 1;
   justify-content: center;
