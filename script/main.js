@@ -21,6 +21,7 @@ function init() {
   if (shouldAutoLoad()) loadGame();
   else render();
   setupAutoSave();
+  setupAutomation();
 }
 
 document.addEventListener('DOMContentLoaded', init);

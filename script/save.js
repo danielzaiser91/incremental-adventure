@@ -45,6 +45,12 @@ function saveGame(opts = {}) {
       dailyPurchases,
       overflowBag,
       questItems,
+      playerStats,
+      strength,
+      mut,
+      zeitkristalle,
+      automation,
+      // combat wird NICHT gespeichert — aktiver Kampf bricht beim Laden ab
       gameFlags:      { ...gameFlags, isWorking: false }, // Laufende Arbeit nicht speichern
       shownDialogs,
       chronikButtonUnseen,
@@ -89,7 +95,7 @@ function applySaveData(save) {
     thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false, ...save.skills
   };
-  needs          = { hunger: 15, tiredness: 0, ...save.needs };
+  needs          = { hunger: 15, tiredness: 0, sleepDebt: 0, ...save.needs };
   gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
   nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false, ...save.nightFlags };
   quests         = {
@@ -120,6 +126,7 @@ function applySaveData(save) {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
+    jagdgebiet: false, automation: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -134,9 +141,16 @@ function applySaveData(save) {
     foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
     kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
     commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
-    resetAnimationSeen: false,
+    resetAnimationSeen: false, kapitel2Unlocked: false, jagdgebietUnlocked: false,
+    automationDiscovered: false, devModeEnabled: false,
     ...save.gameFlags, isWorking: false
   };
+  playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
+  strength       = { xp: 0, level: 0, ...save.strength };
+  mut            = { points: 0, totalEarned: 0, ...save.mut };
+  zeitkristalle  = save.zeitkristalle ?? 0;
+  automation     = { slots: [], ...save.automation };
+  combat         = { active: false, enemyId: null, enemyHp: 0, log: [] };
   shownDialogs   = save.shownDialogs ?? [];
   chronikButtonUnseen   = save.chronikButtonUnseen ?? false;
   chronikUnseenEntryIds = save.chronikUnseenEntryIds ?? [];
@@ -345,6 +359,60 @@ function setAutoLoad(enabled) {
   render();
 }
 
+/* ══════════════════════════════════════════════════════════════
+   RESET-HILFSFUNKTIONEN
+   Pragmatische Alternative zur class-basierten Reset-Architektur:
+   Statt privater Klassen-Felder gibt es hier benannte Funktionen,
+   die einen kanonischen "frischen" State für jedes Objekt zurückgeben.
+   `performHardReset()` nutzt sie, `startManualReset()` (experience.js)
+   kann sie selektiv nutzen (z.B. nur Gold-State resetten, EP behalten).
+   ══════════════════════════════════════════════════════════════ */
+
+function defaultResources()    { return { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0 }; }
+function defaultNeeds()        { return { hunger: 15, tiredness: 0, sleepDebt: 0 }; }
+function defaultGameClock()    { return { day: 1, hour: 7, minute: 0 }; }
+function defaultNightFlags()   { return { nightActivityUsedToday: false, recoveryDebuff: false }; }
+function defaultWorkStats()    { return { count: 0 }; }
+function defaultNightWatchStats() { return { count: 0 }; }
+function defaultPlayerStats()  { return { hp: 30, maxHp: 30 }; }
+function defaultStrength()     { return { xp: 0, level: 0 }; }
+function defaultCombat()       { return { active: false, enemyId: null, enemyHp: 0, log: [] }; }
+function defaultEquipment()    { return { hands: null, guertel: null }; }
+function defaultSettings()     {
+  return {
+    toastDurationMs: 2600,
+    warnBeforeReset: { erfahrung: true },
+    autoSave: { enabled: true, intervalMinutes: 5 },
+    autoLoad: true,
+    showResetAnimation: true
+  };
+}
+function defaultNavUnseen()    {
+  return {
+    arbeitsplatz: true, marktplatz: true, schlafplatz: true,
+    quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
+    errungenschaften: true, pets: true, lehrer: false,
+    jagdgebiet: false, automation: false
+  };
+}
+function defaultGameFlags()    {
+  return {
+    milestoneStrangerTriggered: false, robberyTriggered: false, firstSleepTriggered: false,
+    jobSearchDialogShown: false, tavernVisited: false, jobUnlocked: false,
+    firstWorkDialogShown: false, firstLevelUpDialogShown: false,
+    firstNightDialogShown: false, hungerDialogShown: false, everOwnedItem: false,
+    resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
+    foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
+    kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
+    commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
+    resetAnimationSeen: false, oswingSuperHintShown: false, lehrerUnlocked: false,
+    streetSweeperTalked: false,
+    kapitel2Unlocked: false, jagdgebietUnlocked: false,
+    automationDiscovered: false, devModeEnabled: false,
+    isWorking: false
+  };
+}
+
 /** Setzt das Spiel vollständig zurück (nach Bestätigung). */
 function resetGame() {
   if (!confirm(
@@ -362,60 +430,47 @@ function resetGame() {
 function performHardReset() {
   if (workRafId) { cancelAnimationFrame(workRafId); workRafId = null; }
 
-  storyState     = 10100;
-  resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0 };
-  meta           = { resets: 0, fasterWorkUnlocked: false };
-  equipment      = { hands: null, guertel: null };
-  experience     = { points: 0, totalEarned: 0 };
-  skills         = {
+  storyState    = 10100;
+  resources     = defaultResources();
+  meta          = { resets: 0, fasterWorkUnlocked: false };
+  equipment     = defaultEquipment();
+  experience    = { points: 0, totalEarned: 0 };
+  skills        = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, jobXpBonus: false, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false, petLover: false
   };
-  superSkills    = {};
-  needs          = { hunger: 15, tiredness: 0 };
-  gameClock      = { day: 1, hour: 7, minute: 0 };
-  nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false };
-  quests         = {
+  superSkills   = {};
+  needs         = defaultNeeds();
+  gameClock     = defaultGameClock();
+  nightFlags    = defaultNightFlags();
+  quests        = {
     nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
     kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
     commanderTraining: { state: 'unstarted' }
   };
-  npcFlags       = { miraDrinkGiven: false };
-  workStats      = { count: 0 };
-  nightWatchStats = { count: 0 };
-  achievements   = {};
+  npcFlags      = { miraDrinkGiven: false };
+  workStats     = defaultWorkStats();
+  nightWatchStats = defaultNightWatchStats();
+  achievements  = {};
   achievementTab = 'normal';
-  pets           = {};
+  pets          = {};
   streetCatProgress = { sleepCount: 0, encounters: 0 };
-  settings       = {
-    toastDurationMs: 2600, warnBeforeReset: { erfahrung: true },
-    autoSave: { enabled: true, intervalMinutes: 5 }, autoLoad: true, showResetAnimation: true
-  };
-  toastHistory   = [];
-  dialogHistory  = [];
-  navUnseen      = {
-    arbeitsplatz: true, marktplatz: true, schlafplatz: true,
-    quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
-    errungenschaften: true, pets: true, lehrer: false
-  };
+  settings      = defaultSettings();
+  toastHistory  = [];
+  dialogHistory = [];
+  navUnseen     = defaultNavUnseen();
   dailyPurchases = {};
-  overflowBag    = {};
-  questItems     = {};
-  gameFlags      = {
-    milestoneStrangerTriggered: false, robberyTriggered: false, firstSleepTriggered: false,
-    jobSearchDialogShown: false, tavernVisited: false, jobUnlocked: false,
-    firstWorkDialogShown: false, firstLevelUpDialogShown: false,
-    firstNightDialogShown: false, hungerDialogShown: false, everOwnedItem: false,
-    resetLayerUnlocked: false, firstManualResetExplained: false, breadLimitDialogShown: false,
-    foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
-    kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
-    commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
-    resetAnimationSeen: false, oswingSuperHintShown: false, lehrerUnlocked: false,
-    streetSweeperTalked: false,
-    isWorking: false
-  };
-  shownDialogs   = [];
+  overflowBag   = {};
+  questItems    = {};
+  gameFlags     = defaultGameFlags();
+  playerStats   = defaultPlayerStats();
+  strength      = defaultStrength();
+  mut           = { points: 0, totalEarned: 0 };
+  zeitkristalle = 0;
+  automation    = { slots: [] };
+  combat        = defaultCombat();
+  shownDialogs  = [];
   chronikButtonUnseen   = false;
   chronikUnseenEntryIds = [];
   navLevel       = 0;

@@ -315,16 +315,22 @@ const NPCS = {
           {
             label: 'Ja. Ich bin bereit.',
             next: 'guildEnd',
-            action: () => { quests.guildRegistration.state = 'rewarded'; }
+            action: () => {
+              quests.guildRegistration.state = 'rewarded';
+              gameFlags.kapitel2Unlocked   = true;
+              gameFlags.jagdgebietUnlocked = true;
+              navUnseen.jagdgebiet = true;
+            }
           }
         ]
       },
       guildEnd: {
         text: [
           'Brakka nickt knapp. "Dann ist es Zeit, Fremder. Die Gilde wird von dir hören."',
-          '— Hier endet die Geschichte vorerst. Mehr vom Weg zur Abenteurergilde folgt in einem zukünftigen Update. Danke, dass du bis hierher gespielt hast! Neuigkeiten zu kommenden Updates gibt es bald auch auf unserem Discord (Link folgt). —'
+          '"Aber erst zeig mir, dass du dich schlägst. Südlich der Stadt gibt es ein Jagdgebiet — lass die Wölfe dort deine Visitenkarte sein. Komm zurück, wenn du weißt, was du drauf hast."',
+          'Er dreht sich um. Kein Händeschütteln. Keine Umarmung. Nur ein neuer Weg.'
         ],
-        options: [{ label: 'Zur Kenntnis genommen.', next: null }]
+        options: [{ label: 'Das Jagdgebiet. Ich verstehe.', next: null }]
       },
       guildFinished: {
         text: ['Brakka hebt sein Glas. "Geh und mach uns stolz, Fremder."'],

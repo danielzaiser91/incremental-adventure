@@ -13,7 +13,7 @@
 'use strict';
 
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
-const TOWN_CONTENT_IDS = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe'];
+const TOWN_CONTENT_IDS = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet'];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
@@ -77,6 +77,7 @@ function renderGlobalNavSection() {
     ${erfahrungBtn}
     ${gameFlags.lehrerUnlocked     ? item('lehrer', '📚', 'Lehrhaus')      : ''}
     ${hasAnyAchievement            ? item('errungenschaften', '🏆', 'Errungenschaften') : ''}
+    ${gameFlags.automationDiscovered ? item('automation', '⌛', 'Automatisierung') : ''}
   `;
 }
 
@@ -113,7 +114,8 @@ function renderLocationNavSection() {
     ...(gameFlags.hungerDialogShown   ? [['marktplatz',   '⚖', 'Marktplatz']]   : []),
     ['taverne',      '🍺', 'Taverne'],
     ...(gameFlags.firstNightDialogShown ? [['schlafplatz', '🛏', 'Schlafplatz']] : []),
-    ...(gameFlags.resourceGatheringUnlocked ? [['rohstoffe', '🌲', 'Sammelplatz']] : [])
+    ...(gameFlags.resourceGatheringUnlocked ? [['rohstoffe', '🌲', 'Sammelplatz']] : []),
+    ...(gameFlags.jagdgebietUnlocked        ? [['jagdgebiet', '⚔', 'Jagdgebiet']]  : [])
   ];
   const buttons = places.map(([id, icon, label]) => {
     const active = currentContent === id ? 'active' : '';

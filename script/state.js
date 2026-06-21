@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 6;
+const CURRENT_SAVE_VERSION = 7;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -56,6 +56,14 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Neuer Skill: "Aufmerksamer Lehrling" (Voraussetzung für "Schneller Lerner").' },
     { cat: 'Änderung', text: 'EP-Skillbaum kompakter gestaltet — Klick auf einen Knoten zeigt Details unten.' },
     { cat: 'Änderung', text: 'Autospeicher-Intervalle: 30 Sek, 1 Min, 2 Min, 5 Min.' }
+  ],
+  7: [
+    { cat: 'Neuerung', text: 'Kapitel 2: Jagdgebiet mit Monstern und Kampfsystem — erreichbar nach dem Gildeneintritt.',
+      spoiler: () => !gameFlags.kapitel2Unlocked },
+    { cat: 'Neuerung', text: 'Zeitkristalle und Automatisierung — seltene Drops freischalten selbsttätige Aktionen.',
+      spoiler: () => !gameFlags.automationDiscovered },
+    { cat: 'Neuerung', text: 'Entwickler-Optionen: In der Browser-Konsole devMode() eingeben.' },
+    { cat: 'Änderung', text: 'Müdigkeits-System überarbeitet: Schlafschuld, feinere Stufen, stärkere Erschöpfungs-Strafen.' }
   ]
 };
 
@@ -155,6 +163,10 @@ let gameFlags = {
   oswingSuperHintShown:        false, // Monolog "Oswin könnte Lehrer kennen" nur 1x zeigen
   lehrerUnlocked:              false, // Lehrer-Tab sichtbar (nach Oswin-Gespräch über Lehrmeisterin)
   streetSweeperTalked:         false, // Spieler hat mit dem Strassenkehrer gesprochen → Hinweis sichtbar
+  kapitel2Unlocked:            false, // Akt II Inhalte freigeschaltet (nach Gildeneintritt)
+  jagdgebietUnlocked:          false, // Jagdgebiet betretbar
+  automationDiscovered:        false, // Ersten Zeitkristall gefunden → Automatisierungs-Tab erscheint
+  devModeEnabled:              false, // Entwickler-Optionen über devMode() in der Konsole freigeschaltet
   isWorking:                   false
 };
 
@@ -173,7 +185,9 @@ let navUnseen = {
   rohstoffe:    true,
   errungenschaften: true, // erst sichtbar, sobald die 1. Errungenschaft erreicht ist
   pets:         true,     // erst sichtbar, sobald das 1. Haustier adoptiert wurde
-  lehrer:       false     // erst sichtbar nach Oswin-Gespräch (gameFlags.lehrerUnlocked)
+  lehrer:       false,    // erst sichtbar nach Oswin-Gespräch (gameFlags.lehrerUnlocked)
+  jagdgebiet:   false,    // erst sichtbar nach Gildeneintritt (gameFlags.jagdgebietUnlocked)
+  automation:   false     // erst sichtbar nach erstem Zeitkristall-Fund
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -195,10 +209,13 @@ let questItems = {};
    erst nach dem Skill "Nächtliche Routine" relevant, siehe actions.js). */
 let nightWatchStats = { count: 0 };
 
-/* Bedürfnisse: 0 (bestens) bis 100 (kritisch) */
+/* Bedürfnisse: 0 (bestens) bis 100 (kritisch).
+   `sleepDebt` (0–2): Schlafschuld durch wiederholtes Einschlafen unter
+   hoher Müdigkeit — erhöht den Müdigkeitsaufbau am Folgetag. */
 let needs = {
   hunger:     15,
-  tiredness:  0
+  tiredness:  0,
+  sleepDebt:  0
 };
 
 /* Tageszeit / Spieltag-Zähler */
@@ -303,6 +320,49 @@ let chronikButtonUnseen = false;
    unabhängig vom Chronik-Button oben, der schon beim bloßen Öffnen der
    Chronik-Seite verschwindet. */
 let chronikUnseenEntryIds = [];
+
+/* ── Kapitel 2: Kampfsystem ───────────────────────────────── */
+
+/* Spieler-Lebenspunkte (überstehen weder Gold-Resets noch Schlaf ohne
+   Erholung — Schlafen stellt HP anteilig zur Schlafqualität wieder her). */
+let playerStats = {
+  hp:    30,
+  maxHp: 30
+};
+
+/* Stärke-Progression — analog zu workStats für Feldarbeit, aber für
+   Kämpfe. Übersteht Gold-Resets (wie `fieldworkMemory` für die Feldarbeit),
+   sobald der entsprechende Skill aktiv ist. */
+let strength = {
+  xp:    0,
+  level: 0
+};
+
+/* Mut — Prestige-Währung für Akt II, übersteht alle Resets (wie EP,
+   aber separate Dimension: EP = Wissen, Mut = bewiesener Kampfgeist). */
+let mut = {
+  points:      0,
+  totalEarned: 0
+};
+
+/* Laufender Kampf — wird beim Speichern NICHT mitgesichert; ein
+   gespeichertes Spiel startet immer kampffrei. */
+let combat = {
+  active:   false,
+  enemyId:  null,
+  enemyHp:  0,
+  log:      []
+};
+
+/* Zeitkristalle — seltene Ressource (Drop aus Kämpfen), die
+   Automatisierungs-Slots freischaltet. */
+let zeitkristalle = 0;
+
+/* Automatisierungs-Konfiguration. Jeder Slot führt eine Aktion
+   periodisch selbst aus, solange ein Zeitkristall zugewiesen ist. */
+let automation = {
+  slots: [] // [{ action: 'fieldwork', enabled: true }, ...]
+};
 
 /* ── UI-State ─────────────────────────────────────────────── */
 let selectedSkillId = null; // welcher Skill-Knoten im EP-Baum gerade ausgewählt ist

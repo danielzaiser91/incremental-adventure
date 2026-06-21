@@ -29,7 +29,9 @@ function renderContent() {
     case 'erfahrung':     renderErfahrung(area);    break;
     case 'errungenschaften': renderErrungenschaften(area); break;
     case 'pets':          renderPets(area);         break;
-    case 'lehrer':        renderLehrer(area);       break;
+    case 'lehrer':        renderLehrer(area);        break;
+    case 'jagdgebiet':    renderJagdgebiet(area);   break;
+    case 'automation':    renderAutomation(area);   break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
     default:              renderGeschichte(area);
@@ -788,6 +790,12 @@ function renderSettings(el) {
 
     </div>
   `;
+
+  if (gameFlags.devModeEnabled) {
+    const devContainer = document.createElement('div');
+    el.querySelector('.feature-stage').appendChild(devContainer);
+    renderDevPanel(devContainer);
+  }
 }
 
 /** Wechselt zwischen Meldungs- und Dialog-Verlauf in den Einstellungen. */

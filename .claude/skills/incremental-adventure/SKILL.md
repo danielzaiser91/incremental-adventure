@@ -28,8 +28,9 @@ abzuklären.
 
 `index.html` lädt: `state.js → clock.js → needs.js → story.js →
 market.js → inventory.js → toast.js → dialog.js → npc.js → quests.js →
-experience.js → objective.js → nav.js → content.js → stats.js →
-actions.js → save.js → main.js`.
+achievements.js → experience.js → lehrer.js → combat.js → automation.js →
+dev.js → objective.js → nav.js → content.js → stats.js → actions.js →
+save.js → main.js`.
 
 Funktionen aus späteren Dateien dürfen früher deklarierte Daten
 referenzieren (z.B. `actions.js` nutzt `isStarving()` aus `needs.js`),
@@ -491,23 +492,6 @@ Ausrichtung (wo innerhalb des Bands) sind zwei separate
 CSS-Entscheidungen (`left`/`right` vs. `align-items`) — bei
 Feedback zur Toast-Position zuerst klären, welche der beiden Achsen
 gemeint ist.
-
-## Hunger und Müdigkeit sind zwei verschiedene Strafen, nicht eine doppelt
-
-User-Korrektur: Müdigkeit darf NUR die Arbeitsdauer verlängern, Hunger
-darf NUR den Ertrag schwächen (plus den Müdigkeitsaufbau beschleunigen)
-— die beiden Bedürfniswerte dürfen sich nicht im selben Hebel
-überschneiden. `getTirednessTier()` (`needs.js`) liefert nur noch
-`durationMult`; `getHungerTier()` liefert `rewardMult` +
-`tirednessGainMult`. Hunger ist außerdem gestaffelt wie Müdigkeit
-(`satt` → `hungrig` (≥50) → `sehr-hungrig` (≥80) → `verhungernd` (≥100,
-−90% Ertrag) statt eines einzelnen Boolean-Schwellwerts
-(`isStarving()` bleibt als reines `id !== 'satt'`-Bequemlichkeits-Helper
-erhalten, liefert aber selbst keine Multiplikatoren mehr). Bei neuen
-Bedürfnis-/Statuswerten: vor dem Implementieren festlegen, *welcher*
-Wert *welchen* Spielmechanik-Hebel kontrolliert, und das nicht
-vermischen, auch wenn es anfangs einfacher wäre, beide auf denselben
-Multiplikator wirken zu lassen.
 
 ## Info-Panels: nur die nächste Entscheidung zeigen, nicht die ganze Tabelle
 
@@ -1374,20 +1358,61 @@ an das Quests-Button-Label. Das Label wird manuell als Template-String
 gebaut statt über den generischen `item()`-Helper, weil der Helper kein
 HTML im Label unterstützt.
 
-## Bisher nicht behobene/offene Punkte
+## Kapitel 2: Kampfsystem (combat.js, v7)
 
-Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-
-Levelschwellen (500.000 / 100.000.000 Durchgänge) sind noch nicht
-definiert — Ideen aus der Diskussion: ein sichtbarer Titel/Spitzname
-("Legende der Felder"), eine einmalige Bonus-Belohnung, oder ein
-Late-Game-Multiplikator-Item, das die effektive Zähl-Geschwindigkeit
-erhöht (z.B. "jede Arbeit zählt als 10"), damit die Schwelle überhaupt
-in endlicher Zeit erreichbar wird. Noch nicht implementiert, bewusst
-nur als Haken im Code (`WORK_LEVEL_THRESHOLDS`) hinterlassen. Siehe
-sonst `notes/roadmap.md` für geplante Kapitel-2-Inhalte (Haus,
-Waffenschmied-Freischaltung, weitere Vendors/Quests, weitere
-NPC-Dialoge zum zwielichtigen Mann) und `notes/prestige-konzept.md`
-für die grobe Fünf-Akte-Langzeit-Storyline (Gold- → Stärke- →
-Magie/Intelligenz- → Zeit- → Götter-Prestige) inklusive Vorschlägen,
-wie das bestehende `meta.resets`-System zu einer benannten,
-spielerseitig sichtbaren Prestige-Währung ausgebaut werden könnte.
+`MONSTER_DEFS` + `STRENGTH_LEVELS` + `STRENGTH_LEVEL_THRESHOLDS` in `combat.js`.
+Stärke-Progression analog zu `workStats`/`WORK_LEVELS` (Zähler `strength.xp`,
+Ableitungsfunktion `getStrengthLevel()`, kein eigener gespeicherter Level-State).
+`playerStats.hp`/`maxHp` persistieren — Schlaf stellt HP anteilig wieder her
+(`restoreHpFromSleep(option)` in `finishSleep()`, actions.js). Kampf: turn-based,
+`performAttack()` / `performFlee()` / `endCombat(won, monster)`.
+
+**Neue Währungen:** `mut` (Prestige, übersteht alle Resets, von starken Monstern)
++ `zeitkristalle` (Resource für Automation, 10%-Drop pro Sieg). Beide in state.js,
+`save.js` persistiert + reset via `defaultMut()`.
+
+**Jagdgebiet-Routing:** `gameFlags.jagdgebietUnlocked = true` (gesetzt in
+Brakkas `guildEnd`-Node) → Nav-Button + `renderJagdgebiet()`. Tiefe Zone
+(Waldtroll) erst ab `strength.xp >= 30` zugänglich.
+
+## Müdigkeits-Überarbeitung (v7): 5 Stufen + sleepDebt
+
+`getTirednessTier()` jetzt 5 Stufen: frisch (<35) / leicht müde (<55) /
+müde (<75) / sehr müde (<95) / erschöpft (100). Steilere Strafen (max. 2.8×).
+`needs.sleepDebt` (0–2): steigt, wenn mit >70% eingeschlafen und >30% aufgewacht;
+fällt bei vollständiger Erholung (<30% nach Schlafen). `getSleepDebtMult()` in
+`getWorkTirednessGain()` eingebunden. `updateSleepDebt()` wird in `finishSleep()`
+VOR `startNewDay()` aufgerufen.
+
+## Automatisierungs-System (automation.js, v7)
+
+`AUTOMATION_ACTIONS` (4 Aktionen: Feldarbeit, Holz, Stein, Pflanze).
+`automation.slots` (Array) — ein Slot pro zugeordnetem Zeitkristall (`zeitkristalle`).
+Timer: `setupAutomation()` → `setInterval(tickAutomation, 30_000)`. Setup
+wird aus `main.js init()` aufgerufen. Nav-Button erscheint wenn
+`gameFlags.automationDiscovered` (erster Zeitkristall-Drop setzt es).
+
+## Developer-Tools (dev.js, v7)
+
+`window.devMode()` in der Browser-Konsole → setzt `gameFlags.devModeEnabled = true`
+→ `renderSettings()` (content.js) ruft am Ende `renderDevPanel(devContainer)` auf.
+Dev-Panel: Gold/EP/StärkeXP/HP/Zeitkristalle/Müdigkeit direkt setzen,
+Feature-Flags togglen, alles freischalten, Hard Reset.
+
+## Reset-Hilfsfunktionen (save.js, v7)
+
+`defaultResources()`, `defaultNeeds()`, `defaultGameClock()`, `defaultNightFlags()`,
+`defaultWorkStats()`, `defaultNightWatchStats()`, `defaultPlayerStats()`,
+`defaultStrength()`, `defaultCombat()`, `defaultEquipment()`, `defaultSettings()`,
+`defaultNavUnseen()`, `defaultGameFlags()` — jede gibt einen frischen State zurück.
+`performHardReset()` nutzt sie alle. Für zukünftige selektive Resets (EP-Neuanfang)
+können individuelle `defaultX()` statt aller gerufen werden.
+
+## Bisher offene Punkte
+
+- Feldarbeits-Stufen 4/5 (500k/100M Durchgänge) brauchen einen Beschleuniger
+  (z.B. "jede Arbeit zählt als 10") → Automation ist dieser Beschleuniger.
+- Kampf-Balancing nach echtem Spieltest nötig (siehe `notes/balance.md`).
+- Mut-Ausgaben noch nicht implementiert (Währung existiert, kein Shop dafür).
+- Weitere Super-Skills (clearMind, guildPrep, sleepLikeARock) noch nicht definiert.
+- Roadmap/Prestige-Plan: `notes/prestige-konzept.md` (5 Akte) + `notes/roadmap.md`.

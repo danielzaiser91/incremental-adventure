@@ -219,7 +219,7 @@ function getWorkTirednessGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
   const hungerMult = getHungerTier(needs.hunger).tirednessGainMult;
   const effectiveHungerMult = 1 + (hungerMult - 1) * (skills.ironWill ? 0.5 : 1);
-  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod;
+  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult();
 }
 
 /** Wie viel Hunger eine einzelne Arbeit gerade kosten würde — für die
@@ -633,13 +633,17 @@ function sleep(optionId) {
     einen oder mehrere Dialoge dazwischenschalten kann, bevor der Tag
     tatsächlich endet. */
 function finishSleep(option) {
-  const recoveryMult    = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
-  const tirednessRelief = 100 * recoveryMult * getSleepQualityFactor(option);
+  const tirednessBeforeSleep = needs.tiredness;
+  const recoveryMult         = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
+  const tirednessRelief      = 100 * recoveryMult * getSleepQualityFactor(option);
 
   if (option.cost > 0) resources.gold -= option.cost;
   adjustTiredness(-tirednessRelief);
   if (option.hungerPenalty) adjustHunger(option.hungerPenalty);
   nightFlags.recoveryDebuff = false;
+
+  restoreHpFromSleep(option);      // Kampf-HP anteilig wiederherstellen (combat.js)
+  updateSleepDebt(tirednessBeforeSleep); // Schlafschuld aktualisieren (needs.js)
 
   const isFirstSleep = !gameFlags.firstSleepTriggered;
   gameFlags.firstSleepTriggered = true;
