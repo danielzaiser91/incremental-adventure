@@ -38,13 +38,14 @@
   --c-purchase: #d9b65a;
 
   /* Layout */
-  --nav-w:        220px;
-  --stats-w:      200px;
-  --objective-h:  38px;
-  --pad:          16px;
-  --pad-sm:       10px;
-  --radius:       5px;
-  --rad-sm:       3px;
+  --nav-w:           220px;
+  --stats-w:         200px;
+  --objective-h:     38px;
+  --mobile-topbar-h: 46px;
+  --pad:             16px;
+  --pad-sm:          10px;
+  --radius:          5px;
+  --rad-sm:          3px;
 
   /* Schriften */
   --font-title: 'Cinzel', 'Palatino Linotype', Georgia, serif;
@@ -73,6 +74,10 @@ html, body {
 
 /* ── UTILITY ──────────────────────────────────────────────────── */
 .hidden { display: none !important; }
+
+/* Mobile-only Elemente: auf Desktop versteckt */
+#mobile-top-bar  { display: none; }
+#mobile-backdrop { display: none; position: fixed; inset: 0; }
 
 /* ── APP-ROOT — 3-Spalten-Grid + untere Zielleiste ───────────── */
 #app {
@@ -2300,3 +2305,165 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 }
 .dev-flag-row:hover { color: var(--text-hi); }
 .dev-flag-row input { cursor: pointer; }
+
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE: MOBILE (≤ 640px)
+   Nav- und Stats-Panel werden zu Slide-out-Drawern.
+   Neue Top-Bar (Hamburger + Titel + Charakter-Toggle).
+
+   REGEL FÜR ZUKÜNFTIGE ÄNDERUNGEN:
+   - Neue Flex-Row-Layouts → flex-wrap:wrap oder hier auf column setzen
+   - Neue 2-Spalten-Grids (1fr 1fr) → hier auf 1fr reduzieren
+   - Neue fixed-Position-Elemente → z-index < 150 (unter Drawern)
+   - Neue Buttons → min-height: 44px (Touch-Targets)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* ── MOBILE TOP BAR ─────────────────────────────────────── */
+  #mobile-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--mobile-topbar-h);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0 4px;
+    z-index: 100;
+    user-select: none;
+  }
+
+  .mobile-top-btn {
+    background: none;
+    border: none;
+    color: var(--text-mid);
+    font-family: var(--font-ui);
+    font-size: 18px;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rad-sm);
+    transition: background var(--t), color var(--t);
+  }
+  .mobile-top-btn:hover,
+  .mobile-top-btn.active {
+    background: var(--bg-hover);
+    color: var(--accent);
+  }
+
+  .mobile-title {
+    font-family: var(--font-title);
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+
+  /* ── BACKDROP ───────────────────────────────────────────── */
+  #mobile-backdrop {
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 150;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.22s ease;
+  }
+  body.nav-open   #mobile-backdrop,
+  body.stats-open #mobile-backdrop {
+    pointer-events: auto;
+    opacity: 1;
+    display: block;
+  }
+
+  /* ── APP-GRID: Single-Column + Top-Bar-Zeile ────────────── */
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--mobile-topbar-h) 1fr var(--objective-h);
+    min-width: unset;
+  }
+
+  /* ── NAV-DRAWER: von links einfahren ────────────────────── */
+  #nav-panel {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: min(280px, 82vw);
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    border-right: 1px solid var(--border);
+  }
+  body.nav-open #nav-panel { transform: translateX(0); }
+
+  #mobile-nav-toggle.active { color: var(--accent); }
+
+  /* ── STATS-DRAWER: von rechts einfahren ─────────────────── */
+  #stats-panel {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(260px, 82vw);
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.22s ease;
+    border-left: 1px solid var(--border);
+  }
+  body.stats-open #stats-panel { transform: translateX(0); }
+
+  #mobile-stats-toggle.active { color: var(--accent); }
+
+  /* ── MAIN PANEL: Volle Breite ───────────────────────────── */
+  #main-panel { border-right: none; }
+
+  /* ── OBJECTIVE BAR ─────────────────────────────────────── */
+  #objective-bar {
+    padding: 0 var(--pad-sm);
+    font-size: 11px;
+    gap: 6px;
+  }
+  .objective-chapter { display: none; }
+  .objective-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ── TOAST: unter Top-Bar ───────────────────────────────── */
+  #toast-container {
+    top: calc(var(--mobile-topbar-h) + 8px);
+    left: 8px;
+    right: 8px;
+    padding-right: 0;
+    align-items: flex-end;
+  }
+  .toast { max-width: 100%; }
+
+  /* ── DIALOG: voller Viewport ────────────────────────────── */
+  .dialog-box {
+    max-width: 94vw;
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+
+  /* ── TOUCH TARGETS ──────────────────────────────────────── */
+  .nav-btn,
+  .nav-footer-btn {
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .action-card { min-height: 44px; }
+
+  /* ── ERFAHRUNGS-SEITE: Sidebar über Main statt daneben ──── */
+  .erfahrung-layout   { flex-direction: column; gap: 20px; }
+  .erfahrung-sidebar  { flex: unset; width: 100%; position: static; top: unset; }
+
+  /* ── QUEST/ACHIEVEMENT-KARTEN: schmaler ─────────────────── */
+  .quest-card,
+  .achievement-card { max-width: 100%; }
+
+  /* ── CONTENT-AREA: weniger Innenabstand ─────────────────── */
+  #content-area { padding: 16px var(--pad-sm) var(--pad-sm); }
+
+}

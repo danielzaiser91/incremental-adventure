@@ -1408,6 +1408,24 @@ Feature-Flags togglen, alles freischalten, Hard Reset.
 `performHardReset()` nutzt sie alle. Für zukünftige selektive Resets (EP-Neuanfang)
 können individuelle `defaultX()` statt aller gerufen werden.
 
+## Responsive Design: Regeln für alle zukünftigen Änderungen (ab v8)
+
+Breakpoint: `@media (max-width: 640px)` am Ende von `style.css`.
+
+**Architektur Mobile:** Nav- und Stats-Panel sind Slide-out-Drawers (`position: fixed`,
+`transform: translateX(±100%)`). Body-Klassen `nav-open`/`stats-open` steuern sie.
+`closeMobilePanels()` (main.js) wird automatisch in `showContent()` + `showSettings()`
+aufgerufen — kein extra Code nötig beim Hinzufügen neuer Seiten.
+
+**Neue Layouts:** Flex-Row → `flex-wrap:wrap` oder im Media-Block auf `column`;
+Zwei-Spalten-Grids (`1fr 1fr`) → im Media-Block auf `1fr`. Mehr als 3 feste Spalten
+vermeiden — `auto-fit`/`minmax()` bevorzugen (`.action-grid` als Vorbild).
+
+**Touch-Targets:** alle neuen `<button>` brauchen `min-height: 44px`.
+
+**Z-Index-Hierarchie Mobile:** neue feste Elemente < 100; Backdrop = 150;
+Drawers = 200; Dialog-Overlay = 1000; Toasts = 1100.
+
 ## Bisher offene Punkte
 
 - Feldarbeits-Stufen 4/5 (500k/100M Durchgänge) brauchen einen Beschleuniger

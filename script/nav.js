@@ -162,6 +162,7 @@ function navTo(level) {
  * @param {string} id - Content-ID
  */
 function showContent(id) {
+  closeMobilePanels();
   const isFirstVisit = navUnseen.hasOwnProperty(id) && navUnseen[id];
   if (isFirstVisit) navUnseen[id] = false;
 
@@ -190,6 +191,7 @@ function showContent(id) {
 
 /** Öffnet die Einstellungen, ohne Navigationsebene oder Ort zu ändern. */
 function showSettings() {
+  closeMobilePanels();
   currentContent = 'settings';
   render();
 }

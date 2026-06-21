@@ -31,6 +31,14 @@
 
   <div id="app">
 
+    <!-- ══ MOBILE: Top-Bar (≤640px) — Hamburger + Titel + Charakter-Toggle ══ -->
+    <div id="mobile-top-bar">
+      <button class="mobile-top-btn" id="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Navigation öffnen">☰</button>
+      <span class="mobile-title">Chroniken</span>
+      <button class="mobile-top-btn" id="mobile-stats-toggle" onclick="toggleMobileStats()" aria-label="Charakter öffnen">◈</button>
+    </div>
+    <div id="mobile-backdrop" onclick="closeMobilePanels()"></div>
+
     <!-- ══ LINKE SPALTE: NAVIGATION ══════════════════════════ -->
     <nav id="nav-panel" class="panel">
 

@@ -25,3 +25,24 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+/* ── MOBILE DRAWER STEUERUNG ──────────────────────────────────── */
+function toggleMobileNav() {
+  const open = document.body.classList.toggle('nav-open');
+  document.body.classList.remove('stats-open');
+  document.getElementById('mobile-nav-toggle').classList.toggle('active', open);
+  document.getElementById('mobile-stats-toggle').classList.remove('active');
+}
+
+function toggleMobileStats() {
+  const open = document.body.classList.toggle('stats-open');
+  document.body.classList.remove('nav-open');
+  document.getElementById('mobile-stats-toggle').classList.toggle('active', open);
+  document.getElementById('mobile-nav-toggle').classList.remove('active');
+}
+
+function closeMobilePanels() {
+  document.body.classList.remove('nav-open', 'stats-open');
+  document.getElementById('mobile-nav-toggle').classList.remove('active');
+  document.getElementById('mobile-stats-toggle').classList.remove('active');
+}
