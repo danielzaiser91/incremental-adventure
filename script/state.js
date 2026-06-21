@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 7;
+const CURRENT_SAVE_VERSION = 8;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -63,6 +63,15 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Zeitkristalle und Automatisierung — seltene Drops freischalten selbsttätige Aktionen.',
       spoiler: () => !gameFlags.automationDiscovered },
     { cat: 'Änderung', text: 'Müdigkeits-System überarbeitet: Schlafschuld, feinere Stufen, stärkere Erschöpfungs-Strafen.' }
+  ],
+  8: [
+    { cat: 'Neuerung', text: 'Die Spur des Diebs: eine Detektiv-Quest durch Kapitel 2 mit Korbin, Mira, Brakka und dem zwielichtigen Mann.',
+      spoiler: () => !gameFlags.kapitel2Unlocked },
+    { cat: 'Neuerung', text: 'Sieg-Dialog und Konfetti am Ende von Kapitel 2 — mit Teaser für Kapitel 3.',
+      spoiler: () => !gameFlags.chapter2Complete },
+    { cat: 'Neuerung', text: 'Drei neue geheime Errungenschaften und eine große Normal-Errungenschaft für den Kapitel-Abschluss.' },
+    { cat: 'Neuerung', text: 'Zieltext in der Leiste ist jetzt anklickbar — zeigt den vollständigen Text als Dialog.' },
+    { cat: 'Bugfix',   text: 'Chronik-Eintrag "Der Raub" erscheint jetzt korrekt nach dem Raub, nicht erst nach dem Gildenbeitritt.' }
   ]
 };
 
@@ -166,7 +175,16 @@ let gameFlags = {
   jagdgebietUnlocked:          false, // Jagdgebiet betretbar
   automationDiscovered:        false, // Ersten Zeitkristall gefunden → Automatisierungs-Tab erscheint
   devModeEnabled:              false, // Entwickler-Optionen über devMode() in der Konsole freigeschaltet
-  isWorking:                   false
+  isWorking:                   false,
+  // ── Kapitel-2-Story-Flags ──────────────────────────────────
+  firstJagdgebietKill:         false, // Erster Kill im Jagdgebiet → Story 2.1
+  korbinChapter2Talked:        false, // Korbin hat von der Raubserie erzählt → Story 2.2
+  theftClueFoundInJagdgebiet:  false, // Münze des Spielers unter Räuber-Habe gefunden → Story 2.3
+  miraRevealedInfo:            false, // Mira hat ihre Informationen geteilt → Story 2.4
+  brakkaRevealedSuspect:       false, // Brakka hat den Fremden als Bindeglied benannt → Story 2.5
+  fremderConfronted:           false, // Fremder mit Beweisen konfrontiert → Story 2.6
+  chapter2Complete:            false, // Kapitel 2 vollständig abgeschlossen → Story 2.7 + Sieg-Dialog
+  waldtrollKilled:             false  // Mindestens einen Waldtroll besiegt (Tor zur Endkonfrontation)
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
@@ -232,22 +250,29 @@ let nightFlags = {
 
 /* Quest-Fortschritt. Zustände je Quest: 'unstarted' | 'active' | 'done' | 'rewarded' */
 let quests = {
-  nightWatch:       { state: 'unstarted' },
-  miraLetter:       { state: 'unstarted' },
-  foremanRaise:     { state: 'unstarted' },
-  kraemerinBusiness: { state: 'unstarted' }, // 'unstarted' -> 'invited' -> 'active' -> 'rewarded'
-  guildRegistration: { state: 'unstarted' },
-  commanderTraining: { state: 'unstarted' }
+  nightWatch:          { state: 'unstarted' },
+  miraLetter:          { state: 'unstarted' },
+  foremanRaise:        { state: 'unstarted' },
+  kraemerinBusiness:   { state: 'unstarted' }, // 'unstarted' -> 'invited' -> 'active' -> 'rewarded'
+  guildRegistration:   { state: 'unstarted' },
+  commanderTraining:   { state: 'unstarted' },
+  theftInvestigation:  { state: 'unstarted' } // 'unstarted' -> 'active' -> 'investigating' -> 'mira_consulted' -> 'brakka_consulted' -> 'confronted' -> 'rewarded'
 };
 
 /* Einmalige NPC-Interaktionen, die sich dauerhaft auf den Dialog auswirken */
 let npcFlags = {
-  miraDrinkGiven: false
+  miraDrinkGiven:    false,
+  fremderTalkCount:  0    // Wie oft der Spieler den zwielichtigen Mann angesprochen hat
 };
 
 /* Fortschritt in der Feldarbeit (Erfahrungs-/Level-System, siehe actions.js) */
 let workStats = {
   count: 0 // Anzahl insgesamt abgeschlossener Feldarbeits-Durchgänge
+};
+
+/* Kampf-Statistiken (Kapitel 2) — Kill-Zähler pro Monster-Typ */
+let killStats = {
+  total: 0  // Gesamtzahl aller Kills (Monster-Typ-Tracking ggf. später)
 };
 
 /* Freigeschaltete Errungenschaften (siehe achievements.js): IDs aus

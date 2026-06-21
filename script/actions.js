@@ -469,6 +469,7 @@ function checkMilestones() {
     storyState === 10102
   ) {
     gameFlags.robberyTriggered = true;
+    storyState = 20100; // Kapitel 2 beginnt narrativ — Chronik zeigt Eintrag 1.4 ab jetzt
     maybeShowStoryDialog('1.4', () => {
       resources.gold = 0;
       gameFlags.resetLayerUnlocked = true;
@@ -753,4 +754,63 @@ function adoptStreetCat(option) {
     'Sie schnurrt, lehnt sich gegen meine Hand und bleibt. Als hätte sie längst entschieden, dass ich bleiben darf.',
     'Ich glaube, ich habe gerade eine Mitbewohnerin bekommen.'
   ], () => finishSleep(option));
+}
+
+/* ── Kapitel-2-Sieg-Sequenz ───────────────────────────────────
+   Wird nach dem Abschluss der Konfrontation mit dem Fremden aufgerufen.
+   Zeigt Story 2.7, dann einen großen Sieg-Dialog mit Konfetti. */
+function triggerChapter2Victory() {
+  if (gameFlags.chapter2Complete) return;
+
+  maybeShowStoryDialog('2.7', () => {
+    gameFlags.chapter2Complete = true;
+    quests.theftInvestigation.state = 'rewarded';
+    storyState = 20200;
+    render();
+
+    launchConfetti();
+
+    showDialog({
+      title: '🏆 Kapitel 1 & 2 abgeschlossen!',
+      boxClass: 'dialog-box-wide',
+      html: `
+        <p style="font-size:1.1em;text-align:center;margin-bottom:12px">
+          Du hast es geschafft.
+        </p>
+        <p>
+          Du bist als Niemand in Treutheim angekommen — mit leeren Taschen und
+          großen Träumen. Du wurdest bestohlen, hast neu angefangen, hast gekämpft,
+          gefragt, gesucht. Und jetzt kennst du die Wahrheit.
+        </p>
+        <p>
+          <strong>Der Schatten</strong> ist noch da draußen. Aber er weiß, dass du
+          existierst. Und das verändert alles.
+        </p>
+        <hr style="border-color:var(--border);margin:12px 0">
+        <p style="color:var(--text-mid);font-size:0.85em">
+          <strong>Was in Kapitel 3 auf dich wartet:</strong><br>
+          • Eine neue Stadt jenseits von Treutheim<br>
+          • Die Abenteurergilde als echte Organisation<br>
+          • Der Schatten — wer ist er wirklich?<br>
+          • Mehr Verbündete, mehr Feinde, mehr Geheimnisse
+        </p>
+        <hr style="border-color:var(--border);margin:12px 0">
+        <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
+          Bleibe auf dem Laufenden über zukünftige Updates.<br>
+          Discord-Link folgt in Kürze.<br><br>
+          Danke, dass du gespielt hast — wir hoffen, du hattest Spaß. ✨
+        </p>
+      `,
+      buttons: [{
+        label: 'Das Abenteuer geht weiter!',
+        onClick: () => {
+          closeDialog();
+          achievements.chapter2Complete = true;
+          navUnseen.errungenschaften = true;
+          showToast('🏆 Errungenschaft freigeschaltet: Chroniken des vergessenen Weges!', 'event');
+          render();
+        }
+      }]
+    });
+  });
 }

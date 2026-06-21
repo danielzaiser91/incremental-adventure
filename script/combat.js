@@ -176,7 +176,13 @@ function endCombat(won, monster) {
     resources.gold += gold;
     resources.totalGoldEarned += gold;
     strength.xp += monster.xpReward;
+    killStats.total += 1;
     maybeStrengthLevelUp();
+
+    // Waldtroll-Flag setzen
+    if (monster.id === 'waldtroll' && !gameFlags.waldtrollKilled) {
+      gameFlags.waldtrollKilled = true;
+    }
 
     let msg = `Sieg! +${gold} Gold, +${monster.xpReward} Stärke-XP.`;
 
@@ -197,6 +203,31 @@ function endCombat(won, monster) {
 
     combat.log.unshift(msg);
     showToast(msg, 'reward');
+
+    // Story-Fortschritt nach erstem Kill (storyState 20101)
+    if (!gameFlags.firstJagdgebietKill) {
+      gameFlags.firstJagdgebietKill = true;
+      storyState = 20101;
+      render();
+      maybeShowStoryDialog('2.1');
+    }
+
+    // Münzfund-Event: nach 5+ Kills im Jagdgebiet → Detektivquest vorantreiben
+    if (killStats.total >= 5 && quests.theftInvestigation.state === 'active' &&
+        !gameFlags.theftClueFoundInJagdgebiet) {
+      gameFlags.theftClueFoundInJagdgebiet = true;
+      quests.theftInvestigation.state = 'investigating';
+      storyState = 20103;
+      navUnseen.taverne = true; // Mira hat eine Botschaft
+      render();
+      setTimeout(() => {
+        showMonologue('Ein Fund', [
+          'Zwischen den Habseligkeiten des besiegten Räubers finde ich etwas Vertrautes.',
+          'Eine Münze — mit dem eingestanzten Kratzer, den ich selbst einmal durch einen Sturz verursacht habe. Meine Münze.',
+          'Das ist kein Zufall.'
+        ], () => { maybeShowStoryDialog('2.3'); });
+      }, 400);
+    }
   } else {
     const goldLost = Math.floor(resources.gold * 0.2);
     resources.gold = Math.max(0, resources.gold - goldLost);

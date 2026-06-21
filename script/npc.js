@@ -26,14 +26,15 @@ const NPCS = {
   wirt: {
     name: 'Korbin, der Wirt', icon: '🍺',
     tagline: 'Herzlich, aber wachsam gegenüber Fremden.',
-    // Ausrufezeichen-Badge, solange das aktuelle Ziel "Sprich mit dem Wirt"
-    // ist (siehe objective.js) — analog zu Brakkas questId-Badge, aber ohne
-    // eigene Quest-State-Machine, weil die Jobvermittlung ein einmaliger
-    // Flag-Übergang ist, keine mehrstufige Quest.
-    hasHint: () => gameFlags.tavernVisited && !gameFlags.jobUnlocked,
-    // Vor der Jobvermittlung steigt jedes Gespräch über den Job-Hinweis ein,
-    // danach ganz normal über den Smalltalk-Knoten.
-    start: () => (!gameFlags.jobUnlocked ? 'jobAdvice' : 'greet'),
+    // Badge sobald Detektiv-Quest startbereit ist (Spieler in Kapitel 2, Quest noch unstarted)
+    hasHint: () => (gameFlags.tavernVisited && !gameFlags.jobUnlocked) ||
+      (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === 'unstarted' && storyState >= 20101),
+    start: () => {
+      if (!gameFlags.jobUnlocked) return 'jobAdvice';
+      if (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === 'unstarted' && storyState >= 20101) return 'chapter2intro';
+      if (gameFlags.kapitel2Unlocked && storyState >= 20101) return 'chapter2greet';
+      return 'greet';
+    },
     nodes: {
       jobAdvice: {
         text: [
@@ -64,6 +65,55 @@ const NPCS = {
         options: [
           { label: 'Danke für die Warnung.', next: null }
         ]
+      },
+      chapter2intro: {
+        text: [
+          'Korbin zieht mich nah heran, als ich die Taverne betrete, sein Blick fliegt kurz zur Tür.',
+          '"Ich hab dich draußen kämpfen sehen, Fremder. Du bist nicht mehr das, was du warst, als du ankamst."',
+          '"Ich kenn dich noch, als du frisch hereingekommen bist. Du warst ein leichtes Ziel."',
+          '"Weißt du, du bist nicht der Erste, dem das passiert ist. Es gibt jemanden in dieser Stadt..."'
+        ],
+        options: [
+          {
+            label: '"Erzähl mir mehr."',
+            next: 'chapter2reveal',
+          },
+          { label: '"Ich weiß Bescheid."', next: null }
+        ]
+      },
+      chapter2reveal: {
+        text: [
+          '"Drei Neue in diesem Monat. Immer dasselbe — ankommen, schuften, beraubt werden."',
+          '"Es gibt jemanden, den alle hier nur den Schatten nennen. Er wählt die Neuen aus. Er schickt jemanden vor — einen Beobachter, der entscheidet, ob der Neue lohnend genug ist."',
+          '"Und wenn er es ist, holt er sich sein Teil." Korbin tippt auf mein leeres Glas. "Du weißt, wovon ich rede."',
+          '"Wenn du herausfinden willst, wer dahintersteckt — ich rate dir: frag die, die länger hier sind als ich. Fang im Jagdgebiet an. Die Räuber dort sind keine Zufälle."'
+        ],
+        options: [{
+          label: 'Das ist die Spur, die ich brauche.',
+          next: null,
+          action: () => {
+            if (quests.theftInvestigation.state === 'unstarted') {
+              quests.theftInvestigation.state = 'active';
+              gameFlags.korbinChapter2Talked = true;
+              storyState = 20102;
+              navUnseen.quests = true;
+              render();
+              maybeShowStoryDialog('2.2');
+              showToast('Quest erhalten: Die Spur des Diebs.', 'event');
+            }
+          }
+        }]
+      },
+      chapter2greet: {
+        text: ['Korbin nickt dir knapp zu. "Du siehst wie jemand aus, der Antworten sucht. Was ist?"'],
+        options: [
+          { label: 'Wie läuft das Geschäft?', next: 'chapter2idle' },
+          { label: 'Nichts, ich schaue nur.', next: null }
+        ]
+      },
+      chapter2idle: {
+        text: ['"Besser, seit du angefangen hast, die Räuber dort draußen auszudünnen", sagt er trocken. "Die Leute trauen sich wieder raus."'],
+        options: [{ label: 'Gut zu wissen.', next: null }]
       }
     }
   },
@@ -74,16 +124,15 @@ const NPCS = {
     locked: () => !gameFlags.firstNightDialogShown,
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
-    // Eigenes Signal NACH der eigentlichen questId-Logik oben: die hängt nur
-    // am 'unstarted'-Zustand (neue Aufgabe anbieten), hier geht es um die
-    // Rückmeldung NACHDEM Brakka den Brief schon hat (siehe Brakka,
-    // receiveLetter — setzt 'delivered' statt direkt 'rewarded').
-    hasHint: () => quests.miraLetter.state === 'delivered',
+    hasHint: () => quests.miraLetter.state === 'delivered' ||
+      quests.theftInvestigation.state === 'investigating',
     start: () => {
       if (quests.miraLetter.state === 'delivered') return 'letterDelivered';
       if (quests.miraLetter.state === 'active') return 'letterReminder';
+      if (quests.theftInvestigation.state === 'investigating') return 'detectiveAsk';
       if (!npcFlags.miraDrinkGiven) return 'greet';
       if (meta.resets >= 1 && quests.miraLetter.state === 'unstarted') return 'letterOffer';
+      if (gameFlags.miraRevealedInfo) return 'friendlyAfterReveal';
       return 'friendly';
     },
     nodes: {
@@ -150,6 +199,46 @@ const NPCS = {
             showToast('Mira ist erleichtert — die Sache mit dem Brief ist erledigt.', 'event');
           }
         }]
+      },
+      detectiveAsk: {
+        text: [
+          'Mira sieht mich an — diesmal kein Lächeln, kein Spiel. Sie hat mein Gesicht gerade genug gelesen.',
+          '"Du fragst nach dem Schatten."',
+          'Es ist keine Frage.'
+        ],
+        options: [
+          { label: '"Ich habe Beweise. Und Fragen."', next: 'detectiveReveal' },
+          { label: '"Ich schaue nur."', next: null }
+        ]
+      },
+      detectiveReveal: {
+        text: [
+          '"Der Brief, den ich dir für Brakka gegeben habe?" Sie trinkt einen Schluck, langsamer als nötig. "Es war eine Warnung. Brakka weiß, wer der Schatten ist. Er weiß es seit Jahren."',
+          '"Ich auch. Aber Wissen ohne Schutz ist gefährlich. Du bist jetzt stark genug. Er wird reden, wenn du ihn fragst."',
+          '"Geh zu Brakka. Sag ihm, dass ich dich geschickt habe."'
+        ],
+        options: [{
+          label: '"Danke, Mira."',
+          next: null,
+          action: () => {
+            if (!gameFlags.miraRevealedInfo) {
+              gameFlags.miraRevealedInfo = true;
+              quests.theftInvestigation.state = 'mira_consulted';
+              storyState = 20104;
+              navUnseen.taverne = true; // Brakka hat jetzt etwas zu sagen
+              render();
+              maybeShowStoryDialog('2.4');
+              showToast('Mira hat geredet. Brakka als nächstes.', 'event');
+            }
+          }
+        }]
+      },
+      friendlyAfterReveal: {
+        text: ['Mira nickt mir zu, als ich näherkomme. Keine Spielchen mehr. "Wie läuft die Sache?"'],
+        options: [
+          { label: '"Ich bin dran."', next: null },
+          { label: '"Gut. Danke."', next: null }
+        ]
       }
     }
   },
@@ -205,16 +294,14 @@ const NPCS = {
   brakka: {
     name: 'Brakka, der Schmied', icon: '🔨',
     tagline: 'Trockener Humor, ein Herz aus Eisen — und Eisen für alle anderen.',
-    questId: 'nightWatch', // steuert das Ausrufezeichen-Badge, solange die Quest unstarted ist
+    questId: 'nightWatch',
     questAvailable: () => gameClock.day >= 2,
-    // Zweites/drittes, unabhängiges Signal fürs Ausrufezeichen: die
-    // Gilden-Quest (siehe experience.js, Skill "guildPrep") UND "Nachtwache
-    // bereits gehalten, muss noch berichtet werden" — beide unabhängig von
-    // der questId-basierten "neue Aufgabe verfügbar"-Logik oben.
     hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done' ||
-      (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0),
+      (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) ||
+      quests.theftInvestigation.state === 'mira_consulted',
     start: () => {
       if (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
+      if (quests.theftInvestigation.state === 'mira_consulted') return 'detectiveReveal';
       if (quests.guildRegistration.state === 'active') {
         return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
       }
@@ -335,6 +422,29 @@ const NPCS = {
       guildFinished: {
         text: ['Brakka hebt sein Glas. "Geh und mach uns stolz, Fremder."'],
         options: [{ label: 'Werde ich.', next: null }]
+      },
+      detectiveReveal: {
+        text: [
+          'Brakka legt den Hammer nieder. Langsam. Ich habe ihn das noch nie tun sehen.',
+          '"Mira hat dich geschickt." Es ist keine Frage.',
+          '"Der Mann in der Taverne — er ist kein Dieb. Er ist schlimmer. Er wählt aus, wer beraubt wird. Ich kenne sein Gesicht seit Jahren. Er war schon hier, als ich jung war."',
+          '"Ich habe nie geredet. Weil ich zu feige war, oder weil es mir nicht passiert ist. Ich weiß selbst nicht mehr, was der Unterschied ist."',
+          '"Wenn du ihn stellen willst — erst musst du stärker sein als er erwartet. Er ist kein Mann der Gewalt. Aber er hat Leute, die es für ihn sind."'
+        ],
+        options: [{
+          label: '"Ich bin bereit."',
+          next: null,
+          action: () => {
+            if (!gameFlags.brakkaRevealedSuspect) {
+              gameFlags.brakkaRevealedSuspect = true;
+              quests.theftInvestigation.state = 'brakka_consulted';
+              storyState = 20105;
+              render();
+              maybeShowStoryDialog('2.5');
+              showToast('Brakka hat gesprochen. Jetzt: Stärke-Lvl 3 + Waldtroll besiegen — dann den Fremden stellen.', 'event');
+            }
+          }
+        }]
       },
       receiveLetter: {
         text: [
@@ -515,7 +625,20 @@ const NPCS = {
     name: 'Ein zwielichtiger Mann', icon: '🥷',
     tagline: 'Sitzt allein am Rand des Schankraums, sein Blick wandert ständig.',
     locked: () => storyState < 10102,
-    start: 'greet',
+    // Badge wenn Konfrontation möglich ist
+    hasHint: () => quests.theftInvestigation.state === 'brakka_consulted' &&
+      gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3,
+    start: () => {
+      // Konfrontation (Bedingungen: Quest in 'brakka_consulted', Stärke 3+, Waldtroll besiegt)
+      if (quests.theftInvestigation.state === 'brakka_consulted' &&
+          gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3) {
+        return 'confrontation';
+      }
+      if (quests.theftInvestigation.state === 'confronted' || gameFlags.fremderConfronted) {
+        return 'postConfrontation';
+      }
+      return 'greet';
+    },
     nodes: {
       greet: {
         text: [
@@ -523,9 +646,9 @@ const NPCS = {
           'Sein Blick streift kurz meinen Geldbeutel — dann wieder mein Gesicht, als wäre nichts gewesen.'
         ],
         options: [
-          { label: '"Nur einen Drink."', next: null },
-          { label: '"Wer bist du?"', next: 'who' },
-          { label: '"Du beobachtest mich. Warum?"', next: 'watching' }
+          { label: '"Nur einen Drink."', next: null, action: () => { npcFlags.fremderTalkCount += 1; } },
+          { label: '"Wer bist du?"', next: 'who', action: () => { npcFlags.fremderTalkCount += 1; } },
+          { label: '"Du beobachtest mich. Warum?"', next: 'watching', action: () => { npcFlags.fremderTalkCount += 1; } }
         ]
       },
       who: {
@@ -557,6 +680,47 @@ const NPCS = {
           'Aber sein Blick sagt etwas anderes — und er senkt ihn keine Sekunde zu früh.'
         ],
         options: [{ label: 'Wenn du meinst.', next: null }]
+      },
+      confrontation: {
+        text: [
+          'Ich lege die Münze mit dem eingestanzten Kratzer auf den Tisch zwischen uns.',
+          'Der zwielichtige Mann betrachtet sie lange. Sein Gesicht verrät nichts. Dann: "Du bist nicht wie die anderen."',
+          '"Die anderen haben nach dem Raub aufgehört. Haben die Stadt verlassen oder geschwiegen. Du nicht."',
+          '"Ich habe dich ausgewählt. Nicht nur wegen des Goldes — um zu sehen, was du daraus machst. Du hast Stärke gezeigt. Im Jagdgebiet. Im Gespräch. Sogar hier, jetzt."',
+          '"Der Schatten will wissen, wer du bist. Ich werde ihm sagen, dass du jemand bist, mit dem man rechnet."',
+          'Er schiebt die Münze zu mir zurück. "Behalte sie. Als Erinnerung."'
+        ],
+        options: [{
+          label: '"Und das Gold, das du gestohlen hast?"',
+          next: 'confrontationEnd'
+        }]
+      },
+      confrontationEnd: {
+        text: [
+          '"Das Gold?" Er lacht leise. "Das ist längst weg. Aber du bist hier, und das ist mehr wert."',
+          '"Leb gut, Fremder. Wir werden uns wiedersehen." Er erhebt sich und verlässt die Taverne — langsam, ohne Eile, als wäre er nie bedroht gewesen.'
+        ],
+        options: [{
+          label: 'Ich lasse ihn gehen.',
+          next: null,
+          action: () => {
+            if (!gameFlags.fremderConfronted) {
+              gameFlags.fremderConfronted = true;
+              quests.theftInvestigation.state = 'confronted';
+              storyState = 20106;
+              render();
+              maybeShowStoryDialog('2.6', () => {
+                // Kurze Pause, dann Sieg-Dialog anzeigen
+                setTimeout(triggerChapter2Victory, 800);
+              });
+              showToast('Die Konfrontation ist vorbei. Die Spur des Diebs — abgeschlossen.', 'event');
+            }
+          }
+        }]
+      },
+      postConfrontation: {
+        text: ['Der zwielichtige Mann ist nicht mehr hier. Nur sein leerer Stuhl erinnert an das Gespräch.'],
+        options: [{ label: 'Er ist weg.', next: null }]
       }
     }
   }

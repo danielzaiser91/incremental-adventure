@@ -23,13 +23,41 @@ function getObjectiveText() {
     return 'Arbeite auf dem Feld, um Gold zu verdienen.';
   }
   if (storyState === 10102) {
-    if (gameFlags.resetLayerUnlocked) {
-      return 'Mein Gold ist fort. Vielleicht ist es Zeit für einen Neuanfang — sieh dir "Erfahrung" an.';
-    }
     return 'Verdiene weiter Gold — auch wenn mich jemand beobachtet.';
   }
-  if (storyState >= 20100) {
-    return 'Erkunde Treutheim erneut, um meinen nächsten Schritt zu finden.';
+
+  // Kapitel 2 — storyState 20100+ (Raub hat stattgefunden)
+  if (storyState >= 20100 && !gameFlags.kapitel2Unlocked) {
+    return 'Mein Gold ist fort. Es ist Zeit, klüger vorzugehen — sieh dir "Erfahrung" an und baue meinen Weg zur Abenteurergilde auf.';
+  }
+  if (storyState === 20100) {
+    return 'Das Jagdgebiet südlich der Stadt wartet. Ich sollte zeigen, was ich drauf habe.';
+  }
+  if (storyState === 20101) {
+    const q = quests.theftInvestigation;
+    if (q.state === 'unstarted') return 'Im Jagdgebiet werde ich stärker. Und ich werde die Wahrheit über den Raub herausfinden — spreche mit Korbin in der Taverne.';
+    return 'Die Spur des Diebs führt ins Jagdgebiet. Augen offen halten.';
+  }
+  if (storyState === 20102) {
+    return 'Korbin weiß von einer Raubserie. Erkunde das Jagdgebiet weiter — die Antworten liegen dort draußen.';
+  }
+  if (storyState === 20103) {
+    return 'Meine eigene Münze unter Räuberhabe. Mira weiß mehr — sie in der Taverne ansprechen.';
+  }
+  if (storyState === 20104) {
+    return 'Mira hat gesprochen. Brakka kennt den Namen — ihn in der Schmiede aufsuchen.';
+  }
+  if (storyState === 20105) {
+    const lvl = getStrengthLevel ? getStrengthLevel(strength.xp) : 0;
+    if (!gameFlags.waldtrollKilled) return 'Brakka warnt: Der Voraussucher respektiert nur Stärke. Den Waldtroll im tiefen Jagdgebiet besiegen.';
+    if (lvl < 3) return 'Brakka warnt: Erst stark genug werden (Stärke-Stufe 3+), dann den Fremden stellen.';
+    return 'Ich bin bereit. Den zwielichtigen Mann in der Taverne mit den Beweisen konfrontieren.';
+  }
+  if (storyState === 20106) {
+    return 'Die Konfrontation liegt hinter mir. Brakka und Mira davon berichten — dann Bilanz ziehen.';
+  }
+  if (storyState >= 20200) {
+    return 'Kapitel 2 ist abgeschlossen. Die Geschichte geht weiter — halte Ausschau nach kommenden Updates.';
   }
   return 'Sieh dich um.';
 }

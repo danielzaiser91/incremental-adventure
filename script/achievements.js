@@ -52,6 +52,24 @@ const ACHIEVEMENT_DEFS = [
     desc: 'Gewinne über mehrere Nächte das Vertrauen eines streunenden Straßentiers.',
     hint: 'Manche Freundschaften brauchen Geduld — und ein paar kalte, schlaflose Nächte.',
     check: () => !!pets.streetCat
+  },
+  {
+    id: 'imSchatten', cat: 'secret', layer: 1, icon: '🔍', name: 'Im Schatten',
+    desc: 'Du hast ihn fünfmal angesprochen, bevor du wusstest, wer er wirklich ist.',
+    hint: 'Manchmal sitzt die Antwort die ganze Zeit im selben Raum wie die Frage.',
+    check: () => npcFlags.fremderTalkCount >= 5
+  },
+  {
+    id: 'altesGold', cat: 'secret', layer: 1, icon: '🗝', name: 'Altes Gold',
+    desc: 'Die Spur des Diebs auf leeren Taschen zu Ende gebracht.',
+    hint: 'Mancher Weg zur Wahrheit kostet alles — manche Detektive sind arm wie Kirchenmäuse.',
+    check: () => gameFlags.fremderConfronted && resources.gold < 10
+  },
+  {
+    id: 'chapter2Complete', cat: 'normal', layer: 1, icon: '🏆', name: 'Chroniken des vergessenen Weges',
+    desc: 'Kapitel 1 und 2 vollständig abgeschlossen — die Wahrheit hinter dem Raub enthüllt.',
+    check: () => gameFlags.chapter2Complete,
+    bonusMult: 0.15
   }
 ];
 

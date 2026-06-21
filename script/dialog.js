@@ -170,3 +170,35 @@ function closeDialog(onClosed) {
     if (onClosed) onClosed();
   }, 180);
 }
+
+/* ── Konfetti-Animation ───────────────────────────────────────
+   Erzeugt 120 farbige Partikel, die vom oberen Bildschirmrand fallen.
+   Der Container wird nach 6 Sekunden automatisch entfernt. */
+function launchConfetti() {
+  const existing = document.getElementById('confetti-container');
+  if (existing) existing.remove();
+
+  const colors = ['#e74c3c', '#f39c12', '#2ecc71', '#3498db', '#9b59b6', '#e67e22', '#1abc9c', '#e91e63'];
+  const container = document.createElement('div');
+  container.id = 'confetti-container';
+  document.body.appendChild(container);
+
+  for (let i = 0; i < 120; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-particle';
+    const size = 6 + Math.random() * 8;
+    el.style.cssText = [
+      `width:${size}px`,
+      `height:${size}px`,
+      `background:${colors[Math.floor(Math.random() * colors.length)]}`,
+      `left:${Math.random() * 100}%`,
+      `top:-${20 + Math.random() * 40}px`,
+      `border-radius:${Math.random() > 0.5 ? '50%' : '2px'}`,
+      `animation-duration:${2.5 + Math.random() * 2.5}s`,
+      `animation-delay:${Math.random() * 1.5}s`
+    ].join(';');
+    container.appendChild(el);
+  }
+
+  setTimeout(() => { if (container.parentNode) container.remove(); }, 6000);
+}

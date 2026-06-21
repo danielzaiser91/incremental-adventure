@@ -70,6 +70,20 @@ const QUEST_DEFS = [
       active:    'Kommandant Roswald hat mich in die Taverne eingeladen, um über die Nachtwache zu reden.',
       rewarded:  'Abgeschlossen — ich kann jetzt für die Nachtwache aufleveln (siehe Erfahrung).'
     }
+  },
+  {
+    id:    'theftInvestigation',
+    title: 'Die Spur des Diebs',
+    icon:  '🔍',
+    descByState: {
+      unstarted:      'Noch nicht begonnen.',
+      active:         'Korbin erzählte von einer Serie von Raubüberfällen in Treutheim. Ich sollte das Jagdgebiet erkunden und die Augen offen halten.',
+      investigating:  'Meine eigene Münze zwischen Räuber-Habe — das ist kein Zufall. Mit Mira reden.',
+      mira_consulted: 'Mira hat mehr verraten, als sie wollte. Brakka soll den Täter kennen.',
+      brakka_consulted: 'Brakka hat gesprochen: Der Mann in der Taverne ist der Voraussucher des Schattens. Stark genug werden, um ihn zu konfrontieren.',
+      confronted:     'Die Konfrontation liegt hinter mir. Die Spur ist kälter als gedacht — und reicher.',
+      rewarded:       'Abgeschlossen — ich kenne die Wahrheit hinter dem Raub. Was ich damit anfange, liegt bei mir.'
+    }
   }
 ];
 
@@ -84,12 +98,16 @@ const QUEST_ITEMS = [
 ];
 
 const QUEST_STATE_LABELS = {
-  unstarted: 'Unbekannt',
-  invited:   'Einladung erhalten',
-  active:    'In Arbeit',
-  delivered: 'Rückmeldung ausstehend',
-  done:      'Bereit zur Abgabe',
-  rewarded:  'Abgeschlossen'
+  unstarted:        'Unbekannt',
+  invited:          'Einladung erhalten',
+  active:           'In Arbeit',
+  investigating:    'Spur gefunden',
+  mira_consulted:   'Mira befragt',
+  brakka_consulted: 'Brakka befragt',
+  confronted:       'Konfrontiert',
+  delivered:        'Rückmeldung ausstehend',
+  done:             'Bereit zur Abgabe',
+  rewarded:         'Abgeschlossen'
 };
 
 /** Rendert die Quest-Übersicht. Noch nicht angenommene Quests bleiben unsichtbar —

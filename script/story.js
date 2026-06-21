@@ -59,6 +59,88 @@ const STORY_ENTRIES = [
       'Mein mühsam verdientes Gold. Fort.',
       'Das wird sich nicht wiederholen. Ich werde klüger sein. Härter. Ein neues Kapitel beginnt — und dieses Mal schreibe ich es selbst.'
     ]
+  },
+
+  /* ══ KAPITEL 2: Die Spur des Diebs ════════════════════════ */
+
+  {
+    id:          '2.1',
+    title:       'Erstes Blut',
+    unlockState: 20101,
+    text: [
+      'Das erste Mal. Die Stille danach hat eine eigene Schwere.',
+      'Ich hatte keine Zeit, Angst zu haben — nur zu handeln. Und es hat funktioniert.',
+      'Vielleicht bin ich doch mehr als ein Bauernjunge mit leeren Taschen. Vielleicht war der Raub nicht das Ende meiner Geschichte, sondern ihr eigentlicher Anfang.'
+    ]
+  },
+  {
+    id:          '2.2',
+    title:       'Korbins Geheimnis',
+    unlockFlag:  () => gameFlags.korbinChapter2Talked,
+    text: [
+      'Korbin zieht mich nah an sich heran, sein Atem riecht nach Bier und Vorsicht.',
+      '"Drei Neue in diesem Monat. Immer dasselbe: ankommen, schuften, beraubt werden. Du bist nicht der Erste, Fremder."',
+      '"Es gibt jemanden in dieser Stadt, den alle hier den Schatten nennen. Er wählt die Neuen aus. Jemanden, dem er vertraut, schickt er vor — einen Beobachter. Der entscheidet, ob jemand lohnend genug ist."',
+      'Mir wird kalt, obwohl die Taverne warm ist.'
+    ]
+  },
+  {
+    id:          '2.3',
+    title:       'Eine Spur im Dunkeln',
+    unlockFlag:  () => gameFlags.theftClueFoundInJagdgebiet,
+    text: [
+      'Zwischen den armseligen Habseligkeiten eines Räubers, den ich eben niedergestreckt habe, finde ich etwas.',
+      'Eine Münze. Meine Münze — ich erkenne den eingestanzten Kratzer, den ich selbst einmal durch einen Sturz verursacht habe.',
+      'Der Dieb hat das Gold nicht behalten. Er hat es weitergegeben — an jemanden hier draußen, der mit diesen Räubern in Verbindung steht.',
+      'Das ist kein einfacher Straßenraub. Das ist ein Netzwerk.'
+    ]
+  },
+  {
+    id:          '2.4',
+    title:       'Miras wahres Gesicht',
+    unlockFlag:  () => gameFlags.miraRevealedInfo,
+    text: [
+      'Mira lächelt nicht mehr. Zum ersten Mal seit ich sie kenne, fühlt sich das Gespräch mit ihr wie eines unter Gleichen an.',
+      '"Der Brief, den ich dir für Brakka gegeben habe — es war eine Warnung. Brakka weiß, wer der Schatten ist. Er hat nur nie geredet."',
+      '"Ich auch nicht. Weil es gefährlich ist, zu reden. Aber du fragst. Und das verändert etwas."',
+      'Sie dreht sich weg, als könnte sie es bereuen, wenn sie mich noch länger ansieht.'
+    ]
+  },
+  {
+    id:          '2.5',
+    title:       'Brakkas Schweigen bricht',
+    unlockFlag:  () => gameFlags.brakkaRevealedSuspect,
+    text: [
+      'Brakka stellt den Hammer ab. Das erste Mal, seit ich ihn kenne.',
+      '"Der Mann, der immer in der Taverne sitzt — er ist kein Dieb. Er ist der Voraussucher. Er beobachtet, er wählt aus, er meldet zurück."',
+      '"Ich kenne dieses Gesicht seit Jahren. Er hat immer zugeschaut. Ich war zu feige, etwas zu sagen."',
+      'Er sieht mich an, schwer wie Eisen. "Wenn du das beenden willst — hab etwas in der Hand, wenn du ihn stellst."'
+    ]
+  },
+  {
+    id:          '2.6',
+    title:       'Die Konfrontation',
+    unlockFlag:  () => gameFlags.fremderConfronted,
+    text: [
+      'Ich lege die Münze auf den Tisch zwischen uns. Der Fremde rührt sich nicht.',
+      '"Du bist nicht wie die anderen", sagt er schließlich, leiser als ich erwartet hatte. "Die anderen haben aufgehört. Du nicht."',
+      '"Ich habe dich ausgewählt. Nicht nur, um dich auszurauben — um zu sehen, was du daraus machst."',
+      'Er schiebt die Münze zurück zu mir. "Der Schatten wird wissen wollen, wer du bist. Ich werde ihm sagen, dass du jemand bist, mit dem man rechnen muss."',
+      'Ich nehme die Münze. Kein Sieg. Keine Niederlage. Nur: eine neue Rechnung, offen.'
+    ]
+  },
+  {
+    id:          '2.7',
+    title:       'Das Ende des Anfangs',
+    unlockState: 20200,
+    text: [
+      'Ich sitze auf den Stufen vor der Taverne und denke nach.',
+      'Ich bin angekommen als Niemand. Ein Bauernjunge mit leeren Taschen und vollen Träumen.',
+      'Jetzt? Ich habe Blut vergossen, Gold verdient und verloren, Freunde gemacht und Feinde entdeckt, die ich nicht mal gesucht hatte.',
+      'Treutheim ist nicht das Ziel. Es war immer nur die erste Station.',
+      'Der Schatten ist noch da draußen. Und er weiß, dass ich existiere.',
+      'Das ist kein Ende. Das ist der Beginn von etwas viel Größerem.'
+    ]
   }
 ];
 

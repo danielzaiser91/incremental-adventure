@@ -32,6 +32,7 @@ function saveGame(opts = {}) {
       quests,
       npcFlags,
       workStats,
+      killStats,
       nightWatchStats,
       achievements,
       achievementTab,
@@ -101,11 +102,12 @@ function applySaveData(save) {
   quests         = {
     nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
     kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
-    commanderTraining: { state: 'unstarted' },
+    commanderTraining: { state: 'unstarted' }, theftInvestigation: { state: 'unstarted' },
     ...save.quests
   };
-  npcFlags       = { miraDrinkGiven: false, ...save.npcFlags };
+  npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, ...save.npcFlags };
   workStats      = { count: 0, ...save.workStats };
+  killStats      = { total: 0, ...save.killStats };
   nightWatchStats = { count: 0, ...save.nightWatchStats };
   achievements   = save.achievements ?? {};
   achievementTab = save.achievementTab ?? 'normal';
@@ -143,6 +145,9 @@ function applySaveData(save) {
     commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
     resetAnimationSeen: false, kapitel2Unlocked: false, jagdgebietUnlocked: false,
     automationDiscovered: false, devModeEnabled: false,
+    firstJagdgebietKill: false, korbinChapter2Talked: false, theftClueFoundInJagdgebiet: false,
+    miraRevealedInfo: false, brakkaRevealedSuspect: false, fremderConfronted: false,
+    chapter2Complete: false, waldtrollKilled: false,
     ...save.gameFlags, isWorking: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
