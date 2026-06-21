@@ -165,6 +165,52 @@ function applySaveData(save) {
   workProgress   = 0;
 }
 
+/** Repariert bekannte veraltete Spielstände automatisch, soweit möglich.
+    Wird NACH applySaveData() aufgerufen, wenn ein veralteter Spielstand
+    geladen wurde. Gibt eine Liste der vorgenommenen Korrekturen zurück,
+    damit der Spieler im Changelog-Dialog informiert werden kann. */
+function migrateSaveData(loadedVersion) {
+  const fixes = [];
+
+  // v7→v8: storyState blieb durch Bug bei 10102 hängen, obwohl der Raub
+  // längst stattgefunden hat und die Gilde bereits beigetreten wurde.
+  if (loadedVersion < 8 &&
+      storyState === 10102 &&
+      gameFlags.kapitel2Unlocked &&
+      gameFlags.robberyTriggered) {
+    storyState = 20100;
+    fixes.push('Dein Spielfortschritt wurde repariert — die Kapitel-2-Ziele werden jetzt korrekt angezeigt.');
+  }
+
+  return fixes;
+}
+
+/** Setzt nur den Kapitel-2-Fortschritt zurück, behält aber alles davor
+    (EP, Skills, Errungenschaften, Geld, Ausrüstung). Gedacht für Spieler,
+    die Kapitel 2 von Anfang an neu erleben möchten oder deren Story-Stand
+    nicht automatisch repariert werden konnte. */
+function performGracefulReset() {
+  storyState = 20100;
+  quests.theftInvestigation = { state: 'unstarted' };
+  killStats  = { total: 0 };
+  npcFlags.fremderTalkCount = 0;
+
+  const ch2Flags = [
+    'firstJagdgebietKill', 'korbinChapter2Talked', 'theftClueFoundInJagdgebiet',
+    'miraRevealedInfo', 'brakkaRevealedSuspect', 'fremderConfronted',
+    'chapter2Complete', 'waldtrollKilled'
+  ];
+  ch2Flags.forEach(f => { gameFlags[f] = false; });
+  delete achievements.chapter2Complete;
+  delete achievements.imSchatten;
+
+  closeDialog(() => {
+    saveGame({ silent: true });
+    render();
+    showToast('Kapitel 2 wurde neu gestartet — dein bisheriger Fortschritt bleibt erhalten.', 'info');
+  });
+}
+
 /** Lädt einen gespeicherten Spielstand aus localStorage. Bei Erfolg ganz
     normal; ist der Spielstand nicht mehr lesbar (korruptes JSON oder eine
     Form, die applySaveData() nicht zuordnen kann), erscheint ein Dialog
@@ -181,11 +227,17 @@ function loadGame() {
     const loadedVersion = typeof save.version === 'number' ? save.version : 0;
     applySaveData(save);
 
+    const migrationFixes = loadedVersion < CURRENT_SAVE_VERSION
+      ? migrateSaveData(loadedVersion)
+      : [];
+
     const dateStr = new Date(save.savedAt).toLocaleString('de-DE');
     showToast(`📂 Spielstand geladen (gespeichert: ${dateStr})`, 'info');
     render();
 
-    if (loadedVersion < CURRENT_SAVE_VERSION) showSaveChangelogDialog(loadedVersion);
+    if (loadedVersion < CURRENT_SAVE_VERSION) {
+      showSaveChangelogDialog(loadedVersion, migrationFixes);
+    }
 
   } catch (e) {
     showIncompatibleSaveDialog();
@@ -220,10 +272,10 @@ function changelogEntryHtml(entry) {
 
 /** Zeigt einmalig (direkt nach dem Laden) eine kurze, nach Kategorie
     gruppierte Zusammenfassung dessen, was sich seit der im Spielstand
-    vermerkten Version geändert hat. Der Titel "Spielstand aktualisiert"
-    wäre an dieser Stelle falsch — aktualisiert ist er erst, NACHDEM der
-    Spieler den Button gedrückt hat (siehe unten, saveGame()-Aufruf). */
-function showSaveChangelogDialog(loadedVersion) {
+    vermerkten Version geändert hat.
+    @param {number}   loadedVersion  - Version des geladenen Spielstands
+    @param {string[]} migrationFixes - Korrekturen, die automatisch angewendet wurden */
+function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
   const versions = Object.keys(SAVE_CHANGELOG)
     .map(Number)
     .filter(v => v > loadedVersion && v <= CURRENT_SAVE_VERSION)
@@ -244,18 +296,58 @@ function showSaveChangelogDialog(loadedVersion) {
       <ul class="changelog-list">${group.entries.map(changelogEntryHtml).join('')}</ul>
     `).join('');
 
+  // Automatisch vorgenommene Korrekturen anzeigen
+  const fixesHtml = migrationFixes.length > 0 ? `
+    <div class="changelog-category" style="color:var(--c-reward)">Automatische Korrekturen</div>
+    <ul class="changelog-list">${migrationFixes.map(f =>
+      `<li class="changelog-entry" style="color:var(--c-reward)">✓ ${f}</li>`
+    ).join('')}</ul>
+  ` : '';
+
+  // Graceful-Reset-Option: nur anzeigen, wenn der Spieler bereits in Kapitel 2
+  // ist und einen sauberen Neustart für dieses Kapitel möchte.
+  const isInChapter2 = gameFlags.kapitel2Unlocked && !gameFlags.chapter2Complete;
+  const gracefulResetHtml = isInChapter2 ? `
+    <hr style="border-color:var(--border);margin:14px 0 10px">
+    <p style="color:var(--text-lo);font-size:0.82em">
+      Möchtest du Kapitel 2 lieber von vorn erleben? Ein <strong>Sanfter Neustart</strong>
+      setzt nur den Kapitel-2-Fortschritt zurück — EP, Skills, Gold und alles andere
+      bleibt erhalten.
+    </p>
+  ` : '';
+
+  const buttons = [
+    {
+      label: 'Spielstand aktualisieren und weiterspielen',
+      onClick: () => closeDialog(() => saveGame())
+    }
+  ];
+
+  if (isInChapter2) {
+    buttons.push({
+      label: 'Sanfter Neustart (Kapitel 2)',
+      onClick: () => {
+        showDialog({
+          title: 'Kapitel 2 neu starten?',
+          text: [
+            'Dein EP-Fortschritt, deine Skills, dein Gold und alle Errungenschaften aus Kapitel 1 bleiben erhalten.',
+            'Nur die Kapitel-2-Story, die Detektiv-Quest und die zugehörigen Errungenschaften werden zurückgesetzt.',
+            'Möchtest du das wirklich?'
+          ],
+          buttons: [
+            { label: 'Ja, Kapitel 2 neu starten', onClick: () => performGracefulReset() },
+            { label: 'Abbrechen', onClick: () => closeDialog(() => showSaveChangelogDialog(loadedVersion, migrationFixes)) }
+          ]
+        });
+      }
+    });
+  }
+
   showDialog({
     title: `Changelog von Version ${loadedVersion} zu Version ${CURRENT_SAVE_VERSION}`,
-    html: sectionsHtml,
-    text: allEntries.map(e => e.text), // fürs dialogHistory-Log (siehe dialog.js)
-    buttons: [{
-      label: 'Spielstand aktualisieren und weiterspielen',
-      // Schreibt JETZT explizit die aktuelle Versionsnummer fest, statt
-      // erst beim nächsten ohnehin fälligen Speichervorgang — der
-      // Dialog-Titel verspricht "aktualisieren", also muss der Klick das
-      // auch sofort einlösen.
-      onClick: () => closeDialog(() => saveGame())
-    }],
+    html: sectionsHtml + fixesHtml + gracefulResetHtml,
+    text: allEntries.map(e => e.text),
+    buttons,
     boxClass: 'dialog-box-large'
   });
 }
