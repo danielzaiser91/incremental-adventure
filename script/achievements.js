@@ -60,12 +60,6 @@ const ACHIEVEMENT_DEFS = [
     check: () => npcFlags.fremderTalkCount >= 5
   },
   {
-    id: 'altesGold', cat: 'secret', layer: 1, icon: '🗝', name: 'Altes Gold',
-    desc: 'Die Spur des Diebs auf leeren Taschen zu Ende gebracht.',
-    hint: 'Mancher Weg zur Wahrheit kostet alles — manche Detektive sind arm wie Kirchenmäuse.',
-    check: () => gameFlags.fremderConfronted && resources.gold < 10
-  },
-  {
     id: 'chapter2Complete', cat: 'normal', layer: 1, icon: '🏆', name: 'Chroniken des vergessenen Weges',
     desc: 'Kapitel 1 und 2 vollständig abgeschlossen — die Wahrheit hinter dem Raub enthüllt.',
     check: () => gameFlags.chapter2Complete,
