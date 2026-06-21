@@ -111,11 +111,14 @@ wird.
 
 ## 5. Oswin: "Vielleicht bist du doch nicht völlig wertlos"
 
-Nach Freischaltung des "Geschäfte"-Gesprächs (100 Gold) gibt es eine
-vage Anspielung auf etwas Größeres, aber keine Folgequest. Niedrige
-Priorität — könnte reiner Flavour-Charakter bleiben, oder später eine
-eigene kleine Questkette bekommen (Geschäftsmann-Kontakte, Handelsrouten,
-o.ä.).
+~~Nach Freischaltung des "Geschäfte"-Gesprächs (100 Gold) gibt es eine
+vage Anspielung auf etwas Größeres, aber keine Folgequest.~~
+
+**Status: gelöst.** Oswin hat jetzt einen `teacherHint`-Knoten: sichtbar
+wenn der Spieler mindestens einen Super-Skill-fähigen Skill maximal
+ausgebaut hat und noch nicht ins Lehrhaus geführt wurde. Führt direkt
+zum Lehrhaus-Tab (gameFlags.lehrerUnlocked). Oswin bleibt damit funktional
+ein Vermittler, ohne selbst eine eigene Questkette zu bekommen.
 
 ## 6. Feldarbeits-Endstufen (Querverweis)
 
@@ -130,19 +133,17 @@ verlinkt, nicht dupliziert.
 WORK_LEVELS in actions.js) — die Boni liegen also bereits bereit, bevor
 ein künftiges Feature die Schwellen überhaupt erreichbar macht.
 
-## 7. Super-Skills: Veredelung bestehender EP-Skills (in Planung)
+## 7. Super-Skills: Veredelung bestehender EP-Skills
 
-Idee aus einem Vorschlag heraus: Skills mit mehreren Stufen (z.B.
-Sparsamkeit, Schneller Lerner) sollen nach Erreichen ihrer Maximalstufe
-eine optionale "Veredelung" bekommen — gleicher Effekt, aber deutlich
-verstärkt, zu absichtlich hohen Kosten (EP + Gold), um spätere
-Features mit immensen Anforderungen erreichbar zu machen. Der Spieler
-hat zusätzlich vorgeschlagen, jede Veredelung pro Skill erst über eine
-eigene Quest/Dialog-Reihe freizuschalten (vermutlich über den
-bestehenden `extraLock`/`extraLockReason`-Mechanismus, siehe
-"nightWatchLeveling"/"guildPrep" in experience.js). **Noch NICHT
-umgesetzt** — wurde bewusst zurückgestellt, um die konkrete
-NPC-/Quest-Anbindung erst in einer eigenen Runde auszuarbeiten.
+**Status: Grundstruktur implementiert.** `SUPER_SKILL_DEFS` (experience.js)
+definiert für thrift, quickLearner und fieldPay je eine Aufgabe. Der
+Flow läuft über Oswin → Lehrhaus-Tab (lehrer.js). Die drei definierten
+Super-Skills (Meisterhändler, Natürliches Talent, Verhandlungskunst)
+sind quest-basiert freigeschaltet.
+
+**Offen:** Weitere Super-Skills für alle Endknoten (clearMind, guildPrep,
+sleepLikeARock, etc.) noch nicht definiert — derzeit nur thrift, quickLearner
+und fieldPay abgedeckt.
 
 ## 8. Haustiere: bisher nur die geheime "Besonders"-Kategorie gefüllt
 
