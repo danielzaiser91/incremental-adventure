@@ -34,13 +34,21 @@ function hasEnoughResourcesForQuest() {
   return Object.entries(KRAEMERIN_QUEST_NEED).every(([id, qty]) => (resources.inventory[id] || 0) >= qty);
 }
 
-/** Baut den Live-Fortschritt für Gretas "reminder"-Dialogknoten. */
-function kraemerinProgressText() {
-  return Object.entries(KRAEMERIN_QUEST_NEED).map(([id, qty]) => {
+/** Baut den Live-Fortschritt für Gretas "reminder"-Dialogknoten — als
+    Trennstrich + Überschrift + Liste statt eines einzelnen, schwer
+    lesbaren Fließtext-Satzes mit Punkt-Trennern. Landet als Teil EINER
+    Dialogseite (siehe npc.js, Knoten `reminder`) — kein eigener
+    `showDialog()`-Aufruf nötig, da `textEl.innerHTML` jeden Absatz-String
+    ohnehin direkt als HTML einsetzt (siehe dialog.js). */
+function kraemerinQuestListHtml() {
+  const rows = Object.entries(KRAEMERIN_QUEST_NEED).map(([id, qty]) => {
     const have = resources.inventory[id] || 0;
     const item = RESOURCE_ITEMS.find(r => r.id === id);
-    return `${item.icon} ${item.name}: ${have}/${qty}`;
-  }).join(' · ');
+    return `<li>${item.icon} ${item.name}: ${have}/${qty}</li>`;
+  }).join('');
+  return `<hr class="npc-dialog-sep">` +
+    `<div class="npc-dialog-need-label">Für Questabschluss erforderlich</div>` +
+    `<ul class="npc-dialog-need-list">${rows}</ul>`;
 }
 
 const VENDORS = [

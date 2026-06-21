@@ -33,6 +33,11 @@ function saveGame(opts = {}) {
       npcFlags,
       workStats,
       nightWatchStats,
+      achievements,
+      achievementTab,
+      pets,
+      streetCatProgress,
+      superSkills,
       settings,
       toastHistory,
       dialogHistory,
@@ -82,7 +87,7 @@ function applySaveData(save) {
   skills         = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
-    inventoryKeeper: false, sleepLikeARock: false, ...save.skills
+    inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false, ...save.skills
   };
   needs          = { hunger: 15, tiredness: 0, ...save.needs };
   gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
@@ -96,9 +101,15 @@ function applySaveData(save) {
   npcFlags       = { miraDrinkGiven: false, ...save.npcFlags };
   workStats      = { count: 0, ...save.workStats };
   nightWatchStats = { count: 0, ...save.nightWatchStats };
+  achievements   = save.achievements ?? {};
+  achievementTab = save.achievementTab ?? 'normal';
+  pets           = save.pets ?? {};
+  streetCatProgress = { sleepCount: 0, encounters: 0, ...save.streetCatProgress };
+  superSkills    = save.superSkills ?? {};
   settings       = {
     toastDurationMs: 2600,
     autoLoad: true,
+    showResetAnimation: true,
     ...save.settings,
     warnBeforeReset: { erfahrung: true, ...save.settings?.warnBeforeReset },
     autoSave: { enabled: true, intervalMinutes: 5, ...save.settings?.autoSave }
@@ -108,6 +119,7 @@ function applySaveData(save) {
   navUnseen      = {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
+    errungenschaften: true, pets: true, lehrer: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -122,6 +134,7 @@ function applySaveData(save) {
     foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
     kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
     commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
+    resetAnimationSeen: false,
     ...save.gameFlags, isWorking: false
   };
   shownDialogs   = save.shownDialogs ?? [];
@@ -356,9 +369,10 @@ function performHardReset() {
   experience     = { points: 0, totalEarned: 0 };
   skills         = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
-    thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
-    inventoryKeeper: false, sleepLikeARock: false
+    thrift: 0, jobXpBonus: false, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
+    inventoryKeeper: false, sleepLikeARock: false, petLover: false
   };
+  superSkills    = {};
   needs          = { hunger: 15, tiredness: 0 };
   gameClock      = { day: 1, hour: 7, minute: 0 };
   nightFlags     = { nightActivityUsedToday: false, recoveryDebuff: false };
@@ -370,15 +384,20 @@ function performHardReset() {
   npcFlags       = { miraDrinkGiven: false };
   workStats      = { count: 0 };
   nightWatchStats = { count: 0 };
+  achievements   = {};
+  achievementTab = 'normal';
+  pets           = {};
+  streetCatProgress = { sleepCount: 0, encounters: 0 };
   settings       = {
     toastDurationMs: 2600, warnBeforeReset: { erfahrung: true },
-    autoSave: { enabled: true, intervalMinutes: 5 }, autoLoad: true
+    autoSave: { enabled: true, intervalMinutes: 5 }, autoLoad: true, showResetAnimation: true
   };
   toastHistory   = [];
   dialogHistory  = [];
   navUnseen      = {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
-    quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true
+    quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
+    errungenschaften: true, pets: true, lehrer: false
   };
   dailyPurchases = {};
   overflowBag    = {};
@@ -392,6 +411,8 @@ function performHardReset() {
     foremanInviteShown: false, foremanBonusGiven: false, mustEatBread: false, workBlockedDialogShown: false,
     kraemerinDialogShown: false, resourceGatheringUnlocked: false, guildExplainedByBrakka: false,
     commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
+    resetAnimationSeen: false, oswingSuperHintShown: false, lehrerUnlocked: false,
+    streetSweeperTalked: false,
     isWorking: false
   };
   shownDialogs   = [];

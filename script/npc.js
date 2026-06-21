@@ -74,7 +74,13 @@ const NPCS = {
     locked: () => !gameFlags.firstNightDialogShown,
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
+    // Eigenes Signal NACH der eigentlichen questId-Logik oben: die hängt nur
+    // am 'unstarted'-Zustand (neue Aufgabe anbieten), hier geht es um die
+    // Rückmeldung NACHDEM Brakka den Brief schon hat (siehe Brakka,
+    // receiveLetter — setzt 'delivered' statt direkt 'rewarded').
+    hasHint: () => quests.miraLetter.state === 'delivered',
     start: () => {
+      if (quests.miraLetter.state === 'delivered') return 'letterDelivered';
       if (quests.miraLetter.state === 'active') return 'letterReminder';
       if (!npcFlags.miraDrinkGiven) return 'greet';
       if (meta.resets >= 1 && quests.miraLetter.state === 'unstarted') return 'letterOffer';
@@ -133,6 +139,17 @@ const NPCS = {
       letterReminder: {
         text: ['Mira hebt nur kurz die Augenbraue — eine stumme Erinnerung an den Brief in meiner Tasche.'],
         options: [{ label: 'Ich kümmere mich darum.', next: null }]
+      },
+      letterDelivered: {
+        text: ['Mira lehnt sich zurück, als ich ihr von Brakka berichte. "Na siehst du. Hat doch geklappt." Ihr Grinsen wirkt für einen Moment fast aufrichtig.'],
+        options: [{
+          label: 'War mir ein Vergnügen.',
+          next: null,
+          action: () => {
+            quests.miraLetter.state = 'rewarded';
+            showToast('Mira ist erleichtert — die Sache mit dem Brief ist erledigt.', 'event');
+          }
+        }]
       }
     }
   },
@@ -140,6 +157,7 @@ const NPCS = {
   oswin: {
     name: 'Oswin', icon: '🎩',
     tagline: 'Hochnäsig — spricht nur mit denen, die etwas vorzuweisen haben.',
+    hasHint: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked,
     start: 'greet',
     nodes: {
       greet: {
@@ -156,7 +174,30 @@ const NPCS = {
       },
       business: {
         text: ['Er hebt eine Augenbraue, fast beeindruckt. "Nun gut. Vielleicht bist du doch nicht völlig wertlos."'],
-        options: [{ label: 'Wie schmeichelhaft.', next: null }]
+        options: [
+          {
+            label: 'Ich suche jemanden, der mir zeigen kann, wie man das Können noch weiter treibt.',
+            next: 'teacherHint',
+            visible: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked
+          },
+          { label: 'Wie schmeichelhaft.', next: null }
+        ]
+      },
+      teacherHint: {
+        text: [
+          '"Jemanden, der weiter bringt?" Oswin lehnt sich zurück und lacht einmal, kurz und trocken. "Du hast tatsächlich mehr Mumm, als du aussiehst."',
+          '"Es gibt eine Person. Alt, still, wenig redselig. Manche nennen sie die Lehrmeisterin. Ich nenne sie... eine seltene Investition. Sie taucht gelegentlich im alten Lehrhaus am Stadtrand auf — wenn es ihr gerade beliebt."',
+          '"Wenn du wirklich aus dem herausholen willst, was du schon kannst — dann weißt du jetzt, wo du suchen musst. Aber blamier mich nicht, wenn du dort auftauchst."'
+        ],
+        options: [{
+          label: 'Das Lehrhaus. Ich werde nachschauen.',
+          next: null,
+          action: () => {
+            gameFlags.lehrerUnlocked = true;
+            navUnseen.lehrer = true;
+            showToast('Das Lehrhaus ist jetzt in der Navigation freigeschaltet.', 'event');
+          }
+        }]
       }
     }
   },
@@ -170,7 +211,8 @@ const NPCS = {
     // Gilden-Quest (siehe experience.js, Skill "guildPrep") UND "Nachtwache
     // bereits gehalten, muss noch berichtet werden" — beide unabhängig von
     // der questId-basierten "neue Aufgabe verfügbar"-Logik oben.
-    hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done',
+    hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done' ||
+      (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0),
     start: () => {
       if (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
       if (quests.guildRegistration.state === 'active') {
@@ -299,11 +341,11 @@ const NPCS = {
             next: null,
             action: () => {
               questItems.sealedLetter = Math.max(0, (questItems.sealedLetter || 0) - 1);
-              quests.miraLetter.state = 'rewarded';
+              quests.miraLetter.state = 'delivered';
               resources.gold            += 6;
               resources.totalGoldEarned += 6;
               checkMilestones();
-              showToast('Brief überbracht (+6 Gold).', 'reward');
+              showToast('Brief überbracht (+6 Gold). Mira sollte davon erfahren.', 'reward');
             }
           }
         ]
@@ -383,7 +425,7 @@ const NPCS = {
         }]
       },
       reminder: {
-        text: () => [`"Na, schon was gesammelt?" ${kraemerinProgressText()}`],
+        text: () => [`"Na, schon was gesammelt?"${kraemerinQuestListHtml()}`],
         options: [{ label: 'Ich bin dran.', next: null }]
       },
       turnIn: {
@@ -438,6 +480,27 @@ const NPCS = {
       idle: {
         text: ['Roswald hebt zwei Finger zum Gruß, mehr nicht. Männer wie er verschwenden keine Worte.'],
         options: [{ label: 'Verstanden.', next: null }]
+      }
+    }
+  },
+
+  strassenkehrer: {
+    name: 'Ein alter Straßenkehrer', icon: '🧹',
+    tagline: 'Kennt jede Gasse und jeden Schatten der Stadt — und redet gern darüber.',
+    locked: () => gameClock.day < 5,
+    start: 'greet',
+    nodes: {
+      greet: {
+        text: [
+          'Der alte Mann lehnt an seinem Besen und beobachtet die Gasse, ohne mich direkt anzusehen. "Lange schon in der Stadt?"',
+          '"Weißt du, wer hier nachts sonst noch unterwegs ist? Nicht nur Wachen und Diebe. Drüben bei den Ställen am Stadtrand — wenn es dunkel wird — streichen manchmal Tiere vorbei. Manche sehr scheu."',
+          '"Wer geduldig ist und ein paarmal nachsieht, bevor er schlafen geht, findet darunter vielleicht einen, der sich annähert. Aber erzwingen kann man das nicht."'
+        ],
+        options: [{
+          label: 'Interessant — ich werde nachsehen.',
+          next: null,
+          action: () => { gameFlags.streetSweeperTalked = true; }
+        }]
       }
     }
   },

@@ -1257,6 +1257,123 @@ außen vor: Rohstoffe haben keinen Kaufpreis (sie werden gesammelt, nicht
 gekauft — eigener Verkaufsweg über Gretas "Rohstoffe verkaufen"-Karte,
 market.js), Questgegenstände sollen grundsätzlich nie verkäuflich sein.
 
+## Errungenschaften-System: ein neues, eigenes Datenmodell statt Wiederverwendung von gameFlags
+
+`achievements` (state.js) ist ein eigenes `{id: true}`-Objekt, GETRENNT
+von `gameFlags` — auch wenn beide am Ende nur "ist etwas erreicht?"
+beantworten. Grund: Errungenschaften brauchen eine durchsuchbare
+REGISTRY (`ACHIEVEMENT_DEFS`, achievements.js) mit Anzeige-Metadaten
+(Icon, Name, Beschreibung, Kategorie, vager Hinweis für Geheime) — eine
+einzelne `gameFlags`-Bool-Eigenschaft hätte das nirgendwo aufhängen
+können. `checkAchievements()` läuft bei JEDEM `render()` (siehe main.js,
+ganz am Anfang, neben `checkEveningArrivals()`), mutiert aber nur State
++ zeigt Toasts — ruft selbst NIE `render()` auf, sonst rekursiver
+Render-Aufruf mitten im laufenden Render. Geheime Errungenschaften
+verraten gesperrt weder Name noch Beschreibung (nur "???" + ein
+absichtlich vager `hint`-Text) — das ist eine Eigenschaft des
+EINTRAGS (`cat: 'secret'`), nicht ein separates Geheimhaltungs-Flag.
+
+## Skillbaum-Visibility: `visibleIf` als zusätzliches Kriterium NEBEN `requires`
+
+`renderSkillTree()` kannte bisher nur EIN Sichtbarkeitskriterium:
+"Voraussetzungs-Skill gelernt" (`node.requires`). Der neue Skill
+"Tierfreund" sollte aber zusätzlich verstecky bleiben, bis der Spieler
+überhaupt ein Haustier besitzt — unabhängig vom Skillbaum-Fortschritt.
+Statt eine Sonderfall-Abfrage einzubauen, bekam jeder Knoten ein
+optionales `visibleIf()`-Feld, das die normale `requires`-Prüfung NICHT
+ersetzt, sondern UND-verknüpft ergänzt (siehe `visible`-Array in
+`renderSkillTree()`). Diese Unterscheidung lohnt sich, weil sie generisch
+für JEDEN künftigen Skill funktioniert, dessen Sichtbarkeit von etwas
+außerhalb des Baums selbst abhängt (Inventarbesitz, Story-Fortschritt,
+NPC-Beziehung, …) — ohne den Renderer für jeden neuen Fall erneut
+anzufassen.
+
+## Mehrstufige NPC-Begegnungsketten: `sleep()` in Entscheidung + Ausführung getrennt
+
+Die geheime Straßenkatze-Kette (actions.js) brauchte die Möglichkeit,
+VOR dem eigentlichen "Tag endet jetzt"-Effekt einen oder mehrere Dialoge
+einzuschieben — `sleep()` selbst entscheidet nur noch, OB ein Dialog
+dazwischenkommt (`maybeTriggerStreetWalk()`), die eigentliche
+Schlaf-Logik (Kosten, Erholung, Tageswechsel) wandert komplett in eine
+neue, separate `finishSleep(option)`. Jeder Dialog-Zweig der Kette ruft
+am Ende selbst `finishSleep(option)` auf (über `closeDialog(() => ...)`),
+nie `sleep()` erneut — das vermeidet doppelte Kostenabbuchung/
+doppelten Tageswechsel, falls ein Zweig versehentlich nochmal die
+Eingangsfunktion aufruft. Dasselbe Muster (Eingangsfunktion entscheidet
+nur "Dialog dazwischen, ja/nein", die eigentliche Wirkung steckt in
+einer separat aufrufbaren Funktion) lohnt sich für jede künftige Aktion,
+die gelegentlich eine mehrstufige Zwischengeschichte bekommen soll, ohne
+den Normalfall (kein Dialog) komplizierter zu machen.
+
+## Quest mit echtem Rückweg: dritter Zustand zwischen `active` und `rewarded`
+
+Die Brief-Quest (`miraLetter`) brauchte einen Zustand `'delivered'`
+zwischen "Brief bei Brakka abgegeben" und "Quest abgeschlossen", weil
+der Spieler zwingend noch einmal zu Mira zurück muss, bevor die Quest
+wirklich fertig ist. Genau wie bei `kraemerinBusiness` (`'invited'`
+zwischen `'unstarted'` und `'active'`, siehe ältere Notiz weiter oben)
+gilt: separate Zustände nur einführen, wenn der Spieler dafür
+tatsächlich eine ANDERE Aktion ausführen muss (hier: mit einem ZWEITEN,
+unabhängigen NPC sprechen) — nicht für jede kleine narrative Nuance.
+Beide NPCs (Brakka UND Mira) bekommen über ihr jeweiliges `hasHint()`
+ein eigenes, vom üblichen `questId`-Mechanismus unabhängiges
+Ausrufezeichen für genau diesen Zwischenzustand.
+
+## Kompakter Skillbaum: Icon-Nodes + Detail-Panel statt Karten
+
+`renderSkillTree()` (experience.js) nutzt seit dem zweiten großen Umbau
+keine großen Karten mehr, sondern 52×52px Icon-Knoten (`epNodeIconHtml()`,
+CSS `.ep-node`) + ein Detail-Panel am unteren Rand (`renderSkillDetailPanel()`,
+CSS `.ep-detail-panel`) — es wird an das Ende des von `renderSkillTree()`
+zurückgegebenen HTML-Strings angehängt. `selectSkillNode(id)` togglet
+`selectedSkillId` (state.js) und ruft `render()` auf. Wichtige Regel:
+`renderSkillTree()` darf KEIN `epNodeCardHtml()` mehr aufrufen (Funktion
+existiert nicht mehr, nur `epNodeIconHtml()`). Level-Pips (`.ep-node-pips`)
+zeigen Stufen-Fortschritt für Multi-Level-Skills. CSS-Klassen:
+`ep-node-maxed`, `ep-node-available` (pulsiert), `ep-node-extralocked`,
+`ep-node-locked`, `ep-node-selected`.
+
+## Super-Skills: SUPER_SKILL_DEFS → Oswin → Lehrer-Tab
+
+Drei-Stufen-Flow:
+1. `buyNextSkillLevel()` erkennt, wenn ein Skill sein Maximum erreicht
+   UND `SUPER_SKILL_DEFS` (experience.js, neben den normalen Defs) einen
+   Eintrag mit `forSkill === id` hat. Einmalig ruft es dann
+   `maybeTriggerSuperSkillHint(node)` auf (setzt `gameFlags.oswingSuperHintShown = true`,
+   zeigt Monolog, `navUnseen.taverne = true`).
+2. Oswin (npc.js) bekommt einen neuen `teacherHint`-Knoten, sichtbar wenn
+   `gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked`. Klick auf
+   Abschluss-Option setzt `gameFlags.lehrerUnlocked = true` und
+   `navUnseen.lehrer = true`.
+3. Nav (nav.js): `gameFlags.lehrerUnlocked` → Lehrhaus-Button erscheint.
+   content.js: `case 'lehrer': renderLehrer(area)`. lehrer.js (neue Datei)
+   rendert die Seite und enthält `completeSuperSkillQuest(id)`.
+`superSkills` (state.js, `{id: true}`) persistiert Freischaltungen in
+save.js (saveGame + applySaveData + performHardReset).
+
+## Errungenschaften: Layer-Gliederung, Goldener Rand, Bonus-Bar
+
+- `ACHIEVEMENT_DEFS` hat jetzt ein `layer`-Feld (0 = immer, 1 = ab 1 Reset).
+  `renderErrungenschaften()` zeigt Layer-Sektionen mit Überschrift; Sektion
+  layer 1 erst wenn `meta.resets >= 1`.
+- `bonusMult`-Feld auf Def-Einträgen → `getAchievementGoldBonus()` summiert
+  alle freigeschalteten Boni. UI-Anzeige als `.achievement-bonus-bar` oben.
+- Freigeschaltete Karten: CSS-Klasse `.achievement-card-done` (goldener Rand,
+  volle Opacity), NICHT die alte `.quest-card-done` (die hat `opacity: 0.7`).
+  Gesperrte bleiben `.action-card-locked` (opacity 0.55).
+- Straßenkehrer-Hinweis: `gameFlags.streetSweeperTalked = true` (in npc.js,
+  Strassenkehrer-Dialog, `action`-Feld der Option) macht auf der Geheim-
+  Achievement-Karte einen dauerhaften grünen Hinweis-Text sichtbar
+  (`.achievement-hint-green`).
+
+## Nav-Badge: Aktive Quest-Zahl auf dem Quests-Button
+
+`renderGlobalNavSection()` (nav.js) zählt `Object.values(quests).filter(q
+=> q.state === 'active').length` und hängt bei > 0 ein `.nav-badge`-Span
+an das Quests-Button-Label. Das Label wird manuell als Template-String
+gebaut statt über den generischen `item()`-Helper, weil der Helper kein
+HTML im Label unterstützt.
+
 ## Bisher nicht behobene/offene Punkte
 
 Mögliche Spezial-Freischaltungen für die absurd hohen Feldarbeits-

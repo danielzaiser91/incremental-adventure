@@ -10,6 +10,7 @@
  */
 function render() {
   checkEveningArrivals(); // muss vor renderNav() laufen, da diese navUnseen liest
+  checkAchievements();    // ebenfalls vor renderNav(), liest/setzt navUnseen.errungenschaften
   renderNav();
   renderContent();
   renderStats();

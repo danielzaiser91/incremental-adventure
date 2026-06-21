@@ -61,12 +61,22 @@ function renderGlobalNavSection() {
     ? `<button class="nav-btn ${currentContent === 'erfahrung' ? 'active' : ''} ${navUnseen.erfahrung ? 'nav-btn-new' : ''} ${erfahrungReady ? 'nav-btn-reset-ready' : ''}" onclick="showContent('erfahrung')">✦ Erfahrung</button>`
     : '';
 
+  const hasAnyAchievement = Object.keys(achievements).length > 0;
+  const hasAnyPet         = Object.keys(pets).length > 0;
+  const activeQuestCount  = Object.values(quests).filter(q => q.state === 'active').length;
+  const questLabel = hasAnyQuest
+    ? `🗒 Quests${activeQuestCount > 0 ? ` <span class="nav-badge">${activeQuestCount}</span>` : ''}`
+    : '';
+
   return `
     <div class="nav-level-label">Spieler</div>
     ${item('geschichte', '📖', 'Geschichte')}
-    ${hasAnyQuest                  ? item('quests', '🗒', 'Quests')        : ''}
+    ${hasAnyQuest ? `<button class="nav-btn ${currentContent === 'quests' ? 'active' : ''} ${navUnseen.quests ? 'nav-btn-new' : ''}" onclick="showContent('quests')">${questLabel}</button>` : ''}
     ${gameFlags.everOwnedItem      ? item('inventar', '🎒', 'Inventar')    : ''}
+    ${hasAnyPet                    ? item('pets', '🐾', 'Haustiere')      : ''}
     ${erfahrungBtn}
+    ${gameFlags.lehrerUnlocked     ? item('lehrer', '📚', 'Lehrhaus')      : ''}
+    ${hasAnyAchievement            ? item('errungenschaften', '🏆', 'Errungenschaften') : ''}
   `;
 }
 

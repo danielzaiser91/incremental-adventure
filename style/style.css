@@ -758,6 +758,139 @@ html, body {
   background: var(--border);
 }
 
+/* ── Kompakte EP-Skill-Knoten (Icon-only, 52 × 52 px) ──────────
+   Statt großer Karten nur quadratische Icon-Buttons; Details erscheinen
+   im ep-detail-panel am unteren Rand des Skill-Tree-Containers. */
+.ep-node-slot {
+  width: 52px;
+  height: 52px;
+}
+
+.ep-node {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--rad);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  font-size: 22px;
+  position: relative;
+  transition: border-color var(--t), background var(--t), box-shadow var(--t);
+  padding: 0;
+}
+
+.ep-node:hover { border-color: var(--text-lo); background: var(--bg-hover); }
+
+.ep-node.ep-node-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.ep-node.ep-node-maxed {
+  border-color: var(--c-reward);
+  background: rgba(107, 223, 126, 0.07);
+}
+
+.ep-node.ep-node-available {
+  border-color: var(--accent);
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 0 0px rgba(var(--accent-rgb, 200, 170, 110), 0.4); }
+  50%       { box-shadow: 0 0 0 3px rgba(var(--accent-rgb, 200, 170, 110), 0.1); }
+}
+
+.ep-node.ep-node-locked {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.ep-node.ep-node-extralocked {
+  opacity: 0.6;
+  cursor: default;
+  border-style: dashed;
+}
+
+/* Kleine Pip-Reihe unterhalb des Icons für Multi-Level-Skills */
+.ep-node-pips {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.ep-node-pip {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.ep-node-pip.ep-node-pip-filled { background: var(--accent); }
+
+/* ── Detail-Panel unterhalb des Skill-Baums ─────────────────── */
+.ep-detail-panel {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--rad);
+  min-height: 80px;
+}
+
+.ep-detail-empty {
+  color: var(--text-lo);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ep-detail-icon { font-size: 26px; }
+
+.ep-detail-name {
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--text-hi);
+}
+
+.ep-detail-desc {
+  font-size: 12px;
+  color: var(--text-lo);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.ep-detail-effect {
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+
+.ep-detail-done {
+  font-size: 11px;
+  color: var(--c-reward);
+}
+
+.ep-detail-locked-reason {
+  font-size: 11px;
+  color: var(--text-lo);
+  margin-bottom: 8px;
+}
+
 /* ── TAB-LEISTE: wie im Browser, für umschaltbare Unterbereiche
    (siehe experience.js, Erfahrungs-Seite) ── */
 .tab-bar {
@@ -800,6 +933,14 @@ html, body {
 .sleep-quality-badge {
   font-size: 10px;
   color: var(--text-lo);
+}
+
+/* Generischer Hover-Hinweis-Indikator (reines Erklär-Tooltip per nativem
+   `title`, ohne Werte-Vergleich/Farben — siehe modifiedValueHtml() in
+   content.js für die farbige Variante mit Effekt-Liste). */
+.info-hint {
+  cursor: help;
+  border-bottom: 1px dotted var(--text-lo);
 }
 
 /* ── JOB-KACHEL: vertikale Erfahrungsleiste + ausklappbares Info-Panel ──
@@ -1117,16 +1258,101 @@ html, body {
   font-weight: 500;
   padding: 3px 10px;
   border-radius: var(--rad-sm);
-  margin-top: 4px;
+  /* Sitzt IMMER am unteren Kachelrand, unabhängig von der Beschreibungs-
+     länge — .action-card ist eine Flex-Spalte (siehe weiter oben), `auto`
+     schiebt diesen letzten Block ganz nach unten, damit Status-Zeilen
+     nebeneinanderliegender Quest-Kacheln auf gleicher Höhe stehen. */
+  margin-top: auto;
 }
 
 .quest-status-unstarted { color: var(--text-lo);  background: var(--bg); }
 .quest-status-invited   { color: var(--c-story);  background: rgba(210, 168, 255, 0.1); }
 .quest-status-active    { color: var(--c-info);   background: rgba(121, 192, 255, 0.1); }
+.quest-status-delivered { color: var(--c-story);  background: rgba(210, 168, 255, 0.1); }
 .quest-status-done      { color: var(--c-event);  background: rgba(255, 184, 113, 0.12); }
 .quest-status-rewarded  { color: var(--c-reward); background: rgba(107, 223, 126, 0.1); }
 
 .quest-card-done { opacity: 0.7; }
+
+/* Freigeschaltete Errungenschaften: goldener Rand statt ausgegraut,
+   damit "done" visuell klar von "locked" (opacity 0.55) unterscheidbar. */
+.achievement-card-done {
+  border-color: #a07830;
+  background: rgba(160, 120, 48, 0.07);
+  opacity: 1;
+}
+
+/* Bonus-Zusammenfassung über den Errungenschafts-Karten */
+.achievement-bonus-bar {
+  width: 100%;
+  max-width: 640px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  background: rgba(107, 223, 126, 0.07);
+  border: 1px solid rgba(107, 223, 126, 0.25);
+  border-radius: var(--rad);
+  font-size: 12px;
+  color: var(--text-mid);
+}
+
+/* Layer-Abschnitt in der Allgemein-Ansicht */
+.achievement-layer-section { margin-bottom: 20px; }
+
+.achievement-layer-label {
+  font-size: 11px;
+  color: var(--text-lo);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Straßenkehrer-Hinweis auf Geheim-Achievement-Karte */
+.achievement-hint-green {
+  font-size: 11px;
+  color: #4caf78;
+  margin-top: 6px;
+  font-style: normal;
+}
+
+/* Kleine Badge-Zahl auf Nav-Buttons (z.B. aktive Quests) */
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 10px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* Lehrhaus-spezifische Styles */
+.lehrer-quest-desc {
+  font-size: 12px;
+  color: var(--text-lo);
+  margin: 6px 0 4px;
+}
+
+.lehrer-quest-progress {
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.lehrer-quest-done { color: var(--c-reward); }
+
+/* Einstellungen-Seite: Abstand nach unten, damit letzter Button nicht
+   direkt an der Footer-Leiste klebt. */
+.settings-group:last-child { padding-bottom: 80px; }
 
 .chronik-empty {
   color: var(--text-lo);
@@ -1652,6 +1878,34 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 
 .dialog-text p { margin-bottom: 10px; }
 .dialog-text p:last-child { margin-bottom: 0; }
+
+/* In-Dialog-Bedarfsliste (siehe market.js, kraemerinQuestListHtml()) —
+   trennt das gesprochene Zitat optisch von der reinen Status-Aufzählung,
+   statt beides in einem Fließtext-Satz mit Punkt-Trennern zu quetschen. */
+.npc-dialog-sep {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 12px 0 10px;
+}
+
+.npc-dialog-need-label {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: 6px;
+}
+
+.npc-dialog-need-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+}
 
 .dialog-actions {
   display: flex;

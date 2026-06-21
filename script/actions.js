@@ -54,9 +54,10 @@ function getNightWatchReward() {
 const SLEEP_QUALITY_TIERS = [0.6, 0.8, 1.0];
 const SLEEP_QUALITY_MAX   = SLEEP_QUALITY_TIERS.length;
 
-/** Tatsächliche Schlafqualitäts-Stufe (1–3) eines Orts inkl. Skill-Bonus. */
+/** Tatsächliche Schlafqualitäts-Stufe (1–3) eines Orts inkl. Skill- UND
+    Haustier-Bonus (siehe pets.js, getPetSleepBonus()). */
 function getSleepQualityTier(option) {
-  const bonus = skills.sleepLikeARock ? 1 : 0;
+  const bonus = (skills.sleepLikeARock ? 1 : 0) + getPetSleepBonus();
   return Math.min(SLEEP_QUALITY_MAX, option.qualityTier + bonus);
 }
 
@@ -189,7 +190,8 @@ function getWorkReward(levelOverride) {
     + (equipment.hands === 'ledergloves' ? 1 : 0)
     + (equipment.guertel === 'arbeitsguertel' ? 1 : 0)
     + (gameFlags.foremanBonusGiven ? 1 : 0)
-    + (skills.fieldPay ? 1 : 0);
+    + (skills.fieldPay ? 1 : 0)
+    + (superSkills.fieldPay_super ? 1 : 0);
   reward *= getHungerTier(needs.hunger).rewardMult; // nur Hunger schwächt den Ertrag, Müdigkeit nur die Dauer
   reward *= level.specialRewardMult || 1;
   reward += level.specialFlatBonus || 0;
@@ -202,8 +204,10 @@ function getWorkReward(levelOverride) {
     (siehe WORK_LEVELS, specialXpMult). */
 function getWorkXpGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
-  const skillMult = 1 + getSkillLevel('quickLearner') * 0.1;
-  return Math.max(1, Math.round(skillMult * (level.specialXpMult || 1)));
+  const skillMult = 1 + getSkillLevel('quickLearner') * 0.1 +
+    (superSkills.quickLearner_super ? 0.25 : 0);
+  const base = skills.jobXpBonus ? 2 : 1;
+  return Math.max(1, Math.round(base * skillMult * (level.specialXpMult || 1)));
 }
 
 /** Wie viel Müdigkeit eine einzelne Arbeit gerade kosten würde (Hunger
@@ -610,16 +614,29 @@ function sleep(optionId) {
   if (!option) return;
   if (option.requiresFlag && !gameFlags[option.requiresFlag]) return;
 
+  if (option.cost > 0 && resources.gold < option.cost) {
+    showToast(`Nicht genug Gold für: ${option.name}.`, 'error');
+    return;
+  }
+
+  if (option.id === 'street') {
+    streetCatProgress.sleepCount += 1;
+    if (maybeTriggerStreetWalk(option)) return; // Dialog übernimmt, ruft finishSleep() selbst auf
+  }
+
+  finishSleep(option);
+}
+
+/** Führt einen bereits "entschiedenen" Schlafvorgang aus (Kosten,
+    Erholung, Tageswechsel) — ausgelagert aus sleep(), weil die
+    Straßenkatze-Begegnungskette (siehe maybeTriggerStreetWalk()) erst
+    einen oder mehrere Dialoge dazwischenschalten kann, bevor der Tag
+    tatsächlich endet. */
+function finishSleep(option) {
   const recoveryMult    = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
   const tirednessRelief = 100 * recoveryMult * getSleepQualityFactor(option);
 
-  if (option.cost > 0) {
-    if (resources.gold < option.cost) {
-      showToast(`Nicht genug Gold für: ${option.name}.`, 'error');
-      return;
-    }
-    resources.gold -= option.cost;
-  }
+  if (option.cost > 0) resources.gold -= option.cost;
   adjustTiredness(-tirednessRelief);
   if (option.hungerPenalty) adjustHunger(option.hungerPenalty);
   nightFlags.recoveryDebuff = false;
@@ -639,4 +656,97 @@ function sleep(optionId) {
 
   if (isFirstSleep) maybeShowStoryDialog('1.3', finishMorning);
   else finishMorning();
+}
+
+/* ── Geheime Begegnungskette: die Straßenkatze ───────────────
+   Ab der 5. Nacht auf der Straße (und danach alle 2 weiteren) bietet ein
+   kurzer Dialog an, vor dem Schlafen noch eine Runde zu drehen. Von
+   diesen Spaziergängen führt nur JEDER ZWEITE tatsächlich zur Katze —
+   das ergibt 3 Begegnungen (bei Spaziergang 1, 3, 5) bis zur Adoption.
+   Jede Begegnung lässt sich NICHT überspringen, ohne die Eskalation zu
+   verpassen: wer die Katze in Ruhe lässt, bleibt auf demselben
+   Vertrauens-Stand stehen, bis er es bei der nächsten Begegnung erneut
+   versucht. */
+const STREET_CAT_WALK_FIRST    = 5; // Schlaf-Nr., bei der die Option zum ersten Mal erscheint
+const STREET_CAT_WALK_INTERVAL = 2; // und danach alle X weiteren Nächte auf der Straße
+
+const STREET_CAT_GREET_TEXTS = {
+  1: 'In einer Seitengasse raschelt es. Eine schmale Katze, struppig und misstrauisch, beobachtet mich aus dem Schatten.',
+  2: 'Da ist sie wieder — dieselbe Katze wie letztes Mal. Sie bleibt diesmal etwas länger stehen, bevor sie sich entscheidet, ob sie bleibt.',
+  3: 'Sie wartet schon auf mich, fast so, als hätte sie mich erwartet.'
+};
+
+const STREET_CAT_PET_FAIL_TEXTS = {
+  1: 'Ich strecke langsam die Hand aus. Sie zuckt zurück und verschwindet im Schatten — aber sie ist nicht weit gelaufen. Vielleicht sollte ich es einfach weiter versuchen, ein bisschen Vertrauen aufbauen.',
+  2: 'Diesmal bleibt sie länger. Ich berühre kurz ihr Fell, bevor sie sich losreißt und verschwindet. Ein kleiner Fortschritt — sie vertraut mir schon etwas mehr als beim ersten Mal.'
+};
+
+/** Bietet ggf. den "Spazieren gehen vs. Schlafen gehen"-Dialog an. Gibt
+    `true` zurück, falls ein Dialog übernommen hat (sleep() darf dann
+    NICHT selbst weiterlaufen — finishSleep() wird aus dem Dialog heraus
+    aufgerufen), sonst `false`. */
+function maybeTriggerStreetWalk(option) {
+  if (pets.streetCat) return false; // schon adoptiert — keine weiteren Begegnungen nötig
+
+  const count = streetCatProgress.sleepCount;
+  if (count < STREET_CAT_WALK_FIRST) return false;
+  if ((count - STREET_CAT_WALK_FIRST) % STREET_CAT_WALK_INTERVAL !== 0) return false;
+
+  showDialog({
+    title: 'Schon wieder hier draußen',
+    text: ['Wieder diese kalten Pflastersteine unter mir. Wie oft jetzt schon? Ich verliere langsam den Überblick.'],
+    buttons: [
+      { label: 'Noch eine kleine Runde drehen.', onClick: () => closeDialog(() => takeStreetWalk(option)) },
+      { label: 'Einfach schlafen gehen.', onClick: () => closeDialog(() => finishSleep(option)) }
+    ]
+  });
+  return true;
+}
+
+/** Ein Spaziergang — nur jeder zweite führt tatsächlich zur Katze. */
+function takeStreetWalk(option) {
+  const walkNumber = Math.floor((streetCatProgress.sleepCount - STREET_CAT_WALK_FIRST) / STREET_CAT_WALK_INTERVAL) + 1;
+  const isEncounterWalk = walkNumber % 2 === 1; // 1., 3., 5. Spaziergang
+
+  if (!isEncounterWalk) {
+    showMonologue('Ein kurzer Spaziergang', [
+      'Ein paar stille Gassen, etwas kühle Nachtluft. Niemand hier außer mir, heute.'
+    ], () => finishSleep(option));
+    return;
+  }
+
+  streetCatProgress.encounters += 1;
+  showStreetCatDialog(option);
+}
+
+/** Zeigt die Begegnung mit der Katze — Text + Vertrauens-Level wachsen
+    mit jeder Begegnung (siehe STREET_CAT_GREET_TEXTS). */
+function showStreetCatDialog(option) {
+  const n = streetCatProgress.encounters;
+  showPaginatedDialog('Ein streunendes Tier', splitLongDialogPages([STREET_CAT_GREET_TEXTS[n] || STREET_CAT_GREET_TEXTS[3]]), [
+    { label: 'Vorsichtig die Hand ausstrecken.', onClick: () => closeDialog(() => resolveStreetCatPet(option)) },
+    { label: 'Sie in Ruhe lassen.', onClick: () => closeDialog(() => finishSleep(option)) }
+  ]);
+}
+
+/** Reagiert auf den Streichel-Versuch: bei der 3. Begegnung die Adoption,
+    sonst ein wachsendes (aber noch nicht endgültiges) Vertrauen. */
+function resolveStreetCatPet(option) {
+  const n = streetCatProgress.encounters;
+  if (n >= 3) {
+    adoptStreetCat(option);
+    return;
+  }
+  showMonologue('Ein streunendes Tier', [STREET_CAT_PET_FAIL_TEXTS[n] || STREET_CAT_PET_FAIL_TEXTS[1]], () => finishSleep(option));
+}
+
+/** Letzte Begegnung: die Katze bleibt — schaltet das Haustier UND (über
+    checkAchievements(), main.js) die geheime Errungenschaft frei. */
+function adoptStreetCat(option) {
+  pets.streetCat = { level: 0 };
+  navUnseen.pets = true;
+  showMonologue('Ein neuer Freund', [
+    'Sie schnurrt, lehnt sich gegen meine Hand und bleibt. Als hätte sie längst entschieden, dass ich bleiben darf.',
+    'Ich glaube, ich habe gerade eine Mitbewohnerin bekommen.'
+  ], () => finishSleep(option));
 }

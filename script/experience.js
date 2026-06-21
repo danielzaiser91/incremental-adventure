@@ -72,13 +72,29 @@ const EP_SKILL_TREE = [
     effect: 'Marktplatz-Preise −10 % je Stufe (max. −20 %).'
   },
   {
-    // Eigener, günstiger Ast direkt von der Wurzel — bewusst NICHT an die
-    // anderen Äste gehängt, weil er allgemein die Feldarbeits-Erfahrung
-    // beschleunigt, nicht zu einem einzelnen Thema (Wirtschaft/Besitz/
-    // Ausdauer) gehört. 5 Stufen mit bewusst niedrigen, früh erreichbaren
-    // Kosten (siehe Auftrag: "relativ gering und erschwinglich").
+    // `visibleIf` ist ein zusätzliches, rein optisches Sichtbarkeits-
+    // Kriterium NEBEN der normalen `requires`-Kette (siehe renderSkillTree())
+    // — der Knoten existiert im Baum, taucht aber gar nicht erst auf, bevor
+    // der Spieler überhaupt ein Haustier hat. Anders als `extraLock`
+    // (sichtbar, aber gesperrt) ist er hier komplett unsichtbar, weil ein
+    // Tierfreund-Skill ohne jedes Tier nur verwirren würde.
+    id: 'petLover', name: 'Tierfreund', icon: '🐾',
+    requires: 'jobLeveling', maxLevel: 1, costs: [8],
+    visibleIf: () => Object.keys(pets).length > 0,
+    desc: 'Was mir zuläuft, verdient meine volle Aufmerksamkeit.',
+    effect: 'Haustiere können jetzt aufleveln und ihren Bonus verstärken (siehe Haustiere).'
+  },
+  {
+    id: 'jobXpBonus', name: 'Aufmerksamer Lehrling', icon: '📋',
+    requires: 'jobLeveling', maxLevel: 1, costs: [2],
+    desc: 'Ich beobachte, wie die Erfahreneren die Arbeit angehen. Irgendwann zahlt sich das aus.',
+    effect: '+1 Job-Erfahrung pro Feldarbeit (Voraussetzung für "Schneller Lerner").'
+  },
+  {
+    // Jetzt Voraussetzung: jobXpBonus statt direkt jobLeveling — erst wenn
+    // der Spieler gelernt hat aufmerksam zu sein, hilft ihm weiteres Üben.
     id: 'quickLearner', name: 'Schneller Lerner', icon: '🎯',
-    requires: 'jobLeveling', maxLevel: 5, costs: [1, 2, 3, 4, 5],
+    requires: 'jobXpBonus', maxLevel: 5, costs: [1, 2, 3, 4, 5],
     desc: 'Jeder Handgriff sitzt beim nächsten Mal schon etwas sicherer.',
     effect: '+10 % Job-Erfahrung pro Feldarbeit je Stufe (max. +50 %).'
   },
@@ -114,17 +130,73 @@ const EP_SKILL_TREE = [
    Äste dürfen unterschiedlich lang sein (siehe Mitte, nur 2 Einträge) —
    renderSkillTree() iteriert bis zur längsten Kette und lässt kürzere
    Äste einfach leer auslaufen. */
+/* Jede innere Liste = ein sichtbarer Ast im Baum, von oben nach unten.
+   `undefined` in einer Zeile bedeutet: dieser Ast hat hier keine Stufe
+   (der Ast beginnt erst tiefer). EP_TREE_BRANCHES definiert NUR die
+   Spaltenreihenfolge — die eigentlichen Voraussetzungen stehen im jeweiligen
+   Knoten-Eintrag in EP_SKILL_TREE (`.requires`/`.requiresAll`). */
 const EP_TREE_BRANCHES = [
+  // Ast 0 — Arbeit: fieldworkMemory → ironWill → nightWatchLeveling
   ['fieldworkMemory', 'ironWill', 'nightWatchLeveling'],
-  ['inventoryKeeper', 'sleepLikeARock'],
-  ['thrift', 'clearMind', 'goldBreakthrough'],
-  // Eigene Spalte, aber ohne Zeile 0 — "Überzeugungskraft" verzweigt erst
-  // ab Zeile 1 aus "Geschickte Hände" heraus (dieselbe Voraussetzung wie
-  // "Eiserner Wille" in Spalte 0, nur eine eigene Spalte daneben), statt
-  // an einen der bestehenden Äste angehängt zu werden.
+  // Ast 1 — Überzeugung: DIREKT NEBEN ironWill (beide hängen an fieldworkMemory,
+  // Zeile 0 = undefined, weil der Ast auf Tiefe 1 startet)
   [undefined, 'fieldPay'],
-  ['quickLearner']
+  // Ast 2 — Besitz: inventoryKeeper → sleepLikeARock
+  ['inventoryKeeper', 'sleepLikeARock'],
+  // Ast 3 — Wirtschaft: thrift → clearMind → goldBreakthrough
+  ['thrift', 'clearMind', 'goldBreakthrough'],
+  // Ast 4 — Lernen: jobXpBonus (Grundlage) → quickLearner (5 Stufen)
+  ['jobXpBonus', 'quickLearner'],
+  // Ast 5 — Haustier: petLover (bedingt, nur wenn Haustier vorhanden)
+  ['petLover']
 ];
+
+/* ══════════════════════════════════════════════════════════════
+   SUPER-SKILL-DEFINITIONEN (Lehrer-System)
+   Jeder Eintrag gehört zu einem maxbaren Skill (forSkill) und beschreibt
+   die Aufgabe, die der Spieler beim Lehrmeister abschließen muss, um die
+   erweiterte Version dieses Skills zu erhalten.
+   ══════════════════════════════════════════════════════════════ */
+
+const SUPER_SKILL_DEFS = [
+  {
+    id: 'thrift_super', forSkill: 'thrift',
+    name: 'Meisterhändler', icon: '🪙',
+    shortDesc: 'Weitere −15 % Marktpreise (insgesamt −35 %).',
+    questDesc: 'Verkaufe bei Greta insgesamt 30 Rohstoffe.',
+    questProgress: () => `${Math.min(resources.totalResourcesSold, 30)}/30`,
+    questDone: () => resources.totalResourcesSold >= 30
+  },
+  {
+    id: 'quickLearner_super', forSkill: 'quickLearner',
+    name: 'Natürliches Talent', icon: '🎯',
+    shortDesc: '+25 % zusätzliche Job-Erfahrung.',
+    questDesc: 'Absolviere 30 Feldarbeiten in einem Kapitel ohne Neuanfang.',
+    questProgress: () => `${Math.min(workStats.count, 30)}/30`,
+    questDone: () => workStats.count >= 30
+  },
+  {
+    id: 'fieldPay_super', forSkill: 'fieldPay',
+    name: 'Verhandlungskunst', icon: '🤝',
+    shortDesc: '+1 zusätzliches Gold pro Feldarbeit (insgesamt +2).',
+    questDesc: 'Verdiene in deinem Leben insgesamt 500 Gold.',
+    questProgress: () => `${Math.min(resources.totalGoldEarned, 500)}/500`,
+    questDone: () => resources.totalGoldEarned >= 500
+  }
+];
+
+/** Zeigt einmalig einen Monolog, der den Spieler auf Oswin in der Taverne
+    hinweist — nur wenn noch nicht gesehen UND ein Super-Skill erreichbar ist. */
+function maybeTriggerSuperSkillHint(node) {
+  gameFlags.oswingSuperHintShown = true;
+  showMonologue('Eine Grenze — oder doch nicht?', [
+    `Ich habe bei "${node.name}" alles herausgeholt, was möglich scheint. Das Gefühl ist eigenartig — als hätte ich die Wand hinter einem Horizont berührt.`,
+    'Aber vielleicht gibt es jemanden, der weiß, wie man das, was man kann, noch weiter treibt. Dieser Oswin in der Taverne — hochnäsig, das schon. Aber er steckt in teuren Stoffen und schaut einen so an, als wäre man für ihn lesbar wie ein Buch.',
+    'Ich sollte ihn nach einem Lehrmeister fragen. Wenn er überhaupt redet.'
+  ], () => navUnseen.taverne = true);
+}
+
+/* ──────────────────────────────────────────────────────────── */
 
 /* Mindest-Gold für überhaupt irgendeine Erfahrung bei einem (nicht-ersten)
    Neuanfang — bewusst identisch mit der Raub-Schwelle (siehe state.js):
@@ -205,6 +277,15 @@ function buyNextSkillLevel(id) {
 
   const levelNote = node.maxLevel > 1 ? ` (Stufe ${level + 1})` : '';
   showToast(`${node.name}${levelNote} erlernt.`, 'event');
+
+  // Beim erstmaligen Erreichen des Maximums eines super-skill-fähigen Skills:
+  // Oswin-Hinweis-Monolog einmalig auslösen (siehe npc.js, lehrer.js).
+  const newLevel = level + 1;
+  if (newLevel >= node.maxLevel && !gameFlags.oswingSuperHintShown) {
+    const hasSuperDef = SUPER_SKILL_DEFS.some(s => s.forSkill === id);
+    if (hasSuperDef) maybeTriggerSuperSkillHint(node);
+  }
+
   render();
 }
 
@@ -306,6 +387,11 @@ async function closeResetAnimation() {
     (Gold weg, EP gutgeschrieben) also genau in dem Moment, in dem das
     Overlay verschwindet, nicht schon währenddessen dahinter aufblitzend. */
 async function runManualResetWithAnimation() {
+  if (!settings.showResetAnimation) {
+    performManualReset();
+    return;
+  }
+  gameFlags.resetAnimationSeen = true;
   await playResetAnimation();
   performManualReset();
   await closeResetAnimation();
@@ -348,12 +434,15 @@ function startManualReset() {
   const isFirstReset = meta.resets === 0;
   const epGain = computeEpGain(isFirstReset);
 
+  const xpNote = skills.clearMind
+    ? `+${epGain} EP (davon +1 durch Klarer Kopf)`
+    : `+${epGain} EP`;
   const showConfirm = () => showDialog({
     title: 'Neu anfangen?',
     text: [
       epGain > 0
-        ? `Ich gebe mein gesamtes Gold auf und beginne von vorn. Dafür erhalte ich ${epGain} Erfahrung.`
-        : 'Ich habe ohnehin nichts, das sich gegen Erfahrung eintauschen ließe — noch nicht.'
+        ? `Ich lasse alles hinter mir — mein Gold, meinen Fortschritt. Dafür nehme ich ${xpNote} mit. Manches bleibt, manches geht. Neu anfangen.`
+        : 'Noch nicht genug gesammelt, um daraus Erfahrung zu machen. Ich sollte zuerst mehr erreichen.'
     ],
     buttons: epGain > 0
       ? [
@@ -390,43 +479,92 @@ function toggleResetWarning(id) {
   render();
 }
 
-/** Baut die Karte EINES Skill-Knotens. Wird nur für bereits SICHTBARE
-    Knoten aufgerufen (siehe renderSkillTree()) — "gesperrt wegen fehlender
-    Voraussetzung" kommt hier nicht mehr vor, weil unsichtbare Knoten gar
-    nicht erst gerendert werden. */
-function epNodeCardHtml(node) {
+/** Schaltet die bildschirmfüllende Übergangs-Animation beim Neuanfang
+    ein/aus (siehe Einstellungen — der Schalter selbst erscheint erst,
+    nachdem `gameFlags.resetAnimationSeen` einmal gesetzt wurde, siehe
+    runManualResetWithAnimation()). */
+function setShowResetAnimation(enabled) {
+  settings.showResetAnimation = enabled;
+  render();
+}
+
+/** Setzt den ausgewählten Skill-Knoten und löst einen Re-Render aus.
+    Wird von den kompakten Skill-Knoten-Buttons aufgerufen. */
+function selectSkillNode(id) {
+  selectedSkillId = (selectedSkillId === id) ? null : id;
+  render();
+}
+
+/** Rendert den Detail-Panel für den aktuell ausgewählten Skill-Knoten.
+    Erscheint am unteren Rand des Skill-Baum-Containers. Null = leer. */
+function renderSkillDetailPanel() {
+  if (!selectedSkillId) return `<div class="ep-detail-panel ep-detail-empty">↑ Skill anklicken für Details</div>`;
+  const node = EP_SKILL_TREE.find(n => n.id === selectedSkillId);
+  if (!node) return '';
+
   const level = getSkillLevel(node.id);
   const maxed = level >= node.maxLevel;
   const epCost   = maxed ? null : node.costs[level];
   const goldCost = maxed ? null : (node.goldCosts ? node.goldCosts[level] : 0);
   const extraLocked = !maxed && typeof node.extraLock === 'function' && node.extraLock();
-  const canBuy = !maxed && !extraLocked && experience.points >= epCost && resources.gold >= goldCost;
-  const levelLabel = node.maxLevel > 1 ? ` (Stufe ${level}/${node.maxLevel})` : '';
+  const canBuy = !maxed && !extraLocked && experience.points >= epCost && resources.gold >= (goldCost || 0);
+  const levelLabel = node.maxLevel > 1 ? ` · Stufe ${level}/${node.maxLevel}` : (maxed ? ' · Erworben' : '');
   const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
-  // Solange der Skill noch auf Stufe 0 ist, weiß der Spieler nicht, dass
-  // hinter ihm (noch unsichtbar) weitere Knoten warten — ein kurzer
-  // Hinweis statt der Baum einfach kommentarlos wächst, sobald gekauft.
-  const unlocksMore = level === 0 && nodeUnlocksMoreSkills(node.id);
-
-  let buttonHtml;
+  let actionHtml;
   if (maxed) {
-    buttonHtml = `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`;
+    actionHtml = `<span class="ep-detail-done">✓ Vollständig erlernt</span>`;
   } else if (extraLocked) {
-    buttonHtml = `<button class="action-btn btn-disabled" disabled>🔒 ${node.extraLockReason}</button>`;
+    actionHtml = `<span class="ep-detail-locked">🔒 ${node.extraLockReason}</span>`;
   } else {
-    buttonHtml = `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}" onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>Erlernen (${costLabel})</button>`;
+    actionHtml = `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}"
+      onclick="buyNextSkillLevel('${node.id}')" ${canBuy ? '' : 'disabled'}>
+      Erlernen — ${costLabel}
+    </button>`;
   }
 
   return `
-    <div class="action-card skill-node-card${maxed ? ' quest-card-done' : ''}">
-      <div class="action-card-icon">${node.icon}</div>
-      <div class="action-card-name">${node.name}${levelLabel}</div>
-      <p class="action-card-desc">${node.desc}</p>
-      <div class="action-card-effect">${node.effect}</div>
-      ${unlocksMore ? `<div class="action-card-hint">🔓 Schaltet weitere Fähigkeiten frei</div>` : ''}
-      ${buttonHtml}
+    <div class="ep-detail-panel">
+      <div class="ep-detail-header">
+        <span class="ep-detail-icon">${node.icon}</span>
+        <span class="ep-detail-name">${node.name}${levelLabel}</span>
+      </div>
+      <p class="ep-detail-desc">${node.desc}</p>
+      <div class="ep-detail-effect">${node.effect}</div>
+      ${actionHtml}
     </div>`;
+}
+
+/** Baut den kompakten Skill-Knoten-Button (Icon-only). Zustand wird durch
+    CSS-Klassen kommuniziert (maxed/available/locked/selected). */
+function epNodeIconHtml(node) {
+  if (!node) return `<div class="ep-node-slot"></div>`;
+  const level = getSkillLevel(node.id);
+  const maxed = level >= node.maxLevel;
+  const extraLocked = !maxed && typeof node.extraLock === 'function' && node.extraLock();
+  const epCost = maxed ? 0 : node.costs[level];
+  const canBuy = !maxed && !extraLocked && experience.points >= epCost;
+  const selected = selectedSkillId === node.id;
+
+  let stateClass = '';
+  if (maxed)           stateClass = 'ep-node-maxed';
+  else if (canBuy)     stateClass = 'ep-node-available';
+  else if (extraLocked) stateClass = 'ep-node-extralocked';
+  else                 stateClass = 'ep-node-locked';
+  if (selected) stateClass += ' ep-node-selected';
+
+  const levelPips = node.maxLevel > 1
+    ? `<div class="ep-node-pips">${Array.from({length: node.maxLevel}, (_, i) =>
+        `<span class="ep-node-pip ${i < level ? 'ep-node-pip-filled' : ''}"></span>`).join('')}</div>`
+    : '';
+
+  return `<div class="ep-node-slot">
+    <button class="ep-node ${stateClass}" onclick="selectSkillNode('${node.id}')"
+      title="${node.name}">
+      ${node.icon}
+      ${levelPips}
+    </button>
+  </div>`;
 }
 
 /** Mittelpunkt einer von `total` gleich breiten Spalten, in Prozent —
@@ -438,72 +576,108 @@ function columnCenterPct(index, total) {
 }
 
 /**
- * Baut den Skillbaum als echten Baum: Wurzel oben zentral, darunter Zeile
- * für Zeile N gleich breite Äste (siehe EP_TREE_BRANCHES). Eine Zeile (und
- * ihre Verbindungslinien) erscheint erst, sobald mindestens einer ihrer
- * Vorgänger erlernt wurde — pro Spalte unabhängig, siehe User-Vorgabe:
- * "Lernt man Geschickte Hände, wird Eiserner Wille sichtbar". Äste dürfen
- * unterschiedlich lang sein; kürzere laufen einfach leer aus.
+ * Skillbaum — kompaktes Icon-Node-Layout.
+ * Jeder Knoten ist ein kleiner quadratischer Button (Icon-only). Ein Klick
+ * wählt ihn aus und zeigt sein Detail-Panel am unteren Rand des Containers.
+ * Äste basieren auf EP_TREE_BRANCHES; Sichtbarkeit per `requires`-Kette UND
+ * optionalem `visibleIf`. guildPrep (requiresAll) wird am Ende separat
+ * eingehängt.
  */
 function renderSkillTree() {
   const total = EP_TREE_BRANCHES.length;
-  const root = EP_SKILL_TREE.find(n => n.id === 'jobLeveling');
+  const root  = EP_SKILL_TREE.find(n => n.id === 'jobLeveling');
   let html = `<div class="skill-tree">
-    <div class="skill-tree-row-root">${epNodeCardHtml(root)}</div>`;
+    <div class="skill-tree-row-root">${epNodeIconHtml(root)}</div>`;
 
   const maxRows = Math.max(...EP_TREE_BRANCHES.map(b => b.length));
 
   for (let row = 0; row < maxRows; row++) {
     const rowNodes = EP_TREE_BRANCHES.map(branch =>
       branch[row] ? EP_SKILL_TREE.find(n => n.id === branch[row]) : null);
-    const visible = rowNodes.map(node => !!node && getSkillLevel(node.requires) >= 1);
-    if (!visible.some(Boolean)) break; // Kette endet hier auf allen Spalten
 
+    // Sichtbarkeit: Voraussetzungen erfüllt UND ggf. visibleIf() true.
+    // Für Knoten ohne explizites `requires` (erster Knoten eines Asts, der
+    // implizit von der Wurzel jobLeveling abzweigt) gilt: Wurzel gekauft?
+    const visible = rowNodes.map((node, i) => {
+      if (!node) return false;
+      const req = node.requires;
+      const reqsMet = req
+        ? getSkillLevel(req) >= 1
+        : getSkillLevel('jobLeveling') >= 1;
+      const visOk = typeof node.visibleIf !== 'function' || node.visibleIf();
+      return reqsMet && visOk;
+    });
+
+    if (!visible.some(Boolean)) break;
+
+    // ── Konnektor-Reihe ──────────────────────────────────────
     if (row === 0) {
-      // Direkt unter der Wurzel verzweigt sich EIN Stamm in alle Äste auf
-      // einmal — sie hängen alle an derselben Wurzel, werden also immer
-      // gleichzeitig sichtbar, sobald diese erlernt ist.
-      const stems = rowNodes.map((node, i) => node
-        ? `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%; top:11px; bottom:0;"></div>` : '').join('');
-      html += `<div class="skill-connector">
-        <div class="stl-stem" style="left:50%; top:0; height:11px;"></div>
-        <div class="stl-bar" style="left:${columnCenterPct(0, total)}%; right:${100 - columnCenterPct(total - 1, total)}%; top:11px;"></div>
-        ${stems}
-      </div>`;
+      // Gabel von der Wurzel zu allen Ästen auf Tiefe 0
+      const visibleCols = rowNodes.map((n, i) => n !== null ? i : -1).filter(i => i >= 0);
+      if (visibleCols.length) {
+        const left  = columnCenterPct(visibleCols[0], total);
+        const right = columnCenterPct(visibleCols[visibleCols.length - 1], total);
+        const stems = visibleCols.map(i =>
+          `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%; top:11px; bottom:0;"></div>`).join('');
+        html += `<div class="skill-connector">
+          <div class="stl-stem" style="left:50%; top:0; height:11px;"></div>
+          <div class="stl-bar"  style="left:${left}%; right:${100 - right}%; top:11px;"></div>
+          ${stems}
+        </div>`;
+      }
     } else {
-      // Tiefere Zeilen sind reine Kettenfortsetzungen je Spalte, unabhängig
-      // voneinander — daher pro Spalte eine eigene, ggf. fehlende Linie.
-      const stems = visible.map((v, i) => v
-        ? `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%;"></div>` : '').join('');
-      html += `<div class="skill-connector">${stems}</div>`;
+      // Tiefere Zeilen: einfache Stämme pro sichtbarer Spalte.
+      // Sonderfall: fieldPay (Spalte 1, Zeile 1) hängt an fieldworkMemory
+      // (Spalte 0, Zeile 1 = vorherige Zeile), nicht an einem unsichtbaren
+      // Knoten in Zeile 0 / Spalte 1. Wir zeichnen dafür einen
+      // Gabelarm vom vorherigen Spalten-Center herüber.
+      const stemParts = rowNodes.map((node, i) => {
+        if (!visible[i]) return '';
+        const req = node.requires;
+        if (!req) return `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%;"></div>`;
+        // Liegt der Elternteil in einer anderen Spalte in der SELBEN Zeile
+        // (nicht in Zeile 0 = root)? → kreuzender Gabelarm
+        const parentCol = EP_TREE_BRANCHES.findIndex(b => b[row - 1] === req || b[row] === req);
+        if (parentCol >= 0 && parentCol !== i) {
+          const from = columnCenterPct(parentCol, total);
+          const to   = columnCenterPct(i, total);
+          const barL = Math.min(from, to);
+          const barR = 100 - Math.max(from, to);
+          return `<div class="stl-stem" style="left:${from}%;"></div>
+                  <div class="stl-bar" style="left:${barL}%; right:${barR}%; top:11px;"></div>
+                  <div class="stl-stem" style="left:${to}%; top:11px; bottom:0;"></div>`;
+        }
+        return `<div class="stl-stem" style="left:${columnCenterPct(i, total)}%;"></div>`;
+      }).join('');
+      html += `<div class="skill-connector">${stemParts}</div>`;
     }
 
     const cells = rowNodes.map((node, i) =>
-      `<div class="skill-tree-cell">${visible[i] ? epNodeCardHtml(node) : ''}</div>`).join('');
+      `<div class="skill-tree-cell">${visible[i] ? epNodeIconHtml(node) : '<div class="ep-node-slot"></div>'}</div>`
+    ).join('');
     html += `<div class="skill-tree-row" style="grid-template-columns: repeat(${total}, 1fr);">${cells}</div>`;
   }
 
-  // Konvergenz-Knoten: erscheint erst, sobald ALLE Voraussetzungen erlernt
-  // sind — gespiegelte Gabel-Grafik (zwei Stämme aus ihren jeweiligen
-  // Ästen laufen zu einem zusammen).
+  // ── Konvergenzknoten guildPrep (benötigt BEIDE Endpunkte) ────
   const guildNode = EP_SKILL_TREE.find(n => n.id === 'guildPrep');
   const guildReqs = getNodeRequirements(guildNode);
-  const guildVisible = guildReqs.every(reqId => getSkillLevel(reqId) >= 1);
-  if (guildVisible) {
+  if (guildReqs.every(reqId => getSkillLevel(reqId) >= 1)) {
     const idxA = EP_TREE_BRANCHES.findIndex(b => b.includes(guildReqs[0]));
     const idxB = EP_TREE_BRANCHES.findIndex(b => b.includes(guildReqs[1]));
-    const pctA = columnCenterPct(idxA, total);
-    const pctB = columnCenterPct(idxB, total);
+    const pA = columnCenterPct(idxA, total);
+    const pB = columnCenterPct(idxB, total);
     html += `<div class="skill-connector">
-               <div class="stl-stem" style="left:${pctA}%; top:0; height:11px;"></div>
-               <div class="stl-stem" style="left:${pctB}%; top:0; height:11px;"></div>
-               <div class="stl-bar" style="left:${pctA}%; right:${100 - pctB}%; top:11px;"></div>
-               <div class="stl-stem" style="left:50%; top:11px; bottom:0;"></div>
-             </div>
-             <div class="skill-tree-row-root">${epNodeCardHtml(guildNode)}</div>`;
+      <div class="stl-stem" style="left:${pA}%; top:0; height:11px;"></div>
+      <div class="stl-stem" style="left:${pB}%; top:0; height:11px;"></div>
+      <div class="stl-bar"  style="left:${pA}%; right:${100 - pB}%; top:11px;"></div>
+      <div class="stl-stem" style="left:50%; top:11px; bottom:0;"></div>
+    </div>
+    <div class="skill-tree-row-root">${epNodeIconHtml(guildNode)}</div>`;
   }
 
-  return html + `</div>`;
+  html += `</div>`;
+  html += renderSkillDetailPanel();
+  return html;
 }
 
 /* ── Erfahrungs-Seite ─────────────────────────────────────── */

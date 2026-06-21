@@ -27,6 +27,9 @@ function renderContent() {
     case 'inventar':      renderInventar(area);     break;
     case 'quests':        renderQuests(area);       break;
     case 'erfahrung':     renderErfahrung(area);    break;
+    case 'errungenschaften': renderErrungenschaften(area); break;
+    case 'pets':          renderPets(area);         break;
+    case 'lehrer':        renderLehrer(area);       break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
     default:              renderGeschichte(area);
@@ -523,7 +526,9 @@ function renderSchlafplatz(el) {
     const reliefPct = night ? Math.round(100 * recoveryMult * getSleepQualityFactor(o)) : Math.round(100 * getSleepQualityFactor(o));
     const canAfford = resources.gold >= o.cost;
     const hungerEffect = o.hungerPenalty ? `🍞 Hunger +${o.hungerPenalty}%` : '🍞 Hunger ±0%';
-    const qualityBadge = `<div class="sleep-quality-badge">Schlafqualität ${qualityTier}/${SLEEP_QUALITY_MAX}</div>`;
+    const reliefLabel = Math.round(100 * getSleepQualityFactor(o));
+    const qualityBadge = `<div class="sleep-quality-badge">Schlafqualität ${qualityTier} ` +
+      `<span class="info-hint" tabindex="0" title="Höhere Schlafqualität → mehr regenerierte Müdigkeit. Aktuell: −${reliefLabel}% Müdigkeit pro Schlaf.">ⓘ</span></div>`;
 
     if (!night) {
       return `
@@ -663,11 +668,11 @@ function renderSettings(el) {
           </button>
           ${settings.autoSave.enabled ? `
             <div class="settings-buttons-row" style="margin-top: 4px;">
-              ${[1, 2, 5, 10].map(min => `
+              ${[[0.5, '30 Sek'], [1, '1 Min'], [2, '2 Min'], [5, '5 Min']].map(([min, label]) => `
                 <button
                   class="action-btn settings-btn-option ${settings.autoSave.intervalMinutes === min ? 'active' : ''}"
                   onclick="setAutoSaveInterval(${min})"
-                >${min} Min</button>
+                >${label}</button>
               `).join('')}
             </div>
           ` : ''}
@@ -690,13 +695,18 @@ function renderSettings(el) {
       </div>
 
       <div class="settings-group">
-        <div class="settings-section-title">Warnungen</div>
+        <div class="settings-section-title">Verhalten &amp; Animationen</div>
         <div class="settings-buttons">
           ${gameFlags.resetLayerUnlocked ? `
             <button class="action-btn settings-btn" onclick="toggleResetWarning('erfahrung')">
-              ${settings.warnBeforeReset.erfahrung ? '☑' : '☐'} Vor Neuanfang (Erfahrung) warnen
+              ${settings.warnBeforeReset.erfahrung ? '☑' : '☐'} Vor Erfahrungs-Neuanfang warnen
             </button>
           ` : `<p class="chronik-empty" style="margin: 0;">Noch keine Reset-Ebene freigeschaltet.</p>`}
+          ${gameFlags.resetAnimationSeen ? `
+            <button class="action-btn settings-btn" onclick="setShowResetAnimation(${!settings.showResetAnimation})">
+              ${settings.showResetAnimation ? '☑' : '☐'} Reset-Animation (Erfahrung) anzeigen
+            </button>
+          ` : ''}
         </div>
       </div>
 

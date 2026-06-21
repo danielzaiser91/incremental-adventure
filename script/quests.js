@@ -26,7 +26,8 @@ const QUEST_DEFS = [
     descByState: {
       unstarted: 'Noch nicht begonnen.',
       active:    'Mira hat mir einen versiegelten Brief für Brakka mitgegeben. Ich sollte ihn in der Taverne abgeben.',
-      rewarded:  'Abgeschlossen — der Brief ist bei Brakka angekommen.'
+      delivered: 'Brief bei Brakka abgegeben. Ich sollte Mira davon berichten.',
+      rewarded:  'Abgeschlossen — Mira weiß, dass der Brief angekommen ist.'
     }
   },
   {
@@ -86,6 +87,7 @@ const QUEST_STATE_LABELS = {
   unstarted: 'Unbekannt',
   invited:   'Einladung erhalten',
   active:    'In Arbeit',
+  delivered: 'Rückmeldung ausstehend',
   done:      'Bereit zur Abgabe',
   rewarded:  'Abgeschlossen'
 };

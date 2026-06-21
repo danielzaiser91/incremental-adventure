@@ -83,6 +83,13 @@ sein musste, wird nie aufgelöst. Bewusst als kleines, offenes Mysterium
 stehen gelassen; eignet sich gut als späterer Subplot (z.B. Mira als
 Informantin, ein Komplott, eine Schuld, die Brakka und Mira verbindet).
 
+*Update:* Die Quest hat jetzt einen echten Rückweg — nach der Übergabe
+an Brakka (`'delivered'`) muss der Spieler noch einmal zu Mira zurück,
+bevor die Quest auf `'rewarded'` springt (beide NPCs zeigen währenddessen
+ein Ausrufezeichen). Das macht die Übergabe mechanisch runder, löst aber
+das Mysterium selbst weiterhin nicht auf — bleibt offen für den oben
+genannten Subplot.
+
 ## 3. "Eigenes Zuhause" — referenziert, aber nicht erreichbar
 
 Zwei verschiedene Stellen verweisen auf ein "eigenes Zuhause" als
@@ -117,3 +124,30 @@ sind absichtlich praktisch unerreichbar ohne ein zukünftiges
 Beschleunigungs-Feature. Bereits ausführlich in `SKILL.md` unter
 "Bisher nicht behobene/offene Punkte" dokumentiert — hier nur
 verlinkt, nicht dupliziert.
+
+*Update:* Beide Stufen haben inzwischen konkrete Sonderboni
+(`specialRewardMult`/`specialXpMult`/`specialFlatBonus`, siehe
+WORK_LEVELS in actions.js) — die Boni liegen also bereits bereit, bevor
+ein künftiges Feature die Schwellen überhaupt erreichbar macht.
+
+## 7. Super-Skills: Veredelung bestehender EP-Skills (in Planung)
+
+Idee aus einem Vorschlag heraus: Skills mit mehreren Stufen (z.B.
+Sparsamkeit, Schneller Lerner) sollen nach Erreichen ihrer Maximalstufe
+eine optionale "Veredelung" bekommen — gleicher Effekt, aber deutlich
+verstärkt, zu absichtlich hohen Kosten (EP + Gold), um spätere
+Features mit immensen Anforderungen erreichbar zu machen. Der Spieler
+hat zusätzlich vorgeschlagen, jede Veredelung pro Skill erst über eine
+eigene Quest/Dialog-Reihe freizuschalten (vermutlich über den
+bestehenden `extraLock`/`extraLockReason`-Mechanismus, siehe
+"nightWatchLeveling"/"guildPrep" in experience.js). **Noch NICHT
+umgesetzt** — wurde bewusst zurückgestellt, um die konkrete
+NPC-/Quest-Anbindung erst in einer eigenen Runde auszuarbeiten.
+
+## 8. Haustiere: bisher nur die geheime "Besonders"-Kategorie gefüllt
+
+Die Haustiere-Seite (pets.js) ist als zwei-Kategorien-Seite angelegt
+("Besonders" für geheim/einmalig erhaltene Tiere wie die Straßenkatze),
+aber eine zweite, REGULÄRE Kategorie (z.B. käuflich erwerbbare oder
+durch normale Quests erhaltene Haustiere) existiert noch nicht. Naheliegende
+Erweiterung für später.

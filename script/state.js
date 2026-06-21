@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 5;
+const CURRENT_SAVE_VERSION = 6;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -46,6 +46,16 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'EP-Skills zeigen einen Hinweis auf weitere Folge-Skills.' },
     { cat: 'Bugfix',   text: 'Diverse Balance- und Dialog-Korrekturen.' },
     { cat: 'Neuerung', text: 'Dieser Update-Hinweis beim Laden alter Spielstände.' }
+  ],
+  6: [
+    { cat: 'Neuerung', text: 'Super-Skills: Wenn eine Fähigkeit ihr Maximum erreicht, öffnet sich ein neuer Weg — frage Oswin in der Taverne.',
+      spoiler: () => !gameFlags.oswingSuperHintShown },
+    { cat: 'Neuerung', text: 'Das Lehrhaus ist jetzt in der Navigation erreichbar (nach einem Gespräch mit Oswin).',
+      spoiler: () => !gameFlags.lehrerUnlocked },
+    { cat: 'Neuerung', text: 'Errungenschaften zeigen jetzt ihren Gold-Bonus und sind nach Spielabschnitten gegliedert.' },
+    { cat: 'Neuerung', text: 'Neuer Skill: "Aufmerksamer Lehrling" (Voraussetzung für "Schneller Lerner").' },
+    { cat: 'Änderung', text: 'EP-Skillbaum kompakter gestaltet — Klick auf einen Knoten zeigt Details unten.' },
+    { cat: 'Änderung', text: 'Autospeicher-Intervalle: 30 Sek, 1 Min, 2 Min, 5 Min.' }
   ]
 };
 
@@ -102,13 +112,19 @@ let skills = {
   fieldPay:         false, // +1 Gold pro Feldarbeit, dauerhaft
   nightWatchLeveling: false, // Schaltet ein Erfahrungs-Level-System für die Nachtwache frei
   thrift:           0,     // Marktplatz-Preise -10% je Stufe (max. Stufe 2)
+  jobXpBonus:       false, // +1 Job-Erfahrung pro Feldarbeit (Voraussetzung für "Schneller Lerner")
   quickLearner:     0,     // +10% Job-Erfahrung pro Feldarbeit je Stufe (max. Stufe 5)
   clearMind:        false, // +1 EP bei jedem zukünftigen Neuanfang
   goldBreakthrough: false, // Gold-Meilensteine zählen einzeln statt nur "Grenze erreicht?"
   guildPrep:        false, // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei
   inventoryKeeper:  false, // Inventar/Ausrüstung übersteht künftig einen Neuanfang
-  sleepLikeARock:   false  // +1 Schlafqualitäts-Stufe bei jedem Schlafplatz
+  sleepLikeARock:   false, // +1 Schlafqualitäts-Stufe bei jedem Schlafplatz
+  petLover:         false  // Haustiere können aufleveln und ihren Bonus verstärken
 };
+
+/* Freigeschaltete Super-Skill-Erweiterungen (Lehrer-System) — erst nach
+   Abschluss der jeweiligen Lehrer-Quest verfügbar (siehe lehrer.js). */
+let superSkills = {}; // id -> true wenn freigeschaltet
 
 let gameFlags = {
   milestoneStrangerTriggered: false,
@@ -135,6 +151,10 @@ let gameFlags = {
   commanderInviteShown:        false, // Einladungs-Monolog nach 3x Nachtwache
   firstNightWatchLevelUpShown: false, // Monolog beim 1. Nachtwache-Level-Up
   commanderRecruitmentShown:   false, // Stadtwache-Beitritts-Angebot nach 1. Arbeit auf Nachtwache-Lvl 3
+  resetAnimationSeen:          false, // Schaltet den "Reset-Animation anzeigen"-Schalter in den Einstellungen frei
+  oswingSuperHintShown:        false, // Monolog "Oswin könnte Lehrer kennen" nur 1x zeigen
+  lehrerUnlocked:              false, // Lehrer-Tab sichtbar (nach Oswin-Gespräch über Lehrmeisterin)
+  streetSweeperTalked:         false, // Spieler hat mit dem Strassenkehrer gesprochen → Hinweis sichtbar
   isWorking:                   false
 };
 
@@ -150,7 +170,10 @@ let navUnseen = {
   inventar:     true,
   erfahrung:    true,
   taverne:      false, // wird ab Tag 2 erneut auf true gesetzt, siehe clock.js
-  rohstoffe:    true
+  rohstoffe:    true,
+  errungenschaften: true, // erst sichtbar, sobald die 1. Errungenschaft erreicht ist
+  pets:         true,     // erst sichtbar, sobald das 1. Haustier adoptiert wurde
+  lehrer:       false     // erst sichtbar nach Oswin-Gespräch (gameFlags.lehrerUnlocked)
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -211,6 +234,26 @@ let workStats = {
   count: 0 // Anzahl insgesamt abgeschlossener Feldarbeits-Durchgänge
 };
 
+/* Freigeschaltete Errungenschaften (siehe achievements.js): IDs aus
+   ACHIEVEMENT_DEFS -> `true`. Bloße Anwesenheit eines Schlüssels bedeutet
+   "freigeschaltet" — kein Eintrag heißt "noch nicht erreicht". */
+let achievements = {};
+let achievementTab = 'normal'; // 'normal' | 'secret' — siehe content.js, setAchievementTab()
+
+/* Vom Spieler adoptierte Haustiere (siehe pets.js): id -> { name, level }.
+   `level` startet bei 0 und steigt nur, sobald der Skill "Tierfreund"
+   (experience.js) erlernt wurde (siehe pets.js, trainPet()). */
+let pets = {};
+
+/* Fortschritt der geheimen Straßenkatze-Begegnungskette (siehe actions.js,
+   maybeTriggerStreetWalk()/takeStreetWalk()) — eigenes kleines State-
+   Objekt statt Felder in gameFlags, weil es Zähler sind, keine reinen
+   Einmal-Flags. */
+let streetCatProgress = {
+  sleepCount: 0, // Wie oft insgesamt auf der Straße geschlafen wurde
+  encounters: 0  // Wie oft die Katze bereits getroffen UND gestreichelt wurde (max. 3, dann adoptiert)
+};
+
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */
 let settings = {
   toastDurationMs: 2600,
@@ -224,7 +267,12 @@ let settings = {
   autoSave: { enabled: true, intervalMinutes: 5 },
   // Lädt beim Start automatisch den letzten Spielstand, falls vorhanden
   // (siehe save.js, shouldAutoLoad(), aufgerufen aus main.js init()).
-  autoLoad: true
+  autoLoad: true,
+  // Bildschirmfüllende Übergangs-Animation beim manuellen Neuanfang
+  // (siehe experience.js, runManualResetWithAnimation()) — der Schalter
+  // dafür erscheint in den Einstellungen erst, nachdem der Spieler die
+  // Animation einmal gesehen hat (gameFlags.resetAnimationSeen).
+  showResetAnimation: true
 };
 
 /* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 100). */
@@ -257,6 +305,8 @@ let chronikButtonUnseen = false;
 let chronikUnseenEntryIds = [];
 
 /* ── UI-State ─────────────────────────────────────────────── */
+let selectedSkillId = null; // welcher Skill-Knoten im EP-Baum gerade ausgewählt ist
+
 let navLevel       = 0;            // 0=Hauptmenü | 1=Weltkarte | 2=Treutheim
 let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' | 'arbeitsplatz' | 'marktplatz' |
                                     // 'taverne' | 'schlafplatz' | 'inventar' | 'quests' | 'chronik' | 'settings'
