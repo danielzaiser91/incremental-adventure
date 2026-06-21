@@ -50,7 +50,7 @@ const ACHIEVEMENT_DEFS = [
   {
     id: 'streetCat', cat: 'secret', layer: 0, icon: '🐈', name: 'Eine stille Freundschaft',
     desc: 'Gewinne über mehrere Nächte das Vertrauen eines streunenden Straßentiers.',
-    hint: 'Schlaf ein paarmal draußen auf der Straße — vielleicht bist du dabei nicht so allein, wie du denkst.',
+    hint: 'Manche Freundschaften brauchen Geduld — und ein paar kalte, schlaflose Nächte.',
     check: () => !!pets.streetCat
   },
   {
@@ -109,7 +109,7 @@ function achievementCardHtml(def) {
     // Straßenkehrer-Hinweis: wenn der Spieler diesen NPC gesprochen hat,
     // wird der Hinweis auf der Karte dauerhaft erweitert.
     const extraHint = def.id === 'streetCat' && gameFlags.streetSweeperTalked
-      ? `<p class="achievement-hint-green">Hinweis: Der Straßenfeger in der Taverne meinte, er habe bei den Ställen am Stadtrand manchmal Tiere gesehen. Nächtens, wenn es ruhig ist.</p>`
+      ? `<p class="achievement-hint-green">Tipp: Schlaf ein paarmal auf der Straße — dann passiert vielleicht etwas.</p>`
       : '';
     return `
       <div class="action-card action-card-locked">

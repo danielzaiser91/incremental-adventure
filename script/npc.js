@@ -608,12 +608,12 @@ const NPCS = {
     nodes: {
       greet: {
         text: [
-          'Der alte Mann lehnt an seinem Besen und beobachtet die Gasse, ohne mich direkt anzusehen. "Lange schon in der Stadt?"',
-          '"Weißt du, wer hier nachts sonst noch unterwegs ist? Nicht nur Wachen und Diebe. Drüben bei den Ställen am Stadtrand — wenn es dunkel wird — streichen manchmal Tiere vorbei. Manche sehr scheu."',
-          '"Wer geduldig ist und ein paarmal nachsieht, bevor er schlafen geht, findet darunter vielleicht einen, der sich annähert. Aber erzwingen kann man das nicht."'
+          'Der alte Mann lehnt an seinem Besen, ohne mich direkt anzusehen. "Lange schon in der Stadt?"',
+          '"Ich kehr diese Gassen seit dreißig Jahren. Weißt du, was ich gelernt hab? Wer nachts draußen schläft, sieht Dinge, die andere verpassen. Passiert nicht beim ersten Mal — aber bleib ein paarmal dran."',
+          '"Mehr sag ich nicht." Er kehrt weiter, als wäre das Gespräch nie gewesen.'
         ],
         options: [{
-          label: 'Interessant — ich werde nachsehen.',
+          label: 'Ich werde es im Kopf behalten.',
           next: null,
           action: () => { gameFlags.streetSweeperTalked = true; }
         }]
