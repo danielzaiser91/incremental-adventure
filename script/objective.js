@@ -41,6 +41,12 @@ function getCurrentChapterLabel() {
   return entries[entries.length - 1].id;
 }
 
+/** Öffnet einen Dialog mit dem vollständigen Zieltext. */
+function showObjectiveDialog() {
+  const text = getObjectiveText();
+  showMonologue('Aktuelles Ziel', [text]);
+}
+
 /** Rendert die untere Zielleiste neu. */
 function renderObjective() {
   const chapterEl   = document.getElementById('objective-chapter');
@@ -49,7 +55,10 @@ function renderObjective() {
   const chronikBtn  = document.getElementById('objective-chronik-btn');
 
   if (chapterEl) chapterEl.textContent = `Kap ${getCurrentChapterLabel()}`;
-  if (textEl)    textEl.textContent    = getObjectiveText();
+  if (textEl) {
+    textEl.textContent = getObjectiveText();
+    textEl.onclick = showObjectiveDialog;
+  }
   if (chronikBtn) {
     chronikBtn.classList.toggle('active', currentContent === 'chronik');
     chronikBtn.classList.toggle('chronik-btn-new', chronikButtonUnseen);

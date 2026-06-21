@@ -1700,7 +1700,9 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
+.objective-text:hover { text-decoration: underline dotted; }
 
 .objective-clock {
   color: var(--text-mid);
@@ -2380,11 +2382,12 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   /* ── APP-GRID: Single-Column + Top-Bar-Zeile ────────────── */
   #app {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: var(--mobile-topbar-h) minmax(0, 1fr) var(--objective-h);
+    grid-template-rows: var(--mobile-topbar-h) minmax(0, 1fr) calc(var(--objective-h) + env(safe-area-inset-bottom, 0px));
     min-width: 0;
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
+    height: 100dvh;
   }
 
   /* ── NAV-DRAWER: von links einfahren ────────────────────── */
@@ -2420,7 +2423,7 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 
   /* ── OBJECTIVE BAR ─────────────────────────────────────── */
   #objective-bar {
-    padding: 0 var(--pad-sm);
+    padding: 0 var(--pad-sm) env(safe-area-inset-bottom, 0px);
     font-size: 11px;
     gap: 6px;
   }
