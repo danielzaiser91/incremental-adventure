@@ -109,7 +109,7 @@ function achievementCardHtml(def) {
     // Straßenkehrer-Hinweis: wenn der Spieler diesen NPC gesprochen hat,
     // wird der Hinweis auf der Karte dauerhaft erweitert.
     const extraHint = def.id === 'streetCat' && gameFlags.streetSweeperTalked
-      ? `<p class="achievement-hint-green">Tipp: Schlaf ein paarmal auf der Straße — dann passiert vielleicht etwas.</p>`
+      ? `<p class="achievement-hint-green">Der Straßenkehrer hatte recht — die Nacht gehört jemand anderem. Schlaf öfter draußen.</p>`
       : '';
     return `
       <div class="action-card action-card-locked">
