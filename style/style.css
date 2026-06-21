@@ -2325,13 +2325,10 @@ body.dialog-open #objective-bar { opacity: 0.25; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0; left: 0; right: 0;
     height: var(--mobile-topbar-h);
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     padding: 0 4px;
-    z-index: 100;
     user-select: none;
   }
 
@@ -2422,12 +2419,10 @@ body.dialog-open #objective-bar { opacity: 0.25; }
     font-size: 11px;
     gap: 6px;
   }
+  .objective-left  { flex: 1; min-width: 0; }
+  .objective-right { flex-shrink: 0; }
   .objective-chapter { display: none; }
-  .objective-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  .objective-text { min-width: 0; }
 
   /* ── TOAST: unter Top-Bar ───────────────────────────────── */
   #toast-container {
