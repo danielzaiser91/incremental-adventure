@@ -2320,7 +2320,7 @@ body.dialog-open #objective-bar { opacity: 0.25; }
    - Neue fixed-Position-Elemente → z-index < 150 (unter Drawern)
    - Neue Buttons → min-height: 44px (Touch-Targets)
    ══════════════════════════════════════════════════════════════ */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
   /* ── MOBILE TOP BAR ─────────────────────────────────────── */
   #mobile-top-bar {
@@ -2465,5 +2465,15 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 
   /* ── CONTENT-AREA: weniger Innenabstand ─────────────────── */
   #content-area { padding: 16px var(--pad-sm) var(--pad-sm); }
+
+  /* ── JOB-INFO-PANEL: unter Job-Karte statt rechts daneben ── */
+  .job-card-wrap { flex-direction: column; }
+  .job-card { width: min(260px, 100%); }
+  .job-info-panel { align-self: flex-start; }
+  .job-info-panel.open {
+    width: min(260px, 100%);
+    margin-left: 0;
+    margin-top: 8px;
+  }
 
 }
