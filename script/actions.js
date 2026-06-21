@@ -796,8 +796,8 @@ function triggerChapter2Victory() {
         </p>
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
-          Bleibe auf dem Laufenden über zukünftige Updates.<br>
-          Discord-Link folgt in Kürze.<br><br>
+          Bleibe auf dem Laufenden über zukünftige Updates:<br>
+          <a href="https://discord.gg/NHenxsPh" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
           Danke, dass du gespielt hast — wir hoffen, du hattest Spaß. ✨
         </p>
       `,
