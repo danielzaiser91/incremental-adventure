@@ -50,7 +50,7 @@ const ACHIEVEMENT_DEFS = [
   {
     id: 'streetCat', cat: 'secret', layer: 0, icon: '🐈', name: 'Eine stille Freundschaft',
     desc: 'Gewinne über mehrere Nächte das Vertrauen eines streunenden Straßentiers.',
-    hint: 'Manche Freundschaften brauchen Geduld — und ein paar kalte, schlaflose Nächte.',
+    hint: 'Schlaf ein paarmal draußen auf der Straße — vielleicht bist du dabei nicht so allein, wie du denkst.',
     check: () => !!pets.streetCat
   },
   {
