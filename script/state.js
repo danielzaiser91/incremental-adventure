@@ -62,7 +62,6 @@ const SAVE_CHANGELOG = {
       spoiler: () => !gameFlags.kapitel2Unlocked },
     { cat: 'Neuerung', text: 'Zeitkristalle und Automatisierung — seltene Drops freischalten selbsttätige Aktionen.',
       spoiler: () => !gameFlags.automationDiscovered },
-    { cat: 'Neuerung', text: 'Entwickler-Optionen: In der Browser-Konsole devMode() eingeben.' },
     { cat: 'Änderung', text: 'Müdigkeits-System überarbeitet: Schlafschuld, feinere Stufen, stärkere Erschöpfungs-Strafen.' }
   ]
 };
