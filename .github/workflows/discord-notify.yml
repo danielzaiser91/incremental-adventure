@@ -1,14 +1,15 @@
-name: Discord Release Notification
+name: Discord Notifications
 
 on:
   push:
     branches: [main]
     paths:
-      - 'patchnotes/pending.md'
+      - 'patchnotes/pending-patchnotes.md'
+      - 'patchnotes/pending-status.md'
 
 permissions:
-  contents: write   # für git push (Archive)
-  actions: write    # für STATUS_MESSAGE_ID Variable lesen/schreiben
+  contents: write   # für git push (Archiv)
+  actions: write    # für STATUS_MESSAGE_ID Variable
 
 jobs:
   notify:
@@ -18,84 +19,83 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Determine channel from pending.md
-        id: channel
+      - name: Welche Dateien haben sich geändert?
+        id: changed
         run: |
-          CHANNEL=$(head -1 patchnotes/pending.md | grep -oP '(?<=channel: )\w+' || echo "status")
-          VERSION=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
+          git diff --name-only HEAD~1 HEAD > /tmp/changed.txt
+          cat /tmp/changed.txt
+          grep -q 'patchnotes/pending-patchnotes.md' /tmp/changed.txt \
+            && echo "patchnotes=true" >> $GITHUB_OUTPUT \
+            || echo "patchnotes=false" >> $GITHUB_OUTPUT
+          grep -q 'patchnotes/pending-status.md' /tmp/changed.txt \
+            && echo "status=true" >> $GITHUB_OUTPUT \
+            || echo "status=false" >> $GITHUB_OUTPUT
 
+      - name: Version aus content.js lesen
+        id: version
+        run: |
+          VERSION=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
           echo "current=$VERSION" >> $GITHUB_OUTPUT
 
-          if [ "$CHANNEL" = "patchnotes" ]; then
-            echo "channel=patchnotes" >> $GITHUB_OUTPUT
-            echo "webhook=${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}" >> $GITHUB_OUTPUT
-            echo "mention=<@&1518368928370528256>" >> $GITHUB_OUTPUT
-          else
-            echo "channel=status" >> $GITHUB_OUTPUT
-            echo "webhook=${{ secrets.DISCORD_WEBHOOK_STATUS }}" >> $GITHUB_OUTPUT
-            echo "mention=<@&1518378825451311105>" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Wait for GitHub Pages
+      - name: Warten auf GitHub Pages
+        if: steps.changed.outputs.patchnotes == 'true' || steps.changed.outputs.status == 'true'
         run: sleep 120
 
-      - name: Send to Discord
+      # ── Patchnotes → #patchnotes (immer neue Nachricht, mit @Mention) ──────
+      - name: Patchnotes an Discord senden
+        if: steps.changed.outputs.patchnotes == 'true'
+        run: |
+          CONTENT=$(cat patchnotes/pending-patchnotes.md)
+          PAYLOAD=$(jq -n --arg c "<@&1518368928370528256>
+          ${CONTENT}" '{content: $c}')
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}"
+
+      # ── Status → #status (persistente Nachricht editieren) ──────────────────
+      - name: Status in Discord aktualisieren
+        if: steps.changed.outputs.status == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Erste Zeile (<!-- channel: ... -->) nicht an Discord schicken
-          CONTENT=$(tail -n +2 patchnotes/pending.md)
-          MENTION="${{ steps.channel.outputs.mention }}"
-          CHANNEL="${{ steps.channel.outputs.channel }}"
-          WEBHOOK="${{ steps.channel.outputs.webhook }}"
+          CONTENT=$(cat patchnotes/pending-status.md)
+          PAYLOAD=$(jq -n --arg c "${CONTENT}" '{content: $c}')
+          EXISTING_ID="${{ vars.STATUS_MESSAGE_ID }}"
+          SUCCESS=false
 
-          BODY=$(jq -n --arg c "${MENTION}
-          ${CONTENT}" '{content: $c}')
-
-          if [ "$CHANNEL" = "status" ]; then
-            EXISTING_ID="${{ vars.STATUS_MESSAGE_ID }}"
-            SUCCESS=false
-
-            if [ -n "$EXISTING_ID" ]; then
-              HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
-                -H "Content-Type: application/json" \
-                -d "$BODY" \
-                "${WEBHOOK}/messages/${EXISTING_ID}")
-              if [ "$HTTP" = "200" ]; then
-                echo "Status-Nachricht $EXISTING_ID aktualisiert."
-                SUCCESS=true
-              else
-                echo "PATCH fehlgeschlagen (HTTP $HTTP), erstelle neue Nachricht."
-              fi
-            fi
-
-            if [ "$SUCCESS" = "false" ]; then
-              RESP=$(curl -s -X POST \
-                -H "Content-Type: application/json" \
-                -d "$BODY" \
-                "${WEBHOOK}?wait=true")
-              NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
-              if [ -n "$NEW_ID" ]; then
-                gh api --method PATCH \
-                  "repos/${{ github.repository }}/actions/variables/STATUS_MESSAGE_ID" \
-                  -f value="$NEW_ID" 2>/dev/null || \
-                gh api --method POST \
-                  "repos/${{ github.repository }}/actions/variables" \
-                  -f name="STATUS_MESSAGE_ID" -f value="$NEW_ID"
-                echo "Neue Status-Nachricht erstellt: $NEW_ID"
-              fi
-            fi
-          else
-            curl -s -X POST \
+          if [ -n "$EXISTING_ID" ]; then
+            HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
               -H "Content-Type: application/json" \
-              -d "$BODY" \
-              "$WEBHOOK"
+              -d "$PAYLOAD" \
+              "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}")
+            [ "$HTTP" = "200" ] && SUCCESS=true && echo "Status-Nachricht $EXISTING_ID aktualisiert."
+            [ "$HTTP" != "200" ] && echo "PATCH fehlgeschlagen (HTTP $HTTP), erstelle neue Nachricht."
           fi
 
-      - name: Archive patchnotes
+          if [ "$SUCCESS" = "false" ]; then
+            RESP=$(curl -s -X POST \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD" \
+              "${{ secrets.DISCORD_WEBHOOK_STATUS }}?wait=true")
+            NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
+            if [ -n "$NEW_ID" ]; then
+              gh api --method PATCH \
+                "repos/${{ github.repository }}/actions/variables/STATUS_MESSAGE_ID" \
+                -f value="$NEW_ID" 2>/dev/null || \
+              gh api --method POST \
+                "repos/${{ github.repository }}/actions/variables" \
+                -f name="STATUS_MESSAGE_ID" -f value="$NEW_ID"
+              echo "Neue Status-Nachricht erstellt: $NEW_ID"
+            fi
+          fi
+
+      # ── Patchnotes archivieren ───────────────────────────────────────────────
+      - name: Patchnotes archivieren
+        if: steps.changed.outputs.patchnotes == 'true'
         run: |
-          VERSION="${{ steps.channel.outputs.current }}"
-          cp patchnotes/pending.md "patchnotes/v${VERSION}.md"
+          VERSION="${{ steps.version.outputs.current }}"
+          cp patchnotes/pending-patchnotes.md "patchnotes/v${VERSION}.md"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "patchnotes/v${VERSION}.md"

@@ -1045,7 +1045,9 @@ html, body {
    der Kachel heraus statt sie zu ersetzen. */
 .job-row {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
+  gap: 15px;
   width: 100%;
   margin-bottom: 16px;
 }
