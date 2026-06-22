@@ -14,6 +14,22 @@ window.devMode = function() {
   render();
 };
 
+/** Lauscht auf die Tastenkombination "daniel" (ohne Eingabefeld), wenn
+    man sich auf der Einstellungs-Seite befindet — aktiviert den Dev-Modus. */
+function setupDevKeyListener() {
+  let buf = '';
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+    if (currentContent !== 'einstellungen') { buf = ''; return; }
+    buf += e.key.toLowerCase();
+    if (buf.length > 6) buf = buf.slice(-6);
+    if (buf === 'daniel') {
+      buf = '';
+      if (!gameFlags.devModeEnabled) devMode();
+    }
+  });
+}
+
 /** Rendert das Dev-Panel innerhalb der Einstellungs-Seite.
     Wird von renderSettings() (content.js) aufgerufen, wenn devModeEnabled. */
 function renderDevPanel(container) {
@@ -78,6 +94,19 @@ function renderDevPanel(container) {
       <div class="dev-row" style="margin-top:12px">
         <button class="dev-btn dev-btn-danger" onclick="devUnlockAll()">Alles freischalten</button>
         <button class="dev-btn dev-btn-danger" onclick="devFullReset()">Hard Reset</button>
+      </div>
+
+      <div class="dev-row" style="margin-top:8px">
+        <label class="dev-label">Changelog</label>
+        <span style="font-size:0.85em">v</span>
+        <select class="dev-input" id="dev-cl-from" style="width:52px">
+          ${Array.from({length: CURRENT_SAVE_VERSION}, (_, i) => `<option value="${i}"${i === 0 ? ' selected' : ''}>v${i}</option>`).join('')}
+        </select>
+        <span style="font-size:0.85em">→ v</span>
+        <select class="dev-input" id="dev-cl-to" style="width:52px">
+          ${Array.from({length: CURRENT_SAVE_VERSION}, (_, i) => `<option value="${i+1}"${i+1 === CURRENT_SAVE_VERSION ? ' selected' : ''}>v${i+1}</option>`).join('')}
+        </select>
+        <button class="dev-btn" onclick="devShowChangelog()">Anzeigen</button>
       </div>
     </div>
   `;
@@ -164,4 +193,11 @@ function devUnlockAll() {
 function devFullReset() {
   if (!confirm('Spielstand wirklich vollständig zurücksetzen?')) return;
   performHardReset();
+}
+
+function devShowChangelog() {
+  const from = parseInt(document.getElementById('dev-cl-from')?.value ?? 0);
+  const to   = parseInt(document.getElementById('dev-cl-to')?.value ?? CURRENT_SAVE_VERSION);
+  if (from >= to) { showToast('Von-Version muss kleiner als Bis-Version sein.', 'error'); return; }
+  showSaveChangelogDialog(from, [], to, true);
 }

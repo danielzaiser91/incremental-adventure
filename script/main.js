@@ -23,6 +23,7 @@ function init() {
   applySelectionSetting();
   setupAutoSave();
   setupAutomation();
+  setupDevKeyListener();
 }
 
 document.addEventListener('DOMContentLoaded', init);

@@ -281,12 +281,15 @@ function changelogEntryHtml(entry) {
     vermerkten Version geändert hat.
     @param {number}   loadedVersion  - Version des geladenen Spielstands
     @param {string[]} migrationFixes - Korrekturen, die automatisch angewendet wurden */
-function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
+function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion = CURRENT_SAVE_VERSION, isDevPreview = false) {
   const versions = Object.keys(SAVE_CHANGELOG)
     .map(Number)
-    .filter(v => v > loadedVersion && v <= CURRENT_SAVE_VERSION)
+    .filter(v => v > loadedVersion && v <= maxVersion)
     .sort((a, b) => a - b);
-  if (versions.length === 0) return;
+  if (versions.length === 0) {
+    if (isDevPreview) showToast('Keine Changelog-Einträge für diesen Bereich.', 'info');
+    return;
+  }
 
   const allEntries = versions.flatMap(v => SAVE_CHANGELOG[v].map(e => ({ ...e, _version: v })));
   const categories = [...new Set([
@@ -323,12 +326,9 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
     </p>
   ` : '';
 
-  const buttons = [
-    {
-      label: 'Spielstand aktualisieren und weiterspielen',
-      onClick: () => closeDialog(() => saveGame())
-    }
-  ];
+  const buttons = isDevPreview
+    ? [{ label: 'Schließen', onClick: () => closeDialog() }]
+    : [{ label: 'Spielstand aktualisieren und weiterspielen', onClick: () => closeDialog(() => saveGame()) }];
 
   if (resetOffered) {
     buttons.push({
@@ -351,7 +351,7 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
   }
 
   showDialog({
-    title: `Changelog von Version ${loadedVersion} zu Version ${CURRENT_SAVE_VERSION}`,
+    title: `Changelog von Version ${loadedVersion} zu Version ${maxVersion}`,
     html: sectionsHtml + fixesHtml + gracefulResetHtml,
     text: allEntries.map(e => e.text),
     buttons,
