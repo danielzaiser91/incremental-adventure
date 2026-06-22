@@ -1,5 +1,5 @@
 <!-- version: 0.14.0 -->
-## 🗺 v0.14.0-alpha — Kapitel 3 Abschluss + Wissensdurst-Skillbaum
+## 🗺 v0.14-alpha — Kapitel 3 Abschluss + Wissensdurst-Skillbaum
 
 **Kapitel 3: Lagerhaus-Mission abschließbar**
 Pereth gibt jetzt einen echten Auftrag: Das Lagerhaus am Südtor erkunden. Wer es betritt, erlebt einen Ich-Perspektiv-Monolog über die Entdeckung darin — und berichtet danach Pereth. Belohnung: 300 Gold + Story 3.6 „Die Schatten-Organisation".
