@@ -1237,6 +1237,8 @@ const NPCS_LETHKAR = [
     location: 'taverne',
     start: () => {
       if (!gameFlags.perethMetFirst) return 'firstMeet';
+      if (gameFlags.chapter3StoryComplete) return 'afterQuest';
+      if (gameFlags.lagerhausVisited) return 'reportBack';
       if (gameFlags.perethQuestStarted) return 'questUpdate';
       return 'idle';
     },
@@ -1267,7 +1269,7 @@ const NPCS_LETHKAR = [
             next: null,
             action: () => {
               gameFlags.perethQuestStarted = true;
-              showToast('Pereth hat dir eine Aufgabe gegeben. Mehr dazu in einer der nächsten Versionen.', 'event');
+              showToast('Neuer Auftrag: Das Lagerhaus am Südtor erkunden.', 'event');
             }
           },
           { label: '"Zu riskant. Vielleicht später."', next: null }
@@ -1276,9 +1278,54 @@ const NPCS_LETHKAR = [
       questUpdate: {
         text: ['"Das Lagerhaus? Noch nicht durch damit?" Er schaut amüsiert. "Kein Druck. Aber das Angebot gilt nur noch eine Weile."'],
         options: [
-          { label: '"Ich bin dabei, ich verspreche es."', next: null },
+          {
+            label: '"Ich war im Lagerhaus. Hier ist, was ich gefunden habe."',
+            next: null,
+            action: () => {
+              gameFlags.lagerhausVisited = true;
+              render();
+              showMonologue('Das Lagerhaus am Südtor', [
+                'Das Schloss am Südtor ist neu. Die Wache dreht Runden wie nach Uhr — zu gleichmäßig für echte Wachsamkeit.',
+                'Ich gehe von hinten rein. Ein Fenster, das nie richtig zugezogen wird. Lagerhäuser, die niemand offiziell besitzt, werden nie fertig gebaut.',
+                'Drinnen: Kisten. Tücher. Staub. Und ganz hinten — ein Tisch mit Papieren, die sorgfältiger aussehen als alles andere hier.',
+                'Namen, die ich aus Thessas Büchern kenne. Routen. Zahlen. Und überall dasselbe Siegel — drei Linien, ein Kreis.',
+                'Ich nehme nichts. Ich merke mir alles. Das hier gehört jemandem, dem man keine Spuren hinterlässt.'
+              ], () => {
+                const npc = NPCS_LETHKAR.find(n => n.id === 'pereth');
+                openNpcDialogWithDef(npc, 'reportBack');
+              });
+            }
+          },
+          { label: '"Noch nicht bereit."', next: null },
           { label: '"Was weißt du über Valdris?"', next: 'valdrisPereth' }
         ]
+      },
+      reportBack: {
+        text: [
+          '"Du warst wirklich drin." Er schaut mich lange an. Dann nickt er einmal, langsam. "Und du hast nichts mitgenommen. Gut."',
+          '"Das Siegel — kenn ich. Valdris benutzt das für Transporte, die offiziell nicht existieren. Überall. Seit Jahren."',
+          '"Du hast mehr rausgefunden als ich in drei Monaten zusammen. Hier." Er schiebt drei Münzbeutel über den Tisch. "300 Gold. Und pass auf, wem du das erzählst."'
+        ],
+        options: [{
+          label: '"Danke. Ich pass auf mich auf."',
+          next: null,
+          action: () => {
+            resources.gold += 300;
+            resources.totalGoldEarned += 300;
+            gameFlags.chapter3StoryComplete = true;
+            showToast('+300 Gold — Pereths Auftrag erfüllt', 'reward');
+            render();
+            setTimeout(() => maybeShowStoryDialog('3.6', () => {}), 400);
+          }
+        }]
+      },
+      afterQuest: {
+        text: [
+          '"Weißt du, was das Interessante an Valdris ist?" Er dreht seinen Becher.',
+          '"Er weiß, dass du hier bist. Wahrscheinlich schon seit du in Lethkar bist. Das ist jetzt der Stand der Dinge."',
+          '"Jetzt weißt du es auch."'
+        ],
+        options: [{ label: '"Ich hab\'s verstanden."', next: null }]
       },
       valdrisPereth: {
         text: [

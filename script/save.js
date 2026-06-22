@@ -52,6 +52,7 @@ function saveGame(opts = {}) {
       strength,
       mut,
       einsicht,
+      wissensdurstSkills,
       alchemie,
       expedition,
       zeitkristalle,
@@ -168,14 +169,15 @@ function applySaveData(save) {
     lethkarUnlocked: false,
     varenaMetFirst: false, thessaMetFirst: false, perethMetFirst: false,
     varenaDecodedBrief: false, thessaTrustGained: false,
-    perethQuestStarted: false, chapter3StoryComplete: false,
+    perethQuestStarted: false, lagerhausVisited: false, chapter3StoryComplete: false,
     ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
   strength       = { xp: 0, level: 0, ...save.strength };
   mut            = { points: 0, totalEarned: 0, ...save.mut };
-  einsicht       = { points: 0, totalEarned: 0, ...save.einsicht };
-  alchemie       = { unlocked: false, levels: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, lastTick: null, ...save.alchemie };
+  einsicht           = { points: 0, totalEarned: 0, ...save.einsicht };
+  wissensdurstSkills = { forschungsinstinkt: false, wissensspeicher: false, doppelteErkenntnis: false, aspektmeister: false, alchemistischesGedaechtnis: false, ...save.wissensdurstSkills };
+  alchemie           = { unlocked: false, levels: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, lastTick: null, ...save.alchemie };
   expedition     = { activeExpedition: null, storyCompleted: [], grindCounts: {}, ...save.expedition };
   zeitkristalle  = save.zeitkristalle ?? 0;
   automation     = { slots: [], ...save.automation };
@@ -643,8 +645,18 @@ function performHardReset() {
   playerStats   = defaultPlayerStats();
   strength      = defaultStrength();
   mut           = { points: 0, totalEarned: 0 };
-  einsicht      = { points: 0, totalEarned: 0 };
-  alchemie      = { unlocked: false, levels: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, lastTick: null };
+  einsicht = wissensdurstSkills.wissensspeicher
+    ? { points: einsicht.points, totalEarned: einsicht.totalEarned }
+    : { points: 0, totalEarned: 0 };
+  const keepAlchemieProgress = wissensdurstSkills.alchemistischesGedaechtnis;
+  alchemie = {
+    unlocked: false,
+    levels:   keepAlchemieProgress
+      ? Object.fromEntries(Object.entries(alchemie.levels).map(([k, v]) => [k, Math.floor(v * 0.5)]))
+      : { feuer:0,wasser:0,erde:0,luft:0,aether:0 },
+    progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 },
+    lastTick: null
+  };
   expedition    = { activeExpedition: null, storyCompleted: [], grindCounts: {} };
   zeitkristalle = 0;
   automation    = { slots: [] };

@@ -239,6 +239,7 @@ let gameFlags = {
   varenaDecodedBrief:          false, // Varena hat den Brief entschlüsselt → Story 3.3
   thessaTrustGained:           false, // Thessa vertraut dem Spieler → Story 3.5
   perethQuestStarted:          false, // Pereth hat eine Aufgabe gegeben → Story 3.6
+  lagerhausVisited:            false, // Spieler war im Lagerhaus → Bericht an Pereth möglich
   chapter3StoryComplete:       false, // Alle Story-Punkte in Lethkar gesehen
 };
 
@@ -460,6 +461,16 @@ let expedition = {
 let einsicht = {
   points:      0,
   totalEarned: 0
+};
+
+/* Wissensdurst-Skillbaum — permanent (übersteht Neuanfang). Freigeschaltet
+   durch Wissensdurst-Punkte (einsicht.points), die durch Alchemie erzeugt werden. */
+let wissensdurstSkills = {
+  forschungsinstinkt:         false, // 1 ✦ → Aspekte +25% schneller
+  wissensspeicher:            false, // 2 ✦ → Wissensdurst übersteht Neuanfang
+  doppelteErkenntnis:         false, // 3 ✦ → Level-Up gibt +1 extra Wissensdurst
+  aspektmeister:              false, // 5 ✦ → zusätzlich 2× Speed (stacks)
+  alchemistischesGedaechtnis: false  // 4 ✦ → 50% Aspekt-Progress übersteht Neuanfang
 };
 
 /* Alchemie-Fortschritt — 5 Aspekte, je ein eigenständiger Fortschritt
