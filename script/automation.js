@@ -73,17 +73,25 @@ const AUTOMATION_ACTIONS = [
   }
 ];
 
-/* ── Interner Timer ───────────────────────────────────────── */
+/* ── Spielzeit-basierter Tick ─────────────────────────────── */
 
-let automationTimerId = null;
+/* Schwelle in Spielminuten pro Automation-Tick.
+   Entspricht WORK_CLOCK_MINUTES (actions.js) = 1 Feldarbeit Spielzeit. */
+const AUTOMATION_CLOCK_PER_TICK = 60;
 
-/** Richtet den Automatisierungs-Tick-Timer neu ein.
-    Wird von main.js nach dem Init und von Slot-Änderungen aufgerufen. */
-function setupAutomation() {
-  if (automationTimerId) { clearInterval(automationTimerId); automationTimerId = null; }
+/** Wird von advanceClock() aufgerufen; feuert tickAutomation() für jede
+    volle AUTOMATION_CLOCK_PER_TICK Spielminuten die vergangen sind. */
+function tickAutomationClock(minutes) {
   if (!gameFlags.automationDiscovered || automation.slots.length === 0) return;
-  automationTimerId = setInterval(tickAutomation, 30_000);
+  automation.clockAccum = (automation.clockAccum || 0) + minutes;
+  while (automation.clockAccum >= AUTOMATION_CLOCK_PER_TICK) {
+    automation.clockAccum -= AUTOMATION_CLOCK_PER_TICK;
+    tickAutomation();
+  }
 }
+
+/** Richtet die Automatisierung ein (kein Timer mehr — läuft über Spielzeit). */
+function setupAutomation() {}
 
 /** Führt alle aktiven Automatisierungs-Slots einmal aus. */
 function tickAutomation() {
@@ -159,7 +167,7 @@ function renderAutomation(el) {
         <div class="auto-action-icon">${action.icon}</div>
         <div class="auto-action-body">
           <div class="auto-action-name">${action.label}</div>
-          ${isActive ? '<div class="auto-action-status">⌛ Aktiv — alle 30 Sek.</div>' : ''}
+          ${isActive ? `<div class="auto-action-status">⌛ Aktiv — alle ${AUTOMATION_CLOCK_PER_TICK} Spielminuten</div>` : ''}
         </div>
         ${btn}
       </div>`;

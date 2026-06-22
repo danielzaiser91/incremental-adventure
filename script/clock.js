@@ -26,6 +26,7 @@ function advanceClock(minutes) {
     gameClock.hour -= 24;
   }
   if (minutes > 0) showTimeToast(minutes);
+  if (minutes > 0) tickAutomationClock(minutes);
 }
 
 /** Kurzer, schwebender Hinweis direkt über der Uhrzeit (unten rechts) —

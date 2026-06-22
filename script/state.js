@@ -507,7 +507,8 @@ let zeitkristalle = 0;
 /* Automatisierungs-Konfiguration. Jeder Slot führt eine Aktion
    periodisch selbst aus, solange ein Zeitkristall zugewiesen ist. */
 let automation = {
-  slots: [] // [{ action: 'fieldwork', enabled: true }, ...]
+  slots:     [], // [{ action: 'feldarbeit', enabled: true }, ...]
+  clockAccum: 0  // akkumulierte Spielminuten seit letztem Tick
 };
 
 /* ── UI-State ─────────────────────────────────────────────── */
