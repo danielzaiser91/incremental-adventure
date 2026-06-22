@@ -12,4 +12,7 @@ Fünf permanente Fähigkeiten, die auch einen Neuanfang überleben:
 - 🌊 Aspektmeister (5 ✦) — nochmals 2× Speed (stapelt mit Forschungsinstinkt)
 - 🧠 Alch. Gedächtnis (4 ✦) — 50% der Aspekt-Level bleiben beim Reset erhalten
 
+**Weitere Verbesserungen**
+- Zeitkristall-Automatisierung läuft jetzt spielzeitbasiert (alle 60 Spielminuten statt alle 30 Echtzeit-Sekunden) — Kristalle arbeiten nun synchron mit dem eigenen Rhythmus, nicht im Hintergrund
+
 🔗 https://danielzaiser91.github.io/incremental-adventure/
