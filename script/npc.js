@@ -268,12 +268,22 @@ const NPCS = {
     name: 'Oswin', icon: '🎩',
     tagline: 'Hochnäsig — spricht nur mit denen, die etwas vorzuweisen haben.',
     availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
-    hasHint: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked,
-    start: 'greet',
+    hasHint: () => (gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked) || (!meta.hasHome && storyState >= 20100 && resources.gold >= 2000),
+    start: () => {
+      if (meta.hasHome) return 'greetHomeOwner';
+      return 'greet';
+    },
     nodes: {
       greet: {
         text: ['Oswin mustert mich von oben bis unten und verzieht das Gesicht. "Wer hat dich hereingelassen?"'],
         options: [
+          {
+            label: 'Ich suche ein Haus in Treutheim.',
+            next: 'houseOffer',
+            visible: () => storyState >= 20100 && !meta.hasHome,
+            locked: () => resources.gold < 2000,
+            reason: 'Erfordert 2000 Gold'
+          },
           {
             label: 'Sprich über Geschäfte.',
             next: 'business',
@@ -282,6 +292,79 @@ const NPCS = {
           },
           { label: 'Ignoriere ihn.', next: null }
         ]
+      },
+      houseOffer: {
+        text: [
+          'Oswin hebt eine Augenbraue. Das ist die erste echte Reaktion, die ich bei ihm sehe.',
+          '"Ein Haus." Er trommelt mit dem Finger auf die Theke. "Weißt du, wie viele Leute hierherkommen und nach einem Haus fragen? Und wie viele davon tatsächlich zahlen können?"',
+          '"Am Westrand steht eines. Leerstand seit zwei Jahren. Der Vorbesitzer ist... gegangen." Er schiebt mir ein Schriftstück zu.',
+          '"Zweitausend Gold. Kein Feilschen."'
+        ],
+        options: [
+          {
+            label: '"Abgemacht."',
+            next: 'houseBought',
+            locked: () => resources.gold < 2000,
+            reason: 'Erfordert 2000 Gold',
+            action: () => {
+              resources.gold -= 2000;
+              meta.hasHome    = true;
+              navUnseen.meinhaus = true;
+              showToast('Das Haus gehört dir. "Mein Haus" ist jetzt in der Navigation verfügbar.', 'event');
+            }
+          },
+          { label: '"Ich überlege es mir."', next: null }
+        ]
+      },
+      houseBought: {
+        text: [
+          'Oswin nimmt das Gold, ohne es zu zählen. Er faltet das Papier zusammen und schiebt es mir zu.',
+          '"Glückwunsch. Du bist jetzt Hauseigentümer." Eine kurze Pause. "Treutheim gewinnt mit jedem Tag."',
+          'Ich glaube, das war sein Versuch eines Witzes.'
+        ],
+        options: [{ label: 'Danke.', next: null }]
+      },
+      greetHomeOwner: {
+        text: ['Oswin nickt mir knapp zu. "Der Hauseigentümer." So nennt er mich jetzt. Nicht Name — Kategorie.'],
+        options: [
+          {
+            label: 'Kann ich die Schmiede ausbauen?',
+            next: 'smithOffer',
+            visible: () => !meta.hasSmith
+          },
+          {
+            label: 'Ich suche jemanden, der mir zeigen kann, wie man das Können noch weiter treibt.',
+            next: 'teacherHint',
+            visible: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked
+          },
+          { label: 'Nur Smalltalk.', next: null }
+        ]
+      },
+      smithOffer: {
+        text: [
+          '"Schmieden." Oswin lehnt sich zurück. "Das ist keine Hobbybastelei. Du brauchst einen Amboss, einen Ofen, richtiges Werkzeug."',
+          '"Ein Schlosser aus der Süderstraße macht sowas. Zwölfhundert Gold. Nicht billig, aber sauber gebaut."',
+          '"Willst du das?"'
+        ],
+        options: [
+          {
+            label: '"Machen wir es."',
+            next: 'smithBought',
+            locked: () => resources.gold < 1200,
+            reason: 'Erfordert 1200 Gold',
+            action: () => {
+              resources.gold -= 1200;
+              meta.hasSmith   = true;
+              navUnseen.schmiede = true;
+              showToast('Die Schmiede ist fertig. Sie ist jetzt in "Mein Haus" verfügbar.', 'event');
+            }
+          },
+          { label: '"Noch nicht."', next: null }
+        ]
+      },
+      smithBought: {
+        text: ['"Schön", sagt Oswin. "Hast du jetzt eine Schmiede." Eine weitere Pause. "Du wirst es brauchen."'],
+        options: [{ label: 'Danke.', next: null }]
       },
       business: {
         text: ['Er hebt eine Augenbraue, fast beeindruckt. "Nun gut. Vielleicht bist du doch nicht völlig wertlos."'],

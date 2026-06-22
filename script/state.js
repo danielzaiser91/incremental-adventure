@@ -118,8 +118,10 @@ let resources = {
 
 /* Fortschritt, der Kapitel-Resets überlebt (Meta-Progression) */
 let meta = {
-  resets:            0,      // Anzahl der bewusst vom Spieler ausgelösten Neuanfänge
-  fasterWorkUnlocked: false  // Erleichterung nach dem 1. Neuanfang
+  resets:             0,     // Anzahl der bewusst vom Spieler ausgelösten Neuanfänge
+  fasterWorkUnlocked: false, // Erleichterung nach dem 1. Neuanfang
+  hasHome:            false, // Eigenheim in Treutheim gekauft (dauerhaft)
+  hasSmith:           false  // Schmiede im Eigenheim ausgebaut (dauerhaft)
 };
 
 /* Ausrüstungs-Slots: itemId oder null. Ausgerüstetes wirkt sich aufs
@@ -234,7 +236,9 @@ let navUnseen = {
   lehrer:       false,    // erst sichtbar nach Oswin-Gespräch (gameFlags.lehrerUnlocked)
   jagdgebiet:   false,    // erst sichtbar nach Gildeneintritt (gameFlags.jagdgebietUnlocked)
   automation:   false,    // erst sichtbar nach erstem Zeitkristall-Fund
-  stadtwache:   false     // erst sichtbar nach Roswalds Angebot angenommen
+  stadtwache:   false,    // erst sichtbar nach Roswalds Angebot angenommen
+  meinhaus:     false,    // erst sichtbar nach Hauskauf (meta.hasHome)
+  schmiede:     false     // erst sichtbar nach Schmiede-Umbau (meta.hasSmith)
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —

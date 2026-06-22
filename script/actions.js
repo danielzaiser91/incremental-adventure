@@ -189,6 +189,11 @@ const SLEEP_OPTIONS = [
     id: 'inn', name: 'Schäbige Absteige', icon: '🛏', cost: 5, qualityTier: 1,
     desc: 'Ein Strohsack unter einem Dach. Besser als die Straße.', hungerPenalty: 0,
     requiresFlag: 'firstSleepTriggered'
+  },
+  {
+    id: 'home', name: 'Im eigenen Bett', icon: '🏠', cost: 0, qualityTier: 3,
+    desc: 'Mein Bett. Mein Dach. Kein Lärm, keine fremden Atemzüge.', hungerPenalty: 0,
+    requiresMeta: 'hasHome'
   }
 ];
 

@@ -89,7 +89,7 @@ function applySaveData(save) {
 
   storyState     = save.storyState;
   resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0, ...save.resources };
-  meta           = { resets: 0, fasterWorkUnlocked: false, ...save.meta };
+  meta           = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false, ...save.meta };
   equipment      = { hands: null, guertel: null, ...save.equipment };
   experience     = { points: 0, totalEarned: 0, ...save.experience };
   skills         = {
@@ -134,6 +134,7 @@ function applySaveData(save) {
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
+    meinhaus: false, schmiede: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -544,7 +545,8 @@ function defaultNavUnseen()    {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
-    jagdgebiet: false, automation: false, stadtwache: false
+    jagdgebiet: false, automation: false, stadtwache: false,
+    meinhaus: false, schmiede: false
   };
 }
 function defaultGameFlags()    {
@@ -588,7 +590,7 @@ function performHardReset() {
 
   storyState    = 10100;
   resources     = defaultResources();
-  meta          = { resets: 0, fasterWorkUnlocked: false };
+  meta          = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false };
   equipment     = defaultEquipment();
   experience    = { points: 0, totalEarned: 0 };
   skills        = {

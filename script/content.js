@@ -32,6 +32,8 @@ function renderContent() {
     case 'lehrer':        renderLehrer(area);        break;
     case 'jagdgebiet':    renderJagdgebiet(area);   break;
     case 'stadtwache':    renderStadtwache(area);   break;
+    case 'meinhaus':      renderMeinHaus(area);     break;
+    case 'schmiede':      renderSchmiede(area);     break;
     case 'automation':    renderAutomation(area);   break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
@@ -553,6 +555,42 @@ function renderRohstoffe(el) {
   `;
 }
 
+/* ── Mein Haus ────────────────────────────────────────────── */
+function renderMeinHaus(el) {
+  const sleepOption = SLEEP_OPTIONS.find(o => o.id === 'home');
+  const qualityTier = sleepOption ? getSleepQualityTier(sleepOption) : 3;
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Mein Haus</div>
+      <div class="location-card">
+        <p class="location-card-desc">Am Westrand von Treutheim. Kein Lärm, keine fremden Schritte. Es ist nicht viel — aber es gehört mir.</p>
+        <div class="location-card-actions">
+          <button class="goto-btn" onclick="showContent('schlafplatz')">🛏 Schlafen (Qualität ${qualityTier})</button>
+          ${meta.hasSmith
+            ? `<button class="goto-btn" onclick="showContent('schmiede')">⚒ Zur Schmiede</button>`
+            : `<div class="action-card" style="margin-top:12px;">
+                <div class="action-card-title">⚒ Schmiede ausbauen</div>
+                <p class="action-card-desc">Ein Schlosser aus der Süderstraße könnte eine Schmiede einbauen. Oswin vermittelt das.</p>
+                <div class="action-card-effect">Kosten: 1200 Gold · Sprich mit Oswin in der Taverne.</div>
+              </div>`
+          }
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderSchmiede(el) {
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Schmiede</div>
+      <div class="location-card">
+        <p class="location-card-desc">Der Amboss steht noch unberührt. Der Ofen glüht zum ersten Mal. Hier wird noch nichts Großes entstehen — aber der Anfang ist gemacht.</p>
+        <p class="location-card-desc" style="color:var(--muted);font-style:italic;">Schmiede-Handwerk kommt in einer der nächsten Versionen.</p>
+      </div>
+    </div>`;
+}
+
 /* ── Stadtwache ───────────────────────────────────────────── */
 function renderStadtwache(el) {
   if (!gameFlags.stadtwacheAccepted) {
@@ -644,7 +682,10 @@ function renderSchlafplatz(el) {
   // Auf der Straße ist anfangs die einzige sichtbare Option — die Absteige
   // erscheint erst, nachdem die Figur weiß, wie schlecht sich das anfühlt
   // (siehe SLEEP_OPTIONS, `requiresFlag`).
-  const visibleOptions = SLEEP_OPTIONS.filter(o => !o.requiresFlag || gameFlags[o.requiresFlag]);
+  const visibleOptions = SLEEP_OPTIONS.filter(o =>
+    (!o.requiresFlag || gameFlags[o.requiresFlag]) &&
+    (!o.requiresMeta  || meta[o.requiresMeta])
+  );
   const cards = visibleOptions.map(o => {
     const qualityTier = getSleepQualityTier(o);
     const reliefPct = night ? Math.round(100 * recoveryMult * getSleepQualityFactor(o)) : Math.round(100 * getSleepQualityFactor(o));

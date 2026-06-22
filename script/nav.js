@@ -13,7 +13,7 @@
 'use strict';
 
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
-const TOWN_CONTENT_IDS = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet', 'stadtwache'];
+const TOWN_CONTENT_IDS = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet', 'stadtwache', 'meinhaus', 'schmiede'];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
@@ -116,7 +116,9 @@ function renderLocationNavSection() {
     ...(gameFlags.firstNightDialogShown ? [['schlafplatz', '🛏', 'Schlafplatz']] : []),
     ...(gameFlags.resourceGatheringUnlocked ? [['rohstoffe', '🌲', 'Sammelplatz']] : []),
     ...(gameFlags.jagdgebietUnlocked        ? [['jagdgebiet', '⚔', 'Jagdgebiet']]  : []),
-    ...(gameFlags.stadtwacheAccepted        ? [['stadtwache', '🛡', 'Stadtwache']]  : [])
+    ...(gameFlags.stadtwacheAccepted        ? [['stadtwache', '🛡', 'Stadtwache']]  : []),
+    ...(meta.hasHome                        ? [['meinhaus',   '🏠', 'Mein Haus']]   : []),
+    ...(meta.hasSmith                       ? [['schmiede',   '⚒', 'Schmiede']]     : [])
   ];
   const buttons = places.map(([id, icon, label]) => {
     const active = currentContent === id ? 'active' : '';
