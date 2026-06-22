@@ -83,7 +83,7 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Automatisierungs-Slots kosten keine Hunger/Müdigkeit mehr — erfordern aber Erfahrungs-Schwellen zum Freischalten.' },
     { cat: 'Änderung', text: 'Haustier-Training: maximal einmal pro Spieltag.' },
     { cat: 'Änderung', text: '"Erste Schwielen" erfordert jetzt das erste Feldarbeits-Level-Up statt nur die erste Arbeit.' },
-    { cat: 'Bugfix',   text: 'Autospeicher-Standardintervall auf 1 Minute korrigiert.' }
+    { cat: 'Änderung', text: 'Autospeicher-Standard auf 1 Minute geändert.' }
   ]
 };
 
