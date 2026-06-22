@@ -1,3 +1,4 @@
+<!-- channel: patchnotes -->
 ## 🗺 Version 0.13.0-alpha — Lethkar
 
 **Eigenes Zuhause**

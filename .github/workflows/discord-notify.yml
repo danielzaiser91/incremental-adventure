@@ -14,21 +14,15 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Determine channel from version bump
+      - name: Determine channel from pending.md
         id: channel
         run: |
-          CURRENT=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
-          PREVIOUS=$(git show HEAD~1:script/content.js 2>/dev/null | grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo "0.0.0")
+          CHANNEL=$(head -1 patchnotes/pending.md | grep -oP '(?<=channel: )\w+' || echo "status")
+          VERSION=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
 
-          echo "current=$CURRENT" >> $GITHUB_OUTPUT
-          echo "previous=$PREVIOUS" >> $GITHUB_OUTPUT
+          echo "current=$VERSION" >> $GITHUB_OUTPUT
 
-          CUR_MAJOR=$(echo $CURRENT | cut -d. -f1)
-          CUR_MINOR=$(echo $CURRENT | cut -d. -f2)
-          PREV_MAJOR=$(echo $PREVIOUS | cut -d. -f1)
-          PREV_MINOR=$(echo $PREVIOUS | cut -d. -f2)
-
-          if [ "$CUR_MAJOR" != "$PREV_MAJOR" ] || [ "$CUR_MINOR" != "$PREV_MINOR" ]; then
+          if [ "$CHANNEL" = "patchnotes" ]; then
             echo "channel=patchnotes" >> $GITHUB_OUTPUT
             echo "webhook=${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}" >> $GITHUB_OUTPUT
             echo "mention=<@&1518368928370528256>" >> $GITHUB_OUTPUT
