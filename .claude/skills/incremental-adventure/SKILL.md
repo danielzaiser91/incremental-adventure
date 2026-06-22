@@ -1426,6 +1426,28 @@ vermeiden — `auto-fit`/`minmax()` bevorzugen (`.action-grid` als Vorbild).
 **Z-Index-Hierarchie Mobile:** neue feste Elemente < 100; Backdrop = 150;
 Drawers = 200; Dialog-Overlay = 1000; Toasts = 1100.
 
+## First-Time-Momente: jeder echte Wendepunkt braucht einen Ich-Monolog
+
+Sobald der Spieler etwas zum ERSTEN MAL tut, das narratives Gewicht hat, muss
+ein Dialog (Monolog oder Story-Eintrag) erscheinen — geschrieben aus der
+Ich-Perspektive der Spielfigur, max. 2–3 kurze Absätze.
+
+**Kriterium "relevant genug":** Würde die Figur das in ihrem Tagebuch erwähnen?
+Wenn ja → Dialog. Ein reiner UI-Schritt (neues Tab öffnen) → reicht `navUnseen`.
+
+**Timing-Regel:** Bei kurzen Aktionen (Feldarbeit, Kampf) ist der ABSCHLUSS
+der Moment, nicht der Start — der Spieler wartet nicht, er klickt weiter.
+Bei langen Aktionen (Expedition, Schlafen) entsteht die natürliche Pause
+nach dem Abschluss automatisch.
+
+**Dialog-Art:** `maybeShowStoryDialog(id)` für Plot-relevante Einträge (erscheinen
+in der Chronik). `showMonologue()` für kleinere erste Male (Dialog only). Beide
+mit gleicher Sorgfalt schreiben — Ich-Perspektive, keine Meta-Sprache.
+
+**Verkettung:** Neue `maybeTrigger*()`-Funktionen immer mit `onDone`-Callback
+schreiben und verkettet aufrufen (`A(() => B(() => C()))`), nie parallel — sonst
+überschreibt der zweite Dialog den ersten unsichtbar.
+
 ## Bisher offene Punkte
 
 - Feldarbeits-Stufen 4/5 (500k/100M Durchgänge) brauchen einen Beschleuniger

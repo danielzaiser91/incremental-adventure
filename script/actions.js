@@ -548,7 +548,12 @@ const NAV_INTRO_TEXT = {
   quests:       ['Aufgaben, die ich angenommen habe, sollte ich im Auge behalten.'],
   inventar:     ['Was ich bei mir trage, sollte ich griffbereit haben.'],
   erfahrung:    ['Hier könnte ich festhalten, was ich aus allem gelernt habe.'],
-  rohstoffe:    ['Holz, Stein, Kräuter — wenn ich das hier sammle, kann Greta mehr für mich tun.']
+  rohstoffe:    ['Holz, Stein, Kräuter — wenn ich das hier sammle, kann Greta mehr für mich tun.'],
+  meinhaus:     [
+    'Ein Schlüssel. Meiner. Ein Haus. Meins.',
+    'Ich habe noch nie etwas besessen, das nicht in einen Rucksack gepasst hätte.',
+    'Das hier ist kein gemietetes Bett. Das hier ist ein Zuhause.'
+  ]
 };
 
 /** Zeigt die Kurzbemerkung zu einem Nav-Element, falls eine existiert. */

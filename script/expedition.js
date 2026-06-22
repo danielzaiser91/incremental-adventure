@@ -148,6 +148,8 @@ function checkExpedition() {
 
   expedition.activeExpedition = null;
 
+  const isFirstStoryExpedition = active.type === 'story' && expedition.storyCompleted.length === 0;
+
   if (active.type === 'story') {
     if (!expedition.storyCompleted.includes(active.id)) {
       expedition.storyCompleted.push(active.id);
@@ -159,6 +161,16 @@ function checkExpedition() {
   if (def?.reward) def.reward();
   navUnseen.expedition = true;
   render();
+
+  if (isFirstStoryExpedition) {
+    setTimeout(() => {
+      showMonologue('Zurück', [
+        'Ich bin weit weg gewesen. Nicht nach Stunden gemessen — aber nach Gefühl.',
+        'Die Ruinen waren nicht das, was ich erwartet hatte. Steine und Stille und ein Gefühl, das ich nicht benennen kann.',
+        'Ich glaube, ich will das öfter tun. Raus. Weit weg. Ohne zu wissen, was mich erwartet.'
+      ]);
+    }, 300);
+  }
 }
 
 /* ── Expedition-Render ────────────────────────────────────── */

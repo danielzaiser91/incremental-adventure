@@ -158,7 +158,7 @@ function applySaveData(save) {
     commanderInviteShown: false, firstNightWatchLevelUpShown: false, commanderRecruitmentShown: false,
     resetAnimationSeen: false, kapitel2Unlocked: false, jagdgebietUnlocked: false,
     automationDiscovered: false, devModeEnabled: false,
-    firstJagdgebietKill: false, korbinChapter2Talked: false, theftClueFoundInJagdgebiet: false,
+    firstJagdgebietKill: false, firstCombatDefeated: false, korbinChapter2Talked: false, theftClueFoundInJagdgebiet: false,
     miraRevealedInfo: false, brakkaRevealedSuspect: false, fremderConfronted: false,
     chapter2Complete: false, waldtrollKilled: false, waffenschmiedRejected: false,
     foremanEveningAlerted: false,

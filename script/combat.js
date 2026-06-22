@@ -198,10 +198,17 @@ function endCombat(won, monster) {
     killStats.total += 1;
     maybeStrengthLevelUp();
 
-    // Waldtroll-Flag setzen + Roswald-Monolog auslösen
+    // Waldtroll-Flag setzen → persönlicher Moment → dann Roswald
     if (monster.id === 'waldtroll' && !gameFlags.waldtrollKilled) {
       gameFlags.waldtrollKilled = true;
-      maybeTriggerCommanderRecruitment(() => {});
+      render();
+      setTimeout(() => {
+        showMonologue('Das war der Waldtroll', [
+          'Er ist tot. Ich bin nicht tot. Das fühlt sich bedeutsamer an, als ich erwartet hatte.',
+          'Ich stehe noch hier. Meine Hände zittern ein bisschen. Das ist normal, glaube ich.',
+          'Ich glaube, das ist das Schwerste, was ich je getan habe. Und ich möchte Schwereres.'
+        ], () => maybeTriggerCommanderRecruitment(() => {}));
+      }, 400);
     }
 
     let msg = `Sieg! +${gold} Gold, +${monster.xpReward} Stärke-XP.`;
@@ -273,6 +280,20 @@ function endCombat(won, monster) {
     const msg = `Du wirst besiegt und schleichst dich davon. ${goldLost > 0 ? `−${goldLost} Gold.` : ''}`;
     combat.log.unshift(msg);
     showToast(msg, 'error');
+
+    if (!gameFlags.firstCombatDefeated) {
+      gameFlags.firstCombatDefeated = true;
+      render();
+      setTimeout(() => {
+        showMonologue('Der Boden ist härter als erwartet', [
+          'Ich liege auf dem Rücken und starre in die Baumwipfel. Ich weiß nicht genau, wie ich dorthin gekommen bin.',
+          goldLost > 0
+            ? `Mein Beutel ist leichter. ${goldLost} Gold weg — bezahlt an das Jagdgebiet, ob ich will oder nicht.`
+            : 'Wenigstens mein Gold ist noch da.',
+          'Das nächste Mal bin ich vorbereitet. Oder zumindest schneller beim Weglaufen.'
+        ]);
+      }, 400);
+    }
   }
 
   render();

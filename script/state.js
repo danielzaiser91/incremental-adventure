@@ -100,7 +100,7 @@ const SAVE_CHANGELOG = {
       spoiler: () => !gameFlags.jagdgebietUnlocked },
     { cat: 'Neuerung', text: 'Kapitel 3: Lethkar freigeschaltet (nach Kap-2-Ende + 3 Mut).',
       spoiler: () => !gameFlags.lethkarUnlocked },
-    { cat: 'Neuerung', text: 'Alchemie: 5 Aspekte mit Echtzeit-Fortschritt, erzeugt Einsicht als Prestige-Währung.',
+    { cat: 'Neuerung', text: 'Alchemie: 5 Aspekte mit Echtzeit-Fortschritt, erzeugt Wissensdurst als Prestige-Währung.',
       spoiler: () => !alchemie.unlocked },
     { cat: 'Neuerung', text: 'Lethkar: NPCs Varena, Thessa, Pereth — Story 3.0–3.5 + Valdris-Spur.',
       spoiler: () => !gameFlags.lethkarUnlocked },
@@ -215,6 +215,7 @@ let gameFlags = {
   isWorking:                   false,
   // ── Kapitel-2-Story-Flags ──────────────────────────────────
   firstJagdgebietKill:         false, // Erster Kill im Jagdgebiet → Story 2.1
+  firstCombatDefeated:         false, // Erster Kampfverlust → Ich-Monolog
   korbinChapter2Talked:        false, // Korbin hat von der Raubserie erzählt → Story 2.2
   theftClueFoundInJagdgebiet:  false, // Münze des Spielers unter Räuber-Habe gefunden → Story 2.3
   miraRevealedInfo:            false, // Mira hat ihre Informationen geteilt → Story 2.4
@@ -454,7 +455,7 @@ let expedition = {
   grindCounts:      {}      // id -> Anzahl abgeschlossener Grind-Runs
 };
 
-/* Einsicht — Prestige-Währung für Akt III (Lethkar), übersteht alle
+/* Wissensdurst — Prestige-Währung für Akt III (Lethkar), übersteht alle
    Resets. Wird durch Alchemie-Fortschritt erzeugt. */
 let einsicht = {
   points:      0,

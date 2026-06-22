@@ -3,6 +3,51 @@
 
 ---
 
+## Claudes Gedächtnissystem: Was landet wo?
+
+Claude hat mehrere Schichten, in denen Informationen hinterlegt sein können.
+Je nach Art der Information gehört sie an einen anderen Ort:
+
+### SKILL.md — `.claude/skills/incremental-adventure/SKILL.md`
+**Was:** Architekturregeln, hartgelernte Bugs, Design-Patterns, die beim Coden
+direkt relevant sind. Wird am Anfang JEDER Session automatisch eingelesen.
+**Merksatz:** Alles, was Claude beim Schreiben von Code wissen muss, um keinen
+alten Fehler zu wiederholen oder gegen Projektregeln zu verstoßen.
+**Beispiele:**
+- "Dialog-Ketten immer mit `closeDialog(callback)`, nie direkt hintereinander"
+- "First-Time-Momente brauchen Ich-Perspektiv-Dialoge beim ABSCHLUSS, nicht Start"
+- "Render-Funktionen dürfen render() nicht selbst aufrufen"
+
+### /memory/ — `C:\Users\ih\.claude\projects\...\memory\`
+Persistentes Gedächtnis über Sessions hinweg. Vier Typen:
+- **user_*.md** — Wer ist der User? (Rolle, Vorwissen, Präferenzen)
+- **feedback_*.md** — Korrekturen und bestätigte Vorgehensweisen ("nicht so", "genau so")
+- **project_*.md** — Was läuft gerade, warum, bis wann
+- **reference_*.md** — Wo findet Claude externe Infos (z.B. Webhooks, Discord-Kanal-IDs)
+
+**Webhooks und Secrets** → `memory/discord_setup.md` (type: reference).
+Niemals ins Git-Repo, niemals in SKILL.md. Der /memory/-Ordner ist lokal und
+wird nie committed.
+
+### notes/ — Spieldesign-Dokumente des Users
+Für Claude nur lesbares Hintergrundwissen. Claude schreibt hier nur rein,
+wenn der User explizit bittet. Kein automatisches Laden.
+
+### Faustregel: Wohin gehört was?
+| Information | Ziel |
+|-------------|------|
+| Coding-Pattern oder Bug-Lehre | SKILL.md |
+| Grundlegende Design-Philosophie (z.B. "first-time Momente") | SKILL.md |
+| Dinge die nur BEIM CODEN relevant sind | SKILL.md |
+| Webhooks, externe URLs, Kanal-IDs | memory/reference_*.md |
+| User-Korrekturen ("mach X nicht mehr so") | memory/feedback_*.md |
+| Was gerade gebaut wird, warum | memory/project_*.md |
+| Spieldesign-Entscheidungen (Story, Balance) | notes/ (User's Dokumente) |
+| Git-/Commit-History | Git (nicht im Memory) |
+| Aktuelle Session-Aufgaben | Conversation context (nicht speichern) |
+
+---
+
 ## Grundprinzip: Was du sagst, bekomme ich
 
 Claude arbeitet am besten, wenn ein Prompt drei Dinge enthält:

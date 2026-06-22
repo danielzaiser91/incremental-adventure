@@ -49,7 +49,7 @@ function tickAlchemie(seconds) {
       einsicht.points      += 1;
       einsicht.totalEarned += 1;
       if (currentContent === 'alchemie' || currentContent === 'stats') {
-        showToast(`${aspect.icon} ${aspect.name} Stufe ${alchemie.levels[id]}! +1 Einsicht ✦`, 'reward');
+        showToast(`${aspect.icon} ${aspect.name} Stufe ${alchemie.levels[id]}! +1 Wissensdurst ✦`, 'reward');
       }
       threshold = alchemieThreshold(alchemie.levels[id]);
     }
@@ -95,7 +95,7 @@ function renderAlchemie(el) {
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Alchemie</div>
-      <p style="color:var(--muted);margin-bottom:12px;">Einsicht: <strong>✦ ${einsicht.points}</strong> (gesamt erworben: ${einsicht.totalEarned})</p>
+      <p style="color:var(--muted);margin-bottom:12px;">Wissensdurst: <strong>✦ ${einsicht.points}</strong> (gesamt erworben: ${einsicht.totalEarned})</p>
       <div class="action-grid">${bars}</div>
     </div>`;
 }
