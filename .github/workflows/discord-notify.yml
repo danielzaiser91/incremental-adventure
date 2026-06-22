@@ -9,7 +9,7 @@ on:
 
 permissions:
   contents: write   # für git push (Archiv)
-  actions: write    # für STATUS_MESSAGE_ID Variable
+  actions: write    # für Message-ID Variablen
 
 jobs:
   notify:
@@ -31,27 +31,69 @@ jobs:
             && echo "status=true" >> $GITHUB_OUTPUT \
             || echo "status=false" >> $GITHUB_OUTPUT
 
-      - name: Version aus content.js lesen
-        id: version
-        run: |
-          VERSION=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
-          echo "current=$VERSION" >> $GITHUB_OUTPUT
-
       - name: Warten auf GitHub Pages
         if: steps.changed.outputs.patchnotes == 'true' || steps.changed.outputs.status == 'true'
         run: sleep 120
 
-      # ── Patchnotes → #patchnotes (immer neue Nachricht, mit @Mention) ──────
+      # ── Patchnotes → #patchnotes ─────────────────────────────────────────────
+      # Gleiche Version: PATCH (kein Ping) — neue Version: POST (mit @Patchnotes)
       - name: Patchnotes an Discord senden
         if: steps.changed.outputs.patchnotes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          CONTENT=$(cat patchnotes/pending-patchnotes.md)
-          PAYLOAD=$(jq -n --arg c "<@&1518368928370528256>
+          VERSION=$(head -1 patchnotes/pending-patchnotes.md | grep -oP '(?<=<!-- version: )[^>]+(?= -->)' || true)
+          CONTENT=$(tail -n +2 patchnotes/pending-patchnotes.md)
+          LAST_VERSION="${{ vars.PATCHNOTES_LAST_VERSION }}"
+          EXISTING_ID="${{ vars.PATCHNOTES_MESSAGE_ID }}"
+          SUCCESS=false
+
+          # Gleiche Version + gespeicherte ID → PATCH (kein erneuter Ping)
+          if [ -n "$VERSION" ] && [ "$VERSION" = "$LAST_VERSION" ] && [ -n "$EXISTING_ID" ]; then
+            echo "Selbe Version ($VERSION), versuche PATCH auf $EXISTING_ID..."
+            PAYLOAD=$(jq -n --arg c "$CONTENT" '{content: $c}')
+            HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD" \
+              "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}")
+            if [ "$HTTP" = "200" ]; then
+              echo "Patchnotes v$VERSION aktualisiert."
+              SUCCESS=true
+            else
+              echo "PATCH fehlgeschlagen (HTTP $HTTP), poste neue Nachricht."
+            fi
+          fi
+
+          # Neue Version oder PATCH fehlgeschlagen → POST mit @Mention
+          if [ "$SUCCESS" = "false" ]; then
+            MENTION_LINE="<@&1518368928370528256>"
+            PAYLOAD=$(jq -n --arg c "${MENTION_LINE}
           ${CONTENT}" '{content: $c}')
-          curl -s -X POST \
-            -H "Content-Type: application/json" \
-            -d "$PAYLOAD" \
-            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}"
+            RESP=$(curl -s -X POST \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD" \
+              "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true")
+            NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
+            if [ -n "$NEW_ID" ]; then
+              gh api --method PATCH \
+                "repos/${{ github.repository }}/actions/variables/PATCHNOTES_MESSAGE_ID" \
+                -f value="$NEW_ID" 2>/dev/null || \
+              gh api --method POST \
+                "repos/${{ github.repository }}/actions/variables" \
+                -f name="PATCHNOTES_MESSAGE_ID" -f value="$NEW_ID"
+              if [ -n "$VERSION" ]; then
+                gh api --method PATCH \
+                  "repos/${{ github.repository }}/actions/variables/PATCHNOTES_LAST_VERSION" \
+                  -f value="$VERSION" 2>/dev/null || \
+                gh api --method POST \
+                  "repos/${{ github.repository }}/actions/variables" \
+                  -f name="PATCHNOTES_LAST_VERSION" -f value="$VERSION"
+              fi
+              echo "Neue Patchnotes v${VERSION:-unbekannt} gepostet: $NEW_ID"
+            else
+              echo "FEHLER beim Posten: $RESP"
+            fi
+          fi
 
       # ── Status → #status (persistente Nachricht editieren) ──────────────────
       - name: Status in Discord aktualisieren
@@ -60,7 +102,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CONTENT=$(cat patchnotes/pending-status.md)
-          PAYLOAD=$(jq -n --arg c "${CONTENT}" '{content: $c}')
+          PAYLOAD=$(jq -n --arg c "$CONTENT" '{content: $c}')
           EXISTING_ID="${{ vars.STATUS_MESSAGE_ID }}"
           SUCCESS=false
 
@@ -69,8 +111,12 @@ jobs:
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
               "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}")
-            [ "$HTTP" = "200" ] && SUCCESS=true && echo "Status-Nachricht $EXISTING_ID aktualisiert."
-            [ "$HTTP" != "200" ] && echo "PATCH fehlgeschlagen (HTTP $HTTP), erstelle neue Nachricht."
+            if [ "$HTTP" = "200" ]; then
+              echo "Status-Nachricht $EXISTING_ID aktualisiert."
+              SUCCESS=true
+            else
+              echo "PATCH fehlgeschlagen (HTTP $HTTP), erstelle neue Nachricht."
+            fi
           fi
 
           if [ "$SUCCESS" = "false" ]; then
@@ -87,17 +133,19 @@ jobs:
                 "repos/${{ github.repository }}/actions/variables" \
                 -f name="STATUS_MESSAGE_ID" -f value="$NEW_ID"
               echo "Neue Status-Nachricht erstellt: $NEW_ID"
+            else
+              echo "FEHLER beim Posten: $RESP"
             fi
           fi
 
-      # ── Patchnotes archivieren ───────────────────────────────────────────────
+      # ── Patchnotes archivieren (nur bei neuer Version) ───────────────────────
       - name: Patchnotes archivieren
         if: steps.changed.outputs.patchnotes == 'true'
         run: |
-          VERSION="${{ steps.version.outputs.current }}"
+          VERSION=$(head -1 patchnotes/pending-patchnotes.md | grep -oP '(?<=<!-- version: )[^>]+(?= -->)' || echo "unknown")
           cp patchnotes/pending-patchnotes.md "patchnotes/v${VERSION}.md"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "patchnotes/v${VERSION}.md"
-          git commit -m "chore: archive patchnotes v${VERSION} [skip ci]"
-          git push
+          git diff --staged --quiet || git commit -m "chore: archive patchnotes v${VERSION} [skip ci]"
+          git diff --staged --quiet || git push
