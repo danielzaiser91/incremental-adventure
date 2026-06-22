@@ -1048,9 +1048,15 @@ html, body {
   display: flex;
   align-items: stretch;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
   width: 100%;
   margin-bottom: 16px;
+}
+
+.job-row > * {
+  max-height: 480px;
+  max-width: 320px;
 }
 
 .job-card-wrap {
@@ -1281,6 +1287,14 @@ html, body {
   border-radius: var(--rad-sm);
   overflow: hidden;
   margin-bottom: 10px;
+  /* Immer Platz reservieren — nur Sichtbarkeit toggled, kein Layout-Shift */
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.progress-container.hidden {
+  opacity: 0 !important;
+  display: block !important;
 }
 
 .progress-bar {
