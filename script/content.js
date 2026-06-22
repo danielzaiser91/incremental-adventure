@@ -480,7 +480,7 @@ function renderArbeitsplatz(el) {
           <div class="reward-info">Belohnung: <span class="gold-amount">+${reward} Gold</span></div>
           ${levelNote}
           <div class="action-card-effect">
-            😴 Schlaf-Erholung danach: −${Math.round(NIGHTWATCH_RECOVERY_PENALTY * 100)}%
+            😴 Schlaf-Erholung danach: ${getNightWatchRecoveryPenalty() > 0 ? `−${Math.round(getNightWatchRecoveryPenalty() * 100)}%` : 'kein Debuff (Eiserne Wacht)'}
           </div>
         </div>`;
     }
@@ -564,9 +564,9 @@ function renderSchlafplatz(el) {
     ? 'Der Tag ist noch nicht vorbei. Ich sollte die Zeit nutzen, solange ich kann.'
     : 'Ich bin hundemüde — aber es ist noch nicht spät genug, um schlafen zu gehen. Das wäre vergeudete Zeit.';
 
-  const recoveryMult = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
-  const debuffNote = night && nightFlags.recoveryDebuff
-    ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(NIGHTWATCH_RECOVERY_PENALTY * 100)}% schlechter.</p>`
+  const recoveryMult = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
+  const debuffNote = night && nightFlags.recoveryDebuff && getNightWatchRecoveryPenalty() > 0
+    ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(getNightWatchRecoveryPenalty() * 100)}% schlechter.</p>`
     : '';
 
   // Auf der Straße ist anfangs die einzige sichtbare Option — die Absteige

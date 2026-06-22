@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 9;
+const CURRENT_SAVE_VERSION = 10;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -84,6 +84,14 @@ const SAVE_CHANGELOG = {
     { cat: 'Änderung', text: 'Haustier-Training: maximal einmal pro Spieltag.' },
     { cat: 'Änderung', text: '"Erste Schwielen" erfordert jetzt das erste Feldarbeits-Level-Up statt nur die erste Arbeit.' },
     { cat: 'Änderung', text: 'Autospeicher-Standard auf 1 Minute geändert.' }
+  ],
+  10: [
+    { cat: 'Neuerung', text: 'Stadtwache: neuer Tagesjob in Treutheim (Kapitel 2, nach Waldtroll-Sieg).',
+      spoiler: () => !gameFlags.kapitel2Unlocked },
+    { cat: 'Neuerung', text: 'Vier neue Super-Skills: Eiserner Wille+, Geschickte Hände+, Nächtliche Routine+, Fest verschnürt+.' },
+    { cat: 'Neuerung', text: 'Eiserner Wille+: Hunger hat keinen Einfluss mehr auf den Müdigkeitsaufbau.' },
+    { cat: 'Neuerung', text: 'Nächtliche Routine+: Nachtwache verursacht keinen Schlaf-Debuff mehr.' },
+    { cat: 'Neuerung', text: 'Fest verschnürt+: +3 Inventarplätze (12 → 15).' }
   ]
 };
 
@@ -199,7 +207,11 @@ let gameFlags = {
   chapter2Complete:            false, // Kapitel 2 vollständig abgeschlossen → Story 2.7 + Sieg-Dialog
   waldtrollKilled:             false, // Mindestens einen Waldtroll besiegt (Tor zur Endkonfrontation)
   waffenschmiedRejected:       false, // Spieler wurde vom Waffenschmied abgewiesen → Brakka bietet Gilde an
-  foremanEveningAlerted:       false  // Taverne-Nav einmalig beleuchtet, sobald Vorarbeiter abends antreffbar war
+  foremanEveningAlerted:       false, // Taverne-Nav einmalig beleuchtet, sobald Vorarbeiter abends antreffbar war
+  stadtwacheAccepted:          false, // Spieler hat das Stadtwache-Angebot von Roswald angenommen
+  stadtwacheDeclined:          false, // Spieler hat das Angebot zunächst abgelehnt (Roswald fragt später nochmal)
+  isStadtwacheShift:           false, // Läuft gerade eine Stadtwache-Schicht (Progressbar aktiv)
+  fullInventoryReset:          false  // Spieler hat mindestens einmal mit vollem Inventar (12+) einen Neuanfang gemacht
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
@@ -282,7 +294,13 @@ let npcFlags = {
 
 /* Fortschritt in der Feldarbeit (Erfahrungs-/Level-System, siehe actions.js) */
 let workStats = {
-  count: 0 // Anzahl insgesamt abgeschlossener Feldarbeits-Durchgänge
+  count: 0,           // Anzahl insgesamt abgeschlossener Feldarbeits-Durchgänge
+  hungryWorkCount: 0  // Feldarbeiten im Hunger-Zustand (für ironWill_super-Quest)
+};
+
+/* Fortschritt in der Stadtwache (analog zu workStats, Kapitel 2) */
+let stadtwacheStats = {
+  count: 0 // Anzahl abgeschlossener Stadtwache-Schichten
 };
 
 /* Kampf-Statistiken (Kapitel 2) — Kill-Zähler pro Monster-Typ */

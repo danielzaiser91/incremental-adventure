@@ -67,6 +67,11 @@ const RESOURCE_ITEMS = [
   { id: 'pflanze', name: 'Wildkraut', icon: '🌿' }
 ];
 
+/** Effektive Inventarkapazität — Basis 12, +3 mit inventoryKeeper_super. */
+function getInventorySlotCount() {
+  return INVENTORY_SLOT_COUNT + (superSkills.inventoryKeeper_super ? 3 : 0);
+}
+
 /** Anzahl belegter Inventar-Plätze — ein Platz pro BESESSENEM Gegenstands-
     TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT. Zählt
     auch Werkzeuge (TOOL_ITEMS, market.js) und Rohstoffe mit, da beide
@@ -88,7 +93,7 @@ function getUsedInventorySlots() {
  */
 function grantItem(itemId, qty = 1) {
   const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
-  if (!alreadyHasSlot && getUsedInventorySlots() >= INVENTORY_SLOT_COUNT) {
+  if (!alreadyHasSlot && getUsedInventorySlots() >= getInventorySlotCount()) {
     overflowBag[itemId] = (overflowBag[itemId] || 0) + qty;
     showToast('Mein Beutel ist voll — das hier trage ich vorerst zusätzlich bei mir.', 'event');
     return;
@@ -104,7 +109,7 @@ function moveFromOverflow(itemId) {
   if (qty <= 0) return;
 
   const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
-  if (!alreadyHasSlot && getUsedInventorySlots() >= INVENTORY_SLOT_COUNT) {
+  if (!alreadyHasSlot && getUsedInventorySlots() >= getInventorySlotCount()) {
     showToast('Noch immer kein Platz im Beutel.', 'error');
     return;
   }
@@ -151,13 +156,14 @@ function renderInventar(el) {
   }
 
   const usedSlots = getUsedInventorySlots();
-  const slotCells = Array.from({ length: INVENTORY_SLOT_COUNT }, (_, i) =>
+  const totalSlots = getInventorySlotCount();
+  const slotCells = Array.from({ length: totalSlots }, (_, i) =>
     `<div class="inv-slot-cell ${i < usedSlots ? 'filled' : 'empty'}"></div>`).join('');
   const slotOverview = `
-    <div class="inv-slot-overview" title="${usedSlots} / ${INVENTORY_SLOT_COUNT} Plätze belegt">
+    <div class="inv-slot-overview" title="${usedSlots} / ${totalSlots} Plätze belegt">
       ${slotCells}
     </div>
-    <div class="inv-slot-label">${usedSlots} / ${INVENTORY_SLOT_COUNT} Plätze belegt</div>`;
+    <div class="inv-slot-label">${usedSlots} / ${totalSlots} Plätze belegt</div>`;
 
   let equipmentSection = '';
   if (hasAnyGear) {

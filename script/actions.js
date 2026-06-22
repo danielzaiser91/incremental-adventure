@@ -16,6 +16,10 @@ const FOREMAN_BONUS_THRESHOLD  = 10; // Feldarbeiten bis zum Vorarbeiter-Bonus
 const FOREMAN_BONUS_GOLD       = 5;  // Einmalige Gold-Gabe beim Auslösen
 
 const NIGHTWATCH_RECOVERY_PENALTY = 0.4; // nächster Schlaf erholt 40% schlechter
+/** Gibt 0 zurück wenn nightWatchLeveling_super aktiv (kein Debuff mehr). */
+function getNightWatchRecoveryPenalty() {
+  return superSkills.nightWatchLeveling_super ? 0 : NIGHTWATCH_RECOVERY_PENALTY;
+}
 const NIGHTWATCH_QUEST_REWARD     = 15;
 const COMMANDER_INVITE_THRESHOLD  = 3; // Nachtwachen bis zur Einladung des Kommandanten
 
@@ -224,7 +228,7 @@ function getWorkXpGain(levelOverride) {
 function getWorkTirednessGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
   const hungerMult = getHungerTier(needs.hunger).tirednessGainMult;
-  const effectiveHungerMult = 1 + (hungerMult - 1) * (skills.ironWill ? 0.5 : 1);
+  const effectiveHungerMult = 1 + (hungerMult - 1) * (superSkills.ironWill_super ? 0 : skills.ironWill ? 0.5 : 1);
   return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult();
 }
 
@@ -581,6 +585,7 @@ function completeWork() {
   resources.gold            += reward;
   resources.totalGoldEarned += reward;
   workStats.count            += getWorkXpGain(levelBefore) * mult;
+  if (wasHungry) workStats.hungryWorkCount = (workStats.hungryWorkCount || 0) + 1;
 
   adjustHunger(getWorkHungerGain(levelBefore) * mult);
   adjustTiredness(tirednessGain);
@@ -703,7 +708,7 @@ function maybeTriggerPostAdoptionText(option) {
     tatsächlich endet. */
 function finishSleep(option) {
   const tirednessBeforeSleep = needs.tiredness;
-  const recoveryMult         = nightFlags.recoveryDebuff ? (1 - NIGHTWATCH_RECOVERY_PENALTY) : 1;
+  const recoveryMult         = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
   const tirednessRelief      = 100 * recoveryMult * getSleepQualityFactor(option);
 
   if (option.cost > 0) resources.gold -= option.cost;

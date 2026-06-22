@@ -32,6 +32,7 @@ function saveGame(opts = {}) {
       quests,
       npcFlags,
       workStats,
+      stadtwacheStats,
       killStats,
       nightWatchStats,
       achievements,
@@ -107,7 +108,8 @@ function applySaveData(save) {
     ...save.quests
   };
   npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, ...save.npcFlags };
-  workStats      = { count: 0, ...save.workStats };
+  workStats      = { count: 0, hungryWorkCount: 0, ...save.workStats };
+  stadtwacheStats = { count: 0, ...save.stadtwacheStats };
   killStats      = { total: 0, ...save.killStats };
   nightWatchStats = { count: 0, ...save.nightWatchStats };
   achievements   = save.achievements ?? {};
@@ -152,7 +154,9 @@ function applySaveData(save) {
     miraRevealedInfo: false, brakkaRevealedSuspect: false, fremderConfronted: false,
     chapter2Complete: false, waldtrollKilled: false, waffenschmiedRejected: false,
     foremanEveningAlerted: false,
-    ...save.gameFlags, isWorking: false
+    stadtwacheAccepted: false, stadtwacheDeclined: false, isStadtwacheShift: false,
+    fullInventoryReset: false,
+    ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
   strength       = { xp: 0, level: 0, ...save.strength };
@@ -517,7 +521,8 @@ function defaultResources()    { return { gold: 0, totalGoldEarned: 0, inventory
 function defaultNeeds()        { return { hunger: 15, tiredness: 0, sleepDebt: 0 }; }
 function defaultGameClock()    { return { day: 1, hour: 7, minute: 0 }; }
 function defaultNightFlags()   { return { nightActivityUsedToday: false, recoveryDebuff: false }; }
-function defaultWorkStats()    { return { count: 0 }; }
+function defaultWorkStats()    { return { count: 0, hungryWorkCount: 0 }; }
+function defaultStadtwacheStats() { return { count: 0 }; }
 function defaultNightWatchStats() { return { count: 0 }; }
 function defaultPlayerStats()  { return { hp: 30, maxHp: 30 }; }
 function defaultStrength()     { return { xp: 0, level: 0 }; }
@@ -556,6 +561,8 @@ function defaultGameFlags()    {
     kapitel2Unlocked: false, jagdgebietUnlocked: false,
     automationDiscovered: false, devModeEnabled: false,
     waffenschmiedRejected: false, foremanEveningAlerted: false,
+    stadtwacheAccepted: false, stadtwacheDeclined: false, isStadtwacheShift: false,
+    fullInventoryReset: false,
     isWorking: false
   };
 }
@@ -598,6 +605,7 @@ function performHardReset() {
   };
   npcFlags      = { miraDrinkGiven: false };
   workStats     = defaultWorkStats();
+  stadtwacheStats = defaultStadtwacheStats();
   nightWatchStats = defaultNightWatchStats();
   achievements  = {};
   achievementTab = 'normal';

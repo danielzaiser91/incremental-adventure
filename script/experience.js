@@ -208,6 +208,38 @@ const SUPER_SKILL_DEFS = [
     questDesc: 'Schlafe 20 Mal auf der Straße.',
     questProgress: () => `${Math.min(streetCatProgress.sleepCount, 20)}/20`,
     questDone: () => streetCatProgress.sleepCount >= 20
+  },
+  {
+    id: 'ironWill_super', forSkill: 'ironWill',
+    name: 'Stählerner Wille', icon: '⚔',
+    shortDesc: 'Hunger hat keinen Einfluss mehr auf den Müdigkeitsaufbau.',
+    questDesc: 'Absolviere 10 Feldarbeiten, während du hungrig bist (Hunger ≥ 80 %).',
+    questProgress: () => `${Math.min(workStats.hungryWorkCount || 0, 10)}/10`,
+    questDone: () => (workStats.hungryWorkCount || 0) >= 10
+  },
+  {
+    id: 'fieldworkMemory_super', forSkill: 'fieldworkMemory',
+    name: 'Muskelgedächtnis', icon: '🤲',
+    shortDesc: 'Auch das Nachtwache-Level übersteht einen Neuanfang.',
+    questDesc: 'Erreiche Feldarbeits-Stufe 3 (50 Feldarbeiten in einem Kapitel).',
+    questProgress: () => `${Math.min(workStats.count, 50)}/50`,
+    questDone: () => getWorkLevel(workStats.count) >= 3
+  },
+  {
+    id: 'nightWatchLeveling_super', forSkill: 'nightWatchLeveling',
+    name: 'Eiserne Wacht', icon: '🌒',
+    shortDesc: 'Nachtwache verursacht keinen Schlaf-Debuff mehr.',
+    questDesc: 'Absolviere 15 Nachtwachen.',
+    questProgress: () => `${Math.min(nightWatchStats.count, 15)}/15`,
+    questDone: () => nightWatchStats.count >= 15
+  },
+  {
+    id: 'inventoryKeeper_super', forSkill: 'inventoryKeeper',
+    name: 'Dicker Rucksack', icon: '🎒',
+    shortDesc: '+3 Inventarplätze (12 → 15).',
+    questDesc: 'Übersteht einen Neuanfang mit 12 oder mehr belegten Inventarplätzen.',
+    questProgress: () => gameFlags.fullInventoryReset ? '1/1' : '0/1',
+    questDone: () => !!gameFlags.fullInventoryReset
   }
 ];
 
@@ -436,7 +468,9 @@ function performManualReset() {
 
   resources.gold = 0;
   if (!skills.fieldworkMemory) workStats.count = 0;
-  nightWatchStats.count = 0; // Nachtwache-Routine kennt (noch) kein Memory-Pendant
+  workStats.hungryWorkCount = 0;
+  if (!superSkills.fieldworkMemory_super) nightWatchStats.count = 0;
+  if (getUsedInventorySlots() >= INVENTORY_SLOT_COUNT) gameFlags.fullInventoryReset = true;
   if (!skills.inventoryKeeper) {
     // Ausrüstung MUSS vor dem Leeren von resources.inventory abgelegt
     // werden, sonst zeigt equipment.* danach auf eine ID, die es im
