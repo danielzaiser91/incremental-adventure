@@ -1,0 +1,68 @@
+name: Discord Release Notification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'patchnotes/pending.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Determine channel from version bump
+        id: channel
+        run: |
+          CURRENT=$(grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' script/content.js | head -1)
+          PREVIOUS=$(git show HEAD~1:script/content.js 2>/dev/null | grep -oP '(?<=info-value">)[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo "0.0.0")
+
+          echo "current=$CURRENT" >> $GITHUB_OUTPUT
+          echo "previous=$PREVIOUS" >> $GITHUB_OUTPUT
+
+          CUR_MAJOR=$(echo $CURRENT | cut -d. -f1)
+          CUR_MINOR=$(echo $CURRENT | cut -d. -f2)
+          PREV_MAJOR=$(echo $PREVIOUS | cut -d. -f1)
+          PREV_MINOR=$(echo $PREVIOUS | cut -d. -f2)
+
+          if [ "$CUR_MAJOR" != "$PREV_MAJOR" ] || [ "$CUR_MINOR" != "$PREV_MINOR" ]; then
+            echo "channel=patchnotes" >> $GITHUB_OUTPUT
+            echo "webhook=${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}" >> $GITHUB_OUTPUT
+            echo "mention=<@&1518368928370528256>" >> $GITHUB_OUTPUT
+          else
+            echo "channel=status" >> $GITHUB_OUTPUT
+            echo "webhook=${{ secrets.DISCORD_WEBHOOK_STATUS }}" >> $GITHUB_OUTPUT
+            echo "mention=<@&1518378825451311105>" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Wait for GitHub Pages
+        run: sleep 120
+
+      - name: Send to Discord
+        run: |
+          CONTENT=$(cat patchnotes/pending.md)
+          MENTION="${{ steps.channel.outputs.mention }}"
+          VERSION="${{ steps.channel.outputs.current }}"
+
+          PAYLOAD=$(jq -n \
+            --arg content "${MENTION}
+          ${CONTENT}" \
+            '{content: $content}')
+
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "${{ steps.channel.outputs.webhook }}"
+
+      - name: Archive patchnotes
+        run: |
+          VERSION="${{ steps.channel.outputs.current }}"
+          cp patchnotes/pending.md "patchnotes/v${VERSION}.md"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "patchnotes/v${VERSION}.md"
+          git commit -m "chore: archive patchnotes v${VERSION} [skip ci]"
+          git push
