@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 11;
+const CURRENT_SAVE_VERSION = 12;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -106,6 +106,12 @@ const SAVE_CHANGELOG = {
       spoiler: () => !gameFlags.lethkarUnlocked },
     { cat: 'Neuerung', text: 'Tier-2-Monster im Jagdgebiet (Steingolem, Schattenwolf, Nordbär) nach Lethkar-Freischaltung.',
       spoiler: () => !gameFlags.lethkarUnlocked }
+  ],
+  12: [
+    { cat: 'Neuerung', text: 'Kapitel 3 Abschluss: Perets Lagerhaus-Auftrag abschließbar — Belohnung + Story 3.6 "Die Schatten-Organisation".',
+      spoiler: () => !gameFlags.lethkarUnlocked },
+    { cat: 'Neuerung', text: 'Wissensdurst-Skillbaum: 5 permanente Fähigkeiten auf der Alchemie-Seite (Forschungsinstinkt, Wissensspeicher u.a.).',
+      spoiler: () => !alchemie.unlocked }
   ]
 };
 

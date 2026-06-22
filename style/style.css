@@ -307,7 +307,6 @@ html, body {
 
 #content-area {
   position: relative;
-  padding: 24px var(--pad) var(--pad);
   height: 100%;
 }
 
@@ -317,6 +316,8 @@ html, body {
   align-items: center;
   text-align: center;
   height: 100%;
+  padding: 24px var(--pad) var(--pad);
+  overflow: auto;
 }
 
 .feature-stage-label {
@@ -1665,6 +1666,7 @@ html, body {
 .needs-tier-1 { color: #e2a33d; }
 .needs-tier-2 { color: #c97a2e; }
 .needs-tier-3 { color: #b33a3a; }
+.needs-tier-4 { color: #8a1515; }
 
 .needs-step-badge {
   font-size: 9px;
@@ -2563,7 +2565,7 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   .achievement-card { max-width: 100%; }
 
   /* ── CONTENT-AREA: weniger Innenabstand ─────────────────── */
-  #content-area { padding: 16px var(--pad-sm) var(--pad-sm); }
+  .feature-stage { padding: 16px var(--pad-sm) var(--pad-sm); }
 
   /* ── JOB-INFO-PANEL: unter Job-Karte statt rechts daneben ── */
   .job-card-wrap { flex-direction: column; }
