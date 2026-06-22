@@ -156,6 +156,7 @@ function applySaveData(save) {
     foremanEveningAlerted: false,
     stadtwacheAccepted: false, stadtwacheDeclined: false, isStadtwacheShift: false,
     fullInventoryReset: false,
+    mirasBriefGiven: false, mirasBriefDecoded: false,
     ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
@@ -563,6 +564,7 @@ function defaultGameFlags()    {
     waffenschmiedRejected: false, foremanEveningAlerted: false,
     stadtwacheAccepted: false, stadtwacheDeclined: false, isStadtwacheShift: false,
     fullInventoryReset: false,
+    mirasBriefGiven: false, mirasBriefDecoded: false,
     isWorking: false
   };
 }

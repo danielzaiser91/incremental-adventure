@@ -134,6 +134,7 @@ const NPCS = {
       if (quests.theftInvestigation.state === 'investigating') return 'detectiveAsk';
       if (!npcFlags.miraDrinkGiven) return 'greet';
       if (meta.resets >= 1 && quests.miraLetter.state === 'unstarted') return 'letterOffer';
+      if (gameFlags.miraRevealedInfo && !gameFlags.mirasBriefGiven) return 'givesBrief';
       if (gameFlags.miraRevealedInfo) return 'friendlyAfterReveal';
       return 'friendly';
     },
@@ -232,6 +233,24 @@ const NPCS = {
               maybeShowStoryDialog('2.4');
               showToast('Mira hat geredet. Brakka als nächstes.', 'event');
             }
+          }
+        }]
+      },
+      givesBrief: {
+        text: [
+          'Mira wartet, bis niemand mehr in Hörweite ist.',
+          '"Ich habe lange gezögert, ob ich dir das gebe. Aber du hast die Wahrheit gefunden, als andere weggeschaut haben." Sie schiebt mir einen gefalteten Brief zu.',
+          '"Er ist verschlüsselt. Ich kann ihn nicht lesen. Aber jemand in Lethkar kann — Varena, am Hafen. Sie ist eine alte Bekannte. Sag ihr, du kommst von mir."',
+          '"Tu mir einen Gefallen: Vergiss nicht, was darin steht."'
+        ],
+        options: [{
+          label: '"Ich vergesse es nicht."',
+          next: null,
+          action: () => {
+            gameFlags.mirasBriefGiven = true;
+            questItems.miras_brief    = (questItems.miras_brief || 0) + 1;
+            navUnseen.inventar        = true;
+            showToast('Mira hat dir einen verschlüsselten Brief gegeben. Er wartet auf eine Übersetzung — in Lethkar.', 'event');
           }
         }]
       },

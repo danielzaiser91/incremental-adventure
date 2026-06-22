@@ -211,7 +211,9 @@ let gameFlags = {
   stadtwacheAccepted:          false, // Spieler hat das Stadtwache-Angebot von Roswald angenommen
   stadtwacheDeclined:          false, // Spieler hat das Angebot zunächst abgelehnt (Roswald fragt später nochmal)
   isStadtwacheShift:           false, // Läuft gerade eine Stadtwache-Schicht (Progressbar aktiv)
-  fullInventoryReset:          false  // Spieler hat mindestens einmal mit vollem Inventar (12+) einen Neuanfang gemacht
+  fullInventoryReset:          false, // Spieler hat mindestens einmal mit vollem Inventar (12+) einen Neuanfang gemacht
+  mirasBriefGiven:             false, // Mira hat dem Spieler den verschlüsselten Brief gegeben (nach Story 2.4)
+  mirasBriefDecoded:           false, // Brief wurde in Lethkar von Varena entschlüsselt
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt

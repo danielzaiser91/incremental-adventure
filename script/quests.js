@@ -94,6 +94,12 @@ const QUEST_ITEMS = [
   {
     id: 'sealedLetter', name: 'Versiegelter Brief', icon: '✉',
     desc: 'Mira hat mir diesen Brief anvertraut — er ist für Brakka bestimmt, niemand sonst.'
+  },
+  {
+    id: 'miras_brief', name: 'Miras verschlüsselter Brief', icon: '🔒',
+    desc: () => gameFlags.mirasBriefDecoded
+      ? 'Inhalt: Valdris. Ein Name. Und eine Adresse in Lethkar. Varena weiß mehr.'
+      : 'Mira gab ihn mir, bevor ich Treutheim verließ. Verschlüsselt — ich verstehe ihn nicht. Irgendwo findet sich jemand, der das kann.'
   }
 ];
 
