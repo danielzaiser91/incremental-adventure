@@ -37,6 +37,9 @@ Stand: 22.06.2026 | Priorisiert, technisch detailliert
 
 ## ZULETZT IMPLEMENTIERT
 
+- ✅ Stadtwache-Arbeitsplatz (22.06.2026, v0.12.0): Tagesjob mit Level-System (5 Stufen), 25–35 Gold/Schicht, Progressbar wie Feldarbeit, Automation-Slot ab 50 Schichten. Roswald bietet Job nach Waldtroll-Sieg an.
+- ✅ Super-Skills (22.06.2026, v0.12.0): ironWill+, fieldworkMemory+, nightWatchLeveling+, inventoryKeeper+ vollständig implementiert.
+- ✅ Kap-2-Ende Objective-Text (22.06.2026, v0.12.0): immersiver Abschluss-Satz.
 - ✅ NPC-Verfügbarkeitsindikator (22.06.2026): farbiger Punkt auf NPC-Kacheln (grün=immer, gelb=abends, grau=unklar), mit Hover-Tooltip in Ich-Perspektive.
 - ✅ Tooltip-Basiswert-Anzeige: "Errechnete Werte" zeigt jetzt Basiswert über Modifikatoren.
 - ✅ Automatisierungs-Overhaul: kein Hunger/Müdigkeit, neue List-UI mit Unlock-Conditions, fieldPay_super im Tooltip.
@@ -44,149 +47,118 @@ Stand: 22.06.2026 | Priorisiert, technisch detailliert
 
 ---
 
-## 1. Stadtwache-Arbeitsplatz ★ PRIORITÄT 1
+## 1. Kapitel 3 — Lethkar ★ PRIORITÄT 1
 
-**Entscheidungen getroffen:**
-- Tagesschicht (nicht Nacht — Nachtwache bleibt eigenständig)
-- Ablehnen ist rückgängig machbar: Roswald fragt später erneut ("Hast du es dir nochmal überlegt?")
-- Freischaltbar erst wenn Feldarbeit-Loop vollständig erworben ist (Skills + Automation)
-- Wird zum "neuen Kern-Loop" von Kap 2 — löst Feldarbeit als Primärquelle ab
-- Integriert sich in alle Kap-2-Features: eigenes Job-Level-System (Layer-2-Progression)
-- Zukünftig automatisierbar (Zeitkristall-Slot, Unlock-Condition: `stadtwacheStats.count >= 50`)
+**Design abgeschlossen:** `notes/kapitel3-design.md` + `notes/implementierungsplan_kap3.md`
 
-**Gold-Rahmen:** ~25–35 Gold/Schicht (Basislohn), skaliert mit Level. Genau zu kalibrieren bei Implementierung.
-
-**Unlock-Bedingung Feldarbeit-Loop:** `skills.longShift && skills.jobLeveling && skills.fieldworkMemory && automation.slots.some(s => s.action === 'feldarbeit')`.
-
-**Technisch:**
-1. `gameFlags.stadtwacheAccepted`, `gameFlags.stadtwacheDeclined` in state.js
-2. Neuer Roswald-Dialog-Node `recruit` (npc.js) — erscheint nach `commanderRecruitmentShown`
-3. `stadtwache` in `TOWN_CONTENT_IDS` + Nav-Button (nur wenn accepted)
-4. `renderStadtwache(area)` in content.js
-5. `startStadtwacheShift()` + `stadtwacheStats` in actions.js
-6. Automation-Eintrag in automation.js
+Kurz-Summary:
+- Stadt: **Lethkar** (Tier 2)
+- Freischalt-Bedingung: `mut.points >= 3` (Mut wird geprüft, nicht verbraucht)
+- Kern-Job: **Alchemie** — 5 Echtzeit-Progress-Bars (Aspekte), Spieler wählt aktiven Aspekt
+- Prestige: **Einsicht** (übersteht Neuanfang, Magie-Skillbaum)
+- Story: 3.1–3.10, Antagonist Valdris (Der Schatten), Miras Brief als Subplot
+- Detaillierter Implementierungsplan: → `implementierungsplan_kap3.md`
 
 ---
 
-## 2. Super-Skills: verbleibende Endknoten ★ PRIORITÄT 2
-
-**Entscheidungen getroffen:**
-- **ironWill_super:** Hunger beeinflusst Müdigkeitsaufbau gar nicht mehr (Multiplikator → 0 statt 0.5)
-  - Code: `* (superSkills.ironWill_super ? 0 : skills.ironWill ? 0.5 : 1)`
-  - Quest: 10 Feldarbeiten im Hunger-Zustand → `workStats.hungryWorkCount`, zählt ab sofort (rückwirkend 0 für bestehende Saves)
-- **fieldworkMemory_super:** Nachtwache-Level übersteht ebenfalls den Neuanfang
-  - Code: in `startManualReset()` — `nightWatchStats.count` wenn `superSkills.fieldworkMemory_super`
-  - Quest: Feldarbeit-Level 3 erreichen (`workStats.count >= 500`)
-- **nightWatchLeveling_super:** Nachtwache-Schlaf-Penalty entfällt (statt −40 % kein Malus mehr)
-  - Code: `NIGHTWATCH_RECOVERY_PENALTY` = 0 wenn super aktiv
-  - Quest: 15 Nachtwachen absolvieren (`nightWatchStats.count >= 15`)
-- **inventoryKeeper_super:** +3 Inventar-Slots (12 → 15)
-  - Code: `INVENTORY_SLOT_COUNT + (superSkills.inventoryKeeper_super ? 3 : 0)` in inventory.js
-  - Quest: Einmal mit voll belegtem Inventar (12 Items) einen Neuanfang überlebt haben
-- **guildPrep_super:** Bis Kapitel-3-Design aufschieben — kein Super jetzt
-- **clearMind_super** ✅ bereits implementiert
-- **sleepLikeARock_super** ✅ bereits implementiert
-
-**Technisch:** Nur SUPER_SKILL_DEFS in experience.js + Verdrahtung an 4 Stellen (actions.js, inventory.js). Kein Strukturumbau.
-
----
-
-## 3. Kapitel 3 konzeptionieren ★ PRIORITÄT 3
-
-**Eckpunkte (noch offen, Design-Dokument steht aus):**
-- Neuer Ort (Stadt 2) = Tier-2-Zentrum
-- Fokus: Magie — Alchemie, Magieforschung als erste neue Berufe
-- Abenteurergilde als echte Institution (nicht nur Story-Gate wie bisher)
-- "Der Schatten" = Antagonist, bereits im Sieg-Dialog von Kap 2 angedeutet
-- Miras Brief-Mysterium = K3-Subplot
-- Kap 1 → Kap 2-Übergang ist Prestige-Münze "Mut" (laut prestige-konzept.md); Kap 2 → Kap 3 ist "Einsicht"
-
-**Nächster Schritt:** Design-Dokument `notes/kapitel3-design.md` schreiben (Weltbeschreibung, Story-Arc, neue Mechaniken, Tier-2-Rohstoffe/Arbeiten).
-
----
-
-## 4. Eigenes Zuhause ★ PRIORITÄT 4
+## 2. Eigenes Zuhause ★ PRIORITÄT 2
 
 **Entscheidungen getroffen:**
 - Einmaliger Kauf (kein Mieten), dauerhaft in `meta.hasHome` gespeichert
 - **Käufer:** Oswin vermittelt das Haus (Dialog-Erweiterung)
-- **Preis:** 2000 Gold
-- Navigation: "Mein Haus" als neuer Treutheim-Ort mit eigenem Sub-Nav
-  - Erster Sub-Nav-Eintrag: Schmiede (nach separatem Umbau)
-  - Spätere Einträge: weitere Handwerksberufe
-- Schlafplatz "Im eigenen Bett" = qualityTier 3+ (besser als Absteige)
-- **Schmiede:** Separater Umbau-Schritt (mindestens 1000 Gold, genaue Zahl bei Implementierung kalibrieren — Spieler verdient Kap-2-Schichten á 25–35g)
+- **Preis:** 2000 Gold — sinnvoll ab Kap-2-Mitte (Stadtwache ~30g/Schicht → ~67 Schichten)
+- **Timing:** Verfügbar sobald `storyState >= 20100` (Kap 2 läuft) — kein chapter2Complete nötig
+- Navigation: "Mein Haus" als neuer Treutheim-Ort, eigenes Sub-Nav
+- Schlafplatz "Im eigenen Bett" = qualityTier 3 (besser als Gasthof-Zimmer Tier 2)
+- Schmiede: separater Umbau 1200 Gold, Flag `meta.hasSmith` — schaltet Schmiede-Job frei (Kap-2-Handwerk)
+- **Das Haus übersteht Neuanfänge** (in `meta`, nicht in normalem State) — macht den Kauf dauerhaft bedeutsam
+
+**Schmiede-Job (Folge-Feature, nach Hauskauf):**
+- Handwerkliches Gewerk mit eigenem Level-System (analog Stadtwache)
+- Schmiedet Ausrüstungsgegenstände (Waffen = Kampfbonus, Rüstung = Verteidigung)
+- Kann langfristig ins Berufssystem (Kap-2-Variation des Alchemie-Aspekt-Konzepts) eingebettet werden
 
 **Technisch:**
-1. `meta.hasHome: false` in state.js
-2. Oswin bekommt neuen Dialog-Knoten wenn `resources.gold >= 2000` (kaufen + Flag setzen)
-3. Schlaf-Option in SLEEP_OPTIONS (actions.js): `unlockCond: () => meta.hasHome`
-4. `case 'meinhaus'` in content.js + `renderMeinHaus(area)` mit Sub-Nav-Logik
-5. `meinhaus` in TOWN_CONTENT_IDS + Nav-Button (nur wenn `meta.hasHome`)
-6. Schmiede-Umbau: eigene Aktion/Button in `renderMeinHaus`, eigenes Flag `meta.hasSmith`
+1. `meta.hasHome: false`, `meta.hasSmith: false` in state.js
+2. Oswin: neuer Knoten `houseOffer` wenn `resources.gold >= 2000 && storyState >= 20100`
+3. Schlaf-Option in `SLEEP_OPTIONS` (actions.js): `unlockCond: () => meta.hasHome`
+4. `renderMeinHaus(area)` in content.js mit Sub-Nav (Schlafen / Schmiede-Umbau / später mehr)
+5. `'meinhaus'` in `TOWN_CONTENT_IDS` + Nav-Button (nur wenn `meta.hasHome`)
+6. Schmiede-Seite: `renderSchmiede(area)`, Nav-Button (nur wenn `meta.hasSmith`)
 
 ---
 
-## 5. Chapter-2-Ende Objective ★ PRIORITÄT 5
-
-**Entscheidungen getroffen:**
-- Text muss immersiv sein (kein "Kapitel 2" — Immersionsregel)
-- Nav-Zustand: Treutheim bleibt zugänglich (Spieler soll noch grinden können)
-
-**Text:**
-> *"Treutheim liegt hinter mir — was als Kampf ums Überleben begann, hat mich weitergeführt als ich erwartet hatte. Der nächste Schritt ist noch nicht klar. Aber er kommt."*
-
-**Technisch:** 1 Zeile in objective.js ändern. Trivial.
-
----
-
-## 6. Haustiere — reguläre Kategorie ★ PRIORITÄT 6
+## 3. Haustiere — reguläre Kategorie ★ PRIORITÄT 3
 
 **Entscheidungen getroffen (22.06.2026):**
-- **Herkunft:** Greta (Krämerin) gibt Spieler einen Auftrag: Tiere in den Jagdgebieten fangen
-- **Mechanik:** Auftrag erscheint nach Kap-2-Beginn (gameFlags.kapitel2Unlocked) als neuer Greta-Dialog
-- **petlover / "Zeit miteinander verbringen":** Maximal 1x täglich GESAMT (nicht pro Tier) — identisch zum bestehenden Straßenkatzen-Limit
-- **Jedes Tier gibt einen eigenen Bonus** (Beispiele noch festzulegen, z.B. Hund → Kampf, Vogel → XP, Hase → Hunger-Resistenz)
-- **Bonus ist unendlich steigerbar** durch wiederholtes "Zeit verbringen" — Tierfreund-Skill (EP) schaltet das Leveln frei
-- **Fangmechanik offen:** wahrscheinlich Chance-Drop nach bestimmten Kills im Jagdgebiet (ähnlich Zeitkristall-Drop), genaue Mechanik bei Implementierung festlegen
+- **Herkunft:** Greta gibt Auftrag nach Kap-2-Beginn (`kapitel2Unlocked`) + Greta-Questkette abgeschlossen
+- **Fangmechanik:** Chance-Drop nach Jagdgebiet-Kills (wie Zeitkristalle) — Drop-Rate an Monster-Stärke koppeln
+- **Tier-Bonustypen (final):**
+  - 🐕 Hund: Kampf-Schaden +5/10/15 % je Level
+  - 🐦 Rabe: EP-Gewinn pro Neuanfang +15/30/45 % je Level
+  - 🐇 Hase: Hunger steigt 10/20/30 % langsamer je Level
+  - 🐿 Eichhörnchen: Rohstoff-Menge beim Sammeln +1/2/3 je Level
+- **Level-Cap:** Level 3 pro Tier, maximal 1 Level-Up pro Spieltag (identisch Straßenkatzen-Limit GESAMT)
+- **Tierfreund-Skill** (EP-Baum) als Voraussetzung für Level-Ups
+- Boni sind kumulativ: alle Haustiere gleichzeitig aktiv
 
-**Tiervorschläge (Bonustypen noch nicht final):**
-- Hund: Kampfbonus (Schaden +X %)
-- Rabe/Vogel: EP-Bonus (+X % EP pro Neuanfang)
-- Hase: Hunger steigt langsamer
-- Eichhörnchen: Rohstoff-Drop-Menge +X %
+**Fangmechanik detail:**
+- Wolf/Eber/Bär droppen nichts
+- Waldtroll: 5 % Hunde-Chip-Drop
+- Tief-Zone generell: 3 % Raben-Feder-Drop
+- Wald-Zone generell: 4 % Hase-Spur-Drop / Eichhörnchen-Drop
+- Drop-Item landet im Inventar → "Tier fangen"-Button in Greta-Dialog
 
 **Technisch:**
-- `renderPets()` bekommt zweiten Block für reguläre Tiere
-- Neues `pets.regular: []` im State oder über npcFlags/gameFlags tracking
-- Greta: Neuer Dialog-Knoten nach `kraemerinBusiness.state === 'rewarded'` + Kapitel 2
+- `pets.regular: []` — Array von `{ type: 'hund'|'rabe'|..., level: 1 }`
+- `renderPets()`: zweiter Block "Wildtiere" unter Straßenkatzen-Block
+- Greta-Dialog: neuer Knoten `petQuest` + `petCatch` wenn entsprechendes Drop-Item im Inventar
 
 ---
 
-## 7. Expedition-Tab ★ PRIORITÄT 7 (nach K3-Design)
+## 4. Expedition-Tab ★ PRIORITÄT 4
 
-**Konzept (festgehalten 22.06.2026):**
-- Navigation ist instant (kein Reise-Timer), aber "Expedition" ist eine aktive Mechanik.
-- Spieler tauscht Spielzeit gegen Expeditionsfortschritt.
-- Expeditionen liefern: Story-Erlebnisse, Rohstoffe, Stärkungs-Events, Quest-Fortschritt.
-- Offen: Wie viele Expeditionen? Einmalige Story-Expeditionen vs. wiederholbare Grinding-Expeditionen?
+**Design-Entscheidung (22.06.2026):**
+Zwei getrennte Typen — same UI, different data:
+- **Story-Expeditionen** (einmalig): Führen Story-Fäden fort, verbrauchen Spielzeit, können nicht wiederholt werden. Belohnung: Einmalige Boni, Story-Einträge.
+- **Grind-Expeditionen** (wiederholbar): Kurze Zeitinvestition → Rohstoffe/Gold/Einsicht. Skalieren mit Stärke/Level.
+
+**Mechanik:**
+- Spieler startet Expedition → wählt Dauer (2h/4h/8h Spielzeit)
+- Während der Expedition: andere Aktionen noch möglich, aber Expedition läuft passiv
+- Rückkehr = Ergebnisse sammeln (wie Automatisierung, aber einmalig pro Start)
+- Freischaltung: nach Kap-2-Beginn (`kapitel2Unlocked`) für Grind-Typ; Story-Typ erscheint nur wenn Story-Flag gesetzt
+
+**Technisch (Fundament):**
+- `expedition: { active: null, startTime: null, endTime: null }` in state.js
+- `EXPEDITION_DEFS` Array (analog AUTOMATION_ACTIONS)
+- `renderExpedition(area)` in content.js
+- Neuer Tab in Globaler Nav (erscheint nach erstem Kap-2-Jagdgebiet-Kill)
 
 ---
 
-## 8. Miras Brief-Mysterium ★ PRIORITÄT 8 (nach K3-Design)
+## 5. Miras Brief-Mysterium ★ PRIORITÄT 5
 
-Abhängig von Kapitel-3-Design. Kein Design-Stand.
+**Design-Entscheidung (22.06.2026):**
+Miras Brief ist ein **konkretes Inventar-Item** (kein reines Flag). Es liegt nach Miras Enthüllung (Story 2.4) im Inventar — unlesbar, weil verschlüsselt. In Lethkar gibt Varena den Schlüssel (Story 3.2).
+
+**Implementierung:**
+- Item `miras_brief` in `QUEST_ITEMS` (unverkäuflich, bleibt im Inventar durch `inventoryKeeper`)
+- Mira: neuer Node nach Story 2.4 → gibt Brief ins Inventar (`grantItem('miras_brief', 1)`)
+- Inventar-Anzeige: Brief zeigt "Unlesbar — findet jemanden in Lethkar, der hilft"
+- Varena in Lethkar: Node `brief` — entschlüsselt Brief, triggert Story 3.2
+- Brief-Item nach Entschlüsselung: Icon ändert sich, Text zeigt Inhalt (einmalig)
 
 ---
 
-## BALANCING-OFFENE PUNKTE (aus balance.md)
+## BALANCING-OFFENE PUNKTE
 
-1. **Kampf-HP nach Neuanfang:** `playerStats.hp` nach EP-Reset auf `maxHp` setzen? Aktuell: Nein.
-2. **Waldtroll-Sperre bei <30 XP:** Sollte besser "Stärkelevel 2" als Bedingung sein statt fester XP-Wert.
-3. **Schlafschuld + Nachtwache-Debuff:** Interagieren und können bei Hunger zur Todesspirale führen — bewusst belassen.
-4. **Automatisierung auf Spieluhr-Stunden statt 30s Echtzeit** — langfristig besser, aktuell niedrige Priorität.
+1. **Kampf-HP nach Neuanfang:** → **Entscheidung: Ja** — `playerStats.hp` auf `maxHp` setzen nach Reset, sonst unfair wenn Spieler mit 5 HP neustartet. Triviale Änderung in `runManualReset()`.
+2. **Waldtroll-Sperre:** → **Entscheidung: Stärkelevel 2** statt fester XP-Wert (aktuell 30 XP). Stärkelevel 2 = 30 XP — identisch in der Praxis, aber robuster wenn Levelthresholds sich ändern. Änderung in `combat.js` oder `content.js`.
+3. **Schlafschuld + Nachtwache-Debuff:** → **Belassen** — bewusste Spannung, kein Bug.
+4. **Automatisierung auf Spieluhr:** → **Niedrige Priorität.** Wird relevant, wenn Expeditionen fertig sind (dann macht Spieluhr-Kopplung wieder Sinn).
 
 ---
 
 *Letzte Aktualisierung: 22.06.2026*
-*Implementiert diese Session: NPC-Verfügbarkeitsindikator, Tooltip-Basiswert-Anzeige, Automatisierungs-Overhaul, Save-Deduplication.*
+*Implementiert heute: Stadtwache (v0.12.0), 4× Super-Skills, Kap-2-Ende Objective-Text, NPC-Verfügbarkeitsindikator, Automatisierungs-Overhaul, Save-Deduplication.*
