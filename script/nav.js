@@ -13,7 +13,8 @@
 'use strict';
 
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
-const TOWN_CONTENT_IDS = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet', 'stadtwache', 'meinhaus', 'schmiede'];
+const TOWN_CONTENT_IDS    = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet', 'stadtwache', 'meinhaus', 'schmiede'];
+const LETHKAR_CONTENT_IDS = ['lethkar', 'alchemie', 'lethkar_markt', 'lethkar_taverne', 'lethkar_schlafplatz'];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
@@ -94,21 +95,39 @@ function renderLocationNavSection() {
   }
 
   if (navLevel === 1) {
-    const active = currentContent === 'treutheim' ? 'active' : '';
+    const activeTreutheim = currentContent === 'treutheim' ? 'active' : '';
+    const activeLethkar   = currentContent === 'lethkar'   ? 'active' : '';
     return `
       <div class="nav-level-label">Weltkarte</div>
       <button class="nav-btn nav-btn-back" onclick="navTo(0)">◂ Zurück</button>
       <hr class="nav-divider">
-      <button class="nav-btn ${active}" onclick="navTo(2)">⚑ Treutheim</button>
+      <button class="nav-btn ${activeTreutheim}" onclick="enterCity('treutheim')">⚑ Treutheim</button>
+      ${gameFlags.lethkarUnlocked ? `<button class="nav-btn ${activeLethkar}" onclick="enterCity('lethkar')">🏙 Lethkar</button>` : ''}
     `;
   }
 
-  // navLevel === 2: innerhalb von Treutheim. Jeder Ort erscheint erst,
-  // sobald er spielerisch relevant wird, statt von Anfang an alle Optionen
-  // auf einmal zu zeigen: Arbeitsplatz erst nach der Jobvermittlung beim
-  // Wirt, Marktplatz erst beim ersten Hunger-Debuff, Schlafplatz erst beim
-  // ersten Einbruch der Nacht. Die Taverne ist die einzige Ausnahme, weil
-  // die Jobsuche selbst von Anfang an dorthin verweist.
+  if (navLevel === 2 && currentCity === 'lethkar') {
+    const places = [
+      ['lethkar',           '🏙', 'Übersicht'],
+      ...(alchemie.unlocked         ? [['alchemie',         '⚗', 'Alchemie']]      : []),
+      ...(gameFlags.lethkarUnlocked ? [['lethkar_taverne',  '🍺', 'Taverne']]       : []),
+      ...(gameFlags.lethkarUnlocked ? [['lethkar_markt',    '⚖', 'Marktplatz']]    : []),
+      ...(gameFlags.lethkarUnlocked ? [['lethkar_schlafplatz','🛏','Schlafplatz']]  : [])
+    ];
+    const buttons = places.map(([id, icon, label]) => {
+      const active = currentContent === id ? 'active' : '';
+      const isNew  = navUnseen.hasOwnProperty(id) && navUnseen[id] ? 'nav-btn-new' : '';
+      return `<button class="nav-btn ${active} ${isNew}" onclick="showContent('${id}')">${icon} ${label}</button>`;
+    }).join('');
+    return `
+      <div class="nav-level-label">Lethkar</div>
+      <button class="nav-btn nav-btn-back" onclick="navTo(1)">◂ Weltkarte</button>
+      <hr class="nav-divider">
+      ${buttons}
+    `;
+  }
+
+  // navLevel === 2, currentCity === 'treutheim': innerhalb von Treutheim.
   const places = [
     ['treutheim',    '⚑', 'Übersicht'],
     ...(gameFlags.jobUnlocked         ? [['arbeitsplatz', '⚒', 'Arbeitsplatz']] : []),
@@ -148,14 +167,26 @@ function navTo(level) {
   } else if (level === 1) {
     currentContent = 'weltkarte';
   } else if (level === 2) {
-    if (!TOWN_CONTENT_IDS.includes(currentContent)) {
-      currentContent = 'treutheim';
+    const inCurrentCity = currentCity === 'lethkar'
+      ? LETHKAR_CONTENT_IDS.includes(currentContent)
+      : TOWN_CONTENT_IDS.includes(currentContent);
+    if (!inCurrentCity) {
+      currentContent = currentCity === 'lethkar' ? 'lethkar' : 'treutheim';
     }
   }
 
   render();
 
-  if (level === 2) maybeTriggerJobSearchDialog();
+  if (level === 2 && currentCity === 'treutheim') maybeTriggerJobSearchDialog();
+}
+
+/** Wechselt die aktive Stadt und navigiert auf navLevel 2. */
+function enterCity(city) {
+  currentCity    = city;
+  navLevel       = 2;
+  currentContent = city === 'lethkar' ? 'lethkar' : 'treutheim';
+  render();
+  if (city === 'treutheim') maybeTriggerJobSearchDialog();
 }
 
 /**
@@ -178,7 +209,12 @@ function showContent(id) {
   if (id === 'chronik') chronikButtonUnseen = false;
 
   if (TOWN_CONTENT_IDS.includes(id)) {
-    navLevel = 2;
+    navLevel    = 2;
+    currentCity = 'treutheim';
+  }
+  if (LETHKAR_CONTENT_IDS.includes(id)) {
+    navLevel    = 2;
+    currentCity = 'lethkar';
   }
 
   // Marktplatz öffnet beim Anwählen über Navigation/Quick-Link immer die

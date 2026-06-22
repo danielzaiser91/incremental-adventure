@@ -756,6 +756,13 @@ function nightWatch() {
 }
 
 /* ── Schlafen: beendet den Spieltag ───────────────────────── */
+/** Direkt-Sleep für externe Orte (Lethkar-Pension etc.) ohne SLEEP_OPTIONS-Lookup. */
+function sleepAt(id, cost, qualityTier) {
+  if (!isNight()) return;
+  if (resources.gold < cost) { showToast('Nicht genug Gold.', 'error'); return; }
+  finishSleep({ id, cost, qualityTier, hungerPenalty: 0 });
+}
+
 function sleep(optionId) {
   if (!isNight()) return; // Schlafen ist erst nach Einbruch der Nacht möglich (siehe renderSchlafplatz)
 
@@ -829,7 +836,7 @@ function finishSleep(option) {
   gameFlags.firstSleepTriggered = true;
 
   startNewDay();
-  currentContent = 'treutheim';
+  currentContent = currentCity === 'lethkar' ? 'lethkar' : 'treutheim';
   navLevel       = 2;
 
   render();

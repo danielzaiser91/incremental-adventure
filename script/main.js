@@ -23,6 +23,8 @@ function init() {
   applySelectionSetting();
   setupAutoSave();
   setupAutomation();
+  catchUpAlchemie();
+  startAlchemieTick();
   setupDevKeyListener();
 }
 

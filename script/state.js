@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 10;
+const CURRENT_SAVE_VERSION = 11;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -92,6 +92,20 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Eiserner Wille+: Hunger hat keinen Einfluss mehr auf den Müdigkeitsaufbau.' },
     { cat: 'Neuerung', text: 'Nächtliche Routine+: Nachtwache verursacht keinen Schlaf-Debuff mehr.' },
     { cat: 'Neuerung', text: 'Fest verschnürt+: +3 Inventarplätze (12 → 15).' }
+  ],
+  11: [
+    { cat: 'Neuerung', text: 'Eigenes Zuhause: Oswin vermittelt Hauskauf (2000g), Schmiede-Umbau (1200g), Schlafplatz Tier 3.' },
+    { cat: 'Neuerung', text: 'Haustiere (Wildtiere): Hund, Rabe, Hase, Eichhörnchen — seltene Drops im Jagdgebiet, Greta tauscht Spuren ein.' },
+    { cat: 'Neuerung', text: 'Expeditionen: 2 Story-Expeditionen + 4 Grind-Expeditionen mit Echtzeit-Timer.',
+      spoiler: () => !gameFlags.jagdgebietUnlocked },
+    { cat: 'Neuerung', text: 'Kapitel 3: Lethkar freigeschaltet (nach Kap-2-Ende + 3 Mut).',
+      spoiler: () => !gameFlags.lethkarUnlocked },
+    { cat: 'Neuerung', text: 'Alchemie: 5 Aspekte mit Echtzeit-Fortschritt, erzeugt Einsicht als Prestige-Währung.',
+      spoiler: () => !alchemie.unlocked },
+    { cat: 'Neuerung', text: 'Lethkar: NPCs Varena, Thessa, Pereth — Story 3.0–3.5 + Valdris-Spur.',
+      spoiler: () => !gameFlags.lethkarUnlocked },
+    { cat: 'Neuerung', text: 'Tier-2-Monster im Jagdgebiet (Steingolem, Schattenwolf, Nordbär) nach Lethkar-Freischaltung.',
+      spoiler: () => !gameFlags.lethkarUnlocked }
   ]
 };
 
@@ -216,6 +230,15 @@ let gameFlags = {
   fullInventoryReset:          false, // Spieler hat mindestens einmal mit vollem Inventar (12+) einen Neuanfang gemacht
   mirasBriefGiven:             false, // Mira hat dem Spieler den verschlüsselten Brief gegeben (nach Story 2.4)
   mirasBriefDecoded:           false, // Brief wurde in Lethkar von Varena entschlüsselt
+  // ── Kapitel-3-Flags ───────────────────────────────────────
+  lethkarUnlocked:             false, // Lethkar betreten (Mut >= 3 + Kap-2-Ende)
+  varenaMetFirst:              false, // Varena zum ersten Mal angesprochen
+  thessaMetFirst:              false, // Thessa zum ersten Mal angesprochen
+  perethMetFirst:              false, // Pereth zum ersten Mal angesprochen
+  varenaDecodedBrief:          false, // Varena hat den Brief entschlüsselt → Story 3.3
+  thessaTrustGained:           false, // Thessa vertraut dem Spieler → Story 3.5
+  perethQuestStarted:          false, // Pereth hat eine Aufgabe gegeben → Story 3.6
+  chapter3StoryComplete:       false, // Alle Story-Punkte in Lethkar gesehen
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
@@ -239,7 +262,9 @@ let navUnseen = {
   stadtwache:   false,    // erst sichtbar nach Roswalds Angebot angenommen
   meinhaus:     false,    // erst sichtbar nach Hauskauf (meta.hasHome)
   schmiede:     false,    // erst sichtbar nach Schmiede-Umbau (meta.hasSmith)
-  expedition:   false     // erst sichtbar nach erstem Jagdgebiet-Besuch
+  expedition:   false,    // erst sichtbar nach erstem Jagdgebiet-Besuch
+  alchemie:     false,    // erst sichtbar nach Varena-Alchemie-Unterricht
+  lethkar:      false     // erst sichtbar nach Lethkar-Betreten
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -429,6 +454,25 @@ let expedition = {
   grindCounts:      {}      // id -> Anzahl abgeschlossener Grind-Runs
 };
 
+/* Einsicht — Prestige-Währung für Akt III (Lethkar), übersteht alle
+   Resets. Wird durch Alchemie-Fortschritt erzeugt. */
+let einsicht = {
+  points:      0,
+  totalEarned: 0
+};
+
+/* Alchemie-Fortschritt — 5 Aspekte, je ein eigenständiger Fortschritt
+   mit Echtzeit-Ticks (1 Pt/s, setInterval in alchemie.js).
+   levels[aspect]: aktuelles Level (0–∞, Kosten: 3^level * 100)
+   progress[aspect]: aktueller XP-Fortschritt im aktuellen Level
+   lastTick: Unix-Timestamp des letzten Ticks (für Offline-Aufholen) */
+let alchemie = {
+  unlocked: false,
+  levels:   { feuer: 0, wasser: 0, erde: 0, luft: 0, aether: 0 },
+  progress: { feuer: 0, wasser: 0, erde: 0, luft: 0, aether: 0 },
+  lastTick: null
+};
+
 /* Laufender Kampf — wird beim Speichern NICHT mitgesichert; ein
    gespeichertes Spiel startet immer kampffrei. */
 let combat = {
@@ -451,7 +495,8 @@ let automation = {
 /* ── UI-State ─────────────────────────────────────────────── */
 let selectedSkillId = null; // welcher Skill-Knoten im EP-Baum gerade ausgewählt ist
 
-let navLevel       = 0;            // 0=Hauptmenü | 1=Weltkarte | 2=Treutheim
+let navLevel       = 0;            // 0=Hauptmenü | 1=Weltkarte | 2=Stadt (Treutheim oder Lethkar)
+let currentCity    = 'treutheim'; // 'treutheim' | 'lethkar' — welche Stadt gerade auf navLevel 2
 let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' | 'arbeitsplatz' | 'marktplatz' |
                                     // 'taverne' | 'schlafplatz' | 'inventar' | 'quests' | 'chronik' | 'settings'
 let marketVendor   = null;         // null=Markt-Übersicht | 'kraemer' | 'schmiede'

@@ -950,8 +950,17 @@ function getNpcStartNode(npc) {
  * @param {string} npcId
  * @param {string} [nodeId] - Standard: Start-Knoten des NPC
  */
+function findNpcDef(npcId) {
+  if (NPCS[npcId]) return NPCS[npcId];
+  if (typeof NPCS_LETHKAR !== 'undefined') {
+    const lethkarNpc = NPCS_LETHKAR.find(n => n.id === npcId);
+    if (lethkarNpc) return lethkarNpc;
+  }
+  return null;
+}
+
 function openNpcDialog(npcId, nodeId) {
-  const npc = NPCS[npcId];
+  const npc = findNpcDef(npcId);
   if (!npc) return;
   if (typeof npc.locked === 'function' && npc.locked()) return;
 
@@ -1025,4 +1034,276 @@ function renderTaverne(el) {
       <div class="action-grid">${cards}</div>
     </div>
   `;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LETHKAR-NPCs (Kapitel 3)
+   ══════════════════════════════════════════════════════════════ */
+
+const NPCS_LETHKAR = [
+  {
+    id: 'varena',
+    name: 'Varena', icon: '⚗',
+    tagline: 'Alchemistin. Spricht wenig — und wenn, dann präzise.',
+    location: 'taverne',
+    start: () => {
+      if (!gameFlags.varenaMetFirst) return 'firstMeet';
+      if ((questItems.miras_brief || 0) > 0 && !gameFlags.varenaDecodedBrief) return 'offerDecode';
+      if (gameFlags.varenaDecodedBrief && !alchemie.unlocked) return 'teachAlchemie';
+      if (alchemie.unlocked) return 'alchemieIdle';
+      return 'idle';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          '"Du siehst aus wie jemand, der aus Treutheim kommt." Keine Frage. Eine Feststellung.',
+          '"Ich bin Varena. Ich lehre Alchemie — für die, die es ernst nehmen. Was willst du hier in Lethkar?"'
+        ],
+        options: [
+          {
+            label: '"Ich suche jemandem, der mir einen Brief entschlüsseln kann."',
+            next: 'briefHint',
+            action: () => { gameFlags.varenaMetFirst = true; }
+          },
+          {
+            label: '"Ich bin einfach durchgereist."',
+            next: 'idle',
+            action: () => { gameFlags.varenaMetFirst = true; }
+          }
+        ]
+      },
+      briefHint: {
+        text: ['"Einen verschlüsselten Brief?" Sie sieht dich an. "Zeig ihn mir. Wenn es ein Treutheimer Chiffre ist, kenne ich ihn."'],
+        options: [
+          {
+            label: 'Den Brief zeigen.',
+            next: 'checkBrief',
+            locked: () => !(questItems.miras_brief > 0),
+            reason: 'Ich habe den Brief nicht dabei.'
+          },
+          { label: 'Später vielleicht.', next: null }
+        ]
+      },
+      checkBrief: {
+        text: [
+          'Varena überfliegt den Brief. Ihre Augen wandern ruhig über die Zeilen.',
+          '"Ja. Das ist ein alter Lethkarer Buchstabenverschieber — die Söldner aus dem Norden haben ihn genutzt." Sie faltet ihn zusammen.',
+          '"Valdris. Der Name. Ich kenne das Haus — nördlich des Markts. Geh dorthin nicht allein."'
+        ],
+        options: [{
+          label: '"Was weißt du über Valdris?"',
+          next: 'valdrisInfo',
+          action: () => {
+            gameFlags.varenaDecodedBrief = true;
+            gameFlags.mirasBriefDecoded  = true;
+            questItems.miras_brief       = 0;
+            navUnseen.inventar           = true;
+            showToast('Der Brief ist entschlüsselt. Inhalt jetzt im Inventar lesbar.', 'event');
+          }
+        }]
+      },
+      valdrisInfo: {
+        text: [
+          '"Valdris ist kein Name, den man laut ausspricht. Händler, Söldner, Informanten — er hat überall Augen."',
+          '"Wenn deine Freundin diesen Namen aufgeschrieben hat, dann weiß sie mehr als sie zeigt. Sei vorsichtig."'
+        ],
+        options: [
+          {
+            label: '"Kannst du mir Alchemie beibringen?"',
+            next: 'teachAlchemie'
+          },
+          { label: 'Danke. Ich denke nach.', next: null }
+        ]
+      },
+      offerDecode: {
+        text: ['"Den Brief noch dabei?" Sie nickt. "Bring ihn her."'],
+        options: [{ label: 'Den Brief zeigen.', next: 'checkBrief' }]
+      },
+      teachAlchemie: {
+        text: [
+          '"Du willst lernen." Keine Frage, wieder. "Gut. Dann fangen wir mit dem Einfachsten an."',
+          '"Feuer, Wasser, Erde, Luft — und Äther, das Fünfte. Du wirst Jahre brauchen. Vielleicht dein Leben. Aber du wirst etwas verstehen, das wenige sehen."',
+          '"Das Laboratorium neben dem Markt. Morgen früh. Bring nichts mit außer dir selbst."'
+        ],
+        options: [{
+          label: '"Ich bin dabei."',
+          next: null,
+          action: () => {
+            alchemie.unlocked = true;
+            alchemie.lastTick = Date.now();
+            startAlchemieTick();
+            navUnseen.alchemie = true;
+            showToast('Alchemie freigeschaltet! Das Laboratorium wartet auf dich.', 'reward');
+          }
+        }]
+      },
+      alchemieIdle: {
+        text: ['"Wie läuft es mit dem Studium?" Sie schaut kurz hoch von ihrem Becher.'],
+        options: [
+          { label: '"Langsam. Aber ich lerne."', next: null },
+          { label: '"Fragen zur Alchemie habe ich keine."', next: null }
+        ]
+      },
+      idle: {
+        text: ['"Wenn du Fragen zur Alchemie hast — ich bin abends hier."'],
+        options: [{ label: 'Verstanden.', next: null }]
+      }
+    }
+  },
+
+  {
+    id: 'thessa',
+    name: 'Thessa', icon: '📜',
+    tagline: 'Archivarin. Kennt Lethkar besser als sich selbst.',
+    location: 'taverne',
+    start: () => {
+      if (!gameFlags.thessaMetFirst) return 'firstMeet';
+      if (gameFlags.thessaTrustGained) return 'trusted';
+      return 'cautious';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          'Die Frau am Tisch blättert in einem dicken Buch, ohne aufzusehen.',
+          '"Du bist neu hier. Erkennbar." Sie schaut jetzt hoch. Braune Augen, prüfend. "Thessa. Archivarin."',
+          '"Was du brauchst: nicht fragen, bevor du weißt, wen du fragst."'
+        ],
+        options: [
+          {
+            label: '"Ich suche Informationen über jemanden namens Valdris."',
+            next: 'valdrisCaution',
+            action: () => { gameFlags.thessaMetFirst = true; }
+          },
+          {
+            label: '"Nur neugierig. Guter Rat."',
+            next: null,
+            action: () => { gameFlags.thessaMetFirst = true; }
+          }
+        ]
+      },
+      valdrisCaution: {
+        text: [
+          'Thessa hält inne. Klappt das Buch zu.',
+          '"Das ist kein Name für eine erste Unterhaltung." Sie spricht leiser. "Verdien dir das Vertrauen. Dann reden wir weiter."'
+        ],
+        options: [{ label: 'Verstanden.', next: null }]
+      },
+      cautious: {
+        text: ['"Du wartest auf Vertrauen? Das ist klug." Sie deutet auf den freien Stuhl. "Erzähl mir etwas, das ich noch nicht weiß."'],
+        options: [
+          {
+            label: gameFlags.varenaDecodedBrief
+              ? '"Valdris\' Adresse ist nördlich des Markts — das hat mir eine Alchemistin bestätigt."'
+              : '"Ich arbeite daran."',
+            next: gameFlags.varenaDecodedBrief ? 'trustEarned' : null,
+            action: () => {
+              if (gameFlags.varenaDecodedBrief) {
+                gameFlags.thessaTrustGained = true;
+                showToast('Thessa vertraut dir jetzt. Ihr Wissen über Lethkar steht dir offen.', 'event');
+              }
+            }
+          }
+        ]
+      },
+      trustEarned: {
+        text: [
+          'Thessa nickt langsam. "Das stimmt. Und Varena redet selten." Sie schiebt ein Buch über den Tisch.',
+          '"Lethkar hat Augen — und Ohren. Die meisten Bewohner wissen, wer Valdris ist. Sie reden nur nicht. Du weißt jetzt genug, um die richtigen Fragen zu stellen."'
+        ],
+        options: [{ label: 'Danke.', next: null }]
+      },
+      trusted: {
+        text: ['"Was willst du wissen?" Sie klingt immer noch vorsichtig — aber nicht mehr abweisend.'],
+        options: [
+          { label: '"Wer schützt Valdris?"', next: 'valdrisProtection' },
+          { label: '"Nichts gerade. Danke."', next: null }
+        ]
+      },
+      valdrisProtection: {
+        text: [
+          '"Keiner schützt ihn direkt. Das wäre zu sichtbar." Thessa lehnt sich zurück.',
+          '"Er kauft Loyalität. Söldner, Händler, manchmal Stadtrat-Mitglieder. Du bräuchtest Beweise — und einen Ort, wo du sie sicher aufbewahren kannst."',
+          '"Komm wieder, wenn du etwas in der Hand hast."'
+        ],
+        options: [{ label: 'Ich arbeite daran.', next: null }]
+      }
+    }
+  },
+
+  {
+    id: 'pereth',
+    name: 'Pereth', icon: '🗡',
+    tagline: 'Söldner. Tischbein-Kippend. Zu entspannt für diese Stadt.',
+    location: 'taverne',
+    start: () => {
+      if (!gameFlags.perethMetFirst) return 'firstMeet';
+      if (gameFlags.perethQuestStarted) return 'questUpdate';
+      return 'idle';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          'Der Mann am Tischende hat sein Bein auf dem Stuhl neben ihm. Als ob er weiß, dass du kommst.',
+          '"Pereth." Er hebt den Becher. "Söldner. Derzeit ohne Auftrag, was gut ist." Eine kurze Pause.',
+          '"Du siehst aus wie jemand, der Ärger sucht. Das find ich gut. Setz dich."'
+        ],
+        options: [
+          {
+            label: 'Hinsetzen.',
+            next: 'offerHelp',
+            action: () => { gameFlags.perethMetFirst = true; }
+          }
+        ]
+      },
+      offerHelp: {
+        text: [
+          '"Es gibt was, das ich brauche — jemand ohne Geschichte in dieser Stadt." Er senkt die Stimme.',
+          '"Ein Lagerhaus am Südtor. Zwei Wachen, normaler Zeitplan. Ich brauche jemanden, der reinschaut und sagt, was da drin ist."',
+          '"Kein Stehlen, kein Kämpfen. Nur anschauen. Dafür: 300 Gold und ein paar nützliche Informationen."'
+        ],
+        options: [
+          {
+            label: '"Ich mache das."',
+            next: null,
+            action: () => {
+              gameFlags.perethQuestStarted = true;
+              showToast('Pereth hat dir eine Aufgabe gegeben. Mehr dazu in einer der nächsten Versionen.', 'event');
+            }
+          },
+          { label: '"Zu riskant. Vielleicht später."', next: null }
+        ]
+      },
+      questUpdate: {
+        text: ['"Das Lagerhaus? Noch nicht durch damit?" Er schaut amüsiert. "Kein Druck. Aber das Angebot gilt nur noch eine Weile."'],
+        options: [
+          { label: '"Ich bin dabei, ich verspreche es."', next: null },
+          { label: '"Was weißt du über Valdris?"', next: 'valdrisPereth' }
+        ]
+      },
+      valdrisPereth: {
+        text: [
+          'Pereth setzt das Bein vom Stuhl. Zum ersten Mal ernst.',
+          '"Valdris." Er schaut sich kurz um. "Ich hab für ihn gearbeitet — einmal, vor Jahren. Der Typ zahlt gut und fragt schlecht."',
+          '"Was du wissen willst: er hat eine Basis nördlich des Markts. Aber er ist selten dort. Komm nicht ohne Plan hin."'
+        ],
+        options: [{ label: 'Danke. Ich pass auf mich auf.', next: null }]
+      },
+      idle: {
+        text: ['"Alles gut? Brauchst du was?"'],
+        options: [
+          { label: '"Alles gut. Danke."', next: null },
+          { label: '"Was weißt du über Valdris?"', next: 'valdrisPereth' }
+        ]
+      }
+    }
+  }
+];
+
+/** Öffnet einen Lethkar-NPC-Dialog (wrapper für openNpcDialog). */
+function openLethkarNpcDialog(npcId) {
+  const npc = NPCS_LETHKAR.find(n => n.id === npcId);
+  if (!npc) return;
+  const startNode = typeof npc.start === 'function' ? npc.start() : npc.start;
+  openNpcDialogWithDef(npc, startNode);
+}
 }

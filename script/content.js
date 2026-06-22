@@ -35,7 +35,12 @@ function renderContent() {
     case 'meinhaus':      renderMeinHaus(area);     break;
     case 'schmiede':      renderSchmiede(area);     break;
     case 'automation':    renderAutomation(area);   break;
-    case 'expedition':    renderExpedition(area);   break;
+    case 'expedition':       renderExpedition(area);        break;
+    case 'lethkar':          renderLethkar(area);           break;
+    case 'alchemie':         renderAlchemie(area);          break;
+    case 'lethkar_taverne':  renderLethkarTaverne(area);    break;
+    case 'lethkar_markt':    renderLethkarMarkt(area);      break;
+    case 'lethkar_schlafplatz': renderLethkarSchlafplatz(area); break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
     default:              renderGeschichte(area);
@@ -139,6 +144,17 @@ function renderGeschichte(el) {
 
 /* ── Weltkarte: Übersicht bekannter (und unbekannter) Regionen ── */
 function renderWeltkarte(el) {
+  // Lethkar wird sichtbar sobald Kap-2 abgeschlossen und Mut ausreicht
+  const canUnlockLethkar = storyState >= 20200 && mut.points >= 3 && !gameFlags.lethkarUnlocked;
+  if (canUnlockLethkar) {
+    gameFlags.lethkarUnlocked = true;
+    maybeShowStoryDialog('3.0');
+  }
+
+  // Lethkar ist bekannt (Ziel auf Miras Brief) sobald der Brief entschlüsselt
+  // wurde — auch wenn noch nicht freigeschaltet
+  const lethkarHinted = storyState >= 20200 && mut.points < 3;
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Weltkarte</div>
@@ -148,15 +164,30 @@ function renderWeltkarte(el) {
           <div class="action-card-icon">🏘</div>
           <div class="action-card-name">Treutheim</div>
           <p class="action-card-desc">Die erste Stadt auf meinem Weg — groß genug, um als Bauernsohn unbemerkt anzukommen.</p>
-          <button class="action-btn" onclick="navTo(2)">Betreten</button>
+          <button class="action-btn" onclick="enterCity('treutheim')">Betreten</button>
         </div>
 
-        <div class="action-card action-card-locked">
-          <div class="action-card-icon">🔒</div>
-          <div class="action-card-name">???</div>
-          <p class="action-card-desc">Unbekannte Gebiete jenseits der Hügel. Noch nicht erreichbar.</p>
-          <button class="action-btn btn-disabled" disabled>Unentdeckt</button>
-        </div>
+        ${gameFlags.lethkarUnlocked
+          ? `<div class="action-card">
+              <div class="action-card-icon">🏙</div>
+              <div class="action-card-name">Lethkar</div>
+              <p class="action-card-desc">Eine größere Stadt, drei Tage nördlich. Alchemisten, Händler, Geheimnisse — und die Adresse auf Miras Brief.</p>
+              <button class="action-btn" onclick="enterCity('lethkar')">Betreten</button>
+            </div>`
+          : lethkarHinted
+            ? `<div class="action-card action-card-locked">
+                <div class="action-card-icon">🏙</div>
+                <div class="action-card-name">Lethkar</div>
+                <p class="action-card-desc">Drei Tage nördlich. Die Adresse aus dem Brief liegt dort. Ich bin noch nicht bereit — mir fehlt der Mut für diesen Schritt. (${mut.points}/3 ⚔)</p>
+                <button class="action-btn btn-disabled" disabled>Noch nicht bereit</button>
+              </div>`
+            : `<div class="action-card action-card-locked">
+                <div class="action-card-icon">🔒</div>
+                <div class="action-card-name">???</div>
+                <p class="action-card-desc">Unbekannte Gebiete jenseits der Hügel. Noch nicht erreichbar.</p>
+                <button class="action-btn btn-disabled" disabled>Unentdeckt</button>
+              </div>`
+        }
 
       </div>
     </div>
@@ -941,7 +972,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Version</span>
-            <span class="info-value">0.12.0-alpha</span>
+            <span class="info-value">0.13.0-alpha</span>
           </div>
         </div>
       </div>
@@ -977,4 +1008,112 @@ function renderSettings(el) {
 function setHistoryFilter(filter) {
   historyFilter = filter;
   render();
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LETHKAR — Stadtübersicht + Orte (Kapitel 3)
+   ══════════════════════════════════════════════════════════════ */
+
+function renderLethkar(el) {
+  const places = [
+    ...(alchemie.unlocked ? [{ id: 'alchemie', icon: '⚗', name: 'Das Laboratorium',
+      desc: 'Ein Raum voller dampfender Tiegel und seltsamer Gerüche. Varena hat mir die Tür geöffnet.' }] : []),
+    { id: 'lethkar_taverne', icon: '🍺', name: 'Die Silberne Glocke',
+      desc: 'Ruhiger als in Treutheim. Hier treffen sich Gelehrte, Händler und Leute, die beides vorgeben.' },
+    { id: 'lethkar_markt', icon: '⚖', name: 'Der Markt der Zutaten',
+      desc: 'Alchemistische Rohstoffe, seltene Kräuter, abgefüllte Essenzen. Eine andere Welt als der Treutheimer Markt.' },
+    { id: 'lethkar_schlafplatz', icon: '🛏', name: 'Schlafplatz',
+      desc: 'Ein einfaches Zimmer in einer Pension nahe der Stadtmitte. Nicht billig — aber sicher.' }
+  ];
+
+  const cards = places.map(p => `
+    <div class="action-card">
+      <div class="action-card-icon">${p.icon}</div>
+      <div class="action-card-name">${p.name}</div>
+      <p class="action-card-desc">${p.desc}</p>
+      <button class="goto-btn" onclick="showContent('${p.id}')">Hingehen</button>
+    </div>`).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Lethkar</div>
+      <p class="location-card-desc" style="margin-bottom:12px;">Eine alte Gelehrtenstadt im Norden. Pflastersteine statt Feldwege, Türme statt Kirchendächer — und überall dieser Geruch von Kräutern und heißem Metall.</p>
+      <div class="action-grid">${cards}</div>
+    </div>`;
+}
+
+function renderLethkarTaverne(el) {
+  const npcs = NPCS_LETHKAR.filter(npc => npc.location === 'taverne');
+  const npcCards = npcs.map(npc => {
+    const locked = typeof npc.locked === 'function' ? npc.locked() : false;
+    return `
+      <div class="action-card ${locked ? 'action-card-locked' : ''}">
+        <div class="action-card-icon">${npc.icon}</div>
+        <div class="action-card-name">${npc.name}</div>
+        <p class="action-card-desc">${npc.tagline}</p>
+        ${locked
+          ? `<button class="action-btn btn-disabled" disabled>Nicht zugänglich</button>`
+          : `<button class="action-btn" onclick="openNpcDialog('${npc.id}')">Ansprechen</button>`
+        }
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Die Silberne Glocke</div>
+      <p class="location-card-desc" style="margin-bottom:12px;">Leise Musik. Dicker Kerzenrauch. Hier kann man Geheimnisse flüstern, ohne dass man es hört.</p>
+      <div class="action-grid">${npcCards}</div>
+    </div>`;
+}
+
+function renderLethkarMarkt(el) {
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Markt der Zutaten</div>
+      <p class="location-card-desc">Unzählige Waren aus der ganzen Region. Alchemistische Rohstoffe, gepreiste Essenzen, Werkzeug für Laborarbeiten.</p>
+      <p class="location-card-desc" style="color:var(--muted);font-style:italic;margin-top:8px;">Händler und Kaufoptionen folgen in einer der nächsten Versionen.</p>
+    </div>`;
+}
+
+function renderLethkarSchlafplatz(el) {
+  const LETHKAR_SLEEP_OPTIONS = [
+    {
+      id: 'lethkar_pension', name: 'Pension "Zum ruhigen Mond"', icon: '🛏', cost: 8, qualityTier: 2,
+      desc: 'Ein sauberes Bett, Stille, keine Fremden nebenan. Dafür muss man zahlen.', hungerPenalty: 0
+    }
+  ];
+
+  if (!isNight()) {
+    const tiredness = needs.tiredness;
+    const tier = getTirednessTier(tiredness);
+    const msg = tier.id === 'fresh' || tier.id === 'tired'
+      ? 'Die Sonne steht noch hoch. Schlafen wäre vertane Zeit.'
+      : 'Ich bin erschöpft — aber es ist noch kein Abend. Ich muss die Zeit nutzen.';
+    el.innerHTML = `<div class="feature-stage"><div class="feature-stage-label">Schlafplatz</div><p class="location-card-desc">${msg}</p></div>`;
+    return;
+  }
+
+  const cards = LETHKAR_SLEEP_OPTIONS.map(opt => {
+    const canAfford = resources.gold >= opt.cost;
+    const qualityBonus = getPetSleepBonus();
+    const effectiveTier = opt.qualityTier + qualityBonus;
+    return `
+      <div class="action-card">
+        <div class="action-card-icon">${opt.icon}</div>
+        <div class="action-card-name">${opt.name}</div>
+        <p class="action-card-desc">${opt.desc}</p>
+        <div class="action-card-effect">Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
+        <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
+          onclick="sleepAt('lethkar_pension',${opt.cost},${opt.qualityTier})"
+          ${canAfford ? '' : 'disabled'}>
+          ${canAfford ? 'Einquartieren' : `Nicht genug Gold (${opt.cost}g)`}
+        </button>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Schlafplatz</div>
+      <div class="action-grid">${cards}</div>
+    </div>`;
 }

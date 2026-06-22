@@ -57,7 +57,17 @@ function getObjectiveText() {
     return 'Die Konfrontation liegt hinter mir. Brakka und Mira davon berichten — dann Bilanz ziehen.';
   }
   if (storyState >= 20200) {
-    return 'Treutheim liegt hinter mir — was als Kampf ums Überleben begann, hat mich weitergeführt als ich erwartet hatte. Der nächste Schritt ist noch nicht klar. Aber er kommt.';
+    if (gameFlags.lethkarUnlocked) {
+      if (gameFlags.chapter3StoryComplete)
+        return 'Valdris. Ein Name, eine Struktur, ein Netzwerk. Was ich damit anfange, liegt bei mir.';
+      if (gameFlags.varenaDecodedBrief)
+        return 'Der Brief ist entschlüsselt. Lethkar hält mehr bereit als ich gedacht hatte — Varena, Thessa, Pereth. Und irgendwo nördlich des Markts: ein Haus.';
+      return 'Lethkar. Die Adresse aus dem Brief ist hier. Varena kann helfen — wenn ich ihr vertrauen kann.';
+    }
+    const mutNeeded = Math.max(0, 3 - mut.points);
+    if (mutNeeded > 0)
+      return `Treutheim liegt hinter mir. Der Weg nach Lethkar ist nah — aber noch fehlt mir der Mut, den er fordert. (Noch ${mutNeeded} Mut ⚔ benötigt)`;
+    return 'Der Mut ist da. Der Weg nach Lethkar liegt offen. Auf der Weltkarte weiterziehen.';
   }
   return 'Sieh dich um.';
 }

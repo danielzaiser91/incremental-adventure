@@ -51,6 +51,8 @@ function saveGame(opts = {}) {
       playerStats,
       strength,
       mut,
+      einsicht,
+      alchemie,
       expedition,
       zeitkristalle,
       automation,
@@ -60,6 +62,7 @@ function saveGame(opts = {}) {
       chronikButtonUnseen,
       chronikUnseenEntryIds,
       navLevel,
+      currentCity,
       currentContent: currentContent === 'settings' ? 'geschichte' : currentContent,
       savedAt:        Date.now()
     };
@@ -138,6 +141,7 @@ function applySaveData(save) {
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
     meinhaus: false, schmiede: false, expedition: false,
+    alchemie: false, lethkar: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -161,11 +165,17 @@ function applySaveData(save) {
     stadtwacheAccepted: false, stadtwacheDeclined: false, isStadtwacheShift: false,
     fullInventoryReset: false,
     mirasBriefGiven: false, mirasBriefDecoded: false,
+    lethkarUnlocked: false,
+    varenaMetFirst: false, thessaMetFirst: false, perethMetFirst: false,
+    varenaDecodedBrief: false, thessaTrustGained: false,
+    perethQuestStarted: false, chapter3StoryComplete: false,
     ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
   strength       = { xp: 0, level: 0, ...save.strength };
   mut            = { points: 0, totalEarned: 0, ...save.mut };
+  einsicht       = { points: 0, totalEarned: 0, ...save.einsicht };
+  alchemie       = { unlocked: false, levels: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, lastTick: null, ...save.alchemie };
   expedition     = { activeExpedition: null, storyCompleted: [], grindCounts: {}, ...save.expedition };
   zeitkristalle  = save.zeitkristalle ?? 0;
   automation     = { slots: [], ...save.automation };
@@ -176,6 +186,7 @@ function applySaveData(save) {
   chronikButtonUnseen   = save.chronikButtonUnseen ?? false;
   chronikUnseenEntryIds = save.chronikUnseenEntryIds ?? [];
   navLevel       = save.navLevel       ?? 0;
+  currentCity    = save.currentCity    ?? 'treutheim';
   currentContent = save.currentContent ?? 'geschichte';
   marketVendor   = null;
   workProgress   = 0;
@@ -550,7 +561,8 @@ function defaultNavUnseen()    {
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
-    meinhaus: false, schmiede: false, expedition: false
+    meinhaus: false, schmiede: false, expedition: false,
+    alchemie: false, lethkar: false
   };
 }
 function defaultGameFlags()    {
@@ -631,6 +643,8 @@ function performHardReset() {
   playerStats   = defaultPlayerStats();
   strength      = defaultStrength();
   mut           = { points: 0, totalEarned: 0 };
+  einsicht      = { points: 0, totalEarned: 0 };
+  alchemie      = { unlocked: false, levels: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, progress: { feuer:0,wasser:0,erde:0,luft:0,aether:0 }, lastTick: null };
   expedition    = { activeExpedition: null, storyCompleted: [], grindCounts: {} };
   zeitkristalle = 0;
   automation    = { slots: [] };
@@ -639,6 +653,7 @@ function performHardReset() {
   chronikButtonUnseen   = false;
   chronikUnseenEntryIds = [];
   navLevel       = 0;
+  currentCity    = 'treutheim';
   currentContent = 'geschichte';
   marketVendor   = null;
   workProgress   = 0;

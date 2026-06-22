@@ -141,6 +141,83 @@ const STORY_ENTRIES = [
       'Der Schatten ist noch da draußen. Und er weiß, dass ich existiere.',
       'Das ist kein Ende. Das ist der Beginn von etwas viel Größerem.'
     ]
+  },
+
+  /* ── Kapitel 3: Lethkar ──────────────────────────────────── */
+  {
+    id:          '3.0',
+    title:       'Lethkar',
+    unlockFlag:  () => gameFlags.lethkarUnlocked,
+    text: [
+      'Drei Tage Weg. Keine Räuber — aber auch keine Gastfreundschaft.',
+      'Lethkar ist größer als Treutheim. Andere Gerüche, andere Gesichter. Hier weiß niemand, wer ich bin.',
+      'Das ist ein Vorteil. Vielleicht.',
+      'Die Adresse aus dem Brief liegt nördlich des Markts. Aber ich gehe nicht hin. Noch nicht.'
+    ]
+  },
+  {
+    id:          '3.1',
+    title:       'Erste Schritte in Lethkar',
+    unlockFlag:  () => gameFlags.varenaMetFirst,
+    text: [
+      'In der Taverne sitzt eine Frau mit einem Alchemistenabzeichen und schaut mich so an, als hätte sie erwartet, dass ich komme.',
+      '"Du siehst aus wie jemand, der aus Treutheim kommt." Ich frage mich, was man mir ansieht.',
+      'Varena. Ihr Name bleibt hängen. Und die Art, wie sie redet — präzise. Kein Wort zu viel.'
+    ]
+  },
+  {
+    id:          '3.2',
+    title:       'Der entschlüsselte Brief',
+    unlockFlag:  () => gameFlags.varenaDecodedBrief,
+    text: [
+      '"Valdris." Der Name liegt jetzt in der Luft, nicht mehr auf Papier.',
+      'Ich weiß, wo das Haus ist. Ich weiß, dass ich nicht allein hingehen soll.',
+      'Mira hat mir mehr mitgegeben als ich dachte. Ich hoffe, dass sie weiß, was sie getan hat.'
+    ]
+  },
+  {
+    id:          '3.3',
+    title:       'Das Laboratorium',
+    unlockFlag:  () => alchemie.unlocked,
+    text: [
+      'Es riecht nach Schwefel, nassen Steinen und irgendwas Süßlichem, das ich nicht einordnen kann.',
+      'Varena zeigt mir die fünf Aspekte. Feuer, Wasser, Erde, Luft — und Äther.',
+      '"Das hier ist kein Handwerk." Sie tippt auf den Tisch. "Das ist Verstehen."',
+      'Ich glaube ihr. Das bedeutet nicht, dass ich es schon tue.'
+    ]
+  },
+  {
+    id:          '3.4',
+    title:       'Thessa und ihre Bücher',
+    unlockFlag:  () => gameFlags.thessaTrustGained,
+    text: [
+      '"Du weißt mehr als du zeigst", sagt Thessa. "Das ist gut."',
+      'Sie schiebt mir ein Buch über den Tisch — Aufzeichnungen über Lethkarer Händler-Netzwerke. Namen, Verbindungen, Schulden.',
+      'Valdris\' Name taucht dreimal auf. Immer als Gläubiger. Nie als Schuldner.',
+      'Das erklärt einiges. Und macht es komplizierter.'
+    ]
+  },
+  {
+    id:          '3.5',
+    title:       'Pereth und das Lagerhaus',
+    unlockFlag:  () => gameFlags.perethQuestStarted,
+    text: [
+      '"Du bist der Typ, der aus Treutheim kommt und Fragen über Valdris stellt." Pereth ist direkter als ich erwartet hatte.',
+      '"Ich hab für ihn gearbeitet. Einmal reicht." Er lehnt sich zurück. "Das Lagerhaus am Südtor gehört einem seiner Strohleute."',
+      '"Was da drin ist, weiß ich nicht. Aber ich will es wissen. Und du kannst rein, ohne aufzufallen."',
+      'Ich sage ja. Ich bin mir nicht sicher, ob das klug war.'
+    ]
+  },
+  {
+    id:          '3.6',
+    title:       'Die Schatten-Organisation',
+    unlockFlag:  () => gameFlags.chapter3StoryComplete,
+    text: [
+      'Es ergibt jetzt ein Bild. Kein vollständiges — aber genug.',
+      'Valdris ist kein Söldnerführer. Er ist ein Knotenpunkt. Informationen, Geld, Leute — alles fließt durch ihn.',
+      '"Der Schatten" ist größer als ich gedacht hatte. Valdris ist nur ein Name.',
+      'Hinter ihm steckt mehr. Und es weiß, dass ich hier bin.'
+    ]
   }
 ];
 

@@ -30,6 +30,25 @@ const MONSTER_DEFS = [
     id: 'waldtroll', name: 'Waldtroll', icon: '👹', zone: 'tief',
     maxHp: 60, damage: [10, 18], xpReward: 25, goldReward: [18, 30], mutReward: 1,
     desc: 'Ein graues, schwerfälliges Wesen aus Moos und Fels — langsam, aber wenn er trifft, spüre ich es noch Tage später.'
+  },
+  // ── Tier-2: Lethkar-Region (nur sichtbar wenn lethkarUnlocked)
+  {
+    id: 'steingolem', name: 'Steingolem', icon: '🗿', zone: 'lethkar_tief',
+    maxHp: 80, damage: [12, 22], xpReward: 35, goldReward: [25, 40], mutReward: 1,
+    tier: 2,
+    desc: 'Uralt. Aus dem Fels gemeißelt oder aus ihm erwacht — ich kann es nicht sagen. Er bewegt sich langsam, aber unaufhaltsam.'
+  },
+  {
+    id: 'schattenwolf', name: 'Schattenwolf', icon: '🐾', zone: 'lethkar_wald',
+    maxHp: 55, damage: [15, 25], xpReward: 28, goldReward: [20, 35], mutReward: 0,
+    tier: 2,
+    desc: 'Schwarz wie Tinte, kaum sichtbar zwischen den Nordbäumen. Schnell. Sehr schnell.'
+  },
+  {
+    id: 'nordbaer', name: 'Nordbär', icon: '🐻‍❄️', zone: 'lethkar_wald',
+    maxHp: 100, damage: [14, 26], xpReward: 42, goldReward: [30, 50], mutReward: 2,
+    tier: 2,
+    desc: 'Größer als jeder Bär, den ich in Treutheim gesehen habe. Fellfarbe weiß-grau, fast silbern. Nicht angreifbar ohne Plan.'
   }
 ];
 
@@ -272,8 +291,9 @@ function renderJagdgebiet(el) {
     return;
   }
 
-  const monsterCards = MONSTER_DEFS.map(m => {
-    const isDeep    = m.zone === 'tief';
+  const visibleMonsters = MONSTER_DEFS.filter(m => !m.tier || (m.tier === 2 && gameFlags.lethkarUnlocked));
+  const monsterCards = visibleMonsters.map(m => {
+    const isDeep    = m.zone === 'tief' || m.zone === 'lethkar_tief';
     const blocked   = isDeep && getStrengthLevel(strength.xp) < 2;
     const blockNote = blocked ? '<div class="hunt-blocked">Erfordert Stärke-Stufe 2.</div>' : '';
     const btnAttr   = blocked ? 'disabled' : `onclick="startCombat('${m.id}')"`;
@@ -294,7 +314,7 @@ function renderJagdgebiet(el) {
         <button class="action-btn hunt-btn" ${btnAttr}>Jagen</button>
       </div>
     `;
-  }).join('');
+  }).join('');  // monster cards end
 
   const progressBar = progress.span > 0
     ? `<div class="strength-progress-bar"><div class="strength-progress-fill" style="width:${progress.pct.toFixed(1)}%"></div></div>
