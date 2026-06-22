@@ -133,7 +133,7 @@ function applySaveData(save) {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
-    jagdgebiet: false, automation: false,
+    jagdgebiet: false, automation: false, stadtwache: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -543,7 +543,7 @@ function defaultNavUnseen()    {
     arbeitsplatz: true, marktplatz: true, schlafplatz: true,
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
-    jagdgebiet: false, automation: false
+    jagdgebiet: false, automation: false, stadtwache: false
   };
 }
 function defaultGameFlags()    {

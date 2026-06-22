@@ -48,6 +48,107 @@ function getNightWatchReward() {
   return NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase;
 }
 
+/* ── Stadtwache ─────────────────────────────────────────────
+   Tagesjob in Kapitel 2 — modelliert analog zur Feldarbeit,
+   aber mit eigenem Level-System und höherem Grundlohn.        */
+const STADTWACHE_DURATION_BASE_MS  = 3500; // Basis-Dauer einer Schicht in Echtzeit-ms
+const STADTWACHE_CLOCK_MINUTES     = 480;  // 8 Spielstunden pro Schicht
+const STADTWACHE_TIREDNESS_GAIN    = 20;   // Basis-Müdigkeitsanstieg pro Schicht
+const STADTWACHE_HUNGER_GAIN       = 15;   // Basis-Hungeranstieg pro Schicht
+
+const STADTWACHE_LEVEL_THRESHOLDS = [0, 5, 20, 75, 500000, 100000000];
+const STADTWACHE_LEVELS = [
+  { label: 'Neuling',           goldBase: 25, durationMod: 1.4, gainMod: 1.3 },
+  { label: 'Anwärter',          goldBase: 28, durationMod: 1.2, gainMod: 1.1 },
+  { label: 'Wachmann',          goldBase: 30, durationMod: 1.0, gainMod: 1.0 },
+  { label: 'Erfahrener Wächter',goldBase: 33, durationMod: 0.9, gainMod: 0.9 },
+  { label: 'Veteran',           goldBase: 35, durationMod: 0.8, gainMod: 0.8 },
+  { label: 'Elite-Wächter',     goldBase: 35, durationMod: 0.8, gainMod: 0.8 }
+];
+
+function getStadtwacheLevel(count) {
+  let level = 0;
+  for (let i = 1; i < STADTWACHE_LEVEL_THRESHOLDS.length; i++) {
+    if (count >= STADTWACHE_LEVEL_THRESHOLDS[i]) level = i;
+  }
+  return level;
+}
+
+function getStadtwacheLevelProgress(count) {
+  const level = getStadtwacheLevel(count);
+  const from  = STADTWACHE_LEVEL_THRESHOLDS[level];
+  const to    = STADTWACHE_LEVEL_THRESHOLDS[level + 1];
+  if (!to) return { into: count - from, span: 1, pct: 100 };
+  return { into: count - from, span: to - from, pct: Math.round(((count - from) / (to - from)) * 100) };
+}
+
+function getStadtwacheDurationMs() {
+  const level = STADTWACHE_LEVELS[getStadtwacheLevel(stadtwacheStats.count)];
+  return STADTWACHE_DURATION_BASE_MS * level.durationMod;
+}
+
+function getStadtwacheReward() {
+  const level = STADTWACHE_LEVELS[getStadtwacheLevel(stadtwacheStats.count)];
+  return level.goldBase;
+}
+
+function getStadtwacheTirednessGain() {
+  const level = STADTWACHE_LEVELS[getStadtwacheLevel(stadtwacheStats.count)];
+  return STADTWACHE_TIREDNESS_GAIN * level.gainMod;
+}
+
+function getStadtwacheHungerGain() {
+  const level = STADTWACHE_LEVELS[getStadtwacheLevel(stadtwacheStats.count)];
+  return STADTWACHE_HUNGER_GAIN * level.gainMod;
+}
+
+function startStadtwacheShift() {
+  if (gameFlags.isStadtwacheShift || gameFlags.isWorking || isNight() || needs.tiredness >= 100) return;
+  gameFlags.isStadtwacheShift = true;
+  stadtwacheProgress          = 0;
+  stadtwacheStartTime         = Date.now();
+  render();
+  scheduleStadtwache();
+}
+
+function scheduleStadtwache() {
+  if (stadtwacheRafId) cancelAnimationFrame(stadtwacheRafId);
+  stadtwacheRafId = requestAnimationFrame(animateStadtwache);
+}
+
+function animateStadtwache() {
+  if (!gameFlags.isStadtwacheShift) return;
+  const elapsed       = Date.now() - stadtwacheStartTime;
+  stadtwacheProgress  = Math.min((elapsed / getStadtwacheDurationMs()) * 100, 100);
+  const bar = document.getElementById('stadtwache-progress-bar');
+  const lbl = document.getElementById('stadtwache-progress-label');
+  if (bar) bar.style.width = stadtwacheProgress + '%';
+  if (lbl) lbl.textContent = Math.floor(stadtwacheProgress) + '%';
+  if (stadtwacheProgress >= 100) {
+    completeStadtwache();
+  } else {
+    stadtwacheRafId = requestAnimationFrame(animateStadtwache);
+  }
+}
+
+function completeStadtwache() {
+  if (stadtwacheRafId) { cancelAnimationFrame(stadtwacheRafId); stadtwacheRafId = null; }
+  const reward         = getStadtwacheReward();
+  const tirednessGain  = Math.round(getStadtwacheTirednessGain());
+  gameFlags.isStadtwacheShift   = false;
+  stadtwacheProgress            = 0;
+  resources.gold               += reward;
+  resources.totalGoldEarned    += reward;
+  stadtwacheStats.count        += 1;
+  adjustHunger(Math.round(getStadtwacheHungerGain()));
+  adjustTiredness(tirednessGain);
+  advanceClock(STADTWACHE_CLOCK_MINUTES);
+  showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, 'reward');
+  checkMilestones();
+  maybeTriggerCommanderRecruitment(() => {});
+  render();
+}
+
 /* Schlafqualität als unbegrenzte Stufe (0 = Straße, 1 = Absteige, +höher
    durch Skills und Haustier). Kein fixes Maximum — Incremental-Design:
    weitere Schlafplätze, Skills und Haustier-Level können die Stufe immer
@@ -404,17 +505,17 @@ function maybeTriggerFirstNightWatchLevelUpDialog(onDone = () => {}) {
   ], () => { render(); onDone(); });
 }
 
-/** Monolog nach der ersten Feldarbeit auf Nachtwache-Level 3: der
-    Kommandant fragt, ob der Spieler der Stadtwache beitreten will. Stößt
-    (noch) keinen eigenen Arbeitsplatz an — siehe notes/lose-enden.md für
-    den nächsten Ausbauschritt ("neuer Arbeitsplatz Nachtwache"). */
+/** Monolog nach dem Waldtroll-Sieg: Roswald hat es gerüchteweise erfahren
+    und lädt den Spieler in die Taverne ein, um ein Stadtwache-Angebot zu machen. */
 function maybeTriggerCommanderRecruitment(onDone = () => {}) {
-  if (gameFlags.commanderRecruitmentShown || getNightWatchLevel(nightWatchStats.count) < 2) { onDone(); return; }
+  if (gameFlags.commanderRecruitmentShown || !gameFlags.waldtrollKilled) { onDone(); return; }
   gameFlags.commanderRecruitmentShown = true;
+  navUnseen.taverne = true;
 
-  showMonologue('Ein Angebot', [
-    'Der Kommandant erwartet mich schon am Tor. "Du machst das inzwischen besser als die Hälfte meiner Leute."',
-    '"Ich könnte einen wie dich in der Stadtwache brauchen — fest, nicht nur nachts nebenbei. Überleg es dir."'
+  showMonologue('Ein Ruf eilt voraus', [
+    'Das Gerücht macht die Runde. Den Waldtroll im Jagdgebiet erlegt — das ist nicht nichts.',
+    'Kommandant Roswald hat mich noch vor dem Stadttor abgepasst, auf dem Weg zurück. Wenig Worte, wie immer. Aber sein Blick hat sich verändert.',
+    '"Komm heute Abend in die Taverne", hat er gesagt. Keine Bitte. Eine Aufforderung.'
   ], () => { render(); onDone(); });
 }
 

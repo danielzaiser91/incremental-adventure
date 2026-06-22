@@ -179,9 +179,10 @@ function endCombat(won, monster) {
     killStats.total += 1;
     maybeStrengthLevelUp();
 
-    // Waldtroll-Flag setzen
+    // Waldtroll-Flag setzen + Roswald-Monolog auslösen
     if (monster.id === 'waldtroll' && !gameFlags.waldtrollKilled) {
       gameFlags.waldtrollKilled = true;
+      maybeTriggerCommanderRecruitment(() => {});
     }
 
     let msg = `Sieg! +${gold} Gold, +${monster.xpReward} Stärke-XP.`;

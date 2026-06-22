@@ -581,7 +581,12 @@ const NPCS = {
     questId: 'commanderTraining',
     badgeOnActive: true,
     locked: () => quests.commanderTraining.state === 'unstarted',
-    start: () => (quests.commanderTraining.state === 'active' ? 'offer' : 'idle'),
+    start: () => {
+      if (quests.commanderTraining.state === 'active') return 'offer';
+      if (gameFlags.commanderRecruitmentShown && !gameFlags.stadtwacheAccepted) return 'recruit';
+      if (gameFlags.stadtwacheAccepted) return 'accepted';
+      return 'idle';
+    },
     nodes: {
       offer: {
         text: [
@@ -599,6 +604,54 @@ const NPCS = {
           },
           { label: 'Vielleicht ein anderes Mal.', next: null }
         ]
+      },
+      recruit: {
+        text: () => {
+          const base = [
+            'Roswald sitzt allein am Tisch, ein Becher vor ihm, den er nicht anrührt. Er wartet.',
+            '"Den Waldtroll erlegt", sagt er, ohne aufzublicken. "Hab\'s gehört. Zweimal."',
+            '"Stadtwache ist kein Job für jeden. Ich nehme nur Leute, die ich kenne — oder die mir jemand empfiehlt. Du hast beides nicht."',
+            'Jetzt schaut er mich an. "Aber wer einen Waldtroll übersteht, hat Respekt verdient. Ich mach eine Ausnahme. Einmalig."',
+            '"Was sagst du?"'
+          ];
+          if (gameFlags.stadtwacheDeclined) {
+            return ['"Hast du es dir nochmal überlegt?"'];
+          }
+          return base;
+        },
+        options: [
+          {
+            label: 'Ich bin dabei.',
+            next: 'recruitAccepted',
+            action: () => {
+              gameFlags.stadtwacheAccepted = true;
+              gameFlags.stadtwacheDeclined = false;
+              navUnseen.stadtwache = true;
+              showToast('Roswald nickt. Ab jetzt bist du Teil der Stadtwache.', 'event');
+            }
+          },
+          {
+            label: 'Das ist mir gerade zu viel.',
+            next: 'recruitDeclined',
+            action: () => { gameFlags.stadtwacheDeclined = true; }
+          }
+        ]
+      },
+      recruitAccepted: {
+        text: [
+          'Roswald steht auf, ohne die Hand zu reichen — Männer wie er brauchen das nicht.',
+          '"Schichtbeginn bei Sonnenaufgang. Kein Zu-Spät-Kommen."',
+          'Er geht. Das Gespräch ist vorbei.'
+        ],
+        options: [{ label: 'Verstanden.', next: null }]
+      },
+      recruitDeclined: {
+        text: ['"Meinetwegen. Ich frage nochmal, wenn du bereit bist."'],
+        options: [{ label: 'Danke.', next: null }]
+      },
+      accepted: {
+        text: ['Roswald hebt zwei Finger zum Gruß. "Schicht läuft gut?" Keine Antwort erwartet.'],
+        options: [{ label: 'Läuft.', next: null }]
       },
       idle: {
         text: ['Roswald hebt zwei Finger zum Gruß, mehr nicht. Männer wie er verschwenden keine Worte.'],

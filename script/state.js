@@ -231,7 +231,8 @@ let navUnseen = {
   pets:         true,     // erst sichtbar, sobald das 1. Haustier adoptiert wurde
   lehrer:       false,    // erst sichtbar nach Oswin-Gespräch (gameFlags.lehrerUnlocked)
   jagdgebiet:   false,    // erst sichtbar nach Gildeneintritt (gameFlags.jagdgebietUnlocked)
-  automation:   false     // erst sichtbar nach erstem Zeitkristall-Fund
+  automation:   false,    // erst sichtbar nach erstem Zeitkristall-Fund
+  stadtwache:   false     // erst sichtbar nach Roswalds Angebot angenommen
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -441,6 +442,11 @@ let workProgress  = 0;
 let workStartTime = null;
 let workRafId     = null;
 let workShiftMult = 1; // 1 = normale Schicht, 2 = Lange Schicht
+
+/* ── Stadtwache-Animation State ───────────────────────────── */
+let stadtwacheProgress  = 0;
+let stadtwacheStartTime = null;
+let stadtwacheRafId     = null;
 
 /* ══════════════════════════════════════════════════════════════
    STATE-HILFSFUNKTIONEN

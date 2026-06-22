@@ -54,6 +54,22 @@ const AUTOMATION_ACTIONS = [
     lockedDesc:  () => `Verkaufe mindestens 15 Rohstoffe bei Greta (aktuell: ${Math.min(resources.totalResourcesSold, 15)}/15).`,
     canRun: () => !isNight() && (resources.inventory['sichel'] || 0) > 0,
     run: () => { grantItem('pflanze', RESOURCE_GATHER_AMOUNT); }
+  },
+  {
+    id:    'stadtwache',
+    label: 'Stadtwache-Schicht',
+    icon:  '🛡',
+    unlockCond:  () => gameFlags.stadtwacheAccepted && stadtwacheStats.count >= 50,
+    lockedDesc:  () => gameFlags.stadtwacheAccepted
+      ? `Absolviere mindestens 50 Schichten als Wächter (aktuell: ${Math.min(stadtwacheStats.count, 50)}/50).`
+      : 'Erfordert die Stadtwache-Mitgliedschaft (Kommandant Roswald in der Taverne).',
+    canRun: () => gameFlags.stadtwacheAccepted && !isNight(),
+    run: () => {
+      const reward = getStadtwacheReward();
+      stadtwacheStats.count    += 1;
+      resources.gold           += reward;
+      resources.totalGoldEarned += reward;
+    }
   }
 ];
 

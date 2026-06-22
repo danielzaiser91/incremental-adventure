@@ -31,6 +31,7 @@ function renderContent() {
     case 'pets':          renderPets(area);         break;
     case 'lehrer':        renderLehrer(area);        break;
     case 'jagdgebiet':    renderJagdgebiet(area);   break;
+    case 'stadtwache':    renderStadtwache(area);   break;
     case 'automation':    renderAutomation(area);   break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
@@ -550,6 +551,77 @@ function renderRohstoffe(el) {
       <div class="action-grid">${cards}</div>
     </div>
   `;
+}
+
+/* ── Stadtwache ───────────────────────────────────────────── */
+function renderStadtwache(el) {
+  if (!gameFlags.stadtwacheAccepted) {
+    el.innerHTML = `<div class="feature-stage"><div class="feature-stage-label">Stadtwache</div>
+      <div class="location-card"><p class="location-card-desc">Ich habe noch keinen Platz bei der Stadtwache.</p></div></div>`;
+    return;
+  }
+
+  const night      = isNight();
+  const busy       = gameFlags.isStadtwacheShift;
+  const busyWork   = gameFlags.isWorking;
+  const pctStr     = Math.floor(stadtwacheProgress) + '%';
+  const reward     = getStadtwacheReward();
+  const durationS  = (getStadtwacheDurationMs() / 1000).toFixed(1);
+  const tiredness  = Math.round(getStadtwacheTirednessGain());
+  const hunger     = Math.round(getStadtwacheHungerGain());
+  const level      = getStadtwacheLevel(stadtwacheStats.count);
+  const levelDef   = STADTWACHE_LEVELS[level];
+  const progress   = getStadtwacheLevelProgress(stadtwacheStats.count);
+  const nextDef    = STADTWACHE_LEVELS[level + 1];
+  const xpLine     = nextDef
+    ? `${progress.into} / ${progress.span} Dienste`
+    : 'Maximalstufe erreicht';
+
+  const shiftBlock = night
+    ? `<div class="action-card action-card-locked" style="width:260px;flex-shrink:0;">
+        <div class="action-card-title">🛡 Schicht beginnen</div>
+        <p class="action-card-desc">Die Stadtwache braucht mich tagsüber. Nachts liegt das Tor in anderen Händen.</p>
+        <div class="action-card-effect">Komm bei Tagesanbruch wieder.</div>
+      </div>`
+    : needs.tiredness >= 100
+    ? `<div class="action-card action-card-locked" style="width:260px;flex-shrink:0;">
+        <div class="action-card-title">🛡 Schicht beginnen</div>
+        <p class="action-card-desc">Ich bin zu erschöpft, um heute noch Schicht zu machen.</p>
+      </div>`
+    : `<div class="action-card ${busy ? 'action-card-active' : ''}" style="width:260px;" onclick="${busy || busyWork ? '' : 'startStadtwacheShift()'}">
+        <div class="action-card-title">🛡 ${busy ? '⏳ Im Dienst…' : 'Schicht beginnen'}</div>
+        <p class="action-card-desc">Eine Tagesschicht bei der Stadtwache — die Straßen sicher halten, den Lohn einstreichen.</p>
+        <div class="reward-info">Lohn: <span class="gold-amount">+${reward} Gold</span></div>
+        <div class="action-card-effect">⏱ Dauer: ${durationS}s · 🕐 Spielzeit: +8h · 😴 Müdigkeit: +${tiredness}% · 🍞 Hunger: +${hunger}%</div>
+        ${busy ? `<div class="progress-track"><div class="progress-bar" id="stadtwache-progress-bar" style="width:${pctStr}"></div></div>
+          <div class="progress-label" id="stadtwache-progress-label">${pctStr}</div>` : ''}
+      </div>`;
+
+  const xpPanel = `
+    <div class="job-info-panel">
+      <div class="xp-track">
+        <div class="xp-track-label">Dienst-Erfahrung</div>
+        <div class="xp-bar-row">
+          <div class="xp-bar-bg"><div class="xp-bar-fill" style="width:${progress.pct}%"></div></div>
+          <span class="xp-bar-text">Stufe ${level} — ${levelDef.label}</span>
+        </div>
+        <div class="xp-bar-sub">${xpLine}</div>
+      </div>
+      ${nextDef ? `<div class="job-info-next-label">Nächste Stufe: Lvl ${level + 1} — ${nextDef.label}</div>
+        <div class="job-info-compare-row"><span>Lohn</span><span>${levelDef.goldBase}g → <strong>${nextDef.goldBase}g</strong></span></div>
+        <div class="job-info-compare-row"><span>Müdigkeit/Schicht</span><span>${Math.round(STADTWACHE_TIREDNESS_GAIN * levelDef.gainMod)}% → <strong>${Math.round(STADTWACHE_TIREDNESS_GAIN * nextDef.gainMod)}%</strong></span></div>
+        <div class="job-info-compare-row"><span>Dauer</span><span>${((STADTWACHE_DURATION_BASE_MS * levelDef.durationMod)/1000).toFixed(1)}s → <strong>${((STADTWACHE_DURATION_BASE_MS * nextDef.durationMod)/1000).toFixed(1)}s</strong></span></div>` : ''}
+    </div>`;
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Stadtwache</div>
+      <div class="job-row">
+        <div class="job-card-wrap">${shiftBlock}${xpPanel}</div>
+      </div>
+    </div>`;
+
+  if (busy) scheduleStadtwache();
 }
 
 /* ── Schlafplatz ──────────────────────────────────────────── */
