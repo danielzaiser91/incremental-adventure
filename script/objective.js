@@ -57,7 +57,7 @@ function getObjectiveText() {
     return 'Die Konfrontation liegt hinter mir. Brakka und Mira davon berichten — dann Bilanz ziehen.';
   }
   if (storyState >= 20200) {
-    return 'Kapitel 2 ist abgeschlossen. Die Geschichte geht weiter — halte Ausschau nach kommenden Updates.';
+    return 'Treutheim liegt hinter mir — was als Kampf ums Überleben begann, hat mich weitergeführt als ich erwartet hatte. Der nächste Schritt ist noch nicht klar. Aber er kommt.';
   }
   return 'Sieh dich um.';
 }
