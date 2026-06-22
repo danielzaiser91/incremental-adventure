@@ -326,6 +326,11 @@ let achievementTab = 'normal'; // 'normal' | 'secret' — siehe content.js, setA
    (experience.js) erlernt wurde (siehe pets.js, trainPet()). */
 let pets = {};
 
+/* Reguläre Wildtiere — gefangen im Jagdgebiet nach Greta-Quest.
+   Jedes Tier: { type: 'hund'|'rabe'|'hase'|'eichhoernchen', level: 1 }
+   level steigt durch "Zeit verbringen" (max. Level 3, 1x täglich GESAMT). */
+let wildPets = [];
+
 /* Fortschritt der geheimen Straßenkatze-Begegnungskette (siehe actions.js,
    maybeTriggerStreetWalk()/takeStreetWalk()) — eigenes kleines State-
    Objekt statt Felder in gameFlags, weil es Zähler sind, keine reinen

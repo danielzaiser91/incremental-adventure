@@ -627,7 +627,12 @@ const NPCS = {
       switch (quests.kraemerinBusiness.state) {
         case 'invited': return 'offer';
         case 'active':  return hasEnoughResourcesForQuest() ? 'turnIn' : 'reminder';
-        default:        return 'idle'; // 'rewarded'
+        default: {
+          // Nach Quest-Abschluss: Tier-Drop-Items einlösen?
+          const drops = ['hundespur','rabenfeder','hasenspur','eichhoernchennuss'];
+          if (drops.some(d => (questItems[d] || 0) > 0)) return 'petCatch';
+          return 'idle';
+        }
       }
     },
     nodes: {
@@ -668,6 +673,50 @@ const NPCS = {
             showToast('Rohstoffe abgegeben. Greta erweitert ihr Sortiment.', 'reward');
           }
         }]
+      },
+      petCatch: {
+        text: () => {
+          const dropMap = {
+            hundespur:         { name: 'Hundespur',      animal: 'ein junger Hund', type: 'hund' },
+            rabenfeder:        { name: 'Rabenfeder',     animal: 'ein wilder Rabe', type: 'rabe' },
+            hasenspur:         { name: 'Hasenspur',      animal: 'ein flinker Hase', type: 'hase' },
+            eichhoernchennuss: { name: 'Angebissene Nuss', animal: 'ein Eichhörnchen', type: 'eichhoernchen' }
+          };
+          const found = Object.entries(dropMap).find(([id]) => (questItems[id] || 0) > 0);
+          if (!found) return ['"Was darf\'s heute sein?"'];
+          const [, info] = found;
+          return [
+            `"Warte mal — ist das eine ${info.name}?" Greta beugt sich vor und nimmt sie in die Hand.`,
+            `"Da draußen streift ${info.animal} rum. Ich kenn da eine Methode, solche Tiere zu locken — die Spur ist frisch genug."`,
+            '"Willst du, dass ich dir das beibring?"'
+          ];
+        },
+        options: [
+          {
+            label: '"Ja, zeig es mir."',
+            next: null,
+            action: () => {
+              const dropToType = {
+                hundespur:         'hund',
+                rabenfeder:        'rabe',
+                hasenspur:         'hase',
+                eichhoernchennuss: 'eichhoernchen'
+              };
+              const icons = { hund: '🐕', rabe: '🐦', hase: '🐇', eichhoernchen: '🐿' };
+              const names = { hund: 'Hund', rabe: 'Rabe', hase: 'Hase', eichhoernchen: 'Eichhörnchen' };
+              for (const [itemId, type] of Object.entries(dropToType)) {
+                if ((questItems[itemId] || 0) > 0 && !wildPets.some(p => p.type === type)) {
+                  questItems[itemId] = 0;
+                  wildPets.push({ type, level: 1 });
+                  navUnseen.pets = true;
+                  showToast(`${icons[type]} ${names[type]} gefangen! Er wartet unter "Haustiere".`, 'event');
+                  break;
+                }
+              }
+            }
+          },
+          { label: '"Vielleicht ein anderes Mal."', next: null }
+        ]
       },
       idle: {
         text: ['Greta nickt dir zu. "Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab."'],

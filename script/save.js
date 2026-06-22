@@ -38,6 +38,7 @@ function saveGame(opts = {}) {
       achievements,
       achievementTab,
       pets,
+      wildPets,
       streetCatProgress,
       superSkills,
       settings,
@@ -115,6 +116,7 @@ function applySaveData(save) {
   achievements   = save.achievements ?? {};
   achievementTab = save.achievementTab ?? 'normal';
   pets           = save.pets ?? {};
+  wildPets       = save.wildPets ?? [];
   streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0, ...save.streetCatProgress };
   superSkills    = save.superSkills ?? {};
   settings       = {
@@ -614,6 +616,7 @@ function performHardReset() {
   achievements  = {};
   achievementTab = 'normal';
   pets          = {};
+  wildPets      = [];
   streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0 };
   settings      = defaultSettings();
   toastHistory  = [];

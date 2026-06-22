@@ -202,6 +202,24 @@ function endCombat(won, monster) {
       msg += ' Du findest einen Zeitkristall! ⌛';
     }
 
+    // Tier-Drop-Logic (nur wenn Greta-Quest abgeschlossen + kein Tier dieser Art bereits)
+    if (gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === 'rewarded') {
+      const alreadyHas = type => wildPets.some(p => p.type === type);
+      const dropTable = [];
+      if (!alreadyHas('hund'))          dropTable.push({ item: 'hundespur',         chance: monster.zone === 'tief' ? 0.06 : 0.03 });
+      if (!alreadyHas('rabe'))          dropTable.push({ item: 'rabenfeder',        chance: monster.zone === 'tief' ? 0.05 : 0.02 });
+      if (!alreadyHas('hase'))          dropTable.push({ item: 'hasenspur',         chance: monster.zone === 'wald' ? 0.05 : 0.02 });
+      if (!alreadyHas('eichhoernchen')) dropTable.push({ item: 'eichhoernchennuss', chance: monster.zone === 'wald' ? 0.05 : 0.02 });
+      for (const entry of dropTable) {
+        if (Math.random() < entry.chance) {
+          questItems[entry.item] = (questItems[entry.item] || 0) + 1;
+          showToast(`Du findest: ${QUEST_ITEMS.find(qi => qi.id === entry.item)?.name}. Greta wüsste damit etwas anzufangen.`, 'event');
+          navUnseen.inventar = true;
+          break; // max. 1 Tier-Drop pro Kampf
+        }
+      }
+    }
+
     combat.log.unshift(msg);
     showToast(msg, 'reward');
 

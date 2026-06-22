@@ -100,6 +100,22 @@ const QUEST_ITEMS = [
     desc: () => gameFlags.mirasBriefDecoded
       ? 'Inhalt: Valdris. Ein Name. Und eine Adresse in Lethkar. Varena weiß mehr.'
       : 'Mira gab ihn mir, bevor ich Treutheim verließ. Verschlüsselt — ich verstehe ihn nicht. Irgendwo findet sich jemand, der das kann.'
+  },
+  {
+    id: 'hundespur',     name: 'Hundespur',          icon: '🐾',
+    desc: 'Eine Fell-Spur aus dem Tiefjagdgebiet — ein junger Hund folgt ihr. Greta wüsste, was damit anzufangen ist.'
+  },
+  {
+    id: 'rabenfeder',    name: 'Rabenfeder',          icon: '🪶',
+    desc: 'Eine ungewöhnlich große, glänzende Feder. Ein Rabe streift durch diese Gegend. Greta wüsste, was damit anzufangen ist.'
+  },
+  {
+    id: 'hasenspur',     name: 'Hasenspur',           icon: '🌿',
+    desc: 'Frische Spuren im Erdreich — ein flinker Hase, größer als üblich. Greta wüsste, was damit anzufangen ist.'
+  },
+  {
+    id: 'eichhoernchennuss', name: 'Angebissene Nuss', icon: '🌰',
+    desc: 'Frisch angeknabbert, eindeutig von einem Eichhörnchen. Das Tier ist noch in der Nähe. Greta wüsste, was damit anzufangen ist.'
   }
 ];
 
