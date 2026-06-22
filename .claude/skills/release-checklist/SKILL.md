@@ -36,7 +36,17 @@ Datei: `script/content.js` — Suche nach der Versions-Anzeige in `renderSetting
 | Patch (0.x.Y) | `#status` | In `memory/discord_setup.md` |
 | Minor/Major (0.Y.0 / Y.0.0) | `#patchnotes` | In `memory/discord_setup.md` |
 
-## 4. WICHTIG: User fragen, bevor Discord-Nachricht abgeschickt wird
+## 4. Patchnotes-Inhalt filtern
+
+**Niemals in Patchnotes erwähnen:**
+- Änderungen an `dev.js` oder anderen Dev-Only-Features (Dev-Panel, Tastenkombinationen, Debug-Tools)
+- Interne Refactors ohne Spieler-sichtbare Auswirkung
+- Skill-/Instruktions-Dateien unter `.claude/`
+- Commit-Messages, die mit `chore:` beginnen
+
+Nur was ein normaler Spieler merkt oder nutzen kann, gehört in die Patchnotes.
+
+## 5. WICHTIG: User fragen, bevor Discord-Nachricht abgeschickt wird
 
 Nach der Bewertung dem User mitteilen:
 - Welcher Umfang festgestellt wurde (Patch / Minor / Major)
