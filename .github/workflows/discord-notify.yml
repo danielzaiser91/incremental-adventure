@@ -102,7 +102,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CONTENT=$(cat patchnotes/pending-status.md)
-          PAYLOAD=$(jq -n --arg c "$CONTENT" '{content: $c}')
+          PAYLOAD=$(jq -n --arg c "<@&1518378825451311105>
+          ${CONTENT}" '{content: $c}')
           EXISTING_ID="${{ vars.STATUS_MESSAGE_ID }}"
           SUCCESS=false
 
