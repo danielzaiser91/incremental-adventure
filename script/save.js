@@ -51,6 +51,7 @@ function saveGame(opts = {}) {
       playerStats,
       strength,
       mut,
+      expedition,
       zeitkristalle,
       automation,
       // combat wird NICHT gespeichert — aktiver Kampf bricht beim Laden ab
@@ -136,7 +137,7 @@ function applySaveData(save) {
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
-    meinhaus: false, schmiede: false,
+    meinhaus: false, schmiede: false, expedition: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -165,6 +166,7 @@ function applySaveData(save) {
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
   strength       = { xp: 0, level: 0, ...save.strength };
   mut            = { points: 0, totalEarned: 0, ...save.mut };
+  expedition     = { activeExpedition: null, storyCompleted: [], grindCounts: {}, ...save.expedition };
   zeitkristalle  = save.zeitkristalle ?? 0;
   automation     = { slots: [], ...save.automation };
   // Migration: altes Format erlaubte mehrere Slots pro Aktion — jetzt max. 1 pro Aktion.
@@ -548,7 +550,7 @@ function defaultNavUnseen()    {
     quests: true, inventar: true, erfahrung: true, taverne: false, rohstoffe: true,
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
-    meinhaus: false, schmiede: false
+    meinhaus: false, schmiede: false, expedition: false
   };
 }
 function defaultGameFlags()    {
@@ -629,6 +631,7 @@ function performHardReset() {
   playerStats   = defaultPlayerStats();
   strength      = defaultStrength();
   mut           = { points: 0, totalEarned: 0 };
+  expedition    = { activeExpedition: null, storyCompleted: [], grindCounts: {} };
   zeitkristalle = 0;
   automation    = { slots: [] };
   combat        = defaultCombat();

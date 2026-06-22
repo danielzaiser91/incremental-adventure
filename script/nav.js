@@ -78,6 +78,7 @@ function renderGlobalNavSection() {
     ${gameFlags.lehrerUnlocked     ? item('lehrer', '📚', 'Lehrhaus')      : ''}
     ${hasAnyAchievement            ? item('errungenschaften', '🏆', 'Errungenschaften') : ''}
     ${gameFlags.automationDiscovered ? item('automation', '⌛', 'Automatisierung') : ''}
+    ${gameFlags.jagdgebietUnlocked   ? item('expedition', '🗺', 'Expeditionen')   : ''}
   `;
 }
 

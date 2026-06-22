@@ -35,6 +35,7 @@ function renderContent() {
     case 'meinhaus':      renderMeinHaus(area);     break;
     case 'schmiede':      renderSchmiede(area);     break;
     case 'automation':    renderAutomation(area);   break;
+    case 'expedition':    renderExpedition(area);   break;
     case 'chronik':       renderChronik(area);      break;
     case 'settings':      renderSettings(area);     break;
     default:              renderGeschichte(area);

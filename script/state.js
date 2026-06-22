@@ -238,7 +238,8 @@ let navUnseen = {
   automation:   false,    // erst sichtbar nach erstem Zeitkristall-Fund
   stadtwache:   false,    // erst sichtbar nach Roswalds Angebot angenommen
   meinhaus:     false,    // erst sichtbar nach Hauskauf (meta.hasHome)
-  schmiede:     false     // erst sichtbar nach Schmiede-Umbau (meta.hasSmith)
+  schmiede:     false,    // erst sichtbar nach Schmiede-Umbau (meta.hasSmith)
+  expedition:   false     // erst sichtbar nach erstem Jagdgebiet-Besuch
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -416,6 +417,16 @@ let strength = {
 let mut = {
   points:      0,
   totalEarned: 0
+};
+
+/* Expeditionen — Story-Expeditionen (einmalig) und Grind-Expeditionen
+   (wiederholbar, produzieren Ressourcen/Gold/XP).
+   activeExpedition: null | { id, startTime, durationMs, type }
+   storyCompleted: Set-Objekt als Array gespeichert, grindCounts: {} */
+let expedition = {
+  activeExpedition: null,   // laufende Expedition
+  storyCompleted:   [],     // IDs abgeschlossener Story-Expeditionen
+  grindCounts:      {}      // id -> Anzahl abgeschlossener Grind-Runs
 };
 
 /* Laufender Kampf — wird beim Speichern NICHT mitgesichert; ein
