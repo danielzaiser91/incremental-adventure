@@ -1306,4 +1306,3 @@ function openLethkarNpcDialog(npcId) {
   const startNode = typeof npc.start === 'function' ? npc.start() : npc.start;
   openNpcDialogWithDef(npc, startNode);
 }
-}
