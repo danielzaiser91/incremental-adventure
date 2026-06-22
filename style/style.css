@@ -1045,7 +1045,7 @@ html, body {
    der Kachel heraus statt sie zu ersetzen. */
 .job-row {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   gap: 15px;
   width: 100%;
@@ -1055,6 +1055,11 @@ html, body {
 .job-card-wrap {
   display: flex;
   align-items: flex-start;
+}
+
+/* Karte innerhalb des Wrappers soll ebenfalls auf Row-Höhe gezogen werden */
+.job-card-wrap > .action-card {
+  align-self: stretch;
 }
 
 .job-card {
