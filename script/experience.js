@@ -482,6 +482,8 @@ function performManualReset() {
     overflowBag = {};
   }
   if (storyState < 20100) storyState = 20100;
+  playerStats.maxHp = getPlayerMaxHp();
+  playerStats.hp    = playerStats.maxHp;
   currentContent = 'erfahrung';
   navLevel       = 0;
 

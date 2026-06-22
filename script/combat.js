@@ -256,8 +256,8 @@ function renderJagdgebiet(el) {
 
   const monsterCards = MONSTER_DEFS.map(m => {
     const isDeep    = m.zone === 'tief';
-    const blocked   = isDeep && strength.xp < 30;
-    const blockNote = blocked ? '<div class="hunt-blocked">Benötigt mehr Kampferfahrung.</div>' : '';
+    const blocked   = isDeep && getStrengthLevel(strength.xp) < 2;
+    const blockNote = blocked ? '<div class="hunt-blocked">Erfordert Stärke-Stufe 2.</div>' : '';
     const btnAttr   = blocked ? 'disabled' : `onclick="startCombat('${m.id}')"`;
 
     return `
