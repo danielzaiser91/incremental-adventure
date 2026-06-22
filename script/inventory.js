@@ -187,16 +187,18 @@ function renderInventar(el) {
 
   const foodCards = ownedFood.map(item => {
     const count = resources.inventory[item.id];
-    const effectParts = [`🍞 −${item.hungerRelief}%`];
+    const effectParts = [];
+    if (item.hungerRelief) effectParts.push(`🍞 −${item.hungerRelief}%`);
     if (item.tirednessRelief) effectParts.push(`😴 −${item.tirednessRelief}%`);
     const sellPrice = Math.max(1, Math.floor(item.cost / 2));
+    const useLabel = item.useLabel || 'Verzehren';
 
     return `
       <div class="action-card action-card-compact">
         <div class="action-card-icon">${item.icon}</div>
         <div class="action-card-name">${item.name} <span class="inventory-count">×${count}</span></div>
         <div class="action-card-effect">${effectParts.join(' · ')}</div>
-        <button class="action-btn" onclick="useFood('${item.id}')">Verzehren</button>
+        <button class="action-btn" onclick="useFood('${item.id}')">${useLabel}</button>
         <button class="action-btn inv-sell-btn" onclick="sellInventoryItem('${item.id}')">An Greta verkaufen (+${sellPrice}g)</button>
       </div>`;
   }).join('');
@@ -298,7 +300,7 @@ function useFood(itemId) {
   if (!item || count <= 0) return;
 
   resources.inventory[itemId] = count - 1;
-  adjustHunger(-item.hungerRelief);
+  if (item.hungerRelief) adjustHunger(-item.hungerRelief);
   if (item.tirednessRelief) adjustTiredness(-item.tirednessRelief);
 
   // Brot hebt den harten Arbeits-Block auf, der seit dem ersten
@@ -306,11 +308,11 @@ function useFood(itemId) {
   const resolvedWorkBlock = itemId === 'brot' && gameFlags.mustEatBread;
   if (resolvedWorkBlock) gameFlags.mustEatBread = false;
 
-  showToast(
-    resolvedWorkBlock
-      ? `${item.name} verzehrt. Mit etwas im Magen kann ich wieder arbeiten.`
-      : `${item.name} verzehrt. Der Hunger lässt nach.`,
-    'purchase'
-  );
+  let toastMsg;
+  if (resolvedWorkBlock)     toastMsg = `${item.name} verzehrt. Mit etwas im Magen kann ich wieder arbeiten.`;
+  else if (item.hungerRelief && item.tirednessRelief) toastMsg = `${item.name} verzehrt. Hunger und Müdigkeit lassen nach.`;
+  else if (item.tirednessRelief) toastMsg = `${item.name} getrunken. Die Müdigkeit lässt etwas nach.`;
+  else                       toastMsg = `${item.name} verzehrt. Der Hunger lässt nach.`;
+  showToast(toastMsg, 'purchase');
   render();
 }

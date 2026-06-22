@@ -13,8 +13,8 @@
 const ACHIEVEMENT_DEFS = [
   {
     id: 'firstWork', cat: 'normal', layer: 0, icon: '⚒', name: 'Erste Schwielen',
-    desc: 'Verrichte deine erste Feldarbeit.',
-    check: () => workStats.count >= 1,
+    desc: 'Erreiche Stufe 1 in der Feldarbeit.',
+    check: () => getWorkLevel(workStats.count) >= 1,
     bonusMult: 0.05
   },
   {

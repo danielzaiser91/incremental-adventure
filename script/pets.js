@@ -33,14 +33,20 @@ function getPetSleepBonus() {
 
 /** Lässt ein Haustier eine Stufe aufsteigen (max. PET_MAX_LEVEL) — nur
     möglich, sobald der Skill "Tierfreund" erlernt wurde (experience.js).
-    Bewusst ohne Kosten/Abklingzeit: das Aufleveln selbst ist die
-    Belohnung für den bereits investierten Begegnungs-Aufwand, kein
-    weiterer Grind-Schritt. */
+    Begrenzt auf einmal pro Spieltag: die Zeit miteinander verdient sich,
+    nicht grinden. */
 function trainPet(petId) {
   if (!skills.petLover) return;
   const pet = pets[petId];
   if (!pet || pet.level >= PET_MAX_LEVEL) return;
 
+  const trainKey = `petTrain_${petId}`;
+  if (dailyPurchases[trainKey]) {
+    showToast('Für heute haben wir genug Zeit miteinander verbracht.', 'info');
+    return;
+  }
+
+  dailyPurchases[trainKey] = true;
   pet.level += 1;
   showToast(`${PET_DEFS[petId].name} ist jetzt enger mit dir vertraut (Stufe ${pet.level}/${PET_MAX_LEVEL}).`, 'event');
   render();
@@ -53,9 +59,12 @@ function renderPets(el) {
   const cards = ownedSpecial.map(([id, pet]) => {
     const def = PET_DEFS[id];
     const maxed = pet.level >= PET_MAX_LEVEL;
+    const trainedToday = !!dailyPurchases[`petTrain_${id}`];
+    const trainDisabled = maxed || trainedToday;
+    const trainLabel = maxed ? 'Maximal vertraut' : trainedToday ? 'Schon genug für heute' : 'Zeit miteinander verbringen';
     const trainBtn = skills.petLover
-      ? `<button class="action-btn ${maxed ? 'btn-disabled' : ''}" onclick="trainPet('${id}')" ${maxed ? 'disabled' : ''}>
-           ${maxed ? 'Maximal vertraut' : 'Zeit miteinander verbringen'}
+      ? `<button class="action-btn ${trainDisabled ? 'btn-disabled' : ''}" onclick="trainPet('${id}')" ${trainDisabled ? 'disabled' : ''}>
+           ${trainLabel}
          </button>`
       : `<p class="action-card-hint">🔓 "Tierfreund" im Erfahrungsbaum erlernen, um aufzuleveln</p>`;
     return `

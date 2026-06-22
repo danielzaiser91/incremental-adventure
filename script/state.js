@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 8;
+const CURRENT_SAVE_VERSION = 9;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -72,6 +72,18 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Drei neue geheime Errungenschaften und eine große Normal-Errungenschaft für den Kapitel-Abschluss.' },
     { cat: 'Neuerung', text: 'Zieltext in der Leiste ist jetzt anklickbar — zeigt den vollständigen Text als Dialog.' },
     { cat: 'Bugfix',   text: 'Chronik-Eintrag "Der Raub" erscheint jetzt korrekt nach dem Raub, nicht erst nach dem Gildenbeitritt.' }
+  ],
+  9: [
+    { cat: 'Neuerung', text: 'NPC-Kacheln in der Taverne zeigen farbige Verfügbarkeits-Punkte (grün/blau/gelb) mit Hover-Info.' },
+    { cat: 'Neuerung', text: 'Bei 100 % Müdigkeit ist Arbeit blockiert — stattdessen erscheint "Kurz verschnaufen" (−10% Müdigkeit, +15 Min Spielzeit).' },
+    { cat: 'Neuerung', text: 'Waffenschmied: erste Begehung zeigt Ablehnungs-Dialog; danach dauerhaft gesperrt.',
+      spoiler: () => !gameFlags.kapitel2Unlocked },
+    { cat: 'Neuerung', text: 'Neuer EP-Skill "Lange Schicht": ermöglicht eine 2-Stunden-Feldarbeit mit doppeltem Ertrag.' },
+    { cat: 'Neuerung', text: 'Zwei neue Super-Skills: "Klarer Horizont" (Klarer Kopf) und "Traumloser Schlaf" (Ich schlafe wie ein Stein).' },
+    { cat: 'Neuerung', text: 'Automatisierungs-Slots kosten keine Hunger/Müdigkeit mehr — erfordern aber Erfahrungs-Schwellen zum Freischalten.' },
+    { cat: 'Änderung', text: 'Haustier-Training: maximal einmal pro Spieltag.' },
+    { cat: 'Änderung', text: '"Erste Schwielen" erfordert jetzt das erste Feldarbeits-Level-Up statt nur die erste Arbeit.' },
+    { cat: 'Bugfix',   text: 'Autospeicher-Standardintervall auf 1 Minute korrigiert.' }
   ]
 };
 
@@ -135,7 +147,8 @@ let skills = {
   guildPrep:        false, // Teures Endknoten-Upgrade — schaltet die Gilden-Questkette bei Brakka frei
   inventoryKeeper:  false, // Inventar/Ausrüstung übersteht künftig einen Neuanfang
   sleepLikeARock:   false, // +1 Schlafqualitäts-Stufe bei jedem Schlafplatz
-  petLover:         false  // Haustiere können aufleveln und ihren Bonus verstärken
+  petLover:         false, // Haustiere können aufleveln und ihren Bonus verstärken
+  longShift:        false  // 2-Stunden-Feldarbeit freischalten
 };
 
 /* Freigeschaltete Super-Skill-Erweiterungen (Lehrer-System) — erst nach
@@ -184,7 +197,9 @@ let gameFlags = {
   brakkaRevealedSuspect:       false, // Brakka hat den Fremden als Bindeglied benannt → Story 2.5
   fremderConfronted:           false, // Fremder mit Beweisen konfrontiert → Story 2.6
   chapter2Complete:            false, // Kapitel 2 vollständig abgeschlossen → Story 2.7 + Sieg-Dialog
-  waldtrollKilled:             false  // Mindestens einen Waldtroll besiegt (Tor zur Endkonfrontation)
+  waldtrollKilled:             false, // Mindestens einen Waldtroll besiegt (Tor zur Endkonfrontation)
+  waffenschmiedRejected:       false, // Spieler wurde vom Waffenschmied abgewiesen → Brakka bietet Gilde an
+  foremanEveningAlerted:       false  // Taverne-Nav einmalig beleuchtet, sobald Vorarbeiter abends antreffbar war
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
@@ -291,8 +306,9 @@ let pets = {};
    Objekt statt Felder in gameFlags, weil es Zähler sind, keine reinen
    Einmal-Flags. */
 let streetCatProgress = {
-  sleepCount: 0, // Wie oft insgesamt auf der Straße geschlafen wurde
-  encounters: 0  // Wie oft die Katze bereits getroffen UND gestreichelt wurde (max. 3, dann adoptiert)
+  sleepCount: 0,        // Wie oft insgesamt auf der Straße geschlafen wurde
+  encounters: 0,        // Wie oft die Katze bereits getroffen UND gestreichelt wurde (max. 3, dann adoptiert)
+  postAdoptionNights: 0 // Wie oft nach der Adoption auf der Straße geschlafen wurde
 };
 
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */
@@ -305,7 +321,7 @@ let settings = {
   // Akt-Übergänge.
   warnBeforeReset: { erfahrung: true },
   // Periodisches automatisches Speichern (siehe save.js, setupAutoSave()).
-  autoSave: { enabled: true, intervalMinutes: 5 },
+  autoSave: { enabled: true, intervalMinutes: 1 },
   // Lädt beim Start automatisch den letzten Spielstand, falls vorhanden
   // (siehe save.js, shouldAutoLoad(), aufgerufen aus main.js init()).
   autoLoad: true,
@@ -313,7 +329,10 @@ let settings = {
   // (siehe experience.js, runManualResetWithAnimation()) — der Schalter
   // dafür erscheint in den Einstellungen erst, nachdem der Spieler die
   // Animation einmal gesehen hat (gameFlags.resetAnimationSeen).
-  showResetAnimation: true
+  showResetAnimation: true,
+  // Verhindert die blaue Browser-Textmarkierung bei schnellen Klicks.
+  // Standard: true (kein sichtbares Marking).
+  hideTextSelection: true
 };
 
 /* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 100). */
@@ -403,6 +422,7 @@ let historyFilter    = 'toasts';   // 'toasts' | 'dialoge' — siehe content.js,
 let workProgress  = 0;
 let workStartTime = null;
 let workRafId     = null;
+let workShiftMult = 1; // 1 = normale Schicht, 2 = Lange Schicht
 
 /* ══════════════════════════════════════════════════════════════
    STATE-HILFSFUNKTIONEN

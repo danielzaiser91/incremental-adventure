@@ -1,74 +1,59 @@
 /* ══════════════════════════════════════════════════════════════
    automation.js — Zeitkristall-Automatisierungs-System
-   Zeitkristalle (zeitkristalle in state.js) sind seltene Drops aus
-   Kämpfen. Jeder Kristall kann als "eingefrorene Zeit" einem
-   Automatisierungs-Slot zugewiesen werden, der dann selbsttätig eine
-   Aktion pro Spielstunde ausführt.
+   Zeitkristalle sind seltene Drops aus Kämpfen. Jeder Kristall kann
+   einer Arbeit zugewiesen werden und führt sie selbsttätig aus, wenn
+   Zeit vergeht — ohne Hunger oder Müdigkeit zu kosten.
    ══════════════════════════════════════════════════════════════ */
 
 'use strict';
 
 /* ── Automatisierbare Aktionen ────────────────────────────────
-   `canRun()`: prüft, ob die Aktion gerade ausführbar ist (Tag, kein
-   Hunger-Block, ausreichend Ressourcen).
-   `run()`: führt die Aktion einmalig durch, wie ein unsichtbarer Klick. */
+   `unlockCond()`: Spieler muss die Arbeit ausreichend manuell
+   geleistet haben, bevor er sie automatisieren kann.
+   `lockedDesc()`: Anzeige im UI, was noch fehlt.
+   `canRun()`: Prüft Laufzeit-Voraussetzungen (Tag, Werkzeug etc.).
+   `run()`: Führt die Arbeit einmalig ohne Nebenwirkungen aus. */
 const AUTOMATION_ACTIONS = [
   {
     id:    'feldarbeit',
     label: 'Feldarbeit',
     icon:  '⚒',
-    desc:  'Führt einmal pro Spielstunde eine Feldarbeit durch.',
-    canRun: () => !isNight() && !gameFlags.mustEatBread && !gameFlags.isWorking,
-    run:    () => {
-      if (!AUTOMATION_ACTIONS.find(a => a.id === 'feldarbeit').canRun()) return;
+    unlockCond:  () => workStats.count >= 50,
+    lockedDesc:  () => `Absolviere mindestens 50 Feldarbeiten (aktuell: ${Math.min(workStats.count, 50)}/50).`,
+    canRun: () => !isNight(),
+    run: () => {
       const reward = getWorkReward();
-      const tGain  = getWorkTirednessGain();
-      const hGain  = getWorkHungerGain();
       workStats.count++;
-      resources.gold         += reward;
+      resources.gold            += reward;
       resources.totalGoldEarned += reward;
-      adjustTiredness(tGain);
-      adjustHunger(hGain);
     }
   },
   {
     id:    'holz',
     label: 'Holz hacken',
     icon:  '🌲',
-    desc:  'Sammelt einmal pro Spielstunde ein Stück Holz (benötigt Axt).',
+    unlockCond:  () => resources.totalResourcesSold >= 15,
+    lockedDesc:  () => `Verkaufe mindestens 15 Rohstoffe bei Greta (aktuell: ${Math.min(resources.totalResourcesSold, 15)}/15).`,
     canRun: () => !isNight() && (resources.inventory['axt'] || 0) > 0,
-    run:    () => {
-      if (!AUTOMATION_ACTIONS.find(a => a.id === 'holz').canRun()) return;
-      grantItem('holz', RESOURCE_GATHER_AMOUNT);
-      adjustTiredness(RESOURCE_GATHER_TIREDNESS);
-      adjustHunger(RESOURCE_GATHER_HUNGER);
-    }
+    run: () => { grantItem('holz', RESOURCE_GATHER_AMOUNT); }
   },
   {
     id:    'stein',
     label: 'Steine sammeln',
     icon:  '🪨',
-    desc:  'Sammelt einmal pro Spielstunde einen Stein (benötigt Spitzhacke).',
+    unlockCond:  () => resources.totalResourcesSold >= 15,
+    lockedDesc:  () => `Verkaufe mindestens 15 Rohstoffe bei Greta (aktuell: ${Math.min(resources.totalResourcesSold, 15)}/15).`,
     canRun: () => !isNight() && (resources.inventory['spitzhacke'] || 0) > 0,
-    run:    () => {
-      if (!AUTOMATION_ACTIONS.find(a => a.id === 'stein').canRun()) return;
-      grantItem('stein', RESOURCE_GATHER_AMOUNT);
-      adjustTiredness(RESOURCE_GATHER_TIREDNESS);
-      adjustHunger(RESOURCE_GATHER_HUNGER);
-    }
+    run: () => { grantItem('stein', RESOURCE_GATHER_AMOUNT); }
   },
   {
     id:    'pflanze',
     label: 'Wildkraut sammeln',
     icon:  '🌿',
-    desc:  'Sammelt einmal pro Spielstunde Wildkraut (benötigt Sichel).',
+    unlockCond:  () => resources.totalResourcesSold >= 15,
+    lockedDesc:  () => `Verkaufe mindestens 15 Rohstoffe bei Greta (aktuell: ${Math.min(resources.totalResourcesSold, 15)}/15).`,
     canRun: () => !isNight() && (resources.inventory['sichel'] || 0) > 0,
-    run:    () => {
-      if (!AUTOMATION_ACTIONS.find(a => a.id === 'pflanze').canRun()) return;
-      grantItem('pflanze', RESOURCE_GATHER_AMOUNT);
-      adjustTiredness(RESOURCE_GATHER_TIREDNESS);
-      adjustHunger(RESOURCE_GATHER_HUNGER);
-    }
+    run: () => { grantItem('pflanze', RESOURCE_GATHER_AMOUNT); }
   }
 ];
 
@@ -77,44 +62,35 @@ const AUTOMATION_ACTIONS = [
 let automationTimerId = null;
 
 /** Richtet den Automatisierungs-Tick-Timer neu ein.
-    Wird von main.js nach dem Init und von setAutomationSlot() aufgerufen. */
+    Wird von main.js nach dem Init und von Slot-Änderungen aufgerufen. */
 function setupAutomation() {
   if (automationTimerId) { clearInterval(automationTimerId); automationTimerId = null; }
   if (!gameFlags.automationDiscovered || automation.slots.length === 0) return;
-
-  // Ein Tick pro 30 Sekunden Echtzeit ≈ ~1 Spielstunde (die Spieluhr läuft
-  // variabel durch die Arbeit, hier ist es ein festes Echtzeit-Intervall).
   automationTimerId = setInterval(tickAutomation, 30_000);
 }
 
 /** Führt alle aktiven Automatisierungs-Slots einmal aus. */
 function tickAutomation() {
   let changed = false;
-
-  automation.slots.forEach((slot, i) => {
+  automation.slots.forEach(slot => {
     if (!slot.enabled) return;
     const action = AUTOMATION_ACTIONS.find(a => a.id === slot.action);
     if (!action || !action.canRun()) return;
     action.run();
     changed = true;
   });
-
   if (changed) render();
 }
 
 /* ── Slot-Management ──────────────────────────────────────── */
 
-/** Weist einem Slot eine Aktion zu oder schaltet ihn aus.
-    `index` -1 fügt einen neuen Slot hinzu (kostet einen Zeitkristall). */
+/** Weist einem freien Kristall die Aktion zu. Maximal 1 Kristall pro Aktion. */
 function addAutomationSlot(actionId) {
-  if (zeitkristalle <= 0) {
-    showToast('Kein Zeitkristall verfügbar.', 'error');
-    return;
-  }
-  if (automation.slots.length >= zeitkristalle) {
-    showToast('Alle Zeitkristalle sind bereits verwendet.', 'error');
-    return;
-  }
+  if (zeitkristalle <= 0) { showToast('Kein Zeitkristall verfügbar.', 'error'); return; }
+  if (automation.slots.length >= zeitkristalle) { showToast('Alle Zeitkristalle sind bereits verwendet.', 'error'); return; }
+  if (automation.slots.some(s => s.action === actionId)) { showToast('Diese Arbeit wird bereits automatisiert.', 'info'); return; }
+  const action = AUTOMATION_ACTIONS.find(a => a.id === actionId);
+  if (!action || (action.unlockCond && !action.unlockCond())) { showToast('Diese Arbeit ist noch nicht verfügbar.', 'error'); return; }
   automation.slots.push({ action: actionId, enabled: true });
   setupAutomation();
   render();
@@ -127,78 +103,66 @@ function removeAutomationSlot(index) {
   render();
 }
 
-function setAutomationSlotEnabled(index, enabled) {
-  if (!automation.slots[index]) return;
-  automation.slots[index].enabled = enabled;
-  setupAutomation();
-  render();
-}
-
-function setAutomationSlotAction(index, actionId) {
-  if (!automation.slots[index]) return;
-  automation.slots[index].action = actionId;
-  render();
+/** Entfernt den Slot für eine bestimmte Aktion (erste Fundstelle). */
+function removeAutomationSlotByAction(actionId) {
+  const idx = automation.slots.findIndex(s => s.action === actionId);
+  if (idx !== -1) removeAutomationSlot(idx);
 }
 
 /* ── Render-Funktion ──────────────────────────────────────── */
 
 function renderAutomation(el) {
-  const maxSlots   = zeitkristalle;
-  const usedSlots  = automation.slots.length;
-  const freeSlots  = maxSlots - usedSlots;
+  const maxSlots  = zeitkristalle;
+  const usedSlots = automation.slots.length;
+  const freeSlots = maxSlots - usedSlots;
 
-  const actionOptions = AUTOMATION_ACTIONS.map(a =>
-    `<option value="${a.id}">${a.icon} ${a.label}</option>`
-  ).join('');
+  const actionCards = AUTOMATION_ACTIONS.map(action => {
+    const unlocked    = !action.unlockCond || action.unlockCond();
+    const assignedIdx = automation.slots.findIndex(s => s.action === action.id);
+    const isActive    = assignedIdx !== -1;
 
-  const slotRows = automation.slots.map((slot, i) => {
-    const action  = AUTOMATION_ACTIONS.find(a => a.id === slot.action) || AUTOMATION_ACTIONS[0];
-    const onOpts  = AUTOMATION_ACTIONS.map(a =>
-      `<option value="${a.id}" ${a.id === slot.action ? 'selected' : ''}>${a.icon} ${a.label}</option>`
-    ).join('');
+    if (!unlocked) {
+      return `
+        <div class="auto-action-card auto-action-locked">
+          <div class="auto-action-icon">${action.icon}</div>
+          <div class="auto-action-body">
+            <div class="auto-action-name">${action.label}</div>
+            <div class="auto-action-locked-reason">🔒 ${action.lockedDesc()}</div>
+          </div>
+        </div>`;
+    }
+
+    const btn = isActive
+      ? `<button class="auto-action-btn auto-action-btn-remove" onclick="removeAutomationSlotByAction('${action.id}')">Entfernen</button>`
+      : freeSlots > 0
+        ? `<button class="auto-action-btn" onclick="addAutomationSlot('${action.id}')">⌛ Einsetzen</button>`
+        : `<button class="auto-action-btn btn-disabled" disabled title="Keine freien Kristalle">Kein Kristall frei</button>`;
+
     return `
-      <div class="auto-slot">
-        <div class="auto-slot-crystal">⌛</div>
-        <select class="auto-slot-select" onchange="setAutomationSlotAction(${i}, this.value)">${onOpts}</select>
-        <label class="auto-slot-toggle">
-          <input type="checkbox" ${slot.enabled ? 'checked' : ''} onchange="setAutomationSlotEnabled(${i}, this.checked)">
-          Aktiv
-        </label>
-        <button class="auto-slot-remove" onclick="removeAutomationSlot(${i})" title="Slot entfernen">✕</button>
-        <div class="auto-slot-desc">${action.desc}</div>
-      </div>
-    `;
+      <div class="auto-action-card ${isActive ? 'auto-action-active' : ''}">
+        <div class="auto-action-icon">${action.icon}</div>
+        <div class="auto-action-body">
+          <div class="auto-action-name">${action.label}</div>
+          ${isActive ? '<div class="auto-action-status">⌛ Aktiv — alle 30 Sek.</div>' : ''}
+        </div>
+        ${btn}
+      </div>`;
   }).join('');
-
-  const addSection = freeSlots > 0 ? `
-    <div class="auto-add-row">
-      <select id="auto-new-action-select">${actionOptions}</select>
-      <button class="action-btn auto-add-btn" onclick="addAutomationSlot(document.getElementById('auto-new-action-select').value)">
-        + Slot hinzufügen (⌛ kostet 1 Zeitkristall)
-      </button>
-    </div>
-  ` : '';
 
   el.innerHTML = `
     <div class="feature-stage-label">Automatisierung</div>
 
     <div class="auto-intro">
-      <p>
-        Zeitkristalle enthalten eingefrorene Zeit. Jeder Kristall kann einem Automatisierungs-Slot
-        zugewiesen werden, der dann selbsttätig eine Aktion ausführt — alle 30 Sekunden einmal.
-      </p>
-      <div class="auto-crystal-count">
-        ⌛ ${maxSlots} Zeitkristall${maxSlots !== 1 ? 'e' : ''} verfügbar · ${usedSlots} verwendet · ${freeSlots} frei
-      </div>
+      <p>Mithilfe der Zeitkristalle kann ich gleichzeitig etwas anderes machen. Ich stimme sie auf eine Arbeit ein — und wenn tatsächlich Zeit vergeht, ist es so, als hätte ich diese Arbeit getan. Nur ohne die negativen Effekte.</p>
+      <div class="auto-crystal-count">⌛ ${maxSlots} Zeitkristall${maxSlots !== 1 ? 'e' : ''} · ${usedSlots} aktiv · ${freeSlots} frei</div>
     </div>
 
-    ${usedSlots === 0 && maxSlots === 0 ? `
+    ${maxSlots === 0 ? `
       <div class="auto-empty">
         Noch keine Zeitkristalle gefunden. Sie sind seltene Drops aus Kämpfen im Jagdgebiet.
       </div>
     ` : ''}
 
-    ${slotRows ? `<div class="auto-slots">${slotRows}</div>` : ''}
-    ${addSection}
+    <div class="auto-action-list">${actionCards}</div>
   `;
 }

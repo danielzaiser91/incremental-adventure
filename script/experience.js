@@ -63,7 +63,7 @@ const EP_SKILL_TREE = [
     id: 'sleepLikeARock', name: 'Ich schlafe wie ein Stein', icon: '🪨',
     requires: 'inventoryKeeper', maxLevel: 1, costs: [10],
     desc: 'Man sagt mir nach, ich schlafe wie ein Stein — früher war das kein Kompliment. Inzwischen hilft es mir.',
-    effect: '+1 Schlafqualitäts-Stufe an jedem Schlafplatz (max. 3/3).'
+    effect: '+1 Schlafqualitäts-Stufe an jedem Schlafplatz.'
   },
   {
     id: 'thrift', name: 'Sparsamkeit', icon: '🪙',
@@ -83,6 +83,12 @@ const EP_SKILL_TREE = [
     visibleIf: () => Object.keys(pets).length > 0,
     desc: 'Was mir zuläuft, verdient meine volle Aufmerksamkeit.',
     effect: 'Haustiere können jetzt aufleveln und ihren Bonus verstärken (siehe Haustiere).'
+  },
+  {
+    id: 'longShift', name: 'Lange Schicht', icon: '⏰',
+    requires: 'jobLeveling', maxLevel: 1, costs: [3],
+    desc: 'Wenn ich schon auf dem Feld stehe, kann ich auch gleich doppelt so lange bleiben.',
+    effect: 'Schaltet eine 2-Stunden-Feldarbeit frei — doppelter Ertrag, doppelte Kosten.'
   },
   {
     id: 'jobXpBonus', name: 'Aufmerksamer Lehrling', icon: '📋',
@@ -148,7 +154,9 @@ const EP_TREE_BRANCHES = [
   // Ast 4 — Lernen: jobXpBonus (Grundlage) → quickLearner (5 Stufen)
   ['jobXpBonus', 'quickLearner'],
   // Ast 5 — Haustier: petLover (bedingt, nur wenn Haustier vorhanden)
-  ['petLover']
+  ['petLover'],
+  // Ast 6 — Ausdauer: longShift (direkt aus jobLeveling)
+  ['longShift']
 ];
 
 /* ══════════════════════════════════════════════════════════════
@@ -182,6 +190,24 @@ const SUPER_SKILL_DEFS = [
     questDesc: 'Verdiene in deinem Leben insgesamt 500 Gold.',
     questProgress: () => `${Math.min(resources.totalGoldEarned, 500)}/500`,
     questDone: () => resources.totalGoldEarned >= 500
+  },
+  {
+    id: 'clearMind_super', forSkill: 'clearMind',
+    name: 'Klarer Horizont', icon: '🌅',
+    shortDesc: '+1 weitere EP bei jedem Neuanfang (insgesamt +2 mit Klarer Kopf).',
+    questDesc: 'Beginne dreimal von vorn.',
+    questProgress: () => `${Math.min(meta.resets, 3)}/3`,
+    questDone: () => meta.resets >= 3
+  },
+  {
+    // Straßennächte als Nachweis: wer 20 Mal auf dem Pflaster geschlafen
+    // hat, hat seine Grenzen wirklich kennengelernt.
+    id: 'sleepLikeARock_super', forSkill: 'sleepLikeARock',
+    name: 'Traumloser Schlaf', icon: '🌙',
+    shortDesc: '+1 weiterer Schlafqualitäts-Bonus überall (insgesamt +2 Stufen).',
+    questDesc: 'Schlafe 20 Mal auf der Straße.',
+    questProgress: () => `${Math.min(streetCatProgress.sleepCount, 20)}/20`,
+    questDone: () => streetCatProgress.sleepCount >= 20
   }
 ];
 
@@ -303,6 +329,7 @@ function computeEpGain(isFirstReset) {
     ? EP_GOLD_BREAKPOINTS.filter(bp => resources.gold >= bp).length
     : 1;
   if (skills.clearMind) gain += 1;
+  if (superSkills.clearMind_super) gain += 1;
   return gain;
 }
 
@@ -434,8 +461,9 @@ function startManualReset() {
   const isFirstReset = meta.resets === 0;
   const epGain = computeEpGain(isFirstReset);
 
-  const xpNote = skills.clearMind
-    ? `+${epGain} EP (davon +1 durch Klarer Kopf)`
+  const clearMindBonus = (skills.clearMind ? 1 : 0) + (superSkills.clearMind_super ? 1 : 0);
+  const xpNote = clearMindBonus > 0
+    ? `+${epGain} EP (davon +${clearMindBonus} durch Klarer Kopf)`
     : `+${epGain} EP`;
   const showConfirm = () => showDialog({
     title: 'Neu anfangen?',
@@ -511,6 +539,25 @@ function renderSkillDetailPanel() {
   const levelLabel = node.maxLevel > 1 ? ` · Stufe ${level}/${node.maxLevel}` : '';
   const costLabel = goldCost ? `${epCost} EP + ${goldCost} Gold` : `${epCost} EP`;
 
+  // Super-Skill-Anzeige im Detail-Panel
+  const superDef = SUPER_SKILL_DEFS.find(s => s.forSkill === node.id);
+  let superHtml = '';
+  if (superDef) {
+    const earned = !!superSkills[superDef.id];
+    if (earned) {
+      superHtml = `
+        <div class="ep-detail-super ep-detail-super-done">
+          <span class="ep-detail-super-title">★ ${superDef.name}</span>
+          <span class="ep-detail-super-effect">${superDef.shortDesc}</span>
+        </div>`;
+    } else if (maxed) {
+      superHtml = `
+        <div class="ep-detail-super ep-detail-super-hint">
+          <span class="ep-detail-super-title">✦ Eine tiefere Ebene — im Lehrhaus erlernbar</span>
+        </div>`;
+    }
+  }
+
   let actionHtml;
   if (maxed) {
     actionHtml = `<span class="ep-detail-done">✓ Vollständig erlernt</span>`;
@@ -531,12 +578,13 @@ function renderSkillDetailPanel() {
       </div>
       <p class="ep-detail-desc">${node.desc}</p>
       <div class="ep-detail-effect">${node.effect}</div>
+      ${superHtml}
       ${actionHtml}
     </div>`;
 }
 
 /** Baut den kompakten Skill-Knoten-Button (Icon-only). Zustand wird durch
-    CSS-Klassen kommuniziert (maxed/available/locked/selected). */
+    CSS-Klassen kommuniziert (maxed/available/locked/selected/super). */
 function epNodeIconHtml(node) {
   if (!node) return `<div class="ep-node-slot"></div>`;
   const level = getSkillLevel(node.id);
@@ -546,23 +594,36 @@ function epNodeIconHtml(node) {
   const canBuy = !maxed && !extraLocked && experience.points >= epCost;
   const selected = selectedSkillId === node.id;
 
+  const superDef = SUPER_SKILL_DEFS.find(s => s.forSkill === node.id);
+  const superEarned    = superDef && !!superSkills[superDef.id];
+  const superAvailable = superDef && maxed && !superEarned;
+
   let stateClass = '';
-  if (maxed)           stateClass = 'ep-node-maxed';
-  else if (canBuy)     stateClass = 'ep-node-available';
+  if (maxed)            stateClass = 'ep-node-maxed';
+  else if (canBuy)      stateClass = 'ep-node-available';
   else if (extraLocked) stateClass = 'ep-node-extralocked';
-  else                 stateClass = 'ep-node-locked';
-  if (selected) stateClass += ' ep-node-selected';
+  else                  stateClass = 'ep-node-locked';
+  if (selected)       stateClass += ' ep-node-selected';
+  if (superEarned)    stateClass += ' ep-node-super-done';
+  if (superAvailable) stateClass += ' ep-node-has-super';
 
   const levelPips = node.maxLevel > 1
     ? `<div class="ep-node-pips">${Array.from({length: node.maxLevel}, (_, i) =>
         `<span class="ep-node-pip ${i < level ? 'ep-node-pip-filled' : ''}"></span>`).join('')}</div>`
     : '';
 
+  const superBadge = superEarned
+    ? `<span class="ep-node-super-badge ep-node-super-badge-done">★</span>`
+    : superAvailable
+      ? `<span class="ep-node-super-badge">✦</span>`
+      : '';
+
   return `<div class="ep-node-slot">
     <button class="ep-node ${stateClass}" onclick="selectSkillNode('${node.id}')"
       title="${node.name}">
       ${node.icon}
       ${levelPips}
+      ${superBadge}
     </button>
   </div>`;
 }

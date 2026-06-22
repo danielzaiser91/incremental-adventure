@@ -26,6 +26,7 @@ const NPCS = {
   wirt: {
     name: 'Korbin, der Wirt', icon: '🍺',
     tagline: 'Herzlich, aber wachsam gegenüber Fremden.',
+    availability: 'always', availabilityText: 'Ohne ihn läuft hier nix.',
     // Badge sobald Detektiv-Quest startbereit ist (Spieler in Kapitel 2, Quest noch unstarted)
     hasHint: () => (gameFlags.tavernVisited && !gameFlags.jobUnlocked) ||
       (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === 'unstarted' && storyState >= 20101),
@@ -121,6 +122,7 @@ const NPCS = {
   mira: {
     name: 'Mira', icon: '💃',
     tagline: 'Charmant und gewitzt — weiß immer mehr, als sie zugibt.',
+    availability: 'evening', availabilityText: 'Habe sie bisher nur abends gesehen.',
     locked: () => !gameFlags.firstNightDialogShown,
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
@@ -246,6 +248,7 @@ const NPCS = {
   oswin: {
     name: 'Oswin', icon: '🎩',
     tagline: 'Hochnäsig — spricht nur mit denen, die etwas vorzuweisen haben.',
+    availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
     hasHint: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked,
     start: 'greet',
     nodes: {
@@ -294,6 +297,7 @@ const NPCS = {
   brakka: {
     name: 'Brakka, der Schmied', icon: '🔨',
     tagline: 'Trockener Humor, ein Herz aus Eisen — und Eisen für alle anderen.',
+    availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
     questId: 'nightWatch',
     questAvailable: () => gameClock.day >= 2,
     hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done' ||
@@ -307,7 +311,7 @@ const NPCS = {
       }
       if (quests.guildRegistration.state === 'rewarded') return 'guildFinished';
       switch (quests.nightWatch.state) {
-        case 'unstarted': return gameClock.day >= 2 ? 'offer' : 'tooSoon';
+        case 'unstarted': return (gameClock.day >= 2 && gameFlags.waffenschmiedRejected) ? 'offer' : 'tooSoon';
         case 'active':    return 'waiting';
         case 'done':      return 'turnIn';
         default:          return 'idle';
@@ -472,6 +476,7 @@ const NPCS = {
   vorarbeiter: {
     name: 'Der Vorarbeiter', icon: '👷',
     tagline: 'Wortkarg, aber fair — wer ordentlich schuftet, hat seinen Respekt.',
+    availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'foremanRaise',
     badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
     // Er hat den Spieler ausdrücklich für ABENDS in die Taverne eingeladen
@@ -512,6 +517,7 @@ const NPCS = {
   greta: {
     name: 'Greta, die Krämerin', icon: '🧺',
     tagline: 'Geschäftstüchtig und freundlich — hat immer eine neue Idee im Kopf.',
+    availability: 'day', availabilityText: 'Habe sie tagsüber gesehen.',
     questId: 'kraemerinBusiness',
     badgeOnActive: true,
     locked: () => quests.kraemerinBusiness.state === 'unstarted',
@@ -571,6 +577,7 @@ const NPCS = {
   kommandant: {
     name: 'Kommandant Roswald', icon: '🎖',
     tagline: 'Stramm, diszipliniert — und nicht großzügig mit Lob, wenn es nicht verdient ist.',
+    availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'commanderTraining',
     badgeOnActive: true,
     locked: () => quests.commanderTraining.state === 'unstarted',
@@ -603,6 +610,7 @@ const NPCS = {
   strassenkehrer: {
     name: 'Ein alter Straßenkehrer', icon: '🧹',
     tagline: 'Kennt jede Gasse und jeden Schatten der Stadt — und redet gern darüber.',
+    availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
     locked: () => gameClock.day < 5,
     start: 'greet',
     nodes: {
@@ -625,6 +633,7 @@ const NPCS = {
   fremder: {
     name: 'Ein zwielichtiger Mann', icon: '🥷',
     tagline: 'Sitzt allein am Rand des Schankraums, sein Blick wandert ständig.',
+    availability: 'always', availabilityText: 'Scheint immer hier zu sein.',
     locked: () => storyState < 10102,
     // Badge wenn Konfrontation möglich ist
     hasHint: () => quests.theftInvestigation.state === 'brakka_consulted' &&
@@ -792,9 +801,13 @@ function renderTaverne(el) {
     const badge = (hasOfferableQuest || hasPendingQuest || hasHint)
       ? `<div class="npc-quest-badge" title="Hat eine Aufgabe für mich">❗</div>`
       : '';
+    const availDot = npc.availability
+      ? `<div class="npc-avail-dot npc-avail-${npc.availability}"><div class="npc-avail-tip">${npc.availabilityText}</div></div>`
+      : '';
     return `
       <div class="action-card" style="position: relative;">
         ${badge}
+        ${availDot}
         <div class="action-card-icon">${npc.icon}</div>
         <div class="action-card-name">${npc.name}</div>
         <p class="action-card-desc">${npc.tagline}</p>

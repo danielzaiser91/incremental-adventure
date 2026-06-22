@@ -55,8 +55,9 @@ const VENDORS = [
   { id: 'kraemer',       name: 'Krämer',        icon: '🧺', tagline: 'Verpflegung und kleine Ausrüstung für den Alltag.' },
   { id: 'schmiede',      name: 'Schmiede',      icon: '⚒',  tagline: 'Schwere Ausrüstung — nicht für jeden erschwinglich.' },
   {
-    id: 'waffenschmied', name: 'Waffenschmied', icon: '🔒', locked: true,
-    tagline: 'Der Waffenschmied verkauft seine Ware nur an registrierte Abenteurer.',
+    id: 'waffenschmied', name: 'Waffenschmied', icon: '⚔',
+    tagline: 'Klingen, Rüstungen, Spezialwerkzeug — für die, die wissen, was sie tun.',
+    locked: () => gameFlags.waffenschmiedRejected,
     lockReason: 'Nur für Abenteurer'
   }
 ];
@@ -77,6 +78,16 @@ const FOOD_ITEMS = [
   {
     id: 'honigkuchen', name: 'Honigkuchen', icon: '🍯', cost: 12, hungerRelief: 80, tirednessRelief: 10, dailyLimit: 1, unlockDay: 5,
     desc: 'Ein süßer Genuss von reisenden Händlern. Stärkt Leib und Geist.'
+  },
+  {
+    // unlockCond (Funktion → bool): zusätzliche Bedingung neben unlockDay.
+    // Kaffee ist erst verfügbar, wenn Gretas Handelskette aufgebaut wurde —
+    // kein Zulieferer, kein Kaffee.
+    id: 'kaffee', name: 'Schwarzer Kaffee', icon: '☕', cost: 3,
+    hungerRelief: 0, tirednessRelief: 20, dailyLimit: 2, useLabel: 'Trinken',
+    unlockCond: () => quests.kraemerinBusiness.state === 'rewarded',
+    lockedDesc: 'Noch kein Kaffee im Angebot. Wenn der Handel in Treutheim wächst, kommt auch das.',
+    desc: 'Bitter und stark, in einem kleinen Tonbecher. Vertreibt die Müdigkeit, wenn Schlaf keine Option ist.'
   }
 ];
 
@@ -102,6 +113,24 @@ function openVendor(id) {
   if (id === 'kraemer') maybeTriggerKraemerinDialog();
 }
 
+/** Erster Besuch beim Waffenschmied: Abweisung, danach dauerhaft gesperrt. */
+function visitWaffenschmied() {
+  showDialog({
+    title: 'Waffenschmied',
+    text: [
+      'Ein stämmiger Mann hinter dem Tresen hebt kaum den Blick. "Was willst du hier, Fremder?"',
+      'Sein Blick wandert kurz über mich — und er verliert das Interesse sofort wieder.',
+      '"Wir bedienen nur registrierte Abenteurer. Also verschwinde, bevor du mir die Zeit stiehlst."'
+    ],
+    buttons: [{ label: 'Verstanden.', onClick: () => {
+      gameFlags.waffenschmiedRejected = true;
+      navUnseen.taverne = true;
+      closeDialog();
+      render();
+    }}]
+  });
+}
+
 /** Zurück zur Marktplatz-Übersicht. */
 function backToMarketHub() {
   marketVendor = null;
@@ -113,7 +142,8 @@ function renderMarktplatzHub(el) {
   const nightClosed = isNight();
 
   const cards = VENDORS.map(v => {
-    if (v.locked) {
+    const isLocked = typeof v.locked === 'function' ? v.locked() : !!v.locked;
+    if (isLocked) {
       return `
         <div class="action-card action-card-locked">
           <div class="action-card-icon">🔒</div>
@@ -128,12 +158,13 @@ function renderMarktplatzHub(el) {
     // Arbeits-Block bleibt bis zum tatsächlichen Essen bestehen, siehe
     // useFood(), aber die Hervorhebung hat ihren Zweck schon erfüllt).
     const needsBreadHighlight = v.id === 'kraemer' && gameFlags.mustEatBread && (resources.inventory.brot || 0) === 0;
+    const clickFn = v.id === 'waffenschmied' ? 'visitWaffenschmied()' : `openVendor('${v.id}')`;
     return `
       <div class="action-card${nightClosed ? ' action-card-locked' : ''}${needsBreadHighlight ? ' action-card-highlight' : ''}">
         <div class="action-card-icon">${v.icon}</div>
         <div class="action-card-name">${v.name}</div>
         <p class="action-card-desc">${v.tagline}</p>
-        <button class="action-btn ${nightClosed ? 'btn-disabled' : ''}" onclick="openVendor('${v.id}')" ${nightClosed ? 'disabled' : ''}>
+        <button class="action-btn ${nightClosed ? 'btn-disabled' : ''}" onclick="${clickFn}" ${nightClosed ? 'disabled' : ''}>
           ${nightClosed ? 'Geschlossen' : 'Betreten'}
         </button>
       </div>`;
@@ -148,18 +179,27 @@ function renderMarktplatzHub(el) {
   `;
 }
 
+/** Prüft, ob ein Nahrungsmittel derzeit gesperrt ist (unlockDay ODER unlockCond). */
+function isFoodItemLocked(item) {
+  if (item.unlockDay && gameClock.day < item.unlockDay) return true;
+  if (item.unlockCond && !item.unlockCond()) return true;
+  return false;
+}
+
 /* ── Krämer: Verpflegung & Kleinausrüstung ───────────────────── */
 function renderVendorKraemer(el) {
   const nightClosed = isNight();
 
   const foodCards = FOOD_ITEMS.map(item => {
-    const locked = item.unlockDay && gameClock.day < item.unlockDay;
+    const locked = isFoodItemLocked(item);
     if (locked) {
+      const lockedDesc = item.lockedDesc
+        ?? `Zurzeit ausverkauft. Wird in den nächsten Tagen geliefert${item.unlockDay ? ` (verfügbar ab Spieltag ${item.unlockDay})` : ''}.`;
       return `
         <div class="action-card action-card-locked">
           <div class="action-card-icon">${item.icon}</div>
           <div class="action-card-name">${item.name}</div>
-          <p class="action-card-desc">Zurzeit ausverkauft. Wird in den nächsten Tagen geliefert (verfügbar ab Spieltag ${item.unlockDay}).</p>
+          <p class="action-card-desc">${lockedDesc}</p>
           <button class="action-btn btn-disabled" disabled>Nicht verfügbar</button>
         </div>`;
     }
@@ -168,7 +208,8 @@ function renderVendorKraemer(el) {
     const limitReached = item.dailyLimit && boughtToday >= item.dailyLimit;
     const canAfford = resources.gold >= price && !nightClosed && !limitReached;
     const owned = resources.inventory[item.id] || 0;
-    const effectParts = [`🍞 Hunger −${item.hungerRelief}%`];
+    const effectParts = [];
+    if (item.hungerRelief) effectParts.push(`🍞 Hunger −${item.hungerRelief}%`);
     if (item.tirednessRelief) effectParts.push(`😴 Müdigkeit −${item.tirednessRelief}%`);
     const limitNote = item.dailyLimit
       ? `<div class="action-card-effect">Heute gekauft: ${boughtToday} / ${item.dailyLimit}</div>` : '';
@@ -315,6 +356,10 @@ function buyFood(itemId) {
 
   if (isNight()) {
     showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    return;
+  }
+  if (isFoodItemLocked(item)) {
+    showToast(`${item.name} ist zurzeit nicht im Angebot.`, 'error');
     return;
   }
   if (limitReached) {

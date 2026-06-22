@@ -62,6 +62,11 @@
   padding: 0;
 }
 
+/* Textmarkierung: standardmäßig unsichtbar (verhindert blaue Flecken bei
+   schnellen Klicks). Einstellungsseite kann dies per Body-Klasse aufheben. */
+::selection { background: transparent; color: inherit; }
+body.show-selection ::selection { background: Highlight; color: HighlightText; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -543,6 +548,36 @@ html, body {
   filter: drop-shadow(0 0 4px rgba(255, 200, 87, 0.6));
 }
 
+.npc-avail-dot {
+  position: absolute;
+  bottom: 14px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: default;
+}
+.npc-avail-always  { background: #4caf50; }
+.npc-avail-day     { background: #64b5f6; }
+.npc-avail-evening { background: #f9a825; }
+
+.npc-avail-tip {
+  display: none;
+  position: absolute;
+  bottom: 14px;
+  right: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--rad-sm);
+  padding: 5px 9px;
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--text-mid);
+  pointer-events: none;
+  z-index: 10;
+}
+.npc-avail-dot:hover .npc-avail-tip { display: block; }
+
 /* Absolut positioniert statt im Layout-Fluss: das Erscheinen/Verschwinden
    dieses Buttons (Hub <-> Vendor-Unterseite) darf nie alle Elemente
    darunter nach unten verschieben — sonst landet der Mauszeiger nach der
@@ -634,6 +669,12 @@ html, body {
 
 .value-tooltip-positive { color: var(--c-reward); }
 .value-tooltip-negative { color: var(--c-error); }
+.value-tooltip-base-row {
+  color: var(--text-lo);
+  font-style: italic;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
 
 /* ── INVENTAR: Platz-Übersicht + kompaktere Karten ──────────
    Die Zellen-Reihe signalisiert die maximale Inventar-Kapazität, auch
@@ -842,6 +883,24 @@ html, body {
 
 .ep-node-pip.ep-node-pip-filled { background: var(--accent); }
 
+/* Super-Skill-Badge: kleines Symbol oben rechts am Icon-Knoten */
+.ep-node-super-badge {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 9px;
+  line-height: 1;
+  color: var(--text-lo);
+  pointer-events: none;
+}
+.ep-node-super-badge-done { color: #c8a020; }
+
+.ep-node.ep-node-super-done {
+  border-color: #c8a020;
+  background: rgba(200, 160, 32, 0.08);
+}
+.ep-node.ep-node-has-super { border-style: dashed; }
+
 /* ── Detail-Panel unterhalb des Skill-Baums ─────────────────── */
 .ep-detail-panel {
   margin-top: 18px;
@@ -885,7 +944,35 @@ html, body {
 .ep-detail-effect {
   font-size: 12px;
   color: var(--text-mid);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+/* Super-Skill-Info-Block im Detail-Panel */
+.ep-detail-super {
+  margin: 6px 0 10px;
+  padding: 7px 10px;
+  border-radius: var(--rad-sm);
+  border-left: 2px solid var(--border);
+  font-size: 11px;
+}
+.ep-detail-super-done {
+  border-left-color: #c8a020;
+  background: rgba(200, 160, 32, 0.06);
+}
+.ep-detail-super-hint {
+  border-left-color: var(--accent);
+}
+.ep-detail-super-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin-bottom: 2px;
+}
+.ep-detail-super-done .ep-detail-super-title { color: #c8a020; }
+.ep-detail-super-hint .ep-detail-super-title { color: var(--text-lo); font-style: italic; font-weight: normal; }
+.ep-detail-super-effect {
+  display: block;
+  color: var(--text-lo);
 }
 
 .ep-detail-done {
@@ -1108,8 +1195,6 @@ html, body {
 
 .job-info-computed-tooltip {
   max-width: 280px;
-  bottom: auto;
-  top: 130%;
 }
 
 .value-tooltip-row-title {
@@ -2221,69 +2306,34 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   padding: 20px 0;
   text-align: center;
 }
-.auto-slots { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
-.auto-slot {
+.auto-action-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.auto-action-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--rad);
+  border-radius: var(--rad-sm);
   padding: 10px 12px;
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.auto-slot-crystal { font-size: 20px; }
-.auto-slot-select {
-  background: var(--bg-hover);
-  color: var(--text-hi);
-  border: 1px solid var(--border);
-  border-radius: var(--rad-sm);
-  padding: 4px 8px;
-  font-size: 13px;
-  font-family: inherit;
-}
-.auto-slot-toggle {
-  font-size: 12px;
-  color: var(--text-mid);
   display: flex;
   align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  white-space: nowrap;
+  gap: 12px;
 }
-.auto-slot-remove {
+.auto-action-card.auto-action-active { border-color: var(--accent); }
+.auto-action-card.auto-action-locked { opacity: 0.55; }
+.auto-action-icon { font-size: 22px; flex-shrink: 0; }
+.auto-action-body { flex: 1; min-width: 0; }
+.auto-action-name { font-size: 13px; font-weight: 600; color: var(--text-hi); }
+.auto-action-status { font-size: 11px; color: var(--accent); margin-top: 2px; }
+.auto-action-locked-reason { font-size: 11px; color: var(--text-lo); margin-top: 3px; }
+.auto-action-btn {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.auto-action-btn-remove {
   background: transparent;
-  border: 1px solid var(--border);
+  border-color: var(--border);
   color: var(--text-lo);
-  border-radius: var(--rad-sm);
-  cursor: pointer;
-  padding: 2px 7px;
-  font-size: 12px;
 }
-.auto-slot-remove:hover { border-color: #e55; color: #e55; }
-.auto-slot-desc {
-  grid-column: 1 / -1;
-  font-size: 11px;
-  color: var(--text-lo);
-  font-style: italic;
-  margin-top: -4px;
-}
-.auto-add-row {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.auto-add-row select {
-  background: var(--bg-hover);
-  color: var(--text-hi);
-  border: 1px solid var(--border);
-  border-radius: var(--rad-sm);
-  padding: 4px 8px;
-  font-size: 13px;
-  font-family: inherit;
-}
-.auto-add-btn { flex-shrink: 0; }
+.auto-action-btn-remove:hover { border-color: #e55; color: #e55; }
 
 /* ══════════════════════════════════════════════════════════════
    ENTWICKLER-PANEL
@@ -2326,6 +2376,8 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 .dev-btn:hover { border-color: var(--accent); color: var(--accent); }
 .dev-btn-danger { border-color: #e55; color: #e55; }
 .dev-btn-danger:hover { background: rgba(230,80,80,0.12); }
+.dev-btn-warn { border-color: #e8a; color: #e8a; }
+.dev-btn-warn:hover { background: rgba(220,130,160,0.12); }
 
 .dev-flags { margin: 12px 0 8px; }
 .dev-flag-title {

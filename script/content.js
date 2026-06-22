@@ -272,6 +272,7 @@ function renderArbeitsplatz(el) {
   if (equipment.guertel === 'arbeitsguertel') rewardEffects.push({ label: 'Arbeitsgürtel', value: '+1g', positive: true });
   if (gameFlags.foremanBonusGiven) rewardEffects.push({ label: 'Anerkennung des Vorarbeiters', value: '+1g', positive: true });
   if (skills.fieldPay) rewardEffects.push({ label: 'Überzeugungskraft', value: '+1g', positive: true });
+  if (superSkills.fieldPay_super) rewardEffects.push({ label: 'Verhandlungskunst', value: '+1g', positive: true });
   if (hungerTierNow.id !== 'satt') rewardEffects.push({ label: `Hunger (${hungerTierNow.label})`, value: `×${hungerTierNow.rewardMult}`, positive: false });
   if (currentDef.specialRewardMult) rewardEffects.push({ label: currentDef.label, value: `×${currentDef.specialRewardMult}`, positive: true });
   if (currentDef.specialFlatBonus) rewardEffects.push({ label: 'Legendärer Ruf', value: `+${currentDef.specialFlatBonus}g`, positive: true });
@@ -290,10 +291,14 @@ function renderArbeitsplatz(el) {
   if (meta.fasterWorkUnlocked) durationEffects.push({ label: 'Geübtere Hände (nach dem 1. Neuanfang)', value: '×0.6', positive: true });
   if (tier.id !== 'frisch') durationEffects.push({ label: `Müdigkeit (${tier.label})`, value: `×${tier.durationMult}`, positive: false });
 
+  const baseRewardComputed    = currentDef.goldBase;
+  const baseTirednessComputed = Math.round(WORK_TIREDNESS_GAIN * currentDef.gainMod);
+  const baseDurationComputed  = ((WORK_DURATION_BASE_MS * currentDef.durationMod) / 1000).toFixed(1);
+
   const computedRows = [
-    { label: 'Ertrag', target: `${reward}g`, effects: rewardEffects },
-    { label: 'Müdigkeit/Arbeit', target: `${tirednessGain}%`, effects: tirednessEffects },
-    { label: 'Dauer', target: `${durationS}s`, effects: durationEffects }
+    { label: 'Ertrag',           base: `${baseRewardComputed}g`,    target: `${reward}g`,        effects: rewardEffects },
+    { label: 'Müdigkeit/Arbeit', base: `${baseTirednessComputed}%`, target: `${tirednessGain}%`, effects: tirednessEffects },
+    { label: 'Dauer',            base: `${baseDurationComputed}s`,  target: `${durationS}s`,     effects: durationEffects }
   ].filter(row => row.effects.length > 0);
 
   const computedBlock = computedRows.length ? `
@@ -301,6 +306,7 @@ function renderArbeitsplatz(el) {
       <span class="value-modified" tabindex="0">ⓘ Errechnete Werte<span class="value-tooltip job-info-computed-tooltip">
         ${computedRows.map(row => `
           <div class="value-tooltip-row-title">${row.label}: <strong>${row.target}</strong></div>
+          <div class="value-tooltip-base-row">Basis: ${row.base}</div>
           ${row.effects.map(e => valueEffectHtml(e.label, e.value, e.positive)).join('')}
         `).join('<hr class="value-tooltip-sep">')}
       </span></span>
@@ -316,6 +322,8 @@ function renderArbeitsplatz(el) {
       ${computedBlock}
     </div>` : '';
 
+  const exhausted = !night && needs.tiredness >= 100;
+
   let fieldCard;
   if (night) {
     fieldCard = `
@@ -326,6 +334,24 @@ function renderArbeitsplatz(el) {
           <p class="action-card-desc">Die Felder liegen im Dunkeln. Niemand arbeitet hier nachts.</p>
           <button class="action-btn btn-disabled" disabled>Geschlossen</button>
         </div>
+      </div>`;
+  } else if (exhausted) {
+    fieldCard = `
+      <div class="job-card-wrap">
+        <div class="action-card action-card-locked" style="width:260px;flex-shrink:0;">
+          <div class="action-card-icon">⚒</div>
+          <div class="action-card-name">Auf dem Feld schuften</div>
+          <p class="action-card-desc">Ich bin am Limit. So kann ich nicht arbeiten.</p>
+          <button class="action-btn btn-disabled" disabled>Zu erschöpft</button>
+        </div>
+        ${jobInfoPanel}
+      </div>
+      <div class="action-card" style="width:260px;">
+        <div class="action-card-icon">😮‍💨</div>
+        <div class="action-card-name">Kurz verschnaufen</div>
+        <p class="action-card-desc">Eine kurze Pause — genug, um wieder in die Gänge zu kommen.</p>
+        <button class="action-btn" onclick="ausruhen()">Pause einlegen</button>
+        <div class="action-card-effect">🕐 Spielzeit: +15 Min · 😴 Müdigkeit: −10%</div>
       </div>`;
   } else {
     const hungerTier = getHungerTier(needs.hunger);
@@ -349,6 +375,29 @@ function renderArbeitsplatz(el) {
           <div class="job-xp-bar-fill" style="height:${progress.pct}%"></div>
         </div>`
       : '';
+    const longShiftDurationS  = ((getWorkDurationMs() / 1000) * LONG_SHIFT_MULT).toFixed(1);
+    const longShiftReward     = getWorkReward() * LONG_SHIFT_MULT;
+    const longShiftTiredness  = Math.round(getWorkTirednessGain() * LONG_SHIFT_MULT);
+    const longShiftHunger     = Math.round(getWorkHungerGain() * LONG_SHIFT_MULT);
+    const longShiftBusy       = busy && workShiftMult === LONG_SHIFT_MULT;
+    const normalBusy          = busy && workShiftMult === 1;
+
+    const longShiftCard = skills.longShift ? `
+      <div class="action-card">
+        <div class="action-card-icon">⏰</div>
+        <div class="action-card-name">Lange Schicht (2h)</div>
+        <p class="action-card-desc">Doppelte Investition, doppelter Ertrag. Wer durchhält, wird mehr.</p>
+        <button class="action-btn ${busy || gameFlags.mustEatBread ? 'btn-disabled' : ''}"
+          onclick="startLongShift()" ${busy || gameFlags.mustEatBread ? 'disabled' : ''}>
+          ${longShiftBusy ? '⏳ Am Schuften…' : '⏰ Lange Schicht'}
+        </button>
+        <div class="reward-info">Belohnung: <span class="gold-amount">+${longShiftReward} Gold</span></div>
+        <div class="action-card-effect">
+          ⏱ Dauer: ${longShiftDurationS}s · 🕐 Arbeitszeit: +${WORK_CLOCK_MINUTES * LONG_SHIFT_MULT} Min · 😴 Müdigkeit: +${longShiftTiredness}% · 🍞 Hunger: +${longShiftHunger}%
+        </div>
+        ${debuffNote}${hungerNote}
+      </div>` : '';
+
     fieldCard = `
       <div class="job-card-wrap">
         <div class="action-card action-card-primary job-card">
@@ -359,10 +408,6 @@ function renderArbeitsplatz(el) {
           <p class="action-card-desc">
             Schwere Arbeit unter freiem Himmel. Schweiß, Erde — und am Ende ein paar Münzen.
           </p>
-          ${debuffNote}
-          ${hungerNote}
-          ${lockedLevelingNote}
-          ${breadBlockNote}
 
           <button
             class="action-btn action-btn-primary work-btn"
@@ -370,7 +415,7 @@ function renderArbeitsplatz(el) {
             onclick="startWork()"
             ${busy || gameFlags.mustEatBread ? 'disabled' : ''}
           >
-            ${busy ? '⏳ Am Schuften…' : '⚒ Schuften'}
+            ${normalBusy ? '⏳ Am Schuften…' : busy ? '⏳ Am Schuften…' : '⚒ Schuften'}
           </button>
 
           <div class="progress-container${busy ? '' : ' hidden'}" id="progress-container">
@@ -384,9 +429,14 @@ function renderArbeitsplatz(el) {
           <div class="action-card-effect">
             ⏱ Dauer: ${durationS}s · 🕐 Arbeitszeit: +${WORK_CLOCK_MINUTES} Min · 😴 Müdigkeit: +${tirednessGain}% · 🍞 Hunger: +${hungerGain}%
           </div>
+          ${debuffNote}
+          ${hungerNote}
+          ${lockedLevelingNote}
+          ${breadBlockNote}
         </div>
         ${jobInfoPanel}
-      </div>`;
+      </div>
+      ${longShiftCard}`;
   }
 
   let nightWatchCard = '';
@@ -704,6 +754,9 @@ function renderSettings(el) {
               ${settings.warnBeforeReset.erfahrung ? '☑' : '☐'} Vor Erfahrungs-Neuanfang warnen
             </button>
           ` : `<p class="chronik-empty" style="margin: 0;">Noch keine Reset-Ebene freigeschaltet.</p>`}
+          <button class="action-btn settings-btn" onclick="setHideTextSelection(${!settings.hideTextSelection})">
+            ${settings.hideTextSelection ? '☑' : '☐'} Textmarkierung ausblenden
+          </button>
           ${gameFlags.resetAnimationSeen ? `
             <button class="action-btn settings-btn" onclick="setShowResetAnimation(${!settings.showResetAnimation})">
               ${settings.showResetAnimation ? '☑' : '☐'} Reset-Animation (Erfahrung) anzeigen
@@ -774,7 +827,7 @@ function renderSettings(el) {
           </div>
           <div class="info-row">
             <span class="info-label">Version</span>
-            <span class="info-value">0.10.0-alpha</span>
+            <span class="info-value">0.10.1-alpha</span>
           </div>
         </div>
       </div>

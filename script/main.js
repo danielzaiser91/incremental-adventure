@@ -20,6 +20,7 @@ function render() {
 function init() {
   if (shouldAutoLoad()) loadGame();
   else render();
+  applySelectionSetting();
   setupAutoSave();
   setupAutomation();
 }

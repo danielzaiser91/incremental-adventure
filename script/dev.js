@@ -57,6 +57,13 @@ function renderDevPanel(container) {
         <button class="dev-btn" onclick="devSetTiredness()">Setzen</button>
       </div>
 
+      <div class="dev-row">
+        <label class="dev-label">Spielzeit</label>
+        <button class="dev-btn" onclick="devAdvanceTime(60)">+1h</button>
+        <button class="dev-btn" onclick="devAdvanceTime(240)">+4h</button>
+        <button class="dev-btn dev-btn-warn" onclick="devJumpToNight()">→ Nacht</button>
+      </div>
+
       <div class="dev-flags">
         <div class="dev-flag-title">Feature-Flags</div>
         ${devFlagToggle('kapitel2Unlocked',    'Kapitel 2 freigeschaltet')}
@@ -116,6 +123,15 @@ function devSetZeitkristalle() {
 function devSetTiredness() {
   const v = parseInt(document.getElementById('dev-tiredness')?.value);
   if (!isNaN(v)) { needs.tiredness = Math.max(0, Math.min(100, v)); render(); }
+}
+function devAdvanceTime(minutes) {
+  advanceClock(minutes);
+  render();
+}
+function devJumpToNight() {
+  gameClock.hour   = NIGHT_START_HOUR;
+  gameClock.minute = 0;
+  render();
 }
 function devToggleFlag(flag, value) {
   gameFlags[flag] = value;

@@ -44,39 +44,45 @@ function getNightWatchReward() {
   return NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase;
 }
 
-/* Schlafqualität als Stufen (1–3) statt rohem Faktor — analog zu den
-   Hunger-/Müdigkeits-Stufen (siehe needs.js): leichter zu kommunizieren
-   ("Schlafqualität 1/3") als ein nackter Prozentwert. Die Straße startet
-   bewusst auf der schlechtesten Stufe, die Absteige bereits auf der
-   besten — der Skill "Ich schlafe wie ein Stein" (experience.js) hebt
-   JEDEN Ort um eine Stufe an (gekappt auf die beste Stufe), was bei der
-   Absteige also wirkungslos bleibt, aber die Straße deutlich aufwertet. */
-const SLEEP_QUALITY_TIERS = [0.6, 0.8, 1.0];
-const SLEEP_QUALITY_MAX   = SLEEP_QUALITY_TIERS.length;
+/* Schlafqualität als unbegrenzte Stufe (0 = Straße, 1 = Absteige, +höher
+   durch Skills und Haustier). Kein fixes Maximum — Incremental-Design:
+   weitere Schlafplätze, Skills und Haustier-Level können die Stufe immer
+   weiter erhöhen. Steigerungen haben bewusst abnehmenden Grenznutzen:
+   0→1 bringt mehr als 4→5. Formel: 1 − 0.5 × 0.6^tier */
 
-/** Tatsächliche Schlafqualitäts-Stufe (1–3) eines Orts inkl. Skill- UND
-    Haustier-Bonus (siehe pets.js, getPetSleepBonus()). */
+/** Tatsächliche Schlafqualitäts-Stufe (0 aufwärts, kein Cap) inkl.
+    Skill- und Haustier-Bonus. */
 function getSleepQualityTier(option) {
-  const bonus = (skills.sleepLikeARock ? 1 : 0) + getPetSleepBonus();
-  return Math.min(SLEEP_QUALITY_MAX, option.qualityTier + bonus);
+  const bonus = (skills.sleepLikeARock ? 1 : 0)
+    + (superSkills.sleepLikeARock_super ? 1 : 0)
+    + getPetSleepBonus();
+  return option.qualityTier + bonus;
+}
+
+/** Faktor (0–1) für die tatsächliche Müdigkeits-Erholung bei dieser Stufe.
+    Diminishing Returns: Tier 0→50%, 1→70%, 2→82%, 3→89%, 4→93%, 5→96%… */
+function sleepQualityToFactor(tier) {
+  if (tier <= 0) return 0.5;
+  return 1 - 0.5 * Math.pow(0.6, tier);
 }
 
 /** Faktor (0–1) für die tatsächliche Müdigkeits-Erholung dieses Orts. */
 function getSleepQualityFactor(option) {
-  return SLEEP_QUALITY_TIERS[getSleepQualityTier(option) - 1];
+  return sleepQualityToFactor(getSleepQualityTier(option));
 }
 
 /* Auf der Straße ist anfangs die EINZIGE Option (siehe renderSchlafplatz)
    — erst nachdem die Figur weiß, wie schlecht sich das anfühlt, erscheint
-   die Absteige als bewusste Alternative. */
+   die Absteige als bewusste Alternative. qualityTier 0 = Straße (50% Erholung),
+   qualityTier 1 = Absteige (70% Erholung, Basis). */
 const SLEEP_OPTIONS = [
   {
-    id: 'street', name: 'Auf der Straße schlafen', icon: '🌌', cost: 0, qualityTier: 1,
+    id: 'street', name: 'Auf der Straße schlafen', icon: '🌌', cost: 0, qualityTier: 0,
     desc: 'Kostenlos, aber hart und kalt. Ich schlafe nie wirklich tief.', hungerPenalty: 10
   },
   {
-    id: 'inn', name: 'Schäbige Absteige', icon: '🛏', cost: 5, qualityTier: 3,
-    desc: 'Ein Strohsack unter einem Dach. Ich erhole mich vollständig.', hungerPenalty: 0,
+    id: 'inn', name: 'Schäbige Absteige', icon: '🛏', cost: 5, qualityTier: 1,
+    desc: 'Ein Strohsack unter einem Dach. Besser als die Straße.', hungerPenalty: 0,
     requiresFlag: 'firstSleepTriggered'
   }
 ];
@@ -408,13 +414,13 @@ function maybeTriggerCommanderRecruitment(onDone = () => {}) {
   ], () => { render(); onDone(); });
 }
 
-/** Schaltet die Vorarbeiter-Hervorhebung der Taverne erst frei, wenn er
-    dort tatsächlich anzutreffen ist (er ist nur ABENDS dort, siehe
-    npc.js, NPC "vorarbeiter") — bei jedem render() günstig genug, um
-    einfach den aktuellen Zustand zu prüfen statt ein Zeit-Ereignis zu
-    verfolgen. */
+/** Beleuchtet die Taverne-Nav genau einmal, sobald der Vorarbeiter
+    tatsächlich antreffbar ist (er ist nur NACHTS dort, Zustand 'active' =
+    Belohnung noch nicht abgeholt). Das einmalige Flag verhindert, dass
+    der Hinweis nach dem Klick sofort wieder erscheint. */
 function checkEveningArrivals() {
-  if (quests.foremanRaise.state === 'active' && isNight() && !navUnseen.taverne) {
+  if (quests.foremanRaise.state === 'active' && isNight() && !gameFlags.foremanEveningAlerted) {
+    gameFlags.foremanEveningAlerted = true;
     navUnseen.taverne = true;
   }
 }
@@ -481,12 +487,19 @@ function checkMilestones() {
 
 /* ── Arbeits-System ───────────────────────────────────────── */
 
-/** Startet den Arbeitsvorgang. Müdigkeit blockiert nie hart — Hunger ab dem
-    ersten Debuff aber sehr wohl, bis tatsächlich Brot gegessen wurde (siehe
-    `mustEatBread`, gesetzt in maybeTriggerHungerDialog(), gelöscht in
-    useFood()). Die Nacht blockiert ebenfalls hart, wie schon zuvor. */
+const LONG_SHIFT_MULT = 2; // Faktor für die Lange Schicht (2h statt 1h)
+
+function ausruhen() {
+  adjustTiredness(-10);
+  advanceClock(15);
+  render();
+}
+
+/** Startet den Arbeitsvorgang. Bei 100 % Müdigkeit sowie bei Nacht und
+    Hunger-Block wird früh abgebrochen; sonst gilt das Tier-System (weiche
+    Debuffs auf Dauer, kein Hard-Block). */
 function startWork() {
-  if (gameFlags.isWorking || isNight()) return;
+  if (gameFlags.isWorking || isNight() || needs.tiredness >= 100) return;
 
   if (gameFlags.mustEatBread) {
     maybeTriggerWorkBlockedDialog(() => {
@@ -495,6 +508,28 @@ function startWork() {
     return;
   }
 
+  workShiftMult       = 1;
+  gameFlags.isWorking = true;
+  workProgress        = 0;
+  workStartTime       = Date.now();
+
+  render();
+  scheduleWork();
+}
+
+/** Startet eine 2-Stunden-Schicht (Skill "Lange Schicht" vorausgesetzt).
+    Doppelte Dauer, doppelter Ertrag, doppelte Kosten — sonst identisch mit startWork(). */
+function startLongShift() {
+  if (!skills.longShift || gameFlags.isWorking || isNight()) return;
+
+  if (gameFlags.mustEatBread) {
+    maybeTriggerWorkBlockedDialog(() => {
+      showToast('Ohne etwas im Magen bringt das nichts. Ich brauche Brot vom Marktplatz.', 'error');
+    });
+    return;
+  }
+
+  workShiftMult       = LONG_SHIFT_MULT;
   gameFlags.isWorking = true;
   workProgress        = 0;
   workStartTime       = Date.now();
@@ -516,7 +551,7 @@ function animateWork() {
   if (!gameFlags.isWorking) return;
 
   const elapsed = Date.now() - workStartTime;
-  workProgress  = Math.min((elapsed / getWorkDurationMs()) * 100, 100);
+  workProgress  = Math.min((elapsed / (getWorkDurationMs() * workShiftMult)) * 100, 100);
 
   const bar = document.getElementById('progress-bar');
   const lbl = document.getElementById('progress-label');
@@ -534,20 +569,22 @@ function animateWork() {
 function completeWork() {
   if (workRafId) { cancelAnimationFrame(workRafId); workRafId = null; }
 
-  const reward        = getWorkReward();
+  const mult          = workShiftMult;
+  const reward        = getWorkReward() * mult;
   const wasHungry      = isStarving();
-  const tirednessGain  = getWorkTirednessGain();
+  const tirednessGain  = getWorkTirednessGain() * mult;
   const levelBefore    = getWorkLevel(workStats.count);
 
   gameFlags.isWorking        = false;
   workProgress               = 0;
+  workShiftMult              = 1;
   resources.gold            += reward;
   resources.totalGoldEarned += reward;
-  workStats.count            += getWorkXpGain(levelBefore);
+  workStats.count            += getWorkXpGain(levelBefore) * mult;
 
-  adjustHunger(getWorkHungerGain(levelBefore));
+  adjustHunger(getWorkHungerGain(levelBefore) * mult);
   adjustTiredness(tirednessGain);
-  advanceClock(WORK_CLOCK_MINUTES);
+  advanceClock(WORK_CLOCK_MINUTES * mult);
 
   const hungryNote = wasHungry ? ' Der Hunger schwächt dich und ermüdet dich schneller.' : '';
   showToast(`+${reward} Gold erhalten (Gesamt: ${resources.gold}).${hungryNote}`, 'reward');
@@ -622,10 +659,41 @@ function sleep(optionId) {
 
   if (option.id === 'street') {
     streetCatProgress.sleepCount += 1;
-    if (maybeTriggerStreetWalk(option)) return; // Dialog übernimmt, ruft finishSleep() selbst auf
+    const n = streetCatProgress.sleepCount;
+
+    if (pets.streetCat) {
+      // Nach der Adoption: Flavor-Texte (erste 3 Nächte immer, danach jede 2.)
+      streetCatProgress.postAdoptionNights += 1;
+      if (maybeTriggerPostAdoptionText(option)) return;
+    } else if (n <= STREET_SLEEP_FLAVOR_TEXTS.length) {
+      // Erste 4 Nächte: Eingewöhnungs-Flavor
+      showMonologue('Auf der Straße', [STREET_SLEEP_FLAVOR_TEXTS[n - 1]], () => finishSleep(option));
+      return;
+    } else {
+      if (maybeTriggerStreetWalk(option)) return; // Dialog übernimmt, ruft finishSleep() selbst auf
+    }
   }
 
   finishSleep(option);
+}
+
+/** Zeigt einen Post-Adoption-Flavor-Text nach dem Schlafen auf der Straße mit Katze.
+    Gibt true zurück, wenn ein Monolog übernommen hat (finishSleep() dann über Callback). */
+function maybeTriggerPostAdoptionText(option) {
+  const n = streetCatProgress.postAdoptionNights;
+  let text = null;
+  if (n <= STREET_CAT_POST_ADOPTION_EARLY.length) {
+    text = STREET_CAT_POST_ADOPTION_EARLY[n - 1];
+  } else {
+    // Jede 2. Nacht ab der 4. (n=4, 6, 8, …)
+    const laterIdx = n - STREET_CAT_POST_ADOPTION_EARLY.length - 1;
+    if (laterIdx % 2 === 0) {
+      text = STREET_CAT_POST_ADOPTION_LATER[Math.floor(laterIdx / 2) % STREET_CAT_POST_ADOPTION_LATER.length];
+    }
+  }
+  if (!text) return false;
+  showMonologue('Eine ruhige Nacht', [text], () => finishSleep(option));
+  return true;
 }
 
 /** Führt einen bereits "entschiedenen" Schlafvorgang aus (Kosten,
@@ -664,16 +732,34 @@ function finishSleep(option) {
 }
 
 /* ── Geheime Begegnungskette: die Straßenkatze ───────────────
-   Ab der 5. Nacht auf der Straße (und danach alle 2 weiteren) bietet ein
-   kurzer Dialog an, vor dem Schlafen noch eine Runde zu drehen. Von
-   diesen Spaziergängen führt nur JEDER ZWEITE tatsächlich zur Katze —
-   das ergibt 3 Begegnungen (bei Spaziergang 1, 3, 5) bis zur Adoption.
+   Die ersten 4 Nächte auf der Straße zeigen kurze Flavor-Texte (Eingewöhnung).
+   Ab Nacht 5 erscheint jede Nacht ein Walk-Dialog — jeder zweite davon führt
+   zur Katze. Das ergibt 3 Begegnungen (Spaziergänge 1, 3, 5) bis zur Adoption.
    Jede Begegnung lässt sich NICHT überspringen, ohne die Eskalation zu
    verpassen: wer die Katze in Ruhe lässt, bleibt auf demselben
    Vertrauens-Stand stehen, bis er es bei der nächsten Begegnung erneut
    versucht. */
-const STREET_CAT_WALK_FIRST    = 5; // Schlaf-Nr., bei der die Option zum ersten Mal erscheint
-const STREET_CAT_WALK_INTERVAL = 2; // und danach alle X weiteren Nächte auf der Straße
+const STREET_CAT_WALK_FIRST    = 5; // Schlaf-Nr., bei der Walk-Dialoge beginnen
+const STREET_CAT_WALK_INTERVAL = 1; // jede weitere Nacht auf der Straße
+
+/* Flavor-Texte für die ersten 4 Nächte auf der Straße (index = sleepCount - 1) */
+const STREET_SLEEP_FLAVOR_TEXTS = [
+  'Die Pflastersteine unterm Rücken lassen mich nicht vergessen, wo ich bin. Der Schlaf kommt, aber er bleibt nicht lange.',
+  'Schon wieder. Ein Teil von mir wünscht sich verzweifelt ein echtes Bett — irgendein Bett.',
+  'Ich fange an, die Risse im Pflaster zu kennen. Die Katzen in der Ferne. Den besonderen Geruch nach Nacht. Das sollte mir Sorgen machen.',
+  'In der Ferne raschelt es — zu groß für eine Ratte, zu leise für einen Menschen. Beim nächsten Mal werde ich dem nachgehen.'
+];
+
+/* Texte nach der Adoption: erste 3 Nächte speziell, danach abwechselnd */
+const STREET_CAT_POST_ADOPTION_EARLY = [
+  'Sie schläft neben mir, ein kleines warmes Gewicht an meiner Seite. Seltsam, wie viel das ausmacht.',
+  'Wieder diese Steine — aber mit ihr ist es anders. Ruhiger irgendwie.',
+  'Ich glaube, sie wartet auf mich, wenn ich komme. Das ist neu.'
+];
+const STREET_CAT_POST_ADOPTION_LATER = [
+  'Sie liegt noch an derselben Stelle wie immer. Manche Dinge ändern sich nicht.',
+  'Sie streckt sich einmal durch, als ich mich hinlege, und schläft sofort wieder ein.'
+];
 
 const STREET_CAT_GREET_TEXTS = {
   1: 'In einer Seitengasse raschelt es. Eine schmale Katze, struppig und misstrauisch, beobachtet mich aus dem Schatten.',

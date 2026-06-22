@@ -94,7 +94,8 @@ function applySaveData(save) {
   skills         = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
-    inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false, ...save.skills
+    inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false,
+    longShift: false, ...save.skills
   };
   needs          = { hunger: 15, tiredness: 0, sleepDebt: 0, ...save.needs };
   gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
@@ -112,16 +113,18 @@ function applySaveData(save) {
   achievements   = save.achievements ?? {};
   achievementTab = save.achievementTab ?? 'normal';
   pets           = save.pets ?? {};
-  streetCatProgress = { sleepCount: 0, encounters: 0, ...save.streetCatProgress };
+  streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0, ...save.streetCatProgress };
   superSkills    = save.superSkills ?? {};
   settings       = {
     toastDurationMs: 2600,
     autoLoad: true,
     showResetAnimation: true,
+    hideTextSelection: true,
     ...save.settings,
     warnBeforeReset: { erfahrung: true, ...save.settings?.warnBeforeReset },
-    autoSave: { enabled: true, intervalMinutes: 5, ...save.settings?.autoSave }
+    autoSave: { enabled: true, intervalMinutes: 1, ...save.settings?.autoSave }
   };
+  applySelectionSetting();
   toastHistory   = save.toastHistory ?? [];
   dialogHistory  = save.dialogHistory ?? [];
   navUnseen      = {
@@ -147,7 +150,8 @@ function applySaveData(save) {
     automationDiscovered: false, devModeEnabled: false,
     firstJagdgebietKill: false, korbinChapter2Talked: false, theftClueFoundInJagdgebiet: false,
     miraRevealedInfo: false, brakkaRevealedSuspect: false, fremderConfronted: false,
-    chapter2Complete: false, waldtrollKilled: false,
+    chapter2Complete: false, waldtrollKilled: false, waffenschmiedRejected: false,
+    foremanEveningAlerted: false,
     ...save.gameFlags, isWorking: false
   };
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
@@ -155,6 +159,8 @@ function applySaveData(save) {
   mut            = { points: 0, totalEarned: 0, ...save.mut };
   zeitkristalle  = save.zeitkristalle ?? 0;
   automation     = { slots: [], ...save.automation };
+  // Migration: altes Format erlaubte mehrere Slots pro Aktion — jetzt max. 1 pro Aktion.
+  { const seen = new Set(); automation.slots = automation.slots.filter(s => !seen.has(s.action) && seen.add(s.action)); }
   combat         = { active: false, enemyId: null, enemyHp: 0, log: [] };
   shownDialogs   = save.shownDialogs ?? [];
   chronikButtonUnseen   = save.chronikButtonUnseen ?? false;
@@ -240,8 +246,8 @@ function loadGame() {
     }
 
   } catch (e) {
-    showIncompatibleSaveDialog();
-    render(); // Hintergrund-UI trotzdem mit dem aktuellen (Default-)Zustand zeichnen
+    render(); // Hintergrund-UI im Default-Zustand zeichnen, bevor der Dialog erscheint
+    showIncompatibleSaveDialog(raw);
   }
 }
 
@@ -355,16 +361,47 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = []) {
 
 /** Zeigt einen Dialog, dass der gespeicherte Spielstand nicht geladen
     werden konnte, mit der Möglichkeit, direkt neu anzufangen. */
-function showIncompatibleSaveDialog() {
+/** Speichert den rohen Spielstand-String als Textdatei auf den Rechner
+    des Spielers — so bleibt der Fortschritt erhalten, auch wenn er nicht
+    geladen werden kann, und kann als Bug-Report angehängt werden. */
+function downloadCorruptedSave(raw) {
+  try {
+    const blob = new Blob([raw], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `spielstand-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('📥 Spielstand-Backup gespeichert.', 'info');
+  } catch (e) {
+    showToast('⚠ Download fehlgeschlagen — Zwischenablage-Export als Alternative nutzen.', 'error');
+  }
+}
+
+function showIncompatibleSaveDialog(raw) {
+  const hasRaw = !!raw;
   showDialog({
-    title: 'Inkompatibler Spielstand',
-    text: [
-      'Dieser Spielstand passt nicht zur aktuellen Version des Spiels und konnte nicht geladen werden.',
-      'Du kannst mit deinem aktuellen Fortschritt weiterspielen oder ganz neu beginnen.'
-    ],
+    title: 'Spielstand beschädigt',
+    html: `
+      <p>Der gespeicherte Spielstand konnte nicht gelesen werden — er ist vermutlich beschädigt oder stammt aus einer sehr alten Version.</p>
+      <p>Das Spiel startet jetzt neu. Damit der Fortschritt nicht verloren geht: Sicherheitskopie herunterladen und im Discord melden.</p>
+    `,
     buttons: [
-      { label: 'Weiterspielen', onClick: () => closeDialog() },
-      { label: 'Neu anfangen', onClick: () => closeDialog(performHardReset) }
+      ...(hasRaw ? [{
+        label: '📥 Spielstand sichern',
+        onClick: () => downloadCorruptedSave(raw)
+      }] : []),
+      {
+        label: '💬 Bug melden (Discord)',
+        onClick: () => window.open('https://discord.gg/NHenxsPh', '_blank')
+      },
+      {
+        label: 'Neu starten',
+        onClick: () => { closeDialog(); performHardReset(); render(); }
+      }
     ]
   });
 }
@@ -457,6 +494,16 @@ function setAutoLoad(enabled) {
   render();
 }
 
+function applySelectionSetting() {
+  document.body.classList.toggle('show-selection', !settings.hideTextSelection);
+}
+
+function setHideTextSelection(hide) {
+  settings.hideTextSelection = hide;
+  applySelectionSetting();
+  render();
+}
+
 /* ══════════════════════════════════════════════════════════════
    RESET-HILFSFUNKTIONEN
    Pragmatische Alternative zur class-basierten Reset-Architektur:
@@ -480,9 +527,10 @@ function defaultSettings()     {
   return {
     toastDurationMs: 2600,
     warnBeforeReset: { erfahrung: true },
-    autoSave: { enabled: true, intervalMinutes: 5 },
+    autoSave: { enabled: true, intervalMinutes: 1 },
     autoLoad: true,
-    showResetAnimation: true
+    showResetAnimation: true,
+    hideTextSelection: true
   };
 }
 function defaultNavUnseen()    {
@@ -507,6 +555,7 @@ function defaultGameFlags()    {
     streetSweeperTalked: false,
     kapitel2Unlocked: false, jagdgebietUnlocked: false,
     automationDiscovered: false, devModeEnabled: false,
+    waffenschmiedRejected: false, foremanEveningAlerted: false,
     isWorking: false
   };
 }
@@ -536,7 +585,7 @@ function performHardReset() {
   skills        = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, jobXpBonus: false, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
-    inventoryKeeper: false, sleepLikeARock: false, petLover: false
+    inventoryKeeper: false, sleepLikeARock: false, petLover: false, longShift: false
   };
   superSkills   = {};
   needs         = defaultNeeds();
@@ -545,7 +594,7 @@ function performHardReset() {
   quests        = {
     nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
     kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
-    commanderTraining: { state: 'unstarted' }
+    commanderTraining: { state: 'unstarted' }, theftInvestigation: { state: 'unstarted' }
   };
   npcFlags      = { miraDrinkGiven: false };
   workStats     = defaultWorkStats();
@@ -553,7 +602,7 @@ function performHardReset() {
   achievements  = {};
   achievementTab = 'normal';
   pets          = {};
-  streetCatProgress = { sleepCount: 0, encounters: 0 };
+  streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0 };
   settings      = defaultSettings();
   toastHistory  = [];
   dialogHistory = [];
