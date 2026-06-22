@@ -180,12 +180,20 @@ function navTo(level) {
   if (level === 2 && currentCity === 'treutheim') maybeTriggerJobSearchDialog();
 }
 
-/** Wechselt die aktive Stadt und navigiert auf navLevel 2. */
+/** Wechselt die aktive Stadt und navigiert auf navLevel 2.
+ *  Beim allerersten Betreten von Treutheim (storyState 10100→10101)
+ *  wird auch der Story-State gesetzt und Story 1.1 ausgelöst. */
 function enterCity(city) {
   currentCity    = city;
   navLevel       = 2;
   currentContent = city === 'lethkar' ? 'lethkar' : 'treutheim';
-  render();
+  if (city === 'treutheim' && storyState === 10100) {
+    storyState = 10101;
+    render();
+    maybeShowStoryDialog('1.1');
+  } else {
+    render();
+  }
   if (city === 'treutheim') maybeTriggerJobSearchDialog();
 }
 

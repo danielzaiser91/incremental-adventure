@@ -92,7 +92,7 @@ function renderGeschichte(el) {
         <p class="location-card-desc">Ich habe es bis hierher geschafft. Jetzt oder nie.</p>
         <div class="feature-hero">
           <div class="feature-hero-icon">🏰</div>
-          <button class="action-btn action-btn-primary" onclick="enterCity()">
+          <button class="action-btn action-btn-primary" onclick="enterCity('treutheim')">
             Das Stadttor betreten →
           </button>
         </div>

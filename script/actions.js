@@ -345,13 +345,6 @@ function getWorkHungerGain(levelOverride) {
   return WORK_HUNGER_GAIN * level.gainMod;
 }
 
-/* ── Stadttor betreten (State 10100 → 10101) ──────────────── */
-function enterCity() {
-  storyState = 10101;
-  render();
-  maybeShowStoryDialog('1.1');
-}
-
 /* ── Job-Suche: kleine, ortsgebundene Monolog-Kette zum Auftakt ──────
    Ersetzt den ursprünglich sofort sichtbaren "Arbeitsplatz"-Eintrag:
    die Figur weiß zu Beginn schlicht noch nicht, wo es hier Arbeit gibt,
