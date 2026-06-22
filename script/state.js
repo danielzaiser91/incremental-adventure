@@ -399,10 +399,10 @@ let settings = {
   hideTextSelection: true
 };
 
-/* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 100). */
+/* Verlauf der letzten Toast-Meldungen (neueste zuerst, max. 50). */
 let toastHistory = [];
 
-/* Verlauf der letzten Dialogseiten (neueste zuerst, max. 100) — bewusst
+/* Verlauf der letzten Dialogseiten (neueste zuerst, max. 30) — bewusst
    GETRENNT von toastHistory (siehe Einstellungen, Verlaufs-Filter):
    Toasts sind kurze Reaktionen, Dialoge sind erzählte Szenen, beide
    gemeinsam in einer Liste wären unübersichtlich. */

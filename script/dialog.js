@@ -10,7 +10,7 @@
    splitLongDialogPages()) — das hält die Dialogbox in einer vorhersehbaren
    Höhenspanne, statt bei jedem Knoten/jeder Seite spürbar zu "hüpfen". */
 const DIALOG_MAX_PAGE_LENGTH = 200;
-const DIALOG_HISTORY_LIMIT   = 100;
+const DIALOG_HISTORY_LIMIT   = 30;
 
 /** Teilt zu lange Textseiten an Satzgrenzen in mehrere kürzere Seiten auf.
     Kurze Seiten bleiben unverändert. */
