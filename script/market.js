@@ -83,8 +83,8 @@ const FOOD_ITEMS = [
     // unlockCond (Funktion → bool): zusätzliche Bedingung neben unlockDay.
     // Kaffee ist erst verfügbar, wenn Gretas Handelskette aufgebaut wurde —
     // kein Zulieferer, kein Kaffee.
-    id: 'kaffee', name: 'Schwarzer Kaffee', icon: '☕', cost: 3,
-    hungerRelief: 0, tirednessRelief: 20, tirednessCost: 4, dailyLimit: 2, useLabel: 'Trinken',
+    id: 'kaffee', name: 'Schwarzer Kaffee', icon: '☕', cost: 10,
+    hungerRelief: 0, tirednessRelief: 20, tirednessCost: 0, dailyLimit: 2, useLabel: 'Trinken',
     unlockCond: () => quests.kraemerinBusiness.state === QUEST_STATE.REWARDED,
     lockedDesc: 'Noch kein Kaffee im Angebot. Wenn der Handel in Treutheim wächst, kommt auch das.',
     desc: 'Bitter und stark, in einem kleinen Tonbecher. Vertreibt die Müdigkeit, wenn Schlaf keine Option ist.'
