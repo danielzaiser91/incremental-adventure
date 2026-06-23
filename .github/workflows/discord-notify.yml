@@ -134,6 +134,8 @@ jobs:
                 "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}" || true
               echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
             fi
+            PAYLOAD=$(jq -n --arg c "<@&1518378825451311105>
+          ${CONTENT}" '{content: $c}')
             RESP=$(curl -s -X POST \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
