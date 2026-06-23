@@ -404,21 +404,43 @@ function downloadCorruptedSave(raw) {
   }
 }
 
-function showVersionUpdateDialog(version) {
-  const notes = VERSION_NOTES[version] || [];
-  const categories = [...new Set(notes.map(n => n.cat))];
+function showVersionUpdateDialog(fromVersion) {
+  const parseVer = v => v.replace(/-[^.]*$/, '').split('.').map(Number);
+  const fromParts = parseVer(fromVersion);
+  const isNewer = v => {
+    const p = parseVer(v);
+    for (let i = 0; i < 3; i++) {
+      if ((p[i] || 0) > (fromParts[i] || 0)) return true;
+      if ((p[i] || 0) < (fromParts[i] || 0)) return false;
+    }
+    return false;
+  };
+
+  const newerVersions = Object.keys(VERSION_NOTES)
+    .filter(isNewer)
+    .sort((a, b) => {
+      const pa = parseVer(a), pb = parseVer(b);
+      for (let i = 0; i < 3; i++) {
+        if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) - (pb[i] || 0);
+      }
+      return 0;
+    });
+
+  const allNotes = newerVersions.flatMap(v => VERSION_NOTES[v]);
+  const categories = [...new Set(allNotes.map(n => n.cat))];
   const sectionsHtml = categories.length > 0
     ? categories.map(cat => `
         <div class="changelog-category">${cat}</div>
         <ul class="changelog-list">${
-          notes.filter(n => n.cat === cat)
-               .map(n => `<li class="changelog-entry">${n.text}</li>`)
-               .join('')
+          allNotes.filter(n => n.cat === cat)
+                  .map(n => `<li class="changelog-entry">${n.text}</li>`)
+                  .join('')
         }</ul>`).join('')
     : `<p style="color:var(--text-lo)">Kleinere Verbesserungen und Bugfixes.</p>`;
 
+  const toVersion = newerVersions.at(-1) ?? GAME_VERSION;
   showDialog({
-    title: `✦ Aktualisiert auf ${version}`,
+    title: `✦ Aktualisiert auf ${toVersion}`,
     text: sectionsHtml,
     buttons: [{ label: 'Weiter spielen', onClick: () => closeDialog() }]
   });
