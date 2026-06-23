@@ -27,3 +27,23 @@ Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes
 
 - `#status` → `pending-status.md` → immer DELETE + neu POST mit @Hotfix-Ping
 - `#patchnotes` → `pending-patchnotes.md` → PATCH bei gleicher Version, POST mit @Patchnotes bei neuer Version
+
+## Patchnotes-Format (pending-patchnotes.md)
+
+Struktur: **Allgemein** (keine Spoiler) → dann pro Kapitel ein Abschnitt mit Discord-Spoiler-Tag:
+
+```
+**Allgemein**
+• Änderung ohne Kapitel-Bezug
+
+**Kapitel 2** *(zum Aufdecken anklicken)*
+||• Kapitel-spezifische Änderung
+• Weitere Änderung in Kapitel 2||
+
+**Kapitel 3** *(zum Aufdecken anklicken)*
+||• Kapitel-3-Inhalt||
+```
+
+- `||mehrzeiliger Text||` = ein Discord-Spoiler-Block (Spieler klickt zum Aufdecken)
+- Allgemein = kapitelunabhängige Features/Fixes, nie in Spoiler
+- Je tiefer das Kapitel, desto weiter unten in der Nachricht
