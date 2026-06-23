@@ -35,6 +35,7 @@ function saveGame(opts = {}) {
       stadtwacheStats,
       killStats,
       nightWatchStats,
+      restStats,
       achievements,
       achievementTab,
       pets,
@@ -118,6 +119,7 @@ function applySaveData(save) {
   stadtwacheStats = { count: 0, ...save.stadtwacheStats };
   killStats      = { total: 0, ...save.killStats };
   nightWatchStats = { count: 0, ...save.nightWatchStats };
+  restStats       = { count: 0, ...save.restStats };
   achievements   = save.achievements ?? {};
   achievementTab = save.achievementTab ?? ACH_CAT.NORMAL;
   pets           = save.pets ?? {};
@@ -607,6 +609,7 @@ function defaultNightFlags()   { return { nightActivityUsedToday: false, recover
 function defaultWorkStats()    { return { count: 0, hungryWorkCount: 0 }; }
 function defaultStadtwacheStats() { return { count: 0 }; }
 function defaultNightWatchStats() { return { count: 0 }; }
+function defaultRestStats()      { return { count: 0 }; }
 function defaultPlayerStats()  { return { hp: 30, maxHp: 30 }; }
 function defaultStrength()     { return { xp: 0, level: 0 }; }
 function defaultCombat()       { return { active: false, enemyId: null, enemyHp: 0, log: [] }; }
@@ -693,6 +696,7 @@ function performHardReset() {
   workStats     = defaultWorkStats();
   stadtwacheStats = defaultStadtwacheStats();
   nightWatchStats = defaultNightWatchStats();
+  restStats      = defaultRestStats();
   achievements  = {};
   achievementTab = ACH_CAT.NORMAL;
   pets          = {};

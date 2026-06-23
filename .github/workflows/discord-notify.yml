@@ -62,9 +62,10 @@ jobs:
           SUCCESS=false
           NEW_ID=""
 
+          MENTION="<@&1518368928370528256>"
           if [ -n "$VERSION" ] && [ "$VERSION" = "$LAST_VERSION" ] && [ -n "$EXISTING_ID" ]; then
             echo "Selbe Version ($VERSION), versuche PATCH auf $EXISTING_ID..."
-            PAYLOAD=$(jq -n --arg c "$CONTENT" '{content: $c}')
+            PAYLOAD=$(jq -n --arg c "${MENTION}"$'\n'"${CONTENT}" '{content: $c}')
             HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
@@ -86,7 +87,6 @@ jobs:
                 "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
               echo "Alte Nachricht $EXISTING_ID gelöscht."
             fi
-            MENTION="<@&1518368928370528256>"
             PAYLOAD=$(jq -n --arg c "${MENTION}"$'\n'"${CONTENT}" '{content: $c}')
             RESP=$(curl -s -X POST \
               -H "Content-Type: application/json" \

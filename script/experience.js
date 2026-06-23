@@ -92,9 +92,9 @@ const EP_SKILL_TREE = [
   },
   {
     id: 'longerRest', name: 'Längere Pause', icon: '🛋',
-    requires: 'ironWill', maxLevel: 2, costs: [4, 8],
+    requires: 'ironWill', maxLevel: 4, costs: [4, 8, 12, 16],
     desc: 'Manchmal reicht eine kurze Verschnaufpause einfach nicht. Ich gönne mir mehr Zeit.',
-    effect: 'Pausendauer: 15 → 30 Spielminuten. Stufe 1: Müdigkeitserholung ×1,2 · Stufe 2: ×1,3.'
+    effect: 'Pausendauer: 15 → 30 Min (St. 1), → 60 Min (St. 3). Erholung ×1,2 / ×1,3 / ×1,3 / ×1,5. St. 4: −30 % Hunger.'
   },
   {
     id: 'jobXpBonus', name: 'Aufmerksamer Lehrling', icon: '📋',
@@ -226,6 +226,14 @@ const SUPER_SKILL_DEFS = [
     questDone: () => (workStats.hungryWorkCount || 0) >= 10
   },
   {
+    id: 'longerRest_super', forSkill: 'longerRest',
+    name: 'Natürliche Widerstandskraft', icon: '🌿',
+    shortDesc: 'Hunger und Müdigkeit steigen dauerhaft 10 % langsamer an.',
+    questDesc: 'Lege 20 Mal eine Lange Pause ein (Stufe 1 oder höher).',
+    questProgress: () => `${Math.min(restStats.count || 0, 20)}/20`,
+    questDone: () => (restStats.count || 0) >= 20
+  },
+  {
     id: 'fieldworkMemory_super', forSkill: 'fieldworkMemory',
     name: 'Muskelgedächtnis', icon: '🤲',
     shortDesc: 'Auch das Nachtwache-Level übersteht einen Neuanfang.',
@@ -289,15 +297,26 @@ function getThriftMult() {
   return 1 - getSkillLevel(SKILL_ID.THRIFT) * 0.10;
 }
 
-/** Pausendauer in Spielminuten (15 ohne Skill, 30 ab Stufe 1). */
+/** Pausendauer in Spielminuten (15 / 30 ab St.1 / 60 ab St.3). */
 function getRestDurationMins() {
-  return getSkillLevel(SKILL_ID.LONGER_REST) >= 1 ? 30 : 15;
+  const level = getSkillLevel(SKILL_ID.LONGER_REST);
+  return level >= 3 ? 60 : level >= 1 ? 30 : 15;
 }
 
-/** Müdigkeitserholungs-Multiplikator der Pause (1.0 / 1.2 / 1.3). */
+/** Müdigkeitserholungs-Multiplikator der Pause (1.0 / 1.2 / 1.3 / 1.3 / 1.5). */
 function getRestRecoveryMult() {
   const level = getSkillLevel(SKILL_ID.LONGER_REST);
-  return level >= 2 ? 1.3 : level >= 1 ? 1.2 : 1.0;
+  return level >= 4 ? 1.5 : level >= 2 ? 1.3 : level >= 1 ? 1.2 : 1.0;
+}
+
+/** Hunger-Reduktion durch die Pause in Prozentpunkten (0 oder 30 bei St.4). */
+function getRestHungerReduction() {
+  return getSkillLevel(SKILL_ID.LONGER_REST) >= 4 ? 30 : 0;
+}
+
+/** Multiplikator auf Hunger/Müdigkeitsaufbau durch den Super-Skill (0.9 oder 1.0). */
+function getSuperRestMult() {
+  return superSkills.longerRest_super ? 0.9 : 1.0;
 }
 
 /** Wendet den Sparsamkeits-Rabatt an und rundet auf min. 1 Gold. */

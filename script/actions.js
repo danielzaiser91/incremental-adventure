@@ -140,8 +140,8 @@ function completeStadtwache() {
   resources.gold               += reward;
   resources.totalGoldEarned    += reward;
   stadtwacheStats.count        += 1;
-  adjustHunger(Math.round(getStadtwacheHungerGain()));
-  adjustTiredness(tirednessGain);
+  adjustHunger(Math.round(getStadtwacheHungerGain() * getSuperRestMult()));
+  adjustTiredness(Math.round(tirednessGain * getSuperRestMult()));
   advanceClock(STADTWACHE_CLOCK_MINUTES);
   showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, TOAST.REWARD);
   checkMilestones();
@@ -223,8 +223,8 @@ function gatherResource(resourceId) {
   if (!tool || (resources.inventory[tool.id] || 0) <= 0) return;
 
   grantItem(resourceId, RESOURCE_GATHER_AMOUNT);
-  adjustTiredness(RESOURCE_GATHER_TIREDNESS);
-  adjustHunger(RESOURCE_GATHER_HUNGER);
+  adjustTiredness(Math.round(RESOURCE_GATHER_TIREDNESS * getSuperRestMult()));
+  adjustHunger(Math.round(RESOURCE_GATHER_HUNGER * getSuperRestMult()));
   advanceClock(RESOURCE_GATHER_MINUTES);
 
   const resourceName = RESOURCE_ITEMS.find(r => r.id === resourceId).name;
@@ -613,6 +613,9 @@ const LONG_SHIFT_MULT = 2; // Faktor für die Lange Schicht (2h statt 1h)
 function ausruhen() {
   const recovery = Math.round(10 * getRestRecoveryMult());
   adjustTiredness(-recovery);
+  const hungerReduction = getRestHungerReduction();
+  if (hungerReduction > 0) adjustHunger(-hungerReduction);
+  if (getSkillLevel(SKILL_ID.LONGER_REST) >= 1) restStats.count += 1;
   advanceClock(getRestDurationMins());
   render();
 }
@@ -705,8 +708,8 @@ function completeWork() {
   workStats.count            += getWorkXpGain(levelBefore) * mult;
   if (wasHungry) workStats.hungryWorkCount = (workStats.hungryWorkCount || 0) + 1;
 
-  adjustHunger(getWorkHungerGain(levelBefore) * mult);
-  adjustTiredness(tirednessGain);
+  adjustHunger(Math.round(getWorkHungerGain(levelBefore) * mult * getSuperRestMult()));
+  adjustTiredness(Math.round(tirednessGain * getSuperRestMult()));
   advanceClock(WORK_CLOCK_MINUTES * mult);
 
   const hungryNote = wasHungry ? ' Der Hunger schwächt dich und ermüdet dich schneller.' : '';

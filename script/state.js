@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.14.3-alpha';
+const GAME_VERSION = '0.14.4-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -219,6 +219,10 @@ const VERSION_NOTES = {
   '0.14.3-alpha': [
     { cat: 'Neuerung', text: 'Nach einem Update erscheint ein Dialog mit allen Änderungen seit der letzten gespielten Version.' },
     { cat: 'Bugfix',   text: 'Update-Dialog und Spielstand-Changelog erscheinen jetzt nacheinander statt sich zu überschreiben.' }
+  ],
+  '0.14.4-alpha': [
+    { cat: 'Neuerung', text: '„Längere Pause" auf 4 Stufen erweitert: Stufe 3 verlängert auf 60 Min., Stufe 4 reduziert zusätzlich den Hunger. Super-Skill: Hunger & Müdigkeit steigen dauerhaft 10 % langsamer.' },
+    { cat: 'Neuerung', text: 'Update-Banner erscheint jetzt im Dokumentenfluss statt als Overlay — überdeckt keine UI-Elemente mehr.' }
   ]
 };
 
@@ -401,6 +405,7 @@ let questItems = {};
 /* Fortschritt der Nachtwache (Erfahrungs-Level analog zur Feldarbeit, aber
    erst nach dem Skill "Nächtliche Routine" relevant, siehe actions.js). */
 let nightWatchStats = { count: 0 };
+let restStats = { count: 0 };
 
 /* Bedürfnisse: 0 (bestens) bis 100 (kritisch).
    `sleepDebt` (0–2): Schlafschuld durch wiederholtes Einschlafen unter

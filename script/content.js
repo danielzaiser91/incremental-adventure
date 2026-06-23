@@ -382,20 +382,26 @@ function renderArbeitsplatz(el) {
         ${jobInfoPanel}
       </div>
       ${(() => {
-        const restLevel = getSkillLevel(SKILL_ID.LONGER_REST);
-        const mins      = getRestDurationMins();
-        const recovery  = Math.round(10 * getRestRecoveryMult());
-        const name      = restLevel >= 1 ? 'Lange Pause' : 'Kurz verschnaufen';
-        const desc      = restLevel >= 1
-          ? 'Eine ausgedehnte Ruhepause — Körper und Geist kommen zur Ruhe.'
-          : 'Eine kurze Pause — genug, um wieder in die Gänge zu kommen.';
+        const restLevel     = getSkillLevel(SKILL_ID.LONGER_REST);
+        const mins          = getRestDurationMins();
+        const recovery      = Math.round(10 * getRestRecoveryMult());
+        const hungerReduce  = getRestHungerReduction();
+        const name          = restLevel >= 1 ? 'Lange Pause' : 'Kurz verschnaufen';
+        const desc          = restLevel >= 3
+          ? 'Eine tiefe, ausgedehnte Ruhepause — Körper und Geist erholen sich vollständig.'
+          : restLevel >= 1
+            ? 'Eine ausgedehnte Ruhepause — Körper und Geist kommen zur Ruhe.'
+            : 'Eine kurze Pause — genug, um wieder in die Gänge zu kommen.';
+        const hungerNote    = hungerReduce > 0
+          ? ` · 🍞 Hunger: −${hungerReduce}%`
+          : '';
         return `
       <div class="action-card" style="width:260px;">
         <div class="action-card-icon">😮‍💨</div>
         <div class="action-card-name">${name}</div>
         <p class="action-card-desc">${desc}</p>
         <button class="action-btn" onclick="ausruhen()">Pause einlegen</button>
-        <div class="action-card-effect">🕐 Spielzeit: +${mins} Min · 😴 Müdigkeit: −${recovery}%</div>
+        <div class="action-card-effect">🕐 Spielzeit: +${mins} Min · 😴 Müdigkeit: −${recovery}%${hungerNote}</div>
       </div>`;
       })()}`;
   } else {

@@ -79,14 +79,17 @@ html, body {
   overflow: hidden;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ── UTILITY ──────────────────────────────────────────────────── */
 .hidden { display: none !important; }
 
 /* ── UPDATE-BANNER ────────────────────────────────────────────── */
 #update-banner {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 2000;
+  flex-shrink: 0;
   background: var(--bg-elevated);
   color: var(--c-event);
   border-bottom: 2px solid var(--c-event);
@@ -112,7 +115,8 @@ html, body {
   display: grid;
   grid-template-columns: var(--nav-w) 1fr var(--stats-w);
   grid-template-rows: 1fr var(--objective-h);
-  height: 100vh;
+  flex: 1;
+  min-height: 0;
   min-width: 760px;
 }
 
