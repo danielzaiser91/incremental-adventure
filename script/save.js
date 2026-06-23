@@ -351,7 +351,14 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
 
   const buttons = isDevPreview
     ? [{ label: 'Schließen', onClick: () => closeDialog() }]
-    : [{ label: 'Spielstand aktualisieren und weiterspielen', onClick: () => closeDialog(() => saveGame()) }];
+    : [{ label: 'Spielstand aktualisieren und weiterspielen', onClick: () => closeDialog(() => {
+        saveGame();
+        if (window._pendingVersionUpdate) {
+          const v = window._pendingVersionUpdate;
+          window._pendingVersionUpdate = null;
+          showVersionUpdateDialog(v);
+        }
+      }) }];
 
   if (resetOffered) {
     buttons.push({

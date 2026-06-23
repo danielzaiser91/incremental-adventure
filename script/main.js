@@ -31,7 +31,12 @@ function init() {
   const justUpdated = sessionStorage.getItem('justUpdated');
   if (justUpdated) {
     sessionStorage.removeItem('justUpdated');
-    showVersionUpdateDialog(justUpdated);
+    const dialogOpen = !document.getElementById('dialog-overlay').classList.contains('hidden');
+    if (dialogOpen) {
+      window._pendingVersionUpdate = justUpdated;
+    } else {
+      showVersionUpdateDialog(justUpdated);
+    }
   }
 }
 
