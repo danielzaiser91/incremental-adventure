@@ -196,7 +196,8 @@ const SAVE_CHANGELOG = {
       spoiler: () => !alchemie.unlocked }
   ],
   13: [
-    { cat: 'Neuerung', chapter: 1, text: 'Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, aber das Ziel hält wach.' },
+    { cat: 'Neuerung', chapter: 1, text: 'Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, aber das Ziel hält wach.',
+      spoiler: () => quests.nightWatch.state === QUEST_STATE.UNSTARTED },
     { cat: 'Bugfix',   text: 'Brakka-Ausrufezeichen erscheint erst nach dem Waffenschmied-Besuch.' },
     { cat: 'Bugfix',   text: 'Uhrzeit-Hinweise stapelten sich — werden jetzt im selben Element zusammengefasst.' },
     { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet für den Vorarbeiter jetzt jeden Abend erneut bis das Gespräch geführt wurde.' }

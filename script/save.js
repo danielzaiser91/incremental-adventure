@@ -334,8 +334,20 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
 
   const generalHtml = generalEntries.length > 0 ? renderCategoryGroups(generalEntries) : '';
 
+  const isChapterRevealed = ch => {
+    if (ch <= 1) return true;
+    if (ch === 2) return !!gameFlags.kapitel2Unlocked;
+    if (ch === 3) return !!gameFlags.lethkarUnlocked;
+    return false;
+  };
+
   const chapterHtml = chapterNums.map(ch => {
     const entries = allEntries.filter(e => e.chapter === ch);
+    if (isChapterRevealed(ch)) {
+      return `
+        <div class="changelog-chapter-header">Kapitel ${ch}</div>
+        ${renderCategoryGroups(entries)}`;
+    }
     return `
       <details class="changelog-chapter">
         <summary class="changelog-chapter-summary">Kapitel ${ch} <span class="changelog-spoiler-hint">(Spoiler — zum Aufdecken klicken)</span></summary>
