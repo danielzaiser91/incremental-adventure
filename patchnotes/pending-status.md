@@ -1,8 +1,11 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.14.1-alpha
+**Aktuelle Version:** v0.14.2-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
+
+**Zuletzt behoben in v0.14.2:**
+- Errungenschaften: freigeschaltete Achievements aus dem Erfahrungs-Weg wurden gezählt aber nicht angezeigt
 
 **Zuletzt behoben in v0.14.1:**
 - Brakka-❗ erschien schon ab Tag 2, jetzt erst nach dem Waffenschmied-Besuch
