@@ -269,6 +269,16 @@ function loadGame() {
     const loadedVersion = typeof save.version === 'number' ? save.version : 0;
     applySaveData(save);
 
+    // Spielstände, die mit dem alten Ein-Raub-System in Kapitel 2 angekommen
+    // sind (storyState >= 20100, aber nicht durch das neue 4-Raub-System),
+    // können nicht automatisch migriert werden — Story-Reihenfolge stimmt
+    // nicht mehr überein.
+    if (storyState >= 20100 && !gameFlags.robbery4Triggered) {
+      render();
+      showStoryIncompatibleDialog(raw);
+      return;
+    }
+
     const migrationFixes = loadedVersion < CURRENT_SAVE_VERSION
       ? migrateSaveData(loadedVersion)
       : [];
@@ -521,6 +531,30 @@ function showVersionUpdateDialog(fromVersion) {
       buttons: [{ label: 'Weiter spielen', onClick: () => closeDialog() }]
     });
   }
+}
+
+/** Zeigt einen Dialog wenn der Spielstand wegen der Story-Überarbeitung
+    (v0.15 — 4-Raub-System statt 1) nicht mehr weitergeführt werden kann.
+    Der Spieler kann den Stand als Datei sichern und dann neu anfangen. */
+function showStoryIncompatibleDialog(raw) {
+  showDialog({
+    title: '⚠ Spielstand nicht kompatibel',
+    html: `
+      <p>Die Geschichte wurde in v0.15 grundlegend überarbeitet — vier Raub-Ereignisse ersetzen den bisherigen einmaligen Raub, und der Weg in Kapitel 2 hat sich dadurch verändert.</p>
+      <p>Dein Spielstand stammt aus einer Version vor dieser Überarbeitung und kann leider nicht automatisch angepasst werden, ohne die Story zu übergehen.</p>
+      <p>Du kannst den Spielstand als Datei sichern — falls du ihn für spätere Versionen aufheben möchtest.</p>
+    `,
+    buttons: [
+      {
+        label: '📥 Spielstand als Datei sichern',
+        onClick: () => downloadCorruptedSave(raw)
+      },
+      {
+        label: 'Neu anfangen',
+        onClick: () => { closeDialog(); performHardReset(); render(); }
+      }
+    ]
+  });
 }
 
 function showIncompatibleSaveDialog(raw) {

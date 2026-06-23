@@ -109,6 +109,7 @@ function priceDisplayHtml(baseCost) {
 /** Öffnet die Detailansicht eines Händlers. */
 function openVendor(id) {
   marketVendor = id;
+  if (id === 'kraemer') marketKraemerTab = 'essen';
   render();
   if (id === 'kraemer') maybeTriggerKraemerinDialog();
 }

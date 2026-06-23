@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.15.2-alpha';
+const GAME_VERSION = '0.15.3-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -96,7 +96,7 @@ const VENDOR = Object.freeze({ KRAEMER: 'kraemer', SCHMIEDE: 'schmiede' });
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 13;
+const CURRENT_SAVE_VERSION = 14;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -201,6 +201,14 @@ const SAVE_CHANGELOG = {
     { cat: 'Bugfix',   text: 'Brakka-Ausrufezeichen erscheint erst nach dem Waffenschmied-Besuch.' },
     { cat: 'Bugfix',   text: 'Uhrzeit-Hinweise stapelten sich — werden jetzt im selben Element zusammengefasst.' },
     { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet für den Vorarbeiter jetzt jeden Abend erneut bis das Gespräch geführt wurde.' }
+  ],
+  14: [
+    { cat: 'Änderung', chapter: 1, text: 'Das Raub-System wurde grundlegend überarbeitet: 4 automatische Raub-Events ersetzen den bisherigen einmaligen Raub. Spielstände aus Kapitel 1 (vor dem ersten Neuanfang) sind davon nicht betroffen.' },
+    { cat: 'Neuerung', chapter: 1, text: 'Neuer Skill-Ast „Paranoid" mit 5 Fähigkeiten — freigeschaltet nach dem 4. Raub.',
+      spoiler: () => !gameFlags.robbery4Triggered && skills.paranoid < 1 },
+    { cat: 'Neuerung', text: 'Achievement-Bonus jetzt multiplikativ (nicht mehr additiv) und wird tatsächlich auf Einnahmen angewendet.' },
+    { cat: 'Neuerung', text: 'Krämer: Tab-System für Essen & Ausrüstung.' },
+    { cat: 'Neuerung', text: '23 neue Errungenschaften (Kapitel 1 und Erfahrungs-Weg).' }
   ]
 };
 
@@ -236,6 +244,11 @@ const VERSION_NOTES = {
     { cat: 'Bugfix',   text: 'Nach einem Neuanfang bleibt die Navigation in der aktuellen Stadt — kein ungewolltes Zurückfallen auf die Weltkarte.' },
     { cat: 'Neuerung', text: 'Mira zeigt jetzt ein ❗-Symbol, bevor man sie das erste Mal auf einen Drink eingeladen hat.' },
     { cat: 'Neuerung', text: 'Alle Zielleisten-Texte sind jetzt konsequent in Ich-Perspektive geschrieben.' }
+  ],
+  '0.15.3-alpha': [
+    { cat: 'Bugfix',   text: 'Alte Spielstände aus Kapitel 2 (Einzel-Raub-System) werden jetzt als inkompatibel erkannt — Download-Option + Neustart statt stillem Weiterfahren.' },
+    { cat: 'Bugfix',   text: 'Spielstand-Changelog erscheint jetzt auch für sehr alte Spielstände (v0.13.x), die die Änderungen in v0.14–v0.15 nie angezeigt bekamen.' },
+    { cat: 'Bugfix',   text: 'Krämer öffnet jetzt immer mit dem Essen-Tab (statt dem zuletzt aktiven).' }
   ],
   '0.15.2-alpha': [
     { cat: 'Bugfix',   text: 'Der Paranoid-Skill-Ast erscheint jetzt erst nach dem 4. Raub (nicht schon nach dem 1.).' },
