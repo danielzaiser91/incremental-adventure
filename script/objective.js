@@ -10,9 +10,7 @@
 function getObjectiveText() {
   // Bewusst nur grobe Richtungen für den nächsten GROSSEN Schritt der Story —
   // keine Mikro-Hinweise auf einzelne Aktionen (siehe SKILL.md).
-  if (isNight()) {
-    return 'Es ist spät — ich brauche einen Schlafplatz, bevor die Nacht vorüber ist.';
-  }
+  // Die Tageszeit ändert das Ziel NICHT — 1 Story-Abschnitt = 1 Ziel.
   if (storyState < 10101) {
     return 'Ich sollte das Stadttor betreten und die Stadt erkunden.';
   }
@@ -23,24 +21,24 @@ function getObjectiveText() {
     return 'Auf dem Feld arbeiten und Gold verdienen.';
   }
   if (storyState === 10102) {
-    return 'Ich muss weiter Gold verdienen — auch wenn ich mich beobachtet fühle.';
+    return 'Irgendetwas stimmt nicht — dieses Gefühl, beobachtet zu werden, lässt mich nicht los. Ich halte den Kopf unten und mache weiter.';
   }
 
   // Raub-Sequenz — storyStates 10103–10106 (nach 1.–4. Raub)
   if (storyState === 10103) {
-    return 'Ausgeraubt, wieder von vorn. Im Erfahrungs-Baum warte ich auf eine Antwort — ich sollte ihn ansehen.';
+    return 'Ausgeraubt und wieder bei Null — aber das Erlebnis steckt jetzt in meinen Händen. Die Arbeit fühlt sich leichter an als beim ersten Mal. Weitermachen und das nächste Polster aufbauen.';
   }
   if (storyState === 10104) {
-    return 'Schon wieder. Das ist kein Zufall. Ich muss langsam anders vorgehen — im Erfahrungs-Baum liegt der nächste Schritt.';
+    return 'Schon wieder. Das ist kein Zufall mehr — ich weiß es. Ich bin wütend, aber aufgeben kommt nicht infrage. Noch mehr zusammentragen, schneller als zuvor.';
   }
   if (storyState === 10105) {
-    return 'Dreimal ausgeraubt. Jetzt reicht es. Ich muss mir etwas einfallen lassen — der Erfahrungs-Baum zeigt mir, wohin das führt.';
+    return 'Dreimal. Jemand zieht im Hintergrund die Fäden und wartet, bis ich genug angehäuft habe. Ich weiß es — und mache trotzdem weiter. Noch mehr.';
   }
   if (storyState === 10106) {
     if (skills.paranoid >= 1) {
       return 'Ich habe meinen Kopf wieder klar. Ein bewusster Neuanfang liegt vor mir — klüger diesmal.';
     }
-    return 'Viermal ausgeraubt. Arbeiten hat keinen Sinn mehr — erst muss ich mir einen Plan machen. Der Erfahrungs-Baum wartet.';
+    return 'Viermal — das ist keine Pechsträhne, das ist Absicht. Einfach weiter schuften bringt nichts mehr. Es ist Zeit, die Dinge grundlegend anders anzugehen. Der Erfahrungs-Baum zeigt den Weg.';
   }
 
   // Kapitel 2 — storyState 20100+ (Raub hat stattgefunden)
