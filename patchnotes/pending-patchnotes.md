@@ -1,17 +1,12 @@
-<!-- version: 0.15.4 -->
-## 🗺 v0.15 — Das Paranoia-System
+<!-- version: 0.16.0 -->
+## 🗺 v0.16 — Überlebt und gelernt
 
 **Allgemein**
-• Skill-Lern-Dialoge: immersiver Ich-Monolog beim Kauf jeder Fähigkeit
-• 23 neue Errungenschaften (Kapitel 1 + Erfahrungs-Weg)
-• Achievement-Bonus jetzt multiplikativ — lohnt sich immer mehr je mehr man freischaltet
-• Krämer: Tab-System Essen / Ausrüstung
-• Mira & Brakka erklären auf Wunsch, warum Mira den Brief nicht selbst brachte
-• NPC-Badges: Greta (INVITED-Zustand) + Kommandant Roswald (Rekrutierung) korrigiert
-• Dialogkorrektur: „Schritt für Schritt" in der Nachtwache-Beschreibung
-• Essen erzeugt jetzt leichte Müdigkeit — Brot +4%, Fisch +8%, Honigkuchen +15%, Kaffee netto −16% (Linderung überwiegt)
-• Taverne-Tab leuchtet nur noch auf, wenn wirklich etwas zu tun ist (NPC-Zustands-basiert, keine manuellen Flags mehr)
-• NPC-Dialogseiten: kurze Sperre nach Seitenwechsel verhindert versehentliches Schließen durch schnelles Klicken
+• Essen lindert jetzt leichte Müdigkeit: Brot −4%, Fisch −8%, Honigkuchen −15%, Kaffee −16% (netto)
+• Bei 100% Müdigkeit kann nicht mehr gesammelt werden — erst schlafen
+• Skill-Detail zeigt jetzt an, wenn ein Skill weitere Fähigkeiten freischaltet
+• Taverne-Tab leuchtet nicht mehr, wenn Greta Rohstoffe erwartet aber man sie noch nicht gesammelt hat
+• Dialogseiten: Guard gegen versehentliches Schließen robuster umgeschrieben
 
 **Kapitel 1** *(zum Aufdecken anklicken)*
 ||4 automatische Raub-Events bei 50 / 200 / 300 / 500 Gold — jeweils Story-Dialog + Auto-Reset. Nach dem 4. Raub ist die Arbeit gesperrt, bis „Paranoid" erlernt wurde.

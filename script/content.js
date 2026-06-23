@@ -590,7 +590,9 @@ function renderRohstoffe(el) {
     return;
   }
 
-  const blocked = gameFlags.mustEatBread;
+  const blockedByHunger = gameFlags.mustEatBread;
+  const blockedByTiredness = needs.tiredness >= 100;
+  const blocked = blockedByHunger || blockedByTiredness;
   const cards = TOOL_ITEMS.map(tool => {
     const owned = (resources.inventory[tool.id] || 0) > 0;
     const resourceItem = RESOURCE_ITEMS.find(r => r.id === tool.resource);
@@ -609,7 +611,8 @@ function renderRohstoffe(el) {
         <div class="action-card-icon">${resourceItem.icon}</div>
         <div class="action-card-name">${RESOURCE_GATHER_LABELS[tool.resource]} <span class="inventory-count">×${have}</span></div>
         <p class="action-card-desc">${RESOURCE_GATHER_DESC[tool.resource]}</p>
-        ${blocked ? `<p class="action-card-warning">🍞 Zu schwach vor Hunger — erst Brot vom Marktplatz essen.</p>` : ''}
+        ${blockedByHunger ? `<p class="action-card-warning">🍞 Zu schwach vor Hunger — erst Brot vom Marktplatz essen.</p>` : ''}
+        ${blockedByTiredness ? `<p class="action-card-warning">😴 Zu erschöpft zum Sammeln — erst schlafen gehen.</p>` : ''}
         <button class="action-btn ${blocked ? 'btn-disabled' : ''}" onclick="gatherResource('${tool.resource}')" ${blocked ? 'disabled' : ''}>
           Sammeln
         </button>

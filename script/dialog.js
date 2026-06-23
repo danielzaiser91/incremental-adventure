@@ -52,30 +52,14 @@ function showPaginatedDialog(title, pages, finalButtons) {
     if (isLast) {
       // Kurze Sperre nach dem Seitenwechsel verhindert, dass ein schneller
       // Doppelklick auf "Weiter" versehentlich den ersten Final-Button trifft.
-      const guarded = finalButtons.map(btn => ({ ...btn,
-        onClick: () => { /* leer bis Guard abläuft */ }
+      // Closure-Ansatz: kein DOM-Neuaufbau, nur armed-Flag.
+      let armed = false;
+      setTimeout(() => { armed = true; }, 250);
+      const guardedFinal = finalButtons.map(btn => ({
+        ...btn,
+        onClick: (...args) => { if (armed) btn.onClick(...args); }
       }));
-      showDialog({ title, text: [pages[i]], buttons: guarded });
-      setTimeout(() => {
-        const actionsEl = document.getElementById('dialog-actions');
-        if (!actionsEl) return;
-        actionsEl.innerHTML = '';
-        finalButtons.forEach((btn, idx) => {
-          const b = document.createElement('button');
-          b.className = 'action-btn dialog-btn' + (btn.disabled ? ' btn-disabled' : '');
-          b.id = `dialog-btn-${idx}`;
-          if (btn.reason) {
-            b.innerHTML = `<span class="dialog-btn-main">${btn.label}</span>` +
-                          `<span class="dialog-btn-reason">🔒 ${btn.reason}</span>`;
-            b.title = btn.reason;
-          } else {
-            b.textContent = btn.label;
-          }
-          if (btn.disabled) b.disabled = true;
-          else b.addEventListener('click', btn.onClick);
-          actionsEl.appendChild(b);
-        });
-      }, 250);
+      showDialog({ title, text: [pages[i]], buttons: guardedFinal });
     } else {
       showDialog({
         title,

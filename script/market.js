@@ -68,15 +68,15 @@ const VENDORS = [
    tageslimitiert — sonst würde reines Geld-Stapeln jedes Limit aushebeln. */
 const FOOD_ITEMS = [
   {
-    id: 'brot', name: 'Brot', icon: '🍞', cost: 2, hungerRelief: 30, tirednessCost: 4, dailyLimit: 3,
+    id: 'brot', name: 'Brot', icon: '🍞', cost: 2, hungerRelief: 30, tirednessRelief: 4, dailyLimit: 3,
     desc: 'Frisch gebacken, noch warm. Stillt den größten Hunger.'
   },
   {
-    id: 'fisch', name: 'Geräucherter Fisch', icon: '🐟', cost: 5, hungerRelief: 60, tirednessCost: 8, dailyLimit: 2, unlockDay: 3,
+    id: 'fisch', name: 'Geräucherter Fisch', icon: '🐟', cost: 5, hungerRelief: 60, tirednessRelief: 8, dailyLimit: 2, unlockDay: 3,
     desc: 'Herzhaft und sättigend — hält länger vor als Brot.'
   },
   {
-    id: 'honigkuchen', name: 'Honigkuchen', icon: '🍯', cost: 12, hungerRelief: 80, tirednessCost: 15, dailyLimit: 1, unlockDay: 5,
+    id: 'honigkuchen', name: 'Honigkuchen', icon: '🍯', cost: 12, hungerRelief: 80, tirednessRelief: 15, dailyLimit: 1, unlockDay: 5,
     desc: 'Ein süßer Genuss von reisenden Händlern. Stärkt Leib und Geist.'
   },
   {

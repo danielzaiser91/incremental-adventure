@@ -167,7 +167,7 @@ const EP_SKILL_TREE = [
     requires: 'jobLeveling', maxLevel: 1, costs: [2],
     visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Ich beobachte, wie die Erfahreneren die Arbeit angehen. Irgendwann zahlt sich das aus.',
-    effect: '+1 Job-Erfahrung pro Feldarbeit (Voraussetzung für "Schneller Lerner").',
+    effect: '+1 Job-Erfahrung pro Feldarbeit.',
     learnDialogs: [
       'Ich habe aufgehört, einfach nur zu schaufeln. Ich schaue jetzt, wie der Alte neben mir es macht — Handgelenk, Winkel, Rhythmus. Alles, was ich vorher übersehen hatte.',
       'Ein bisschen abgucken, ein bisschen ausprobieren. Die Arbeit geht leichter, die Fortschritte kommen schneller. Wer genau hinschaut, lernt doppelt.'
@@ -818,6 +818,7 @@ function renderSkillDetailPanel() {
       </div>
       <p class="ep-detail-desc">${node.desc}</p>
       <div class="ep-detail-effect">${node.effect}</div>
+      ${nodeUnlocksMoreSkills(node.id) ? `<div class="ep-detail-unlocks">↳ Schaltet weitere Fähigkeiten frei</div>` : ''}
       ${superHtml}
       ${actionHtml}
     </div>`;

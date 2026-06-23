@@ -673,6 +673,7 @@ const NPCS = {
     availability: 'day', availabilityText: 'Habe sie tagsüber gesehen.',
     questId: 'kraemerinBusiness',
     badgeOnActive: true,
+    badgeOnActiveIf: () => hasEnoughResourcesForQuest(),
     hasHint: () => quests.kraemerinBusiness.state === QUEST_STATE.INVITED,
     locked: () => quests.kraemerinBusiness.state === QUEST_STATE.UNSTARTED,
     start: () => {
@@ -1059,7 +1060,8 @@ function isTaverneTabNew() {
     if (typeof npc.locked === 'function' ? npc.locked() : !!npc.locked) return false;
     const hasOfferableQuest = npc.questId && quests[npc.questId]?.state === QUEST_STATE.UNSTARTED &&
       (typeof npc.questAvailable !== 'function' || npc.questAvailable());
-    const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId]?.state === QUEST_STATE.ACTIVE;
+    const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId]?.state === QUEST_STATE.ACTIVE &&
+      (typeof npc.badgeOnActiveIf !== 'function' || npc.badgeOnActiveIf());
     const hasHint = typeof npc.hasHint === 'function' && npc.hasHint();
     return hasOfferableQuest || hasPendingQuest || hasHint;
   });

@@ -222,7 +222,7 @@ const RESOURCE_GATHER_DESC = {
     blockiert nachts UND solange `mustEatBread` gilt (auch Sammeln ist
     körperliche Arbeit). */
 function gatherResource(resourceId) {
-  if (isNight() || gameFlags.mustEatBread) return;
+  if (isNight() || gameFlags.mustEatBread || needs.tiredness >= 100) return;
   const tool = TOOL_ITEMS.find(t => t.resource === resourceId);
   if (!tool || (resources.inventory[tool.id] || 0) <= 0) return;
 

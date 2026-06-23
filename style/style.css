@@ -992,7 +992,14 @@ body {
 .ep-detail-effect {
   font-size: 12px;
   color: var(--text-mid);
+  margin-bottom: 4px;
+}
+
+.ep-detail-unlocks {
+  font-size: 11px;
+  color: var(--accent);
   margin-bottom: 8px;
+  opacity: 0.8;
 }
 
 /* Super-Skill-Info-Block im Detail-Panel */

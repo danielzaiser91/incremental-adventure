@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.15.4-alpha';
+const GAME_VERSION = '0.16.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -216,6 +216,13 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.16.0-alpha': [
+    { cat: 'Bugfix',   text: 'Essen lindert jetzt leichte Müdigkeit statt sie zu erhöhen: Brot −4%, Fisch −8%, Honigkuchen −15%, Kaffee −16% (netto).' },
+    { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet nicht mehr, wenn Greta Rohstoffe erwartet, die noch nicht gesammelt wurden.' },
+    { cat: 'Bugfix',   text: 'Dialogseiten-Guard: zuverlässiger umgeschrieben — kein DOM-Neuaufbau mehr, robuster bei schnellen Klickfolgen.' },
+    { cat: 'Neuerung', text: 'Sammeln bei 100% Müdigkeit nicht mehr möglich — erst schlafen.' },
+    { cat: 'Neuerung', text: 'Skill-Detail zeigt jetzt an, wenn ein Skill weitere Fähigkeiten freischaltet.' }
+  ],
   '0.14.1-alpha': [
     { cat: 'Bugfix', text: 'Brakkas Questmarkierung erscheint erst nach dem Waffenschmied-Besuch.' },
     { cat: 'Bugfix', text: 'Uhrzeit-Hinweise stapeln sich nicht mehr bei schnellen Aktionen.' },
