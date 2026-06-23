@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.16.3-alpha';
+const GAME_VERSION = '0.16.4-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -216,6 +216,11 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.16.4-alpha': [
+    { cat: 'Balance', text: 'EP-Mindestschwelle für Neuanfänge: 50 → 300 Gold. Raub 2 (200g) ergibt nun keine EP mehr — erst Raub 3 (300g) und Raub 4 (500g).' },
+    { cat: 'Balance', text: '"Weitblick"-Breakpoints starten jetzt bei 300g (vorher 50g) und verdoppeln sich: 300, 600, 1200, 2400 …' },
+    { cat: 'Bugfix', text: 'Schuften-Karte: Progressbar erscheint jetzt über dem Button statt darunter — kein Layout-Sprung mehr beim Klick.' },
+  ],
   '0.16.3-alpha': [
     { cat: 'Bugfix', text: 'Zieltext nach dem 4. Raub und zu Beginn von Kapitel 2 enthielt UI-Begriffe ("Erfahrungs-Baum", "Reiter") — ersetzt durch immersive Formulierungen.' },
     { cat: 'Bugfix', text: 'Paranoid-Skill: Nachteil-Zeile bricht jetzt im Detail-Panel auf eine eigene Zeile um.' },
@@ -439,9 +444,9 @@ let gameFlags = {
   schmiedeWelcomeSeen:         false, // Willkommens-Monolog in der Schmiede beim ersten Betreten
   exhaustionDialogShown:       false, // Einmaliger Erschöpfungs-Monolog beim ersten Erreichen von 100% Müdigkeit
   // ── Neues Raub-System (4 automatische Raub-Events) ────────
-  robbery2Triggered:           false, // 2. Raub (75 Gold) ausgelöst
-  robbery3Triggered:           false, // 3. Raub (100 Gold) ausgelöst
-  robbery4Triggered:           false, // 4. Raub (125 Gold) ausgelöst
+  robbery2Triggered:           false, // 2. Raub (200 Gold in der Hand) ausgelöst
+  robbery3Triggered:           false, // 3. Raub (300 Gold in der Hand) ausgelöst
+  robbery4Triggered:           false, // 4. Raub (500 Gold in der Hand) ausgelöst
   workBlockedByRobberies:      false, // Nach 4. Raub: Arbeit gesperrt bis Paranoid gekauft
   newRobberySystemActive:      true,  // true = neues 4-Raub-System; false nur bei Altständen ohne dieses Flag
 };

@@ -7,6 +7,14 @@
 
 'use strict';
 
+/* Mindest-Gold für EP bei einem Neuanfang (außer dem allerersten).
+   Bewusst bei 300 — entspricht Raub 3, der ersten Schwelle die wirklich
+   wehtut. Raub 2 (200g) lehrt nichts — der Spieler ist noch nicht weit
+   genug. Die Breakpoints starten ebenfalls bei 300, damit jeder Schritt
+   einen echten Unterschied macht. */
+const RESET_MIN_GOLD = 300;
+const EP_GOLD_BREAKPOINTS = [300, 600, 1200, 2400, 4800, 9600, 19200, 38400];
+
 /* Jeder Knoten: `requires` zeigt auf eine andere Skill-ID (Stufe ≥1 davon
    nötig) oder ist `null` (Wurzel, immer kaufbar). `costs[i]` ist der Preis
    für den Aufstieg von Stufe i auf i+1 — bei `maxLevel:1` also `costs[0]`. */
@@ -202,7 +210,7 @@ const EP_SKILL_TREE = [
     id: 'goldBreakthrough', name: 'Weitblick', icon: '📈',
     requires: 'clearMind', maxLevel: 1, costs: [15],
     desc: 'Ich verstehe jetzt, dass mehr zurückgelassenes Gold auch mehr lehrt — nicht nur, OB ich eine Grenze überschritten habe.',
-    effect: `Bei einem Neuanfang zählt jeder erreichte Gold-Meilenstein (${GOLD_MILESTONE_THRESHOLD}, ${GOLD_MILESTONE_THRESHOLD * 2}, ${GOLD_MILESTONE_THRESHOLD * 4}, …) als zusätzliche Erfahrung.`,
+    effect: `Bei einem Neuanfang zählt jeder erreichte Gold-Meilenstein (${EP_GOLD_BREAKPOINTS[0]}, ${EP_GOLD_BREAKPOINTS[1]}, ${EP_GOLD_BREAKPOINTS[2]}, …) als zusätzliche Erfahrung.`,
     learnDialogs: [
       'Ich dachte, ein Neuanfang ist immer gleich — alles weg, ein EP, von vorn. Aber das stimmt nicht ganz.',
       'Wie weit ich komme, bevor ich aufhöre, macht den Unterschied. Mehr riskiert, mehr zurückgelassen, mehr gelernt. Das ist keine Mystik — das ist eine Formel.'
@@ -426,15 +434,6 @@ function maybeTriggerSuperSkillHint(node) {
 
 /* ──────────────────────────────────────────────────────────── */
 
-/* Mindest-Gold für überhaupt irgendeine Erfahrung bei einem (nicht-ersten)
-   Neuanfang — bewusst identisch mit der Raub-Schwelle (siehe state.js):
-   wer so viel Gold hat wie der Räuber für einen Überfall braucht, hat
-   genug riskiert, um daraus etwas zu lernen. Ohne "Weitblick" bleibt der
-   Gewinn trotz mehr Gold bei genau 1 EP (+1 mit "Klarer Kopf") gekappt —
-   erst der Skill macht aus zusätzlichem Gold zusätzliche Erfahrung, über
-   exponentiell wachsende Meilensteine. */
-const RESET_MIN_GOLD = GOLD_MILESTONE_THRESHOLD;
-const EP_GOLD_BREAKPOINTS = [1, 2, 4, 8, 16, 32, 64, 128].map(f => GOLD_MILESTONE_THRESHOLD * f);
 
 /** Liefert die aktuelle Stufe eines Skills (0 = noch nicht erlernt). */
 function getSkillLevel(id) {

@@ -484,20 +484,6 @@ function renderArbeitsplatz(el) {
             Schwere Arbeit unter freiem Himmel. Schweiß, Erde — und am Ende ein paar Münzen.
           </p>
 
-          <button
-            class="action-btn action-btn-primary work-btn"
-            id="btn-work"
-            onclick="startWork()"
-            ${busy || gameFlags.mustEatBread ? 'disabled' : ''}
-          >
-            ${normalBusy ? '⏳ Am Schuften…' : busy ? '⏳ Am Schuften…' : '⚒ Schuften'}
-          </button>
-
-          <div class="progress-container${busy ? '' : ' hidden'}" id="progress-container">
-            <div class="progress-bar" id="progress-bar" style="width: ${workProgress}%"></div>
-            <span class="progress-label" id="progress-label">${pctStr}</span>
-          </div>
-
           <div class="reward-info">
             Belohnung: <span class="gold-amount">+${reward} Gold</span> pro Durchgang
           </div>
@@ -508,6 +494,20 @@ function renderArbeitsplatz(el) {
           ${hungerNote}
           ${lockedLevelingNote}
           ${breadBlockNote}
+
+          <div class="progress-container${busy ? '' : ' hidden'}" id="progress-container">
+            <div class="progress-bar" id="progress-bar" style="width: ${workProgress}%"></div>
+            <span class="progress-label" id="progress-label">${pctStr}</span>
+          </div>
+
+          <button
+            class="action-btn action-btn-primary work-btn"
+            id="btn-work"
+            onclick="startWork()"
+            ${busy || gameFlags.mustEatBread ? 'disabled' : ''}
+          >
+            ${normalBusy ? '⏳ Am Schuften…' : busy ? '⏳ Am Schuften…' : '⚒ Schuften'}
+          </button>
         </div>
         ${jobInfoPanel}
       </div>
