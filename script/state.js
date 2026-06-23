@@ -15,7 +15,7 @@ const WORK_DURATION_BASE_MS = 2000;
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 12;
+const CURRENT_SAVE_VERSION = 13;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -112,6 +112,12 @@ const SAVE_CHANGELOG = {
       spoiler: () => !gameFlags.lethkarUnlocked },
     { cat: 'Neuerung', text: 'Wissensdurst-Skillbaum: 5 permanente Fähigkeiten auf der Alchemie-Seite (Forschungsinstinkt, Wissensspeicher u.a.).',
       spoiler: () => !alchemie.unlocked }
+  ],
+  13: [
+    { cat: 'Neuerung', text: 'Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, aber das Ziel hält wach.' },
+    { cat: 'Bugfix',   text: 'Brakka-Ausrufezeichen erscheint erst nach dem Waffenschmied-Besuch.' },
+    { cat: 'Bugfix',   text: 'Uhrzeit-Hinweise stapelten sich — werden jetzt im selben Element zusammengefasst.' },
+    { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet für den Vorarbeiter jetzt jeden Abend erneut bis das Gespräch geführt wurde.' }
   ]
 };
 
