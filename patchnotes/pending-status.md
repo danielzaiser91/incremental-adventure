@@ -1,8 +1,12 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.16.1-alpha
+**Aktuelle Version:** v0.16.2-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
+
+**In v0.16.2 gefixt:**
+- Raub-Resets werden beim nächsten Laden automatisch nachgeholt, falls sie durch den Bug in v0.16.1 übersprungen wurden (Spielstand-Selbstheilung)
+- Raub-Story-Dialoge öffnen jetzt zuverlässig nach NPC-Dialogen — verhindert, dass der Reset-Callback aus brakka.turnIn oder anderen NPC-Aktionen verloren geht
 
 **In v0.16.1 gefixt:**
 - Erster Raub löst jetzt zuverlässig einen Reset aus, auch wenn gleichzeitig der Monolog zur ersten Nachtwache gezeigt wird (Dialog-Überschreibungs-Bug)

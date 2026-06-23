@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.16.1-alpha';
+const GAME_VERSION = '0.16.2-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -216,6 +216,10 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.16.2-alpha': [
+    { cat: 'Bugfix', text: 'Raub-Resets werden beim Laden automatisch nachgeholt, falls sie durch einen früheren Bug übersprungen wurden.' },
+    { cat: 'Bugfix', text: 'Raub-Story-Dialoge öffnen zuverlässig nach NPC-Dialogen — kein verlorener Reset-Callback mehr aus brakka.turnIn.' },
+  ],
   '0.16.1-alpha': [
     { cat: 'Bugfix', text: 'Erster Raub löst jetzt zuverlässig einen Reset aus, auch wenn gleichzeitig der Monolog zur ersten Nachtwache gezeigt wird.' },
   ],

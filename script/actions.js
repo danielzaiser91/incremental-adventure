@@ -616,33 +616,36 @@ function checkMilestones() {
     gameFlags.newRobberySystemActive = true;
     storyState = 10103;
     gameFlags.resetLayerUnlocked = true;
-    maybeShowStoryDialog('1.4', () => {
+    // setTimeout > 180ms: falls checkMilestones() aus einer NPC-Aktion heraus aufgerufen
+    // wird (z.B. brakka.turnIn), läuft gerade noch ein closeDialog(180ms) — der Story-
+    // Dialog darf erst danach öffnen, sonst geht der Reset-Callback verloren.
+    setTimeout(() => maybeShowStoryDialog('1.4', () => {
       render();
       showToast('Ausgeraubt. Wieder von vorn — aber ich lerne dabei.', TOAST.EVENT);
       runManualResetWithAnimation();
-    });
+    }), 250);
   }
 
   // Raub 2 — 200 Gold in der Hand
   if (!gameFlags.robbery2Triggered && resources.gold >= 200 && storyState === 10103) {
     gameFlags.robbery2Triggered = true;
     storyState = 10104;
-    maybeShowStoryDialog('1.5', () => {
+    setTimeout(() => maybeShowStoryDialog('1.5', () => {
       render();
       showToast('Zum zweiten Mal ausgeraubt. Ich bin wütend — aber ich mache weiter.', TOAST.EVENT);
       runManualResetWithAnimation();
-    });
+    }), 250);
   }
 
   // Raub 3 — 300 Gold in der Hand
   if (!gameFlags.robbery3Triggered && resources.gold >= 300 && storyState === 10104) {
     gameFlags.robbery3Triggered = true;
     storyState = 10105;
-    maybeShowStoryDialog('1.6', () => {
+    setTimeout(() => maybeShowStoryDialog('1.6', () => {
       render();
       showToast('Dreimal ausgeraubt. Das hat System — ich muss mir etwas einfallen lassen.', TOAST.EVENT);
       runManualResetWithAnimation();
-    });
+    }), 250);
   }
 
   // Raub 4 — 500 Gold in der Hand. Arbeit wird danach gesperrt.
@@ -650,11 +653,11 @@ function checkMilestones() {
     gameFlags.robbery4Triggered = true;
     storyState = 10106;
     gameFlags.workBlockedByRobberies = true;
-    maybeShowStoryDialog('1.7', () => {
+    setTimeout(() => maybeShowStoryDialog('1.7', () => {
       render();
       showToast('Viermal ausgeraubt. Genug. Ich brauche einen anderen Weg.', TOAST.EVENT);
       runManualResetWithAnimation();
-    });
+    }), 250);
   }
 }
 

@@ -16,6 +16,29 @@ function render() {
   renderObjective();
 }
 
+/** Heilt Spieler, bei denen Raub-Resets durch einen Bug nicht ausgelöst wurden.
+ *  Erkennbar: Anzahl getriggerter Räube > meta.resets (jeder Raub muss einen
+ *  Reset hinterlassen haben). Führt die fehlenden Resets nach und zeigt einen
+ *  erklärenden Toast. */
+function maybehealRobberyBug() {
+  const triggered = [
+    gameFlags.robberyTriggered,
+    gameFlags.robbery2Triggered,
+    gameFlags.robbery3Triggered,
+    gameFlags.robbery4Triggered,
+  ].filter(Boolean).length;
+
+  const missing = triggered - meta.resets;
+  if (missing <= 0) return;
+
+  for (let i = 0; i < missing; i++) performManualReset();
+  showToast(
+    `Spielstand-Fix: ${missing} übersprungene${missing > 1 ? ' Raub-Resets wurden' : 'r Raub-Reset wurde'} durch einen behobenen Bug nachgeholt.`,
+    TOAST.EVENT
+  );
+  render();
+}
+
 function init() {
   if (shouldAutoLoad()) loadGame();
   else render();
@@ -26,6 +49,8 @@ function init() {
   startAlchemieTick();
   setupDevKeyListener();
   startVersionCheck();
+  // Muss nach loadGame() + startVersionCheck() laufen (justUpdated-Check folgt danach)
+  setTimeout(maybehealRobberyBug, 800);
 
   const justUpdated = sessionStorage.getItem('justUpdated');
   if (justUpdated) {
