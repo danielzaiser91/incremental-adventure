@@ -128,7 +128,7 @@ async function main() {
       updateSection(ctx, initState.storyState, SECTIONS);
     }
 
-    const phaseOrder = PHASE_ORDER_K1; // TODO: per Kapitel variieren wenn Kapitel 2 kommt
+    const phaseOrder = chapter.PHASE_ORDER || PHASE_ORDER_K1;
     const skipCount  = getSkipCount(FROM_FIXTURE, phaseOrder);
     console.log(`  Übersprungene Phasen: ${skipCount} (Fixture: "${FROM_FIXTURE || '—'}")`);
 

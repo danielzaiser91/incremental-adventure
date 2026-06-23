@@ -129,7 +129,7 @@ function applySaveData(save) {
   streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0, ...save.streetCatProgress };
   superSkills    = save.superSkills ?? {};
   settings       = {
-    toastDurationMs: 2600,
+    toastDurationMs: 5000,
     autoLoad: true,
     showResetAnimation: true,
     hideTextSelection: true,
@@ -702,7 +702,7 @@ function defaultCombat()       { return { active: false, enemyId: null, enemyHp:
 function defaultEquipment()    { return { hands: null, guertel: null }; }
 function defaultSettings()     {
   return {
-    toastDurationMs: 2600,
+    toastDurationMs: 5000,
     warnBeforeReset: { erfahrung: true },
     autoSave: { enabled: true, intervalMinutes: 1 },
     autoLoad: true,

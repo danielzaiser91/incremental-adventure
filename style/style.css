@@ -2175,6 +2175,17 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   color: var(--c-event);
 }
 
+.dialog-reward {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(107, 223, 126, 0.08);
+  border-left: 3px solid #6bdf7e;
+  color: #6bdf7e;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 /* ── CHANGELOG-DIALOG: kategorisierte Liste + Spoiler-Markierung
    (siehe save.js, showSaveChangelogDialog()) ── */
 .changelog-category {

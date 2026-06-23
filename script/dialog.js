@@ -45,7 +45,7 @@ function splitLongDialogPages(pages) {
  * @param {string[]} pages - bereits ggf. per splitLongDialogPages() aufgeteilt
  * @param {{label:string, onClick:Function, disabled?:boolean, reason?:string}[]} finalButtons
  */
-function showPaginatedDialog(title, pages, finalButtons) {
+function showPaginatedDialog(title, pages, finalButtons, rewardHtml) {
   let i = 0;
   const showPage = () => {
     const isLast = i === pages.length - 1;
@@ -59,7 +59,11 @@ function showPaginatedDialog(title, pages, finalButtons) {
         ...btn,
         onClick: (...args) => { if (armed) btn.onClick(...args); }
       }));
-      showDialog({ title, text: [pages[i]], buttons: guardedFinal });
+      if (rewardHtml) {
+        showDialog({ title, text: [pages[i]], html: `<p>${pages[i]}</p>${rewardHtml}`, buttons: guardedFinal });
+      } else {
+        showDialog({ title, text: [pages[i]], buttons: guardedFinal });
+      }
     } else {
       showDialog({
         title,

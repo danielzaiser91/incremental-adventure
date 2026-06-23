@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.16.0-alpha';
+const GAME_VERSION = '0.16.1-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -216,6 +216,9 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.16.1-alpha': [
+    { cat: 'Bugfix', text: 'Erster Raub löst jetzt zuverlässig einen Reset aus, auch wenn gleichzeitig der Monolog zur ersten Nachtwache gezeigt wird.' },
+  ],
   '0.16.0-alpha': [
     { cat: 'Bugfix',   text: 'Essen lindert jetzt leichte Müdigkeit statt sie zu erhöhen: Brot −4%, Fisch −8%, Honigkuchen −15%, Kaffee −16% (netto).' },
     { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet nicht mehr, wenn Greta Rohstoffe erwartet, die noch nicht gesammelt wurden.' },
@@ -566,7 +569,7 @@ let streetCatProgress = {
 
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */
 let settings = {
-  toastDurationMs: 2600,
+  toastDurationMs: 5000,
   // Pro Reset-"Ebene" einzeln umschaltbar, ob vor dem Klick auf "Neu
   // anfangen" noch ein Bestätigungsdialog kommt (siehe experience.js,
   // startManualReset()). Aktuell gibt es nur die Kapitel-1-Ebene

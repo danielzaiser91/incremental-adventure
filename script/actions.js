@@ -815,12 +815,18 @@ function nightWatch() {
     showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, TOAST.REWARD);
   }
 
-  checkMilestones();
   render();
 
+  // checkMilestones() steht absichtlich AM ENDE der Dialog-Kette:
+  // Falls hier Raub 1 ausgelöst wird (totalGoldEarned >= 50), darf der
+  // Raub-Dialog nicht von maybeTriggerFirstNightWatchDialog() überschrieben
+  // werden — showDialog() hat keine Warteschlange, der zweite Aufruf
+  // ersetzt den ersten sofort und der Reset-Callback geht verloren.
   maybeTriggerFirstNightWatchDialog(() => {
     maybeTriggerCommanderArrival(() => {
-      maybeTriggerFirstNightWatchLevelUpDialog();
+      maybeTriggerFirstNightWatchLevelUpDialog(() => {
+        checkMilestones();
+      });
     });
   });
 }

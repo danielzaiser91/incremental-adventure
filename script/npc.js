@@ -489,6 +489,7 @@ const NPCS = {
           '"Du hast es tatsächlich getan", sagt Brakka und nickt anerkennend. "Nicht schlecht für jemanden, der vor ein paar Tagen noch durch das Stadttor gestolpert ist."',
           'Er drückt mir ein paar Münzen in die Hand. "Hier — und weil du dich nicht gleich in die Hose gemacht hast: Die Wachen lassen dich ab jetzt jede Nacht ans Tor. Mach was draus, oder lass es. Mir ist es gleich, solang du nicht schnarchst."'
         ],
+        reward: () => `✨ <strong>+${NIGHTWATCH_QUEST_REWARD} Gold</strong> · Nachtwache steht ab jetzt jede Nacht zur Verfügung`,
         options: [
           {
             label: 'Danke, Brakka.',
@@ -658,6 +659,7 @@ const NPCS = {
       },
       praiseFarewell: {
         text: ['Er hebt sein Glas mir zu. "Bis morgen auf dem Feld. Und lass dir die Münzen nicht gleich wieder abnehmen."'],
+        reward: () => `✨ Dauerhafter Bonus: <strong>+1 Gold</strong> pro Feldarbeit freigeschaltet · +${FOREMAN_BONUS_GOLD} Gold erhalten`,
         options: [{ label: 'Bis morgen.', next: null }]
       },
       idle: {
@@ -971,7 +973,10 @@ const NPCS = {
         ],
         options: [{
           label: 'Ich lasse ihn gehen.',
-          next: null,
+          // handled: true → openNpcDialog ruft nach der Aktion weder closeDialog()
+          // noch openNpcDialog(next) auf; maybeShowStoryDialog('2.6') übernimmt
+          // das Dialog-Lifecycle selbst (inklusive des Sieg-Callbacks).
+          handled: true,
           action: () => {
             if (!gameFlags.fremderConfronted) {
               gameFlags.fremderConfronted = true;
@@ -1036,6 +1041,7 @@ function openNpcDialog(npcId, nodeId) {
           onClick: () => {
             if (opt.action) opt.action();
             render(); // Stats (z.B. Gold) sofort aktualisieren, auch während der Dialog offen bleibt
+            if (opt.handled) return; // Aktion hat das Dialog-Lifecycle selbst übernommen
             if (opt.next) openNpcDialog(npcId, opt.next);
             else closeDialog();
           }
@@ -1049,7 +1055,10 @@ function openNpcDialog(npcId, nodeId) {
   // Antwortoptionen erscheinen erst auf der letzten Seite.
   const rawText    = typeof node.text === 'function' ? node.text() : node.text;
   const paragraphs = Array.isArray(rawText) ? rawText : [rawText];
-  showPaginatedDialog(npc.name, splitLongDialogPages(paragraphs), buttons);
+  const rewardRaw  = node.reward;
+  const rewardText = typeof rewardRaw === 'function' ? rewardRaw() : rewardRaw;
+  const rewardHtml = rewardText ? `<div class="dialog-reward">${rewardText}</div>` : null;
+  showPaginatedDialog(npc.name, splitLongDialogPages(paragraphs), buttons, rewardHtml);
 }
 
 /** Gibt true zurück, wenn mindestens ein Treutheim-NPC etwas Quest-Relevantes
