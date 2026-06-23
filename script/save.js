@@ -454,6 +454,11 @@ function downloadCorruptedSave(raw) {
 function showVersionUpdateDialog(fromVersion) {
   const parseVer = v => v.replace(/-[^.]*$/, '').split('.').map(Number);
   const fromParts = parseVer(fromVersion);
+  const toParts   = parseVer(GAME_VERSION);
+
+  // Minor-Sprung = unterschiedliche Minor- oder Major-Zahl (0.14 → 0.15)
+  const isMinorBump = toParts[0] > fromParts[0] || toParts[1] > fromParts[1];
+
   const isNewer = v => {
     const p = parseVer(v);
     for (let i = 0; i < 3; i++) {
@@ -473,24 +478,49 @@ function showVersionUpdateDialog(fromVersion) {
       return 0;
     });
 
-  const allNotes = newerVersions.flatMap(v => VERSION_NOTES[v]);
-  const categories = [...new Set(allNotes.map(n => n.cat))];
-  const sectionsHtml = categories.length > 0
-    ? categories.map(cat => `
-        <div class="changelog-category">${cat}</div>
-        <ul class="changelog-list">${
-          allNotes.filter(n => n.cat === cat)
-                  .map(n => `<li class="changelog-entry">${n.text}</li>`)
-                  .join('')
-        }</ul>`).join('')
-    : `<p style="color:var(--text-lo)">Kleinere Verbesserungen und Bugfixes.</p>`;
+  function buildSectionsHtml(notes) {
+    if (!notes.length) return `<p style="color:var(--text-lo)">Kleinere Verbesserungen und Bugfixes.</p>`;
+    const cats = [...new Set(notes.map(n => n.cat))];
+    return cats.map(cat => `
+      <div class="changelog-category">${cat}</div>
+      <ul class="changelog-list">${
+        notes.filter(n => n.cat === cat)
+             .map(n => `<li class="changelog-entry">${n.text}</li>`)
+             .join('')
+      }</ul>`).join('');
+  }
 
-  const toVersion = newerVersions.at(-1) ?? GAME_VERSION;
-  showDialog({
-    title: `✦ Aktualisiert auf ${toVersion}`,
-    text: sectionsHtml,
-    buttons: [{ label: 'Weiter spielen', onClick: () => closeDialog() }]
-  });
+  if (isMinorBump) {
+    // Minor-Update: zeigt nur die Highlights der neuen Minor-Version prominent.
+    // Zwischenzeitliche Patches (selbe Minor-Zahl wie fromVersion) werden in
+    // einem ausklappbaren Abschnitt versteckt, um nicht vom Neuen abzulenken.
+    const majorNotes  = VERSION_NOTES[GAME_VERSION] ?? [];
+    const patchNotes  = newerVersions
+      .filter(v => parseVer(v)[1] === fromParts[1])
+      .flatMap(v => VERSION_NOTES[v]);
+
+    const patchBlock = patchNotes.length > 0
+      ? `<details class="changelog-chapter" style="margin-top:12px">
+           <summary class="changelog-chapter-summary">Ältere Patch-Notizen (v0.${fromParts[1]}.x)</summary>
+           ${buildSectionsHtml(patchNotes)}
+         </details>`
+      : '';
+
+    showDialog({
+      title: `✦ v0.${toParts[1]} ist live!`,
+      text:  buildSectionsHtml(majorNotes) + patchBlock,
+      buttons: [{ label: 'Los geht\'s!', onClick: () => closeDialog() }]
+    });
+  } else {
+    // Patch-Update: akkumulierte Änderungen seit letzter gespielter Version.
+    const allNotes  = newerVersions.flatMap(v => VERSION_NOTES[v]);
+    const toVersion = newerVersions.at(-1) ?? GAME_VERSION;
+    showDialog({
+      title:   `✦ Aktualisiert auf ${toVersion}`,
+      text:    buildSectionsHtml(allNotes),
+      buttons: [{ label: 'Weiter spielen', onClick: () => closeDialog() }]
+    });
+  }
 }
 
 function showIncompatibleSaveDialog(raw) {

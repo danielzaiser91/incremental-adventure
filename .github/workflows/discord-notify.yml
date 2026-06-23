@@ -63,9 +63,16 @@ jobs:
           NEW_ID=""
 
           MENTION="<@&1518368928370528256>"
+          # Discord-Limit: 2000 Zeichen gesamt inkl. Mention+Newline (23 Zeichen)
+          FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
+          if [ "${#FULL_MSG}" -gt 1999 ]; then
+            echo "WARNUNG: Nachricht zu lang (${#FULL_MSG} Zeichen), kürze auf 1999..."
+            FULL_MSG="${FULL_MSG:0:1996}..."
+          fi
+
           if [ -n "$VERSION" ] && [ "$VERSION" = "$LAST_VERSION" ] && [ -n "$EXISTING_ID" ]; then
             echo "Selbe Version ($VERSION), versuche PATCH auf $EXISTING_ID..."
-            PAYLOAD=$(jq -n --arg c "${MENTION}"$'\n'"${CONTENT}" '{content: $c}')
+            PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
             HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
@@ -87,7 +94,7 @@ jobs:
                 "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
               echo "Alte Nachricht $EXISTING_ID gelöscht."
             fi
-            PAYLOAD=$(jq -n --arg c "${MENTION}"$'\n'"${CONTENT}" '{content: $c}')
+            PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
             RESP=$(curl -s -X POST \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
@@ -112,14 +119,20 @@ jobs:
           EXISTING_ID="${{ steps.ids.outputs.status_msg_id }}"
           NEW_ID=""
 
+          MENTION="<@&1518378825451311105>"
+          FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
+          if [ "${#FULL_MSG}" -gt 1999 ]; then
+            echo "WARNUNG: Status-Nachricht zu lang (${#FULL_MSG} Zeichen), kürze auf 1999..."
+            FULL_MSG="${FULL_MSG:0:1996}..."
+          fi
+
           if [ -n "$EXISTING_ID" ]; then
             curl -s -o /dev/null -X DELETE \
               "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}" || true
             echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
           fi
 
-          PAYLOAD=$(jq -n --arg c "<@&1518378825451311105>
-          ${CONTENT}" '{content: $c}')
+          PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
           RESP=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD" \
