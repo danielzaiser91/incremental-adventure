@@ -263,7 +263,6 @@ function endCombat(won, monster) {
       gameFlags.theftClueFoundInJagdgebiet = true;
       quests.theftInvestigation.state = QUEST_STATE.INVESTIGATING;
       storyState = 20103;
-      navUnseen.taverne = true; // Mira hat eine Botschaft
       render();
       setTimeout(() => {
         showMonologue('Ein Fund', [

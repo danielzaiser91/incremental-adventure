@@ -449,7 +449,6 @@ function toggleJobInfoPanel() {
 function maybeTriggerFirstNightDialog(onDone = () => {}) {
   if (gameFlags.firstNightDialogShown || !isNight()) { onDone(); return; }
   gameFlags.firstNightDialogShown = true;
-  navUnseen.taverne = true; // Mira ist ab jetzt in der Taverne ansprechbar
 
   showMonologue('Die Nacht bricht an', [
     'Die Sonne ist verschwunden. Es wird kalt, und meine Augen werden schwer.',
@@ -527,7 +526,6 @@ function maybeTriggerCommanderArrival(onDone = () => {}) {
   if (gameFlags.commanderInviteShown || nightWatchStats.count < COMMANDER_INVITE_THRESHOLD) { onDone(); return; }
   gameFlags.commanderInviteShown = true;
   quests.commanderTraining.state = QUEST_STATE.ACTIVE;
-  navUnseen.taverne = true;
 
   showMonologue('Ein wachsames Auge', [
     'Eine Gestalt in Uniform beobachtet mich vom Stadttor aus, schon die dritte Nacht in Folge.',
@@ -552,7 +550,6 @@ function maybeTriggerFirstNightWatchLevelUpDialog(onDone = () => {}) {
 function maybeTriggerCommanderRecruitment(onDone = () => {}) {
   if (gameFlags.commanderRecruitmentShown || !gameFlags.waldtrollKilled) { onDone(); return; }
   gameFlags.commanderRecruitmentShown = true;
-  navUnseen.taverne = true;
 
   showMonologue('Ein Ruf eilt voraus', [
     'Das Gerücht macht die Runde. Den Waldtroll im Jagdgebiet erlegt — das ist nicht nichts.',
@@ -561,16 +558,6 @@ function maybeTriggerCommanderRecruitment(onDone = () => {}) {
   ], () => { render(); onDone(); });
 }
 
-/** Beleuchtet die Taverne-Nav genau einmal, sobald der Vorarbeiter
-    tatsächlich antreffbar ist (er ist nur NACHTS dort, Zustand 'active' =
-    Belohnung noch nicht abgeholt). Das einmalige Flag verhindert, dass
-    der Hinweis nach dem Klick sofort wieder erscheint. */
-function checkEveningArrivals() {
-  if (quests.foremanRaise.state === QUEST_STATE.ACTIVE && isNight() && !gameFlags.foremanEveningAlerted) {
-    gameFlags.foremanEveningAlerted = true;
-    navUnseen.taverne = true;
-  }
-}
 
 /* Kurze Ich-Bemerkungen beim allerersten Anklicken eines neu erschienenen
    Nav-Elements (siehe nav.js, `navUnseen`). Jede Stelle, die ein Feature
@@ -604,12 +591,6 @@ function maybeShowNavIntro(id) {
 
 /** Prüft nach jedem Gold-Gewinn, ob ein automatischer Story-Trigger ausgelöst wird. */
 function checkMilestones() {
-  // Oswin: Taverne-Tab leuchtet einmalig auf, sobald "Sprich über Geschäfte" entsperrbar ist.
-  if (resources.gold >= 100 && !npcFlags.oswingBusinessSeen && !npcFlags.oswingHintNotified) {
-    npcFlags.oswingHintNotified = true;
-    navUnseen.taverne = true;
-  }
-
   // Ein Fremder beginnt, den Spieler zu beobachten.
   if (
     !gameFlags.milestoneStrangerTriggered &&
@@ -618,7 +599,6 @@ function checkMilestones() {
   ) {
     gameFlags.milestoneStrangerTriggered = true;
     storyState = 10102;
-    navUnseen.taverne = true; // Der zwielichtige Mann sitzt jetzt in der Taverne
     render();
     maybeShowStoryDialog('1.2');
   }
@@ -830,7 +810,6 @@ function nightWatch() {
 
   if (state === QUEST_STATE.ACTIVE) {
     quests.nightWatch.state = QUEST_STATE.DONE;
-    navUnseen.taverne = true; // Jetzt gibt es wirklich etwas bei Brakka zu berichten
     showToast(`Nachtwache gehalten (+${reward} Gold). Erzähl Brakka davon!`, TOAST.REWARD);
   } else {
     showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, TOAST.REWARD);

@@ -128,6 +128,7 @@ function renderLocationNavSection() {
   }
 
   // navLevel === NAV_LEVEL.STADT, currentCity === CONTENT.TREUTHEIM: innerhalb von Treutheim.
+  navUnseen.taverne = isTaverneTabNew();
   const places = [
     [CONTENT.TREUTHEIM,    '⚑', 'Übersicht'],
     ...(gameFlags.jobUnlocked         ? [[CONTENT.ARBEITSPLATZ, '⚒', 'Arbeitsplatz']] : []),

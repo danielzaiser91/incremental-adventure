@@ -9,8 +9,7 @@
  * Rekonstruiert das gesamte UI aus storyState + resources + UI-State.
  */
 function render() {
-  checkEveningArrivals(); // muss vor renderNav() laufen, da diese navUnseen liest
-  checkAchievements();    // ebenfalls vor renderNav(), liest/setzt navUnseen.errungenschaften
+  checkAchievements();    // vor renderNav(), liest/setzt navUnseen.errungenschaften
   renderNav();
   renderContent();
   renderStats();

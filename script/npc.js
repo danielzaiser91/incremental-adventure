@@ -250,7 +250,6 @@ const NPCS = {
               gameFlags.miraRevealedInfo = true;
               quests.theftInvestigation.state = QUEST_STATE.MIRA_CONSULTED;
               storyState = 20104;
-              navUnseen.taverne = true; // Brakka hat jetzt etwas zu sagen
               render();
               maybeShowStoryDialog('2.4');
               showToast('Mira hat geredet. Brakka als nächstes.', TOAST.EVENT);
@@ -632,9 +631,9 @@ const NPCS = {
     tagline: 'Wortkarg, aber fair — wer ordentlich schuftet, hat seinen Respekt.',
     availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'foremanRaise',
-    badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
-    // Er hat den Spieler ausdrücklich für ABENDS in die Taverne eingeladen
-    // (siehe maybeTriggerForemanBonusDialog()) — tagsüber ist er auf dem Feld.
+    // Nur nachts antreffbar — hasHint schließt die Tageszeit ein, damit der
+    // Taverne-Tab nicht schon tagsüber nach dem Einladungs-Dialog leuchtet.
+    hasHint: () => quests.foremanRaise.state === QUEST_STATE.ACTIVE && isNight(),
     locked: () => quests.foremanRaise.state === QUEST_STATE.UNSTARTED || !isNight(),
     start: () => (quests.foremanRaise.state === QUEST_STATE.ACTIVE ? 'praise' : 'idle'),
     nodes: {
@@ -893,9 +892,10 @@ const NPCS = {
     tagline: 'Sitzt allein am Rand des Schankraums, sein Blick wandert ständig.',
     availability: 'always', availabilityText: 'Scheint immer hier zu sein.',
     locked: () => storyState < 10102,
-    // Badge wenn Konfrontation möglich ist
-    hasHint: () => quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
-      gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3,
+    hasHint: () =>
+      (storyState >= 10102 && npcFlags.fremderTalkCount === 0) ||
+      (quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
+        gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3),
     start: () => {
       // Konfrontation (Bedingungen: Quest in 'brakka_consulted', Stärke 3+, Waldtroll besiegt)
       if (quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
@@ -1051,13 +1051,23 @@ function openNpcDialog(npcId, nodeId) {
   showPaginatedDialog(npc.name, splitLongDialogPages(paragraphs), buttons);
 }
 
+/** Gibt true zurück, wenn mindestens ein Treutheim-NPC etwas Quest-Relevantes
+    zu sagen hat. Wird jedes Render-Frame in nav.js berechnet — kein manuelles
+    navUnseen.taverne = true mehr nötig. */
+function isTaverneTabNew() {
+  return Object.values(NPCS).some(npc => {
+    const hasOfferableQuest = npc.questId && quests[npc.questId]?.state === QUEST_STATE.UNSTARTED &&
+      (typeof npc.questAvailable !== 'function' || npc.questAvailable());
+    const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId]?.state === QUEST_STATE.ACTIVE;
+    const hasHint = typeof npc.hasHint === 'function' && npc.hasHint();
+    return hasOfferableQuest || hasPendingQuest || hasHint;
+  });
+}
+
 /* ── Taverne: Ortsansicht mit anklickbaren NPCs ──────────────── */
 /* Gäste, deren Bedingung (noch) nicht erfüllt ist, erscheinen gar nicht
    erst — kein "Nicht ansprechbar"-Platzhalter mehr (Progressive
-   Disclosure, siehe philosophie.md Punkt 6). Der Moment, in dem ein Gast
-   neu hinzukommt, wird stattdessen über die Nav-Hervorhebung der Taverne
-   selbst signalisiert (siehe `navUnseen.taverne`, gesetzt an den
-   jeweiligen Freischalt-Stellen in actions.js). */
+   Disclosure). */
 function renderTaverne(el) {
   const visibleNpcs = Object.entries(NPCS).filter(([, npc]) =>
     !(typeof npc.locked === 'function' ? npc.locked() : !!npc.locked));

@@ -196,6 +196,7 @@ function renderInventar(el) {
     const effectParts = [];
     if (item.hungerRelief) effectParts.push(`🍞 −${item.hungerRelief}%`);
     if (item.tirednessRelief) effectParts.push(`😴 −${item.tirednessRelief}%`);
+    if (item.tirednessCost)  effectParts.push(`😴 +${item.tirednessCost}%`);
     const sellPrice = Math.max(1, Math.floor(item.cost / 2));
     const useLabel = item.useLabel || 'Verzehren';
 
@@ -308,17 +309,20 @@ function useFood(itemId) {
   resources.inventory[itemId] = count - 1;
   if (item.hungerRelief) adjustHunger(-item.hungerRelief);
   if (item.tirednessRelief) adjustTiredness(-item.tirednessRelief);
+  if (item.tirednessCost)  adjustTiredness(item.tirednessCost);
 
   // Brot hebt den harten Arbeits-Block auf, der seit dem ersten
   // Hunger-Debuff gilt (siehe actions.js, startWork()/mustEatBread).
   const resolvedWorkBlock = itemId === 'brot' && gameFlags.mustEatBread;
   if (resolvedWorkBlock) gameFlags.mustEatBread = false;
 
+  const netTiredness = (item.tirednessCost || 0) - (item.tirednessRelief || 0);
+
   let toastMsg;
-  if (resolvedWorkBlock)     toastMsg = `${item.name} verzehrt. Mit etwas im Magen kann ich wieder arbeiten.`;
-  else if (item.hungerRelief && item.tirednessRelief) toastMsg = `${item.name} verzehrt. Hunger und Müdigkeit lassen nach.`;
-  else if (item.tirednessRelief) toastMsg = `${item.name} getrunken. Die Müdigkeit lässt etwas nach.`;
-  else                       toastMsg = `${item.name} verzehrt. Der Hunger lässt nach.`;
+  if (resolvedWorkBlock)                             toastMsg = `${item.name} verzehrt. Mit etwas im Magen kann ich wieder arbeiten.`;
+  else if (item.hungerRelief && netTiredness < 0)    toastMsg = `${item.name} verzehrt. Hunger und Müdigkeit lassen nach.`;
+  else if (netTiredness < 0)                         toastMsg = `${item.name} getrunken. Die Müdigkeit lässt etwas nach.`;
+  else                                               toastMsg = `${item.name} verzehrt. Der Hunger lässt nach.`;
   showToast(toastMsg, TOAST.PURCHASE);
   render();
 }

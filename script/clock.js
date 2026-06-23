@@ -75,16 +75,4 @@ function startNewDay() {
   nightFlags.nightActivityUsedToday = false;
   dailyPurchases = {};
 
-  // Ab Tag 2 hat Brakka eine neue Aufgabe anzubieten — die Taverne
-  // verdient deshalb noch einmal einen kurzen Hinweis in der Navigation,
-  // obwohl sie selbst längst kein "neuer" Ort mehr ist.
-  if (gameClock.day === 2 && quests.nightWatch.state === QUEST_STATE.UNSTARTED) {
-    navUnseen.taverne = true;
-  }
-
-  // Vorarbeiter-Abend-Hinweis täglich zurücksetzen, damit der Tab jede Nacht
-  // erneut leuchtet, solange der Spieler das Gespräch noch nicht geführt hat.
-  if (quests.foremanRaise.state === QUEST_STATE.ACTIVE && !gameFlags.foremanBonusGiven) {
-    gameFlags.foremanEveningAlerted = false;
-  }
 }

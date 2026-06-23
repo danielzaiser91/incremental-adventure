@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.15.3-alpha';
+const GAME_VERSION = '0.15.4-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -245,6 +245,13 @@ const VERSION_NOTES = {
     { cat: 'Neuerung', text: 'Mira zeigt jetzt ein ❗-Symbol, bevor man sie das erste Mal auf einen Drink eingeladen hat.' },
     { cat: 'Neuerung', text: 'Alle Zielleisten-Texte sind jetzt konsequent in Ich-Perspektive geschrieben.' }
   ],
+  '0.15.4-alpha': [
+    { cat: 'Neuerung', text: 'Essen erzeugt jetzt leichte Müdigkeit: Brot +4%, Fisch +8%, Honigkuchen +15%, Kaffee netto −16% (Linderung überwiegt).' },
+    { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet nur noch auf, wenn wirklich etwas zu tun ist — nicht mehr direkt nach dem Vorarbeiter-Gespräch tagsüber.' },
+    { cat: 'Bugfix',   text: 'Erfahrung-Sidebar (EP-Zähler + Neu-anfangen) ist erst nach dem ersten Neuanfang sichtbar.' },
+    { cat: 'Bugfix',   text: 'NPC-Dialoge: Letzte Seite aktiviert Antwort-Buttons erst nach kurzer Pause, verhindert versehentliches Schließen.' },
+    { cat: 'Bugfix',   text: 'Icons (⚙ Einstellungen, Kap-Anzeige, Ziel) korrekt — Sonderzeichen-Kodierung wurde bei einem früheren Cache-Buster-Update korrumpiert.' }
+  ],
   '0.15.3-alpha': [
     { cat: 'Bugfix',   text: 'Alte Spielstände aus Kapitel 2 (Einzel-Raub-System) werden jetzt als inkompatibel erkannt — Download-Option + Neustart statt stillem Weiterfahren.' },
     { cat: 'Bugfix',   text: 'Spielstand-Changelog erscheint jetzt auch für sehr alte Spielstände (v0.13.x), die die Änderungen in v0.14–v0.15 nie angezeigt bekamen.' },
@@ -395,7 +402,6 @@ let gameFlags = {
   chapter2Complete:            false, // Kapitel 2 vollständig abgeschlossen → Story 2.7 + Sieg-Dialog
   waldtrollKilled:             false, // Mindestens einen Waldtroll besiegt (Tor zur Endkonfrontation)
   waffenschmiedRejected:       false, // Spieler wurde vom Waffenschmied abgewiesen → Brakka bietet Gilde an
-  foremanEveningAlerted:       false, // Taverne-Nav einmalig beleuchtet, sobald Vorarbeiter abends antreffbar war
   stadtwacheAccepted:          false, // Spieler hat das Stadtwache-Angebot von Roswald angenommen
   stadtwacheDeclined:          false, // Spieler hat das Angebot zunächst abgelehnt (Roswald fragt später nochmal)
   isStadtwacheShift:           false, // Läuft gerade eine Stadtwache-Schicht (Progressbar aktiv)
@@ -433,7 +439,7 @@ let navUnseen = {
   quests:       true,
   inventar:     true,
   erfahrung:    true,
-  taverne:      false, // wird ab Tag 2 erneut auf true gesetzt, siehe clock.js
+  taverne:      false, // dynamisch berechnet in nav.js via isTaverneTabNew()
   rohstoffe:    true,
   errungenschaften: true, // erst sichtbar, sobald die 1. Errungenschaft erreicht ist
   pets:         true,     // erst sichtbar, sobald das 1. Haustier adoptiert wurde

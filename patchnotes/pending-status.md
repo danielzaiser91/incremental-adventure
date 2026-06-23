@@ -1,8 +1,15 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.15.3-alpha
+**Aktuelle Version:** v0.15.4-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
+
+**In v0.15.4 gefixt:**
+- Icons (⚙ Einstellungen, Kap-Anzeige, Ziel) korrekt — Sonderzeichen-Kodierung war korrumpiert
+- Taverne-Tab leuchtet jetzt NPC-zustands-basiert — keine manuellen Flags mehr, kein falsches Aufleuchten nach Vorarbeiter-Einladung
+- NPC-Dialog: kurze Sperre nach Seitenwechsel verhindert versehentliches Schließen durch schnelles Klicken
+- Erfahrung-Sidebar erst nach erstem Neuanfang sichtbar
+- Essen erzeugt jetzt leichte Müdigkeit (Brot +4%, Fisch +8%, Honigkuchen +15%)
 
 **In v0.15.3 gefixt:**
 - Alte Spielstände (Einzel-Raub-System, Kapitel 2) werden jetzt als inkompatibel erkannt — Download + Neustart statt stilles Weiterlaufen

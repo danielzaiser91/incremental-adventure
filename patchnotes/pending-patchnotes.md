@@ -1,4 +1,4 @@
-<!-- version: 0.15.0 -->
+<!-- version: 0.15.4 -->
 ## 🗺 v0.15 — Das Paranoia-System
 
 **Allgemein**
@@ -9,6 +9,9 @@
 • Mira & Brakka erklären auf Wunsch, warum Mira den Brief nicht selbst brachte
 • NPC-Badges: Greta (INVITED-Zustand) + Kommandant Roswald (Rekrutierung) korrigiert
 • Dialogkorrektur: „Schritt für Schritt" in der Nachtwache-Beschreibung
+• Essen erzeugt jetzt leichte Müdigkeit — Brot +4%, Fisch +8%, Honigkuchen +15%, Kaffee netto −16% (Linderung überwiegt)
+• Taverne-Tab leuchtet nur noch auf, wenn wirklich etwas zu tun ist (NPC-Zustands-basiert, keine manuellen Flags mehr)
+• NPC-Dialogseiten: kurze Sperre nach Seitenwechsel verhindert versehentliches Schließen durch schnelles Klicken
 
 **Kapitel 1** *(zum Aufdecken anklicken)*
 ||4 automatische Raub-Events bei 50 / 200 / 300 / 500 Gold — jeweils Story-Dialog + Auto-Reset. Nach dem 4. Raub ist die Arbeit gesperrt, bis „Paranoid" erlernt wurde.

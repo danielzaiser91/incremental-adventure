@@ -68,15 +68,15 @@ const VENDORS = [
    tageslimitiert — sonst würde reines Geld-Stapeln jedes Limit aushebeln. */
 const FOOD_ITEMS = [
   {
-    id: 'brot', name: 'Brot', icon: '🍞', cost: 2, hungerRelief: 30, dailyLimit: 3,
+    id: 'brot', name: 'Brot', icon: '🍞', cost: 2, hungerRelief: 30, tirednessCost: 4, dailyLimit: 3,
     desc: 'Frisch gebacken, noch warm. Stillt den größten Hunger.'
   },
   {
-    id: 'fisch', name: 'Geräucherter Fisch', icon: '🐟', cost: 5, hungerRelief: 60, dailyLimit: 2, unlockDay: 3,
+    id: 'fisch', name: 'Geräucherter Fisch', icon: '🐟', cost: 5, hungerRelief: 60, tirednessCost: 8, dailyLimit: 2, unlockDay: 3,
     desc: 'Herzhaft und sättigend — hält länger vor als Brot.'
   },
   {
-    id: 'honigkuchen', name: 'Honigkuchen', icon: '🍯', cost: 12, hungerRelief: 80, tirednessRelief: 10, dailyLimit: 1, unlockDay: 5,
+    id: 'honigkuchen', name: 'Honigkuchen', icon: '🍯', cost: 12, hungerRelief: 80, tirednessCost: 15, dailyLimit: 1, unlockDay: 5,
     desc: 'Ein süßer Genuss von reisenden Händlern. Stärkt Leib und Geist.'
   },
   {
@@ -84,7 +84,7 @@ const FOOD_ITEMS = [
     // Kaffee ist erst verfügbar, wenn Gretas Handelskette aufgebaut wurde —
     // kein Zulieferer, kein Kaffee.
     id: 'kaffee', name: 'Schwarzer Kaffee', icon: '☕', cost: 3,
-    hungerRelief: 0, tirednessRelief: 20, dailyLimit: 2, useLabel: 'Trinken',
+    hungerRelief: 0, tirednessRelief: 20, tirednessCost: 4, dailyLimit: 2, useLabel: 'Trinken',
     unlockCond: () => quests.kraemerinBusiness.state === QUEST_STATE.REWARDED,
     lockedDesc: 'Noch kein Kaffee im Angebot. Wenn der Handel in Treutheim wächst, kommt auch das.',
     desc: 'Bitter und stark, in einem kleinen Tonbecher. Vertreibt die Müdigkeit, wenn Schlaf keine Option ist.'
@@ -125,7 +125,6 @@ function visitWaffenschmied() {
     ],
     buttons: [{ label: 'Verstanden.', onClick: () => {
       gameFlags.waffenschmiedRejected = true;
-      navUnseen.taverne = true;
       closeDialog();
       render();
     }}]
@@ -520,7 +519,6 @@ function maybeTriggerKraemerinDialog() {
     label: 'Ich höre zu.',
     onClick: () => closeDialog(() => {
       quests.kraemerinBusiness.state = QUEST_STATE.INVITED;
-      navUnseen.taverne = true;
       render();
     })
   }]);

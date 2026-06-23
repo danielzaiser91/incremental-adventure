@@ -421,7 +421,7 @@ function maybeTriggerSuperSkillHint(node) {
     `Ich habe bei "${node.name}" alles herausgeholt, was möglich scheint. Das Gefühl ist eigenartig — als hätte ich die Wand hinter einem Horizont berührt.`,
     'Aber vielleicht gibt es jemanden, der weiß, wie man das, was man kann, noch weiter treibt. Dieser Oswin in der Taverne — hochnäsig, das schon. Aber er steckt in teuren Stoffen und schaut einen so an, als wäre man für ihn lesbar wie ein Buch.',
     'Ich sollte ihn nach einem Lehrmeister fragen. Wenn er überhaupt redet.'
-  ], () => navUnseen.taverne = true);
+  ], render);
 }
 
 /* ──────────────────────────────────────────────────────────── */
@@ -522,7 +522,6 @@ function buyNextSkillLevel(id) {
   // Brakkas Gilden-Questkette an (siehe npc.js).
   if (id === 'guildPrep') {
     quests.guildRegistration.state = QUEST_STATE.ACTIVE;
-    navUnseen.taverne = true;
   }
 
   const newLevel = level + 1;
@@ -1088,18 +1087,21 @@ function renderErfahrung(el) {
     lowerSection = lifeLessonsHtml();
   }
 
+  const sidebar = meta.resets >= 1 ? `
+    <div class="erfahrung-sidebar">
+      <div class="feature-stage-label">Erfahrung</div>
+      <p class="location-card-desc">
+        Was nützt mir noch Gold, das mir ohnehin gestohlen werden kann? Vielleicht sollte ich
+        lieber in mich selbst investieren — Fähigkeiten, die mir niemand wegnehmen kann.
+      </p>
+      <div class="reward-info">Erfahrung: <span class="gold-amount">${experience.points} EP</span></div>
+      ${resetCard}
+    </div>` : '';
+
   el.innerHTML = `
     <div class="feature-stage erfahrung-page">
       <div class="erfahrung-layout">
-        <div class="erfahrung-sidebar">
-          <div class="feature-stage-label">Erfahrung</div>
-          <p class="location-card-desc">
-            Was nützt mir noch Gold, das mir ohnehin gestohlen werden kann? Vielleicht sollte ich
-            lieber in mich selbst investieren — Fähigkeiten, die mir niemand wegnehmen kann.
-          </p>
-          <div class="reward-info">Erfahrung: <span class="gold-amount">${experience.points} EP</span></div>
-          ${resetCard}
-        </div>
+        ${sidebar}
         <div class="erfahrung-main">${lowerSection}</div>
       </div>
     </div>
