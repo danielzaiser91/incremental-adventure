@@ -27,6 +27,12 @@ function init() {
   startAlchemieTick();
   setupDevKeyListener();
   startVersionCheck();
+
+  const justUpdated = sessionStorage.getItem('justUpdated');
+  if (justUpdated) {
+    sessionStorage.removeItem('justUpdated');
+    showVersionUpdateDialog(justUpdated);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

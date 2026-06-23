@@ -122,6 +122,21 @@ const SAVE_CHANGELOG = {
   ]
 };
 
+/* Spieler-sichtbare Release-Notes pro Versions-String.
+   Wird nach einem Update-Banner-Reload als Dialog angezeigt.
+   Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
+const VERSION_NOTES = {
+  '0.14.1-alpha': [
+    { cat: 'Bugfix', text: 'Brakkas Questmarkierung erscheint erst nach dem Waffenschmied-Besuch.' },
+    { cat: 'Bugfix', text: 'Uhrzeit-Hinweise stapeln sich nicht mehr bei schnellen Aktionen.' },
+    { cat: 'Bugfix', text: 'Vorarbeiter-Tab in der Taverne leuchtet jetzt jeden Abend erneut.' }
+  ],
+  '0.14.2-alpha': [
+    { cat: 'Bugfix',   text: 'Errungenschaften im Erfahrungs-Weg waren unsichtbar, obwohl bereits freigeschaltet.' },
+    { cat: 'Neuerung', text: 'Update-Banner: das Spiel meldet sich automatisch, wenn eine neue Version verfügbar ist.' }
+  ]
+};
+
 /* Gemeinsame Gold-Schwelle für den Raub UND das Minimum, ab dem ein
    Neuanfang überhaupt Erfahrung bringt (siehe actions.js/experience.js).
    Eine Konstante statt zwei, damit beide immer zusammenpassen. */

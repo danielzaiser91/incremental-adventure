@@ -404,6 +404,26 @@ function downloadCorruptedSave(raw) {
   }
 }
 
+function showVersionUpdateDialog(version) {
+  const notes = VERSION_NOTES[version] || [];
+  const categories = [...new Set(notes.map(n => n.cat))];
+  const sectionsHtml = categories.length > 0
+    ? categories.map(cat => `
+        <div class="changelog-category">${cat}</div>
+        <ul class="changelog-list">${
+          notes.filter(n => n.cat === cat)
+               .map(n => `<li class="changelog-entry">${n.text}</li>`)
+               .join('')
+        }</ul>`).join('')
+    : `<p style="color:var(--text-lo)">Kleinere Verbesserungen und Bugfixes.</p>`;
+
+  showDialog({
+    title: `✦ Aktualisiert auf ${version}`,
+    text: sectionsHtml,
+    buttons: [{ label: 'Weiter spielen', onClick: () => closeDialog() }]
+  });
+}
+
 function showIncompatibleSaveDialog(raw) {
   const hasRaw = !!raw;
   showDialog({

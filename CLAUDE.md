@@ -15,11 +15,11 @@
 
 Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes.md` geändert wurde. Kein Update = keine Discord-Kommunikation.
 
-## Versionsnummern — 3 Dateien immer zusammen
+## Versionsnummern — bei jedem Bump diese Dateien anpassen
 
 - `version.json` → wird vom Spiel alle 3 Min gefetcht für Update-Banner
-- `script/state.js` → `GAME_VERSION` Konstante (wird im Banner-Check verwendet)
-- `script/content.js` → Versionsstring im UI (nutzt `GAME_VERSION`)
+- `script/state.js` → `GAME_VERSION` Konstante + neuer Eintrag in `VERSION_NOTES` mit spielersichtbaren Änderungen
+- `script/content.js` → nutzt `GAME_VERSION` automatisch, keine manuelle Änderung nötig
 - `script/state.js` → `CURRENT_SAVE_VERSION` + `SAVE_CHANGELOG` **nur** bei Änderungen an gespeicherten Datenstrukturen
 
 ## Discord-Kanäle
