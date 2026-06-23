@@ -315,18 +315,33 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
   }
 
   const allEntries = versions.flatMap(v => SAVE_CHANGELOG[v].map(e => ({ ...e, _version: v })));
-  const categories = [...new Set([
-    ...SAVE_CHANGELOG_CATEGORY_ORDER,
-    ...allEntries.map(e => e.cat)
-  ])];
 
-  const sectionsHtml = categories
-    .map(cat => ({ cat, entries: allEntries.filter(e => e.cat === cat) }))
-    .filter(group => group.entries.length > 0)
-    .map(group => `
-      <div class="changelog-category">${group.cat}</div>
-      <ul class="changelog-list">${group.entries.map(changelogEntryHtml).join('')}</ul>
-    `).join('');
+  const generalEntries = allEntries.filter(e => !e.chapter);
+  const chapterNums = [...new Set(allEntries.filter(e => e.chapter).map(e => e.chapter))].sort((a, b) => a - b);
+
+  const renderCategoryGroups = (entries) => {
+    const categories = [...new Set([...SAVE_CHANGELOG_CATEGORY_ORDER, ...entries.map(e => e.cat)])];
+    return categories
+      .map(cat => ({ cat, entries: entries.filter(e => e.cat === cat) }))
+      .filter(g => g.entries.length > 0)
+      .map(g => `
+        <div class="changelog-category">${g.cat}</div>
+        <ul class="changelog-list">${g.entries.map(changelogEntryHtml).join('')}</ul>
+      `).join('');
+  };
+
+  const generalHtml = generalEntries.length > 0 ? renderCategoryGroups(generalEntries) : '';
+
+  const chapterHtml = chapterNums.map(ch => {
+    const entries = allEntries.filter(e => e.chapter === ch);
+    return `
+      <details class="changelog-chapter">
+        <summary class="changelog-chapter-summary">Kapitel ${ch} <span class="changelog-spoiler-hint">(Spoiler — zum Aufdecken klicken)</span></summary>
+        ${renderCategoryGroups(entries)}
+      </details>`;
+  }).join('');
+
+  const sectionsHtml = generalHtml + chapterHtml;
 
   // Automatisch vorgenommene Korrekturen anzeigen
   const fixesHtml = migrationFixes.length > 0 ? `

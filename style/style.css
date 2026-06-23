@@ -2138,6 +2138,49 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   color: var(--text-lo);
 }
 
+.changelog-chapter {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--rad);
+  margin: 12px 0 4px;
+  padding: 0 12px;
+}
+
+.changelog-chapter-summary {
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.changelog-chapter-summary::-webkit-details-marker { display: none; }
+
+.changelog-chapter-summary::before {
+  content: '▶';
+  font-size: 8px;
+  color: var(--text-lo);
+  transition: transform 0.15s ease;
+}
+
+.changelog-chapter[open] > .changelog-chapter-summary::before { transform: rotate(90deg); }
+
+.changelog-spoiler-hint {
+  font-size: 9px;
+  font-weight: 400;
+  color: var(--text-lo);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.changelog-chapter[open] { padding-bottom: 10px; }
+
 .changelog-spoiler {
   cursor: pointer;
 }

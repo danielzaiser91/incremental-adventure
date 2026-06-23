@@ -32,11 +32,11 @@ const CURRENT_SAVE_VERSION = 13;
    Fortschritt. */
 const SAVE_CHANGELOG = {
   4: [
-    { cat: 'Neuerung', text: 'Greta, die Krämerin, hat eine eigene Sammel-Questkette.',
+    { cat: 'Neuerung', chapter: 1, text: 'Greta, die Krämerin, hat eine eigene Sammel-Questkette.',
       spoiler: () => quests.kraemerinBusiness.state === 'unstarted' },
-    { cat: 'Neuerung', text: 'Neuer Sammelplatz für Rohstoffe (Holz, Stein, Wildkraut).',
+    { cat: 'Neuerung', chapter: 1, text: 'Neuer Sammelplatz für Rohstoffe (Holz, Stein, Wildkraut).',
       spoiler: () => !gameFlags.resourceGatheringUnlocked },
-    { cat: 'Neuerung', text: 'Kommandant Roswald und eine Nachtwache-Karriere.',
+    { cat: 'Neuerung', chapter: 1, text: 'Kommandant Roswald und eine Nachtwache-Karriere.',
       spoiler: () => quests.commanderTraining.state === 'unstarted' },
     { cat: 'Änderung', text: 'Erfahrungs-Skillbaum auf drei Äste erweitert, mit Tab-Ansicht.' },
     { cat: 'Änderung', text: 'Feldarbeits-Boni neu kalibriert (Hunger/Müdigkeit ausgewogener).' },
@@ -59,16 +59,16 @@ const SAVE_CHANGELOG = {
     { cat: 'Änderung', text: 'Autospeicher-Intervalle: 30 Sek, 1 Min, 2 Min, 5 Min.' }
   ],
   7: [
-    { cat: 'Neuerung', text: 'Kapitel 2: Jagdgebiet mit Monstern und Kampfsystem — erreichbar nach dem Gildeneintritt.',
+    { cat: 'Neuerung', chapter: 2, text: 'Kapitel 2: Jagdgebiet mit Monstern und Kampfsystem — erreichbar nach dem Gildeneintritt.',
       spoiler: () => !gameFlags.kapitel2Unlocked },
-    { cat: 'Neuerung', text: 'Zeitkristalle und Automatisierung — seltene Drops freischalten selbsttätige Aktionen.',
+    { cat: 'Neuerung', chapter: 2, text: 'Zeitkristalle und Automatisierung — seltene Drops freischalten selbsttätige Aktionen.',
       spoiler: () => !gameFlags.automationDiscovered },
     { cat: 'Änderung', text: 'Müdigkeits-System überarbeitet: Schlafschuld, feinere Stufen, stärkere Erschöpfungs-Strafen.' }
   ],
   8: [
-    { cat: 'Neuerung', text: 'Die Spur des Diebs: eine Detektiv-Quest durch Kapitel 2 mit Korbin, Mira, Brakka und dem zwielichtigen Mann.',
+    { cat: 'Neuerung', chapter: 2, text: 'Die Spur des Diebs: eine Detektiv-Quest durch Kapitel 2 mit Korbin, Mira, Brakka und dem zwielichtigen Mann.',
       spoiler: () => !gameFlags.kapitel2Unlocked },
-    { cat: 'Neuerung', text: 'Sieg-Dialog und Konfetti am Ende von Kapitel 2 — mit Teaser für Kapitel 3.',
+    { cat: 'Neuerung', chapter: 2, text: 'Sieg-Dialog und Konfetti am Ende von Kapitel 2 — mit Teaser für Kapitel 3.',
       spoiler: () => !gameFlags.chapter2Complete },
     { cat: 'Neuerung', text: 'Drei neue geheime Errungenschaften und eine große Normal-Errungenschaft für den Kapitel-Abschluss.' },
     { cat: 'Neuerung', text: 'Zieltext in der Leiste ist jetzt anklickbar — zeigt den vollständigen Text als Dialog.' },
@@ -77,7 +77,7 @@ const SAVE_CHANGELOG = {
   9: [
     { cat: 'Neuerung', text: 'NPC-Kacheln in der Taverne zeigen farbige Verfügbarkeits-Punkte (grün/blau/gelb) mit Hover-Info.' },
     { cat: 'Neuerung', text: 'Bei 100 % Müdigkeit ist Arbeit blockiert — stattdessen erscheint "Kurz verschnaufen" (−10% Müdigkeit, +15 Min Spielzeit).' },
-    { cat: 'Neuerung', text: 'Waffenschmied: erste Begehung zeigt Ablehnungs-Dialog; danach dauerhaft gesperrt.',
+    { cat: 'Neuerung', chapter: 2, text: 'Waffenschmied: erste Begehung zeigt Ablehnungs-Dialog; danach dauerhaft gesperrt.',
       spoiler: () => !gameFlags.kapitel2Unlocked },
     { cat: 'Neuerung', text: 'Neuer EP-Skill "Lange Schicht": ermöglicht eine 2-Stunden-Feldarbeit mit doppeltem Ertrag.' },
     { cat: 'Neuerung', text: 'Zwei neue Super-Skills: "Klarer Horizont" (Klarer Kopf) und "Traumloser Schlaf" (Ich schlafe wie ein Stein).' },
@@ -87,7 +87,7 @@ const SAVE_CHANGELOG = {
     { cat: 'Änderung', text: 'Autospeicher-Standard auf 1 Minute geändert.' }
   ],
   10: [
-    { cat: 'Neuerung', text: 'Stadtwache: neuer Tagesjob in Treutheim (Kapitel 2, nach Waldtroll-Sieg).',
+    { cat: 'Neuerung', chapter: 2, text: 'Stadtwache: neuer Tagesjob in Treutheim (Kapitel 2, nach Waldtroll-Sieg).',
       spoiler: () => !gameFlags.kapitel2Unlocked },
     { cat: 'Neuerung', text: 'Vier neue Super-Skills: Eiserner Wille+, Geschickte Hände+, Nächtliche Routine+, Fest verschnürt+.' },
     { cat: 'Neuerung', text: 'Eiserner Wille+: Hunger hat keinen Einfluss mehr auf den Müdigkeitsaufbau.' },
@@ -96,26 +96,27 @@ const SAVE_CHANGELOG = {
   ],
   11: [
     { cat: 'Neuerung', text: 'Eigenes Zuhause: Oswin vermittelt Hauskauf (2000g), Schmiede-Umbau (1200g), Schlafplatz Tier 3.' },
-    { cat: 'Neuerung', text: 'Haustiere (Wildtiere): Hund, Rabe, Hase, Eichhörnchen — seltene Drops im Jagdgebiet, Greta tauscht Spuren ein.' },
-    { cat: 'Neuerung', text: 'Expeditionen: 2 Story-Expeditionen + 4 Grind-Expeditionen mit Echtzeit-Timer.',
+    { cat: 'Neuerung', chapter: 2, text: 'Haustiere (Wildtiere): Hund, Rabe, Hase, Eichhörnchen — seltene Drops im Jagdgebiet, Greta tauscht Spuren ein.',
       spoiler: () => !gameFlags.jagdgebietUnlocked },
-    { cat: 'Neuerung', text: 'Kapitel 3: Lethkar freigeschaltet (nach Kap-2-Ende + 3 Mut).',
+    { cat: 'Neuerung', chapter: 2, text: 'Expeditionen: 2 Story-Expeditionen + 4 Grind-Expeditionen mit Echtzeit-Timer.',
+      spoiler: () => !gameFlags.jagdgebietUnlocked },
+    { cat: 'Neuerung', chapter: 3, text: 'Kapitel 3: Lethkar freigeschaltet (nach Kap-2-Ende + 3 Mut).',
       spoiler: () => !gameFlags.lethkarUnlocked },
-    { cat: 'Neuerung', text: 'Alchemie: 5 Aspekte mit Echtzeit-Fortschritt, erzeugt Wissensdurst als Prestige-Währung.',
+    { cat: 'Neuerung', chapter: 3, text: 'Alchemie: 5 Aspekte mit Echtzeit-Fortschritt, erzeugt Wissensdurst als Prestige-Währung.',
       spoiler: () => !alchemie.unlocked },
-    { cat: 'Neuerung', text: 'Lethkar: NPCs Varena, Thessa, Pereth — Story 3.0–3.5 + Valdris-Spur.',
+    { cat: 'Neuerung', chapter: 3, text: 'Lethkar: NPCs Varena, Thessa, Pereth — Story 3.0–3.5 + Valdris-Spur.',
       spoiler: () => !gameFlags.lethkarUnlocked },
-    { cat: 'Neuerung', text: 'Tier-2-Monster im Jagdgebiet (Steingolem, Schattenwolf, Nordbär) nach Lethkar-Freischaltung.',
+    { cat: 'Neuerung', chapter: 3, text: 'Tier-2-Monster im Jagdgebiet (Steingolem, Schattenwolf, Nordbär) nach Lethkar-Freischaltung.',
       spoiler: () => !gameFlags.lethkarUnlocked }
   ],
   12: [
-    { cat: 'Neuerung', text: 'Kapitel 3 Abschluss: Perets Lagerhaus-Auftrag abschließbar — Belohnung + Story 3.6 "Die Schatten-Organisation".',
+    { cat: 'Neuerung', chapter: 3, text: 'Kapitel 3 Abschluss: Perets Lagerhaus-Auftrag abschließbar — Belohnung + Story 3.6 "Die Schatten-Organisation".',
       spoiler: () => !gameFlags.lethkarUnlocked },
-    { cat: 'Neuerung', text: 'Wissensdurst-Skillbaum: 5 permanente Fähigkeiten auf der Alchemie-Seite (Forschungsinstinkt, Wissensspeicher u.a.).',
+    { cat: 'Neuerung', chapter: 3, text: 'Wissensdurst-Skillbaum: 5 permanente Fähigkeiten auf der Alchemie-Seite (Forschungsinstinkt, Wissensspeicher u.a.).',
       spoiler: () => !alchemie.unlocked }
   ],
   13: [
-    { cat: 'Neuerung', text: 'Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, aber das Ziel hält wach.' },
+    { cat: 'Neuerung', chapter: 1, text: 'Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, aber das Ziel hält wach.' },
     { cat: 'Bugfix',   text: 'Brakka-Ausrufezeichen erscheint erst nach dem Waffenschmied-Besuch.' },
     { cat: 'Bugfix',   text: 'Uhrzeit-Hinweise stapelten sich — werden jetzt im selben Element zusammengefasst.' },
     { cat: 'Bugfix',   text: 'Taverne-Tab leuchtet für den Vorarbeiter jetzt jeden Abend erneut bis das Gespräch geführt wurde.' }
