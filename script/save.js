@@ -381,7 +381,7 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
   }
 
   showDialog({
-    title: `Changelog von Version ${loadedVersion} zu Version ${maxVersion}`,
+    title: `Spielstand aktualisiert`,
     html: sectionsHtml + fixesHtml + gracefulResetHtml,
     text: allEntries.map(e => e.text),
     buttons,
