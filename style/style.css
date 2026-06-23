@@ -854,6 +854,28 @@ body {
 .paranoid-skill-tree .skill-tree-row {
   grid-template-columns: 1fr;
 }
+.ep-node-mystery {
+  opacity: 0.45;
+  border-color: var(--text-lo);
+  cursor: default;
+  filter: grayscale(0.6);
+}
+.paranoid-mystery-hint {
+  margin-top: 0.35rem;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-lo);
+  font-style: italic;
+  line-height: 1.55;
+}
+.paranoid-mystery-hint p { margin: 0; }
+.paranoid-mystery-cost {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.7rem;
+  font-style: normal;
+  color: var(--text-mid);
+}
 
 /* ── Kompakte EP-Skill-Knoten (Icon-only, 52 × 52 px) ──────────
    Statt großer Karten nur quadratische Icon-Buttons; Details erscheinen

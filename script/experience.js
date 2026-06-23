@@ -982,13 +982,34 @@ function renderSkillTree() {
 }
 
 /** Rendert den paranoiden Einzel-Spalten-Baum rechts neben dem normalen Baum.
-    Jeder Knoten wird erst sichtbar, wenn sein Vorgänger gekauft wurde.
-    Nur angezeigt nach dem 4. Raub — der Beschreibungstext setzt das voraus. */
+ *  3 Zustände:
+ *  - robbery2Triggered + totalEarned < 3 → Mystery-Knoten (?, kein echter Text)
+ *  - robbery2Triggered + totalEarned >= 3 → echter Knoten sichtbar und kaufbar
+ *  - robbery4Triggered oder bereits gekauft → voller Baum mit Ästen */
 function renderParanoidTree() {
-  if (!gameFlags.robbery4Triggered && skills.paranoid < 1) return '';
+  if (!gameFlags.robbery2Triggered && skills.paranoid < 1) return '';
   const root = EP_SKILL_TREE.find(n => n.id === 'paranoid');
   if (!root) return '';
 
+  // Mystery-Zustand: Knoten ahnen lassen, aber noch nicht enthüllen
+  if (!gameFlags.robbery4Triggered && skills.paranoid < 1 && experience.totalEarned < 3) {
+    return `
+      <div class="skill-tree paranoid-skill-tree">
+        <div class="skill-tree-row-root">
+          <div class="ep-node-slot">
+            <button class="ep-node ep-node-mystery" disabled title="???">❓</button>
+          </div>
+        </div>
+        <div class="paranoid-mystery-hint">
+          <p>Ich muss mir was überlegen —</p>
+          <p>Erfahrung macht mich stärker...</p>
+          <p>aber ich brauche noch mehr davon.</p>
+          <span class="paranoid-mystery-cost">3 EP benötigt</span>
+        </div>
+      </div>`;
+  }
+
+  // Enthüllter / voller Baum
   let html = `<div class="skill-tree paranoid-skill-tree">
     <div class="skill-tree-row-root">${epNodeIconHtml(root)}</div>`;
 
