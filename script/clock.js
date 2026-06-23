@@ -72,4 +72,10 @@ function startNewDay() {
   if (gameClock.day === 2 && quests.nightWatch.state === 'unstarted') {
     navUnseen.taverne = true;
   }
+
+  // Vorarbeiter-Abend-Hinweis täglich zurücksetzen, damit der Tab jede Nacht
+  // erneut leuchtet, solange der Spieler das Gespräch noch nicht geführt hat.
+  if (quests.foremanRaise.state === 'active' && !gameFlags.foremanBonusGiven) {
+    gameFlags.foremanEveningAlerted = false;
+  }
 }

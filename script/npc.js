@@ -581,9 +581,10 @@ const NPCS = {
     availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'foremanRaise',
     badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
-    // Er hat den Spieler ausdrücklich für ABENDS in die Taverne eingeladen
-    // (siehe maybeTriggerForemanBonusDialog()) — tagsüber ist er auf dem Feld.
-    locked: () => quests.foremanRaise.state === 'unstarted' || !isNight(),
+    // Komplett versteckt bis zur Einladung; danach tagsüber sichtbar-aber-gesperrt
+    // (timeLocked), damit klar ist dass er abends kommt und nicht einfach fehlt.
+    locked:     () => quests.foremanRaise.state === 'unstarted',
+    timeLocked: () => !isNight(),
     start: () => (quests.foremanRaise.state === 'active' ? 'praise' : 'idle'),
     nodes: {
       praise: {
@@ -1003,8 +1004,11 @@ function openNpcDialog(npcId, nodeId) {
    selbst signalisiert (siehe `navUnseen.taverne`, gesetzt an den
    jeweiligen Freischalt-Stellen in actions.js). */
 function renderTaverne(el) {
-  const visibleNpcs = Object.entries(NPCS).filter(([, npc]) =>
-    !(typeof npc.locked === 'function' ? npc.locked() : !!npc.locked));
+  const isLocked     = npc => typeof npc.locked     === 'function' ? npc.locked()     : !!npc.locked;
+  const isTimeLocked = npc => typeof npc.timeLocked === 'function' ? npc.timeLocked() : false;
+
+  const visibleNpcs    = Object.entries(NPCS).filter(([, npc]) => !isLocked(npc) && !isTimeLocked(npc));
+  const timeLockedNpcs = Object.entries(NPCS).filter(([, npc]) => !isLocked(npc) && isTimeLocked(npc));
 
   const cards = visibleNpcs.map(([id, npc]) => {
     const hasOfferableQuest = npc.questId && quests[npc.questId].state === 'unstarted' &&
@@ -1028,10 +1032,17 @@ function renderTaverne(el) {
       </div>`;
   }).join('');
 
+  const timeLockedCards = timeLockedNpcs.map(([, npc]) => `
+      <div class="action-card action-card-locked" style="position: relative;">
+        <div class="action-card-icon">${npc.icon}</div>
+        <div class="action-card-name">${npc.name}</div>
+        <p class="action-card-desc">${npc.availabilityText || 'Gerade nicht anwesend.'}</p>
+      </div>`).join('');
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Taverne — Zum Müden Wanderer</div>
-      <div class="action-grid">${cards}</div>
+      <div class="action-grid">${cards}${timeLockedCards}</div>
     </div>
   `;
 }
