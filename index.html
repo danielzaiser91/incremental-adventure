@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -7,19 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/style.css?v=20260623">
+  <link rel="stylesheet" href="style/style.css?v=20260623b">
 </head>
 <body>
 
-  <!-- ══ UPDATE-BANNER: neue Version verfügbar ═══════════════════ -->
+  <!-- â•â• UPDATE-BANNER: neue Version verfÃ¼gbar â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="update-banner" class="hidden" onclick="saveAndReload()">
-    ✦ Neue Version verfügbar — Klicken zum Speichern &amp; Neu laden
+    âœ¦ Neue Version verfÃ¼gbar â€” Klicken zum Speichern &amp; Neu laden
   </div>
 
-  <!-- ══ TOAST-CONTAINER: ephemere Reaktionstexte, oben rechts ══ -->
+  <!-- â•â• TOAST-CONTAINER: ephemere Reaktionstexte, oben rechts â•â• -->
   <div id="toast-container" aria-live="polite"></div>
 
-  <!-- ══ DIALOG-OVERLAY: einmalige Story-Momente, modal ══════════ -->
+  <!-- â•â• DIALOG-OVERLAY: einmalige Story-Momente, modal â•â•â•â•â•â•â•â•â•â• -->
   <div id="dialog-overlay" class="dialog-overlay hidden">
     <div class="dialog-box" id="dialog-box" role="dialog" aria-modal="true">
       <div class="dialog-title" id="dialog-title"></div>
@@ -28,23 +28,23 @@
     </div>
   </div>
 
-  <!-- ══ RESET-OVERLAY: bildschirmfüllende Übergangs-Animation beim
-       manuellen Neuanfang (siehe experience.js, playResetAnimation()) ══ -->
+  <!-- â•â• RESET-OVERLAY: bildschirmfÃ¼llende Ãœbergangs-Animation beim
+       manuellen Neuanfang (siehe experience.js, playResetAnimation()) â•â• -->
   <div id="reset-overlay" class="reset-overlay hidden">
     <div class="reset-overlay-text" id="reset-overlay-text"></div>
   </div>
 
   <div id="app">
 
-    <!-- ══ MOBILE: Top-Bar (≤768px) — Hamburger + Titel + Charakter-Toggle ══ -->
+    <!-- â•â• MOBILE: Top-Bar (â‰¤768px) â€” Hamburger + Titel + Charakter-Toggle â•â• -->
     <div id="mobile-top-bar">
-      <button class="mobile-top-btn" id="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Navigation öffnen">☰</button>
+      <button class="mobile-top-btn" id="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Navigation Ã¶ffnen">â˜°</button>
       <span class="mobile-title">Chroniken</span>
-      <button class="mobile-top-btn" id="mobile-stats-toggle" onclick="toggleMobileStats()" aria-label="Charakter öffnen">◈</button>
+      <button class="mobile-top-btn" id="mobile-stats-toggle" onclick="toggleMobileStats()" aria-label="Charakter Ã¶ffnen">â—ˆ</button>
     </div>
     <div id="mobile-backdrop" onclick="closeMobilePanels()"></div>
 
-    <!-- ══ LINKE SPALTE: NAVIGATION ══════════════════════════ -->
+    <!-- â•â• LINKE SPALTE: NAVIGATION â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <nav id="nav-panel" class="panel">
 
       <!-- Game Branding -->
@@ -63,16 +63,16 @@
         <!-- renderNav() -->
       </div>
 
-      <!-- Einstellungen — permanent am unteren Rand fixiert -->
+      <!-- Einstellungen â€” permanent am unteren Rand fixiert -->
       <div class="nav-footer">
         <button class="nav-footer-btn" id="btn-settings" onclick="showSettings()">
-          ⚙ Einstellungen
+          âš™ Einstellungen
         </button>
       </div>
 
     </nav>
 
-    <!-- ══ MITTLERE SPALTE: INTERAKTIVER FEATURE-BEREICH ══════ -->
+    <!-- â•â• MITTLERE SPALTE: INTERAKTIVER FEATURE-BEREICH â•â•â•â•â•â• -->
     <main id="main-panel" class="panel">
       <section id="content-section">
         <div id="content-area">
@@ -81,7 +81,7 @@
       </section>
     </main>
 
-    <!-- ══ RECHTE SPALTE: CHARAKTER-STATS ════════════════════ -->
+    <!-- â•â• RECHTE SPALTE: CHARAKTER-STATS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
     <aside id="stats-panel" class="panel">
       <div class="panel-header">
         <span class="panel-label">Charakter</span>
@@ -92,13 +92,13 @@
       <div id="stat-floats"></div>
     </aside>
 
-    <!-- ══ UNTERE LEISTE: AKTUELLES ZIEL, immer sichtbar ══════ -->
+    <!-- â•â• UNTERE LEISTE: AKTUELLES ZIEL, immer sichtbar â•â•â•â•â•â• -->
     <footer id="objective-bar">
       <div class="objective-left">
-        <button class="objective-chronik-btn" id="objective-chronik-btn" onclick="showContent('chronik')" title="Chronik öffnen">📜</button>
+        <button class="objective-chronik-btn" id="objective-chronik-btn" onclick="showContent('chronik')" title="Chronik Ã¶ffnen">ðŸ“œ</button>
         <span class="objective-chapter" id="objective-chapter"></span>
         <span class="objective-divider"></span>
-        <span class="objective-icon">◈</span>
+        <span class="objective-icon">â—ˆ</span>
         <span class="objective-label">Ziel:</span>
         <span class="objective-text" id="objective-text"></span>
       </div>
@@ -109,32 +109,33 @@
 
   </div><!-- /#app -->
 
-  <script src="script/state.js?v=20260623"></script>
-  <script src="script/version-check.js?v=20260623"></script>
-  <script src="script/clock.js?v=20260623"></script>
-  <script src="script/needs.js?v=20260623"></script>
-  <script src="script/story.js?v=20260623"></script>
-  <script src="script/market.js?v=20260623"></script>
-  <script src="script/inventory.js?v=20260623"></script>
-  <script src="script/pets.js?v=20260623"></script>
-  <script src="script/toast.js?v=20260623"></script>
-  <script src="script/dialog.js?v=20260623"></script>
-  <script src="script/npc.js?v=20260623"></script>
-  <script src="script/quests.js?v=20260623"></script>
-  <script src="script/achievements.js?v=20260623"></script>
-  <script src="script/experience.js?v=20260623"></script>
-  <script src="script/lehrer.js?v=20260623"></script>
-  <script src="script/combat.js?v=20260623"></script>
-  <script src="script/automation.js?v=20260623"></script>
-  <script src="script/expedition.js?v=20260623"></script>
-  <script src="script/alchemie.js?v=20260623"></script>
-  <script src="script/dev.js?v=20260623"></script>
-  <script src="script/objective.js?v=20260623"></script>
-  <script src="script/nav.js?v=20260623"></script>
-  <script src="script/content.js?v=20260623"></script>
-  <script src="script/stats.js?v=20260623"></script>
-  <script src="script/actions.js?v=20260623"></script>
-  <script src="script/save.js?v=20260623"></script>
-  <script src="script/main.js?v=20260623"></script>
+  <script src="script/state.js?v=20260623b"></script>
+  <script src="script/version-check.js?v=20260623b"></script>
+  <script src="script/clock.js?v=20260623b"></script>
+  <script src="script/needs.js?v=20260623b"></script>
+  <script src="script/story.js?v=20260623b"></script>
+  <script src="script/market.js?v=20260623b"></script>
+  <script src="script/inventory.js?v=20260623b"></script>
+  <script src="script/pets.js?v=20260623b"></script>
+  <script src="script/toast.js?v=20260623b"></script>
+  <script src="script/dialog.js?v=20260623b"></script>
+  <script src="script/npc.js?v=20260623b"></script>
+  <script src="script/quests.js?v=20260623b"></script>
+  <script src="script/achievements.js?v=20260623b"></script>
+  <script src="script/experience.js?v=20260623b"></script>
+  <script src="script/lehrer.js?v=20260623b"></script>
+  <script src="script/combat.js?v=20260623b"></script>
+  <script src="script/automation.js?v=20260623b"></script>
+  <script src="script/expedition.js?v=20260623b"></script>
+  <script src="script/alchemie.js?v=20260623b"></script>
+  <script src="script/dev.js?v=20260623b"></script>
+  <script src="script/objective.js?v=20260623b"></script>
+  <script src="script/nav.js?v=20260623b"></script>
+  <script src="script/content.js?v=20260623b"></script>
+  <script src="script/stats.js?v=20260623b"></script>
+  <script src="script/actions.js?v=20260623b"></script>
+  <script src="script/save.js?v=20260623b"></script>
+  <script src="script/main.js?v=20260623b"></script>
 </body>
 </html>
+

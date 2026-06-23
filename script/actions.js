@@ -643,8 +643,8 @@ function checkMilestones() {
     });
   }
 
-  // Raub 2 — 75 Gold in der Hand
-  if (!gameFlags.robbery2Triggered && resources.gold >= 75 && storyState === 10103) {
+  // Raub 2 — 200 Gold in der Hand
+  if (!gameFlags.robbery2Triggered && resources.gold >= 200 && storyState === 10103) {
     gameFlags.robbery2Triggered = true;
     storyState = 10104;
     maybeShowStoryDialog('1.5', () => {
@@ -654,8 +654,8 @@ function checkMilestones() {
     });
   }
 
-  // Raub 3 — 100 Gold in der Hand
-  if (!gameFlags.robbery3Triggered && resources.gold >= 100 && storyState === 10104) {
+  // Raub 3 — 300 Gold in der Hand
+  if (!gameFlags.robbery3Triggered && resources.gold >= 300 && storyState === 10104) {
     gameFlags.robbery3Triggered = true;
     storyState = 10105;
     maybeShowStoryDialog('1.6', () => {
@@ -665,8 +665,8 @@ function checkMilestones() {
     });
   }
 
-  // Raub 4 — 125 Gold in der Hand. Arbeit wird danach gesperrt.
-  if (!gameFlags.robbery4Triggered && resources.gold >= 125 && storyState === 10105) {
+  // Raub 4 — 500 Gold in der Hand. Arbeit wird danach gesperrt.
+  if (!gameFlags.robbery4Triggered && resources.gold >= 500 && storyState === 10105) {
     gameFlags.robbery4Triggered = true;
     storyState = 10106;
     gameFlags.workBlockedByRobberies = true;

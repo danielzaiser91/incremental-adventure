@@ -11,7 +11,7 @@
 • Dialogkorrektur: „Schritt für Schritt" in der Nachtwache-Beschreibung
 
 **Kapitel 1** *(zum Aufdecken anklicken)*
-||4 automatische Raub-Events bei 50/75/100/125 Gold — jeweils Story-Dialog + Auto-Reset. Nach dem 4. Raub ist die Arbeit gesperrt, bis „Paranoid" erlernt wurde.
+||4 automatische Raub-Events bei 50 / 200 / 300 / 500 Gold — jeweils Story-Dialog + Auto-Reset. Nach dem 4. Raub ist die Arbeit gesperrt, bis „Paranoid" erlernt wurde.
 
 Kapitel 1.5–1.7: drei neue Story-Chronik-Einträge für die Räube.
 

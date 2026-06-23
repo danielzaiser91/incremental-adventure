@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.15.0-alpha';
+const GAME_VERSION = '0.15.1-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -237,8 +237,12 @@ const VERSION_NOTES = {
     { cat: 'Neuerung', text: 'Mira zeigt jetzt ein ❗-Symbol, bevor man sie das erste Mal auf einen Drink eingeladen hat.' },
     { cat: 'Neuerung', text: 'Alle Zielleisten-Texte sind jetzt konsequent in Ich-Perspektive geschrieben.' }
   ],
+  '0.15.1-alpha': [
+    { cat: 'Balance',  text: 'Raub 2/3/4 goldwerte angehoben: 200/300/500 Gold (war 75/100/125) — die Raub-Intervalle geben mehr Zeit zum Aufbauen.' },
+    { cat: 'Bugfix',   text: '„Neu anfangen" war sofort sichtbar, bevor man Paranoid erlernte — jetzt korrekt verborgen bis zum Kauf.' }
+  ],
   '0.15.0-alpha': [
-    { cat: 'Story',    text: 'Neues Raub-System: 4 automatische Raub-Events (50/75/100/125 Gold), jeder mit eigenem Story-Dialog (Kapitel 1.5–1.7) und auto-Reset. Nach dem 4. Raub ist Arbeit gesperrt.' },
+    { cat: 'Story',    text: 'Neues Raub-System: 4 automatische Raub-Events (50/200/300/500 Gold), jeder mit eigenem Story-Dialog (Kapitel 1.5–1.7) und auto-Reset. Nach dem 4. Raub ist Arbeit gesperrt.' },
     { cat: 'Story',    text: 'Neuer Skill-Ast: „Paranoid" (5 Fähigkeiten) — kaufbar nach dem 4. Raub. Schaltet die „Neu anfangen"-Karte und den restlichen Erfahrungs-Baum frei. Eigener visueller Ast neben dem normalen Baum.' },
     { cat: 'Story',    text: 'Kapitel 1.8 „Paranoid" — Story-Chronik-Eintrag nach Kauf der gleichnamigen Fähigkeit.' },
     { cat: 'Neuerung', text: 'Jede erlernte Fähigkeit im Erfahrungs-Baum zeigt jetzt einen immersiven Ich-Perspektiv-Monolog.' },
@@ -397,7 +401,7 @@ let gameFlags = {
   robbery3Triggered:           false, // 3. Raub (100 Gold) ausgelöst
   robbery4Triggered:           false, // 4. Raub (125 Gold) ausgelöst
   workBlockedByRobberies:      false, // Nach 4. Raub: Arbeit gesperrt bis Paranoid gekauft
-  newRobberySystemActive:      false, // Zeigt an, dass der neue 4-Raub-Ablauf aktiv ist (vs. Altstand)
+  newRobberySystemActive:      true,  // true = neues 4-Raub-System; false nur bei Altständen ohne dieses Flag
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
