@@ -370,6 +370,9 @@ function renderArbeitsplatz(el) {
       </span></span>
     </div>` : '';
 
+  const exhausted = !night && needs.tiredness >= 100;
+  if (exhausted && jobInfoPanelOpen) jobInfoPanelOpen = false;
+
   const jobInfoPanel = levelingUnlocked ? `
     <div class="job-info-panel${jobInfoPanelOpen ? ' open' : ''}">
       <div class="job-info-title">Feldarbeit</div>
@@ -379,9 +382,6 @@ function renderArbeitsplatz(el) {
       ${nextLevelBlock}
       ${computedBlock}
     </div>` : '';
-
-  const exhausted = !night && needs.tiredness >= 100;
-  if (exhausted && jobInfoPanelOpen) jobInfoPanelOpen = false;
 
   let fieldCard;
   if (night) {
