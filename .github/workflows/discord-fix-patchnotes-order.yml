@@ -1,0 +1,68 @@
+name: Discord Patchnotes — Reihenfolge reparieren (einmalig)
+
+# Einmalig manuell auslösen: löscht die aktuelle v0.15-Nachricht und postet
+# v0.14 + v0.15 neu in der richtigen Reihenfolge.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aktuelle Patchnotes-Nachricht löschen und neu ordnen
+        id: repost
+        run: |
+          MENTION="<@&1518368928370528256>"
+          CURRENT_ID=$(jq -r '.patchnotes_message_id // empty' patchnotes/.discord-ids.json)
+
+          # 1. Aktuelle v0.15-Nachricht löschen
+          if [ -n "$CURRENT_ID" ]; then
+            curl -s -o /dev/null -X DELETE \
+              "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${CURRENT_ID}" || true
+            echo "Gelöscht: $CURRENT_ID"
+          fi
+
+          # 2. v0.14 posten (historisch, ID wird nicht gespeichert)
+          V14=$(tail -n +2 patchnotes/v0.14.0.md)
+          V14_MSG="${MENTION}"$'\n'"${V14}"
+          if [ "${#V14_MSG}" -gt 1999 ]; then V14_MSG="${V14_MSG:0:1996}..."; fi
+          curl -s -o /dev/null -X POST \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg c "$V14_MSG" '{content: $c}')" \
+            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true"
+          echo "v0.14 gepostet"
+          sleep 1
+
+          # 3. v0.15 posten und neue ID speichern
+          V15=$(tail -n +2 patchnotes/v0.15.0.md)
+          V15_MSG="${MENTION}"$'\n'"${V15}"
+          if [ "${#V15_MSG}" -gt 1999 ]; then V15_MSG="${V15_MSG:0:1996}..."; fi
+          RESP=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg c "$V15_MSG" '{content: $c}')" \
+            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true")
+          NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
+          echo "v0.15 gepostet: $NEW_ID"
+          echo "new_id=$NEW_ID" >> $GITHUB_OUTPUT
+
+      - name: discord-ids.json aktualisieren und committen
+        run: |
+          NEW_ID="${{ steps.repost.outputs.new_id }}"
+          if [ -z "$NEW_ID" ]; then echo "FEHLER: keine neue ID"; exit 1; fi
+
+          CURRENT=$(cat patchnotes/.discord-ids.json)
+          echo "$CURRENT" | jq \
+            --arg id "$NEW_ID" --arg v "0.15.0" \
+            '. + {patchnotes_message_id: $id, patchnotes_last_version: $v}' \
+            > patchnotes/.discord-ids.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add patchnotes/.discord-ids.json
+          git diff --staged --quiet || git commit -m "fix: Discord-Patchnotes-Reihenfolge repariert (v0.14 wieder eingefügt) [skip ci]"
+          git push
