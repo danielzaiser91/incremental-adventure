@@ -398,15 +398,24 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
     </p>
   ` : '';
 
+  const flushPendingActions = () => {
+    if (window._pendingVersionUpdate) {
+      const v = window._pendingVersionUpdate;
+      window._pendingVersionUpdate = null;
+      showVersionUpdateDialog(v);
+    }
+    if (window._pendingHealAction) {
+      const fn = window._pendingHealAction;
+      window._pendingHealAction = null;
+      fn();
+    }
+  };
+
   const buttons = isDevPreview
-    ? [{ label: 'Schließen', onClick: () => closeDialog() }]
+    ? [{ label: 'Schließen', onClick: () => closeDialog(flushPendingActions) }]
     : [{ label: 'Spielstand aktualisieren und weiterspielen', onClick: () => closeDialog(() => {
         saveGame();
-        if (window._pendingVersionUpdate) {
-          const v = window._pendingVersionUpdate;
-          window._pendingVersionUpdate = null;
-          showVersionUpdateDialog(v);
-        }
+        flushPendingActions();
       }) }];
 
   if (resetOffered) {

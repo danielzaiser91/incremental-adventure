@@ -18,8 +18,8 @@ function render() {
 
 /** Heilt Spieler, bei denen Raub-Resets durch einen Bug nicht ausgelöst wurden.
  *  Erkennbar: Anzahl getriggerter Räube > meta.resets (jeder Raub muss einen
- *  Reset hinterlassen haben). Führt die fehlenden Resets nach und zeigt einen
- *  erklärenden Toast. */
+ *  Reset hinterlassen haben). Führt die fehlenden Resets mechanisch nach und
+ *  zeigt den Story-Dialog des ersten verpassten Raubes (bypass seen-Flag). */
 function maybehealRobberyBug() {
   const triggered = [
     gameFlags.robberyTriggered,
@@ -31,12 +31,32 @@ function maybehealRobberyBug() {
   const missing = triggered - meta.resets;
   if (missing <= 0) return;
 
-  for (let i = 0; i < missing; i++) performManualReset();
-  showToast(
-    `Spielstand-Fix: ${missing} übersprungene${missing > 1 ? ' Raub-Resets wurden' : 'r Raub-Reset wurde'} durch einen behobenen Bug nachgeholt.`,
-    TOAST.EVENT
-  );
-  render();
+  const doHeal = () => {
+    for (let i = 0; i < missing; i++) performManualReset();
+    render();
+
+    // Story-Dialog des ersten verpassten Raubes direkt zeigen (umgeht seen-Flag)
+    const storyId = ['1.4', '1.5', '1.6', '1.7'][triggered - missing];
+    const entry = storyId && STORY_ENTRIES.find(e => e.id === storyId);
+    if (entry) {
+      showStoryEntryDialog(entry, () => {
+        showToast('Spielstand korrigiert: ein übersprungener Neuanfang wurde nachgeholt.', TOAST.EVENT);
+      });
+    } else {
+      showToast(
+        `Spielstand korrigiert: ${missing} übersprungener Neuanfang wurde nachgeholt.`,
+        TOAST.EVENT
+      );
+    }
+  };
+
+  const dialogOpen = !document.getElementById('dialog-overlay').classList.contains('hidden');
+  if (dialogOpen) {
+    // Changelog oder anderer Dialog offen → nach dessen Schließen ausführen
+    window._pendingHealAction = doHeal;
+  } else {
+    setTimeout(doHeal, 100);
+  }
 }
 
 function init() {
@@ -49,8 +69,7 @@ function init() {
   startAlchemieTick();
   setupDevKeyListener();
   startVersionCheck();
-  // Muss nach loadGame() + startVersionCheck() laufen (justUpdated-Check folgt danach)
-  setTimeout(maybehealRobberyBug, 800);
+  setTimeout(maybehealRobberyBug, 200);
 
   const justUpdated = sessionStorage.getItem('justUpdated');
   if (justUpdated) {
