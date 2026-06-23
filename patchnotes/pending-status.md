@@ -11,6 +11,6 @@
 
 **In v0.16.3:** Zieltext-Formulierungen (immersiver), Paranoid-Nachteil-Zeilenumbruch
 
-📋 [Vollständiges Changelog älterer Versionen](https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md)
+📋 Vollständiges Changelog älterer Versionen: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/
