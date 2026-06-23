@@ -53,11 +53,13 @@ const STORY_ENTRIES = [
     title:       'Der erste Raub',
     unlockState: 10103,
     text: [
-      'Eine Hand packt mich im Schatten einer Gasse.',
-      'Der Fremde — er hat die ganze Zeit gewartet.',
-      'Er reißt mir den Geldbeutel von der Hüfte und ist verschwunden, bevor ich begreife, was passiert.',
-      'Mein mühsam verdientes Gold. Fort.',
-      'Das wird sich nicht wiederholen. Ich werde klüger sein. Härter. Was ich daraus gelernt habe, nimmt mir keiner.'
+      'Der Griff kommt, bevor ich ihn höre. Eine Hand um mein Handgelenk, ein Ruck — ich bin in der Gasse, Rücken gegen Stein, bevor mein Gehirn aufgeholt hat.',
+      'Der Fremde steht vor mir. Ruhig. Er hat nicht mal die Kapuze hochgezogen.',
+      '»Hübsche Summe für einen Neuankömmling«, sagt er. Nimmt den Geldbeutel von meiner Hüfte, als würde er ihm gehören.',
+      'Ich will etwas sagen. Tue es nicht. Er ist schon auf halbem Weg aus der Gasse.',
+      '»Bis bald«, sagt er über die Schulter. Dann ist er weg.',
+      'Meine Hände zittern. Nicht aus Angst. Aus blankem Unglauben.',
+      'Das passiert mir kein zweites Mal.'
     ]
   },
   {
@@ -65,10 +67,12 @@ const STORY_ENTRIES = [
     title:       'Der zweite Raub',
     unlockState: 10104,
     text: [
-      'Es ist wieder passiert.',
-      'Keine Gasse diesmal — voller Marktplatz, helles Tageslicht. Derselbe Griff, dieselbe Hand, dieselbe Leere danach.',
-      'Das ist kein Zufall. Das ist eine Methode. Irgendjemand weiß, wann ich Geld bei mir trage.',
-      'Ich stehe mit leeren Händen und einem einzigen klaren Gedanken: Wut.'
+      'Der Marktplatz, Mittag — hundert Menschen, Stimmen, Geruch nach gebratenem Fleisch. Diesmal halte ich den Geldbeutel unter dem Arm.',
+      'Nicht fest genug.',
+      'Ein Ellenbogen in meine Seite. Eine Drehung. Er ist schon drei Schritte weg, bevor ich aufgehört habe zu stolpern.',
+      'Er dreht sich einmal um. Sieht mich direkt an — und zwinkert.',
+      'Volles Tageslicht. Hundert Zeugen. Er hat sich nicht mal die Mühe gemacht, sein Gesicht zu verbergen.',
+      'Ich kann mich nicht rühren vor Wut. Er kennt mich. Er weiß, wann ich komme.'
     ]
   },
   {
@@ -76,9 +80,13 @@ const STORY_ENTRIES = [
     title:       'Der dritte Raub',
     unlockState: 10105,
     text: [
-      'Drei Mal. Ich sage mir jedes Mal dasselbe: Das nächste Mal bin ich bereit.',
-      'Die Zähne sind aufeinandergebissen. Kein Schreien, kein Fluchen — was soll das bringen?',
-      'Ich muss mir ernsthaft etwas einfallen lassen. Nicht irgendwann. Jetzt.'
+      'Ich höre das Rascheln einen Atemzug zu spät.',
+      'Ein Stoß in meinen Rücken — ich taumle, Schulter gegen Mauerstein. Als ich mich umdrehe, ist er weg.',
+      'Kein Griff, kein Wort, nicht mal Augenkontakt. Nur eine Geste, so beiläufig wie das Aufheben einer Münze vom Boden.',
+      'Ich lehne gegen die Wand. Warte, bis die Hände aufhören zu zittern.',
+      'Er hat mich nicht mal für würdig befunden, ihn anzusehen.',
+      'Das ist nicht Pech. Das ist System. Jemand weiß, wo ich bin — wann ich komme, wie viel ich trage.',
+      'Das nächste Mal lasse ich ihn nicht entkommen.'
     ]
   },
   {
@@ -86,10 +94,13 @@ const STORY_ENTRIES = [
     title:       'Der vierte Raub',
     unlockState: 10106,
     text: [
-      'Jetzt reicht es.',
-      'Vier Mal ausgeraubt. Vier Mal von vorn angefangen. Und noch immer stehle ich mich durch dieselben Gassen, schaufel auf denselben Feldern, verdiene dasselbe Gold.',
-      'Ich höre auf. Nicht mit dem Kämpfen. Mit dem Blindschuften.',
-      'Ich muss nachdenken — wirklich nachdenken, was ich hier tue. Die Antwort liegt nicht auf dem Feld. Sie liegt in mir.'
+      'Er wartet auf mich. Offen. Unverdeckt. Lehnt an der Mauer, Arme verschränkt, als hätte er die ganze Zeit gewusst, dass ich hier entlangkomme.',
+      '»Langsam lernst du«, sagt er, bevor ich auch nur stehenbleibe. »Aber noch nicht schnell genug.«',
+      'Er macht einen Schritt auf mich zu. Ich weiche zurück. Ich — ich weiche zurück.',
+      'Er nimmt das Gold. Ohne Eile. Ohne Gerangel. Als wäre es längst beschlossene Sache.',
+      '»Bis zum nächsten Mal.«',
+      'Er dreht sich um und geht. Einfach geht. Als wäre ich keine Bedrohung. Als wäre ich nichts.',
+      'Nein. Nicht noch einmal. Ich fange anders an — mit dem Kopf, nicht mit den Händen.'
     ]
   },
   {
@@ -97,9 +108,10 @@ const STORY_ENTRIES = [
     title:       'Paranoid',
     unlockFlag:  () => skills.paranoid >= 1,
     text: [
-      'Paranoid — ja, das bin ich wohl. Ich kann es auch ruhig sagen.',
-      'Aber die Angst ist nicht mehr lähmend. Sie ist scharf geworden. Ich sehe jetzt Muster, die ich früher übersehen hätte.',
-      'Dieser Weg beginnt mit einem neuen Anfang — aber einem gewählten, keinem erzwungenen.'
+      'Jedes Geräusch. Jede Schulter, die sich zu früh dreht. Jeder Schatten, der einen Moment zu lang steht.',
+      'Ja — ich bin paranoid. Ich sage es mir laut vor, manchmal. Als würde es dadurch irgendwie besser.',
+      'Aber es macht mich schärfer. Ich sehe jetzt Muster, die ich früher für Zufall gehalten hätte.',
+      'Ich fange von vorn an — nicht weil ich muss. Weil ich es will. Klüger diesmal.'
     ]
   },
 
@@ -110,9 +122,12 @@ const STORY_ENTRIES = [
     title:       'Erstes Blut',
     unlockState: 20101,
     text: [
-      'Das erste Mal. Die Stille danach hat eine eigene Schwere.',
-      'Ich hatte keine Zeit, Angst zu haben — nur zu handeln. Und es hat funktioniert.',
-      'Vielleicht bin ich doch mehr als ein Bauernjunge mit leeren Taschen. Vielleicht war der Raub nicht das Ende meiner Geschichte, sondern ihr eigentlicher Anfang.'
+      'Das Rascheln hinter mir — ich wirbele herum, bevor ich denke.',
+      'Alles passiert zu schnell für Angst. Ein Hieb, ein Taumel, Staub in meinem Mund. Dann Stille.',
+      'Ich stehe über dem gestürzten Räuber und merke erst jetzt, wie laut mein Atem ist.',
+      'Das erste Mal. Ich hatte erwartet, mich schlechter zu fühlen.',
+      'Stattdessen: eine merkwürdige, klare Ruhe. Und eine Erkenntnis — ich bin nicht mehr derselbe, der in Treutheim ankam.',
+      'Dieser hier hat sich gewehrt. Ich auch.'
     ]
   },
   {
