@@ -605,7 +605,7 @@ const NPCS = {
         text: [
           'Brakka hebt kaum die Augenbraue — als hätte er die Frage erwartet.',
           '"Weil Mira klug ist", sagt er knapp. "Sie weiß, wen man sieht — und wen man sich merkt."',
-          '"Einen Fremden sieht man. Mira sieht man sich merken. Das ist der Unterschied zwischen einer Botschaft, die ankommt, und einem Problem, das sich von selbst löst."',
+          '"Ein Fremder fällt auf. Mira merkt man sich. Das ist der Unterschied zwischen einer Botschaft, die ankommt, und einem Problem, das sich von selbst löst."',
           'Er faltet den Brief. "Verstanden?"'
         ],
         options: [
