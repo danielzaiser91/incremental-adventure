@@ -381,6 +381,7 @@ function renderArbeitsplatz(el) {
     </div>` : '';
 
   const exhausted = !night && needs.tiredness >= 100;
+  if (exhausted && jobInfoPanelOpen) jobInfoPanelOpen = false;
 
   let fieldCard;
   if (night) {

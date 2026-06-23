@@ -983,9 +983,9 @@ function renderSkillTree() {
 
 /** Rendert den paranoiden Einzel-Spalten-Baum rechts neben dem normalen Baum.
     Jeder Knoten wird erst sichtbar, wenn sein Vorgänger gekauft wurde.
-    Nur angezeigt, wenn der Erfahrungs-Tab freigeschaltet wurde (nach Raub 1). */
+    Nur angezeigt nach dem 4. Raub — der Beschreibungstext setzt das voraus. */
 function renderParanoidTree() {
-  if (!gameFlags.resetLayerUnlocked) return '';
+  if (!gameFlags.robbery4Triggered && skills.paranoid < 1) return '';
   const root = EP_SKILL_TREE.find(n => n.id === 'paranoid');
   if (!root) return '';
 

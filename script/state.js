@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.15.1-alpha';
+const GAME_VERSION = '0.15.2-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -236,6 +236,11 @@ const VERSION_NOTES = {
     { cat: 'Bugfix',   text: 'Nach einem Neuanfang bleibt die Navigation in der aktuellen Stadt — kein ungewolltes Zurückfallen auf die Weltkarte.' },
     { cat: 'Neuerung', text: 'Mira zeigt jetzt ein ❗-Symbol, bevor man sie das erste Mal auf einen Drink eingeladen hat.' },
     { cat: 'Neuerung', text: 'Alle Zielleisten-Texte sind jetzt konsequent in Ich-Perspektive geschrieben.' }
+  ],
+  '0.15.2-alpha': [
+    { cat: 'Bugfix',   text: 'Der Paranoid-Skill-Ast erscheint jetzt erst nach dem 4. Raub (nicht schon nach dem 1.).' },
+    { cat: 'Bugfix',   text: 'Feldarbeit-Infopanel («/») wird automatisch eingeklappt, wenn man zu erschöpft zum Arbeiten ist — der Toggle-Button verschwindet sonst.' },
+    { cat: 'Bugfix',   text: 'Feldarbeit-Infopanel liegt jetzt korrekt über dem Verschnaufen-Button (z-index-Fix).' }
   ],
   '0.15.1-alpha': [
     { cat: 'Balance',  text: 'Raub 2/3/4 goldwerte angehoben: 200/300/500 Gold (war 75/100/125) — die Raub-Intervalle geben mehr Zeit zum Aufbauen.' },
