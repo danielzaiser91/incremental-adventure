@@ -14,5 +14,7 @@ Fünf permanente Fähigkeiten, die auch einen Neuanfang überleben:
 
 **Weitere Verbesserungen**
 - Zeitkristall-Automatisierung läuft jetzt spielzeitbasiert (alle 60 Spielminuten statt alle 30 Echtzeit-Sekunden) — Kristalle arbeiten nun synchron mit dem eigenen Rhythmus, nicht im Hintergrund
+- Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, Durchhalten, das Ziel vor Augen
+- Update-Banner: das Spiel erkennt automatisch wenn eine neue Version bereit steht — Klick speichert und lädt neu, danach erscheint ein Dialog mit allen Neuerungen seit der letzten gespielten Version
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/

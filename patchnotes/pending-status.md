@@ -4,9 +4,8 @@
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
-**Zuletzt behoben / neu in v0.14.3:**
-- Neuerung: Nach einem Update erscheint ein Dialog mit allen Änderungen seit der letzten gespielten Version
-- Bugfix: Update-Dialog und Spielstand-Changelog erscheinen jetzt nacheinander statt sich zu überschreiben
+**Zuletzt behoben in v0.14.3:**
+- Update-Dialog und Spielstand-Changelog erscheinen jetzt nacheinander statt sich zu überschreiben
 
 **Zuletzt behoben in v0.14.2:**
 - Errungenschaften im Erfahrungs-Weg waren unsichtbar, obwohl bereits freigeschaltet

@@ -6,8 +6,9 @@
 
 | Änderung | Was muss mit in den Commit |
 |---|---|
-| Bugfix | `patchnotes/pending-status.md` + Patch-Version bump (`script/content.js`, `version.json`, `script/state.js` GAME_VERSION) |
-| Neues Feature / Story | `patchnotes/pending-patchnotes.md` + Minor-Version bump |
+| Bugfix | `patchnotes/pending-status.md` (nur Bugfixes!) + Patch-Version bump (`version.json`, `script/state.js` GAME_VERSION + VERSION_NOTES) |
+| Neues Feature / Story | `patchnotes/pending-patchnotes.md` + Minor-Version bump — NICHT in pending-status.md |
+| Feature ohne Minor-Bump (Nachtrag) | `patchnotes/pending-patchnotes.md` ergänzen → Bot macht PATCH (Edit) der bestehenden Nachricht |
 | Bekannter Bug (noch offen) | `patchnotes/pending-status.md` unter "Bekannte Fehler" |
 | Workflow / Dev-Dateien / Refactoring | nichts — kein Spieler-Impact |
 
