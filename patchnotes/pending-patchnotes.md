@@ -3,7 +3,7 @@
 
 **Allgemein**
 • Erste Nachtwache: immersiver Ich-Monolog — Erschöpfung, Durchhalten, das Ziel vor Augen
-• Update-Banner: das Spiel erkennt automatisch wenn eine neue Version bereitsteht — Klick speichert & lädt neu, danach erscheint ein Übersicht aller Neuerungen seit der letzten gespielten Version
+• Update-Banner: das Spiel erkennt automatisch wenn eine neue Version bereitsteht — Klick speichert & lädt neu, danach erscheint eine Übersicht aller Neuerungen seit der letzten gespielten Version
 • Zeitkristall-Automatisierung läuft jetzt spielzeitbasiert (alle 60 Spielminuten statt alle 30 Echtzeit-Sekunden)
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
