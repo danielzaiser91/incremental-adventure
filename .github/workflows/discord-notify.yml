@@ -103,49 +103,32 @@ jobs:
           echo "new_id=$NEW_ID" >> $GITHUB_OUTPUT
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      # ── Status → #status (immer nur eine Nachricht) ──────────────────────────
+      # ── Status → #status (immer löschen + neu posten, damit @Hotfix gepingt wird) ──
       - name: Status in Discord aktualisieren
         if: steps.changed.outputs.status == 'true'
         id: status_send
         run: |
           CONTENT=$(cat patchnotes/pending-status.md)
-          PAYLOAD=$(jq -n --arg c "$CONTENT" '{content: $c}')
           EXISTING_ID="${{ steps.ids.outputs.status_msg_id }}"
-          SUCCESS=false
           NEW_ID=""
 
           if [ -n "$EXISTING_ID" ]; then
-            HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
-              -H "Content-Type: application/json" \
-              -d "$PAYLOAD" \
-              "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}")
-            if [ "$HTTP" = "200" ]; then
-              echo "Status-Nachricht $EXISTING_ID per PATCH aktualisiert."
-              SUCCESS=true
-            else
-              echo "PATCH fehlgeschlagen (HTTP $HTTP), ersetze Nachricht."
-            fi
+            curl -s -o /dev/null -X DELETE \
+              "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}" || true
+            echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
           fi
 
-          if [ "$SUCCESS" = "false" ]; then
-            # Alte Nachricht löschen bevor neu gepostet wird
-            if [ -n "$EXISTING_ID" ]; then
-              curl -s -o /dev/null -X DELETE \
-                "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}" || true
-              echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
-            fi
-            PAYLOAD=$(jq -n --arg c "<@&1518378825451311105>
+          PAYLOAD=$(jq -n --arg c "<@&1518378825451311105>
           ${CONTENT}" '{content: $c}')
-            RESP=$(curl -s -X POST \
-              -H "Content-Type: application/json" \
-              -d "$PAYLOAD" \
-              "${{ secrets.DISCORD_WEBHOOK_STATUS }}?wait=true")
-            NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
-            if [ -n "$NEW_ID" ]; then
-              echo "Neue Status-Nachricht erstellt: $NEW_ID"
-            else
-              echo "FEHLER beim Posten: $RESP"
-            fi
+          RESP=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "${{ secrets.DISCORD_WEBHOOK_STATUS }}?wait=true")
+          NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
+          if [ -n "$NEW_ID" ]; then
+            echo "Status-Nachricht gepostet: $NEW_ID"
+          else
+            echo "FEHLER beim Posten: $RESP"
           fi
 
           echo "new_id=$NEW_ID" >> $GITHUB_OUTPUT
