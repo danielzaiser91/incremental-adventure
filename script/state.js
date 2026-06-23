@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.14.2-alpha';
+const GAME_VERSION = '0.14.3-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient NICHT der
@@ -134,6 +134,10 @@ const VERSION_NOTES = {
   '0.14.2-alpha': [
     { cat: 'Bugfix',   text: 'Errungenschaften im Erfahrungs-Weg waren unsichtbar, obwohl bereits freigeschaltet.' },
     { cat: 'Neuerung', text: 'Update-Banner: das Spiel meldet sich automatisch, wenn eine neue Version verfügbar ist.' }
+  ],
+  '0.14.3-alpha': [
+    { cat: 'Neuerung', text: 'Nach einem Update erscheint ein Dialog mit allen Änderungen seit der letzten gespielten Version.' },
+    { cat: 'Bugfix',   text: 'Update-Dialog und Spielstand-Changelog erscheinen jetzt nacheinander statt sich zu überschreiben.' }
   ]
 };
 
