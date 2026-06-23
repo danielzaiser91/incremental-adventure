@@ -381,13 +381,23 @@ function renderArbeitsplatz(el) {
         </div>
         ${jobInfoPanel}
       </div>
+      ${(() => {
+        const restLevel = getSkillLevel('longerRest');
+        const mins      = getRestDurationMins();
+        const recovery  = Math.round(10 * getRestRecoveryMult());
+        const name      = restLevel >= 1 ? 'Lange Pause' : 'Kurz verschnaufen';
+        const desc      = restLevel >= 1
+          ? 'Eine ausgedehnte Ruhepause — Körper und Geist kommen zur Ruhe.'
+          : 'Eine kurze Pause — genug, um wieder in die Gänge zu kommen.';
+        return `
       <div class="action-card" style="width:260px;">
         <div class="action-card-icon">😮‍💨</div>
-        <div class="action-card-name">Kurz verschnaufen</div>
-        <p class="action-card-desc">Eine kurze Pause — genug, um wieder in die Gänge zu kommen.</p>
+        <div class="action-card-name">${name}</div>
+        <p class="action-card-desc">${desc}</p>
         <button class="action-btn" onclick="ausruhen()">Pause einlegen</button>
-        <div class="action-card-effect">🕐 Spielzeit: +15 Min · 😴 Müdigkeit: −10%</div>
+        <div class="action-card-effect">🕐 Spielzeit: +${mins} Min · 😴 Müdigkeit: −${recovery}%</div>
       </div>`;
+      })()}`;
   } else {
     const hungerTier = getHungerTier(needs.hunger);
     const debuffNote = tier.id !== 'frisch'

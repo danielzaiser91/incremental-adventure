@@ -611,8 +611,9 @@ function checkMilestones() {
 const LONG_SHIFT_MULT = 2; // Faktor für die Lange Schicht (2h statt 1h)
 
 function ausruhen() {
-  adjustTiredness(-10);
-  advanceClock(15);
+  const recovery = Math.round(10 * getRestRecoveryMult());
+  adjustTiredness(-recovery);
+  advanceClock(getRestDurationMins());
   render();
 }
 

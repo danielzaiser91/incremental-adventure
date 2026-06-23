@@ -102,7 +102,7 @@ function applySaveData(save) {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false,
-    longShift: false, ...save.skills
+    longShift: false, longerRest: 0, ...save.skills
   };
   needs          = { hunger: 15, tiredness: 0, sleepDebt: 0, ...save.needs };
   gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
@@ -678,7 +678,7 @@ function performHardReset() {
   skills        = {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, jobXpBonus: false, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
-    inventoryKeeper: false, sleepLikeARock: false, petLover: false, longShift: false
+    inventoryKeeper: false, sleepLikeARock: false, petLover: false, longShift: false, longerRest: 0
   };
   superSkills   = {};
   needs         = defaultNeeds();

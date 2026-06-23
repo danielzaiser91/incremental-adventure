@@ -91,6 +91,12 @@ const EP_SKILL_TREE = [
     effect: 'Schaltet eine 2-Stunden-Feldarbeit frei — doppelter Ertrag, doppelte Kosten.'
   },
   {
+    id: 'longerRest', name: 'Längere Pause', icon: '🛋',
+    requires: 'ironWill', maxLevel: 2, costs: [4, 8],
+    desc: 'Manchmal reicht eine kurze Verschnaufpause einfach nicht. Ich gönne mir mehr Zeit.',
+    effect: 'Pausendauer: 15 → 30 Spielminuten. Stufe 1: Müdigkeitserholung ×1,2 · Stufe 2: ×1,3.'
+  },
+  {
     id: 'jobXpBonus', name: 'Aufmerksamer Lehrling', icon: '📋',
     requires: 'jobLeveling', maxLevel: 1, costs: [2],
     desc: 'Ich beobachte, wie die Erfahreneren die Arbeit angehen. Irgendwann zahlt sich das aus.',
@@ -156,7 +162,9 @@ const EP_TREE_BRANCHES = [
   // Ast 5 — Haustier: petLover (bedingt, nur wenn Haustier vorhanden)
   ['petLover'],
   // Ast 6 — Ausdauer: longShift (direkt aus jobLeveling)
-  ['longShift']
+  ['longShift'],
+  // Ast 7 — Erholung: longerRest (aus ironWill, Tiefe 2)
+  [undefined, undefined, 'longerRest']
 ];
 
 /* ══════════════════════════════════════════════════════════════
@@ -279,6 +287,17 @@ function setSkillLevel(id, level) {
 /** Marktplatz-Preis-Multiplikator durch den Skill "Sparsamkeit". */
 function getThriftMult() {
   return 1 - getSkillLevel('thrift') * 0.10;
+}
+
+/** Pausendauer in Spielminuten (15 ohne Skill, 30 ab Stufe 1). */
+function getRestDurationMins() {
+  return getSkillLevel('longerRest') >= 1 ? 30 : 15;
+}
+
+/** Müdigkeitserholungs-Multiplikator der Pause (1.0 / 1.2 / 1.3). */
+function getRestRecoveryMult() {
+  const level = getSkillLevel('longerRest');
+  return level >= 2 ? 1.3 : level >= 1 ? 1.2 : 1.0;
 }
 
 /** Wendet den Sparsamkeits-Rabatt an und rundet auf min. 1 Gold. */
