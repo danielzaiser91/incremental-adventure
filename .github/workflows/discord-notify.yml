@@ -61,6 +61,7 @@ jobs:
           EXISTING_ID="${{ steps.ids.outputs.patchnotes_msg_id }}"
           SUCCESS=false
           NEW_ID=""
+          SAME_VERSION_PATCH_FAILED=false
 
           MENTION="<@&1518368928370528256>"
           # Discord-Limit: 2000 Zeichen gesamt inkl. Mention+Newline (23 Zeichen)
@@ -82,17 +83,19 @@ jobs:
               SUCCESS=true
             else
               echo "PATCH fehlgeschlagen (HTTP $HTTP), ersetze Nachricht."
+              SAME_VERSION_PATCH_FAILED=true
             fi
           else
-            echo "Neue Version oder keine ID gespeichert — ersetze Nachricht."
+            echo "Neue Version ($VERSION ≠ $LAST_VERSION) — poste neue Nachricht (alte bleibt)."
           fi
 
           if [ "$SUCCESS" = "false" ]; then
-            # Alte Nachricht löschen (Webhook kann nur eigene Nachrichten löschen)
-            if [ -n "$EXISTING_ID" ]; then
+            # Alte Nachricht nur löschen, wenn PATCH für dieselbe Version fehlschlug.
+            # Bei neuer Version bleibt die alte Nachricht im Kanal.
+            if [ "$SAME_VERSION_PATCH_FAILED" = "true" ] && [ -n "$EXISTING_ID" ]; then
               curl -s -o /dev/null -X DELETE \
                 "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
-              echo "Alte Nachricht $EXISTING_ID gelöscht."
+              echo "Alte Nachricht $EXISTING_ID gelöscht (PATCH fehlgeschlagen, selbe Version)."
             fi
             PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
             RESP=$(curl -s -X POST \

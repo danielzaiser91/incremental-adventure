@@ -1,0 +1,86 @@
+name: Patchnotes-Reihenfolge wiederherstellen
+
+# Einmaliger manueller Trigger, um gelöschte ältere Patchnotes in Discord
+# in der richtigen Reihenfolge neu zu posten.
+on:
+  workflow_dispatch:
+    inputs:
+      archive_version:
+        description: "Archivierte Version, die zuerst gepostet werden soll (z.B. 0.15.4)"
+        required: true
+        default: "0.15.4"
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Archivierte + aktuelle Patchnotes in richtiger Reihenfolge posten
+        run: |
+          ARCHIVE_FILE="patchnotes/v${{ github.event.inputs.archive_version }}.md"
+          CURRENT_FILE="patchnotes/pending-patchnotes.md"
+          MENTION="<@&1518368928370528256>"
+          IDS_FILE="patchnotes/.discord-ids.json"
+
+          if [ ! -f "$ARCHIVE_FILE" ]; then
+            echo "FEHLER: $ARCHIVE_FILE nicht gefunden."
+            exit 1
+          fi
+
+          # 0. Aktuelle Patchnotes-Nachricht löschen (um sie später neu in richtiger Reihenfolge zu posten)
+          EXISTING_ID=$(jq -r '.patchnotes_message_id // empty' "$IDS_FILE")
+          if [ -n "$EXISTING_ID" ]; then
+            echo "Lösche bestehende Patchnotes-Nachricht $EXISTING_ID..."
+            curl -s -o /dev/null -X DELETE \
+              "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
+          fi
+
+          sleep 1
+
+          # 1. Archivierte Patchnotes posten
+          OLD_CONTENT=$(tail -n +2 "$ARCHIVE_FILE")
+          OLD_MSG="${MENTION}"$'\n'"${OLD_CONTENT}"
+          if [ "${#OLD_MSG}" -gt 1999 ]; then OLD_MSG="${OLD_MSG:0:1996}..."; fi
+          echo "Poste $ARCHIVE_FILE..."
+          RESP=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg c "$OLD_MSG" '{content: $c}')" \
+            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true")
+          OLD_ID=$(echo "$RESP" | jq -r '.id // empty')
+          echo "Archiv-Nachricht ID: $OLD_ID"
+          if [ -z "$OLD_ID" ]; then echo "FEHLER beim Posten der Archiv-Nachricht: $RESP"; exit 1; fi
+
+          sleep 2
+
+          # 2. Aktuelle Patchnotes posten
+          CUR_VERSION=$(head -1 "$CURRENT_FILE" | grep -oP '(?<=<!-- version: )[^>]+(?= -->)' || echo "unbekannt")
+          CUR_CONTENT=$(tail -n +2 "$CURRENT_FILE")
+          CUR_MSG="${MENTION}"$'\n'"${CUR_CONTENT}"
+          if [ "${#CUR_MSG}" -gt 1999 ]; then CUR_MSG="${CUR_MSG:0:1996}..."; fi
+          echo "Poste aktuelle Patchnotes (v$CUR_VERSION)..."
+          RESP=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg c "$CUR_MSG" '{content: $c}')" \
+            "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true")
+          CUR_ID=$(echo "$RESP" | jq -r '.id // empty')
+          echo "Aktuelle Nachricht ID: $CUR_ID"
+          if [ -z "$CUR_ID" ]; then echo "FEHLER beim Posten der aktuellen Patchnotes: $RESP"; exit 1; fi
+
+          # 3. discord-ids.json mit der neuen aktuellen ID aktualisieren
+          CURRENT_IDS=$(cat patchnotes/.discord-ids.json 2>/dev/null || echo '{}')
+          echo "$CURRENT_IDS" | jq \
+            --arg id "$CUR_ID" \
+            --arg v "$CUR_VERSION" \
+            '. + {patchnotes_message_id: $id, patchnotes_last_version: $v}' \
+            > patchnotes/.discord-ids.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add patchnotes/.discord-ids.json
+          git diff --staged --quiet || git commit -m "chore: discord-ids nach patchnotes-wiederherstellung aktualisiert [skip ci]"
+          git push
+          echo "Fertig — v${{ github.event.inputs.archive_version }} + v$CUR_VERSION in Discord gepostet."
