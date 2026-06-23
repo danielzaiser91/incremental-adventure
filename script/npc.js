@@ -1424,6 +1424,12 @@ const NPCS_LETHKAR = [
   }
 ];
 
+/** Öffnet einen NPC-Dialog anhand einer NPC-Definition (statt ID-String).
+ *  Ermöglicht Aufrufe direkt aus Aktions-Callbacks, die bereits die Def haben. */
+function openNpcDialogWithDef(npc, nodeId) {
+  openNpcDialog(npc.id, nodeId);
+}
+
 /** Öffnet einen Lethkar-NPC-Dialog (wrapper für openNpcDialog). */
 function openLethkarNpcDialog(npcId) {
   const npc = NPCS_LETHKAR.find(n => n.id === npcId);

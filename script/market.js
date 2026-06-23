@@ -505,6 +505,43 @@ function buyArbeitsguertel() {
     Neuanfang — dankt für die Treue, lenkt auf die Lederhandschuhe und lädt
     in die Taverne ein, wo Greta ihre eigentliche Geschäftsidee vorstellt
     (siehe npc.js, NPC "greta"). */
+/* Lethkarer Verpflegung — getrennt von FOOD_ITEMS damit sie nicht im
+   Treutheimer Kraemer auftauchen. useFood()/getItemBaseCost() suchen
+   in beiden Arrays (siehe inventory.js). */
+const LETHKAR_FOOD_ITEMS = [
+  { id: 'lethkar_suppe', name: 'Lethkarer Suppe', icon: '🍲', cost: 25,
+    hungerRelief: 40, tirednessRelief: 5,
+    desc: 'Herzhaft, warm, mit getrockneten Kräutern. Füllt den Magen für den ganzen Tag.' },
+  { id: 'lethkar_brot', name: 'Mehrkornbrot', icon: '🍞', cost: 12,
+    hungerRelief: 18, tirednessRelief: 0,
+    desc: 'Dunkles, schweres Brot. Sättigt länger als Treutheimer Weißbrot.' },
+  { id: 'lethkar_wein', name: 'Kräuterwein', icon: '🍷', cost: 40,
+    hungerRelief: 10, tirednessRelief: 20,
+    desc: 'Ein Glas zum Abend. Löst die Anspannung — und füllt den Magen ein wenig.' }
+];
+
+/** Kauft das Alchemisten-Werkzeug am Lethkarer Markt — einmalig, +50% Alchemie-Tempo. */
+function buyAlchemieWerkzeug() {
+  const cost = 5000;
+  if (meta.alchemieWerkzeug) return;
+  if (isNight()) { showToast('Der Markt hat für die Nacht geschlossen.', TOAST.ERROR); return; }
+  if (resources.gold < cost) { showToast(`Nicht genug Gold (${cost}g benötigt).`, TOAST.ERROR); return; }
+  resources.gold -= cost;
+  meta.alchemieWerkzeug = true;
+  showToast(`Alchemisten-Werkzeug erworben (−${cost} Gold). Alchemie-Tempo +50 %.`, TOAST.PURCHASE);
+  render();
+}
+
+/** Kauft Lethkarer Verpflegung — legt den Gegenstand ins Inventar. */
+function buyLethkarFood(itemId, cost) {
+  if (isNight()) { showToast('Der Markt hat für die Nacht geschlossen.', TOAST.ERROR); return; }
+  if (resources.gold < cost) { showToast(`Nicht genug Gold (${cost}g benötigt).`, TOAST.ERROR); return; }
+  resources.gold -= cost;
+  grantItem(itemId, 1);
+  showToast(`Gekauft (−${cost} Gold).`, TOAST.PURCHASE);
+  render();
+}
+
 function maybeTriggerKraemerinDialog() {
   if (gameFlags.kraemerinDialogShown || meta.resets < 1) return;
   gameFlags.kraemerinDialogShown = true;

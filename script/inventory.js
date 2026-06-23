@@ -29,6 +29,7 @@ const EQUIPMENT_ITEMS = [
    sollen grundsätzlich nie verkäuflich sein. */
 function getItemBaseCost(itemId) {
   const item = FOOD_ITEMS.find(i => i.id === itemId) ||
+    (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId)) ||
     TOOL_ITEMS.find(i => i.id === itemId) ||
     EQUIPMENT_ITEMS.find(i => i.id === itemId);
   return item ? item.cost : null;
@@ -122,14 +123,18 @@ function moveFromOverflow(itemId) {
 /** Findet Name/Icon eines Gegenstands über Food- oder Ausrüstungs-Registry
     (für die Anzeige im überzähligen Beutel, der beide Arten enthalten kann). */
 function findItemMeta(itemId) {
-  return FOOD_ITEMS.find(i => i.id === itemId) || EQUIPMENT_ITEMS.find(i => i.id === itemId) ||
+  return FOOD_ITEMS.find(i => i.id === itemId) ||
+    (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId)) ||
+    EQUIPMENT_ITEMS.find(i => i.id === itemId) ||
     RESOURCE_ITEMS.find(i => i.id === itemId) || TOOL_ITEMS.find(i => i.id === itemId);
 }
 
 /** Rendert die Inventar-Seite: Slot-Übersicht, Ausrüstung, Verbrauchsgüter,
     Questgegenstände (separat) und ggf. den überzähligen Beutel. */
 function renderInventar(el) {
-  const ownedFood   = FOOD_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
+  const allFoodItems = typeof LETHKAR_FOOD_ITEMS !== 'undefined'
+    ? [...FOOD_ITEMS, ...LETHKAR_FOOD_ITEMS] : FOOD_ITEMS;
+  const ownedFood   = allFoodItems.filter(item => (resources.inventory[item.id] || 0) > 0);
   const ownedEquip  = EQUIPMENT_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
   // Ein Slot erscheint nur, sobald der Spieler je Zugriff auf einen
   // passenden Gegenstand hatte — sonst wäre ein leerer "Gürtel"-Platz ein
@@ -302,7 +307,8 @@ function unequipItem(slot) {
 
 /** Verzehrt ein Nahrungsmittel aus dem Inventar und wendet seine Effekte an. */
 function useFood(itemId) {
-  const item  = FOOD_ITEMS.find(i => i.id === itemId);
+  const item  = FOOD_ITEMS.find(i => i.id === itemId) ||
+    (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId));
   const count = resources.inventory[itemId] || 0;
   if (!item || count <= 0) return;
 

@@ -4,6 +4,15 @@ Alle Versionen, chronologisch von neu nach alt.
 
 ---
 
+## v0.17.0-alpha
+- **Story** Kapitel 3 — Lethkar zugänglich nach Kapitel-2-Abschluss + 3 Mut. Stadt mit Taverne, Markt, Schlafplatz, Laboratorium.
+- **Story** NPCs Varena, Thessa, Pereth mit vollständiger Dialog-Baumstruktur — Story 3.0–3.6 (Valdris-Spur, Brief-Entschlüsselung, Lagerhaus-Auftrag).
+- **Neuerung** Alchemie-System: 5 Aspekte (Feuer/Wasser/Erde/Luft/Äther) mit Echtzeit-Fortschritt, Level-Ups geben Wissensdurst ✦.
+- **Neuerung** Alchemie-Meilensteine: Aspekt-Level-Ups schalten konkrete Gameplay-Boni frei (Kampf-Schaden, MaxHP, Rohstoff-Bonus, Luft-Gold u.a.).
+- **Neuerung** Wissensdurst-Skillbaum: 5 permanente Fähigkeiten (Forschungsinstinkt, Wissensspeicher, Doppelte Erkenntnis …).
+- **Neuerung** Lethkar Markt: Alchemisten-Werkzeug (5000g, +50% Alchemie-Tempo) + Lethkarer Verpflegung (Suppe, Mehrkornbrot, Kräuterwein).
+- **Bugfix** Lethkar-NPC-Dialoge (Varena/Thessa/Pereth) konnten nicht geöffnet werden — `openNpcDialogWithDef` war nicht definiert.
+
 ## v0.16.4-alpha
 - **Balance** EP-Mindestschwelle für Neuanfänge: 50 → 300 Gold. Raub 2 (200g) ergibt nun keine EP mehr — erst Raub 3 (300g) und Raub 4 (500g).
 - **Balance** „Weitblick"-Breakpoints starten jetzt bei 300g und verdoppeln sich: 300, 600, 1200, 2400 …

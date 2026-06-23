@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.16.4-alpha';
+const GAME_VERSION = '0.17.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -216,6 +216,15 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.17.0-alpha': [
+    { cat: 'Story',    text: 'Kapitel 3: Lethkar ist zugänglich (Kapitel 2 abgeschlossen + 3 Mut). Stadtübersicht, Taverne, Markt, Schlafplatz.' },
+    { cat: 'Story',    text: 'NPCs in Lethkar: Varena (entschlüsselt Miras Brief), Thessa und Pereth mit vollständiger Story 3.0–3.6.' },
+    { cat: 'Neuerung', text: 'Alchemie-System: 5 Aspekte (Feuer, Wasser, Erde, Luft, Äther) in Echtzeit — Wissensdurst als neue Prestige-Währung.' },
+    { cat: 'Neuerung', text: 'Alchemie-Meilensteine: Level-Ups schalten Gameplay-Boni frei (Kampf-Schaden, MaxHP, Rohstoff-Bonus, Gold-Bonus u.a.).' },
+    { cat: 'Neuerung', text: 'Wissensdurst-Fähigkeiten: 5 permanente Skills (Forschungsinstinkt, Wissensspeicher, Doppelte Erkenntnis …).' },
+    { cat: 'Neuerung', text: 'Lethkar Markt: Alchemisten-Werkzeug (+50% Alchemie-Tempo) und Lethkarer Verpflegung.' },
+    { cat: 'Bugfix',   text: 'Lethkar-NPC-Dialoge (Varena, Thessa, Pereth) konnten nicht geöffnet werden — openNpcDialogWithDef fehlte.' },
+  ],
   '0.16.4-alpha': [
     { cat: 'Balance', text: 'EP-Mindestschwelle für Neuanfänge: 50 → 300 Gold. Raub 2 (200g) ergibt nun keine EP mehr — erst Raub 3 (300g) und Raub 4 (500g).' },
     { cat: 'Balance', text: '"Weitblick"-Breakpoints starten jetzt bei 300g (vorher 50g) und verdoppeln sich: 300, 600, 1200, 2400 …' },
@@ -328,7 +337,8 @@ let meta = {
   resets:             0,     // Anzahl der bewusst vom Spieler ausgelösten Neuanfänge
   fasterWorkUnlocked: false, // Erleichterung nach dem 1. Neuanfang
   hasHome:            false, // Eigenheim in Treutheim gekauft (dauerhaft)
-  hasSmith:           false  // Schmiede im Eigenheim ausgebaut (dauerhaft)
+  hasSmith:           false, // Schmiede im Eigenheim ausgebaut (dauerhaft)
+  alchemieWerkzeug:   false  // Alchemisten-Werkzeug (Lethkar Markt, 500g) — +50% Alchemie-Tempo
 };
 
 /* Ausrüstungs-Slots: itemId oder null. Ausgerüstetes wirkt sich aufs

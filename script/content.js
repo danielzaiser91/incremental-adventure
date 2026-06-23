@@ -1110,11 +1110,62 @@ function renderLethkarTaverne(el) {
 }
 
 function renderLethkarMarkt(el) {
+  const nightClosed = isNight();
+
+  // Alchemisten-Werkzeug: einmaliger Kauf, +50% Alchemie-Tempo
+  const werkzeugCost = 5000;
+  const werkzeugOwned = meta.alchemieWerkzeug;
+  const canBuyWerkzeug = !werkzeugOwned && resources.gold >= werkzeugCost && !nightClosed;
+
+  // Lethkarer Rationen — aus market.js (LETHKAR_FOOD_ITEMS)
+  const LETHKAR_FOOD = LETHKAR_FOOD_ITEMS;
+
+  const werkzeugCard = `
+    <div class="action-card${werkzeugOwned ? ' quest-card-done' : ''}">
+      <div class="action-card-icon">⚗</div>
+      <div class="action-card-name">Alchemisten-Werkzeug</div>
+      <p class="action-card-desc">Präzise Tiegel, fein justierte Waagen, speziell beschichtete Glaskolben. Einmaliger Kauf.</p>
+      <div class="action-card-effect">+50 % Alchemie-Tempo (permanent, dauerhaft)</div>
+      ${werkzeugOwned
+        ? `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`
+        : `<div class="action-card-cost ${canBuyWerkzeug ? 'cost-ok' : 'cost-too-high'}">${werkzeugCost} Gold</div>
+           <button class="action-btn ${canBuyWerkzeug ? '' : 'btn-disabled'}"
+             onclick="buyAlchemieWerkzeug()"
+             ${canBuyWerkzeug ? '' : 'disabled'}>
+             ${nightClosed ? 'Markt geschlossen' : resources.gold < werkzeugCost ? `Nicht genug Gold (${werkzeugCost}g)` : 'Kaufen'}
+           </button>`
+      }
+    </div>`;
+
+  const foodCards = LETHKAR_FOOD.map(item => {
+    const owned = resources.inventory[item.id] || 0;
+    const canBuy = resources.gold >= item.cost && !nightClosed;
+    const effectParts = [];
+    if (item.hungerRelief)    effectParts.push(`🍞 Hunger −${item.hungerRelief}%`);
+    if (item.tirednessRelief) effectParts.push(`😴 Müdigkeit −${item.tirednessRelief}%`);
+    return `
+      <div class="action-card">
+        <div class="action-card-icon">${item.icon}</div>
+        <div class="action-card-name">${item.name}${owned ? ` <span class="inventory-count">×${owned} im Inventar</span>` : ''}</div>
+        <p class="action-card-desc">${item.desc}</p>
+        <div class="action-card-effect">${effectParts.join(' · ')}</div>
+        <div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${item.cost} Gold</div>
+        <button class="action-btn ${canBuy ? '' : 'btn-disabled'}"
+          onclick="buyLethkarFood('${item.id}',${item.cost})"
+          ${canBuy ? '' : 'disabled'}>
+          ${nightClosed ? 'Markt geschlossen' : 'Kaufen'}
+        </button>
+      </div>`;
+  }).join('');
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Markt der Zutaten</div>
-      <p class="location-card-desc">Unzählige Waren aus der ganzen Region. Alchemistische Rohstoffe, gepreiste Essenzen, Werkzeug für Laborarbeiten.</p>
-      <p class="location-card-desc" style="color:var(--muted);font-style:italic;margin-top:8px;">Händler und Kaufoptionen folgen in einer der nächsten Versionen.</p>
+      <p class="location-card-desc" style="margin-bottom:12px;">Alchemistische Rohstoffe, hochwertige Waren, Dinge die man in Treutheim nicht findet.</p>
+      <div class="market-section-label">Alchemie-Ausrüstung</div>
+      <div class="action-grid">${werkzeugCard}</div>
+      <div class="market-section-label" style="margin-top:16px;">Verpflegung</div>
+      <div class="action-grid">${foodCards}</div>
     </div>`;
 }
 

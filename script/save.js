@@ -808,9 +808,12 @@ function performHardReset() {
   playerStats   = defaultPlayerStats();
   strength      = defaultStrength();
   mut           = { points: 0, totalEarned: 0 };
-  einsicht = wissensdurstSkills.wissensspeicher
-    ? { points: einsicht.points, totalEarned: einsicht.totalEarned }
-    : { points: 0, totalEarned: 0 };
+  const aetherResetBonus = typeof alchemieAetherResetBonus === 'function' && alchemieAetherResetBonus() ? 1 : 0;
+  if (wissensdurstSkills.wissensspeicher) {
+    einsicht = { points: einsicht.points + aetherResetBonus, totalEarned: einsicht.totalEarned + aetherResetBonus };
+  } else {
+    einsicht = { points: aetherResetBonus, totalEarned: aetherResetBonus };
+  }
   const keepAlchemieProgress = wissensdurstSkills.alchemistischesGedaechtnis;
   alchemie = {
     unlocked: false,

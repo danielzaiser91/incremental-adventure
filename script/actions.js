@@ -226,13 +226,15 @@ function gatherResource(resourceId) {
   const tool = TOOL_ITEMS.find(t => t.resource === resourceId);
   if (!tool || (resources.inventory[tool.id] || 0) <= 0) return;
 
-  grantItem(resourceId, RESOURCE_GATHER_AMOUNT);
+  const erdeBonus   = typeof getAlchemieErdeRohstoffBonus === 'function' ? getAlchemieErdeRohstoffBonus() : 0;
+  const totalAmount = RESOURCE_GATHER_AMOUNT + erdeBonus;
+  grantItem(resourceId, totalAmount);
   adjustTiredness(Math.round(RESOURCE_GATHER_TIREDNESS * getSuperRestMult()));
   adjustHunger(Math.round(RESOURCE_GATHER_HUNGER * getSuperRestMult()));
   advanceClock(RESOURCE_GATHER_MINUTES);
 
   const resourceName = RESOURCE_ITEMS.find(r => r.id === resourceId).name;
-  showToast(`+${RESOURCE_GATHER_AMOUNT} ${resourceName}.`, TOAST.REWARD);
+  showToast(`+${totalAmount} ${resourceName}.`, TOAST.REWARD);
   render();
   maybeTriggerExhaustionDialog();
 }
@@ -307,13 +309,15 @@ function getWorkDurationMs(levelOverride) {
 
 function getWorkReward(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
+  const alchemieGold = typeof getAlchemieLuftGoldBonus === 'function' ? getAlchemieLuftGoldBonus() : 0;
   let reward = level.goldBase
     + (equipment.hands === 'ledergloves' ? 1 : 0)
     + (equipment.guertel === 'arbeitsguertel' ? 1 : 0)
     + (gameFlags.foremanBonusGiven ? 1 : 0)
     + (skills.fieldPay ? 1 : 0)
     + (superSkills.fieldPay_super ? 1 : 0)
-    + (skills.instinkt ? 1 : 0);
+    + (skills.instinkt ? 1 : 0)
+    + alchemieGold;
   reward *= getHungerTier(needs.hunger).rewardMult; // nur Hunger schwächt den Ertrag, Müdigkeit nur die Dauer
   reward *= level.specialRewardMult || 1;
   reward += level.specialFlatBonus || 0;

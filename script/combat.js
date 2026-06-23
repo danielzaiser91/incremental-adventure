@@ -90,14 +90,16 @@ function getStrengthLevelProgress(xp) {
 
 /** Berechnet den aktuellen MaxHP-Wert des Spielers. */
 function getPlayerMaxHp() {
-  return 30 + getStrengthLevelData(strength.xp).maxHpBonus;
+  const alchemieHp = typeof getAlchemieWasserMaxHp === 'function' ? getAlchemieWasserMaxHp() : 0;
+  return 30 + getStrengthLevelData(strength.xp).maxHpBonus + alchemieHp;
 }
 
 /** Berechnet den Schaden, den der Spieler in einem Schlag macht. */
 function rollPlayerDamage() {
-  const data = getStrengthLevelData(strength.xp);
-  const base = Math.floor(Math.random() * 6) + 5; // 5–10
-  return Math.max(1, Math.round(base * data.damageMult));
+  const data        = getStrengthLevelData(strength.xp);
+  const base        = Math.floor(Math.random() * 6) + 5; // 5–10
+  const alchemieMult = typeof getAlchemieFeuerschadenMult === 'function' ? getAlchemieFeuerschadenMult() : 1;
+  return Math.max(1, Math.round(base * data.damageMult * alchemieMult));
 }
 
 /** Berechnet den Schaden, den ein Monster nach Abzug der Verteidigung macht. */
@@ -211,7 +213,14 @@ function endCombat(won, monster) {
       }, 400);
     }
 
+    // Wasser-Aspekt Level 3: HP-Regen nach Kampfsieg
+    const waterRegen = typeof getAlchemieWasserHpRegen === 'function' ? getAlchemieWasserHpRegen() : 0;
+    if (waterRegen > 0) {
+      playerStats.hp = Math.min(playerStats.maxHp, playerStats.hp + waterRegen);
+    }
+
     let msg = `Sieg! +${gold} Gold, +${monster.xpReward} Stärke-XP.`;
+    if (waterRegen > 0) msg += ` +${waterRegen} HP (Wasser).`;
 
     if (monster.mutReward > 0) {
       mut.points      += monster.mutReward;
