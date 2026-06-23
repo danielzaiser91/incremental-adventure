@@ -208,6 +208,7 @@ let gameFlags = {
   resourceGatheringUnlocked:   false, // Nach Gretas Taverne-Gespräch -> Sammelplatz-Nav erscheint
   guildExplainedByBrakka:      false, // Unterscheidet 1. Erklärung von späteren "bist du bereit?"-Nachfragen
   commanderInviteShown:        false, // Einladungs-Monolog nach 3x Nachtwache
+  firstNightWatchShown:        false, // Immersiver Monolog nach der 1. Nachtwache
   firstNightWatchLevelUpShown: false, // Monolog beim 1. Nachtwache-Level-Up
   commanderRecruitmentShown:   false, // Stadtwache-Beitritts-Angebot nach 1. Arbeit auf Nachtwache-Lvl 3
   resetAnimationSeen:          false, // Schaltet den "Reset-Animation anzeigen"-Schalter in den Einstellungen frei

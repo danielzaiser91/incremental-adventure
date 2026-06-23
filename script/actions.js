@@ -475,6 +475,19 @@ function maybeTriggerForemanBonusDialog(onDone = () => {}) {
   ], () => { render(); onDone(); });
 }
 
+/** Immersiver Monolog nach der allerersten Nachtwache — kaum wachzuhalten,
+    aber das Geld und das Ziel halten den Spieler aufrecht. */
+function maybeTriggerFirstNightWatchDialog(onDone = () => {}) {
+  if (gameFlags.firstNightWatchShown || nightWatchStats.count !== 1) { onDone(); return; }
+  gameFlags.firstNightWatchShown = true;
+  showMonologue('Die erste Nachtwache', [
+    'Die Nacht ist träge. Schritt vor Schritt gehe ich die Mauer ab — immer dieselbe Strecke, immer dieselben Schatten. Kein Laut außer meinen eigenen Schritten.',
+    'Irgendwann um Mitternacht hört das Denken auf. Was bleibt, ist das dumpfe Gewicht der Müdigkeit. Ich kneife die Augen zusammen. Beiße die Zähne aufeinander. Weitermachen.',
+    'Ich denke ans Gold. Nicht viel — nie viel — aber es ist da. Jede Stunde, die ich hier stehe, ist eine, die ich mir verdient habe. Niemand schenkt mir hier etwas.',
+    'Ich werde nicht ewig derjenige sein, der friert und die Zähne zusammenbeißt. Eines Tages werde ich weiterziehen — weiter als dieses Stadttor, weiter als dieser Morgen. Aber bis dahin: stehen. Wachen. Nicht einschlafen.'
+  ], () => { render(); onDone(); });
+}
+
 /** Monolog nach 3x Nachtwache: der Kommandant der Stadtwache wird auf den
     Spieler aufmerksam und lädt ihn in die Taverne ein (siehe npc.js,
     NPC "kommandant"). Schaltet noch nichts frei — das Gespräch selbst
@@ -748,8 +761,10 @@ function nightWatch() {
   checkMilestones();
   render();
 
-  maybeTriggerCommanderArrival(() => {
-    maybeTriggerFirstNightWatchLevelUpDialog();
+  maybeTriggerFirstNightWatchDialog(() => {
+    maybeTriggerCommanderArrival(() => {
+      maybeTriggerFirstNightWatchLevelUpDialog();
+    });
   });
 }
 

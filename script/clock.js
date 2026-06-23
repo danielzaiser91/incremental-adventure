@@ -30,20 +30,29 @@ function advanceClock(minutes) {
 }
 
 /** Kurzer, schwebender Hinweis direkt über der Uhrzeit (unten rechts) —
-    signalisiert, dass gerade Spielzeit vergangen ist, unabhängig vom
-    normalen Toast-Strom oben rechts (der für Aktions-Feedback reserviert
-    bleibt, nicht für reinen Zeitablauf). */
+    signalisiert, dass gerade Spielzeit vergangen ist. Existiert bereits
+    ein Toast, wird er aktualisiert statt gestapelt. */
 function showTimeToast(minutes) {
   const anchor = document.querySelector('.objective-right');
   if (!anchor) return;
 
-  const el = document.createElement('div');
-  el.className = 'time-toast';
-  el.textContent = `+${minutes} Min`;
-  anchor.appendChild(el);
+  let el = anchor.querySelector('.time-toast');
+  if (el) {
+    const prev = parseInt(el.dataset.min || '0', 10);
+    const total = prev + minutes;
+    el.dataset.min = total;
+    el.textContent = `+${total} Min`;
+    clearTimeout(el._timer);
+  } else {
+    el = document.createElement('div');
+    el.className = 'time-toast';
+    el.dataset.min = minutes;
+    el.textContent = `+${minutes} Min`;
+    anchor.appendChild(el);
+    requestAnimationFrame(() => el.classList.add('time-toast-in'));
+  }
 
-  requestAnimationFrame(() => el.classList.add('time-toast-in'));
-  setTimeout(() => el.remove(), 1100);
+  el._timer = setTimeout(() => el.remove(), 1100);
 }
 
 /** Formatiert die aktuelle Uhrzeit als "HH:MM". */
