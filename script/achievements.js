@@ -157,7 +157,7 @@ function renderErrungenschaften(el) {
 
   // "Allgemein"-Tab: Abschnitte pro Layer
   const LAYER_LABELS  = { 0: 'Erstes Kapitel', 1: 'Erfahrungs-Weg' };
-  const layerVisible  = { 0: true, 1: meta.resets >= 1 };
+  const layerVisible  = { 0: true, 1: meta.resets >= 1 || normalDefs.filter(d => d.layer === 1).some(d => achievements[d.id]) };
 
   const layerSections = [0, 1].map(layer => {
     if (!layerVisible[layer]) return '';
