@@ -94,10 +94,43 @@ function getCurrentChapterLabel() {
   return entries[entries.length - 1].id;
 }
 
-/** Öffnet einen Dialog mit dem vollständigen Zieltext. */
+/**
+ * Liefert einen konkreten, messbaren Hinweis zum aktuellen Ziel — nur
+ * dort, wo es keinen Story-Inhalt verrät (Goldmengen sind kein Spoiler).
+ * Gibt null zurück, wenn kein explizites Ziel sinnvoll angegeben werden kann.
+ */
+function getExplicitGoalText() {
+  if (storyState === 10101) {
+    if (!gameFlags.tavernVisited) return 'Die Taverne aufsuchen.';
+    if (!gameFlags.jobUnlocked)   return 'Mit dem Wirt der Taverne sprechen.';
+    return null;
+  }
+  if (storyState === 10102) {
+    const earned = resources.totalGoldEarned;
+    const target = GOLD_MILESTONE_THRESHOLD;
+    return `${earned} / ${target} Gold verdient`;
+  }
+  if (storyState === 10103) return `${resources.gold} / 200 Gold angespart`;
+  if (storyState === 10104) return `${resources.gold} / 300 Gold angespart`;
+  if (storyState === 10105) return `${resources.gold} / 500 Gold angespart`;
+  return null;
+}
+
+/** Öffnet einen Dialog mit dem vollständigen Zieltext und — sofern möglich —
+ *  einem konkreten, messbaren Teilziel darunter. */
 function showObjectiveDialog() {
-  const text = getObjectiveText();
-  showMonologue('Aktuelles Ziel', [text]);
+  const text     = getObjectiveText();
+  const explicit = getExplicitGoalText();
+  const html = `<p>${text}</p>` + (explicit ? `
+    <div class="objective-goal-section">
+      <div class="objective-goal-label">Nächster Schritt</div>
+      <div class="objective-goal-value">${explicit}</div>
+    </div>` : '');
+  showDialog({
+    title: 'Aktuelles Ziel',
+    html,
+    buttons: [{ label: 'Schließen', onClick: () => closeDialog() }]
+  });
 }
 
 /** Rendert die untere Zielleiste neu. */

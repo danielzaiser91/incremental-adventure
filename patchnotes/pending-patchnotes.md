@@ -9,6 +9,7 @@
 • Skill-Detail zeigt jetzt an, wenn ein Skill weitere Fähigkeiten freischaltet
 • Taverne-Tab leuchtet nicht mehr, wenn Greta Rohstoffe erwartet aber man sie noch nicht gesammelt hat
 • Dialogseiten: Guard gegen versehentliches Schließen robuster umgeschrieben
+• Zielleiste anklicken zeigt jetzt — wo möglich — ein konkretes Teilziel (z.B. aktuellen Goldstand vs. nächste Schwelle)
 
 **Kapitel 1** *(zum Aufdecken anklicken)*
 ||4 automatische Raub-Events bei 50 / 200 / 300 / 500 Gold — jeweils Story-Dialog + Auto-Reset. Nach dem 4. Raub ist die Arbeit gesperrt, bis „Paranoid" erlernt wurde.

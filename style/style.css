@@ -877,6 +877,25 @@ body {
   color: var(--text-mid);
 }
 
+/* ── Ziel-Dialog: konkretes Teilziel ────────────────────────── */
+.objective-goal-section {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-soft);
+}
+.objective-goal-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-lo);
+  margin-bottom: 0.3rem;
+}
+.objective-goal-value {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
 /* ── Kompakte EP-Skill-Knoten (Icon-only, 52 × 52 px) ──────────
    Statt großer Karten nur quadratische Icon-Buttons; Details erscheinen
    im ep-detail-panel am unteren Rand des Skill-Tree-Containers. */
