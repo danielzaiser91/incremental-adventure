@@ -573,6 +573,12 @@ function maybeShowNavIntro(id) {
 
 /** Prüft nach jedem Gold-Gewinn, ob ein automatischer Story-Trigger ausgelöst wird. */
 function checkMilestones() {
+  // Oswin: Taverne-Tab leuchtet einmalig auf, sobald "Sprich über Geschäfte" entsperrbar ist.
+  if (resources.gold >= 100 && !npcFlags.oswingBusinessSeen && !npcFlags.oswingHintNotified) {
+    npcFlags.oswingHintNotified = true;
+    navUnseen.taverne = true;
+  }
+
   // Ein Fremder beginnt, den Spieler zu beobachten.
   if (
     !gameFlags.milestoneStrangerTriggered &&

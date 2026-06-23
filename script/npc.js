@@ -268,7 +268,10 @@ const NPCS = {
     name: 'Oswin', icon: '🎩',
     tagline: 'Hochnäsig — spricht nur mit denen, die etwas vorzuweisen haben.',
     availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
-    hasHint: () => (gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked) || (!meta.hasHome && storyState >= 20100 && resources.gold >= 2000),
+    hasHint: () =>
+      (resources.gold >= 100 && !npcFlags.oswingBusinessSeen) ||
+      (gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked) ||
+      (!meta.hasHome && storyState >= 20100 && resources.gold >= 2000),
     start: () => {
       if (meta.hasHome) return 'greetHomeOwner';
       return 'greet';
@@ -288,7 +291,8 @@ const NPCS = {
             label: 'Sprich über Geschäfte.',
             next: 'business',
             locked: () => resources.gold < 100,
-            reason: 'Erfordert 100 Gold'
+            reason: 'Erfordert 100 Gold',
+            action: () => { npcFlags.oswingBusinessSeen = true; }
           },
           { label: 'Ignoriere ihn.', next: null }
         ]
@@ -367,14 +371,17 @@ const NPCS = {
         options: [{ label: 'Danke.', next: null }]
       },
       business: {
-        text: ['Er hebt eine Augenbraue, fast beeindruckt. "Nun gut. Vielleicht bist du doch nicht völlig wertlos."'],
+        text: () => gameFlags.lehrerUnlocked
+          ? ['"Darüber haben wir doch bereits geredet." Oswin schaut mich mit kaum verhüllter Ungeduld an. "Hast du das etwa vergessen? Das Lehrhaus. Dort findest du, was du suchst."']
+          : ['Er hebt eine Augenbraue, fast beeindruckt. "Nun gut. Vielleicht bist du doch nicht völlig wertlos."'],
         options: [
           {
             label: 'Ich suche jemanden, der mir zeigen kann, wie man das Können noch weiter treibt.',
             next: 'teacherHint',
             visible: () => gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked
           },
-          { label: 'Wie schmeichelhaft.', next: null }
+          { label: 'Wie schmeichelhaft.', next: null, visible: () => !gameFlags.lehrerUnlocked },
+          { label: 'Entschuldigung. Ich gehe dann.', next: null, visible: () => !!gameFlags.lehrerUnlocked }
         ]
       },
       teacherHint: {
@@ -968,7 +975,9 @@ function openNpcDialog(npcId, nodeId) {
   const node = npc.nodes[id];
   if (!node) { closeDialog(); return; }
 
-  const options = node.options || [];
+  const options = (node.options || []).filter(opt =>
+    typeof opt.visible !== 'function' || opt.visible()
+  );
   const buttons = options.length
     ? options.map(opt => {
         const locked = typeof opt.locked === 'function' ? opt.locked() : !!opt.locked;

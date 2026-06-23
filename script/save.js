@@ -114,7 +114,7 @@ function applySaveData(save) {
     commanderTraining: { state: 'unstarted' }, theftInvestigation: { state: 'unstarted' },
     ...save.quests
   };
-  npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, ...save.npcFlags };
+  npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, oswingBusinessSeen: false, oswingHintNotified: false, ...save.npcFlags };
   workStats      = { count: 0, hungryWorkCount: 0, ...save.workStats };
   stadtwacheStats = { count: 0, ...save.stadtwacheStats };
   killStats      = { total: 0, ...save.killStats };

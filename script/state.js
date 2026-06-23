@@ -443,8 +443,10 @@ let quests = {
 
 /* Einmalige NPC-Interaktionen, die sich dauerhaft auf den Dialog auswirken */
 let npcFlags = {
-  miraDrinkGiven:    false,
-  fremderTalkCount:  0    // Wie oft der Spieler den zwielichtigen Mann angesprochen hat
+  miraDrinkGiven:       false,
+  fremderTalkCount:     0,    // Wie oft der Spieler den zwielichtigen Mann angesprochen hat
+  oswingBusinessSeen:   false, // Spieler hat "Sprich über Geschäfte" (100g) geklickt → ! erlischt
+  oswingHintNotified:   false  // Taverne-Tab hat einmalig für Oswin-100g-Hint aufgeleuchtet
 };
 
 /* Fortschritt in der Feldarbeit (Erfahrungs-/Level-System, siehe actions.js) */
