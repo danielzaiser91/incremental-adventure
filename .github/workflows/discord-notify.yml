@@ -50,7 +50,7 @@ jobs:
 
       # ── Patchnotes → #patchnotes ─────────────────────────────────────────────
       # Gleiche Version + gespeicherte ID → PATCH (kein Ping)
-      # Neue Version oder kein PATCH-Erfolg   → POST (mit @Patchnotes-Mention)
+      # Neue Version oder PATCH fehlgeschlagen → alte löschen + POST (mit @Patchnotes)
       - name: Patchnotes an Discord senden
         if: steps.changed.outputs.patchnotes == 'true'
         id: patchnotes_send
@@ -73,13 +73,19 @@ jobs:
               echo "Patchnotes v$VERSION per PATCH aktualisiert."
               SUCCESS=true
             else
-              echo "PATCH fehlgeschlagen (HTTP $HTTP), poste neue Nachricht."
+              echo "PATCH fehlgeschlagen (HTTP $HTTP), ersetze Nachricht."
             fi
           else
-            echo "Neue Version oder keine ID gespeichert — poste neue Nachricht."
+            echo "Neue Version oder keine ID gespeichert — ersetze Nachricht."
           fi
 
           if [ "$SUCCESS" = "false" ]; then
+            # Alte Nachricht löschen (Webhook kann nur eigene Nachrichten löschen)
+            if [ -n "$EXISTING_ID" ]; then
+              curl -s -o /dev/null -X DELETE \
+                "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
+              echo "Alte Nachricht $EXISTING_ID gelöscht."
+            fi
             PAYLOAD=$(jq -n --arg c "<@&1518368928370528256>
           ${CONTENT}" '{content: $c}')
             RESP=$(curl -s -X POST \
@@ -88,7 +94,7 @@ jobs:
               "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}?wait=true")
             NEW_ID=$(echo "$RESP" | jq -r '.id // empty')
             if [ -n "$NEW_ID" ]; then
-              echo "Neue Patchnotes v${VERSION:-unbekannt} gepostet: $NEW_ID"
+              echo "Patchnotes v${VERSION:-unbekannt} neu gepostet: $NEW_ID"
             else
               echo "FEHLER beim Posten: $RESP"
             fi
@@ -97,7 +103,7 @@ jobs:
           echo "new_id=$NEW_ID" >> $GITHUB_OUTPUT
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      # ── Status → #status (persistente Nachricht editieren) ──────────────────
+      # ── Status → #status (immer nur eine Nachricht) ──────────────────────────
       - name: Status in Discord aktualisieren
         if: steps.changed.outputs.status == 'true'
         id: status_send
@@ -117,11 +123,17 @@ jobs:
               echo "Status-Nachricht $EXISTING_ID per PATCH aktualisiert."
               SUCCESS=true
             else
-              echo "PATCH fehlgeschlagen (HTTP $HTTP), erstelle neue Nachricht."
+              echo "PATCH fehlgeschlagen (HTTP $HTTP), ersetze Nachricht."
             fi
           fi
 
           if [ "$SUCCESS" = "false" ]; then
+            # Alte Nachricht löschen bevor neu gepostet wird
+            if [ -n "$EXISTING_ID" ]; then
+              curl -s -o /dev/null -X DELETE \
+                "${{ secrets.DISCORD_WEBHOOK_STATUS }}/messages/${EXISTING_ID}" || true
+              echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
+            fi
             RESP=$(curl -s -X POST \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
