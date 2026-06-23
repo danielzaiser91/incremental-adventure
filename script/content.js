@@ -247,6 +247,29 @@ function renderArbeitsplatz(el) {
     return;
   }
 
+  if (gameFlags.workBlockedByRobberies && !skills.paranoid) {
+    el.innerHTML = `
+      <div class="feature-stage">
+        <div class="feature-stage-label">Arbeitsplatz</div>
+        <div class="location-card">
+          <p class="location-card-desc">
+            Ich kann nicht weiterarbeiten. Nicht so.
+          </p>
+          <p class="location-card-desc">
+            Viermal ausgeraubt, viermal wieder von vorn. Das ist kein Pech — das ist ein System, und ich spiele mit, ohne es zu verstehen.
+          </p>
+          <p class="location-card-desc">
+            Ich werde noch wahnsinnig. Bevor ich wieder eine Schaufel in die Hand nehme, muss ich mir einen Plan machen.
+          </p>
+          <p class="location-card-desc action-card-warning">
+            → Im Erfahrungs-Baum liegt die Antwort.
+          </p>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
   const night      = isNight();
   const busy       = gameFlags.isWorking;
   const pctStr     = Math.floor(workProgress) + '%';

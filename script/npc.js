@@ -126,7 +126,8 @@ const NPCS = {
     locked: () => !gameFlags.firstNightDialogShown,
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
-    hasHint: () => quests.miraLetter.state === QUEST_STATE.DELIVERED ||
+    hasHint: () => (!npcFlags.miraDrinkGiven && gameFlags.firstNightDialogShown) ||
+      quests.miraLetter.state === QUEST_STATE.DELIVERED ||
       quests.theftInvestigation.state === QUEST_STATE.INVESTIGATING,
     start: () => {
       if (quests.miraLetter.state === QUEST_STATE.DELIVERED) return 'letterDelivered';
@@ -185,7 +186,28 @@ const NPCS = {
               showToast('Quest erhalten: Ein Brief für Brakka.', TOAST.EVENT);
             }
           },
+          { label: '"Warum kannst du den Brief nicht selbst bringen?"', next: 'letterWhyNot' },
           { label: 'Lieber nicht.', next: null }
+        ]
+      },
+      letterWhyNot: {
+        text: [
+          'Mira wird kurz still. Kein Lächeln — nur ein kurzer, prüfender Blick.',
+          '"Weil man mich hier kennt. Zu gut. Wenn ich selbst zu Brakka gehe, sieht das jemand — und dann weiß der Falsche, dass wir miteinander reden."',
+          '"Du bist neu hier. Unbekannt. Du kannst hingehen, ohne dass jemand eine Verbindung zieht."',
+          '"Deshalb du. Nicht weil es für dich sicherer ist. Weil es für uns beide klüger ist."'
+        ],
+        options: [
+          {
+            label: 'Verstanden. Ich nehme den Brief.',
+            next: null,
+            action: () => {
+              questItems.sealedLetter = (questItems.sealedLetter || 0) + 1;
+              quests.miraLetter.state = QUEST_STATE.ACTIVE;
+              showToast('Quest erhalten: Ein Brief für Brakka.', TOAST.EVENT);
+            }
+          },
+          { label: 'Das klingt riskant. Lieber nicht.', next: null }
         ]
       },
       letterReminder: {
@@ -576,6 +598,29 @@ const NPCS = {
               checkMilestones();
               showToast('Brief überbracht (+6 Gold). Mira sollte davon erfahren.', TOAST.REWARD);
             }
+          },
+          { label: '"Warum hat Mira den Brief nicht selbst gebracht?"', next: 'whyMiraSent' }
+        ]
+      },
+      whyMiraSent: {
+        text: [
+          'Brakka hebt kaum die Augenbraue — als hätte er die Frage erwartet.',
+          '"Weil Mira klug ist", sagt er knapp. "Sie weiß, wen man sieht — und wen man sich merkt."',
+          '"Einen Fremden sieht man. Mira sieht man sich merken. Das ist der Unterschied zwischen einer Botschaft, die ankommt, und einem Problem, das sich von selbst löst."',
+          'Er faltet den Brief. "Verstanden?"'
+        ],
+        options: [
+          {
+            label: 'Ja. Ich gebe ihr Bescheid.',
+            next: null,
+            action: () => {
+              questItems.sealedLetter = Math.max(0, (questItems.sealedLetter || 0) - 1);
+              quests.miraLetter.state = QUEST_STATE.DELIVERED;
+              resources.gold            += 6;
+              resources.totalGoldEarned += 6;
+              checkMilestones();
+              showToast('Brief überbracht (+6 Gold). Mira sollte davon erfahren.', TOAST.REWARD);
+            }
           }
         ]
       }
@@ -629,6 +674,7 @@ const NPCS = {
     availability: 'day', availabilityText: 'Habe sie tagsüber gesehen.',
     questId: 'kraemerinBusiness',
     badgeOnActive: true,
+    hasHint: () => quests.kraemerinBusiness.state === QUEST_STATE.INVITED,
     locked: () => quests.kraemerinBusiness.state === QUEST_STATE.UNSTARTED,
     start: () => {
       switch (quests.kraemerinBusiness.state) {
@@ -738,6 +784,7 @@ const NPCS = {
     availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'commanderTraining',
     badgeOnActive: true,
+    hasHint: () => gameFlags.commanderRecruitmentShown && !gameFlags.stadtwacheAccepted,
     locked: () => quests.commanderTraining.state === QUEST_STATE.UNSTARTED,
     start: () => {
       if (quests.commanderTraining.state === QUEST_STATE.ACTIVE) return 'offer';

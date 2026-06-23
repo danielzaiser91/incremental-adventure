@@ -103,7 +103,9 @@ function applySaveData(save) {
     jobLeveling: false, fieldworkMemory: false, ironWill: false, fieldPay: false, nightWatchLeveling: false,
     thrift: 0, quickLearner: 0, clearMind: false, goldBreakthrough: false, guildPrep: false,
     inventoryKeeper: false, sleepLikeARock: false, petLover: false, jobXpBonus: false,
-    longShift: false, longerRest: 0, ...save.skills
+    longShift: false, longerRest: 0,
+    paranoid: false, aufmerksamkeit: false, instinkt: false, kaltbluetig: false, unzerstoerbar: false,
+    ...save.skills
   };
   needs          = { hunger: 15, tiredness: 0, sleepDebt: 0, ...save.needs };
   gameClock      = { day: 1, hour: 7, minute: 0, ...save.gameClock };
@@ -172,8 +174,17 @@ function applySaveData(save) {
     varenaMetFirst: false, thessaMetFirst: false, perethMetFirst: false,
     varenaDecodedBrief: false, thessaTrustGained: false,
     perethQuestStarted: false, lagerhausVisited: false, chapter3StoryComplete: false,
+    schmiedeWelcomeSeen: false,
+    exhaustionDialogShown: false,
+    robbery2Triggered: false, robbery3Triggered: false, robbery4Triggered: false,
+    workBlockedByRobberies: false, newRobberySystemActive: false,
     ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
+  // Konsistenz-Fix: Raub hat stattgefunden (robberyTriggered + storyState ≥ 20100),
+  // aber resetLayerUnlocked wurde durch Autosave-Timing nicht gesetzt.
+  if (gameFlags.robberyTriggered && storyState >= 20100 && !gameFlags.resetLayerUnlocked) {
+    gameFlags.resetLayerUnlocked = true;
+  }
   playerStats    = { hp: 30, maxHp: 30, ...save.playerStats };
   strength       = { xp: 0, level: 0, ...save.strength };
   mut            = { points: 0, totalEarned: 0, ...save.mut };

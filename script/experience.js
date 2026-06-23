@@ -15,19 +15,33 @@ const EP_SKILL_TREE = [
     id: 'jobLeveling', name: 'Lehrreiche Rückschläge', icon: '📘',
     requires: null, maxLevel: 1, costs: [1],
     desc: 'Was ich bei der Arbeit lerne, bleibt nicht wirkungslos.',
-    effect: 'Schaltet das Job-Level-System frei — Feldarbeit wird mit Wiederholung besser.'
+    effect: 'Schaltet das Job-Level-System frei — Feldarbeit wird mit Wiederholung besser.',
+    learnDialogs: [
+      'Ich wurde ausgeraubt. Was ich mir mühsam erarbeitet hatte — weg, in einem einzigen Augenblick. Ich stand da mit leeren Händen und dachte: Ist das jetzt das Ende?',
+      'Nein. Der Fremde hat mein Gold, aber er hat mir etwas gelassen, das er nicht greifen kann: die Erfahrung. Jeder Rückschlag ist eine Lektion — ich muss sie nur nutzen.',
+      'Ab jetzt gebe ich bei jeder Arbeit mein Bestes. Wer immer sein Bestes gibt, wird immer besser. Das ist mein Plan.'
+    ]
   },
   {
     id: 'fieldworkMemory', name: 'Geschickte Hände', icon: '🤲',
     requires: 'jobLeveling', maxLevel: 1, costs: [3],
+    visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Was meine Hände einmal gelernt haben, vergessen sie nicht mehr.',
-    effect: 'Mein Feldarbeits-Level übersteht künftig einen Neuanfang.'
+    effect: 'Mein Feldarbeits-Level übersteht künftig einen Neuanfang.',
+    learnDialogs: [
+      'Zweiter Anlauf. Neues Kapitel. Ich dachte, es wäre genauso zermürbend wie das erste Mal.',
+      'Dann griff ich den Spaten und merkte: die Bewegungen sitzen. Meine Hände erinnern sich. Was ich einmal gelernt habe, nimmt mir keiner mehr.'
+    ]
   },
   {
     id: 'ironWill', name: 'Eiserner Wille', icon: '🛡',
     requires: 'fieldworkMemory', maxLevel: 1, costs: [10],
     desc: 'Hunger raubt mir nicht mehr so schnell die letzten Kräfte.',
-    effect: 'Hunger beschleunigt den Müdigkeitsaufbau nur noch halb so stark.'
+    effect: 'Hunger beschleunigt den Müdigkeitsaufbau nur noch halb so stark.',
+    learnDialogs: [
+      'Hunger. Wieder. Früher hätte er mir die Hände zittern lassen.',
+      'Jetzt ist er nur noch Lärm im Hintergrund. Ich arbeite trotzdem. Nicht dagegen ankämpfen — einfach weitermachen. Das ist die Lektion.'
+    ]
   },
   {
     // Bewusst eine zweite, eigene Spalte mit derselben Voraussetzung wie
@@ -37,7 +51,11 @@ const EP_SKILL_TREE = [
     id: 'fieldPay', name: 'Überzeugungskraft', icon: '🤝',
     requires: 'fieldworkMemory', maxLevel: 1, costs: [10],
     desc: 'Ich weiß inzwischen, wie ich auch für einfache Arbeit ein bisschen mehr heraushole.',
-    effect: '+1 Gold pro Feldarbeit, dauerhaft.'
+    effect: '+1 Gold pro Feldarbeit, dauerhaft.',
+    learnDialogs: [
+      'Heute habe ich gewartet, bis der Vorarbeiter in der Nähe war — und dann ruhig gesagt, was ich verdiene. Ohne zu zögern, ohne zu bitten.',
+      'Er hat kurz geschaut und genickt. Eine Münze mehr. Nicht weil ich gefordert habe, sondern weil ich überzeugt habe. Das ist ein Unterschied.'
+    ]
   },
   {
     // `extraLock` ist eine zusätzliche Bedingung NEBEN der normalen
@@ -51,25 +69,46 @@ const EP_SKILL_TREE = [
     desc: 'Auch die Nacht lehrt mich etwas, wenn ich nur aufmerksam genug bin.',
     effect: 'Schaltet ein Erfahrungs-Level-System für die Nachtwache frei.',
     extraLock: () => quests.commanderTraining.state !== 'rewarded',
-    extraLockReason: 'Erfordert die Unterweisung durch Kommandant Roswald'
+    extraLockReason: 'Erfordert die Unterweisung durch Kommandant Roswald',
+    learnDialogs: [
+      'Roswalds Unterweisung war kürzer als erwartet. „Die Nacht lehrt", hat er gesagt. „Aber nur den, der still genug ist, um zuzuhören."',
+      'Ich fange an zu verstehen, was er meint. Jede Patrouille schärft die Sinne. Was ich hier lerne, ist mehr als Wachtposten-Routine — es ist Aufmerksamkeit als Handwerk.'
+    ]
   },
   {
     id: 'inventoryKeeper', name: 'Fest verschnürt', icon: '🎒',
     requires: 'jobLeveling', maxLevel: 1, costs: [12],
+    visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Was ich mir mühsam zusammengetragen habe, lasse ich nicht einfach so zurück.',
-    effect: 'Inventar UND Ausrüstung überstehen künftig einen Neuanfang.'
+    effect: 'Inventar UND Ausrüstung überstehen künftig einen Neuanfang.',
+    learnDialogs: [
+      'Ich habe meinen Rucksack ausgepackt und neu geordnet. Was vorne liegt, was hinten, was nah am Körper — nichts mehr dem Zufall überlassen.',
+      'Wenn ich alles zurücklassen müsste, nähme ich wenigstens das Wichtigste mit. Kein zufälliges Sortiment mehr. Alles hat seinen Platz.'
+    ]
   },
   {
     id: 'sleepLikeARock', name: 'Ich schlafe wie ein Stein', icon: '🪨',
     requires: 'inventoryKeeper', maxLevel: 1, costs: [10],
     desc: 'Man sagt mir nach, ich schlafe wie ein Stein — früher war das kein Kompliment. Inzwischen hilft es mir.',
-    effect: '+1 Schlafqualitäts-Stufe an jedem Schlafplatz.'
+    effect: '+1 Schlafqualitäts-Stufe an jedem Schlafplatz.',
+    learnDialogs: [
+      'Früher lag ich wach, die Gedanken kreisten, der Schlaf kam nicht. Heute: Kopf aufs Kissen, und die Welt ist weg.',
+      'Es ist kein Talent. Ich habe gelernt abzuschalten, wenn der Tag vorbei ist. Sorgen, Pläne, offene Fragen — die können warten. Jetzt schläft der Körper.'
+    ]
   },
   {
     id: 'thrift', name: 'Sparsamkeit', icon: '🪙',
     requires: 'jobLeveling', maxLevel: 2, costs: [4, 8],
+    visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Ich weiß inzwischen, wo man beim Krämer ein gutes Wort einlegt.',
-    effect: 'Marktplatz-Preise −10 % je Stufe (max. −20 %).'
+    effect: 'Marktplatz-Preise −10 % je Stufe (max. −20 %).',
+    learnDialogs: level => level === 1 ? [
+      'Beim Krämer heute: doppelt so lange gehandelt wie nötig. Ergebnis: ein Brot billiger. Nicht spektakulär.',
+      'Aber ich kenne jetzt die Preise. Wo ist Spielraum, wo nicht. Das nächste Mal weiß ich es schon beim Betreten des Ladens.'
+    ] : [
+      'Ich kenne inzwischen jeden Preis auf dem Marktplatz auswendig. Greta weiß das. Die Händler ahnen es.',
+      'Ein ruhiges Lächeln, ein klarer Blick — der Preis gibt nach. Das ist keine Kunst mehr. Das ist Übung, die sich auszahlt.'
+    ]
   },
   {
     // `visibleIf` ist ein zusätzliches, rein optisches Sichtbarkeits-
@@ -80,27 +119,59 @@ const EP_SKILL_TREE = [
     // Tierfreund-Skill ohne jedes Tier nur verwirren würde.
     id: 'petLover', name: 'Tierfreund', icon: '🐾',
     requires: 'jobLeveling', maxLevel: 1, costs: [8],
-    visibleIf: () => Object.keys(pets).length > 0,
+    visibleIf: () => Object.keys(pets).length > 0 && (getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive),
     desc: 'Was mir zuläuft, verdient meine volle Aufmerksamkeit.',
-    effect: 'Haustiere können jetzt aufleveln und ihren Bonus verstärken (siehe Haustiere).'
+    effect: 'Haustiere können jetzt aufleveln und ihren Bonus verstärken (siehe Haustiere).',
+    learnDialogs: [
+      'Das Tier hat mich mehr gelehrt als mancher Mensch. Geduld. Beständigkeit. Vertrauen, das man sich verdienen muss — und das man nicht einfach fordert.',
+      'Ich fange an zu verstehen, was es braucht. Keine Tricks, keine Befehle — nur Zeit und Aufmerksamkeit. Der Rest kommt von selbst.'
+    ]
   },
   {
     id: 'longShift', name: 'Lange Schicht', icon: '⏰',
     requires: 'jobLeveling', maxLevel: 1, costs: [3],
+    visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Wenn ich schon auf dem Feld stehe, kann ich auch gleich doppelt so lange bleiben.',
-    effect: 'Schaltet eine 2-Stunden-Feldarbeit frei — doppelter Ertrag, doppelte Kosten.'
+    effect: 'Schaltet eine 2-Stunden-Feldarbeit frei — doppelter Ertrag, doppelte Kosten.',
+    learnDialogs: [
+      'Ich stehe auf dem Feld und schaue auf die Sonne. Heute bleibe ich länger. Weil ich es kann — und weil es sich lohnt.',
+      'Zwei Stunden statt einer. Mehr Erschöpfung, mehr Gold, und das Gefühl: Heute habe ich wirklich etwas geschafft.'
+    ]
   },
   {
     id: 'longerRest', name: 'Längere Pause', icon: '🛋',
     requires: 'ironWill', maxLevel: 4, costs: [4, 8, 12, 16],
     desc: 'Manchmal reicht eine kurze Verschnaufpause einfach nicht. Ich gönne mir mehr Zeit.',
-    effect: 'Pausendauer: 15 → 30 Min (St. 1), → 60 Min (St. 3). Erholung ×1,2 / ×1,3 / ×1,3 / ×1,5. St. 4: −30 % Hunger.'
+    effect: 'Pausendauer: 15 → 30 Min (St. 1), → 60 Min (St. 3). Erholung ×1,2 / ×1,3 / ×1,3 / ×1,5. St. 4: −30 % Hunger.',
+    learnDialogs: level => [
+      [
+        'Fünfzehn Minuten sind keine Pause. Ich habe das immer gedacht, aber nie zugegeben.',
+        'Dreißig Minuten. Der Körper entspannt tatsächlich — die Schultern sinken, die Hände hören auf zu zittern. So soll eine Pause sein.'
+      ],
+      [
+        'Ich habe angefangen, die Pause zu verfeinern. Weniger zappeln, mehr atmen. Die Erholung kommt tiefer.',
+        'Es ist eine Fertigkeit, sich richtig auszuruhen. Ich übe sie — und es zahlt sich aus.'
+      ],
+      [
+        'Eine Stunde. Manche würden sagen: zu lang. Ich sage: endlich genug.',
+        'Ich schlafe nicht — aber ich lasse los. Gedanken, Anspannung, das ständige Rechnen im Kopf. Völlige Stille. Danach bin ich besser als vorher.'
+      ],
+      [
+        'Der Körper hat gelernt, während der Pause effizienter zu regenerieren. Weniger Hunger danach — nicht weil ich gegessen habe.',
+        'Echte Erholung verringert, wie dringend die Mahlzeit wird. Das ist kein Trick — das ist das Ergebnis langer Übung.'
+      ]
+    ][level - 1]
   },
   {
     id: 'jobXpBonus', name: 'Aufmerksamer Lehrling', icon: '📋',
     requires: 'jobLeveling', maxLevel: 1, costs: [2],
+    visibleIf: () => getSkillLevel('paranoid') >= 1 || !gameFlags.newRobberySystemActive,
     desc: 'Ich beobachte, wie die Erfahreneren die Arbeit angehen. Irgendwann zahlt sich das aus.',
-    effect: '+1 Job-Erfahrung pro Feldarbeit (Voraussetzung für "Schneller Lerner").'
+    effect: '+1 Job-Erfahrung pro Feldarbeit (Voraussetzung für "Schneller Lerner").',
+    learnDialogs: [
+      'Ich habe aufgehört, einfach nur zu schaufeln. Ich schaue jetzt, wie der Alte neben mir es macht — Handgelenk, Winkel, Rhythmus. Alles, was ich vorher übersehen hatte.',
+      'Ein bisschen abgucken, ein bisschen ausprobieren. Die Arbeit geht leichter, die Fortschritte kommen schneller. Wer genau hinschaut, lernt doppelt.'
+    ]
   },
   {
     // Jetzt Voraussetzung: jobXpBonus statt direkt jobLeveling — erst wenn
@@ -108,19 +179,34 @@ const EP_SKILL_TREE = [
     id: 'quickLearner', name: 'Schneller Lerner', icon: '🎯',
     requires: 'jobXpBonus', maxLevel: 5, costs: [1, 2, 3, 4, 5],
     desc: 'Jeder Handgriff sitzt beim nächsten Mal schon etwas sicherer.',
-    effect: '+10 % Job-Erfahrung pro Feldarbeit je Stufe (max. +50 %).'
+    effect: '+10 % Job-Erfahrung pro Feldarbeit je Stufe (max. +50 %).',
+    learnDialogs: level => [
+      ['Ich mache schneller Fortschritte als erwartet. Kein Talent — es ist Aufmerksamkeit, die sich endlich auszahlt.'],
+      ['Die Kurve flacht sich ab. Aber ich kenne sie jetzt — weiß, wie ich durchkomme. Jeder Rückschlag ist nur der nächste Anlauf.'],
+      ['Manchmal weiß ich schon, wie es geht, bevor ich es ausprobiert habe. Das Hirn füllt die Lücken selbst. Lernen beschleunigt das Lernen.'],
+      ['Ich sehe den Abstand zwischen gestern und heute. Nicht dramatisch — aber stetig. Jede Schicht bringt mehr als die letzte.'],
+      ['Ich bin kein Lehrling mehr. Die Arbeit sitzt tief — in den Händen, in der Haltung, in jedem Schritt. Ich merke es. Die anderen auch.']
+    ][level - 1]
   },
   {
     id: 'clearMind', name: 'Klarer Kopf', icon: '🧠',
     requires: 'thrift', maxLevel: 1, costs: [8],
     desc: 'Je öfter ich neu anfange, desto klarer sehe ich, was wirklich zählt.',
-    effect: '+1 Erfahrung bei jedem zukünftigen Neuanfang.'
+    effect: '+1 Erfahrung bei jedem zukünftigen Neuanfang.',
+    learnDialogs: [
+      'Jedes Mal von vorn anfangen hat etwas in mir verändert. Die Aufregung der ersten Versuche ist weg — zurück bleibt Klarheit.',
+      'Ich sehe jetzt, was wirklich zählt. Gold ist flüchtig. Was ich verstehe, bleibt. Beim nächsten Neuanfang nehme ich mehr mit als bisher.'
+    ]
   },
   {
     id: 'goldBreakthrough', name: 'Weitblick', icon: '📈',
     requires: 'clearMind', maxLevel: 1, costs: [15],
     desc: 'Ich verstehe jetzt, dass mehr zurückgelassenes Gold auch mehr lehrt — nicht nur, OB ich eine Grenze überschritten habe.',
-    effect: `Bei einem Neuanfang zählt jeder erreichte Gold-Meilenstein (${GOLD_MILESTONE_THRESHOLD}, ${GOLD_MILESTONE_THRESHOLD * 2}, ${GOLD_MILESTONE_THRESHOLD * 4}, …) als zusätzliche Erfahrung.`
+    effect: `Bei einem Neuanfang zählt jeder erreichte Gold-Meilenstein (${GOLD_MILESTONE_THRESHOLD}, ${GOLD_MILESTONE_THRESHOLD * 2}, ${GOLD_MILESTONE_THRESHOLD * 4}, …) als zusätzliche Erfahrung.`,
+    learnDialogs: [
+      'Ich dachte, ein Neuanfang ist immer gleich — alles weg, ein EP, von vorn. Aber das stimmt nicht ganz.',
+      'Wie weit ich komme, bevor ich aufhöre, macht den Unterschied. Mehr riskiert, mehr zurückgelassen, mehr gelernt. Das ist keine Mystik — das ist eine Formel.'
+    ]
   },
   {
     // Einziger Knoten, der BEIDE Äste als Voraussetzung hat (`requiresAll`
@@ -131,7 +217,68 @@ const EP_SKILL_TREE = [
     id: 'guildPrep', name: 'Vorbereitung auf die Gilde', icon: '⚔',
     requiresAll: ['nightWatchLeveling', 'goldBreakthrough'], maxLevel: 1, costs: [100], goldCosts: [1000],
     desc: 'Reichtum und Routine allein machen noch keinen Abenteurer — aber sie sind ein Anfang.',
-    effect: 'Schaltet den Weg zur Abenteurergilde frei. Brakka weiß mehr darüber.'
+    effect: 'Schaltet den Weg zur Abenteurergilde frei. Brakka weiß mehr darüber.',
+    learnDialogs: [
+      'Ich habe lange gewartet, bevor ich mich das getraut habe. Die Anforderungen waren real: Ausdauer, Kenntnisse, nachgewiesene Erfahrung. Keine Abkürzungen.',
+      'Brakka wird sehen, dass ich bereit bin. Nicht weil ich es behaupte — sondern weil ich alles getan habe, was nötig war. Die Karten liegen auf dem Tisch.',
+      'Die Gilde. Ein neues Kapitel. Ich weiß noch nicht genau, was mich erwartet. Aber ich bin vorbereitet — auf mehr als ich gedacht hatte.'
+    ]
+  },
+
+  // ══ PARANOIDER AST — freigeschaltet nach dem 4. automatischen Raub ══════
+  // Dieser Ast wächst parallel zum normalen Baum (eigene Spalte rechts).
+  // Die Visualisierung erfolgt über renderParanoidTree() + PARANOID_BRANCHES.
+  // buyNextSkillLevel() funktioniert für diese Knoten unverändert.
+  {
+    id: 'paranoid', name: 'Paranoid', icon: '👁',
+    requires: null, maxLevel: 1, costs: [3],
+    desc: 'Viermal ausgeraubt — und immer noch hier. Die Angst sitzt tief, aber sie macht mich wacher.',
+    effect: 'Schaltet den manuellen Neuanfang frei. Gibt den restlichen Erfahrungs-Baum frei. Nachteil: +15 % Müdigkeit bei Feldarbeit (Dauerspannung).',
+    learnDialogs: [
+      'Viermal. Viermal ausgeraubt, viermal mit leeren Händen wieder aufgestanden. Ich kann nicht mehr so tun, als wäre das alles in Ordnung.',
+      'Ich bin paranoid geworden. Jedes Geräusch, jeder Schatten. Aber vielleicht ist das gar nicht so falsch — wer ständig auf der Hut ist, übersieht weniger.',
+      'Ich fange an, das alles anders zu sehen. Nicht blind schuften — sondern denken. Das kostet mich Nerven. Aber es bringt mich weiter.'
+    ]
+  },
+  {
+    id: 'aufmerksamkeit', name: 'Scharf beobachtet', icon: '👀',
+    requires: 'paranoid', maxLevel: 1, costs: [5],
+    desc: 'Die Anspannung lässt sich kanalisieren — wenn man weiß, wie.',
+    effect: 'Hebt den Müdigkeitsmalus von Paranoid auf.',
+    learnDialogs: [
+      'Die Panik ist weg. Was bleibt, ist Wachheit — aber kontrolliert. Ich laufe nicht mehr davon.',
+      'Ich habe gelernt, die Angst arbeiten zu lassen, statt gegen mich. Konzentration statt Verkrampfung. Die Arbeit geht leichter.'
+    ]
+  },
+  {
+    id: 'instinkt', name: 'Instinkt', icon: '🔍',
+    requires: 'aufmerksamkeit', maxLevel: 1, costs: [8],
+    desc: 'Was mich nicht umbringt, macht mich schärfer. Ich erkenne Gelegenheiten, die andere übersehen.',
+    effect: '+1 Gold pro Feldarbeit. Die Paranoia ist zum Vorteil geworden.',
+    learnDialogs: [
+      'Nicht mehr wütend. Nicht mehr ängstlich. Ich sehe jetzt Möglichkeiten, die früher im Lärm der Angst untergingen.',
+      'Der Fremde hat mich viermal ausgeraubt — und jedes Mal habe ich mehr mitgenommen als er mir lassen wollte. Den Instinkt kann er mir nicht stehlen.'
+    ]
+  },
+  {
+    id: 'kaltbluetig', name: 'Kaltblütig', icon: '🧊',
+    requires: 'instinkt', maxLevel: 1, costs: [12],
+    desc: 'Ich lasse mich nicht mehr aus der Ruhe bringen. Weder von Hunger noch von Schicksalsschlägen.',
+    effect: '+1 Erfahrung bei jedem Neuanfang.',
+    learnDialogs: [
+      'Kalt. Klar. Unerschütterlich. Das bin ich jetzt.',
+      'Nicht weil ich kein Herz mehr habe — sondern weil ich gelernt habe, es zu beherrschen. Jeder Neuanfang lehrt mich mehr als der letzte.'
+    ]
+  },
+  {
+    id: 'unzerstoerbar', name: 'Unzerstörbar', icon: '⛰',
+    requires: 'kaltbluetig', maxLevel: 1, costs: [20],
+    desc: 'Ich weiß, dass ich immer wieder aufstehen werde — egal wie oft ich falle. Das macht mich stärker als jeden, der nie gefallen ist.',
+    effect: '+1 weiterer Erfahrungspunkt bei jedem Neuanfang (stapelt sich mit Kaltblütig und allen anderen Boni).',
+    learnDialogs: [
+      'Ich habe mehr verloren als die meisten Menschen hier je besitzen werden. Und ich stehe noch.',
+      'Das ist keine Heldengeschichte. Das ist das, was passiert, wenn man immer wieder aufsteht, bis man es nicht mehr anders kann. Bis Weitermachen keine Entscheidung mehr ist — sondern wer man ist.'
+    ]
   }
 ];
 
@@ -165,6 +312,13 @@ const EP_TREE_BRANCHES = [
   ['longShift'],
   // Ast 7 — Erholung: longerRest (aus ironWill, Tiefe 2)
   [undefined, undefined, 'longerRest']
+];
+
+/* Äste des paranoiden Skillbaums — eine einzige Spalte, parallel zum
+   normalen Baum. Die Wurzel "paranoid" wird separat als root-Reihe
+   gerendert (analog zu jobLeveling im normalen Baum). */
+const PARANOID_BRANCHES = [
+  ['aufmerksamkeit', 'instinkt', 'kaltbluetig', 'unzerstoerbar']
 ];
 
 /* ══════════════════════════════════════════════════════════════
@@ -371,18 +525,26 @@ function buyNextSkillLevel(id) {
     navUnseen.taverne = true;
   }
 
-  const levelNote = node.maxLevel > 1 ? ` (Stufe ${level + 1})` : '';
+  const newLevel = level + 1;
+  const levelNote = node.maxLevel > 1 ? ` (Stufe ${newLevel})` : '';
   showToast(`${node.name}${levelNote} erlernt.`, TOAST.EVENT);
 
-  // Beim erstmaligen Erreichen des Maximums eines super-skill-fähigen Skills:
-  // Oswin-Hinweis-Monolog einmalig auslösen (siehe npc.js, lehrer.js).
-  const newLevel = level + 1;
-  if (newLevel >= node.maxLevel && !gameFlags.oswingSuperHintShown) {
-    const hasSuperDef = SUPER_SKILL_DEFS.some(s => s.forSkill === id);
-    if (hasSuperDef) maybeTriggerSuperSkillHint(node);
-  }
+  const afterLearnDialog = () => {
+    if (newLevel >= node.maxLevel && !gameFlags.oswingSuperHintShown) {
+      if (SUPER_SKILL_DEFS.some(s => s.forSkill === id)) maybeTriggerSuperSkillHint(node);
+    }
+    render();
+  };
 
-  render();
+  const rawDialogs = node.learnDialogs;
+  const pages = typeof rawDialogs === 'function' ? rawDialogs(newLevel) : rawDialogs;
+
+  if (pages && pages.length > 0) {
+    render();
+    showMonologue(node.name, pages, afterLearnDialog);
+  } else {
+    afterLearnDialog();
+  }
 }
 
 /** EP-Gewinn eines Neuanfangs. Der allererste gibt IMMER genau 1 EP,
@@ -400,6 +562,8 @@ function computeEpGain(isFirstReset) {
     : 1;
   if (skills.clearMind) gain += 1;
   if (superSkills.clearMind_super) gain += 1;
+  if (skills.kaltbluetig) gain += 1;
+  if (skills.unzerstoerbar) gain += 1;
   return gain;
 }
 
@@ -519,11 +683,14 @@ function performManualReset() {
     resources.inventory = {};
     overflowBag = {};
   }
-  if (storyState < 20100) storyState = 20100;
+  // Im neuen Raub-System bleiben die Auto-Resets in Kapitel 1 (storyState 10103–10106).
+  // Kapitel 2 beginnt erst nach dem ersten MANUELLEN Reset (nach Kauf von Paranoid).
+  if (storyState < 20100 && (!gameFlags.newRobberySystemActive || skills.paranoid >= 1)) {
+    storyState = 20100;
+  }
   playerStats.maxHp = getPlayerMaxHp();
   playerStats.hp    = playerStats.maxHp;
   currentContent = 'erfahrung';
-  navLevel       = NAV_LEVEL.MENU;
 
   render();
   showToast(`+${epGain} Erfahrung gewonnen. Mein Gold ist fort, aber das Gelernte bleibt.`, TOAST.EVENT);
@@ -811,7 +978,31 @@ function renderSkillTree() {
   }
 
   html += `</div>`;
-  html += renderSkillDetailPanel();
+  return html;
+}
+
+/** Rendert den paranoiden Einzel-Spalten-Baum rechts neben dem normalen Baum.
+    Jeder Knoten wird erst sichtbar, wenn sein Vorgänger gekauft wurde.
+    Nur angezeigt, wenn der Erfahrungs-Tab freigeschaltet wurde (nach Raub 1). */
+function renderParanoidTree() {
+  if (!gameFlags.resetLayerUnlocked) return '';
+  const root = EP_SKILL_TREE.find(n => n.id === 'paranoid');
+  if (!root) return '';
+
+  let html = `<div class="skill-tree paranoid-skill-tree">
+    <div class="skill-tree-row-root">${epNodeIconHtml(root)}</div>`;
+
+  for (const id of PARANOID_BRANCHES[0]) {
+    const node = EP_SKILL_TREE.find(n => n.id === id);
+    if (!node) continue;
+    if (getSkillLevel(node.requires) < 1) break;
+    html += `<div class="skill-connector"><div class="stl-stem" style="left:50%;"></div></div>`;
+    html += `<div class="skill-tree-row" style="grid-template-columns: 1fr;">
+      <div class="skill-tree-cell">${epNodeIconHtml(node)}</div>
+    </div>`;
+  }
+
+  html += `</div>`;
   return html;
 }
 
@@ -834,7 +1025,12 @@ function renderErfahrung(el) {
       (nextTarget ? ` — noch ${nextTarget - resources.gold} Gold bis zum nächsten Punkt` : ' (höchster Meilenstein erreicht)');
   }
 
-  const resetCard = `
+  // "Neu anfangen"-Karte nur sichtbar wenn:
+  // - Paranoid gekauft (neues System), ODER
+  // - storyState bereits in Kapitel 2 (Altspeicherstand)
+  const showResetCard = skills.paranoid >= 1 || storyState >= 20100 || !gameFlags.newRobberySystemActive;
+
+  const resetCard = showResetCard ? `
     <div class="action-card action-card-primary">
       <div class="action-card-icon">✦</div>
       <div class="action-card-name">Neu anfangen</div>
@@ -845,7 +1041,7 @@ function renderErfahrung(el) {
       <button class="action-btn action-btn-primary ${canReset ? '' : 'btn-disabled'}" onclick="startManualReset()" ${canReset ? '' : 'disabled'}>
         Neu anfangen
       </button>
-    </div>`;
+    </div>` : '';
 
   const hasTree    = meta.resets > 0;
   const hasLessons = gameFlags.foremanBonusGiven;
@@ -861,16 +1057,23 @@ function renderErfahrung(el) {
       </div>
     </div>`;
 
-  const skillTreeWithIntro = () => `
-    <p class="erfahrung-section-intro">Was ich mir bewusst beigebracht habe, und mir niemand mehr nehmen kann.</p>
-    ${renderSkillTree()}`;
+  // Beide Bäume nebeneinander + gemeinsames Detail-Panel darunter.
+  // Der paranoide Baum erscheint nur wenn resetLayerUnlocked (nach Raub 1).
+  const skillTreeWithIntro = () => {
+    const paranoidHtml = renderParanoidTree();
+    const wrapperClass = paranoidHtml ? 'skill-trees-container skill-trees-dual' : 'skill-trees-container';
+    return `
+      <p class="erfahrung-section-intro">Was ich mir bewusst beigebracht habe, und mir niemand mehr nehmen kann.</p>
+      <div class="${wrapperClass}">
+        <div class="skill-tree-column">${renderSkillTree()}</div>
+        ${paranoidHtml ? `<div class="skill-tree-column skill-tree-paranoid-column">${paranoidHtml}</div>` : ''}
+      </div>
+      ${renderSkillDetailPanel()}`;
+  };
 
   // Beide Bereiche gleichzeitig sichtbar → echte Tabs zum Umschalten
   // (siehe erfahrungTab, state.js). Ist nur einer der beiden relevant,
-  // braucht es keine Tab-Leiste — eine einzelne Sektion reicht. Die Labels
-  // sind bewusst auf je ein Wort gekürzt (Tab-Leiste/Sektion-Label haben
-  // keinen Platz für ganze Sätze) — der volle Satz "Was das Leben mich
-  // gelehrt hat" steht stattdessen als Einleitung in lifeLessonsHtml().
+  // braucht es keine Tab-Leiste — eine einzelne Sektion reicht.
   let lowerSection = '';
   if (hasTree && hasLessons) {
     lowerSection = `
@@ -885,17 +1088,6 @@ function renderErfahrung(el) {
     lowerSection = lifeLessonsHtml();
   }
 
-  // Eigenes zweispaltiges Layout statt des sonst üblichen zentrierten
-  // `.feature-stage`-Inhalts: Intro-Text + Reset-Kachel sind hier nur der
-  // EINSTIEG, nicht der Kern der Seite (das ist der Skillbaum/die
-  // Lektionen darunter) — sie bekommen daher eine schmale, sticky
-  // Seitenspalte links statt zentrierten Platz über der vollen Breite zu
-  // beanspruchen. Das Seiten-Label steht bewusst INNERHALB dieser
-  // sticky Spalte (nicht als Geschwister darüber) — sonst würde es beim
-  // Scrollen verschwinden, während die Box direkt darunter sichtbar
-  // bleibt, was wie zwei unabhängige, nicht zusammengehörige Elemente
-  // wirkt. `position: sticky` bezieht sich auf #content-section (siehe
-  // style.css), den scrollenden Ahnen dieser Seite.
   el.innerHTML = `
     <div class="feature-stage erfahrung-page">
       <div class="erfahrung-layout">

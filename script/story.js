@@ -50,14 +50,56 @@ const STORY_ENTRIES = [
   },
   {
     id:          '1.4',
-    title:       'Der Raub',
-    unlockState: 20100,
+    title:       'Der erste Raub',
+    unlockState: 10103,
     text: [
       'Eine Hand packt mich im Schatten einer Gasse.',
       'Der Fremde — er hat die ganze Zeit gewartet.',
       'Er reißt mir den Geldbeutel von der Hüfte und ist verschwunden, bevor ich begreife, was passiert.',
       'Mein mühsam verdientes Gold. Fort.',
-      'Das wird sich nicht wiederholen. Ich werde klüger sein. Härter. Ein neues Kapitel beginnt — und dieses Mal schreibe ich es selbst.'
+      'Das wird sich nicht wiederholen. Ich werde klüger sein. Härter. Was ich daraus gelernt habe, nimmt mir keiner.'
+    ]
+  },
+  {
+    id:          '1.5',
+    title:       'Der zweite Raub',
+    unlockState: 10104,
+    text: [
+      'Es ist wieder passiert.',
+      'Keine Gasse diesmal — voller Marktplatz, helles Tageslicht. Derselbe Griff, dieselbe Hand, dieselbe Leere danach.',
+      'Das ist kein Zufall. Das ist eine Methode. Irgendjemand weiß, wann ich Geld bei mir trage.',
+      'Ich stehe mit leeren Händen und einem einzigen klaren Gedanken: Wut.'
+    ]
+  },
+  {
+    id:          '1.6',
+    title:       'Der dritte Raub',
+    unlockState: 10105,
+    text: [
+      'Drei Mal. Ich sage mir jedes Mal dasselbe: Das nächste Mal bin ich bereit.',
+      'Die Zähne sind aufeinandergebissen. Kein Schreien, kein Fluchen — was soll das bringen?',
+      'Ich muss mir ernsthaft etwas einfallen lassen. Nicht irgendwann. Jetzt.'
+    ]
+  },
+  {
+    id:          '1.7',
+    title:       'Der vierte Raub',
+    unlockState: 10106,
+    text: [
+      'Jetzt reicht es.',
+      'Vier Mal ausgeraubt. Vier Mal von vorn angefangen. Und noch immer stehle ich mich durch dieselben Gassen, schaufel auf denselben Feldern, verdiene dasselbe Gold.',
+      'Ich höre auf. Nicht mit dem Kämpfen. Mit dem Blindschuften.',
+      'Ich muss nachdenken — wirklich nachdenken, was ich hier tue. Die Antwort liegt nicht auf dem Feld. Sie liegt in mir.'
+    ]
+  },
+  {
+    id:          '1.8',
+    title:       'Paranoid',
+    unlockFlag:  () => skills.paranoid >= 1,
+    text: [
+      'Paranoid — ja, das bin ich wohl. Ich kann es auch ruhig sagen.',
+      'Aber die Angst ist nicht mehr lähmend. Sie ist scharf geworden. Ich sehe jetzt Muster, die ich früher übersehen hätte.',
+      'Dieser Weg beginnt mit einem neuen Anfang — aber einem gewählten, keinem erzwungenen.'
     ]
   },
 

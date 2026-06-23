@@ -4,6 +4,25 @@
 
 'use strict';
 
+let _prevGold = null;
+let _prevEP   = null;
+
+function spawnStatFloat(anchorId, text) {
+  const panel     = document.getElementById('stats-panel');
+  const anchor    = document.getElementById(anchorId);
+  const container = document.getElementById('stat-floats');
+  if (!panel || !anchor || !container) return;
+  const pRect = panel.getBoundingClientRect();
+  const aRect = anchor.getBoundingClientRect();
+  const el = document.createElement('div');
+  el.className  = 'stat-float';
+  el.textContent = text;
+  el.style.top   = (aRect.top - pRect.top) + 'px';
+  el.style.right = (pRect.right - aRect.right) + 'px';
+  container.appendChild(el);
+  el.addEventListener('animationend', () => el.remove());
+}
+
 function renderStats() {
   const el = document.getElementById('stats-content');
   if (!el) return;
@@ -26,12 +45,17 @@ function renderStats() {
   const stepBadge = (step) => step > 0
     ? `<span class="needs-step-badge">${step}/${NEEDS_TIER_MAX}</span>` : '';
 
+  const prevGold = _prevGold;
+  const prevEP   = _prevEP;
+  _prevGold = resources.gold;
+  _prevEP   = experience.points;
+
   el.innerHTML = `
     <div class="stat-group">
       <div class="stat-section-label">Ressourcen</div>
       <div class="stat-row">
         <span class="stat-label">Gold</span>
-        <span class="stat-value gold-value">
+        <span class="stat-value gold-value" id="stat-gold-val">
           ${resources.gold}<span class="gold-icon">◈</span>
         </span>
       </div>
@@ -59,7 +83,7 @@ function renderStats() {
         <div class="stat-section-label">Erfahrung</div>
         <div class="stat-row">
           <span class="stat-label">EP</span>
-          <span class="stat-value gold-value">${experience.points}</span>
+          <span class="stat-value gold-value" id="stat-ep-val">${experience.points}</span>
         </div>
         ${meta.resets > 0 ? `
           <div class="stat-row">
@@ -70,4 +94,9 @@ function renderStats() {
       </div>
     ` : ''}
   `;
+
+  if (prevGold !== null && resources.gold > prevGold)
+    spawnStatFloat('stat-gold-val', `+${resources.gold - prevGold}◈`);
+  if (prevEP !== null && gameFlags.resetLayerUnlocked && experience.points > prevEP)
+    spawnStatFloat('stat-ep-val', `+${experience.points - prevEP} ✦`);
 }

@@ -234,6 +234,7 @@ function showContent(id) {
   render();
 
   if (id === CONTENT.TAVERNE) maybeTriggerTavernArrivalDialog();
+  if (id === CONTENT.SCHMIEDE && meta.hasSmith) maybeTriggerSchmiedeWelcomeDialog();
   if (isFirstVisit) maybeShowNavIntro(id);
 }
 

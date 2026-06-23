@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.14.4-alpha';
+const GAME_VERSION = '0.15.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -224,6 +224,29 @@ const VERSION_NOTES = {
   '0.14.4-alpha': [
     { cat: 'Neuerung', text: '„Längere Pause" auf 4 Stufen erweitert: Stufe 3 verlängert auf 60 Min., Stufe 4 reduziert zusätzlich den Hunger. Super-Skill: Hunger & Müdigkeit steigen dauerhaft 10 % langsamer.' },
     { cat: 'Neuerung', text: 'Update-Banner erscheint jetzt im Dokumentenfluss statt als Overlay — überdeckt keine UI-Elemente mehr.' }
+  ],
+  '0.14.5-alpha': [
+    { cat: 'Bugfix',   text: 'Der Raub-Dialog konnte bei ungünstigem Autosave-Timing nicht erscheinen und den Erfahrungs-Tab dauerhaft gesperrt lassen — das wird jetzt beim Laden automatisch repariert.' },
+    { cat: 'Neuerung', text: 'Erster Besuch in der Schmiede wird mit einem kurzen Ich-Monolog begrüßt.' },
+    { cat: 'Neuerung', text: 'Beim ersten Erreichen von 100 % Müdigkeit erscheint ein einmaliger Monolog.' },
+    { cat: 'Neuerung', text: 'Gold- und EP-Gewinne werden als kurze schwebende Zahl in der Charakter-Anzeige animiert.' }
+  ],
+  '0.14.6-alpha': [
+    { cat: 'Bugfix',   text: 'Raub: Gold verschwindet jetzt erst nach dem Dialog, nicht schon davor — der Kontostand beim Lesen war verwirrend.' },
+    { cat: 'Bugfix',   text: 'Nach einem Neuanfang bleibt die Navigation in der aktuellen Stadt — kein ungewolltes Zurückfallen auf die Weltkarte.' },
+    { cat: 'Neuerung', text: 'Mira zeigt jetzt ein ❗-Symbol, bevor man sie das erste Mal auf einen Drink eingeladen hat.' },
+    { cat: 'Neuerung', text: 'Alle Zielleisten-Texte sind jetzt konsequent in Ich-Perspektive geschrieben.' }
+  ],
+  '0.15.0-alpha': [
+    { cat: 'Story',    text: 'Neues Raub-System: 4 automatische Raub-Events (50/75/100/125 Gold), jeder mit eigenem Story-Dialog (Kapitel 1.5–1.7) und auto-Reset. Nach dem 4. Raub ist Arbeit gesperrt.' },
+    { cat: 'Story',    text: 'Neuer Skill-Ast: „Paranoid" (5 Fähigkeiten) — kaufbar nach dem 4. Raub. Schaltet die „Neu anfangen"-Karte und den restlichen Erfahrungs-Baum frei. Eigener visueller Ast neben dem normalen Baum.' },
+    { cat: 'Story',    text: 'Kapitel 1.8 „Paranoid" — Story-Chronik-Eintrag nach Kauf der gleichnamigen Fähigkeit.' },
+    { cat: 'Neuerung', text: 'Jede erlernte Fähigkeit im Erfahrungs-Baum zeigt jetzt einen immersiven Ich-Perspektiv-Monolog.' },
+    { cat: 'Neuerung', text: 'Errungenschaften: 23 neue Einträge (Kapitel 1 und Erfahrungs-Weg).' },
+    { cat: 'Neuerung', text: 'Mira und Brakka erklären jetzt auf Nachfrage, warum Mira den Brief nicht selbst überbracht hat.' },
+    { cat: 'Bugfix',   text: '„Wachsamer Geist" erscheint jetzt korrekt in der Kategorie „Erstes Kapitel".' },
+    { cat: 'Bugfix',   text: 'Greta (Krämerin) und Kommandant Roswald zeigen jetzt korrekte ❗-Badges wenn ihre Quests auf Aufmerksamkeit warten.' },
+    { cat: 'Bugfix',   text: '"Schritt für Schritt" in der Nachtwache-Beschreibung korrigiert.' }
   ]
 };
 
@@ -290,7 +313,14 @@ let skills = {
   inventoryKeeper:  false, // Inventar/Ausrüstung übersteht künftig einen Neuanfang
   sleepLikeARock:   false, // +1 Schlafqualitäts-Stufe bei jedem Schlafplatz
   petLover:         false, // Haustiere können aufleveln und ihren Bonus verstärken
-  longShift:        false  // 2-Stunden-Feldarbeit freischalten
+  longShift:        false, // 2-Stunden-Feldarbeit freischalten
+  longerRest:       0,     // Pause verlängern (4 Stufen)
+  // ── Paranoider Ast (freigeschaltet nach dem 4. Raub) ──────
+  paranoid:         false, // Schaltet "Neu anfangen" + Reihe 2 des Normalbaums frei. Nachteil: +15 % Müdigkeit
+  aufmerksamkeit:   false, // Hebt den Müdigkeitsmalus von Paranoid auf
+  instinkt:         false, // +1 Gold pro Feldarbeit
+  kaltbluetig:      false, // +1 EP bei jedem Neuanfang
+  unzerstoerbar:    false  // +1 weiterer EP bei jedem Neuanfang
 };
 
 /* Freigeschaltete Super-Skill-Erweiterungen (Lehrer-System) — erst nach
@@ -360,6 +390,14 @@ let gameFlags = {
   perethQuestStarted:          false, // Pereth hat eine Aufgabe gegeben → Story 3.6
   lagerhausVisited:            false, // Spieler war im Lagerhaus → Bericht an Pereth möglich
   chapter3StoryComplete:       false, // Alle Story-Punkte in Lethkar gesehen
+  schmiedeWelcomeSeen:         false, // Willkommens-Monolog in der Schmiede beim ersten Betreten
+  exhaustionDialogShown:       false, // Einmaliger Erschöpfungs-Monolog beim ersten Erreichen von 100% Müdigkeit
+  // ── Neues Raub-System (4 automatische Raub-Events) ────────
+  robbery2Triggered:           false, // 2. Raub (75 Gold) ausgelöst
+  robbery3Triggered:           false, // 3. Raub (100 Gold) ausgelöst
+  robbery4Triggered:           false, // 4. Raub (125 Gold) ausgelöst
+  workBlockedByRobberies:      false, // Nach 4. Raub: Arbeit gesperrt bis Paranoid gekauft
+  newRobberySystemActive:      false, // Zeigt an, dass der neue 4-Raub-Ablauf aktiv ist (vs. Altstand)
 };
 
 /* Welche progressiv freigeschalteten Nav-Elemente noch nicht angeklickt
@@ -633,7 +671,8 @@ let selectedSkillId = null; // welcher Skill-Knoten im EP-Baum gerade ausgewähl
 let navLevel       = NAV_LEVEL.MENU;
 let currentCity    = CONTENT.TREUTHEIM;
 let currentContent = CONTENT.GESCHICHTE;
-let marketVendor   = null;         // null=Markt-Übersicht | VENDOR.KRAEMER | VENDOR.SCHMIEDE
+let marketVendor      = null;         // null=Markt-Übersicht | VENDOR.KRAEMER | VENDOR.SCHMIEDE
+let marketKraemerTab  = 'essen';      // 'essen' | 'ausruestung'
 let jobInfoPanelOpen = false;
 let erfahrungTab     = EP_TAB.SKILLS;
 let historyFilter    = HISTORY_FILTER.TOASTS;

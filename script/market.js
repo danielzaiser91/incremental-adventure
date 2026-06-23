@@ -186,6 +186,8 @@ function isFoodItemLocked(item) {
   return false;
 }
 
+function setKraemerTab(tab) { marketKraemerTab = tab; render(); }
+
 /* ── Krämer: Verpflegung & Kleinausrüstung ───────────────────── */
 function renderVendorKraemer(el) {
   const nightClosed = isNight();
@@ -310,16 +312,31 @@ function renderVendorKraemer(el) {
     gretaSection = `<div class="market-section-label">Gretas Werkstatt</div><div class="action-grid">${sellCard}${guertelCard}</div>`;
   }
 
+  const hasAusruestungItems = gearSection || toolSection || gretaSection;
+  const ausruestungContent = hasAusruestungItems
+    ? (gearSection + toolSection + gretaSection)
+    : `<div class="action-card action-card-locked">
+         <div class="action-card-icon">🔒</div>
+         <div class="action-card-name">Noch nichts verfügbar</div>
+         <p class="action-card-desc">Wer weiß, was Greta noch auf Lager hat, wenn der Handel wächst.</p>
+       </div>`;
+
+  const isEssen = marketKraemerTab === 'essen';
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Krämer — Verpflegung &amp; Kleinkram</div>
       <button class="action-btn vendor-back-btn" onclick="backToMarketHub()">◂ Zurück zum Marktplatz</button>
       ${nightClosed ? `<div class="status-badge status-badge-warning">⚠ Der Krämer hat für die Nacht geschlossen</div>` : ''}
-      <div class="market-section-label">Verpflegung</div>
-      <div class="action-grid">${foodCards}</div>
-      ${gearSection}
-      ${toolSection}
-      ${gretaSection}
+      <div class="tab-bar">
+        <button class="tab-btn${isEssen ? ' active' : ''}" onclick="setKraemerTab('essen')">🍞 Essen &amp; Trinken</button>
+        <button class="tab-btn${!isEssen ? ' active' : ''}" onclick="setKraemerTab('ausruestung')">🧤 Ausrüstung</button>
+      </div>
+      <div class="tab-panel">
+        ${isEssen
+          ? `<div class="market-section-label">Verpflegung</div><div class="action-grid">${foodCards}</div>`
+          : ausruestungContent
+        }
+      </div>
     </div>
   `;
 }

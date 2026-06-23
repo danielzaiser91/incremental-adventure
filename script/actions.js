@@ -45,7 +45,9 @@ function getNightWatchLevel(count) {
 }
 
 function getNightWatchReward() {
-  return NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase;
+  return Math.max(1, Math.round(
+    NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase * getAchievementGoldMult()
+  ));
 }
 
 /* ── Stadtwache ─────────────────────────────────────────────
@@ -145,7 +147,9 @@ function completeStadtwache() {
   advanceClock(STADTWACHE_CLOCK_MINUTES);
   showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, TOAST.REWARD);
   checkMilestones();
-  maybeTriggerCommanderRecruitment(() => {});
+  maybeTriggerCommanderRecruitment(() => {
+    maybeTriggerExhaustionDialog();
+  });
   render();
 }
 
@@ -230,6 +234,7 @@ function gatherResource(resourceId) {
   const resourceName = RESOURCE_ITEMS.find(r => r.id === resourceId).name;
   showToast(`+${RESOURCE_GATHER_AMOUNT} ${resourceName}.`, TOAST.REWARD);
   render();
+  maybeTriggerExhaustionDialog();
 }
 
 /* Erfahrungs-Level für Feldarbeit: je öfter verrichtet, desto besser darin.
@@ -307,10 +312,12 @@ function getWorkReward(levelOverride) {
     + (equipment.guertel === 'arbeitsguertel' ? 1 : 0)
     + (gameFlags.foremanBonusGiven ? 1 : 0)
     + (skills.fieldPay ? 1 : 0)
-    + (superSkills.fieldPay_super ? 1 : 0);
+    + (superSkills.fieldPay_super ? 1 : 0)
+    + (skills.instinkt ? 1 : 0);
   reward *= getHungerTier(needs.hunger).rewardMult; // nur Hunger schwächt den Ertrag, Müdigkeit nur die Dauer
   reward *= level.specialRewardMult || 1;
   reward += level.specialFlatBonus || 0;
+  reward *= getAchievementGoldMult();
   return Math.max(1, Math.round(reward));
 }
 
@@ -335,7 +342,9 @@ function getWorkTirednessGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
   const hungerMult = getHungerTier(needs.hunger).tirednessGainMult;
   const effectiveHungerMult = 1 + (hungerMult - 1) * (superSkills.ironWill_super ? 0 : skills.ironWill ? 0.5 : 1);
-  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult();
+  // Paranoid: dauernde Anspannung erhöht Müdigkeit um 15 % — entfällt wenn "Scharf beobachtet" gelernt
+  const paranoidMult = (skills.paranoid && !skills.aufmerksamkeit) ? 1.15 : 1;
+  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult() * paranoidMult;
 }
 
 /** Wie viel Hunger eine einzelne Arbeit gerade kosten würde — für die
@@ -368,6 +377,28 @@ function maybeTriggerTavernArrivalDialog() {
   showMonologue('In der Taverne', [
     'Stimmen, Gelächter, der Geruch von Bier. Wen frage ich hier wegen Arbeit?',
     'Der Wirt kennt sicher jeden in der Stadt. Er wird wissen, wie ich hier reich werde.'
+  ], render);
+}
+
+/** Monolog beim ersten Mal, dass Müdigkeit 100 % erreicht: erklärt, dass
+    so nicht weitergearbeitet werden kann und eine kurze Pause nötig ist. */
+function maybeTriggerExhaustionDialog() {
+  if (gameFlags.exhaustionDialogShown || needs.tiredness < 100) return;
+  gameFlags.exhaustionDialogShown = true;
+
+  showMonologue('Völlig erschöpft', [
+    'Der Körper streikt. Meine Beine tragen mich kaum noch, die Hände zittern — so kann ich nicht weiterarbeiten.',
+    'Eine kurze Pause würde reichen. Nur ein paar Minuten ausruhen, dann geht es weiter.'
+  ], render);
+}
+
+function maybeTriggerSchmiedeWelcomeDialog() {
+  if (gameFlags.schmiedeWelcomeSeen) return;
+  gameFlags.schmiedeWelcomeSeen = true;
+  showMonologue('Die Schmiede', [
+    'Ich schiebe die schwere Tür auf. Eisengeruch, frischer Mörtel. Und mittendrin: der Amboss — schwerer als ich erwartet hatte.',
+    'Der Handwerker, den Oswin schickte, brauchte vier Stunden für den Aufbau. „So ein Stück liefern wir nur an feste Adressen", hatte er gesagt. Zum Glück habe ich jetzt eine.',
+    'Der Ofen ist kalt. Noch. Ich lege meine Hand auf das kalte Eisen. Hier fängt etwas Neues an.'
   ], render);
 }
 
@@ -481,7 +512,7 @@ function maybeTriggerFirstNightWatchDialog(onDone = () => {}) {
   if (gameFlags.firstNightWatchShown || nightWatchStats.count !== 1) { onDone(); return; }
   gameFlags.firstNightWatchShown = true;
   showMonologue('Die erste Nachtwache', [
-    'Die Nacht ist träge. Schritt vor Schritt gehe ich die Mauer ab — immer dieselbe Strecke, immer dieselben Schatten. Kein Laut außer meinen eigenen Schritten.',
+    'Die Nacht ist träge. Schritt für Schritt gehe ich die Mauer ab — immer dieselbe Strecke, immer dieselben Schatten. Kein Laut außer meinen eigenen Schritten.',
     'Irgendwann um Mitternacht hört das Denken auf. Was bleibt, ist das dumpfe Gewicht der Müdigkeit. Ich kneife die Augen zusammen. Beiße die Zähne aufeinander. Weitermachen.',
     'Ich denke ans Gold. Nicht viel — nie viel — aber es ist da. Jede Stunde, die ich hier stehe, ist eine, die ich mir verdient habe. Niemand schenkt mir hier etwas.',
     'Ich werde nicht ewig derjenige sein, der friert und die Zähne zusammenbeißt. Eines Tages werde ich weiterziehen — weiter als dieses Stadttor, weiter als dieser Morgen. Aber bis dahin: stehen. Wachen. Nicht einschlafen.'
@@ -592,22 +623,57 @@ function checkMilestones() {
     maybeShowStoryDialog('1.2');
   }
 
-  // Der Raub: nimmt das Gold, schaltet aber NUR den "Erfahrung"-Tab frei.
-  // Der eigentliche Neuanfang (Reset gegen EP) bleibt eine bewusste
-  // Spielerentscheidung — siehe experience.js/startManualReset(). Die Figur
-  // selbst zieht hier nur den Schluss, dass Gold allein sie nicht weiterbringt.
-  if (
-    !gameFlags.robberyTriggered &&
-    resources.totalGoldEarned >= GOLD_MILESTONE_THRESHOLD &&
-    storyState === 10102
-  ) {
+  // ── Neues Raub-System: 4 automatische Raub-Events ────────────
+  // Jeder Raub löst sofort einen Reset aus. Die Reset-Karte bleibt verborgen,
+  // bis der Spieler "Paranoid" kauft (nach dem 4. Raub, der Arbeit sperrt).
+  // performManualReset() berechnet den EP-Gewinn aus dem AKTUELLEN Gold
+  // (vor dem Reset). EP: Raub 1 immer 1 (isFirstReset), Raub 2-4 je 1 EP
+  // wenn Gold >= 50 (Mindestgrenze).
+
+  // Raub 1 — 50 totalGoldEarned (bestehende Logik, jetzt mit Auto-Reset)
+  if (!gameFlags.robberyTriggered && resources.totalGoldEarned >= GOLD_MILESTONE_THRESHOLD && storyState === 10102) {
     gameFlags.robberyTriggered = true;
-    storyState = 20100; // Kapitel 2 beginnt narrativ — Chronik zeigt Eintrag 1.4 ab jetzt
+    gameFlags.newRobberySystemActive = true;
+    storyState = 10103;
+    gameFlags.resetLayerUnlocked = true;
     maybeShowStoryDialog('1.4', () => {
-      resources.gold = 0;
-      gameFlags.resetLayerUnlocked = true;
       render();
-      showToast('Mein Gold ist weg. Aber vielleicht kann ich aus alldem trotzdem etwas lernen.', TOAST.EVENT);
+      showToast('Ausgeraubt. Wieder von vorn — aber ich lerne dabei.', TOAST.EVENT);
+      runManualResetWithAnimation();
+    });
+  }
+
+  // Raub 2 — 75 Gold in der Hand
+  if (!gameFlags.robbery2Triggered && resources.gold >= 75 && storyState === 10103) {
+    gameFlags.robbery2Triggered = true;
+    storyState = 10104;
+    maybeShowStoryDialog('1.5', () => {
+      render();
+      showToast('Zum zweiten Mal ausgeraubt. Ich bin wütend — aber ich mache weiter.', TOAST.EVENT);
+      runManualResetWithAnimation();
+    });
+  }
+
+  // Raub 3 — 100 Gold in der Hand
+  if (!gameFlags.robbery3Triggered && resources.gold >= 100 && storyState === 10104) {
+    gameFlags.robbery3Triggered = true;
+    storyState = 10105;
+    maybeShowStoryDialog('1.6', () => {
+      render();
+      showToast('Dreimal ausgeraubt. Das hat System — ich muss mir etwas einfallen lassen.', TOAST.EVENT);
+      runManualResetWithAnimation();
+    });
+  }
+
+  // Raub 4 — 125 Gold in der Hand. Arbeit wird danach gesperrt.
+  if (!gameFlags.robbery4Triggered && resources.gold >= 125 && storyState === 10105) {
+    gameFlags.robbery4Triggered = true;
+    storyState = 10106;
+    gameFlags.workBlockedByRobberies = true;
+    maybeShowStoryDialog('1.7', () => {
+      render();
+      showToast('Viermal ausgeraubt. Genug. Ich brauche einen anderen Weg.', TOAST.EVENT);
+      runManualResetWithAnimation();
     });
   }
 }
@@ -732,7 +798,9 @@ function completeWork() {
       maybeTriggerFirstLevelUpDialog(() => {
         maybeTriggerForemanBonusDialog(() => {
           maybeTriggerCommanderRecruitment(() => {
-            maybeTriggerFirstNightDialog();
+            maybeTriggerFirstNightDialog(() => {
+              maybeTriggerExhaustionDialog();
+            });
           });
         });
       });

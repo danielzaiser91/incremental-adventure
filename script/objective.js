@@ -11,50 +11,67 @@ function getObjectiveText() {
   // Bewusst nur grobe Richtungen für den nächsten GROSSEN Schritt der Story —
   // keine Mikro-Hinweise auf einzelne Aktionen (siehe SKILL.md).
   if (isNight()) {
-    return 'Es ist spät. Suche dir einen Schlafplatz, bevor die Nacht vorüber ist.';
+    return 'Es ist spät — ich brauche einen Schlafplatz, bevor die Nacht vorüber ist.';
   }
   if (storyState < 10101) {
-    return 'Betritt das Stadttor, um die Stadt zu erkunden.';
+    return 'Ich sollte das Stadttor betreten und die Stadt erkunden.';
   }
   if (storyState === 10101) {
-    if (!gameFlags.jobSearchDialogShown) return 'Finde einen Job und werde reich in Treutheim!';
-    if (!gameFlags.tavernVisited)        return 'Gehe zur Taverne, um einen Job zu finden.';
-    if (!gameFlags.jobUnlocked)          return 'Sprich mit dem Wirt in der Taverne.';
-    return 'Arbeite auf dem Feld, um Gold zu verdienen.';
+    if (!gameFlags.jobSearchDialogShown) return 'Einen Job finden, Gold verdienen — das ist mein Plan in Treutheim.';
+    if (!gameFlags.tavernVisited)        return 'Ich sollte zur Taverne — dort weiß man, wo man Arbeit findet.';
+    if (!gameFlags.jobUnlocked)          return 'Mit dem Wirt in der Taverne sprechen.';
+    return 'Auf dem Feld arbeiten und Gold verdienen.';
   }
   if (storyState === 10102) {
-    return 'Verdiene weiter Gold — auch wenn mich jemand beobachtet.';
+    return 'Ich muss weiter Gold verdienen — auch wenn ich mich beobachtet fühle.';
+  }
+
+  // Raub-Sequenz — storyStates 10103–10106 (nach 1.–4. Raub)
+  if (storyState === 10103) {
+    return 'Ausgeraubt, wieder von vorn. Im Erfahrungs-Baum warte ich auf eine Antwort — ich sollte ihn ansehen.';
+  }
+  if (storyState === 10104) {
+    return 'Schon wieder. Das ist kein Zufall. Ich muss langsam anders vorgehen — im Erfahrungs-Baum liegt der nächste Schritt.';
+  }
+  if (storyState === 10105) {
+    return 'Dreimal ausgeraubt. Jetzt reicht es. Ich muss mir etwas einfallen lassen — der Erfahrungs-Baum zeigt mir, wohin das führt.';
+  }
+  if (storyState === 10106) {
+    if (skills.paranoid >= 1) {
+      return 'Ich habe meinen Kopf wieder klar. Ein bewusster Neuanfang liegt vor mir — klüger diesmal.';
+    }
+    return 'Viermal ausgeraubt. Arbeiten hat keinen Sinn mehr — erst muss ich mir einen Plan machen. Der Erfahrungs-Baum wartet.';
   }
 
   // Kapitel 2 — storyState 20100+ (Raub hat stattgefunden)
   if (storyState >= 20100 && !gameFlags.kapitel2Unlocked) {
-    return 'Mein Gold ist fort. Es ist Zeit, klüger vorzugehen — sieh dir "Erfahrung" an und baue meinen Weg zur Abenteurergilde auf.';
+    return 'Mein Gold ist fort. Es ist Zeit, klüger vorzugehen — ich sollte mir den Reiter "Erfahrung" ansehen und meinen Weg zur Abenteurergilde aufbauen.';
   }
   if (storyState === 20100) {
-    return 'Das Jagdgebiet südlich der Stadt wartet. Ich sollte zeigen, was ich drauf habe.';
+    return 'Das Jagdgebiet südlich der Stadt wartet. Ich werde zeigen, was ich drauf habe.';
   }
   if (storyState === 20101) {
     const q = quests.theftInvestigation;
-    if (q.state === QUEST_STATE.UNSTARTED) return 'Im Jagdgebiet werde ich stärker. Und ich werde die Wahrheit über den Raub herausfinden — spreche mit Korbin in der Taverne.';
-    return 'Die Spur des Diebs führt ins Jagdgebiet. Augen offen halten.';
+    if (q.state === QUEST_STATE.UNSTARTED) return 'Im Jagdgebiet werde ich stärker — und die Wahrheit über den Raub werde ich auch herausfinden. Ich sollte Korbin in der Taverne ansprechen.';
+    return 'Die Spur des Diebs führt ins Jagdgebiet. Ich halte die Augen offen.';
   }
   if (storyState === 20102) {
-    return 'Korbin weiß von einer Raubserie. Erkunde das Jagdgebiet weiter — die Antworten liegen dort draußen.';
+    return 'Korbin weiß von einer Raubserie. Ich sollte das Jagdgebiet weiter erkunden — die Antworten liegen dort draußen.';
   }
   if (storyState === 20103) {
-    return 'Meine eigene Münze unter Räuberhabe. Mira weiß mehr — sie in der Taverne ansprechen.';
+    return 'Meine eigene Münze unter Räuberhabe. Mira weiß mehr — ich muss sie in der Taverne ansprechen.';
   }
   if (storyState === 20104) {
-    return 'Mira hat gesprochen. Brakka kennt den Namen — ihn in der Schmiede aufsuchen.';
+    return 'Mira hat gesprochen. Brakka kennt den Namen — ich suche ihn in der Schmiede auf.';
   }
   if (storyState === 20105) {
     const lvl = getStrengthLevel ? getStrengthLevel(strength.xp) : 0;
-    if (!gameFlags.waldtrollKilled) return 'Brakka warnt: Der Voraussucher respektiert nur Stärke. Den Waldtroll im tiefen Jagdgebiet besiegen.';
-    if (lvl < 3) return 'Brakka warnt: Erst stark genug werden (Stärke-Stufe 3+), dann den Fremden stellen.';
-    return 'Ich bin bereit. Den zwielichtigen Mann in der Taverne mit den Beweisen konfrontieren.';
+    if (!gameFlags.waldtrollKilled) return 'Brakka warnt: Der Voraussucher respektiert nur Stärke. Ich muss den Waldtroll im tiefen Jagdgebiet besiegen.';
+    if (lvl < 3) return 'Brakka warnt: Ich muss erst stark genug werden (Stärke 3+), bevor ich den Fremden stelle.';
+    return 'Ich bin bereit — den zwielichtigen Mann in der Taverne mit den Beweisen stellen.';
   }
   if (storyState === 20106) {
-    return 'Die Konfrontation liegt hinter mir. Brakka und Mira davon berichten — dann Bilanz ziehen.';
+    return 'Die Konfrontation liegt hinter mir. Ich sollte Brakka und Mira berichten, was ich herausgefunden habe.';
   }
   if (storyState >= 20200) {
     if (gameFlags.lethkarUnlocked) {
@@ -62,14 +79,14 @@ function getObjectiveText() {
         return 'Valdris. Ein Name, eine Struktur, ein Netzwerk. Was ich damit anfange, liegt bei mir.';
       if (gameFlags.varenaDecodedBrief)
         return 'Der Brief ist entschlüsselt. Lethkar hält mehr bereit als ich gedacht hatte — Varena, Thessa, Pereth. Und irgendwo nördlich des Markts: ein Haus.';
-      return 'Lethkar. Die Adresse aus dem Brief ist hier. Varena kann helfen — wenn ich ihr vertrauen kann.';
+      return 'Lethkar. Die Adresse aus dem Brief ist hier. Varena kann mir helfen — wenn ich ihr vertrauen kann.';
     }
     const mutNeeded = Math.max(0, 3 - mut.points);
     if (mutNeeded > 0)
-      return `Treutheim liegt hinter mir. Der Weg nach Lethkar ist nah — aber noch fehlt mir der Mut, den er fordert. (Noch ${mutNeeded} Mut ⚔ benötigt)`;
-    return 'Der Mut ist da. Der Weg nach Lethkar liegt offen. Auf der Weltkarte weiterziehen.';
+      return `Treutheim liegt hinter mir. Der Weg nach Lethkar ist nah — aber mir fehlt noch der Mut dazu. (Noch ${mutNeeded} Mut ⚔ benötigt)`;
+    return 'Der Mut ist da. Der Weg nach Lethkar liegt offen — auf der Weltkarte weiterziehen.';
   }
-  return 'Sieh dich um.';
+  return 'Ich sollte mich umsehen.';
 }
 
 /** Kurzes Label des aktuell jüngsten freigeschalteten Story-Eintrags, z.B. "1.2". */
