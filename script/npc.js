@@ -1056,6 +1056,7 @@ function openNpcDialog(npcId, nodeId) {
     navUnseen.taverne = true mehr nötig. */
 function isTaverneTabNew() {
   return Object.values(NPCS).some(npc => {
+    if (typeof npc.locked === 'function' ? npc.locked() : !!npc.locked) return false;
     const hasOfferableQuest = npc.questId && quests[npc.questId]?.state === QUEST_STATE.UNSTARTED &&
       (typeof npc.questAvailable !== 'function' || npc.questAvailable());
     const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId]?.state === QUEST_STATE.ACTIVE;
