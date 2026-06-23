@@ -6,6 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
+const GAME_VERSION = '0.14.2-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient NICHT der

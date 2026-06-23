@@ -6,7 +6,7 @@
 
 | Änderung | Was muss mit in den Commit |
 |---|---|
-| Bugfix | `patchnotes/pending-status.md` + Patch-Version bump (`script/content.js`) |
+| Bugfix | `patchnotes/pending-status.md` + Patch-Version bump (`script/content.js`, `version.json`, `script/state.js` GAME_VERSION) |
 | Neues Feature / Story | `patchnotes/pending-patchnotes.md` + Minor-Version bump |
 | Bekannter Bug (noch offen) | `patchnotes/pending-status.md` unter "Bekannte Fehler" |
 | Workflow / Dev-Dateien / Refactoring | nichts — kein Spieler-Impact |
@@ -15,10 +15,12 @@
 
 Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes.md` geändert wurde. Kein Update = keine Discord-Kommunikation.
 
-## Versionsnummern
+## Versionsnummern — 3 Dateien immer zusammen
 
-- `script/content.js` → Versionsstring im UI (z.B. `0.14.2-alpha`)
-- `script/state.js` → `CURRENT_SAVE_VERSION` + `SAVE_CHANGELOG` nur bei Änderungen an gespeicherten Datenstrukturen
+- `version.json` → wird vom Spiel alle 3 Min gefetcht für Update-Banner
+- `script/state.js` → `GAME_VERSION` Konstante (wird im Banner-Check verwendet)
+- `script/content.js` → Versionsstring im UI (nutzt `GAME_VERSION`)
+- `script/state.js` → `CURRENT_SAVE_VERSION` + `SAVE_CHANGELOG` **nur** bei Änderungen an gespeicherten Datenstrukturen
 
 ## Discord-Kanäle
 

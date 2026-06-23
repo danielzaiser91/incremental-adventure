@@ -26,6 +26,7 @@ function init() {
   catchUpAlchemie();
   startAlchemieTick();
   setupDevKeyListener();
+  startVersionCheck();
 }
 
 document.addEventListener('DOMContentLoaded', init);
