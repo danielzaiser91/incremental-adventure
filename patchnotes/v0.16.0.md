@@ -2,6 +2,8 @@
 ## 🗺 v0.16 — Überlebt und gelernt
 
 **Allgemein**
+• Quest-Belohnungen mit dauerhaftem Effekt werden jetzt direkt im Dialog hervorgehoben — kein Verpassen mehr im Toast
+• Benachrichtigungen bleiben jetzt 5 Sekunden sichtbar (vorher 2,6s)
 • Essen lindert jetzt leichte Müdigkeit: Brot −4%, Fisch −8%, Honigkuchen −15%, Kaffee −16% (netto)
 • Bei 100% Müdigkeit kann nicht mehr gesammelt werden — erst schlafen
 • Skill-Detail zeigt jetzt an, wenn ein Skill weitere Fähigkeiten freischaltet
