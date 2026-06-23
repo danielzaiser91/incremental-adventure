@@ -12,55 +12,55 @@
    1 = Erfahrungs-Layer (sichtbar ab meta.resets >= 1) */
 const ACHIEVEMENT_DEFS = [
   {
-    id: 'firstWork', cat: 'normal', layer: 0, icon: '⚒', name: 'Erste Schwielen',
+    id: 'firstWork', cat: ACH_CAT.NORMAL, layer: 0, icon: '⚒', name: 'Erste Schwielen',
     desc: 'Erreiche Stufe 1 in der Feldarbeit.',
     check: () => getWorkLevel(workStats.count) >= 1,
     bonusMult: 0.05
   },
   {
-    id: 'kraemerinDone', cat: 'normal', layer: 0, icon: '🧺', name: 'Geschäftspartner',
+    id: 'kraemerinDone', cat: ACH_CAT.NORMAL, layer: 0, icon: '🧺', name: 'Geschäftspartner',
     desc: 'Hilf Greta, ihr Sortiment zu erweitern.',
-    check: () => quests.kraemerinBusiness.state === 'rewarded',
+    check: () => quests.kraemerinBusiness.state === QUEST_STATE.REWARDED,
     bonusMult: 0.05
   },
   {
-    id: 'firstReset', cat: 'normal', layer: 1, icon: '✦', name: 'Ein neuer Anfang',
+    id: 'firstReset', cat: ACH_CAT.NORMAL, layer: 1, icon: '✦', name: 'Ein neuer Anfang',
     desc: 'Beginne zum ersten Mal ganz von vorn.',
     check: () => meta.resets >= 1,
     bonusMult: 0.10
   },
   {
-    id: 'nightWatchDone', cat: 'normal', layer: 1, icon: '🌙', name: 'Wachsamer Geist',
+    id: 'nightWatchDone', cat: ACH_CAT.NORMAL, layer: 1, icon: '🌙', name: 'Wachsamer Geist',
     desc: 'Schließe die Nachtwache für Brakka ab.',
-    check: () => quests.nightWatch.state === 'rewarded',
+    check: () => quests.nightWatch.state === QUEST_STATE.REWARDED,
     bonusMult: 0.05
   },
   {
-    id: 'guildReady', cat: 'normal', layer: 1, icon: '⚔', name: 'Bereit für die Gilde',
+    id: 'guildReady', cat: ACH_CAT.NORMAL, layer: 1, icon: '⚔', name: 'Bereit für die Gilde',
     desc: 'Schließe die Vorbereitung auf die Abenteurergilde ab.',
-    check: () => quests.guildRegistration.state === 'rewarded',
+    check: () => quests.guildRegistration.state === QUEST_STATE.REWARDED,
     bonusMult: 0.10
   },
   {
-    id: 'thriftMaster', cat: 'normal', layer: 1, icon: '🪙', name: 'Geschäftssinn',
+    id: 'thriftMaster', cat: ACH_CAT.NORMAL, layer: 1, icon: '🪙', name: 'Geschäftssinn',
     desc: 'Erlerne die Sparsamkeit vollständig (Stufe 2).',
-    check: () => getSkillLevel('thrift') >= 2,
+    check: () => getSkillLevel(SKILL_ID.THRIFT) >= 2,
     bonusMult: 0.05
   },
   {
-    id: 'streetCat', cat: 'secret', layer: 0, icon: '🐈', name: 'Eine stille Freundschaft',
+    id: 'streetCat', cat: ACH_CAT.SECRET, layer: 0, icon: '🐈', name: 'Eine stille Freundschaft',
     desc: 'Gewinne über mehrere Nächte das Vertrauen eines streunenden Straßentiers.',
     hint: 'Manche Freundschaften brauchen Geduld — und ein paar kalte, schlaflose Nächte.',
     check: () => !!pets.streetCat
   },
   {
-    id: 'imSchatten', cat: 'secret', layer: 1, icon: '🔍', name: 'Im Schatten',
+    id: 'imSchatten', cat: ACH_CAT.SECRET, layer: 1, icon: '🔍', name: 'Im Schatten',
     desc: 'Du hast ihn fünfmal angesprochen, bevor du wusstest, wer er wirklich ist.',
     hint: 'Manchmal sitzt die Antwort die ganze Zeit im selben Raum wie die Frage.',
     check: () => npcFlags.fremderTalkCount >= 5
   },
   {
-    id: 'chapter2Complete', cat: 'normal', layer: 1, icon: '🏆', name: 'Chroniken des vergessenen Weges',
+    id: 'chapter2Complete', cat: ACH_CAT.NORMAL, layer: 1, icon: '🏆', name: 'Chroniken des vergessenen Weges',
     desc: 'Kapitel 1 und 2 vollständig abgeschlossen — die Wahrheit hinter dem Raub enthüllt.',
     check: () => gameFlags.chapter2Complete,
     bonusMult: 0.15
@@ -84,8 +84,8 @@ function checkAchievements() {
 
     achievements[def.id] = true;
     navUnseen.errungenschaften = true;
-    const prefix = def.cat === 'secret' ? '🏆 Geheime Errungenschaft' : '🏆 Errungenschaft';
-    showToast(`${prefix} freigeschaltet: ${def.name}`, 'event');
+    const prefix = def.cat === ACH_CAT.SECRET ? '🏆 Geheime Errungenschaft' : '🏆 Errungenschaft';
+    showToast(`${prefix} freigeschaltet: ${def.name}`, TOAST.EVENT);
   });
 }
 
@@ -99,7 +99,7 @@ function setAchievementTab(tab) {
 function achievementCardHtml(def) {
   const unlocked = !!achievements[def.id];
 
-  if (def.cat === 'secret' && !unlocked) {
+  if (def.cat === ACH_CAT.SECRET && !unlocked) {
     // Straßenkehrer-Hinweis: wenn der Spieler diesen NPC gesprochen hat,
     // wird der Hinweis auf der Karte dauerhaft erweitert.
     const extraHint = def.id === 'streetCat' && gameFlags.streetSweeperTalked
@@ -129,8 +129,8 @@ function achievementCardHtml(def) {
 
 /* ── Errungenschaften-Seite ───────────────────────────────── */
 function renderErrungenschaften(el) {
-  const normalDefs = ACHIEVEMENT_DEFS.filter(d => d.cat === 'normal');
-  const secretDefs = ACHIEVEMENT_DEFS.filter(d => d.cat === 'secret');
+  const normalDefs = ACHIEVEMENT_DEFS.filter(d => d.cat === ACH_CAT.NORMAL);
+  const secretDefs = ACHIEVEMENT_DEFS.filter(d => d.cat === ACH_CAT.SECRET);
   const normalCount = normalDefs.filter(d => achievements[d.id]).length;
   const secretCount = secretDefs.filter(d => achievements[d.id]).length;
 
@@ -139,14 +139,14 @@ function renderErrungenschaften(el) {
     ? `<div class="achievement-bonus-bar">✦ Aktive Boni: <strong>+${Math.round(totalBonus * 100)}% Gold</strong> aus allen Quellen</div>`
     : '';
 
-  if (achievementTab === 'secret') {
+  if (achievementTab === ACH_CAT.SECRET) {
     el.innerHTML = `
       <div class="feature-stage">
         <div class="feature-stage-label">Errungenschaften</div>
         ${bonusSummaryHtml}
         <div class="tab-bar">
-          <button class="tab-btn" onclick="setAchievementTab('normal')">Allgemein (${normalCount}/${normalDefs.length})</button>
-          <button class="tab-btn active" onclick="setAchievementTab('secret')">Geheim (${secretCount}/${secretDefs.length})</button>
+          <button class="tab-btn" onclick="setAchievementTab('${ACH_CAT.NORMAL}')">Allgemein (${normalCount}/${normalDefs.length})</button>
+          <button class="tab-btn active" onclick="setAchievementTab('${ACH_CAT.SECRET}')">Geheim (${secretCount}/${secretDefs.length})</button>
         </div>
         <div class="tab-panel">
           <div class="action-grid">${secretDefs.map(achievementCardHtml).join('')}</div>
@@ -175,8 +175,8 @@ function renderErrungenschaften(el) {
       <div class="feature-stage-label">Errungenschaften</div>
       ${bonusSummaryHtml}
       <div class="tab-bar">
-        <button class="tab-btn active" onclick="setAchievementTab('normal')">Allgemein (${normalCount}/${normalDefs.length})</button>
-        <button class="tab-btn" onclick="setAchievementTab('secret')">Geheim (${secretCount}/${secretDefs.length})</button>
+        <button class="tab-btn active" onclick="setAchievementTab('${ACH_CAT.NORMAL}')">Allgemein (${normalCount}/${normalDefs.length})</button>
+        <button class="tab-btn" onclick="setAchievementTab('${ACH_CAT.SECRET}')">Geheim (${secretCount}/${secretDefs.length})</button>
       </div>
       <div class="tab-panel">${layerSections}</div>
     </div>`;

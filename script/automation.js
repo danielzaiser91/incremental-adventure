@@ -110,11 +110,11 @@ function tickAutomation() {
 
 /** Weist einem freien Kristall die Aktion zu. Maximal 1 Kristall pro Aktion. */
 function addAutomationSlot(actionId) {
-  if (zeitkristalle <= 0) { showToast('Kein Zeitkristall verfügbar.', 'error'); return; }
-  if (automation.slots.length >= zeitkristalle) { showToast('Alle Zeitkristalle sind bereits verwendet.', 'error'); return; }
-  if (automation.slots.some(s => s.action === actionId)) { showToast('Diese Arbeit wird bereits automatisiert.', 'info'); return; }
+  if (zeitkristalle <= 0) { showToast('Kein Zeitkristall verfügbar.', TOAST.ERROR); return; }
+  if (automation.slots.length >= zeitkristalle) { showToast('Alle Zeitkristalle sind bereits verwendet.', TOAST.ERROR); return; }
+  if (automation.slots.some(s => s.action === actionId)) { showToast('Diese Arbeit wird bereits automatisiert.', TOAST.INFO); return; }
   const action = AUTOMATION_ACTIONS.find(a => a.id === actionId);
-  if (!action || (action.unlockCond && !action.unlockCond())) { showToast('Diese Arbeit ist noch nicht verfügbar.', 'error'); return; }
+  if (!action || (action.unlockCond && !action.unlockCond())) { showToast('Diese Arbeit ist noch nicht verfügbar.', TOAST.ERROR); return; }
   automation.slots.push({ action: actionId, enabled: true });
   setupAutomation();
   render();

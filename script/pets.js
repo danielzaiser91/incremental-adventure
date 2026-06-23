@@ -65,13 +65,13 @@ function trainPet(petId) {
   if (!pet || pet.level >= PET_MAX_LEVEL) return;
 
   if (dailyPurchases.petTrainToday) {
-    showToast('Für heute haben wir genug Zeit miteinander verbracht.', 'info');
+    showToast('Für heute haben wir genug Zeit miteinander verbracht.', TOAST.INFO);
     return;
   }
 
   dailyPurchases.petTrainToday = true;
   pet.level += 1;
-  showToast(`${PET_DEFS[petId].name} ist jetzt enger mit dir vertraut (Stufe ${pet.level}/${PET_MAX_LEVEL}).`, 'event');
+  showToast(`${PET_DEFS[petId].name} ist jetzt enger mit dir vertraut (Stufe ${pet.level}/${PET_MAX_LEVEL}).`, TOAST.EVENT);
   render();
 }
 
@@ -82,14 +82,14 @@ function trainWildPet(type) {
   if (!pet || pet.level >= PET_MAX_LEVEL) return;
 
   if (dailyPurchases.petTrainToday) {
-    showToast('Für heute haben wir genug Zeit miteinander verbracht.', 'info');
+    showToast('Für heute haben wir genug Zeit miteinander verbracht.', TOAST.INFO);
     return;
   }
 
   dailyPurchases.petTrainToday = true;
   pet.level += 1;
   const def = WILD_PET_DEFS[type];
-  showToast(`${def.name} vertraut dir mehr (Stufe ${pet.level}/${PET_MAX_LEVEL}). ${def.bonusFn(pet.level)}`, 'event');
+  showToast(`${def.name} vertraut dir mehr (Stufe ${pet.level}/${PET_MAX_LEVEL}). ${def.bonusFn(pet.level)}`, TOAST.EVENT);
   render();
 }
 
@@ -140,7 +140,7 @@ function renderPets(el) {
 
   const wildSection = wildPets.length > 0
     ? `<div class="market-section-label">Wildtiere</div><div class="action-grid">${wildCards}</div>`
-    : gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === 'rewarded'
+    : gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === QUEST_STATE.REWARDED
       ? `<div class="market-section-label">Wildtiere</div>
          <p style="color:var(--muted);font-style:italic;padding:8px 0">Noch keine Wildtiere gefangen. Seltene Drops aus dem Jagdgebiet — sprich mit Greta, wenn du etwas findest.</p>`
       : '';

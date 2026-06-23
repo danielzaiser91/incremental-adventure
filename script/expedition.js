@@ -26,7 +26,7 @@ const EXPEDITION_STORY = [
     reward: () => {
       resources.gold += 80;
       strength.xp += 30;
-      showToast('Die Ruinen von Äthren. Kaum mehr als Steine — aber etwas Altes liegt in der Luft. +80 Gold, +30 Stärke-XP', 'reward');
+      showToast('Die Ruinen von Äthren. Kaum mehr als Steine — aber etwas Altes liegt in der Luft. +80 Gold, +30 Stärke-XP', TOAST.REWARD);
     },
     storyUnlock: null
   },
@@ -41,7 +41,7 @@ const EXPEDITION_STORY = [
       resources.gold += 150;
       mut.points      += 1;
       mut.totalEarned += 1;
-      showToast('Die Nordstraße ist länger als gedacht. Und Spuren — frische. +150 Gold, +1 Mut ⚔', 'reward');
+      showToast('Die Nordstraße ist länger als gedacht. Und Spuren — frische. +150 Gold, +1 Mut ⚔', TOAST.REWARD);
     },
     storyUnlock: null
   }
@@ -59,7 +59,7 @@ const EXPEDITION_GRIND = [
       const gold = 25 + Math.floor(Math.random() * 16);
       resources.gold += gold;
       resources.totalGoldEarned += gold;
-      showToast(`Stadtrand-Patrouille abgeschlossen. +${gold} Gold.`, 'reward');
+      showToast(`Stadtrand-Patrouille abgeschlossen. +${gold} Gold.`, TOAST.REWARD);
     }
   },
   {
@@ -72,7 +72,7 @@ const EXPEDITION_GRIND = [
     reward: () => {
       const qty = 2 + Math.floor(Math.random() * 3) + getWildPetResourceBonus();
       resources.inventory['wildkraut'] = (resources.inventory['wildkraut'] || 0) + qty;
-      showToast(`Kräuter gesammelt: +${qty} Wildkraut.`, 'reward');
+      showToast(`Kräuter gesammelt: +${qty} Wildkraut.`, TOAST.REWARD);
     }
   },
   {
@@ -86,7 +86,7 @@ const EXPEDITION_GRIND = [
       const qty = 3 + Math.floor(Math.random() * 3) + getWildPetResourceBonus();
       resources.inventory['holz'] = (resources.inventory['holz'] || 0) + qty;
       strength.xp += 10;
-      showToast(`Holz gehackt: +${qty} Holz, +10 Stärke-XP.`, 'reward');
+      showToast(`Holz gehackt: +${qty} Holz, +10 Stärke-XP.`, TOAST.REWARD);
     }
   },
   {
@@ -103,7 +103,7 @@ const EXPEDITION_GRIND = [
       resources.gold += gold;
       resources.totalGoldEarned += gold;
       strength.xp += xp;
-      showToast(`Kopfgeld eingestrichen. +${gold} Gold, +${xp} Stärke-XP.`, 'reward');
+      showToast(`Kopfgeld eingestrichen. +${gold} Gold, +${xp} Stärke-XP.`, TOAST.REWARD);
     }
   }
 ];
@@ -112,11 +112,11 @@ const EXPEDITION_GRIND = [
 
 function startExpedition(id, type) {
   if (expedition.activeExpedition) {
-    showToast('Noch eine Expedition unterwegs — erst zurückkehren.', 'info');
+    showToast('Noch eine Expedition unterwegs — erst zurückkehren.', TOAST.INFO);
     return;
   }
   if (isNight()) {
-    showToast('Nachts trete ich keine Expedition an.', 'info');
+    showToast('Nachts trete ich keine Expedition an.', TOAST.INFO);
     return;
   }
 
@@ -131,7 +131,7 @@ function startExpedition(id, type) {
     startTime:   Date.now(),
     durationMs:  def.duration
   };
-  showToast(`Expedition gestartet: ${def.name}`, 'event');
+  showToast(`Expedition gestartet: ${def.name}`, TOAST.EVENT);
   render();
 }
 
@@ -258,7 +258,7 @@ function renderExpedition(el) {
   // Auto-refresh alle 5s während aktiver Expedition
   if (active) {
     setTimeout(() => {
-      if (document.getElementById('main-area') && currentContent === 'expedition') render();
+      if (document.getElementById('main-area') && currentContent === CONTENT.EXPEDITION) render();
     }, 5000);
   }
 }

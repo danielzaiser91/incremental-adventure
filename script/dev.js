@@ -10,7 +10,7 @@
 /** Aktiviert das Entwickler-Panel. In der Browser-Konsole aufrufen. */
 window.devMode = function() {
   gameFlags.devModeEnabled = true;
-  showToast('🛠 Entwickler-Modus aktiviert. Einstellungen → Dev-Panel.', 'event');
+  showToast('🛠 Entwickler-Modus aktiviert. Einstellungen → Dev-Panel.', TOAST.EVENT);
   render();
 };
 
@@ -20,7 +20,7 @@ function setupDevKeyListener() {
   let buf = '';
   document.addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
-    if (currentContent !== 'settings') { buf = ''; return; }
+    if (currentContent !== CONTENT.SETTINGS) { buf = ''; return; }
     buf += e.key.toLowerCase();
     if (buf.length > 6) buf = buf.slice(-6);
     if (buf === 'daniel') {
@@ -187,7 +187,7 @@ function devUnlockAll() {
   playerStats.maxHp = getPlayerMaxHp();
   playerStats.hp    = playerStats.maxHp;
   zeitkristalle = Math.max(zeitkristalle, 3);
-  showToast('🛠 Alle Features freigeschaltet.', 'event');
+  showToast('🛠 Alle Features freigeschaltet.', TOAST.EVENT);
   render();
 }
 function devFullReset() {
@@ -198,6 +198,6 @@ function devFullReset() {
 function devShowChangelog() {
   const from = parseInt(document.getElementById('dev-cl-from')?.value ?? 0);
   const to   = parseInt(document.getElementById('dev-cl-to')?.value ?? CURRENT_SAVE_VERSION);
-  if (from >= to) { showToast('Von-Version muss kleiner als Bis-Version sein.', 'error'); return; }
+  if (from >= to) { showToast('Von-Version muss kleiner als Bis-Version sein.', TOAST.ERROR); return; }
   showSaveChangelogDialog(from, [], to, true);
 }

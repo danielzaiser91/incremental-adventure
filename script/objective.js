@@ -35,7 +35,7 @@ function getObjectiveText() {
   }
   if (storyState === 20101) {
     const q = quests.theftInvestigation;
-    if (q.state === 'unstarted') return 'Im Jagdgebiet werde ich stärker. Und ich werde die Wahrheit über den Raub herausfinden — spreche mit Korbin in der Taverne.';
+    if (q.state === QUEST_STATE.UNSTARTED) return 'Im Jagdgebiet werde ich stärker. Und ich werde die Wahrheit über den Raub herausfinden — spreche mit Korbin in der Taverne.';
     return 'Die Spur des Diebs führt ins Jagdgebiet. Augen offen halten.';
   }
   if (storyState === 20102) {
@@ -98,7 +98,7 @@ function renderObjective() {
     textEl.onclick = showObjectiveDialog;
   }
   if (chronikBtn) {
-    chronikBtn.classList.toggle('active', currentContent === 'chronik');
+    chronikBtn.classList.toggle('active', currentContent === CONTENT.CHRONIK);
     chronikBtn.classList.toggle('chronik-btn-new', chronikButtonUnseen);
   }
 

@@ -49,7 +49,7 @@ function sellInventoryItem(itemId) {
   resources.totalGoldEarned += price;
 
   const itemMeta = findItemMeta(itemId);
-  showToast(`${itemMeta.name} an Greta verkauft (+${price} Gold).`, 'purchase');
+  showToast(`${itemMeta.name} an Greta verkauft (+${price} Gold).`, TOAST.PURCHASE);
   checkMilestones();
   render();
 }
@@ -95,7 +95,7 @@ function grantItem(itemId, qty = 1) {
   const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
   if (!alreadyHasSlot && getUsedInventorySlots() >= getInventorySlotCount()) {
     overflowBag[itemId] = (overflowBag[itemId] || 0) + qty;
-    showToast('Mein Beutel ist voll — das hier trage ich vorerst zusätzlich bei mir.', 'event');
+    showToast('Mein Beutel ist voll — das hier trage ich vorerst zusätzlich bei mir.', TOAST.EVENT);
     return;
   }
   resources.inventory[itemId] = (resources.inventory[itemId] || 0) + qty;
@@ -110,7 +110,7 @@ function moveFromOverflow(itemId) {
 
   const alreadyHasSlot = (resources.inventory[itemId] || 0) > 0;
   if (!alreadyHasSlot && getUsedInventorySlots() >= getInventorySlotCount()) {
-    showToast('Noch immer kein Platz im Beutel.', 'error');
+    showToast('Noch immer kein Platz im Beutel.', TOAST.ERROR);
     return;
   }
 
@@ -285,7 +285,7 @@ function equipItem(itemId) {
   resources.inventory[itemId] = owned - 1;
   equipment[item.slot] = itemId;
 
-  showToast(`${item.name} ausgerüstet.`, 'purchase');
+  showToast(`${item.name} ausgerüstet.`, TOAST.PURCHASE);
   render();
 }
 
@@ -319,6 +319,6 @@ function useFood(itemId) {
   else if (item.hungerRelief && item.tirednessRelief) toastMsg = `${item.name} verzehrt. Hunger und Müdigkeit lassen nach.`;
   else if (item.tirednessRelief) toastMsg = `${item.name} getrunken. Die Müdigkeit lässt etwas nach.`;
   else                       toastMsg = `${item.name} verzehrt. Der Hunger lässt nach.`;
-  showToast(toastMsg, 'purchase');
+  showToast(toastMsg, TOAST.PURCHASE);
   render();
 }

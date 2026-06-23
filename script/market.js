@@ -85,7 +85,7 @@ const FOOD_ITEMS = [
     // kein Zulieferer, kein Kaffee.
     id: 'kaffee', name: 'Schwarzer Kaffee', icon: '☕', cost: 3,
     hungerRelief: 0, tirednessRelief: 20, dailyLimit: 2, useLabel: 'Trinken',
-    unlockCond: () => quests.kraemerinBusiness.state === 'rewarded',
+    unlockCond: () => quests.kraemerinBusiness.state === QUEST_STATE.REWARDED,
     lockedDesc: 'Noch kein Kaffee im Angebot. Wenn der Handel in Treutheim wächst, kommt auch das.',
     desc: 'Bitter und stark, in einem kleinen Tonbecher. Vertreibt die Müdigkeit, wenn Schlaf keine Option ist.'
   }
@@ -98,7 +98,7 @@ const FOOD_ITEMS = [
 function priceDisplayHtml(baseCost) {
   const price = applyThrift(baseCost);
   const display = `${price} Gold`;
-  const thriftLevel = getSkillLevel('thrift');
+  const thriftLevel = getSkillLevel(SKILL_ID.THRIFT);
   if (thriftLevel <= 0) return display;
 
   return modifiedValueHtml(display, 'Basiskosten', `${baseCost}g`, [
@@ -275,7 +275,7 @@ function renderVendorKraemer(el) {
   }
 
   let gretaSection = '';
-  if (quests.kraemerinBusiness.state === 'rewarded') {
+  if (quests.kraemerinBusiness.state === QUEST_STATE.REWARDED) {
     const totalOnHand = RESOURCE_ITEMS.reduce((sum, r) => sum + (resources.inventory[r.id] || 0), 0);
     const sellCard = `
       <div class="action-card">
@@ -355,20 +355,20 @@ function buyFood(itemId) {
   const limitReached = item.dailyLimit && boughtToday >= item.dailyLimit;
 
   if (isNight()) {
-    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    showToast('Der Krämer hat für die Nacht geschlossen.', TOAST.ERROR);
     return;
   }
   if (isFoodItemLocked(item)) {
-    showToast(`${item.name} ist zurzeit nicht im Angebot.`, 'error');
+    showToast(`${item.name} ist zurzeit nicht im Angebot.`, TOAST.ERROR);
     return;
   }
   if (limitReached) {
-    showToast(`Mehr ${item.name} gibt es heute nicht — versuch es morgen wieder.`, 'error');
+    showToast(`Mehr ${item.name} gibt es heute nicht — versuch es morgen wieder.`, TOAST.ERROR);
     maybeShowFoodLimitDialog(item.name);
     return;
   }
   if (resources.gold < price) {
-    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für ${item.name}.`, 'error');
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für ${item.name}.`, TOAST.ERROR);
     return;
   }
 
@@ -376,7 +376,7 @@ function buyFood(itemId) {
   grantItem(item.id, 1);
   dailyPurchases[itemId] = boughtToday + 1;
 
-  showToast(`${item.name} gekauft (−${price} Gold). Liegt jetzt in deinem Inventar bereit.`, 'purchase');
+  showToast(`${item.name} gekauft (−${price} Gold). Liegt jetzt in deinem Inventar bereit.`, TOAST.PURCHASE);
   render();
 
   if (item.dailyLimit && dailyPurchases[itemId] >= item.dailyLimit) maybeShowFoodLimitDialog(item.name);
@@ -401,17 +401,17 @@ function buyLedergloves() {
   const price = applyThrift(LEDERGLOVES_COST);
 
   if (isNight()) {
-    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    showToast('Der Krämer hat für die Nacht geschlossen.', TOAST.ERROR);
     return;
   }
   if (alreadyHave || resources.gold < price) {
-    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für die Lederhandschuhe.`, 'error');
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für die Lederhandschuhe.`, TOAST.ERROR);
     return;
   }
 
   resources.gold -= price;
   grantItem('ledergloves', 1);
-  showToast(`Lederhandschuhe erworben (−${price} Gold). Im Inventar ausrüsten, damit sie wirken.`, 'purchase');
+  showToast(`Lederhandschuhe erworben (−${price} Gold). Im Inventar ausrüsten, damit sie wirken.`, TOAST.PURCHASE);
   render();
 }
 
@@ -425,17 +425,17 @@ function buyTool(itemId) {
   const price = applyThrift(tool.cost);
 
   if (isNight()) {
-    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    showToast('Der Krämer hat für die Nacht geschlossen.', TOAST.ERROR);
     return;
   }
   if (alreadyHave || resources.gold < price) {
-    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für ${tool.name}.`, 'error');
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für ${tool.name}.`, TOAST.ERROR);
     return;
   }
 
   resources.gold -= price;
   grantItem(itemId, 1);
-  showToast(`${tool.name} erworben (−${price} Gold).`, 'purchase');
+  showToast(`${tool.name} erworben (−${price} Gold).`, TOAST.PURCHASE);
   render();
 }
 
@@ -444,7 +444,7 @@ function buyTool(itemId) {
 function sellResources() {
   const total = RESOURCE_ITEMS.reduce((sum, r) => sum + (resources.inventory[r.id] || 0), 0);
   if (total <= 0) {
-    showToast('Nichts zu verkaufen.', 'error');
+    showToast('Nichts zu verkaufen.', TOAST.ERROR);
     return;
   }
 
@@ -454,7 +454,7 @@ function sellResources() {
   resources.totalGoldEarned   += gain;
   resources.totalResourcesSold = (resources.totalResourcesSold || 0) + total;
 
-  showToast(`${total} Rohstoffe verkauft (+${gain} Gold).`, 'purchase');
+  showToast(`${total} Rohstoffe verkauft (+${gain} Gold).`, TOAST.PURCHASE);
   render();
 }
 
@@ -466,21 +466,21 @@ function buyArbeitsguertel() {
   const price = applyThrift(ARBEITSGUERTEL_COST);
 
   if (isNight()) {
-    showToast('Der Krämer hat für die Nacht geschlossen.', 'error');
+    showToast('Der Krämer hat für die Nacht geschlossen.', TOAST.ERROR);
     return;
   }
   if (!enoughSold) {
-    showToast(`Greta braucht erst noch mehr verkaufte Rohstoffe (${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD}).`, 'error');
+    showToast(`Greta braucht erst noch mehr verkaufte Rohstoffe (${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD}).`, TOAST.ERROR);
     return;
   }
   if (alreadyHave || resources.gold < price) {
-    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für den Arbeitsgürtel.`, 'error');
+    showToast(`Nicht genug Gold. Du benötigst ${price} Gold für den Arbeitsgürtel.`, TOAST.ERROR);
     return;
   }
 
   resources.gold -= price;
   grantItem('arbeitsguertel', 1);
-  showToast(`Arbeitsgürtel erworben (−${price} Gold). Im Inventar ausrüsten, damit er wirkt.`, 'purchase');
+  showToast(`Arbeitsgürtel erworben (−${price} Gold). Im Inventar ausrüsten, damit er wirkt.`, TOAST.PURCHASE);
   render();
 }
 
@@ -501,7 +501,7 @@ function maybeTriggerKraemerinDialog() {
   showPaginatedDialog('Greta, die Krämerin', splitLongDialogPages(pages), [{
     label: 'Ich höre zu.',
     onClick: () => closeDialog(() => {
-      quests.kraemerinBusiness.state = 'invited';
+      quests.kraemerinBusiness.state = QUEST_STATE.INVITED;
       navUnseen.taverne = true;
       render();
     })

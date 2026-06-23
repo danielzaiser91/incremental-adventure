@@ -286,17 +286,17 @@ function setSkillLevel(id, level) {
 
 /** Marktplatz-Preis-Multiplikator durch den Skill "Sparsamkeit". */
 function getThriftMult() {
-  return 1 - getSkillLevel('thrift') * 0.10;
+  return 1 - getSkillLevel(SKILL_ID.THRIFT) * 0.10;
 }
 
 /** Pausendauer in Spielminuten (15 ohne Skill, 30 ab Stufe 1). */
 function getRestDurationMins() {
-  return getSkillLevel('longerRest') >= 1 ? 30 : 15;
+  return getSkillLevel(SKILL_ID.LONGER_REST) >= 1 ? 30 : 15;
 }
 
 /** Müdigkeitserholungs-Multiplikator der Pause (1.0 / 1.2 / 1.3). */
 function getRestRecoveryMult() {
-  const level = getSkillLevel('longerRest');
+  const level = getSkillLevel(SKILL_ID.LONGER_REST);
   return level >= 2 ? 1.3 : level >= 1 ? 1.2 : 1.0;
 }
 
@@ -333,11 +333,11 @@ function buyNextSkillLevel(id) {
   const epCost   = node.costs[level];
   const goldCost = node.goldCosts ? node.goldCosts[level] : 0;
   if (experience.points < epCost) {
-    showToast(`Nicht genug Erfahrung — benötigt: ${epCost} EP.`, 'error');
+    showToast(`Nicht genug Erfahrung — benötigt: ${epCost} EP.`, TOAST.ERROR);
     return;
   }
   if (resources.gold < goldCost) {
-    showToast(`Nicht genug Gold — benötigt: ${goldCost} Gold.`, 'error');
+    showToast(`Nicht genug Gold — benötigt: ${goldCost} Gold.`, TOAST.ERROR);
     return;
   }
 
@@ -348,12 +348,12 @@ function buyNextSkillLevel(id) {
   // "guildPrep" hat keinen Spielmechanik-Effekt, sondern stößt direkt
   // Brakkas Gilden-Questkette an (siehe npc.js).
   if (id === 'guildPrep') {
-    quests.guildRegistration.state = 'active';
+    quests.guildRegistration.state = QUEST_STATE.ACTIVE;
     navUnseen.taverne = true;
   }
 
   const levelNote = node.maxLevel > 1 ? ` (Stufe ${level + 1})` : '';
-  showToast(`${node.name}${levelNote} erlernt.`, 'event');
+  showToast(`${node.name}${levelNote} erlernt.`, TOAST.EVENT);
 
   // Beim erstmaligen Erreichen des Maximums eines super-skill-fähigen Skills:
   // Oswin-Hinweis-Monolog einmalig auslösen (siehe npc.js, lehrer.js).
@@ -504,10 +504,10 @@ function performManualReset() {
   playerStats.maxHp = getPlayerMaxHp();
   playerStats.hp    = playerStats.maxHp;
   currentContent = 'erfahrung';
-  navLevel       = 0;
+  navLevel       = NAV_LEVEL.MENU;
 
   render();
-  showToast(`+${epGain} Erfahrung gewonnen. Mein Gold ist fort, aber das Gelernte bleibt.`, 'event');
+  showToast(`+${epGain} Erfahrung gewonnen. Mein Gold ist fort, aber das Gelernte bleibt.`, TOAST.EVENT);
 }
 
 /** Startet den Neuanfang — beim allerersten Mal mit ausführlicher
@@ -719,7 +719,7 @@ function renderSkillTree() {
       const req = node.requires;
       const reqsMet = req
         ? getSkillLevel(req) >= 1
-        : getSkillLevel('jobLeveling') >= 1;
+        : getSkillLevel(SKILL_ID.JOB_LEVELING) >= 1;
       const visOk = typeof node.visibleIf !== 'function' || node.visibleIf();
       return reqsMet && visOk;
     });
@@ -856,10 +856,10 @@ function renderErfahrung(el) {
   if (hasTree && hasLessons) {
     lowerSection = `
       <div class="tab-bar">
-        <button class="tab-btn ${erfahrungTab === 'skills' ? 'active' : ''}" onclick="setErfahrungTab('skills')">Skillbaum</button>
-        <button class="tab-btn ${erfahrungTab === 'lessons' ? 'active' : ''}" onclick="setErfahrungTab('lessons')">Lektionen</button>
-      </div>
-      <div class="tab-panel">${erfahrungTab === 'skills' ? skillTreeWithIntro() : lifeLessonsHtml()}</div>`;
+        <button class="tab-btn ${erfahrungTab === EP_TAB.SKILLS ? 'active' : ''}" onclick="setErfahrungTab('${EP_TAB.SKILLS}')">Skillbaum</button>
+        <button class="tab-btn ${erfahrungTab === EP_TAB.LESSONS ? 'active' : ''}" onclick="setErfahrungTab('${EP_TAB.LESSONS}')">Lektionen</button>
+</div>
+      <div class="tab-panel">${erfahrungTab === EP_TAB.SKILLS ? skillTreeWithIntro() : lifeLessonsHtml()}</div>`;
   } else if (hasTree) {
     lowerSection = skillTreeWithIntro();
   } else if (hasLessons) {

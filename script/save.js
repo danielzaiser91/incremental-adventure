@@ -64,21 +64,21 @@ function saveGame(opts = {}) {
       chronikUnseenEntryIds,
       navLevel,
       currentCity,
-      currentContent: currentContent === 'settings' ? 'geschichte' : currentContent,
+      currentContent: currentContent === CONTENT.SETTINGS ? CONTENT.GESCHICHTE : currentContent,
       savedAt:        Date.now()
     };
 
     localStorage.setItem(SAVE_KEY, JSON.stringify(save));
 
     if (opts.silent) {
-      showToast('💾 Automatisch gespeichert', 'info');
+      showToast('💾 Automatisch gespeichert', TOAST.INFO);
     } else {
-      showToast(`💾 Spielstand gespeichert (${new Date().toLocaleTimeString('de-DE')})`, 'info');
+      showToast(`💾 Spielstand gespeichert (${new Date().toLocaleTimeString('de-DE')})`, TOAST.INFO);
     }
     render(); // Einstellungen-Ansicht aktualisieren (Laden-Button aktivieren)
 
   } catch (e) {
-    showToast('⚠ Speichern fehlgeschlagen: ' + e.message, 'error');
+    showToast('⚠ Speichern fehlgeschlagen: ' + e.message, TOAST.ERROR);
   }
 }
 
@@ -119,7 +119,7 @@ function applySaveData(save) {
   killStats      = { total: 0, ...save.killStats };
   nightWatchStats = { count: 0, ...save.nightWatchStats };
   achievements   = save.achievements ?? {};
-  achievementTab = save.achievementTab ?? 'normal';
+  achievementTab = save.achievementTab ?? ACH_CAT.NORMAL;
   pets           = save.pets ?? {};
   wildPets       = save.wildPets ?? [];
   streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0, ...save.streetCatProgress };
@@ -236,7 +236,7 @@ function performGracefulReset() {
   closeDialog(() => {
     saveGame({ silent: true });
     render();
-    showToast('Kapitel 2 wurde neu gestartet — dein bisheriger Fortschritt bleibt erhalten.', 'info');
+    showToast('Kapitel 2 wurde neu gestartet — dein bisheriger Fortschritt bleibt erhalten.', TOAST.INFO);
   });
 }
 
@@ -247,7 +247,7 @@ function performGracefulReset() {
 function loadGame() {
   const raw = localStorage.getItem(SAVE_KEY);
   if (!raw) {
-    showToast('Kein Spielstand gefunden.', 'error');
+    showToast('Kein Spielstand gefunden.', TOAST.ERROR);
     return;
   }
 
@@ -261,7 +261,7 @@ function loadGame() {
       : [];
 
     const dateStr = new Date(save.savedAt).toLocaleString('de-DE');
-    showToast(`📂 Spielstand geladen (gespeichert: ${dateStr})`, 'info');
+    showToast(`📂 Spielstand geladen (gespeichert: ${dateStr})`, TOAST.INFO);
     render();
 
     if (loadedVersion < CURRENT_SAVE_VERSION) {
@@ -310,7 +310,7 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
     .filter(v => v > loadedVersion && v <= maxVersion)
     .sort((a, b) => a - b);
   if (versions.length === 0) {
-    if (isDevPreview) showToast('Keine Changelog-Einträge für diesen Bereich.', 'info');
+    if (isDevPreview) showToast('Keine Changelog-Einträge für diesen Bereich.', TOAST.INFO);
     return;
   }
 
@@ -420,9 +420,9 @@ function downloadCorruptedSave(raw) {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    showToast('📥 Spielstand-Backup gespeichert.', 'info');
+    showToast('📥 Spielstand-Backup gespeichert.', TOAST.INFO);
   } catch (e) {
-    showToast('⚠ Download fehlgeschlagen — Zwischenablage-Export als Alternative nutzen.', 'error');
+    showToast('⚠ Download fehlgeschlagen — Zwischenablage-Export als Alternative nutzen.', TOAST.ERROR);
   }
 }
 
@@ -500,14 +500,14 @@ function showIncompatibleSaveDialog(raw) {
 async function exportSaveToClipboard() {
   const raw = localStorage.getItem(SAVE_KEY);
   if (!raw) {
-    showToast('Kein Spielstand zum Exportieren vorhanden — erst speichern.', 'error');
+    showToast('Kein Spielstand zum Exportieren vorhanden — erst speichern.', TOAST.ERROR);
     return;
   }
   try {
     await navigator.clipboard.writeText(raw);
-    showToast('📋 Spielstand in die Zwischenablage kopiert.', 'info');
+    showToast('📋 Spielstand in die Zwischenablage kopiert.', TOAST.INFO);
   } catch (e) {
-    showToast('⚠ Export fehlgeschlagen — Zwischenablage nicht verfügbar.', 'error');
+    showToast('⚠ Export fehlgeschlagen — Zwischenablage nicht verfügbar.', TOAST.ERROR);
   }
 }
 
@@ -520,11 +520,11 @@ async function importSaveFromClipboard() {
   try {
     text = await navigator.clipboard.readText();
   } catch (e) {
-    showToast('⚠ Import fehlgeschlagen — Zwischenablage nicht verfügbar.', 'error');
+    showToast('⚠ Import fehlgeschlagen — Zwischenablage nicht verfügbar.', TOAST.ERROR);
     return;
   }
   if (!text || !text.trim()) {
-    showToast('Zwischenablage ist leer.', 'error');
+    showToast('Zwischenablage ist leer.', TOAST.ERROR);
     return;
   }
 
@@ -694,7 +694,7 @@ function performHardReset() {
   stadtwacheStats = defaultStadtwacheStats();
   nightWatchStats = defaultNightWatchStats();
   achievements  = {};
-  achievementTab = 'normal';
+  achievementTab = ACH_CAT.NORMAL;
   pets          = {};
   wildPets      = [];
   streetCatProgress = { sleepCount: 0, encounters: 0, postAdoptionNights: 0 };
@@ -728,7 +728,7 @@ function performHardReset() {
   shownDialogs  = [];
   chronikButtonUnseen   = false;
   chronikUnseenEntryIds = [];
-  navLevel       = 0;
+  navLevel       = NAV_LEVEL.MENU;
   currentCity    = 'treutheim';
   currentContent = 'geschichte';
   marketVendor   = null;
@@ -737,6 +737,6 @@ function performHardReset() {
   localStorage.removeItem(SAVE_KEY);
   setupAutoSave();
 
-  showToast('Spielstand zurückgesetzt. Eine neue Geschichte beginnt…', 'info');
+  showToast('Spielstand zurückgesetzt. Eine neue Geschichte beginnt…', TOAST.INFO);
   render();
 }

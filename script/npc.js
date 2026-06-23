@@ -29,10 +29,10 @@ const NPCS = {
     availability: 'always', availabilityText: 'Ohne ihn läuft hier nix.',
     // Badge sobald Detektiv-Quest startbereit ist (Spieler in Kapitel 2, Quest noch unstarted)
     hasHint: () => (gameFlags.tavernVisited && !gameFlags.jobUnlocked) ||
-      (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === 'unstarted' && storyState >= 20101),
+      (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === QUEST_STATE.UNSTARTED && storyState >= 20101),
     start: () => {
       if (!gameFlags.jobUnlocked) return 'jobAdvice';
-      if (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === 'unstarted' && storyState >= 20101) return 'chapter2intro';
+      if (gameFlags.kapitel2Unlocked && quests.theftInvestigation.state === QUEST_STATE.UNSTARTED && storyState >= 20101) return 'chapter2intro';
       if (gameFlags.kapitel2Unlocked && storyState >= 20101) return 'chapter2greet';
       return 'greet';
     },
@@ -49,7 +49,7 @@ const NPCS = {
             next: null,
             action: () => {
               gameFlags.jobUnlocked = true;
-              showToast('Job gefunden: Feldarbeit vor dem Stadttor.', 'event');
+              showToast('Job gefunden: Feldarbeit vor dem Stadttor.', TOAST.EVENT);
             }
           }
         ]
@@ -93,14 +93,14 @@ const NPCS = {
           label: 'Das ist die Spur, die ich brauche.',
           next: null,
           action: () => {
-            if (quests.theftInvestigation.state === 'unstarted') {
-              quests.theftInvestigation.state = 'active';
+            if (quests.theftInvestigation.state === QUEST_STATE.UNSTARTED) {
+              quests.theftInvestigation.state = QUEST_STATE.ACTIVE;
               gameFlags.korbinChapter2Talked = true;
               storyState = 20102;
               navUnseen.quests = true;
               render();
               maybeShowStoryDialog('2.2');
-              showToast('Quest erhalten: Die Spur des Diebs.', 'event');
+              showToast('Quest erhalten: Die Spur des Diebs.', TOAST.EVENT);
             }
           }
         }]
@@ -126,14 +126,14 @@ const NPCS = {
     locked: () => !gameFlags.firstNightDialogShown,
     questId: 'miraLetter',
     questAvailable: () => npcFlags.miraDrinkGiven && meta.resets >= 1,
-    hasHint: () => quests.miraLetter.state === 'delivered' ||
-      quests.theftInvestigation.state === 'investigating',
+    hasHint: () => quests.miraLetter.state === QUEST_STATE.DELIVERED ||
+      quests.theftInvestigation.state === QUEST_STATE.INVESTIGATING,
     start: () => {
-      if (quests.miraLetter.state === 'delivered') return 'letterDelivered';
-      if (quests.miraLetter.state === 'active') return 'letterReminder';
-      if (quests.theftInvestigation.state === 'investigating') return 'detectiveAsk';
+      if (quests.miraLetter.state === QUEST_STATE.DELIVERED) return 'letterDelivered';
+      if (quests.miraLetter.state === QUEST_STATE.ACTIVE) return 'letterReminder';
+      if (quests.theftInvestigation.state === QUEST_STATE.INVESTIGATING) return 'detectiveAsk';
       if (!npcFlags.miraDrinkGiven) return 'greet';
-      if (meta.resets >= 1 && quests.miraLetter.state === 'unstarted') return 'letterOffer';
+      if (meta.resets >= 1 && quests.miraLetter.state === QUEST_STATE.UNSTARTED) return 'letterOffer';
       if (gameFlags.miraRevealedInfo && !gameFlags.mirasBriefGiven) return 'givesBrief';
       if (gameFlags.miraRevealedInfo) return 'friendlyAfterReveal';
       return 'friendly';
@@ -152,7 +152,7 @@ const NPCS = {
               resources.gold -= 3;
               grantItem('brot', 1);
               npcFlags.miraDrinkGiven = true;
-              showToast('Drink für Mira ausgegeben (−3 Gold). Sie schiebt dir ein Brot zu.', 'purchase');
+              showToast('Drink für Mira ausgegeben (−3 Gold). Sie schiebt dir ein Brot zu.', TOAST.PURCHASE);
             }
           },
           { label: 'Nur Smalltalk.', next: 'smalltalk' }
@@ -181,8 +181,8 @@ const NPCS = {
             next: null,
             action: () => {
               questItems.sealedLetter = (questItems.sealedLetter || 0) + 1;
-              quests.miraLetter.state = 'active';
-              showToast('Quest erhalten: Ein Brief für Brakka.', 'event');
+              quests.miraLetter.state = QUEST_STATE.ACTIVE;
+              showToast('Quest erhalten: Ein Brief für Brakka.', TOAST.EVENT);
             }
           },
           { label: 'Lieber nicht.', next: null }
@@ -198,8 +198,8 @@ const NPCS = {
           label: 'War mir ein Vergnügen.',
           next: null,
           action: () => {
-            quests.miraLetter.state = 'rewarded';
-            showToast('Mira ist erleichtert — die Sache mit dem Brief ist erledigt.', 'event');
+            quests.miraLetter.state = QUEST_STATE.REWARDED;
+            showToast('Mira ist erleichtert — die Sache mit dem Brief ist erledigt.', TOAST.EVENT);
           }
         }]
       },
@@ -226,12 +226,12 @@ const NPCS = {
           action: () => {
             if (!gameFlags.miraRevealedInfo) {
               gameFlags.miraRevealedInfo = true;
-              quests.theftInvestigation.state = 'mira_consulted';
+              quests.theftInvestigation.state = QUEST_STATE.MIRA_CONSULTED;
               storyState = 20104;
               navUnseen.taverne = true; // Brakka hat jetzt etwas zu sagen
               render();
               maybeShowStoryDialog('2.4');
-              showToast('Mira hat geredet. Brakka als nächstes.', 'event');
+              showToast('Mira hat geredet. Brakka als nächstes.', TOAST.EVENT);
             }
           }
         }]
@@ -250,7 +250,7 @@ const NPCS = {
             gameFlags.mirasBriefGiven = true;
             questItems.miras_brief    = (questItems.miras_brief || 0) + 1;
             navUnseen.inventar        = true;
-            showToast('Mira hat dir einen verschlüsselten Brief gegeben. Er wartet auf eine Übersetzung — in Lethkar.', 'event');
+            showToast('Mira hat dir einen verschlüsselten Brief gegeben. Er wartet auf eine Übersetzung — in Lethkar.', TOAST.EVENT);
           }
         }]
       },
@@ -310,7 +310,7 @@ const NPCS = {
               resources.gold -= 2000;
               meta.hasHome    = true;
               navUnseen.meinhaus = true;
-              showToast('Das Haus gehört dir. "Mein Haus" ist jetzt in der Navigation verfügbar.', 'event');
+              showToast('Das Haus gehört dir. "Mein Haus" ist jetzt in der Navigation verfügbar.', TOAST.EVENT);
             }
           },
           { label: '"Ich überlege es mir."', next: null }
@@ -356,7 +356,7 @@ const NPCS = {
               resources.gold -= 1200;
               meta.hasSmith   = true;
               navUnseen.schmiede = true;
-              showToast('Die Schmiede ist fertig. Sie ist jetzt in "Mein Haus" verfügbar.', 'event');
+              showToast('Die Schmiede ist fertig. Sie ist jetzt in "Mein Haus" verfügbar.', TOAST.EVENT);
             }
           },
           { label: '"Noch nicht."', next: null }
@@ -389,7 +389,7 @@ const NPCS = {
           action: () => {
             gameFlags.lehrerUnlocked = true;
             navUnseen.lehrer = true;
-            showToast('Das Lehrhaus ist jetzt in der Navigation freigeschaltet.', 'event');
+            showToast('Das Lehrhaus ist jetzt in der Navigation freigeschaltet.', TOAST.EVENT);
           }
         }]
       }
@@ -402,20 +402,20 @@ const NPCS = {
     availability: 'day', availabilityText: 'Habe ihn tagsüber gesehen.',
     questId: 'nightWatch',
     questAvailable: () => gameClock.day >= 2 && gameFlags.waffenschmiedRejected,
-    hasHint: () => quests.guildRegistration.state === 'active' || quests.nightWatch.state === 'done' ||
-      (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) ||
-      quests.theftInvestigation.state === 'mira_consulted',
+    hasHint: () => quests.guildRegistration.state === QUEST_STATE.ACTIVE || quests.nightWatch.state === QUEST_STATE.DONE ||
+      (quests.miraLetter.state === QUEST_STATE.ACTIVE && (questItems.sealedLetter || 0) > 0) ||
+      quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED,
     start: () => {
-      if (quests.miraLetter.state === 'active' && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
-      if (quests.theftInvestigation.state === 'mira_consulted') return 'detectiveReveal';
-      if (quests.guildRegistration.state === 'active') {
+      if (quests.miraLetter.state === QUEST_STATE.ACTIVE && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
+      if (quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED) return 'detectiveReveal';
+      if (quests.guildRegistration.state === QUEST_STATE.ACTIVE) {
         return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
       }
-      if (quests.guildRegistration.state === 'rewarded') return 'guildFinished';
+      if (quests.guildRegistration.state === QUEST_STATE.REWARDED) return 'guildFinished';
       switch (quests.nightWatch.state) {
-        case 'unstarted': return (gameClock.day >= 2 && gameFlags.waffenschmiedRejected) ? 'offer' : 'tooSoon';
-        case 'active':    return 'waiting';
-        case 'done':      return 'turnIn';
+        case QUEST_STATE.UNSTARTED: return (gameClock.day >= 2 && gameFlags.waffenschmiedRejected) ? 'offer' : 'tooSoon';
+        case QUEST_STATE.ACTIVE:    return 'waiting';
+        case QUEST_STATE.DONE:      return 'turnIn';
         default:          return 'idle';
       }
     },
@@ -445,8 +445,8 @@ const NPCS = {
             label: 'Ich nehme die Aufgabe an.',
             next: null,
             action: () => {
-              quests.nightWatch.state = 'active';
-              showToast('Aufgabe angenommen: Halte heute Nacht Wache.', 'event');
+              quests.nightWatch.state = QUEST_STATE.ACTIVE;
+              showToast('Aufgabe angenommen: Halte heute Nacht Wache.', TOAST.EVENT);
             }
           },
           { label: 'Vielleicht ein anderes Mal.', next: null }
@@ -468,9 +468,9 @@ const NPCS = {
             action: () => {
               resources.gold            += NIGHTWATCH_QUEST_REWARD;
               resources.totalGoldEarned += NIGHTWATCH_QUEST_REWARD;
-              quests.nightWatch.state = 'rewarded';
+              quests.nightWatch.state = QUEST_STATE.REWARDED;
               checkMilestones(); // Gold-Gewinne außerhalb von completeWork()/nightWatch() müssen denselben Check auslösen
-              showToast(`Aufgabe abgeschlossen: Nachtwache (+${NIGHTWATCH_QUEST_REWARD} Gold). Ab jetzt jede Nacht möglich.`, 'reward');
+              showToast(`Aufgabe abgeschlossen: Nachtwache (+${NIGHTWATCH_QUEST_REWARD} Gold). Ab jetzt jede Nacht möglich.`, TOAST.REWARD);
             }
           }
         ]
@@ -497,7 +497,7 @@ const NPCS = {
           next: null,
           action: () => {
             gameFlags.guildExplainedByBrakka = true;
-            showToast('Aufgabe: Bereite dich auf die Gildenprüfung vor — sprich wieder mit Brakka, wenn du bereit bist.', 'event');
+            showToast('Aufgabe: Bereite dich auf die Gildenprüfung vor — sprich wieder mit Brakka, wenn du bereit bist.', TOAST.EVENT);
           }
         }]
       },
@@ -509,7 +509,7 @@ const NPCS = {
             label: 'Ja. Ich bin bereit.',
             next: 'guildEnd',
             action: () => {
-              quests.guildRegistration.state = 'rewarded';
+              quests.guildRegistration.state = QUEST_STATE.REWARDED;
               gameFlags.kapitel2Unlocked   = true;
               gameFlags.jagdgebietUnlocked = true;
               navUnseen.jagdgebiet = true;
@@ -543,11 +543,11 @@ const NPCS = {
           action: () => {
             if (!gameFlags.brakkaRevealedSuspect) {
               gameFlags.brakkaRevealedSuspect = true;
-              quests.theftInvestigation.state = 'brakka_consulted';
+              quests.theftInvestigation.state = QUEST_STATE.BRAKKA_CONSULTED;
               storyState = 20105;
               render();
               maybeShowStoryDialog('2.5');
-              showToast('Brakka hat gesprochen. Jetzt: Stärke-Lvl 3 + Waldtroll besiegen — dann den Fremden stellen.', 'event');
+              showToast('Brakka hat gesprochen. Jetzt: Stärke-Lvl 3 + Waldtroll besiegen — dann den Fremden stellen.', TOAST.EVENT);
             }
           }
         }]
@@ -563,11 +563,11 @@ const NPCS = {
             next: null,
             action: () => {
               questItems.sealedLetter = Math.max(0, (questItems.sealedLetter || 0) - 1);
-              quests.miraLetter.state = 'delivered';
+              quests.miraLetter.state = QUEST_STATE.DELIVERED;
               resources.gold            += 6;
               resources.totalGoldEarned += 6;
               checkMilestones();
-              showToast('Brief überbracht (+6 Gold). Mira sollte davon erfahren.', 'reward');
+              showToast('Brief überbracht (+6 Gold). Mira sollte davon erfahren.', TOAST.REWARD);
             }
           }
         ]
@@ -583,8 +583,8 @@ const NPCS = {
     badgeOnActive: true, // Badge zeigt hier "geh hin, er wartet", nicht "neue Aufgabe verfügbar"
     // Er hat den Spieler ausdrücklich für ABENDS in die Taverne eingeladen
     // (siehe maybeTriggerForemanBonusDialog()) — tagsüber ist er auf dem Feld.
-    locked: () => quests.foremanRaise.state === 'unstarted' || !isNight(),
-    start: () => (quests.foremanRaise.state === 'active' ? 'praise' : 'idle'),
+    locked: () => quests.foremanRaise.state === QUEST_STATE.UNSTARTED || !isNight(),
+    start: () => (quests.foremanRaise.state === QUEST_STATE.ACTIVE ? 'praise' : 'idle'),
     nodes: {
       praise: {
         text: [
@@ -599,9 +599,9 @@ const NPCS = {
             gameFlags.foremanBonusGiven = true;
             resources.gold            += FOREMAN_BONUS_GOLD;
             resources.totalGoldEarned += FOREMAN_BONUS_GOLD;
-            quests.foremanRaise.state = 'rewarded';
+            quests.foremanRaise.state = QUEST_STATE.REWARDED;
             checkMilestones();
-            showToast(`+${FOREMAN_BONUS_GOLD} Gold und dauerhaft +1 Gold pro Feldarbeit.`, 'reward');
+            showToast(`+${FOREMAN_BONUS_GOLD} Gold und dauerhaft +1 Gold pro Feldarbeit.`, TOAST.REWARD);
           }
         }]
       },
@@ -622,11 +622,11 @@ const NPCS = {
     availability: 'day', availabilityText: 'Habe sie tagsüber gesehen.',
     questId: 'kraemerinBusiness',
     badgeOnActive: true,
-    locked: () => quests.kraemerinBusiness.state === 'unstarted',
+    locked: () => quests.kraemerinBusiness.state === QUEST_STATE.UNSTARTED,
     start: () => {
       switch (quests.kraemerinBusiness.state) {
-        case 'invited': return 'offer';
-        case 'active':  return hasEnoughResourcesForQuest() ? 'turnIn' : 'reminder';
+        case QUEST_STATE.INVITED: return 'offer';
+        case QUEST_STATE.ACTIVE:  return hasEnoughResourcesForQuest() ? 'turnIn' : 'reminder';
         default: {
           // Nach Quest-Abschluss: Tier-Drop-Items einlösen?
           const drops = ['hundespur','rabenfeder','hasenspur','eichhoernchennuss'];
@@ -646,10 +646,10 @@ const NPCS = {
           label: 'Ich kümmere mich darum.',
           next: null,
           action: () => {
-            quests.kraemerinBusiness.state = 'active';
+            quests.kraemerinBusiness.state = QUEST_STATE.ACTIVE;
             gameFlags.resourceGatheringUnlocked = true;
             navUnseen.rohstoffe = true;
-            showToast('Quest erhalten: Rohstoffe für Greta sammeln.', 'event');
+            showToast('Quest erhalten: Rohstoffe für Greta sammeln.', TOAST.EVENT);
           }
         }]
       },
@@ -669,8 +669,8 @@ const NPCS = {
             Object.entries(KRAEMERIN_QUEST_NEED).forEach(([id, qty]) => {
               resources.inventory[id] = Math.max(0, (resources.inventory[id] || 0) - qty);
             });
-            quests.kraemerinBusiness.state = 'rewarded';
-            showToast('Rohstoffe abgegeben. Greta erweitert ihr Sortiment.', 'reward');
+            quests.kraemerinBusiness.state = QUEST_STATE.REWARDED;
+            showToast('Rohstoffe abgegeben. Greta erweitert ihr Sortiment.', TOAST.REWARD);
           }
         }]
       },
@@ -709,7 +709,7 @@ const NPCS = {
                   questItems[itemId] = 0;
                   wildPets.push({ type, level: 1 });
                   navUnseen.pets = true;
-                  showToast(`${icons[type]} ${names[type]} gefangen! Er wartet unter "Haustiere".`, 'event');
+                  showToast(`${icons[type]} ${names[type]} gefangen! Er wartet unter "Haustiere".`, TOAST.EVENT);
                   break;
                 }
               }
@@ -731,9 +731,9 @@ const NPCS = {
     availability: 'evening', availabilityText: 'Habe ihn bisher nur abends gesehen.',
     questId: 'commanderTraining',
     badgeOnActive: true,
-    locked: () => quests.commanderTraining.state === 'unstarted',
+    locked: () => quests.commanderTraining.state === QUEST_STATE.UNSTARTED,
     start: () => {
-      if (quests.commanderTraining.state === 'active') return 'offer';
+      if (quests.commanderTraining.state === QUEST_STATE.ACTIVE) return 'offer';
       if (gameFlags.commanderRecruitmentShown && !gameFlags.stadtwacheAccepted) return 'recruit';
       if (gameFlags.stadtwacheAccepted) return 'accepted';
       return 'idle';
@@ -749,8 +749,8 @@ const NPCS = {
             label: 'Zeig es mir.',
             next: null,
             action: () => {
-              quests.commanderTraining.state = 'rewarded';
-              showToast('Roswald hat dir die Grundlagen gezeigt. Im Erfahrungsbaum kannst du jetzt für die Nachtwache aufleveln.', 'event');
+              quests.commanderTraining.state = QUEST_STATE.REWARDED;
+              showToast('Roswald hat dir die Grundlagen gezeigt. Im Erfahrungsbaum kannst du jetzt für die Nachtwache aufleveln.', TOAST.EVENT);
             }
           },
           { label: 'Vielleicht ein anderes Mal.', next: null }
@@ -778,7 +778,7 @@ const NPCS = {
               gameFlags.stadtwacheAccepted = true;
               gameFlags.stadtwacheDeclined = false;
               navUnseen.stadtwache = true;
-              showToast('Roswald nickt. Ab jetzt bist du Teil der Stadtwache.', 'event');
+              showToast('Roswald nickt. Ab jetzt bist du Teil der Stadtwache.', TOAST.EVENT);
             }
           },
           {
@@ -840,15 +840,15 @@ const NPCS = {
     availability: 'always', availabilityText: 'Scheint immer hier zu sein.',
     locked: () => storyState < 10102,
     // Badge wenn Konfrontation möglich ist
-    hasHint: () => quests.theftInvestigation.state === 'brakka_consulted' &&
+    hasHint: () => quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
       gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3,
     start: () => {
       // Konfrontation (Bedingungen: Quest in 'brakka_consulted', Stärke 3+, Waldtroll besiegt)
-      if (quests.theftInvestigation.state === 'brakka_consulted' &&
+      if (quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
           gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3) {
         return 'confrontation';
       }
-      if (quests.theftInvestigation.state === 'confronted' || gameFlags.fremderConfronted) {
+      if (quests.theftInvestigation.state === QUEST_STATE.CONFRONTED || gameFlags.fremderConfronted) {
         return 'postConfrontation';
       }
       return 'greet';
@@ -920,14 +920,14 @@ const NPCS = {
           action: () => {
             if (!gameFlags.fremderConfronted) {
               gameFlags.fremderConfronted = true;
-              quests.theftInvestigation.state = 'confronted';
+              quests.theftInvestigation.state = QUEST_STATE.CONFRONTED;
               storyState = 20106;
               render();
               maybeShowStoryDialog('2.6', () => {
                 // Kurze Pause, dann Sieg-Dialog anzeigen
                 setTimeout(triggerChapter2Victory, 800);
               });
-              showToast('Die Konfrontation ist vorbei. Die Spur des Diebs — abgeschlossen.', 'event');
+              showToast('Die Konfrontation ist vorbei. Die Spur des Diebs — abgeschlossen.', TOAST.EVENT);
             }
           }
         }]
@@ -1007,9 +1007,9 @@ function renderTaverne(el) {
     !(typeof npc.locked === 'function' ? npc.locked() : !!npc.locked));
 
   const cards = visibleNpcs.map(([id, npc]) => {
-    const hasOfferableQuest = npc.questId && quests[npc.questId].state === 'unstarted' &&
+    const hasOfferableQuest = npc.questId && quests[npc.questId].state === QUEST_STATE.UNSTARTED &&
       (typeof npc.questAvailable !== 'function' || npc.questAvailable());
-    const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId].state === 'active';
+    const hasPendingQuest = npc.questId && npc.badgeOnActive && quests[npc.questId].state === QUEST_STATE.ACTIVE;
     const hasHint = typeof npc.hasHint === 'function' && npc.hasHint();
     const badge = (hasOfferableQuest || hasPendingQuest || hasHint)
       ? `<div class="npc-quest-badge" title="Hat eine Aufgabe für mich">❗</div>`
@@ -1045,7 +1045,7 @@ const NPCS_LETHKAR = [
     id: 'varena',
     name: 'Varena', icon: '⚗',
     tagline: 'Alchemistin. Spricht wenig — und wenn, dann präzise.',
-    location: 'taverne',
+    location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.varenaMetFirst) return 'firstMeet';
       if ((questItems.miras_brief || 0) > 0 && !gameFlags.varenaDecodedBrief) return 'offerDecode';
@@ -1098,7 +1098,7 @@ const NPCS_LETHKAR = [
             gameFlags.mirasBriefDecoded  = true;
             questItems.miras_brief       = 0;
             navUnseen.inventar           = true;
-            showToast('Der Brief ist entschlüsselt. Inhalt jetzt im Inventar lesbar.', 'event');
+            showToast('Der Brief ist entschlüsselt. Inhalt jetzt im Inventar lesbar.', TOAST.EVENT);
           }
         }]
       },
@@ -1133,7 +1133,7 @@ const NPCS_LETHKAR = [
             alchemie.lastTick = Date.now();
             startAlchemieTick();
             navUnseen.alchemie = true;
-            showToast('Alchemie freigeschaltet! Das Laboratorium wartet auf dich.', 'reward');
+            showToast('Alchemie freigeschaltet! Das Laboratorium wartet auf dich.', TOAST.REWARD);
           }
         }]
       },
@@ -1155,7 +1155,7 @@ const NPCS_LETHKAR = [
     id: 'thessa',
     name: 'Thessa', icon: '📜',
     tagline: 'Archivarin. Kennt Lethkar besser als sich selbst.',
-    location: 'taverne',
+    location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.thessaMetFirst) return 'firstMeet';
       if (gameFlags.thessaTrustGained) return 'trusted';
@@ -1199,7 +1199,7 @@ const NPCS_LETHKAR = [
             action: () => {
               if (gameFlags.varenaDecodedBrief) {
                 gameFlags.thessaTrustGained = true;
-                showToast('Thessa vertraut dir jetzt. Ihr Wissen über Lethkar steht dir offen.', 'event');
+                showToast('Thessa vertraut dir jetzt. Ihr Wissen über Lethkar steht dir offen.', TOAST.EVENT);
               }
             }
           }
@@ -1234,7 +1234,7 @@ const NPCS_LETHKAR = [
     id: 'pereth',
     name: 'Pereth', icon: '🗡',
     tagline: 'Söldner. Tischbein-Kippend. Zu entspannt für diese Stadt.',
-    location: 'taverne',
+    location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.perethMetFirst) return 'firstMeet';
       if (gameFlags.chapter3StoryComplete) return 'afterQuest';
@@ -1269,7 +1269,7 @@ const NPCS_LETHKAR = [
             next: null,
             action: () => {
               gameFlags.perethQuestStarted = true;
-              showToast('Neuer Auftrag: Das Lagerhaus am Südtor erkunden.', 'event');
+              showToast('Neuer Auftrag: Das Lagerhaus am Südtor erkunden.', TOAST.EVENT);
             }
           },
           { label: '"Zu riskant. Vielleicht später."', next: null }
@@ -1313,7 +1313,7 @@ const NPCS_LETHKAR = [
             resources.gold += 300;
             resources.totalGoldEarned += 300;
             gameFlags.chapter3StoryComplete = true;
-            showToast('+300 Gold — Pereths Auftrag erfüllt', 'reward');
+            showToast('+300 Gold — Pereths Auftrag erfüllt', TOAST.REWARD);
             render();
             setTimeout(() => maybeShowStoryDialog('3.6', () => {}), 400);
           }

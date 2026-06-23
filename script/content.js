@@ -11,39 +11,39 @@ function renderContent() {
   if (!area) return;
 
   switch (currentContent) {
-    case 'geschichte':    renderGeschichte(area);   break;
-    case 'weltkarte':     renderWeltkarte(area);    break;
-    case 'treutheim':     renderTreutheim(area);    break;
-    case 'arbeitsplatz':  renderArbeitsplatz(area); break;
-    case 'marktplatz':
-      if (!marketVendor)            renderMarktplatzHub(area);
-      else if (marketVendor === 'kraemer')  renderVendorKraemer(area);
-      else if (marketVendor === 'schmiede') renderVendorSchmiede(area);
-      else                           renderMarktplatzHub(area);
+    case CONTENT.GESCHICHTE:         renderGeschichte(area);         break;
+    case CONTENT.WELTKARTE:          renderWeltkarte(area);          break;
+    case CONTENT.TREUTHEIM:          renderTreutheim(area);          break;
+    case CONTENT.ARBEITSPLATZ:       renderArbeitsplatz(area);       break;
+    case CONTENT.MARKTPLATZ:
+      if (!marketVendor)                       renderMarktplatzHub(area);
+      else if (marketVendor === VENDOR.KRAEMER)  renderVendorKraemer(area);
+      else if (marketVendor === VENDOR.SCHMIEDE) renderVendorSchmiede(area);
+      else                                       renderMarktplatzHub(area);
       break;
-    case 'schlafplatz':   renderSchlafplatz(area);  break;
-    case 'rohstoffe':     renderRohstoffe(area);    break;
-    case 'taverne':       renderTaverne(area);      break;
-    case 'inventar':      renderInventar(area);     break;
-    case 'quests':        renderQuests(area);       break;
-    case 'erfahrung':     renderErfahrung(area);    break;
-    case 'errungenschaften': renderErrungenschaften(area); break;
-    case 'pets':          renderPets(area);         break;
-    case 'lehrer':        renderLehrer(area);        break;
-    case 'jagdgebiet':    renderJagdgebiet(area);   break;
-    case 'stadtwache':    renderStadtwache(area);   break;
-    case 'meinhaus':      renderMeinHaus(area);     break;
-    case 'schmiede':      renderSchmiede(area);     break;
-    case 'automation':    renderAutomation(area);   break;
-    case 'expedition':       renderExpedition(area);        break;
-    case 'lethkar':          renderLethkar(area);           break;
-    case 'alchemie':         renderAlchemie(area);          break;
-    case 'lethkar_taverne':  renderLethkarTaverne(area);    break;
-    case 'lethkar_markt':    renderLethkarMarkt(area);      break;
-    case 'lethkar_schlafplatz': renderLethkarSchlafplatz(area); break;
-    case 'chronik':       renderChronik(area);      break;
-    case 'settings':      renderSettings(area);     break;
-    default:              renderGeschichte(area);
+    case CONTENT.SCHLAFPLATZ:        renderSchlafplatz(area);        break;
+    case CONTENT.ROHSTOFFE:          renderRohstoffe(area);          break;
+    case CONTENT.TAVERNE:            renderTaverne(area);            break;
+    case CONTENT.INVENTAR:           renderInventar(area);           break;
+    case CONTENT.QUESTS:             renderQuests(area);             break;
+    case CONTENT.ERFAHRUNG:          renderErfahrung(area);          break;
+    case CONTENT.ERRUNGENSCHAFTEN:   renderErrungenschaften(area);   break;
+    case CONTENT.PETS:               renderPets(area);               break;
+    case CONTENT.LEHRER:             renderLehrer(area);             break;
+    case CONTENT.JAGDGEBIET:         renderJagdgebiet(area);         break;
+    case CONTENT.STADTWACHE:         renderStadtwache(area);         break;
+    case CONTENT.MEINHAUS:           renderMeinHaus(area);           break;
+    case CONTENT.SCHMIEDE:           renderSchmiede(area);           break;
+    case CONTENT.AUTOMATION:         renderAutomation(area);         break;
+    case CONTENT.EXPEDITION:         renderExpedition(area);         break;
+    case CONTENT.LETHKAR:            renderLethkar(area);            break;
+    case CONTENT.ALCHEMIE:           renderAlchemie(area);           break;
+    case CONTENT.LETHKAR_TAVERNE:    renderLethkarTaverne(area);     break;
+    case CONTENT.LETHKAR_MARKT:      renderLethkarMarkt(area);       break;
+    case CONTENT.LETHKAR_SCHLAFPLATZ:renderLethkarSchlafplatz(area); break;
+    case CONTENT.CHRONIK:            renderChronik(area);            break;
+    case CONTENT.SETTINGS:           renderSettings(area);           break;
+    default:                         renderGeschichte(area);
   }
 }
 
@@ -110,7 +110,7 @@ function renderGeschichte(el) {
           <p class="location-card-desc">
             Wie es weitergeht, schreibt sich noch. Bis dahin lässt sich nachlesen, was bisher geschah.
           </p>
-          <button class="action-btn" onclick="showContent('chronik')">📜 Zur Chronik</button>
+          <button class="action-btn" onclick="showContent('${CONTENT.CHRONIK}')">📜 Zur Chronik</button>
         </div>
       </div>
     `;
@@ -382,7 +382,7 @@ function renderArbeitsplatz(el) {
         ${jobInfoPanel}
       </div>
       ${(() => {
-        const restLevel = getSkillLevel('longerRest');
+        const restLevel = getSkillLevel(SKILL_ID.LONGER_REST);
         const mins      = getRestDurationMins();
         const recovery  = Math.round(10 * getRestRecoveryMult());
         const name      = restLevel >= 1 ? 'Lange Pause' : 'Kurz verschnaufen';
@@ -608,9 +608,9 @@ function renderMeinHaus(el) {
       <div class="location-card">
         <p class="location-card-desc">Am Westrand von Treutheim. Kein Lärm, keine fremden Schritte. Es ist nicht viel — aber es gehört mir.</p>
         <div class="location-card-actions">
-          <button class="goto-btn" onclick="showContent('schlafplatz')">🛏 Schlafen (Qualität ${qualityTier})</button>
+          <button class="goto-btn" onclick="showContent('${CONTENT.SCHLAFPLATZ}')">🛏 Schlafen (Qualität ${qualityTier})</button>
           ${meta.hasSmith
-            ? `<button class="goto-btn" onclick="showContent('schmiede')">⚒ Zur Schmiede</button>`
+            ? `<button class="goto-btn" onclick="showContent('${CONTENT.SCHMIEDE}')">⚒ Zur Schmiede</button>`
             : `<div class="action-card" style="margin-top:12px;">
                 <div class="action-card-title">⚒ Schmiede ausbauen</div>
                 <p class="action-card-desc">Ein Schlosser aus der Süderstraße könnte eine Schmiede einbauen. Oswin vermittelt das.</p>
@@ -923,11 +923,11 @@ function renderSettings(el) {
       <div class="settings-group">
         <div class="settings-section-title">Verlauf</div>
         <div class="tab-bar" style="max-width: 420px;">
-          <button class="tab-btn ${historyFilter === 'toasts' ? 'active' : ''}" onclick="setHistoryFilter('toasts')">Meldungen (${toastHistory.length})</button>
-          <button class="tab-btn ${historyFilter === 'dialoge' ? 'active' : ''}" onclick="setHistoryFilter('dialoge')">Dialoge (${dialogHistory.length})</button>
+          <button class="tab-btn ${historyFilter === HISTORY_FILTER.TOASTS ? 'active' : ''}" onclick="setHistoryFilter('${HISTORY_FILTER.TOASTS}')">Meldungen (${toastHistory.length})</button>
+          <button class="tab-btn ${historyFilter === HISTORY_FILTER.DIALOGE ? 'active' : ''}" onclick="setHistoryFilter('${HISTORY_FILTER.DIALOGE}')">Dialoge (${dialogHistory.length})</button>
         </div>
         <div class="history-panel">
-          ${historyFilter === 'toasts'
+          ${historyFilter === HISTORY_FILTER.TOASTS
             ? (toastHistory.length
                 ? toastHistory.map(t => `
                     <div class="history-entry history-entry-${t.type}">

@@ -143,7 +143,7 @@ function completeStadtwache() {
   adjustHunger(Math.round(getStadtwacheHungerGain()));
   adjustTiredness(tirednessGain);
   advanceClock(STADTWACHE_CLOCK_MINUTES);
-  showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, 'reward');
+  showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, TOAST.REWARD);
   checkMilestones();
   maybeTriggerCommanderRecruitment(() => {});
   render();
@@ -228,7 +228,7 @@ function gatherResource(resourceId) {
   advanceClock(RESOURCE_GATHER_MINUTES);
 
   const resourceName = RESOURCE_ITEMS.find(r => r.id === resourceId).name;
-  showToast(`+${RESOURCE_GATHER_AMOUNT} ${resourceName}.`, 'reward');
+  showToast(`+${RESOURCE_GATHER_AMOUNT} ${resourceName}.`, TOAST.REWARD);
   render();
 }
 
@@ -320,7 +320,7 @@ function getWorkReward(levelOverride) {
     (siehe WORK_LEVELS, specialXpMult). */
 function getWorkXpGain(levelOverride) {
   const level = WORK_LEVELS[levelOverride ?? getWorkLevel(workStats.count)];
-  const skillMult = 1 + getSkillLevel('quickLearner') * 0.1 +
+  const skillMult = 1 + getSkillLevel(SKILL_ID.QUICK_LEARNER) * 0.1 +
     (superSkills.quickLearner_super ? 0.25 : 0);
   const base = skills.jobXpBonus ? 2 : 1;
   return Math.max(1, Math.round(base * skillMult * (level.specialXpMult || 1)));
@@ -465,7 +465,7 @@ function maybeTriggerWorkBlockedDialog(onDone = () => {}) {
 function maybeTriggerForemanBonusDialog(onDone = () => {}) {
   if (gameFlags.foremanInviteShown || workStats.count < FOREMAN_BONUS_THRESHOLD) { onDone(); return; }
   gameFlags.foremanInviteShown = true;
-  quests.foremanRaise.state    = 'active';
+  quests.foremanRaise.state    = QUEST_STATE.ACTIVE;
   // KEIN navUnseen.taverne hier — er ist nur ABENDS dort (siehe
   // checkEveningArrivals(), aufgerufen aus main.js render()).
 
@@ -495,7 +495,7 @@ function maybeTriggerFirstNightWatchDialog(onDone = () => {}) {
 function maybeTriggerCommanderArrival(onDone = () => {}) {
   if (gameFlags.commanderInviteShown || nightWatchStats.count < COMMANDER_INVITE_THRESHOLD) { onDone(); return; }
   gameFlags.commanderInviteShown = true;
-  quests.commanderTraining.state = 'active';
+  quests.commanderTraining.state = QUEST_STATE.ACTIVE;
   navUnseen.taverne = true;
 
   showMonologue('Ein wachsames Auge', [
@@ -535,7 +535,7 @@ function maybeTriggerCommanderRecruitment(onDone = () => {}) {
     Belohnung noch nicht abgeholt). Das einmalige Flag verhindert, dass
     der Hinweis nach dem Klick sofort wieder erscheint. */
 function checkEveningArrivals() {
-  if (quests.foremanRaise.state === 'active' && isNight() && !gameFlags.foremanEveningAlerted) {
+  if (quests.foremanRaise.state === QUEST_STATE.ACTIVE && isNight() && !gameFlags.foremanEveningAlerted) {
     gameFlags.foremanEveningAlerted = true;
     navUnseen.taverne = true;
   }
@@ -601,7 +601,7 @@ function checkMilestones() {
       resources.gold = 0;
       gameFlags.resetLayerUnlocked = true;
       render();
-      showToast('Mein Gold ist weg. Aber vielleicht kann ich aus alldem trotzdem etwas lernen.', 'event');
+      showToast('Mein Gold ist weg. Aber vielleicht kann ich aus alldem trotzdem etwas lernen.', TOAST.EVENT);
     });
   }
 }
@@ -625,7 +625,7 @@ function startWork() {
 
   if (gameFlags.mustEatBread) {
     maybeTriggerWorkBlockedDialog(() => {
-      showToast('Ohne etwas im Magen bringt das nichts. Ich brauche Brot vom Marktplatz.', 'error');
+      showToast('Ohne etwas im Magen bringt das nichts. Ich brauche Brot vom Marktplatz.', TOAST.ERROR);
     });
     return;
   }
@@ -646,7 +646,7 @@ function startLongShift() {
 
   if (gameFlags.mustEatBread) {
     maybeTriggerWorkBlockedDialog(() => {
-      showToast('Ohne etwas im Magen bringt das nichts. Ich brauche Brot vom Marktplatz.', 'error');
+      showToast('Ohne etwas im Magen bringt das nichts. Ich brauche Brot vom Marktplatz.', TOAST.ERROR);
     });
     return;
   }
@@ -710,7 +710,7 @@ function completeWork() {
   advanceClock(WORK_CLOCK_MINUTES * mult);
 
   const hungryNote = wasHungry ? ' Der Hunger schwächt dich und ermüdet dich schneller.' : '';
-  showToast(`+${reward} Gold erhalten (Gesamt: ${resources.gold}).${hungryNote}`, 'reward');
+  showToast(`+${reward} Gold erhalten (Gesamt: ${resources.gold}).${hungryNote}`, TOAST.REWARD);
 
   checkMilestones();
   render();
@@ -741,7 +741,7 @@ function nightWatch() {
   // Vor der ersten Belohnung durch Brakka ist die Nachtwache nur EIN Mal
   // möglich — danach muss erst berichtet werden, bevor man es wieder tut.
   // Nach der Belohnung ("rewarded") ist sie jede Nacht verfügbar.
-  const allowed = state === 'active' || state === 'rewarded';
+  const allowed = state === QUEST_STATE.ACTIVE || state === 'rewarded';
   if (!isNight() || nightFlags.nightActivityUsedToday || !allowed) return;
 
   const reward = getNightWatchReward();
@@ -751,12 +751,12 @@ function nightWatch() {
   nightFlags.nightActivityUsedToday = true;
   nightFlags.recoveryDebuff         = true;
 
-  if (state === 'active') {
-    quests.nightWatch.state = 'done';
+  if (state === QUEST_STATE.ACTIVE) {
+    quests.nightWatch.state = QUEST_STATE.DONE;
     navUnseen.taverne = true; // Jetzt gibt es wirklich etwas bei Brakka zu berichten
-    showToast(`Nachtwache gehalten (+${reward} Gold). Erzähl Brakka davon!`, 'reward');
+    showToast(`Nachtwache gehalten (+${reward} Gold). Erzähl Brakka davon!`, TOAST.REWARD);
   } else {
-    showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, 'reward');
+    showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, TOAST.REWARD);
   }
 
   checkMilestones();
@@ -773,7 +773,7 @@ function nightWatch() {
 /** Direkt-Sleep für externe Orte (Lethkar-Pension etc.) ohne SLEEP_OPTIONS-Lookup. */
 function sleepAt(id, cost, qualityTier) {
   if (!isNight()) return;
-  if (resources.gold < cost) { showToast('Nicht genug Gold.', 'error'); return; }
+  if (resources.gold < cost) { showToast('Nicht genug Gold.', TOAST.ERROR); return; }
   finishSleep({ id, cost, qualityTier, hungerPenalty: 0 });
 }
 
@@ -785,7 +785,7 @@ function sleep(optionId) {
   if (option.requiresFlag && !gameFlags[option.requiresFlag]) return;
 
   if (option.cost > 0 && resources.gold < option.cost) {
-    showToast(`Nicht genug Gold für: ${option.name}.`, 'error');
+    showToast(`Nicht genug Gold für: ${option.name}.`, TOAST.ERROR);
     return;
   }
 
@@ -851,12 +851,12 @@ function finishSleep(option) {
 
   startNewDay();
   currentContent = currentCity === 'lethkar' ? 'lethkar' : 'treutheim';
-  navLevel       = 2;
+  navLevel       = NAV_LEVEL.STADT;
 
   render();
 
   const finishMorning = () => maybeTriggerHungerDialog(() => {
-    showToast(`Ein neuer Tag beginnt (Tag ${gameClock.day}).`, 'info');
+    showToast(`Ein neuer Tag beginnt (Tag ${gameClock.day}).`, TOAST.INFO);
   });
 
   if (isFirstSleep) maybeShowStoryDialog('1.3', finishMorning);
@@ -982,7 +982,7 @@ function triggerChapter2Victory() {
 
   maybeShowStoryDialog('2.7', () => {
     gameFlags.chapter2Complete = true;
-    quests.theftInvestigation.state = 'rewarded';
+    quests.theftInvestigation.state = QUEST_STATE.REWARDED;
     storyState = 20200;
     render();
 
@@ -1025,7 +1025,7 @@ function triggerChapter2Victory() {
           closeDialog();
           achievements.chapter2Complete = true;
           navUnseen.errungenschaften = true;
-          showToast('🏆 Errungenschaft freigeschaltet: Chroniken des vergessenen Weges!', 'event');
+          showToast('🏆 Errungenschaft freigeschaltet: Chroniken des vergessenen Weges!', TOAST.EVENT);
           render();
         }
       }]

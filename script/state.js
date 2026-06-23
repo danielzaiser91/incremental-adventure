@@ -9,6 +9,86 @@ const SAVE_KEY = 'chronicles_v1';
 const GAME_VERSION = '0.14.3-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
+/* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
+
+/** Content-IDs für currentContent / showContent() / switch-Dispatcher */
+const CONTENT = Object.freeze({
+  GESCHICHTE:          'geschichte',
+  WELTKARTE:           'weltkarte',
+  TREUTHEIM:           'treutheim',
+  ARBEITSPLATZ:        'arbeitsplatz',
+  MARKTPLATZ:          'marktplatz',
+  SCHLAFPLATZ:         'schlafplatz',
+  ROHSTOFFE:           'rohstoffe',
+  TAVERNE:             'taverne',
+  INVENTAR:            'inventar',
+  QUESTS:              'quests',
+  ERFAHRUNG:           'erfahrung',
+  ERRUNGENSCHAFTEN:    'errungenschaften',
+  PETS:                'pets',
+  LEHRER:              'lehrer',
+  JAGDGEBIET:          'jagdgebiet',
+  STADTWACHE:          'stadtwache',
+  MEINHAUS:            'meinhaus',
+  SCHMIEDE:            'schmiede',
+  AUTOMATION:          'automation',
+  EXPEDITION:          'expedition',
+  LETHKAR:             'lethkar',
+  ALCHEMIE:            'alchemie',
+  LETHKAR_TAVERNE:     'lethkar_taverne',
+  LETHKAR_MARKT:       'lethkar_markt',
+  LETHKAR_SCHLAFPLATZ: 'lethkar_schlafplatz',
+  CHRONIK:             'chronik',
+  SETTINGS:            'settings',
+});
+
+/** Quest-Zustände (state-Machine-Strings in quests.*) */
+const QUEST_STATE = Object.freeze({
+  UNSTARTED:        'unstarted',
+  ACTIVE:           'active',
+  DONE:             'done',
+  REWARDED:         'rewarded',
+  DELIVERED:        'delivered',
+  INVESTIGATING:    'investigating',
+  MIRA_CONSULTED:   'mira_consulted',
+  BRAKKA_CONSULTED: 'brakka_consulted',
+  CONFRONTED:       'confronted',
+  INVITED:          'invited',
+});
+
+/** Zweiter Parameter von showToast() */
+const TOAST = Object.freeze({
+  EVENT:    'event',
+  ERROR:    'error',
+  REWARD:   'reward',
+  INFO:     'info',
+  PURCHASE: 'purchase',
+});
+
+/** Errungenschaften-Kategorien (cat-Feld in ACHIEVEMENT_DEFS) */
+const ACH_CAT = Object.freeze({ NORMAL: 'normal', SECRET: 'secret' });
+
+/** Navigationsebenen (navLevel) */
+const NAV_LEVEL = Object.freeze({ MENU: 0, WELTKARTE: 1, STADT: 2 });
+
+/** Skill-IDs für getSkillLevel() — nur die, die in Logik verglichen werden */
+const SKILL_ID = Object.freeze({
+  THRIFT:        'thrift',
+  QUICK_LEARNER: 'quickLearner',
+  LONGER_REST:   'longerRest',
+  JOB_LEVELING:  'jobLeveling',
+  IRON_WILL:     'ironWill',
+});
+
+/** Tabs in der Erfahrungs-Seite */
+const EP_TAB = Object.freeze({ SKILLS: 'skills', LESSONS: 'lessons' });
+
+/** Filter im Einstellungs-Verlauf */
+const HISTORY_FILTER = Object.freeze({ TOASTS: 'toasts', DIALOGE: 'dialoge' });
+
+/** Marktplatz-Händler-IDs (marketVendor) */
+const VENDOR = Object.freeze({ KRAEMER: 'kraemer', SCHMIEDE: 'schmiede' });
+
 /* Aktuelle Spielstand-Versionsnummer (siehe save.js). Dient NICHT der
    Zukunftssicherheit selbst (die kommt aus den Default-Merges in
    loadGame()/applySaveData()), sondern als Vergleichswert für
@@ -33,11 +113,11 @@ const CURRENT_SAVE_VERSION = 13;
 const SAVE_CHANGELOG = {
   4: [
     { cat: 'Neuerung', chapter: 1, text: 'Greta, die Krämerin, hat eine eigene Sammel-Questkette.',
-      spoiler: () => quests.kraemerinBusiness.state === 'unstarted' },
+      spoiler: () => quests.kraemerinBusiness.state === QUEST_STATE.UNSTARTED },
     { cat: 'Neuerung', chapter: 1, text: 'Neuer Sammelplatz für Rohstoffe (Holz, Stein, Wildkraut).',
       spoiler: () => !gameFlags.resourceGatheringUnlocked },
     { cat: 'Neuerung', chapter: 1, text: 'Kommandant Roswald und eine Nachtwache-Karriere.',
-      spoiler: () => quests.commanderTraining.state === 'unstarted' },
+      spoiler: () => quests.commanderTraining.state === QUEST_STATE.UNSTARTED },
     { cat: 'Änderung', text: 'Erfahrungs-Skillbaum auf drei Äste erweitert, mit Tab-Ansicht.' },
     { cat: 'Änderung', text: 'Feldarbeits-Boni neu kalibriert (Hunger/Müdigkeit ausgewogener).' },
     { cat: 'Neuerung', text: 'Automatisches Speichern/Laden, Export/Import per Zwischenablage.' },
@@ -381,7 +461,7 @@ let killStats = {
    ACHIEVEMENT_DEFS -> `true`. Bloße Anwesenheit eines Schlüssels bedeutet
    "freigeschaltet" — kein Eintrag heißt "noch nicht erreicht". */
 let achievements = {};
-let achievementTab = 'normal'; // 'normal' | 'secret' — siehe content.js, setAchievementTab()
+let achievementTab = ACH_CAT.NORMAL;
 
 /* Vom Spieler adoptierte Haustiere (siehe pets.js): id -> { name, level }.
    `level` startet bei 0 und steigt nur, sobald der Skill "Tierfreund"
@@ -542,14 +622,13 @@ let automation = {
 /* ── UI-State ─────────────────────────────────────────────── */
 let selectedSkillId = null; // welcher Skill-Knoten im EP-Baum gerade ausgewählt ist
 
-let navLevel       = 0;            // 0=Hauptmenü | 1=Weltkarte | 2=Stadt (Treutheim oder Lethkar)
-let currentCity    = 'treutheim'; // 'treutheim' | 'lethkar' — welche Stadt gerade auf navLevel 2
-let currentContent = 'geschichte'; // 'geschichte' | 'weltkarte' | 'treutheim' | 'arbeitsplatz' | 'marktplatz' |
-                                    // 'taverne' | 'schlafplatz' | 'inventar' | 'quests' | 'chronik' | 'settings'
-let marketVendor   = null;         // null=Markt-Übersicht | 'kraemer' | 'schmiede'
-let jobInfoPanelOpen = false;      // UI-Klapp-Zustand des Level-Info-Panels auf der Job-Kachel
-let erfahrungTab     = 'skills';   // 'skills' | 'lessons' — siehe experience.js, renderErfahrung()
-let historyFilter    = 'toasts';   // 'toasts' | 'dialoge' — siehe content.js, renderSettings()
+let navLevel       = NAV_LEVEL.MENU;
+let currentCity    = CONTENT.TREUTHEIM;
+let currentContent = CONTENT.GESCHICHTE;
+let marketVendor   = null;         // null=Markt-Übersicht | VENDOR.KRAEMER | VENDOR.SCHMIEDE
+let jobInfoPanelOpen = false;
+let erfahrungTab     = EP_TAB.SKILLS;
+let historyFilter    = HISTORY_FILTER.TOASTS;
 
 /* ── Arbeits-Animation State ──────────────────────────────── */
 let workProgress  = 0;

@@ -57,7 +57,7 @@ function buyWissensdurstSkill(id) {
   if (einsicht.points < skill.cost) return;
   einsicht.points -= skill.cost;
   wissensdurstSkills[id] = true;
-  showToast(`Fähigkeit erlernt: ${skill.name}`, 'reward');
+  showToast(`Fähigkeit erlernt: ${skill.name}`, TOAST.REWARD);
   render();
 }
 
@@ -81,7 +81,7 @@ function startAlchemieTick() {
     if (!alchemie.unlocked) return;
     tickAlchemie(1);
     // Render nur wenn Alchemie-Tab gerade offen
-    if (currentContent === 'alchemie') render();
+    if (currentContent === CONTENT.ALCHEMIE) render();
   }, 1000);
 }
 
@@ -101,8 +101,8 @@ function tickAlchemie(seconds) {
       alchemie.levels[id]   += 1;
       einsicht.points       += wdPerLevel;
       einsicht.totalEarned  += wdPerLevel;
-      if (currentContent === 'alchemie' || currentContent === 'stats') {
-        showToast(`${aspect.icon} ${aspect.name} Stufe ${alchemie.levels[id]}! +${wdPerLevel} Wissensdurst ✦`, 'reward');
+      if (currentContent === CONTENT.ALCHEMIE || currentContent === 'stats') {
+        showToast(`${aspect.icon} ${aspect.name} Stufe ${alchemie.levels[id]}! +${wdPerLevel} Wissensdurst ✦`, TOAST.REWARD);
       }
       threshold = alchemieThreshold(alchemie.levels[id]);
     }

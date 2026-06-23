@@ -116,7 +116,7 @@ function maybeStrengthLevelUp() {
     const newMaxHp = getPlayerMaxHp();
     playerStats.maxHp = newMaxHp;
     playerStats.hp    = Math.min(playerStats.hp + data.maxHpBonus, newMaxHp);
-    showToast(`Stärke gestiegen: ${data.label}! Max-HP: ${newMaxHp}`, 'event');
+    showToast(`Stärke gestiegen: ${data.label}! Max-HP: ${newMaxHp}`, TOAST.EVENT);
   }
 }
 
@@ -128,7 +128,7 @@ function startCombat(monsterId) {
   const monster = MONSTER_DEFS.find(m => m.id === monsterId);
   if (!monster) return;
   if (playerStats.hp <= 0) {
-    showToast('Ich bin zu geschwächt, um zu kämpfen. Erst schlafen.', 'error');
+    showToast('Ich bin zu geschwächt, um zu kämpfen. Erst schlafen.', TOAST.ERROR);
     return;
   }
 
@@ -175,7 +175,7 @@ function performFlee() {
   if (Math.random() < 0.5) {
     combat.active = false;
     combat.log    = [];
-    showToast('Du entkommen dem Kampf mit knapper Not.', 'info');
+    showToast('Du entkommen dem Kampf mit knapper Not.', TOAST.INFO);
   } else {
     const enemyDmg = rollEnemyDamage(monster);
     playerStats.hp = Math.max(0, playerStats.hp - enemyDmg);
@@ -229,7 +229,7 @@ function endCombat(won, monster) {
     }
 
     // Tier-Drop-Logic (nur wenn Greta-Quest abgeschlossen + kein Tier dieser Art bereits)
-    if (gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === 'rewarded') {
+    if (gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === QUEST_STATE.REWARDED) {
       const alreadyHas = type => wildPets.some(p => p.type === type);
       const dropTable = [];
       if (!alreadyHas('hund'))          dropTable.push({ item: 'hundespur',         chance: monster.zone === 'tief' ? 0.06 : 0.03 });
@@ -239,7 +239,7 @@ function endCombat(won, monster) {
       for (const entry of dropTable) {
         if (Math.random() < entry.chance) {
           questItems[entry.item] = (questItems[entry.item] || 0) + 1;
-          showToast(`Du findest: ${QUEST_ITEMS.find(qi => qi.id === entry.item)?.name}. Greta wüsste damit etwas anzufangen.`, 'event');
+          showToast(`Du findest: ${QUEST_ITEMS.find(qi => qi.id === entry.item)?.name}. Greta wüsste damit etwas anzufangen.`, TOAST.EVENT);
           navUnseen.inventar = true;
           break; // max. 1 Tier-Drop pro Kampf
         }
@@ -247,7 +247,7 @@ function endCombat(won, monster) {
     }
 
     combat.log.unshift(msg);
-    showToast(msg, 'reward');
+    showToast(msg, TOAST.REWARD);
 
     // Story-Fortschritt nach erstem Kill (storyState 20101)
     if (!gameFlags.firstJagdgebietKill) {
@@ -258,10 +258,10 @@ function endCombat(won, monster) {
     }
 
     // Münzfund-Event: nach 5+ Kills im Jagdgebiet → Detektivquest vorantreiben
-    if (killStats.total >= 5 && quests.theftInvestigation.state === 'active' &&
+    if (killStats.total >= 5 && quests.theftInvestigation.state === QUEST_STATE.ACTIVE &&
         !gameFlags.theftClueFoundInJagdgebiet) {
       gameFlags.theftClueFoundInJagdgebiet = true;
-      quests.theftInvestigation.state = 'investigating';
+      quests.theftInvestigation.state = QUEST_STATE.INVESTIGATING;
       storyState = 20103;
       navUnseen.taverne = true; // Mira hat eine Botschaft
       render();
@@ -279,7 +279,7 @@ function endCombat(won, monster) {
     playerStats.hp = 1;
     const msg = `Du wirst besiegt und schleichst dich davon. ${goldLost > 0 ? `−${goldLost} Gold.` : ''}`;
     combat.log.unshift(msg);
-    showToast(msg, 'error');
+    showToast(msg, TOAST.ERROR);
 
     if (!gameFlags.firstCombatDefeated) {
       gameFlags.firstCombatDefeated = true;

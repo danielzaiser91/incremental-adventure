@@ -21,7 +21,7 @@ function completeSuperSkillQuest(id) {
 
   superSkills[id] = true;
   navUnseen.lehrer = true;
-  showToast(`${def.icon} Lehrmeisterschaft erworben: ${def.name}`, 'event');
+  showToast(`${def.icon} Lehrmeisterschaft erworben: ${def.name}`, TOAST.EVENT);
   render();
 }
 

@@ -13,14 +13,14 @@
 'use strict';
 
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
-const TOWN_CONTENT_IDS    = ['treutheim', 'arbeitsplatz', 'marktplatz', 'taverne', 'schlafplatz', 'rohstoffe', 'jagdgebiet', 'stadtwache', 'meinhaus', 'schmiede'];
-const LETHKAR_CONTENT_IDS = ['lethkar', 'alchemie', 'lethkar_markt', 'lethkar_taverne', 'lethkar_schlafplatz'];
+const TOWN_CONTENT_IDS    = [CONTENT.TREUTHEIM, CONTENT.ARBEITSPLATZ, CONTENT.MARKTPLATZ, CONTENT.TAVERNE, CONTENT.SCHLAFPLATZ, CONTENT.ROHSTOFFE, CONTENT.JAGDGEBIET, CONTENT.STADTWACHE, CONTENT.MEINHAUS, CONTENT.SCHMIEDE];
+const LETHKAR_CONTENT_IDS = [CONTENT.LETHKAR, CONTENT.ALCHEMIE, CONTENT.LETHKAR_MARKT, CONTENT.LETHKAR_TAVERNE, CONTENT.LETHKAR_SCHLAFPLATZ];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
    in der unteren Zielleiste (siehe objective.js/index.html), weil sie
    seltener gebraucht wird als Quests/Inventar/Geschichte. */
-const GLOBAL_CONTENT_IDS = ['geschichte', 'quests', 'inventar'];
+const GLOBAL_CONTENT_IDS = [CONTENT.GESCHICHTE, CONTENT.QUESTS, CONTENT.INVENTAR];
 
 /** Rendert den Inhalt der linken Navigationsspalte (global + ortsbezogen). */
 function renderNav() {
@@ -33,7 +33,7 @@ function renderNav() {
 
   const settingsBtn = document.getElementById('btn-settings');
   if (settingsBtn) {
-    settingsBtn.classList.toggle('active', currentContent === 'settings');
+    settingsBtn.classList.toggle('active', currentContent === CONTENT.SETTINGS);
   }
 }
 
@@ -50,7 +50,7 @@ function renderGlobalNavSection() {
     return `<button class="nav-btn ${active} ${isNew}" onclick="showContent('${id}')">${icon} ${label}</button>`;
   };
 
-  const hasAnyQuest = Object.values(quests).some(q => q.state !== 'unstarted');
+  const hasAnyQuest = Object.values(quests).some(q => q.state !== QUEST_STATE.UNSTARTED);
 
   // "Erfahrung" blinkt zusätzlich zur normalen Erstbesuchs-Hervorhebung
   // (navUnseen), sobald ein lohnender Neuanfang bereit liegt — unabhängig
@@ -59,12 +59,12 @@ function renderGlobalNavSection() {
   // ein- und ausschalten kann, je nachdem ob gerade genug Gold da ist.
   const erfahrungReady = gameFlags.resetLayerUnlocked && canPerformManualReset();
   const erfahrungBtn = gameFlags.resetLayerUnlocked
-    ? `<button class="nav-btn ${currentContent === 'erfahrung' ? 'active' : ''} ${navUnseen.erfahrung ? 'nav-btn-new' : ''} ${erfahrungReady ? 'nav-btn-reset-ready' : ''}" onclick="showContent('erfahrung')">✦ Erfahrung</button>`
+    ? `<button class="nav-btn ${currentContent === CONTENT.ERFAHRUNG ? 'active' : ''} ${navUnseen.erfahrung ? 'nav-btn-new' : ''} ${erfahrungReady ? 'nav-btn-reset-ready' : ''}" onclick="showContent('${CONTENT.ERFAHRUNG}')">✦ Erfahrung</button>`
     : '';
 
   const hasAnyAchievement = Object.keys(achievements).length > 0;
   const hasAnyPet         = Object.keys(pets).length > 0;
-  const activeQuestCount  = Object.values(quests).filter(q => q.state === 'active').length;
+  const activeQuestCount  = Object.values(quests).filter(q => q.state === QUEST_STATE.ACTIVE).length;
   const questLabel = hasAnyQuest
     ? `🗒 Quests${activeQuestCount > 0 ? ` <span class="nav-badge">${activeQuestCount}</span>` : ''}`
     : '';
@@ -72,7 +72,7 @@ function renderGlobalNavSection() {
   return `
     <div class="nav-level-label">Spieler</div>
     ${item('geschichte', '📖', 'Geschichte')}
-    ${hasAnyQuest ? `<button class="nav-btn ${currentContent === 'quests' ? 'active' : ''} ${navUnseen.quests ? 'nav-btn-new' : ''}" onclick="showContent('quests')">${questLabel}</button>` : ''}
+    ${hasAnyQuest ? `<button class="nav-btn ${currentContent === CONTENT.QUESTS ? 'active' : ''} ${navUnseen.quests ? 'nav-btn-new' : ''}" onclick="showContent('${CONTENT.QUESTS}')">${questLabel}</button>` : ''}
     ${gameFlags.everOwnedItem      ? item('inventar', '🎒', 'Inventar')    : ''}
     ${hasAnyPet                    ? item('pets', '🐾', 'Haustiere')      : ''}
     ${erfahrungBtn}
@@ -85,34 +85,34 @@ function renderGlobalNavSection() {
 
 /** Ortsbezogener Bereich: hängt von der aktuellen Navigationsebene (navLevel) ab. */
 function renderLocationNavSection() {
-  if (navLevel === 0) {
+  if (navLevel === NAV_LEVEL.MENU) {
     const mapHidden = storyState < 10101 ? 'hidden' : '';
-    const active    = currentContent === 'weltkarte' ? 'active' : '';
+    const active    = currentContent === CONTENT.WELTKARTE ? 'active' : '';
     return `
       <div class="nav-level-label">Welt</div>
-      <button class="nav-btn ${active} ${mapHidden}" onclick="navTo(1)">◈ Weltkarte</button>
+      <button class="nav-btn ${active} ${mapHidden}" onclick="navTo(${NAV_LEVEL.WELTKARTE})">◈ Weltkarte</button>
     `;
   }
 
-  if (navLevel === 1) {
-    const activeTreutheim = currentContent === 'treutheim' ? 'active' : '';
-    const activeLethkar   = currentContent === 'lethkar'   ? 'active' : '';
+  if (navLevel === NAV_LEVEL.WELTKARTE) {
+    const activeTreutheim = currentContent === CONTENT.TREUTHEIM ? 'active' : '';
+    const activeLethkar   = currentContent === CONTENT.LETHKAR   ? 'active' : '';
     return `
       <div class="nav-level-label">Weltkarte</div>
-      <button class="nav-btn nav-btn-back" onclick="navTo(0)">◂ Zurück</button>
+      <button class="nav-btn nav-btn-back" onclick="navTo(${NAV_LEVEL.MENU})">◂ Zurück</button>
       <hr class="nav-divider">
-      <button class="nav-btn ${activeTreutheim}" onclick="enterCity('treutheim')">⚑ Treutheim</button>
-      ${gameFlags.lethkarUnlocked ? `<button class="nav-btn ${activeLethkar}" onclick="enterCity('lethkar')">🏙 Lethkar</button>` : ''}
+      <button class="nav-btn ${activeTreutheim}" onclick="enterCity('${CONTENT.TREUTHEIM}')">⚑ Treutheim</button>
+      ${gameFlags.lethkarUnlocked ? `<button class="nav-btn ${activeLethkar}" onclick="enterCity('${CONTENT.LETHKAR}')">🏙 Lethkar</button>` : ''}
     `;
   }
 
-  if (navLevel === 2 && currentCity === 'lethkar') {
+  if (navLevel === NAV_LEVEL.STADT && currentCity === CONTENT.LETHKAR) {
     const places = [
-      ['lethkar',           '🏙', 'Übersicht'],
-      ...(alchemie.unlocked         ? [['alchemie',         '⚗', 'Alchemie']]      : []),
-      ...(gameFlags.lethkarUnlocked ? [['lethkar_taverne',  '🍺', 'Taverne']]       : []),
-      ...(gameFlags.lethkarUnlocked ? [['lethkar_markt',    '⚖', 'Marktplatz']]    : []),
-      ...(gameFlags.lethkarUnlocked ? [['lethkar_schlafplatz','🛏','Schlafplatz']]  : [])
+      [CONTENT.LETHKAR,           '🏙', 'Übersicht'],
+      ...(alchemie.unlocked         ? [[CONTENT.ALCHEMIE,         '⚗', 'Alchemie']]      : []),
+      ...(gameFlags.lethkarUnlocked ? [[CONTENT.LETHKAR_TAVERNE,  '🍺', 'Taverne']]       : []),
+      ...(gameFlags.lethkarUnlocked ? [[CONTENT.LETHKAR_MARKT,    '⚖', 'Marktplatz']]    : []),
+      ...(gameFlags.lethkarUnlocked ? [[CONTENT.LETHKAR_SCHLAFPLATZ,'🛏','Schlafplatz']]  : [])
     ];
     const buttons = places.map(([id, icon, label]) => {
       const active = currentContent === id ? 'active' : '';
@@ -121,24 +121,24 @@ function renderLocationNavSection() {
     }).join('');
     return `
       <div class="nav-level-label">Lethkar</div>
-      <button class="nav-btn nav-btn-back" onclick="navTo(1)">◂ Weltkarte</button>
+      <button class="nav-btn nav-btn-back" onclick="navTo(${NAV_LEVEL.WELTKARTE})">◂ Weltkarte</button>
       <hr class="nav-divider">
       ${buttons}
     `;
   }
 
-  // navLevel === 2, currentCity === 'treutheim': innerhalb von Treutheim.
+  // navLevel === NAV_LEVEL.STADT, currentCity === CONTENT.TREUTHEIM: innerhalb von Treutheim.
   const places = [
-    ['treutheim',    '⚑', 'Übersicht'],
-    ...(gameFlags.jobUnlocked         ? [['arbeitsplatz', '⚒', 'Arbeitsplatz']] : []),
-    ...(gameFlags.hungerDialogShown   ? [['marktplatz',   '⚖', 'Marktplatz']]   : []),
-    ['taverne',      '🍺', 'Taverne'],
-    ...(gameFlags.firstNightDialogShown ? [['schlafplatz', '🛏', 'Schlafplatz']] : []),
-    ...(gameFlags.resourceGatheringUnlocked ? [['rohstoffe', '🌲', 'Sammelplatz']] : []),
-    ...(gameFlags.jagdgebietUnlocked        ? [['jagdgebiet', '⚔', 'Jagdgebiet']]  : []),
-    ...(gameFlags.stadtwacheAccepted        ? [['stadtwache', '🛡', 'Stadtwache']]  : []),
-    ...(meta.hasHome                        ? [['meinhaus',   '🏠', 'Mein Haus']]   : []),
-    ...(meta.hasSmith                       ? [['schmiede',   '⚒', 'Schmiede']]     : [])
+    [CONTENT.TREUTHEIM,    '⚑', 'Übersicht'],
+    ...(gameFlags.jobUnlocked         ? [[CONTENT.ARBEITSPLATZ, '⚒', 'Arbeitsplatz']] : []),
+    ...(gameFlags.hungerDialogShown   ? [[CONTENT.MARKTPLATZ,   '⚖', 'Marktplatz']]   : []),
+    [CONTENT.TAVERNE,      '🍺', 'Taverne'],
+    ...(gameFlags.firstNightDialogShown ? [[CONTENT.SCHLAFPLATZ, '🛏', 'Schlafplatz']] : []),
+    ...(gameFlags.resourceGatheringUnlocked ? [[CONTENT.ROHSTOFFE, '🌲', 'Sammelplatz']] : []),
+    ...(gameFlags.jagdgebietUnlocked        ? [[CONTENT.JAGDGEBIET, '⚔', 'Jagdgebiet']]  : []),
+    ...(gameFlags.stadtwacheAccepted        ? [[CONTENT.STADTWACHE, '🛡', 'Stadtwache']]  : []),
+    ...(meta.hasHome                        ? [[CONTENT.MEINHAUS,   '🏠', 'Mein Haus']]   : []),
+    ...(meta.hasSmith                       ? [[CONTENT.SCHMIEDE,   '⚒', 'Schmiede']]     : [])
   ];
   const buttons = places.map(([id, icon, label]) => {
     const active = currentContent === id ? 'active' : '';
@@ -148,7 +148,7 @@ function renderLocationNavSection() {
 
   return `
     <div class="nav-level-label">Treutheim</div>
-    <button class="nav-btn nav-btn-back" onclick="navTo(1)">◂ Zurück</button>
+    <button class="nav-btn nav-btn-back" onclick="navTo(${NAV_LEVEL.WELTKARTE})">◂ Zurück</button>
     <hr class="nav-divider">
     ${buttons}
   `;
@@ -162,22 +162,22 @@ function renderLocationNavSection() {
 function navTo(level) {
   navLevel = level;
 
-  if (level === 0) {
-    currentContent = 'geschichte';
-  } else if (level === 1) {
-    currentContent = 'weltkarte';
-  } else if (level === 2) {
-    const inCurrentCity = currentCity === 'lethkar'
+  if (level === NAV_LEVEL.MENU) {
+    currentContent = CONTENT.GESCHICHTE;
+  } else if (level === NAV_LEVEL.WELTKARTE) {
+    currentContent = CONTENT.WELTKARTE;
+  } else if (level === NAV_LEVEL.STADT) {
+    const inCurrentCity = currentCity === CONTENT.LETHKAR
       ? LETHKAR_CONTENT_IDS.includes(currentContent)
       : TOWN_CONTENT_IDS.includes(currentContent);
     if (!inCurrentCity) {
-      currentContent = currentCity === 'lethkar' ? 'lethkar' : 'treutheim';
+      currentContent = currentCity === CONTENT.LETHKAR ? CONTENT.LETHKAR : CONTENT.TREUTHEIM;
     }
   }
 
   render();
 
-  if (level === 2 && currentCity === 'treutheim') maybeTriggerJobSearchDialog();
+  if (level === NAV_LEVEL.STADT && currentCity === CONTENT.TREUTHEIM) maybeTriggerJobSearchDialog();
 }
 
 /** Wechselt die aktive Stadt und navigiert auf navLevel 2.
@@ -185,16 +185,16 @@ function navTo(level) {
  *  wird auch der Story-State gesetzt und Story 1.1 ausgelöst. */
 function enterCity(city) {
   currentCity    = city;
-  navLevel       = 2;
-  currentContent = city === 'lethkar' ? 'lethkar' : 'treutheim';
-  if (city === 'treutheim' && storyState === 10100) {
+  navLevel       = NAV_LEVEL.STADT;
+  currentContent = city === CONTENT.LETHKAR ? CONTENT.LETHKAR : CONTENT.TREUTHEIM;
+  if (city === CONTENT.TREUTHEIM && storyState === 10100) {
     storyState = 10101;
     render();
     maybeShowStoryDialog('1.1');
   } else {
     render();
   }
-  if (city === 'treutheim') maybeTriggerJobSearchDialog();
+  if (city === CONTENT.TREUTHEIM) maybeTriggerJobSearchDialog();
 }
 
 /**
@@ -214,32 +214,32 @@ function showContent(id) {
   // Chronik-Button-Hervorhebung (siehe objective.js) verschwindet bereits
   // beim Öffnen der Seite — die einzelnen NEUEN Einträge darin bleiben
   // davon unberührt und verschwinden erst je einzeln per Hover.
-  if (id === 'chronik') chronikButtonUnseen = false;
+  if (id === CONTENT.CHRONIK) chronikButtonUnseen = false;
 
   if (TOWN_CONTENT_IDS.includes(id)) {
-    navLevel    = 2;
-    currentCity = 'treutheim';
+    navLevel    = NAV_LEVEL.STADT;
+    currentCity = CONTENT.TREUTHEIM;
   }
   if (LETHKAR_CONTENT_IDS.includes(id)) {
-    navLevel    = 2;
-    currentCity = 'lethkar';
+    navLevel    = NAV_LEVEL.STADT;
+    currentCity = CONTENT.LETHKAR;
   }
 
   // Marktplatz öffnet beim Anwählen über Navigation/Quick-Link immer die
   // Händler-Übersicht (Hub), nicht den zuletzt besuchten Händler.
-  if (id === 'marktplatz') {
+  if (id === CONTENT.MARKTPLATZ) {
     marketVendor = null;
   }
 
   render();
 
-  if (id === 'taverne') maybeTriggerTavernArrivalDialog();
+  if (id === CONTENT.TAVERNE) maybeTriggerTavernArrivalDialog();
   if (isFirstVisit) maybeShowNavIntro(id);
 }
 
 /** Öffnet die Einstellungen, ohne Navigationsebene oder Ort zu ändern. */
 function showSettings() {
   closeMobilePanels();
-  currentContent = 'settings';
+  currentContent = CONTENT.SETTINGS;
   render();
 }
