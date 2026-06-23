@@ -1,8 +1,12 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.16.2-alpha
+**Aktuelle Version:** v0.16.3-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
+
+**In v0.16.3 gefixt:**
+- Zieltext nach dem 4. Raub und zu Beginn von Kapitel 2 enthielt UI-Begriffe ("Erfahrungs-Baum", "Reiter") — ersetzt durch immersive Formulierungen
+- Paranoid-Skill: Nachteil-Zeile bricht jetzt im Detail-Panel auf eine eigene Zeile um
 
 **In v0.16.2 gefixt:**
 - Raub-Resets werden beim nächsten Laden automatisch nachgeholt, falls sie durch den Bug in v0.16.1 übersprungen wurden (Spielstand-Selbstheilung)

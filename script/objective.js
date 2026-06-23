@@ -38,12 +38,12 @@ function getObjectiveText() {
     if (skills.paranoid >= 1) {
       return 'Ich habe meinen Kopf wieder klar. Ein bewusster Neuanfang liegt vor mir — klüger diesmal.';
     }
-    return 'Viermal — das ist keine Pechsträhne, das ist Absicht. Einfach weiter schuften bringt nichts mehr. Es ist Zeit, die Dinge grundlegend anders anzugehen. Der Erfahrungs-Baum zeigt den Weg.';
+    return 'Viermal — das ist kein Pech, das ist Methode. Einfach weiter schuften bringt nur den nächsten Raub. Die Antwort steckt in dem, was mich diese vier Erlebnisse gelehrt haben — ich muss aufhören zu arbeiten und anfangen zu denken.';
   }
 
   // Kapitel 2 — storyState 20100+ (Raub hat stattgefunden)
   if (storyState >= 20100 && !gameFlags.kapitel2Unlocked) {
-    return 'Mein Gold ist fort. Es ist Zeit, klüger vorzugehen — ich sollte mir den Reiter "Erfahrung" ansehen und meinen Weg zur Abenteurergilde aufbauen.';
+    return 'Mein Gold ist fort — bewusst zurückgelassen. Die Rückschläge haben mich verändert; jetzt muss ich daraus echte Stärke machen und den Weg zur Abenteurergilde ernsthaft angehen.';
   }
   if (storyState === 20100) {
     return 'Das Jagdgebiet südlich der Stadt wartet. Ich werde zeigen, was ich drauf habe.';

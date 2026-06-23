@@ -233,7 +233,7 @@ const EP_SKILL_TREE = [
     id: 'paranoid', name: 'Paranoid', icon: '👁',
     requires: null, maxLevel: 1, costs: [3],
     desc: 'Viermal ausgeraubt — und immer noch hier. Die Angst sitzt tief, aber sie macht mich wacher.',
-    effect: 'Schaltet den manuellen Neuanfang frei. Gibt den restlichen Erfahrungs-Baum frei. Nachteil: +15 % Müdigkeit bei Feldarbeit (Dauerspannung).',
+    effect: 'Schaltet den manuellen Neuanfang frei. Gibt den restlichen Erfahrungs-Baum frei.<br>Nachteil: +15 % Müdigkeit bei Feldarbeit (Dauerspannung).',
     learnDialogs: [
       'Viermal. Viermal ausgeraubt, viermal mit leeren Händen wieder aufgestanden. Ich kann nicht mehr so tun, als wäre das alles in Ordnung.',
       'Ich bin paranoid geworden. Jedes Geräusch, jeder Schatten. Aber vielleicht ist das gar nicht so falsch — wer ständig auf der Hut ist, übersieht weniger.',
