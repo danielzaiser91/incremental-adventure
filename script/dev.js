@@ -20,7 +20,7 @@ function setupDevKeyListener() {
   let buf = '';
   document.addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
-    if (currentContent !== 'einstellungen') { buf = ''; return; }
+    if (currentContent !== 'settings') { buf = ''; return; }
     buf += e.key.toLowerCase();
     if (buf.length > 6) buf = buf.slice(-6);
     if (buf === 'daniel') {
