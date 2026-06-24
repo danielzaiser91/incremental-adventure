@@ -1358,22 +1358,166 @@ function startValdrisFinale() {
   render();
 }
 
-function launchValdrisKonfrontation() {
-  if (!gameFlags.valdrisFinaleStarted) return;
-  if (quests.dieKonfrontation?.state !== QUEST_STATE.ACTIVE) return;
-
-  showDialog({
-    title: 'Die Konfrontation',
+// ── Valdris-Finale: vollständiger Node-Graph ─────────────────────────────
+const VALDRIS_FINALE_NODES = {
+  start: {
     text: [
-      'Valdris steht mir gegenüber. Er sieht mich an — nicht überrascht. Erwartet.',
-      '"Du hast dir Mühe gegeben." Seine Stimme ist ruhig. "Ich hätte dich früher stoppen sollen."',
-      '"Aber du hast drei Fraktionen hinter dir. Das Dokument. Und Verbündete, die ich unterschätzt habe."',
+      'Das Treffen findet im alten Lagerhaus am Nordkai statt. Kein Zufall — es ist der Ort, den Valdris selbst gewählt hat.',
+      'Er steht am Fenster, den Rücken zu mir. Dreht sich um, als ich eintrete. Sieht mich an — nicht überrascht. Erwartet.',
+      '"Du hast dir Mühe gegeben." Seine Stimme ist ruhig. Keine Bedrohung. Keine Nervosität.',
+      '"Drei Fraktionen. Das Dokument. Sele, Yeva, Gorr — alle auf deiner Seite." Er lächelt dünn.',
+      '"Ich unterschätze selten. Dich habe ich unterschätzt."',
       'Eine lange Pause. Dann: "Was willst du?"'
     ],
     options: [
-      { label: '"Dich vor Gericht bringen."', next: 'konfrontation_gericht' },
-      { label: '"Velmark verlassen — für immer."', next: 'konfrontation_exil' },
+      { label: '"Dich vor Gericht bringen."', next: 'gericht_1' },
+      { label: '"Velmark verlassen — für immer."', next: 'exil_1' }
     ]
+  },
+
+  // ── Pfad A: Gericht ──────────────────────────────────────────────────
+  gericht_1: {
+    text: [
+      'Er hebt eine Augenbraue. Fast amüsiert.',
+      '"Gericht." Er dreht sich wieder zum Fenster. "Du weißt, wen der Stadtrat hört. Wen er kennt."',
+      '"Drei Jahre habe ich gebraucht, ihn zu kaufen. Einen nach dem anderen. Diskret. Geduldig."',
+      '"Der Stadtrat hört auf mich."'
+    ],
+    options: [{ label: '"Das war früher."', next: 'gericht_2' }]
+  },
+  gericht_2: {
+    text: [
+      'Stille.',
+      'Dann: Schritte. Die Tür öffnet sich.',
+      'Yeva tritt ein — mit einem geschlossenen Aktenordner. Hinter ihr: Gorr, eine Hand am Schwertgriff. Sele, mit drei Dokumentenkopien unter dem Arm.',
+      '"Heute nicht", sagt Yeva. Sie legt den Ordner auf den Tisch zwischen uns.',
+      '"Der Stadtrat hat die Originale bereits erhalten."'
+    ],
+    options: [{ label: 'Ich trete vor. "Es ist vorbei, Valdris."', next: 'gericht_3' }]
+  },
+  gericht_3: {
+    text: [
+      'Er schaut die drei an. Dann mich. Dann wieder die drei.',
+      'Und für einen Moment — einen einzigen, echten Moment — sieht er nicht wie ein Netzwerker aus. Nicht wie ein Strippenzieher.',
+      'Er sieht müde aus.',
+      '"Ihr habt das gut gemacht." Er streckt langsam die Hände aus.',
+      '"Besser als ich erwartet hätte."'
+    ],
+    options: [{
+      label: 'Gorr legt ihm die Hand auf die Schulter. Das war es.',
+      next: null,
+      action: () => { triggerValdrisSieg(false); }
+    }]
+  },
+
+  // ── Pfad B: Exil ─────────────────────────────────────────────────────
+  exil_1: {
+    text: [
+      'Stille. Er betrachtet mich neu. Länger.',
+      '"Exil." Er wiederholt das Wort, als ob er seine Qualität prüfe.',
+      '"Du bist... verhandlungsbereit. Das hätte ich nicht erwartet."',
+      '"Wenn ich gehe — was garantierst du mir?"'
+    ],
+    options: [{ label: '"Dein Leben. Deine Freiheit. Nur nicht in Velmark."', next: 'exil_2' }]
+  },
+  exil_2: {
+    text: [
+      'Er geht zum Tisch. Lehnt sich drauf.',
+      '"Heute Nacht. Nordtor. Mit zehn Leuten — nicht mehr. Vor Sonnenaufgang draußen."',
+      '"Das Netz hier: ich löse es auf. Die Namen, die Schulden — ich lasse das fallen."',
+      'Eine Pause. "Und du gibst mir dreißig Jahre Abstand."',
+      '"Das ist das Abkommen."'
+    ],
+    options: [{ label: '"Abgemacht."', next: 'exil_3' }]
+  },
+  exil_3: {
+    text: [
+      'Er nickt. Einmal. Dann dreht er sich um und geht.',
+      'Keine weitere Worte. Kein letzter Blick.',
+      'Gorr tritt neben mich. "War das klug?"',
+      'Ich brauche einen Moment.',
+      '"Vielleicht nicht. Aber es war meins."',
+      'Die Tür schließt sich. In drei Stunden ist er weg.'
+    ],
+    options: [{
+      label: 'Den Rest der Nacht stehen wir Wache.',
+      next: null,
+      action: () => { triggerValdrisSieg(true); }
+    }]
+  }
+};
+
+function openValdrisNode(nodeId) {
+  const node = VALDRIS_FINALE_NODES[nodeId];
+  if (!node) return;
+  const paragraphs = Array.isArray(node.text) ? node.text : [node.text];
+  const buttons = node.options.map(opt => ({
+    label: opt.label,
+    onClick: () => {
+      if (opt.action) opt.action();
+      if (opt.next) openValdrisNode(opt.next);
+      else closeDialog();
+    }
+  }));
+  showPaginatedDialog('Die Konfrontation', splitLongDialogPages(paragraphs), buttons, null);
+}
+
+function launchValdrisKonfrontation() {
+  if (!gameFlags.valdrisFinaleStarted) return;
+  if (quests.dieKonfrontation?.state !== QUEST_STATE.ACTIVE) return;
+  openValdrisNode('start');
+}
+
+function triggerValdrisSieg(exil) {
+  closeDialog();
+  quests.dieKonfrontation.state = QUEST_STATE.REWARDED;
+  gameFlags.kap4Complete = true;
+  render();
+
+  maybeShowStoryDialog('4.10', () => {
+    launchConfetti();
+
+    const exilText = exil
+      ? `<p>Valdris ist weg. Kein Urteil — aber auch kein Netz mehr. Manchmal ist das, was bleibt, wichtiger als das, was endet.</p>`
+      : `<p>Valdris steht vor dem Stadtrat. Das Netz ist aufgedeckt. Was drei Fraktionen allein nicht konnten, hat eine Person zusammengebracht.</p>`;
+
+    showDialog({
+      title: '🏆 Das Ende eines Weges.',
+      boxClass: 'dialog-box-wide',
+      html: `
+        <p style="font-size:1.1em;text-align:center;margin-bottom:12px">
+          Von Treutheim nach Velmark. Von Niemand zu dem, der das Netz zerschnitten hat.
+        </p>
+        ${exilText}
+        <p>
+          Varena wird schreiben. Thessa auch, irgendwann. Pereth sitzt wahrscheinlich schon
+          in der nächsten Stadt und wartet mit einem Bier.
+        </p>
+        <p>Und ich? Ich stehe im Morgenlicht von Velmark — und denke daran, was als nächstes kommt.</p>
+        <hr style="border-color:var(--border);margin:12px 0">
+        <p style="color:var(--text-mid);font-size:0.85em">
+          <strong>Das war Kapitel 4.</strong><br>
+          Das Spiel wird weiter wachsen — neue Kapitel, neue Gesichter, neue Geheimnisse.<br>
+          Danke, dass du bis hierher dabei warst.
+        </p>
+        <hr style="border-color:var(--border);margin:12px 0">
+        <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
+          Bleib auf dem Laufenden:<br>
+          <a href="https://discord.gg/NHenxsPh" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
+          Danke fürs Spielen. ✨
+        </p>
+      `,
+      buttons: [{
+        label: 'Das Abenteuer geht weiter.',
+        onClick: () => {
+          closeDialog();
+          achievements.kap4Abschluss = true;
+          navUnseen.errungenschaften = true;
+          showToast('🏆 Errungenschaft freigeschaltet: Der Preis des Einflusses!', TOAST.EVENT);
+          render();
+        }
+      }]
+    });
   });
 }
 

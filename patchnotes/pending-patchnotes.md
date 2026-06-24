@@ -19,6 +19,6 @@
 • Stadtarchiv: Archiv-Recherche (3x Durchsuchen), Seles Wissen, Das Dokument (letzter Beweis), Die Konfrontation
 Neue Spielfläche: Velmarks Hafen (Hafenarbeit, Velmark-Stadtwache, Harro)
 Valdris-Profil: 6 aufdeckbare Felder — je mehr bekannt, desto stärker die Position
-Finale Konfrontation: Voraussetzungen prüfen, Finale einleiten, Valdris stellen||
+Valdris-Finale vollständig spielbar: Konfrontation mit vollständigem Entscheidungsbaum — Gericht (Yeva/Gorr/Sele treten auf) oder Exil (Verhandlung) · beide Enden führen zum Sieg-Dialog mit Errungenschaft||
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/
