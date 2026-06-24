@@ -16,15 +16,12 @@
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
 || • Tier-2-Monster (Steingolem, Schattenwolf, Nordbär) geben jetzt Wissensdurst ✦ als Kampf-Drop
-• Bugfix: Alchemisten-Werkzeug wurde bei hartem Reset nicht korrekt zurückgesetzt ||
-
-**Kapitel 3 — Abschluss** *(zum Aufdecken anklicken)*
-|| Story 3.7–3.10 — der Abschluss von Kapitel 3:
-
-• **3.7 Einsicht I**: Valdris' Lager am Nordrand der Stadt ist erkundbar. Das Lager ist leer — aber nicht ohne Spuren.
-• **3.8 Der Name**: Varena enthüllt Valdris' wahre Rolle — und woher er kommt.
-• **3.9 Einsicht II**: Alchemie-Durchbruch bei Gesellen-Niveau (10 Gesamtlevel).
-• **3.10 Der nächste Horizont**: Kap-3-Abschluss mit Konfetti + Errungenschaft „Im Schatten der Einsicht" (+20% Gold). ||
+• Bugfix: Alchemisten-Werkzeug wurde bei hartem Reset nicht korrekt zurückgesetzt
+• Story 3.7–3.10 — der Abschluss von Kapitel 3:
+  **3.7 Einsicht I**: Valdris' Lager am Nordrand der Stadt ist erkundbar.
+  **3.8 Der Name**: Varena enthüllt Valdris' wahre Rolle.
+  **3.9 Einsicht II**: Alchemie-Durchbruch bei Gesellen-Niveau (10 Gesamtlevel).
+  **3.10 Der nächste Horizont**: Kap-3-Abschluss mit Konfetti + Errungenschaft „Im Schatten der Einsicht" (+20% Gold). ||
 
 **Kapitel 4** *(zum Aufdecken anklicken)*
 || Velmark — die finale Stadt auf dem Weg:
