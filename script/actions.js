@@ -830,9 +830,9 @@ function nightWatch() {
   // brennenderMut-Quest: aufeinanderfolgende Nachtwachen zählen
   if (quests.brennenderMut?.state === QUEST_STATE.ACTIVE) {
     gameFlags.consecutiveNightwatch = (gameFlags.consecutiveNightwatch || 0) + 1;
-    if (gameFlags.consecutiveNightwatch >= 5) {
+    if (gameFlags.consecutiveNightwatch >= 3) {
       quests.brennenderMut.state = QUEST_STATE.DONE;
-      showToast('Fünf Nächte in Folge gewacht. Brakka wird das beeindrucken.', TOAST.EVENT);
+      showToast('Drei Nächte in Folge gewacht. Brakka Bescheid geben.', TOAST.EVENT);
     }
   }
 

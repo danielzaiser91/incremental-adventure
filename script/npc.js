@@ -295,6 +295,7 @@ const NPCS = {
       (!meta.hasHome && storyState >= 20100 && resources.gold >= 2000),
     start: () => {
       if (quests.oswinsAuftrag?.state === QUEST_STATE.UNSTARTED && gameClock.day >= 2 && gameFlags.jobUnlocked) return 'oswinsAuftragOffer';
+      if (quests.oswinsAuftrag?.state === QUEST_STATE.ACTIVE) return 'oswinsAuftragActive';
       if (quests.oswinsAuftrag?.state === QUEST_STATE.DONE) return 'oswinsAuftragDone';
       if (quests.fremderGeheimnis?.state === QUEST_STATE.ASKING_AROUND) return 'fremderHint';
       if (meta.hasHome) return 'greetHomeOwner';
@@ -322,6 +323,14 @@ const NPCS = {
       oswinsAbweis: {
         text: ['"Wie du willst." Er wendet sich ab. "Ich habe andere Wege."'],
         options: [{ label: 'Gut.', next: null }]
+      },
+      oswinsAuftragActive: {
+        text: [
+          'Oswin nickt mir kurz zu und senkt die Stimme.',
+          '"Brakka — hast du ihn schon gefunden?"',
+          'Er wartet. Kein Druck. Nur Geduld.'
+        ],
+        options: [{ label: '"Noch unterwegs."', next: null }]
       },
       oswinsAuftragDone: {
         text: [
@@ -500,6 +509,7 @@ const NPCS = {
       if (quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED) return 'detectiveReveal';
       if (quests.gildePruefung?.state === QUEST_STATE.DONE) return 'gildePruefungTurnIn';
       if (quests.waldtrollJagd?.state === QUEST_STATE.DONE) return 'waldtrollTurnIn';
+      if (quests.brennenderMut?.state === QUEST_STATE.DONE) return 'brennenderMutTurnIn';
       if (quests.brennenderMut?.state === QUEST_STATE.UNSTARTED && quests.nightWatch.state === QUEST_STATE.REWARDED && gameFlags.kapitel2Unlocked) return 'brennenderMutOffer';
       if (quests.guildRegistration.state === QUEST_STATE.ACTIVE) {
         return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
@@ -724,6 +734,25 @@ const NPCS = {
           },
           { label: '"Noch nicht bereit."', next: null }
         ]
+      },
+      brennenderMutTurnIn: {
+        text: [
+          'Brakka hört mich kommen, bevor ich ihn anspreche.',
+          '"Drei Nächte." Er dreht sich um. Er sieht mich an — anders als sonst.',
+          '"Nicht zwei, nicht halb. Drei. Ohne Ausreden."',
+          '"Das nennt man Charakter." Er streckt die Hand aus. "Du hast mein Vertrauen. Das ist nicht nichts."'
+        ],
+        reward: () => '✨ <strong>+25 Gold</strong> · Brakkas Vertrauen gewonnen',
+        options: [{
+          label: 'Ich schlage ein.',
+          next: null,
+          action: () => {
+            quests.brennenderMut.state = QUEST_STATE.REWARDED;
+            resources.gold += 25; resources.totalGoldEarned += 25;
+            checkMilestones();
+            showToast('Brennender Mut abgeschlossen! +25 Gold.', TOAST.REWARD);
+          }
+        }]
       },
       detectiveReveal: {
         text: [
