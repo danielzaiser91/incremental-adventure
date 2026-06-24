@@ -1436,7 +1436,7 @@ const VALDRIS_FINALE_NODES = {
       'Keine weitere Worte. Kein letzter Blick.',
       'Gorr tritt neben mich. "War das klug?"',
       'Ich brauche einen Moment.',
-      '"Vielleicht nicht. Aber es war meins."',
+      '"Vielleicht nicht. Aber ich habe entschieden — nicht das Gesetz, nicht die Gilde. Sondern ich."',
       'Die Tür schließt sich. In drei Stunden ist er weg.'
     ],
     options: [{
