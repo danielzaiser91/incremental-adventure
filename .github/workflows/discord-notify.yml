@@ -30,9 +30,6 @@ jobs:
             && echo "status=true" >> $GITHUB_OUTPUT \
             || echo "status=false" >> $GITHUB_OUTPUT
 
-      - name: Warten auf GitHub Pages
-        if: steps.changed.outputs.patchnotes == 'true' || steps.changed.outputs.status == 'true'
-        run: sleep 120
 
       - name: Discord IDs aus Datei laden
         id: ids
