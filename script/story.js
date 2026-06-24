@@ -275,6 +275,181 @@ const STORY_ENTRIES = [
       '"Der Schatten" ist größer als ich gedacht hatte. Valdris ist nur ein Name.',
       'Hinter ihm steckt mehr. Und es weiß, dass ich hier bin.'
     ]
+  },
+  {
+    id:          '3.7',
+    title:       'Einsicht I',
+    unlockFlag:  () => gameFlags.valdrisOperationRaided,
+    text: [
+      'Das Lager ist leer. Zu leer — jemand wusste, dass ich komme. Oder sie sind von sich aus gegangen.',
+      'Aber ich finde, was sie zurückgelassen haben: Listen. Routen. Quittungen für Dienste, die keine Namen tragen.',
+      'Und überall dasselbe Muster. Nicht Raub — Kontrolle. Schulden, Geheimnisse, Loyalitäten.',
+      'Valdris baut kein Netzwerk von Verbrechern. Er baut ein Netz aus Menschen, die ihm etwas schulden.',
+      'Das ist schwerer zu zerstören als eine Bande. Viel schwerer.'
+    ]
+  },
+  {
+    id:          '3.8',
+    title:       'Der Name',
+    unlockFlag:  () => gameFlags.varenaRevealedValdrisIdent,
+    text: [
+      '"Du hast das Lager gefunden." Varena sagt es ohne Überraschung. "Das bedeutet, er zieht sich zurück."',
+      '"Valdris ist nicht von hier. Er kommt aus dem Osten — aus einer Stadt, die auf Handelsrouten gebaut wurde."',
+      '"Was er hier macht, ist ein Vorposten. Lethkar ist nicht sein Ziel. Es ist sein Sprungbrett."',
+      'Ich frage, wohin er springt. Sie schüttelt den Kopf.',
+      '"Das ist die Frage, die du beantworten musst. Ich kenne nur den Namen — und dass er nicht aufhört."'
+    ]
+  },
+  {
+    id:          '3.9',
+    title:       'Einsicht II',
+    unlockFlag:  () => gameFlags.alchemieGeselleReached,
+    text: [
+      'Ich sitze über den Aspekten und merke plötzlich: ich denke anders.',
+      'Nicht nur über Alchemie. Über Verbindungen. Wie Wasser durch Risse fließt. Wie Feuer Formen annimmt.',
+      'Pereth hat Gold genommen und Wissen gegeben. Varena hat Namen getauscht gegen Vertrauen. Thessa hat Bücher gegen Zeit geöffnet.',
+      'Valdris tut dasselbe — nur in die andere Richtung. Er nimmt Loyalität und gibt Schulden zurück.',
+      'Ich verstehe jetzt, womit ich es zu tun habe. Und das ist mehr wert als jede Waffe.'
+    ]
+  },
+  {
+    id:          '3.10',
+    title:       'Der nächste Horizont',
+    unlockFlag:  () => gameFlags.kap3Complete,
+    text: [
+      'Lethkar hat mich verändert. Nicht auf die Art, die ich erwartet hatte.',
+      'Ich bin stärker — aber das war vorhersehbar. Ich bin klüger — das auch.',
+      'Was ich nicht erwartet hatte: ich habe aufgehört, Valdris zu fürchten.',
+      'Er ist real. Er ist gefährlich. Aber er ist kein Schatten mehr — er ist ein Mensch mit einem Plan.',
+      'Und ich bin jemand, der Pläne lesen kann.',
+      'Der Weg führt weiter nach Osten. Dorthin, woher er kommt.',
+      'Ich weiß noch nicht, was mich dort erwartet. Aber ich weiß, wer ich bin, wenn ich ankomme.'
+    ]
+  },
+
+  /* ── Kapitel 4: Velmark ──────────────────────────────────── */
+  {
+    id:          '4.1',
+    title:       'Velmark',
+    unlockFlag:  () => gameFlags.velmarkUnlocked,
+    text: [
+      'Velmark. Größer als Lethkar. Lauter. Mehr Stimmen, mehr Gerüche, mehr Menschen die nichts voneinander wissen wollen.',
+      'Niemand kennt mich hier.',
+      'Gut. Ich kenne auch niemanden.',
+      'Zum ersten Mal seit Treutheim bin ich wieder ein Niemand — aber diesmal weiß ich, was das bedeutet.',
+      'Es bedeutet: Ich kann wählen, wer ich hier werde.'
+    ]
+  },
+  {
+    id:          '4.2',
+    title:       'Drei Säulen',
+    unlockFlag:  () => gameFlags.gildekontaktGeknuepft || gameFlags.bruderschaftkontaktGeknuepft || gameFlags.archivkontaktGeknuepft,
+    text: [
+      'Velmark wird von drei Kräften zusammengehalten.',
+      'Die Händlergilde: wer zahlt, hat Recht. Alte Logik, aber sie funktioniert.',
+      'Die Eiserne Bruderschaft: Söldner, Wachen, Männer mit Muskeln und kurzen Gedächtnissen. Aber sie hören auf Stärke.',
+      'Das Stadtarchiv: Aufzeichnungen, Legitimität, Geschichte. Die leiseste der drei — und wahrscheinlich die mächtigste.',
+      'Und irgendwo in allen dreien: Valdris. Nicht sichtbar. Aber spürbar.'
+    ]
+  },
+  {
+    id:          '4.3',
+    title:       'Pereth, wieder',
+    unlockFlag:  () => gameFlags.perethFoundInVelmark,
+    text: [
+      'Er sitzt in einer Taverne am Westkai, als wäre er nie weg gewesen.',
+      '"Ich hab mich gefragt, wann du auftauchst." Kein Hallo. Kein Überraschung.',
+      'Er ist nicht mehr für Valdris tätig — er ist ihm einen Schritt voraus. Und einen hinter mir.',
+      'Er kennt diese Stadt. Er hat hier für Valdris Kontakte aufgebaut.',
+      '"Jetzt weiß ich, wie sein Netz funktioniert. Das macht mich nützlich für dich. Und gefährlich für ihn."'
+    ]
+  },
+  {
+    id:          '4.4',
+    title:       'Der erste Schritt',
+    unlockFlag:  () => gameFlags.ersteAllianzGeknuepft,
+    text: [
+      'Ich habe angefangen, ein Gesicht zu werden in dieser Stadt.',
+      'Die erste Fraktion ist aufgetaut — langsam, vorsichtig, wie alles hier.',
+      'Es fühlt sich anders an als in Treutheim oder Lethkar.',
+      'Dort bin ich gewachsen. Hier muss ich etwas anderes sein: überzeugend.',
+      'Vertrauen hier ist keine Frage der Kraft oder des Wissens. Es ist eine Frage der Zeit.'
+    ]
+  },
+  {
+    id:          '4.5',
+    title:       'Der Brief',
+    unlockFlag:  () => gameFlags.valdrisBriefErhalten,
+    text: [
+      'Ein Brief. Kein Absender. Aber die Handschrift kenne ich nicht — und trotzdem weiß ich sofort, von wem er ist.',
+      '"Ich habe bemerkt, dass du in Velmark angekommen bist. Kein Zufall, nehme ich an."',
+      '"Wir könnten reden, wenn du möchtest. Unverbindlich."',
+      'Er weiß, dass ich hier bin. Er fragt nicht, was ich will — er setzt voraus, dass wir dasselbe wollen.',
+      'Das ist die gefährlichste Art von Feind: einer, der nicht falsch liegt.'
+    ]
+  },
+  {
+    id:          '4.6',
+    title:       'Zwei Säulen',
+    unlockFlag:  () => gameFlags.zweiAllianzGekuepft,
+    text: [
+      'Zwei von drei.',
+      'Die Stadt beginnt, mich anders anzusehen — nicht mehr als Fremden, sondern als jemanden, der bleibt.',
+      'Valdris macht Gegenzüge. Kleine Dinge: ein Lieferant der nicht kommt, ein Gespräch das abgebrochen wird.',
+      'Er weiß, was ich tue. Aber er kann es noch nicht stoppen.',
+      'Ein Netz, das auf Schulden gebaut ist, hat eine Schwäche: Die Schulden müssen auch irgendwann vergessen werden.'
+    ]
+  },
+  {
+    id:          '4.7',
+    title:       'Das Angebot',
+    unlockFlag:  () => gameFlags.valdrisAngebotGemacht,
+    text: [
+      'Er sitzt mir gegenüber. Zum ersten Mal.',
+      'Er ist jünger als ich dachte. Ruhiger. Kein Messer, kein Wächter in Sichtweite.',
+      '"Ich baue etwas Dauerhaftes", sagt er. "Du auch. Das sieht man."',
+      '"Warum nicht zusammen? Du bekommst, was du willst — und ich bekomme, was ich will."',
+      'Ich habe keine Antwort. Nicht sofort.',
+      'Das ist das härteste Gespräch meines Lebens.'
+    ]
+  },
+  {
+    id:          '4.8',
+    title:       'Keine Kompromisse',
+    unlockFlag:  () => gameFlags.valdrisAngebotAbgelehnt,
+    text: [
+      'Ich habe Nein gesagt.',
+      'Nicht weil ich ein besserer Mensch bin. Nicht wegen irgendeiner Moral.',
+      'Sondern weil sein "Dauerhaftes" auf anderen liegt — und das wäre bald auf mir.',
+      'Er hat nichts gesagt. Er ist gegangen.',
+      'Jetzt ist es kein Gespräch mehr. Jetzt ist es etwas anderes.'
+    ]
+  },
+  {
+    id:          '4.9',
+    title:       'Das Netz steht',
+    unlockFlag:  () => gameFlags.allianzKomplett,
+    text: [
+      'Alle drei.',
+      'Es hat länger gedauert als gedacht. Manches hat mich Dinge gekostet, die ich nicht zurückbekomme.',
+      'Aber das Netz steht — meines, nicht seines.',
+      'Valdris ist eingekreist. Nicht militärisch. Politisch.',
+      'Er kann nirgends mehr hin, ohne jemanden zu verraten, der jetzt bei mir steht.'
+    ]
+  },
+  {
+    id:          '4.10',
+    title:       'Das Ende des Weges',
+    unlockFlag:  () => gameFlags.kap4Complete,
+    text: [
+      'Er wusste es natürlich.',
+      'Das letzte Gespräch war kurz. Kürzer als ich erwartet hatte.',
+      'Er hat nicht gezögert, nicht gefeilscht. Er hat die Lage gesehen — und gezogen.',
+      'Velmark gehört wieder sich selbst. Das Netz ist zerschnitten.',
+      'Treutheim, Lethkar, Velmark.',
+      'Ich bin nicht mehr derselbe, der dort an diesem Stadttor gestanden hat.',
+      'Gut so.'
+    ]
   }
 ];
 

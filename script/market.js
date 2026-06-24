@@ -283,7 +283,7 @@ function renderVendorKraemer(el) {
       <div class="action-card">
         <div class="action-card-icon">💰</div>
         <div class="action-card-name">Rohstoffe verkaufen</div>
-        <p class="action-card-desc">Greta kauft, was du gesammelt hast, und verkauft es an die Handwerker weiter.</p>
+        <p class="action-card-desc">Greta kauft, was ich gesammelt habe, und verkauft es an die Handwerker weiter.</p>
         <div class="action-card-effect">Vorrat: ${totalOnHand} Einheiten · insgesamt verkauft: ${resources.totalResourcesSold}/${RESOURCE_SELL_THRESHOLD}</div>
         <button class="action-btn ${totalOnHand > 0 ? '' : 'btn-disabled'}" onclick="sellResources()" ${totalOnHand > 0 ? '' : 'disabled'}>
           Verkaufen (+${totalOnHand * RESOURCE_SELL_RATE} Gold)
@@ -393,7 +393,7 @@ function buyFood(itemId) {
   grantItem(item.id, 1);
   dailyPurchases[itemId] = boughtToday + 1;
 
-  showToast(`${item.name} gekauft (−${price} Gold). Liegt jetzt in deinem Inventar bereit.`, TOAST.PURCHASE);
+  showToast(`${item.name} gekauft (−${price} Gold). Liegt jetzt in meinem Inventar bereit.`, TOAST.PURCHASE);
   render();
 
   if (item.dailyLimit && dailyPurchases[itemId] >= item.dailyLimit) maybeShowFoodLimitDialog(item.name);
@@ -548,7 +548,7 @@ function maybeTriggerKraemerinDialog() {
 
   const pages = [
     '"Du bist mir schon aufgefallen", sagt die Krämerin und wischt die Theke ab. "Kommst öfter vorbei als die meisten — und gehst nie ohne was zu kaufen."',
-    'Sie deutet auf deine Hände. "Ist das nicht hart? Mit bloßen Händen auf dem Feld?" Sie zeigt zu einem Regal hinter sich. "Schau dir ruhig mein restliches Angebot an — manches davon könnte dir die Arbeit erleichtern."',
+    'Sie deutet auf meine Hände. "Ist das nicht hart? Mit bloßen Händen auf dem Feld?" Sie zeigt zu einem Regal hinter sich. "Schau dir ruhig mein restliches Angebot an — manches davon könnte dir die Arbeit erleichtern."',
     '"Und wenn du mal Zeit hast — komm in die Taverne. Ich hab da eine Geschäftsidee, bei der du mir vielleicht helfen könntest."'
   ];
 

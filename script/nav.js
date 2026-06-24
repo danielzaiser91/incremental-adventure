@@ -15,6 +15,7 @@
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
 const TOWN_CONTENT_IDS    = [CONTENT.TREUTHEIM, CONTENT.ARBEITSPLATZ, CONTENT.MARKTPLATZ, CONTENT.TAVERNE, CONTENT.SCHLAFPLATZ, CONTENT.ROHSTOFFE, CONTENT.JAGDGEBIET, CONTENT.STADTWACHE, CONTENT.MEINHAUS, CONTENT.SCHMIEDE];
 const LETHKAR_CONTENT_IDS = [CONTENT.LETHKAR, CONTENT.ALCHEMIE, CONTENT.LETHKAR_MARKT, CONTENT.LETHKAR_TAVERNE, CONTENT.LETHKAR_SCHLAFPLATZ];
+const VELMARK_CONTENT_IDS = [CONTENT.VELMARK, CONTENT.VELMARK_FRAKTIONEN, CONTENT.VELMARK_JAGDGEBIET, CONTENT.VELMARK_MARKT, CONTENT.VELMARK_SCHLAFPLATZ];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
@@ -97,12 +98,34 @@ function renderLocationNavSection() {
   if (navLevel === NAV_LEVEL.WELTKARTE) {
     const activeTreutheim = currentContent === CONTENT.TREUTHEIM ? 'active' : '';
     const activeLethkar   = currentContent === CONTENT.LETHKAR   ? 'active' : '';
+    const activeVelmark   = currentContent === CONTENT.VELMARK   ? 'active' : '';
     return `
       <div class="nav-level-label">Weltkarte</div>
       <button class="nav-btn nav-btn-back" onclick="navTo(${NAV_LEVEL.MENU})">◂ Zurück</button>
       <hr class="nav-divider">
       <button class="nav-btn ${activeTreutheim}" onclick="enterCity('${CONTENT.TREUTHEIM}')">⚑ Treutheim</button>
       ${gameFlags.lethkarUnlocked ? `<button class="nav-btn ${activeLethkar}" onclick="enterCity('${CONTENT.LETHKAR}')">🏙 Lethkar</button>` : ''}
+      ${gameFlags.velmarkUnlocked ? `<button class="nav-btn ${activeVelmark} ${navUnseen.velmark ? 'nav-btn-new' : ''}" onclick="enterCity('${CONTENT.VELMARK}')">🌆 Velmark</button>` : ''}
+    `;
+  }
+
+  if (navLevel === NAV_LEVEL.STADT && currentCity === CONTENT.VELMARK) {
+    const places = [
+      [CONTENT.VELMARK,              '🌆', 'Übersicht'],
+      [CONTENT.VELMARK_FRAKTIONEN,   '🤝', 'Fraktionen'],
+      [CONTENT.VELMARK_JAGDGEBIET,   '⚔',  'Unterwelt'],
+      [CONTENT.VELMARK_MARKT,        '🏪', 'Markt'],
+      [CONTENT.VELMARK_SCHLAFPLATZ,  '🛏',  'Schlafplatz']
+    ];
+    const buttons = places.map(([id, icon, label]) => {
+      const active = currentContent === id ? 'active' : '';
+      return `<button class="nav-btn ${active}" onclick="showContent('${id}')">${icon} ${label}</button>`;
+    }).join('');
+    return `
+      <div class="nav-level-label">Velmark</div>
+      <button class="nav-btn nav-btn-back" onclick="navTo(${NAV_LEVEL.WELTKARTE})">◂ Weltkarte</button>
+      <hr class="nav-divider">
+      ${buttons}
     `;
   }
 
@@ -170,9 +193,13 @@ function navTo(level) {
   } else if (level === NAV_LEVEL.STADT) {
     const inCurrentCity = currentCity === CONTENT.LETHKAR
       ? LETHKAR_CONTENT_IDS.includes(currentContent)
-      : TOWN_CONTENT_IDS.includes(currentContent);
+      : currentCity === CONTENT.VELMARK
+        ? VELMARK_CONTENT_IDS.includes(currentContent)
+        : TOWN_CONTENT_IDS.includes(currentContent);
     if (!inCurrentCity) {
-      currentContent = currentCity === CONTENT.LETHKAR ? CONTENT.LETHKAR : CONTENT.TREUTHEIM;
+      if (currentCity === CONTENT.LETHKAR)      currentContent = CONTENT.LETHKAR;
+      else if (currentCity === CONTENT.VELMARK) currentContent = CONTENT.VELMARK;
+      else                                      currentContent = CONTENT.TREUTHEIM;
     }
   }
 
@@ -187,7 +214,9 @@ function navTo(level) {
 function enterCity(city) {
   currentCity    = city;
   navLevel       = NAV_LEVEL.STADT;
-  currentContent = city === CONTENT.LETHKAR ? CONTENT.LETHKAR : CONTENT.TREUTHEIM;
+  if (city === CONTENT.LETHKAR)      currentContent = CONTENT.LETHKAR;
+  else if (city === CONTENT.VELMARK) currentContent = CONTENT.VELMARK;
+  else                               currentContent = CONTENT.TREUTHEIM;
   if (city === CONTENT.TREUTHEIM && storyState === 10100) {
     storyState = 10101;
     render();
@@ -224,6 +253,10 @@ function showContent(id) {
   if (LETHKAR_CONTENT_IDS.includes(id)) {
     navLevel    = NAV_LEVEL.STADT;
     currentCity = CONTENT.LETHKAR;
+  }
+  if (VELMARK_CONTENT_IDS.includes(id)) {
+    navLevel    = NAV_LEVEL.STADT;
+    currentCity = CONTENT.VELMARK;
   }
 
   // Marktplatz öffnet beim Anwählen über Navigation/Quick-Link immer die

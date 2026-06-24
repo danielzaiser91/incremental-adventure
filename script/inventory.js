@@ -30,6 +30,7 @@ const EQUIPMENT_ITEMS = [
 function getItemBaseCost(itemId) {
   const item = FOOD_ITEMS.find(i => i.id === itemId) ||
     (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId)) ||
+    (typeof VELMARK_FOOD_ITEMS !== 'undefined' && VELMARK_FOOD_ITEMS.find(i => i.id === itemId)) ||
     TOOL_ITEMS.find(i => i.id === itemId) ||
     EQUIPMENT_ITEMS.find(i => i.id === itemId);
   return item ? item.cost : null;
@@ -125,6 +126,7 @@ function moveFromOverflow(itemId) {
 function findItemMeta(itemId) {
   return FOOD_ITEMS.find(i => i.id === itemId) ||
     (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId)) ||
+    (typeof VELMARK_FOOD_ITEMS !== 'undefined' && VELMARK_FOOD_ITEMS.find(i => i.id === itemId)) ||
     EQUIPMENT_ITEMS.find(i => i.id === itemId) ||
     RESOURCE_ITEMS.find(i => i.id === itemId) || TOOL_ITEMS.find(i => i.id === itemId);
 }
@@ -132,8 +134,11 @@ function findItemMeta(itemId) {
 /** Rendert die Inventar-Seite: Slot-Übersicht, Ausrüstung, Verbrauchsgüter,
     Questgegenstände (separat) und ggf. den überzähligen Beutel. */
 function renderInventar(el) {
-  const allFoodItems = typeof LETHKAR_FOOD_ITEMS !== 'undefined'
-    ? [...FOOD_ITEMS, ...LETHKAR_FOOD_ITEMS] : FOOD_ITEMS;
+  const allFoodItems = [
+    ...FOOD_ITEMS,
+    ...(typeof LETHKAR_FOOD_ITEMS !== 'undefined' ? LETHKAR_FOOD_ITEMS : []),
+    ...(typeof VELMARK_FOOD_ITEMS !== 'undefined' ? VELMARK_FOOD_ITEMS : [])
+  ];
   const ownedFood   = allFoodItems.filter(item => (resources.inventory[item.id] || 0) > 0);
   const ownedEquip  = EQUIPMENT_ITEMS.filter(item => (resources.inventory[item.id] || 0) > 0);
   // Ein Slot erscheint nur, sobald der Spieler je Zugriff auf einen
@@ -308,7 +313,8 @@ function unequipItem(slot) {
 /** Verzehrt ein Nahrungsmittel aus dem Inventar und wendet seine Effekte an. */
 function useFood(itemId) {
   const item  = FOOD_ITEMS.find(i => i.id === itemId) ||
-    (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId));
+    (typeof LETHKAR_FOOD_ITEMS !== 'undefined' && LETHKAR_FOOD_ITEMS.find(i => i.id === itemId)) ||
+    (typeof VELMARK_FOOD_ITEMS !== 'undefined' && VELMARK_FOOD_ITEMS.find(i => i.id === itemId));
   const count = resources.inventory[itemId] || 0;
   if (!item || count <= 0) return;
 

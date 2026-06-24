@@ -163,13 +163,17 @@ function alchemieThreshold(level) {
   return Math.pow(3, level) * 100;
 }
 
-let alchemieInterval = null;
+let alchemieInterval   = null;
+let _alchemieSfxTick   = 0; // Gedrosselt: SFX nur alle 5 Sekunden
 
 function startAlchemieTick() {
   if (alchemieInterval) return;
   alchemieInterval = setInterval(() => {
     if (!alchemie.unlocked) return;
     tickAlchemie(1);
+    // Gedrosselter Alchemie-SFX (nur alle 5 Sekunden, nicht jeden Frame)
+    _alchemieSfxTick = (_alchemieSfxTick + 1) % 5;
+    if (_alchemieSfxTick === 0 && currentContent === CONTENT.ALCHEMIE) playSfx('alchemy');
     // Render nur wenn Alchemie-Tab gerade offen
     if (currentContent === CONTENT.ALCHEMIE) render();
   }, 1000);
@@ -227,7 +231,7 @@ function renderAlchemie(el) {
     el.innerHTML = `
       <div class="feature-stage">
         <div class="feature-stage-label">Alchemie</div>
-        <p style="color:var(--muted);font-style:italic">Varena erklärt dir die Grundlagen, sobald du ihr Vertrauen gewonnen hast.</p>
+        <p style="color:var(--muted);font-style:italic">Varena erklärt mir die Grundlagen, sobald ich ihr Vertrauen gewonnen habe.</p>
       </div>`;
     return;
   }

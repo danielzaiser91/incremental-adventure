@@ -3,6 +3,15 @@
 Leitprinzipien, die jede Design-Entscheidung in diesem Projekt prägen
 sollten. Bei Zweifelsfällen: dieses Dokument vor neuen Features lesen.
 
+## Kernelemente
+
+Die zwei Säulen, die das Spiel definieren:
+
+1. **Story & Immersion** — der Spieler erlebt die Welt als Spielfigur (Ich-Perspektive, keine Meta-Sprache, Progressive Disclosure erklärt alles in-universe). Das Spiel ist eine Geschichte, nicht nur ein Zahlen-Grinder.
+2. **Prestige-Loop / Reset als Fortschritt** — das Kerngefühl "ich verliere etwas, gewinne aber dauerhaft etwas Besseres" treibt die langfristige Motivation und unterscheidet das Spiel von einem normalen Idle-Game.
+
+Jede Design-Entscheidung sollte mindestens eines dieser beiden Kernelemente stärken.
+
 ## 1. Interaktion vor Fließtext
 
 Das Spiel ist eine Story, aber die Story ist nicht das Interface.
@@ -103,18 +112,13 @@ Freischaltung: der begleitende Ich-Monolog ist hier optional, weil der
 eigentliche Inhalt — das neue Gespräch selbst — die Erklärung schon
 liefert; die Hervorhebung allein genügt als "hier gibt's was Neues".
 
-Apropos Punkt 4 — Reset-Auslöser dürfen ebenfalls nicht automatisch
-sein. Ein Meilenstein (z.B. der Raub) darf eine Fähigkeit/einen Tab
-freischalten, aber NIE selbst einen Reset durchführen — das Auslösen
-eines Prestige-Resets ist immer eine bewusste, vom Spieler über einen
-echten Button initiierte Entscheidung, mit einer immersiven Begründung
-beim ersten Mal und einer echten Abbrechen-Option danach (siehe
-`script/experience.js`, `startManualReset()`).
+Apropos Punkt 4 — Reset-Auslöser und Automatismus: Wenn ein Reset
+direkt an einen Story-Moment gekoppelt ist (z.B. die ersten 4 Raub-
+Events), darf er automatisch passieren — die Story selbst ist die
+Erklärung und Begründung, kein separater Button nötig. Ist ein Reset
+dagegen NICHT an einen fixen Story-Beat gebunden (Prestige-Reset,
+manueller Neuanfang), ist er immer eine bewusste Spieler-Entscheidung
+via Button mit immersiver Begründung beim ersten Mal und echter
+Abbrechen-Option danach (siehe `script/experience.js`,
+`startManualReset()`).
 
-## 7. Eine zentrale Render-Wahrheit
-
-UI ist immer eine reine Funktion aus globalem State
-(`storyState`, `resources`, `meta`, `needs`, `gameClock`, ...).
-Jede Aktion ändert State und ruft `render()` — kein manuelles
-DOM-Patchen außerhalb der rAF-Progressbar-Ausnahme. Das hält das Spiel
-einfach debugbar und einfach speicherbar (State-Objekt → JSON).

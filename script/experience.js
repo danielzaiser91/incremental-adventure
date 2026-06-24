@@ -341,7 +341,7 @@ const SUPER_SKILL_DEFS = [
     id: 'thrift_super', forSkill: 'thrift',
     name: 'Meisterhändler', icon: '🪙',
     shortDesc: 'Weitere −15 % Marktpreise (insgesamt −35 %).',
-    questDesc: 'Verkaufe bei Greta insgesamt 30 Rohstoffe.',
+    questDesc: 'Insgesamt 30 Rohstoffe bei Greta verkaufen.',
     questProgress: () => `${Math.min(resources.totalResourcesSold, 30)}/30`,
     questDone: () => resources.totalResourcesSold >= 30
   },
@@ -349,7 +349,7 @@ const SUPER_SKILL_DEFS = [
     id: 'quickLearner_super', forSkill: 'quickLearner',
     name: 'Natürliches Talent', icon: '🎯',
     shortDesc: '+25 % zusätzliche Job-Erfahrung.',
-    questDesc: 'Absolviere 30 Feldarbeiten in einem Kapitel ohne Neuanfang.',
+    questDesc: '30 Feldarbeiten in einem Abschnitt ohne Neuanfang absolvieren.',
     questProgress: () => `${Math.min(workStats.count, 30)}/30`,
     questDone: () => workStats.count >= 30
   },
@@ -357,7 +357,7 @@ const SUPER_SKILL_DEFS = [
     id: 'fieldPay_super', forSkill: 'fieldPay',
     name: 'Verhandlungskunst', icon: '🤝',
     shortDesc: '+1 zusätzliches Gold pro Feldarbeit (insgesamt +2).',
-    questDesc: 'Verdiene in deinem Leben insgesamt 500 Gold.',
+    questDesc: 'Insgesamt 500 Gold verdienen.',
     questProgress: () => `${Math.min(resources.totalGoldEarned, 500)}/500`,
     questDone: () => resources.totalGoldEarned >= 500
   },
@@ -365,7 +365,7 @@ const SUPER_SKILL_DEFS = [
     id: 'clearMind_super', forSkill: 'clearMind',
     name: 'Klarer Horizont', icon: '🌅',
     shortDesc: '+1 weitere EP bei jedem Neuanfang (insgesamt +2 mit Klarer Kopf).',
-    questDesc: 'Beginne dreimal von vorn.',
+    questDesc: 'Dreimal von vorn beginnen.',
     questProgress: () => `${Math.min(meta.resets, 3)}/3`,
     questDone: () => meta.resets >= 3
   },
@@ -375,7 +375,7 @@ const SUPER_SKILL_DEFS = [
     id: 'sleepLikeARock_super', forSkill: 'sleepLikeARock',
     name: 'Traumloser Schlaf', icon: '🌙',
     shortDesc: '+1 weiterer Schlafqualitäts-Bonus überall (insgesamt +2 Stufen).',
-    questDesc: 'Schlafe 20 Mal auf der Straße.',
+    questDesc: '20 Mal auf der Straße schlafen.',
     questProgress: () => `${Math.min(streetCatProgress.sleepCount, 20)}/20`,
     questDone: () => streetCatProgress.sleepCount >= 20
   },
@@ -383,7 +383,7 @@ const SUPER_SKILL_DEFS = [
     id: 'ironWill_super', forSkill: 'ironWill',
     name: 'Stählerner Wille', icon: '⚔',
     shortDesc: 'Hunger hat keinen Einfluss mehr auf den Müdigkeitsaufbau.',
-    questDesc: 'Absolviere 10 Feldarbeiten, während du hungrig bist (Hunger ≥ 80 %).',
+    questDesc: '10 Feldarbeiten mit Hunger ≥ 80 % abschließen.',
     questProgress: () => `${Math.min(workStats.hungryWorkCount || 0, 10)}/10`,
     questDone: () => (workStats.hungryWorkCount || 0) >= 10
   },
@@ -391,7 +391,7 @@ const SUPER_SKILL_DEFS = [
     id: 'longerRest_super', forSkill: 'longerRest',
     name: 'Natürliche Widerstandskraft', icon: '🌿',
     shortDesc: 'Hunger und Müdigkeit steigen dauerhaft 10 % langsamer an.',
-    questDesc: 'Lege 20 Mal eine Lange Pause ein (Stufe 1 oder höher).',
+    questDesc: '20 Mal eine Lange Pause einlegen (Stufe 1 oder höher).',
     questProgress: () => `${Math.min(restStats.count || 0, 20)}/20`,
     questDone: () => (restStats.count || 0) >= 20
   },
@@ -399,7 +399,7 @@ const SUPER_SKILL_DEFS = [
     id: 'fieldworkMemory_super', forSkill: 'fieldworkMemory',
     name: 'Muskelgedächtnis', icon: '🤲',
     shortDesc: 'Auch das Nachtwache-Level übersteht einen Neuanfang.',
-    questDesc: 'Erreiche Feldarbeits-Stufe 3 (50 Feldarbeiten in einem Kapitel).',
+    questDesc: 'Feldarbeits-Stufe 3 erreichen (50 Feldarbeiten in einem Abschnitt).',
     questProgress: () => `${Math.min(workStats.count, 50)}/50`,
     questDone: () => getWorkLevel(workStats.count) >= 3
   },
@@ -407,7 +407,7 @@ const SUPER_SKILL_DEFS = [
     id: 'nightWatchLeveling_super', forSkill: 'nightWatchLeveling',
     name: 'Eiserne Wacht', icon: '🌒',
     shortDesc: 'Nachtwache verursacht keinen Schlaf-Debuff mehr.',
-    questDesc: 'Absolviere 15 Nachtwachen.',
+    questDesc: '15 Nachtwachen absolvieren.',
     questProgress: () => `${Math.min(nightWatchStats.count, 15)}/15`,
     questDone: () => nightWatchStats.count >= 15
   },
@@ -415,7 +415,7 @@ const SUPER_SKILL_DEFS = [
     id: 'inventoryKeeper_super', forSkill: 'inventoryKeeper',
     name: 'Dicker Rucksack', icon: '🎒',
     shortDesc: '+3 Inventarplätze (12 → 15).',
-    questDesc: 'Übersteht einen Neuanfang mit 12 oder mehr belegten Inventarplätzen.',
+    questDesc: 'Einen Neuanfang mit 12 oder mehr belegten Inventarplätzen überstehen.',
     questProgress: () => gameFlags.fullInventoryReset ? '1/1' : '0/1',
     questDone: () => !!gameFlags.fullInventoryReset
   }
@@ -817,7 +817,7 @@ function renderSkillDetailPanel() {
       </div>
       <p class="ep-detail-desc">${node.desc}</p>
       <div class="ep-detail-effect">${node.effect}</div>
-      ${nodeUnlocksMoreSkills(node.id) ? `<div class="ep-detail-unlocks">↳ Schaltet weitere Fähigkeiten frei</div>` : ''}
+      ${nodeUnlocksMoreSkills(node.id) && getSkillLevel(node.id) < 1 && !SUPER_SKILL_DEFS.some(s => s.forSkill === node.id && superSkills[s.id]) ? `<div class="ep-detail-unlocks">↳ Schaltet weitere Fähigkeiten frei</div>` : ''}
       ${superHtml}
       ${actionHtml}
     </div>`;

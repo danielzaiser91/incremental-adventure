@@ -45,8 +45,9 @@ function getNightWatchLevel(count) {
 }
 
 function getNightWatchReward() {
+  const owlBonus = typeof getWildPetNightWatchBonus === 'function' ? getWildPetNightWatchBonus() : 0;
   return Math.max(1, Math.round(
-    NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase * getAchievementGoldMult()
+    NIGHTWATCH_LEVELS[getNightWatchLevel(nightWatchStats.count)].goldBase * getAchievementGoldMult() * (1 + owlBonus)
   ));
 }
 
@@ -348,7 +349,9 @@ function getWorkTirednessGain(levelOverride) {
   const effectiveHungerMult = 1 + (hungerMult - 1) * (superSkills.ironWill_super ? 0 : skills.ironWill ? 0.5 : 1);
   // Paranoid: dauernde Anspannung erhöht Müdigkeit um 15 % — entfällt wenn "Scharf beobachtet" gelernt
   const paranoidMult = (skills.paranoid && !skills.aufmerksamkeit) ? 1.15 : 1;
-  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult() * paranoidMult;
+  // Hauskatze (Wildtier): reduziert Müdigkeitsanstieg
+  const catReduction = 1 - (typeof getWildPetTirednessReduction === 'function' ? getWildPetTirednessReduction() : 0);
+  return WORK_TIREDNESS_GAIN * effectiveHungerMult * level.gainMod * getSleepDebtMult() * paranoidMult * catReduction;
 }
 
 /** Wie viel Hunger eine einzelne Arbeit gerade kosten würde — für die
@@ -771,8 +774,9 @@ function completeWork() {
   adjustTiredness(Math.round(tirednessGain * getSuperRestMult()));
   advanceClock(WORK_CLOCK_MINUTES * mult);
 
-  const hungryNote = wasHungry ? ' Der Hunger schwächt dich und ermüdet dich schneller.' : '';
+  const hungryNote = wasHungry ? ' Der Hunger schwächt mich und ermüdet mich schneller.' : '';
   showToast(`+${reward} Gold erhalten (Gesamt: ${resources.gold}).${hungryNote}`, TOAST.REWARD);
+  playSfx('work');
 
   checkMilestones();
   render();
@@ -820,6 +824,20 @@ function nightWatch() {
     showToast(`Nachtwache gehalten (+${reward} Gold). Erzähl Brakka davon!`, TOAST.REWARD);
   } else {
     showToast(`Nachtwache gehalten (+${reward} Gold). Ich werde mich danach schlechter erholen.`, TOAST.REWARD);
+  }
+  playSfx('work');
+
+  // Hauskatze: Drop nach 15 Nachtwachen
+  if (nightWatchStats.count === 15 && !wildPets.find(p => p.type === 'katze')) {
+    wildPets.push({ type: 'katze', level: 0 });
+    showToast('Eine Hauskatze schleicht sich in mein Quartier... 🐱', TOAST.EVENT);
+    navUnseen.pets = true;
+  }
+  // Eule: Drop nach 20 Nachtwachen
+  if (nightWatchStats.count === 20 && !wildPets.find(p => p.type === 'eule')) {
+    wildPets.push({ type: 'eule', level: 0 });
+    showToast('Eine Eule hat sich auf meinem Fensterbrett eingenistet... 🦉', TOAST.EVENT);
+    navUnseen.pets = true;
   }
 
   render();
@@ -917,6 +935,7 @@ function finishSleep(option) {
 
   const isFirstSleep = !gameFlags.firstSleepTriggered;
   gameFlags.firstSleepTriggered = true;
+  playSfx('sleep');
 
   startNewDay();
   currentContent = currentCity === 'lethkar' ? 'lethkar' : 'treutheim';
@@ -1058,24 +1077,24 @@ function triggerChapter2Victory() {
     launchConfetti();
 
     showDialog({
-      title: '🏆 Kapitel 1 & 2 abgeschlossen!',
+      title: '🏆 Ein langer Weg — und noch ist er nicht zu Ende.',
       boxClass: 'dialog-box-wide',
       html: `
         <p style="font-size:1.1em;text-align:center;margin-bottom:12px">
-          Du hast es geschafft.
+          Ich habe es geschafft.
         </p>
         <p>
-          Du bist als Niemand in Treutheim angekommen — mit leeren Taschen und
-          großen Träumen. Du wurdest bestohlen, hast neu angefangen, hast gekämpft,
-          gefragt, gesucht. Und jetzt kennst du die Wahrheit.
+          Als Niemand in Treutheim angekommen — mit leeren Taschen und
+          großen Träumen. Bestohlen worden, neu angefangen, gekämpft,
+          gefragt, gesucht. Und jetzt kenne ich die Wahrheit.
         </p>
         <p>
-          <strong>Der Schatten</strong> ist noch da draußen. Aber er weiß, dass du
-          existierst. Und das verändert alles.
+          <strong>Der Schatten</strong> ist noch da draußen. Aber er weiß, dass ich
+          existiere. Und das verändert alles.
         </p>
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-mid);font-size:0.85em">
-          <strong>Was in Kapitel 3 auf dich wartet:</strong><br>
+          <strong>Was als nächstes kommt:</strong><br>
           • Eine neue Stadt jenseits von Treutheim<br>
           • Die Abenteurergilde als echte Organisation<br>
           • Der Schatten — wer ist er wirklich?<br>
@@ -1083,9 +1102,9 @@ function triggerChapter2Victory() {
         </p>
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
-          Bleibe auf dem Laufenden über zukünftige Updates:<br>
+          Bleib auf dem Laufenden über zukünftige Updates:<br>
           <a href="https://discord.gg/NHenxsPh" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
-          Danke, dass du gespielt hast — wir hoffen, du hattest Spaß. ✨
+          Danke fürs Spielen — wir hoffen, es hat Spaß gemacht. ✨
         </p>
       `,
       buttons: [{

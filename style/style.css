@@ -1355,6 +1355,8 @@ body {
 }
 
 /* ── ACTION-BUTTONS ───────────────────────────────────────── */
+.action-btn-sm { font-size: 0.8em; padding: 5px 10px; }
+
 .action-btn {
   display: inline-flex;
   align-items: center;
@@ -1574,6 +1576,56 @@ body {
   font-style: normal;
 }
 
+/* Kompakte Achievement-Kacheln (3+ pro Reihe) */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.achievement-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  transition: border-color 0.15s;
+  min-height: 44px;
+}
+
+.achievement-tile:hover { border-color: var(--accent, #7ca); }
+
+.achievement-tile.unlocked {
+  border-color: var(--success, #4caf50);
+  background: rgba(76, 175, 80, 0.08);
+}
+
+.achievement-tile.achievement-tile-selected {
+  border-color: var(--accent, #7ca);
+  box-shadow: 0 0 0 2px rgba(100, 200, 160, 0.2);
+}
+
+.achievement-tile-icon { font-size: 1.4em; }
+.achievement-tile-name { font-size: 0.75em; font-weight: 600; line-height: 1.2; }
+.achievement-tile-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-lo); }
+.achievement-tile.unlocked .achievement-tile-dot { background: var(--success, #4caf50); }
+
+/* Detail-Panel unterhalb der Kacheln */
+.achievement-detail {
+  background: var(--surface-2, var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 0.9em;
+}
+
 /* Kleine Badge-Zahl auf Nav-Buttons (z.B. aktive Quests) */
 .nav-badge {
   display: inline-flex;
@@ -1617,6 +1669,54 @@ body {
   font-size: 12px;
   font-style: italic;
   margin-top: 40px;
+}
+
+/* ── AUDIO-STEUERUNG (Einstellungen) ─────────────────────── */
+.settings-audio-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.settings-audio-label {
+  min-width: 110px;
+  font-size: 0.85em;
+  color: var(--text-mid);
+}
+
+.audio-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.audio-control input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.audio-control input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent);
+  cursor: pointer;
+  height: 4px;
+}
+
+.audio-control input[type="range"]:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.audio-volume-label {
+  font-size: 0.75em;
+  color: var(--text-lo);
+  min-width: 32px;
+  text-align: right;
 }
 
 /* ── EINSTELLUNGEN ────────────────────────────────────────── */

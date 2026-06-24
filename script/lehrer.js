@@ -101,7 +101,7 @@ function renderLehrer(el) {
 
       ${nothingAvailable ? `
         <p class="chronik-empty" style="margin-top: 16px;">
-          Noch keine Fähigkeit vollständig erlernt. Kehre zurück, wenn du weiter bist.
+          Noch keine Fähigkeit vollständig erlernt. Kehre zurück, wenn ich weiter bin.
         </p>
       ` : ''}
     </div>

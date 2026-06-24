@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.17.0-alpha';
+const GAME_VERSION = '0.18.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -38,6 +38,11 @@ const CONTENT = Object.freeze({
   LETHKAR_TAVERNE:     'lethkar_taverne',
   LETHKAR_MARKT:       'lethkar_markt',
   LETHKAR_SCHLAFPLATZ: 'lethkar_schlafplatz',
+  VELMARK:              'velmark',
+  VELMARK_FRAKTIONEN:   'velmark_fraktionen',
+  VELMARK_JAGDGEBIET:   'velmark_jagdgebiet',
+  VELMARK_MARKT:        'velmark_markt',
+  VELMARK_SCHLAFPLATZ:  'velmark_schlafplatz',
   CHRONIK:             'chronik',
   SETTINGS:            'settings',
 });
@@ -96,7 +101,7 @@ const VENDOR = Object.freeze({ KRAEMER: 'kraemer', SCHMIEDE: 'schmiede' });
    showSaveChangelogDialog() einmalig eine kurze Zusammenfassung, was sich
    seither geändert hat. Bei jedem spürbaren Inhalts-Update: Nummer um 1
    erhöhen UND einen neuen Eintrag in SAVE_CHANGELOG ergänzen. */
-const CURRENT_SAVE_VERSION = 14;
+const CURRENT_SAVE_VERSION = 16;
 
 /* Kurzer Changelog je Spielstand-Versionssprung — bewusst knapp (ein
    Halbsatz pro Punkt), nicht der volle Commit-Verlauf. Schlüssel = die
@@ -209,6 +214,22 @@ const SAVE_CHANGELOG = {
     { cat: 'Neuerung', text: 'Achievement-Bonus jetzt multiplikativ (nicht mehr additiv) und wird tatsächlich auf Einnahmen angewendet.' },
     { cat: 'Neuerung', text: 'Krämer: Tab-System für Essen & Ausrüstung.' },
     { cat: 'Neuerung', text: '23 neue Errungenschaften (Kapitel 1 und Erfahrungs-Weg).' }
+  ],
+  15: [
+    { cat: 'Neuerung', chapter: 3, text: 'Story 3.7–3.10: Valdris\' Lager, der Name, der Alchemie-Durchbruch und der Kapitel-3-Abschluss.',
+      spoiler: () => !gameFlags.chapter3StoryComplete },
+    { cat: 'Neuerung', chapter: 3, text: 'Tier-2-Monster geben jetzt Wissensdurst (✦) als Kampf-Drop.',
+      spoiler: () => !gameFlags.lethkarUnlocked }
+  ],
+  16: [
+    { cat: 'Neuerung', chapter: 4, text: 'Kapitel 4: Velmark — die finale Stadt. Fraktionssystem, Einfluss (⚜), Informantennetz, Story 4.1–4.10.',
+      spoiler: () => !gameFlags.velmarkUnlocked },
+    { cat: 'Neuerung', chapter: 4, text: 'Tier-3-Kämpfe in Velmarks Unterwelt: Kanalratte, Söldner des Netzwerks, Schattenkämpfer — alle geben ⚜ Einfluss.',
+      spoiler: () => !gameFlags.velmarkUnlocked },
+    { cat: 'Neuerung', chapter: 4, text: 'Velmarks Großer Markt: Kettenrüstung (−5 Kampfschaden), Geheimes Netzwerk (mehr Informanten), Hafenverpflegung.',
+      spoiler: () => !gameFlags.velmarkUnlocked },
+    { cat: 'Neuerung', chapter: 4, text: 'Velmark-Schlafplatz: Hafenpension und Herrschaftliche Suite für HP-Regeneration in der Stadt.',
+      spoiler: () => !gameFlags.velmarkUnlocked }
   ]
 };
 
@@ -216,6 +237,17 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.18.0-alpha': [
+    { cat: 'Story',    text: 'Kapitel 3 Abschluss: Story 3.7–3.10 — Valdris\' Lager, Varenas Enthüllung, Alchemie-Durchbruch, Kap-3-Sieg-Dialog.' },
+    { cat: 'Story',    text: 'Kapitel 4: Velmark — die finale Stadt. Fraktionssystem, Einfluss (⚜), Informantennetz, Story 4.1–4.10 inkl. vollständigem Sieg-Dialog.' },
+    { cat: 'Neuerung', text: 'Audio-System: Hintergrundmusik (Ambient, Taverne, Kampf) + 11 Soundeffekte — synthetisch via Web Audio API, keine externen Dateien.' },
+    { cat: 'Neuerung', text: '50+ neue Errungenschaften für alle Kapitel + 8 geheime Errungenschaften. Kompaktes Kachel-UI mit Klick-Detail-Panel + Layer-Filter-Tabs.' },
+    { cat: 'Neuerung', text: 'Drei Fraktionen in Velmark: Händlergilde, Eiserne Bruderschaft, Stadtarchiv — je mit Reputationsbalken und NPC-Dialog-Baum.' },
+    { cat: 'Neuerung', text: 'Tier-2-Monster geben Wissensdurst ✦ als Kampf-Drop. Tier-3-Kämpfe in Velmarks Unterwelt geben ⚜ Einfluss.' },
+    { cat: 'Neuerung', text: 'Haustiere: Hauskatze (15 NW), Eule (20 NW), Wolf-Welpe (Waldtroll-Drop). Überarbeitete UI mit Wildtiere/Besonders-Tabs.' },
+    { cat: 'Neuerung', text: 'Geschichte-Seite: zustandsbasierte Ich-Texte für jede Story-Phase.' },
+    { cat: 'Bugfix',   text: 'Alchemisten-Werkzeug wird bei hartem Reset korrekt zurückgesetzt. Erstkontakt-Story (4.2) triggert jetzt korrekt. Erfahrungs-Baum: "Schaltet weitere Fähigkeiten frei" verschwindet nach Erwerb.' }
+  ],
   '0.17.0-alpha': [
     { cat: 'Story',    text: 'Kapitel 3: Lethkar ist zugänglich (Kapitel 2 abgeschlossen + 3 Mut). Stadtübersicht, Taverne, Markt, Schlafplatz.' },
     { cat: 'Story',    text: 'NPCs in Lethkar: Varena (entschlüsselt Miras Brief), Thessa und Pereth mit vollständiger Story 3.0–3.6.' },
@@ -338,7 +370,9 @@ let meta = {
   fasterWorkUnlocked: false, // Erleichterung nach dem 1. Neuanfang
   hasHome:            false, // Eigenheim in Treutheim gekauft (dauerhaft)
   hasSmith:           false, // Schmiede im Eigenheim ausgebaut (dauerhaft)
-  alchemieWerkzeug:   false  // Alchemisten-Werkzeug (Lethkar Markt, 500g) — +50% Alchemie-Tempo
+  alchemieWerkzeug:   false, // Alchemisten-Werkzeug (Lethkar Markt, 500g) — +50% Alchemie-Tempo
+  velmarkRuestung:    false, // Velmarker Kettenrüstung (Velmark Markt) — −5 Schaden im Kampf
+  netzwerkErweitert:  false  // Geheimes Netzwerk (Velmark Markt) — Informanten-Max 5 → 8
 };
 
 /* Ausrüstungs-Slots: itemId oder null. Ausgerüstetes wirkt sich aufs
@@ -450,9 +484,30 @@ let gameFlags = {
   thessaTrustGained:           false, // Thessa vertraut dem Spieler → Story 3.5
   perethQuestStarted:          false, // Pereth hat eine Aufgabe gegeben → Story 3.6
   lagerhausVisited:            false, // Spieler war im Lagerhaus → Bericht an Pereth möglich
-  chapter3StoryComplete:       false, // Alle Story-Punkte in Lethkar gesehen
+  chapter3StoryComplete:       false, // Pereth-Auftrag abgeschlossen → Story 3.6
+  valdrisOperationRaided:      false, // Spieler hat Valdris' Lager gestürmt → Story 3.7
+  varenaRevealedValdrisIdent:  false, // Varena hat Valdris als Netzwerk-Kopf enthüllt → Story 3.8
+  alchemieGeselleReached:      false, // Alchemie-Geselle (10 Gesamtlevel) → Story 3.9
+  kap3Complete:                false, // Kapitel 3 vollständig abgeschlossen → Story 3.10 + Konfetti
+  // ── Kapitel-4-Flags (Velmark) ─────────────────────────────
+  velmarkUnlocked:             false, // Velmark betreten (kap3Complete + Weltkarte)
+  perethFoundInVelmark:        false, // Pereth in Velmark gefunden und angesprochen
+  informantenNetzFreigeschaltet: false, // Informanten-Tick aktiv (nach Pereth-Quest)
+  gildekontaktGeknuepft:       false, // Händlergilde: erste Konversation
+  bruderschaftkontaktGeknuepft: false, // Eiserne Bruderschaft: erste Konversation
+  archivkontaktGeknuepft:      false, // Stadtarchiv: erste Konversation
+  ersteAllianzGeknuepft:       false, // eine Fraktion ≥ 30 → Story 4.4
+  valdrisBriefErhalten:        false, // Brief von Valdris → Story 4.5
+  zweiAllianzGekuepft:         false, // zwei Fraktionen ≥ 60 → Story 4.6
+  valdrisAngebotGemacht:       false, // Valdris' persönliches Angebot → Story 4.7
+  valdrisAngebotAbgelehnt:     false, // Angebot abgelehnt → Story 4.8
+  allianzKomplett:             false, // alle drei Fraktionen ≥ 80 → Story 4.9
+  kap4Complete:                false, // Kapitel 4 vollständig abgeschlossen → Story 4.10 + Ende
   schmiedeWelcomeSeen:         false, // Willkommens-Monolog in der Schmiede beim ersten Betreten
   exhaustionDialogShown:       false, // Einmaliger Erschöpfungs-Monolog beim ersten Erreichen von 100% Müdigkeit
+  firstTier2Kill:              false, // Erster Tier-2-Gegner besiegt (Achievement-Tracking)
+  firstTier3Kill:              false, // Erster Tier-3-Gegner besiegt (Achievement-Tracking)
+  deepHuntingUnlocked:         false, // Tiefe Jagdzone (Waldtroll) betreten (Achievement-Tracking)
   // ── Neues Raub-System (4 automatische Raub-Events) ────────
   robbery2Triggered:           false, // 2. Raub (200 Gold in der Hand) ausgelöst
   robbery3Triggered:           false, // 3. Raub (300 Gold in der Hand) ausgelöst
@@ -484,7 +539,8 @@ let navUnseen = {
   schmiede:     false,    // erst sichtbar nach Schmiede-Umbau (meta.hasSmith)
   expedition:   false,    // erst sichtbar nach erstem Jagdgebiet-Besuch
   alchemie:     false,    // erst sichtbar nach Varena-Alchemie-Unterricht
-  lethkar:      false     // erst sichtbar nach Lethkar-Betreten
+  lethkar:      false,    // erst sichtbar nach Lethkar-Betreten
+  velmark:      false     // erst sichtbar nach Velmark-Betreten
 };
 
 /* Wie oft heute bereits von welchem Marktplatz-Gut gekauft wurde —
@@ -569,6 +625,7 @@ let killStats = {
    "freigeschaltet" — kein Eintrag heißt "noch nicht erreicht". */
 let achievements = {};
 let achievementTab = ACH_CAT.NORMAL;
+let achievementLayerFilter = null; // null = alle Layer, 0–4 = spezifischer Layer
 
 /* Vom Spieler adoptierte Haustiere (siehe pets.js): id -> { name, level }.
    `level` startet bei 0 und steigt nur, sobald der Skill "Tierfreund"
@@ -576,9 +633,12 @@ let achievementTab = ACH_CAT.NORMAL;
 let pets = {};
 
 /* Reguläre Wildtiere — gefangen im Jagdgebiet nach Greta-Quest.
-   Jedes Tier: { type: 'hund'|'rabe'|'hase'|'eichhoernchen', level: 1 }
+   Jedes Tier: { type: 'hund'|'rabe'|'hase'|'eichhoernchen'|'katze'|'eule', level: 1 }
    level steigt durch "Zeit verbringen" (max. Level 3, 1x täglich GESAMT). */
 let wildPets = [];
+
+/* Aktiver Tab auf der Haustiere-Seite. */
+let petsTab = 'wildtiere'; // 'wildtiere' oder 'besonders'
 
 /* Fortschritt der geheimen Straßenkatze-Begegnungskette (siehe actions.js,
    maybeTriggerStreetWalk()/takeStreetWalk()) — eigenes kleines State-
@@ -588,6 +648,17 @@ let streetCatProgress = {
   sleepCount: 0,        // Wie oft insgesamt auf der Straße geschlafen wurde
   encounters: 0,        // Wie oft die Katze bereits getroffen UND gestreichelt wurde (max. 3, dann adoptiert)
   postAdoptionNights: 0 // Wie oft nach der Adoption auf der Straße geschlafen wurde
+};
+
+/* Audio-Einstellungen — werden NICHT in den normalen Spielstand gespeichert,
+   sondern in einem eigenen localStorage-Key ('audioSettings'). Damit überleben
+   sie einen Hard-Reset (der SAVE_KEY löscht nur den Spielfortschritt).
+   Laden/Speichern erfolgt über loadAudioSettings()/saveAudioSettings() in audio.js. */
+let audioSettings = {
+  musicEnabled: true,
+  sfxEnabled:   true,
+  musicVolume:  0.5,
+  sfxVolume:    0.5
 };
 
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */
@@ -682,6 +753,32 @@ let expedition = {
 let einsicht = {
   points:      0,
   totalEarned: 0
+};
+
+/* Einfluss — die Kapitel-4-Ressource (Velmark). Kein Reset-Prestige mehr —
+   Einfluss wird direkt eingesetzt, um Fraktions-Reputation zu kaufen und
+   Diplomatie-Aktionen freizuschalten. Übersteht Resets trotzdem (analog Mut). */
+let einfluss = {
+  points:      0,
+  totalEarned: 0
+};
+
+/* Fraktionen — Velmark (Kapitel 4). Reputation 0–100 je Fraktion.
+   ≥ 30: Bekannt (erste Quests verfügbar)
+   ≥ 60: Verbündet (Diplomatie-Aktionen + Händler-Boni)
+   ≥ 80: Vollverbündet (für Allianz gegen Valdris erforderlich) */
+let fraktionen = {
+  haendlergilde: 0, // Händlergilde — Gold-Fraktion
+  bruderschaft:  0, // Eiserne Bruderschaft — Kampf-Fraktion
+  archiv:        0  // Stadtarchiv — Wissen-Fraktion
+};
+
+/* Informantennetz — freigeschaltet nach Pereth-Quest in Velmark.
+   count: Anzahl aktiver Informanten (jeder gibt 1 ⚜ / Minute passiv)
+   lastTick: Unix-Timestamp des letzten Ticks (analog alchemie.lastTick) */
+let informanten = {
+  count:    0,
+  lastTick: null
 };
 
 /* Wissensdurst-Skillbaum — permanent (übersteht Neuanfang). Freigeschaltet

@@ -99,7 +99,9 @@ function rollPlayerDamage() {
   const data        = getStrengthLevelData(strength.xp);
   const base        = Math.floor(Math.random() * 6) + 5; // 5–10
   const alchemieMult = typeof getAlchemieFeuerschadenMult === 'function' ? getAlchemieFeuerschadenMult() : 1;
-  return Math.max(1, Math.round(base * data.damageMult * alchemieMult));
+  // Wolf-Welpe Bonus: fester Schadenszuwachs (via pets.js)
+  const wolfBonus = typeof getWildPetCombatDamageBonus === 'function' ? getWildPetCombatDamageBonus() : 0;
+  return Math.max(1, Math.round(base * data.damageMult * alchemieMult) + wolfBonus);
 }
 
 /** Berechnet den Schaden, den ein Monster nach Abzug der Verteidigung macht. */
@@ -138,7 +140,12 @@ function startCombat(monsterId) {
   combat.active  = true;
   combat.enemyId = monsterId;
   combat.enemyHp = monster.maxHp;
-  combat.log     = [`Du begegnest: ${monster.icon} ${monster.name} (${monster.maxHp} HP).`];
+  combat.log     = [`Ich begegne: ${monster.icon} ${monster.name} (${monster.maxHp} HP).`];
+
+  // Tracking: erste Erkundung der tiefen Jagdzone (für Achievement)
+  if ((monster.zone === 'tief' || monster.zone === 'lethkar_tief') && !gameFlags.deepHuntingUnlocked) {
+    gameFlags.deepHuntingUnlocked = true;
+  }
 
   render();
 }
@@ -150,7 +157,8 @@ function performAttack() {
 
   const playerDmg = rollPlayerDamage();
   combat.enemyHp = Math.max(0, combat.enemyHp - playerDmg);
-  combat.log.unshift(`Du schlägst zu: −${playerDmg} HP (Gegner: ${combat.enemyHp}/${monster.maxHp}).`);
+  combat.log.unshift(`Ich schlage zu: −${playerDmg} HP (Gegner: ${combat.enemyHp}/${monster.maxHp}).`);
+  playSfx('hit');
 
   if (combat.enemyHp <= 0) {
     endCombat(true, monster);
@@ -159,7 +167,7 @@ function performAttack() {
 
   const enemyDmg = rollEnemyDamage(monster);
   playerStats.hp = Math.max(0, playerStats.hp - enemyDmg);
-  combat.log.unshift(`${monster.icon} schlägt zurück: −${enemyDmg} HP (Du: ${playerStats.hp}/${playerStats.maxHp}).`);
+  combat.log.unshift(`${monster.icon} schlägt zurück: −${enemyDmg} HP (Ich: ${playerStats.hp}/${playerStats.maxHp}).`);
 
   if (playerStats.hp <= 0) {
     endCombat(false, monster);
@@ -177,11 +185,12 @@ function performFlee() {
   if (Math.random() < 0.5) {
     combat.active = false;
     combat.log    = [];
-    showToast('Du entkommen dem Kampf mit knapper Not.', TOAST.INFO);
+    showToast('Ich entkamm dem Kampf mit knapper Not.', TOAST.INFO);
   } else {
     const enemyDmg = rollEnemyDamage(monster);
     playerStats.hp = Math.max(0, playerStats.hp - enemyDmg);
-    combat.log.unshift(`Flucht misslungen! ${monster.icon} trifft dich beim Fliehen: −${enemyDmg} HP.`);
+    combat.log.unshift(`Flucht misslungen! ${monster.icon} trifft mich beim Fliehen: −${enemyDmg} HP.`);
+    playSfx('miss');
     if (playerStats.hp <= 0) { endCombat(false, monster); return; }
   }
 
@@ -200,6 +209,14 @@ function endCombat(won, monster) {
     killStats.total += 1;
     maybeStrengthLevelUp();
 
+    // First-Kill-Tracking für Achievements
+    if (!gameFlags.firstTier2Kill && monster.tier === 2) {
+      gameFlags.firstTier2Kill = true;
+    }
+    if (!gameFlags.firstTier3Kill && monster.tier === 3) {
+      gameFlags.firstTier3Kill = true;
+    }
+
     // Waldtroll-Flag setzen → persönlicher Moment → dann Roswald
     if (monster.id === 'waldtroll' && !gameFlags.waldtrollKilled) {
       gameFlags.waldtrollKilled = true;
@@ -211,6 +228,13 @@ function endCombat(won, monster) {
           'Ich glaube, das ist das Schwerste, was ich je getan habe. Und ich möchte Schwereres.'
         ], () => maybeTriggerCommanderRecruitment(() => {}));
       }, 400);
+    }
+
+    // Wolf-Welpe: seltener Drop nach Waldtroll-Kill (10% Chance)
+    if (monster.id === 'waldtroll' && !pets.wolfWelpe && Math.random() < 0.10) {
+      pets.wolfWelpe = { level: 0 };
+      showToast('Ein Wolf-Welpe folgt mir aus dem Wald... 🐺', TOAST.EVENT);
+      navUnseen.pets = true;
     }
 
     // Wasser-Aspekt Level 3: HP-Regen nach Kampfsieg
@@ -257,6 +281,7 @@ function endCombat(won, monster) {
 
     combat.log.unshift(msg);
     showToast(msg, TOAST.REWARD);
+    playSfx('victory');
 
     // Story-Fortschritt nach erstem Kill (storyState 20101)
     if (!gameFlags.firstJagdgebietKill) {
@@ -285,9 +310,10 @@ function endCombat(won, monster) {
     const goldLost = Math.floor(resources.gold * 0.2);
     resources.gold = Math.max(0, resources.gold - goldLost);
     playerStats.hp = 1;
-    const msg = `Du wirst besiegt und schleichst dich davon. ${goldLost > 0 ? `−${goldLost} Gold.` : ''}`;
+    const msg = `Besiegt — ich schleiche mich davon. ${goldLost > 0 ? `−${goldLost} Gold.` : ''}`;
     combat.log.unshift(msg);
     showToast(msg, TOAST.ERROR);
+    playSfx('defeat');
 
     if (!gameFlags.firstCombatDefeated) {
       gameFlags.firstCombatDefeated = true;
@@ -373,7 +399,7 @@ function renderJagdgebiet(el) {
     </div>
 
     <div class="hunt-info-text">
-      Schlafen stellt deine Lebenspunkte wieder her. Im Kampf besiegt zu werden kostet 20 % deines Goldes.
+      Schlafen stellt meine Lebenspunkte wieder her. Im Kampf besiegt zu werden kostet 20 % meines Goldes.
     </div>
 
     <div class="hunt-monster-list">

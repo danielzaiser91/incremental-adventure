@@ -25,7 +25,6 @@ function showUpdateBanner() {
 }
 
 function saveAndReload() {
-  sessionStorage.setItem('justUpdated', GAME_VERSION);
   saveGame();
   location.reload();
 }

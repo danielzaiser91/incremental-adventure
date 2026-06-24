@@ -41,6 +41,11 @@ function renderContent() {
     case CONTENT.LETHKAR_TAVERNE:    renderLethkarTaverne(area);     break;
     case CONTENT.LETHKAR_MARKT:      renderLethkarMarkt(area);       break;
     case CONTENT.LETHKAR_SCHLAFPLATZ:renderLethkarSchlafplatz(area); break;
+    case CONTENT.VELMARK:            renderVelmark(area);            break;
+    case CONTENT.VELMARK_FRAKTIONEN: renderVelmarkFraktionen(area);  break;
+    case CONTENT.VELMARK_JAGDGEBIET:  renderVelmarkJagdgebiet(area);   break;
+    case CONTENT.VELMARK_MARKT:       renderVelmarkMarkt(area);        break;
+    case CONTENT.VELMARK_SCHLAFPLATZ: renderVelmarkSchlafplatz(area);  break;
     case CONTENT.CHRONIK:            renderChronik(area);            break;
     case CONTENT.SETTINGS:           renderSettings(area);           break;
     default:                         renderGeschichte(area);
@@ -85,6 +90,7 @@ function modifiedValueHtml(displayHtml, baseLabel, baseValue, effects) {
 
 /* ── Geschichte: rein erzählerischer Innenwelt-Bildschirm ────── */
 function renderGeschichte(el) {
+  // Vor dem Stadttor — einziger Zustand mit Action-Button
   if (storyState === 10100) {
     el.innerHTML = `
       <div class="feature-stage">
@@ -101,45 +107,194 @@ function renderGeschichte(el) {
     return;
   }
 
-  if (storyState >= 20100) {
+  // Chronik-Link — wird unter Post-Kap-1-Texten angezeigt
+  const chronikBtn = `<button class="action-btn action-btn-sm" onclick="showContent('${CONTENT.CHRONIK}')" style="margin-top:10px">📜 Chronik</button>`;
+
+  // ── Kap 1 Phasen (10101–10106) ───────────────────────────
+  if (storyState < 20100) {
+    let label, title, text, subHtml = '';
+
+    if (storyState === 10101) {
+      label = 'Treutheim — erste Schritte';
+      title = 'Angekommen';
+      text  = 'Größer, lauter, unordentlicher als erwartet — aber auch voller Möglichkeiten, die es dort, wo ich herkomme, nie gegeben hat.';
+    } else if (storyState === 10102) {
+      label = 'Treutheim';
+      title = 'Ich werde beobachtet';
+      text  = 'Irgendetwas stimmt nicht. Jemand beobachtet mich — ich spüre es in der Stille zwischen den Blicken.';
+    } else if (storyState === 10103) {
+      label   = 'Nach dem ersten Raub';
+      title   = 'Alles weg';
+      text    = 'Die Hände zittern noch — nicht vor Angst, vor blankem Unglauben. Er hat es beiläufig gemacht. Als wäre ich keine Bedrohung.';
+      subHtml = `<p class="location-card-desc" style="color:var(--muted);font-style:italic">Weitermachen. Schneller diesmal.</p>`;
+    } else if (storyState === 10104) {
+      label = 'Nach dem zweiten Raub';
+      title = 'Kein Zufall';
+      text  = 'Er weiß, wann ich komme. Das ist System — und ich bin das Opfer, das es noch nicht begriffen hat.';
+    } else if (storyState === 10105) {
+      label = 'Nach dem dritten Raub';
+      title = 'Dreimal';
+      text  = 'Ich stehe gegen eine Wand und warte auf den vierten. Etwas muss sich ändern — nicht beim nächsten Anlauf. Jetzt.';
+    } else if (storyState === 10106) {
+      label = 'Nach dem vierten Raub';
+      if (skills.paranoid >= 1) {
+        title = 'Paranoid — und klüger';
+        text  = 'Ja, ich bin paranoid. Aber paranoid macht mich schärfer. Der nächste Anlauf wird anders.';
+      } else {
+        title = 'Vier Mal';
+        text  = 'Ich bin wütend genug, um endlich klug zu handeln.';
+      }
+    } else {
+      // Fallback für Kap-1-Zwischenzustände
+      label = `Treutheim — Tag ${gameClock.day}`;
+      title = 'Angekommen';
+      text  = 'Größer, lauter, unordentlicher als erwartet — aber auch voller Möglichkeiten, die es dort, wo ich herkomme, nie gegeben hat.';
+    }
+
     el.innerHTML = `
       <div class="feature-stage">
-        <div class="feature-stage-label">Treutheim — danach</div>
+        <div class="feature-stage-label">${label}</div>
         <div class="location-card">
-          <div class="location-card-title">Ich bin nicht mehr dieselbe Person</div>
-          <p class="location-card-desc">
-            Wie es weitergeht, schreibt sich noch. Bis dahin lässt sich nachlesen, was bisher geschah.
-          </p>
-          <button class="action-btn" onclick="showContent('${CONTENT.CHRONIK}')">📜 Zur Chronik</button>
+          <div class="location-card-title">${title}</div>
+          <p class="location-card-desc">${text}</p>
+          ${subHtml}
         </div>
-      </div>
-    `;
+      </div>`;
     return;
   }
 
-  const watchedBadge = storyState >= 10102
-    ? `<div class="status-badge status-badge-warning">⚠ Ich habe das Gefühl, beobachtet zu werden.</div>`
-    : '';
+  // ── Kap-2-Phasen (20100–20106) ───────────────────────────
+  if (storyState < 20200) {
+    let label, title, text, subHtml = '';
+
+    if (storyState === 20100 && !gameFlags.kapitel2Unlocked) {
+      // Bewusster Neuanfang-Zustand (storyState 20100 aber Kap2 noch nicht aktiv)
+      label = 'Treutheim — Wendepunkt';
+      title = 'Der bewusste Neuanfang';
+      text  = 'Mein Gold ist fort — diesmal absichtlich zurückgelassen. Die Rückschläge haben mich verändert. Zeit, daraus Stärke zu machen.';
+    } else if (storyState === 20100) {
+      label = 'Treutheim — Gildenmitglied';
+      title = 'Ich gehöre dazu';
+      text  = 'Ein Siegel, ein Name in einem Buch. Das fühlt sich anders an — nicht nur ein Titel, sondern ein erster echter Schritt.';
+    } else if (storyState === 20101) {
+      label = 'Das Jagdgebiet';
+      if (quests.theftInvestigation?.state && quests.theftInvestigation.state !== 'unstarted') {
+        title = 'Die Spur';
+        text  = 'Die Spur des Diebs führt ins Jagdgebiet. Ich halte die Augen offen.';
+      } else {
+        title = 'Das Jagdgebiet ruft';
+        text  = 'Stärker werden und die Wahrheit finden — beides wartet dort draußen.';
+      }
+    } else if (storyState === 20102) {
+      label = 'Spuren';
+      title = 'Korbin hat geredet';
+      text  = 'Eine Raubserie. Jemand sammelt gezielt — und ich war sein Ziel. Die Antwort liegt draußen.';
+    } else if (storyState === 20103) {
+      label = 'Ein Fund';
+      title = 'Meine eigene Münze';
+      text  = 'Unter Räuberhabe. Das ist kein Zufall mehr — das ist ein Fingerzeig. Mira weiß mehr.';
+    } else if (storyState === 20104) {
+      label = 'Mira hat gesprochen';
+      title = 'Mira hat gesprochen';
+      text  = 'Ein Name. Eine Methode. Und ein Rat: erst stark genug werden, dann stellen.';
+    } else if (storyState === 20105) {
+      label = 'Stärke beweisen';
+      if (!gameFlags.waldtrollKilled) {
+        title = 'Erst die Stärke';
+        text  = 'Brakka warnt: er respektiert nur Kraft. Der Waldtroll muss fallen.';
+      } else if (getStrengthLevel(strength.xp) < 3) {
+        title = 'Noch nicht bereit';
+        text  = 'Der Troll liegt hinter mir — aber für den Fremden brauche ich noch mehr.';
+      } else {
+        title = 'Bereit';
+        text  = 'Der Troll liegt hinter mir. Jetzt stelle ich den Fremden.';
+      }
+    } else if (storyState === 20106) {
+      label = 'Konfrontation';
+      title = 'Die Konfrontation';
+      text  = 'Er wusste, wer ich bin. Ich weiß jetzt, wer er ist. Brakka und Mira verdienen die Wahrheit.';
+    } else {
+      label = 'Treutheim';
+      title = 'Ein neues Kapitel';
+      text  = 'Die Gilde wartet. Mein nächster Schritt wird größer sein als alles, was ich bisher gewagt habe.';
+    }
+
+    el.innerHTML = `
+      <div class="feature-stage">
+        <div class="feature-stage-label">${label}</div>
+        <div class="location-card">
+          <div class="location-card-title">${title}</div>
+          <p class="location-card-desc">${text}</p>
+          ${subHtml}
+          ${chronikBtn}
+        </div>
+      </div>`;
+    return;
+  }
+
+  // ── storyState >= 20200: Post-Kap-2 (Lethkar / Velmark) ─
+  let label, title, text, icon = '', extraHtml = '';
+
+  if (gameFlags.kap4Complete) {
+    icon  = '🌆';
+    label = 'Velmark — Ende';
+    title = 'Der Weg hat ein Ende';
+    text  = 'Das Netz ist zerschnitten. Valdris ist gestellt. Was bleibt, ist der Moment danach.';
+    extraHtml = `<button class="action-btn action-btn-sm" onclick="showContent('${CONTENT.CHRONIK}')" style="margin-top:6px">📜 Chronik</button>`;
+  } else if (gameFlags.allianzKomplett) {
+    label = 'Velmark — Alle Fraktionen';
+    title = 'Alle Fraktionen vereint';
+    text  = 'Drei Fraktionen hinter mir. Valdris ist eingekreist. Es ist Zeit für das letzte Gespräch.';
+  } else if (gameFlags.velmarkUnlocked) {
+    icon  = '🌆';
+    label = 'Velmark';
+    title = 'Velmarks Netz';
+    text  = 'Drei Fraktionen, ein Netzwerk aus Schulden — und irgendwo: Valdris. Ich fange an.';
+  } else if (gameFlags.kap3Complete) {
+    icon  = '🗺';
+    label = 'Lethkar liegt hinter mir';
+    title = 'Lethkar liegt hinter mir';
+    text  = 'Valdris zieht sich zurück — nach Osten. Der nächste Schritt wartet auf der Weltkarte.';
+  } else if (gameFlags.lethkarUnlocked) {
+    icon  = '🏙';
+    label = 'Lethkar';
+    // Lethkar-interner Zustand anhand von Flags
+    if (gameFlags.chapter3StoryComplete) {
+      title = 'Am Ende von Lethkar';
+      text  = 'Alles, was hier zu tun war, ist getan. Der Weg weist nach Osten.';
+    } else if (gameFlags.valdrisOperationRaided) {
+      title = 'Das Lager ist durchsucht';
+      text  = 'Valdris ist nicht mehr hier. Aber die Spuren zeigen, wohin er sich zurückgezogen hat.';
+    } else if (gameFlags.varenaRevealedValdrisIdent) {
+      title = 'Varena hat gesprochen';
+      text  = 'Ein Name. Eine Geschichte dahinter. Das Netz ist größer als ich dachte — und Valdris steckt mittendrin.';
+    } else if (gameFlags.alchemieGeselleReached) {
+      title = 'Geselle';
+      text  = 'Das Feuer kennt meine Hände jetzt. Varena hat bemerkt, was ich kann.';
+    } else if (alchemie && alchemie.unlocked) {
+      title = 'Die Alchemie ruft';
+      text  = 'Die Werkstatt wartet. Jedes Level bringt mich Varena näher — und der Wahrheit.';
+    } else {
+      title = 'Lethkar';
+      text  = 'Kälter als Treutheim. Mehr Schatten als Licht. Aber auch mehr Wissen — und Varena, die weiß, was Miras Brief wirklich bedeutet.';
+    }
+  } else {
+    // Kap-2-Ende, noch kein Lethkar
+    label = 'Der Weg nach Norden';
+    title = 'Der Weg nach Norden';
+    text  = 'Mut ist da. Lethkar wartet — die Adresse aus dem Brief führt dorthin.';
+  }
 
   el.innerHTML = `
     <div class="feature-stage">
-      <div class="feature-stage-label">Treutheim — Tag ${gameClock.day}</div>
+      <div class="feature-stage-label">${icon ? icon + ' ' : ''}${label}</div>
       <div class="location-card">
-        ${watchedBadge}
-        <div class="location-card-title">Ich bin angekommen!</div>
-        <p class="location-card-desc">
-          Die Stadt ist lauter, schmutziger und kälter, als ich es mir erträumt hatte — aber sie ist
-          auch voller Möglichkeiten, die es dort, wo ich herkomme, niemals gegeben hätte.
-        </p>
-        <p class="location-card-desc">
-          Ich weiß, was ich will: nicht für immer ein gebeugter Rücken auf einem fremden Feld sein.
-          Ich will ein Abenteurer werden — jemand mit einer Geschichte, die es wert ist, erzählt zu
-          werden. Bis dahin ist es ein weiter Weg, und im Moment besteht er vor allem aus Schwielen
-          und einem leeren Geldbeutel.
-        </p>
+        <div class="location-card-title">${title}</div>
+        <p class="location-card-desc">${text}</p>
+        ${extraHtml}
+        ${chronikBtn}
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
 /* ── Weltkarte: Übersicht bekannter (und unbekannter) Regionen ── */
@@ -151,9 +306,20 @@ function renderWeltkarte(el) {
     maybeShowStoryDialog('3.0');
   }
 
+  // Velmark wird sichtbar sobald Kap-3 vollständig abgeschlossen
+  const canUnlockVelmark = gameFlags.kap3Complete && !gameFlags.velmarkUnlocked;
+  if (canUnlockVelmark) {
+    gameFlags.velmarkUnlocked = true;
+    navUnseen.velmark = true;
+    render();
+    setTimeout(() => maybeShowStoryDialog('4.1'), 400);
+    return;
+  }
+
   // Lethkar ist bekannt (Ziel auf Miras Brief) sobald der Brief entschlüsselt
   // wurde — auch wenn noch nicht freigeschaltet
   const lethkarHinted = storyState >= 20200 && mut.points < 3;
+  const velmarkHinted  = gameFlags.lethkarUnlocked && !gameFlags.velmarkUnlocked;
 
   el.innerHTML = `
     <div class="feature-stage">
@@ -187,6 +353,23 @@ function renderWeltkarte(el) {
                 <p class="action-card-desc">Unbekannte Gebiete jenseits der Hügel. Noch nicht erreichbar.</p>
                 <button class="action-btn btn-disabled" disabled>Unentdeckt</button>
               </div>`
+        }
+
+        ${gameFlags.velmarkUnlocked
+          ? `<div class="action-card">
+              <div class="action-card-icon">🌆</div>
+              <div class="action-card-name">Velmark</div>
+              <p class="action-card-desc">Eine Handelsstadt im Osten — Valdris' Heimat. Drei Fraktionen, ein Netz aus Loyalitäten, und eine offene Rechnung.</p>
+              <button class="action-btn" onclick="enterCity('velmark')">Betreten</button>
+            </div>`
+          : velmarkHinted
+            ? `<div class="action-card action-card-locked">
+                <div class="action-card-icon">🌆</div>
+                <div class="action-card-name">Velmark</div>
+                <p class="action-card-desc">Dorthin, woher Valdris kommt. Ich bin noch nicht bereit aufzubrechen.</p>
+                <button class="action-btn btn-disabled" disabled>Noch nicht bereit</button>
+              </div>`
+            : ''
         }
 
       </div>
@@ -981,6 +1164,36 @@ function renderSettings(el) {
       </div>
 
       <div class="settings-group">
+        <div class="settings-section-title">🎵 Audio</div>
+        <div class="settings-audio-row">
+          <label class="settings-audio-label">Musik</label>
+          <div class="audio-control">
+            <input type="checkbox" id="music-toggle"
+              ${audioSettings.musicEnabled ? 'checked' : ''}
+              onchange="setMusicEnabled(this.checked)">
+            <input type="range" min="0" max="1" step="0.05"
+              value="${audioSettings.musicVolume}"
+              oninput="setMusicVolume(parseFloat(this.value))"
+              ${!audioSettings.musicEnabled ? 'disabled' : ''}>
+            <span class="audio-volume-label">${Math.round(audioSettings.musicVolume * 100)}%</span>
+          </div>
+        </div>
+        <div class="settings-audio-row">
+          <label class="settings-audio-label">Soundeffekte</label>
+          <div class="audio-control">
+            <input type="checkbox" id="sfx-toggle"
+              ${audioSettings.sfxEnabled ? 'checked' : ''}
+              onchange="setSfxEnabled(this.checked)">
+            <input type="range" min="0" max="1" step="0.05"
+              value="${audioSettings.sfxVolume}"
+              oninput="setSfxVolume(parseFloat(this.value))"
+              ${!audioSettings.sfxEnabled ? 'disabled' : ''}>
+            <span class="audio-volume-label">${Math.round(audioSettings.sfxVolume * 100)}%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-group">
         <div class="settings-section-title">Debug-Info</div>
         <div class="settings-info">
           <div class="info-row">
@@ -1077,11 +1290,30 @@ function renderLethkar(el) {
       <button class="goto-btn" onclick="showContent('${p.id}')">Hingehen</button>
     </div>`).join('');
 
+  const raidCard = gameFlags.chapter3StoryComplete ? (() => {
+    if (gameFlags.valdrisOperationRaided) {
+      return `
+        <div class="action-card quest-card-done">
+          <div class="action-card-icon">🏚</div>
+          <div class="action-card-name">Valdris' Lager</div>
+          <p class="action-card-desc">Ich war bereits drin. Es war leer — aber nicht ohne Spuren.</p>
+          <button class="action-btn btn-disabled" disabled>Erkundet</button>
+        </div>`;
+    }
+    return `
+      <div class="action-card">
+        <div class="action-card-icon">🏚</div>
+        <div class="action-card-name">Valdris' Lager</div>
+        <p class="action-card-desc">Am Nordrand der Stadt, zwischen zwei Lagerhäusern. Pereth, Thessa, Varena — alle drei wissen, wo es ist. Niemand ist hingegangen.</p>
+        <button class="action-btn" onclick="raidValdrisLager()">Erkunden</button>
+      </div>`;
+  })() : '';
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Lethkar</div>
       <p class="location-card-desc" style="margin-bottom:12px;">Eine alte Gelehrtenstadt im Norden. Pflastersteine statt Feldwege, Türme statt Kirchendächer — und überall dieser Geruch von Kräutern und heißem Metall.</p>
-      <div class="action-grid">${cards}</div>
+      <div class="action-grid">${cards}${raidCard}</div>
     </div>`;
 }
 
@@ -1199,6 +1431,319 @@ function renderLethkarSchlafplatz(el) {
         <div class="action-card-effect">Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
           onclick="sleepAt('lethkar_pension',${opt.cost},${opt.qualityTier})"
+          ${canAfford ? '' : 'disabled'}>
+          ${canAfford ? 'Einquartieren' : `Nicht genug Gold (${opt.cost}g)`}
+        </button>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Schlafplatz</div>
+      <div class="action-grid">${cards}</div>
+    </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Kapitel 4 — Velmark
+   ══════════════════════════════════════════════════════════════ */
+
+function renderVelmark(el) {
+  const frakPlaces = [
+    { id: CONTENT.VELMARK_FRAKTIONEN, icon: '🤝', name: 'Fraktionen',
+      desc: 'Händlergilde, Eiserne Bruderschaft, Stadtarchiv — drei Kräfte, die diese Stadt zusammenhalten.' },
+    { id: CONTENT.VELMARK_JAGDGEBIET, icon: '⚔', name: 'Velmarks Unterwelt',
+      desc: 'In den Gassen und Lagerhäusern patrouillieren Valdris\' Leute. Ein riskanter Ort — aber mit Einfluss zu gewinnen.' },
+    { id: CONTENT.VELMARK_MARKT, icon: '🏪', name: 'Der Große Markt',
+      desc: 'Größer als alles in Lethkar. Informationen, Waffen, Alchemie-Rohmaterialien.' }
+  ];
+
+  const perethCard = gameFlags.perethFoundInVelmark ? '' : `
+    <div class="action-card">
+      <div class="action-card-icon">🕵</div>
+      <div class="action-card-name">Ein bekanntes Gesicht</div>
+      <p class="action-card-desc">Am Westkai sitzt jemand, den ich aus Lethkar kenne. Ich sollte ihn ansprechen.</p>
+      <button class="action-btn" onclick="findPerethInVelmark()">Ansprechen</button>
+    </div>`;
+
+  const cards = frakPlaces.map(p => `
+    <div class="action-card">
+      <div class="action-card-icon">${p.icon}</div>
+      <div class="action-card-name">${p.name}</div>
+      <p class="action-card-desc">${p.desc}</p>
+      <button class="action-btn" onclick="showContent('${p.id}')">Hingehen</button>
+    </div>`).join('');
+
+  const einflussInfo = `
+    <div class="alchemie-header" style="margin-bottom:12px;">
+      <span class="alchemie-berufsstufe">Velmark</span>
+      <span class="alchemie-wissensdurst">⚜ ${einfluss.points} Einfluss <span style="color:var(--text-lo);font-size:0.8em;">(${einfluss.totalEarned} gesamt)</span></span>
+    </div>`;
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Velmark</div>
+      ${einflussInfo}
+      <div class="action-grid">
+        ${perethCard}
+        ${cards}
+      </div>
+    </div>`;
+}
+
+function renderVelmarkFraktionen(el) {
+  const fraktionenDefs = [
+    {
+      id: 'haendlergilde', icon: '💰', name: 'Händlergilde',
+      desc: 'Die älteste Institution Velmarks. Wer in dieser Stadt handelt, handelt mit ihrer Erlaubnis.',
+      voraussetzung: () => resources.gold >= 500,
+      vorausText: `${resources.gold}/500 Gold verfügbar`,
+      kontaktFlag: 'gildekontaktGeknuepft',
+      npcId: 'gildenmeisterin'
+    },
+    {
+      id: 'bruderschaft', icon: '⚔', name: 'Eiserne Bruderschaft',
+      desc: 'Söldner, Wachen, Männer mit Muskeln und kurzen Gedächtnissen. Sie hören auf Stärke.',
+      voraussetzung: () => mut.points >= 5,
+      vorausText: `${mut.points}/5 Mut ⚔`,
+      kontaktFlag: 'bruderschaftkontaktGeknuepft',
+      npcId: 'hauptmann_gorr'
+    },
+    {
+      id: 'archiv', icon: '📜', name: 'Stadtarchiv',
+      desc: 'Die leiseste der drei Kräfte — und wahrscheinlich die mächtigste. Aufzeichnungen sind dauerhafte Waffen.',
+      voraussetzung: () => einsicht.totalEarned >= 10,
+      vorausText: `${einsicht.totalEarned}/10 Wissensdurst ✦ gesamt`,
+      kontaktFlag: 'archivkontaktGeknuepft',
+      npcId: 'archivarin_sele'
+    }
+  ];
+
+  const cards = fraktionenDefs.map(f => {
+    const rep = fraktionen[f.id];
+    const repLabel = rep >= 80 ? 'Vollverbündet' : rep >= 60 ? 'Verbündet' : rep >= 30 ? 'Bekannt' : 'Unbekannt';
+    const repColor = rep >= 80 ? 'var(--c-reward)' : rep >= 60 ? 'var(--c-event)' : rep >= 30 ? 'var(--c-purchase)' : 'var(--text-lo)';
+    const met     = !!gameFlags[f.kontaktFlag];
+    const canMeet = !met && f.voraussetzung();
+    const locked  = !met && !canMeet;
+    return `
+      <div class="action-card${locked ? ' action-card-locked' : ''}">
+        <div class="action-card-icon">${f.icon}</div>
+        <div class="action-card-name">${f.name}
+          ${met ? `<span style="color:${repColor};font-size:0.8em;margin-left:6px;">${repLabel} (${rep}/100)</span>` : ''}
+        </div>
+        <p class="action-card-desc">${f.desc}</p>
+        ${met
+          ? `<div class="xp-track" title="${rep}/100 Reputation">
+               <div class="xp-bar" style="width:${rep}%;background:${repColor}"></div>
+             </div>
+             <button class="action-btn" onclick="openNpcDialog('${f.npcId}')">Sprechen</button>`
+          : locked
+            ? `<div class="action-card-effect" style="color:var(--text-lo)">Voraussetzung: ${f.vorausText}</div>
+               <button class="action-btn btn-disabled" disabled>Noch nicht zugänglich</button>`
+            : `<div class="action-card-effect">Voraussetzung erfüllt: ${f.vorausText}</div>
+               <button class="action-btn" onclick="kontaktKnuepfen('${f.id}')">Kontakt aufnehmen</button>`
+        }
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Fraktionen</div>
+      <p style="color:var(--text-mid);font-size:0.85em;margin-bottom:12px;">
+        ⚜ ${einfluss.points} Einfluss verfügbar · Reputation ≥ 80 bei allen drei Fraktionen für den Abschluss benötigt.
+      </p>
+      <div class="action-grid">${cards}</div>
+    </div>`;
+}
+
+function renderVelmarkJagdgebiet(el) {
+  if (combat.active) {
+    renderKampf(el);
+    return;
+  }
+
+  const lvlData  = getStrengthLevelData(strength.xp);
+  const progress = getStrengthLevelProgress(strength.xp);
+  const hpColor  = playerStats.hp > playerStats.maxHp * 0.4 ? '' : 'style="color:var(--accent)"';
+
+  const tier3Monsters = MONSTER_DEFS.filter(m => m.tier === 3);
+  const monsterCards = tier3Monsters.map(m => {
+    const isDeep  = m.zone === 'velmark_tief';
+    const blocked = isDeep && getStrengthLevel(strength.xp) < 3;
+    const blockNote = blocked ? '<div class="hunt-blocked">Erfordert Stärke-Stufe 3 (Erfahrener Kämpfer).</div>' : '';
+    const btnAttr   = blocked ? 'disabled' : `onclick="startCombat('${m.id}')"`;
+    return `
+      <div class="monster-card ${blocked ? 'monster-locked' : ''}">
+        <div class="monster-icon">${m.icon}</div>
+        <div class="monster-info">
+          <div class="monster-name">${m.name}</div>
+          <div class="monster-desc">${m.desc}</div>
+          <div class="monster-stats">
+            HP: ${m.maxHp} · Schaden: ${m.damage[0]}–${m.damage[1]}
+            · XP: ${m.xpReward} · Gold: ${m.goldReward[0]}–${m.goldReward[1]}
+            ${m.mutReward > 0 ? ` · Mut: ${m.mutReward}` : ''}
+            ${m.einsichtReward > 0 ? ` · ✦ ${m.einsichtReward}` : ''}
+            ${m.einflussReward > 0 ? ` · ⚜ ${m.einflussReward}` : ''}
+          </div>
+          ${blockNote}
+        </div>
+        <button class="action-btn hunt-btn" ${btnAttr}>Jagen</button>
+      </div>`;
+  }).join('');
+
+  const progressBar = progress.span > 0
+    ? `<div class="strength-progress-bar"><div class="strength-progress-fill" style="width:${progress.pct.toFixed(1)}%"></div></div>
+       <div class="strength-progress-label">${progress.into}/${progress.span} XP bis zur nächsten Stufe</div>`
+    : `<div class="strength-progress-label">Höchste Stufe erreicht!</div>`;
+
+  el.innerHTML = `
+    <div class="feature-stage-label">Velmarks Unterwelt</div>
+
+    <div class="hunt-player-card">
+      <div class="hunt-player-row">
+        <span class="hunt-label">Lebenspunkte</span>
+        <span class="hunt-value" ${hpColor}>${playerStats.hp} / ${playerStats.maxHp} HP</span>
+      </div>
+      <div class="hunt-hp-bar">
+        <div class="hunt-hp-fill" style="width:${Math.round(playerStats.hp / playerStats.maxHp * 100)}%"></div>
+      </div>
+      <div class="hunt-player-row">
+        <span class="hunt-label">Stärke-Stufe</span>
+        <span class="hunt-value">${lvlData.label} (Lvl ${progress.level})</span>
+      </div>
+      ${progressBar}
+      <div class="hunt-player-row" style="margin-top:6px">
+        <span class="hunt-label">Einfluss</span>
+        <span class="hunt-value">${einfluss.points} ⚜ (gesamt: ${einfluss.totalEarned})</span>
+      </div>
+    </div>
+
+    <div class="hunt-info-text">
+      Kämpfe in Velmarks Schatten bringen Einfluss ⚜ — und treiben Valdris' Söldner aus der Stadt.
+      Im Kampf besiegt zu werden kostet 20 % deines Goldes. Schlafen stellt HP wieder her.
+    </div>
+
+    <div class="hunt-monster-list">
+      ${monsterCards}
+    </div>
+  `;
+}
+
+function renderVelmarkMarkt(el) {
+  const nightClosed = isNight();
+
+  // ── Velmarker Kettenrüstung (permanent, −5 Kampfschaden)
+  const ruestungCost   = 8000;
+  const ruestungOwned  = meta.velmarkRuestung;
+  const canBuyRuestung = !ruestungOwned && resources.gold >= ruestungCost && !nightClosed;
+  const ruestungCard   = `
+    <div class="action-card${ruestungOwned ? ' quest-card-done' : ''}">
+      <div class="action-card-icon">🛡</div>
+      <div class="action-card-name">Velmarker Kettenrüstung</div>
+      <p class="action-card-desc">Geschmiedet in den unterirdischen Schmieden Velmarks. Schwerer als alles, was ich bisher getragen habe — aber auch widerstandsfähiger.</p>
+      <div class="action-card-effect">−5 Kampfschaden (dauerhaft, jeder Kampf)</div>
+      ${ruestungOwned
+        ? `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`
+        : `<div class="action-card-cost ${canBuyRuestung ? 'cost-ok' : 'cost-too-high'}">${ruestungCost} Gold</div>
+           <button class="action-btn ${canBuyRuestung ? '' : 'btn-disabled'}"
+             onclick="buyVelmarkRuestung()"
+             ${canBuyRuestung ? '' : 'disabled'}>
+             ${nightClosed ? 'Markt geschlossen' : resources.gold < ruestungCost ? `Nicht genug Gold (${ruestungCost}g)` : 'Kaufen'}
+           </button>`
+      }
+    </div>`;
+
+  // ── Netzwerk-Ausbau (Informanten-Max 5 → 8, kostet 20 ⚜)
+  const netzwerkOwned  = meta.netzwerkErweitert;
+  const netzwerkCost   = 20;
+  const canBuyNetzwerk = !netzwerkOwned && einfluss.points >= netzwerkCost && gameFlags.informantenNetzFreigeschaltet;
+  const netzwerkCard   = gameFlags.informantenNetzFreigeschaltet ? `
+    <div class="action-card${netzwerkOwned ? ' quest-card-done' : ''}">
+      <div class="action-card-icon">🕸</div>
+      <div class="action-card-name">Geheimes Netzwerk</div>
+      <p class="action-card-desc">Pereths tiefster Kontakt — Vermittler die selbst nie in einem Datenbuch auftauchen. Drei weitere Informanten können auf dieser Basis angeworben werden.</p>
+      <div class="action-card-effect">Informanten-Maximum: 5 → 8</div>
+      ${netzwerkOwned
+        ? `<button class="action-btn btn-disabled" disabled>Erworben ✓</button>`
+        : `<div class="action-card-cost ${canBuyNetzwerk ? 'cost-ok' : 'cost-too-high'}">${netzwerkCost} ⚜ Einfluss</div>
+           <button class="action-btn ${canBuyNetzwerk ? '' : 'btn-disabled'}"
+             onclick="buyNetzwerkAusbau()"
+             ${canBuyNetzwerk ? '' : 'disabled'}>
+             ${einfluss.points < netzwerkCost ? `${einfluss.points}/${netzwerkCost} ⚜` : 'Kaufen'}
+           </button>`
+      }
+    </div>` : '';
+
+  // ── Verpflegung
+  const foodCards = VELMARK_FOOD_ITEMS.map(item => {
+    const owned  = resources.inventory[item.id] || 0;
+    const canBuy = resources.gold >= item.cost && !nightClosed;
+    const effectParts = [];
+    if (item.hungerRelief)    effectParts.push(`🍞 Hunger −${item.hungerRelief}%`);
+    if (item.tirednessRelief) effectParts.push(`😴 Müdigkeit −${item.tirednessRelief}%`);
+    return `
+      <div class="action-card">
+        <div class="action-card-icon">${item.icon}</div>
+        <div class="action-card-name">${item.name}${owned ? ` <span class="inventory-count">×${owned} im Inventar</span>` : ''}</div>
+        <p class="action-card-desc">${item.desc}</p>
+        <div class="action-card-effect">${effectParts.join(' · ')}</div>
+        <div class="action-card-cost ${canBuy ? 'cost-ok' : 'cost-too-high'}">${item.cost} Gold</div>
+        <button class="action-btn ${canBuy ? '' : 'btn-disabled'}"
+          onclick="buyVelmarkFood('${item.id}',${item.cost})"
+          ${canBuy ? '' : 'disabled'}>
+          ${nightClosed ? 'Markt geschlossen' : 'Kaufen'}
+        </button>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Der Große Markt</div>
+      <p class="location-card-desc" style="margin-bottom:12px;">Velmarks Handelszentrum: hier endet jede Route, die durch diese Stadt führt.</p>
+      <div class="market-section-label">Kampfausrüstung</div>
+      <div class="action-grid">${ruestungCard}</div>
+      ${netzwerkCard ? `<div class="market-section-label" style="margin-top:16px;">Untergrundkontakte</div>
+      <div class="action-grid">${netzwerkCard}</div>` : ''}
+      <div class="market-section-label" style="margin-top:16px;">Verpflegung</div>
+      <div class="action-grid">${foodCards}</div>
+    </div>`;
+}
+
+function renderVelmarkSchlafplatz(el) {
+  if (!isNight()) {
+    const tiredness = needs.tiredness;
+    const tier = getTirednessTier(tiredness);
+    const msg = tier.id === 'fresh' || tier.id === 'tired'
+      ? 'Die Sonne steht noch hoch. Schlafen wäre vertane Zeit.'
+      : 'Erschöpft — aber der Tag läuft noch. Ich muss die Stunden nutzen.';
+    el.innerHTML = `<div class="feature-stage"><div class="feature-stage-label">Schlafplatz</div><p class="location-card-desc">${msg}</p></div>`;
+    return;
+  }
+
+  const VELMARK_SLEEP_OPTIONS = [
+    {
+      id: 'velmark_pension', name: 'Hafenpension "Morgenwind"', icon: '🛏', cost: 12, qualityTier: 2,
+      desc: 'Eine ruhige Kammer mit Blick aufs Wasser. Geräuschloser als das Hafen-Treiben unten.'
+    },
+    {
+      id: 'velmark_suite', name: 'Herrschaftliche Suite', icon: '🏨', cost: 40, qualityTier: 3,
+      desc: 'Für Leute, die sich das leisten können. Weiche Matratze, keine Nachbarn, keine Fragen.'
+    }
+  ];
+
+  const qualityBonus = typeof getPetSleepBonus === 'function' ? getPetSleepBonus() : 0;
+  const cards = VELMARK_SLEEP_OPTIONS.map(opt => {
+    const canAfford     = resources.gold >= opt.cost;
+    const effectiveTier = opt.qualityTier + qualityBonus;
+    return `
+      <div class="action-card">
+        <div class="action-card-icon">${opt.icon}</div>
+        <div class="action-card-name">${opt.name}</div>
+        <p class="action-card-desc">${opt.desc}</p>
+        <div class="action-card-effect">Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
+        <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
+          onclick="sleepAt('${opt.id}',${opt.cost},${opt.qualityTier})"
           ${canAfford ? '' : 'disabled'}>
           ${canAfford ? 'Einquartieren' : `Nicht genug Gold (${opt.cost}g)`}
         </button>

@@ -14,6 +14,7 @@ function render() {
   renderContent();
   renderStats();
   renderObjective();
+  updateMusicForContext();
 }
 
 /** Heilt Spieler, bei denen Raub-Resets durch einen Bug nicht ausgelöst wurden.
@@ -40,11 +41,11 @@ function maybehealRobberyBug() {
     const entry = storyId && STORY_ENTRIES.find(e => e.id === storyId);
     if (entry) {
       showStoryEntryDialog(entry, () => {
-        showToast('Spielstand korrigiert: ein übersprungener Neuanfang wurde nachgeholt.', TOAST.EVENT);
+        showToast('Fortschritt korrigiert: ein übersprungener Neuanfang wurde nachgeholt.', TOAST.EVENT);
       });
     } else {
       showToast(
-        `Spielstand korrigiert: ${missing} übersprungener Neuanfang wurde nachgeholt.`,
+        `Fortschritt korrigiert: ${missing} übersprungener Neuanfang wurde nachgeholt.`,
         TOAST.EVENT
       );
     }
@@ -60,6 +61,7 @@ function maybehealRobberyBug() {
 }
 
 function init() {
+  loadAudioSettings();
   if (shouldAutoLoad()) loadGame();
   else render();
   applySelectionSetting();
@@ -70,6 +72,9 @@ function init() {
   setupDevKeyListener();
   startVersionCheck();
   setTimeout(maybehealRobberyBug, 200);
+  // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren
+  document.addEventListener('click', () => getAudioCtx(), { once: true });
+  setTimeout(() => updateMusicForContext(), 100);
 
   const justUpdated = sessionStorage.getItem('justUpdated');
   if (justUpdated) {

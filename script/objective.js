@@ -73,6 +73,28 @@ function getObjectiveText() {
   }
   if (storyState >= 20200) {
     if (gameFlags.lethkarUnlocked) {
+      if (gameFlags.kap4Complete)
+        return 'Das Netz ist zerschnitten. Velmark ist frei. Der Weg hat ein Ende gefunden — vorläufig.';
+    if (gameFlags.allianzKomplett)
+        return 'Alle drei Fraktionen stehen hinter mir. Valdris ist eingekreist. Zeit für das letzte Gespräch.';
+    if (gameFlags.valdrisAngebotAbgelehnt)
+        return 'Ich habe abgelehnt. Jetzt ist es kein Gespräch mehr — jetzt ist es ein Endspiel. Dritte Fraktion vollenden.';
+    if (gameFlags.valdrisAngebotGemacht && !gameFlags.valdrisAngebotAbgelehnt)
+        return 'Valdris hat mir ein Angebot gemacht. Ich muss entscheiden.';
+    if (gameFlags.zweiAllianzGekuepft)
+        return 'Zwei Fraktionen auf meiner Seite. Eine fehlt noch.';
+    if (gameFlags.ersteAllianzGeknuepft)
+        return 'Die erste Allianz steht. Valdris hat reagiert — ein Brief liegt vor mir. Weiter zu den anderen Fraktionen.';
+    if (gameFlags.velmarkUnlocked && !gameFlags.ersteAllianzGeknuepft)
+        return 'Velmark. Drei Fraktionen, ein Netz aus Schulden, und irgendwo: Valdris. Ich fange bei einer Fraktion an.';
+    if (gameFlags.kap3Complete)
+        return 'Lethkar liegt hinter mir. Valdris zieht sich zurück — nach Osten. Der nächste Schritt wartet.';
+      if (gameFlags.varenaRevealedValdrisIdent && !gameFlags.alchemieGeselleReached)
+        return 'Varena hat das Bild vervollständigt. Die Alchemie vertieft mein Verständnis — ich bin nah an einem Durchbruch.';
+      if (gameFlags.valdrisOperationRaided && !gameFlags.varenaRevealedValdrisIdent)
+        return 'Das Lager war leer — aber nicht ohne Spuren. Varena sollte das wissen.';
+      if (gameFlags.chapter3StoryComplete && !gameFlags.valdrisOperationRaided)
+        return 'Ich weiß, wo das Lager ist. Es ist Zeit, dorthin zu gehen.';
       if (gameFlags.chapter3StoryComplete)
         return 'Valdris. Ein Name, eine Struktur, ein Netzwerk. Was ich damit anfange, liegt bei mir.';
       if (gameFlags.varenaDecodedBrief)

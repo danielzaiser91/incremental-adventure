@@ -251,7 +251,7 @@ function renderExpedition(el) {
       ${storyCards.length ? `<div class="market-section-label">Story</div><div class="action-grid">${storyCards}</div>` : ''}
       ${grindCards.length ? `<div class="market-section-label">Wiederkehrend</div><div class="action-grid">${grindCards}</div>` : ''}
       ${!storyCards.length && !grindCards.length && !active
-        ? '<p style="color:var(--muted);font-style:italic">Noch keine Expeditionen verfügbar. Komm wieder, wenn du mehr von der Welt kennst.</p>'
+        ? '<p style="color:var(--muted);font-style:italic">Noch keine Expeditionen verfügbar. Wiederkommen, wenn ich mehr von der Welt kenne.</p>'
         : ''}
     </div>`;
 

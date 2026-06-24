@@ -220,7 +220,7 @@ function migrateSaveData(loadedVersion) {
       gameFlags.kapitel2Unlocked &&
       gameFlags.robberyTriggered) {
     storyState = 20100;
-    fixes.push('Dein Spielfortschritt wurde repariert — die Kapitel-2-Ziele werden jetzt korrekt angezeigt.');
+    fixes.push('Spielfortschritt wurde repariert — die Ziele werden jetzt korrekt angezeigt.');
   }
 
   return fixes;
@@ -248,7 +248,7 @@ function performGracefulReset() {
   closeDialog(() => {
     saveGame({ silent: true });
     render();
-    showToast('Kapitel 2 wurde neu gestartet — dein bisheriger Fortschritt bleibt erhalten.', TOAST.INFO);
+    showToast('Spielstand neu gestartet — mein bisheriger Fortschritt bleibt erhalten.', TOAST.INFO);
   });
 }
 
@@ -361,16 +361,18 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
     return false;
   };
 
+  const CHAPTER_NAMES = { 1: 'Treutheim — Die Anfänge', 2: 'Treutheim — Das Geheimnis', 3: 'Lethkar' };
   const chapterHtml = chapterNums.map(ch => {
     const entries = allEntries.filter(e => e.chapter === ch);
+    const label = CHAPTER_NAMES[ch] || `Abschnitt ${ch}`;
     if (isChapterRevealed(ch)) {
       return `
-        <div class="changelog-chapter-header">Kapitel ${ch}</div>
+        <div class="changelog-chapter-header">${label}</div>
         ${renderCategoryGroups(entries)}`;
     }
     return `
       <details class="changelog-chapter">
-        <summary class="changelog-chapter-summary">Kapitel ${ch} <span class="changelog-spoiler-hint">(Spoiler — zum Aufdecken klicken)</span></summary>
+        <summary class="changelog-chapter-summary">${label} <span class="changelog-spoiler-hint">(Spoiler — zum Aufdecken klicken)</span></summary>
         ${renderCategoryGroups(entries)}
       </details>`;
   }).join('');
@@ -391,9 +393,9 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
   const gracefulResetHtml = resetOffered ? `
     <hr style="border-color:var(--border);margin:14px 0 10px">
     <p style="color:var(--text-lo);font-size:0.82em">
-      Da dein Spielstand automatisch korrigiert wurde, kann es sein, dass du einige
-      Kapitel-2-Szenen noch nicht erlebt hast. Ein <strong>Sanfter Neustart</strong>
-      setzt nur den Kapitel-2-Fortschritt zurück — EP, Skills, Gold und alles andere
+      Da der Spielstand automatisch korrigiert wurde, kann es sein, dass einige
+      Szenen aus dem zweiten Abschnitt noch nicht erlebt wurden. Ein <strong>Sanfter Neustart</strong>
+      setzt nur diesen Fortschritt zurück — EP, Skills, Gold und alles andere
       bleibt vollständig erhalten.
     </p>
   ` : '';
@@ -420,17 +422,17 @@ function showSaveChangelogDialog(loadedVersion, migrationFixes = [], maxVersion 
 
   if (resetOffered) {
     buttons.push({
-      label: 'Sanfter Neustart (Kapitel 2)',
+      label: 'Sanfter Neustart (Treutheim-Geschichte)',
       onClick: () => {
         showDialog({
-          title: 'Kapitel 2 neu starten?',
+          title: 'Geschichte des zweiten Abschnitts neu starten?',
           text: [
-            'Dein EP-Fortschritt, deine Skills, dein Gold und alle Errungenschaften aus Kapitel 1 bleiben erhalten.',
-            'Nur die Kapitel-2-Story, die Detektiv-Quest und die zugehörigen Errungenschaften werden zurückgesetzt.',
-            'Möchtest du das wirklich?'
+            'EP-Fortschritt, Skills, Gold und alle Errungenschaften aus dem ersten Abschnitt bleiben erhalten.',
+            'Nur die Story des zweiten Abschnitts, die Detektiv-Quest und die zugehörigen Errungenschaften werden zurückgesetzt.',
+            'Wirklich neu starten?'
           ],
           buttons: [
-            { label: 'Ja, Kapitel 2 neu starten', onClick: () => performGracefulReset() },
+            { label: 'Ja, neu starten', onClick: () => performGracefulReset() },
             { label: 'Abbrechen', onClick: () => closeDialog(() => showSaveChangelogDialog(loadedVersion, migrationFixes)) }
           ]
         });
@@ -548,9 +550,9 @@ function showStoryIncompatibleDialog(raw) {
   showDialog({
     title: '⚠ Spielstand nicht kompatibel',
     html: `
-      <p>Die Geschichte wurde in v0.15 grundlegend überarbeitet — vier Raub-Ereignisse ersetzen den bisherigen einmaligen Raub, und der Weg in Kapitel 2 hat sich dadurch verändert.</p>
-      <p>Dein Spielstand stammt aus einer Version vor dieser Überarbeitung und kann leider nicht automatisch angepasst werden, ohne die Story zu übergehen.</p>
-      <p>Du kannst den Spielstand als Datei sichern — falls du ihn für spätere Versionen aufheben möchtest.</p>
+      <p>Die Geschichte wurde in v0.15 grundlegend überarbeitet — vier Raub-Ereignisse ersetzen den bisherigen einmaligen Raub, und der Handlungsverlauf hat sich dadurch verändert.</p>
+      <p>Dieser Spielstand stammt aus einer Version vor dieser Überarbeitung und kann leider nicht automatisch angepasst werden, ohne die Story zu übergehen.</p>
+      <p>Den Spielstand als Datei sichern — falls er für spätere Versionen aufgehoben werden soll.</p>
     `,
     buttons: [
       {

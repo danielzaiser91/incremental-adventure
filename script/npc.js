@@ -106,7 +106,7 @@ const NPCS = {
         }]
       },
       chapter2greet: {
-        text: ['Korbin nickt dir knapp zu. "Du siehst wie jemand aus, der Antworten sucht. Was ist?"'],
+        text: ['Korbin nickt mir knapp zu. "Du siehst wie jemand aus, der Antworten sucht. Was ist?"'],
         options: [
           { label: 'Wie läuft das Geschäft?', next: 'chapter2idle' },
           { label: 'Nichts, ich schaue nur.', next: null }
@@ -153,7 +153,7 @@ const NPCS = {
               resources.gold -= 3;
               grantItem('brot', 1);
               npcFlags.miraDrinkGiven = true;
-              showToast('Drink für Mira ausgegeben (−3 Gold). Sie schiebt dir ein Brot zu.', TOAST.PURCHASE);
+              showToast('Drink für Mira ausgegeben (−3 Gold). Sie schiebt mir ein Brot zu.', TOAST.PURCHASE);
             }
           },
           { label: 'Nur Smalltalk.', next: 'smalltalk' }
@@ -271,7 +271,7 @@ const NPCS = {
             gameFlags.mirasBriefGiven = true;
             questItems.miras_brief    = (questItems.miras_brief || 0) + 1;
             navUnseen.inventar        = true;
-            showToast('Mira hat dir einen verschlüsselten Brief gegeben. Er wartet auf eine Übersetzung — in Lethkar.', TOAST.EVENT);
+            showToast('Mira hat mir einen verschlüsselten Brief gegeben. Er wartet auf eine Übersetzung — in Lethkar.', TOAST.EVENT);
           }
         }]
       },
@@ -335,7 +335,7 @@ const NPCS = {
               resources.gold -= 2000;
               meta.hasHome    = true;
               navUnseen.meinhaus = true;
-              showToast('Das Haus gehört dir. "Mein Haus" ist jetzt in der Navigation verfügbar.', TOAST.EVENT);
+              showToast('Das Haus gehört mir. "Mein Haus" ist jetzt in der Navigation verfügbar.', TOAST.EVENT);
             }
           },
           { label: '"Ich überlege es mir."', next: null }
@@ -526,12 +526,12 @@ const NPCS = {
           next: null,
           action: () => {
             gameFlags.guildExplainedByBrakka = true;
-            showToast('Aufgabe: Bereite dich auf die Gildenprüfung vor — sprich wieder mit Brakka, wenn du bereit bist.', TOAST.EVENT);
+            showToast('Gildenprüfung vorbereiten — dann wieder mit Brakka sprechen.', TOAST.EVENT);
           }
         }]
       },
       guildReadyCheck: {
-        text: ['Brakka mustert dich von oben bis unten. "Na? Bereit, oder verschwendest du nur meine Zeit?"'],
+        text: ['Brakka mustert mich von oben bis unten. "Na? Bereit, oder verschwendest du nur meine Zeit?"'],
         options: [
           { label: 'Noch nicht.', next: null },
           {
@@ -714,7 +714,7 @@ const NPCS = {
       },
       turnIn: {
         text: [
-          'Greta strahlt, als du ihr die Rohstoffe zeigst. "Genau richtig! Damit kann ich arbeiten."',
+          'Greta strahlt, als ich ihr die Rohstoffe zeige. "Genau richtig! Damit kann ich arbeiten."',
           '"Ich verkaufe das an ein paar Handwerker, die mir dafür fertige Ware machen — und die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei."'
         ],
         options: [{
@@ -774,7 +774,7 @@ const NPCS = {
         ]
       },
       idle: {
-        text: ['Greta nickt dir zu. "Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab."'],
+        text: ['Greta nickt mir zu. "Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab."'],
         options: [{ label: 'Mach ich.', next: null }]
       }
     }
@@ -806,7 +806,7 @@ const NPCS = {
             next: null,
             action: () => {
               quests.commanderTraining.state = QUEST_STATE.REWARDED;
-              showToast('Roswald hat dir die Grundlagen gezeigt. Im Erfahrungsbaum kannst du jetzt für die Nachtwache aufleveln.', TOAST.EVENT);
+              showToast('Roswald hat mir die Grundlagen gezeigt. Im Erfahrungsbaum kann ich jetzt für die Nachtwache aufleveln.', TOAST.EVENT);
             }
           },
           { label: 'Vielleicht ein anderes Mal.', next: null }
@@ -834,7 +834,7 @@ const NPCS = {
               gameFlags.stadtwacheAccepted = true;
               gameFlags.stadtwacheDeclined = false;
               navUnseen.stadtwache = true;
-              showToast('Roswald nickt. Ab jetzt bist du Teil der Stadtwache.', TOAST.EVENT);
+              showToast('Roswald nickt. Ab jetzt bin ich Teil der Stadtwache.', TOAST.EVENT);
             }
           },
           {
@@ -1139,7 +1139,7 @@ const NPCS_LETHKAR = [
         ],
         options: [
           {
-            label: '"Ich suche jemandem, der mir einen Brief entschlüsseln kann."',
+            label: '"Ich suche jemanden, der mir einen Brief entschlüsseln kann."',
             next: 'briefHint',
             action: () => { gameFlags.varenaMetFirst = true; }
           },
@@ -1151,7 +1151,7 @@ const NPCS_LETHKAR = [
         ]
       },
       briefHint: {
-        text: ['"Einen verschlüsselten Brief?" Sie sieht dich an. "Zeig ihn mir. Wenn es ein Treutheimer Chiffre ist, kenne ich ihn."'],
+        text: ['"Einen verschlüsselten Brief?" Sie sieht mich an. "Zeig ihn mir. Wenn es ein Treutheimer Chiffre ist, kenne ich ihn."'],
         options: [
           {
             label: 'Den Brief zeigen.',
@@ -1211,7 +1211,7 @@ const NPCS_LETHKAR = [
             alchemie.lastTick = Date.now();
             startAlchemieTick();
             navUnseen.alchemie = true;
-            showToast('Alchemie freigeschaltet! Das Laboratorium wartet auf dich.', TOAST.REWARD);
+            showToast('Alchemie freigeschaltet! Das Laboratorium wartet auf mich.', TOAST.REWARD);
           }
         }]
       },
@@ -1277,7 +1277,7 @@ const NPCS_LETHKAR = [
             action: () => {
               if (gameFlags.varenaDecodedBrief) {
                 gameFlags.thessaTrustGained = true;
-                showToast('Thessa vertraut dir jetzt. Ihr Wissen über Lethkar steht dir offen.', TOAST.EVENT);
+                showToast('Thessa vertraut mir jetzt. Ihr Wissen über Lethkar steht mir offen.', TOAST.EVENT);
               }
             }
           }
@@ -1323,7 +1323,7 @@ const NPCS_LETHKAR = [
     nodes: {
       firstMeet: {
         text: [
-          'Der Mann am Tischende hat sein Bein auf dem Stuhl neben ihm. Als ob er weiß, dass du kommst.',
+          'Der Mann am Tischende hat sein Bein auf dem Stuhl neben ihm. Als ob er weiß, dass ich komme.',
           '"Pereth." Er hebt den Becher. "Söldner. Derzeit ohne Auftrag, was gut ist." Eine kurze Pause.',
           '"Du siehst aus wie jemand, der Ärger sucht. Das find ich gut. Setz dich."'
         ],
