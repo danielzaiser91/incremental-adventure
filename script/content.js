@@ -46,6 +46,9 @@ function renderContent() {
     case CONTENT.VELMARK_JAGDGEBIET:  renderVelmarkJagdgebiet(area);   break;
     case CONTENT.VELMARK_MARKT:       renderVelmarkMarkt(area);        break;
     case CONTENT.VELMARK_SCHLAFPLATZ: renderVelmarkSchlafplatz(area);  break;
+    case CONTENT.VELMARK_HAFEN:      renderVelmarkHafen(area);        break;
+    case CONTENT.VALDRIS_PROFIL:     renderValdrisProfil(area);       break;
+    case CONTENT.VALDRIS_FINALE:     renderValdrisFinale(area);       break;
     case CONTENT.CHRONIK:            renderChronik(area);            break;
     case CONTENT.SETTINGS:           renderSettings(area);           break;
     case CONTENT.RUF_FAEHIGKEITEN:   renderRufFaehigkeiten(area);    break;
@@ -1348,6 +1351,44 @@ function renderLethkar(el) {
       <button class="goto-btn" onclick="showContent('${p.id}')">Hingehen</button>
     </div>`).join('');
 
+  const wildkrautCount = questItems.wildkraut || 0;
+  const kraeuter = quests.varenaErstkontakt?.state === QUEST_STATE.ACTIVE ? `
+    <div class="action-card">
+      <div class="action-card-icon">🌿</div>
+      <div class="action-card-name">Wildkraut sammeln</div>
+      <p class="action-card-desc">Am Waldrand wächst das seltene Wildkraut, das Varena sucht. ${wildkrautCount}/5 gesammelt.</p>
+      <div class="action-card-effect">🌿 +1 Wildkraut · 😴 +5% · 🍞 +3%</div>
+      ${wildkrautCount >= 5 ? '<div class="action-card-effect" style="color:var(--c-reward)">✓ Genug gesammelt — zu Varena!</div>' : ''}
+      <button class="action-btn" onclick="sammleWildkraut()" ${wildkrautCount >= 5 ? 'disabled' : ''}>Sammeln</button>
+    </div>` : '';
+
+  const valdrisSpurenCards = (() => {
+    const qs = quests.valdrisSpuren?.state;
+    if (!qs || qs === 'unstarted' || qs === 'rewarded') return '';
+    const done1 = qs !== 'ort1';
+    const done2 = !['ort1','ort2'].includes(qs);
+    const done3 = !['ort1','ort2','ort3'].includes(qs);
+    return `
+      <div class="action-card ${done1 ? 'quest-card-done' : ''}">
+        <div class="action-card-icon">🔍</div>
+        <div class="action-card-name">Valdris' Spur: Taverne</div>
+        <p class="action-card-desc">In der Taverne soll jemand Informationen hinterlassen haben.</p>
+        <button class="action-btn" onclick="untersucheValdrisOrt(1)" ${done1 ? 'disabled' : ''}>${done1 ? 'Untersucht' : 'Untersuchen'}</button>
+      </div>
+      <div class="action-card ${done2 ? 'quest-card-done' : ''}" style="${qs === 'ort1' ? 'opacity:0.5' : ''}">
+        <div class="action-card-icon">🔍</div>
+        <div class="action-card-name">Valdris' Spur: Markt</div>
+        <p class="action-card-desc">Ein Stand am Markt soll regelmäßige Gäste gehabt haben, die keine Waren kauften.</p>
+        <button class="action-btn" onclick="untersucheValdrisOrt(2)" ${done2 || qs === 'ort1' ? 'disabled' : ''}>${done2 ? 'Untersucht' : qs === 'ort1' ? 'Gesperrt' : 'Untersuchen'}</button>
+      </div>
+      <div class="action-card ${done3 ? 'quest-card-done' : ''}" style="${['ort1','ort2'].includes(qs) ? 'opacity:0.5' : ''}">
+        <div class="action-card-icon">🔍</div>
+        <div class="action-card-name">Valdris' Spur: Stadtrand</div>
+        <p class="action-card-desc">Am Nordrand liegt ein verlassenes Lagerhaus — Berichte über merkwürdige Aktivitäten.</p>
+        <button class="action-btn" onclick="untersucheValdrisOrt(3)" ${done3 || ['ort1','ort2'].includes(qs) ? 'disabled' : ''}>${done3 ? 'Untersucht' : ['ort1','ort2'].includes(qs) ? 'Gesperrt' : 'Untersuchen'}</button>
+      </div>`;
+  })();
+
   const raidCard = gameFlags.chapter3StoryComplete ? (() => {
     if (gameFlags.valdrisOperationRaided) {
       return `
@@ -1371,7 +1412,7 @@ function renderLethkar(el) {
     <div class="feature-stage">
       <div class="feature-stage-label">Lethkar</div>
       <p class="location-card-desc" style="margin-bottom:12px;">Eine alte Gelehrtenstadt im Norden. Pflastersteine statt Feldwege, Türme statt Kirchendächer — und überall dieser Geruch von Kräutern und heißem Metall.</p>
-      <div class="action-grid">${cards}${raidCard}</div>
+      <div class="action-grid">${cards}${kraeuter}${valdrisSpurenCards}${raidCard}</div>
     </div>`;
 }
 
@@ -1549,7 +1590,9 @@ function renderVelmark(el) {
     { id: CONTENT.VELMARK_JAGDGEBIET, icon: '⚔', name: 'Velmarks Unterwelt',
       desc: 'In den Gassen und Lagerhäusern patrouillieren Valdris\' Leute. Ein riskanter Ort — aber mit Einfluss zu gewinnen.' },
     { id: CONTENT.VELMARK_MARKT, icon: '🏪', name: 'Der Große Markt',
-      desc: 'Größer als alles in Lethkar. Informationen, Waffen, Alchemie-Rohmaterialien.' }
+      desc: 'Größer als alles in Lethkar. Informationen, Waffen, Alchemie-Rohmaterialien.' },
+    { id: CONTENT.VELMARK_HAFEN, icon: '⚓', name: 'Velmarks Hafen',
+      desc: 'Der Hafen schläft nie — Waren, Gerüchte und Arbeit fließen hier rund um die Uhr.' }
   ];
 
   const perethCard = gameFlags.perethFoundInVelmark ? '' : `
@@ -1848,5 +1891,141 @@ function renderVelmarkSchlafplatz(el) {
     <div class="feature-stage">
       <div class="feature-stage-label">Schlafplatz</div>
       <div class="action-grid">${cards}</div>
+    </div>`;
+}
+
+function renderVelmarkHafen(el) {
+  const einflussPoints = einfluss.points || 0;
+
+  const hafenCard = `
+    <div class="action-card">
+      <div class="action-card-icon">⚓</div>
+      <div class="action-card-name">Hafenarbeit</div>
+      <p class="action-card-desc">Waren schleppen, Boote vertäuen, Ladungen prüfen. Harte Arbeit — aber Velmark-Verdienst.</p>
+      <div class="action-card-effect">💰 +30–60 Gold · ⚜ +1–2 Einfluss · 😴 +12% · 🍞 +8%</div>
+      ${!gameFlags.hafenarbeitUnlocked ? '<div class="action-card-warning">Freigeschaltet durch Hafen-Quests</div>' : ''}
+      <button class="action-btn" onclick="hafenarbeit()" ${!gameFlags.hafenarbeitUnlocked || isNight() ? 'disabled' : ''}>
+        ${!gameFlags.hafenarbeitUnlocked ? 'Noch nicht verfügbar' : isNight() ? 'Nachts geschlossen' : 'Arbeiten'}
+      </button>
+    </div>`;
+
+  const harroCard = `
+    <div class="action-card">
+      <div class="action-card-icon">😓</div>
+      <div class="action-card-name">Harro</div>
+      <p class="action-card-desc">Ein nervöser Mann am Kai. Weiß mehr, als er zeigt.</p>
+      <button class="action-btn" onclick="openVelmarkNpcDialog('harro')">Ansprechen</button>
+    </div>`;
+
+  const stadtwacheCard = gameFlags.velmarkStadtwacheUnlocked ? `
+    <div class="action-card">
+      <div class="action-card-icon">🛡</div>
+      <div class="action-card-name">Velmark-Stadtwache</div>
+      <p class="action-card-desc">Gelegentliche Schicht mit der Stadtwache — seriöser als Hafenarbeit, solider Verdienst.</p>
+      <div class="action-card-effect">💰 +40–80 Gold · ⚜ +1 Einfluss · 😴 +15% · 🍞 +10%</div>
+      <button class="action-btn" onclick="velmarkStadtwache()" ${isNight() ? 'disabled' : ''}>
+        ${isNight() ? 'Nachts geschlossen' : 'Schicht übernehmen'}
+      </button>
+    </div>` : '';
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Velmarks Hafen</div>
+      <div style="margin-bottom:10px;color:var(--text-mid);font-size:0.9em;">
+        ⚜ Einfluss: <strong>${einflussPoints}</strong>
+      </div>
+      <div class="action-grid">
+        ${hafenCard}
+        ${harroCard}
+        ${stadtwacheCard}
+      </div>
+    </div>`;
+}
+
+function renderValdrisProfil(el) {
+  const felder = [
+    { key: 'herkunft', label: 'Herkunft', icon: '📍', desc: 'Woher kommt Valdris — und was hat ihn geformt?' },
+    { key: 'netzwerk', label: 'Netzwerk', icon: '🕸', desc: 'Wer arbeitet für ihn — und wie tief geht das Netz?' },
+    { key: 'motive', label: 'Motive', icon: '🎯', desc: 'Was will Valdris wirklich?' },
+    { key: 'kontakte', label: 'Schlüsselkontakte', icon: '👥', desc: 'Die wichtigsten Personen in seiner Struktur.' },
+    { key: 'schwaeche', label: 'Schwäche', icon: '⚡', desc: 'Jede Struktur hat eine Schwachstelle — welche hat er?' },
+    { key: 'aufenthaltsort', label: 'Aufenthaltsort', icon: '🗺', desc: 'Wo befindet sich Valdris?' },
+  ];
+
+  const entries = felder.map(f => {
+    const known = valdrisProfil[f.key];
+    return `
+      <div class="action-card" style="${known ? '' : 'opacity:0.6'}">
+        <div class="action-card-icon">${f.icon}</div>
+        <div class="action-card-name">${f.label}</div>
+        <p class="action-card-desc">${known ? f.desc : '???'}</p>
+        ${known ? '<div class="action-card-effect" style="color:var(--c-reward)">✓ Aufgedeckt</div>' : ''}
+      </div>`;
+  }).join('');
+
+  const knownCount = Object.values(valdrisProfil).filter(Boolean).length;
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Valdris — Profil</div>
+      <p style="margin-bottom:12px;color:var(--text-mid);font-size:0.9em;">
+        ${knownCount}/6 Informationen aufgedeckt.
+      </p>
+      <div class="action-grid">${entries}</div>
+      ${knownCount >= 5 && !gameFlags.valdrisFinaleStarted ? `
+        <div style="margin-top:16px;padding:12px;background:var(--bg-card);border:1px solid var(--c-reward);border-radius:8px;">
+          <strong style="color:var(--c-reward);">Bereit für die Konfrontation</strong>
+          <p style="margin:8px 0;font-size:0.9em;">Ich kenne genug über Valdris. Die drei Fraktionen stehen hinter mir.</p>
+          <button class="action-btn action-btn-primary" onclick="showContent('${CONTENT.VALDRIS_FINALE}')">Die Konfrontation vorbereiten</button>
+        </div>` : ''}
+    </div>`;
+}
+
+function renderValdrisFinale(el) {
+  const haendlerRuf = fraktionen.haendlergilde || 0;
+  const bruderRuf   = fraktionen.bruderschaft   || 0;
+  const archivRuf   = fraktionen.archiv          || 0;
+  const allReady    = haendlerRuf >= 60 && bruderRuf >= 60 && archivRuf >= 60;
+  const dokGefunden = gameFlags.valdrisDokumentGefunden;
+
+  if (gameFlags.valdrisFinaleStarted) {
+    el.innerHTML = `
+      <div class="feature-stage">
+        <div class="feature-stage-label">Die Konfrontation</div>
+        <p style="color:var(--text-mid);">Die Vorbereitungen laufen. Es ist Zeit zu handeln.</p>
+        <button class="action-btn action-btn-primary" onclick="launchValdrisKonfrontation()">Valdris stellen</button>
+      </div>`;
+    return;
+  }
+
+  const requirements = [
+    { label: 'Händlergilde (min. 60 Ruf)', done: haendlerRuf >= 60, current: haendlerRuf },
+    { label: 'Eiserne Bruderschaft (min. 60 Ruf)', done: bruderRuf >= 60, current: bruderRuf },
+    { label: 'Stadtarchiv (min. 60 Ruf)', done: archivRuf >= 60, current: archivRuf },
+    { label: 'Valdris-Dokument gesichert', done: dokGefunden },
+  ];
+
+  const reqList = requirements.map(r => `
+    <div style="display:flex;align-items:center;gap:8px;margin:6px 0;">
+      <span style="color:${r.done ? 'var(--c-reward)' : 'var(--text-lo)'}">${r.done ? '✓' : '○'}</span>
+      <span style="${r.done ? '' : 'color:var(--text-mid)'}">${r.label}${r.current !== undefined ? ` (${r.current}/60)` : ''}</span>
+    </div>`).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Die Konfrontation</div>
+      <p style="margin-bottom:12px;font-size:0.9em;color:var(--text-mid);">
+        Alles, was ich in Velmark getan habe, läuft auf diesen Moment zu.
+      </p>
+      <div style="background:var(--bg-card);padding:12px;border-radius:8px;margin-bottom:16px;">
+        <strong>Voraussetzungen:</strong>
+        ${reqList}
+      </div>
+      ${allReady && dokGefunden ? `
+        <button class="action-btn action-btn-primary" onclick="startValdrisFinale()">Finale einleiten</button>
+      ` : `
+        <button class="action-btn" disabled>Noch nicht bereit</button>
+        <p style="font-size:0.8em;color:var(--text-lo);margin-top:8px;">Erfülle alle Voraussetzungen, um Valdris zu stellen.</p>
+      `}
     </div>`;
 }

@@ -15,7 +15,7 @@
 /* Content-IDs, die zur Stadtebene (navLevel 2) gehören. */
 const TOWN_CONTENT_IDS    = [CONTENT.TREUTHEIM, CONTENT.ARBEITSPLATZ, CONTENT.MARKTPLATZ, CONTENT.TAVERNE, CONTENT.SCHLAFPLATZ, CONTENT.ROHSTOFFE, CONTENT.JAGDGEBIET, CONTENT.STADTWACHE, CONTENT.MEINHAUS, CONTENT.SCHMIEDE];
 const LETHKAR_CONTENT_IDS = [CONTENT.LETHKAR, CONTENT.ALCHEMIE, CONTENT.LETHKAR_MARKT, CONTENT.LETHKAR_TAVERNE, CONTENT.LETHKAR_SCHLAFPLATZ];
-const VELMARK_CONTENT_IDS = [CONTENT.VELMARK, CONTENT.VELMARK_FRAKTIONEN, CONTENT.VELMARK_JAGDGEBIET, CONTENT.VELMARK_MARKT, CONTENT.VELMARK_SCHLAFPLATZ];
+const VELMARK_CONTENT_IDS = [CONTENT.VELMARK, CONTENT.VELMARK_FRAKTIONEN, CONTENT.VELMARK_JAGDGEBIET, CONTENT.VELMARK_MARKT, CONTENT.VELMARK_SCHLAFPLATZ, CONTENT.VELMARK_HAFEN];
 
 /* Content-IDs des immer sichtbaren globalen Navigationsbereichs.
    Chronik ist bewusst NICHT dabei — sie hängt als kleiner Buch-Button
@@ -82,6 +82,7 @@ function renderGlobalNavSection() {
     ${gameFlags.automationDiscovered ? item('automation', '⌛', 'Automatisierung') : ''}
     ${gameFlags.jagdgebietUnlocked   ? item('expedition', '🗺', 'Expeditionen')   : ''}
     ${(kap2ResetCount > 0 || ruf > 0) ? item('rufFaehigkeiten', '⚔', 'Veteranen-Boni') : ''}
+    ${gameFlags.valdrisSpurenGefunden ? `<button class="nav-btn ${currentContent === CONTENT.VALDRIS_PROFIL ? 'active' : ''} ${navUnseen.valdrisProfil ? 'nav-btn-new' : ''}" onclick="showContent('${CONTENT.VALDRIS_PROFIL}')">🎯 Valdris</button>` : ''}
   `;
 }
 
@@ -116,6 +117,7 @@ function renderLocationNavSection() {
       [CONTENT.VELMARK_FRAKTIONEN,   '🤝', 'Fraktionen'],
       [CONTENT.VELMARK_JAGDGEBIET,   '⚔',  'Unterwelt'],
       [CONTENT.VELMARK_MARKT,        '🏪', 'Markt'],
+      [CONTENT.VELMARK_HAFEN,        '⚓',  'Hafen'],
       [CONTENT.VELMARK_SCHLAFPLATZ,  '🛏',  'Schlafplatz']
     ];
     const buttons = places.map(([id, icon, label]) => {

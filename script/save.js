@@ -60,6 +60,7 @@ function saveGame(opts = {}) {
       automation,
       ruf, kap2ResetCount, rufSkills, kap3ResetCount,
       einfluss, fraktionen, informanten,
+      valdrisProfil, hafenStats,
       // combat wird NICHT gespeichert — aktiver Kampf bricht beim Laden ab
       gameFlags:      { ...gameFlags, isWorking: false }, // Laufende Arbeit nicht speichern
       shownDialogs,
@@ -115,7 +116,24 @@ function applySaveData(save) {
   quests         = {
     nightWatch: { state: 'unstarted' }, miraLetter: { state: 'unstarted' }, foremanRaise: { state: 'unstarted' },
     kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
-    commanderTraining: { state: 'unstarted' }, theftInvestigation: { state: 'unstarted' },
+    commanderTraining: { state: 'unstarted' },
+    oswinsAuftrag: { state: 'unstarted' }, erstesZuhause: { state: 'unstarted' },
+    theftInvestigation: { state: 'unstarted' },
+    gildePruefung: { state: 'unstarted' }, fremderGeheimnis: { state: 'unstarted' },
+    miraSuche: { state: 'unstarted' }, kampfRoutine: { state: 'unstarted' },
+    waldtrollJagd: { state: 'unstarted' }, gildaAufstieg: { state: 'unstarted' },
+    brennenderMut: { state: 'unstarted', count: 0 }, kapitel2Finale: { state: 'unstarted' },
+    varenaErstkontakt: { state: 'unstarted' }, alchemieInitiierung: { state: 'unstarted' },
+    thessaGeheimnis: { state: 'unstarted' }, tier2Boss: { state: 'unstarted' },
+    wissensdurst10: { state: 'unstarted' }, valdrisSpuren: { state: 'unstarted' },
+    lethkarMarkt: { state: 'unstarted', goldTraded: 0 }, perethKontakt: { state: 'unstarted' },
+    alchemieGeselle: { state: 'unstarted' }, kapitel3Abschluss: { state: 'unstarted' },
+    gildeSchulden: { state: 'unstarted', wacheCount: 0 }, gildeInvestition: { state: 'unstarted', investDay: 0 },
+    gildeKorruption: { state: 'unstarted', hinweisCount: 0 },
+    bruderschaftBeweis: { state: 'unstarted', killCount: 0 },
+    gorrsVergangenheit: { state: 'unstarted' }, gorrsEid: { state: 'unstarted' },
+    archivRecherche: { state: 'unstarted', count: 0 }, seleWissen: { state: 'unstarted' },
+    dasDokument: { state: 'unstarted' }, dieKonfrontation: { state: 'unstarted' },
     ...save.quests
   };
   npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, oswingBusinessSeen: false, oswingHintNotified: false, ...save.npcFlags };
@@ -148,7 +166,8 @@ function applySaveData(save) {
     errungenschaften: true, pets: true, lehrer: false,
     jagdgebiet: false, automation: false, stadtwache: false,
     meinhaus: false, schmiede: false, expedition: false,
-    alchemie: false, lethkar: false,
+    alchemie: false, lethkar: false, velmark: false,
+    valdrisProfil: false, velmark_hafen: false,
     ...save.navUnseen
   };
   dailyPurchases = save.dailyPurchases ?? {};
@@ -179,6 +198,11 @@ function applySaveData(save) {
     exhaustionDialogShown: false,
     robbery2Triggered: false, robbery3Triggered: false, robbery4Triggered: false,
     workBlockedByRobberies: false, newRobberySystemActive: false,
+    fremderIdentityKnown: false, kapitel2FinaleStarted: false, kampfTrainingDone: false, consecutiveNightwatch: 0,
+    thessaMetLethkar: false, valdrisSpurenGefunden: false, perethKontaktLethkar: false, lethkarHaendlerRabatt: false,
+    hafenarbeitUnlocked: false, velmarkStadtwacheUnlocked: false, archivDurchsuchenUnlocked: false,
+    unterweltVerhandlungUnlocked: false, gorrsEidGeleistet: false, valdrisDokumentGefunden: false, valdrisFinaleStarted: false,
+    harroMet: false, harroSchuldenBezahlt: false, gorrMet: false, seleMet: false, yevaMetFirst: false,
     ...save.gameFlags, isWorking: false, isStadtwacheShift: false
   };
   // Konsistenz-Fix: Raub hat stattgefunden (robberyTriggered + storyState ≥ 20100),
@@ -197,6 +221,8 @@ function applySaveData(save) {
   automation     = { slots: [], ...save.automation };
   ruf            = save.ruf            ?? 0;
   kap2ResetCount = save.kap2ResetCount ?? 0;
+  valdrisProfil  = { herkunft: false, netzwerk: false, motive: false, kontakte: false, schwaeche: false, aufenthaltsort: false, ...save.valdrisProfil };
+  hafenStats     = { count: 0, ...save.hafenStats };
   rufSkills      = save.rufSkills      ?? {};
   kap3ResetCount = save.kap3ResetCount ?? 0;
   einfluss       = { points: 0, totalEarned: 0, ...save.einfluss };

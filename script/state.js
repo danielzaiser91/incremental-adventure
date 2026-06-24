@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.19.0-alpha';
+const GAME_VERSION = '0.20.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -43,6 +43,9 @@ const CONTENT = Object.freeze({
   VELMARK_JAGDGEBIET:   'velmark_jagdgebiet',
   VELMARK_MARKT:        'velmark_markt',
   VELMARK_SCHLAFPLATZ:  'velmark_schlafplatz',
+  VELMARK_HAFEN:        'velmark_hafen',
+  VALDRIS_PROFIL:       'valdrisProfil',
+  VALDRIS_FINALE:       'valdrisFinale',
   CHRONIK:             'chronik',
   SETTINGS:            'settings',
   RUF_FAEHIGKEITEN:    'rufFaehigkeiten',
@@ -60,6 +63,32 @@ const QUEST_STATE = Object.freeze({
   BRAKKA_CONSULTED: 'brakka_consulted',
   CONFRONTED:       'confronted',
   INVITED:          'invited',
+  // Neue States für erweiterte Quest-Lines
+  CURIOUS:          'curious',
+  ASKING_AROUND:    'asking_around',
+  IDENTITY_KNOWN:   'identity_known',
+  HALF_DONE:        'half_done',
+  TALK1:            'talk1',
+  TALK2:            'talk2',
+  ABSCHIED_VARENA:  'abschied_varena',
+  ABSCHIED_THESSA:  'abschied_thessa',
+  INVESTED:         'invested',
+  WAITING:          'waiting',
+  WAITING_NIGHT:    'waiting_night',
+  HINWEIS1:         'hinweis1',
+  HINWEIS2:         'hinweis2',
+  DOK1:             'dok1',
+  DOK2:             'dok2',
+  DOK3:             'dok3',
+  ORT1:             'ort1',
+  ORT2:             'ort2',
+  ORT3:             'ort3',
+  AKTIV:            'aktiv',
+  NIGHT_TALK:       'night_talk',
+  DUELL_WON:        'duell_won',
+  STEP1:            'step1',
+  STEP2:            'step2',
+  STEP3:            'step3',
 });
 
 /** Zweiter Parameter von showToast() */
@@ -238,6 +267,15 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.20.0-alpha': [
+    { cat: 'Neuerung', text: '29 neue Quests — Kap 2 (8), Kap 3 (10), Kap 4 (10) — mit vollständigen NPC-Dialogen, Quest-Ketten und Belohnungen.' },
+    { cat: 'Neuerung', text: 'Neuer NPC Harro (Hafen-Schuldner), erweiterter Gorr/Sele/Yeva-Dialog mit 3-stufigen Quest-Ketten pro Fraktion.' },
+    { cat: 'Neuerung', text: 'Velmarks Hafen: neue Spielfläche mit Hafenarbeit, Velmark-Stadtwache, Unterwelt-Verhandlung, Archiv-Durchsuchen.' },
+    { cat: 'Neuerung', text: 'Valdris-Profil: 6 aufdeckbare Felder geben ein vollständiges Bild des Antagonisten.' },
+    { cat: 'Neuerung', text: 'Finale Konfrontation: Vorbereitungsphase + Valdris-Finale als krönender Abschluss von Kapitel 4.' },
+    { cat: 'Neuerung', text: '4 neue Tier-1/Tier-2 Monster (Bandit, Sumpfwesen, Eisengolem, Giftschlange) + 2 Tier-3 (Hafenwächter, Valdris-Agent).' },
+    { cat: 'Neuerung', text: '5 neue Errungenschaften: Vollständigkeit Kap 2/3/4, Valdris enthüllt, Hafenmeister.' },
+  ],
   '0.19.0-alpha': [
     { cat: 'Neuerung', text: 'Kap-2-Prestige: "Als Veteran zurückkehren" — Ruf als dauerhafte Metawährung, 5 Ruf-Fähigkeiten (Max-HP, Kampfschaden, Startgold, Tier-2-Drops u.a.).' },
     { cat: 'Neuerung', text: 'Kap-3-Prestige: Lethkar erneut besuchen — gibt Wissensdurst ✦, steigender Bonus pro Neustart.' },
@@ -499,6 +537,17 @@ let gameFlags = {
   alchemieGeselleReached:      false, // Alchemie-Geselle (10 Gesamtlevel) → Story 3.9
   kap3Complete:                false, // Kapitel 3 vollständig abgeschlossen → Story 3.10 + Konfetti
   // ── Kapitel-4-Flags (Velmark) ─────────────────────────────
+  // ── Kap-2-Flags (neu) ─────────────────────────────────────
+  fremderIdentityKnown:        false, // Der Fremde wurde identifiziert (fremderGeheimnis)
+  kapitel2FinaleStarted:       false, // kapitel2Finale-Quest gestartet
+  kampfTrainingDone:           false, // kampfRoutine-Quest abgeschlossen
+  consecutiveNightwatch:       0,     // Zähler für aufeinanderfolgende Nachtwachen (brennenderMut)
+  // ── Kap-3-Flags (neu) ─────────────────────────────────────
+  thessaMetLethkar:            false, // Thessa in Lethkar getroffen
+  valdrisSpurenGefunden:       false, // valdrisSpuren-Quest abgeschlossen
+  perethKontaktLethkar:        false, // Pereth in Lethkar kontaktiert
+  lethkarHaendlerRabatt:       false, // Händlerrabatt durch lethkarMarkt-Quest
+  // ── Kap-4-Flags (mit Velmark-Original) ──────────────────
   velmarkUnlocked:             false, // Velmark betreten (kap3Complete + Weltkarte)
   perethFoundInVelmark:        false, // Pereth in Velmark gefunden und angesprochen
   informantenNetzFreigeschaltet: false, // Informanten-Tick aktiv (nach Pereth-Quest)
@@ -512,6 +561,19 @@ let gameFlags = {
   valdrisAngebotAbgelehnt:     false, // Angebot abgelehnt → Story 4.8
   allianzKomplett:             false, // alle drei Fraktionen ≥ 80 → Story 4.9
   kap4Complete:                false, // Kapitel 4 vollständig abgeschlossen → Story 4.10 + Ende
+  // ── Kap-4-Flags (neu) ─────────────────────────────────────
+  hafenarbeitUnlocked:         false, // Hafenarbeit-Aktion freigeschaltet
+  velmarkStadtwacheUnlocked:   false, // Velmark-Stadtwache freigeschaltet (gildeSchulden)
+  archivDurchsuchenUnlocked:   false, // Archiv-Durchsuchen freigeschaltet (archivRecherche)
+  unterweltVerhandlungUnlocked: false, // Unterwelt-Verhandlung freigeschaltet (bruderschaftBeweis)
+  gorrsEidGeleistet:           false, // Gorrs Eid geleistet → Bruderschaft hält Südtor
+  harroMet:                    false, // Harro am Hafen getroffen
+  harroSchuldenBezahlt:        false, // Harrос Schulden übernommen (gildeSchulden)
+  gorrMet:                     false, // Gorr zum ersten Mal gesprochen
+  seleMet:                     false, // Sele zum ersten Mal gesprochen
+  yevaMetFirst:                false, // Yeva zum ersten Mal gesprochen
+  valdrisDokumentGefunden:     false, // Valdris-Dokument gefunden (dasDokument-Quest)
+  valdrisFinaleStarted:        false, // Finale Konfrontation begonnen
   schmiedeWelcomeSeen:         false, // Willkommens-Monolog in der Schmiede beim ersten Betreten
   exhaustionDialogShown:       false, // Einmaliger Erschöpfungs-Monolog beim ersten Erreichen von 100% Müdigkeit
   firstTier2Kill:              false, // Erster Tier-2-Gegner besiegt (Achievement-Tracking)
@@ -596,13 +658,47 @@ let nightFlags = {
 
 /* Quest-Fortschritt. Zustände je Quest: 'unstarted' | 'active' | 'done' | 'rewarded' */
 let quests = {
+  // ── Kapitel 1 ─────────────────────────────────────────────
   nightWatch:          { state: 'unstarted' },
   miraLetter:          { state: 'unstarted' },
   foremanRaise:        { state: 'unstarted' },
   kraemerinBusiness:   { state: 'unstarted' }, // 'unstarted' -> 'invited' -> 'active' -> 'rewarded'
   guildRegistration:   { state: 'unstarted' },
   commanderTraining:   { state: 'unstarted' },
-  theftInvestigation:  { state: 'unstarted' } // 'unstarted' -> 'active' -> 'investigating' -> 'mira_consulted' -> 'brakka_consulted' -> 'confronted' -> 'rewarded'
+  oswinsAuftrag:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  erstesZuhause:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  // ── Kapitel 2 ─────────────────────────────────────────────
+  theftInvestigation:  { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'investigating' -> 'mira_consulted' -> 'brakka_consulted' -> 'confronted' -> 'rewarded'
+  gildePruefung:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  fremderGeheimnis:    { state: 'unstarted' }, // 'unstarted' -> 'curious' -> 'asking_around' -> 'identity_known' -> 'rewarded'
+  miraSuche:           { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  kampfRoutine:        { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'half_done' -> 'rewarded'
+  waldtrollJagd:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  gildaAufstieg:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  brennenderMut:       { state: 'unstarted', count: 0 }, // zählt Nachtwachen
+  kapitel2Finale:      { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  // ── Kapitel 3 ─────────────────────────────────────────────
+  varenaErstkontakt:   { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  alchemieInitiierung: { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  thessaGeheimnis:     { state: 'unstarted' }, // 'unstarted' -> 'talk1' -> 'talk2' -> 'rewarded'
+  tier2Boss:           { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  wissensdurst10:      { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  valdrisSpuren:       { state: 'unstarted' }, // 'unstarted' -> 'ort1' -> 'ort2' -> 'ort3' -> 'rewarded'
+  lethkarMarkt:        { state: 'unstarted', goldTraded: 0 }, // 'unstarted' -> 'active' -> 'rewarded'
+  perethKontakt:       { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  alchemieGeselle:     { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'done' -> 'rewarded'
+  kapitel3Abschluss:   { state: 'unstarted' }, // 'unstarted' -> 'abschied_varena' -> 'abschied_thessa' -> 'rewarded'
+  // ── Kapitel 4 ─────────────────────────────────────────────
+  gildeSchulden:       { state: 'unstarted', wacheCount: 0 },
+  gildeInvestition:    { state: 'unstarted', investDay: 0 },
+  gildeKorruption:     { state: 'unstarted', hinweisCount: 0 },
+  bruderschaftBeweis:  { state: 'unstarted', killCount: 0 },
+  gorrsVergangenheit:  { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'night_talk' -> 'rewarded'
+  gorrsEid:            { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'duell_won' -> 'rewarded'
+  archivRecherche:     { state: 'unstarted', count: 0 },
+  seleWissen:          { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'rewarded'
+  dasDokument:         { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'waiting_night' -> 'rewarded'
+  dieKonfrontation:    { state: 'unstarted' }, // 'unstarted' -> 'active' -> 'step1' -> 'step2' -> 'rewarded'
 };
 
 /* Einmalige NPC-Interaktionen, die sich dauerhaft auf den Dialog auswirken */
@@ -850,6 +946,20 @@ let combat = {
 /* Zeitkristalle — seltene Ressource (Drop aus Kämpfen), die
    Automatisierungs-Slots freischaltet. */
 let zeitkristalle = 0;
+
+/* Valdris-Profil — Wissen über den Antagonisten, das durch Quests enthüllt wird.
+   Jedes Feld: false (unbekannt → "???") oder true (bekannt → Text sichtbar). */
+let valdrisProfil = {
+  herkunft:     false, // enthüllt durch archivRecherche-Quest
+  netzwerk:     false, // enthüllt durch gorrsVergangenheit-Quest
+  motive:       false, // enthüllt durch dasDokument-Quest
+  kontakte:     false, // enthüllt durch gildeKorruption-Quest
+  schwaeche:    false, // enthüllt durch seleWissen-Quest
+  aufenthaltsort: false // enthüllt durch dasDokument-Quest (finales Dokument)
+};
+
+/* Hafen-Statistiken — Velmark Kap 4. Analog zu workStats. */
+let hafenStats = { count: 0 };
 
 /* Automatisierungs-Konfiguration. Jeder Slot führt eine Aktion
    periodisch selbst aus, solange ein Zeitkristall zugewiesen ist. */

@@ -387,6 +387,53 @@ const ACHIEVEMENT_DEFS = [
     bonusMult: 0.10
   },
   {
+    id: 'questmaestro_kap2', cat: ACH_CAT.NORMAL, layer: 2, icon: '📋', name: 'Treutheimer Vollständigkeit',
+    desc: 'Alle Aufgaben in Treutheim abschließen.',
+    check: () => {
+      try {
+        return ['gildePruefung','fremderGeheimnis','miraSuche','kampfRoutine','waldtrollJagd','gildaAufstieg','brennenderMut','kapitel2Finale']
+          .every(id => quests[id]?.state === 'rewarded');
+      } catch(e) { return false; }
+    },
+    bonusMult: 0.08
+  },
+  {
+    id: 'questmaestro_kap3', cat: ACH_CAT.NORMAL, layer: 3, icon: '📋', name: 'Lethkarer Vollständigkeit',
+    desc: 'Alle Aufgaben in Lethkar abschließen.',
+    check: () => {
+      try {
+        return ['varenaErstkontakt','alchemieInitiierung','thessaGeheimnis','tier2Boss','wissensdurst10','valdrisSpuren','lethkarMarkt','perethKontakt','alchemieGeselle','kapitel3Abschluss']
+          .every(id => quests[id]?.state === 'rewarded');
+      } catch(e) { return false; }
+    },
+    bonusMult: 0.10
+  },
+  {
+    id: 'questmaestro_kap4', cat: ACH_CAT.NORMAL, layer: 4, icon: '📋', name: 'Velmarker Vollständigkeit',
+    desc: 'Alle Aufgaben in Velmark abschließen.',
+    check: () => {
+      try {
+        return ['gildeSchulden','gildeInvestition','gildeKorruption','bruderschaftBeweis','gorrsVergangenheit','gorrsEid','archivRecherche','seleWissen','dasDokument','dieKonfrontation']
+          .every(id => quests[id]?.state === 'rewarded');
+      } catch(e) { return false; }
+    },
+    bonusMult: 0.12
+  },
+  {
+    id: 'valdrisEnthüllt', cat: ACH_CAT.NORMAL, layer: 4, icon: '🎯', name: 'Der Schleier fällt',
+    desc: 'Alle sechs Felder in Valdris\' Profil aufdecken.',
+    check: () => {
+      try { return Object.values(valdrisProfil).every(Boolean); } catch(e) { return false; }
+    },
+    bonusMult: 0.10
+  },
+  {
+    id: 'hafenmeister', cat: ACH_CAT.NORMAL, layer: 4, icon: '⚓', name: 'Hafenmeister',
+    desc: 'Zehn Hafenarbeiten in Velmark durchführen.',
+    check: () => (hafenStats?.count || 0) >= 10,
+    bonusMult: 0.05
+  },
+  {
     id: 'kap4Abschluss', cat: ACH_CAT.NORMAL, layer: 4, icon: '🏆', name: 'Der Preis des Einflusses',
     desc: 'Kapitel 4 vollständig abschließen und Valdris stellen.',
     check: () => !!gameFlags.kap4Complete,

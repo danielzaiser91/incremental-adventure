@@ -27,9 +27,19 @@ const MONSTER_DEFS = [
     desc: 'Ein breiter Bär, doppelt so groß wie ich erwartet hatte. Sein Blick ist schwer und ruhig.'
   },
   {
+    id: 'bandit', name: 'Wegelagerer', icon: '🗡️', zone: 'wald',
+    maxHp: 18, damage: [4, 8], xpReward: 8, goldReward: [5, 12], mutReward: 0,
+    desc: 'Ein schlecht gekleideter Mann mit einem rostigen Messer. Er wirkt hungrig — und verzweifelt.'
+  },
+  {
     id: 'waldtroll', name: 'Waldtroll', icon: '👹', zone: 'tief',
     maxHp: 60, damage: [10, 18], xpReward: 25, goldReward: [18, 30], mutReward: 1,
     desc: 'Ein graues, schwerfälliges Wesen aus Moos und Fels — langsam, aber wenn er trifft, spüre ich es noch Tage später.'
+  },
+  {
+    id: 'sumpfwesen', name: 'Sumpfwesen', icon: '🐊', zone: 'tief',
+    maxHp: 32, damage: [5, 11], xpReward: 11, goldReward: [8, 16], mutReward: 0,
+    desc: 'Halb Tier, halb Schlamm. Riecht schlimmer als es aussieht — und es sieht bereits schrecklich aus.'
   },
   // ── Tier-2: Lethkar-Region (nur sichtbar wenn lethkarUnlocked)
   {
@@ -50,6 +60,18 @@ const MONSTER_DEFS = [
     tier: 2,
     desc: 'Größer als jeder Bär, den ich in Treutheim gesehen habe. Fellfarbe weiß-grau, fast silbern. Nicht angreifbar ohne Plan.'
   },
+  {
+    id: 'eisengolem', name: 'Eisengolem', icon: '🤖', zone: 'lethkar_tief',
+    maxHp: 130, damage: [18, 30], xpReward: 55, goldReward: [35, 55], mutReward: 2,
+    tier: 2,
+    desc: 'Schwerer als Stein, kälter als Eisen. Bewegt sich wie ein Traum — so langsam, dass man glaubt, man hätte Zeit. Man hat sie nicht.'
+  },
+  {
+    id: 'giftschlange', name: 'Riesengiftschlange', icon: '🐍', zone: 'lethkar_wald',
+    maxHp: 70, damage: [20, 32], xpReward: 40, goldReward: [28, 45], mutReward: 1,
+    tier: 2,
+    desc: 'Länger als ich groß bin. Ihre Augen folgen mir, auch wenn ich mich nicht bewege.'
+  },
   // ── Tier-3: Velmarks Unterwelt (nur sichtbar wenn velmarkUnlocked)
   {
     id: 'kanalratte', name: 'Kanalratte', icon: '🐀', zone: 'velmark_kanal',
@@ -68,6 +90,19 @@ const MONSTER_DEFS = [
     maxHp: 160, damage: [24, 40], xpReward: 80, goldReward: [90, 140], mutReward: 2, einflussReward: 3,
     tier: 3,
     desc: 'Wer ihn schickt, bleibt unbekannt. Er hat keine Farben, keine Abzeichen — nur ein Messer und den Auftrag.'
+  },
+  {
+    id: 'hafenwächter', name: 'Hafenwächter', icon: '🛡️', zone: 'velmark_hafen',
+    maxHp: 100, damage: [18, 28], xpReward: 45, goldReward: [55, 85], mutReward: 1, einflussReward: 2,
+    tier: 3,
+    desc: 'Breit, ruhig, mit Augen, die alles registrieren. Harro\'s Mann. Redet nicht — bewegt sich einfach in den Weg.'
+  },
+  {
+    id: 'valdrisAgent', name: 'Valdris\' Agent', icon: '🕵️', zone: 'velmark_schatten',
+    maxHp: 200, damage: [30, 48], xpReward: 100, goldReward: [100, 160], mutReward: 2, einflussReward: 5,
+    tier: 3,
+    visibleWhen: () => gameFlags.valdrisDokumentGefunden,
+    desc: 'Kein Name. Keine Farben. Nur der Auftrag. Ich weiß, dass er von Valdris persönlich geschickt wurde.'
   }
 ];
 
@@ -376,11 +411,13 @@ function renderJagdgebiet(el) {
     return;
   }
 
-  const visibleMonsters = MONSTER_DEFS.filter(m =>
-    !m.tier ||
-    (m.tier === 2 && gameFlags.lethkarUnlocked) ||
-    (m.tier === 3 && gameFlags.velmarkUnlocked)
-  );
+  const visibleMonsters = MONSTER_DEFS.filter(m => {
+    if (m.visibleWhen && !m.visibleWhen()) return false;
+    if (!m.tier) return true;
+    if (m.tier === 2) return gameFlags.lethkarUnlocked;
+    if (m.tier === 3) return gameFlags.velmarkUnlocked;
+    return false;
+  });
   const monsterCards = visibleMonsters.map(m => {
     const isDeep    = m.zone === 'tief' || m.zone === 'lethkar_tief';
     const blocked   = isDeep && getStrengthLevel(strength.xp) < 2;

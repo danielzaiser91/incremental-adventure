@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════════════════════════
+﻿/* ══════════════════════════════════════════════════════════════
    npc.js — Taverne: NPC-Registry + Dialog-Baum-Engine
    Jeder NPC hat einen Einstiegsknoten (statisch oder als Funktion für
    zustandsabhängige Startpunkte, z.B. Quest-Fortschritt) und einen
@@ -294,10 +294,54 @@ const NPCS = {
       (gameFlags.oswingSuperHintShown && !gameFlags.lehrerUnlocked) ||
       (!meta.hasHome && storyState >= 20100 && resources.gold >= 2000),
     start: () => {
+      if (quests.oswinsAuftrag?.state === QUEST_STATE.UNSTARTED && gameClock.day >= 2 && gameFlags.jobUnlocked) return 'oswinsAuftragOffer';
+      if (quests.oswinsAuftrag?.state === QUEST_STATE.DONE) return 'oswinsAuftragDone';
+      if (quests.fremderGeheimnis?.state === QUEST_STATE.ASKING_AROUND) return 'fremderHint';
       if (meta.hasHome) return 'greetHomeOwner';
       return 'greet';
     },
     nodes: {
+      oswinsAuftragOffer: {
+        text: [
+          'Oswin schaut mich an — und dann schaut er zur Seite, als würde er prüfen, ob jemand zuhört.',
+          '"Du bist der Neue. Unbekannt, kein Ruf, keine Verbindungen." Eine Pause. "Das ist nützlich."',
+          '"Richte Brakka aus, dass ich... ein Gespräch möchte. Diskret. Kein großes Ding. Einfach sagen: Oswin bittet um seine Zeit."'
+        ],
+        options: [
+          {
+            label: '"Das mache ich."',
+            next: null,
+            action: () => {
+              quests.oswinsAuftrag.state = QUEST_STATE.ACTIVE;
+              showToast('Neue Aufgabe: Oswins stiller Auftrag — Brakka ausrichten.', TOAST.EVENT);
+            }
+          },
+          { label: '"Ich bin nicht dein Bote."', next: 'oswinsAbweis' }
+        ]
+      },
+      oswinsAbweis: {
+        text: ['"Wie du willst." Er wendet sich ab. "Ich habe andere Wege."'],
+        options: [{ label: 'Gut.', next: null }]
+      },
+      oswinsAuftragDone: {
+        text: [
+          'Oswin hebt die Augenbraue, kaum merklich.',
+          '"Ah. Du hast es tatsächlich getan." Er nickt, kurz und knapp.',
+          '"Hier. Du hast dir das verdient. Und — ich merke mir das."',
+          'Zum ersten Mal sieht er mich an, als wäre ich ein Mensch.'
+        ],
+        reward: () => '✨ <strong>+15 Gold</strong> · Oswin merkt sich deinen Namen',
+        options: [{
+          label: 'Gern geschehen.',
+          next: null,
+          action: () => {
+            quests.oswinsAuftrag.state = QUEST_STATE.REWARDED;
+            resources.gold += 15; resources.totalGoldEarned += 15;
+            checkMilestones();
+            showToast('Oswins Auftrag abgeschlossen! +15 Gold.', TOAST.REWARD);
+          }
+        }]
+      },
       greet: {
         text: ['Oswin mustert mich von oben bis unten und verzieht das Gesicht. "Wer hat dich hereingelassen?"'],
         options: [
@@ -391,6 +435,21 @@ const NPCS = {
         text: ['"Schön", sagt Oswin. "Hast du jetzt eine Schmiede." Eine weitere Pause. "Du wirst es brauchen."'],
         options: [{ label: 'Danke.', next: null }]
       },
+      fremderHint: {
+        text: [
+          'Oswin hebt eine Augenbraue. "Der Mann in der Ecke?" Er senkt die Stimme.',
+          '"Er nennt sich Serin. Zumindest in manchen Kreisen. Früher Informationshandel — jetzt... weicher in der Außendarstellung, sagen Leute."',
+          '"Ich würde ihn fragen. Direkt. Er respektiert Direktheit — im Gegensatz zu den meisten."'
+        ],
+        options: [{
+          label: 'Danke.',
+          next: null,
+          action: () => {
+            if (quests.fremderGeheimnis?.state === QUEST_STATE.ASKING_AROUND)
+              quests.fremderGeheimnis.state = QUEST_STATE.IDENTITY_KNOWN;
+          }
+        }]
+      },
       business: {
         text: () => gameFlags.lehrerUnlocked
           ? ['"Darüber haben wir doch bereits geredet." Oswin schaut mich mit kaum verhüllter Ungeduld an. "Hast du das etwa vergessen? Das Lehrhaus. Dort findest du, was du suchst."']
@@ -432,10 +491,16 @@ const NPCS = {
     questAvailable: () => gameClock.day >= 2 && gameFlags.waffenschmiedRejected,
     hasHint: () => quests.guildRegistration.state === QUEST_STATE.ACTIVE || quests.nightWatch.state === QUEST_STATE.DONE ||
       (quests.miraLetter.state === QUEST_STATE.ACTIVE && (questItems.sealedLetter || 0) > 0) ||
-      quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED,
+      quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED ||
+      quests.gildePruefung?.state === QUEST_STATE.DONE ||
+      quests.waldtrollJagd?.state === QUEST_STATE.DONE ||
+      quests.brennenderMut?.state === QUEST_STATE.REWARDED,
     start: () => {
       if (quests.miraLetter.state === QUEST_STATE.ACTIVE && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
       if (quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED) return 'detectiveReveal';
+      if (quests.gildePruefung?.state === QUEST_STATE.DONE) return 'gildePruefungTurnIn';
+      if (quests.waldtrollJagd?.state === QUEST_STATE.DONE) return 'waldtrollTurnIn';
+      if (quests.brennenderMut?.state === QUEST_STATE.UNSTARTED && quests.nightWatch.state === QUEST_STATE.REWARDED && gameFlags.kapitel2Unlocked) return 'brennenderMutOffer';
       if (quests.guildRegistration.state === QUEST_STATE.ACTIVE) {
         return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
       }
@@ -450,7 +515,29 @@ const NPCS = {
     nodes: {
       tooSoon: {
         text: ['Brakka nickt mir knapp zu, ohne den Hammer aus der Hand zu legen. "Lern erst die Stadt kennen, Fremder. Wir reden noch."'],
-        options: [{ label: 'Verstanden.', next: null }]
+        options: [
+          { label: 'Verstanden.', next: null },
+          {
+            label: '"Oswin bittet um deine Zeit."',
+            next: 'oswinsNachricht',
+            visible: () => quests.oswinsAuftrag?.state === QUEST_STATE.ACTIVE
+          }
+        ]
+      },
+      oswinsNachricht: {
+        text: [
+          'Brakka hält inne. Für einen Moment ist sein Gesicht schwer zu lesen.',
+          '"Oswin." Er seufzt kurz. "Gut. Sag ihm, ich komme."',
+          '"Und dir — danke, dass du diskret warst."'
+        ],
+        options: [{
+          label: 'Ich richte es aus.',
+          next: null,
+          action: () => {
+            quests.oswinsAuftrag.state = QUEST_STATE.DONE;
+            showToast('Brakka hat zugestimmt — Oswin Bescheid geben.', TOAST.EVENT);
+          }
+        }]
       },
       offer: {
         text: [
@@ -556,7 +643,85 @@ const NPCS = {
       },
       guildFinished: {
         text: ['Brakka hebt sein Glas. "Geh und mach uns stolz, Fremder."'],
-        options: [{ label: 'Werde ich.', next: null }]
+        options: [
+          { label: 'Werde ich.', next: null },
+          { label: '"Hast du Gerüchte über das tiefe Waldgebiet gehört?"', next: 'waldtrollRumor',
+            visible: () => quests.gildePruefung?.state === QUEST_STATE.REWARDED }
+        ]
+      },
+      waldtrollRumor: {
+        text: [
+          'Brakka senkt die Stimme. "Das Tiefjagdgebiet? Ja. Gerüchte gibt es da immer."',
+          '"Sie sagen, da draußen streift etwas — groß, grau, langsam wie Fels und hart wie Eisen."',
+          '"Wenn du es suchst, dann geh rein. Aber sag mir hinterher Bescheid — damit wir wissen, was wirklich dort ist."'
+        ],
+        options: [{
+          label: '"Ich werde es finden."',
+          next: null,
+          action: () => {
+            if (quests.waldtrollJagd?.state === QUEST_STATE.UNSTARTED) {
+              quests.waldtrollJagd.state = QUEST_STATE.ACTIVE;
+              showToast('Neue Aufgabe: Das Ungeheuer im Tiefjagd.', TOAST.EVENT);
+            }
+          }
+        }]
+      },
+      gildePruefungTurnIn: {
+        text: [
+          'Brakka schaut mich ruhig an, während ich erzähle. Fünf Kämpfe.',
+          '"Na gut", sagt er schließlich. "Du hast bewiesen, dass du kämpfen kannst. Nicht nur zuhören."',
+          '"Das tiefe Jagdgebiet ist dir jetzt zugänglich. Und hier — fünfzehn Gold dafür, dass du mich nicht enttäuscht hast."'
+        ],
+        reward: () => '✨ <strong>+15 Gold</strong> · Tiefjagdgebiet jetzt zugänglich',
+        options: [{
+          label: 'Danke, Brakka.',
+          next: null,
+          action: () => {
+            quests.gildePruefung.state = QUEST_STATE.REWARDED;
+            resources.gold += 15; resources.totalGoldEarned += 15;
+            gameFlags.deepHuntingUnlocked = true;
+            checkMilestones();
+            showToast('Gildenprüfung abgeschlossen! Tiefjagdgebiet freigeschaltet.', TOAST.REWARD);
+          }
+        }]
+      },
+      waldtrollTurnIn: {
+        text: [
+          'Brakka starrt mich an. Dann lacht er — kurz, aber echt.',
+          '"Den Waldtroll. Du hast ihn tatsächlich besiegt."',
+          '"Ich dachte, du kommst irgendwann zurück und sagst mir, du hast ihn nicht mal gefunden." Er schiebt mir Gold zu.',
+          '"Gut gemacht, Fremder. Du bist kein Fremder mehr."'
+        ],
+        reward: () => '✨ <strong>+25 Gold</strong> · Brakka nennt dich nicht mehr "Fremder"',
+        options: [{
+          label: 'Das bedeutet mir viel.',
+          next: null,
+          action: () => {
+            quests.waldtrollJagd.state = QUEST_STATE.REWARDED;
+            resources.gold += 25; resources.totalGoldEarned += 25;
+            checkMilestones();
+            showToast('Waldtroll-Quest abgeschlossen! +25 Gold.', TOAST.REWARD);
+          }
+        }]
+      },
+      brennenderMutOffer: {
+        text: [
+          'Brakka lehnt sich zurück und betrachtet mich mit einem Ausdruck, den ich noch nicht an ihm kenne. Ernsthaft. Fast respektvoll.',
+          '"Ich kenne Leute, die kommen einmal zur Wache und denken, sie haben etwas bewiesen."',
+          '"Drei Nächte hintereinander. Ohne Ausreden. Wenn du das schaffst, vertraue ich dir — und das bedeutet in Treutheim mehr, als du ahnst."'
+        ],
+        options: [
+          {
+            label: '"Drei Nächte. Abgemacht."',
+            next: null,
+            action: () => {
+              quests.brennenderMut.state = QUEST_STATE.ACTIVE;
+              quests.brennenderMut.count = 0;
+              showToast('Neue Aufgabe: Drei Nächte Stadtwache hintereinander.', TOAST.EVENT);
+            }
+          },
+          { label: '"Noch nicht bereit."', next: null }
+        ]
       },
       detectiveReveal: {
         text: [
@@ -862,7 +1027,53 @@ const NPCS = {
       },
       idle: {
         text: ['Roswald hebt zwei Finger zum Gruß, mehr nicht. Männer wie er verschwenden keine Worte.'],
-        options: [{ label: 'Verstanden.', next: null }]
+        options: [
+          { label: 'Verstanden.', next: null },
+          {
+            label: '"Ich habe mich im Kampf bewiesen. Kannst du mir zeigen, wie ich noch besser werde?"',
+            next: 'kampfRoutineOffer',
+            visible: () => quests.kampfRoutine?.state === QUEST_STATE.UNSTARTED && quests.nightWatch.state === QUEST_STATE.REWARDED && killStats.total >= 3
+          },
+          {
+            label: '"Das Kampftraining ist abgeschlossen."',
+            next: 'kampfRoutineTurnIn',
+            visible: () => quests.kampfRoutine?.state === QUEST_STATE.DONE
+          }
+        ]
+      },
+      kampfRoutineOffer: {
+        text: [
+          'Roswald legt seinen Stift nieder. Betrachtet mich.',
+          '"Du hast gelernt, einen Treffer zu landen. Das ist mehr als die meisten." Eine Pause.',
+          '"Zwei Schichten Stadtwache, fünf weitere Kämpfe. Dann reden wir wieder."'
+        ],
+        options: [{
+          label: '"Ich werde es tun."',
+          next: null,
+          action: () => {
+            quests.kampfRoutine.state = QUEST_STATE.ACTIVE;
+            showToast('Neue Aufgabe: Roswalds Kampftraining gestartet.', TOAST.EVENT);
+          }
+        }]
+      },
+      kampfRoutineTurnIn: {
+        text: [
+          'Roswald schaut mich kurz an. Dann nickt er.',
+          '"Du hast die Bedingungen erfüllt. Ich sehe es." Er steht auf, legt mir kurz die Hand auf die Schulter — dann nimmt er sie sofort wieder weg.',
+          '"Du bist robuster geworden. Das hält an."'
+        ],
+        reward: () => '✨ <strong>+10 Max-HP dauerhaft</strong> · Roswald nennt dich seinen Schüler',
+        options: [{
+          label: 'Das werde ich nicht vergessen.',
+          next: null,
+          action: () => {
+            quests.kampfRoutine.state = QUEST_STATE.REWARDED;
+            gameFlags.kampfTrainingDone = true;
+            playerStats.maxHp += 10;
+            playerStats.hp = Math.min(playerStats.hp + 10, playerStats.maxHp);
+            showToast('Kampftraining abgeschlossen! +10 Max-HP dauerhaft.', TOAST.REWARD);
+          }
+        }]
       }
     }
   },
@@ -898,14 +1109,17 @@ const NPCS = {
     hasHint: () =>
       (storyState >= 10102 && npcFlags.fremderTalkCount === 0) ||
       (quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
-        gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3),
+        gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3) ||
+      quests.fremderGeheimnis?.state === QUEST_STATE.IDENTITY_KNOWN ||
+      quests.kapitel2Finale?.state === QUEST_STATE.ACTIVE,
     start: () => {
-      // Konfrontation (Bedingungen: Quest in 'brakka_consulted', Stärke 3+, Waldtroll besiegt)
+      if (quests.kapitel2Finale?.state === QUEST_STATE.ACTIVE) return 'finaleDialog';
       if (quests.theftInvestigation.state === QUEST_STATE.BRAKKA_CONSULTED &&
           gameFlags.waldtrollKilled && getStrengthLevel(strength.xp) >= 3) {
         return 'confrontation';
       }
       if (quests.theftInvestigation.state === QUEST_STATE.CONFRONTED || gameFlags.fremderConfronted) {
+        if (quests.fremderGeheimnis?.state === QUEST_STATE.IDENTITY_KNOWN) return 'identityReveal';
         return 'postConfrontation';
       }
       return 'greet';
@@ -994,7 +1208,126 @@ const NPCS = {
       },
       postConfrontation: {
         text: ['Der zwielichtige Mann ist nicht mehr hier. Nur sein leerer Stuhl erinnert an das Gespräch.'],
-        options: [{ label: 'Er ist weg.', next: null }]
+        options: [
+          { label: 'Er ist weg.', next: null },
+          {
+            label: '"Ich will wissen, wer er wirklich ist."',
+            next: 'fremderGeheimnisCue',
+            visible: () => quests.fremderGeheimnis?.state === QUEST_STATE.CURIOUS && !gameFlags.fremderIdentityKnown
+          }
+        ]
+      },
+      fremderGeheimnisCue: {
+        text: [
+          'Der leere Stuhl. Ich denke nach.',
+          'Oswin hat ihn einmal erwähnt — eine "Investition in Informationen". Mira war nervös, als ich von ihm sprach.',
+          'Jemand hier kennt ihn. Ich muss nur fragen.'
+        ],
+        options: [{
+          label: 'Ich fange an, nachzufragen.',
+          next: null,
+          action: () => {
+            if (quests.fremderGeheimnis?.state === QUEST_STATE.CURIOUS)
+              quests.fremderGeheimnis.state = QUEST_STATE.ASKING_AROUND;
+          }
+        }]
+      },
+      identityReveal: {
+        text: [
+          'Er sitzt wieder. Natürlich sitzt er wieder.',
+          'Als ich mich setze, schaut er mich anders an. "Du hast gefragt. Ich habe es gehört."',
+          '"Mein Name ist nicht wichtig. Aber Lethkar..." Er lächelt, kaum sichtbar. "...dort kennt man mich. Und bald wirst du es auch tun."'
+        ],
+        options: [{
+          label: '"Warum mir das sagen?"',
+          next: 'identityReveal2'
+        }]
+      },
+      identityReveal2: {
+        text: [
+          '"Weil du nicht aufgehört hast nachzufragen. Das bedeutet, dass du bereit bist."',
+          'Er steht auf. Legt ein kleines gefaltetes Papier auf den Tisch. "Das ist eine Adresse in Lethkar. Finde sie. Nenn meinen Namen: Serin."',
+          '"Bis dahin — viel Erfolg. Du wirst es brauchen."'
+        ],
+        options: [{
+          label: 'Ich nehme das Papier.',
+          next: null,
+          action: () => {
+            quests.fremderGeheimnis.state = QUEST_STATE.REWARDED;
+            gameFlags.fremderIdentityKnown = true;
+            showToast('Der Fremde heißt Serin — und er kennt Lethkar.', TOAST.REWARD);
+          }
+        }]
+      },
+      finaleDialog: {
+        text: [
+          'Er sitzt an seinem üblichen Platz. Aber heute kommt er mir entgegen, bevor ich ihn ansprich.',
+          '"Du hast dir einen Ruf gemacht, Serin... verzeiht. Alten Reflex."',
+          '"Treutheim hat dir alles gegeben, was es hat. Der Rest liegt woanders."',
+          '"Lethkar. Nördlich, durch den Bergpass. Du wirst nicht leicht hinkommen — aber du wirst ankommen."',
+          'Er schiebt mir ein kleines, gefaltetes Stück Pergament zu. Keine Worte mehr.'
+        ],
+        options: [{
+          label: 'Ich nehme das Pergament.',
+          next: null,
+          action: () => {
+            quests.kapitel2Finale.state = QUEST_STATE.DONE;
+            gameFlags.lethkarUnlocked = true;
+            navUnseen.lethkar = true;
+            showToast('Lethkar ist jetzt auf der Weltkarte freigeschaltet!', TOAST.REWARD);
+            quests.kapitel2Finale.state = QUEST_STATE.REWARDED;
+            render();
+          }
+        }]
+      }
+    }
+  },
+
+  torben: {
+    name: 'Torben, Gildenvorsteher', icon: '🏅',
+    tagline: 'Er hat jeden kommen und gehen sehen. Nicht jeder bleibt.',
+    availability: 'always', availabilityText: 'Er wartet.',
+    locked: () => quests.gildaAufstieg?.state === QUEST_STATE.UNSTARTED,
+    start: () => {
+      if (quests.gildaAufstieg?.state === QUEST_STATE.ACTIVE) return 'willkommen';
+      if (quests.gildaAufstieg?.state === QUEST_STATE.REWARDED) return 'idle';
+      return 'willkommen';
+    },
+    nodes: {
+      willkommen: {
+        text: [
+          'Ein älterer Mann mit ruhigen Augen und einem grünen Gilden-Abzeichen auf dem Revers steht auf, als ich eintrete.',
+          '"Du bist es, von dem Brakka gesprochen hat." Nicht ganz ein Lächeln. Aber fast.',
+          '"Ich bin Torben. Ich führe die Gilde in Treutheim seit zwanzig Jahren. Ich habe viele kommen und gehen sehen."',
+          '"Ich höre, du bist jemand, der bleibt."'
+        ],
+        options: [{
+          label: '"Ich versuche es."',
+          next: 'aufnahme',
+        }]
+      },
+      aufnahme: {
+        text: [
+          '"Gut genug." Er öffnet ein altes Buch und trägt etwas ein — meinen Namen, schätze ich.',
+          '"Mit diesem Eintrag bist du Gildenmitglied. Kein Rang, kein Titel. Nur die Zugehörigkeit und was du daraus machst."',
+          '"Die Welt ist größer als Treutheim. Wenn der Weg dich ruft — folg ihm. Das ist alles, was die Gilde von dir erwartet."',
+          'Er reicht mir dreißig Gold. "Startkapital."'
+        ],
+        reward: () => '✨ <strong>+30 Gold</strong> · Gildenmitglied — dauerhaft',
+        options: [{
+          label: 'Danke, Torben.',
+          next: null,
+          action: () => {
+            quests.gildaAufstieg.state = QUEST_STATE.REWARDED;
+            resources.gold += 30; resources.totalGoldEarned += 30;
+            checkMilestones();
+            showToast('Gildenaufstieg abgeschlossen! +30 Gold. Gildenmitglied.', TOAST.REWARD);
+          }
+        }]
+      },
+      idle: {
+        text: ['"Die Gilde ist stolz auf dich, Abenteurer. Geh und mach weiter so."'],
+        options: [{ label: 'Danke.', next: null }]
       }
     }
   }
@@ -1132,6 +1465,11 @@ const NPCS_LETHKAR = [
       if (!gameFlags.varenaMetFirst) return 'firstMeet';
       if ((questItems.miras_brief || 0) > 0 && !gameFlags.varenaDecodedBrief) return 'offerDecode';
       if (gameFlags.varenaDecodedBrief && !alchemie.unlocked) return 'teachAlchemie';
+      if (quests.varenaErstkontakt?.state === QUEST_STATE.DONE) return 'varenaErstkontaktTurnIn';
+      if (quests.varenaErstkontakt?.state === QUEST_STATE.UNSTARTED && alchemie.unlocked) return 'varenaQuestOffer';
+      if (quests.alchemieGeselle?.state === QUEST_STATE.DONE) return 'alchemieGeselleTurnIn';
+      if (quests.valdrisSpuren?.state === QUEST_STATE.ORT3 || quests.valdrisSpuren?.state === 'ort3') return 'valdrisSpurenDeuten';
+      if (quests.kapitel3Abschluss?.state === QUEST_STATE.UNSTARTED && quests.perethKontakt?.state === QUEST_STATE.REWARDED) return 'abschiedVarena';
       if (alchemie.unlocked) return 'alchemieIdle';
       return 'idle';
     },
@@ -1219,6 +1557,98 @@ const NPCS_LETHKAR = [
           }
         }]
       },
+      varenaQuestOffer: {
+        text: [
+          'Varena wischt die Hände ab. "Du lernst schnell. Ich habe eine Aufgabe für dich, wenn du Interesse hast."',
+          '"Im Wald nordwestlich wächst ein seltenes Wildkraut. Ich brauche fünf davon für meine Forschung. Bring sie mir."',
+          '"Als Gegenleistung zeige ich dir, wie man etwas Wertvolles daraus macht."'
+        ],
+        options: [{
+          label: '"Ich bringe sie dir."',
+          next: null,
+          action: () => {
+            quests.varenaErstkontakt.state = QUEST_STATE.ACTIVE;
+            showToast('Neue Quest: Varenas Erstauftrag — 5x Wildkraut sammeln.', TOAST.QUEST);
+          }
+        }, { label: '"Vielleicht später."', next: null }]
+      },
+      varenaErstkontaktTurnIn: {
+        text: [
+          'Varena sieht die Kräuter. Nickt zufrieden.',
+          '"Gut. Diese hier sind frisch — du weißt, wie man sucht." Sie beginnt sofort mit der Verarbeitung.',
+          '"Ich schulde dir etwas. Was möchtest du wissen?"'
+        ],
+        options: [{
+          label: '"Lehr mich mehr über Alchemie."',
+          next: 'varenaTeachBonus',
+          action: () => {
+            if ((questItems.wildkraut || 0) >= 5) {
+              questItems.wildkraut = (questItems.wildkraut || 0) - 5;
+              quests.varenaErstkontakt.state = QUEST_STATE.REWARDED;
+              alchemie.speed = Math.max(alchemie.speed - 0.1, 0.5);
+              showToast('Quest abgeschlossen! Alchemie-Geschwindigkeit +10%.', TOAST.REWARD);
+            }
+          }
+        }]
+      },
+      varenaTeachBonus: {
+        text: ['"Guter Instinkt." Sie zeigt mir einen Griff am Brennkolben. "Hier. Das spart Zeit."'],
+        options: [{ label: 'Danke.', next: null }]
+      },
+      alchemieGeselleTurnIn: {
+        text: [
+          'Varena schaut auf meine Arbeit. Lange. Dann: "Du hast das wirklich verstanden."',
+          '"Das ist mehr als die meisten Lehrlinge in einem Monat schaffen." Sie lächelt — selten für sie.',
+          '"Jetzt bist du kein Schüler mehr. Ein Geselle. Nicht von mir ernannt — das hast du dir erarbeitet."',
+          '"Nimm das hier. Selten. Nützlich." Sie reicht mir einen kleinen Beutel Essenzen.'
+        ],
+        options: [{
+          label: 'Danke, Varena.',
+          next: null,
+          action: () => {
+            quests.alchemieGeselle.state = QUEST_STATE.REWARDED;
+            resources.gold = (resources.gold || 0) + 40;
+            showToast('Quest abgeschlossen! Alchemie-Geselle: +40 Gold, Prestige-Bonus freigeschaltet.', TOAST.REWARD);
+          }
+        }]
+      },
+      valdrisSpurenDeuten: {
+        text: [
+          'Varena hört zu, während ich ihr erzähle, was ich gefunden habe.',
+          '"Drei Orte, alle mit Valdris\' Handschrift." Sie kreuzt die Arme. "Das ist systematisch — kein Zufall."',
+          '"Er baut ein Netzwerk auf. Wahrscheinlich Velmark als Basis. Du musst dahin." Sie zieht eine Karte hervor.',
+          '"Aber nicht blind. Geh zu Thessa in der Taverne. Sie weiß Dinge, die ich nicht weiß."'
+        ],
+        options: [{
+          label: '"Ich tue das."',
+          next: null,
+          action: () => {
+            if (quests.valdrisSpuren?.state === QUEST_STATE.ORT3 || quests.valdrisSpuren?.state === 'ort3') {
+              quests.valdrisSpuren.state = QUEST_STATE.REWARDED;
+              valdrisProfil.aufenthaltsort = true;
+              showToast('Valdris\' Spur führt nach Velmark. Thessa hat mehr Informationen.', TOAST.REWARD);
+            }
+          }
+        }]
+      },
+      abschiedVarena: {
+        text: [
+          'Varena räumt still ihre Becher weg, als ich reinkomme.',
+          '"Du gehst bald, oder?" Keine Frage — eine Feststellung.',
+          '"Velmark ist die nächste Stufe. Für dich und für mich." Sie pause. "Ich schicke dir Informationen, wenn ich sie habe."',
+          '"Du hast hier gut gelernt. Vergiss nicht: Alchemie ist Geduld — nicht Schnelligkeit."'
+        ],
+        options: [{
+          label: '"Ich vergesse es nicht. Danke."',
+          next: null,
+          action: () => {
+            if (quests.kapitel3Abschluss?.state === QUEST_STATE.UNSTARTED) {
+              quests.kapitel3Abschluss.state = QUEST_STATE.ABSCHIED_VARENA;
+              showToast('Varena hat mich verabschiedet. Ich sollte auch Thessa Lebewohl sagen.', TOAST.EVENT);
+            }
+          }
+        }]
+      },
       alchemieIdle: {
         text: ['"Wie läuft es mit dem Studium?" Sie schaut kurz hoch von ihrem Becher.'],
         options: [
@@ -1240,6 +1670,9 @@ const NPCS_LETHKAR = [
     location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.thessaMetFirst) return 'firstMeet';
+      if (quests.kapitel3Abschluss?.state === QUEST_STATE.ABSCHIED_VARENA) return 'abschiedThessa';
+      if (quests.thessaGeheimnis?.state === QUEST_STATE.TALK1) return 'talk2';
+      if (quests.thessaGeheimnis?.state === QUEST_STATE.TALK2) return 'talk3';
       if (gameFlags.thessaTrustGained) return 'trusted';
       return 'cautious';
     },
@@ -1292,7 +1725,45 @@ const NPCS_LETHKAR = [
           'Thessa nickt langsam. "Das stimmt. Und Varena redet selten." Sie schiebt ein Buch über den Tisch.',
           '"Lethkar hat Augen — und Ohren. Die meisten Bewohner wissen, wer Valdris ist. Sie reden nur nicht. Du weißt jetzt genug, um die richtigen Fragen zu stellen."'
         ],
-        options: [{ label: 'Danke.', next: null }]
+        options: [{
+          label: 'Danke.',
+          next: null,
+          action: () => {
+            if (quests.thessaGeheimnis?.state === QUEST_STATE.UNSTARTED)
+              quests.thessaGeheimnis.state = QUEST_STATE.TALK1;
+          }
+        }]
+      },
+      talk2: {
+        text: [
+          'Thessa hebt kurz den Blick. "Du bist wieder hier." Eine Pause. "Gut."',
+          '"Ich habe Valdris\' Namen in den letzten sechs Monaten dreimal gehört — von verschiedenen Leuten, alle in Eile. Das bedeutet etwas."',
+          '"Komm morgen nochmals. Ich habe mehr."'
+        ],
+        options: [{
+          label: '"Bis morgen."',
+          next: null,
+          action: () => {
+            if (quests.thessaGeheimnis?.state === QUEST_STATE.TALK1)
+              quests.thessaGeheimnis.state = QUEST_STATE.TALK2;
+          }
+        }]
+      },
+      talk3: {
+        text: [
+          'Thessa legt das Buch beiseite. Zum ersten Mal ohne Vorbehalt.',
+          '"Valdris hat Velmark unterwandert — drei Fraktionen, alle zu einem Grad unter seiner Kontrolle. Er hat Yeva in der Händlergilde eingeschüchtert, aber sie kämpft noch."',
+          '"Finde sie. Sag, dass Thessa dich geschickt hat. Und — pass auf dich auf."'
+        ],
+        options: [{
+          label: '"Ich mache das."',
+          next: null,
+          action: () => {
+            quests.thessaGeheimnis.state = QUEST_STATE.REWARDED;
+            if (!gameFlags.thessaTrustGained) gameFlags.thessaTrustGained = true;
+            showToast('Thessa vertraut mir. Yeva in Velmark — das ist mein nächster Schritt.', TOAST.REWARD);
+          }
+        }]
       },
       trusted: {
         text: ['"Was willst du wissen?" Sie klingt immer noch vorsichtig — aber nicht mehr abweisend.'],
@@ -1308,10 +1779,29 @@ const NPCS_LETHKAR = [
           '"Komm wieder, wenn du etwas in der Hand hast."'
         ],
         options: [{ label: 'Ich arbeite daran.', next: null }]
+      },
+      abschiedThessa: {
+        text: [
+          '"Du gehst." Keine Frage. Thessa klappt ihr Buch zu.',
+          '"Velmark ist anders als Lethkar. Größer, lauter — und die Menschen dort haben gelernt, nichts zu zeigen."',
+          '"Du hast hier etwas Wichtiges gelernt: Fragen sind Vertrauen. Und du hast meins verdient."',
+          '"Viel Erfolg. Ich lese von dir — in irgendeinem Bericht, irgendwann."'
+        ],
+        options: [{
+          label: '"Danke, Thessa. Wirklich."',
+          next: null,
+          action: () => {
+            if (quests.kapitel3Abschluss?.state === QUEST_STATE.ABSCHIED_VARENA) {
+              quests.kapitel3Abschluss.state = QUEST_STATE.REWARDED;
+              gameFlags.velmarkUnlocked = true;
+              navUnseen.velmark = true;
+              showToast('Lethkar liegt hinter mir. Velmark ist jetzt auf der Weltkarte freigeschaltet!', TOAST.REWARD);
+            }
+          }
+        }]
       }
     }
   },
-
   {
     id: 'pereth',
     name: 'Pereth', icon: '🗡',
@@ -1319,6 +1809,10 @@ const NPCS_LETHKAR = [
     location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.perethMetFirst) return 'firstMeet';
+      if (quests.perethKontakt?.state === QUEST_STATE.ACTIVE && !gameFlags.perethKontaktLethkar) return 'perethKontaktOffer';
+      if (quests.kapitel3Abschluss?.state === QUEST_STATE.UNSTARTED && gameFlags.thessaTrustGained) {
+        if (quests.perethKontakt?.state === QUEST_STATE.UNSTARTED) quests.perethKontakt.state = QUEST_STATE.ACTIVE;
+      }
       if (gameFlags.chapter3StoryComplete) return 'afterQuest';
       if (gameFlags.lagerhausVisited) return 'reportBack';
       if (gameFlags.perethQuestStarted) return 'questUpdate';
@@ -1401,13 +1895,52 @@ const NPCS_LETHKAR = [
           }
         }]
       },
+      perethKontaktOffer: {
+        text: [
+          'Pereth nickt, als er mich kommen sieht. "Du bist hartnäckig. Gut."',
+          '"Ich war in Velmark. Ich weiß, wie es läuft. Wenn du ernst machst mit Valdris — dann ist Velmark der nächste Schritt."',
+          '"Ich gehe nächste Woche. Du kommst mit, oder du kommst nach."'
+        ],
+        options: [{
+          label: '"Ich komme nach. Velmark ist mein Ziel."',
+          next: null,
+          action: () => {
+            quests.perethKontakt.state = QUEST_STATE.DONE;
+            gameFlags.perethKontaktLethkar = true;
+            showToast('Pereth erwartet dich in Velmark.', TOAST.EVENT);
+          }
+        }]
+      },
       afterQuest: {
         text: [
           '"Weißt du, was das Interessante an Valdris ist?" Er dreht seinen Becher.',
           '"Er weiß, dass du hier bist. Wahrscheinlich schon seit du in Lethkar bist. Das ist jetzt der Stand der Dinge."',
           '"Jetzt weißt du es auch."'
         ],
-        options: [{ label: '"Ich hab\'s verstanden."', next: null }]
+        options: [
+          { label: '"Ich hab\'s verstanden."', next: null },
+          {
+            label: '"Pereth — kannst du mir von Velmark erzählen?"',
+            next: 'perethVelmarkHint',
+            visible: () => quests.perethKontakt?.state === QUEST_STATE.UNSTARTED
+          }
+        ]
+      },
+      perethVelmarkHint: {
+        text: [
+          '"Velmark." Er pfeift kurz. "Küstenstadt, drei rivalisierende Fraktionen, ein Mann der alle kontrolliert."',
+          '"Valdris hat seine Basis dort aufgebaut — Händler, Söldner, ein Archiv. Alle arbeiten für ihn, die meisten ohne es zu wissen."',
+          '"Willst du dahin? Dann brauchst du mich." Er schaut mich direkt an. "Ich bin nächste Woche weg. Sag mir jetzt Bescheid."'
+        ],
+        options: [{
+          label: '"Ich will mit."',
+          next: null,
+          action: () => {
+            quests.perethKontakt.state = QUEST_STATE.DONE;
+            gameFlags.perethKontaktLethkar = true;
+            showToast('Pereth erwartet dich in Velmark.', TOAST.EVENT);
+          }
+        }]
       },
       valdrisPereth: {
         text: [
@@ -1540,35 +2073,232 @@ const NPCS_VELMARK = [
 
   // ── Fraktions-NPCs ───────────────────────────────────────────
   {
+    id: 'harro',
+    name: 'Harro', icon: '😓',
+    tagline: 'Schuldner. Weiß mehr, als er zugeben will.',
+    location: CONTENT.VELMARK_HAFEN,
+    start: () => {
+      if (!gameFlags.harroMet) return 'firstMeet';
+      if (quests.gildeSchulden?.state === QUEST_STATE.DONE) return 'schuldenHinweis';
+      if (quests.gildeSchulden?.state === QUEST_STATE.REWARDED) return 'dankbar';
+      return 'nervous';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          'Ein Mann um die vierzig lehnt gegen die Hafenmauer. Er zuckt zusammen, als er mich sieht.',
+          '"Ich kenne dich nicht. Du kennst mich nicht. So bleibts am besten."',
+          'Er dreht sich weg. Dann: "Außer... du hast Gold. Dann könnte ich etwas vergessen."'
+        ],
+        options: [{
+          label: '"Was willst du vergessen?"',
+          next: 'harroOffert',
+          action: () => { gameFlags.harroMet = true; }
+        }, { label: 'Nicht mein Problem.', next: null, action: () => { gameFlags.harroMet = true; } }]
+      },
+      harroOffert: {
+        text: [
+          '"Die Gilde — Yeva — ich schulde ihr. Viel." Er schluckt. "Und sie lässt mich dafür... Dienste erbringen."',
+          '"Ihr wisst. Beobachten. Berichten. Was ich sehe am Hafen." Er schaut sich um. "Wenn jemand meine Schulden übernimmt — ich rede. Über Valdris. Über das, was ich gesehen habe."'
+        ],
+        options: [
+          { label: '"Ich übernehme deine Schulden."', next: 'schuldenUebernehmen',
+            locked: () => (resources.gold || 0) < 300,
+            reason: 'Erfordert 300 Gold',
+            action: () => {
+              if ((resources.gold || 0) >= 300) {
+                resources.gold -= 300;
+                quests.gildeSchulden.state = QUEST_STATE.ACTIVE;
+                gameFlags.harroSchuldenBezahlt = true;
+                showToast('Harrос Schulden übernommen (−300 Gold). Yeva erwartet mich.', TOAST.EVENT);
+              }
+            }
+          },
+          { label: '"Zu teuer. Vielleicht später."', next: null }
+        ]
+      },
+      schuldenUebernehmen: {
+        text: [
+          'Harro atmet aus. Langsam. Erleichtert.',
+          '"Valdris\' Lager. Nordufer. Nach Mitternacht kommen Boote." Er drückt mir einen gefalteten Zettel in die Hand.',
+          '"Das ist alles, was ich habe. Jetzt bin ich quitt."'
+        ],
+        options: [{
+          label: 'Danke.',
+          next: null,
+          action: () => {
+            valdrisProfil.netzwerk = true;
+            if (quests.gildeSchulden?.state === QUEST_STATE.ACTIVE)
+              quests.gildeSchulden.state = QUEST_STATE.DONE;
+          }
+        }]
+      },
+      schuldenHinweis: {
+        text: ['"Yeva musst du noch aufsuchen. Die übernimmt gerne — wenn du ihr mehr bringst als Gold."'],
+        options: [{ label: 'Ich weiß.', next: null }]
+      },
+      dankbar: {
+        text: ['"Ich... danke. Ernsthaft. Du hast mir das hier erspart." Er zeigt auf die Hafenmauer hinter ihm. "Vergiss mich. Das meine ich freundlich."'],
+        options: [{ label: 'Kein Problem.', next: null }]
+      },
+      nervous: {
+        text: ['"Ich hab nichts mehr zu sagen." Er weicht aus. "Nicht heute."'],
+        options: [{ label: 'In Ordnung.', next: null }]
+      }
+    }
+  },
+
+  {
     id: 'gildenmeisterin',
     name: 'Gildenmeisterin Yeva', icon: '💰',
     tagline: 'Sie kauft und verkauft Allianzen wie andere Leute Gemüse.',
     location: CONTENT.VELMARK_FRAKTIONEN,
-    start: () => 'greet',
+    start: () => {
+      if (!gameFlags.yevaMetFirst) return 'greet';
+      if (gameFlags.harroSchuldenBezahlt && quests.gildeSchulden?.state === QUEST_STATE.DONE) return 'schuldenTurnIn';
+      if (quests.gildeInvestition?.state === QUEST_STATE.DONE) return 'investitionTurnIn';
+      if (quests.gildeKorruption?.state === QUEST_STATE.AKTIV) return 'korruptionDialog';
+      if (quests.gildeKorruption?.state === QUEST_STATE.DONE) return 'korruptionTurnIn';
+      if (quests.gildeInvestition?.state === QUEST_STATE.UNSTARTED && quests.gildeSchulden?.state === QUEST_STATE.REWARDED) return 'investitionOffer';
+      if (gameFlags.thessaTrustGained) return 'thessaEmpfehlung';
+      return 'idle';
+    },
     nodes: {
       greet: {
         text: [
-          '"Ein neues Gesicht. Was bringt mich dazu, dir zuzuhören?"',
-          'Sie schaut mich kurz an. Ihre Augen sind schnell. Geschäftlich.',
-          '"Gold? Gut. Dann sprechen wir."'
+          '"Ein neues Gesicht." Sie legt die Feder hin. "Thessa hat mich vorgewarnt — das ist gut. Unkündigte Besucher stören."',
+          '"Du suchst Valdris. Ich weiß, was er tut." Sie verschränkt die Arme. "Die Frage ist: was bietest du der Gilde?"'
         ],
         options: [
-          { label: '"Ich bin hier, um Allianzen zu schmieden."', next: 'allianzAngebot' },
-          { label: '"Vielleicht ein anderes Mal."', next: null }
+          { label: '"Arbeit. Loyalität. Ergebnisse."', next: 'erstesBedingung',
+            action: () => {
+              gameFlags.yevaMetFirst = true;
+              if (quests.gildeSchulden?.state === QUEST_STATE.UNSTARTED) quests.gildeSchulden.state = QUEST_STATE.ACTIVE;
+            }
+          },
+          { label: '"Ich komme wieder, wenn ich bereit bin."', next: null, action: () => { gameFlags.yevaMetFirst = true; } }
         ]
       },
-      allianzAngebot: {
+      erstesBedingung: {
         text: [
-          '"Die Gilde unterstützt Leute, die uns etwas bringen. Handel, Schutz, Informationen — was hast du?"',
-          '"Zeig mir, dass du investieren willst, und ich zeige dir, was wir leisten können."'
+          '"Harro schuldet uns Geld. Er sitzt am Hafen und tut so, als wäre er unsichtbar." Sie lächelt dünn.',
+          '"Bring das in Ordnung — wie du willst — und wir reden weiter."'
         ],
+        options: [{ label: '"Ich kümmere mich darum."', next: null }]
+      },
+      thessaEmpfehlung: {
+        text: [
+          '"Thessa empfiehlt dich. Das ist kein kleines Ding." Yeva steht auf, schaut aus dem Fenster.',
+          '"Ich habe ein Problem: Jemand schuldet der Gilde Geld. Er weigert sich zu zahlen. Du kannst helfen?"'
+        ],
+        options: [{
+          label: '"Wer ist es?"',
+          next: 'harroHinweis',
+          action: () => {
+            gameFlags.yevaMetFirst = true;
+            if (quests.gildeSchulden?.state === QUEST_STATE.UNSTARTED) quests.gildeSchulden.state = QUEST_STATE.ACTIVE;
+          }
+        }]
+      },
+      harroHinweis: {
+        text: ['"Harro. Am Hafen. Er wird reden — er redet immer, wenn es sich lohnt."'],
+        options: [{ label: 'Ich finde ihn.', next: null }]
+      },
+      schuldenTurnIn: {
+        text: [
+          '"Harro." Ein kurzes Nicken. "Du hast das schnell geregelt." Sie schiebt einen Beutel über den Tisch.',
+          '"Hier — deine Provision. Und mein Vertrauen. Das ist mehr wert als das Gold."'
+        ],
+        options: [{
+          label: '"Danke, Yeva."',
+          next: null,
+          action: () => {
+            resources.gold = (resources.gold || 0) + 150;
+            fraktionen.haendlergilde = Math.min(100, (fraktionen.haendlergilde || 0) + 20);
+            quests.gildeSchulden.state = QUEST_STATE.REWARDED;
+            showToast('Quest abgeschlossen! +150 Gold, Händlergilde +20 Ruf.', TOAST.REWARD);
+          }
+        }]
+      },
+      investitionOffer: {
+        text: [
+          '"Du hast Potential. Ich will es testen." Yeva öffnet ein Konto-Buch.',
+          '"Investier 500 Gold in die Gilde. Ich vervielfache es — und gleichzeitig sehen wir, ob du uns wirklich traust."',
+          '"Rendite: sechzig Prozent nach einer Woche Arbeit. Für dich und für uns."'
+        ],
+        options: [{
+          label: '"Deal."',
+          next: null,
+          locked: () => (resources.gold || 0) < 500,
+          reason: 'Erfordert 500 Gold',
+          action: () => {
+            if ((resources.gold || 0) >= 500) {
+              resources.gold -= 500;
+              quests.gildeInvestition.state = QUEST_STATE.ACTIVE;
+              showToast('500 Gold investiert. Yeva erwartet Ergebnisse.', TOAST.EVENT);
+            }
+          }
+        }, { label: '"Noch nicht bereit."', next: null }]
+      },
+      investitionTurnIn: {
+        text: [
+          '"Du hast gearbeitet. Das Ergebnis spricht für sich." Yeva legt einen schweren Beutel auf den Tisch.',
+          '"Achthundert. Sechzig Prozent Rendite — wie vereinbart." Sie lehnt sich zurück. "Ich habe noch eine Aufgabe."'
+        ],
+        options: [{
+          label: '"Ich höre."',
+          next: 'korruptionIntro',
+          action: () => {
+            resources.gold = (resources.gold || 0) + 800;
+            fraktionen.haendlergilde = Math.min(100, (fraktionen.haendlergilde || 0) + 15);
+            quests.gildeInvestition.state = QUEST_STATE.REWARDED;
+            showToast('Quest abgeschlossen! +800 Gold, Händlergilde +15 Ruf.', TOAST.REWARD);
+          }
+        }]
+      },
+      korruptionIntro: {
+        text: [
+          '"Valdris hat einen unserer Buchhalter bestochen. Er hat Zugang zu unseren Konten."',
+          '"Ich brauche Beweis dafür — etwas, das ich vor dem Stadtrat vorzeigen kann. Damit er fliegt, ohne dass ich die Schuld trage."',
+          '"Das Stadtarchiv hat Unterlagen. Sele kann dir helfen — wenn du ihr gibst, was sie will."'
+        ],
+        options: [{
+          label: '"Ich beschaffe dir den Beweis."',
+          next: null,
+          action: () => { quests.gildeKorruption.state = QUEST_STATE.AKTIV; }
+        }]
+      },
+      korruptionDialog: {
+        text: ['"Du hast noch nicht alles. Das Archiv, Sele — hast du sie schon aufgesucht?"'],
+        options: [{ label: '"Ich bin daran."', next: null }]
+      },
+      korruptionTurnIn: {
+        text: [
+          'Yeva schaut die Dokumente durch. Einmal. Zweimal.',
+          '"Das reicht." Sie klappt den Ordner zu. "Du hast getan, worum ich gebeten habe. Mehr als das."',
+          '"Die Händlergilde steht hinter dir. Vollständig." Sie streckt die Hand aus.'
+        ],
+        options: [{
+          label: 'Ich schlage ein.',
+          next: null,
+          action: () => {
+            fraktionen.haendlergilde = Math.min(100, (fraktionen.haendlergilde || 0) + 25);
+            quests.gildeKorruption.state = QUEST_STATE.REWARDED;
+            gameFlags.valdrisDokumentGefunden = true;
+            showToast('Händlergilde vollständig verbündet! Valdris-Dokument gesichert.', TOAST.REWARD);
+          }
+        }]
+      },
+      idle: {
+        text: ['"Was gibt es?"'],
         options: [
-          { label: '"Ich komme wieder, wenn ich bereit bin."', next: null }
+          { label: '"Wie läuft es mit der Gilde?"', next: 'gildeStatus' },
+          { label: '"Nichts. Nur vorbeigeschaut."', next: null }
         ]
       },
-      verbündet: {
-        text: ['"Gut gearbeitet. Wir behalten dich im Auge — die richtige Art von Auge."'],
-        options: [{ label: 'Gut.', next: null }]
+      gildeStatus: {
+        text: ['"Valdris bremst uns. Solange er operiert, verlieren wir täglich. Deswegen bin ich froh, dass du hier bist."'],
+        options: [{ label: 'Ich arbeite daran.', next: null }]
       }
     }
   },
@@ -1578,21 +2308,136 @@ const NPCS_VELMARK = [
     name: 'Hauptmann Gorr', icon: '⚔',
     tagline: 'Eiserne Faust, wenig Geduld, kein Interesse an Erklärungen.',
     location: CONTENT.VELMARK_FRAKTIONEN,
-    start: () => 'greet',
+    start: () => {
+      if (!gameFlags.gorrMet) return 'greet';
+      if (quests.gorrsVergangenheit?.state === QUEST_STATE.DONE) return 'vergangenheitTurnIn';
+      if (quests.gorrsEid?.state === QUEST_STATE.DONE) return 'eidTurnIn';
+      if (quests.bruderschaftBeweis?.state === QUEST_STATE.DONE) return 'beweisAnnehmen';
+      if (quests.bruderschaftBeweis?.state === QUEST_STATE.UNSTARTED) return 'beweisOffer';
+      return 'kampfIdle';
+    },
     nodes: {
       greet: {
         text: [
           'Er dreht sich um. Kein Lächeln. "Du willst zur Bruderschaft."',
           '"Dann zeig mir, dass du kämpfen kannst. Reden reicht mir nicht."'
         ],
-        options: [
-          { label: '"Ich habe mich genug bewiesen."', next: 'mutCheck' },
-          { label: '"Später."', next: null }
-        ]
+        options: [{
+          label: '"Ich habe mich genug bewiesen."',
+          next: 'mutCheck',
+          action: () => { gameFlags.gorrMet = true; }
+        }, { label: '"Später."', next: null, action: () => { gameFlags.gorrMet = true; } }]
       },
       mutCheck: {
-        text: ['"Treutheim, Lethkar — ich kenne die Berichte. Waldtroll. Valdris\' Lager. Das reicht als Referenz."'],
-        options: [{ label: 'Dann sind wir Verbündete.', next: null }]
+        text: ['"Treutheim, Lethkar — ich kenne die Berichte. Waldtroll. Valdris\' Lager. Das reicht als Referenz."',
+          '"Bring mir etwas, das ich dem Rat vorzeigen kann. Einen Beweis, dass du handeln kannst — nicht nur reden."'],
+        options: [{
+          label: '"Was für ein Beweis?"',
+          next: null,
+          action: () => {
+            if (quests.bruderschaftBeweis?.state === QUEST_STATE.UNSTARTED)
+              quests.bruderschaftBeweis.state = QUEST_STATE.ACTIVE;
+          }
+        }]
+      },
+      beweisOffer: {
+        text: ['"Ich brauche einen konkreten Beweis für deine Eignung. Besieg einen von Valdris\' Wächtern am Hafen — und komm zurück."'],
+        options: [{ label: '"Ich mache das."', next: null }]
+      },
+      beweisAnnehmen: {
+        text: [
+          'Gorr schaut die Beute an. Schweigt. Dann nickt er.',
+          '"Gut. Die Bruderschaft steht hinter dir. Was brauchst du?"'
+        ],
+        options: [{
+          label: '"Deine Geschichte, Gorr. Woher kommst du wirklich?"',
+          next: 'vergangenheitBegin',
+          action: () => {
+            fraktionen.bruderschaft = Math.min(100, (fraktionen.bruderschaft || 0) + 15);
+            quests.bruderschaftBeweis.state = QUEST_STATE.REWARDED;
+            quests.gorrsVergangenheit.state = QUEST_STATE.ACTIVE;
+            showToast('Bruderschaft-Beitritt bestätigt! Gorrs Vergangenheit — eine neue Quest.', TOAST.REWARD);
+          }
+        }, { label: '"Danke. Dann arbeiten wir."', next: null,
+          action: () => {
+            fraktionen.bruderschaft = Math.min(100, (fraktionen.bruderschaft || 0) + 15);
+            quests.bruderschaftBeweis.state = QUEST_STATE.REWARDED;
+          }
+        }]
+      },
+      vergangenheitBegin: {
+        text: [
+          'Gorr zieht einen Stuhl heran. Setzt sich — zum ersten Mal entspannt.',
+          '"Ich war nicht immer hier. Vor zehn Jahren: Bruderschaft des Nordens. Wir schützten Karawanen." Er pause.',
+          '"Dann kam Valdris. Kaufte unsere Leute. Einer nach dem anderen. Bis wir kaum noch wir waren."',
+          '"Ich bin desertiert. Einer von dreien, die nicht verkauft wurden."'
+        ],
+        options: [{ label: '"Und die anderen beiden?"', next: 'vergangenheitBrüder' }]
+      },
+      vergangenheitBrüder: {
+        text: [
+          '"Einer ist tot. Der andere — ich weiß es nicht." Er schaut weg.',
+          '"Das ist mein Grund, hier zu sein. Nicht Velmark. Valdris."',
+          '"Komm morgen Nacht. Ich zeige dir das Netz, das er spannt."'
+        ],
+        options: [{
+          label: '"Ich bin da."',
+          next: null,
+          action: () => {
+            quests.gorrsVergangenheit.state = QUEST_STATE.DONE;
+            valdrisProfil.herkunft = true;
+          }
+        }]
+      },
+      vergangenheitTurnIn: {
+        text: [
+          '"Du bist zurück." Gorr sieht mich nicht an — er starrt auf eine Karte. "Ich habe Valdris\' Routen markiert."',
+          '"Aber ich brauche mehr als Informationen." Er dreht sich um. "Ich brauche deinen Eid."',
+          '"Nicht für die Bruderschaft — für das hier." Er zeigt auf die Karte. "Schwör mir, dass du das bis zum Ende durchziehst."'
+        ],
+        options: [{
+          label: '"Ich schwöre es."',
+          next: 'eidGeleistet',
+          action: () => {
+            quests.gorrsVergangenheit.state = QUEST_STATE.REWARDED;
+            quests.gorrsEid.state = QUEST_STATE.ACTIVE;
+            fraktionen.bruderschaft = Math.min(100, (fraktionen.bruderschaft || 0) + 15);
+          }
+        }]
+      },
+      eidGeleistet: {
+        text: ['"Dann sind wir Bruderschaft. Beide." Er streckt die Hand aus.'],
+        options: [{
+          label: 'Ich schlage ein.',
+          next: null,
+          action: () => {
+            gameFlags.gorrsEidGeleistet = true;
+            valdrisProfil.motive = true;
+            showToast('Gorrs Eid geschworen. Die Bruderschaft steht fest hinter mir.', TOAST.EVENT);
+          }
+        }]
+      },
+      eidTurnIn: {
+        text: [
+          '"Du hast es durchgezogen." Gorr nickt. Einmal. Das ist viel für ihn.',
+          '"Die Bruderschaft ist hinter dir. Vollständig. Kein Vorbehalt mehr."'
+        ],
+        options: [{
+          label: '"Danke, Gorr."',
+          next: null,
+          action: () => {
+            fraktionen.bruderschaft = Math.min(100, (fraktionen.bruderschaft || 0) + 25);
+            quests.gorrsEid.state = QUEST_STATE.REWARDED;
+            showToast('Quest abgeschlossen! Bruderschaft vollständig verbündet.', TOAST.REWARD);
+          }
+        }]
+      },
+      kampfIdle: {
+        text: ['"Wie läuft es? Die Hafenwächter geben nach?"'],
+        options: [
+          { label: '"Ich arbeite daran."', next: null },
+          { label: '"Fast."', next: null }
+        ]
       }
     }
   },
@@ -1602,24 +2447,107 @@ const NPCS_VELMARK = [
     name: 'Archivarin Sele', icon: '📜',
     tagline: 'Weiß alles. Sagt es nur, wenn es sich lohnt.',
     location: CONTENT.VELMARK_FRAKTIONEN,
-    start: () => 'greet',
+    start: () => {
+      if (!gameFlags.seleMet) return 'greet';
+      if (quests.archivRecherche?.state === QUEST_STATE.DONE) return 'rechercheTurnIn';
+      if (quests.seleWissen?.state === QUEST_STATE.DONE) return 'wisseTurnIn';
+      if (quests.dasDokument?.state === QUEST_STATE.DONE) return 'dokumentTurnIn';
+      if (quests.archivRecherche?.state === QUEST_STATE.UNSTARTED) return 'recherchOffer';
+      return 'archivIdle';
+    },
     nodes: {
       greet: {
         text: [
           '"Das Stadtarchiv ist kein Gasthaus." Sie sieht mich über ihre Akten hinweg an.',
-          '"Aber du bist interessant. Jemand, der Valdris jagt und dabei Alchemie lernt — das klingt nach einem Buch, das ich lesen möchte."'
+          '"Aber du bist interessant. Jemand, der Valdris jagt und dabei Alchemie lernt — das klingt nach einem Buch, das ich lesen möchte."',
+          '"Was bietest du mir?"'
         ],
+        options: [{
+          label: '"Zugang zu Informationen, die du noch nicht hast."',
+          next: 'erstesAngebot',
+          action: () => {
+            gameFlags.seleMet = true;
+            if (quests.archivRecherche?.state === QUEST_STATE.UNSTARTED) quests.archivRecherche.state = QUEST_STATE.ACTIVE;
+          }
+        }, { label: '"Ich komme wieder."', next: null, action: () => { gameFlags.seleMet = true; } }]
+      },
+      erstesAngebot: {
+        text: [
+          '"Interessant." Sie legt die Feder hin. "Ich mache dir ein Gegenangebot."',
+          '"Hilf mir, das Archiv zu durchsuchen — wir haben Dokumente aus den letzten zwanzig Jahren, alle ungeordnet. Ich brauche jemanden mit frischem Blick."',
+          '"Wenn du findest, was ich vermute — dann reden wir über Valdris."'
+        ],
+        options: [{ label: '"Ich fange an."', next: null }]
+      },
+      recherchOffer: {
+        text: ['"Das Archiv wartet. Findest du die Zeit?"'],
+        options: [{ label: '"Ich bin dabei."', next: null }]
+      },
+      rechercheTurnIn: {
+        text: [
+          '"Du hast mehr gefunden als erwartet." Sele blättert durch die Stapel.',
+          '"Diese Buchführung — das ist Valdris\' Handschrift. Er hat das Archiv schon vor Jahren unterwandert."',
+          '"Ich schulde dir das. Was willst du wissen?"'
+        ],
+        options: [{
+          label: '"Alles über Valdris\' Kontakte."',
+          next: 'wissensTransfer',
+          action: () => {
+            fraktionen.archiv = Math.min(100, (fraktionen.archiv || 0) + 15);
+            quests.archivRecherche.state = QUEST_STATE.REWARDED;
+            quests.seleWissen.state = QUEST_STATE.ACTIVE;
+            showToast('Quest abgeschlossen! Archiv +15 Ruf. Seles Wissen — neue Quest.', TOAST.REWARD);
+          }
+        }]
+      },
+      wissensTransfer: {
+        text: [
+          '"Valdris hat vier Hauptkontakte in Velmark. Einen Buchhalter — bereits kompromittiert. Einen Söldnerführer. Einen Stadtratsmitglieder."',
+          '"Und einen vierten — ich kenne seinen Namen nicht. Aber ich kenne seine Schrift." Sie reicht mir ein Blatt.',
+          '"Das ist für dich. Aber ich brauche noch etwas: ein Dokument aus dem Keller. Gesperrt. Nur du kannst da rein, ohne Aufsehen zu erregen."'
+        ],
+        options: [{
+          label: '"Ich beschaffe es."',
+          next: null,
+          action: () => {
+            valdrisProfil.kontakte = true;
+            quests.seleWissen.state = QUEST_STATE.DONE;
+          }
+        }]
+      },
+      wisseTurnIn: {
+        text: ['"Das Dokument ist verschlossen." Eine Pause. "Du weißt, wie man das umgeht?"'],
+        options: [{ label: '"Ich finde einen Weg."', next: null }]
+      },
+      dokumentTurnIn: {
+        text: [
+          'Sele öffnet das Dokument. Liest. Sieht mich an.',
+          '"Das ist es." Ihre Stimme ist ruhiger als erwartet — zu ruhig. "Das ist der Beweis, den wir brauchen."',
+          '"Valdris\' vollständige Operationsstruktur. Unterschriften, Kontostände, Namen." Sie klappt es zu.',
+          '"Das Archiv steht hinter dir. Vollständig. Und ich persönlich schulde dir mehr als Dank."'
+        ],
+        options: [{
+          label: '"Das ist genug."',
+          next: null,
+          action: () => {
+            fraktionen.archiv = Math.min(100, (fraktionen.archiv || 0) + 25);
+            quests.dasDokument.state = QUEST_STATE.REWARDED;
+            valdrisProfil.schwaeche = true;
+            showToast('Das Dokument gesichert! Archiv vollständig verbündet. Valdris\' Schwäche bekannt.', TOAST.REWARD);
+          }
+        }]
+      },
+      archivIdle: {
+        text: ['"Was gibt es? Neue Informationen?"'],
         options: [
-          { label: '"Ich habe Informationen, die ihr interessieren könnten."', next: 'infoAngebot' },
-          { label: '"Ich komme wieder."', next: null }
+          { label: '"Noch nicht. Ich arbeite daran."', next: null },
+          { label: '"Was weißt du über die Unterwelt?"', next: 'unterweltHinweis' }
         ]
       },
-      infoAngebot: {
-        text: [
-          '"Informationen gegen Wissen. Das ist ein fairer Tausch."',
-          '"Was weißt du über das Netzwerk?"'
-        ],
-        options: [{ label: '"Mehr als Valdris ahnt."', next: null }]
+      unterweltHinweis: {
+        text: ['"Die Unterwelt in Velmark ist kein Ort — es ist ein Netzwerk. Informanten, Händler, Schulden." Eine Pause.',
+          '"Wenn du Einfluss aufbaust, reden sie mit dir. Nicht vorher."'],
+        options: [{ label: 'Verstanden.', next: null }]
       }
     }
   }

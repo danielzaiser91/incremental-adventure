@@ -827,6 +827,15 @@ function nightWatch() {
   }
   playSfx('work');
 
+  // brennenderMut-Quest: aufeinanderfolgende Nachtwachen zählen
+  if (quests.brennenderMut?.state === QUEST_STATE.ACTIVE) {
+    gameFlags.consecutiveNightwatch = (gameFlags.consecutiveNightwatch || 0) + 1;
+    if (gameFlags.consecutiveNightwatch >= 5) {
+      quests.brennenderMut.state = QUEST_STATE.DONE;
+      showToast('Fünf Nächte in Folge gewacht. Brakka wird das beeindrucken.', TOAST.EVENT);
+    }
+  }
+
   // Hauskatze: Drop nach 15 Nachtwachen
   if (nightWatchStats.count === 15 && !wildPets.find(p => p.type === 'katze')) {
     wildPets.push({ type: 'katze', level: 0 });
@@ -1230,4 +1239,174 @@ function triggerChapter2Victory() {
       }]
     });
   });
+}
+
+// ═══════════════════════════════════════════════════
+// VELMARK-AKTIONEN (Kapitel 4)
+// ═══════════════════════════════════════════════════
+
+function hafenarbeit() {
+  if (!gameFlags.hafenarbeitUnlocked) return;
+  if (gameFlags.isWorking || gameFlags.isStadtwacheShift) return;
+  if (isNight()) return;
+
+  const baseGold   = 30 + Math.floor(Math.random() * 31);
+  const einflussGain = 1 + (Math.random() < 0.4 ? 1 : 0);
+  resources.gold        += baseGold;
+  resources.totalGoldEarned += baseGold;
+  einfluss.points      += einflussGain;
+  einfluss.totalEarned += einflussGain;
+  hafenStats.count     = (hafenStats.count || 0) + 1;
+  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 12);
+  needs.hunger    = Math.min(100, (needs.hunger    || 0) + 8);
+
+  showToast(`Hafenarbeit: +${baseGold} Gold, +${einflussGain} Einfluss.`, TOAST.REWARD);
+  checkQuestTriggers();
+  render();
+}
+
+function velmarkStadtwache() {
+  if (!gameFlags.velmarkStadtwacheUnlocked) return;
+  if (gameFlags.isWorking || gameFlags.isStadtwacheShift) return;
+  if (isNight()) return;
+
+  const baseGold = 40 + Math.floor(Math.random() * 41);
+  resources.gold        += baseGold;
+  resources.totalGoldEarned += baseGold;
+  einfluss.points      += 1;
+  einfluss.totalEarned += 1;
+  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 15);
+  needs.hunger    = Math.min(100, (needs.hunger    || 0) + 10);
+
+  showToast(`Velmark-Stadtwache: +${baseGold} Gold, +1 Einfluss.`, TOAST.REWARD);
+  checkQuestTriggers();
+  render();
+}
+
+function archivDurchsuchen() {
+  if (!gameFlags.archivDurchsuchenUnlocked) return;
+  const kosten = 5;
+  if (einfluss.points < kosten) {
+    showToast(`Erfordert ${kosten} Einfluss.`, TOAST.ERROR);
+    return;
+  }
+  einfluss.points -= kosten;
+
+  if (quests.archivRecherche) {
+    quests.archivRecherche.count = (quests.archivRecherche.count || 0) + 1;
+    if (quests.archivRecherche.count >= 3 && quests.archivRecherche.state === QUEST_STATE.ACTIVE) {
+      quests.archivRecherche.state = QUEST_STATE.DONE;
+      showToast('Archiv durchsucht — genug Material gesammelt. Zu Sele!', TOAST.EVENT);
+    } else {
+      showToast(`Archiv-Eintrag gefunden (${quests.archivRecherche.count}/3). −${kosten} Einfluss.`, TOAST.EVENT);
+    }
+  } else {
+    showToast(`Archiv durchsucht. −${kosten} Einfluss.`, TOAST.EVENT);
+  }
+  checkQuestTriggers();
+  render();
+}
+
+function unterweltVerhandlung() {
+  if (!gameFlags.unterweltVerhandlungUnlocked) return;
+  const kosten = 10;
+  if (einfluss.points < kosten) {
+    showToast(`Erfordert ${kosten} Einfluss.`, TOAST.ERROR);
+    return;
+  }
+  einfluss.points -= kosten;
+  informanten.count = (informanten.count || 0) + 1;
+  informanten.lastTick = Date.now();
+  if (!gameFlags.informantenNetzFreigeschaltet) {
+    gameFlags.informantenNetzFreigeschaltet = true;
+    setupInformantenTick();
+  }
+
+  showToast(`Unterwelt-Verhandlung: +1 Informant. −${kosten} Einfluss.`, TOAST.EVENT);
+  checkQuestTriggers();
+  render();
+}
+
+function lethkarHandel() {
+  if (!gameFlags.lethkarUnlocked) return;
+  const baseGold = 15 + Math.floor(Math.random() * 16); // 15-30g
+  resources.gold = (resources.gold || 0) + baseGold;
+  resources.totalGoldEarned = (resources.totalGoldEarned || 0) + baseGold;
+  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 8);
+  needs.hunger = Math.min(100, (needs.hunger || 0) + 5);
+
+  if (quests.lethkarMarkt) {
+    quests.lethkarMarkt.goldTraded = (quests.lethkarMarkt.goldTraded || 0) + baseGold;
+    if (quests.lethkarMarkt.goldTraded >= 200 && quests.lethkarMarkt.state === QUEST_STATE.ACTIVE) {
+      quests.lethkarMarkt.state = QUEST_STATE.DONE;
+      showToast('Lethkarer Händlermarkt gemeistert (+200g Handelsvolumen). Bericht an Varena!', TOAST.EVENT);
+    }
+  }
+
+  showToast(`Lethkar-Handel: +${baseGold} Gold.`, TOAST.REWARD);
+  checkQuestTriggers();
+  render();
+}
+
+function startValdrisFinale() {
+  if (gameFlags.valdrisFinaleStarted) return;
+  gameFlags.valdrisFinaleStarted = true;
+  if (quests.dieKonfrontation?.state === QUEST_STATE.UNSTARTED)
+    quests.dieKonfrontation.state = QUEST_STATE.ACTIVE;
+  maybeShowStoryDialog('4.9');
+  showToast('Die Konfrontation beginnt. Es gibt kein Zurück mehr.', TOAST.EVENT);
+  render();
+}
+
+function launchValdrisKonfrontation() {
+  if (!gameFlags.valdrisFinaleStarted) return;
+  if (quests.dieKonfrontation?.state !== QUEST_STATE.ACTIVE) return;
+
+  showDialog({
+    title: 'Die Konfrontation',
+    text: [
+      'Valdris steht mir gegenüber. Er sieht mich an — nicht überrascht. Erwartet.',
+      '"Du hast dir Mühe gegeben." Seine Stimme ist ruhig. "Ich hätte dich früher stoppen sollen."',
+      '"Aber du hast drei Fraktionen hinter dir. Das Dokument. Und Verbündete, die ich unterschätzt habe."',
+      'Eine lange Pause. Dann: "Was willst du?"'
+    ],
+    options: [
+      { label: '"Dich vor Gericht bringen."', next: 'konfrontation_gericht' },
+      { label: '"Velmark verlassen — für immer."', next: 'konfrontation_exil' },
+    ]
+  });
+}
+
+function sammleWildkraut() {
+  if (quests.varenaErstkontakt?.state !== QUEST_STATE.ACTIVE) return;
+  if ((questItems.wildkraut || 0) >= 5) return;
+  questItems.wildkraut = (questItems.wildkraut || 0) + 1;
+  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 5);
+  needs.hunger    = Math.min(100, (needs.hunger    || 0) + 3);
+  const count = questItems.wildkraut;
+  showToast(`Wildkraut gesammelt (${count}/5).`, TOAST.REWARD);
+  if (count >= 5) {
+    quests.varenaErstkontakt.state = QUEST_STATE.DONE;
+    showToast('Genug Wildkraut! Varena in der Taverne aufsuchen.', TOAST.EVENT);
+  }
+  checkQuestTriggers();
+  render();
+}
+
+function untersucheValdrisOrt(ort) {
+  const qs = quests.valdrisSpuren?.state;
+  if (!qs) return;
+  if (ort === 1 && qs === 'ort1') {
+    quests.valdrisSpuren.state = QUEST_STATE.ORT2;
+    valdrisProfil.netzwerk = true;
+    showToast('Valdris\' Spur: Taverne untersucht. Nächster Hinweis: der Markt.', TOAST.EVENT);
+  } else if (ort === 2 && qs === 'ort2') {
+    quests.valdrisSpuren.state = QUEST_STATE.ORT3;
+    valdrisProfil.kontakte = true;
+    showToast('Valdris\' Spur: Markt untersucht. Nächster Hinweis: der Stadtrand.', TOAST.EVENT);
+  } else if (ort === 3 && qs === 'ort3') {
+    showToast('Stadtrand untersucht. Das Bild wird klarer — Varena hat mehr dazu zu sagen.', TOAST.EVENT);
+  }
+  checkQuestTriggers();
+  render();
 }
