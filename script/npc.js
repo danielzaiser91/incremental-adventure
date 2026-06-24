@@ -505,6 +505,7 @@ const NPCS = {
         return gameFlags.guildExplainedByBrakka ? 'guildReadyCheck' : 'guildExplain';
       }
       if (quests.guildRegistration.state === QUEST_STATE.REWARDED) return 'guildFinished';
+      if (quests.oswinsAuftrag?.state === QUEST_STATE.ACTIVE) return 'oswinsNachricht';
       switch (quests.nightWatch.state) {
         case QUEST_STATE.UNSTARTED: return (gameClock.day >= 2 && gameFlags.waffenschmiedRejected) ? 'offer' : 'tooSoon';
         case QUEST_STATE.ACTIVE:    return 'waiting';
@@ -526,6 +527,7 @@ const NPCS = {
       },
       oswinsNachricht: {
         text: [
+          'Ich trete einen Schritt näher, die Stimme gesenkt. "Brakka — Oswin bittet um deine Zeit."',
           'Brakka hält inne. Für einen Moment ist sein Gesicht schwer zu lesen.',
           '"Oswin." Er seufzt kurz. "Gut. Sag ihm, ich komme."',
           '"Und dir — danke, dass du diskret warst."'
