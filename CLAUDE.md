@@ -37,13 +37,15 @@ Struktur: **Allgemein** (keine Spoiler) → dann pro Kapitel ein Abschnitt mit D
 • Änderung ohne Kapitel-Bezug
 
 **Kapitel 2** *(zum Aufdecken anklicken)*
-||• Kapitel-spezifische Änderung
+||Kapitel-spezifische Änderungen:
+• Erste Änderung in Kapitel 2
 • Weitere Änderung in Kapitel 2||
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
-||• Kapitel-3-Inhalt||
+||Kapitel-3-Inhalt hier.||
 ```
 
 - `||mehrzeiliger Text||` = ein Discord-Spoiler-Block (Spieler klickt zum Aufdecken)
+- ⚠️ Spoilerblock muss mit einem **Buchstaben** beginnen (nicht `•`), sonst erkennt Discord `||` nicht als Spoiler-Opener
 - Allgemein = kapitelunabhängige Features/Fixes, nie in Spoiler
 - Je tiefer das Kapitel, desto weiter unten in der Nachricht
