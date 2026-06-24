@@ -45,7 +45,8 @@ Struktur: **Allgemein** (keine Spoiler) → dann pro Kapitel ein Abschnitt mit D
 ||Kapitel-3-Inhalt hier.||
 ```
 
-- `||mehrzeiliger Text||` = ein Discord-Spoiler-Block (Spieler klickt zum Aufdecken)
+- `||Text||` = Discord-Spoiler (Spieler klickt zum Aufdecken) — **immer einzeilig**, kein Zeilenumbruch innerhalb des Spoilers
 - ⚠️ Spoilerblock muss mit einem **Buchstaben** beginnen (nicht `•`), sonst erkennt Discord `||` nicht als Spoiler-Opener
+- Inhalt kompakt halten (Stichwörter mit `·` trennen statt Zeilenumbrüche)
 - Allgemein = kapitelunabhängige Features/Fixes, nie in Spoiler
 - Je tiefer das Kapitel, desto weiter unten in der Nachricht

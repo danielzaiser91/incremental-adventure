@@ -15,42 +15,9 @@
 • Bugfix: Versions-Changelog-Overlay erschien bei Minor-Updates nicht korrekt — zeigt jetzt alle Zwischenversionen akkumuliert
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
-||Änderungen in Kapitel 3:
-• Tier-2-Monster (Steingolem, Schattenwolf, Nordbär) geben jetzt Wissensdurst ✦ als Kampf-Drop
-• Bugfix: Alchemisten-Werkzeug wurde bei hartem Reset nicht korrekt zurückgesetzt
-• Story 3.7–3.10 — der Abschluss von Kapitel 3:
-  **3.7 Einsicht I**: Valdris' Lager am Nordrand der Stadt ist erkundbar.
-  **3.8 Der Name**: Varena enthüllt Valdris' wahre Rolle.
-  **3.9 Einsicht II**: Alchemie-Durchbruch bei Gesellen-Niveau (10 Gesamtlevel).
-  **3.10 Der nächste Horizont**: Kap-3-Abschluss mit Konfetti + Errungenschaft „Im Schatten der Einsicht" (+20% Gold).||
+||Tier-2-Monster geben jetzt Wissensdurst ✦ als Kampf-Drop · Story 3.7–3.10: Kap-3-Abschluss mit Valdris' Lager, Varenas Enthüllung, Alchemie-Durchbruch und Konfetti-Sieg + Errungenschaft „Im Schatten der Einsicht" (+20% Gold)||
 
 **Kapitel 4** *(zum Aufdecken anklicken)*
-||Velmark — die finale Stadt auf dem Weg:
-
-Velmark öffnet sich auf der Weltkarte nach Abschluss von Kapitel 3.
-
-**Neue Mechanik: Einfluss ⚜**
-Kein weiterer Prestige-Reset — Einfluss wird direkt eingesetzt, um Fraktionen zu gewinnen und Valdris einzukreisen.
-
-**Fraktionssystem — drei Wege:**
-• 💰 **Händlergilde** — zugänglich mit Gold (Handelslogik)
-• ⚔ **Eiserne Bruderschaft** — zugänglich mit Mut (Kampfstärke)
-• 📜 **Stadtarchiv** — zugänglich mit Wissensdurst (Alchemie-Wissen)
-
-Jede Fraktion hat einen Reputationsbalken (0–100) und einen eigenen NPC-Dialog-Baum. Alle drei auf ≥ 80 zu bringen löst das Finale aus.
-
-**Velmarks Unterwelt:**
-Tier-3-Kämpfe gegen Kanalratte, Söldner des Netzwerks und Schattenkämpfer — alle geben Einfluss ⚜.
-
-**Velmarks Großer Markt:**
-Velmarker Kettenrüstung (−5 Kampfschaden), Geheimes Netzwerk (Informanten-Max: 5 → 8), Hafenverpflegung.
-
-**Informantennetz:**
-Pereth in Velmark finden und ansprechen → passiver Einfluss-Tick startet (skaliert bis zu 8 Informanten mit Netzwerk-Ausbau).
-
-**Story 4.1–4.10:**
-Von der Ankunft in Velmark bis zum letzten Gespräch mit Valdris — einschließlich seinem persönlichen Angebot und dem finalen Sieg-Dialog mit Konfetti.
-
-Neue Errungenschaft: „Der Preis des Einflusses" (+25% Gold).||
+||Velmark ist jetzt spielbar: Fraktionssystem (Händlergilde/Eiserne Bruderschaft/Stadtarchiv), Einfluss ⚜ statt Prestige-Reset, Tier-3-Kämpfe, Informantennetz, Story 4.1–4.10 mit finalem Sieg-Dialog + Errungenschaft „Der Preis des Einflusses" (+25% Gold)||
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/
