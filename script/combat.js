@@ -49,6 +49,25 @@ const MONSTER_DEFS = [
     maxHp: 100, damage: [14, 26], xpReward: 42, goldReward: [30, 50], mutReward: 2,
     tier: 2,
     desc: 'Größer als jeder Bär, den ich in Treutheim gesehen habe. Fellfarbe weiß-grau, fast silbern. Nicht angreifbar ohne Plan.'
+  },
+  // ── Tier-3: Velmarks Unterwelt (nur sichtbar wenn velmarkUnlocked)
+  {
+    id: 'kanalratte', name: 'Kanalratte', icon: '🐀', zone: 'velmark_kanal',
+    maxHp: 70, damage: [16, 26], xpReward: 30, goldReward: [40, 70], mutReward: 0, einflussReward: 1,
+    tier: 3,
+    desc: 'Klein, schnell, bissig — und sie kennt die Kanäle besser als ich. Unterschätzt wird sie nur einmal.'
+  },
+  {
+    id: 'soeldner', name: 'Söldner des Netzwerks', icon: '⚔️', zone: 'velmark_kanal',
+    maxHp: 120, damage: [20, 34], xpReward: 55, goldReward: [70, 110], mutReward: 1, einflussReward: 2,
+    tier: 3,
+    desc: 'Valdris\' Handlanger. Gut bezahlt, gut ausgerüstet. Redet nicht viel.'
+  },
+  {
+    id: 'schattenkämpfer', name: 'Schattenkämpfer', icon: '🗡️', zone: 'velmark_schatten',
+    maxHp: 160, damage: [24, 40], xpReward: 80, goldReward: [90, 140], mutReward: 2, einflussReward: 3,
+    tier: 3,
+    desc: 'Wer ihn schickt, bleibt unbekannt. Er hat keine Farben, keine Abzeichen — nur ein Messer und den Auftrag.'
   }
 ];
 
@@ -253,7 +272,13 @@ function endCombat(won, monster) {
     if (monster.mutReward > 0) {
       mut.points      += monster.mutReward;
       mut.totalEarned += monster.mutReward;
-      msg += ` +${monster.mutReward} Mut.`;
+      msg += ` +${monster.mutReward} Mut ⚔.`;
+    }
+
+    if (monster.einflussReward > 0 && typeof einfluss !== 'undefined') {
+      einfluss.points      = (einfluss.points || 0) + monster.einflussReward;
+      einfluss.totalEarned = (einfluss.totalEarned || 0) + monster.einflussReward;
+      msg += ` +${monster.einflussReward} Einfluss ⚜.`;
     }
 
     if (Math.random() < 0.1) {
@@ -351,7 +376,11 @@ function renderJagdgebiet(el) {
     return;
   }
 
-  const visibleMonsters = MONSTER_DEFS.filter(m => !m.tier || (m.tier === 2 && gameFlags.lethkarUnlocked));
+  const visibleMonsters = MONSTER_DEFS.filter(m =>
+    !m.tier ||
+    (m.tier === 2 && gameFlags.lethkarUnlocked) ||
+    (m.tier === 3 && gameFlags.velmarkUnlocked)
+  );
   const monsterCards = visibleMonsters.map(m => {
     const isDeep    = m.zone === 'tief' || m.zone === 'lethkar_tief';
     const blocked   = isDeep && getStrengthLevel(strength.xp) < 2;

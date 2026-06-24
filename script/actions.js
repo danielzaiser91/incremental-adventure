@@ -1113,7 +1113,7 @@ function buyNetzwerkAusbau() {
 
 /** Kauft Velmark-Ausrüstung. */
 function buyVelmarkRuestung() {
-  const cost = 120;
+  const cost = 300;
   if (resources.gold < cost) {
     showToast(`Nicht genug Gold. Benötigt: ${cost}g.`, TOAST.WARNING);
     return;
