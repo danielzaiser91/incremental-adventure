@@ -1,4 +1,5 @@
 .claude/settings.local.json
+*.code-workspace
 prompt-history/
 
 # Node / Playwright (lokale Testumgebung, nicht Teil des Spiels)
