@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.18.0-alpha';
+const GAME_VERSION = '0.19.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -45,6 +45,7 @@ const CONTENT = Object.freeze({
   VELMARK_SCHLAFPLATZ:  'velmark_schlafplatz',
   CHRONIK:             'chronik',
   SETTINGS:            'settings',
+  RUF_FAEHIGKEITEN:    'rufFaehigkeiten',
 });
 
 /** Quest-Zustände (state-Machine-Strings in quests.*) */
@@ -237,6 +238,14 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.19.0-alpha': [
+    { cat: 'Neuerung', text: 'Kap-2-Prestige: "Als Veteran zurückkehren" — Ruf als dauerhafte Metawährung, 5 Ruf-Fähigkeiten (Max-HP, Kampfschaden, Startgold, Tier-2-Drops u.a.).' },
+    { cat: 'Neuerung', text: 'Kap-3-Prestige: Lethkar erneut besuchen — gibt Wissensdurst ✦, steigender Bonus pro Neustart.' },
+    { cat: 'Neuerung', text: 'Velmark: Pereth als Kontakt, Fraktions-NPCs (Gildenmeisterin Yeva, Hauptmann Gorr, Archivarin Sele) mit Dialog-Bäumen.' },
+    { cat: 'Neuerung', text: 'Neues Haustier: Stadtfalke — erscheint wenn das Informantennetz wächst, gibt dauerhaften Einfluss-Bonus.' },
+    { cat: 'Neuerung', text: '4 neue Errungenschaften: Veteran, Dreifach erprobt, Wissbegierig, Freier Himmel.' },
+    { cat: 'Neuerung', text: 'Informantennetz: tickt jede Minute automatisch Einfluss nach, solange Pereth freigeschaltet.' }
+  ],
   '0.18.0-alpha': [
     { cat: 'Story',    text: 'Kapitel 3 Abschluss: Story 3.7–3.10 — Valdris\' Lager, Varenas Enthüllung, Alchemie-Durchbruch, Kap-3-Sieg-Dialog.' },
     { cat: 'Story',    text: 'Kapitel 4: Velmark — die finale Stadt. Fraktionssystem, Einfluss (⚜), Informantennetz, Story 4.1–4.10 inkl. vollständigem Sieg-Dialog.' },
@@ -737,6 +746,32 @@ let mut = {
   points:      0,
   totalEarned: 0
 };
+
+/* ── Kap-2-Prestige: Ruf ─────────────────────────────────────
+   Wird durch Kap-2-Prestige-Resets verdient (3 + kap2ResetCount*2 pro Reset).
+   Übersteht alle Resets permanent (wie EP / Mut). */
+let ruf = 0;
+let kap2ResetCount = 0;
+let rufSkills = {}; // { rufVeteran: true, rufKaempfer: true, … }
+
+/* Kap-3-Prestige-Zähler */
+let kap3ResetCount = 0;
+
+/* Definitionen der Ruf-Fähigkeiten (Kap-2-Prestige). */
+const RUF_SKILL_DEFS = [
+  { id: 'rufVeteran',      name: 'Veteran',           cost: 3, desc: '+20 Max-HP dauerhaft.' },
+  { id: 'rufKaempfer',     name: 'Kampferfahrung',    cost: 4, desc: '+10 % Kampfschaden dauerhaft.' },
+  { id: 'rufGilde',        name: 'Gildenmitglied',    cost: 2, desc: 'Gildengebühr entfällt beim nächsten Kap-2-Start.' },
+  { id: 'rufSchnellstart', name: 'Schnellstart',      cost: 3, desc: 'Startet mit 200 Gold nach jedem Prestige-Reset.' },
+  { id: 'rufExperte',      name: 'Kampfexperte',      cost: 5, desc: 'Tier-2-Monster geben 50 % mehr Drops.' },
+];
+
+/* ── Ruf-Bonus-Hilfsfunktionen ────────────────────────────── */
+function getRufMaxHpBonus()     { return rufSkills.rufVeteran      ? 20   : 0; }
+function getRufCombatDmgBonus() { return rufSkills.rufKaempfer     ? 0.10 : 0; }
+function getRufGildeFree()      { return !!rufSkills.rufGilde; }
+function getRufStartGold()      { return rufSkills.rufSchnellstart ? 200  : 0; }
+function getRufTier2DropBonus() { return rufSkills.rufExperte      ? 0.5  : 0; }
 
 /* Expeditionen — Story-Expeditionen (einmalig) und Grind-Expeditionen
    (wiederholbar, produzieren Ressourcen/Gold/XP).

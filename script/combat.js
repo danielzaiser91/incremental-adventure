@@ -91,7 +91,8 @@ function getStrengthLevelProgress(xp) {
 /** Berechnet den aktuellen MaxHP-Wert des Spielers. */
 function getPlayerMaxHp() {
   const alchemieHp = typeof getAlchemieWasserMaxHp === 'function' ? getAlchemieWasserMaxHp() : 0;
-  return 30 + getStrengthLevelData(strength.xp).maxHpBonus + alchemieHp;
+  const rufHp = typeof getRufMaxHpBonus === 'function' ? getRufMaxHpBonus() : 0;
+  return 30 + getStrengthLevelData(strength.xp).maxHpBonus + alchemieHp + rufHp;
 }
 
 /** Berechnet den Schaden, den der Spieler in einem Schlag macht. */
@@ -99,9 +100,10 @@ function rollPlayerDamage() {
   const data        = getStrengthLevelData(strength.xp);
   const base        = Math.floor(Math.random() * 6) + 5; // 5–10
   const alchemieMult = typeof getAlchemieFeuerschadenMult === 'function' ? getAlchemieFeuerschadenMult() : 1;
+  const rufMult      = typeof getRufCombatDmgBonus === 'function' ? (1 + getRufCombatDmgBonus()) : 1;
   // Wolf-Welpe Bonus: fester Schadenszuwachs (via pets.js)
   const wolfBonus = typeof getWildPetCombatDamageBonus === 'function' ? getWildPetCombatDamageBonus() : 0;
-  return Math.max(1, Math.round(base * data.damageMult * alchemieMult) + wolfBonus);
+  return Math.max(1, Math.round(base * data.damageMult * alchemieMult * rufMult) + wolfBonus);
 }
 
 /** Berechnet den Schaden, den ein Monster nach Abzug der Verteidigung macht. */
@@ -155,7 +157,9 @@ function performAttack() {
   if (!combat.active) return;
   const monster = MONSTER_DEFS.find(m => m.id === combat.enemyId);
 
-  const playerDmg = rollPlayerDamage();
+  const tier3Bonus = (monster.tier === 3 && typeof getWildPetTier3DmgBonus === 'function')
+    ? getWildPetTier3DmgBonus() : 0;
+  const playerDmg = Math.round(rollPlayerDamage() * (1 + tier3Bonus));
   combat.enemyHp = Math.max(0, combat.enemyHp - playerDmg);
   combat.log.unshift(`Ich schlage zu: −${playerDmg} HP (Gegner: ${combat.enemyHp}/${monster.maxHp}).`);
   playSfx('hit');
@@ -263,12 +267,13 @@ function endCombat(won, monster) {
 
     // Tier-Drop-Logic (nur wenn Greta-Quest abgeschlossen + kein Tier dieser Art bereits)
     if (gameFlags.kapitel2Unlocked && quests.kraemerinBusiness.state === QUEST_STATE.REWARDED) {
+      const rufBonus = typeof getRufTier2DropBonus === 'function' && monster.tier === 2 ? getRufTier2DropBonus() : 0;
       const alreadyHas = type => wildPets.some(p => p.type === type);
       const dropTable = [];
-      if (!alreadyHas('hund'))          dropTable.push({ item: 'hundespur',         chance: monster.zone === 'tief' ? 0.06 : 0.03 });
-      if (!alreadyHas('rabe'))          dropTable.push({ item: 'rabenfeder',        chance: monster.zone === 'tief' ? 0.05 : 0.02 });
-      if (!alreadyHas('hase'))          dropTable.push({ item: 'hasenspur',         chance: monster.zone === 'wald' ? 0.05 : 0.02 });
-      if (!alreadyHas('eichhoernchen')) dropTable.push({ item: 'eichhoernchennuss', chance: monster.zone === 'wald' ? 0.05 : 0.02 });
+      if (!alreadyHas('hund'))          dropTable.push({ item: 'hundespur',         chance: (monster.zone === 'tief' ? 0.06 : 0.03) * (1 + rufBonus) });
+      if (!alreadyHas('rabe'))          dropTable.push({ item: 'rabenfeder',        chance: (monster.zone === 'tief' ? 0.05 : 0.02) * (1 + rufBonus) });
+      if (!alreadyHas('hase'))          dropTable.push({ item: 'hasenspur',         chance: (monster.zone === 'wald' ? 0.05 : 0.02) * (1 + rufBonus) });
+      if (!alreadyHas('eichhoernchen')) dropTable.push({ item: 'eichhoernchennuss', chance: (monster.zone === 'wald' ? 0.05 : 0.02) * (1 + rufBonus) });
       for (const entry of dropTable) {
         if (Math.random() < entry.chance) {
           questItems[entry.item] = (questItems[entry.item] || 0) + 1;

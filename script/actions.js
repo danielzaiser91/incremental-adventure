@@ -1065,6 +1065,117 @@ function adoptStreetCat(option) {
 /* ── Kapitel-2-Sieg-Sequenz ───────────────────────────────────
    Wird nach dem Abschluss der Konfrontation mit dem Fremden aufgerufen.
    Zeigt Story 2.7, dann einen großen Sieg-Dialog mit Konfetti. */
+/* ── Velmark-Aktionen ─────────────────────────────────────────────── */
+
+/** Sucht Pereth in Velmark (Story-Aktion, einmalig). */
+function findPerethInVelmark() {
+  if (gameFlags.perethFoundInVelmark) {
+    openVelmarkNpcDialog('pereth_velmark');
+    return;
+  }
+  maybeShowStoryDialog('4.2', () => {
+    gameFlags.perethFoundInVelmark = true;
+    openVelmarkNpcDialog('pereth_velmark');
+    render();
+  });
+}
+
+/** Startet einen Kontaktaufbau (Einfluss gewinnen). */
+function kontaktKnuepfen() {
+  if (!gameFlags.informantenNetzFreigeschaltet) {
+    showToast('Ich kenne noch niemanden hier. Ich sollte zuerst Pereth finden.', TOAST.INFO);
+    return;
+  }
+  const base    = 2 + (informanten.count || 0);
+  const falkeB  = typeof getStadtfalkeInfluenceBonus === 'function' ? getStadtfalkeInfluenceBonus() : 0;
+  const gained  = Math.round(base * (1 + falkeB));
+  einfluss.points     += gained;
+  einfluss.totalEarned += gained;
+  informanten.lastTick = Date.now();
+  showToast(`+${gained} Einfluss gewonnen.`, TOAST.EVENT);
+  checkAchievements();
+  saveGame({ silent: true });
+  render();
+}
+
+/** Kauft die Netzwerkerweiterung (Meta-Upgrade). */
+function buyNetzwerkAusbau() {
+  const cost = 20;
+  if (meta.netzwerkErweitert) return;
+  if (einfluss.points < cost) return;
+  einfluss.points -= cost;
+  meta.netzwerkErweitert = true;
+  informanten.count = (informanten.count || 0) + 2;
+  showToast('Netzwerk ausgebaut — drei Informanten aktiv.', TOAST.EVENT);
+  saveGame({ silent: true });
+  render();
+}
+
+/** Kauft Velmark-Ausrüstung. */
+function buyVelmarkRuestung() {
+  const cost = 120;
+  if (resources.gold < cost) {
+    showToast(`Nicht genug Gold. Benötigt: ${cost}g.`, TOAST.WARNING);
+    return;
+  }
+  if (meta.velmarkRuestung) {
+    showToast('Ich habe diese Ausrüstung bereits.', TOAST.INFO);
+    return;
+  }
+  resources.gold -= cost;
+  meta.velmarkRuestung = true;
+  showToast('Neue Ausrüstung aus Velmark — ich bin besser geschützt.', TOAST.EVENT);
+  saveGame({ silent: true });
+  render();
+}
+
+/** Kauft Verpflegung in Velmark. */
+function buyVelmarkFood() {
+  const cost = 8;
+  if (resources.gold < cost) {
+    showToast(`Nicht genug Gold. Benötigt: ${cost}g.`, TOAST.WARNING);
+    return;
+  }
+  resources.gold -= cost;
+  needs.hunger = Math.max(0, needs.hunger - 40);
+  showToast('Velmarker Reisekost — Hunger deutlich gesenkt.', TOAST.EVENT);
+  saveGame({ silent: true });
+  render();
+}
+
+/** Startet oder erneuert den Informanten-Tick-Timer. */
+function setupInformantenTick() {
+  if (window._informantenInterval) clearInterval(window._informantenInterval);
+  window._informantenInterval = setInterval(tickInformanten, 60 * 1000); // jede Minute
+}
+
+/** Wird jede Minute aufgerufen; vergibt Einfluss + checkt Stadtfalke-Unlock. */
+function tickInformanten() {
+  if (!gameFlags.informantenNetzFreigeschaltet) return;
+  const count = informanten.count || 0;
+  if (count <= 0) return;
+
+  const falkeB  = typeof getStadtfalkeInfluenceBonus === 'function' ? getStadtfalkeInfluenceBonus() : 0;
+  const gained  = Math.round(count * (1 + falkeB));
+  einfluss.points      += gained;
+  einfluss.totalEarned += gained;
+  informanten.lastTick  = Date.now();
+
+  // Stadtfalke-Unlock: 5 % Chance pro Tick wenn count >= 5 und noch nicht vorhanden
+  if (count >= 5 && !pets.stadtfalke) {
+    if (Math.random() < 0.05) {
+      pets.stadtfalke = { level: 0 };
+      navUnseen.pets = true;
+      showToast('Ein Stadtfalke hat mich gefunden — er folgt mir nun.', TOAST.EVENT);
+      checkAchievements();
+    }
+  }
+
+  checkAchievements();
+  saveGame({ silent: true });
+  render();
+}
+
 function triggerChapter2Victory() {
   if (gameFlags.chapter2Complete) return;
 

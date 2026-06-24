@@ -1016,6 +1016,10 @@ function findNpcDef(npcId) {
     const lethkarNpc = NPCS_LETHKAR.find(n => n.id === npcId);
     if (lethkarNpc) return lethkarNpc;
   }
+  if (typeof NPCS_VELMARK !== 'undefined') {
+    const velmarkNpc = NPCS_VELMARK.find(n => n.id === npcId);
+    if (velmarkNpc) return velmarkNpc;
+  }
   return null;
 }
 
@@ -1424,6 +1428,203 @@ const NPCS_LETHKAR = [
   }
 ];
 
+/* ══════════════════════════════════════════════════════════════
+   VELMARK-NPCs (Kapitel 4)
+   ══════════════════════════════════════════════════════════════ */
+
+const NPCS_VELMARK = [
+  {
+    id: 'pereth_velmark',
+    name: 'Pereth', icon: '🗡',
+    tagline: 'Derselbe Pereth. Andere Stadt. Noch entspannter.',
+    location: CONTENT.VELMARK,
+    start: () => {
+      if ((fraktionen?.haendlergilde||0) > 60 && (fraktionen?.bruderschaft||0) > 60 && (fraktionen?.archiv||0) > 60) return 'alleFraktionenStark';
+      if ((fraktionen?.haendlergilde||0) > 50 || (fraktionen?.bruderschaft||0) > 50 || (fraktionen?.archiv||0) > 50) return 'rufMehr50';
+      if (!gameFlags.perethFoundInVelmark) return 'firstMeet';
+      return 'idle';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          '"Du?" Pereth hebt eine Augenbraue — das erste Mal, dass er wirklich überrascht wirkt.',
+          '"Velmark. Ich hätte gedacht, du steckst noch in Lethkar, irgendwo zwischen Büchern und Alchemie-Qualm."',
+          '"Sitz. Ich hab Informationen, die du brauchst — und ich brauche jemanden, dem ich vertraue."'
+        ],
+        options: [{
+          label: '"Was weißt du über Valdris in Velmark?"',
+          next: 'valdrisVelmark',
+          action: () => {
+            gameFlags.perethFoundInVelmark = true;
+            maybeShowStoryDialog('4.3');
+          }
+        }]
+      },
+      valdrisVelmark: {
+        text: [
+          '"Er hat drei Stützen hier: die Händlergilde hält sein Geld sauber, die Bruderschaft schützt seine Leute, das Stadtarchiv vergraben seine Spuren."',
+          '"Du brauchst alle drei auf deiner Seite, wenn du gegen ihn stehen willst. Einer reicht nicht. Zwei auch nicht."',
+          '"Ich kann dir Türen öffnen. Aber du musst selbst durchgehen."'
+        ],
+        options: [
+          { label: '"Wie komme ich an die Gilde?"', next: 'gildeTipp' },
+          { label: '"Wie ist dein Informantennetz?"', next: 'netzwerkTipp' },
+          { label: '"Danke. Ich fang an."', next: null }
+        ]
+      },
+      gildeTipp: {
+        text: [
+          '"Die Gilde? Gold. Schlicht und einfach. Die reden mit jedem, der genug davon mitbringt."',
+          '"Fünfhundert mindestens. Zeig ihnen, dass du kein Bettler bist, und die Tür öffnet sich."'
+        ],
+        options: [{ label: 'Verstanden.', next: null }]
+      },
+      netzwerkTipp: {
+        text: [
+          '"Das aufzubauen dauert. Aber jeder Kontakt bringt dich näher an Valdris ran."',
+          '"Informanten reden — wenn du ihnen genug Einfluss gibst. Und der Einfluss wächst, wenn du seine Leute in der Unterwelt aufmischst."'
+        ],
+        options: [{
+          label: '"Ich verstehe. Danke."',
+          next: null,
+          action: () => {
+            if (!gameFlags.informantenNetzFreigeschaltet) {
+              gameFlags.informantenNetzFreigeschaltet = true;
+              informanten.count = 1;
+              informanten.lastTick = Date.now();
+              showToast('Informantennetz aufgebaut — ein erster Kontakt ist aktiv.', TOAST.EVENT);
+              setupInformantenTick();
+            }
+          }
+        }]
+      },
+      rufMehr50: {
+        text: ['Pereths Mundwinkel bewegen sich kaum. "Dein Ruf in dieser Stadt wächst. Die Leute reden über dich."'],
+        options: [
+          { text: 'Was sagen sie?', label: 'Was sagen sie?', next: 'stadtGeruechte' },
+          { text: 'Gut.', label: 'Gut.', next: null }
+        ]
+      },
+      stadtGeruechte: {
+        text: [
+          '"Dass du methodisch vorgehst. Kein Söldner, kein Gaukler — sondern jemand mit einem Ziel. Das macht manche nervös."'
+        ],
+        options: [
+          { label: 'Auch Valdris?', next: 'valdrisNervoes' },
+          { label: 'Gut so.', next: null }
+        ]
+      },
+      valdrisNervoes: {
+        text: [
+          '"Valdris ist nie nervös. Aber er beobachtet dich. Ich habe seine Leute gesehen."'
+        ],
+        options: [{ label: 'Dann muss ich schneller sein.', next: null }]
+      },
+      alleFraktionenStark: {
+        text: [
+          '"Drei Fraktionen — alle auf deiner Seite." Pereth lehnt sich zurück. "Ich hab sowas noch nicht gesehen."',
+          '"Valdris wird das wissen."'
+        ],
+        options: [{ label: '"Dann ist es Zeit."', next: null }]
+      },
+      idle: {
+        text: ['"Alles im Plan? Brauchst du noch etwas?"'],
+        options: [
+          { label: '"Alles gut. Danke."', next: null },
+          { label: '"Was weißt du über die Fraktionen?"', next: 'gildeTipp' },
+          { label: '"Das Informantennetz?"', next: 'netzwerkTipp' }
+        ]
+      }
+    }
+  },
+
+  // ── Fraktions-NPCs ───────────────────────────────────────────
+  {
+    id: 'gildenmeisterin',
+    name: 'Gildenmeisterin Yeva', icon: '💰',
+    tagline: 'Sie kauft und verkauft Allianzen wie andere Leute Gemüse.',
+    location: CONTENT.VELMARK_FRAKTIONEN,
+    start: () => 'greet',
+    nodes: {
+      greet: {
+        text: [
+          '"Ein neues Gesicht. Was bringt mich dazu, dir zuzuhören?"',
+          'Sie schaut mich kurz an. Ihre Augen sind schnell. Geschäftlich.',
+          '"Gold? Gut. Dann sprechen wir."'
+        ],
+        options: [
+          { label: '"Ich bin hier, um Allianzen zu schmieden."', next: 'allianzAngebot' },
+          { label: '"Vielleicht ein anderes Mal."', next: null }
+        ]
+      },
+      allianzAngebot: {
+        text: [
+          '"Die Gilde unterstützt Leute, die uns etwas bringen. Handel, Schutz, Informationen — was hast du?"',
+          '"Zeig mir, dass du investieren willst, und ich zeige dir, was wir leisten können."'
+        ],
+        options: [
+          { label: '"Ich komme wieder, wenn ich bereit bin."', next: null }
+        ]
+      },
+      verbündet: {
+        text: ['"Gut gearbeitet. Wir behalten dich im Auge — die richtige Art von Auge."'],
+        options: [{ label: 'Gut.', next: null }]
+      }
+    }
+  },
+
+  {
+    id: 'hauptmann_gorr',
+    name: 'Hauptmann Gorr', icon: '⚔',
+    tagline: 'Eiserne Faust, wenig Geduld, kein Interesse an Erklärungen.',
+    location: CONTENT.VELMARK_FRAKTIONEN,
+    start: () => 'greet',
+    nodes: {
+      greet: {
+        text: [
+          'Er dreht sich um. Kein Lächeln. "Du willst zur Bruderschaft."',
+          '"Dann zeig mir, dass du kämpfen kannst. Reden reicht mir nicht."'
+        ],
+        options: [
+          { label: '"Ich habe mich genug bewiesen."', next: 'mutCheck' },
+          { label: '"Später."', next: null }
+        ]
+      },
+      mutCheck: {
+        text: ['"Treutheim, Lethkar — ich kenne die Berichte. Waldtroll. Valdris\' Lager. Das reicht als Referenz."'],
+        options: [{ label: 'Dann sind wir Verbündete.', next: null }]
+      }
+    }
+  },
+
+  {
+    id: 'archivarin_sele',
+    name: 'Archivarin Sele', icon: '📜',
+    tagline: 'Weiß alles. Sagt es nur, wenn es sich lohnt.',
+    location: CONTENT.VELMARK_FRAKTIONEN,
+    start: () => 'greet',
+    nodes: {
+      greet: {
+        text: [
+          '"Das Stadtarchiv ist kein Gasthaus." Sie sieht mich über ihre Akten hinweg an.',
+          '"Aber du bist interessant. Jemand, der Valdris jagt und dabei Alchemie lernt — das klingt nach einem Buch, das ich lesen möchte."'
+        ],
+        options: [
+          { label: '"Ich habe Informationen, die ihr interessieren könnten."', next: 'infoAngebot' },
+          { label: '"Ich komme wieder."', next: null }
+        ]
+      },
+      infoAngebot: {
+        text: [
+          '"Informationen gegen Wissen. Das ist ein fairer Tausch."',
+          '"Was weißt du über das Netzwerk?"'
+        ],
+        options: [{ label: '"Mehr als Valdris ahnt."', next: null }]
+      }
+    }
+  }
+];
+
 /** Öffnet einen NPC-Dialog anhand einer NPC-Definition (statt ID-String).
  *  Ermöglicht Aufrufe direkt aus Aktions-Callbacks, die bereits die Def haben. */
 function openNpcDialogWithDef(npc, nodeId) {
@@ -1433,6 +1634,14 @@ function openNpcDialogWithDef(npc, nodeId) {
 /** Öffnet einen Lethkar-NPC-Dialog (wrapper für openNpcDialog). */
 function openLethkarNpcDialog(npcId) {
   const npc = NPCS_LETHKAR.find(n => n.id === npcId);
+  if (!npc) return;
+  const startNode = typeof npc.start === 'function' ? npc.start() : npc.start;
+  openNpcDialogWithDef(npc, startNode);
+}
+
+/** Öffnet einen Velmark-NPC-Dialog (wrapper für openNpcDialog). */
+function openVelmarkNpcDialog(npcId) {
+  const npc = NPCS_VELMARK.find(n => n.id === npcId);
   if (!npc) return;
   const startNode = typeof npc.start === 'function' ? npc.start() : npc.start;
   openNpcDialogWithDef(npc, startNode);

@@ -48,6 +48,7 @@ function renderContent() {
     case CONTENT.VELMARK_SCHLAFPLATZ: renderVelmarkSchlafplatz(area);  break;
     case CONTENT.CHRONIK:            renderChronik(area);            break;
     case CONTENT.SETTINGS:           renderSettings(area);           break;
+    case CONTENT.RUF_FAEHIGKEITEN:   renderRufFaehigkeiten(area);    break;
     default:                         renderGeschichte(area);
   }
 }
@@ -373,8 +374,65 @@ function renderWeltkarte(el) {
         }
 
       </div>
+
+      ${gameFlags.chapter2Complete ? `
+        <div class="prestige-offer" style="margin-top:18px;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg2);">
+          <p style="color:var(--text-mid);margin-bottom:8px;">Was ich in Treutheim durchlebt habe, könnte ich erneut durchleben — mit mehr Erfahrung und Stärke.</p>
+          <button class="action-btn" onclick="showKap2PrestigeDialog()">
+            🔄 Als Veteran zurückkehren (+${3 + kap2ResetCount * 2} Ruf)
+          </button>
+        </div>` : ''}
+
+      ${gameFlags.kap3Complete ? `
+        <div class="prestige-offer" style="margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg2);">
+          <p style="color:var(--text-mid);margin-bottom:8px;">Ich könnte nach Lethkar zurückkehren — die Alchemie erneut ergründen, tiefer als beim ersten Mal.</p>
+          <button class="action-btn" onclick="showKap3PrestigeDialog()">
+            ↩ Nach Lethkar zurück (+${5 + kap3ResetCount * 3} Wissensdurst ✦)
+          </button>
+        </div>` : ''}
+
     </div>
   `;
+}
+
+/* ── Prestige-Bestätigungs-Dialoge ──────────────────────────────────── */
+
+function showKap2PrestigeDialog() {
+  const earned = 3 + kap2ResetCount * 2;
+  showDialog({
+    title: 'Als Veteran zurückkehren?',
+    text: [
+      'Meine bisherigen Errungenschaften in Treutheim bleiben, aber der Fortschritt in Kapitel 2 wird zurückgesetzt.',
+      `Ich behalte 25 % meines Goldes${getRufStartGold() > 0 ? ` + ${getRufStartGold()} Startgold (Schnellstart)` : ''}, alle EP, Mut und Ruf-Fähigkeiten.`,
+      `Ich erhalte +${earned} Ruf, die ich dauerhaft für Kampf-Boni einsetzen kann.`
+    ],
+    buttons: [
+      {
+        label: `🔄 Zurückkehren (+${earned} Ruf)`,
+        onClick: () => closeDialog(() => performKap2PrestigeReset())
+      },
+      { label: 'Abbrechen', onClick: () => closeDialog() }
+    ]
+  });
+}
+
+function showKap3PrestigeDialog() {
+  const earned = 5 + kap3ResetCount * 3;
+  showDialog({
+    title: 'Nach Lethkar zurückkehren?',
+    text: [
+      'Der Alchemie-Fortschritt wird zurückgesetzt, aber alle freigeschalteten Wissensdurst-Fähigkeiten bleiben.',
+      `Ich erhalte +${earned} Wissensdurst ✦ — mehr als beim ersten Mal.`,
+      'EP, Mut, Ruf und alles aus Treutheim bleibt vollständig erhalten.'
+    ],
+    buttons: [
+      {
+        label: `↩ Zurückkehren (+${earned} ✦)`,
+        onClick: () => closeDialog(() => performKap3PrestigeReset())
+      },
+      { label: 'Abbrechen', onClick: () => closeDialog() }
+    ]
+  });
 }
 
 /* ── Treutheim: Stadtkern mit immersiver Beschreibung + echten Orten ──
@@ -1447,6 +1505,42 @@ function renderLethkarSchlafplatz(el) {
 /* ══════════════════════════════════════════════════════════════
    Kapitel 4 — Velmark
    ══════════════════════════════════════════════════════════════ */
+
+/* ── Ruf-Fähigkeiten (Kap-2-Prestige) ───────────────────────────── */
+function renderRufFaehigkeiten(el) {
+  const skills = RUF_SKILL_DEFS.map(def => {
+    const owned   = !!rufSkills[def.id];
+    const canBuy  = !owned && ruf >= def.cost;
+    const locked  = !owned && !canBuy;
+    return `
+      <div class="action-card${owned ? ' quest-card-done' : locked ? ' action-card-locked' : ''}">
+        <div class="action-card-name">${def.name}</div>
+        <p class="action-card-desc">${def.desc}</p>
+        <div class="action-card-effect">${owned ? '✓ Erworben' : `Kosten: ${def.cost} Ruf`}</div>
+        ${owned
+          ? `<button class="action-btn btn-disabled" disabled>Freigeschaltet ✓</button>`
+          : `<button class="action-btn ${canBuy ? '' : 'btn-disabled'}"
+               onclick="buyRufSkill('${def.id}')"
+               ${canBuy ? '' : 'disabled'}>
+               ${locked ? `${ruf}/${def.cost} Ruf` : 'Freischalten'}
+             </button>`
+        }
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feature-stage">
+      <div class="feature-stage-label">Erfahrung als Veteran</div>
+      <div class="alchemie-header" style="margin-bottom:12px;">
+        <span class="alchemie-berufsstufe">Ruf</span>
+        <span class="alchemie-wissensdurst">⚔ ${ruf} Ruf verfügbar</span>
+      </div>
+      <p style="color:var(--text-mid);font-size:0.85em;margin-bottom:14px;">
+        Erworben durch wiederholtes Abschließen des zweiten Abschnitts. Permanente Kampf-Boni, die bei keinem Reset verloren gehen.
+      </p>
+      <div class="action-grid">${skills}</div>
+    </div>`;
+}
 
 function renderVelmark(el) {
   const frakPlaces = [

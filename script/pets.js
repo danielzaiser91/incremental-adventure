@@ -21,6 +21,12 @@ const PET_DEFS = {
     desc: 'Er folgte mir aus dem tiefen Wald — nach dem Kampf mit dem Waldtroll war er plötzlich einfach da.',
     bonusText: level => `+${3 * (1 + level)} Kampfschaden (Stufe ${level}/${PET_MAX_LEVEL} verstärkt)`,
     unlockHint: 'Gefunden in den Tiefen des Jagdgebiets'
+  },
+  stadtfalke: {
+    name: 'Stadtfalke', icon: '🦅', special: true,
+    desc: 'Er kreist über Velmark und bringt mir Nachrichten, noch bevor meine Informanten zurückkehren.',
+    bonusText: level => `+${5 * (1 + level)} % Einfluss pro Informanten-Tick (Stufe ${level}/${PET_MAX_LEVEL})`,
+    unlockHint: 'Erscheint, wenn das Informantennetz wächst'
   }
 };
 
@@ -30,7 +36,9 @@ const WILD_PET_DEFS = {
   hase:          { name: 'Hase',          icon: '🐇', bonusLabel: 'Hunger',       bonusFn: lvl => `Hunger steigt ${10 * lvl} % langsamer`,   hint: 'Seltener Drop aus dem Jagdgebiet — Greta fragen' },
   eichhoernchen: { name: 'Eichhörnchen', icon: '🐿', bonusLabel: 'Rohstoffe',   bonusFn: lvl => `+${lvl} Rohstoff pro Sammelaktion`,        hint: 'Seltener Drop aus dem Jagdgebiet — Greta fragen' },
   katze:         { name: 'Hauskatze',     icon: '🐱', bonusLabel: 'Müdigkeit',   bonusFn: lvl => `Müdigkeit steigt ${8 * lvl} % langsamer`,  hint: 'Scheint nach vielen Nachtwachen aufzutauchen' },
-  eule:          { name: 'Eule',          icon: '🦉', bonusLabel: 'Nachtwache',  bonusFn: lvl => `+${10 * lvl} % Gold aus Nachtwachen`,      hint: 'Erscheint bei besonders ausdauernden Nachtwächtern' }
+  eule:          { name: 'Eule',          icon: '🦉', bonusLabel: 'Nachtwache',  bonusFn: lvl => `+${10 * lvl} % Gold aus Nachtwachen`,      hint: 'Erscheint bei besonders ausdauernden Nachtwächtern' },
+  kettenhund:    { name: 'Kettenhund',    icon: '🦮', bonusLabel: 'Tier-3-Kampf', bonusFn: lvl => `+${10 * lvl} % Schaden gegen Tier-3-Monster`, hint: 'Begleiter der Eisernen Bruderschaft — bei hohem Ansehen' },
+  archivfalter:  { name: 'Archivfalter', icon: '🦋', bonusLabel: 'Wissensdurst', bonusFn: lvl => `+${5 * lvl} % Wissensdurst aus Alchemie`,      hint: 'Lebt im Stadtarchiv — bei hohem Ansehen des Archivs' }
 };
 
 /** Bonus-Multiplikator auf Angriffsstärke aus Hund-Haustier. */
@@ -69,10 +77,28 @@ function getWildPetNightWatchBonus() {
   return owl ? owl.level * 0.10 : 0; // 0.10 = 10% mehr Gold pro Level
 }
 
+/** Bonus-Multiplikator auf Schaden gegen Tier-3-Monster durch Kettenhund. */
+function getWildPetTier3DmgBonus() {
+  const dog = wildPets.find(p => p.type === 'kettenhund');
+  return dog ? dog.level * 0.10 : 0;
+}
+
+/** Bonus-Multiplikator auf Wissensdurst aus Alchemie durch Archivfalter. */
+function getWildPetAlchemieWissensdurstBonus() {
+  const moth = wildPets.find(p => p.type === 'archivfalter');
+  return moth ? moth.level * 0.05 : 0;
+}
+
 /** Fester Schadenszuwachs durch Wolf-Welpen (besonderes Haustier). */
 function getWildPetCombatDamageBonus() {
   const wolf = pets.wolfWelpe;
   return wolf ? 3 * (1 + (wolf.level || 0)) : 0;
+}
+
+/** Einfluss-Bonus pro Informanten-Tick durch den Stadtfalken (additiv, %). */
+function getStadtfalkeInfluenceBonus() {
+  const falke = pets.stadtfalke;
+  return falke ? 0.05 * (1 + (falke.level || 0)) : 0;
 }
 
 /** Sammelbonus aller Haustiere auf die Schlafqualität. */
@@ -130,7 +156,7 @@ function renderPets(el) {
 
   // ── Wildtiere-Tab: Alle bekannten Wildtier-Typen ──────────────
   if (petsTab === 'wildtiere') {
-    const wildTypeOrder = ['hund', 'rabe', 'hase', 'eichhoernchen', 'katze', 'eule'];
+    const wildTypeOrder = ['hund', 'rabe', 'hase', 'eichhoernchen', 'katze', 'eule', 'kettenhund', 'archivfalter'];
     const wildCards = wildTypeOrder.map(type => {
       const def = WILD_PET_DEFS[type];
       const owned = wildPets.find(p => p.type === type);

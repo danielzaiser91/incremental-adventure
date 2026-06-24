@@ -81,6 +81,7 @@ function renderGlobalNavSection() {
     ${hasAnyAchievement            ? item('errungenschaften', '🏆', 'Errungenschaften') : ''}
     ${gameFlags.automationDiscovered ? item('automation', '⌛', 'Automatisierung') : ''}
     ${gameFlags.jagdgebietUnlocked   ? item('expedition', '🗺', 'Expeditionen')   : ''}
+    ${(kap2ResetCount > 0 || ruf > 0) ? item('rufFaehigkeiten', '⚔', 'Veteranen-Boni') : ''}
   `;
 }
 

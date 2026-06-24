@@ -1,23 +1,17 @@
-<!-- version: 0.18.0 -->
-## 🌆🎵 v0.18 — Velmark, Klang & Errungenschaften
+<!-- version: 0.19.0 -->
+## ⚔✦ v0.19 — Veteranen-Ruf, Prestige-Resets & Velmark-Ausbau
 
 **Allgemein**
-• Audio-System: Hintergrundmusik (Ambient, Taverne, Kampf) + 11 Soundeffekte — alles synthetisch via Web Audio API, keine externen Dateien nötig
-• Audio-Einstellungen: Musik und SFX einzeln aktivierbar + Lautstärkeregler (Standard 50%) in den Einstellungen
-• Errungenschaften: 50+ neue Errungenschaften für alle Kapitel (Kap 2, Lethkar, Velmark) + 8 neue geheime Errungenschaften
-• Errungenschaften: kompaktes Kachel-UI mit Klick-Detail-Panel + Layer-Filter-Tabs (Treutheim / Erfahrungs-Weg / Kap 2 / Lethkar / Velmark)
-• Errungenschaften: Kap-2-Inhalte in eigene Sektion verschoben + 6 neue Erfahrungs-Weg-Meilensteine
-• Haustiere: Hauskatze (nach 15 Nachtwachen) und Eule (nach 20 Nachtwachen) als neue Wildtiere — Katze senkt Müdigkeit, Eule erhöht Nachtwachen-Gold
-• Haustiere: Wolf-Welpe als neues besonderes Tier — seltener Drop nach Waldtroll-Sieg, gibt Kampfschadens-Bonus
-• Haustiere: überarbeitete Seite mit Wildtiere/Besonders-Tabs — alle Tierslots sichtbar mit Fundhinweisen
-• Geschichte-Seite: für jede Story-Phase eigener reflektiver Ich-Text statt generischem Einheitstext
-• Erfahrungs-Baum: „Schaltet weitere Fähigkeiten frei" verschwindet sobald der Skill bereits erworben ist
-• Bugfix: Versions-Changelog-Overlay erschien bei Minor-Updates nicht korrekt — zeigt jetzt alle Zwischenversionen akkumuliert
+• 4 neue Errungenschaften: Veteran, Dreifach erprobt, Wissbegierig, Freier Himmel
+• Neue Haustiere: Stadtfalke (Informantennetz ≥ 5), Kettenhund (Bruderschaft Ansehen ≥ 30), Archivfalter (Archiv Ansehen ≥ 30)
+
+**Kapitel 2** *(zum Aufdecken anklicken)*
+||Kap-2-Prestige: Als Veteran zurückkehren — Ruf als dauerhafte Metawährung · 5 Ruf-Fähigkeiten: Veteran (+20 Max-HP), Kampferfahrung (+10% Schaden), Schnellstart (+200 Startgold), Kampfexperte (+50% Tier-2-Drops) · Neue Seite „Veteranen-Boni" in der Navigation||
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
-||Tier-2-Monster geben jetzt Wissensdurst ✦ als Kampf-Drop · Story 3.7–3.10: Kap-3-Abschluss mit Valdris' Lager, Varenas Enthüllung, Alchemie-Durchbruch und Konfetti-Sieg + Errungenschaft „Im Schatten der Einsicht" (+20% Gold)||
+||Kap-3-Prestige: Nach Lethkar zurückkehren — gibt Wissensdurst ✦, steigender Bonus pro Neustart · Alchemistisches Gedächtnis (Wissensdurst-Skill) hält 50% der Alchemie-Level beim Reset||
 
 **Kapitel 4** *(zum Aufdecken anklicken)*
-||Velmark ist jetzt spielbar: Fraktionssystem (Händlergilde/Eiserne Bruderschaft/Stadtarchiv), Einfluss ⚜ statt Prestige-Reset, Tier-3-Kämpfe, Informantennetz, Story 4.1–4.10 mit finalem Sieg-Dialog + Errungenschaft „Der Preis des Einflusses" (+25% Gold)||
+||Velmark-Ausbau: Pereth als vollständiger NPC mit kontext-sensitivem Dialog · Fraktions-NPCs mit Dialogbäumen: Gildenmeisterin Yeva, Hauptmann Gorr, Archivarin Sele · Informantennetz tickt jetzt jede Minute automatisch Einfluss nach||
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/

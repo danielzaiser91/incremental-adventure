@@ -472,6 +472,32 @@ const ACHIEVEMENT_DEFS = [
       try { return (einfluss.totalEarned || 0) >= 100; } catch(e) { return false; }
     },
     bonusMult: 0.15
+  },
+  {
+    id: 'kap2Prestige1', cat: ACH_CAT.NORMAL, layer: 4, icon: '🔄', name: 'Veteran',
+    desc: 'Den zweiten Abschnitt ein erstes Mal als Veteran neu beginnen.',
+    check: () => kap2ResetCount >= 1,
+    bonusMult: 0.08
+  },
+  {
+    id: 'kap2Prestige3', cat: ACH_CAT.SECRET, layer: 4, icon: '⚔', name: 'Dreifach erprobt',
+    desc: 'Den zweiten Abschnitt dreimal als Veteran absolviert.',
+    hint: 'Manche Wege werden durch Wiederholung erst klarer.',
+    check: () => kap2ResetCount >= 3,
+    bonusMult: 0.15
+  },
+  {
+    id: 'kap3Prestige1', cat: ACH_CAT.NORMAL, layer: 4, icon: '↩', name: 'Wissbegierig',
+    desc: 'Den Lethkarer Weg ein weiteres Mal beschreiten — mit mehr Wissen als beim ersten Mal.',
+    check: () => kap3ResetCount >= 1,
+    bonusMult: 0.10
+  },
+  {
+    id: 'stadtfalkeAch', cat: ACH_CAT.SECRET, layer: 4, icon: '🦅', name: 'Freier Himmel',
+    desc: 'Einen Stadtfalken als Begleiter gewinnen.',
+    hint: 'Manche Tiere lassen sich nicht suchen — sie kommen von selbst.',
+    check: () => !!pets.stadtfalke,
+    bonusMult: 0.08
   }
 ];
 
@@ -511,6 +537,20 @@ function checkAchievements() {
     showToast(`${prefix} freigeschaltet: ${def.name}`, TOAST.EVENT);
     playSfx('achievement');
   });
+
+  // Velmark-Wildtier-Unlocks (Kettenhund + Archivfalter)
+  try {
+    if ((fraktionen?.bruderschaft || 0) >= 30 && !wildPets.find(p => p.type === 'kettenhund')) {
+      wildPets.push({ type: 'kettenhund', level: 1 });
+      showToast('Ein Kettenhund der Eisernen Bruderschaft folgt mir nun.', TOAST.EVENT);
+      playSfx('achievement');
+    }
+    if ((fraktionen?.archiv || 0) >= 30 && !wildPets.find(p => p.type === 'archivfalter')) {
+      wildPets.push({ type: 'archivfalter', level: 1 });
+      showToast('Ein Archivfalter hat sich mir angeschlossen — er lebt zwischen den Seiten alter Bücher.', TOAST.EVENT);
+      playSfx('achievement');
+    }
+  } catch(e) {}
 }
 
 /** Wechselt zwischen "Allgemein" und "Geheim" auf der Errungenschaften-Seite. */

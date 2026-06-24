@@ -196,8 +196,10 @@ function tickAlchemie(seconds) {
       const newLevel = alchemie.levels[id];
 
       // Äther Level 1: jeder Level-Up (egal welcher Aspekt) gibt +1 extra Wissensdurst
-      const aetherBonus = getAlchemieAetherLevelUpBonus();
-      const wdGain      = wdBase + aetherBonus;
+      const aetherBonus  = getAlchemieAetherLevelUpBonus();
+      const falterMult   = typeof getWildPetAlchemieWissensdurstBonus === 'function'
+        ? (1 + getWildPetAlchemieWissensdurstBonus()) : 1;
+      const wdGain       = Math.round((wdBase + aetherBonus) * falterMult);
       einsicht.points      += wdGain;
       einsicht.totalEarned += wdGain;
 

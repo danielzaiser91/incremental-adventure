@@ -58,6 +58,8 @@ function saveGame(opts = {}) {
       expedition,
       zeitkristalle,
       automation,
+      ruf, kap2ResetCount, rufSkills, kap3ResetCount,
+      einfluss, fraktionen, informanten,
       // combat wird NICHT gespeichert — aktiver Kampf bricht beim Laden ab
       gameFlags:      { ...gameFlags, isWorking: false }, // Laufende Arbeit nicht speichern
       shownDialogs,
@@ -193,6 +195,13 @@ function applySaveData(save) {
   expedition     = { activeExpedition: null, storyCompleted: [], grindCounts: {}, ...save.expedition };
   zeitkristalle  = save.zeitkristalle ?? 0;
   automation     = { slots: [], ...save.automation };
+  ruf            = save.ruf            ?? 0;
+  kap2ResetCount = save.kap2ResetCount ?? 0;
+  rufSkills      = save.rufSkills      ?? {};
+  kap3ResetCount = save.kap3ResetCount ?? 0;
+  einfluss       = { points: 0, totalEarned: 0, ...save.einfluss };
+  fraktionen     = { haendlergilde: 0, bruderschaft: 0, archiv: 0, ...save.fraktionen };
+  informanten    = { count: 0, lastTick: null, ...save.informanten };
   // Migration: altes Format erlaubte mehrere Slots pro Aktion — jetzt max. 1 pro Aktion.
   { const seen = new Set(); automation.slots = automation.slots.filter(s => !seen.has(s.action) && seen.add(s.action)); }
   combat         = { active: false, enemyId: null, enemyHp: 0, log: [] };
@@ -224,6 +233,112 @@ function migrateSaveData(loadedVersion) {
   }
 
   return fixes;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRESTIGE-RESET-SYSTEME
+   Kap-2-Prestige (Ruf) und Kap-3-Prestige (Wissensdurst).
+   Diese Resets sind BEWUSSTE Spieler-Aktionen, niemals automatisch.
+   ══════════════════════════════════════════════════════════════ */
+
+/** Führt einen Kap-2-Prestige-Reset durch: gibt Ruf, setzt Kap-2-State zurück,
+    behält aber Gold×0.25, EP, Mut, Ruf, rufSkills, Kap-1-Flags. */
+function performKap2PrestigeReset() {
+  const earned = 3 + kap2ResetCount * 2;
+  ruf          += earned;
+  kap2ResetCount++;
+
+  // ── Kap-2-spezifischen State zurücksetzen ────────────────────
+  storyState = 20100;
+  gameFlags.chapter2Complete       = false;
+  gameFlags.waldtrollKilled        = false;
+  gameFlags.firstJagdgebietKill    = false;
+  gameFlags.korbinChapter2Talked   = false;
+  gameFlags.theftClueFoundInJagdgebiet = false;
+  gameFlags.miraRevealedInfo       = false;
+  gameFlags.brakkaRevealedSuspect  = false;
+  gameFlags.fremderConfronted      = false;
+  gameFlags.mirasBriefGiven        = false;
+  gameFlags.mirasBriefDecoded      = false;
+  gameFlags.firstCombatDefeated    = false;
+
+  quests.theftInvestigation = { state: 'unstarted' };
+  quests.miraLetter         = { state: 'unstarted' };
+  npcFlags.fremderTalkCount  = 0;
+
+  combat    = defaultCombat();
+  killStats = { total: 0 };
+  strength  = defaultStrength();
+
+  // ── Gold: 25 % behalten + Schnellstart-Bonus ────────────────
+  resources.gold = Math.floor(resources.gold * 0.25) + getRufStartGold();
+
+  // ── Bedürfnisse ──────────────────────────────────────────────
+  needs.hunger    = 20;
+  needs.tiredness = 10;
+  needs.sleepDebt = 0;
+
+  // ── playerStats neu berechnen (Ruf-Veteran-Bonus) ────────────
+  const newMaxHp = getPlayerMaxHp();
+  playerStats.maxHp = newMaxHp;
+  playerStats.hp    = newMaxHp;
+
+  showToast(`Ich kehre zurück — als Veteran. (+${earned} Ruf)`, TOAST.EVENT);
+  saveGame({ silent: true });
+  render();
+}
+
+/** Kauft eine Ruf-Fähigkeit. Kosten werden in `ruf` abgezogen. */
+function buyRufSkill(id) {
+  const def = RUF_SKILL_DEFS.find(s => s.id === id);
+  if (!def || rufSkills[id] || ruf < def.cost) return;
+  ruf          -= def.cost;
+  rufSkills[id] = true;
+  showToast(`${def.name} freigeschaltet!`, TOAST.EVENT);
+  playSfx('achievement');
+  render();
+}
+
+/** Führt einen Kap-3-Prestige-Reset durch: gibt Wissensdurst, setzt Kap-3-State zurück. */
+function performKap3PrestigeReset() {
+  const earned = 5 + kap3ResetCount * 3;
+  einsicht.points      += earned;
+  einsicht.totalEarned += earned;
+  kap3ResetCount++;
+
+  // ── Kap-3-spezifischen State zurücksetzen ────────────────────
+  storyState = 30100;
+  gameFlags.kap3Complete              = false;
+  gameFlags.kap3ArrivalShown          = false; // falls vorhanden
+  gameFlags.varenaMetFirst            = false;
+  gameFlags.thessaMetFirst            = false;
+  gameFlags.perethMetFirst            = false;
+  gameFlags.varenaDecodedBrief        = false;
+  gameFlags.thessaTrustGained         = false;
+  gameFlags.perethQuestStarted        = false;
+  gameFlags.lagerhausVisited          = false;
+  gameFlags.chapter3StoryComplete     = false;
+  gameFlags.valdrisOperationRaided    = false;
+  gameFlags.varenaRevealedValdrisIdent= false;
+  gameFlags.alchemieGeselleReached    = false;
+
+  // Alchemie-Fortschritt zurücksetzen (Skills bleiben via wissensdurstSkills)
+  const keepProgress = wissensdurstSkills.alchemistischesGedaechtnis;
+  alchemie = {
+    unlocked: false,
+    levels:   keepProgress
+      ? Object.fromEntries(Object.entries(alchemie.levels).map(([k,v]) => [k, Math.floor(v * 0.5)]))
+      : { feuer:0, wasser:0, erde:0, luft:0, aether:0 },
+    progress: { feuer:0, wasser:0, erde:0, luft:0, aether:0 },
+    lastTick: null
+  };
+
+  // Lethkar bleibt freigeschaltet, aber Miras Brief muss neu entschlüsselt werden
+  gameFlags.lethkarUnlocked   = true;
+
+  showToast(`Ich kehre nach Lethkar zurück — wissbegieriger denn je. (+${earned} Wissensdurst ✦)`, TOAST.EVENT);
+  saveGame({ silent: true });
+  render();
 }
 
 /** Setzt nur den Kapitel-2-Fortschritt zurück, behält aber alles davor
@@ -281,6 +396,11 @@ function loadGame() {
     const migrationFixes = loadedVersion < CURRENT_SAVE_VERSION
       ? migrateSaveData(loadedVersion)
       : [];
+
+    // Informanten-Tick nach dem Laden neu starten (falls freigeschaltet)
+    if (gameFlags.informantenNetzFreigeschaltet && typeof setupInformantenTick === 'function') {
+      setupInformantenTick();
+    }
 
     const dateStr = new Date(save.savedAt).toLocaleString('de-DE');
     showToast(`📂 Spielstand geladen (gespeichert: ${dateStr})`, TOAST.INFO);
@@ -829,6 +949,12 @@ function performHardReset() {
   zeitkristalle = 0;
   automation    = { slots: [] };
   combat        = defaultCombat();
+  // ruf, rufSkills, kap2ResetCount, kap3ResetCount sind permanente Meta-Progression
+  // und überstehen auch einen harten Reset (wie EP, Mut, Wissensdurst).
+  // (bleiben unverändert)
+  einfluss      = { points: 0, totalEarned: 0 };
+  fraktionen    = { haendlergilde: 0, bruderschaft: 0, archiv: 0 };
+  informanten   = { count: 0, lastTick: null };
   shownDialogs  = [];
   chronikButtonUnseen   = false;
   chronikUnseenEntryIds = [];
