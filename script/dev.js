@@ -32,7 +32,14 @@ function setupDevKeyListener() {
 
 /** Rendert das Dev-Panel innerhalb der Einstellungs-Seite.
     Wird von renderSettings() (content.js) aufgerufen, wenn devModeEnabled. */
+const _devOpenDetails = new Set();
+
 function renderDevPanel(container) {
+  container.querySelectorAll('details[open]').forEach(d => {
+    const key = d.querySelector('summary')?.textContent?.trim();
+    if (key) _devOpenDetails.add(key);
+  });
+
   container.innerHTML = `
     <div class="settings-group dev-panel">
       <div class="settings-group-title">🛠 Entwickler-Optionen</div>
@@ -184,6 +191,14 @@ function renderDevPanel(container) {
       </div>
     </div>
   `;
+
+  container.querySelectorAll('details').forEach(d => {
+    const key = d.querySelector('summary')?.textContent?.trim();
+    if (key && _devOpenDetails.has(key)) d.open = true;
+    d.addEventListener('toggle', () => {
+      if (key) d.open ? _devOpenDetails.add(key) : _devOpenDetails.delete(key);
+    });
+  });
 }
 
 function devFlagToggle(flag, label) {
