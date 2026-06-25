@@ -107,8 +107,8 @@ function renderDevPanel(container) {
         <div class="dev-test-zone-header">
           <span>🧪 Test-Zone</span>
           <div class="dev-test-slot-btns">
-            <button class="dev-btn" onclick="devSaveTestSlot()" title="Aktuellen Spielstand als Test-Slot sichern">💾 Slot sichern</button>
-            <button class="dev-btn" onclick="devLoadTestSlot()" title="Test-Slot wiederherstellen">↩ Slot laden</button>
+            <button class="dev-btn" onclick="devSaveTestSlot()" title="Echten Spielstand sichern (vor dem Testen)">💾 Backup sichern</button>
+            <button class="dev-btn" onclick="devLoadTestSlot()" title="Gesicherter Spielstand wiederherstellen">↩ Backup laden</button>
           </div>
         </div>
 
@@ -380,13 +380,13 @@ function devSaveTestSlot() {
   const current = localStorage.getItem(SAVE_KEY);
   if (!current) { showToast('Kein Spielstand vorhanden.', TOAST.ERROR); return; }
   localStorage.setItem(DEV_TEST_SLOT, current);
-  showToast('💾 Test-Slot gesichert.', TOAST.EVENT);
+  showToast('💾 Backup gesichert — Spielstand vor dem Test gespeichert.', TOAST.EVENT);
 }
 
 function devLoadTestSlot() {
   const slot = localStorage.getItem(DEV_TEST_SLOT);
-  if (!slot) { showToast('Kein Test-Slot vorhanden — zuerst sichern.', TOAST.ERROR); return; }
-  if (!confirm('Test-Slot laden? Aktueller Spielstand wird überschrieben.')) return;
+  if (!slot) { showToast('Kein Backup vorhanden — zuerst sichern.', TOAST.ERROR); return; }
+  if (!confirm('Backup laden? Spielstand wird auf den gesicherten Stand zurückgesetzt.')) return;
   localStorage.setItem(SAVE_KEY, slot);
   location.reload();
 }
