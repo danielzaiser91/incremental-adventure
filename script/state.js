@@ -271,6 +271,7 @@ const VERSION_NOTES = {
     { cat: 'Neuerung', text: 'Feldarbeit: Stufen 4 ("Meister des Feldes") und 5 ("Legende der Felder") sind jetzt in Kapitel 2/3 erreichbar — über neue narrative Freischaltungen.' },
     { cat: 'Neuerung', text: 'Neuer NPC Sivert in Roswalds Schenke (Treutheim) — Agrarberater auf Reisen, vermittelt eine Technik, die Feldarbeit-Erfahrung massiv beschleunigt.' },
     { cat: 'Bugfix', text: 'Schlafplatz Lethkar/Velmark: Nach Nachtwache zeigte die Karte die ungestörte Erholungsrate statt der tatsächlich reduzierten. Behoben.' },
+    { cat: 'Neuerung', text: 'Nachtwache-Erholungs-Malus (−40%) wird durch eigene Schlaf-Boni (Skills/Haustier) abgeschwächt — je besser der Schlafplatz, desto stärker der Effekt. Minimum 10% Malus bleibt.' },
   ],
   '0.21.3-alpha': [
     { cat: 'Bugfix', text: 'Schlafqualität: Straße/Absteige/Bett erholten alle gleich viel bei hohem Skill-Bonus. Jeder Schlafplatz hat jetzt ein eigenes Maximum (Straße 55%, Absteige 72%, Eigenes Bett 100%).' },

@@ -993,11 +993,6 @@ function renderSchlafplatz(el) {
     ? 'Der Tag ist noch nicht vorbei. Ich sollte die Zeit nutzen, solange ich kann.'
     : 'Ich bin hundemüde — aber es ist noch nicht spät genug, um schlafen zu gehen. Das wäre vergeudete Zeit.';
 
-  const recoveryMult = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
-  const debuffNote = night && nightFlags.recoveryDebuff && getNightWatchRecoveryPenalty() > 0
-    ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(getNightWatchRecoveryPenalty() * 100)}% schlechter.</p>`
-    : '';
-
   // Auf der Straße ist anfangs die einzige sichtbare Option — die Absteige
   // erscheint erst, nachdem die Figur weiß, wie schlecht sich das anfühlt
   // (siehe SLEEP_OPTIONS, `requiresFlag`).
@@ -1006,13 +1001,18 @@ function renderSchlafplatz(el) {
     (!o.requiresMeta  || meta[o.requiresMeta])
   );
   const cards = visibleOptions.map(o => {
-    const qualityTier = getSleepQualityTier(o);
-    const reliefPct = night ? Math.round(100 * recoveryMult * getSleepQualityFactor(o)) : Math.round(100 * getSleepQualityFactor(o));
-    const canAfford = resources.gold >= o.cost;
+    const penalty      = getNightWatchRecoveryPenalty(o);
+    const recoveryMult = nightFlags.recoveryDebuff ? (1 - penalty) : 1;
+    const qualityTier  = getSleepQualityTier(o);
+    const reliefPct    = night ? Math.round(100 * recoveryMult * getSleepQualityFactor(o)) : Math.round(100 * getSleepQualityFactor(o));
+    const canAfford    = resources.gold >= o.cost;
     const hungerEffect = o.hungerPenalty ? `🍞 Hunger +${o.hungerPenalty}%` : '🍞 Hunger ±0%';
-    const reliefLabel = Math.round(100 * getSleepQualityFactor(o));
+    const reliefLabel  = Math.round(100 * getSleepQualityFactor(o));
     const qualityBadge = `<div class="sleep-quality-badge">Schlafqualität ${qualityTier} ` +
       `<span class="info-hint" tabindex="0" title="Höhere Schlafqualität → mehr regenerierte Müdigkeit. Aktuell: −${reliefLabel}% Müdigkeit pro Schlaf.">ⓘ</span></div>`;
+    const debuffNote   = night && nightFlags.recoveryDebuff && penalty > 0
+      ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(penalty * 100)}% schlechter.</p>`
+      : '';
 
     if (!night) {
       return `
@@ -1030,6 +1030,7 @@ function renderSchlafplatz(el) {
         <div class="action-card-icon">${o.icon}</div>
         <div class="action-card-name">${o.name}</div>
         <p class="action-card-desc">${o.desc}</p>
+        ${debuffNote}
         ${qualityBadge}
         <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · ${hungerEffect}</div>
         <div class="action-card-cost ${canAfford ? 'cost-ok' : 'cost-too-high'}">${o.cost > 0 ? o.cost + ' Gold' : 'Kostenlos'}</div>
@@ -1042,7 +1043,6 @@ function renderSchlafplatz(el) {
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Schlafplatz</div>
-      ${debuffNote}
       <div class="action-grid">
         ${cards}
 
@@ -1519,20 +1519,21 @@ function renderLethkarSchlafplatz(el) {
     return;
   }
 
-  const lethRecoveryMult = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
-  const lethDebuffNote = nightFlags.recoveryDebuff && getNightWatchRecoveryPenalty() > 0
-    ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(getNightWatchRecoveryPenalty() * 100)}% schlechter.</p>`
-    : '';
   const cards = LETHKAR_SLEEP_OPTIONS.map(opt => {
+    const penalty      = getNightWatchRecoveryPenalty(opt);
+    const recoveryMult = nightFlags.recoveryDebuff ? (1 - penalty) : 1;
     const canAfford    = resources.gold >= opt.cost;
     const effectiveTier = getSleepQualityTier(opt);
-    const reliefPct    = Math.round(100 * lethRecoveryMult * getSleepQualityFactor(opt));
+    const reliefPct    = Math.round(100 * recoveryMult * getSleepQualityFactor(opt));
+    const debuffNote   = nightFlags.recoveryDebuff && penalty > 0
+      ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(penalty * 100)}% schlechter.</p>`
+      : '';
     return `
       <div class="action-card">
         <div class="action-card-icon">${opt.icon}</div>
         <div class="action-card-name">${opt.name}</div>
         <p class="action-card-desc">${opt.desc}</p>
-        ${lethDebuffNote}
+        ${debuffNote}
         <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
           onclick="sleepAt('lethkar_pension',${opt.cost},${opt.qualityTier})"
@@ -1875,20 +1876,21 @@ function renderVelmarkSchlafplatz(el) {
     }
   ];
 
-  const velRecoveryMult = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
-  const velDebuffNote = nightFlags.recoveryDebuff && getNightWatchRecoveryPenalty() > 0
-    ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(getNightWatchRecoveryPenalty() * 100)}% schlechter.</p>`
-    : '';
   const cards = VELMARK_SLEEP_OPTIONS.map(opt => {
-    const canAfford     = resources.gold >= opt.cost;
+    const penalty      = getNightWatchRecoveryPenalty(opt);
+    const recoveryMult = nightFlags.recoveryDebuff ? (1 - penalty) : 1;
+    const canAfford    = resources.gold >= opt.cost;
     const effectiveTier = getSleepQualityTier(opt);
-    const reliefPct     = Math.round(100 * velRecoveryMult * getSleepQualityFactor(opt));
+    const reliefPct    = Math.round(100 * recoveryMult * getSleepQualityFactor(opt));
+    const debuffNote   = nightFlags.recoveryDebuff && penalty > 0
+      ? `<p class="action-card-warning">⚠ Nach der Nachtwache erhole ich mich heute −${Math.round(penalty * 100)}% schlechter.</p>`
+      : '';
     return `
       <div class="action-card">
         <div class="action-card-icon">${opt.icon}</div>
         <div class="action-card-name">${opt.name}</div>
         <p class="action-card-desc">${opt.desc}</p>
-        ${velDebuffNote}
+        ${debuffNote}
         <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
           onclick="sleepAt('${opt.id}',${opt.cost},${opt.qualityTier})"

@@ -16,9 +16,41 @@ const FOREMAN_BONUS_THRESHOLD  = 10; // Feldarbeiten bis zum Vorarbeiter-Bonus
 const FOREMAN_BONUS_GOLD       = 5;  // Einmalige Gold-Gabe beim Auslösen
 
 const NIGHTWATCH_RECOVERY_PENALTY = 0.4; // nächster Schlaf erholt 40% schlechter
-/** Gibt 0 zurück wenn nightWatchLeveling_super aktiv (kein Debuff mehr). */
-function getNightWatchRecoveryPenalty() {
-  return superSkills.nightWatchLeveling_super ? 0 : NIGHTWATCH_RECOVERY_PENALTY;
+
+// Schlafplatz-Multiplikator für die Abschwächung des Nachtwache-Debuffs durch eigene Schlaf-Boni.
+// Bessere Schlafplätze verstärken den Effekt der eigenen Boni (Stufe 1–3).
+const NACHTWACHE_DEBUFF_LOC_MULT = {
+  street:          1.0,
+  inn:             2.0,
+  lethkar_pension: 2.5,
+  velmark_pension: 2.7,
+  velmark_suite:   2.9,
+  home:            3.0,
+};
+
+/** Eigene Schlaf-Boni (Skills + Haustier) ohne den Basis-Qualitätstier des Schlafplatzes. */
+function getOwnSleepBonus() {
+  return (skills.sleepLikeARock ? 1 : 0)
+    + (superSkills.sleepLikeARock_super ? 1 : 0)
+    + getPetSleepBonus();
+}
+
+/** Gibt den effektiven Nachtwache-Erholungs-Malus zurück (0–1).
+    Eigene Schlaf-Boni können den Malus je nach Schlafplatz abschwächen
+    (abnehmende Effektivität: n^0.58 × Orts-Mult × 1% Reduktion).
+    Minimum 10%, Superpower "Eiserne Wacht" hebt ihn ganz auf. */
+function getNightWatchRecoveryPenalty(sleepOpt) {
+  if (superSkills.nightWatchLeveling_super) return 0;
+
+  const base = NIGHTWATCH_RECOVERY_PENALTY;
+  if (!sleepOpt) return base;
+
+  const ownBonus = getOwnSleepBonus();
+  if (ownBonus <= 0) return base;
+
+  const locMult  = NACHTWACHE_DEBUFF_LOC_MULT[sleepOpt.id] ?? 1.0;
+  const reduction = Math.pow(ownBonus, 0.58) * locMult * 0.01;
+  return Math.max(0.10, base - reduction);
 }
 const NIGHTWATCH_QUEST_REWARD     = 15;
 const COMMANDER_INVITE_THRESHOLD  = 3; // Nachtwachen bis zur Einladung des Kommandanten
@@ -972,7 +1004,7 @@ function maybeTriggerPostAdoptionText(option) {
     tatsächlich endet. */
 function finishSleep(option) {
   const tirednessBeforeSleep = needs.tiredness;
-  const recoveryMult         = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty()) : 1;
+  const recoveryMult         = nightFlags.recoveryDebuff ? (1 - getNightWatchRecoveryPenalty(option)) : 1;
   const tirednessRelief      = 100 * recoveryMult * getSleepQualityFactor(option);
 
   if (option.cost > 0) resources.gold -= option.cost;

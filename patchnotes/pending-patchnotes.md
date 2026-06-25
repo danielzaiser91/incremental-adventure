@@ -1,8 +1,9 @@
 <!-- version: 0.22.0 -->
-## 🗒✨ v0.22 — Feldarbeit-Meisterschaft
+## 🗒✨ v0.22 — Feldarbeit-Meisterschaft & Schlaf-Feintuning
 
 **Allgemein**
 • Feldarbeit-Stufen 4 und 5 sind jetzt in Kapitel 2/3 erreichbar
+• Nachtwache-Erholungs-Malus (−40%) wird durch Schlaf-Boni abgeschwächt — je besser das Bett, desto stärker der Effekt
 
 **Kapitel 2** *(zum Aufdecken anklicken)*
 ||Neuerungen:
