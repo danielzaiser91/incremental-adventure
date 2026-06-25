@@ -7,7 +7,8 @@
 
 **Kapitel 2** *(zum Aufdecken anklicken)*
 ||Neuerungen:
-- Neuer NPC: Sivert (Agrarberater) in Roswalds Schenke — erscheint ab Feldarbeit-Stufe 3, kostet 800 Gold, schaltet massiv erhöhte Feldarbeit-Erfahrung frei (Stufe 4 erreichbar)||
+- Neuer NPC: Sivert (Agrarberater) in Roswalds Schenke — erscheint ab Feldarbeit-Stufe 3, kostet 800 Gold, schaltet massiv erhöhte Feldarbeit-Erfahrung frei (Stufe 4 erreichbar)
+- Brakka: neue optionale Dialoge — Hintergrund zur Abenteurergilde, warum er dem Fremden eine Chance gibt, und was nach dem Gildenbeitritt kommt||
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
 ||Neuerungen:
