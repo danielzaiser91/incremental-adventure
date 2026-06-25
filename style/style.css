@@ -2803,6 +2803,35 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   gap: 4px;
 }
 .dev-test-list li { line-height: 1.4; }
+
+.dev-test-summary {
+  margin: 0 0 8px 14px;
+  padding: 0;
+  color: var(--text-mid);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: disc;
+}
+.dev-test-summary li { line-height: 1.4; }
+.dev-test-summary details { margin-top: 3px; display: block; }
+.dev-test-summary summary {
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-lo);
+  user-select: none;
+}
+.dev-test-summary summary:hover { color: #a0d0ff; }
+.dev-test-summary details[open] summary { color: #a0d0ff; }
+.dev-test-summary details > *:not(summary) {
+  margin: 4px 0 2px 8px;
+  font-size: 11px;
+  color: var(--text-lo);
+  line-height: 1.5;
+  border-left: 2px solid rgba(160,208,255,0.2);
+  padding-left: 6px;
+}
+
 .dev-test-feedback {
   color: var(--text-lo);
   font-size: 11px;

@@ -113,43 +113,60 @@ function renderDevPanel(container) {
         </div>
 
         <div class="dev-test-guide">
+
           <div class="dev-test-block">
-            <div class="dev-test-title">📋 Kap 3 — Was testen?</div>
-            <ol class="dev-test-list">
-              <li>Geh nach Lethkar → Markt → wie viel kostet das <b>Alchemisten-Werkzeug</b>? Kannst du es dir leisten oder wirkt es unerreichbar?</li>
-              <li>Mach 10–15 Minuten Lethkar-Aktionen (Feldarbeit, Wildkraut, Alchemie). Notiere: <b>Gold nach 10 Min</b>.</li>
-              <li>Kaufe Essen im Lethkar-Markt — wirken die Preise im Verhältnis zu deinem Einkommen <b>fair / zu teuer / zu billig</b>?</li>
-            </ol>
-            <div class="dev-test-feedback">💬 Feedback-Format:<br>
-              <code>Kap3: Werkzeug nach [X] Min leistbar | Gold/10min: ~[X] | Essen: [fair/teuer/billig]</code>
+            <div class="dev-test-title">📋 Kap 3 — Balancing testen</div>
+            <ul class="dev-test-summary">
+              <li>Wie lange, bis du dir das <b>Alchemisten-Werkzeug</b> leisten kannst?
+                <details><summary>Wie geht das?</summary><span>Backup sichern → „▶ Start Kapitel 3" laden → Navigation oben → <b>Weltkarte</b> → <b>Lethkar</b> → <b>Marktplatz</b> → Alchemisten-Händler öffnen. Notiere den Preis des Werkzeugs, schau rechts auf dein Gold.</span></details>
+              </li>
+              <li>Wie viel Gold verdienst du in <b>10 Minuten</b> Spielzeit?
+                <details><summary>Wie geht das?</summary><span>Weltkarte → Lethkar → <b>Arbeitsplatz</b>. Starte eine Uhr. Klicke verfügbare Aktionen (Wildkraut, Feldarbeit, Alchemie) und starte jede direkt neu wenn sie fertig ist. Nach 10 Min: Gold-Anzeige rechts ablesen.</span></details>
+              </li>
+              <li>Wirken die <b>Essenspreise</b> fair gegenüber deinem Verdienst?
+                <details><summary>Wie geht das?</summary><span>Marktplatz → Lebensmittel-Händler öffnen. Preise von Brot, Suppe etc. mit deinem Gold/10min vergleichen.</span></details>
+              </li>
+            </ul>
+            <div class="dev-test-feedback">💬 Feedback:<br>
+              <code>Kap3: Werkzeug [sofort / nach ~X Min] | Gold/10min: ~[X] | Essen: [fair/teuer/billig]</code>
             </div>
           </div>
 
           <div class="dev-test-block">
-            <div class="dev-test-title">📋 Kap 4 — Was testen?</div>
-            <ol class="dev-test-list">
-              <li>Wie lange dauert es, eine Fraktion von <b>10 → 30</b> (erste Quests) zu bringen?</li>
-              <li>Wie lange dauert es, eine Fraktion von <b>30 → 80</b> (Allianz für Finale)?</li>
-              <li>Wie viel <b>Einfluss ⚜</b> hast du nach 20 Minuten Spielen? Reicht das für die Aktionen?</li>
-              <li>Wirkt der <b>Gold-Vorrat</b> (10.000g Start) zu viel / zu wenig / passend?</li>
-            </ol>
-            <div class="dev-test-feedback">💬 Feedback-Format:<br>
-              <code>Kap4: Fraktion 10→30: [X] Min | 30→80: [X] Min | Einfluss/20min: ~[X] | Gold: [zu viel/wenig/ok]</code>
+            <div class="dev-test-title">📋 Kap 4 — Balancing testen</div>
+            <ul class="dev-test-summary">
+              <li>Wie lange dauert es, eine Fraktion auf <b>Ansehen 30</b> zu bringen?
+                <details><summary>Wie geht das?</summary><span>Backup sichern → „▶ Start Kapitel 4" laden → Weltkarte → <b>Velmark</b>. Du siehst drei Fraktionen mit Fortschrittsbalken (0–100). Wähle eine aus und starte immer wieder ihre Aktionen. Zeit stoppen bis Balken auf 30.</span></details>
+              </li>
+              <li>Wie lange dauert es weiter bis <b>Ansehen 80</b>?
+                <details><summary>Wie geht das?</summary><span>Gleiche Fraktion weiterspielen bis 80. Gesamtzeit notieren.</span></details>
+              </li>
+              <li>Wie viel <b>Einfluss ⚜</b> hast du nach 20 Minuten — reicht das?
+                <details><summary>Wie geht das?</summary><span>Einfluss ⚜ steht rechts in der Statusleiste. Nach 20 Min ablesen. Schau ob du dir Aktionen leisten kannst (deren Kosten stehen auf den Aktions-Karten).</span></details>
+              </li>
+              <li>10.000 Gold Start — <b>zu viel / zu wenig / passend</b>?</li>
+            </ul>
+            <div class="dev-test-feedback">💬 Feedback:<br>
+              <code>Kap4: Fraktion →30: [X] Min | →80: [X] Min | Einfluss/20min: ~[X] | Gold-Start: [zu viel/wenig/ok]</code>
             </div>
           </div>
 
           <div class="dev-test-block">
-            <div class="dev-test-title">📋 Vor Finale — Was testen?</div>
-            <ol class="dev-test-list">
-              <li>Starte die <b>Konfrontation</b> (dieKonfrontation-Quest) — läuft der Dialog-Baum durch ohne Fehler?</li>
-              <li>Teste beide Endungen: <b>Gericht</b> (Valdris vor Gericht stellen) und <b>Exil</b> (Verbannung) — jeweils einmal.</li>
-              <li>Erscheint am Ende das <b>Konfetti + Errungenschaft</b> korrekt?</li>
-              <li>Gibt es Stellen im Dialog die sich <b>unfertig, abrupt oder seltsam</b> anfühlen?</li>
-            </ol>
-            <div class="dev-test-feedback">💬 Feedback-Format:<br>
-              <code>Finale: Gericht [ok/Bug: ...] | Exil [ok/Bug: ...] | Konfetti [ja/nein] | Dialog-Auffälligkeiten: [...]</code>
+            <div class="dev-test-title">📋 Vor Finale — Story &amp; Bugs testen</div>
+            <ul class="dev-test-summary">
+              <li>Beide Endungen (<b>Gericht</b> + <b>Exil</b>) komplett durchspielen — hängt etwas?
+                <details><summary>Wie geht das?</summary><span>Backup sichern → „▶ Vor Finale" laden → Navigation oben → <b>Quests</b> → Quest „Die Konfrontation" starten. Dialog Seite für Seite durchklicken. Beim ersten Durchgang Richtung <b>Gericht</b> wählen. Danach <b>Backup laden</b> und nochmal, diesmal <b>Exil</b>.</span></details>
+              </li>
+              <li>Erscheinen am Ende <b>Konfetti</b> und eine <b>Errungenschaft</b>?
+                <details><summary>Wo schauen?</summary><span>Konfetti erscheint groß auf dem Bildschirm. Errungenschaft kommt als Popup oben rechts oder direkt nach dem Dialog. Falls beides ausbleibt, bitte notieren.</span></details>
+              </li>
+              <li>Gibt es Dialog-Stellen, die sich <b>seltsam oder unfertig</b> anfühlen?</li>
+            </ul>
+            <div class="dev-test-feedback">💬 Feedback:<br>
+              <code>Finale: Gericht [ok / Bug: ...] | Exil [ok / Bug: ...] | Konfetti [ja/nein] | Auffälligkeiten: [...]</code>
             </div>
           </div>
+
         </div>
       </div>
 
