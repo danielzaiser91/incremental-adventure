@@ -1046,13 +1046,14 @@ function renderSchlafplatz(el) {
       <div class="action-grid">
         ${cards}
 
+        ${!meta.hasHome ? `
         <div class="action-card action-card-locked">
           <div class="action-card-icon">🔒</div>
           <div class="action-card-name">Im eigenen Bett schlafen</div>
           <p class="action-card-desc">???</p>
           <div class="action-card-cost">Erfordert ein eigenes Zuhause</div>
           <button class="action-btn btn-disabled" disabled>Gesperrt</button>
-        </div>
+        </div>` : ''}
 
       </div>
     </div>
