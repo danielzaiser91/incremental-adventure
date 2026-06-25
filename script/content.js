@@ -885,9 +885,9 @@ function renderMeinHaus(el) {
       <div class="location-card">
         <p class="location-card-desc">Am Westrand von Treutheim. Kein Lärm, keine fremden Schritte. Es ist nicht viel — aber es gehört mir.</p>
         <div class="location-card-actions">
-          <button class="goto-btn" onclick="showContent('${CONTENT.SCHLAFPLATZ}')">🛏 Schlafen (Qualität ${qualityTier})</button>
+          <button class="action-btn" onclick="showContent('${CONTENT.SCHLAFPLATZ}')">🛏 Schlafen (Qualität ${qualityTier})</button>
           ${meta.hasSmith
-            ? `<button class="goto-btn" onclick="showContent('${CONTENT.SCHMIEDE}')">⚒ Zur Schmiede</button>`
+            ? `<button class="action-btn" onclick="showContent('${CONTENT.SCHMIEDE}')">⚒ Zur Schmiede</button>`
             : `<div class="action-card" style="margin-top:12px;">
                 <div class="action-card-title">⚒ Schmiede ausbauen</div>
                 <p class="action-card-desc">Ein Schlosser aus der Süderstraße könnte eine Schmiede einbauen. Oswin vermittelt das.</p>
@@ -1348,7 +1348,7 @@ function renderLethkar(el) {
       <div class="action-card-icon">${p.icon}</div>
       <div class="action-card-name">${p.name}</div>
       <p class="action-card-desc">${p.desc}</p>
-      <button class="goto-btn" onclick="showContent('${p.id}')">Hingehen</button>
+      <button class="action-btn" onclick="showContent('${p.id}')">Hingehen</button>
     </div>`).join('');
 
   const wildkrautCount = questItems.wildkraut || 0;
