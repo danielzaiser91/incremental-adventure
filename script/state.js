@@ -730,7 +730,8 @@ let npcFlags = {
   miraDrinkGiven:       false,
   fremderTalkCount:     0,    // Wie oft der Spieler den zwielichtigen Mann angesprochen hat
   oswingBusinessSeen:   false, // Spieler hat "Sprich über Geschäfte" (100g) geklickt → ! erlischt
-  oswingHintNotified:   false  // Taverne-Tab hat einmalig für Oswin-100g-Hint aufgeleuchtet
+  oswingHintNotified:   false, // Taverne-Tab hat einmalig für Oswin-100g-Hint aufgeleuchtet
+  brakkaGildeDetailsSeen: false // Einmaliger "Was macht die Abenteurergilde?"-Dialog
 };
 
 /* Fortschritt in der Feldarbeit (Erfahrungs-/Level-System, siehe actions.js) */

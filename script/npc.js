@@ -558,6 +558,7 @@ const NPCS = {
         ],
         options: [
           { label: 'Wie werde ich ein registrierter Abenteurer?', next: 'explain' },
+          { label: '"Warum sagst du mir das?"', next: 'brakkaWarum' },
           { label: 'Ein andermal.', next: null }
         ]
       },
@@ -607,6 +608,11 @@ const NPCS = {
         text: ['Brakka hebt seinen Krug, ohne aufzusehen. "Schon wieder wach geblieben letzte Nacht? Du wirst noch zur Eule, Fremder."'],
         options: [
           { label: 'Und die Sache mit der Abenteurergilde?', next: 'guildPending' },
+          {
+            label: '"Was macht die Abenteurergilde eigentlich?"',
+            next: 'gildeDetails',
+            visible: () => !npcFlags.brakkaGildeDetailsSeen
+          },
           { label: 'Vielleicht.', next: null }
         ]
       },
@@ -657,9 +663,41 @@ const NPCS = {
         text: ['Brakka hebt sein Glas. "Geh und mach uns stolz, Fremder."'],
         options: [
           { label: 'Werde ich.', next: null },
+          { label: '"Was erwartet mich jetzt?"', next: 'gildeZukunft' },
           { label: '"Hast du Gerüchte über das tiefe Waldgebiet gehört?"', next: 'waldtrollRumor',
             visible: () => quests.gildePruefung?.state === QUEST_STATE.REWARDED }
         ]
+      },
+      brakkaWarum: {
+        text: [
+          'Brakka stellt den Krug ab. Sein Blick streift mich — kurz, gewogen. Als zählte er etwas nach, das er nicht laut sagen wird.',
+          '"In meinen Jahren hab ich viele durch diese Tür kommen sehen. Die meisten witterten dasselbe: Ruhm, Gold, am liebsten beides."',
+          '"Du hast von nichts davon geredet. Du hast gefragt, wie es mir geht." Die schwielige Hand legt sich wieder um den Krug.',
+          '"Das war genug. Jetzt zeig mir, dass ich mich nicht verschätzt hab — dann gibt es zwischen uns nichts weiter zu reden."'
+        ],
+        options: [{ label: 'Ich verstehe.', next: null }]
+      },
+      gildeDetails: {
+        text: [
+          'Brakka lehnt sich gegen die Wand, die Balken knarren unter ihm. "Die Gilde ist kein Orden. Kein Heilsversprechen. Arbeit ist es — mit einem Stempel drauf."',
+          '"Verträge. Händler ohne eigene Wachen. Bauern, die ein Vieh loswerden wollen. Und Dinge, vor denen andere lieber wegsehen."',
+          '"Dafür kriegst du Zugang. Zum Waffenschmied. Zum Jagdgebiet. Zu Leuten, die dir sonst die Tür vor der Nase zuschlagen würden."',
+          'Sein Blick fällt in den Krug. "Ich kenn die Gilde länger, als mir manchmal lieb ist." Dann trinkt er. Mehr ist dazu nicht zu holen.'
+        ],
+        options: [{
+          label: 'Das klingt... pragmatisch.',
+          next: null,
+          action: () => { npcFlags.brakkaGildeDetailsSeen = true; }
+        }]
+      },
+      gildeZukunft: {
+        text: [
+          '"Was dich erwartet?" Ein kurzes, trockenes Lachen. "Aufträge. Manche stumpf, manche weniger."',
+          '"Respekt kommt nicht mit dem Stempel. Den verdienst du dir Schritt für Schritt — sobald die Leute merken, dass du zurückkommst."',
+          '"Fang vorne an. Der Waffenschmied lässt dich jetzt durch. Das Jagdgebiet kennst du schon. Also los."',
+          'Er hebt den Krug — kein Toast, er will einfach trinken. "Viel Erfolg, Fremder. Und das mein ich ernst."'
+        ],
+        options: [{ label: 'Ich werde es dir zeigen.', next: null }]
       },
       waldtrollRumor: {
         text: [

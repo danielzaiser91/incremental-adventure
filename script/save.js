@@ -136,7 +136,7 @@ function applySaveData(save) {
     dasDokument: { state: 'unstarted' }, dieKonfrontation: { state: 'unstarted' },
     ...save.quests
   };
-  npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, oswingBusinessSeen: false, oswingHintNotified: false, ...save.npcFlags };
+  npcFlags       = { miraDrinkGiven: false, fremderTalkCount: 0, oswingBusinessSeen: false, oswingHintNotified: false, brakkaGildeDetailsSeen: false, ...save.npcFlags };
   workStats      = { count: 0, hungryWorkCount: 0, ...save.workStats };
   stadtwacheStats = { count: 0, ...save.stadtwacheStats };
   killStats      = { total: 0, ...save.killStats };
@@ -935,7 +935,7 @@ function performHardReset() {
     kraemerinBusiness: { state: 'unstarted' }, guildRegistration: { state: 'unstarted' },
     commanderTraining: { state: 'unstarted' }, theftInvestigation: { state: 'unstarted' }
   };
-  npcFlags      = { miraDrinkGiven: false };
+  npcFlags      = { miraDrinkGiven: false, brakkaGildeDetailsSeen: false };
   workStats     = defaultWorkStats();
   stadtwacheStats = defaultStadtwacheStats();
   nightWatchStats = defaultNightWatchStats();
