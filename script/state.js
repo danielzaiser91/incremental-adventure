@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.20.0-alpha';
+const GAME_VERSION = '0.21.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,13 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.21.0-alpha': [
+    { cat: 'Qualität', text: 'Alle NPC-Dialoge und Story-Texte komplett überarbeitet — natürlicheres, fließendes Deutsch auf Romanqualität.' },
+    { cat: 'Bugfix', text: 'gildeInvestition: Quest konnte nie abgeschlossen werden (Timer lief nie). Behoben.' },
+    { cat: 'Bugfix', text: 'gildeKorruption: Quest war durch falschen State-Namen blockiert. Behoben.' },
+    { cat: 'Bugfix', text: 'brennenderMut: Kein Turn-in bei Brakka möglich. Behoben. Schwelle korrigiert (3 Nächte statt 5).' },
+    { cat: 'Bugfix', text: 'oswinsAuftrag: Oswin reagierte nicht auf laufende Quest. Behoben.' },
+  ],
   '0.20.0-alpha': [
     { cat: 'Neuerung', text: '29 neue Quests — Kap 2 (8), Kap 3 (10), Kap 4 (10) — mit vollständigen NPC-Dialogen, Quest-Ketten und Belohnungen.' },
     { cat: 'Neuerung', text: 'Neuer NPC Harro (Hafen-Schuldner), erweiterter Gorr/Sele/Yeva-Dialog mit 3-stufigen Quest-Ketten pro Fraktion.' },

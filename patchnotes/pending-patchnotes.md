@@ -1,24 +1,17 @@
-<!-- version: 0.20.0 -->
-## 🗒⚔ v0.20 — Quest-Expansion, Velmarks Hafen & die Konfrontation
+<!-- version: 0.21.0 -->
+## 🗒✨ v0.21 — Dialog-Überarbeitung & Bugfixes
 
 **Allgemein**
-• 29 neue Quests über alle Kapitel verteilt — mit vollständigen NPC-Ketten, Belohnungen und Weltauswirkungen
-• 4 neue Monster: Bandit, Sumpfwesen (Tier 1/2 in Lethkar) + Hafenwächter, Valdris-Agent (Tier 3 in Velmark)
-• 5 neue Errungenschaften: Vollständigkeit Kap 2/3/4, „Der Schleier fällt" (Valdris-Profil), Hafenmeister
+• Alle NPC-Dialoge und Story-Texte komplett neu geschrieben — natürlicheres Deutsch, stärkere Charakterstimmen, mehr Atmosphäre
+• 5 Bugfixes: 2 Hardblocker (Quest-Ketten in Velmark waren nicht abschließbar), 3 Routing-Bugs
 
 **Kapitel 2** *(zum Aufdecken anklicken)*
-||8 neue Quests: Gildenprüfung, Fremder-Geheimnis (3-stufige Enthüllung, wer Serin wirklich ist), Mira-Suche, Kampfroutine (+Max-HP dauerhaft), Waldtroll-Jagd, Gilda-Aufstieg (Gildenvorsteher Torben), Brennender Mut (5 Nachtwachen in Folge), Kap-2-Finale||
+||Brakka, Mira, Oswin, Roswald, Fremder, Torben: alle Dialoge überarbeitet · brennenderMut: Turn-in bei Brakka möglich (war blockiert) · Schwelle korrigiert: 3 Nächte statt 5 · oswinsAuftrag: Oswin reagiert jetzt korrekt auf laufende Quest||
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
-||10 neue Quests: Varena-Erstkontakt (5x Wildkraut), Alchemie-Initiierung, Thessa-Geheimnis (3 Gespräche → Yeva-Hinweis), Tier-2-Boss, Wissensdurst ×10, Valdris-Spuren (3 Lethkar-Orte), Lethkar-Markt (200g Handelsvolumen), Pereth-Kontakt (Velmark-Weg), Alchemie-Geselle (Varena-Abschluss), Kapitel-3-Finale||
+||Varena, Thessa, Pereth: alle Dialoge überarbeitet · schärfere Charakterstimmen (Varenas Präzision, Thessas Zurückhaltung, Pereths Glätte)||
 
 **Kapitel 4** *(zum Aufdecken anklicken)*
-||10 neue Quests über 3 Fraktionsketten:
-• Händlergilde: Gildes Schulden (Harro am Hafen — neuer NPC), Gilde-Investition (500g → 800g Rendite), Gilde-Korruption (Valdris' Buchhalter)
-• Eiserne Bruderschaft: Bruderschafts-Beweis (Tier-3-Kampf), Gorrs Vergangenheit (NPC-Tiefe), Gorrs Eid (vollständige Verbündung)
-• Stadtarchiv: Archiv-Recherche (3x Durchsuchen), Seles Wissen, Das Dokument (letzter Beweis), Die Konfrontation
-Neue Spielfläche: Velmarks Hafen (Hafenarbeit, Velmark-Stadtwache, Harro)
-Valdris-Profil: 6 aufdeckbare Felder — je mehr bekannt, desto stärker die Position
-Valdris-Finale vollständig spielbar: Konfrontation mit vollständigem Entscheidungsbaum — Gericht (Yeva/Gorr/Sele treten auf) oder Exil (Verhandlung) · beide Enden führen zum Sieg-Dialog mit Errungenschaft||
+||Harro, Yeva, Gorr, Sele: alle Dialoge überarbeitet · gildeInvestition: Quest-Timer lief nie an (Hardblocker) — behoben · gildeKorruption: falscher State-Name blockierte die gesamte Quest-Kette — behoben||
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/
