@@ -9,3 +9,4 @@ package-lock.json
 .package-lock.json
 test/screenshots/
 test/walkthrough_k*.md
+.env.local
