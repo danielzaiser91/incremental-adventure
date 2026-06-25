@@ -129,4 +129,4 @@ Veraltete Werte sind als **⚠️ OBSOLET** markiert — im Zuge des Playtests p
 3. **Kap 4 — Einfluss-Rate:** Wie viel ⚜ pro 20 Minuten akkumuliert der Spieler?
 4. **Velmark-Monster:** Tier-3-Werte nicht in diesem Dokument — nachlesen in combat.js.
 5. **Schlafqualität höhere Stufen:** Lethkar-Pension, Velmark-Pension, eigenes Bett — Werte nicht dokumentiert.
-6. **Waldtroll-Sperre:** Aktuell < 30 XP hart gesperrt — sinnvoller wäre Stärkelevel 2 als Bedingung.
+6. **Waldtroll-Sperre:** Verwendet `getStrengthLevel() < 2` — korrekt, kein Fix nötig.
