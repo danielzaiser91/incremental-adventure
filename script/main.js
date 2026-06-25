@@ -72,9 +72,14 @@ function init() {
   setupDevKeyListener();
   startVersionCheck();
   setTimeout(maybehealRobberyBug, 200);
-  // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren
-  document.addEventListener('click', () => getAudioCtx(), { once: true });
-  setTimeout(() => updateMusicForContext(), 100);
+  // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren.
+  // Nach Resume vorab-schedulierte Nodes verwerfen und Musik neu starten,
+  // da currentTime-Verhalten bei Suspension browser-abhängig ist.
+  document.addEventListener('click', () => {
+    const ctx = getAudioCtx();
+    if (ctx.state !== 'suspended') return;
+    ctx.resume().then(() => { stopCurrentMusic(); updateMusicForContext(); });
+  }, { once: true });
 
   const justUpdated = sessionStorage.getItem('justUpdated');
   if (justUpdated) {

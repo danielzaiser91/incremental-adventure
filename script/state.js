@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.21.0-alpha';
+const GAME_VERSION = '0.21.1-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,9 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.21.1-alpha': [
+    { cat: 'Bugfix', text: 'Musik startete nach dem Laden der Seite nicht (Browser-Autoplay-Sperre). Behoben.' },
+  ],
   '0.21.0-alpha': [
     { cat: 'Qualität', text: 'Alle NPC-Dialoge und Story-Texte komplett überarbeitet — natürlicheres, fließendes Deutsch auf Romanqualität.' },
     { cat: 'Bugfix', text: 'gildeInvestition: Quest konnte nie abgeschlossen werden (Timer lief nie). Behoben.' },

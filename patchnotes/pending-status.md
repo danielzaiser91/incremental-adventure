@@ -1,10 +1,11 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.21.0-alpha
+**Aktuelle Version:** v0.21.1-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
+- Musik: startete nach dem Seitenaufruf nicht (Browser-Autoplay-Sperre)
 - brennenderMut: Turn-in möglich + Nacht-Schwelle 5→3
 - oswinsAuftrag: Oswin reagiert korrekt auf aktive Quest
 - gildeInvestition: Quest-Timer (Hardblocker) behoben
