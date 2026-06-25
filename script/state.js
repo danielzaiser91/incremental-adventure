@@ -998,6 +998,15 @@ let stadtwacheProgress  = 0;
 let stadtwacheStartTime = null;
 let stadtwacheRafId     = null;
 
+/* ── Velmark-Aktions-Animation State ──────────────────────── */
+let hafenProgress  = 0;
+let hafenStartTime = null;
+let hafenRafId     = null;
+
+let velmarkWacheProgress  = 0;
+let velmarkWacheStartTime = null;
+let velmarkWacheRafId     = null;
+
 /* ══════════════════════════════════════════════════════════════
    STATE-HILFSFUNKTIONEN
    ══════════════════════════════════════════════════════════════ */

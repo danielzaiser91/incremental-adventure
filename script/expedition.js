@@ -175,8 +175,40 @@ function checkExpedition() {
 
 /* ── Expedition-Render ────────────────────────────────────── */
 
+let _expTimerInterval = null;
+
+function _tickExpeditionTimer() {
+  const active = expedition.activeExpedition;
+  if (!active || currentContent !== CONTENT.EXPEDITION) {
+    clearInterval(_expTimerInterval);
+    _expTimerInterval = null;
+    return;
+  }
+  const elapsed   = Date.now() - active.startTime;
+  const progress  = Math.min(elapsed / active.durationMs, 1);
+  const remaining = Math.max(active.durationMs - elapsed, 0);
+  const mins      = Math.floor(remaining / 60000);
+  const secs      = Math.floor((remaining % 60000) / 1000);
+  const pct       = Math.floor(progress * 100);
+
+  const barEl  = document.getElementById('exp-progress-bar');
+  const textEl = document.getElementById('exp-timer-text');
+  const btnEl  = document.getElementById('exp-return-btn');
+  if (barEl)  barEl.style.width = pct + '%';
+  if (textEl) textEl.textContent = progress >= 1
+    ? '✓ Abgeschlossen — klicke Zurückkehren'
+    : `Noch ${mins}m ${secs}s (${pct}%)`;
+  if (btnEl && progress >= 1 && btnEl.hidden) {
+    btnEl.hidden = false;
+    clearInterval(_expTimerInterval);
+    _expTimerInterval = null;
+  }
+}
+
 function renderExpedition(el) {
   checkExpedition(); // Offline-Abschluss prüfen
+  clearInterval(_expTimerInterval);
+  _expTimerInterval = null;
 
   const active = expedition.activeExpedition;
 
@@ -195,18 +227,12 @@ function renderExpedition(el) {
         <div class="action-card-icon">${def?.icon ?? '🚶'}</div>
         <div class="action-card-name">Unterwegs: ${def?.name ?? active.id}</div>
         <div class="xp-track" style="margin-top:8px;">
-          <div class="xp-bar" style="width:${pct}%"></div>
+          <div class="xp-bar" id="exp-progress-bar" style="width:${pct}%"></div>
         </div>
-        <div class="action-card-effect" style="margin-top:6px;">
-          ${progress >= 1
-            ? '<span style="color:var(--green)">✓ Abgeschlossen — lade die Seite neu oder klicke:</span>'
-            : `Noch ${mins}m ${secs}s (${pct}%)`
-          }
+        <div class="action-card-effect" style="margin-top:6px;" id="exp-timer-text">
+          ${progress >= 1 ? '✓ Abgeschlossen — klicke Zurückkehren' : `Noch ${mins}m ${secs}s (${pct}%)`}
         </div>
-        ${progress >= 1
-          ? `<button class="action-btn" onclick="checkExpedition();render()">Zurückkehren</button>`
-          : ''
-        }
+        <button id="exp-return-btn" class="action-btn" onclick="checkExpedition();render()" ${progress >= 1 ? '' : 'hidden'}>Zurückkehren</button>
       </div>`;
   })() : '';
 
@@ -255,10 +281,7 @@ function renderExpedition(el) {
         : ''}
     </div>`;
 
-  // Auto-refresh alle 5s während aktiver Expedition
-  if (active) {
-    setTimeout(() => {
-      if (document.getElementById('main-area') && currentContent === CONTENT.EXPEDITION) render();
-    }, 5000);
+  if (active && active.durationMs - (Date.now() - active.startTime) > 0) {
+    _expTimerInterval = setInterval(_tickExpeditionTimer, 1000);
   }
 }

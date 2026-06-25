@@ -1897,7 +1897,14 @@ function renderVelmarkSchlafplatz(el) {
 function renderVelmarkHafen(el) {
   const einflussPoints = einfluss.points || 0;
 
-  const hafenCard = `
+  const hafenCard = gameFlags.isHafenarbeit ? `
+    <div class="action-card">
+      <div class="action-card-icon">⚓</div>
+      <div class="action-card-name">Hafenarbeit</div>
+      <p class="action-card-desc">Waren schleppen, Boote vertäuen, Ladungen prüfen. Harte Arbeit — aber Velmark-Verdienst.</p>
+      <div class="xp-track"><div class="xp-bar" id="hafen-progress-bar" style="width:0%"></div></div>
+      <div class="action-card-effect" id="hafen-progress-label" style="margin-top:4px">0%</div>
+    </div>` : `
     <div class="action-card">
       <div class="action-card-icon">⚓</div>
       <div class="action-card-name">Hafenarbeit</div>
@@ -1917,7 +1924,15 @@ function renderVelmarkHafen(el) {
       <button class="action-btn" onclick="openVelmarkNpcDialog('harro')">Ansprechen</button>
     </div>`;
 
-  const stadtwacheCard = gameFlags.velmarkStadtwacheUnlocked ? `
+  const stadtwacheCard = gameFlags.velmarkStadtwacheUnlocked
+    ? (gameFlags.isVelmarkWache ? `
+    <div class="action-card">
+      <div class="action-card-icon">🛡</div>
+      <div class="action-card-name">Velmark-Stadtwache</div>
+      <p class="action-card-desc">Gelegentliche Schicht mit der Stadtwache — seriöser als Hafenarbeit, solider Verdienst.</p>
+      <div class="xp-track"><div class="xp-bar" id="velmarkwache-progress-bar" style="width:0%"></div></div>
+      <div class="action-card-effect" id="velmarkwache-progress-label" style="margin-top:4px">0%</div>
+    </div>` : `
     <div class="action-card">
       <div class="action-card-icon">🛡</div>
       <div class="action-card-name">Velmark-Stadtwache</div>
@@ -1926,7 +1941,7 @@ function renderVelmarkHafen(el) {
       <button class="action-btn" onclick="velmarkStadtwache()" ${isNight() ? 'disabled' : ''}>
         ${isNight() ? 'Nachts geschlossen' : 'Schicht übernehmen'}
       </button>
-    </div>` : '';
+    </div>`) : '';
 
   el.innerHTML = `
     <div class="feature-stage">
@@ -1940,6 +1955,9 @@ function renderVelmarkHafen(el) {
         ${stadtwacheCard}
       </div>
     </div>`;
+
+  if (gameFlags.isHafenarbeit)  _scheduleHafenarbeit();
+  if (gameFlags.isVelmarkWache) _scheduleVelmarkWache();
 }
 
 function renderValdrisProfil(el) {

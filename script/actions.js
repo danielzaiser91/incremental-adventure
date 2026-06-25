@@ -1245,21 +1245,49 @@ function triggerChapter2Victory() {
 // VELMARK-AKTIONEN (Kapitel 4)
 // ═══════════════════════════════════════════════════
 
+const HAFEN_DURATION_MS      = 3000;
+const HAFEN_CLOCK_MINUTES    = 120;
+const VELMARK_WACHE_DURATION_MS   = 4000;
+const VELMARK_WACHE_CLOCK_MINUTES = 240;
+
 function hafenarbeit() {
   if (!gameFlags.hafenarbeitUnlocked) return;
-  if (gameFlags.isWorking || gameFlags.isStadtwacheShift) return;
+  if (gameFlags.isWorking || gameFlags.isStadtwacheShift || gameFlags.isHafenarbeit || gameFlags.isVelmarkWache) return;
   if (isNight()) return;
-
-  const baseGold   = 30 + Math.floor(Math.random() * 31);
+  gameFlags.isHafenarbeit = true;
+  hafenProgress  = 0;
+  hafenStartTime = Date.now();
+  render();
+  _scheduleHafenarbeit();
+}
+function _scheduleHafenarbeit() {
+  if (hafenRafId) cancelAnimationFrame(hafenRafId);
+  hafenRafId = requestAnimationFrame(_animateHafenarbeit);
+}
+function _animateHafenarbeit() {
+  if (!gameFlags.isHafenarbeit) return;
+  hafenProgress = Math.min(((Date.now() - hafenStartTime) / HAFEN_DURATION_MS) * 100, 100);
+  const bar = document.getElementById('hafen-progress-bar');
+  const lbl = document.getElementById('hafen-progress-label');
+  if (bar) bar.style.width = hafenProgress + '%';
+  if (lbl) lbl.textContent = Math.floor(hafenProgress) + '%';
+  if (hafenProgress >= 100) { _completeHafenarbeit(); }
+  else { hafenRafId = requestAnimationFrame(_animateHafenarbeit); }
+}
+function _completeHafenarbeit() {
+  if (hafenRafId) { cancelAnimationFrame(hafenRafId); hafenRafId = null; }
+  const baseGold     = 30 + Math.floor(Math.random() * 31);
   const einflussGain = 1 + (Math.random() < 0.4 ? 1 : 0);
-  resources.gold        += baseGold;
+  gameFlags.isHafenarbeit    = false;
+  hafenProgress              = 0;
+  resources.gold            += baseGold;
   resources.totalGoldEarned += baseGold;
-  einfluss.points      += einflussGain;
-  einfluss.totalEarned += einflussGain;
-  hafenStats.count     = (hafenStats.count || 0) + 1;
-  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 12);
-  needs.hunger    = Math.min(100, (needs.hunger    || 0) + 8);
-
+  einfluss.points           += einflussGain;
+  einfluss.totalEarned      += einflussGain;
+  hafenStats.count           = (hafenStats.count || 0) + 1;
+  adjustTiredness(12);
+  adjustHunger(8);
+  advanceClock(HAFEN_CLOCK_MINUTES);
   showToast(`Hafenarbeit: +${baseGold} Gold, +${einflussGain} Einfluss.`, TOAST.REWARD);
   checkQuestTriggers();
   render();
@@ -1267,17 +1295,40 @@ function hafenarbeit() {
 
 function velmarkStadtwache() {
   if (!gameFlags.velmarkStadtwacheUnlocked) return;
-  if (gameFlags.isWorking || gameFlags.isStadtwacheShift) return;
+  if (gameFlags.isWorking || gameFlags.isStadtwacheShift || gameFlags.isHafenarbeit || gameFlags.isVelmarkWache) return;
   if (isNight()) return;
-
+  gameFlags.isVelmarkWache  = true;
+  velmarkWacheProgress  = 0;
+  velmarkWacheStartTime = Date.now();
+  render();
+  _scheduleVelmarkWache();
+}
+function _scheduleVelmarkWache() {
+  if (velmarkWacheRafId) cancelAnimationFrame(velmarkWacheRafId);
+  velmarkWacheRafId = requestAnimationFrame(_animateVelmarkWache);
+}
+function _animateVelmarkWache() {
+  if (!gameFlags.isVelmarkWache) return;
+  velmarkWacheProgress = Math.min(((Date.now() - velmarkWacheStartTime) / VELMARK_WACHE_DURATION_MS) * 100, 100);
+  const bar = document.getElementById('velmarkwache-progress-bar');
+  const lbl = document.getElementById('velmarkwache-progress-label');
+  if (bar) bar.style.width = velmarkWacheProgress + '%';
+  if (lbl) lbl.textContent = Math.floor(velmarkWacheProgress) + '%';
+  if (velmarkWacheProgress >= 100) { _completeVelmarkWache(); }
+  else { velmarkWacheRafId = requestAnimationFrame(_animateVelmarkWache); }
+}
+function _completeVelmarkWache() {
+  if (velmarkWacheRafId) { cancelAnimationFrame(velmarkWacheRafId); velmarkWacheRafId = null; }
   const baseGold = 40 + Math.floor(Math.random() * 41);
-  resources.gold        += baseGold;
+  gameFlags.isVelmarkWache  = false;
+  velmarkWacheProgress      = 0;
+  resources.gold            += baseGold;
   resources.totalGoldEarned += baseGold;
-  einfluss.points      += 1;
-  einfluss.totalEarned += 1;
-  needs.tiredness = Math.min(100, (needs.tiredness || 0) + 15);
-  needs.hunger    = Math.min(100, (needs.hunger    || 0) + 10);
-
+  einfluss.points           += 1;
+  einfluss.totalEarned      += 1;
+  adjustTiredness(15);
+  adjustHunger(10);
+  advanceClock(VELMARK_WACHE_CLOCK_MINUTES);
   showToast(`Velmark-Stadtwache: +${baseGold} Gold, +1 Einfluss.`, TOAST.REWARD);
   checkQuestTriggers();
   render();
