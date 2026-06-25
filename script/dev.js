@@ -104,6 +104,14 @@ function renderDevPanel(container) {
           <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('finale')">▶ Vor Finale</button>
         </div>
 
+        <div class="dev-test-zone-header">
+          <span>🧪 Test-Zone</span>
+          <div class="dev-test-slot-btns">
+            <button class="dev-btn" onclick="devSaveTestSlot()" title="Aktuellen Spielstand als Test-Slot sichern">💾 Slot sichern</button>
+            <button class="dev-btn" onclick="devLoadTestSlot()" title="Test-Slot wiederherstellen">↩ Slot laden</button>
+          </div>
+        </div>
+
         <div class="dev-test-guide">
           <div class="dev-test-block">
             <div class="dev-test-title">📋 Kap 3 — Was testen?</div>
@@ -364,6 +372,23 @@ function devLoadPreset(preset) {
 
   saveGame();
   render();
+}
+
+const DEV_TEST_SLOT = 'chronicles_dev_test_slot';
+
+function devSaveTestSlot() {
+  const current = localStorage.getItem(SAVE_KEY);
+  if (!current) { showToast('Kein Spielstand vorhanden.', TOAST.ERROR); return; }
+  localStorage.setItem(DEV_TEST_SLOT, current);
+  showToast('💾 Test-Slot gesichert.', TOAST.EVENT);
+}
+
+function devLoadTestSlot() {
+  const slot = localStorage.getItem(DEV_TEST_SLOT);
+  if (!slot) { showToast('Kein Test-Slot vorhanden — zuerst sichern.', TOAST.ERROR); return; }
+  if (!confirm('Test-Slot laden? Aktueller Spielstand wird überschrieben.')) return;
+  localStorage.setItem(SAVE_KEY, slot);
+  location.reload();
 }
 
 function devShowChangelog() {

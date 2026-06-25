@@ -2759,7 +2759,25 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 .dev-flag-row:hover { color: var(--text-hi); }
 .dev-flag-row input { cursor: pointer; }
 
-.dev-presets { margin: 12px 0 8px; }
+.dev-presets {
+  margin: 12px 0 8px;
+  border: 1px solid rgba(255,200,50,0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(255,200,50,0.03);
+}
+.dev-test-zone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #f0c040;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.dev-test-slot-btns { display: flex; gap: 6px; }
 .dev-test-guide { margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
 .dev-test-block {
   background: rgba(255,200,50,0.06);
