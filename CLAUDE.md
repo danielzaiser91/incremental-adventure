@@ -39,16 +39,20 @@ Struktur: **Allgemein** (keine Spoiler) → dann pro Kapitel ein Abschnitt mit D
 • Änderung ohne Kapitel-Bezug
 
 **Kapitel 2** *(zum Aufdecken anklicken)*
-||Kapitel-spezifische Änderungen:
-• Erste Änderung in Kapitel 2
-• Weitere Änderung in Kapitel 2||
+||Dialoge überarbeitet:
+- NPC1 · NPC2 · NPC3
+
+Bugfixes:
+- Fix 1
+- Fix 2||
 
 **Kapitel 3** *(zum Aufdecken anklicken)*
 ||Kapitel-3-Inhalt hier.||
 ```
 
-- `||Text||` = Discord-Spoiler (Spieler klickt zum Aufdecken) — **immer einzeilig**, kein Zeilenumbruch innerhalb des Spoilers
-- ⚠️ Spoilerblock muss mit einem **Buchstaben** beginnen (nicht `•`), sonst erkennt Discord `||` nicht als Spoiler-Opener
-- Inhalt kompakt halten (Stichwörter mit `·` trennen statt Zeilenumbrüche)
+- `||Text||` = Discord-Spoiler (Spieler klickt zum Aufdecken) — **mehrzeilig erlaubt**, `||` öffnet und schließt den Block
+- ⚠️ Spoilerblock muss mit einem **Buchstaben** beginnen (nicht `•` oder `-`), sonst erkennt Discord `||` nicht als Spoiler-Opener
+- Einträge innerhalb des Spoilers als Liste mit `-` pro Zeile — keine langen `·`-Ketten
+- Kategorien innerhalb des Spoilers (z.B. "Dialoge überarbeitet:" / "Bugfixes:") mit Leerzeile trennen
 - Allgemein = kapitelunabhängige Features/Fixes, nie in Spoiler
 - Je tiefer das Kapitel, desto weiter unten in der Nachricht
