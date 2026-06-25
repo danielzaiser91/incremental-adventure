@@ -103,6 +103,46 @@ function renderDevPanel(container) {
           <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('kap4')">▶ Start Kapitel 4</button>
           <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('finale')">▶ Vor Finale</button>
         </div>
+
+        <div class="dev-test-guide">
+          <div class="dev-test-block">
+            <div class="dev-test-title">📋 Kap 3 — Was testen?</div>
+            <ol class="dev-test-list">
+              <li>Geh nach Lethkar → Markt → wie viel kostet das <b>Alchemisten-Werkzeug</b>? Kannst du es dir leisten oder wirkt es unerreichbar?</li>
+              <li>Mach 10–15 Minuten Lethkar-Aktionen (Feldarbeit, Wildkraut, Alchemie). Notiere: <b>Gold nach 10 Min</b>.</li>
+              <li>Kaufe Essen im Lethkar-Markt — wirken die Preise im Verhältnis zu deinem Einkommen <b>fair / zu teuer / zu billig</b>?</li>
+            </ol>
+            <div class="dev-test-feedback">💬 Feedback-Format:<br>
+              <code>Kap3: Werkzeug nach [X] Min leistbar | Gold/10min: ~[X] | Essen: [fair/teuer/billig]</code>
+            </div>
+          </div>
+
+          <div class="dev-test-block">
+            <div class="dev-test-title">📋 Kap 4 — Was testen?</div>
+            <ol class="dev-test-list">
+              <li>Wie lange dauert es, eine Fraktion von <b>10 → 30</b> (erste Quests) zu bringen?</li>
+              <li>Wie lange dauert es, eine Fraktion von <b>30 → 80</b> (Allianz für Finale)?</li>
+              <li>Wie viel <b>Einfluss ⚜</b> hast du nach 20 Minuten Spielen? Reicht das für die Aktionen?</li>
+              <li>Wirkt der <b>Gold-Vorrat</b> (10.000g Start) zu viel / zu wenig / passend?</li>
+            </ol>
+            <div class="dev-test-feedback">💬 Feedback-Format:<br>
+              <code>Kap4: Fraktion 10→30: [X] Min | 30→80: [X] Min | Einfluss/20min: ~[X] | Gold: [zu viel/wenig/ok]</code>
+            </div>
+          </div>
+
+          <div class="dev-test-block">
+            <div class="dev-test-title">📋 Vor Finale — Was testen?</div>
+            <ol class="dev-test-list">
+              <li>Starte die <b>Konfrontation</b> (dieKonfrontation-Quest) — läuft der Dialog-Baum durch ohne Fehler?</li>
+              <li>Teste beide Endungen: <b>Gericht</b> (Valdris vor Gericht stellen) und <b>Exil</b> (Verbannung) — jeweils einmal.</li>
+              <li>Erscheint am Ende das <b>Konfetti + Errungenschaft</b> korrekt?</li>
+              <li>Gibt es Stellen im Dialog die sich <b>unfertig, abrupt oder seltsam</b> anfühlen?</li>
+            </ol>
+            <div class="dev-test-feedback">💬 Feedback-Format:<br>
+              <code>Finale: Gericht [ok/Bug: ...] | Exil [ok/Bug: ...] | Konfetti [ja/nein] | Dialog-Auffälligkeiten: [...]</code>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="dev-row" style="margin-top:8px">

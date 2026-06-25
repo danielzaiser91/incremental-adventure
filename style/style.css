@@ -2759,6 +2759,49 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 .dev-flag-row:hover { color: var(--text-hi); }
 .dev-flag-row input { cursor: pointer; }
 
+.dev-presets { margin: 12px 0 8px; }
+.dev-test-guide { margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.dev-test-block {
+  background: rgba(255,200,50,0.06);
+  border: 1px solid rgba(255,200,50,0.2);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+.dev-test-title {
+  font-size: 11px;
+  font-weight: bold;
+  color: #f0c040;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 6px;
+}
+.dev-test-list {
+  margin: 0 0 8px 16px;
+  padding: 0;
+  color: var(--text-mid);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dev-test-list li { line-height: 1.4; }
+.dev-test-feedback {
+  color: var(--text-lo);
+  font-size: 11px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 6px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+.dev-test-feedback code {
+  display: block;
+  margin-top: 3px;
+  color: #a0d0ff;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
 
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE: MOBILE (≤ 640px)
