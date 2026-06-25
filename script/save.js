@@ -99,7 +99,7 @@ function applySaveData(save) {
 
   storyState     = save.storyState;
   resources      = { gold: 0, totalGoldEarned: 0, inventory: {}, totalResourcesSold: 0, ...save.resources };
-  meta           = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false, ...save.meta };
+  meta           = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false, feldarbeitProfi: false, feldarbeitMeister: false, ...save.meta };
   equipment      = { hands: null, guertel: null, ...save.equipment };
   experience     = { points: 0, totalEarned: 0, ...save.experience };
   skills         = {
@@ -918,7 +918,7 @@ function performHardReset() {
 
   storyState    = 10100;
   resources     = defaultResources();
-  meta          = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false };
+  meta          = { resets: 0, fasterWorkUnlocked: false, hasHome: false, hasSmith: false, feldarbeitProfi: false, feldarbeitMeister: false };
   equipment     = defaultEquipment();
   experience    = { points: 0, totalEarned: 0 };
   skills        = {

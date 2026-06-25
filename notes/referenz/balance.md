@@ -22,8 +22,8 @@ Veraltete Werte sind als **⚠️ OBSOLET** markiert — im Zuge des Playtests p
 | 0→1 | 5 | 1 → 2 | 1,0 → 0,9 |
 | 1→2 | 10 | 2 → 4 | 0,9 → 0,8 |
 | 2→3 | 50 | 4 → 8 | 0,8 → 0,65 |
-| 3→4 | 500.000 | 8 → 16 | 0,65 → 0,5 (nur mit Automation) |
-| 4→5 | 100.000.000 | 16 → 32 | 0,5 → 0,35 (nur via Reset-Loops) |
+| 3→4 | 500.000 (effektiv ~500 mit Profi-Mult ×1000) | 8 → 16 | 0,65 → 0,5 |
+| 4→5 | 100.000.000 (effektiv ~1000 ab Meister, Mult ×100.000 gesamt) | 16 → 32 | 0,5 → 0,35 |
 
 ---
 

@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.21.3-alpha';
+const GAME_VERSION = '0.22.0-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,11 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.0-alpha': [
+    { cat: 'Neuerung', text: 'Feldarbeit: Stufen 4 ("Meister des Feldes") und 5 ("Legende der Felder") sind jetzt in Kapitel 2/3 erreichbar — über neue narrative Freischaltungen.' },
+    { cat: 'Neuerung', text: 'Neuer NPC Sivert in Roswalds Schenke (Treutheim) — Agrarberater auf Reisen, vermittelt eine Technik, die Feldarbeit-Erfahrung massiv beschleunigt.' },
+    { cat: 'Bugfix', text: 'Schlafplatz Lethkar/Velmark: Nach Nachtwache zeigte die Karte die ungestörte Erholungsrate statt der tatsächlich reduzierten. Behoben.' },
+  ],
   '0.21.3-alpha': [
     { cat: 'Bugfix', text: 'Schlafqualität: Straße/Absteige/Bett erholten alle gleich viel bei hohem Skill-Bonus. Jeder Schlafplatz hat jetzt ein eigenes Maximum (Straße 55%, Absteige 72%, Eigenes Bett 100%).' },
   ],
@@ -435,7 +440,9 @@ let meta = {
   hasSmith:           false, // Schmiede im Eigenheim ausgebaut (dauerhaft)
   alchemieWerkzeug:   false, // Alchemisten-Werkzeug (Lethkar Markt, 500g) — +50% Alchemie-Tempo
   velmarkRuestung:    false, // Velmarker Kettenrüstung (Velmark Markt) — −5 Schaden im Kampf
-  netzwerkErweitert:  false  // Geheimes Netzwerk (Velmark Markt) — Informanten-Max 5 → 8
+  netzwerkErweitert:  false, // Geheimes Netzwerk (Velmark Markt) — Informanten-Max 5 → 8
+  feldarbeitProfi:    false, // Siverts Lehre (Lethkar Taverne, 800g) — Feldarbeit-XP ×1000
+  feldarbeitMeister:  false  // Körpergedächtnis-Durchbruch bei Stufe 4 — Feldarbeit-XP ×100.000
 };
 
 /* Ausrüstungs-Slots: itemId oder null. Ausgerüstetes wirkt sich aufs

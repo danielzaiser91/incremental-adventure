@@ -1361,6 +1361,87 @@ const NPCS = {
         options: [{ label: 'Danke.', next: null }]
       }
     }
+  },
+
+  sivert: {
+    name: 'Sivert', icon: '🌾',
+    tagline: 'Agrarberater auf Reisen. Sagt wenig — meint alles.',
+    // Erscheint erst ab Kapitel 2 und wenn Feldarbeit-Stufe 3 erreicht ist.
+    locked: () => storyState < 20101 || getWorkLevel(workStats.count) < 3,
+    start: () => {
+      if (meta.feldarbeitMeister) return 'masterDone';
+      if (meta.feldarbeitProfi)   return 'profiDone';
+      return 'firstMeet';
+    },
+    nodes: {
+      firstMeet: {
+        text: [
+          '"Du arbeitest auf dem Feld." Er stellt seinen Becher ab. Keine Frage — eine Feststellung. "Das sieht man sofort. Treutheim, wenn ich richtig schätze."',
+          '"Mein Name ist Sivert. Ich berate Hofbesitzer, wie sie mehr aus ihrer Arbeit herausholen. Was du beherrschst, ist Fleiß. Was dir noch fehlt, ist Methode."'
+        ],
+        options: [
+          { label: '"Was meinst du mit Methode?"', next: 'erklaerung' },
+          { label: '"Ich höre zu."', next: 'angebot' },
+          { label: '"Nicht jetzt."', next: 'abwarten' }
+        ]
+      },
+      erklaerung: {
+        text: [
+          '"Feldarbeit sieht einfach aus — ist sie nicht. Nicht wenn man sie wirklich beherrscht. Handgelenk, Atemrhythmus, wann man zieht, wann man schiebt. Die meisten lernen das nie, weil sie nie aufhören, einfach zu schuften."',
+          '"Ich kann dir zeigen, was dir fehlt. Nicht mehr Kraft — ein anderes Denken. Das Ergebnis ist dasselbe Feld, dieselbe Schaufel. Aber was du herausholst, ist ein anderes."'
+        ],
+        options: [
+          { label: '"Und was kostet das?"', next: 'angebot' },
+          { label: '"Klingt interessant. Ich denk drüber nach."', next: 'abwarten' }
+        ]
+      },
+      angebot: {
+        text: ['"Drei Stunden. Acht Hundert Gold — meine Zeit ist knapp, mein Wissen nicht billig. Danach arbeitest du anders, als du es je getan hast."'],
+        options: [
+          {
+            label: '"Einverstanden." (800 Gold)',
+            locked: () => resources.gold < 800,
+            reason: 'Erfordert 800 Gold',
+            next: null,
+            action: () => {
+              resources.gold -= 800;
+              meta.feldarbeitProfi = true;
+              saveGame();
+              render();
+              showMonologue('Drei Stunden', [
+                'Er zeigt mir nicht, wie man schneller schaufelt. Er zeigt mir, wie ich mich falsch halte — und warum das, was ich "Routine" nenne, in Wahrheit verschwendete Bewegung ist.',
+                'Handgelenk. Atemzug. Der Moment, in dem man loslässt, bevor der Widerstand kommt, statt danach. Kleine Dinge, die sich nicht wie Technik anfühlen, bis man merkt, wie viel leichter die Arbeit wird.',
+                '"Diese Dinge lernt man nicht durch Erklärung." Er sieht mich an. "Man erinnert sie. Und du hast es schneller kapiert als die meisten — das ist schon was wert."',
+                'Ich bin kein anderer Mensch. Aber meine Hände wissen jetzt etwas, was sie vorher nicht wussten.'
+              ], () => {
+                showToast('Siverts Technik erlernt — Feldarbeit-Erfahrung massiv erhöht.', TOAST.REWARD);
+                render();
+              });
+            }
+          },
+          { label: '"Noch nicht genug Gold."', next: 'abwarten', locked: () => resources.gold >= 800 },
+          { label: '"Vielleicht ein anderes Mal."', next: 'abwarten' }
+        ]
+      },
+      abwarten: {
+        text: ['"Noch nicht soweit. Das akzeptiere ich." Er hebt seinen Becher. "Die Tür bleibt offen."'],
+        options: [{ label: 'Gehen.', next: null }]
+      },
+      profiDone: {
+        text: [
+          '"Die Technik gehört dir jetzt." Er wendet sich seinem Becher zu. "Übe sie. Was du damit machst, liegt bei dir."',
+          'Ich spüre, dass das Gespräch beendet ist — nicht unfreundlich, nur abgeschlossen.'
+        ],
+        options: [{ label: 'Gehen.', next: null }]
+      },
+      masterDone: {
+        text: [
+          '"Du siehst aus wie jemand, der es kapiert hat." Ein knappes Nicken. Mehr gibt es von ihm nicht.',
+          'Ich glaube, das ist das größte Kompliment, das Sivert je macht.'
+        ],
+        options: [{ label: 'Gehen.', next: null }]
+      }
+    }
   }
 };
 

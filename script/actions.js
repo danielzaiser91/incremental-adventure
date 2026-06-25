@@ -347,7 +347,35 @@ function getWorkXpGain(levelOverride) {
   const skillMult = 1 + getSkillLevel(SKILL_ID.QUICK_LEARNER) * 0.1 +
     (superSkills.quickLearner_super ? 0.25 : 0);
   const base = skills.jobXpBonus ? 2 : 1;
-  return Math.max(1, Math.round(base * skillMult * (level.specialXpMult || 1)));
+  const profiMult   = meta.feldarbeitProfi   ? 1000 : 1;
+  const meisterMult = meta.feldarbeitMeister ? 100  : 1;
+  return Math.max(1, Math.round(base * skillMult * (level.specialXpMult || 1) * profiMult * meisterMult));
+}
+
+/** Prüft nach jedem Feldarbeits-Durchgang, ob der Spieler gerade Stufe 4
+    erreicht hat und noch keinen Körpergedächtnis-Durchbruch hatte.
+    Wird in _completeWork() aufgerufen. setTimeout sorgt dafür, dass der
+    Monolog erst erscheint, nachdem die synchrone maybeTrigger*-Kette
+    abgearbeitet ist — kein Dialogkonflikt möglich. */
+function maybeUnlockFeldarbeitMeister() {
+  if (!meta.feldarbeitProfi) return;
+  if (meta.feldarbeitMeister) return;
+  if (!alchemie.unlocked) return;  // erst ab Kap 3.3 (Alchemie-Laboratorium freigeschaltet)
+  if (getWorkLevel(workStats.count) < 4) return;
+
+  meta.feldarbeitMeister = true;
+  saveGame();
+
+  setTimeout(() => {
+    showMonologue('Eine Kleinigkeit verändert sich', [
+      'Es passiert mitten in einer ganz gewöhnlichen Schaufelung. Kein besonderer Moment, kein Zeuge, kein Donner — nur dieses eine Mal, wo ich merke, dass ich gar nicht nachgedacht habe.',
+      'Siverts Technik liegt nicht mehr im Kopf. Sie ist in den Händen, in der Schulter, im Atemrhythmus. Was ich einmal bewusst einüben musste, läuft einfach — als wäre es immer so gewesen.',
+      'Das ist nicht mehr Fleiß. Das ist etwas anderes. Etwas, das man sich nicht kaufen kann — man muss es sich erarbeiten, Durchgang für Durchgang, bis der Körper aufhört zu fragen und einfach weiß.'
+    ], () => {
+      showToast('Körpergedächtnis freigeschaltet — Feldarbeit-Erfahrung massiv erhöht.', TOAST.EVENT);
+      render();
+    });
+  }, 300);
 }
 
 /** Wie viel Müdigkeit eine einzelne Arbeit gerade kosten würde (Hunger
@@ -791,6 +819,7 @@ function completeWork() {
   playSfx('work');
 
   checkMilestones();
+  maybeUnlockFeldarbeitMeister();
   render();
 
   // Verkettet statt parallel aufgerufen, damit sich nie zwei dieser

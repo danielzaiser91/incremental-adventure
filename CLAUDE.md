@@ -56,3 +56,13 @@ Bugfixes:
 - Kategorien innerhalb des Spoilers (z.B. "Dialoge überarbeitet:" / "Bugfixes:") mit Leerzeile trennen
 - Allgemein = kapitelunabhängige Features/Fixes, nie in Spoiler
 - Je tiefer das Kapitel, desto weiter unten in der Nachricht
+
+## Spieler-sichtbare Texte & Dialoge
+
+Alle NPC-Dialoge, Story-Texte, Monologe und immersiven Beschreibungen werden mit der spezialisierten **Dialog-/Roman-KI** geschrieben (Subagent-Typ `fable`). Das gilt für:
+- Neue NPC-Dialogknoten (nodes in npc.js)
+- Story-Einträge (story.js)
+- Monologe (showMonologue-Aufrufe in actions.js, content.js etc.)
+- Beschreibungstexte von Locations, Karten, Items
+
+Einzige Ausnahme: kurze funktionale Labels (Button-Texte, Toast-Nachrichten mit reinen Werten wie "+300 Gold").
