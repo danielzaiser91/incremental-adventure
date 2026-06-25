@@ -161,7 +161,7 @@ jobs:
             CURRENT=$(echo "$CURRENT" | jq \
               --arg id "$PATCHNOTES_NEW_ID" \
               --arg v "$PATCHNOTES_VERSION" \
-              '. + {patchnotes_message_id: $id, patchnotes_last_version: $v}')
+              '. + {patchnotes_message_id: $id, patchnotes_last_version: $v, patchnotes_history: ((.patchnotes_history // {}) + {($v): $id})}')
           fi
           if [ -n "$STATUS_NEW_ID" ]; then
             CURRENT=$(echo "$CURRENT" | jq \

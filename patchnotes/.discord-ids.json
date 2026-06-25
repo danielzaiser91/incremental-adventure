@@ -1,5 +1,8 @@
 {
   "status_message_id": "1519094913067778159",
   "patchnotes_message_id": "1519660775004704899",
-  "patchnotes_last_version": "0.21.0"
+  "patchnotes_last_version": "0.21.0",
+  "patchnotes_history": {
+    "0.21.0": "1519660775004704899"
+  }
 }
