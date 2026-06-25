@@ -96,6 +96,15 @@ function renderDevPanel(container) {
         <button class="dev-btn dev-btn-danger" onclick="devFullReset()">Hard Reset</button>
       </div>
 
+      <div class="dev-presets">
+        <div class="dev-flag-title">Spielstand-Vorlagen (Balancing-Tests)</div>
+        <div class="dev-row">
+          <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('kap3')">▶ Start Kapitel 3</button>
+          <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('kap4')">▶ Start Kapitel 4</button>
+          <button class="dev-btn dev-btn-warn" onclick="devLoadPreset('finale')">▶ Vor Finale</button>
+        </div>
+      </div>
+
       <div class="dev-row" style="margin-top:8px">
         <label class="dev-label">Changelog</label>
         <span style="font-size:0.85em">v</span>
@@ -193,6 +202,128 @@ function devUnlockAll() {
 function devFullReset() {
   if (!confirm('Spielstand wirklich vollständig zurücksetzen?')) return;
   performHardReset();
+}
+
+function devLoadPreset(preset) {
+  if (!confirm(`Spielstand auf Vorlage "${preset}" setzen? Aktueller Stand wird überschrieben.`)) return;
+
+  // ── Gemeinsame Basis: Kap1 + Kap2 komplett ───────────────
+  function baseKap2() {
+    // Flags
+    Object.assign(gameFlags, {
+      jobUnlocked: true, firstSleepTriggered: true, hungerDialogShown: true,
+      firstNightDialogShown: true, resourceGatheringUnlocked: true,
+      lehrerUnlocked: true, resetLayerUnlocked: true,
+      kapitel2Unlocked: true, jagdgebietUnlocked: true,
+      automationDiscovered: true, waffenschmiedRejected: true,
+      stadtwacheAccepted: true, mirasBriefGiven: true,
+      fremderIdentityKnown: true, kampfTrainingDone: true,
+      kapitel2FinaleStarted: true,
+    });
+    navUnseen.automation = false; navUnseen.jagdgebiet = false;
+    // Ressourcen
+    resources.gold = 500; needs.hunger = 20; needs.tiredness = 10;
+    playerStats.maxHp = 120; playerStats.hp = 120;
+    strength.xp = 200; experience.points = 30;
+    zeitkristalle = 3; mut.points = 5; mut.totalEarned = 5;
+    // Quests Kap1+2 auf rewarded
+    const r = QUEST_STATE.REWARDED;
+    quests.nightWatch      = { state: r };
+    quests.oswinsAuftrag   = { state: r };
+    quests.erstesZuhause   = { state: r };
+    quests.gildePruefung   = { state: r };
+    quests.fremderGeheimnis = { state: r, stufe: 3 };
+    quests.miraSuche       = { state: r };
+    quests.kampfRoutine    = { state: r };
+    quests.waldtrollJagd   = { state: r };
+    quests.gildaAufstieg   = { state: r };
+    quests.brennenderMut   = { state: r };
+    quests.kapitel2Finale  = { state: r };
+    gameFlags.consecutiveNightwatch = 0;
+    storyState = 20901; // Ende Kap 2
+  }
+
+  if (preset === 'kap3') {
+    baseKap2();
+    gameFlags.lethkarUnlocked    = true;
+    gameFlags.mirasBriefDecoded  = false; // Lethkar-Einstieg: Brief noch nicht entschlüsselt
+    resources.gold = 2000;
+    storyState = 30100;
+    showToast('🛠 Vorlage geladen: Start Kapitel 3 (Lethkar)', TOAST.EVENT);
+  }
+
+  if (preset === 'kap4') {
+    baseKap2();
+    Object.assign(gameFlags, {
+      lethkarUnlocked: true, mirasBriefDecoded: true,
+      varenaMetFirst: true, thessaMetFirst: true, perethMetFirst: true,
+      varenaDecodedBrief: true, thessaTrustGained: true,
+      perethQuestStarted: true, lagerhausVisited: true,
+      chapter3StoryComplete: true, valdrisOperationRaided: true,
+      varenaRevealedValdrisIdent: true, alchemieGeselleReached: true,
+      kap3Complete: true, velmarkUnlocked: true,
+      valdrisSpurenGefunden: true, perethKontaktLethkar: true,
+      perethFoundInVelmark: true, informantenNetzFreigeschaltet: true,
+      hafenarbeitUnlocked: true, harroMet: true,
+      gildekontaktGeknuepft: true, bruderschaftkontaktGeknuepft: true,
+      archivkontaktGeknuepft: true,
+    });
+    const r = QUEST_STATE.REWARDED;
+    quests.varenaErstkontakt  = { state: r };
+    quests.alchemieInitiierung = { state: r };
+    quests.thessaGeheimnis    = { state: r, gespraeche: 3 };
+    quests.tier2Boss          = { state: r };
+    quests.wissensdurst10     = { state: r };
+    quests.valdrisSpuren      = { state: r, orte: 3 };
+    quests.lethkarMarkt       = { state: r };
+    quests.perethKontakt      = { state: r };
+    quests.alchemieGeselle    = { state: r };
+    quests.kapitel3Abschluss  = { state: r };
+    quests.gildeSchulden      = { state: r };
+    mut.points = 8; mut.totalEarned = 8;
+    einfluss.points = 50; einfluss.totalEarned = 50;
+    fraktionen.haendlergilde = 10; fraktionen.bruderschaft = 10; fraktionen.archiv = 10;
+    resources.gold = 10000;
+    storyState = 40100;
+    showToast('🛠 Vorlage geladen: Start Kapitel 4 (Velmark)', TOAST.EVENT);
+  }
+
+  if (preset === 'finale') {
+    devLoadPreset('kap4'); // Basis laden (rekursiv), dann überschreiben
+    Object.assign(gameFlags, {
+      gildekontaktGeknuepft: true, bruderschaftkontaktGeknuepft: true, archivkontaktGeknuepft: true,
+      ersteAllianzGeknuepft: true, valdrisBriefErhalten: true,
+      zweiAllianzGekuepft: true, valdrisAngebotGemacht: true, valdrisAngebotAbgelehnt: true,
+      allianzKomplett: true, velmarkStadtwacheUnlocked: true,
+      archivDurchsuchenUnlocked: true, unterweltVerhandlungUnlocked: true,
+      gorrsEidGeleistet: true, harroSchuldenBezahlt: true,
+      gorrMet: true, seleMet: true, yevaMetFirst: true,
+      valdrisDokumentGefunden: true,
+      // Valdris-Profil komplett aufgedeckt
+      valdrisProfilHerkunft: true, valdrisProfilNetzwerk: true,
+      valdrisProfilMotive: true, valdrisProfilKontakte: true,
+      valdrisProfilSchwaeche: true, valdrisProfilAufenthaltsort: true,
+    });
+    const r = QUEST_STATE.REWARDED;
+    quests.gildeInvestition   = { state: r };
+    quests.gildeKorruption    = { state: r };
+    quests.bruderschaftBeweis = { state: r };
+    quests.gorrsVergangenheit = { state: r };
+    quests.gorrsEid           = { state: r };
+    quests.archivRecherche    = { state: r };
+    quests.seleWissen         = { state: r };
+    quests.dasDokument        = { state: r };
+    quests.dieKonfrontation   = { state: QUEST_STATE.ACTIVE };
+    fraktionen.haendlergilde = 80; fraktionen.bruderschaft = 80; fraktionen.archiv = 80;
+    einfluss.points = 300; einfluss.totalEarned = 300;
+    resources.gold = 25000;
+    storyState = 40900;
+    showToast('🛠 Vorlage geladen: Vor Valdris-Finale', TOAST.EVENT);
+    return; // rekursiver Aufruf hat bereits render() via baseKap2 nicht aufgerufen
+  }
+
+  saveGame();
+  render();
 }
 
 function devShowChangelog() {
