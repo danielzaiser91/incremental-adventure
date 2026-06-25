@@ -155,13 +155,22 @@ function completeStadtwache() {
 }
 
 /* Schlafqualität als unbegrenzte Stufe (0 = Straße, 1 = Absteige, +höher
-   durch Skills und Haustier). Kein fixes Maximum — Incremental-Design:
-   weitere Schlafplätze, Skills und Haustier-Level können die Stufe immer
-   weiter erhöhen. Steigerungen haben bewusst abnehmenden Grenznutzen:
-   0→1 bringt mehr als 4→5. Formel: 1 − 0.5 × 0.6^tier */
+   durch Skills und Haustier). Steigerungen haben abnehmenden Grenznutzen.
+   Formel: 1 − 0.5 × 0.6^tier — konvergiert gegen 100%.
+   Damit Schlafplatz-Typ trotz hohem Skill-Bonus spürbar unterschiedlich bleibt,
+   hat jeder Ort ein maxRecovery-Cap. Skills verbessern innerhalb des Caps,
+   aber die Qualität des Orts bleibt immer der limitierende Faktor. */
 
-/** Tatsächliche Schlafqualitäts-Stufe (0 aufwärts, kein Cap) inkl.
-    Skill- und Haustier-Bonus. */
+const SLEEP_MAX_RECOVERY = {
+  street:          0.55,
+  inn:             0.72,
+  lethkar_pension: 0.82,
+  velmark_pension: 0.88,
+  velmark_suite:   0.94,
+  home:            1.00,
+};
+
+/** Tatsächliche Schlafqualitäts-Stufe (0 aufwärts) inkl. Skill- und Haustier-Bonus. */
 function getSleepQualityTier(option) {
   const bonus = (skills.sleepLikeARock ? 1 : 0)
     + (superSkills.sleepLikeARock_super ? 1 : 0)
@@ -176,9 +185,12 @@ function sleepQualityToFactor(tier) {
   return 1 - 0.5 * Math.pow(0.6, tier);
 }
 
-/** Faktor (0–1) für die tatsächliche Müdigkeits-Erholung dieses Orts. */
+/** Faktor (0–1) für die tatsächliche Müdigkeits-Erholung dieses Orts.
+    Wird durch SLEEP_MAX_RECOVERY gedeckelt — Ort ist immer limitierender Faktor. */
 function getSleepQualityFactor(option) {
-  return sleepQualityToFactor(getSleepQualityTier(option));
+  const raw = sleepQualityToFactor(getSleepQualityTier(option));
+  const cap = SLEEP_MAX_RECOVERY[option.id] ?? 1.0;
+  return Math.min(raw, cap);
 }
 
 /* Auf der Straße ist anfangs die EINZIGE Option (siehe renderSchlafplatz)

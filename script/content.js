@@ -1520,15 +1520,15 @@ function renderLethkarSchlafplatz(el) {
   }
 
   const cards = LETHKAR_SLEEP_OPTIONS.map(opt => {
-    const canAfford = resources.gold >= opt.cost;
-    const qualityBonus = getPetSleepBonus();
-    const effectiveTier = opt.qualityTier + qualityBonus;
+    const canAfford    = resources.gold >= opt.cost;
+    const effectiveTier = getSleepQualityTier(opt);
+    const reliefPct    = Math.round(100 * getSleepQualityFactor(opt));
     return `
       <div class="action-card">
         <div class="action-card-icon">${opt.icon}</div>
         <div class="action-card-name">${opt.name}</div>
         <p class="action-card-desc">${opt.desc}</p>
-        <div class="action-card-effect">Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
+        <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
           onclick="sleepAt('lethkar_pension',${opt.cost},${opt.qualityTier})"
           ${canAfford ? '' : 'disabled'}>
@@ -1870,16 +1870,16 @@ function renderVelmarkSchlafplatz(el) {
     }
   ];
 
-  const qualityBonus = typeof getPetSleepBonus === 'function' ? getPetSleepBonus() : 0;
   const cards = VELMARK_SLEEP_OPTIONS.map(opt => {
     const canAfford     = resources.gold >= opt.cost;
-    const effectiveTier = opt.qualityTier + qualityBonus;
+    const effectiveTier = getSleepQualityTier(opt);
+    const reliefPct     = Math.round(100 * getSleepQualityFactor(opt));
     return `
       <div class="action-card">
         <div class="action-card-icon">${opt.icon}</div>
         <div class="action-card-name">${opt.name}</div>
         <p class="action-card-desc">${opt.desc}</p>
-        <div class="action-card-effect">Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
+        <div class="action-card-effect">😴 Müdigkeit −${reliefPct}% · Schlafqualität ${effectiveTier} · Kosten: ${opt.cost} Gold</div>
         <button class="action-btn ${canAfford ? '' : 'btn-disabled'}"
           onclick="sleepAt('${opt.id}',${opt.cost},${opt.qualityTier})"
           ${canAfford ? '' : 'disabled'}>

@@ -1,10 +1,11 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.21.2-alpha
+**Aktuelle Version:** v0.21.3-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
+- Schlafqualität: Straße/Absteige/Bett erholten bei hohem Skill-Bonus alle gleich viel — eigene Caps pro Schlafplatz (Straße max 55%, Absteige max 72%, Bett max 100%)
 - Schlafplatz: "Im eigenen Bett" erschien doppelt wenn Zuhause vorhanden
 - Musik: startete nach dem Seitenaufruf nicht (Browser-Autoplay-Sperre)
 - brennenderMut: Turn-in möglich + Nacht-Schwelle 5→3
