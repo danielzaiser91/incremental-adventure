@@ -243,22 +243,22 @@ function renderGeschichte(el) {
     icon  = '🌆';
     label = 'Velmark — Ende';
     title = 'Der Weg hat ein Ende';
-    text  = 'Das Netz ist zerschnitten. Valdris ist gestellt. Was bleibt, ist der Moment danach.';
+    text  = 'Das Netz ist zerschnitten, Valdris gestellt. Geblieben ist die Stille danach — und ich, ein anderer als der, der einst aufbrach.';
     extraHtml = `<button class="action-btn action-btn-sm" onclick="showContent('${CONTENT.CHRONIK}')" style="margin-top:6px">📜 Chronik</button>`;
   } else if (gameFlags.allianzKomplett) {
     label = 'Velmark — Alle Fraktionen';
     title = 'Alle Fraktionen vereint';
-    text  = 'Drei Fraktionen hinter mir. Valdris ist eingekreist. Es ist Zeit für das letzte Gespräch.';
+    text  = 'Drei Fraktionen stehen hinter mir. Valdris ist eingekreist. Es ist Zeit für das letzte Gespräch.';
   } else if (gameFlags.velmarkUnlocked) {
     icon  = '🌆';
     label = 'Velmark';
     title = 'Velmarks Netz';
-    text  = 'Drei Fraktionen, ein Netzwerk aus Schulden — und irgendwo: Valdris. Ich fange an.';
+    text  = 'Drei Fraktionen, ein Geflecht aus Schulden — und irgendwo darin Valdris. Ich beginne, Faden um Faden.';
   } else if (gameFlags.kap3Complete) {
     icon  = '🗺';
     label = 'Lethkar liegt hinter mir';
     title = 'Lethkar liegt hinter mir';
-    text  = 'Valdris zieht sich zurück — nach Osten. Der nächste Schritt wartet auf der Weltkarte.';
+    text  = 'Valdris zieht sich nach Osten zurück. Der nächste Schritt wartet auf der Weltkarte.';
   } else if (gameFlags.lethkarUnlocked) {
     icon  = '🏙';
     label = 'Lethkar';
@@ -268,25 +268,25 @@ function renderGeschichte(el) {
       text  = 'Alles, was hier zu tun war, ist getan. Der Weg weist nach Osten.';
     } else if (gameFlags.valdrisOperationRaided) {
       title = 'Das Lager ist durchsucht';
-      text  = 'Valdris ist nicht mehr hier. Aber die Spuren zeigen, wohin er sich zurückgezogen hat.';
+      text  = 'Valdris ist fort. Doch die Spuren verraten, wohin er sich zurückgezogen hat.';
     } else if (gameFlags.varenaRevealedValdrisIdent) {
       title = 'Varena hat gesprochen';
-      text  = 'Ein Name. Eine Geschichte dahinter. Das Netz ist größer als ich dachte — und Valdris steckt mittendrin.';
+      text  = 'Ein Name, und dahinter eine ganze Geschichte. Das Netz ist größer, als ich ahnte — und Valdris steckt mittendrin.';
     } else if (gameFlags.alchemieGeselleReached) {
       title = 'Geselle';
-      text  = 'Das Feuer kennt meine Hände jetzt. Varena hat bemerkt, was ich kann.';
+      text  = 'Das Feuer kennt jetzt meine Hände. Varena hat bemerkt, was in mir steckt.';
     } else if (alchemie && alchemie.unlocked) {
       title = 'Die Alchemie ruft';
-      text  = 'Die Werkstatt wartet. Jedes Level bringt mich Varena näher — und der Wahrheit.';
+      text  = 'Die Werkstatt wartet. Jede Stufe bringt mich Varena näher — und der Wahrheit.';
     } else {
       title = 'Lethkar';
-      text  = 'Kälter als Treutheim. Mehr Schatten als Licht. Aber auch mehr Wissen — und Varena, die weiß, was Miras Brief wirklich bedeutet.';
+      text  = 'Kälter als Treutheim, mehr Schatten als Licht. Aber auch mehr Wissen — und Varena, die weiß, was Miras Brief wirklich bedeutet.';
     }
   } else {
     // Kap-2-Ende, noch kein Lethkar
     label = 'Der Weg nach Norden';
     title = 'Der Weg nach Norden';
-    text  = 'Mut ist da. Lethkar wartet — die Adresse aus dem Brief führt dorthin.';
+    text  = 'Der Mut ist da. Lethkar wartet — die Adresse aus dem Brief weist mir den Weg.';
   }
 
   el.innerHTML = `

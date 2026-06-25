@@ -1490,7 +1490,7 @@ const NPCS_LETHKAR = [
   {
     id: 'varena',
     name: 'Varena', icon: '⚗',
-    tagline: 'Alchemistin. Spricht wenig — und wenn, dann präzise.',
+    tagline: 'Alchemistin. Spart sich jedes Wort, das nicht stimmt — und meint jedes, das fällt.',
     location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.varenaMetFirst) return 'firstMeet';
@@ -1507,8 +1507,8 @@ const NPCS_LETHKAR = [
     nodes: {
       firstMeet: {
         text: [
-          '"Du siehst aus wie jemand, der aus Treutheim kommt." Keine Frage. Eine Feststellung.',
-          '"Ich bin Varena. Ich lehre Alchemie — für die, die es ernst nehmen. Was willst du hier in Lethkar?"'
+          'Sie mustert mich, wie man eine Probe mustert. "Treutheim. Das sieht man dir an." Keine Frage, eine Diagnose.',
+          '"Varena. Ich lehre Alchemie — denen, die sie ernst nehmen, und nur denen. Was führt dich nach Lethkar?"'
         ],
         options: [
           {
@@ -1517,14 +1517,14 @@ const NPCS_LETHKAR = [
             action: () => { gameFlags.varenaMetFirst = true; }
           },
           {
-            label: '"Ich bin einfach durchgereist."',
+            label: '"Nur auf der Durchreise."',
             next: 'idle',
             action: () => { gameFlags.varenaMetFirst = true; }
           }
         ]
       },
       briefHint: {
-        text: ['"Einen verschlüsselten Brief?" Sie sieht mich an. "Zeig ihn mir. Wenn es ein Treutheimer Chiffre ist, kenne ich ihn."'],
+        text: ['"Verschlüsselt?" Etwas in ihrem Blick schärft sich. "Zeig her. Wenn es eine Treutheimer Chiffre ist, lese ich sie wie gedruckt."'],
         options: [
           {
             label: 'Den Brief zeigen.',
@@ -1532,14 +1532,14 @@ const NPCS_LETHKAR = [
             locked: () => !(questItems.miras_brief > 0),
             reason: 'Ich habe den Brief nicht dabei.'
           },
-          { label: 'Später vielleicht.', next: null }
+          { label: 'Vielleicht später.', next: null }
         ]
       },
       checkBrief: {
         text: [
-          'Varena überfliegt den Brief. Ihre Augen wandern ruhig über die Zeilen.',
-          '"Ja. Das ist ein alter Lethkarer Buchstabenverschieber — die Söldner aus dem Norden haben ihn genutzt." Sie faltet ihn zusammen.',
-          '"Valdris. Der Name. Ich kenne das Haus — nördlich des Markts. Geh dorthin nicht allein."'
+          'Ihre Augen gleiten über die Zeilen, ruhig, Wort für Wort, ohne Hast.',
+          '"Ein alter Lethkarer Buchstabenverschieber. Die Nordsöldner haben ihn benutzt." Sie faltet das Blatt sorgfältig zusammen.',
+          'Erst dann sieht sie auf. "Valdris. Das Haus nördlich des Markts kenne ich. Geh nicht allein dorthin."'
         ],
         options: [{
           label: '"Was weißt du über Valdris?"',
@@ -1555,26 +1555,26 @@ const NPCS_LETHKAR = [
       },
       valdrisInfo: {
         text: [
-          '"Valdris ist kein Name, den man laut ausspricht. Händler, Söldner, Informanten — er hat überall Augen."',
-          '"Wenn deine Freundin diesen Namen aufgeschrieben hat, dann weiß sie mehr als sie zeigt. Sei vorsichtig."'
+          '"Valdris ist kein Name, den man laut sagt. Händler, Söldner, Informanten — überall hat er Augen, und keines davon gehört ihm aus Freundschaft."',
+          '"Wenn deine Freundin diesen Namen zu Papier gebracht hat, dann weiß sie mehr, als sie dir gezeigt hat. Trag das mit Bedacht."'
         ],
         options: [
           {
             label: '"Kannst du mir Alchemie beibringen?"',
             next: 'teachAlchemie'
           },
-          { label: 'Danke. Ich denke nach.', next: null }
+          { label: 'Danke. Ich denke darüber nach.', next: null }
         ]
       },
       offerDecode: {
-        text: ['"Den Brief noch dabei?" Sie nickt. "Bring ihn her."'],
+        text: ['Ihr Blick fällt auf meine Tasche. "Der Brief — noch dabei? Dann her damit."'],
         options: [{ label: 'Den Brief zeigen.', next: 'checkBrief' }]
       },
       teachAlchemie: {
         text: [
-          '"Du willst lernen." Keine Frage, wieder. "Gut. Dann fangen wir mit dem Einfachsten an."',
-          '"Feuer, Wasser, Erde, Luft — und Äther, das Fünfte. Du wirst Jahre brauchen. Vielleicht dein Leben. Aber du wirst etwas verstehen, das wenige sehen."',
-          '"Das Laboratorium neben dem Markt. Morgen früh. Bring nichts mit außer dir selbst."'
+          '"Du willst lernen." Wieder keine Frage. "Gut. Dann beim Einfachsten anfangen."',
+          '"Feuer, Wasser, Erde, Luft — und Äther als das Fünfte. Jahre wird dich das kosten, vielleicht ein ganzes Leben. Dafür siehst du am Ende, was den meisten verborgen bleibt."',
+          '"Das Laboratorium neben dem Markt. Morgen früh. Bring nichts mit als dich selbst."'
         ],
         options: [{
           label: '"Ich bin dabei."',
@@ -1590,9 +1590,9 @@ const NPCS_LETHKAR = [
       },
       varenaQuestOffer: {
         text: [
-          'Varena wischt die Hände ab. "Du lernst schnell. Ich habe eine Aufgabe für dich, wenn du Interesse hast."',
-          '"Im Wald nordwestlich wächst ein seltenes Wildkraut. Ich brauche fünf davon für meine Forschung. Bring sie mir."',
-          '"Als Gegenleistung zeige ich dir, wie man etwas Wertvolles daraus macht."'
+          'Sie wischt sich die Hände an einem Tuch ab, ohne aufzublicken. "Du lernst schnell. Falls du Interesse hast — ich hätte Arbeit für dich."',
+          '"Nordwestlich im Wald wächst ein seltenes Wildkraut. Fünf Stück brauche ich für meine Forschung. Frisch."',
+          '"Bring sie mir, und ich zeige dir, wie man aus Unkraut etwas Wertvolles macht."'
         ],
         options: [{
           label: '"Ich bringe sie dir."',
@@ -1605,9 +1605,9 @@ const NPCS_LETHKAR = [
       },
       varenaErstkontaktTurnIn: {
         text: [
-          'Varena sieht die Kräuter. Nickt zufrieden.',
-          '"Gut. Diese hier sind frisch — du weißt, wie man sucht." Sie beginnt sofort mit der Verarbeitung.',
-          '"Ich schulde dir etwas. Was möchtest du wissen?"'
+          'Sie nimmt die Kräuter, hält eines gegen das Licht, nickt.',
+          '"Frisch. Sauber abgeschnitten. Du weißt, wo man sucht." Schon ist sie bei der Verarbeitung.',
+          'Ohne aufzusehen: "Ich stehe in deiner Schuld. Frag."'
         ],
         options: [{
           label: '"Lehr mich mehr über Alchemie."',
@@ -1623,15 +1623,15 @@ const NPCS_LETHKAR = [
         }]
       },
       varenaTeachBonus: {
-        text: ['"Guter Instinkt." Sie zeigt mir einen Griff am Brennkolben. "Hier. Das spart Zeit."'],
+        text: ['"Guter Instinkt." Sie führt meine Hand an den Brennkolben, zeigt einen kleinen Griff. "So. Das spart dir die halbe Zeit."'],
         options: [{ label: 'Danke.', next: null }]
       },
       alchemieGeselleTurnIn: {
         text: [
-          'Varena schaut auf meine Arbeit. Lange. Dann: "Du hast das wirklich verstanden."',
-          '"Das ist mehr als die meisten Lehrlinge in einem Monat schaffen." Sie lächelt — selten für sie.',
-          '"Jetzt bist du kein Schüler mehr. Ein Geselle. Nicht von mir ernannt — das hast du dir erarbeitet."',
-          '"Nimm das hier. Selten. Nützlich." Sie reicht mir einen kleinen Beutel Essenzen.'
+          'Lange betrachtet sie meine Arbeit, ohne ein Wort. Dann: "Du hast es wirklich begriffen."',
+          '"Mehr, als die meisten Lehrlinge in einem Monat schaffen." Und sie lächelt — bei ihr ein seltenes Ereignis.',
+          '"Kein Schüler mehr. Ein Geselle. Den Titel hat dir nicht ich verliehen — den hast du dir verdient."',
+          'Ein kleiner Beutel wechselt den Tisch. "Selten. Nützlich. Heb sie dir auf."'
         ],
         options: [{
           label: 'Danke, Varena.',
@@ -1645,13 +1645,13 @@ const NPCS_LETHKAR = [
       },
       valdrisSpurenDeuten: {
         text: [
-          'Varena hört zu, während ich ihr erzähle, was ich gefunden habe.',
-          '"Drei Orte, alle mit Valdris\' Handschrift." Sie kreuzt die Arme. "Das ist systematisch — kein Zufall."',
-          '"Er baut ein Netzwerk auf. Wahrscheinlich Velmark als Basis. Du musst dahin." Sie zieht eine Karte hervor.',
-          '"Aber nicht blind. Geh zu Thessa in der Taverne. Sie weiß Dinge, die ich nicht weiß."'
+          'Sie hört zu, ohne mich zu unterbrechen, während ich von dem berichte, was ich gefunden habe.',
+          '"Drei Orte, dieselbe Handschrift." Die Arme verschränkt. "Das ist Methode, kein Zufall."',
+          'Eine Karte breitet sich auf dem Tisch aus. "Er knüpft ein Netz. Velmark als Knoten, vermutlich. Dorthin führt dein Weg."',
+          '"Aber nicht blind. Sprich mit Thessa, in der Taverne. Sie weiß, was ich nicht weiß."'
         ],
         options: [{
-          label: '"Ich tue das."',
+          label: '"Das werde ich."',
           next: null,
           action: () => {
             if (quests.valdrisSpuren?.state === QUEST_STATE.ORT3 || quests.valdrisSpuren?.state === 'ort3') {
@@ -1664,10 +1664,10 @@ const NPCS_LETHKAR = [
       },
       abschiedVarena: {
         text: [
-          'Varena räumt still ihre Becher weg, als ich reinkomme.',
-          '"Du gehst bald, oder?" Keine Frage — eine Feststellung.',
-          '"Velmark ist die nächste Stufe. Für dich und für mich." Sie pause. "Ich schicke dir Informationen, wenn ich sie habe."',
-          '"Du hast hier gut gelernt. Vergiss nicht: Alchemie ist Geduld — nicht Schnelligkeit."'
+          'Als ich eintrete, räumt sie schweigend ihre Becher fort, einen nach dem anderen.',
+          '"Du gehst bald." Keine Frage — sie liest es an mir ab wie an einer Probe.',
+          '"Velmark ist die nächste Stufe. Für dich, und für mich." Eine Pause. "Ich schicke dir, was ich erfahre."',
+          'Erst an der Tür sieht sie auf. "Du hast gut gelernt. Vergiss das eine nicht: Alchemie ist Geduld, nie Eile."'
         ],
         options: [{
           label: '"Ich vergesse es nicht. Danke."',
@@ -1681,14 +1681,14 @@ const NPCS_LETHKAR = [
         }]
       },
       alchemieIdle: {
-        text: ['"Wie läuft es mit dem Studium?" Sie schaut kurz hoch von ihrem Becher.'],
+        text: ['Sie blickt nur kurz von ihrem Becher auf. "Und das Studium?"'],
         options: [
-          { label: '"Langsam. Aber ich lerne."', next: null },
-          { label: '"Fragen zur Alchemie habe ich keine."', next: null }
+          { label: '"Langsam. Aber stetig."', next: null },
+          { label: '"Heute keine Fragen."', next: null }
         ]
       },
       idle: {
-        text: ['"Wenn du Fragen zur Alchemie hast — ich bin abends hier."'],
+        text: ['"Solltest du je Fragen zur Alchemie haben — abends findest du mich hier."'],
         options: [{ label: 'Verstanden.', next: null }]
       }
     }
@@ -1697,7 +1697,7 @@ const NPCS_LETHKAR = [
   {
     id: 'thessa',
     name: 'Thessa', icon: '📜',
-    tagline: 'Archivarin. Kennt Lethkar besser als sich selbst.',
+    tagline: 'Archivarin. Kennt jede Gasse Lethkars — und jeden Namen, den man besser nicht laut sagt.',
     location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.thessaMetFirst) return 'firstMeet';
@@ -1710,18 +1710,18 @@ const NPCS_LETHKAR = [
     nodes: {
       firstMeet: {
         text: [
-          'Die Frau am Tisch blättert in einem dicken Buch, ohne aufzusehen.',
-          '"Du bist neu hier. Erkennbar." Sie schaut jetzt hoch. Braune Augen, prüfend. "Thessa. Archivarin."',
-          '"Was du brauchst: nicht fragen, bevor du weißt, wen du fragst."'
+          'Die Frau am Tisch blättert in einem dicken Band, ohne den Blick zu heben, als gäbe es im Raum nichts Wichtigeres als die nächste Seite.',
+          'Erst als ich stehenbleibe, sehen mich zwei braune Augen an, prüfend, von der ruhigen Art, die alles aufnimmt und nichts preisgibt. "Neu. Das trägst du vor dir her wie eine offene Tasche. Thessa, Archivarin."',
+          '"Ein Rat, der nichts kostet: Frag niemanden etwas, bevor du weißt, wen du da vor dir hast."'
         ],
         options: [
           {
-            label: '"Ich suche Informationen über jemanden namens Valdris."',
+            label: '"Ich suche, was es über einen Mann namens Valdris zu wissen gibt."',
             next: 'valdrisCaution',
             action: () => { gameFlags.thessaMetFirst = true; }
           },
           {
-            label: '"Nur neugierig. Guter Rat."',
+            label: '"Nur neugierig. Aber der Rat ist gut."',
             next: null,
             action: () => { gameFlags.thessaMetFirst = true; }
           }
@@ -1729,17 +1729,17 @@ const NPCS_LETHKAR = [
       },
       valdrisCaution: {
         text: [
-          'Thessa hält inne. Klappt das Buch zu.',
-          '"Das ist kein Name für eine erste Unterhaltung." Sie spricht leiser. "Verdien dir das Vertrauen. Dann reden wir weiter."'
+          'Das Buch klappt zu, und für einen Moment ist es, als hätte ich den Raum kälter gemacht.',
+          '"Das ist kein Name, den man bei einer ersten Begegnung in die Luft wirft", sagt sie, leiser jetzt. "Verdien dir, dass ich dir traue. Dann reden wir über mehr als das Wetter."'
         ],
         options: [{ label: 'Verstanden.', next: null }]
       },
       cautious: {
-        text: ['"Du wartest auf Vertrauen? Das ist klug." Sie deutet auf den freien Stuhl. "Erzähl mir etwas, das ich noch nicht weiß."'],
+        text: ['"Du wartest, bis ich dir traue. Klug — die meisten haben dafür keine Geduld." Eine Geste zum leeren Stuhl. "Setz dich. Und erzähl mir etwas, das in keinem meiner Bücher steht."'],
         options: [
           {
             label: gameFlags.varenaDecodedBrief
-              ? '"Valdris\' Adresse ist nördlich des Markts — das hat mir eine Alchemistin bestätigt."'
+              ? '"Valdris sitzt nördlich des Markts — eine Alchemistin hat es mir bestätigt."'
               : '"Ich arbeite daran."',
             next: gameFlags.varenaDecodedBrief ? 'trustEarned' : null,
             action: () => {
@@ -1753,8 +1753,8 @@ const NPCS_LETHKAR = [
       },
       trustEarned: {
         text: [
-          'Thessa nickt langsam. "Das stimmt. Und Varena redet selten." Sie schiebt ein Buch über den Tisch.',
-          '"Lethkar hat Augen — und Ohren. Die meisten Bewohner wissen, wer Valdris ist. Sie reden nur nicht. Du weißt jetzt genug, um die richtigen Fragen zu stellen."'
+          'Langsam nickt sie, und ein Buch gleitet über den Tisch in meine Richtung. "Es stimmt. Und Varena verschwendet ihre Worte nicht — wenn sie etwas bestätigt, dann stimmt es."',
+          '"Lethkar hat Augen und Ohren, und die meisten hier wissen genau, wer Valdris ist. Sie schweigen nur. Du weißt jetzt genug, um die richtigen Leute das Richtige zu fragen."'
         ],
         options: [{
           label: 'Danke.',
@@ -1767,9 +1767,9 @@ const NPCS_LETHKAR = [
       },
       talk2: {
         text: [
-          'Thessa hebt kurz den Blick. "Du bist wieder hier." Eine Pause. "Gut."',
-          '"Ich habe Valdris\' Namen in den letzten sechs Monaten dreimal gehört — von verschiedenen Leuten, alle in Eile. Das bedeutet etwas."',
-          '"Komm morgen nochmals. Ich habe mehr."'
+          'Ein kurzer Blick über den Buchrand. "Wieder da." Eine Pause, in der ich nicht weiß, ob das ein Vorwurf ist. "Gut."',
+          '"Diesen Namen — Valdris — habe ich in einem halben Jahr dreimal gehört, von drei verschiedenen Leuten, und jeder davon hatte es eilig, ihn wieder zu vergessen. So etwas bedeutet immer etwas."',
+          '"Komm morgen wieder. Bis dahin weiß ich mehr."'
         ],
         options: [{
           label: '"Bis morgen."',
@@ -1782,12 +1782,12 @@ const NPCS_LETHKAR = [
       },
       talk3: {
         text: [
-          'Thessa legt das Buch beiseite. Zum ersten Mal ohne Vorbehalt.',
-          '"Valdris hat Velmark unterwandert — drei Fraktionen, alle zu einem Grad unter seiner Kontrolle. Er hat Yeva in der Händlergilde eingeschüchtert, aber sie kämpft noch."',
-          '"Finde sie. Sag, dass Thessa dich geschickt hat. Und — pass auf dich auf."'
+          'Diesmal legt sie das Buch ganz beiseite und sieht mich an, zum ersten Mal ohne den prüfenden Vorbehalt von früher.',
+          '"Valdris hat Velmark durchsetzt — drei Fraktionen, jede auf ihre Art an ihn gebunden. Yeva, die Gildenmeisterin, hat er eingeschüchtert; aber sie ist nicht von denen, die sich brechen lassen, noch nicht."',
+          '"Such sie auf. Sag, Thessa schickt dich. Und — was selten zu meinen Worten gehört: gib auf dich acht."'
         ],
         options: [{
-          label: '"Ich mache das."',
+          label: '"Das werde ich."',
           next: null,
           action: () => {
             quests.thessaGeheimnis.state = QUEST_STATE.REWARDED;
@@ -1797,26 +1797,26 @@ const NPCS_LETHKAR = [
         }]
       },
       trusted: {
-        text: ['"Was willst du wissen?" Sie klingt immer noch vorsichtig — aber nicht mehr abweisend.'],
+        text: ['"Was möchtest du wissen?" Vorsichtig klingt sie noch — aber das Abweisende ist aus ihrer Stimme verschwunden.'],
         options: [
           { label: '"Wer schützt Valdris?"', next: 'valdrisProtection' },
-          { label: '"Nichts gerade. Danke."', next: null }
+          { label: '"Im Moment nichts. Danke."', next: null }
         ]
       },
       valdrisProtection: {
         text: [
-          '"Keiner schützt ihn direkt. Das wäre zu sichtbar." Thessa lehnt sich zurück.',
-          '"Er kauft Loyalität. Söldner, Händler, manchmal Stadtrat-Mitglieder. Du bräuchtest Beweise — und einen Ort, wo du sie sicher aufbewahren kannst."',
-          '"Komm wieder, wenn du etwas in der Hand hast."'
+          'Sie lehnt sich zurück, die Finger ineinandergelegt. "Niemand schützt ihn offen — das wäre zu auffällig, und Auffälligkeit ist das Einzige, was er sich nicht leisten kann."',
+          '"Er kauft Treue. Söldner, Händler, hier und da einen aus dem Stadtrat. Gegen so jemanden brauchst du Beweise — und einen Ort, an dem die Beweise nicht über Nacht verschwinden."',
+          '"Komm wieder, sobald du etwas in der Hand hältst."'
         ],
         options: [{ label: 'Ich arbeite daran.', next: null }]
       },
       abschiedThessa: {
         text: [
-          '"Du gehst." Keine Frage. Thessa klappt ihr Buch zu.',
-          '"Velmark ist anders als Lethkar. Größer, lauter — und die Menschen dort haben gelernt, nichts zu zeigen."',
-          '"Du hast hier etwas Wichtiges gelernt: Fragen sind Vertrauen. Und du hast meins verdient."',
-          '"Viel Erfolg. Ich lese von dir — in irgendeinem Bericht, irgendwann."'
+          '"Du gehst." Das Buch fällt zu, sanft diesmal, fast wie ein Punkt am Satzende.',
+          '"Velmark ist nicht Lethkar. Größer, lauter — und die Menschen dort haben es zur Kunst gebracht, nichts von dem zu zeigen, was sie wirklich denken."',
+          '"Das Wichtigste hast du hier gelernt: Eine Frage ist ein Stück Vertrauen, das man verschenkt. Du hast meins bekommen, und das gebe ich nicht oft."',
+          '"Viel Erfolg. Ich werde von dir lesen — irgendwann, in irgendeinem Bericht, der über meinen Tisch wandert."'
         ],
         options: [{
           label: '"Danke, Thessa. Wirklich."',
@@ -1836,7 +1836,7 @@ const NPCS_LETHKAR = [
   {
     id: 'pereth',
     name: 'Pereth', icon: '🗡',
-    tagline: 'Söldner. Tischbein-Kippend. Zu entspannt für diese Stadt.',
+    tagline: 'Söldner. Kippt mit dem Stuhl, lächelt wie ein alter Bekannter — und ist dir immer einen Zug voraus.',
     location: CONTENT.TAVERNE,
     start: () => {
       if (!gameFlags.perethMetFirst) return 'firstMeet';
@@ -1852,9 +1852,9 @@ const NPCS_LETHKAR = [
     nodes: {
       firstMeet: {
         text: [
-          'Der Mann am Tischende hat sein Bein auf dem Stuhl neben ihm. Als ob er weiß, dass ich komme.',
-          '"Pereth." Er hebt den Becher. "Söldner. Derzeit ohne Auftrag, was gut ist." Eine kurze Pause.',
-          '"Du siehst aus wie jemand, der Ärger sucht. Das find ich gut. Setz dich."'
+          'Der Mann am Tischende hat das Bein auf dem Nachbarstuhl liegen — auf genau dem Stuhl, auf den ich mich setzen würde. Als hätte er mit mir gerechnet.',
+          '"Pereth." Der Becher hebt sich zu einem halben Gruß. "Söldner. Im Moment ohne Auftrag, was dir gleich noch gefallen wird."',
+          'Ein Blick, der mich in einem Wimpernschlag taxiert. "Du siehst aus wie jemand, der Ärger sucht. Mag ich. Setz dich."'
         ],
         options: [
           {
@@ -1866,9 +1866,9 @@ const NPCS_LETHKAR = [
       },
       offerHelp: {
         text: [
-          '"Es gibt was, das ich brauche — jemand ohne Geschichte in dieser Stadt." Er senkt die Stimme.',
-          '"Ein Lagerhaus am Südtor. Zwei Wachen, normaler Zeitplan. Ich brauche jemanden, der reinschaut und sagt, was da drin ist."',
-          '"Kein Stehlen, kein Kämpfen. Nur anschauen. Dafür: 300 Gold und ein paar nützliche Informationen."'
+          '"Mir fehlt jemand für eine Kleinigkeit. Jemand, den hier noch keiner kennt." Die Stimme sinkt eine Stufe tiefer, beiläufig, als spräche er übers Bier.',
+          '"Ein Lagerhaus am Südtor. Zwei Wachen, ein Plan, so regelmäßig wie ein Kirchenglockenschlag. Jemand soll hineinschauen und mir sagen, was drinliegt."',
+          '"Nichts stehlen, niemanden umbringen. Nur hinschauen. Dafür: dreihundert Gold und ein paar Worte, die dir noch nützlich werden."'
         ],
         options: [
           {
@@ -1883,35 +1883,35 @@ const NPCS_LETHKAR = [
         ]
       },
       questUpdate: {
-        text: ['"Das Lagerhaus? Noch nicht durch damit?" Er schaut amüsiert. "Kein Druck. Aber das Angebot gilt nur noch eine Weile."'],
+        text: ['"Das Lagerhaus, immer noch nicht erledigt?" Ein amüsiertes Schmunzeln. "Kein Druck. Nur — Angebote wie meines verfallen, wenn man sie zu lange im Regal stehen lässt."'],
         options: [
           {
-            label: '"Ich war im Lagerhaus. Hier ist, was ich gefunden habe."',
+            label: '"Ich war drin. Hör dir an, was ich gefunden habe."',
             next: null,
             action: () => {
               gameFlags.lagerhausVisited = true;
               render();
               showMonologue('Das Lagerhaus am Südtor', [
-                'Das Schloss am Südtor ist neu. Die Wache dreht Runden wie nach Uhr — zu gleichmäßig für echte Wachsamkeit.',
-                'Ich gehe von hinten rein. Ein Fenster, das nie richtig zugezogen wird. Lagerhäuser, die niemand offiziell besitzt, werden nie fertig gebaut.',
-                'Drinnen: Kisten. Tücher. Staub. Und ganz hinten — ein Tisch mit Papieren, die sorgfältiger aussehen als alles andere hier.',
-                'Namen, die ich aus Thessas Büchern kenne. Routen. Zahlen. Und überall dasselbe Siegel — drei Linien, ein Kreis.',
-                'Ich nehme nichts. Ich merke mir alles. Das hier gehört jemandem, dem man keine Spuren hinterlässt.'
+                'Das Schloss am Südtor glänzt noch, so neu ist es. Die Wache zieht ihre Runden nach der Uhr — zu pünktlich, um wirklich wachsam zu sein.',
+                'Ich nehme den Rückweg. Irgendwo ist immer ein Fenster, das nie ganz schließt: Lagerhäuser, die niemand offiziell besitzt, werden auch nie ganz fertig gebaut.',
+                'Drinnen nur Kisten, Tücher, Staub. Doch ganz hinten ein Tisch, und auf ihm Papiere, die mit mehr Sorgfalt gestapelt sind als alles andere in diesem Raum.',
+                'Namen, die ich aus Thessas Büchern wiedererkenne. Routen. Zahlen. Und immer wieder dasselbe Siegel — drei Linien, ein Kreis darum.',
+                'Ich nehme nichts mit. Nur das Bild im Kopf. Das hier gehört jemandem, dem man besser keine Lücke im Staub hinterlässt.'
               ], () => {
                 const npc = NPCS_LETHKAR.find(n => n.id === 'pereth');
                 openNpcDialogWithDef(npc, 'reportBack');
               });
             }
           },
-          { label: '"Noch nicht bereit."', next: null },
+          { label: '"Noch nicht so weit."', next: null },
           { label: '"Was weißt du über Valdris?"', next: 'valdrisPereth' }
         ]
       },
       reportBack: {
         text: [
-          '"Du warst wirklich drin." Er schaut mich lange an. Dann nickt er einmal, langsam. "Und du hast nichts mitgenommen. Gut."',
-          '"Das Siegel — kenn ich. Valdris benutzt das für Transporte, die offiziell nicht existieren. Überall. Seit Jahren."',
-          '"Du hast mehr rausgefunden als ich in drei Monaten zusammen. Hier." Er schiebt drei Münzbeutel über den Tisch. "300 Gold. Und pass auf, wem du das erzählst."'
+          '"Du warst wirklich drin." Lange sieht er mich an, dann nickt er, einmal, langsam. "Und hast nichts mitgehen lassen. Noch besser."',
+          '"Das Siegel kenne ich. Valdris zeichnet damit, was offiziell gar nicht reist. Überall, seit Jahren — man muss nur wissen, wonach man sucht."',
+          'Drei Beutel wandern über den Tisch, einer nach dem anderen. "Mehr, als ich in drei Monaten zusammenbekommen hab. Dreihundert Gold. Und pass gut auf, wem du das weitererzählst."'
         ],
         options: [{
           label: '"Danke. Ich pass auf mich auf."',
@@ -1928,9 +1928,9 @@ const NPCS_LETHKAR = [
       },
       perethKontaktOffer: {
         text: [
-          'Pereth nickt, als er mich kommen sieht. "Du bist hartnäckig. Gut."',
-          '"Ich war in Velmark. Ich weiß, wie es läuft. Wenn du ernst machst mit Valdris — dann ist Velmark der nächste Schritt."',
-          '"Ich gehe nächste Woche. Du kommst mit, oder du kommst nach."'
+          'Er nickt mir schon entgegen, ehe ich den Tisch erreiche. "Hartnäckig. Gefällt mir."',
+          '"Ich war in Velmark, ich kenne die Spielregeln dort. Wenn es dir mit Valdris ernst ist, führt der nächste Schritt genau dorthin."',
+          '"Nächste Woche bin ich weg. Du kommst mit — oder du kommst nach."'
         ],
         options: [{
           label: '"Ich komme nach. Velmark ist mein Ziel."',
@@ -1944,12 +1944,12 @@ const NPCS_LETHKAR = [
       },
       afterQuest: {
         text: [
-          '"Weißt du, was das Interessante an Valdris ist?" Er dreht seinen Becher.',
-          '"Er weiß, dass du hier bist. Wahrscheinlich schon seit du in Lethkar bist. Das ist jetzt der Stand der Dinge."',
-          '"Jetzt weißt du es auch."'
+          '"Weißt du, was das Pikante an Valdris ist?" Der Becher dreht sich langsam zwischen seinen Fingern.',
+          '"Er weiß längst, dass du da bist. Vermutlich, seit du den Fuß nach Lethkar gesetzt hast. Daran ändern wir jetzt nichts mehr."',
+          'Ein schiefes Lächeln. "Aber jetzt weißt du es eben auch."'
         ],
         options: [
-          { label: '"Ich hab\'s verstanden."', next: null },
+          { label: '"Verstanden."', next: null },
           {
             label: '"Pereth — kannst du mir von Velmark erzählen?"',
             next: 'perethVelmarkHint',
@@ -1959,9 +1959,9 @@ const NPCS_LETHKAR = [
       },
       perethVelmarkHint: {
         text: [
-          '"Velmark." Er pfeift kurz. "Küstenstadt, drei rivalisierende Fraktionen, ein Mann der alle kontrolliert."',
-          '"Valdris hat seine Basis dort aufgebaut — Händler, Söldner, ein Archiv. Alle arbeiten für ihn, die meisten ohne es zu wissen."',
-          '"Willst du dahin? Dann brauchst du mich." Er schaut mich direkt an. "Ich bin nächste Woche weg. Sag mir jetzt Bescheid."'
+          '"Velmark." Ein kurzer Pfiff durch die Zähne. "Küstenstadt. Drei Fraktionen, die einander an die Gurgel wollen, und ein Mann, der sie alle an der Leine hält."',
+          '"Genau dort hat Valdris sich eingerichtet — Händler, Söldner, ein Archiv. Sie arbeiten für ihn, fast alle, und die wenigsten ahnen es."',
+          'Sein Blick liegt jetzt voll auf mir. "Willst du dahin, brauchst du mich. Nächste Woche bin ich fort. Also: jetzt entscheiden."'
         ],
         options: [{
           label: '"Ich will mit."',
@@ -1975,14 +1975,14 @@ const NPCS_LETHKAR = [
       },
       valdrisPereth: {
         text: [
-          'Pereth setzt das Bein vom Stuhl. Zum ersten Mal ernst.',
-          '"Valdris." Er schaut sich kurz um. "Ich hab für ihn gearbeitet — einmal, vor Jahren. Der Typ zahlt gut und fragt schlecht."',
-          '"Was du wissen willst: er hat eine Basis nördlich des Markts. Aber er ist selten dort. Komm nicht ohne Plan hin."'
+          'Das Bein gleitet vom Stuhl. Das Lächeln ist weg — zum ersten Mal sehe ich ihn ernst.',
+          '"Valdris." Ein kurzer Blick über die Schulter. "Ich hab mal für ihn gearbeitet, einmal, vor Jahren. Der Mann zahlt gut und fragt nichts. Beides sollte einen warnen."',
+          '"Was du wissen willst: Seine Basis liegt nördlich des Markts. Nur ist er selten selbst dort. Geh nicht ohne Plan hin — bei ihm rächt sich jede Improvisation."'
         ],
         options: [{ label: 'Danke. Ich pass auf mich auf.', next: null }]
       },
       idle: {
-        text: ['"Alles gut? Brauchst du was?"'],
+        text: ['"Alles im Lot? Brauchst du was?"'],
         options: [
           { label: '"Alles gut. Danke."', next: null },
           { label: '"Was weißt du über Valdris?"', next: 'valdrisPereth' }
@@ -2000,7 +2000,7 @@ const NPCS_VELMARK = [
   {
     id: 'pereth_velmark',
     name: 'Pereth', icon: '🗡',
-    tagline: 'Derselbe Pereth. Andere Stadt. Noch entspannter.',
+    tagline: 'Derselbe Pereth, eine Stadt weiter — und noch immer entspannter, als ihm irgendwer abkaufen sollte.',
     location: CONTENT.VELMARK,
     start: () => {
       if ((fraktionen?.haendlergilde||0) > 60 && (fraktionen?.bruderschaft||0) > 60 && (fraktionen?.archiv||0) > 60) return 'alleFraktionenStark';
@@ -2011,12 +2011,12 @@ const NPCS_VELMARK = [
     nodes: {
       firstMeet: {
         text: [
-          '"Du?" Pereth hebt eine Augenbraue — das erste Mal, dass er wirklich überrascht wirkt.',
-          '"Velmark. Ich hätte gedacht, du steckst noch in Lethkar, irgendwo zwischen Büchern und Alchemie-Qualm."',
-          '"Sitz. Ich hab Informationen, die du brauchst — und ich brauche jemanden, dem ich vertraue."'
+          '"Du?" Eine Augenbraue klettert hoch — das erste Mal, dass ich Pereth wirklich überrascht erlebe.',
+          '"In Velmark. Ich hätte schwören können, du hängst noch in Lethkar fest, zwischen Büchern und Alchemiequalm."',
+          'Ein Stuhl wird mit dem Fuß herangeschoben. "Setz dich. Ich hab, was du brauchst — und ich brauche jemanden, dem ich den Rücken nicht ständig zudrehen muss."'
         ],
         options: [{
-          label: '"Was weißt du über Valdris in Velmark?"',
+          label: '"Was weißt du über Valdris hier in Velmark?"',
           next: 'valdrisVelmark',
           action: () => {
             gameFlags.perethFoundInVelmark = true;
@@ -2026,30 +2026,30 @@ const NPCS_VELMARK = [
       },
       valdrisVelmark: {
         text: [
-          '"Er hat drei Stützen hier: die Händlergilde hält sein Geld sauber, die Bruderschaft schützt seine Leute, das Stadtarchiv vergraben seine Spuren."',
-          '"Du brauchst alle drei auf deiner Seite, wenn du gegen ihn stehen willst. Einer reicht nicht. Zwei auch nicht."',
-          '"Ich kann dir Türen öffnen. Aber du musst selbst durchgehen."'
+          '"Drei Säulen trägt ihn hier: Die Händlergilde wäscht sein Geld, die Bruderschaft schützt seine Leute, das Stadtarchiv lässt seine Spuren verschwinden, bevor sie jemand findet."',
+          '"Gegen ihn brauchst du alle drei auf deiner Seite. Eine reicht nicht. Zwei auch nicht — bei ihm zählt erst die Mehrheit."',
+          '"Türen kann ich dir öffnen. Durchgehen musst du allein."'
         ],
         options: [
-          { label: '"Wie komme ich an die Gilde?"', next: 'gildeTipp' },
-          { label: '"Wie ist dein Informantennetz?"', next: 'netzwerkTipp' },
-          { label: '"Danke. Ich fang an."', next: null }
+          { label: '"Wie komme ich an die Gilde heran?"', next: 'gildeTipp' },
+          { label: '"Was hat es mit deinem Informantennetz auf sich?"', next: 'netzwerkTipp' },
+          { label: '"Danke. Ich fange an."', next: null }
         ]
       },
       gildeTipp: {
         text: [
-          '"Die Gilde? Gold. Schlicht und einfach. Die reden mit jedem, der genug davon mitbringt."',
-          '"Fünfhundert mindestens. Zeig ihnen, dass du kein Bettler bist, und die Tür öffnet sich."'
+          '"Die Gilde? Gold, nichts weiter. Die reden mit jedem, der genug davon auf den Tisch legt — Herkunft interessiert dort niemanden."',
+          '"Fünfhundert, das ist die Untergrenze. Zeig ihnen, dass du kein Bettler bist, und die Tür geht von selbst auf."'
         ],
         options: [{ label: 'Verstanden.', next: null }]
       },
       netzwerkTipp: {
         text: [
-          '"Das aufzubauen dauert. Aber jeder Kontakt bringt dich näher an Valdris ran."',
-          '"Informanten reden — wenn du ihnen genug Einfluss gibst. Und der Einfluss wächst, wenn du seine Leute in der Unterwelt aufmischst."'
+          '"Das braucht Zeit, so etwas wächst nicht über Nacht. Aber jeder Kontakt rückt dich ein Stück näher an Valdris heran."',
+          '"Informanten reden, wenn du ihnen Einfluss in die Hand gibst. Und dieser Einfluss wächst jedes Mal, wenn du seinen Leuten in der Unterwelt das Geschäft verdirbst."'
         ],
         options: [{
-          label: '"Ich verstehe. Danke."',
+          label: '"Verstanden. Danke."',
           next: null,
           action: () => {
             if (!gameFlags.informantenNetzFreigeschaltet) {
@@ -2063,40 +2063,40 @@ const NPCS_VELMARK = [
         }]
       },
       rufMehr50: {
-        text: ['Pereths Mundwinkel bewegen sich kaum. "Dein Ruf in dieser Stadt wächst. Die Leute reden über dich."'],
+        text: ['Kaum sichtbar heben sich seine Mundwinkel. "Dein Name macht die Runde in dieser Stadt. Über dich wird geredet — und das ist nicht wenig wert."'],
         options: [
-          { text: 'Was sagen sie?', label: 'Was sagen sie?', next: 'stadtGeruechte' },
-          { text: 'Gut.', label: 'Gut.', next: null }
+          { text: 'Was sagen sie?', label: '"Was sagt man?"', next: 'stadtGeruechte' },
+          { text: 'Gut.', label: '"Gut."', next: null }
         ]
       },
       stadtGeruechte: {
         text: [
-          '"Dass du methodisch vorgehst. Kein Söldner, kein Gaukler — sondern jemand mit einem Ziel. Das macht manche nervös."'
+          '"Dass du planvoll vorgehst. Kein Söldner, kein Gaukler — einer mit einem Ziel. Genau das macht ein paar Leute hier nervös."'
         ],
         options: [
-          { label: 'Auch Valdris?', next: 'valdrisNervoes' },
-          { label: 'Gut so.', next: null }
+          { label: '"Auch Valdris?"', next: 'valdrisNervoes' },
+          { label: '"Gut so."', next: null }
         ]
       },
       valdrisNervoes: {
         text: [
-          '"Valdris ist nie nervös. Aber er beobachtet dich. Ich habe seine Leute gesehen."'
+          '"Valdris wird nie nervös. Aber er hat ein Auge auf dir — seine Leute habe ich längst in deiner Nähe gesehen."'
         ],
-        options: [{ label: 'Dann muss ich schneller sein.', next: null }]
+        options: [{ label: '"Dann muss ich schneller sein als er."', next: null }]
       },
       alleFraktionenStark: {
         text: [
-          '"Drei Fraktionen — alle auf deiner Seite." Pereth lehnt sich zurück. "Ich hab sowas noch nicht gesehen."',
-          '"Valdris wird das wissen."'
+          '"Drei Fraktionen, und jede hinter dir." Er lehnt sich zurück, fast anerkennend. "So etwas hab ich noch nicht erlebt, ehrlich nicht."',
+          '"Und du kannst sicher sein: Valdris weiß es bereits."'
         ],
         options: [{ label: '"Dann ist es Zeit."', next: null }]
       },
       idle: {
-        text: ['"Alles im Plan? Brauchst du noch etwas?"'],
+        text: ['"Alles nach Plan? Fehlt dir was?"'],
         options: [
           { label: '"Alles gut. Danke."', next: null },
           { label: '"Was weißt du über die Fraktionen?"', next: 'gildeTipp' },
-          { label: '"Das Informantennetz?"', next: 'netzwerkTipp' }
+          { label: '"Und das Informantennetz?"', next: 'netzwerkTipp' }
         ]
       }
     }
@@ -2106,7 +2106,7 @@ const NPCS_VELMARK = [
   {
     id: 'harro',
     name: 'Harro', icon: '😓',
-    tagline: 'Schuldner. Weiß mehr, als er zugeben will.',
+    tagline: 'Schuldner. Weiß mehr, als ihm lieb ist — und redet sich um Kopf und Kragen, sobald die Angst ihn packt.',
     location: CONTENT.VELMARK_HAFEN,
     start: () => {
       if (!gameFlags.harroMet) return 'firstMeet';
@@ -2117,20 +2117,20 @@ const NPCS_VELMARK = [
     nodes: {
       firstMeet: {
         text: [
-          'Ein Mann um die vierzig lehnt gegen die Hafenmauer. Er zuckt zusammen, als er mich sieht.',
-          '"Ich kenne dich nicht. Du kennst mich nicht. So bleibts am besten."',
-          'Er dreht sich weg. Dann: "Außer... du hast Gold. Dann könnte ich etwas vergessen."'
+          'Ein Mann um die vierzig lehnt an der Hafenmauer. Als er mich entdeckt, fährt er zusammen, als hätte ich ihn bei etwas ertappt.',
+          '"Ich kenn dich nicht, du kennst mich nicht, und glaub mir, so ist es für uns beide am gesündesten, wirklich, das ist kein Spruch."',
+          'Er wendet sich ab — und dann, halb über die Schulter: "Es sei denn, du hast Gold. Bei Gold kann mein Gedächtnis erstaunlich löchrig werden."'
         ],
         options: [{
-          label: '"Was willst du vergessen?"',
+          label: '"Was genau willst du vergessen?"',
           next: 'harroOffert',
           action: () => { gameFlags.harroMet = true; }
         }, { label: 'Nicht mein Problem.', next: null, action: () => { gameFlags.harroMet = true; } }]
       },
       harroOffert: {
         text: [
-          '"Die Gilde — Yeva — ich schulde ihr. Viel." Er schluckt. "Und sie lässt mich dafür... Dienste erbringen."',
-          '"Ihr wisst. Beobachten. Berichten. Was ich sehe am Hafen." Er schaut sich um. "Wenn jemand meine Schulden übernimmt — ich rede. Über Valdris. Über das, was ich gesehen habe."'
+          '"Die Gilde — Yeva — ich steh bei ihr in der Kreide, tief, tiefer als du dir vorstellst." Er schluckt. "Und sie lässt mich das abarbeiten. Auf ihre Art."',
+          'Sein Blick huscht über den Kai. "Beobachten. Berichten. Wer kommt, wer geht, was geladen wird. Übernimmt mir jemand die Schulden, dann rede ich. Über Valdris. Über alles, was ich am Hafen gesehen hab."'
         ],
         options: [
           { label: '"Ich übernehme deine Schulden."', next: 'schuldenUebernehmen',
@@ -2141,7 +2141,7 @@ const NPCS_VELMARK = [
                 resources.gold -= 300;
                 quests.gildeSchulden.state = QUEST_STATE.ACTIVE;
                 gameFlags.harroSchuldenBezahlt = true;
-                showToast('Harrос Schulden übernommen (−300 Gold). Yeva erwartet mich.', TOAST.EVENT);
+                showToast('Harros Schulden übernommen (−300 Gold). Yeva erwartet mich.', TOAST.EVENT);
               }
             }
           },
@@ -2150,9 +2150,9 @@ const NPCS_VELMARK = [
       },
       schuldenUebernehmen: {
         text: [
-          'Harro atmet aus. Langsam. Erleichtert.',
-          '"Valdris\' Lager. Nordufer. Nach Mitternacht kommen Boote." Er drückt mir einen gefalteten Zettel in die Hand.',
-          '"Das ist alles, was ich habe. Jetzt bin ich quitt."'
+          'Harro atmet aus, lang und zitternd, als hätte er die Luft tagelang angehalten.',
+          '"Valdris\' Lager. Nordufer. Nach Mitternacht kommen die Boote." Ein gefalteter Zettel landet in meiner Hand.',
+          '"Mehr hab ich nicht. Jetzt sind wir quitt."'
         ],
         options: [{
           label: 'Danke.',
@@ -2165,15 +2165,15 @@ const NPCS_VELMARK = [
         }]
       },
       schuldenHinweis: {
-        text: ['"Yeva musst du noch aufsuchen. Die übernimmt gerne — wenn du ihr mehr bringst als Gold."'],
+        text: ['"Zu Yeva musst du noch. Die nimmt das gern an — solange du ihr mehr bringst als bloß Gold."'],
         options: [{ label: 'Ich weiß.', next: null }]
       },
       dankbar: {
-        text: ['"Ich... danke. Ernsthaft. Du hast mir das hier erspart." Er zeigt auf die Hafenmauer hinter ihm. "Vergiss mich. Das meine ich freundlich."'],
+        text: ['"Ich... danke. Wirklich. Das hier hast du mir erspart." Eine Kopfbewegung zur Hafenmauer hinter ihm. "Und jetzt vergiss mich. Das mein ich nett."'],
         options: [{ label: 'Kein Problem.', next: null }]
       },
       nervous: {
-        text: ['"Ich hab nichts mehr zu sagen." Er weicht aus. "Nicht heute."'],
+        text: ['"Hab nichts mehr zu sagen." Er weicht meinem Blick aus. "Nicht heute."'],
         options: [{ label: 'In Ordnung.', next: null }]
       }
     }
@@ -2182,7 +2182,7 @@ const NPCS_VELMARK = [
   {
     id: 'gildenmeisterin',
     name: 'Gildenmeisterin Yeva', icon: '💰',
-    tagline: 'Sie kauft und verkauft Allianzen wie andere Leute Gemüse.',
+    tagline: 'Handelt mit Allianzen wie andere mit Gemüse — und rechnet bei jedem Wort den Preis mit.',
     location: CONTENT.VELMARK_FRAKTIONEN,
     start: () => {
       if (!gameFlags.yevaMetFirst) return 'greet';
@@ -2197,8 +2197,8 @@ const NPCS_VELMARK = [
     nodes: {
       greet: {
         text: [
-          '"Ein neues Gesicht." Sie legt die Feder hin. "Thessa hat mich vorgewarnt — das ist gut. Unkündigte Besucher stören."',
-          '"Du suchst Valdris. Ich weiß, was er tut." Sie verschränkt die Arme. "Die Frage ist: was bietest du der Gilde?"'
+          '"Ein neues Gesicht." Die Feder wird abgelegt, ohne Hast. "Thessa hat dich angekündigt. Gut. Unangemeldete kosten mich Zeit, und Zeit verkaufe ich nicht."',
+          '"Du jagst Valdris. Ich weiß, was er treibt." Die Arme verschränken sich. "Bleibt die einzige Frage, die mich interessiert: Was bietest du der Gilde?"'
         ],
         options: [
           { label: '"Arbeit. Loyalität. Ergebnisse."', next: 'erstesBedingung',
@@ -2212,15 +2212,15 @@ const NPCS_VELMARK = [
       },
       erstesBedingung: {
         text: [
-          '"Harro schuldet uns Geld. Er sitzt am Hafen und tut so, als wäre er unsichtbar." Sie lächelt dünn.',
-          '"Bring das in Ordnung — wie du willst — und wir reden weiter."'
+          '"Harro schuldet uns Geld. Er kauert am Hafen und hält sich für unsichtbar." Ein dünnes Lächeln, das die Augen nicht erreicht.',
+          '"Bring das in Ordnung. Wie, ist deine Sache. Danach reden wir weiter."'
         ],
         options: [{ label: '"Ich kümmere mich darum."', next: null }]
       },
       thessaEmpfehlung: {
         text: [
-          '"Thessa empfiehlt dich. Das ist kein kleines Ding." Yeva steht auf, schaut aus dem Fenster.',
-          '"Ich habe ein Problem: Jemand schuldet der Gilde Geld. Er weigert sich zu zahlen. Du kannst helfen?"'
+          '"Thessa empfiehlt dich. Aus ihrem Mund ist das kein leeres Wort." Yeva erhebt sich, tritt ans Fenster, den Rücken zu mir.',
+          '"Ich habe ein Problem. Jemand schuldet der Gilde, und er zahlt nicht. Lässt sich das beheben?"'
         ],
         options: [{
           label: '"Wer ist es?"',
@@ -2232,13 +2232,13 @@ const NPCS_VELMARK = [
         }]
       },
       harroHinweis: {
-        text: ['"Harro. Am Hafen. Er wird reden — er redet immer, wenn es sich lohnt."'],
+        text: ['"Harro. Am Hafen. Er wird reden — Harro redet immer, sobald es sich für ihn lohnt."'],
         options: [{ label: 'Ich finde ihn.', next: null }]
       },
       schuldenTurnIn: {
         text: [
-          '"Harro." Ein kurzes Nicken. "Du hast das schnell geregelt." Sie schiebt einen Beutel über den Tisch.',
-          '"Hier — deine Provision. Und mein Vertrauen. Das ist mehr wert als das Gold."'
+          '"Harro." Ein knappes Nicken. "Schnell erledigt." Ein Beutel gleitet über den Tisch.',
+          '"Deine Provision. Und mein Vertrauen dazu. Das Zweite ist hier mehr wert als das Erste."'
         ],
         options: [{
           label: '"Danke, Yeva."',
@@ -2253,12 +2253,12 @@ const NPCS_VELMARK = [
       },
       investitionOffer: {
         text: [
-          '"Du hast Potential. Ich will es testen." Yeva öffnet ein Konto-Buch.',
-          '"Investier 500 Gold in die Gilde. Ich vervielfache es — und gleichzeitig sehen wir, ob du uns wirklich traust."',
-          '"Rendite: sechzig Prozent nach einer Woche Arbeit. Für dich und für uns."'
+          '"Du hast Potential. Potential will geprüft werden." Ein Kontobuch klappt auf.',
+          '"Fünfhundert Gold in die Gilde. Ich mehre es — und nebenbei zeigt sich, ob du uns wirklich traust. Beides interessiert mich gleich sehr."',
+          '"Sechzig Prozent Rendite, nach einer Woche Arbeit. Für dich wie für uns."'
         ],
         options: [{
-          label: '"Deal."',
+          label: '"Abgemacht."',
           next: null,
           locked: () => (resources.gold || 0) < 500,
           reason: 'Erfordert 500 Gold',
@@ -2273,8 +2273,8 @@ const NPCS_VELMARK = [
       },
       investitionTurnIn: {
         text: [
-          '"Du hast gearbeitet. Das Ergebnis spricht für sich." Yeva legt einen schweren Beutel auf den Tisch.',
-          '"Achthundert. Sechzig Prozent Rendite — wie vereinbart." Sie lehnt sich zurück. "Ich habe noch eine Aufgabe."'
+          '"Du hast geliefert. Das Ergebnis spricht für sich." Ein schwerer Beutel landet auf dem Tisch, dass die Münzen klirren.',
+          '"Achthundert. Sechzig Prozent, wie vereinbart." Sie lehnt sich zurück. "Es gibt da noch eine Sache."'
         ],
         options: [{
           label: '"Ich höre."',
@@ -2289,9 +2289,9 @@ const NPCS_VELMARK = [
       },
       korruptionIntro: {
         text: [
-          '"Valdris hat einen unserer Buchhalter bestochen. Er hat Zugang zu unseren Konten."',
-          '"Ich brauche Beweis dafür — etwas, das ich vor dem Stadtrat vorzeigen kann. Damit er fliegt, ohne dass ich die Schuld trage."',
-          '"Das Stadtarchiv hat Unterlagen. Sele kann dir helfen — wenn du ihr gibst, was sie will."'
+          '"Valdris hat einen unserer Buchhalter gekauft. Der Mann sitzt an unseren Konten."',
+          '"Ich brauche den Beweis. Etwas, das ich dem Stadtrat vorlege — damit er fällt und der Verdacht nicht an mir hängenbleibt."',
+          '"Das Stadtarchiv hat die Unterlagen. Sele kann dir den Weg ebnen — wenn du ihr gibst, was sie verlangt."'
         ],
         options: [{
           label: '"Ich beschaffe dir den Beweis."',
@@ -2300,14 +2300,14 @@ const NPCS_VELMARK = [
         }]
       },
       korruptionDialog: {
-        text: ['"Du hast noch nicht alles. Das Archiv, Sele — hast du sie schon aufgesucht?"'],
-        options: [{ label: '"Ich bin daran."', next: null }]
+        text: ['"Dir fehlt noch das Entscheidende. Das Archiv, Sele — warst du schon bei ihr?"'],
+        options: [{ label: '"Ich bin dran."', next: null }]
       },
       korruptionTurnIn: {
         text: [
-          'Yeva schaut die Dokumente durch. Einmal. Zweimal.',
-          '"Das reicht." Sie klappt den Ordner zu. "Du hast getan, worum ich gebeten habe. Mehr als das."',
-          '"Die Händlergilde steht hinter dir. Vollständig." Sie streckt die Hand aus.'
+          'Yeva geht die Dokumente durch. Einmal. Dann ein zweites Mal, langsamer.',
+          '"Das genügt." Der Ordner fällt zu. "Du hast getan, worum ich gebeten habe. Und ein Stück mehr."',
+          '"Die Händlergilde steht hinter dir. Ohne Vorbehalt." Eine Hand streckt sich mir entgegen.'
         ],
         options: [{
           label: 'Ich schlage ein.',
@@ -2323,12 +2323,12 @@ const NPCS_VELMARK = [
       idle: {
         text: ['"Was gibt es?"'],
         options: [
-          { label: '"Wie läuft es mit der Gilde?"', next: 'gildeStatus' },
+          { label: '"Wie steht es um die Gilde?"', next: 'gildeStatus' },
           { label: '"Nichts. Nur vorbeigeschaut."', next: null }
         ]
       },
       gildeStatus: {
-        text: ['"Valdris bremst uns. Solange er operiert, verlieren wir täglich. Deswegen bin ich froh, dass du hier bist."'],
+        text: ['"Valdris bremst uns aus. Solange er seine Geschäfte treibt, verlieren wir Tag für Tag. Genau darum bin ich froh, dass du hier bist."'],
         options: [{ label: 'Ich arbeite daran.', next: null }]
       }
     }
@@ -2337,7 +2337,7 @@ const NPCS_VELMARK = [
   {
     id: 'hauptmann_gorr',
     name: 'Hauptmann Gorr', icon: '⚔',
-    tagline: 'Eiserne Faust, wenig Geduld, kein Interesse an Erklärungen.',
+    tagline: 'Harte Hand, kurze Worte. Wer Taten bringt, hat sein Ohr — wer redet, seine Verachtung.',
     location: CONTENT.VELMARK_FRAKTIONEN,
     start: () => {
       if (!gameFlags.gorrMet) return 'greet';
@@ -2350,18 +2350,18 @@ const NPCS_VELMARK = [
     nodes: {
       greet: {
         text: [
-          'Er dreht sich um. Kein Lächeln. "Du willst zur Bruderschaft."',
-          '"Dann zeig mir, dass du kämpfen kannst. Reden reicht mir nicht."'
+          'Er dreht sich um. Kein Lächeln, keines erwartet. "Du willst zur Bruderschaft."',
+          '"Dann beweis, dass du kämpfen kannst. Worte zählen hier nichts."'
         ],
         options: [{
-          label: '"Ich habe mich genug bewiesen."',
+          label: '"Ich habe mich bewiesen. Mehr als genug."',
           next: 'mutCheck',
           action: () => { gameFlags.gorrMet = true; }
         }, { label: '"Später."', next: null, action: () => { gameFlags.gorrMet = true; } }]
       },
       mutCheck: {
-        text: ['"Treutheim, Lethkar — ich kenne die Berichte. Waldtroll. Valdris\' Lager. Das reicht als Referenz."',
-          '"Bring mir etwas, das ich dem Rat vorzeigen kann. Einen Beweis, dass du handeln kannst — nicht nur reden."'],
+        text: ['"Treutheim. Lethkar. Die Berichte kenne ich. Waldtroll. Valdris\' Lager. Das genügt als Referenz."',
+          '"Bring mir etwas, das ich dem Rat vorlege. Einen Beweis, dass du handelst. Nicht redest."'],
         options: [{
           label: '"Was für ein Beweis?"',
           next: null,
@@ -2372,12 +2372,12 @@ const NPCS_VELMARK = [
         }]
       },
       beweisOffer: {
-        text: ['"Ich brauche einen konkreten Beweis für deine Eignung. Besieg einen von Valdris\' Wächtern am Hafen — und komm zurück."'],
+        text: ['"Der Beweis muss konkret sein. Besieg einen von Valdris\' Wächtern am Hafen. Dann komm zurück."'],
         options: [{ label: '"Ich mache das."', next: null }]
       },
       beweisAnnehmen: {
         text: [
-          'Gorr schaut die Beute an. Schweigt. Dann nickt er.',
+          'Gorr betrachtet die Beute. Schweigt. Dann ein einzelnes Nicken.',
           '"Gut. Die Bruderschaft steht hinter dir. Was brauchst du?"'
         ],
         options: [{
@@ -2398,17 +2398,17 @@ const NPCS_VELMARK = [
       },
       vergangenheitBegin: {
         text: [
-          'Gorr zieht einen Stuhl heran. Setzt sich — zum ersten Mal entspannt.',
-          '"Ich war nicht immer hier. Vor zehn Jahren: Bruderschaft des Nordens. Wir schützten Karawanen." Er pause.',
-          '"Dann kam Valdris. Kaufte unsere Leute. Einer nach dem anderen. Bis wir kaum noch wir waren."',
-          '"Ich bin desertiert. Einer von dreien, die nicht verkauft wurden."'
+          'Gorr zieht einen Stuhl heran und setzt sich. Zum ersten Mal nicht in Hab-Acht.',
+          '"Ich war nicht immer hier. Vor zehn Jahren: Bruderschaft des Nordens. Wir schützten die Karawanen." Eine Pause.',
+          '"Dann kam Valdris. Kaufte unsere Männer. Einen nach dem anderen. Am Ende waren wir kaum noch wir selbst."',
+          '"Ich bin desertiert. Einer von dreien, die er nicht kaufen konnte."'
         ],
         options: [{ label: '"Und die anderen beiden?"', next: 'vergangenheitBrüder' }]
       },
       vergangenheitBrüder: {
         text: [
-          '"Einer ist tot. Der andere — ich weiß es nicht." Er schaut weg.',
-          '"Das ist mein Grund, hier zu sein. Nicht Velmark. Valdris."',
+          '"Einer ist tot. Der andere — ich weiß es nicht." Sein Blick geht zur Seite.',
+          '"Das ist mein Grund. Nicht Velmark. Valdris."',
           '"Komm morgen Nacht. Ich zeige dir das Netz, das er spannt."'
         ],
         options: [{
@@ -2422,9 +2422,9 @@ const NPCS_VELMARK = [
       },
       vergangenheitTurnIn: {
         text: [
-          '"Du bist zurück." Gorr sieht mich nicht an — er starrt auf eine Karte. "Ich habe Valdris\' Routen markiert."',
-          '"Aber ich brauche mehr als Informationen." Er dreht sich um. "Ich brauche deinen Eid."',
-          '"Nicht für die Bruderschaft — für das hier." Er zeigt auf die Karte. "Schwör mir, dass du das bis zum Ende durchziehst."'
+          '"Du bist zurück." Gorr blickt nicht auf — sein Finger fährt eine Karte entlang. "Valdris\' Routen. Ich habe sie markiert."',
+          '"Informationen reichen nicht." Jetzt dreht er sich um. "Ich brauche deinen Eid."',
+          'Die Hand fällt auf die Karte. "Nicht für die Bruderschaft. Für das hier. Schwör, dass du es zu Ende bringst."'
         ],
         options: [{
           label: '"Ich schwöre es."',
@@ -2437,7 +2437,7 @@ const NPCS_VELMARK = [
         }]
       },
       eidGeleistet: {
-        text: ['"Dann sind wir Bruderschaft. Beide." Er streckt die Hand aus.'],
+        text: ['"Dann sind wir Bruderschaft. Beide." Die Hand streckt sich mir entgegen.'],
         options: [{
           label: 'Ich schlage ein.',
           next: null,
@@ -2450,8 +2450,8 @@ const NPCS_VELMARK = [
       },
       eidTurnIn: {
         text: [
-          '"Du hast es durchgezogen." Gorr nickt. Einmal. Das ist viel für ihn.',
-          '"Die Bruderschaft ist hinter dir. Vollständig. Kein Vorbehalt mehr."'
+          '"Durchgezogen." Gorr nickt. Einmal. Bei ihm zählt das wie eine Umarmung.',
+          '"Die Bruderschaft steht hinter dir. Vollständig. Kein Vorbehalt mehr."'
         ],
         options: [{
           label: '"Danke, Gorr."',
@@ -2464,7 +2464,7 @@ const NPCS_VELMARK = [
         }]
       },
       kampfIdle: {
-        text: ['"Wie läuft es? Die Hafenwächter geben nach?"'],
+        text: ['"Bericht. Geben die Hafenwächter nach?"'],
         options: [
           { label: '"Ich arbeite daran."', next: null },
           { label: '"Fast."', next: null }
@@ -2476,7 +2476,7 @@ const NPCS_VELMARK = [
   {
     id: 'archivarin_sele',
     name: 'Archivarin Sele', icon: '📜',
-    tagline: 'Weiß alles. Sagt es nur, wenn es sich lohnt.',
+    tagline: 'Weiß alles, sagt das Wenigste — und genießt jeden Moment, in dem sie mehr weiß als du.',
     location: CONTENT.VELMARK_FRAKTIONEN,
     start: () => {
       if (!gameFlags.seleMet) return 'greet';
@@ -2489,12 +2489,12 @@ const NPCS_VELMARK = [
     nodes: {
       greet: {
         text: [
-          '"Das Stadtarchiv ist kein Gasthaus." Sie sieht mich über ihre Akten hinweg an.',
-          '"Aber du bist interessant. Jemand, der Valdris jagt und dabei Alchemie lernt — das klingt nach einem Buch, das ich lesen möchte."',
-          '"Was bietest du mir?"'
+          '"Das Stadtarchiv ist kein Gasthaus." Der Blick kommt über den Rand einer Akte, ohne dass sie das Lesen unterbricht.',
+          '"Aber interessant bist du. Jemand, der Valdris jagt und nebenbei Alchemie lernt — so etwas lese ich für gewöhnlich nur in Büchern. Und die enden selten gut."',
+          '"Also. Was bietest du mir?"'
         ],
         options: [{
-          label: '"Zugang zu Informationen, die du noch nicht hast."',
+          label: '"Zugang zu Wissen, das selbst dir noch fehlt."',
           next: 'erstesAngebot',
           action: () => {
             gameFlags.seleMet = true;
@@ -2504,21 +2504,21 @@ const NPCS_VELMARK = [
       },
       erstesAngebot: {
         text: [
-          '"Interessant." Sie legt die Feder hin. "Ich mache dir ein Gegenangebot."',
-          '"Hilf mir, das Archiv zu durchsuchen — wir haben Dokumente aus den letzten zwanzig Jahren, alle ungeordnet. Ich brauche jemanden mit frischem Blick."',
-          '"Wenn du findest, was ich vermute — dann reden wir über Valdris."'
+          '"Reizvoll." Die Feder wird abgelegt. "Dann mein Gegenangebot — und das ist die bessere Hälfte des Geschäfts, glaub mir."',
+          '"Hilf mir, das Archiv zu durchforsten. Zwanzig Jahre Akten, keine davon dort, wo sie hingehört. Was mir fehlt, ist ein Paar Augen ohne Gewohnheit."',
+          '"Findest du, was ich vermute, reden wir über Valdris. Vorher nicht."'
         ],
         options: [{ label: '"Ich fange an."', next: null }]
       },
       recherchOffer: {
-        text: ['"Das Archiv wartet. Findest du die Zeit?"'],
+        text: ['"Das Archiv wartet geduldig. Es hat ja Zeit. Hast du sie auch?"'],
         options: [{ label: '"Ich bin dabei."', next: null }]
       },
       rechercheTurnIn: {
         text: [
-          '"Du hast mehr gefunden als erwartet." Sele blättert durch die Stapel.',
-          '"Diese Buchführung — das ist Valdris\' Handschrift. Er hat das Archiv schon vor Jahren unterwandert."',
-          '"Ich schulde dir das. Was willst du wissen?"'
+          '"Mehr, als ich erwartet hätte." Sele blättert durch die Stapel, und um ihre Mundwinkel spielt etwas, das fast Zufriedenheit ist.',
+          '"Diese Buchführung trägt Valdris\' Handschrift. Er hat dieses Archiv unterwandert, lange bevor ich hier saß."',
+          '"Ich stehe in deiner Schuld. Selten genug. Frag."'
         ],
         options: [{
           label: '"Alles über Valdris\' Kontakte."',
@@ -2533,9 +2533,9 @@ const NPCS_VELMARK = [
       },
       wissensTransfer: {
         text: [
-          '"Valdris hat vier Hauptkontakte in Velmark. Einen Buchhalter — bereits kompromittiert. Einen Söldnerführer. Einen Stadtratsmitglieder."',
-          '"Und einen vierten — ich kenne seinen Namen nicht. Aber ich kenne seine Schrift." Sie reicht mir ein Blatt.',
-          '"Das ist für dich. Aber ich brauche noch etwas: ein Dokument aus dem Keller. Gesperrt. Nur du kannst da rein, ohne Aufsehen zu erregen."'
+          '"Vier Hauptkontakte hält Valdris in Velmark. Ein Buchhalter — den hast du bereits, mehr oder weniger. Ein Söldnerführer. Ein Mann aus dem Stadtrat."',
+          '"Und ein vierter. Seinen Namen kenne ich nicht — aber seine Schrift erkenne ich überall." Ein Blatt wechselt den Besitzer.',
+          '"Das ist für dich. Im Gegenzug: ein Dokument aus dem Keller. Gesperrt. Nur du kommst dort hinein, ohne dass jemand Fragen stellt."'
         ],
         options: [{
           label: '"Ich beschaffe es."',
@@ -2547,15 +2547,15 @@ const NPCS_VELMARK = [
         }]
       },
       wisseTurnIn: {
-        text: ['"Das Dokument ist verschlossen." Eine Pause. "Du weißt, wie man das umgeht?"'],
+        text: ['"Das Dokument liegt hinter Schloss und Riegel." Eine Pause, fast genüsslich. "Aber so etwas hat dich noch nie aufgehalten, oder?"'],
         options: [{ label: '"Ich finde einen Weg."', next: null }]
       },
       dokumentTurnIn: {
         text: [
-          'Sele öffnet das Dokument. Liest. Sieht mich an.',
-          '"Das ist es." Ihre Stimme ist ruhiger als erwartet — zu ruhig. "Das ist der Beweis, den wir brauchen."',
-          '"Valdris\' vollständige Operationsstruktur. Unterschriften, Kontostände, Namen." Sie klappt es zu.',
-          '"Das Archiv steht hinter dir. Vollständig. Und ich persönlich schulde dir mehr als Dank."'
+          'Sele bricht das Siegel, liest, hebt den Blick.',
+          '"Das ist es." Ihre Stimme ist ruhiger, als ich erwartet hätte — eine Spur zu ruhig. "Der Beweis, auf den wir gewartet haben."',
+          '"Valdris\' ganze Struktur. Unterschriften, Kontostände, Namen." Das Dokument klappt zu.',
+          '"Das Archiv steht hinter dir. Vollständig. Und ich persönlich — ich schulde dir mehr als ein höfliches Dankeschön."'
         ],
         options: [{
           label: '"Das ist genug."',
@@ -2569,15 +2569,15 @@ const NPCS_VELMARK = [
         }]
       },
       archivIdle: {
-        text: ['"Was gibt es? Neue Informationen?"'],
+        text: ['"Und? Bringst du mir etwas Neues — oder nur deine Gesellschaft?"'],
         options: [
           { label: '"Noch nicht. Ich arbeite daran."', next: null },
           { label: '"Was weißt du über die Unterwelt?"', next: 'unterweltHinweis' }
         ]
       },
       unterweltHinweis: {
-        text: ['"Die Unterwelt in Velmark ist kein Ort — es ist ein Netzwerk. Informanten, Händler, Schulden." Eine Pause.',
-          '"Wenn du Einfluss aufbaust, reden sie mit dir. Nicht vorher."'],
+        text: ['"Die Unterwelt von Velmark ist kein Ort, den du auf einer Karte findest. Sie ist ein Geflecht — Informanten, Händler, Schulden, alles ineinander verknotet." Eine Pause.',
+          '"Bau dir Einfluss auf, dann reden sie mit dir. Vorher hältst du für sie den Mund — und das ist besser für deine Gesundheit."'],
         options: [{ label: 'Verstanden.', next: null }]
       }
     }

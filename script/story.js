@@ -19,19 +19,19 @@ const STORY_ENTRIES = [
     title:       'Das Stadttor',
     unlockState: 10101,
     text: [
-      'Der Hof meiner Familie gab nie mehr her als Mehltau im Korn und einen Vater, der mehr fluchte als hoffte. Sechzehn Jahre habe ich davon geträumt, hier wegzukommen.',
-      'Jetzt ist es so weit! Reichtum, Ruhm, Macht — ich will das alles. Raus aus dem Acker, hinein in ein Leben, das wirklich mir gehört. Ich kann es kaum erwarten.',
-      'Treutheim liegt vor mir — die erste Stadt auf meinem Weg. Hier beginnt es: ein Job, etwas Gold, und der erste Schritt zum Abenteurer.'
+      'Der Hof meiner Familie gab nie mehr her als Mehltau im Korn und einen Vater, der lieber fluchte als hoffte.',
+      'Sechzehn Jahre lang habe ich davon geträumt, von hier fortzugehen. Heute wurde der Acker mit jedem Schritt kleiner hinter mir.',
+      'Vor mir liegt Treutheim. Die erste Stadt, der erste Atemzug eines Lebens, das endlich mir gehören soll.'
     ]
   },
   {
     id:          '1.2',
-    title:       'Zwielichtige Begegnung',
+    title:       'Ein Blick aus dem Schatten',
     unlockState: 10102,
     text: [
-      'Ein Mann tritt aus dem Schatten einer Gasse.',
-      'Seinen Namen kenne ich nicht. Aber seinen Blick werde ich nicht vergessen — er klebt an meinem Geldbeutel, nicht an meinem Gesicht.',
-      'Er sagt kein Wort. Muss er auch nicht. Ab jetzt halte ich mein Gold dichter bei mir.'
+      'Aus dem Dunkel einer Gasse löst sich ein Mann, als hätte der Schatten ihn ausgespuckt.',
+      'Seinen Namen kenne ich nicht. Doch sein Blick brennt sich ein — er liegt auf meinem Geldbeutel, nicht auf meinem Gesicht.',
+      'Kein Wort fällt. Es braucht auch keines. Von nun an trage ich mein Gold dichter am Leib.'
     ]
   },
   {
@@ -39,13 +39,13 @@ const STORY_ENTRIES = [
     title:      'Die erste Nacht',
     unlockFlag: () => gameFlags.firstSleepTriggered,
     text: [
-      'Jeder Knochen schwer. Der erste Tag ist vorbei. Nur der erste.',
-      'Ehrlich? Hässlicher, als ich dachte. Schuften für ein paar Münzen, die kaum für Brot reichen.',
-      'War es das, wofür ich mein Zuhause verlassen habe?',
-      'Aber zuhause wartet derselbe Acker. Derselbe Tag, der sich wiederholt, bis er einen aufreibt.',
-      'Nein. Ich will mehr sein als ein Paar müde Hände. Ich will ein Abenteurer werden.',
-      'Manchmal, wenn ich erschöpft genug bin, spüre ich etwas Unerklärliches. Ein Kribbeln, das mehr verspricht, als ich mir einbilden sollte.',
-      'Morgen geht es weiter. Wenn niemand es für mich ändert, ändere ich es selbst.'
+      'Jeder Knochen liegt mir schwer im Leib. Der erste Tag ist vorüber — und es war nur der erste.',
+      'Ehrlich gesagt: rauer, als ich es mir ausgemalt hatte. Schuften für ein paar Münzen, die kaum das Brot decken.',
+      'War es das, wofür ich mein Zuhause hinter mir gelassen habe?',
+      'Doch dort wartet nur derselbe Acker. Derselbe Tag, der sich dreht und dreht, bis er einen Menschen ganz verbraucht.',
+      'Nein. Ich will mehr sein als ein Paar müder Hände. Ich will weiter, hinaus, hinauf.',
+      'Und manchmal, tief in der Erschöpfung, regt sich etwas in mir. Ein Kribbeln, das mehr verspricht, als ich zu glauben wage.',
+      'Morgen geht es weiter. Ändert es niemand für mich, dann ändere ich es selbst.'
     ]
   },
   {
@@ -53,13 +53,13 @@ const STORY_ENTRIES = [
     title:       'Der erste Raub',
     unlockState: 10103,
     text: [
-      'Der Griff kommt, bevor ich ihn höre. Eine Hand um mein Handgelenk, ein Ruck — ich bin in der Gasse, Rücken gegen Stein, bevor mein Gehirn aufgeholt hat.',
-      'Der Fremde steht vor mir. Ruhig. Er hat nicht mal die Kapuze hochgezogen.',
-      '»Hübsche Summe für einen Neuankömmling«, sagt er. Nimmt den Geldbeutel von meiner Hüfte, als würde er ihm gehören.',
-      'Ich will etwas sagen. Tue es nicht. Er ist schon auf halbem Weg aus der Gasse.',
-      '»Bis bald«, sagt er über die Schulter. Dann ist er weg.',
-      'Meine Hände zittern. Nicht aus Angst. Aus blankem Unglauben.',
-      'Das passiert mir kein zweites Mal.'
+      'Der Griff kommt, bevor ich ihn höre. Eine Hand am Handgelenk, ein Ruck — und schon stehe ich in der Gasse, den Rücken am kalten Stein, ehe mein Verstand begreift, was geschieht.',
+      'Der Fremde steht vor mir, ruhig, gelassen. Nicht einmal die Kapuze hat er hochgezogen.',
+      '»Eine hübsche Summe für einen Neuankömmling«, sagt er und löst den Beutel von meiner Hüfte, als gehörte er ihm.',
+      'Ich will etwas erwidern und schweige doch. Er ist schon halb aus der Gasse hinaus.',
+      '»Bis bald«, wirft er über die Schulter. Dann verschluckt ihn die Stadt.',
+      'Meine Hände zittern. Nicht vor Angst — vor blankem Unglauben.',
+      'Ein zweites Mal lasse ich das nicht geschehen.'
     ]
   },
   {
@@ -67,12 +67,12 @@ const STORY_ENTRIES = [
     title:       'Der zweite Raub',
     unlockState: 10104,
     text: [
-      'Der Marktplatz, Mittag — hundert Menschen, Stimmen, Geruch nach gebratenem Fleisch. Diesmal halte ich den Geldbeutel unter dem Arm.',
+      'Marktplatz, Mittagsstunde. Hundert Stimmen, der Geruch von gebratenem Fleisch. Diesmal klemme ich den Beutel fest unter dem Arm.',
       'Nicht fest genug.',
-      'Ein Ellenbogen in meine Seite. Eine Drehung. Er ist schon drei Schritte weg, bevor ich aufgehört habe zu stolpern.',
-      'Er dreht sich einmal um. Sieht mich direkt an — und zwinkert.',
-      'Volles Tageslicht. Hundert Zeugen. Er hat sich nicht mal die Mühe gemacht, sein Gesicht zu verbergen.',
-      'Ich kann mich nicht rühren vor Wut. Er kennt mich. Er weiß, wann ich komme.'
+      'Ein Ellenbogen in die Seite, eine Drehung — und er ist schon drei Schritte fort, ehe ich mein Stolpern abgefangen habe.',
+      'Einmal dreht er sich um. Sieht mich an. Und zwinkert.',
+      'Helles Tageslicht, hundert Zeugen. Nicht einmal die Mühe macht er sich, sein Gesicht zu verbergen.',
+      'Vor Wut bin ich wie versteinert. Er kennt mich. Er weiß genau, wann ich komme.'
     ]
   },
   {
@@ -80,13 +80,13 @@ const STORY_ENTRIES = [
     title:       'Der dritte Raub',
     unlockState: 10105,
     text: [
-      'Ich höre das Rascheln einen Atemzug zu spät.',
-      'Ein Stoß in meinen Rücken — ich taumle, Schulter gegen Mauerstein. Als ich mich umdrehe, ist er weg.',
-      'Kein Griff, kein Wort, nicht mal Augenkontakt. Nur eine Geste, so beiläufig wie das Aufheben einer Münze vom Boden.',
-      'Ich lehne gegen die Wand. Warte, bis die Hände aufhören zu zittern.',
-      'Er hat mich nicht mal für würdig befunden, ihn anzusehen.',
-      'Das ist nicht Pech. Das ist System. Jemand weiß, wo ich bin — wann ich komme, wie viel ich trage.',
-      'Das nächste Mal lasse ich ihn nicht entkommen.'
+      'Das Rascheln höre ich einen Atemzug zu spät.',
+      'Ein Stoß in den Rücken — ich taumle, die Schulter prallt gegen den Mauerstein. Als ich mich umwende, ist er fort.',
+      'Kein Griff, kein Wort, nicht einmal ein Blick. Nur ein Handgriff, beiläufig wie das Aufheben einer Münze vom Pflaster.',
+      'Ich lehne mich an die Wand und warte, bis das Zittern aus den Händen weicht.',
+      'Nicht einmal eines Blickes hat er mich für würdig gehalten.',
+      'Das ist kein Pech mehr. Das ist Plan. Jemand weiß, wo ich bin, wann ich komme, wie viel ich trage.',
+      'Beim nächsten Mal entkommt er mir nicht.'
     ]
   },
   {
@@ -94,24 +94,24 @@ const STORY_ENTRIES = [
     title:       'Der vierte Raub',
     unlockState: 10106,
     text: [
-      'Er wartet auf mich. Offen. Unverdeckt. Lehnt an der Mauer, Arme verschränkt, als hätte er die ganze Zeit gewusst, dass ich hier entlangkomme.',
-      '»Langsam lernst du«, sagt er, bevor ich auch nur stehenbleibe. »Aber noch nicht schnell genug.«',
-      'Er macht einen Schritt auf mich zu. Ich weiche zurück. Ich — ich weiche zurück.',
-      'Er nimmt das Gold. Ohne Eile. Ohne Gerangel. Als wäre es längst beschlossene Sache.',
+      'Diesmal wartet er auf mich. Offen, mit verschränkten Armen an die Mauer gelehnt, als hätte er von jeher gewusst, dass mein Weg hier entlangführt.',
+      '»Du lernst«, sagt er, ehe ich auch nur stehenbleibe. »Nur noch nicht schnell genug.«',
+      'Er tritt einen Schritt auf mich zu. Und ich weiche zurück. Ich — weiche zurück.',
+      'Ohne Eile nimmt er das Gold. Kein Gerangel. Als wäre alles längst entschieden.',
       '»Bis zum nächsten Mal.«',
-      'Er dreht sich um und geht. Einfach geht. Als wäre ich keine Bedrohung. Als wäre ich nichts.',
-      'Nein. Nicht noch einmal. Ich fange anders an — mit dem Kopf, nicht mit den Händen.'
+      'Er wendet sich ab und geht. Einfach geht. Als wäre ich keine Gefahr. Als wäre ich nichts.',
+      'Nein. Nicht noch einmal. Ich beginne von vorn — diesmal mit dem Kopf, nicht mit den Händen.'
     ]
   },
   {
     id:          '1.8',
-    title:       'Paranoid',
+    title:       'Wachsam',
     unlockFlag:  () => skills.paranoid >= 1,
     text: [
-      'Jedes Geräusch. Jede Schulter, die sich zu früh dreht. Jeder Schatten, der einen Moment zu lang steht.',
-      'Ja — ich bin paranoid. Ich sage es mir laut vor, manchmal. Als würde es dadurch irgendwie besser.',
-      'Aber es macht mich schärfer. Ich sehe jetzt Muster, die ich früher für Zufall gehalten hätte.',
-      'Ich fange von vorn an — nicht weil ich muss. Weil ich es will. Klüger diesmal.'
+      'Jedes Geräusch. Jede Schulter, die sich zu früh dreht. Jeder Schatten, der einen Lidschlag zu lange steht.',
+      'Ja, ich bin misstrauisch geworden. Manchmal sage ich es mir laut vor, als würde es dadurch leichter zu tragen.',
+      'Doch es schärft den Blick. Ich erkenne jetzt Muster, wo ich früher nur Zufall sah.',
+      'Also fange ich von vorn an — nicht, weil ich muss, sondern weil ich will. Klüger diesmal.'
     ]
   },
 
@@ -122,11 +122,11 @@ const STORY_ENTRIES = [
     title:       'Erstes Blut',
     unlockState: 20101,
     text: [
-      'Das Rascheln hinter mir — ich wirbele herum, bevor ich denke.',
-      'Alles passiert zu schnell für Angst. Ein Hieb, ein Taumel, Staub in meinem Mund. Dann Stille.',
-      'Ich stehe über dem gestürzten Räuber und merke erst jetzt, wie laut mein Atem ist.',
-      'Das erste Mal. Ich hatte erwartet, mich schlechter zu fühlen.',
-      'Stattdessen: eine merkwürdige, klare Ruhe. Und eine Erkenntnis — ich bin nicht mehr derselbe, der in Treutheim ankam.',
+      'Ein Rascheln hinter mir — und ich wirbele herum, ehe ein Gedanke mich daran hindern kann.',
+      'Es geht zu schnell für Angst. Ein Hieb, ein Taumel, Staub auf den Lippen. Dann Stille.',
+      'Ich stehe über dem gestürzten Räuber und höre erst jetzt, wie laut mein eigener Atem geht.',
+      'Das erste Mal. Ich hätte erwartet, mich schlechter zu fühlen.',
+      'Stattdessen eine seltsame, klare Ruhe. Und die Gewissheit: Ich bin nicht mehr der, der einst durch dieses Stadttor kam.',
       'Dieser hier hat sich gewehrt. Ich auch.'
     ]
   },
@@ -135,10 +135,10 @@ const STORY_ENTRIES = [
     title:       'Korbins Geheimnis',
     unlockFlag:  () => gameFlags.korbinChapter2Talked,
     text: [
-      'Korbin zieht mich nah an sich heran, sein Atem riecht nach Bier und Vorsicht.',
-      '"Drei Neue in diesem Monat. Immer dasselbe: ankommen, schuften, beraubt werden. Du bist nicht der Erste, Fremder."',
-      '"Es gibt jemanden in dieser Stadt, den alle hier den Schatten nennen. Er wählt die Neuen aus. Jemanden, dem er vertraut, schickt er vor — einen Beobachter. Der entscheidet, ob jemand lohnend genug ist."',
-      'Mir wird kalt, obwohl die Taverne warm ist.'
+      'Korbin zieht mich nah zu sich heran. Sein Atem riecht nach Bier und nach Vorsicht.',
+      '»Drei Neue allein in diesem Monat. Immer dasselbe: ankommen, schuften, beraubt werden. Du bist nicht der Erste, Fremder.«',
+      '»Es gibt einen in dieser Stadt, den alle nur den Schatten nennen. Er sucht sich die Neuen aus. Einen, dem er traut, schickt er vor — einen, der beobachtet und entscheidet, ob die Beute sich lohnt.«',
+      'Mir wird kalt, obwohl die Wärme der Taverne mich umfängt.'
     ]
   },
   {
@@ -146,10 +146,10 @@ const STORY_ENTRIES = [
     title:       'Eine Spur im Dunkeln',
     unlockFlag:  () => gameFlags.theftClueFoundInJagdgebiet,
     text: [
-      'Zwischen den armseligen Habseligkeiten eines Räubers, den ich eben niedergestreckt habe, finde ich etwas.',
-      'Eine Münze. Meine Münze — ich erkenne den eingestanzten Kratzer, den ich selbst einmal durch einen Sturz verursacht habe.',
-      'Der Dieb hat das Gold nicht behalten. Er hat es weitergegeben — an jemanden hier draußen, der mit diesen Räubern in Verbindung steht.',
-      'Das ist kein einfacher Straßenraub. Das ist ein Netzwerk.'
+      'Zwischen der armseligen Habe eines Räubers, den ich eben niedergestreckt habe, liegt etwas, das nicht hierhergehört.',
+      'Eine Münze. Meine Münze — ich erkenne den Kratzer, den ich ihr selbst einst bei einem Sturz beigebracht habe.',
+      'Der Dieb hat das Gold nicht behalten. Er hat es weitergereicht, hinaus zu jemandem, der mit diesen Räubern unter einer Decke steckt.',
+      'Das ist kein gewöhnlicher Straßenraub. Das ist ein Netz.'
     ]
   },
   {
@@ -157,10 +157,10 @@ const STORY_ENTRIES = [
     title:       'Miras wahres Gesicht',
     unlockFlag:  () => gameFlags.miraRevealedInfo,
     text: [
-      'Mira lächelt nicht mehr. Zum ersten Mal seit ich sie kenne, fühlt sich das Gespräch mit ihr wie eines unter Gleichen an.',
-      '"Der Brief, den ich dir für Brakka gegeben habe — es war eine Warnung. Brakka weiß, wer der Schatten ist. Er hat nur nie geredet."',
-      '"Ich auch nicht. Weil es gefährlich ist, zu reden. Aber du fragst. Und das verändert etwas."',
-      'Sie dreht sich weg, als könnte sie es bereuen, wenn sie mich noch länger ansieht.'
+      'Mira lächelt nicht mehr. Zum ersten Mal, seit ich sie kenne, sprechen wir wie zwei, die einander ebenbürtig sind.',
+      '»Der Brief, den ich dir für Brakka mitgab — er war eine Warnung. Brakka weiß, wer der Schatten ist. Er hat nur nie ein Wort verloren.«',
+      '»Ich auch nicht. Weil Reden gefährlich ist. Aber du fragst. Und das verändert etwas.«',
+      'Sie wendet sich ab, als fürchtete sie, es zu bereuen, sähe sie mich noch länger an.'
     ]
   },
   {
@@ -168,10 +168,10 @@ const STORY_ENTRIES = [
     title:       'Brakkas Schweigen bricht',
     unlockFlag:  () => gameFlags.brakkaRevealedSuspect,
     text: [
-      'Brakka stellt den Hammer ab. Das erste Mal, seit ich ihn kenne.',
-      '"Der Mann, der immer in der Taverne sitzt — er ist kein Dieb. Er ist der Voraussucher. Er beobachtet, er wählt aus, er meldet zurück."',
-      '"Ich kenne dieses Gesicht seit Jahren. Er hat immer zugeschaut. Ich war zu feige, etwas zu sagen."',
-      'Er sieht mich an, schwer wie Eisen. "Wenn du das beenden willst — hab etwas in der Hand, wenn du ihn stellst."'
+      'Brakka legt den Hammer aus der Hand. Zum ersten Mal, seit ich ihn kenne.',
+      '»Der Mann, der immer in der Taverne hockt — er ist kein Dieb. Er ist der Späher. Er beobachtet, er wählt aus, er meldet weiter.«',
+      '»Dieses Gesicht kenne ich seit Jahren. Immer hat er nur zugesehen. Und ich war zu feige, den Mund aufzumachen.«',
+      'Sein Blick liegt schwer wie Eisen auf mir. »Willst du dem ein Ende setzen, dann halte etwas in der Hand, wenn du ihn stellst.«'
     ]
   },
   {
@@ -179,11 +179,11 @@ const STORY_ENTRIES = [
     title:       'Die Konfrontation',
     unlockFlag:  () => gameFlags.fremderConfronted,
     text: [
-      'Ich lege die Münze auf den Tisch zwischen uns. Der Fremde rührt sich nicht.',
-      '"Du bist nicht wie die anderen", sagt er schließlich, leiser als ich erwartet hatte. "Die anderen haben aufgehört. Du nicht."',
-      '"Ich habe dich ausgewählt. Nicht nur, um dich auszurauben — um zu sehen, was du daraus machst."',
-      'Er schiebt die Münze zurück zu mir. "Der Schatten wird wissen wollen, wer du bist. Ich werde ihm sagen, dass du jemand bist, mit dem man rechnen muss."',
-      'Ich nehme die Münze. Kein Sieg. Keine Niederlage. Nur: eine neue Rechnung, offen.'
+      'Ich lege die Münze auf den Tisch, zwischen uns beide. Der Fremde rührt sich nicht.',
+      '»Du bist nicht wie die anderen«, sagt er endlich, leiser, als ich erwartet hatte. »Die anderen haben aufgegeben. Du nicht.«',
+      '»Ich habe dich ausgewählt. Nicht nur, um dich zu bestehlen — sondern um zu sehen, was du daraus machst.«',
+      'Er schiebt die Münze zu mir zurück. »Der Schatten wird wissen wollen, wer du bist. Ich werde ihm sagen, dass man mit dir rechnen muss.«',
+      'Ich nehme die Münze. Kein Sieg, keine Niederlage. Nur eine neue Rechnung, die offenbleibt.'
     ]
   },
   {
@@ -191,12 +191,12 @@ const STORY_ENTRIES = [
     title:       'Das Ende des Anfangs',
     unlockState: 20200,
     text: [
-      'Ich sitze auf den Stufen vor der Taverne und denke nach.',
-      'Ich bin angekommen als Niemand. Ein Bauernjunge mit leeren Taschen und vollen Träumen.',
-      'Jetzt? Ich habe Blut vergossen, Gold verdient und verloren, Freunde gemacht und Feinde entdeckt, die ich nicht mal gesucht hatte.',
-      'Treutheim ist nicht das Ziel. Es war immer nur die erste Station.',
-      'Der Schatten ist noch da draußen. Und er weiß, dass ich existiere.',
-      'Das ist kein Ende. Das ist der Beginn von etwas viel Größerem.'
+      'Ich sitze auf den Stufen vor der Taverne, und meine Gedanken gehen den Weg zurück, den ich gekommen bin.',
+      'Als Niemand bin ich hier eingetroffen. Ein Bauernjunge mit leeren Taschen und Träumen, die kein Maß kannten.',
+      'Und nun? Ich habe Blut vergossen, Gold gewonnen und verloren, Freunde gefunden und Feinde, nach denen ich nie gesucht habe.',
+      'Treutheim war nie das Ziel. Immer nur die erste Station.',
+      'Der Schatten ist noch dort draußen. Und er weiß, dass es mich gibt.',
+      'Das ist kein Ende. Das ist der Anfang von etwas weit Größerem.'
     ]
   },
 
@@ -206,10 +206,10 @@ const STORY_ENTRIES = [
     title:       'Lethkar',
     unlockFlag:  () => gameFlags.lethkarUnlocked,
     text: [
-      'Drei Tage Weg. Keine Räuber — aber auch keine Gastfreundschaft.',
-      'Lethkar ist größer als Treutheim. Andere Gerüche, andere Gesichter. Hier weiß niemand, wer ich bin.',
+      'Drei Tage Weg liegen hinter mir. Keine Räuber — aber auch keine Hand, die sich mir entgegenstreckte.',
+      'Lethkar ist größer als Treutheim. Fremde Gerüche, fremde Gesichter. Hier weiß niemand, wer ich bin.',
       'Das ist ein Vorteil. Vielleicht.',
-      'Die Adresse aus dem Brief liegt nördlich des Markts. Aber ich gehe nicht hin. Noch nicht.'
+      'Die Adresse aus dem Brief liegt nördlich des Marktes. Doch ich gehe nicht hin. Noch nicht.'
     ]
   },
   {
@@ -217,9 +217,9 @@ const STORY_ENTRIES = [
     title:       'Erste Schritte in Lethkar',
     unlockFlag:  () => gameFlags.varenaMetFirst,
     text: [
-      'In der Taverne sitzt eine Frau mit einem Alchemistenabzeichen und schaut mich so an, als hätte sie erwartet, dass ich komme.',
-      '"Du siehst aus wie jemand, der aus Treutheim kommt." Ich frage mich, was man mir ansieht.',
-      'Varena. Ihr Name bleibt hängen. Und die Art, wie sie redet — präzise. Kein Wort zu viel.'
+      'In der Taverne sitzt eine Frau mit dem Abzeichen der Alchemisten und sieht mich an, als hätte sie auf mein Kommen gewartet.',
+      '»Du siehst aus wie einer, der aus Treutheim kommt.« Ich frage mich, was mein Gesicht ihr verrät.',
+      'Varena. Ihr Name bleibt haften. Und die Art, wie sie spricht — genau, klar, kein Wort zu viel.'
     ]
   },
   {
@@ -227,9 +227,9 @@ const STORY_ENTRIES = [
     title:       'Der entschlüsselte Brief',
     unlockFlag:  () => gameFlags.varenaDecodedBrief,
     text: [
-      '"Valdris." Der Name liegt jetzt in der Luft, nicht mehr auf Papier.',
-      'Ich weiß, wo das Haus ist. Ich weiß, dass ich nicht allein hingehen soll.',
-      'Mira hat mir mehr mitgegeben als ich dachte. Ich hoffe, dass sie weiß, was sie getan hat.'
+      '»Valdris.« Nun liegt der Name in der Luft, nicht mehr nur auf dem Papier.',
+      'Ich weiß, wo das Haus steht. Und ich weiß, dass ich nicht allein dorthin gehen soll.',
+      'Mira hat mir mehr mitgegeben, als ich ahnte. Ich hoffe nur, sie weiß selbst, was sie damit getan hat.'
     ]
   },
   {
@@ -237,10 +237,10 @@ const STORY_ENTRIES = [
     title:       'Das Laboratorium',
     unlockFlag:  () => alchemie.unlocked,
     text: [
-      'Es riecht nach Schwefel, nassen Steinen und irgendwas Süßlichem, das ich nicht einordnen kann.',
-      'Varena zeigt mir die fünf Aspekte. Feuer, Wasser, Erde, Luft — und Äther.',
-      '"Das hier ist kein Handwerk." Sie tippt auf den Tisch. "Das ist Verstehen."',
-      'Ich glaube ihr. Das bedeutet nicht, dass ich es schon tue.'
+      'Es riecht nach Schwefel, nach nassem Stein und nach etwas Süßlichem, das ich nicht zu benennen weiß.',
+      'Varena zeigt mir die fünf Aspekte: Feuer, Wasser, Erde, Luft — und Äther.',
+      '»Das hier ist kein Handwerk.« Sie tippt auf die Tischplatte. »Das ist Verstehen.«',
+      'Ich glaube ihr. Was nicht heißt, dass ich es schon verstehe.'
     ]
   },
   {
@@ -248,10 +248,10 @@ const STORY_ENTRIES = [
     title:       'Thessa und ihre Bücher',
     unlockFlag:  () => gameFlags.thessaTrustGained,
     text: [
-      '"Du weißt mehr als du zeigst", sagt Thessa. "Das ist gut."',
-      'Sie schiebt mir ein Buch über den Tisch — Aufzeichnungen über Lethkarer Händler-Netzwerke. Namen, Verbindungen, Schulden.',
-      'Valdris\' Name taucht dreimal auf. Immer als Gläubiger. Nie als Schuldner.',
-      'Das erklärt einiges. Und macht es komplizierter.'
+      '»Du weißt mehr, als du zeigst«, sagt Thessa. »Das ist gut.«',
+      'Sie schiebt mir ein Buch über den Tisch — Aufzeichnungen über die Händlernetze von Lethkar. Namen, Verbindungen, Schulden.',
+      'Valdris\' Name steht dreimal darin. Stets als Gläubiger. Niemals als Schuldner.',
+      'Das erklärt manches. Und macht alles verwickelter.'
     ]
   },
   {
@@ -259,10 +259,10 @@ const STORY_ENTRIES = [
     title:       'Pereth und das Lagerhaus',
     unlockFlag:  () => gameFlags.perethQuestStarted,
     text: [
-      '"Du bist der Typ, der aus Treutheim kommt und Fragen über Valdris stellt." Pereth ist direkter als ich erwartet hatte.',
-      '"Ich hab für ihn gearbeitet. Einmal reicht." Er lehnt sich zurück. "Das Lagerhaus am Südtor gehört einem seiner Strohleute."',
-      '"Was da drin ist, weiß ich nicht. Aber ich will es wissen. Und du kannst rein, ohne aufzufallen."',
-      'Ich sage ja. Ich bin mir nicht sicher, ob das klug war.'
+      '»Du bist der aus Treutheim, der Fragen über Valdris stellt.« Pereth ist geradliniger, als ich erwartet hatte.',
+      '»Ich habe für ihn gearbeitet. Einmal genügt.« Er lehnt sich zurück. »Das Lagerhaus am Südtor gehört einem seiner Strohmänner.«',
+      '»Was darin liegt, weiß ich nicht. Aber ich will es wissen. Und du kommst hinein, ohne aufzufallen.«',
+      'Ich sage ja. Ob es klug war, weiß ich nicht.'
     ]
   },
   {
@@ -270,10 +270,10 @@ const STORY_ENTRIES = [
     title:       'Die Schatten-Organisation',
     unlockFlag:  () => gameFlags.chapter3StoryComplete,
     text: [
-      'Es ergibt jetzt ein Bild. Kein vollständiges — aber genug.',
-      'Valdris ist kein Söldnerführer. Er ist ein Knotenpunkt. Informationen, Geld, Leute — alles fließt durch ihn.',
-      '"Der Schatten" ist größer als ich gedacht hatte. Valdris ist nur ein Name.',
-      'Hinter ihm steckt mehr. Und es weiß, dass ich hier bin.'
+      'Langsam fügt sich ein Bild. Kein vollständiges — aber genug.',
+      'Valdris ist kein Söldnerführer. Er ist ein Knotenpunkt. Nachrichten, Gold, Menschen — alles läuft durch seine Hände.',
+      'Der Schatten ist größer, als ich es mir vorgestellt habe. Valdris ist nur ein Name darin.',
+      'Hinter ihm steht mehr. Und es weiß, dass ich hier bin.'
     ]
   },
   {
@@ -281,11 +281,11 @@ const STORY_ENTRIES = [
     title:       'Einsicht I',
     unlockFlag:  () => gameFlags.valdrisOperationRaided,
     text: [
-      'Das Lager ist leer. Zu leer — jemand wusste, dass ich komme. Oder sie sind von sich aus gegangen.',
-      'Aber ich finde, was sie zurückgelassen haben: Listen. Routen. Quittungen für Dienste, die keine Namen tragen.',
-      'Und überall dasselbe Muster. Nicht Raub — Kontrolle. Schulden, Geheimnisse, Loyalitäten.',
-      'Valdris baut kein Netzwerk von Verbrechern. Er baut ein Netz aus Menschen, die ihm etwas schulden.',
-      'Das ist schwerer zu zerstören als eine Bande. Viel schwerer.'
+      'Das Lager ist leer. Zu leer. Jemand wusste, dass ich komme — oder sie sind aus eigenem Antrieb gegangen.',
+      'Doch ich finde, was sie zurückließen: Listen, Routen, Quittungen für Dienste, die keinen Namen tragen.',
+      'Und überall dasselbe Muster. Kein Raub — Beherrschung. Schulden, Geheimnisse, erkaufte Treue.',
+      'Valdris baut kein Netz aus Verbrechern. Er baut ein Netz aus Menschen, die ihm etwas schulden.',
+      'Das lässt sich schwerer zerschlagen als eine Bande. Weit schwerer.'
     ]
   },
   {
@@ -293,11 +293,11 @@ const STORY_ENTRIES = [
     title:       'Der Name',
     unlockFlag:  () => gameFlags.varenaRevealedValdrisIdent,
     text: [
-      '"Du hast das Lager gefunden." Varena sagt es ohne Überraschung. "Das bedeutet, er zieht sich zurück."',
-      '"Valdris ist nicht von hier. Er kommt aus dem Osten — aus einer Stadt, die auf Handelsrouten gebaut wurde."',
-      '"Was er hier macht, ist ein Vorposten. Lethkar ist nicht sein Ziel. Es ist sein Sprungbrett."',
+      '»Du hast das Lager gefunden.« Varena sagt es ohne Überraschung. »Das heißt, er zieht sich zurück.«',
+      '»Valdris ist nicht von hier. Er stammt aus dem Osten, aus einer Stadt, die auf Handelswegen errichtet wurde.«',
+      '»Was er hier betreibt, ist nur ein Vorposten. Lethkar ist nicht sein Ziel — es ist sein Sprungbrett.«',
       'Ich frage, wohin er springt. Sie schüttelt den Kopf.',
-      '"Das ist die Frage, die du beantworten musst. Ich kenne nur den Namen — und dass er nicht aufhört."'
+      '»Das ist die Frage, die du beantworten musst. Ich kenne nur den Namen — und weiß, dass er nicht innehält.«'
     ]
   },
   {
@@ -305,11 +305,11 @@ const STORY_ENTRIES = [
     title:       'Einsicht II',
     unlockFlag:  () => gameFlags.alchemieGeselleReached,
     text: [
-      'Ich sitze über den Aspekten und merke plötzlich: ich denke anders.',
-      'Nicht nur über Alchemie. Über Verbindungen. Wie Wasser durch Risse fließt. Wie Feuer Formen annimmt.',
-      'Pereth hat Gold genommen und Wissen gegeben. Varena hat Namen getauscht gegen Vertrauen. Thessa hat Bücher gegen Zeit geöffnet.',
-      'Valdris tut dasselbe — nur in die andere Richtung. Er nimmt Loyalität und gibt Schulden zurück.',
-      'Ich verstehe jetzt, womit ich es zu tun habe. Und das ist mehr wert als jede Waffe.'
+      'Ich sitze über den Aspekten, und mit einem Mal merke ich: Ich denke anders als zuvor.',
+      'Nicht nur über Alchemie. Über das Geflecht der Dinge. Wie Wasser durch jeden Riss seinen Weg findet. Wie Feuer Gestalt annimmt.',
+      'Pereth nahm Gold und gab Wissen. Varena tauschte Namen gegen Vertrauen. Thessa öffnete ihre Bücher gegen Zeit.',
+      'Valdris tut dasselbe — nur umgekehrt. Er nimmt Treue und gibt Schuld zurück.',
+      'Jetzt begreife ich, womit ich es zu tun habe. Und das wiegt schwerer als jede Waffe.'
     ]
   },
   {
@@ -317,13 +317,13 @@ const STORY_ENTRIES = [
     title:       'Der nächste Horizont',
     unlockFlag:  () => gameFlags.kap3Complete,
     text: [
-      'Lethkar hat mich verändert. Nicht auf die Art, die ich erwartet hatte.',
-      'Ich bin stärker — aber das war vorhersehbar. Ich bin klüger — das auch.',
-      'Was ich nicht erwartet hatte: ich habe aufgehört, Valdris zu fürchten.',
-      'Er ist real. Er ist gefährlich. Aber er ist kein Schatten mehr — er ist ein Mensch mit einem Plan.',
-      'Und ich bin jemand, der Pläne lesen kann.',
-      'Der Weg führt weiter nach Osten. Dorthin, woher er kommt.',
-      'Ich weiß noch nicht, was mich dort erwartet. Aber ich weiß, wer ich bin, wenn ich ankomme.'
+      'Lethkar hat mich verändert. Nicht auf die Weise, die ich erwartet hatte.',
+      'Stärker bin ich geworden — doch das war abzusehen. Klüger auch.',
+      'Was ich nicht erwartet hatte: Ich habe aufgehört, Valdris zu fürchten.',
+      'Er ist wirklich, er ist gefährlich. Aber kein Schatten mehr — ein Mensch mit einem Plan.',
+      'Und ich bin einer, der Pläne zu lesen versteht.',
+      'Der Weg führt weiter nach Osten. Dorthin, woher er gekommen ist.',
+      'Was mich dort erwartet, weiß ich nicht. Doch ich weiß, wer ich sein werde, wenn ich ankomme.'
     ]
   },
 
@@ -333,11 +333,11 @@ const STORY_ENTRIES = [
     title:       'Velmark',
     unlockFlag:  () => gameFlags.velmarkUnlocked,
     text: [
-      'Velmark. Größer als Lethkar. Lauter. Mehr Stimmen, mehr Gerüche, mehr Menschen die nichts voneinander wissen wollen.',
+      'Velmark. Größer als Lethkar, lauter dazu. Mehr Stimmen, mehr Gerüche, mehr Menschen, die nichts voneinander wissen wollen.',
       'Niemand kennt mich hier.',
-      'Gut. Ich kenne auch niemanden.',
-      'Zum ersten Mal seit Treutheim bin ich wieder ein Niemand — aber diesmal weiß ich, was das bedeutet.',
-      'Es bedeutet: Ich kann wählen, wer ich hier werde.'
+      'Gut so. Ich kenne hier ebenso wenig jemanden.',
+      'Zum ersten Mal seit Treutheim bin ich wieder ein Niemand — doch diesmal weiß ich, was das bedeutet.',
+      'Es bedeutet: Ich darf wählen, wer ich hier werde.'
     ]
   },
   {
@@ -345,11 +345,11 @@ const STORY_ENTRIES = [
     title:       'Drei Säulen',
     unlockFlag:  () => gameFlags.gildekontaktGeknuepft || gameFlags.bruderschaftkontaktGeknuepft || gameFlags.archivkontaktGeknuepft,
     text: [
-      'Velmark wird von drei Kräften zusammengehalten.',
-      'Die Händlergilde: wer zahlt, hat Recht. Alte Logik, aber sie funktioniert.',
-      'Die Eiserne Bruderschaft: Söldner, Wachen, Männer mit Muskeln und kurzen Gedächtnissen. Aber sie hören auf Stärke.',
-      'Das Stadtarchiv: Aufzeichnungen, Legitimität, Geschichte. Die leiseste der drei — und wahrscheinlich die mächtigste.',
-      'Und irgendwo in allen dreien: Valdris. Nicht sichtbar. Aber spürbar.'
+      'Drei Kräfte halten Velmark zusammen.',
+      'Die Händlergilde: Wer zahlt, hat recht. Eine alte Wahrheit, aber sie trägt.',
+      'Die Eiserne Bruderschaft: Söldner und Wächter, Männer mit breiten Schultern und kurzem Gedächtnis. Doch sie hören auf Stärke.',
+      'Das Stadtarchiv: Aufzeichnungen, Recht, Geschichte. Die stillste der drei — und wohl die mächtigste.',
+      'Und in allen dreien, irgendwo verborgen: Valdris. Nicht zu sehen. Aber zu spüren.'
     ]
   },
   {
@@ -357,11 +357,11 @@ const STORY_ENTRIES = [
     title:       'Pereth, wieder',
     unlockFlag:  () => gameFlags.perethFoundInVelmark,
     text: [
-      'Er sitzt in einer Taverne am Westkai, als wäre er nie weg gewesen.',
-      '"Ich hab mich gefragt, wann du auftauchst." Kein Hallo. Kein Überraschung.',
-      'Er ist nicht mehr für Valdris tätig — er ist ihm einen Schritt voraus. Und einen hinter mir.',
-      'Er kennt diese Stadt. Er hat hier für Valdris Kontakte aufgebaut.',
-      '"Jetzt weiß ich, wie sein Netz funktioniert. Das macht mich nützlich für dich. Und gefährlich für ihn."'
+      'Er sitzt in einer Taverne am Westkai, als wäre er nie fort gewesen.',
+      '»Ich habe mich gefragt, wann du auftauchst.« Kein Gruß. Keine Überraschung.',
+      'Für Valdris arbeitet er nicht mehr — er ist ihm einen Schritt voraus. Und mir einen hinterher.',
+      'Er kennt diese Stadt. Hier hat er einst für Valdris die Fäden geknüpft.',
+      '»Jetzt weiß ich, wie sein Netz gewoben ist. Das macht mich nützlich für dich. Und gefährlich für ihn.«'
     ]
   },
   {
@@ -369,11 +369,11 @@ const STORY_ENTRIES = [
     title:       'Der erste Schritt',
     unlockFlag:  () => gameFlags.ersteAllianzGeknuepft,
     text: [
-      'Ich habe angefangen, ein Gesicht zu werden in dieser Stadt.',
-      'Die erste Fraktion ist aufgetaut — langsam, vorsichtig, wie alles hier.',
-      'Es fühlt sich anders an als in Treutheim oder Lethkar.',
+      'Langsam werde ich zu einem Gesicht in dieser Stadt.',
+      'Die erste Fraktion ist aufgetaut — behutsam, zögernd, so wie hier alles geschieht.',
+      'Es ist anders als in Treutheim oder Lethkar.',
       'Dort bin ich gewachsen. Hier muss ich etwas anderes sein: überzeugend.',
-      'Vertrauen hier ist keine Frage der Kraft oder des Wissens. Es ist eine Frage der Zeit.'
+      'Vertrauen ist hier weder eine Frage der Kraft noch des Wissens. Es ist eine Frage der Zeit.'
     ]
   },
   {
@@ -381,11 +381,11 @@ const STORY_ENTRIES = [
     title:       'Der Brief',
     unlockFlag:  () => gameFlags.valdrisBriefErhalten,
     text: [
-      'Ein Brief. Kein Absender. Aber die Handschrift kenne ich nicht — und trotzdem weiß ich sofort, von wem er ist.',
-      '"Ich habe bemerkt, dass du in Velmark angekommen bist. Kein Zufall, nehme ich an."',
-      '"Wir könnten reden, wenn du möchtest. Unverbindlich."',
-      'Er weiß, dass ich hier bin. Er fragt nicht, was ich will — er setzt voraus, dass wir dasselbe wollen.',
-      'Das ist die gefährlichste Art von Feind: einer, der nicht falsch liegt.'
+      'Ein Brief, ohne Absender. Die Handschrift ist mir fremd — und doch weiß ich auf der Stelle, von wem er stammt.',
+      '»Es ist mir nicht entgangen, dass du in Velmark eingetroffen bist. Kein Zufall, vermute ich.«',
+      '»Wir könnten reden, wenn du magst. Ganz unverbindlich.«',
+      'Er weiß, dass ich hier bin. Er fragt nicht, was ich will — er nimmt einfach an, dass wir dasselbe begehren.',
+      'Das ist die gefährlichste Art von Feind: einer, der nicht irrt.'
     ]
   },
   {
@@ -394,10 +394,10 @@ const STORY_ENTRIES = [
     unlockFlag:  () => gameFlags.zweiAllianzGekuepft,
     text: [
       'Zwei von drei.',
-      'Die Stadt beginnt, mich anders anzusehen — nicht mehr als Fremden, sondern als jemanden, der bleibt.',
-      'Valdris macht Gegenzüge. Kleine Dinge: ein Lieferant der nicht kommt, ein Gespräch das abgebrochen wird.',
-      'Er weiß, was ich tue. Aber er kann es noch nicht stoppen.',
-      'Ein Netz, das auf Schulden gebaut ist, hat eine Schwäche: Die Schulden müssen auch irgendwann vergessen werden.'
+      'Die Stadt sieht mich mit anderen Augen an — nicht mehr als Fremden, sondern als einen, der bleibt.',
+      'Valdris setzt zum Gegenzug an. Kleine Dinge: ein Lieferant, der ausbleibt, ein Gespräch, das jäh verstummt.',
+      'Er weiß, was ich treibe. Aufhalten kann er es noch nicht.',
+      'Ein Netz aus Schulden hat eine Schwäche: Auch Schulden geraten irgendwann in Vergessenheit.'
     ]
   },
   {
@@ -406,11 +406,11 @@ const STORY_ENTRIES = [
     unlockFlag:  () => gameFlags.valdrisAngebotGemacht,
     text: [
       'Er sitzt mir gegenüber. Zum ersten Mal.',
-      'Er ist jünger als ich dachte. Ruhiger. Kein Messer, kein Wächter in Sichtweite.',
-      '"Ich baue etwas Dauerhaftes", sagt er. "Du auch. Das sieht man."',
-      '"Warum nicht zusammen? Du bekommst, was du willst — und ich bekomme, was ich will."',
-      'Ich habe keine Antwort. Nicht sofort.',
-      'Das ist das härteste Gespräch meines Lebens.'
+      'Jünger ist er, als ich dachte. Ruhiger. Kein Messer, kein Wächter in Sichtweite.',
+      '»Ich baue etwas, das Bestand hat«, sagt er. »Du auch. Das sieht man dir an.«',
+      '»Warum nicht gemeinsam? Du erhältst, was du suchst — und ich, was ich suche.«',
+      'Ich habe keine Antwort. Jedenfalls nicht sogleich.',
+      'Es ist das schwerste Gespräch meines Lebens.'
     ]
   },
   {
@@ -419,9 +419,9 @@ const STORY_ENTRIES = [
     unlockFlag:  () => gameFlags.valdrisAngebotAbgelehnt,
     text: [
       'Ich habe Nein gesagt.',
-      'Nicht weil ich ein besserer Mensch bin. Nicht wegen irgendeiner Moral.',
-      'Sondern weil sein "Dauerhaftes" auf anderen liegt — und das wäre bald auf mir.',
-      'Er hat nichts gesagt. Er ist gegangen.',
+      'Nicht, weil ich der bessere Mensch wäre. Nicht aus irgendeiner Moral heraus.',
+      'Sondern weil sein Bauwerk auf den Schultern anderer ruht — und bald auf meinen ruhen würde.',
+      'Er hat nichts erwidert. Er ist gegangen.',
       'Jetzt ist es kein Gespräch mehr. Jetzt ist es etwas anderes.'
     ]
   },
@@ -431,10 +431,10 @@ const STORY_ENTRIES = [
     unlockFlag:  () => gameFlags.allianzKomplett,
     text: [
       'Alle drei.',
-      'Es hat länger gedauert als gedacht. Manches hat mich Dinge gekostet, die ich nicht zurückbekomme.',
-      'Aber das Netz steht — meines, nicht seines.',
-      'Valdris ist eingekreist. Nicht militärisch. Politisch.',
-      'Er kann nirgends mehr hin, ohne jemanden zu verraten, der jetzt bei mir steht.'
+      'Es hat länger gedauert als gedacht. Manches hat mich Dinge gekostet, die mir niemand zurückgibt.',
+      'Doch das Netz steht — meines, nicht seines.',
+      'Valdris ist eingekreist. Nicht mit Waffen. Mit Macht und Bündnissen.',
+      'Er kann sich nirgends mehr hinwenden, ohne einen zu verraten, der jetzt zu mir hält.'
     ]
   },
   {
@@ -442,12 +442,12 @@ const STORY_ENTRIES = [
     title:       'Das Ende des Weges',
     unlockFlag:  () => gameFlags.kap4Complete,
     text: [
-      'Er wusste es natürlich.',
-      'Das letzte Gespräch war kurz. Kürzer als ich erwartet hatte.',
-      'Er hat nicht gezögert, nicht gefeilscht. Er hat die Lage gesehen — und gezogen.',
+      'Er hat es natürlich gewusst.',
+      'Das letzte Gespräch war kurz. Kürzer, als ich erwartet hatte.',
+      'Kein Zögern, kein Feilschen. Er hat die Lage erkannt — und ist gegangen.',
       'Velmark gehört wieder sich selbst. Das Netz ist zerschnitten.',
       'Treutheim, Lethkar, Velmark.',
-      'Ich bin nicht mehr derselbe, der dort an diesem Stadttor gestanden hat.',
+      'Ich bin nicht mehr der, der einst an jenem Stadttor stand.',
       'Gut so.'
     ]
   }

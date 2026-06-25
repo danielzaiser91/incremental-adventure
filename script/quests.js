@@ -353,10 +353,8 @@ const QUEST_DEFS = [
     chapter: 4,
     descByState: {
       unstarted: 'Noch nicht begonnen.',
-      active:    () => `Jemand manipuliert Yevas Bücher. Drei Hinweise sammeln: Kampf, Dialog, Markt. (${quests.gildeKorruption?.hinweisCount ?? 0}/3)`,
-      hinweis1:  'Ersten Hinweis gefunden. Zwei fehlen noch.',
-      hinweis2:  'Zwei Hinweise gefunden. Noch einer.',
-      done:      'Drei Hinweise gesammelt. Den Täter mit Yeva konfrontieren.',
+      active:    'Valdris hat einen Buchhalter bestochen. Beweis liegt beim Stadtarchiv — Sele um Hilfe bitten.',
+      done:      'Das Dokument ist gesichert. Yeva aufsuchen und die Beweise übergeben.',
       rewarded:  'Abgeschlossen — die Händlergilde ist vollständig auf meiner Seite.'
     }
   },
@@ -792,13 +790,13 @@ function checkQuestTriggers() {
   }
   // Kap 4: gildeKorruption nach gildeInvestition rewarded
   if (quests.gildeKorruption.state === 'unstarted' && quests.gildeInvestition.state === 'rewarded') {
-    quests.gildeKorruption.state = 'active';
-    showToast('Neue Aufgabe: Jemand manipuliert Yevas Bücher.', TOAST.EVENT);
+    quests.gildeKorruption.state = QUEST_STATE.ACTIVE;
+    showToast('Neue Aufgabe: Valdris hat einen Buchhalter bestochen — Beweis beschaffen.', TOAST.EVENT);
   }
-  // Kap 4: gildeKorruption Fortschritt
-  if (quests.gildeKorruption.state === 'active' && quests.gildeKorruption.hinweisCount >= 3) {
-    quests.gildeKorruption.state = 'done';
-    showToast('Drei Hinweise gesammelt — den Täter mit Yeva konfrontieren.', TOAST.REWARD);
+  // Kap 4: gildeKorruption — Beweis liegt vor sobald dasDokument abgeschlossen
+  if (quests.gildeKorruption.state === QUEST_STATE.ACTIVE && quests.dasDokument?.state === QUEST_STATE.REWARDED) {
+    quests.gildeKorruption.state = QUEST_STATE.DONE;
+    showToast('Beweis gesichert — zu Yeva.', TOAST.REWARD);
   }
   // Kap 4: unterweltVerhandlung nach bruderschaftBeweis
   if (!gameFlags.unterweltVerhandlungUnlocked && quests.bruderschaftBeweis.state === 'rewarded') {
