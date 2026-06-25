@@ -15,3 +15,4 @@
 ||Dialoge überarbeitet: Harro · Yeva · Gorr · Sele — Fix: gildeInvestition: Quest-Timer (Hardblocker) · Fix: gildeKorruption: falscher State (Hardblocker)||
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/
+
