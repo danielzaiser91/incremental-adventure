@@ -1,11 +1,14 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.20.0-alpha
+**Aktuelle Version:** v0.21.0-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
-- Brakka reagierte nicht auf „Oswins stiller Auftrag" wenn der Spieler bereits weiter fortgeschritten war (nightWatch nicht mehr unstarted) — Dialog ist jetzt immer erreichbar
+- brennenderMut: Turn-in möglich + Nacht-Schwelle 5→3
+- oswinsAuftrag: Oswin reagiert korrekt auf aktive Quest
+- gildeInvestition: Quest-Timer (Hardblocker) behoben
+- gildeKorruption: falscher State (Hardblocker) behoben
 
 📋 Vollständiges Changelog älterer Versionen: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
 
