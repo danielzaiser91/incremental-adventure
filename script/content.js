@@ -1490,11 +1490,30 @@ function renderLethkarMarkt(el) {
       </div>`;
   }).join('');
 
+  const traded = quests.lethkarMarkt?.goldTraded || 0;
+  const questActive = quests.lethkarMarkt?.state === 'active';
+  const canSell = !nightClosed;
+  const sellCard = `
+    <div class="action-card">
+      <div class="action-card-icon">🪙</div>
+      <div class="action-card-name">Waren anbieten</div>
+      <p class="action-card-desc">Mitgebrachtes feilbieten — Rohstoffe, Kräuter, was die Wildnis hergibt.</p>
+      <div class="action-card-effect">+15–30 Gold · 😴 Müdigkeit +8 % · 🍞 Hunger +5 %</div>
+      ${questActive ? `<div class="action-card-warning">Handelsvolumen: ${traded}/200 Gold</div>` : ''}
+      <button class="action-btn ${canSell ? '' : 'btn-disabled'}"
+        onclick="lethkarHandel()"
+        ${canSell ? '' : 'disabled'}>
+        ${nightClosed ? 'Markt geschlossen' : 'Verkaufen'}
+      </button>
+    </div>`;
+
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Markt der Zutaten</div>
       <p class="location-card-desc" style="margin-bottom:12px;">Alchemistische Rohstoffe, hochwertige Waren, Dinge die man in Treutheim nicht findet.</p>
-      <div class="market-section-label">Alchemie-Ausrüstung</div>
+      <div class="market-section-label">Waren verkaufen</div>
+      <div class="action-grid">${sellCard}</div>
+      <div class="market-section-label" style="margin-top:16px;">Alchemie-Ausrüstung</div>
       <div class="action-grid">${werkzeugCard}</div>
       <div class="market-section-label" style="margin-top:16px;">Verpflegung</div>
       <div class="action-grid">${foodCards}</div>

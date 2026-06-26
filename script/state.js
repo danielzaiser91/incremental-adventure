@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.2-alpha';
+const GAME_VERSION = '0.22.3-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,10 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.3-alpha': [
+    { cat: 'Bugfix', text: 'Velmark freigeschaltet bevor alle Kap.-3-Quests abgeschlossen waren — Abschiedsdialog bei Varena erschien zu früh. Behoben.' },
+    { cat: 'Bugfix', text: 'Lethkar-Markt: Kein Verkaufsangebot vorhanden, "Handel in der Kälte"-Achievement nicht abschließbar. Verkaufsstand hinzugefügt.' },
+  ],
   '0.22.2-alpha': [
     { cat: 'Bugfix', text: 'Valdris\' Lager: "Erkunden"-Button löste einen Absturz aus (Funktion nicht definiert). Behoben.' },
   ],

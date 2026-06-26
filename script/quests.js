@@ -283,7 +283,10 @@ const QUEST_DEFS = [
     chapter: 3,
     descByState: {
       unstarted: 'Noch nicht begonnen.',
-      active:    'Den Lethkar-Markt richtig nutzen — kaufen oder Ressourcen für mindestens 200 Gold verkaufen.',
+      active:    () => {
+        const traded = quests.lethkarMarkt?.goldTraded || 0;
+        return `Den Lethkar-Markt richtig nutzen — kaufen oder Ressourcen für mindestens 200 Gold verkaufen (${traded}/200 Gold).`;
+      },
       rewarded:  'Abgeschlossen — die Händler kennen mich jetzt. Kleine Rabatte, aber doch.'
     }
   },

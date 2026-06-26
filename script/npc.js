@@ -1260,9 +1260,6 @@ const NPCS = {
         ],
         options: [{
           label: 'Ich lasse ihn gehen.',
-          // handled: true → openNpcDialog ruft nach der Aktion weder closeDialog()
-          // noch openNpcDialog(next) auf; maybeShowStoryDialog('2.6') übernimmt
-          // das Dialog-Lifecycle selbst (inklusive des Sieg-Callbacks).
           handled: true,
           action: () => {
             if (!gameFlags.fremderConfronted) {
@@ -1270,9 +1267,11 @@ const NPCS = {
               quests.theftInvestigation.state = QUEST_STATE.CONFRONTED;
               storyState = 20106;
               render();
-              maybeShowStoryDialog('2.6');
               showToast('Die Konfrontation ist vorbei. Die Spur des Diebs — abgeschlossen.', TOAST.EVENT);
             }
+            // closeDialog() immer aufrufen — maybeShowStoryDialog zeigt 2.6 nur
+            // wenn noch nicht gezeigt, schließt aber nicht selbst wenn schon gesehen.
+            closeDialog(() => maybeShowStoryDialog('2.6'));
           }
         }]
       },
@@ -1621,7 +1620,10 @@ const NPCS_LETHKAR = [
       if (quests.varenaErstkontakt?.state === QUEST_STATE.UNSTARTED && alchemie.unlocked) return 'varenaQuestOffer';
       if (quests.alchemieGeselle?.state === QUEST_STATE.DONE) return 'alchemieGeselleTurnIn';
       if (quests.valdrisSpuren?.state === QUEST_STATE.ORT3 || quests.valdrisSpuren?.state === 'ort3') return 'valdrisSpurenDeuten';
-      if (quests.kapitel3Abschluss?.state === QUEST_STATE.UNSTARTED && quests.perethKontakt?.state === QUEST_STATE.REWARDED) return 'abschiedVarena';
+      if (quests.kapitel3Abschluss?.state === QUEST_STATE.UNSTARTED &&
+          quests.perethKontakt?.state === QUEST_STATE.REWARDED &&
+          quests.alchemieGeselle?.state === QUEST_STATE.REWARDED &&
+          quests.valdrisSpuren?.state === QUEST_STATE.REWARDED) return 'abschiedVarena';
       if (alchemie.unlocked) return 'alchemieIdle';
       return 'idle';
     },

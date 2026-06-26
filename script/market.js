@@ -548,7 +548,9 @@ function buyAlchemieWerkzeug() {
   if (resources.gold < cost) { showToast(`Nicht genug Gold (${cost}g benötigt).`, TOAST.ERROR); return; }
   resources.gold -= cost;
   meta.alchemieWerkzeug = true;
+  if (quests.lethkarMarkt) quests.lethkarMarkt.goldTraded = (quests.lethkarMarkt.goldTraded || 0) + cost;
   showToast(`Alchemisten-Werkzeug erworben (−${cost} Gold). Alchemie-Tempo +50 %.`, TOAST.PURCHASE);
+  checkQuestTriggers();
   render();
 }
 
@@ -558,7 +560,9 @@ function buyLethkarFood(itemId, cost) {
   if (resources.gold < cost) { showToast(`Nicht genug Gold (${cost}g benötigt).`, TOAST.ERROR); return; }
   resources.gold -= cost;
   grantItem(itemId, 1);
+  if (quests.lethkarMarkt) quests.lethkarMarkt.goldTraded = (quests.lethkarMarkt.goldTraded || 0) + cost;
   showToast(`Gekauft (−${cost} Gold).`, TOAST.PURCHASE);
+  checkQuestTriggers();
   render();
 }
 

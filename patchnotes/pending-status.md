@@ -1,10 +1,13 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.2-alpha
+**Aktuelle Version:** v0.22.3-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
+- Konfrontation mit dem Fremden: Dialog ließ sich nicht schließen (harter Blocker) — behoben
+- Velmark freigeschaltet bevor alle Kap.-3-Quests abgeschlossen — Bedingung korrigiert
+- Lethkar-Markt: Kein Verkaufsangebot vorhanden, Achievement "Handel in der Kälte" nicht abschließbar — Verkaufsstand hinzugefügt
 - Valdris' Lager: "Erkunden"-Button führte zu einem Absturz (Funktion nicht definiert) — behoben
 - Inventar: Werkzeuge (Axt, Spitzhacke, Sichel) belegten fälschlicherweise Inventarplätze
 - Gildenprüfung: Kill-Zähler startete ab Spielbeginn statt ab Quest-Annahme — zeigt jetzt Fortschritt (X/5)
