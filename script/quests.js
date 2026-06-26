@@ -190,6 +190,7 @@ const QUEST_DEFS = [
     descByState: {
       unstarted: 'Noch nicht begonnen.',
       active:    () => `Brakka hat mich herausgefordert: Drei Tagesschichten Stadtwache hintereinander. (${quests.brennenderMut?.count ?? 0}/3)`,
+      done:      'Drei Schichten durchgehalten — Brakka Bescheid geben.',
       rewarded:  'Abgeschlossen — Brakka vertraut mir jetzt anders. Und ich vertraue mir selbst.'
     }
   },

@@ -507,7 +507,7 @@ const NPCS = {
       quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED ||
       quests.gildePruefung?.state === QUEST_STATE.DONE ||
       quests.waldtrollJagd?.state === QUEST_STATE.DONE ||
-      quests.brennenderMut?.state === QUEST_STATE.REWARDED,
+      quests.brennenderMut?.state === QUEST_STATE.DONE,
     start: () => {
       if (quests.miraLetter.state === QUEST_STATE.ACTIVE && (questItems.sealedLetter || 0) > 0) return 'receiveLetter';
       if (quests.theftInvestigation.state === QUEST_STATE.MIRA_CONSULTED) return 'detectiveReveal';
@@ -780,19 +780,19 @@ const NPCS = {
       brennenderMutTurnIn: {
         text: [
           'Brakka hört mich kommen, bevor ich ihn anspreche.',
-          '"Drei Nächte." Er dreht sich um. Er sieht mich an — anders als sonst.',
+          '"Drei Schichten." Er dreht sich um. Er sieht mich an — anders als sonst.',
           '"Nicht zwei, nicht halb. Drei. Ohne Ausreden."',
           '"Das nennt man Charakter." Er streckt die Hand aus. "Du hast mein Vertrauen. Das ist nicht nichts."'
         ],
-        reward: () => '✨ <strong>+25 Gold</strong> · Brakkas Vertrauen gewonnen',
+        reward: () => '✨ <strong>+200 Gold</strong> · Brakkas Vertrauen gewonnen',
         options: [{
           label: 'Ich schlage ein.',
           next: null,
           action: () => {
             quests.brennenderMut.state = QUEST_STATE.REWARDED;
-            resources.gold += 25; resources.totalGoldEarned += 25;
+            resources.gold += 200; resources.totalGoldEarned += 200;
             checkMilestones();
-            showToast('Brennender Mut abgeschlossen! +25 Gold.', TOAST.REWARD);
+            showToast('Brennender Mut abgeschlossen! +200 Gold.', TOAST.REWARD);
           }
         }]
       },
