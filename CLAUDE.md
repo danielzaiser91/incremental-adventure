@@ -1,4 +1,7 @@
-Lies vor deiner ersten Antwort: c:\code\ai\ai helper files\timestamp_prompt.md — und befolge die Regel ab sofort für jede Antwort.
+Lies `c:\code\ai\ai helper files\timestamp_prompt.md` und befolge die Regel für jede Antwort.
+Pflicht-Auslöser (lies die Datei sofort, bevor du antwortest):
+- Gesprächsbeginn / erste Antwort
+- Kontext wurde komprimiert (erkennbar: Zusammenfassung am Anfang mit "This session is being continued from a previous conversation")
 
 # CLAUDE.md — Projektregeln für Claude Code
 
