@@ -1799,7 +1799,7 @@ function renderVelmarkMarkt(el) {
   const nightClosed = isNight();
 
   // ── Velmarker Kettenrüstung (permanent, −5 Kampfschaden)
-  const ruestungCost   = 120000;
+  const ruestungCost   = 6000;
   const ruestungOwned  = meta.velmarkRuestung;
   const canBuyRuestung = !ruestungOwned && resources.gold >= ruestungCost && !nightClosed;
   const ruestungCard   = `
@@ -1888,11 +1888,11 @@ function renderVelmarkSchlafplatz(el) {
 
   const VELMARK_SLEEP_OPTIONS = [
     {
-      id: 'velmark_pension', name: 'Hafenpension "Morgenwind"', icon: '🛏', cost: 2000, qualityTier: 2,
+      id: 'velmark_pension', name: 'Hafenpension "Morgenwind"', icon: '🛏', cost: 300, qualityTier: 2,
       desc: 'Eine ruhige Kammer mit Blick aufs Wasser. Geräuschloser als das Hafen-Treiben unten.'
     },
     {
-      id: 'velmark_suite', name: 'Herrschaftliche Suite', icon: '🏨', cost: 6000, qualityTier: 3,
+      id: 'velmark_suite', name: 'Herrschaftliche Suite', icon: '🏨', cost: 800, qualityTier: 3,
       desc: 'Für Leute, die sich das leisten können. Weiche Matratze, keine Nachbarn, keine Fragen.'
     }
   ];

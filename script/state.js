@@ -270,7 +270,7 @@ const VERSION_NOTES = {
   '0.22.7-alpha': [
     { cat: 'Bugfix', text: 'Quest "Drei Nächte, keine Ausreden": zählte Nachtwache statt Stadtwache, Fortschritt zeigte immer 0/3. Quest heißt jetzt "Drei Schichten" und trackt Stadtwache-Schichten korrekt.' },
     { cat: 'Bugfix', text: 'Stadtwache-Karte hatte keinen sichtbaren Button — Klick funktionierte nur auf dem unsichtbaren Div. Button ist jetzt sichtbar.' },
-    { cat: 'Balancing', text: 'Velmark-Preise an Kap.-4-Einkommensrate angepasst: Essen 2.000–10.000g, Schlafplatz 2.000–6.000g, Kettenrüstung 120.000g.' },
+    { cat: 'Balancing', text: 'Velmark-Preise korrigiert: Essen 200–900g, Schlafplatz 300–800g, Kettenrüstung 6.000g.' },
   ],
   '0.22.6-alpha': [
     { cat: 'Bugfix', text: 'Eichhörnchen-Bonus (+X Rohstoffe pro Sammelaktion) wurde nie angewendet — Holz hacken, Steine sammeln und Wildkraut sammeln zählen jetzt korrekt.' },
