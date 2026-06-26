@@ -271,8 +271,9 @@ function gatherResource(resourceId) {
   const tool = TOOL_ITEMS.find(t => t.resource === resourceId);
   if (!tool || (resources.inventory[tool.id] || 0) <= 0) return;
 
-  const erdeBonus   = typeof getAlchemieErdeRohstoffBonus === 'function' ? getAlchemieErdeRohstoffBonus() : 0;
-  const totalAmount = RESOURCE_GATHER_AMOUNT + erdeBonus;
+  const erdeBonus     = typeof getAlchemieErdeRohstoffBonus === 'function' ? getAlchemieErdeRohstoffBonus() : 0;
+  const squirrelBonus = typeof getWildPetResourceBonus === 'function' ? getWildPetResourceBonus() : 0;
+  const totalAmount   = RESOURCE_GATHER_AMOUNT + erdeBonus + squirrelBonus;
   grantItem(resourceId, totalAmount);
   adjustTiredness(Math.round(RESOURCE_GATHER_TIREDNESS * getSuperRestMult()));
   adjustHunger(Math.round(RESOURCE_GATHER_HUNGER * getSuperRestMult()));

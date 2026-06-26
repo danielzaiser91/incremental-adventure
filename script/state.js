@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.5-alpha';
+const GAME_VERSION = '0.22.6-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,9 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.6-alpha': [
+    { cat: 'Bugfix', text: 'Eichhörnchen-Bonus (+X Rohstoffe pro Sammelaktion) wurde nie angewendet — Holz hacken, Steine sammeln und Wildkraut sammeln zählen jetzt korrekt.' },
+  ],
   '0.22.5-alpha': [
     { cat: 'Balancing', text: 'Waldtroll: Kampf-Belohnung von 18–30 Gold auf 120–200 Gold angehoben (Kap.-1-Boss-Niveau).' },
     { cat: 'Balancing', text: 'Waldtroll-Quest-Belohnung (Brakka): von 25 Gold auf 750 Gold erhöht.' },
