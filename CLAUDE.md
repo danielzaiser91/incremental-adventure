@@ -8,8 +8,8 @@ Lies vor deiner ersten Antwort: c:\code\ai\ai helper files\timestamp_prompt.md �
 
 | Änderung | Was muss mit in den Commit |
 |---|---|
-| Bugfix | `patchnotes/pending-status.md` (nur Bugfixes!) + Patch-Version bump (`version.json`, `script/state.js` GAME_VERSION + VERSION_NOTES) |
-| Neues Feature / Story | `patchnotes/pending-patchnotes.md` + Minor-Version bump — NICHT in pending-status.md |
+| Bugfix | `patchnotes/pending-status.md` (Version + Bugfixes eintragen) + Patch-Version bump (`version.json`, `script/state.js` GAME_VERSION + VERSION_NOTES) |
+| Neues Feature / Story | `patchnotes/pending-patchnotes.md` + Minor-Version bump + **Version in `pending-status.md` aktualisieren** |
 | Feature ohne Minor-Bump (Nachtrag) | `patchnotes/pending-patchnotes.md` ergänzen → Bot macht PATCH (Edit) der bestehenden Nachricht |
 | Bekannter Bug (noch offen) | `patchnotes/pending-status.md` unter "Bekannte Fehler" |
 | Workflow / Dev-Dateien / Refactoring | nichts — kein Spieler-Impact |
