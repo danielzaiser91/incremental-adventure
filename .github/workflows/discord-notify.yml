@@ -31,6 +31,23 @@ jobs:
             || echo "status=false" >> $GITHUB_OUTPUT
 
 
+      - name: Warten bis GitHub Pages mit neuer Version live ist
+        run: |
+          EXPECTED=$(jq -r '.version' version.json)
+          echo "Erwartete Version: $EXPECTED"
+          URL="https://danielzaiser91.github.io/incremental-adventure/version.json"
+          for i in $(seq 1 20); do
+            LIVE=$(curl -sf "$URL" | jq -r '.version // empty' 2>/dev/null || echo "")
+            echo "Versuch $i: Live=$LIVE"
+            if [ "$LIVE" = "$EXPECTED" ]; then
+              echo "GitHub Pages ist aktuell ($LIVE). Weiter."
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "FEHLER: GitHub Pages nach 400s noch nicht auf $EXPECTED. Abbruch."
+          exit 1
+
       - name: Discord IDs aus Datei laden
         id: ids
         run: |
