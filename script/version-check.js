@@ -1,6 +1,6 @@
 'use strict';
 
-const VERSION_CHECK_INTERVAL_MS = 45 * 1000;
+const VERSION_CHECK_INTERVAL_MS = 15 * 1000;
 const VERSION_CHECK_INITIAL_MS  = 15 * 1000;
 
 function startVersionCheck() {
