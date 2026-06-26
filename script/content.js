@@ -945,13 +945,15 @@ function renderStadtwache(el) {
         <div class="action-card-title">🛡 Schicht beginnen</div>
         <p class="action-card-desc">Ich bin zu erschöpft, um heute noch Schicht zu machen.</p>
       </div>`
-    : `<div class="action-card ${busy ? 'action-card-active' : ''}" style="width:260px;" onclick="${busy || busyWork ? '' : 'startStadtwacheShift()'}">
+    : `<div class="action-card ${busy ? 'action-card-active' : ''}" style="width:260px;">
         <div class="action-card-title">🛡 ${busy ? '⏳ Im Dienst…' : 'Schicht beginnen'}</div>
         <p class="action-card-desc">Eine Tagesschicht bei der Stadtwache — die Straßen sicher halten, den Lohn einstreichen.</p>
         <div class="reward-info">Lohn: <span class="gold-amount">+${reward} Gold</span></div>
         <div class="action-card-effect">⏱ Dauer: ${durationS}s · 🕐 Spielzeit: +8h · 😴 Müdigkeit: +${tiredness}% · 🍞 Hunger: +${hunger}%</div>
-        ${busy ? `<div class="progress-track"><div class="progress-bar" id="stadtwache-progress-bar" style="width:${pctStr}"></div></div>
-          <div class="progress-label" id="stadtwache-progress-label">${pctStr}</div>` : ''}
+        ${busy
+          ? `<div class="progress-track"><div class="progress-bar" id="stadtwache-progress-bar" style="width:${pctStr}"></div></div>
+             <div class="progress-label" id="stadtwache-progress-label">${pctStr}</div>`
+          : `<button class="action-btn" onclick="startStadtwacheShift()" ${busyWork ? 'disabled' : ''}>Schicht übernehmen</button>`}
       </div>`;
 
   const xpPanel = `
@@ -1797,7 +1799,7 @@ function renderVelmarkMarkt(el) {
   const nightClosed = isNight();
 
   // ── Velmarker Kettenrüstung (permanent, −5 Kampfschaden)
-  const ruestungCost   = 8000;
+  const ruestungCost   = 120000;
   const ruestungOwned  = meta.velmarkRuestung;
   const canBuyRuestung = !ruestungOwned && resources.gold >= ruestungCost && !nightClosed;
   const ruestungCard   = `
@@ -1886,11 +1888,11 @@ function renderVelmarkSchlafplatz(el) {
 
   const VELMARK_SLEEP_OPTIONS = [
     {
-      id: 'velmark_pension', name: 'Hafenpension "Morgenwind"', icon: '🛏', cost: 12, qualityTier: 2,
+      id: 'velmark_pension', name: 'Hafenpension "Morgenwind"', icon: '🛏', cost: 2000, qualityTier: 2,
       desc: 'Eine ruhige Kammer mit Blick aufs Wasser. Geräuschloser als das Hafen-Treiben unten.'
     },
     {
-      id: 'velmark_suite', name: 'Herrschaftliche Suite', icon: '🏨', cost: 40, qualityTier: 3,
+      id: 'velmark_suite', name: 'Herrschaftliche Suite', icon: '🏨', cost: 6000, qualityTier: 3,
       desc: 'Für Leute, die sich das leisten können. Weiche Matratze, keine Nachbarn, keine Fragen.'
     }
   ];

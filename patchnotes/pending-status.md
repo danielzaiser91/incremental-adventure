@@ -1,20 +1,19 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.6-alpha
+**Aktuelle Version:** v0.22.7-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt / geändert:**
-- Eichhörnchen-Bonus (+X Rohstoffe pro Sammelaktion) wurde nie angewendet — behoben
-- Balancing: Waldtroll-Kampfbelohnung 18–30 → 120–200 Gold
-- Balancing: Waldtroll-Quest-Belohnung (Brakka) 25 → 750 Gold
-- Balancing: Gildenprüfung-Belohnung (Brakka) 15 → 200 Gold
-- Waldtroll-Quest blieb auf "In Arbeit" nach dem Sieg — beim Laden automatisch repariert
-- Update-Banner lud nach Klick manchmal noch die alte Version — behoben
+- Quest "Drei Nächte, keine Ausreden" → "Drei Schichten, keine Ausreden": zählte Nachtwache statt Stadtwache, Fortschritt zeigte immer 0/3 — behoben
+- Stadtwache-Karte: kein sichtbarer Button, leerer Klickbereich — Button hinzugefügt
+- Balancing Velmark: Essen 2.000–10.000g, Schlaf 2.000–6.000g, Kettenrüstung 120.000g
+- Eichhörnchen-Bonus (+Rohstoffe/Sammelaktion) wurde nie angewendet — behoben
+- Waldtroll-Kampfbelohnung 18–30 → 120–200 Gold; Quest-Belohnung 25 → 750 Gold
+- Waldtroll-Quest blieb auf "In Arbeit" — beim Laden automatisch repariert
 - Konfrontation mit dem Fremden: Dialog ließ sich nicht schließen — behoben
-- Velmark freigeschaltet bevor alle Kap.-3-Quests abgeschlossen — behoben
-- Lethkar-Markt: Verkaufsstand hinzugefügt, Achievement "Handel in der Kälte" abschließbar
+- Velmark/Varena freigeschaltet zu früh — Bedingungen korrigiert
 
-📋 Vollständiges Changelog älterer Versionen: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
+📋 Vollständiges Changelog: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
 
 🔗 https://danielzaiser91.github.io/incremental-adventure/

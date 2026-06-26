@@ -568,13 +568,13 @@ function buyLethkarFood(itemId, cost) {
 
 /* Velmarker Verpflegung — analog zu LETHKAR_FOOD_ITEMS */
 const VELMARK_FOOD_ITEMS = [
-  { id: 'velmark_hafenfisch', name: 'Hafenfisch', icon: '🐟', cost: 60,
+  { id: 'velmark_hafenfisch', name: 'Hafenfisch', icon: '🐟', cost: 4000,
     hungerRelief: 50, tirednessRelief: 8,
     desc: 'Frisch aus dem Hafen, heute Morgen angeliefert. Salzig und sättigend.' },
-  { id: 'velmark_brot', name: 'Stadtbrot', icon: '🍞', cost: 30,
+  { id: 'velmark_brot', name: 'Stadtbrot', icon: '🍞', cost: 2000,
     hungerRelief: 25, tirednessRelief: 0,
     desc: 'Das Brot der Stadt — dicht, dunkel, mit Sonnenblumenkernen.' },
-  { id: 'velmark_kaviar', name: 'Kaviar-Häppchen', icon: '🫙', cost: 120,
+  { id: 'velmark_kaviar', name: 'Kaviar-Häppchen', icon: '🫙', cost: 10000,
     hungerRelief: 20, tirednessRelief: 30,
     desc: 'Teuer, aber es lohnt sich. Die Schwere des Tages bleibt zurück.' }
 ];

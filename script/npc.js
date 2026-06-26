@@ -762,16 +762,16 @@ const NPCS = {
         text: [
           'Brakka lehnt sich zurück und betrachtet mich mit einem Ausdruck, den ich noch nicht an ihm kenne. Ernsthaft. Fast respektvoll.',
           '"Ich kenne Leute, die kommen einmal zur Wache und denken, sie haben etwas bewiesen."',
-          '"Drei Nächte hintereinander. Ohne Ausreden. Wenn du das schaffst, vertraue ich dir — und das bedeutet in Treutheim mehr, als du ahnst."'
+          '"Drei Tagesschichten hintereinander. Ohne Ausreden. Wenn du das schaffst, vertraue ich dir — und das bedeutet in Treutheim mehr, als du ahnst."'
         ],
         options: [
           {
-            label: '"Drei Nächte. Abgemacht."',
+            label: '"Drei Schichten. Abgemacht."',
             next: null,
             action: () => {
               quests.brennenderMut.state = QUEST_STATE.ACTIVE;
               quests.brennenderMut.count = 0;
-              showToast('Neue Aufgabe: Drei Nächte Stadtwache hintereinander.', TOAST.EVENT);
+              showToast('Neue Aufgabe: Drei Tagesschichten Stadtwache hintereinander.', TOAST.EVENT);
             }
           },
           { label: '"Noch nicht bereit."', next: null }

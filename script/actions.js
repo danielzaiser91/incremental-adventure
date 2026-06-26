@@ -179,6 +179,16 @@ function completeStadtwache() {
   adjustTiredness(Math.round(tirednessGain * getSuperRestMult()));
   advanceClock(STADTWACHE_CLOCK_MINUTES);
   showToast(`+${reward} Gold erhalten (Stadtwache). Gesamt: ${resources.gold}.`, TOAST.REWARD);
+
+  // brennenderMut-Quest: drei Stadtwache-Schichten
+  if (quests.brennenderMut?.state === QUEST_STATE.ACTIVE) {
+    quests.brennenderMut.count = (quests.brennenderMut.count || 0) + 1;
+    if (quests.brennenderMut.count >= 3) {
+      quests.brennenderMut.state = QUEST_STATE.DONE;
+      showToast('Drei Schichten durchgehalten. Brakka Bescheid geben.', TOAST.EVENT);
+    }
+  }
+
   checkMilestones();
   maybeTriggerCommanderRecruitment(() => {
     maybeTriggerExhaustionDialog();
@@ -901,14 +911,7 @@ function nightWatch() {
   }
   playSfx('work');
 
-  // brennenderMut-Quest: aufeinanderfolgende Nachtwachen zählen
-  if (quests.brennenderMut?.state === QUEST_STATE.ACTIVE) {
-    gameFlags.consecutiveNightwatch = (gameFlags.consecutiveNightwatch || 0) + 1;
-    if (gameFlags.consecutiveNightwatch >= 3) {
-      quests.brennenderMut.state = QUEST_STATE.DONE;
-      showToast('Drei Nächte in Folge gewacht. Brakka Bescheid geben.', TOAST.EVENT);
-    }
-  }
+  // brennenderMut wird jetzt über Stadtwache-Schichten gezählt (nicht Nachtwache)
 
   // Hauskatze: Drop nach 15 Nachtwachen
   if (nightWatchStats.count === 15 && !wildPets.find(p => p.type === 'katze')) {

@@ -184,12 +184,12 @@ const QUEST_DEFS = [
   },
   {
     id:    'brennenderMut',
-    title: 'Drei Nächte, keine Ausreden',
-    icon:  '🌙',
+    title: 'Drei Schichten, keine Ausreden',
+    icon:  '🛡',
     chapter: 2,
     descByState: {
       unstarted: 'Noch nicht begonnen.',
-      active:    () => `Brakka hat mich herausgefordert: Drei Nächte Stadtwache ohne Unterbrechung. (${quests.brennenderMut?.count ?? 0}/3)`,
+      active:    () => `Brakka hat mich herausgefordert: Drei Tagesschichten Stadtwache hintereinander. (${quests.brennenderMut?.count ?? 0}/3)`,
       rewarded:  'Abgeschlossen — Brakka vertraut mir jetzt anders. Und ich vertraue mir selbst.'
     }
   },
