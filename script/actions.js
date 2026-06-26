@@ -1216,18 +1216,6 @@ function buyVelmarkRuestung() {
 }
 
 /** Kauft Verpflegung in Velmark. */
-function buyVelmarkFood() {
-  const cost = 8;
-  if (resources.gold < cost) {
-    showToast(`Nicht genug Gold. Benötigt: ${cost}g.`, TOAST.WARNING);
-    return;
-  }
-  resources.gold -= cost;
-  needs.hunger = Math.max(0, needs.hunger - 40);
-  showToast('Velmarker Reisekost — Hunger deutlich gesenkt.', TOAST.EVENT);
-  saveGame({ silent: true });
-  render();
-}
 
 /** Startet oder erneuert den Informanten-Tick-Timer. */
 function setupInformantenTick() {
