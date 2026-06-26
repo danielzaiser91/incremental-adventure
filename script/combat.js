@@ -33,7 +33,7 @@ const MONSTER_DEFS = [
   },
   {
     id: 'waldtroll', name: 'Waldtroll', icon: '👹', zone: 'tief',
-    maxHp: 60, damage: [10, 18], xpReward: 25, goldReward: [18, 30], mutReward: 1,
+    maxHp: 60, damage: [10, 18], xpReward: 25, goldReward: [120, 200], mutReward: 1,
     desc: 'Ein graues, schwerfälliges Wesen aus Moos und Fels — langsam, aber wenn er trifft, spüre ich es noch Tage später.'
   },
   {

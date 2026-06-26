@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.4-alpha';
+const GAME_VERSION = '0.22.5-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,11 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.5-alpha': [
+    { cat: 'Balancing', text: 'Waldtroll: Kampf-Belohnung von 18–30 Gold auf 120–200 Gold angehoben (Kap.-1-Boss-Niveau).' },
+    { cat: 'Balancing', text: 'Waldtroll-Quest-Belohnung (Brakka): von 25 Gold auf 750 Gold erhöht.' },
+    { cat: 'Balancing', text: 'Gildenprüfung-Belohnung (Brakka): von 15 Gold auf 200 Gold erhöht.' },
+  ],
   '0.22.4-alpha': [
     { cat: 'Bugfix', text: 'Waldtroll-Quest blieb auf "In Arbeit" nach dem Sieg — Abschluss-Check wurde in Kampf nicht ausgelöst. Behoben, alte Saves werden beim Laden automatisch repariert.' },
     { cat: 'Bugfix', text: 'Update-Banner: "Aktualisieren"-Klick lud manchmal noch die alte Version (Browser-Cache). Erzwingt jetzt eine cache-freie Seite.' },

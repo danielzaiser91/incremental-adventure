@@ -724,15 +724,15 @@ const NPCS = {
         text: [
           'Brakka schaut mich ruhig an, während ich erzähle. Fünf Kämpfe.',
           '"Na gut", sagt er schließlich. "Du hast bewiesen, dass du kämpfen kannst. Nicht nur zuhören."',
-          '"Das tiefe Jagdgebiet ist dir jetzt zugänglich. Und hier — fünfzehn Gold dafür, dass du mich nicht enttäuscht hast."'
+          '"Das tiefe Jagdgebiet ist dir jetzt zugänglich. Und hier — zweihundert Gold dafür, dass du mich nicht enttäuscht hast."'
         ],
-        reward: () => '✨ <strong>+15 Gold</strong> · Tiefjagdgebiet jetzt zugänglich',
+        reward: () => '✨ <strong>+200 Gold</strong> · Tiefjagdgebiet jetzt zugänglich',
         options: [{
           label: 'Danke, Brakka.',
           next: null,
           action: () => {
             quests.gildePruefung.state = QUEST_STATE.REWARDED;
-            resources.gold += 15; resources.totalGoldEarned += 15;
+            resources.gold += 200; resources.totalGoldEarned += 200;
             gameFlags.deepHuntingUnlocked = true;
             checkMilestones();
             showToast('Gildenprüfung abgeschlossen! Tiefjagdgebiet freigeschaltet.', TOAST.REWARD);
@@ -743,18 +743,18 @@ const NPCS = {
         text: [
           'Brakka starrt mich an. Dann lacht er — kurz, aber echt.',
           '"Den Waldtroll. Du hast ihn tatsächlich besiegt."',
-          '"Ich dachte, du kommst irgendwann zurück und sagst mir, du hast ihn nicht mal gefunden." Er schiebt mir Gold zu.',
+          '"Ich dachte, du kommst irgendwann zurück und sagst mir, du hast ihn nicht mal gefunden." Er schiebt mir einen schweren Beutel zu.',
           '"Gut gemacht, Fremder. Du bist kein Fremder mehr."'
         ],
-        reward: () => '✨ <strong>+25 Gold</strong> · Brakka nennt dich nicht mehr "Fremder"',
+        reward: () => '✨ <strong>+750 Gold</strong> · Brakka nennt dich nicht mehr "Fremder"',
         options: [{
           label: 'Das bedeutet mir viel.',
           next: null,
           action: () => {
             quests.waldtrollJagd.state = QUEST_STATE.REWARDED;
-            resources.gold += 25; resources.totalGoldEarned += 25;
+            resources.gold += 750; resources.totalGoldEarned += 750;
             checkMilestones();
-            showToast('Waldtroll-Quest abgeschlossen! +25 Gold.', TOAST.REWARD);
+            showToast('Waldtroll-Quest abgeschlossen! +750 Gold.', TOAST.REWARD);
           }
         }]
       },
