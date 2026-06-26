@@ -73,6 +73,10 @@ function init() {
   startVersionCheck();
   setTimeout(maybehealRobberyBug, 200);
   setTimeout(checkQuestTriggers, 300); // retroaktive Quest-Checks für alte Saves
+  // Migration: velmarkRuestung war nur meta-Flag, jetzt Equipment-Item
+  if (meta.velmarkRuestung && equipment.torso !== 'velmarkRuestung' && !(resources.inventory.velmarkRuestung > 0)) {
+    grantItem('velmarkRuestung', 1);
+  }
   // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren.
   // Nach Resume vorab-schedulierte Nodes verwerfen und Musik neu starten,
   // da currentTime-Verhalten bei Suspension browser-abhängig ist.

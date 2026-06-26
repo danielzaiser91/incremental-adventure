@@ -162,9 +162,10 @@ function rollPlayerDamage() {
 
 /** Berechnet den Schaden, den ein Monster nach Abzug der Verteidigung macht. */
 function rollEnemyDamage(monster) {
-  const def  = getStrengthLevelData(strength.xp).defenseBonus;
-  const raw  = Math.floor(Math.random() * (monster.damage[1] - monster.damage[0] + 1)) + monster.damage[0];
-  return Math.max(1, raw - def);
+  const def        = getStrengthLevelData(strength.xp).defenseBonus;
+  const armorBonus = (typeof equipment !== 'undefined' && equipment.torso === 'velmarkRuestung') ? 5 : 0;
+  const raw        = Math.floor(Math.random() * (monster.damage[1] - monster.damage[0] + 1)) + monster.damage[0];
+  return Math.max(1, raw - def - armorBonus);
 }
 
 /** Stärke-Level aktuell halten (nach XP-Gewinn prüfen). */

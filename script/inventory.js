@@ -18,6 +18,11 @@ const EQUIPMENT_ITEMS = [
     id: 'arbeitsguertel', name: 'Arbeitsgürtel', icon: '🪢', slot: 'guertel', slotLabel: 'Gürtel',
     desc: 'Handwerksarbeit aus Gretas neuem Sortiment. Verteilt das Gewicht besser, schont den Rücken.',
     effect: '+1 Gold pro Feldarbeit', cost: ARBEITSGUERTEL_COST
+  },
+  {
+    id: 'velmarkRuestung', name: 'Velmarker Kettenrüstung', icon: '🛡', slot: 'torso', slotLabel: 'Rumpf',
+    desc: 'Geschmiedet in den unterirdischen Schmieden Velmarks.', effect: '−5 Kampfschaden (dauerhaft)',
+    cost: 6000
   }
 ];
 
@@ -58,7 +63,8 @@ function sellInventoryItem(itemId) {
 
 const EQUIPMENT_SLOTS = [
   { id: 'hands',   label: 'Hände',  emptyIcon: '✋' },
-  { id: 'guertel', label: 'Gürtel', emptyIcon: '➖' }
+  { id: 'guertel', label: 'Gürtel', emptyIcon: '➖' },
+  { id: 'torso',   label: 'Rumpf',  emptyIcon: '👕' }
 ];
 
 /* Rohstoffe für Gretas Auftrag (siehe npc.js, market.js) — eigene Registry,

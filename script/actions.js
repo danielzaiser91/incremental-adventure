@@ -1199,18 +1199,19 @@ function buyNetzwerkAusbau() {
 
 /** Kauft Velmark-Ausrüstung. */
 function buyVelmarkRuestung() {
-  const cost = 300;
+  const cost = 6000;
   if (resources.gold < cost) {
     showToast(`Nicht genug Gold. Benötigt: ${cost}g.`, TOAST.WARNING);
     return;
   }
-  if (meta.velmarkRuestung) {
+  if (meta.velmarkRuestung || equipment.torso === 'velmarkRuestung' || (resources.inventory.velmarkRuestung || 0) > 0) {
     showToast('Ich habe diese Ausrüstung bereits.', TOAST.INFO);
     return;
   }
   resources.gold -= cost;
   meta.velmarkRuestung = true;
-  showToast('Neue Ausrüstung aus Velmark — ich bin besser geschützt.', TOAST.EVENT);
+  grantItem('velmarkRuestung', 1);
+  showToast('Velmarker Kettenrüstung erhalten — im Inventar ausrüsten.', TOAST.EVENT);
   saveGame({ silent: true });
   render();
 }
