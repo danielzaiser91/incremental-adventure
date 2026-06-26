@@ -26,6 +26,7 @@ function setupDevKeyListener() {
     if (buf === 'daniel') {
       buf = '';
       if (!gameFlags.devModeEnabled) devMode();
+      else { gameFlags.devModeEnabled = false; render(); }
     }
   });
 }
