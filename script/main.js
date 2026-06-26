@@ -72,6 +72,7 @@ function init() {
   setupDevKeyListener();
   startVersionCheck();
   setTimeout(maybehealRobberyBug, 200);
+  setTimeout(checkQuestTriggers, 300); // retroaktive Quest-Checks für alte Saves
   // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren.
   // Nach Resume vorab-schedulierte Nodes verwerfen und Musik neu starten,
   // da currentTime-Verhalten bei Suspension browser-abhängig ist.

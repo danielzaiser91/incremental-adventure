@@ -290,9 +290,13 @@ function endCombat(won, monster) {
       gameFlags.firstTier3Kill = true;
     }
 
-    // Waldtroll-Flag setzen → persönlicher Moment → dann Roswald
+    // Waldtroll-Flag setzen → Quest vorantreiben → persönlicher Moment → dann Roswald
     if (monster.id === 'waldtroll' && !gameFlags.waldtrollKilled) {
       gameFlags.waldtrollKilled = true;
+      if (quests.waldtrollJagd?.state === QUEST_STATE.ACTIVE) {
+        quests.waldtrollJagd.state = QUEST_STATE.DONE;
+        showToast('Waldtroll besiegt — Brakka Bericht erstatten.', TOAST.REWARD);
+      }
       render();
       setTimeout(() => {
         showMonologue('Das war der Waldtroll', [

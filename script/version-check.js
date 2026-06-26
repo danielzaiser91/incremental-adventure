@@ -1,9 +1,10 @@
 'use strict';
 
-const VERSION_CHECK_INTERVAL_MS = 3 * 60 * 1000;
+const VERSION_CHECK_INTERVAL_MS = 45 * 1000;
+const VERSION_CHECK_INITIAL_MS  = 15 * 1000;
 
 function startVersionCheck() {
-  setTimeout(checkForNewVersion, VERSION_CHECK_INTERVAL_MS);
+  setTimeout(checkForNewVersion, VERSION_CHECK_INITIAL_MS);
 }
 
 async function checkForNewVersion() {
@@ -26,5 +27,6 @@ function showUpdateBanner() {
 
 function saveAndReload() {
   saveGame();
-  location.reload();
+  // Cache-Buster: zwingt den Browser, alle Ressourcen frisch vom Server zu laden
+  window.location.href = window.location.pathname + '?v=' + Date.now();
 }
