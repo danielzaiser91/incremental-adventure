@@ -1258,6 +1258,19 @@ function tickInformanten() {
   render();
 }
 
+function raidValdrisLager() {
+  if (gameFlags.valdrisOperationRaided) return;
+  gameFlags.valdrisOperationRaided = true;
+  navUnseen.lethkar = true;
+  render();
+  setTimeout(() => {
+    maybeShowStoryDialog('3.7', () => {
+      checkQuestTriggers();
+      render();
+    });
+  }, 300);
+}
+
 function triggerChapter2Victory() {
   if (gameFlags.chapter2Complete) return;
 

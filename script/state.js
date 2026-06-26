@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.1-alpha';
+const GAME_VERSION = '0.22.2-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,9 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.2-alpha': [
+    { cat: 'Bugfix', text: 'Valdris\' Lager: "Erkunden"-Button löste einen Absturz aus (Funktion nicht definiert). Behoben.' },
+  ],
   '0.22.1-alpha': [
     { cat: 'Bugfix', text: 'Inventar: Werkzeuge (Axt, Spitzhacke, Sichel) belegten fälschlicherweise Inventarplätze — sie zählen jetzt nicht mehr gegen das Limit.' },
     { cat: 'Bugfix', text: 'Gildenprüfung: Kills wurden seit Spielstart gezählt statt ab Quest-Annahme. Außerdem fehlte der Abschluss-Trigger nach dem Kampf. Beides behoben — Quest zeigt jetzt Fortschritt (X/5).' },

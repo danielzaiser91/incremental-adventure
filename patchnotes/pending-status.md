@@ -1,12 +1,13 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.1-alpha
+**Aktuelle Version:** v0.22.2-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
+- Valdris' Lager: "Erkunden"-Button führte zu einem Absturz (Funktion nicht definiert) — behoben
 - Inventar: Werkzeuge (Axt, Spitzhacke, Sichel) belegten fälschlicherweise Inventarplätze
-- Gildenprüfung: Kill-Zähler startete ab Spielbeginn statt ab Quest-Annahme — Quest zeigt jetzt Fortschritt (X/5)
+- Gildenprüfung: Kill-Zähler startete ab Spielbeginn statt ab Quest-Annahme — zeigt jetzt Fortschritt (X/5)
 - Quest "Ein Dach über dem Kopf" blieb auf "In Arbeit" trotz vorhandenem Haus
 - Schmiede im Marktplatz zeigte falsche Sperrung nach Hauskauf
 - Miras verschlüsselter Brief: Funktionscode statt Beschreibung im Inventar
