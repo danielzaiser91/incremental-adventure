@@ -389,6 +389,10 @@ const NPCS = {
               meta.hasHome    = true;
               navUnseen.meinhaus = true;
               showToast('Das Haus gehört mir. "Mein Haus" ist jetzt in der Navigation verfügbar.', TOAST.EVENT);
+              if (quests.erstesZuhause?.state === 'active') {
+                quests.erstesZuhause.state = 'rewarded';
+                showToast('Quest abgeschlossen: Ein Dach über dem Kopf!', TOAST.REWARD);
+              }
             }
           },
           { label: '"Ich überlege es mir."', next: null }
@@ -1266,10 +1270,7 @@ const NPCS = {
               quests.theftInvestigation.state = QUEST_STATE.CONFRONTED;
               storyState = 20106;
               render();
-              maybeShowStoryDialog('2.6', () => {
-                // Kurze Pause, dann Sieg-Dialog anzeigen
-                setTimeout(triggerChapter2Victory, 800);
-              });
+              maybeShowStoryDialog('2.6');
               showToast('Die Konfrontation ist vorbei. Die Spur des Diebs — abgeschlossen.', TOAST.EVENT);
             }
           }
@@ -1346,6 +1347,7 @@ const NPCS = {
             showToast('Lethkar ist jetzt auf der Weltkarte freigeschaltet!', TOAST.REWARD);
             quests.kapitel2Finale.state = QUEST_STATE.REWARDED;
             render();
+            setTimeout(triggerChapter2Victory, 800);
           }
         }]
       }

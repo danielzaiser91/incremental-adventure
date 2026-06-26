@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.0-alpha';
+const GAME_VERSION = '0.22.1-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,14 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.1-alpha': [
+    { cat: 'Bugfix', text: 'Inventar: Werkzeuge (Axt, Spitzhacke, Sichel) belegten fälschlicherweise Inventarplätze — sie zählen jetzt nicht mehr gegen das Limit.' },
+    { cat: 'Bugfix', text: 'Gildenprüfung: Kills wurden seit Spielstart gezählt statt ab Quest-Annahme. Außerdem fehlte der Abschluss-Trigger nach dem Kampf. Beides behoben — Quest zeigt jetzt Fortschritt (X/5).' },
+    { cat: 'Bugfix', text: 'Quest "Ein Dach über dem Kopf" blieb auf "In Arbeit" obwohl ein Haus vorhanden war. Abschluss-Check behoben.' },
+    { cat: 'Bugfix', text: 'Schmiede im Marktplatz zeigte "Erfordert ein eigenes Zuhause" auch nach dem Hauskauf. Hinweis führt jetzt korrekt zu Oswin weiter.' },
+    { cat: 'Bugfix', text: 'Miras verschlüsselter Brief zeigte Funktionscode statt Beschreibung im Inventar. Behoben.' },
+    { cat: 'Bugfix', text: 'Sieg-Dialog (Kap. 2 Ende) erschien nach der Fremden-Konfrontation zu früh — er wartet jetzt auf den Abschluss des Finales.' },
+  ],
   '0.22.0-alpha': [
     { cat: 'Neuerung', text: 'Feldarbeit: Stufen 4 ("Meister des Feldes") und 5 ("Legende der Felder") sind jetzt in Kapitel 2/3 erreichbar — über neue narrative Freischaltungen.' },
     { cat: 'Neuerung', text: 'Neuer NPC Sivert in Roswalds Schenke (Treutheim) — Agrarberater auf Reisen, vermittelt eine Technik, die Feldarbeit-Erfahrung massiv beschleunigt.' },

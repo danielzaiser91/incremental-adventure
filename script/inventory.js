@@ -75,15 +75,13 @@ function getInventorySlotCount() {
 }
 
 /** Anzahl belegter Inventar-Plätze — ein Platz pro BESESSENEM Gegenstands-
-    TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT. Zählt
-    auch Werkzeuge (TOOL_ITEMS, market.js) und Rohstoffe mit, da beide
-    ebenfalls in `resources.inventory` liegen. */
+    TYP (Stapel zählen nicht doppelt), siehe INVENTORY_SLOT_COUNT.
+    Werkzeuge (TOOL_ITEMS) zählen NICHT: sie belegen keine Inventar-Slots. */
 function getUsedInventorySlots() {
-  const food      = FOOD_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  const equip     = EQUIPMENT_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  const res       = RESOURCE_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  const tools     = TOOL_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
-  return food + equip + res + tools;
+  const food  = FOOD_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const equip = EQUIPMENT_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  const res   = RESOURCE_ITEMS.filter(i => (resources.inventory[i.id] || 0) > 0).length;
+  return food + equip + res;
 }
 
 /**
@@ -236,7 +234,7 @@ function renderInventar(el) {
     <div class="action-card action-card-compact action-card-quest">
       <div class="action-card-icon">${qi.icon}</div>
       <div class="action-card-name">${qi.name} <span class="inventory-count">×${questItems[qi.id]}</span></div>
-      <p class="action-card-desc">${qi.desc}</p>
+      <p class="action-card-desc">${typeof qi.desc === 'function' ? qi.desc() : qi.desc}</p>
     </div>`).join('');
 
   const resourceCards = ownedResources.map(r => `

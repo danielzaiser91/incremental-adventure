@@ -344,20 +344,40 @@ function renderVendorKraemer(el) {
 /* ── Schmiede: schwere Ausrüstung ─────────────────────────────── */
 function renderVendorSchmiede(el) {
   const nightClosed = isNight();
+  let card = '';
+  if (!meta.hasHome) {
+    card = `
+      <div class="action-card action-card-locked">
+        <div class="action-card-icon">🔒</div>
+        <div class="action-card-name">Schmiedeofen</div>
+        <p class="action-card-desc">???</p>
+        <div class="action-card-cost">Erfordert ein eigenes Zuhause</div>
+        <button class="action-btn btn-disabled" disabled>Gesperrt</button>
+      </div>`;
+  } else if (!meta.hasSmith) {
+    card = `
+      <div class="action-card action-card-locked">
+        <div class="action-card-icon">🔒</div>
+        <div class="action-card-name">Schmiedeofen</div>
+        <p class="action-card-desc">Einen eigenen Ofen zu besitzen war immer ein Gedanke. Der Schlosser von der Süderstraße könnte das bauen — aber zuerst muss ich Oswin fragen.</p>
+        <div class="action-card-cost">Mit Oswin in Treutheim sprechen</div>
+        <button class="action-btn btn-disabled" disabled>Nicht verfügbar</button>
+      </div>`;
+  } else {
+    card = `
+      <div class="action-card">
+        <div class="action-card-icon">⚒</div>
+        <div class="action-card-name">Schmiedeofen</div>
+        <p class="action-card-desc">Mein Ofen steht bereit. Die Arbeit wartet in meinem Haus.</p>
+        <button class="action-btn" onclick="showContent('meinhaus')">Zu meinem Haus</button>
+      </div>`;
+  }
   el.innerHTML = `
     <div class="feature-stage">
       <div class="feature-stage-label">Schmiede — Schwere Ausrüstung</div>
       <button class="action-btn vendor-back-btn" onclick="backToMarketHub()">◂ Zurück zum Marktplatz</button>
       ${nightClosed ? `<div class="status-badge status-badge-warning">⚠ Die Schmiede hat für die Nacht geschlossen</div>` : ''}
-      <div class="action-grid">
-        <div class="action-card action-card-locked">
-          <div class="action-card-icon">🔒</div>
-          <div class="action-card-name">Schmiedeofen</div>
-          <p class="action-card-desc">???</p>
-          <div class="action-card-cost">Erfordert ein eigenes Zuhause</div>
-          <button class="action-btn btn-disabled" disabled>Gesperrt</button>
-        </div>
-      </div>
+      <div class="action-grid">${card}</div>
     </div>
   `;
 }

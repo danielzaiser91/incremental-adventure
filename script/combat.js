@@ -267,6 +267,21 @@ function endCombat(won, monster) {
     killStats.total += 1;
     maybeStrengthLevelUp();
 
+    // Gildenprüfung: 5 Kämpfe ab Quest-Annahme
+    if (quests.gildePruefung?.state === 'active' &&
+        killStats.total - (quests.gildePruefung.killsAtStart || 0) >= 5) {
+      quests.gildePruefung.state = 'done';
+      render();
+      setTimeout(() => {
+        showMonologue('Die Prüfung ist bestanden', [
+          'Fünf Kämpfe. Fünf Siege. Mein Atem geht schwer, doch meine Hand hält das Schwert ruhig. Die Wildnis hat mich nicht gebrochen.',
+          'Das Blut trocknet, die Stille kehrt zurück. Ich habe getan, was Roswald verlangte. Jeder Hieb sitzt noch in meinen Knochen.',
+          'Jetzt zurück nach Treutheim. Roswald wartet in der Taverne. Es wird Zeit, dass er mich als einen der Ihren ansieht.'
+        ]);
+        showToast('Gildenprüfung bestanden — zu Roswald zurückkehren.', TOAST.REWARD);
+      }, 400);
+    }
+
     // First-Kill-Tracking für Achievements
     if (!gameFlags.firstTier2Kill && monster.tier === 2) {
       gameFlags.firstTier2Kill = true;

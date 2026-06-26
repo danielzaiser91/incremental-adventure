@@ -1,17 +1,16 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.21.3-alpha
+**Aktuelle Version:** v0.22.1-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt:**
-- Schlafqualität: Straße/Absteige/Bett erholten bei hohem Skill-Bonus alle gleich viel — eigene Caps pro Schlafplatz (Straße max 55%, Absteige max 72%, Bett max 100%)
-- Schlafplatz: "Im eigenen Bett" erschien doppelt wenn Zuhause vorhanden
-- Musik: startete nach dem Seitenaufruf nicht (Browser-Autoplay-Sperre)
-- brennenderMut: Turn-in möglich + Nacht-Schwelle 5→3
-- oswinsAuftrag: Oswin reagiert korrekt auf aktive Quest
-- gildeInvestition: Quest-Timer (Hardblocker) behoben
-- gildeKorruption: falscher State (Hardblocker) behoben
+- Inventar: Werkzeuge (Axt, Spitzhacke, Sichel) belegten fälschlicherweise Inventarplätze
+- Gildenprüfung: Kill-Zähler startete ab Spielbeginn statt ab Quest-Annahme — Quest zeigt jetzt Fortschritt (X/5)
+- Quest "Ein Dach über dem Kopf" blieb auf "In Arbeit" trotz vorhandenem Haus
+- Schmiede im Marktplatz zeigte falsche Sperrung nach Hauskauf
+- Miras verschlüsselter Brief: Funktionscode statt Beschreibung im Inventar
+- Sieg-Dialog (Kap. 2) erschien zu früh nach Konfrontation mit dem Fremden
 
 📋 Vollständiges Changelog älterer Versionen: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
 

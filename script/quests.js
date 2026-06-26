@@ -114,7 +114,10 @@ const QUEST_DEFS = [
     chapter: 2,
     descByState: {
       unstarted: 'Noch nicht begonnen.',
-      active:    'Roswald will Taten sehen. Fünf Kämpfe in der Wildnis bestehen und dann zu ihm zurückkehren.',
+      active:    () => {
+        const done = Math.min(killStats.total - (quests.gildePruefung.killsAtStart || 0), 5);
+        return `Roswald will Taten sehen. Fünf Kämpfe in der Wildnis bestehen (${done}/5) und dann zu ihm zurückkehren.`;
+      },
       done:      'Fünf Kämpfe bestanden. Zu Roswald in der Taverne zurückkehren.',
       rewarded:  'Abgeschlossen — das tiefere Jagdgebiet ist zugänglich. Und mein Ruf in der Gilde ist gefestigt.'
     }
@@ -575,18 +578,25 @@ function renderQuests(el) {
 /** Prüft Quest-Trigger nach jeder Spieler-Aktion. Hier ausschließlich
     automatische Freischaltungen (kein manueller Spieler-Schritt nötig). */
 function checkQuestTriggers() {
-  // Kap 1: Erstes Zuhause
+  // Kap 1: Erstes Zuhause — Aktivierung
   if (quests.erstesZuhause.state === 'unstarted' && streetCatProgress.sleepCount >= 3) {
     quests.erstesZuhause.state = 'active';
     showToast('Neue Aufgabe: Ein Dach über dem Kopf.', TOAST.EVENT);
   }
+  // Kap 1: Erstes Zuhause — Abschluss (auch retroaktiv für alte Saves)
+  if (quests.erstesZuhause.state === 'active' && meta.hasHome) {
+    quests.erstesZuhause.state = 'rewarded';
+    showToast('Quest abgeschlossen: Ein Dach über dem Kopf!', TOAST.REWARD);
+  }
   // Kap 2: Gildeprüfung nach guildRegistration
   if (quests.gildePruefung.state === 'unstarted' && quests.guildRegistration.state === 'rewarded') {
     quests.gildePruefung.state = 'active';
+    quests.gildePruefung.killsAtStart = killStats.total;
     showToast('Neue Aufgabe: Die Gildenprüfung — fünf Kämpfe für Roswald.', TOAST.EVENT);
   }
-  // Kap 2: Gildeprüfung — 5 Kills zählen
-  if (quests.gildePruefung.state === 'active' && killStats.total >= 5) {
+  // Kap 2: Gildeprüfung — Fallback falls Kills bereits erfüllt (ohne Monolog)
+  if (quests.gildePruefung.state === 'active' &&
+      killStats.total - (quests.gildePruefung.killsAtStart || 0) >= 5) {
     quests.gildePruefung.state = 'done';
     showToast('Gildenprüfung bestanden — zu Roswald zurückkehren.', TOAST.REWARD);
   }
