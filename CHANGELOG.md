@@ -100,7 +100,7 @@ Alle Versionen, neueste zuerst. Patch-Versionen (Bugfix-only) werden als Unterab
 - Kap.-2-Prestige: „Als Veteran zurückkehren" — Ruf als Metawährung, 5 Ruf-Fähigkeiten (Max-HP, Kampfschaden, Startgold u. a.)
 - Kap.-3-Prestige: Lethkar erneut besuchen — Wissensdurst ✦ als dauerhafter Bonus pro Neustart
 - Velmark: Pereth als Kontakt, Fraktions-NPCs (Yeva, Gorr, Sele) mit Dialog-Bäumen
-- Neues Haustier: Stadtfalke — erscheint wenn Informantennetz wächst, dauerhafter Einfluss-Bonus
+- Neue Haustiere: Stadtfalke (Informantennetz ≥ 5), Kettenhund (Bruderschaft Ansehen ≥ 30), Archivfalter (Archiv Ansehen ≥ 30)
 - 4 neue Errungenschaften: Veteran, Dreifach erprobt, Wissbegierig, Freier Himmel
 - Informantennetz: tickt jede Minute automatisch Einfluss nach, solange Pereth freigeschaltet
 
@@ -113,7 +113,7 @@ Alle Versionen, neueste zuerst. Patch-Versionen (Bugfix-only) werden als Unterab
 - Kapitel 4 — Velmark: Fraktionssystem, Einfluss (⚜), Informantennetz, Story 4.1–4.10 inkl. Sieg-Dialog
 
 **Neuerungen**
-- Audio-System: Hintergrundmusik (Ambient, Taverne, Kampf) + 11 Soundeffekte — synthetisch via Web Audio API
+- Audio-System: Hintergrundmusik (Ambient, Taverne, Kampf) + 11 Soundeffekte — synthetisch via Web Audio API; Musik und SFX einzeln aktivierbar + Lautstärkeregler in den Einstellungen
 - 50+ neue Errungenschaften für alle Kapitel + 8 geheime; kompaktes Kachel-UI mit Filter-Tabs
 - Drei Fraktionen in Velmark: Händlergilde, Eiserne Bruderschaft, Stadtarchiv — je Reputationsbalken + NPC-Dialog
 - Tier-2-Monster geben Wissensdurst ✦ als Kampf-Drop; Tier-3-Kämpfe in der Unterwelt geben ⚜ Einfluss
