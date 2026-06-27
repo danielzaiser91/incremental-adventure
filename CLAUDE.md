@@ -27,11 +27,25 @@ Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes
 - `script/state.js` → `GAME_VERSION` Konstante + neuer Eintrag in `VERSION_NOTES` mit spielersichtbaren Änderungen
 - `script/content.js` → nutzt `GAME_VERSION` automatisch, keine manuelle Änderung nötig
 - `script/state.js` → `CURRENT_SAVE_VERSION` + `SAVE_CHANGELOG` **nur** bei Änderungen an gespeicherten Datenstrukturen
+- `CHANGELOG.md` (Projekt-Root) → immer aktualisieren: Patch-Versionen als Unterabschnitt, Minor/Major als neuer Abschnitt
 
 ## Discord-Kanäle
 
-- `#status` → `pending-status.md` → immer DELETE + neu POST mit @Hotfix-Ping
-- `#patchnotes` → `pending-patchnotes.md` → PATCH bei gleicher Version, POST mit @Patchnotes bei neuer Version
+| Kanal | Channel-ID | Verwendung |
+|---|---|---|
+| `#patchnotes` | `1518367613640507552` | Minor/Major-Releases → `pending-patchnotes.md` → PATCH (gleiche Version) / POST mit @Patchnotes (neue Version) |
+| `#status` | `1518378043830304808` | Patch-Versionen + Bugs → `pending-status.md` → immer DELETE + neu POST mit @Hotfix-Ping |
+| `#feedback` | `1518385990409129984` | Spieler-Bug-Reports — nur lesen, nicht schreiben |
+| `#allgemein` | `1518367128686952491` | Allgemeiner Chat |
+| `#spoiler-erlaubt` | `1518372670163390504` | Spoiler-Diskussionen |
+| `#willkommen` | `1518381095635124357` | Willkommens-Kanal |
+| `#kapitel-1` | `1518385791682740426` | Kapitel-1-Diskussionen |
+| `#kapitel-2` | `1518385813103050822` | Kapitel-2-Diskussionen |
+| `#moderator-only` | `1518391365333946540` | Nur Mods |
+| `#eingangshalle` | `1518590738211012628` | Eingangsbereich |
+
+**Server-ID:** `1518367128074457209`
+**Bot-ID:** `1519669988229779506` (Chroniken Bot — Token in my_secrets.md Zeile 22)
 
 ## Patchnotes-Format (pending-patchnotes.md)
 
