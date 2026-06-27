@@ -1,18 +1,17 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.7-alpha
+**Aktuelle Version:** v0.22.8-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt / geändert:**
-- Quest "Drei Nächte, keine Ausreden" → "Drei Schichten, keine Ausreden": zählte Nachtwache statt Stadtwache, Fortschritt zeigte immer 0/3 — behoben
-- Stadtwache-Karte: kein sichtbarer Button, leerer Klickbereich — Button hinzugefügt
-- Balancing Velmark: Essen 2.000–10.000g, Schlaf 2.000–6.000g, Kettenrüstung 120.000g
-- Eichhörnchen-Bonus (+Rohstoffe/Sammelaktion) wurde nie angewendet — behoben
-- Waldtroll-Kampfbelohnung 18–30 → 120–200 Gold; Quest-Belohnung 25 → 750 Gold
-- Waldtroll-Quest blieb auf "In Arbeit" — beim Laden automatisch repariert
-- Konfrontation mit dem Fremden: Dialog ließ sich nicht schließen — behoben
-- Velmark/Varena freigeschaltet zu früh — Bedingungen korrigiert
+- Gildenmeisterin Yeva nicht ansprechbar trotz aktiver Quest — behoben
+- Velmarker Kettenrüstung nicht im Inventar sichtbar, −5 Schaden nicht aktiv — behoben
+- Velmark-Essen landete nicht im Inventar — behoben
+- Quest "Drei Schichten, keine Ausreden": zählte falsche Aktion, Fortschritt zeigte immer 0/3 — behoben
+- Stadtwache-Karte: kein sichtbarer Button — behoben
+- Balancing: Velmark-Preise korrigiert (Essen 200–900g, Schlaf 300–800g, Rüstung 6.000g)
+- Eichhörnchen-Bonus (+Rohstoffe) wurde nie angewendet — behoben
 
 📋 Vollständiges Changelog: <https://github.com/danielzaiser91/incremental-adventure/blob/main/patchnotes/CHANGELOG.md>
 

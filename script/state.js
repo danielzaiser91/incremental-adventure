@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.22.7-alpha';
+const GAME_VERSION = '0.22.8-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,11 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.22.8-alpha': [
+    { cat: 'Bugfix', text: 'Gildenmeisterin Yeva war nicht ansprechbar wenn "Yeva\'s Schuldner" bereits aktiv war — Kontakt-Flag wird beim Laden automatisch repariert.' },
+    { cat: 'Bugfix', text: 'Velmarker Kettenrüstung erschien nicht im Inventar und reduzierte keinen Kampfschaden — behoben, Equipment-System integriert.' },
+    { cat: 'Bugfix', text: 'Velmark-Essen landete nicht im Inventar (alte buyVelmarkFood-Funktion überschrieb die neue).' },
+  ],
   '0.22.7-alpha': [
     { cat: 'Bugfix', text: 'Quest "Drei Nächte, keine Ausreden": zählte Nachtwache statt Stadtwache, Fortschritt zeigte immer 0/3. Quest heißt jetzt "Drei Schichten" und trackt Stadtwache-Schichten korrekt.' },
     { cat: 'Bugfix', text: 'Stadtwache-Karte hatte keinen sichtbaren Button — Klick funktionierte nur auf dem unsichtbaren Div. Button ist jetzt sichtbar.' },

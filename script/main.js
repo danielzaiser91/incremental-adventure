@@ -77,6 +77,10 @@ function init() {
   if (meta.velmarkRuestung && equipment.torso !== 'velmarkRuestung' && !(resources.inventory.velmarkRuestung > 0)) {
     grantItem('velmarkRuestung', 1);
   }
+  // Migration: gildeSchulden aktiv aber gildekontaktGeknuepft nicht gesetzt → Yeva nicht ansprechbar
+  if (quests.gildeSchulden?.state !== QUEST_STATE.UNSTARTED && !gameFlags.gildekontaktGeknuepft) {
+    gameFlags.gildekontaktGeknuepft = true;
+  }
   // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren.
   // Nach Resume vorab-schedulierte Nodes verwerfen und Musik neu starten,
   // da currentTime-Verhalten bei Suspension browser-abhängig ist.
