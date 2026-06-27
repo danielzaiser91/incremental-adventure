@@ -2313,7 +2313,7 @@ const NPCS_VELMARK = [
       if (quests.gildeInvestition?.state === QUEST_STATE.DONE) return 'investitionTurnIn';
       if (quests.gildeKorruption?.state === QUEST_STATE.AKTIV) return 'korruptionDialog';
       if (quests.gildeKorruption?.state === QUEST_STATE.DONE) return 'korruptionTurnIn';
-      if (quests.gildeInvestition?.state === QUEST_STATE.UNSTARTED && quests.gildeSchulden?.state === QUEST_STATE.REWARDED) return 'investitionOffer';
+      if ((quests.gildeInvestition?.state === QUEST_STATE.UNSTARTED || quests.gildeInvestition?.state === QUEST_STATE.ACTIVE) && quests.gildeSchulden?.state === QUEST_STATE.REWARDED) return 'investitionOffer';
       if (gameFlags.thessaTrustGained) return 'thessaEmpfehlung';
       return 'idle';
     },
@@ -2388,8 +2388,9 @@ const NPCS_VELMARK = [
           action: () => {
             if ((resources.gold || 0) >= 500) {
               resources.gold -= 500;
-              quests.gildeInvestition.state = QUEST_STATE.ACTIVE;
-              showToast('500 Gold investiert. Yeva erwartet Ergebnisse.', TOAST.EVENT);
+              quests.gildeInvestition.state = QUEST_STATE.WAITING;
+              quests.gildeInvestition.investDay = gameClock.day;
+              showToast('500 Gold investiert. Das Handelsnetz braucht einen Tag.', TOAST.EVENT);
             }
           }
         }, { label: '"Noch nicht bereit."', next: null }]

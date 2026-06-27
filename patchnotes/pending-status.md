@@ -1,10 +1,11 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.8-alpha
+**Aktuelle Version:** v0.22.9-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt / geändert:**
+- Yevas Handelsnetz-Quest: Investitionsangebot war nach Abschluss der Schulden-Quest nicht erreichbar, Wartetimer wurde nie gestartet — behoben
 - Gildenmeisterin Yeva nicht ansprechbar trotz aktiver Quest — behoben
 - Velmarker Kettenrüstung nicht im Inventar sichtbar, −5 Schaden nicht aktiv — behoben
 - Velmark-Essen landete nicht im Inventar — behoben

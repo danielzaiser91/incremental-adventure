@@ -81,6 +81,13 @@ function init() {
   if (quests.gildeSchulden?.state !== QUEST_STATE.UNSTARTED && !gameFlags.gildekontaktGeknuepft) {
     gameFlags.gildekontaktGeknuepft = true;
   }
+  // Migration: gildeInvestition stuck in 'active' without investDay — offer was never reachable (bug)
+  if (quests.gildeInvestition?.state === QUEST_STATE.ACTIVE &&
+      !quests.gildeInvestition.investDay &&
+      quests.gildeSchulden?.state === QUEST_STATE.REWARDED) {
+    quests.gildeInvestition.state = QUEST_STATE.WAITING;
+    quests.gildeInvestition.investDay = gameClock.day - 1;
+  }
   // AutoPlay-Policy: AudioContext erst nach erster User-Interaktion aktivieren.
   // Nach Resume vorab-schedulierte Nodes verwerfen und Musik neu starten,
   // da currentTime-Verhalten bei Suspension browser-abhängig ist.
