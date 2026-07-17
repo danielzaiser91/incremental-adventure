@@ -1,0 +1,590 @@
+{
+  "generated": "2026-07-17T10:03:19.099Z",
+  "units": [
+    {
+      "id": "story-1-1",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Stadttor",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Der Hof meiner Familie gab nie mehr her als Mehltau im Korn und einen Vater, der lieber fluchte als hoffte.\n\nSechzehn Jahre lang habe ich davon geträumt, von hier fortzugehen. Heute wurde der Acker mit jedem Schritt kleiner hinter mir.\n\nVor mir liegt Treutheim. Die erste Stadt, der erste Atemzug eines Lebens, das endlich mir gehören soll."
+    },
+    {
+      "id": "story-1-2",
+      "phase": 1,
+      "category": "story",
+      "title": "Ein Blick aus dem Schatten",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Aus dem Dunkel einer Gasse löst sich ein Mann, als hätte der Schatten ihn ausgespuckt.\n\nSeinen Namen kenne ich nicht. Doch sein Blick brennt sich ein — er liegt auf meinem Geldbeutel, nicht auf meinem Gesicht.\n\nKein Wort fällt. Es braucht auch keines. Von nun an trage ich mein Gold dichter am Leib."
+    },
+    {
+      "id": "story-1-3",
+      "phase": 1,
+      "category": "story",
+      "title": "Die erste Nacht",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Jeder Knochen liegt mir schwer im Leib. Der erste Tag ist vorüber — und es war nur der erste.\n\nEhrlich gesagt: rauer, als ich es mir ausgemalt hatte. Schuften für ein paar Münzen, die kaum das Brot decken.\n\nWar es das, wofür ich mein Zuhause hinter mir gelassen habe?\n\nDoch dort wartet nur derselbe Acker. Derselbe Tag, der sich dreht und dreht, bis er einen Menschen ganz verbraucht.\n\nNein. Ich will mehr sein als ein Paar müder Hände. Ich will weiter, hinaus, hinauf.\n\nUnd manchmal, tief in der Erschöpfung, regt sich etwas in mir. Ein Kribbeln, das mehr verspricht, als ich zu glauben wage.\n\nMorgen geht es weiter. Ändert es niemand für mich, dann ändere ich es selbst."
+    },
+    {
+      "id": "story-1-4",
+      "phase": 1,
+      "category": "story",
+      "title": "Der erste Raub",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Der Griff kommt, bevor ich ihn höre. Eine Hand am Handgelenk, ein Ruck — und schon stehe ich in der Gasse, den Rücken am kalten Stein, ehe mein Verstand begreift, was geschieht.\n\nDer Fremde steht vor mir, ruhig, gelassen. Nicht einmal die Kapuze hat er hochgezogen.\n\n»Eine hübsche Summe für einen Neuankömmling«, sagt er und löst den Beutel von meiner Hüfte, als gehörte er ihm.\n\nIch will etwas erwidern und schweige doch. Er ist schon halb aus der Gasse hinaus.\n\n»Bis bald«, wirft er über die Schulter. Dann verschluckt ihn die Stadt.\n\nMeine Hände zittern. Nicht vor Angst — vor blankem Unglauben.\n\nEin zweites Mal lasse ich das nicht geschehen."
+    },
+    {
+      "id": "story-1-5",
+      "phase": 1,
+      "category": "story",
+      "title": "Der zweite Raub",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Marktplatz, Mittagsstunde. Hundert Stimmen, der Geruch von gebratenem Fleisch. Diesmal klemme ich den Beutel fest unter dem Arm.\n\nNicht fest genug.\n\nEin Ellenbogen in die Seite, eine Drehung — und er ist schon drei Schritte fort, ehe ich mein Stolpern abgefangen habe.\n\nEinmal dreht er sich um. Sieht mich an. Und zwinkert.\n\nHelles Tageslicht, hundert Zeugen. Nicht einmal die Mühe macht er sich, sein Gesicht zu verbergen.\n\nVor Wut bin ich wie versteinert. Er kennt mich. Er weiß genau, wann ich komme."
+    },
+    {
+      "id": "story-1-6",
+      "phase": 1,
+      "category": "story",
+      "title": "Der dritte Raub",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Das Rascheln höre ich einen Atemzug zu spät.\n\nEin Stoß in den Rücken — ich taumle, die Schulter prallt gegen den Mauerstein. Als ich mich umwende, ist er fort.\n\nKein Griff, kein Wort, nicht einmal ein Blick. Nur ein Handgriff, beiläufig wie das Aufheben einer Münze vom Pflaster.\n\nIch lehne mich an die Wand und warte, bis das Zittern aus den Händen weicht.\n\nNicht einmal eines Blickes hat er mich für würdig gehalten.\n\nDas ist kein Pech mehr. Das ist Plan. Jemand weiß, wo ich bin, wann ich komme, wie viel ich trage.\n\nBeim nächsten Mal entkommt er mir nicht."
+    },
+    {
+      "id": "story-1-7",
+      "phase": 1,
+      "category": "story",
+      "title": "Der vierte Raub",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Diesmal wartet er auf mich. Offen, mit verschränkten Armen an die Mauer gelehnt, als hätte er von jeher gewusst, dass mein Weg hier entlangführt.\n\n»Du lernst«, sagt er, ehe ich auch nur stehenbleibe. »Nur noch nicht schnell genug.«\n\nEr tritt einen Schritt auf mich zu. Und ich weiche zurück. Ich — weiche zurück.\n\nOhne Eile nimmt er das Gold. Kein Gerangel. Als wäre alles längst entschieden.\n\n»Bis zum nächsten Mal.«\n\nEr wendet sich ab und geht. Einfach geht. Als wäre ich keine Gefahr. Als wäre ich nichts.\n\nNein. Nicht noch einmal. Ich beginne von vorn — diesmal mit dem Kopf, nicht mit den Händen."
+    },
+    {
+      "id": "story-1-8",
+      "phase": 1,
+      "category": "story",
+      "title": "Wachsam",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Jedes Geräusch. Jede Schulter, die sich zu früh dreht. Jeder Schatten, der einen Lidschlag zu lange steht.\n\nJa, ich bin misstrauisch geworden. Manchmal sage ich es mir laut vor, als würde es dadurch leichter zu tragen.\n\nDoch es schärft den Blick. Ich erkenne jetzt Muster, wo ich früher nur Zufall sah.\n\nAlso fange ich von vorn an — nicht, weil ich muss, sondern weil ich will. Klüger diesmal."
+    },
+    {
+      "id": "story-2-1",
+      "phase": 1,
+      "category": "story",
+      "title": "Erstes Blut",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ein Rascheln hinter mir — und ich wirbele herum, ehe ein Gedanke mich daran hindern kann.\n\nEs geht zu schnell für Angst. Ein Hieb, ein Taumel, Staub auf den Lippen. Dann Stille.\n\nIch stehe über dem gestürzten Räuber und höre erst jetzt, wie laut mein eigener Atem geht.\n\nDas erste Mal. Ich hätte erwartet, mich schlechter zu fühlen.\n\nStattdessen eine seltsame, klare Ruhe. Und die Gewissheit: Ich bin nicht mehr der, der einst durch dieses Stadttor kam.\n\nDieser hier hat sich gewehrt. Ich auch."
+    },
+    {
+      "id": "story-2-2",
+      "phase": 1,
+      "category": "story",
+      "title": "Korbins Geheimnis",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Korbin zieht mich nah zu sich heran. Sein Atem riecht nach Bier und nach Vorsicht.\n\n»Drei Neue allein in diesem Monat. Immer dasselbe: ankommen, schuften, beraubt werden. Du bist nicht der Erste, Fremder.«\n\n»Es gibt einen in dieser Stadt, den alle nur den Schatten nennen. Er sucht sich die Neuen aus. Einen, dem er traut, schickt er vor — einen, der beobachtet und entscheidet, ob die Beute sich lohnt.«\n\nMir wird kalt, obwohl die Wärme der Taverne mich umfängt."
+    },
+    {
+      "id": "story-2-3",
+      "phase": 1,
+      "category": "story",
+      "title": "Eine Spur im Dunkeln",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Zwischen der armseligen Habe eines Räubers, den ich eben niedergestreckt habe, liegt etwas, das nicht hierhergehört.\n\nEine Münze. Meine Münze — ich erkenne den Kratzer, den ich ihr selbst einst bei einem Sturz beigebracht habe.\n\nDer Dieb hat das Gold nicht behalten. Er hat es weitergereicht, hinaus zu jemandem, der mit diesen Räubern unter einer Decke steckt.\n\nDas ist kein gewöhnlicher Straßenraub. Das ist ein Netz."
+    },
+    {
+      "id": "story-2-4",
+      "phase": 1,
+      "category": "story",
+      "title": "Miras wahres Gesicht",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Mira lächelt nicht mehr. Zum ersten Mal, seit ich sie kenne, sprechen wir wie zwei, die einander ebenbürtig sind.\n\n»Der Brief, den ich dir für Brakka mitgab — er war eine Warnung. Brakka weiß, wer der Schatten ist. Er hat nur nie ein Wort verloren.«\n\n»Ich auch nicht. Weil Reden gefährlich ist. Aber du fragst. Und das verändert etwas.«\n\nSie wendet sich ab, als fürchtete sie, es zu bereuen, sähe sie mich noch länger an."
+    },
+    {
+      "id": "story-2-5",
+      "phase": 1,
+      "category": "story",
+      "title": "Brakkas Schweigen bricht",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Brakka legt den Hammer aus der Hand. Zum ersten Mal, seit ich ihn kenne.\n\n»Der Mann, der immer in der Taverne hockt — er ist kein Dieb. Er ist der Späher. Er beobachtet, er wählt aus, er meldet weiter.«\n\n»Dieses Gesicht kenne ich seit Jahren. Immer hat er nur zugesehen. Und ich war zu feige, den Mund aufzumachen.«\n\nSein Blick liegt schwer wie Eisen auf mir. »Willst du dem ein Ende setzen, dann halte etwas in der Hand, wenn du ihn stellst.«"
+    },
+    {
+      "id": "story-2-6",
+      "phase": 1,
+      "category": "story",
+      "title": "Die Konfrontation",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich lege die Münze auf den Tisch, zwischen uns beide. Der Fremde rührt sich nicht.\n\n»Du bist nicht wie die anderen«, sagt er endlich, leiser, als ich erwartet hatte. »Die anderen haben aufgegeben. Du nicht.«\n\n»Ich habe dich ausgewählt. Nicht nur, um dich zu bestehlen — sondern um zu sehen, was du daraus machst.«\n\nEr schiebt die Münze zu mir zurück. »Der Schatten wird wissen wollen, wer du bist. Ich werde ihm sagen, dass man mit dir rechnen muss.«\n\nIch nehme die Münze. Kein Sieg, keine Niederlage. Nur eine neue Rechnung, die offenbleibt."
+    },
+    {
+      "id": "story-2-7",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Ende des Anfangs",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich sitze auf den Stufen vor der Taverne, und meine Gedanken gehen den Weg zurück, den ich gekommen bin.\n\nAls Niemand bin ich hier eingetroffen. Ein Bauernjunge mit leeren Taschen und Träumen, die kein Maß kannten.\n\nUnd nun? Ich habe Blut vergossen, Gold gewonnen und verloren, Freunde gefunden und Feinde, nach denen ich nie gesucht habe.\n\nTreutheim war nie das Ziel. Immer nur die erste Station.\n\nDer Schatten ist noch dort draußen. Und er weiß, dass es mich gibt.\n\nDas ist kein Ende. Das ist der Anfang von etwas weit Größerem."
+    },
+    {
+      "id": "story-3-0",
+      "phase": 1,
+      "category": "story",
+      "title": "Lethkar",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Drei Tage Weg liegen hinter mir. Keine Räuber — aber auch keine Hand, die sich mir entgegenstreckte.\n\nLethkar ist größer als Treutheim. Fremde Gerüche, fremde Gesichter. Hier weiß niemand, wer ich bin.\n\nDas ist ein Vorteil. Vielleicht.\n\nDie Adresse aus dem Brief liegt nördlich des Marktes. Doch ich gehe nicht hin. Noch nicht."
+    },
+    {
+      "id": "story-3-1",
+      "phase": 1,
+      "category": "story",
+      "title": "Erste Schritte in Lethkar",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "In der Taverne sitzt eine Frau mit dem Abzeichen der Alchemisten und sieht mich an, als hätte sie auf mein Kommen gewartet.\n\n»Du siehst aus wie einer, der aus Treutheim kommt.« Ich frage mich, was mein Gesicht ihr verrät.\n\nVarena. Ihr Name bleibt haften. Und die Art, wie sie spricht — genau, klar, kein Wort zu viel."
+    },
+    {
+      "id": "story-3-2",
+      "phase": 1,
+      "category": "story",
+      "title": "Der entschlüsselte Brief",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "»Valdris.« Nun liegt der Name in der Luft, nicht mehr nur auf dem Papier.\n\nIch weiß, wo das Haus steht. Und ich weiß, dass ich nicht allein dorthin gehen soll.\n\nMira hat mir mehr mitgegeben, als ich ahnte. Ich hoffe nur, sie weiß selbst, was sie damit getan hat."
+    },
+    {
+      "id": "story-3-3",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Laboratorium",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Es riecht nach Schwefel, nach nassem Stein und nach etwas Süßlichem, das ich nicht zu benennen weiß.\n\nVarena zeigt mir die fünf Aspekte: Feuer, Wasser, Erde, Luft — und Äther.\n\n»Das hier ist kein Handwerk.« Sie tippt auf die Tischplatte. »Das ist Verstehen.«\n\nIch glaube ihr. Was nicht heißt, dass ich es schon verstehe."
+    },
+    {
+      "id": "story-3-4",
+      "phase": 1,
+      "category": "story",
+      "title": "Thessa und ihre Bücher",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "»Du weißt mehr, als du zeigst«, sagt Thessa. »Das ist gut.«\n\nSie schiebt mir ein Buch über den Tisch — Aufzeichnungen über die Händlernetze von Lethkar. Namen, Verbindungen, Schulden.\n\nValdris' Name steht dreimal darin. Stets als Gläubiger. Niemals als Schuldner.\n\nDas erklärt manches. Und macht alles verwickelter."
+    },
+    {
+      "id": "story-3-5",
+      "phase": 1,
+      "category": "story",
+      "title": "Pereth und das Lagerhaus",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "»Du bist der aus Treutheim, der Fragen über Valdris stellt.« Pereth ist geradliniger, als ich erwartet hatte.\n\n»Ich habe für ihn gearbeitet. Einmal genügt.« Er lehnt sich zurück. »Das Lagerhaus am Südtor gehört einem seiner Strohmänner.«\n\n»Was darin liegt, weiß ich nicht. Aber ich will es wissen. Und du kommst hinein, ohne aufzufallen.«\n\nIch sage ja. Ob es klug war, weiß ich nicht."
+    },
+    {
+      "id": "story-3-6",
+      "phase": 1,
+      "category": "story",
+      "title": "Die Schatten-Organisation",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Langsam fügt sich ein Bild. Kein vollständiges — aber genug.\n\nValdris ist kein Söldnerführer. Er ist ein Knotenpunkt. Nachrichten, Gold, Menschen — alles läuft durch seine Hände.\n\nDer Schatten ist größer, als ich es mir vorgestellt habe. Valdris ist nur ein Name darin.\n\nHinter ihm steht mehr. Und es weiß, dass ich hier bin."
+    },
+    {
+      "id": "story-3-7",
+      "phase": 1,
+      "category": "story",
+      "title": "Einsicht I",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Das Lager ist leer. Zu leer. Jemand wusste, dass ich komme — oder sie sind aus eigenem Antrieb gegangen.\n\nDoch ich finde, was sie zurückließen: Listen, Routen, Quittungen für Dienste, die keinen Namen tragen.\n\nUnd überall dasselbe Muster. Kein Raub — Beherrschung. Schulden, Geheimnisse, erkaufte Treue.\n\nValdris baut kein Netz aus Verbrechern. Er baut ein Netz aus Menschen, die ihm etwas schulden.\n\nDas lässt sich schwerer zerschlagen als eine Bande. Weit schwerer."
+    },
+    {
+      "id": "story-3-8",
+      "phase": 1,
+      "category": "story",
+      "title": "Der Name",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "»Du hast das Lager gefunden.« Varena sagt es ohne Überraschung. »Das heißt, er zieht sich zurück.«\n\n»Valdris ist nicht von hier. Er stammt aus dem Osten, aus einer Stadt, die auf Handelswegen errichtet wurde.«\n\n»Was er hier betreibt, ist nur ein Vorposten. Lethkar ist nicht sein Ziel — es ist sein Sprungbrett.«\n\nIch frage, wohin er springt. Sie schüttelt den Kopf.\n\n»Das ist die Frage, die du beantworten musst. Ich kenne nur den Namen — und weiß, dass er nicht innehält.«"
+    },
+    {
+      "id": "story-3-9",
+      "phase": 1,
+      "category": "story",
+      "title": "Einsicht II",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich sitze über den Aspekten, und mit einem Mal merke ich: Ich denke anders als zuvor.\n\nNicht nur über Alchemie. Über das Geflecht der Dinge. Wie Wasser durch jeden Riss seinen Weg findet. Wie Feuer Gestalt annimmt.\n\nPereth nahm Gold und gab Wissen. Varena tauschte Namen gegen Vertrauen. Thessa öffnete ihre Bücher gegen Zeit.\n\nValdris tut dasselbe — nur umgekehrt. Er nimmt Treue und gibt Schuld zurück.\n\nJetzt begreife ich, womit ich es zu tun habe. Und das wiegt schwerer als jede Waffe."
+    },
+    {
+      "id": "story-3-10",
+      "phase": 1,
+      "category": "story",
+      "title": "Der nächste Horizont",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Lethkar hat mich verändert. Nicht auf die Weise, die ich erwartet hatte.\n\nStärker bin ich geworden — doch das war abzusehen. Klüger auch.\n\nWas ich nicht erwartet hatte: Ich habe aufgehört, Valdris zu fürchten.\n\nEr ist wirklich, er ist gefährlich. Aber kein Schatten mehr — ein Mensch mit einem Plan.\n\nUnd ich bin einer, der Pläne zu lesen versteht.\n\nDer Weg führt weiter nach Osten. Dorthin, woher er gekommen ist.\n\nWas mich dort erwartet, weiß ich nicht. Doch ich weiß, wer ich sein werde, wenn ich ankomme."
+    },
+    {
+      "id": "story-4-1",
+      "phase": 1,
+      "category": "story",
+      "title": "Velmark",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Velmark. Größer als Lethkar, lauter dazu. Mehr Stimmen, mehr Gerüche, mehr Menschen, die nichts voneinander wissen wollen.\n\nNiemand kennt mich hier.\n\nGut so. Ich kenne hier ebenso wenig jemanden.\n\nZum ersten Mal seit Treutheim bin ich wieder ein Niemand — doch diesmal weiß ich, was das bedeutet.\n\nEs bedeutet: Ich darf wählen, wer ich hier werde."
+    },
+    {
+      "id": "story-4-2",
+      "phase": 1,
+      "category": "story",
+      "title": "Drei Säulen",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Drei Kräfte halten Velmark zusammen.\n\nDie Händlergilde: Wer zahlt, hat recht. Eine alte Wahrheit, aber sie trägt.\n\nDie Eiserne Bruderschaft: Söldner und Wächter, Männer mit breiten Schultern und kurzem Gedächtnis. Doch sie hören auf Stärke.\n\nDas Stadtarchiv: Aufzeichnungen, Recht, Geschichte. Die stillste der drei — und wohl die mächtigste.\n\nUnd in allen dreien, irgendwo verborgen: Valdris. Nicht zu sehen. Aber zu spüren."
+    },
+    {
+      "id": "story-4-3",
+      "phase": 1,
+      "category": "story",
+      "title": "Pereth, wieder",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Er sitzt in einer Taverne am Westkai, als wäre er nie fort gewesen.\n\n»Ich habe mich gefragt, wann du auftauchst.« Kein Gruß. Keine Überraschung.\n\nFür Valdris arbeitet er nicht mehr — er ist ihm einen Schritt voraus. Und mir einen hinterher.\n\nEr kennt diese Stadt. Hier hat er einst für Valdris die Fäden geknüpft.\n\n»Jetzt weiß ich, wie sein Netz gewoben ist. Das macht mich nützlich für dich. Und gefährlich für ihn.«"
+    },
+    {
+      "id": "story-4-4",
+      "phase": 1,
+      "category": "story",
+      "title": "Der erste Schritt",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Langsam werde ich zu einem Gesicht in dieser Stadt.\n\nDie erste Fraktion ist aufgetaut — behutsam, zögernd, so wie hier alles geschieht.\n\nEs ist anders als in Treutheim oder Lethkar.\n\nDort bin ich gewachsen. Hier muss ich etwas anderes sein: überzeugend.\n\nVertrauen ist hier weder eine Frage der Kraft noch des Wissens. Es ist eine Frage der Zeit."
+    },
+    {
+      "id": "story-4-5",
+      "phase": 1,
+      "category": "story",
+      "title": "Der Brief",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ein Brief, ohne Absender. Die Handschrift ist mir fremd — und doch weiß ich auf der Stelle, von wem er stammt.\n\n»Es ist mir nicht entgangen, dass du in Velmark eingetroffen bist. Kein Zufall, vermute ich.«\n\n»Wir könnten reden, wenn du magst. Ganz unverbindlich.«\n\nEr weiß, dass ich hier bin. Er fragt nicht, was ich will — er nimmt einfach an, dass wir dasselbe begehren.\n\nDas ist die gefährlichste Art von Feind: einer, der nicht irrt."
+    },
+    {
+      "id": "story-4-6",
+      "phase": 1,
+      "category": "story",
+      "title": "Zwei Säulen",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Zwei von drei.\n\nDie Stadt sieht mich mit anderen Augen an — nicht mehr als Fremden, sondern als einen, der bleibt.\n\nValdris setzt zum Gegenzug an. Kleine Dinge: ein Lieferant, der ausbleibt, ein Gespräch, das jäh verstummt.\n\nEr weiß, was ich treibe. Aufhalten kann er es noch nicht.\n\nEin Netz aus Schulden hat eine Schwäche: Auch Schulden geraten irgendwann in Vergessenheit."
+    },
+    {
+      "id": "story-4-7",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Angebot",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Er sitzt mir gegenüber. Zum ersten Mal.\n\nJünger ist er, als ich dachte. Ruhiger. Kein Messer, kein Wächter in Sichtweite.\n\n»Ich baue etwas, das Bestand hat«, sagt er. »Du auch. Das sieht man dir an.«\n\n»Warum nicht gemeinsam? Du erhältst, was du suchst — und ich, was ich suche.«\n\nIch habe keine Antwort. Jedenfalls nicht sogleich.\n\nEs ist das schwerste Gespräch meines Lebens."
+    },
+    {
+      "id": "story-4-8",
+      "phase": 1,
+      "category": "story",
+      "title": "Keine Kompromisse",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe Nein gesagt.\n\nNicht, weil ich der bessere Mensch wäre. Nicht aus irgendeiner Moral heraus.\n\nSondern weil sein Bauwerk auf den Schultern anderer ruht — und bald auf meinen ruhen würde.\n\nEr hat nichts erwidert. Er ist gegangen.\n\nJetzt ist es kein Gespräch mehr. Jetzt ist es etwas anderes."
+    },
+    {
+      "id": "story-4-9",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Netz steht",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Alle drei.\n\nEs hat länger gedauert als gedacht. Manches hat mich Dinge gekostet, die mir niemand zurückgibt.\n\nDoch das Netz steht — meines, nicht seines.\n\nValdris ist eingekreist. Nicht mit Waffen. Mit Macht und Bündnissen.\n\nEr kann sich nirgends mehr hinwenden, ohne einen zu verraten, der jetzt zu mir hält."
+    },
+    {
+      "id": "story-4-10",
+      "phase": 1,
+      "category": "story",
+      "title": "Das Ende des Weges",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Er hat es natürlich gewusst.\n\nDas letzte Gespräch war kurz. Kürzer, als ich erwartet hatte.\n\nKein Zögern, kein Feilschen. Er hat die Lage erkannt — und ist gegangen.\n\nVelmark gehört wieder sich selbst. Das Netz ist zerschnitten.\n\nTreutheim, Lethkar, Velmark.\n\nIch bin nicht mehr der, der einst an jenem Stadttor stand.\n\nGut so."
+    },
+    {
+      "id": "skill-jobLeveling",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Lehrreiche Rückschläge",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich wurde ausgeraubt. Was ich mir mühsam erarbeitet hatte — weg, in einem einzigen Augenblick. Ich stand da mit leeren Händen und dachte: Ist das jetzt das Ende?\n\nNein. Der Fremde hat mein Gold, aber er hat mir etwas gelassen, das er nicht greifen kann: die Erfahrung. Jeder Rückschlag ist eine Lektion — ich muss sie nur nutzen.\n\nAb jetzt gebe ich bei jeder Arbeit mein Bestes. Wer immer sein Bestes gibt, wird immer besser. Das ist mein Plan."
+    },
+    {
+      "id": "skill-fieldworkMemory",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Geschickte Hände",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Zweiter Anlauf. Neues Kapitel. Ich dachte, es wäre genauso zermürbend wie das erste Mal.\n\nDann griff ich den Spaten und merkte: die Bewegungen sitzen. Meine Hände erinnern sich. Was ich einmal gelernt habe, nimmt mir keiner mehr."
+    },
+    {
+      "id": "skill-ironWill",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Eiserner Wille",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Hunger. Wieder. Früher hätte er mir die Hände zittern lassen.\n\nJetzt ist er nur noch Lärm im Hintergrund. Ich arbeite trotzdem. Nicht dagegen ankämpfen — einfach weitermachen. Das ist die Lektion."
+    },
+    {
+      "id": "skill-fieldPay",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Überzeugungskraft",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Heute habe ich gewartet, bis der Vorarbeiter in der Nähe war — und dann ruhig gesagt, was ich verdiene. Ohne zu zögern, ohne zu bitten.\n\nEr hat kurz geschaut und genickt. Eine Münze mehr. Nicht weil ich gefordert habe, sondern weil ich überzeugt habe. Das ist ein Unterschied."
+    },
+    {
+      "id": "skill-nightWatchLeveling",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Nächtliche Routine",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Roswalds Unterweisung war kürzer als erwartet. „Die Nacht lehrt\", hat er gesagt. „Aber nur den, der still genug ist, um zuzuhören.\"\n\nIch fange an zu verstehen, was er meint. Jede Patrouille schärft die Sinne. Was ich hier lerne, ist mehr als Wachtposten-Routine — es ist Aufmerksamkeit als Handwerk."
+    },
+    {
+      "id": "skill-inventoryKeeper",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Fest verschnürt",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe meinen Rucksack ausgepackt und neu geordnet. Was vorne liegt, was hinten, was nah am Körper — nichts mehr dem Zufall überlassen.\n\nWenn ich alles zurücklassen müsste, nähme ich wenigstens das Wichtigste mit. Kein zufälliges Sortiment mehr. Alles hat seinen Platz."
+    },
+    {
+      "id": "skill-sleepLikeARock",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Ich schlafe wie ein Stein",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Früher lag ich wach, die Gedanken kreisten, der Schlaf kam nicht. Heute: Kopf aufs Kissen, und die Welt ist weg.\n\nEs ist kein Talent. Ich habe gelernt abzuschalten, wenn der Tag vorbei ist. Sorgen, Pläne, offene Fragen — die können warten. Jetzt schläft der Körper."
+    },
+    {
+      "id": "skill-thrift-l1",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Sparsamkeit (Stufe 1)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Beim Krämer heute: doppelt so lange gehandelt wie nötig. Ergebnis: ein Brot billiger. Nicht spektakulär.\n\nAber ich kenne jetzt die Preise. Wo ist Spielraum, wo nicht. Das nächste Mal weiß ich es schon beim Betreten des Ladens."
+    },
+    {
+      "id": "skill-thrift-l2",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Sparsamkeit (Stufe 2)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich kenne inzwischen jeden Preis auf dem Marktplatz auswendig. Greta weiß das. Die Händler ahnen es.\n\nEin ruhiges Lächeln, ein klarer Blick — der Preis gibt nach. Das ist keine Kunst mehr. Das ist Übung, die sich auszahlt."
+    },
+    {
+      "id": "skill-petLover",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Tierfreund",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Das Tier hat mich mehr gelehrt als mancher Mensch. Geduld. Beständigkeit. Vertrauen, das man sich verdienen muss — und das man nicht einfach fordert.\n\nIch fange an zu verstehen, was es braucht. Keine Tricks, keine Befehle — nur Zeit und Aufmerksamkeit. Der Rest kommt von selbst."
+    },
+    {
+      "id": "skill-longShift",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Lange Schicht",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich stehe auf dem Feld und schaue auf die Sonne. Heute bleibe ich länger. Weil ich es kann — und weil es sich lohnt.\n\nZwei Stunden statt einer. Mehr Erschöpfung, mehr Gold, und das Gefühl: Heute habe ich wirklich etwas geschafft."
+    },
+    {
+      "id": "skill-longerRest-l1",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Längere Pause (Stufe 1)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Fünfzehn Minuten sind keine Pause. Ich habe das immer gedacht, aber nie zugegeben.\n\nDreißig Minuten. Der Körper entspannt tatsächlich — die Schultern sinken, die Hände hören auf zu zittern. So soll eine Pause sein."
+    },
+    {
+      "id": "skill-longerRest-l2",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Längere Pause (Stufe 2)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe angefangen, die Pause zu verfeinern. Weniger zappeln, mehr atmen. Die Erholung kommt tiefer.\n\nEs ist eine Fertigkeit, sich richtig auszuruhen. Ich übe sie — und es zahlt sich aus."
+    },
+    {
+      "id": "skill-longerRest-l3",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Längere Pause (Stufe 3)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Eine Stunde. Manche würden sagen: zu lang. Ich sage: endlich genug.\n\nIch schlafe nicht — aber ich lasse los. Gedanken, Anspannung, das ständige Rechnen im Kopf. Völlige Stille. Danach bin ich besser als vorher."
+    },
+    {
+      "id": "skill-longerRest-l4",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Längere Pause (Stufe 4)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Der Körper hat gelernt, während der Pause effizienter zu regenerieren. Weniger Hunger danach — nicht weil ich gegessen habe.\n\nEchte Erholung verringert, wie dringend die Mahlzeit wird. Das ist kein Trick — das ist das Ergebnis langer Übung."
+    },
+    {
+      "id": "skill-jobXpBonus",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Aufmerksamer Lehrling",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe aufgehört, einfach nur zu schaufeln. Ich schaue jetzt, wie der Alte neben mir es macht — Handgelenk, Winkel, Rhythmus. Alles, was ich vorher übersehen hatte.\n\nEin bisschen abgucken, ein bisschen ausprobieren. Die Arbeit geht leichter, die Fortschritte kommen schneller. Wer genau hinschaut, lernt doppelt."
+    },
+    {
+      "id": "skill-quickLearner-l1",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Schneller Lerner (Stufe 1)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich mache schneller Fortschritte als erwartet. Kein Talent — es ist Aufmerksamkeit, die sich endlich auszahlt."
+    },
+    {
+      "id": "skill-quickLearner-l2",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Schneller Lerner (Stufe 2)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Die Kurve flacht sich ab. Aber ich kenne sie jetzt — weiß, wie ich durchkomme. Jeder Rückschlag ist nur der nächste Anlauf."
+    },
+    {
+      "id": "skill-quickLearner-l3",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Schneller Lerner (Stufe 3)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Manchmal weiß ich schon, wie es geht, bevor ich es ausprobiert habe. Das Hirn füllt die Lücken selbst. Lernen beschleunigt das Lernen."
+    },
+    {
+      "id": "skill-quickLearner-l4",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Schneller Lerner (Stufe 4)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich sehe den Abstand zwischen gestern und heute. Nicht dramatisch — aber stetig. Jede Schicht bringt mehr als die letzte."
+    },
+    {
+      "id": "skill-quickLearner-l5",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Schneller Lerner (Stufe 5)",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich bin kein Lehrling mehr. Die Arbeit sitzt tief — in den Händen, in der Haltung, in jedem Schritt. Ich merke es. Die anderen auch."
+    },
+    {
+      "id": "skill-clearMind",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Klarer Kopf",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Jedes Mal von vorn anfangen hat etwas in mir verändert. Die Aufregung der ersten Versuche ist weg — zurück bleibt Klarheit.\n\nIch sehe jetzt, was wirklich zählt. Gold ist flüchtig. Was ich verstehe, bleibt. Beim nächsten Neuanfang nehme ich mehr mit als bisher."
+    },
+    {
+      "id": "skill-goldBreakthrough",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Weitblick",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich dachte, ein Neuanfang ist immer gleich — alles weg, ein EP, von vorn. Aber das stimmt nicht ganz.\n\nWie weit ich komme, bevor ich aufhöre, macht den Unterschied. Mehr riskiert, mehr zurückgelassen, mehr gelernt. Das ist keine Mystik — das ist eine Formel."
+    },
+    {
+      "id": "skill-guildPrep",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Vorbereitung auf die Gilde",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe lange gewartet, bevor ich mich das getraut habe. Die Anforderungen waren real: Ausdauer, Kenntnisse, nachgewiesene Erfahrung. Keine Abkürzungen.\n\nBrakka wird sehen, dass ich bereit bin. Nicht weil ich es behaupte — sondern weil ich alles getan habe, was nötig war. Die Karten liegen auf dem Tisch.\n\nDie Gilde. Ein neues Kapitel. Ich weiß noch nicht genau, was mich erwartet. Aber ich bin vorbereitet — auf mehr als ich gedacht hatte."
+    },
+    {
+      "id": "skill-paranoid",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Paranoid",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Viermal. Viermal ausgeraubt, viermal mit leeren Händen wieder aufgestanden. Ich kann nicht mehr so tun, als wäre das alles in Ordnung.\n\nIch bin paranoid geworden. Jedes Geräusch, jeder Schatten. Aber vielleicht ist das gar nicht so falsch — wer ständig auf der Hut ist, übersieht weniger.\n\nIch fange an, das alles anders zu sehen. Nicht blind schuften — sondern denken. Das kostet mich Nerven. Aber es bringt mich weiter."
+    },
+    {
+      "id": "skill-aufmerksamkeit",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Scharf beobachtet",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Die Panik ist weg. Was bleibt, ist Wachheit — aber kontrolliert. Ich laufe nicht mehr davon.\n\nIch habe gelernt, die Angst arbeiten zu lassen, statt gegen mich. Konzentration statt Verkrampfung. Die Arbeit geht leichter."
+    },
+    {
+      "id": "skill-instinkt",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Instinkt",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Nicht mehr wütend. Nicht mehr ängstlich. Ich sehe jetzt Möglichkeiten, die früher im Lärm der Angst untergingen.\n\nDer Fremde hat mich viermal ausgeraubt — und jedes Mal habe ich mehr mitgenommen als er mir lassen wollte. Den Instinkt kann er mir nicht stehlen."
+    },
+    {
+      "id": "skill-kaltbluetig",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Kaltblütig",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Kalt. Klar. Unerschütterlich. Das bin ich jetzt.\n\nNicht weil ich kein Herz mehr habe — sondern weil ich gelernt habe, es zu beherrschen. Jeder Neuanfang lehrt mich mehr als der letzte."
+    },
+    {
+      "id": "skill-unzerstoerbar",
+      "phase": 2,
+      "category": "skill-monolog",
+      "title": "Unzerstörbar",
+      "voice": "Iapetus",
+      "style": "Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:",
+      "text": "Ich habe mehr verloren als die meisten Menschen hier je besitzen werden. Und ich stehe noch.\n\nDas ist keine Heldengeschichte. Das ist das, was passiert, wenn man immer wieder aufsteht, bis man es nicht mehr anders kann. Bis Weitermachen keine Entscheidung mehr ist — sondern wer man ist."
+    }
+  ]
+}
