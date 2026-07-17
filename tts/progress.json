@@ -1,9 +1,59 @@
 {
-  "done": {},
-  "failed": {
+  "done": {
     "story-1-1": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n",
-      "date": "2026-07-17T10:03:37.740Z"
+      "file": "story-1-1.wav",
+      "seconds": 34.4,
+      "date": "2026-07-17T10:17:19.319Z"
+    },
+    "story-1-2": {
+      "file": "story-1-2.wav",
+      "seconds": 27.9,
+      "date": "2026-07-17T10:18:00.366Z"
+    },
+    "story-1-4": {
+      "file": "story-1-4.wav",
+      "seconds": 49.4,
+      "date": "2026-07-17T10:21:32.041Z"
+    },
+    "story-1-5": {
+      "file": "story-1-5.wav",
+      "seconds": 41,
+      "date": "2026-07-17T10:22:29.485Z"
+    },
+    "story-1-6": {
+      "file": "story-1-6.wav",
+      "seconds": 43.9,
+      "date": "2026-07-17T10:23:32.602Z"
+    },
+    "story-1-7": {
+      "file": "story-1-7.wav",
+      "seconds": 44.5,
+      "date": "2026-07-17T10:24:14.348Z"
+    },
+    "story-1-8": {
+      "file": "story-1-8.wav",
+      "seconds": 29.4,
+      "date": "2026-07-17T10:24:52.699Z"
+    },
+    "story-2-1": {
+      "file": "story-2-1.wav",
+      "seconds": 33.8,
+      "date": "2026-07-17T10:25:31.138Z"
+    },
+    "story-2-2": {
+      "file": "story-2-2.wav",
+      "seconds": 33.5,
+      "date": "2026-07-17T10:26:15.646Z"
+    }
+  },
+  "failed": {
+    "story-2-3": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash-tts\\nPlease retry in 4.697768611s.\",\n    \"status\": \"RESOURCE_EXHA",
+      "date": "2026-07-17T10:26:36.781Z"
+    },
+    "story-1-3": {
+      "error": "Unplausible Audiodauer 655s statt ~42s (Grossteil Stille/Artefakte) — Neu-Generierung im naechsten Batch",
+      "date": "2026-07-17T10:28:09.736Z"
     }
   }
 }

@@ -16,7 +16,9 @@ const fs = require('fs');
 const path = require('path');
 
 const MODEL = 'gemini-2.5-flash-preview-tts';
-const BATCH_LIMIT_DEFAULT = 15;
+/* Free-Tier-Tageslimit, verifiziert 17.07.2026 per 429-Quota
+   (GenerateRequestsPerDayPerProjectPerModel-FreeTier, quotaValue 10). */
+const BATCH_LIMIT_DEFAULT = 10;
 const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
@@ -123,6 +125,13 @@ async function main() {
     try {
       const { pcm, sampleRate } = await synthesize(apiKey, unit);
       const seconds = pcm.length / 2 / sampleRate;
+      /* Plausibilität: ~16 Zeichen/s Sprechtempo. Deutlich längere Ausgaben
+         sind erfahrungsgemäß Stille/Artefakte (siehe story-1-3 am 17.07.) —
+         als Fehler werten, damit der nächste Batch sie neu generiert. */
+      const expected = unit.text.length / 16;
+      if (seconds > expected * 3 + 30) {
+        throw new Error(`Unplausible Audiodauer ${seconds.toFixed(1)}s bei erwarteten ~${expected.toFixed(0)}s — vermutlich Stille/Artefakte`);
+      }
       const file = `${unit.id}.wav`;
       fs.writeFileSync(path.join(OUT_DIR, file), wavFromPcm(pcm, sampleRate));
       progress.done[unit.id] = { file, seconds: Math.round(seconds * 10) / 10, date: new Date().toISOString() };
