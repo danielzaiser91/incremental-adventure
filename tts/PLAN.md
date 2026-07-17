@@ -21,6 +21,9 @@ aktualisiert** (teils automatisch durch `generate-batch.js`, Checkboxen von Hand
 - Täglicher Ablauf: `node tts/generate-batch.js` — nimmt die nächsten 15 offenen
   Einheiten aus `tts/manifest.json`, wartet 21 s zwischen Requests (3 RPM),
   stoppt sauber bei 429 (Tageslimit) und loggt unten ins Aktivitäts-Log.
+- **Automatisiert:** Geplante Aufgabe `tts-daily-batch-incremental-adventure`
+  (Claude-Desktop, täglich ~22:00 Uhr) führt den Batch aus, pflegt diese Datei
+  und pusht. Läuft nur, wenn die App offen ist — sonst beim nächsten App-Start.
 
 ## Meilenstein-Checkliste
 
