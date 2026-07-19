@@ -189,9 +189,14 @@ function completeStadtwache() {
     }
   }
 
-  checkMilestones();
+  // checkMilestones() steht absichtlich AM ENDE der Dialog-Kette (siehe
+  // nightWatch() für die ausführliche Begründung) — sonst überschreibt ein
+  // gleichzeitig ausgelöster Meilenstein-Dialog (z.B. story-1.2) den hier
+  // parallel aufgerufenen maybeTriggerCommanderRecruitment()-Dialog oder
+  // umgekehrt.
   maybeTriggerCommanderRecruitment(() => {
     maybeTriggerExhaustionDialog();
+    checkMilestones();
   });
   render();
 }
@@ -861,13 +866,17 @@ function completeWork() {
   showToast(`+${reward} Gold erhalten (Gesamt: ${resources.gold}).${hungryNote}`, TOAST.REWARD);
   playSfx('work');
 
-  checkMilestones();
   maybeUnlockFeldarbeitMeister();
   render();
 
   // Verkettet statt parallel aufgerufen, damit sich nie zwei dieser
   // Ersteinblendungs-Monologe gegenseitig überschreiben (siehe Kommentar
-  // über maybeTriggerFirstWorkDialog).
+  // über maybeTriggerFirstWorkDialog). checkMilestones() steht bewusst AM
+  // ENDE der Kette (wie schon in nightWatch()) — sonst überschrieb der
+  // "erste Feldarbeit"-Monolog (maybeTriggerFirstWorkDialog) einen im selben
+  // Tick per checkMilestones() geöffneten Story-Meilenstein-Dialog (z.B.
+  // story-1.2), bevor der Spieler ihn zu sehen bekam (Bug, gefunden
+  // 19.07.2026 beim Testen des Wort-Highlighting-Prototyps).
   maybeTriggerFirstWorkDialog(() => {
     maybeTriggerHungerDialog(() => {
       maybeTriggerFirstLevelUpDialog(() => {
@@ -875,6 +884,7 @@ function completeWork() {
           maybeTriggerCommanderRecruitment(() => {
             maybeTriggerFirstNightDialog(() => {
               maybeTriggerExhaustionDialog();
+              checkMilestones();
             });
           });
         });
@@ -1302,7 +1312,7 @@ function triggerChapter2Victory() {
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
           Bleib auf dem Laufenden über zukünftige Updates:<br>
-          <a href="https://discord.gg/NHenxsPh" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
+          <a href="https://discord.gg/QuMTbDAfPd" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
           Danke fürs Spielen — wir hoffen, es hat Spaß gemacht. ✨
         </p>
       `,
@@ -1633,7 +1643,7 @@ function triggerValdrisSieg(exil) {
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
           Bleib auf dem Laufenden:<br>
-          <a href="https://discord.gg/NHenxsPh" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
+          <a href="https://discord.gg/QuMTbDAfPd" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
           Danke fürs Spielen. ✨
         </p>
       `,
