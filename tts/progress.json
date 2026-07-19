@@ -6,5 +6,10 @@
       "date": "2026-07-19T14:13:23.229Z"
     }
   },
-  "failed": {}
+  "failed": {
+    "story-1-1": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash-tts\\nPlease retry in 56.051732928s.\",\n    \"status\": \"RESOURCE_EXH",
+      "date": "2026-07-19T14:15:58.799Z"
+    }
+  }
 }

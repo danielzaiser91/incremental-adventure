@@ -25,24 +25,25 @@ function evalGameFile(relPath, resultExpr) {
 }
 
 const NARRATOR_VOICE = 'Iapetus';
-/* Stand 19.07.2026, Qualitäts-Überarbeitung v2: Feedback nach v1-Hörprobe
-   (story-1-1) war "immer noch langweilig, kein Charakter" + ein Wortfehler
-   ("die" statt "der" erste Atemzug). Ergänzt daher: (a) explizite
-   Wortwörtlichkeits-Anweisung gegen Text-Drift, (b) Anweisung zu kräftigerer,
-   präsenterer Stimme mit ausdrücklicher Erlaubnis, Emotion eher zu übertreiben
-   als zurückhaltend zu bleiben. */
+/* Stand 19.07.2026, Qualitäts-Überarbeitung v3: v1 war "langweilig, kein
+   Charakter" + Wortfehler ("die" statt "der" erste Atemzug). v2 (Anweisung,
+   Emotion "lieber zu stark als zu schwach" zu übertreiben) war dann "over the
+   top". v3 zielt auf die Mitte: präsente, charaktervolle Stimme mit klarer
+   emotionaler Dynamik, aber glaubwürdig/natürlich statt theatralisch
+   übertrieben. Wortwörtlichkeits-Anweisung bleibt (gegen Text-Drift). */
 const NARRATOR_STYLE =
   'Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten ' +
   'Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein ' +
-  'Erzähler, der mit echter innerer Beteiligung und vollem Ausdruck spricht. ' +
-  'Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt ' +
-  'gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\n' +
-  'Sprich niemals monoton oder gleichförmig. Trage den Text kraftvoll, lebendig ' +
-  'und emotional intensiv vor: Angst klingt spürbar gehetzt und mit stockendem ' +
-  'Atem; Wut hart, scharf und laut; Hoffnung hell, warm und energisch; ' +
-  'Verzweiflung brüchig, aber durchdrungen; ruhige Reflexion langsamer, aber mit ' +
-  'Gewicht und Präsenz; Erleichterung hörbar befreit. Übertreibe die Emotion ' +
-  'lieber zu stark als zu schwach — Zurückhaltung ist hier unerwünscht. Wechsle ' +
+  'Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und ' +
+  'diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, ' +
+  'unabhängig vom Inhalt — es ist immer dieselbe Person.\n' +
+  'Sprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder ' +
+  'überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine ' +
+  'eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, ' +
+  'aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht ' +
+  'stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; ' +
+  'Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige ' +
+  'Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle ' +
   'diese Färbung innerhalb des Textes, sobald sich die Stimmung des ' +
   'Ich-Erzählers ändert.\n' +
   'Lies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu ' +

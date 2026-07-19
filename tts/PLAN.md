@@ -90,3 +90,4 @@ Phase 3–4 bis ~12.08., Phase 5 bis ~31.08., Phase 6–7 bis ~Anfang Oktober 20
 - 19.07.2026 15:57 — QUALITÄTS-SPERRE: User-Feedback (monoton, keine Konsistenz der Stimme) → alle 18 Audiodateien gelöscht, progress.json auf 0/65 zurückgesetzt, Stil-Prompt überarbeitet (Konsistenz-Anker + Emotions-/Tempo-Dynamik), `--only`-Flag in generate-batch.js ergänzt. Nächster Schritt: story-1-1 als Hörprobe generieren, sobald Kontingent verfügbar. Kein normaler Batch bis Freigabe.
 - 19.07.2026 16:03 — Batch: 1 Dateien (story-1-1 … story-1-1), 25 s Audio, komplett. Gesamt: 1/65 im Manifest.
 - 19.07.2026 16:13 — Batch: 1 Dateien (story-1-1 … story-1-1), 27 s Audio, komplett. Gesamt: 1/65 im Manifest.
+- 19.07.2026 16:15 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 1/65 im Manifest.
