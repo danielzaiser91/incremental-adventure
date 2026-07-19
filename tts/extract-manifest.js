@@ -25,23 +25,28 @@ function evalGameFile(relPath, resultExpr) {
 }
 
 const NARRATOR_VOICE = 'Iapetus';
-/* Stand 19.07.2026, Qualitäts-Überarbeitung: Feedback nach Anhören war
-   "monoton, ohne Gefühl" und "klingt nicht nach derselben Person". Der Prompt
-   ankert daher zuerst eine feste, unveränderliche Stimm-Identität (damit sie
-   über getrennte API-Calls hinweg gleich klingt) und fordert danach explizit
-   Emotions-/Tempo-/Lautstärke-Dynamik passend zur jeweiligen Szene. */
+/* Stand 19.07.2026, Qualitäts-Überarbeitung v2: Feedback nach v1-Hörprobe
+   (story-1-1) war "immer noch langweilig, kein Charakter" + ein Wortfehler
+   ("die" statt "der" erste Atemzug). Ergänzt daher: (a) explizite
+   Wortwörtlichkeits-Anweisung gegen Text-Drift, (b) Anweisung zu kräftigerer,
+   präsenterer Stimme mit ausdrücklicher Erlaubnis, Emotion eher zu übertreiben
+   als zurückhaltend zu bleiben. */
 const NARRATOR_STYLE =
-  'Du bist ein junger Mann von neunzehn Jahren mit einer klaren, mittelhohen, ' +
-  'leicht rauen Stimme. Dieses Timbre und diese Sprechweise bleiben über alle ' +
-  'Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe ' +
-  'Person, die ihr Tagebuch abends leise für sich liest.\n' +
-  'Trage den folgenden Text lebendig und emotional vor, niemals monoton: Passe ' +
-  'Tempo, Tonhöhe, Lautstärke und Atmung an die Stimmung der jeweiligen Szene an ' +
-  '— Angst klingt gehetzt, leiser und mit stockendem Atem; Wut wird härter, ' +
-  'schärfer und lauter; Hoffnung heller und wärmer; Verzweiflung leise und ' +
-  'brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung spürbar ' +
-  'lockerer. Wechsle diese Färbung innerhalb des Textes, sobald sich die ' +
-  'Stimmung des Ich-Erzählers ändert. Lies auf Deutsch den folgenden Text:';
+  'Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten ' +
+  'Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein ' +
+  'Erzähler, der mit echter innerer Beteiligung und vollem Ausdruck spricht. ' +
+  'Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt ' +
+  'gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\n' +
+  'Sprich niemals monoton oder gleichförmig. Trage den Text kraftvoll, lebendig ' +
+  'und emotional intensiv vor: Angst klingt spürbar gehetzt und mit stockendem ' +
+  'Atem; Wut hart, scharf und laut; Hoffnung hell, warm und energisch; ' +
+  'Verzweiflung brüchig, aber durchdrungen; ruhige Reflexion langsamer, aber mit ' +
+  'Gewicht und Präsenz; Erleichterung hörbar befreit. Übertreibe die Emotion ' +
+  'lieber zu stark als zu schwach — Zurückhaltung ist hier unerwünscht. Wechsle ' +
+  'diese Färbung innerhalb des Textes, sobald sich die Stimmung des ' +
+  'Ich-Erzählers ändert.\n' +
+  'Lies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu ' +
+  'verändern, hinzuzufügen oder wegzulassen:';
 
 const units = [];
 
