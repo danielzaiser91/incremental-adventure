@@ -45,7 +45,7 @@ Dev-Modus: `d` → `a` → `n` → `i` → `e` → `l` eintippen (im laufenden S
 
 ## Discord
 
-**[Server beitreten](https://discord.gg/NHenxsPh)** — Bug-Reports, Feedback und Patchnotes.
+**[Server beitreten](https://discord.gg/QuMTbDAfPd)** — Bug-Reports, Feedback und Patchnotes.
 
 ## Lizenz
 
