@@ -62,6 +62,11 @@ function maybehealRobberyBug() {
 
 function init() {
   loadAudioSettings();
+  // Wort-Zeitstempel für die Vorlese-Vertonung im Hintergrund vorladen (siehe
+  // story.js) — MUSS vor dem ersten Story-Dialog fertig/gestartet sein, sonst
+  // verliert ein `await` mitten im Klick die für Autoplay nötige
+  // Nutzerinteraktions-Berechtigung des Browsers.
+  prefetchAllStoryWords();
   if (shouldAutoLoad()) loadGame();
   else render();
   applySelectionSetting();

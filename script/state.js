@@ -829,7 +829,14 @@ let audioSettings = {
   musicEnabled: true,
   sfxEnabled:   true,
   musicVolume:  0.5,
-  sfxVolume:    0.5
+  sfxVolume:    0.5,
+  // Vorlese-Vertonung (Prototyp, siehe tts/PLAN.md) — bewusst LEISER Default
+  // (10%). Autoplay Default TRUE seit 19.07.2026 auf ausdrücklichen
+  // User-Wunsch (Spieldesign-Entscheidung des Autors für seine eigenen
+  // Spieler, kein unerwartetes Preview-Autoplay).
+  narrationEnabled:  true,
+  narrationVolume:   0.1,
+  narrationAutoplay: true
 };
 
 /* Spieler-Einstellungen, die das Spielgefühl betreffen (nicht den Fortschritt) */

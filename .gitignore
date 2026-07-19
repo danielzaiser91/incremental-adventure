@@ -11,5 +11,13 @@ test/screenshots/
 test/walkthrough_k*.md
 .env.local
 
-# TTS-Audio (unkomprimiert, lokal — bis Opus-Kompression steht)
-tts/output/
+# TTS-Audio (unkomprimiert, lokal — bis Opus-Kompression steht). Die
+# Wort-Zeitstempel (*.words.json, siehe tts/align/) sind winzige Textdateien
+# und werden bewusst NICHT ignoriert — die braucht das Wort-Highlighting auch
+# im deployten Spiel, unabhängig vom noch fehlenden Audio-Rollout.
+tts/output/*.wav
+
+# TTS-Forced-Alignment: lokale Python-venv + Modell-Cache (nicht Teil des Repos)
+tts/align/.venv/
+tts/align/*.log
+tts/align/__pycache__/

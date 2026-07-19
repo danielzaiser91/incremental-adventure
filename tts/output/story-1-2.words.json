@@ -1,0 +1,684 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 6.626,
+      "text": "Aus dem Dunkel einer Gasse löst sich ein Mann, als hätte der Schatten ihn ausgespuckt.",
+      "words": [
+        {
+          "word": "Aus",
+          "start": 0.44,
+          "end": 0.54,
+          "score": 0.93
+        },
+        {
+          "word": "dem",
+          "start": 0.581,
+          "end": 0.781,
+          "score": 0.974
+        },
+        {
+          "word": "Dunkel",
+          "start": 0.821,
+          "end": 1.181,
+          "score": 0.867
+        },
+        {
+          "word": "einer",
+          "start": 1.201,
+          "end": 1.461,
+          "score": 0.934
+        },
+        {
+          "word": "Gasse",
+          "start": 1.501,
+          "end": 1.882,
+          "score": 0.992
+        },
+        {
+          "word": "löst",
+          "start": 1.942,
+          "end": 2.182,
+          "score": 0.903
+        },
+        {
+          "word": "sich",
+          "start": 2.222,
+          "end": 2.402,
+          "score": 0.89
+        },
+        {
+          "word": "ein",
+          "start": 2.442,
+          "end": 2.642,
+          "score": 0.749
+        },
+        {
+          "word": "Mann,",
+          "start": 2.662,
+          "end": 3.563,
+          "score": 0.961
+        },
+        {
+          "word": "als",
+          "start": 3.603,
+          "end": 3.823,
+          "score": 0.992
+        },
+        {
+          "word": "hätte",
+          "start": 3.863,
+          "end": 4.064,
+          "score": 0.988
+        },
+        {
+          "word": "der",
+          "start": 4.104,
+          "end": 4.204,
+          "score": 0.974
+        },
+        {
+          "word": "Schatten",
+          "start": 4.224,
+          "end": 4.524,
+          "score": 0.908
+        },
+        {
+          "word": "ihn",
+          "start": 4.564,
+          "end": 4.724,
+          "score": 0.667
+        },
+        {
+          "word": "ausgespuckt.",
+          "start": 4.764,
+          "end": 6.626,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 6.646,
+      "end": 8.568,
+      "text": "Seinen Namen kenne ich nicht.",
+      "words": [
+        {
+          "word": "Seinen",
+          "start": 6.646,
+          "end": 6.906,
+          "score": 0.925
+        },
+        {
+          "word": "Namen",
+          "start": 6.946,
+          "end": 7.266,
+          "score": 0.88
+        },
+        {
+          "word": "kenne",
+          "start": 7.286,
+          "end": 7.467,
+          "score": 0.852
+        },
+        {
+          "word": "ich",
+          "start": 7.507,
+          "end": 7.607,
+          "score": 0.841
+        },
+        {
+          "word": "nicht.",
+          "start": 7.647,
+          "end": 8.568,
+          "score": 0.81
+        }
+      ]
+    },
+    {
+      "start": 8.588,
+      "end": 15.574,
+      "text": "Doch sein Blick brennt sich ein — er liegt auf meinem Geldbeutel, nicht auf meinem Gesicht.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 8.588,
+          "end": 8.768,
+          "score": 0.893
+        },
+        {
+          "word": "sein",
+          "start": 8.808,
+          "end": 9.028,
+          "score": 0.767
+        },
+        {
+          "word": "Blick",
+          "start": 9.048,
+          "end": 9.288,
+          "score": 0.797
+        },
+        {
+          "word": "brennt",
+          "start": 9.328,
+          "end": 9.589,
+          "score": 0.846
+        },
+        {
+          "word": "sich",
+          "start": 9.629,
+          "end": 9.889,
+          "score": 0.894
+        },
+        {
+          "word": "ein",
+          "start": 9.929,
+          "end": 10.129,
+          "score": 0.848
+        },
+        {
+          "word": "—",
+          "start": 10.99,
+          "end": 11.01,
+          "score": 0.347
+        },
+        {
+          "word": "er",
+          "start": 11.07,
+          "end": 11.21,
+          "score": 0.713
+        },
+        {
+          "word": "liegt",
+          "start": 11.23,
+          "end": 11.41,
+          "score": 0.842
+        },
+        {
+          "word": "auf",
+          "start": 11.45,
+          "end": 11.57,
+          "score": 0.926
+        },
+        {
+          "word": "meinem",
+          "start": 11.61,
+          "end": 11.831,
+          "score": 0.983
+        },
+        {
+          "word": "Geldbeutel,",
+          "start": 11.851,
+          "end": 13.032,
+          "score": 0.857
+        },
+        {
+          "word": "nicht",
+          "start": 13.052,
+          "end": 13.212,
+          "score": 0.872
+        },
+        {
+          "word": "auf",
+          "start": 13.252,
+          "end": 13.352,
+          "score": 0.994
+        },
+        {
+          "word": "meinem",
+          "start": 13.392,
+          "end": 13.592,
+          "score": 0.845
+        },
+        {
+          "word": "Gesicht.",
+          "start": 13.612,
+          "end": 15.574,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 15.594,
+      "end": 17.516,
+      "text": "Kein Wort fällt.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 15.594,
+          "end": 15.814,
+          "score": 0.798
+        },
+        {
+          "word": "Wort",
+          "start": 15.854,
+          "end": 16.074,
+          "score": 0.994
+        },
+        {
+          "word": "fällt.",
+          "start": 16.114,
+          "end": 17.516,
+          "score": 0.604
+        }
+      ]
+    },
+    {
+      "start": 17.576,
+      "end": 19.557,
+      "text": "Es braucht auch keines.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 17.576,
+          "end": 17.676,
+          "score": 0.738
+        },
+        {
+          "word": "braucht",
+          "start": 17.696,
+          "end": 17.956,
+          "score": 0.907
+        },
+        {
+          "word": "auch",
+          "start": 17.976,
+          "end": 18.136,
+          "score": 0.873
+        },
+        {
+          "word": "keines.",
+          "start": 18.176,
+          "end": 19.557,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 19.597,
+      "end": 22.02,
+      "text": "Von nun an trage ich mein Gold dichter am Leib.",
+      "words": [
+        {
+          "word": "Von",
+          "start": 19.597,
+          "end": 19.798,
+          "score": 0.91
+        },
+        {
+          "word": "nun",
+          "start": 19.818,
+          "end": 20.038,
+          "score": 0.944
+        },
+        {
+          "word": "an",
+          "start": 20.078,
+          "end": 20.198,
+          "score": 0.798
+        },
+        {
+          "word": "trage",
+          "start": 20.258,
+          "end": 20.478,
+          "score": 0.865
+        },
+        {
+          "word": "ich",
+          "start": 20.518,
+          "end": 20.658,
+          "score": 0.779
+        },
+        {
+          "word": "mein",
+          "start": 20.698,
+          "end": 20.879,
+          "score": 0.807
+        },
+        {
+          "word": "Gold",
+          "start": 20.919,
+          "end": 21.219,
+          "score": 0.933
+        },
+        {
+          "word": "dichter",
+          "start": 21.259,
+          "end": 21.619,
+          "score": 0.697
+        },
+        {
+          "word": "am",
+          "start": 21.659,
+          "end": 21.759,
+          "score": 0.968
+        },
+        {
+          "word": "Leib.",
+          "start": 21.839,
+          "end": 22.02,
+          "score": 0.831
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Aus",
+      "start": 0.44,
+      "end": 0.54,
+      "score": 0.93
+    },
+    {
+      "word": "dem",
+      "start": 0.581,
+      "end": 0.781,
+      "score": 0.974
+    },
+    {
+      "word": "Dunkel",
+      "start": 0.821,
+      "end": 1.181,
+      "score": 0.867
+    },
+    {
+      "word": "einer",
+      "start": 1.201,
+      "end": 1.461,
+      "score": 0.934
+    },
+    {
+      "word": "Gasse",
+      "start": 1.501,
+      "end": 1.882,
+      "score": 0.992
+    },
+    {
+      "word": "löst",
+      "start": 1.942,
+      "end": 2.182,
+      "score": 0.903
+    },
+    {
+      "word": "sich",
+      "start": 2.222,
+      "end": 2.402,
+      "score": 0.89
+    },
+    {
+      "word": "ein",
+      "start": 2.442,
+      "end": 2.642,
+      "score": 0.749
+    },
+    {
+      "word": "Mann,",
+      "start": 2.662,
+      "end": 3.563,
+      "score": 0.961
+    },
+    {
+      "word": "als",
+      "start": 3.603,
+      "end": 3.823,
+      "score": 0.992
+    },
+    {
+      "word": "hätte",
+      "start": 3.863,
+      "end": 4.064,
+      "score": 0.988
+    },
+    {
+      "word": "der",
+      "start": 4.104,
+      "end": 4.204,
+      "score": 0.974
+    },
+    {
+      "word": "Schatten",
+      "start": 4.224,
+      "end": 4.524,
+      "score": 0.908
+    },
+    {
+      "word": "ihn",
+      "start": 4.564,
+      "end": 4.724,
+      "score": 0.667
+    },
+    {
+      "word": "ausgespuckt.",
+      "start": 4.764,
+      "end": 6.626,
+      "score": 0.945
+    },
+    {
+      "word": "Seinen",
+      "start": 6.646,
+      "end": 6.906,
+      "score": 0.925
+    },
+    {
+      "word": "Namen",
+      "start": 6.946,
+      "end": 7.266,
+      "score": 0.88
+    },
+    {
+      "word": "kenne",
+      "start": 7.286,
+      "end": 7.467,
+      "score": 0.852
+    },
+    {
+      "word": "ich",
+      "start": 7.507,
+      "end": 7.607,
+      "score": 0.841
+    },
+    {
+      "word": "nicht.",
+      "start": 7.647,
+      "end": 8.568,
+      "score": 0.81
+    },
+    {
+      "word": "Doch",
+      "start": 8.588,
+      "end": 8.768,
+      "score": 0.893
+    },
+    {
+      "word": "sein",
+      "start": 8.808,
+      "end": 9.028,
+      "score": 0.767
+    },
+    {
+      "word": "Blick",
+      "start": 9.048,
+      "end": 9.288,
+      "score": 0.797
+    },
+    {
+      "word": "brennt",
+      "start": 9.328,
+      "end": 9.589,
+      "score": 0.846
+    },
+    {
+      "word": "sich",
+      "start": 9.629,
+      "end": 9.889,
+      "score": 0.894
+    },
+    {
+      "word": "ein",
+      "start": 9.929,
+      "end": 10.129,
+      "score": 0.848
+    },
+    {
+      "word": "—",
+      "start": 10.99,
+      "end": 11.01,
+      "score": 0.347
+    },
+    {
+      "word": "er",
+      "start": 11.07,
+      "end": 11.21,
+      "score": 0.713
+    },
+    {
+      "word": "liegt",
+      "start": 11.23,
+      "end": 11.41,
+      "score": 0.842
+    },
+    {
+      "word": "auf",
+      "start": 11.45,
+      "end": 11.57,
+      "score": 0.926
+    },
+    {
+      "word": "meinem",
+      "start": 11.61,
+      "end": 11.831,
+      "score": 0.983
+    },
+    {
+      "word": "Geldbeutel,",
+      "start": 11.851,
+      "end": 13.032,
+      "score": 0.857
+    },
+    {
+      "word": "nicht",
+      "start": 13.052,
+      "end": 13.212,
+      "score": 0.872
+    },
+    {
+      "word": "auf",
+      "start": 13.252,
+      "end": 13.352,
+      "score": 0.994
+    },
+    {
+      "word": "meinem",
+      "start": 13.392,
+      "end": 13.592,
+      "score": 0.845
+    },
+    {
+      "word": "Gesicht.",
+      "start": 13.612,
+      "end": 15.574,
+      "score": 0.957
+    },
+    {
+      "word": "Kein",
+      "start": 15.594,
+      "end": 15.814,
+      "score": 0.798
+    },
+    {
+      "word": "Wort",
+      "start": 15.854,
+      "end": 16.074,
+      "score": 0.994
+    },
+    {
+      "word": "fällt.",
+      "start": 16.114,
+      "end": 17.516,
+      "score": 0.604
+    },
+    {
+      "word": "Es",
+      "start": 17.576,
+      "end": 17.676,
+      "score": 0.738
+    },
+    {
+      "word": "braucht",
+      "start": 17.696,
+      "end": 17.956,
+      "score": 0.907
+    },
+    {
+      "word": "auch",
+      "start": 17.976,
+      "end": 18.136,
+      "score": 0.873
+    },
+    {
+      "word": "keines.",
+      "start": 18.176,
+      "end": 19.557,
+      "score": 0.912
+    },
+    {
+      "word": "Von",
+      "start": 19.597,
+      "end": 19.798,
+      "score": 0.91
+    },
+    {
+      "word": "nun",
+      "start": 19.818,
+      "end": 20.038,
+      "score": 0.944
+    },
+    {
+      "word": "an",
+      "start": 20.078,
+      "end": 20.198,
+      "score": 0.798
+    },
+    {
+      "word": "trage",
+      "start": 20.258,
+      "end": 20.478,
+      "score": 0.865
+    },
+    {
+      "word": "ich",
+      "start": 20.518,
+      "end": 20.658,
+      "score": 0.779
+    },
+    {
+      "word": "mein",
+      "start": 20.698,
+      "end": 20.879,
+      "score": 0.807
+    },
+    {
+      "word": "Gold",
+      "start": 20.919,
+      "end": 21.219,
+      "score": 0.933
+    },
+    {
+      "word": "dichter",
+      "start": 21.259,
+      "end": 21.619,
+      "score": 0.697
+    },
+    {
+      "word": "am",
+      "start": 21.659,
+      "end": 21.759,
+      "score": 0.968
+    },
+    {
+      "word": "Leib.",
+      "start": 21.839,
+      "end": 22.02,
+      "score": 0.831
+    }
+  ]
+}

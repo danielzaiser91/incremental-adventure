@@ -220,14 +220,22 @@ function enterCity(city) {
   if (city === CONTENT.LETHKAR)      currentContent = CONTENT.LETHKAR;
   else if (city === CONTENT.VELMARK) currentContent = CONTENT.VELMARK;
   else                               currentContent = CONTENT.TREUTHEIM;
+
+  const triggerJobSearch = () => { if (city === CONTENT.TREUTHEIM) maybeTriggerJobSearchDialog(); };
+
   if (city === CONTENT.TREUTHEIM && storyState === 10100) {
     storyState = 10101;
     render();
-    maybeShowStoryDialog('1.1');
+    // Verkettet statt parallel (siehe SKILL.md, "Verkettete Ersteinblendungs-
+    // Dialoge"): sonst überschreibt maybeTriggerJobSearchDialog() den gerade
+    // erst geöffneten Story-1.1-Dialog noch im selben Tick, bevor der Spieler
+    // ihn je zu sehen bekommt — Bug gefunden 19.07.2026 beim Testen der
+    // Vertonungs-Einbindung.
+    maybeShowStoryDialog('1.1', triggerJobSearch);
   } else {
     render();
+    triggerJobSearch();
   }
-  if (city === CONTENT.TREUTHEIM) maybeTriggerJobSearchDialog();
 }
 
 /**

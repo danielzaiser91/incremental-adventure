@@ -450,6 +450,64 @@ function setSfxEnabled(b) {
   saveAudioSettings();
 }
 
+/* ── Vorlese-Vertonung (Prototyp) ──────────────────────────────
+   Eigenes HTMLAudioElement (#dialog-audio-player, index.html), KEIN Web-
+   Audio-Gain-Node wie Musik/SFX oben — deshalb eigene Sync-Funktion statt
+   syncAudioGains(). Lautstärke/Stumm gelten global für jede Vertonung,
+   unabhängig davon, welcher Dialog gerade offen ist. */
+function syncNarrationAudio() {
+  const player = document.getElementById('dialog-audio-player');
+  if (!player) return;
+  player.volume = audioSettings.narrationVolume;
+  player.muted  = !audioSettings.narrationEnabled;
+}
+
+function setNarrationVolume(v) {
+  audioSettings.narrationVolume = Math.max(0, Math.min(1, v));
+  syncNarrationAudio();
+  saveAudioSettings();
+}
+
+function setNarrationEnabled(b) {
+  audioSettings.narrationEnabled = b;
+  syncNarrationAudio();
+  saveAudioSettings();
+}
+
+function setNarrationAutoplay(b) {
+  audioSettings.narrationAutoplay = b;
+  saveAudioSettings();
+}
+
+/* ── Musik-Ducking während vertonter Dialoge ──────────────────────
+   Solange ein Dialog mit TTS-Vertonung offen ist, wird die Musik auf 10%
+   ABGESENKT, damit die Vorlese-Stimme verständlich bleibt — beim Schließen
+   springt sie auf den vorherigen Wert zurück. Reine Absenkung, keine
+   Anhebung: hat der Spieler die Musik selbst schon leiser als 10% (oder per
+   musicEnabled=false ganz aus) eingestellt, bleibt das unangetastet — TTS
+   soll niemals lauter/hörbarer machen, was der Spieler bewusst leiser
+   wollte (User-Korrektur 19.07.2026). Rein TEMPORÄR: ändert
+   `audioSettings.musicVolume` zwar kurzzeitig (damit syncAudioGains() den
+   gewohnten Pfad nutzen kann), speichert aber NIE über saveAudioSettings()
+   — der eigentliche User-Wert in localStorage bleibt unberührt. */
+let _preDuckMusicVolume = null;
+
+function duckMusicForNarration() {
+  if (_preDuckMusicVolume !== null) return; // schon geduckt
+  _preDuckMusicVolume = audioSettings.musicVolume;
+  if (audioSettings.musicEnabled && audioSettings.musicVolume > 0.1) {
+    audioSettings.musicVolume = 0.1;
+    syncAudioGains();
+  }
+}
+
+function restoreMusicAfterNarration() {
+  if (_preDuckMusicVolume === null) return;
+  audioSettings.musicVolume = _preDuckMusicVolume;
+  _preDuckMusicVolume = null;
+  syncAudioGains();
+}
+
 function saveAudioSettings() {
   try { localStorage.setItem('audioSettings', JSON.stringify(audioSettings)); } catch(_) {}
 }

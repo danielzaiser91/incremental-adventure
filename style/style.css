@@ -87,6 +87,22 @@ body {
 /* ── UTILITY ──────────────────────────────────────────────────── */
 .hidden { display: none !important; }
 
+/* ── DEV-BUILD-BADGE (nur TTS-Prototyp, siehe tts/PLAN.md) ───────── */
+#dev-build-badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #000;
+  color: #0f0;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
 /* ── UPDATE-BANNER ────────────────────────────────────────────── */
 #update-banner {
   flex-shrink: 0;
@@ -2237,6 +2253,7 @@ body.dialog-open #objective-bar { opacity: 0.25; }
 .reset-overlay-text.reset-overlay-text-visible { opacity: 1; }
 
 .dialog-box {
+  position: relative;
   width: 90%;
   max-width: 480px;
   padding: 28px 26px;
@@ -2246,6 +2263,50 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px -10px var(--accent-hi);
   transform: translateY(14px) scale(0.98);
   transition: transform 0.2s ease;
+}
+
+/* Vorlese-Steuerung (TTS-Prototyp) — aus dem Fluss genommen (siehe SKILL.md,
+   "Layout-Sprünge durch bedingt eingefügte Elemente"), damit ihr Erscheinen/
+   Verschwinden je nach Eintrag nie den Titel/Text darunter verschiebt. */
+.dialog-audio-controls {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dialog-audio-icon-btn {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--t), border-color var(--t);
+}
+.dialog-audio-icon-btn:hover { background: var(--bg-hover); }
+.dialog-audio-icon-btn.dialog-audio-playing {
+  border-color: var(--accent);
+  color: var(--text-hi);
+}
+.dialog-audio-icon-btn.dialog-audio-muted {
+  color: var(--text-lo);
+}
+
+.dialog-audio-volume {
+  width: 56px;
+  height: 3px;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
 
 .dialog-overlay.dialog-visible .dialog-box {
@@ -2281,6 +2342,7 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   letter-spacing: 0.04em;
   margin-bottom: 14px;
   padding-bottom: 12px;
+  padding-right: 130px; /* Platz für die absolut positionierte Vorlese-Steuerung (Play/Volume/Mute) */
   border-bottom: 1px solid var(--border-soft);
 }
 
@@ -2297,6 +2359,18 @@ body.dialog-open #objective-bar { opacity: 0.25; }
   min-height: 64px;
   max-height: 60vh;
   overflow-y: auto;
+}
+
+/* Wort-Highlighting-Prototyp (siehe dialog.js/story.js, tts/align/) — nur
+   vorhanden, wenn für den Eintrag Wort-Zeitstempel existieren; sonst bleibt
+   der Text ein normaler <p>-Absatz ohne Spans. */
+.dialog-word {
+  transition: color var(--t), background var(--t);
+  border-radius: 2px;
+}
+.dialog-word-active {
+  color: var(--text-hi);
+  background: var(--accent-glow);
 }
 
 .dialog-text p { margin-bottom: 10px; }

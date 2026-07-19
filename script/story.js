@@ -13,6 +13,29 @@
 
 'use strict';
 
+/* Puffer, um den Seitenanfang/-ende beim Wort-Highlighting-Prototyp VOR den
+   jeweiligen Alignment-Zeitstempel gezogen werden (siehe
+   showStoryEntryDialog()) — Erfahrungswerte, keine exakt gemessenen Werte. */
+const STORY_AUDIO_PAGE_START_BUFFER_S = 0.15;
+const STORY_AUDIO_PAGE_END_BUFFER_S   = 0.65;
+
+/* Vorab-Lade-Cache für Wort-Zeitstempel: id -> word_segments[] oder `null`
+   (kein Alignment für diesen Eintrag vorhanden). Wird von
+   prefetchAllStoryWords() (main.js, beim Spielstart) im Hintergrund gefüllt,
+   BEVOR der Spieler den ersten Story-Dialog überhaupt erreicht — dadurch
+   liest showStoryEntryDialog() synchron aus dem Cache statt mitten im Klick
+   auf ein `fetch()` zu warten (siehe Begründung dort). */
+const _storyWordsCache = {};
+
+async function prefetchAllStoryWords() {
+  await Promise.all(STORY_ENTRIES.map(entry =>
+    fetch(getStoryWordsSrc(entry.id))
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => { _storyWordsCache[entry.id] = (data && Array.isArray(data.word_segments)) ? data.word_segments : null; })
+      .catch(() => { _storyWordsCache[entry.id] = null; })
+  ));
+}
+
 const STORY_ENTRIES = [
   {
     id:          '1.1',
@@ -506,10 +529,132 @@ function maybeShowStoryDialog(id, onClose) {
  * als eigene, kurze Dialog-Seite gezeigt ("Weiter" blättert um) statt als
  * ein langer Textblock — das hält Spannung und Lesbarkeit hoch (siehe
  * SKILL.md, "Story-Dialoge: kurz und mehrstufig").
+ *
+ * PROTOTYP Wort-Highlighting (siehe tts/PLAN.md): lädt vorab die
+ * Wort-Zeitstempel (falls für diesen Eintrag vorhanden, siehe
+ * tts/align/align.py) und baut pro Seite Wort-`<span>`s statt reinem Text —
+ * dialog.js hebt dann per timeupdate das gerade gesprochene Wort hervor.
+ * Fehlt die Datei (noch nicht ausgerichteter Eintrag), fällt alles auf den
+ * bisherigen reinen Text-Modus zurück, ganz ohne Sonderfall im Aufrufer.
  */
 function showStoryEntryDialog(entry, onClose) {
-  const pages = Array.isArray(entry.text) ? entry.text : [entry.text];
-  showPaginatedDialog(entry.title, splitLongDialogPages(pages), [
-    { label: 'Weiter', onClick: () => closeDialog(onClose) }
-  ]);
+  const rawPages = Array.isArray(entry.text) ? entry.text : [entry.text];
+  const pages = splitLongDialogPages(rawPages);
+  const audioSrc = getStoryAudioSrc(entry.id);
+  // WICHTIG: synchron aus dem Vorab-Lade-Cache lesen (siehe
+  // prefetchAllStoryWords(), main.js) statt hier `await fetch(...)` zu
+  // machen. Ein `await` VOR dem ersten `play()` kostet die "echte
+  // Nutzerinteraktion", die Browser fürs automatische Abspielen mit Ton
+  // verlangen — der Klick auf "Weiter"/"Betreten" landet dann außerhalb der
+  // Gesten-Kette, Autoplay wird lautlos vom Browser blockiert (Bug, User-
+  // Feedback 19.07.2026). Ist der Cache für diesen Eintrag ausnahmsweise noch
+  // nicht gefüllt (Eintrag erreicht, bevor der Prefetch fertig ist), fällt
+  // alles auf reinen Text ohne Highlighting zurück — kein Fehler, nur kein
+  // Wort-Highlighting für dieses eine Mal.
+  const words = _storyWordsCache[entry.id] || null;
+  const pageWordSlices = words ? sliceWordsIntoPages(words, pages) : null;
+
+  let i = 0;
+  const showPage = () => {
+    const isLast = i === pages.length - 1;
+    const slice = pageWordSlices ? pageWordSlices[i] : null;
+    const html = slice && slice.length ? wordSliceToHtml(slice) : `<p>${pages[i]}</p>`;
+    // Seite 0 startet bei echtem Nullpunkt (Anfang der Datei, inkl. eventueller
+    // Anfangsstille), nicht beim Zeitstempel des ersten Worts — sonst würde
+    // der allererste Ton-Bruchteil der Datei übersprungen. Für alle weiteren
+    // Seiten zieht STORY_AUDIO_PAGE_START_BUFFER_S den Startpunkt etwas VOR
+    // den gemeldeten Wort-Zeitstempel — Whisper-Alignment markiert den
+    // Wortanfang laut Höreindruck (User-Feedback 19.07.2026) tendenziell
+    // etwas zu spät, sonst klingt der erste Laut des Wortes abgeschnitten.
+    // Symmetrisch zieht STORY_AUDIO_PAGE_END_BUFFER_S das Seitenende etwas
+    // VOR den Zeitstempel des letzten Worts — zusätzliche Sicherheitsmarge
+    // zum präzisen Stopp-Timer (dialog.js), falls Wörter sehr knapp aneinander
+    // anschließen (z.B. nur 20ms Lücke zwischen zwei Seiten). NICHT auf die
+    // LETZTE Seite anwenden — dort gibt es kein nächstes Wort, vor dem
+    // geschützt werden müsste, und der Puffer hätte nur das letzte Wort
+    // selbst abgeschnitten (Bug, User-Feedback 19.07.2026: "mir ge..." statt
+    // "gehören soll.").
+    const pageStart = slice && slice.length
+      ? (i === 0 ? 0 : Math.max(0, slice[0].start - STORY_AUDIO_PAGE_START_BUFFER_S))
+      : undefined;
+    const pageEnd = slice && slice.length
+      ? (isLast
+          ? slice[slice.length - 1].end
+          : Math.max(pageStart || 0, slice[slice.length - 1].end - STORY_AUDIO_PAGE_END_BUFFER_S))
+      : undefined;
+
+    let armed = false;
+    if (isLast) setTimeout(() => { armed = true; }, 250);
+
+    showDialog({
+      title: entry.title,
+      text: [pages[i]],
+      html,
+      audioSrc,
+      audioPageStart: pageStart,
+      audioPageEnd: pageEnd,
+      buttons: [{
+        label: 'Weiter',
+        onClick: () => {
+          if (isLast) { if (armed) closeDialog(onClose); return; }
+          i += 1;
+          showPage();
+        }
+      }]
+    });
+
+    if (slice && slice.length) bindWordHighlight(slice);
+  };
+  showPage();
+}
+
+/** Verteilt die flache Wortliste (Ausrichtungs-Reihenfolge = Lesereihenfolge)
+    auf die angezeigten Dialogseiten, rein über Wort-ANZAHL pro Seite (kein
+    Text-Fuzzy-Match nötig): `splitLongDialogPages()` regruppiert Sätze nur
+    innerhalb eines Absatzes, fügt nie Wörter hinzu/entfernt sie nie — die
+    Summe der Wortzahlen aller Seiten entspricht daher exakt der Gesamtzahl
+    ausgerichteter Wörter. */
+function sliceWordsIntoPages(words, pages) {
+  let cursor = 0;
+  return pages.map(page => {
+    const count = (page.match(/\S+/g) || []).length;
+    const slice = words.slice(cursor, cursor + count);
+    cursor += count;
+    return slice;
+  });
+}
+
+/** Baut das HTML einer Dialogseite mit einem `<span>` pro Wort. */
+function wordSliceToHtml(slice) {
+  const spans = slice.map(w =>
+    `<span class="dialog-word">${w.word.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</span>`
+  ).join(' ');
+  return `<p>${spans}</p>`;
+}
+
+/** Verknüpft die gerade gerenderten Wort-`<span>`s mit ihren Zeitstempeln
+    und übergibt sie an dialog.js zur Hervorhebung während der Wiedergabe. */
+function bindWordHighlight(slice) {
+  const spanEls = document.querySelectorAll('#dialog-text .dialog-word');
+  const paired = slice.map((w, idx) => ({ el: spanEls[idx], start: w.start, end: w.end }))
+    .filter(w => w.el);
+  setActiveWordSpans(paired);
+}
+
+/**
+ * Pfad zur (eventuell noch nicht vorhandenen) Vertonung eines Story-Eintrags.
+ * Reine Namenskonvention, identisch zur ID-Umwandlung in
+ * tts/extract-manifest.js (`story-${id.replace(/\./g, '-')}`) — KEINE
+ * Garantie, dass die Datei existiert. dialog.js' updateDialogAudio()
+ * versteckt den Vorlese-Button automatisch, falls das Laden fehlschlägt
+ * (noch nicht vertonter Eintrag, siehe tts/progress.json).
+ */
+function getStoryAudioSrc(id) {
+  return `tts/output/story-${id.replace(/\./g, '-')}.wav`;
+}
+
+/** Pfad zu den (eventuell noch nicht vorhandenen) Wort-Zeitstempeln eines
+    Story-Eintrags, siehe tts/align/align.py. */
+function getStoryWordsSrc(id) {
+  return `tts/output/story-${id.replace(/\./g, '-')}.words.json`;
 }

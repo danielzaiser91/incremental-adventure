@@ -8,9 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/style.css?v=20260623e">
+  <link rel="stylesheet" href="style/style.css?v=1">
 </head>
 <body>
+
+  <!-- ══ DEV-BUILD-BADGE: NUR TTS-Vertonungs-Prototyp (tts/PLAN.md), zeigt
+       den Cache-Bust-Stand statisch an, damit im Test klar ist, ob der
+       Browser wirklich die neueste Version geladen hat. Vor echtem Release
+       wieder entfernen — kein Spieler-Feature. -->
+  <div id="dev-build-badge">Build v1</div>
 
   <!-- ══ UPDATE-BANNER: neue Version verfügbar ═══════════════════ -->
   <div id="update-banner" class="hidden" onclick="saveAndReload()">
@@ -24,10 +30,20 @@
   <div id="dialog-overlay" class="dialog-overlay hidden">
     <div class="dialog-box" id="dialog-box" role="dialog" aria-modal="true">
       <div class="dialog-title" id="dialog-title"></div>
+      <!-- Vorlese-Steuerung (Prototyp TTS-Vertonung, siehe tts/PLAN.md) — nie
+           Autoplay, erscheint nur, wenn showDialog() eine audioSrc bekommt
+           (dialog.js, updateDialogAudio()). Steuert das EINE geteilte, nie
+           neu erzeugte Audio-Element darunter. -->
+      <div class="dialog-audio-controls hidden" id="dialog-audio-controls">
+        <button class="dialog-audio-icon-btn" id="dialog-audio-play-btn" type="button" aria-label="Vorlesen"></button>
+        <input type="range" class="dialog-audio-volume" id="dialog-audio-volume" min="0" max="1" step="0.05" aria-label="Lautstärke">
+        <button class="dialog-audio-icon-btn" id="dialog-audio-mute-btn" type="button" aria-label="Stumm schalten"></button>
+      </div>
       <div class="dialog-text" id="dialog-text"></div>
       <div class="dialog-actions" id="dialog-actions"></div>
     </div>
   </div>
+  <audio id="dialog-audio-player" preload="none"></audio>
 
   <!-- ══ RESET-OVERLAY: bildschirmfüllende Übergangs-Animation beim
        manuellen Neuanfang (siehe experience.js, playResetAnimation()) ══ -->
@@ -110,33 +126,33 @@
 
   </div><!-- /#app -->
 
-  <script src="script/state.js?v=20260623e"></script>
-  <script src="script/version-check.js?v=20260623e"></script>
-  <script src="script/clock.js?v=20260623e"></script>
-  <script src="script/needs.js?v=20260623e"></script>
-  <script src="script/story.js?v=20260623e"></script>
-  <script src="script/market.js?v=20260623e"></script>
-  <script src="script/inventory.js?v=20260623e"></script>
-  <script src="script/pets.js?v=20260623e"></script>
-  <script src="script/toast.js?v=20260623e"></script>
-  <script src="script/dialog.js?v=20260623e"></script>
-  <script src="script/npc.js?v=20260623e"></script>
-  <script src="script/quests.js?v=20260623e"></script>
-  <script src="script/achievements.js?v=20260623e"></script>
-  <script src="script/experience.js?v=20260623e"></script>
-  <script src="script/lehrer.js?v=20260623e"></script>
-  <script src="script/combat.js?v=20260623e"></script>
-  <script src="script/automation.js?v=20260623e"></script>
-  <script src="script/expedition.js?v=20260623e"></script>
-  <script src="script/alchemie.js?v=20260623e"></script>
-  <script src="script/dev.js?v=20260623e"></script>
-  <script src="script/objective.js?v=20260623e"></script>
-  <script src="script/nav.js?v=20260623e"></script>
-  <script src="script/content.js?v=20260623e"></script>
-  <script src="script/stats.js?v=20260623e"></script>
-  <script src="script/actions.js?v=20260623e"></script>
-  <script src="script/save.js?v=20260623e"></script>
-  <script src="script/audio.js?v=20260623e"></script>
-  <script src="script/main.js?v=20260623e"></script>
+  <script src="script/state.js?v=1"></script>
+  <script src="script/version-check.js?v=1"></script>
+  <script src="script/clock.js?v=1"></script>
+  <script src="script/needs.js?v=1"></script>
+  <script src="script/story.js?v=1"></script>
+  <script src="script/market.js?v=1"></script>
+  <script src="script/inventory.js?v=1"></script>
+  <script src="script/pets.js?v=1"></script>
+  <script src="script/toast.js?v=1"></script>
+  <script src="script/dialog.js?v=1"></script>
+  <script src="script/npc.js?v=1"></script>
+  <script src="script/quests.js?v=1"></script>
+  <script src="script/achievements.js?v=1"></script>
+  <script src="script/experience.js?v=1"></script>
+  <script src="script/lehrer.js?v=1"></script>
+  <script src="script/combat.js?v=1"></script>
+  <script src="script/automation.js?v=1"></script>
+  <script src="script/expedition.js?v=1"></script>
+  <script src="script/alchemie.js?v=1"></script>
+  <script src="script/dev.js?v=1"></script>
+  <script src="script/objective.js?v=1"></script>
+  <script src="script/nav.js?v=1"></script>
+  <script src="script/content.js?v=1"></script>
+  <script src="script/stats.js?v=1"></script>
+  <script src="script/actions.js?v=1"></script>
+  <script src="script/save.js?v=1"></script>
+  <script src="script/audio.js?v=1"></script>
+  <script src="script/main.js?v=1"></script>
 </body>
 </html>
