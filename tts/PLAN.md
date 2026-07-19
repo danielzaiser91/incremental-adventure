@@ -6,47 +6,46 @@ Gemini-Free-Tier, verteilt über mehrere Wochen.
 **Status-Übersicht und Aktivitäts-Log in dieser Datei werden nach JEDEM Batch
 aktualisiert** (teils automatisch durch `generate-batch.js`, Checkboxen von Hand).
 
-## ⚠️ QUALITÄTS-SPERRE (seit 19.07.2026) — normaler Batch pausiert
+## Qualitäts-Check 19.07.2026 — abgeschlossen, Modellwechsel
 
-User-Feedback nach Anhören der ersten 18 Dateien: Vortrag klingt **monoton,
-ohne Gefühl**, und die Stimme **klingt nicht konsistent wie dieselbe Person**
-über verschiedene Aufnahmen hinweg.
+User-Feedback nach Anhören der ersten 18 Dateien (Modell `gemini-2.5-flash-
+preview-tts`): Vortrag klingt monoton, ohne Gefühl, Stimme nicht konsistent
+über verschiedene Aufnahmen hinweg. Nach zwei Prompt-Iterationen (v2 zu
+"over the top", v3 als Mittelweg) blieb die 2.5-Flash-Stimme insgesamt zu
+schwach — im direkten A/B-Test gegen `gemini-3.1-flash-tts-preview` (gleicher
+v3-Style-Prompt) war 3.1 klar besser: hörbar bessere Emotion, Pausen,
+Stimmhöhen-Dynamik. User-Urteil: "akzeptabel" (noch nicht perfekt, aber ok).
 
-Maßnahmen bereits umgesetzt:
-- Alle 18 bisherigen Audiodateien gelöscht, `progress.json` zurückgesetzt (0/65)
-- Stil-Prompt in `extract-manifest.js` überarbeitet: fester Konsistenz-Anker
-  (Stimm-Identität explizit beschrieben) + Anweisung zu emotionaler Dynamik
-  (Tempo/Tonhöhe/Lautstärke passend zur Szenenstimmung: Angst, Wut, Hoffnung,
-  Verzweiflung, Ruhe, Erleichterung)
-- `generate-batch.js` um `--only <id>` erweitert, um gezielt eine einzelne
-  Einheit zu generieren, ohne den Batch-Fortschritt anzurühren
+**Ergebnis: Modellwechsel auf `gemini-3.1-flash-tts-preview`** (siehe
+Rahmendaten unten). `story-1-1.wav` ist bereits die 3.1-Version.
+Alle 18 zuvor mit 2.5-Flash generierten Dateien wurden gelöscht,
+`progress.json` war zwischenzeitlich auf 0/65 zurückgesetzt.
 
-**Nächster Schritt (sobald wieder Tageskontingent verfügbar ist):**
-`node tts/generate-batch.js --only story-1-1` — NUR diese eine Datei erzeugen
-und dem User als Hörprobe geben (Dateipfad nennen, NICHT automatisch abspielen).
-
-**Regel: Kein normaler Batch-Betrieb, keine Checkbox-Änderungen, keine
-weiteren TTS-Requests über die Hörprobe hinaus, bis der User die Hörprobe
-ausdrücklich freigegeben hat.** Erst nach Freigabe: diesen Abschnitt entfernen
-und mit Phase 1 wie gewohnt fortfahren.
-
-Freigabe-Status: **ausstehend**
+Freigabe-Status: **erteilt** — normaler Batch-Betrieb läuft ab jetzt wieder,
+mit dem neuen Modell.
 
 ## Rahmendaten
 
-- Modell: `gemini-2.5-flash-preview-tts` (Free Tier: Input + Output kostenlos)
-- Free-Tier-Limits (**verifiziert 17.07.2026** über 429-Antwort, Quota-ID
-  `GenerateRequestsPerDayPerProjectPerModel-FreeTier`): **10 Requests/Tag**
-  pro Modell, 3 Requests/Minute → 1 Batch = 10 Audiodateien/Tag
+- **Modell: `gemini-3.1-flash-tts-preview`** (Wechsel 19.07.2026, siehe
+  Qualitäts-Check oben). Preis lt. Google-Preisseite: $1,00/1 Mio.
+  Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt) — Free-Tier-
+  Tageslimit für dieses Modell noch nicht empirisch verifiziert (Ablauf wie
+  bei 2.5 Flash: das Skript stoppt sauber bei 429 und loggt die Quota-ID,
+  daraus ergibt sich der reale Wert beim nächsten Lauf).
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
+- Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
+  `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
+  Wortwörtlichkeits-Anweisung (gegen Artikel-/Wort-Drift)
 - NPC-Stimmen: pro NPC eine eigene Stimme (Zuordnung in `extract-manifest.js`,
   wird bei Phase 3 festgelegt)
 - Audio-Format: 24 kHz PCM → WAV in `tts/output/` (gitignored). Kompression zu
   Opus/MP3 folgt, sobald ffmpeg installiert ist — erst dann kommen Audiodateien
   ins Repo/Spiel.
-- Täglicher Ablauf: `node tts/generate-batch.js` — nimmt die nächsten 15 offenen
-  Einheiten aus `tts/manifest.json`, wartet 21 s zwischen Requests (3 RPM),
-  stoppt sauber bei 429 (Tageslimit) und loggt unten ins Aktivitäts-Log.
+- Täglicher Ablauf: `node tts/generate-batch.js` — nimmt die nächsten offenen
+  Einheiten aus `tts/manifest.json` (Default-Limit vorläufig 30, bis das echte
+  Tageslimit von 3.1 Flash TTS bekannt ist), wartet 21 s zwischen Requests
+  (3 RPM), stoppt sauber bei 429 (Tageslimit) und loggt unten ins
+  Aktivitäts-Log.
 - **Automatisiert:** Geplante Aufgabe `tts-daily-batch-incremental-adventure`
   (Claude-Desktop, täglich ~22:00 Uhr) führt den Batch aus, pflegt diese Datei
   und pusht. Läuft nur, wenn die App offen ist — sonst beim nächsten App-Start.
@@ -59,9 +58,12 @@ Freigabe-Status: **ausstehend**
   - [x] Batch-Skript (`generate-batch.js`) mit Rate-Limit + Progress-Tracking
   - [x] ~~BLOCKER: alter Key Prepay mit 0 Credits~~ — erledigt 17.07.2026,
         12:15 Uhr: neuer Free-Tier-Key vom User, in `.env.local` eingetragen
-  - [x] Echtes Free-Tier-Limit verifiziert: **10 Requests/Tag** (nicht 15) —
-        Quota-ID `…PerDayPerProjectPerModel-FreeTier`, quotaValue 10.
-        Batch-Default entsprechend auf 10 gesetzt
+  - [x] Echtes Free-Tier-Limit für `gemini-2.5-flash-preview-tts` verifiziert:
+        **10 Requests/Tag** — Quota-ID `…PerDayPerProjectPerModel-FreeTier`,
+        quotaValue 10. Inzwischen irrelevant, siehe Modellwechsel unten.
+  - [x] Free-Tier-Limit für `gemini-3.1-flash-tts-preview` verifiziert:
+        ebenfalls **10 Requests/Tag** (identische Quota-ID/-Wert wie beim
+        alten Modell) — Batch-Default auf 10 zurückgesetzt
   - [ ] ffmpeg installieren → WAV→Opus-Konvertierung ergänzen
   - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
@@ -76,8 +78,9 @@ Freigabe-Status: **ausstehend**
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - [ ] **Phase 7 — optional: Achievements** (79 Einheiten)
 
-Grobe Zeitschätzung bei 10/Tag (verifiziertes Limit): Phase 1–2 bis ~23.07.,
-Phase 3–4 bis ~12.08., Phase 5 bis ~31.08., Phase 6–7 bis ~Anfang Oktober 2026.
+Grobe Zeitschätzung bei 10/Tag (verifiziertes Limit für 3.1 Flash TTS, gleicher
+Wert wie zuvor): Phase 1–2 bis ~23.07., Phase 3–4 bis ~12.08., Phase 5 bis
+~31.08., Phase 6–7 bis ~Anfang Oktober 2026.
 
 ## Aktivitäts-Log
 
@@ -92,3 +95,4 @@ Phase 3–4 bis ~12.08., Phase 5 bis ~31.08., Phase 6–7 bis ~Anfang Oktober 20
 - 19.07.2026 16:13 — Batch: 1 Dateien (story-1-1 … story-1-1), 27 s Audio, komplett. Gesamt: 1/65 im Manifest.
 - 19.07.2026 16:15 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 1/65 im Manifest.
 - 19.07.2026 16:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 1/65 im Manifest.
+- 19.07.2026 16:34 — Batch: 10 Dateien (story-1-2 … story-2-3), 419 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 11/65 im Manifest.

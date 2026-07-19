@@ -18,9 +18,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const MODEL = 'gemini-2.5-flash-preview-tts';
-/* Free-Tier-Tageslimit, verifiziert 17.07.2026 per 429-Quota
-   (GenerateRequestsPerDayPerProjectPerModel-FreeTier, quotaValue 10). */
+/* Modellwechsel 19.07.2026: gemini-2.5-flash-preview-tts klang laut
+   User-Hörprobe monoton/charakterlos. gemini-3.1-flash-tts-preview liefert
+   hörbar bessere Emotion/Pausen/Stimmhöhe bei gleichem Style-Prompt — als
+   "akzeptabel" freigegeben. Tageslimit für dieses Modell noch nicht verifiziert
+   (BATCH_LIMIT_DEFAULT ist ein vorläufiger, bewusst hoch angesetzter Wert —
+   das Skript stoppt ohnehin sauber bei 429 und loggt die echte Quota). */
+const MODEL = 'gemini-3.1-flash-tts-preview';
+/* Free-Tier-Tageslimit verifiziert 19.07.2026 per 429-Quota — identisch zum
+   alten Modell: GenerateRequestsPerDayPerProjectPerModel-FreeTier, quotaValue 10. */
 const BATCH_LIMIT_DEFAULT = 10;
 const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
 const OUT_DIR = path.join(__dirname, 'output');
