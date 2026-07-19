@@ -5,7 +5,10 @@
    schreibt WAV-Dateien nach tts/output/ und pflegt progress.json
    sowie das Aktivitäts-Log in PLAN.md.
 
-   Aufruf:  node tts/generate-batch.js [--limit N]
+   Aufruf:  node tts/generate-batch.js [--limit N] [--only <id>]
+   --only <id>: generiert NUR diese eine Einheit (auch wenn sie in
+   progress.json bereits als "done" markiert ist) — für Hörproben/
+   Neuversuche, ohne den normalen Batch-Fortschritt anzurühren.
    Stoppt sauber bei 429 (Tageslimit erreicht) und loggt die
    Quota-Details — daran ist ablesbar, ob der Key als Free Tier läuft.
    ══════════════════════════════════════════════════════════════ */
@@ -101,14 +104,22 @@ function timestamp() {
 async function main() {
   const limitArg = process.argv.indexOf('--limit');
   const limit = limitArg > -1 ? Number(process.argv[limitArg + 1]) : BATCH_LIMIT_DEFAULT;
+  const onlyArg = process.argv.indexOf('--only');
+  const onlyId = onlyArg > -1 ? process.argv[onlyArg + 1] : null;
 
   const apiKey = loadEnvKey();
   const manifest = loadJson(path.join(__dirname, 'manifest.json'), null);
   if (!manifest) throw new Error('manifest.json fehlt — erst node tts/extract-manifest.js');
   const progress = loadJson(PROGRESS_FILE, { done: {}, failed: {} });
 
-  const pending = manifest.units.filter(u => !progress.done[u.id]);
-  const batch = pending.slice(0, limit);
+  let pending;
+  if (onlyId) {
+    pending = manifest.units.filter(u => u.id === onlyId);
+    if (!pending.length) throw new Error(`Einheit "${onlyId}" nicht im Manifest gefunden`);
+  } else {
+    pending = manifest.units.filter(u => !progress.done[u.id]);
+  }
+  const batch = onlyId ? pending : pending.slice(0, limit);
   if (!batch.length) { console.log('Nichts offen — alles vertont.'); return; }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });

@@ -25,10 +25,23 @@ function evalGameFile(relPath, resultExpr) {
 }
 
 const NARRATOR_VOICE = 'Iapetus';
+/* Stand 19.07.2026, Qualitäts-Überarbeitung: Feedback nach Anhören war
+   "monoton, ohne Gefühl" und "klingt nicht nach derselben Person". Der Prompt
+   ankert daher zuerst eine feste, unveränderliche Stimm-Identität (damit sie
+   über getrennte API-Calls hinweg gleich klingt) und fordert danach explizit
+   Emotions-/Tempo-/Lautstärke-Dynamik passend zur jeweiligen Szene. */
 const NARRATOR_STYLE =
-  'Sprich auf Deutsch, als junger Mann am Ende des Teenageralters: ruhig, ' +
-  'nachdenklich, wie ein leiser innerer Monolog beim Tagebuchschreiben. ' +
-  'Ernst und verletzlich, mit stiller Entschlossenheit. Lies den folgenden Text:';
+  'Du bist ein junger Mann von neunzehn Jahren mit einer klaren, mittelhohen, ' +
+  'leicht rauen Stimme. Dieses Timbre und diese Sprechweise bleiben über alle ' +
+  'Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe ' +
+  'Person, die ihr Tagebuch abends leise für sich liest.\n' +
+  'Trage den folgenden Text lebendig und emotional vor, niemals monoton: Passe ' +
+  'Tempo, Tonhöhe, Lautstärke und Atmung an die Stimmung der jeweiligen Szene an ' +
+  '— Angst klingt gehetzt, leiser und mit stockendem Atem; Wut wird härter, ' +
+  'schärfer und lauter; Hoffnung heller und wärmer; Verzweiflung leise und ' +
+  'brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung spürbar ' +
+  'lockerer. Wechsle diese Färbung innerhalb des Textes, sobald sich die ' +
+  'Stimmung des Ich-Erzählers ändert. Lies auf Deutsch den folgenden Text:';
 
 const units = [];
 
