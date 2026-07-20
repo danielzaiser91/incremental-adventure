@@ -109,12 +109,17 @@
       "file": "story-3-7.wav",
       "seconds": 46.5,
       "date": "2026-07-20T20:16:37.480Z"
+    },
+    "story-3-6": {
+      "file": "story-3-6.wav",
+      "seconds": 27.5,
+      "date": "2026-07-20T20:30:00.312Z"
     }
   },
   "failed": {
-    "story-3-6": {
-      "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 344,\n    \"candidatesTokenCount\": 972,\n    \"totalTokenCount\": 1316,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 344\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 972\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  },\n",
-      "date": "2026-07-20T20:15:49.966Z"
+    "story-3-8": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 42.364897277s.\",\n    \"status\": \"RESOURCE_EXH",
+      "date": "2026-07-20T20:30:16.752Z"
     }
   }
 }
