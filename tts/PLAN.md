@@ -82,6 +82,57 @@ Grobe Zeitschätzung bei 10/Tag (verifiziertes Limit für 3.1 Flash TTS, gleiche
 Wert wie zuvor): Phase 1–2 bis ~23.07., Phase 3–4 bis ~12.08., Phase 5 bis
 ~31.08., Phase 6–7 bis ~Anfang Oktober 2026.
 
+## TODO — Wort-Highlighting-Prototyp, offene Bugs (Test 20.07.2026, 00:23 Uhr)
+
+Manueller Test durch User (nicht Browser-Automation) bei story-1.3 (Schlafplatz,
+Nacht, "Die erste Nacht") — **keine Code-Änderungen vorgenommen, nur notiert.**
+
+**Nächster Schritt vor jedem weiteren Test:** Alignment fehlt aktuell für 11 von
+13 bereits vertonten Story-Einträgen (nur 1-1 und 1-2 haben `words.json`) —
+`tts/align/story-1-1.txt`/`.words.json` und `story-1-2.txt`/`.words.json` sind
+die einzigen vorhandenen Beispiele für den Alignment-Workflow (`tts/align/align.py`,
+Python-venv in `tts/align/.venv`). Fehlende Einträge:
+`story-1-3, story-1-4, story-1-5, story-1-6, story-1-7, story-1-8, story-2-1,
+story-2-2, story-2-3, story-2-4, story-2-5`. Für ALLE bereits vorhandenen
+`.wav`-Dateien das Alignment nachziehen, BEVOR erneut auf Highlighting/Seek/
+Pagination getestet wird — sonst wird wieder ein bereits bekannter
+Datenlücken-Zustand als "getestet" durchlaufen, ohne neue Erkenntnis zu liefern.
+Dabei auch klären, ob der Alignment-Schritt in `generate-batch.js` künftig
+automatisch direkt nach der Audio-Generierung mitläuft (ein manueller
+Nachzieh-Schritt pro Batch ist fehleranfällig/vergessbar), statt als
+nachgelagerter Extra-Lauf.
+
+- **Kein Wort-Highlighting.** Erwartet für story-1.3: `tts/output/story-1-3.words.json`
+  existiert noch nicht (nur 1-1 und 1-2 haben Alignment-Daten, siehe
+  `tts/align/`). Vor dem Test bereits als bekannte Lücke angekündigt — sollte
+  sich mit dem Alignment-Schritt für 1-3 von selbst lösen. Trotzdem gegenchecken,
+  sobald `story-1-3.words.json` existiert (nicht nur annehmen, dass es dann läuft).
+- **Audio stoppt nicht nach "erste" (Ende Seite 1), spielt einfach weiter.**
+  Vermutlich derselbe Root Cause wie oben: `updateDialogAudio(audioSrc,
+  pageStart, pageEnd)` bekommt `pageStart`/`pageEnd` ausschließlich aus den
+  Wort-Zeitstempeln (`story.js`, `bindWordHighlight()`/Aufrufer) — ohne
+  `words.json` sind beide vermutlich `undefined`. `applySeekNow()` UND
+  `scheduleEndPause()` (`dialog.js`) brechen bei `typeof pageStart !== 'number'`
+  sofort ab → kein Seitenende-Stopp, kein Seek. Prüfen, ob das tatsächlich der
+  Mechanismus ist (durch Vergleich mit story-1-2, das Alignment-Daten hat und
+  im automatisierten Test sauber stoppte).
+- **"Weiter"-Klick hat keinerlei Effekt auf die laufende Audiowiedergabe**
+  (kein Seek, kein Abschneiden) — konsistent mit obigem Verdacht: ohne
+  Timestamp-Daten läuft die Datei einfach unabhängig von den Dialogseiten
+  durch, statt seitenweise zu pausieren/zu springen.
+  - **Zu klären, nicht nur zu fixen:** Ist das akzeptables Fallback-Verhalten
+    für Einträge OHNE Alignment-Daten (Audio läuft einfach durch, unabhängig
+    von Text-Pagination), oder sollte die Audio-Steuerung bei fehlenden
+    Timestamps besser ganz versteckt bleiben, bis das Alignment nachgezogen
+    ist? Aktuell wirkt es für den Spieler wie ein kaputter, nicht wie ein
+    fehlender Feature-Zustand.
+- **UX: letzter "Weiter"-Button einer Dialogseiten-Serie sollte anders
+  beschriftet sein** als die Zwischen-Seiten, um anzuzeigen, dass der Klick
+  den Dialog schließt (z.B. "Schließen"/"Verstanden" statt erneut "Weiter").
+  Betrifft `showPaginatedDialog()`/`showMonologue()`/`showStoryEntryDialog()`
+  (`dialog.js`/`story.js`) — letzte Seite müsste ihren Button-Text separat
+  setzen können.
+
 ## Aktivitäts-Log
 
 <!-- generate-batch.js hängt hier automatisch Zeilen an — Format:
@@ -97,3 +148,4 @@ Wert wie zuvor): Phase 1–2 bis ~23.07., Phase 3–4 bis ~12.08., Phase 5 bis
 - 19.07.2026 16:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 1/65 im Manifest.
 - 19.07.2026 16:34 — Batch: 10 Dateien (story-1-2 … story-2-3), 419 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 11/65 im Manifest.
 - 19.07.2026 22:20 — Batch: 2 Dateien (story-2-4 … story-2-5), 66 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 13/65 im Manifest.
+- 20.07.2026 22:16 — Batch: 9 Dateien (story-2-6 … story-3-7), 318 s Audio, komplett. Gesamt: 22/65 im Manifest.

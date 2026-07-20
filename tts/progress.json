@@ -64,12 +64,57 @@
       "file": "story-2-5.wav",
       "seconds": 35,
       "date": "2026-07-19T20:20:25.622Z"
+    },
+    "story-2-6": {
+      "file": "story-2-6.wav",
+      "seconds": 67.5,
+      "date": "2026-07-20T20:10:37.413Z"
+    },
+    "story-2-7": {
+      "file": "story-2-7.wav",
+      "seconds": 38.5,
+      "date": "2026-07-20T20:11:19.916Z"
+    },
+    "story-3-0": {
+      "file": "story-3-0.wav",
+      "seconds": 29.6,
+      "date": "2026-07-20T20:11:58.641Z"
+    },
+    "story-3-1": {
+      "file": "story-3-1.wav",
+      "seconds": 27.5,
+      "date": "2026-07-20T20:12:39.226Z"
+    },
+    "story-3-2": {
+      "file": "story-3-2.wav",
+      "seconds": 19.1,
+      "date": "2026-07-20T20:13:12.245Z"
+    },
+    "story-3-3": {
+      "file": "story-3-3.wav",
+      "seconds": 30.4,
+      "date": "2026-07-20T20:13:51.355Z"
+    },
+    "story-3-4": {
+      "file": "story-3-4.wav",
+      "seconds": 28.1,
+      "date": "2026-07-20T20:14:29.945Z"
+    },
+    "story-3-5": {
+      "file": "story-3-5.wav",
+      "seconds": 31.2,
+      "date": "2026-07-20T20:15:10.247Z"
+    },
+    "story-3-7": {
+      "file": "story-3-7.wav",
+      "seconds": 46.5,
+      "date": "2026-07-20T20:16:37.480Z"
     }
   },
   "failed": {
-    "story-2-6": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 7.853967782s.\",\n    \"status\": \"RESOURCE_EXHA",
-      "date": "2026-07-19T20:20:46.748Z"
+    "story-3-6": {
+      "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 344,\n    \"candidatesTokenCount\": 972,\n    \"totalTokenCount\": 1316,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 344\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 972\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  },\n",
+      "date": "2026-07-20T20:15:49.966Z"
     }
   }
 }
