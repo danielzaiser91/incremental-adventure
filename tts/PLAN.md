@@ -153,3 +153,4 @@ nachgelagerter Extra-Lauf.
 - 20.07.2026 22:30 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 23/65 im Manifest.
 - 22.07.2026 12:47 — Batch: 9 Dateien (story-3-9 … story-4-7), 320 s Audio, komplett. Gesamt: 32/65 im Manifest.
 - 22.07.2026 12:47 — Batch: 1 Dateien (story-3-8 … story-3-8), 37 s Audio, komplett. Gesamt: 33/65 im Manifest.
+- 22.07.2026 22:10 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 33/65 im Manifest.
