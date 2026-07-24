@@ -67,8 +67,8 @@ mit dem neuen Modell.
   - [ ] ffmpeg installieren → WAV→Opus-Konvertierung ergänzen
   - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
-- [ ] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *läuft*
-- [ ] **Phase 2 — Skill-Monologe** (22 `learnDialogs`, experience.js)
+- [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
+- [ ] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *läuft, 7/29*
 - [ ] **Phase 3 — Story-kritische NPCs** (~143 Knoten: Sivert 84, Brakka 23,
       Fremder 12, Mira 12, Oswin 12) — Extraktion npc.js noch zu ergänzen
 - [ ] **Phase 4 — Neben-NPCs** (~24 Knoten: Korbin 7, Roswald 7, Vorarbeiter,
@@ -154,3 +154,4 @@ nachgelagerter Extra-Lauf.
 - 22.07.2026 12:47 — Batch: 9 Dateien (story-3-9 … story-4-7), 320 s Audio, komplett. Gesamt: 32/65 im Manifest.
 - 22.07.2026 12:47 — Batch: 1 Dateien (story-3-8 … story-3-8), 37 s Audio, komplett. Gesamt: 33/65 im Manifest.
 - 22.07.2026 22:10 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 33/65 im Manifest.
+- 23.07.2026 22:16 — Batch: 10 Dateien (story-4-8 … skill-sleepLikeARock), 268 s Audio, komplett. Gesamt: 43/65 im Manifest.

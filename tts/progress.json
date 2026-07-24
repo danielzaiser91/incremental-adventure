@@ -164,16 +164,57 @@
       "file": "story-3-8.wav",
       "seconds": 37.2,
       "date": "2026-07-22T10:47:36.869Z"
-    }
-  },
-  "failed": {
+    },
     "story-4-8": {
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "date": "2026-07-22T20:10:06.799Z"
+      "file": "story-4-8.wav",
+      "seconds": 24.7,
+      "date": "2026-07-23T20:10:36.080Z"
     },
     "story-4-9": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 44.640137316s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-07-22T20:10:27.918Z"
+      "file": "story-4-9.wav",
+      "seconds": 24.9,
+      "date": "2026-07-23T20:11:14.009Z"
+    },
+    "story-4-10": {
+      "file": "story-4-10.wav",
+      "seconds": 46.6,
+      "date": "2026-07-23T20:11:59.391Z"
+    },
+    "skill-jobLeveling": {
+      "file": "skill-jobLeveling.wav",
+      "seconds": 40.4,
+      "date": "2026-07-23T20:12:39.258Z"
+    },
+    "skill-fieldworkMemory": {
+      "file": "skill-fieldworkMemory.wav",
+      "seconds": 20.9,
+      "date": "2026-07-23T20:13:13.470Z"
+    },
+    "skill-ironWill": {
+      "file": "skill-ironWill.wav",
+      "seconds": 18.2,
+      "date": "2026-07-23T20:13:43.688Z"
+    },
+    "skill-fieldPay": {
+      "file": "skill-fieldPay.wav",
+      "seconds": 22.2,
+      "date": "2026-07-23T20:14:18.824Z"
+    },
+    "skill-nightWatchLeveling": {
+      "file": "skill-nightWatchLeveling.wav",
+      "seconds": 24.1,
+      "date": "2026-07-23T20:14:55.490Z"
+    },
+    "skill-inventoryKeeper": {
+      "file": "skill-inventoryKeeper.wav",
+      "seconds": 20,
+      "date": "2026-07-23T20:15:28.383Z"
+    },
+    "skill-sleepLikeARock": {
+      "file": "skill-sleepLikeARock.wav",
+      "seconds": 25.7,
+      "date": "2026-07-23T20:16:05.685Z"
     }
-  }
+  },
+  "failed": {}
 }
