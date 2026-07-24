@@ -214,6 +214,56 @@
       "file": "skill-sleepLikeARock.wav",
       "seconds": 25.7,
       "date": "2026-07-23T20:16:05.685Z"
+    },
+    "skill-thrift-l1": {
+      "file": "skill-thrift-l1.wav",
+      "seconds": 19.8,
+      "date": "2026-07-24T22:25:10.445Z"
+    },
+    "skill-thrift-l2": {
+      "file": "skill-thrift-l2.wav",
+      "seconds": 17.9,
+      "date": "2026-07-24T22:25:43.178Z"
+    },
+    "skill-petLover": {
+      "file": "skill-petLover.wav",
+      "seconds": 26.6,
+      "date": "2026-07-24T22:26:20.069Z"
+    },
+    "skill-longShift": {
+      "file": "skill-longShift.wav",
+      "seconds": 21.2,
+      "date": "2026-07-24T22:26:53.273Z"
+    },
+    "skill-longerRest-l1": {
+      "file": "skill-longerRest-l1.wav",
+      "seconds": 18.1,
+      "date": "2026-07-24T22:27:25.658Z"
+    },
+    "skill-longerRest-l2": {
+      "file": "skill-longerRest-l2.wav",
+      "seconds": 16.7,
+      "date": "2026-07-24T22:27:56.917Z"
+    },
+    "skill-longerRest-l3": {
+      "file": "skill-longerRest-l3.wav",
+      "seconds": 19.8,
+      "date": "2026-07-24T22:28:30.855Z"
+    },
+    "skill-longerRest-l4": {
+      "file": "skill-longerRest-l4.wav",
+      "seconds": 17.5,
+      "date": "2026-07-24T22:29:02.563Z"
+    },
+    "skill-jobXpBonus": {
+      "file": "skill-jobXpBonus.wav",
+      "seconds": 24.2,
+      "date": "2026-07-24T22:29:39.791Z"
+    },
+    "skill-quickLearner-l1": {
+      "file": "skill-quickLearner-l1.wav",
+      "seconds": 7.4,
+      "date": "2026-07-24T22:30:06.551Z"
     }
   },
   "failed": {}
