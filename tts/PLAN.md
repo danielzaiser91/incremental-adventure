@@ -68,7 +68,7 @@ mit dem neuen Modell.
   - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
-- [ ] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *läuft, 17/29*
+- [ ] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *läuft, 27/29*
 - [ ] **Phase 3 — Story-kritische NPCs** (~143 Knoten: Sivert 84, Brakka 23,
       Fremder 12, Mira 12, Oswin 12) — Extraktion npc.js noch zu ergänzen
 - [ ] **Phase 4 — Neben-NPCs** (~24 Knoten: Korbin 7, Roswald 7, Vorarbeiter,
@@ -156,3 +156,5 @@ nachgelagerter Extra-Lauf.
 - 22.07.2026 22:10 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 33/65 im Manifest.
 - 23.07.2026 22:16 — Batch: 10 Dateien (story-4-8 … skill-sleepLikeARock), 268 s Audio, komplett. Gesamt: 43/65 im Manifest.
 - 25.07.2026 00:30 — Batch: 10 Dateien (skill-thrift-l1 … skill-quickLearner-l1), 189 s Audio, komplett. Gesamt: 53/65 im Manifest.
+- 25.07.2026 22:14 — Batch: 9 Dateien (skill-quickLearner-l2 … skill-instinkt), 187 s Audio, komplett. Gesamt: 62/65 im Manifest.
+- 25.07.2026 22:15 — Batch: 1 Dateien (skill-quickLearner-l4 … skill-quickLearner-l4), 10 s Audio, komplett. Gesamt: 63/65 im Manifest.
