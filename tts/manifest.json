@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T14:15:58.342Z",
+  "generated": "2026-07-26T20:14:31.572Z",
   "units": [
     {
       "id": "story-1-1",
@@ -585,6 +585,591 @@
       "voice": "Iapetus",
       "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
       "text": "Ich habe mehr verloren als die meisten Menschen hier je besitzen werden. Und ich stehe noch.\n\nDas ist keine Heldengeschichte. Das ist das, was passiert, wenn man immer wieder aufsteht, bis man es nicht mehr anders kann. Bis Weitermachen keine Entscheidung mehr ist — sondern wer man ist."
+    },
+    {
+      "id": "npc-mira-greet",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — greet",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira lehnt sich über ihren Krug und lächelt mich an. \"Na, ein neues Gesicht. Und was für eines.\""
+    },
+    {
+      "id": "npc-mira-drink",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — drink",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Sie nimmt einen Schluck und grinst. \"Na siehst du, du bist gar nicht so verloren, wie du aussiehst.\" Beim Abschied drückt sie mir ein Stück Brot in die Hand."
+    },
+    {
+      "id": "npc-mira-smalltalk",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — smalltalk",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Smalltalk also\", seufzt sie gespielt enttäuscht. \"Schade. Vielleicht ein anderes Mal.\""
+    },
+    {
+      "id": "npc-mira-friendly",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — friendly",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira lächelt, als ich näherkomme. \"Na, mein Spendierfreund ist zurück. Was gibt's?\""
+    },
+    {
+      "id": "npc-mira-letterOffer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — letterOffer",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira zieht mich kurz zur Seite, ihre sonst so spöttische Stimme wird leiser. \"Du kommst doch öfter mit Brakka klar, oder?\"\n\n\"Gib ihm das hier — aber lass es niemand anderen sehen.\" Sie drückt mir einen versiegelten Brief in die Hand."
+    },
+    {
+      "id": "npc-mira-letterWhyNot",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — letterWhyNot",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira wird kurz still. Kein Lächeln — nur ein kurzer, prüfender Blick.\n\n\"Weil man mich hier kennt. Zu gut. Wenn ich selbst zu Brakka gehe, sieht das jemand — und dann weiß der Falsche, dass wir miteinander reden.\"\n\n\"Du bist neu hier. Unbekannt. Du kannst hingehen, ohne dass jemand eine Verbindung zieht.\"\n\n\"Deshalb du. Nicht weil es für dich sicherer ist. Weil es für uns beide klüger ist.\""
+    },
+    {
+      "id": "npc-mira-letterReminder",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — letterReminder",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira hebt nur kurz die Augenbraue — eine stumme Erinnerung an den Brief in meiner Tasche."
+    },
+    {
+      "id": "npc-mira-letterDelivered",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — letterDelivered",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira lehnt sich zurück, als ich ihr von Brakka berichte. \"Na siehst du. Hat doch geklappt.\" Ihr Grinsen wirkt für einen Moment fast aufrichtig."
+    },
+    {
+      "id": "npc-mira-detectiveAsk",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — detectiveAsk",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira sieht mich an — diesmal kein Lächeln, kein Spiel. Sie hat mein Gesicht gerade genug gelesen.\n\n\"Du fragst nach dem Schatten.\"\n\nEs ist keine Frage."
+    },
+    {
+      "id": "npc-mira-detectiveReveal",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — detectiveReveal",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Der Brief, den ich dir für Brakka gegeben habe?\" Sie trinkt einen Schluck, langsamer als nötig. \"Es war eine Warnung. Brakka weiß, wer der Schatten ist. Er weiß es seit Jahren.\"\n\n\"Ich auch. Aber Wissen ohne Schutz ist gefährlich. Du bist jetzt stark genug. Er wird reden, wenn du ihn fragst.\"\n\n\"Geh zu Brakka. Sag ihm, dass ich dich geschickt habe.\""
+    },
+    {
+      "id": "npc-mira-givesBrief",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — givesBrief",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira wartet, bis niemand mehr in Hörweite ist.\n\n\"Ich habe lange gezögert, ob ich dir das gebe. Aber du hast die Wahrheit gefunden, als andere weggeschaut haben.\" Sie schiebt mir einen gefalteten Brief zu.\n\n\"Er ist verschlüsselt. Ich kann ihn nicht lesen. Aber jemand in Lethkar kann — Varena, am Hafen. Sie ist eine alte Bekannte. Sag ihr, du kommst von mir.\"\n\n\"Tu mir einen Gefallen: Vergiss nicht, was darin steht.\""
+    },
+    {
+      "id": "npc-mira-friendlyAfterReveal",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Mira — friendlyAfterReveal",
+      "voice": "Aoede",
+      "style": "Du sprichst eine feste Rolle: eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und lässt durchklingen, dass sie mehr weiß, als sie zugibt. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Mira nickt mir zu, als ich näherkomme. Keine Spielchen mehr. \"Wie läuft die Sache?\""
+    },
+    {
+      "id": "npc-oswin-oswinsAuftragOffer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — oswinsAuftragOffer",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin schaut mich an — und dann schaut er zur Seite, als würde er prüfen, ob jemand zuhört.\n\n\"Du bist der Neue. Unbekannt, kein Ruf, keine Verbindungen.\" Eine Pause. \"Das ist nützlich.\"\n\n\"Richte Brakka aus, dass ich... ein Gespräch möchte. Diskret. Kein großes Ding. Einfach sagen: Oswin bittet um seine Zeit.\""
+    },
+    {
+      "id": "npc-oswin-oswinsAbweis",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — oswinsAbweis",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Wie du willst.\" Er wendet sich ab. \"Ich habe andere Wege.\""
+    },
+    {
+      "id": "npc-oswin-oswinsAuftragActive",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — oswinsAuftragActive",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin nickt mir kurz zu und senkt die Stimme.\n\n\"Brakka — hast du ihn schon gefunden?\"\n\nEr wartet. Kein Druck. Nur Geduld."
+    },
+    {
+      "id": "npc-oswin-oswinsAuftragDone",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — oswinsAuftragDone",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin hebt die Augenbraue, kaum merklich.\n\n\"Ah. Du hast es tatsächlich getan.\" Er nickt, kurz und knapp.\n\n\"Hier. Du hast dir das verdient. Und — ich merke mir das.\"\n\nZum ersten Mal sieht er mich an, als wäre ich ein Mensch."
+    },
+    {
+      "id": "npc-oswin-greet",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — greet",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin mustert mich von oben bis unten und verzieht das Gesicht. \"Wer hat dich hereingelassen?\""
+    },
+    {
+      "id": "npc-oswin-houseOffer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — houseOffer",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin hebt eine Augenbraue. Das ist die erste echte Reaktion, die ich bei ihm sehe.\n\n\"Ein Haus.\" Er trommelt mit dem Finger auf die Theke. \"Weißt du, wie viele Leute hierherkommen und nach einem Haus fragen? Und wie viele davon tatsächlich zahlen können?\"\n\n\"Am Westrand steht eines. Leerstand seit zwei Jahren. Der Vorbesitzer ist... gegangen.\" Er schiebt mir ein Schriftstück zu.\n\n\"Zweitausend Gold. Kein Feilschen.\""
+    },
+    {
+      "id": "npc-oswin-houseBought",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — houseBought",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin nimmt das Gold, ohne es zu zählen. Er faltet das Papier zusammen und schiebt es mir zu.\n\n\"Glückwunsch. Du bist jetzt Hauseigentümer.\" Eine kurze Pause. \"Treutheim gewinnt mit jedem Tag.\"\n\nIch glaube, das war sein Versuch eines Witzes."
+    },
+    {
+      "id": "npc-oswin-greetHomeOwner",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — greetHomeOwner",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin nickt mir knapp zu. \"Der Hauseigentümer.\" So nennt er mich jetzt. Nicht Name — Kategorie."
+    },
+    {
+      "id": "npc-oswin-smithOffer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — smithOffer",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Schmieden.\" Oswin lehnt sich zurück. \"Das ist keine Hobbybastelei. Du brauchst einen Amboss, einen Ofen, richtiges Werkzeug.\"\n\n\"Ein Schlosser aus der Süderstraße macht sowas. Zwölfhundert Gold. Nicht billig, aber sauber gebaut.\"\n\n\"Willst du das?\""
+    },
+    {
+      "id": "npc-oswin-smithBought",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — smithBought",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Schön\", sagt Oswin. \"Hast du jetzt eine Schmiede.\" Eine weitere Pause. \"Du wirst es brauchen.\""
+    },
+    {
+      "id": "npc-oswin-fremderHint",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — fremderHint",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Oswin hebt eine Augenbraue. \"Der Mann in der Ecke?\" Er senkt die Stimme.\n\n\"Er nennt sich Serin. Zumindest in manchen Kreisen. Früher Informationshandel — jetzt... weicher in der Außendarstellung, sagen Leute.\"\n\n\"Ich würde ihn fragen. Direkt. Er respektiert Direktheit — im Gegensatz zu den meisten.\""
+    },
+    {
+      "id": "npc-oswin-teacherHint",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Oswin — teacherHint",
+      "voice": "Orus",
+      "style": "Du sprichst eine feste Rolle: ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem Unterton und herablassender Höflichkeit. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Jemanden, der weiter bringt?\" Oswin lehnt sich zurück und lacht einmal, kurz und trocken. \"Du hast tatsächlich mehr Mumm, als du aussiehst.\"\n\n\"Es gibt eine Person. Alt, still, wenig redselig. Manche nennen sie die Lehrmeisterin. Ich nenne sie... eine seltene Investition. Sie taucht gelegentlich im alten Lehrhaus am Stadtrand auf — wenn es ihr gerade beliebt.\"\n\n\"Wenn du wirklich aus dem herausholen willst, was du schon kannst — dann weißt du jetzt, wo du suchen musst. Aber blamier mich nicht, wenn du dort auftauchst.\""
+    },
+    {
+      "id": "npc-brakka-tooSoon",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — tooSoon",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka nickt mir knapp zu, ohne den Hammer aus der Hand zu legen. \"Lern erst die Stadt kennen, Fremder. Wir reden noch.\""
+    },
+    {
+      "id": "npc-brakka-oswinsNachricht",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — oswinsNachricht",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ich trete einen Schritt näher, die Stimme gesenkt. \"Brakka — Oswin bittet um deine Zeit.\"\n\nBrakka hält inne. Für einen Moment ist sein Gesicht schwer zu lesen.\n\n\"Oswin.\" Er seufzt kurz. \"Gut. Sag ihm, ich komme.\"\n\n\"Und dir — danke, dass du diskret warst.\""
+    },
+    {
+      "id": "npc-brakka-offer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — offer",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka stellt seinen Krug ab und betrachtet mich nachdenklich. \"Du willst dir wohl auch beim Waffenschmied die Klinge ansehen, hm? Vergiss es — der verkauft nur an registrierte Abenteurer.\"\n\n\"Willst du wissen, wie man das wird?\""
+    },
+    {
+      "id": "npc-brakka-explain",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — explain",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Beweise erstmal, dass du wach bleiben kannst, wenn es drauf ankommt\", sagt er trocken. \"Halte heute Nacht Wache vor dem Stadttor. Schaffst du das, sprich wieder mit mir.\"\n\n\"Und komm nicht zu früh — die Wachen wechseln erst um 22 Uhr, wenn die Nacht richtig einbricht. Vorher lässt dich am Tor sowieso keiner ran.\""
+    },
+    {
+      "id": "npc-brakka-waiting",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — waiting",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Nun?\", fragt Brakka und hebt eine Augenbraue. \"Hast du heute Nacht schon Wache gehalten?\""
+    },
+    {
+      "id": "npc-brakka-turnIn",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — turnIn",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Du hast es tatsächlich getan\", sagt Brakka und nickt anerkennend. \"Nicht schlecht für jemanden, der vor ein paar Tagen noch durch das Stadttor gestolpert ist.\"\n\nEr drückt mir ein paar Münzen in die Hand. \"Hier — und weil du dich nicht gleich in die Hose gemacht hast: Die Wachen lassen dich ab jetzt jede Nacht ans Tor. Mach was draus, oder lass es. Mir ist es gleich, solang du nicht schnarchst.\""
+    },
+    {
+      "id": "npc-brakka-idle",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — idle",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka hebt seinen Krug, ohne aufzusehen. \"Schon wieder wach geblieben letzte Nacht? Du wirst noch zur Eule, Fremder.\""
+    },
+    {
+      "id": "npc-brakka-guildPending",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — guildPending",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka winkt ab. \"Eine Sache nach der anderen. Du merkst schon, wann es Zeit ist — vorher kann ich dir auch nicht weiterhelfen.\""
+    },
+    {
+      "id": "npc-brakka-guildExplain",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — guildExplain",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka stellt seinen Krug ab, diesmal ohne den üblichen Spott. \"Du willst also wirklich zur Gilde.\"\n\n\"Dann hör zu: die nehmen niemanden, der nicht zumindest ordentliche Ausrüstung mitbringt — und den Kopf klar genug hat, um nicht beim ersten Auftrag zu sterben.\"\n\n\"Beschaff dir, was du brauchst. Bereite dich vor — wirklich vorbereiten, nicht nur einen Tag früher aufstehen. Wenn du meinst, dass es Zeit ist, komm wieder zu mir.\""
+    },
+    {
+      "id": "npc-brakka-guildReadyCheck",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — guildReadyCheck",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka mustert mich von oben bis unten. \"Na? Bereit, oder verschwendest du nur meine Zeit?\""
+    },
+    {
+      "id": "npc-brakka-guildEnd",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — guildEnd",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka nickt knapp. \"Dann ist es Zeit, Fremder. Die Gilde wird von dir hören.\"\n\n\"Aber erst zeig mir, dass du dich schlägst. Südlich der Stadt gibt es ein Jagdgebiet — lass die Wölfe dort deine Visitenkarte sein. Komm zurück, wenn du weißt, was du drauf hast.\"\n\nEr dreht sich um. Kein Händeschütteln. Keine Umarmung. Nur ein neuer Weg."
+    },
+    {
+      "id": "npc-brakka-guildFinished",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — guildFinished",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka hebt sein Glas. \"Geh und mach uns stolz, Fremder.\""
+    },
+    {
+      "id": "npc-brakka-brakkaWarum",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — brakkaWarum",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka stellt den Krug ab. Sein Blick streift mich — kurz, gewogen. Als zählte er etwas nach, das er nicht laut sagen wird.\n\n\"In meinen Jahren hab ich viele durch diese Tür kommen sehen. Die meisten witterten dasselbe: Ruhm, Gold, am liebsten beides.\"\n\n\"Du hast von nichts davon geredet. Du hast gefragt, wie es mir geht.\" Die schwielige Hand legt sich wieder um den Krug.\n\n\"Das war genug. Jetzt zeig mir, dass ich mich nicht verschätzt hab — dann gibt es zwischen uns nichts weiter zu reden.\""
+    },
+    {
+      "id": "npc-brakka-gildeDetails",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — gildeDetails",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka lehnt sich gegen die Wand, die Balken knarren unter ihm. \"Die Gilde ist kein Orden. Kein Heilsversprechen. Arbeit ist es — mit einem Stempel drauf.\"\n\n\"Verträge. Händler ohne eigene Wachen. Bauern, die ein Vieh loswerden wollen. Und Dinge, vor denen andere lieber wegsehen.\"\n\n\"Dafür kriegst du Zugang. Zum Waffenschmied. Zum Jagdgebiet. Zu Leuten, die dir sonst die Tür vor der Nase zuschlagen würden.\"\n\nSein Blick fällt in den Krug. \"Ich kenn die Gilde länger, als mir manchmal lieb ist.\" Dann trinkt er. Mehr ist dazu nicht zu holen."
+    },
+    {
+      "id": "npc-brakka-gildeZukunft",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — gildeZukunft",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Was dich erwartet?\" Ein kurzes, trockenes Lachen. \"Aufträge. Manche stumpf, manche weniger.\"\n\n\"Respekt kommt nicht mit dem Stempel. Den verdienst du dir Schritt für Schritt — sobald die Leute merken, dass du zurückkommst.\"\n\n\"Fang vorne an. Der Waffenschmied lässt dich jetzt durch. Das Jagdgebiet kennst du schon. Also los.\"\n\nEr hebt den Krug — kein Toast, er will einfach trinken. \"Viel Erfolg, Fremder. Und das mein ich ernst.\""
+    },
+    {
+      "id": "npc-brakka-waldtrollRumor",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — waldtrollRumor",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka senkt die Stimme. \"Das Tiefjagdgebiet? Ja. Gerüchte gibt es da immer.\"\n\n\"Sie sagen, da draußen streift etwas — groß, grau, langsam wie Fels und hart wie Eisen.\"\n\n\"Wenn du es suchst, dann geh rein. Aber sag mir hinterher Bescheid — damit wir wissen, was wirklich dort ist.\""
+    },
+    {
+      "id": "npc-brakka-gildePruefungTurnIn",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — gildePruefungTurnIn",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka schaut mich ruhig an, während ich erzähle. Fünf Kämpfe.\n\n\"Na gut\", sagt er schließlich. \"Du hast bewiesen, dass du kämpfen kannst. Nicht nur zuhören.\"\n\n\"Das tiefe Jagdgebiet ist dir jetzt zugänglich. Und hier — zweihundert Gold dafür, dass du mich nicht enttäuscht hast.\""
+    },
+    {
+      "id": "npc-brakka-waldtrollTurnIn",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — waldtrollTurnIn",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka starrt mich an. Dann lacht er — kurz, aber echt.\n\n\"Den Waldtroll. Du hast ihn tatsächlich besiegt.\"\n\n\"Ich dachte, du kommst irgendwann zurück und sagst mir, du hast ihn nicht mal gefunden.\" Er schiebt mir einen schweren Beutel zu.\n\n\"Gut gemacht, Fremder. Du bist kein Fremder mehr.\""
+    },
+    {
+      "id": "npc-brakka-brennenderMutOffer",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — brennenderMutOffer",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka lehnt sich zurück und betrachtet mich mit einem Ausdruck, den ich noch nicht an ihm kenne. Ernsthaft. Fast respektvoll.\n\n\"Ich kenne Leute, die kommen einmal zur Wache und denken, sie haben etwas bewiesen.\"\n\n\"Drei Tagesschichten hintereinander. Ohne Ausreden. Wenn du das schaffst, vertraue ich dir — und das bedeutet in Treutheim mehr, als du ahnst.\""
+    },
+    {
+      "id": "npc-brakka-brennenderMutTurnIn",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — brennenderMutTurnIn",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka hört mich kommen, bevor ich ihn anspreche.\n\n\"Drei Schichten.\" Er dreht sich um. Er sieht mich an — anders als sonst.\n\n\"Nicht zwei, nicht halb. Drei. Ohne Ausreden.\"\n\n\"Das nennt man Charakter.\" Er streckt die Hand aus. \"Du hast mein Vertrauen. Das ist nicht nichts.\""
+    },
+    {
+      "id": "npc-brakka-detectiveReveal",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — detectiveReveal",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka legt den Hammer nieder. Langsam. Ich habe ihn das noch nie tun sehen.\n\n\"Mira hat dich geschickt.\" Es ist keine Frage.\n\n\"Der Mann in der Taverne — er ist kein Dieb. Er ist schlimmer. Er wählt aus, wer beraubt wird. Ich kenne sein Gesicht seit Jahren. Er war schon hier, als ich jung war.\"\n\n\"Ich habe nie geredet. Weil ich zu feige war, oder weil es mir nicht passiert ist. Ich weiß selbst nicht mehr, was der Unterschied ist.\"\n\n\"Wenn du ihn stellen willst — erst musst du stärker sein als er erwartet. Er ist kein Mann der Gewalt. Aber er hat Leute, die es für ihn sind.\""
+    },
+    {
+      "id": "npc-brakka-receiveLetter",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — receiveLetter",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ich reiche Brakka den versiegelten Brief. Er liest ihn kurz, sein Grinsen verschwindet für einen Moment.\n\n\"Sag Mira, ich kümmere mich drum.\" Er steckt den Brief weg und drückt mir zum Dank ein paar Münzen in die Hand."
+    },
+    {
+      "id": "npc-brakka-whyMiraSent",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Brakka, der Schmied — whyMiraSent",
+      "voice": "Algenib",
+      "style": "Du sprichst eine feste Rolle: ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter der harten Schale — Spott klingt bei ihm freundlich, nie gehässig. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Brakka hebt kaum die Augenbraue — als hätte er die Frage erwartet.\n\n\"Weil Mira klug ist\", sagt er knapp. \"Sie weiß, wen man sieht — und wen man sich merkt.\"\n\n\"Ein Fremder fällt auf. Mira merkt man sich. Das ist der Unterschied zwischen einer Botschaft, die ankommt, und einem Problem, das sich von selbst löst.\"\n\nEr faltet den Brief. \"Verstanden?\""
+    },
+    {
+      "id": "npc-fremder-greet",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — greet",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Aus der Nähe wirkt er noch zwielichtiger. Er nickt mir knapp zu, ohne wirklich herzusehen. \"Suchst du was?\"\n\nSein Blick streift kurz meinen Geldbeutel — dann wieder mein Gesicht, als wäre nichts gewesen."
+    },
+    {
+      "id": "npc-fremder-who",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — who",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er grinst schief. \"Niemand Wichtiges. Noch nicht.\" Er lässt das Wort einen Moment in der Luft hängen, als wollte er sehen, ob ich verstehe, was er meint."
+    },
+    {
+      "id": "npc-fremder-cryptic",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — cryptic",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Manche Leute laufen durch diese Stadt und merken gar nicht, wie viel Aufmerksamkeit sie erregen\", sagt er leise, ohne mich anzusehen.\n\n\"Pass besser auf, was du mit dir herumträgst. Nicht jeder hier ist so... gesprächig wie ich.\""
+    },
+    {
+      "id": "npc-fremder-threat",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — threat",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er lacht trocken, kein Funken Wärme darin. \"Nenn es, wie du willst. Ich hab nur gesagt, was ich gesehen habe.\""
+    },
+    {
+      "id": "npc-fremder-watching",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — watching",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er hebt beide Hände, gespielt unschuldig. \"Beobachten? Ich sitze hier und trinke. Weiter nichts.\"\n\nAber sein Blick sagt etwas anderes — und er senkt ihn keine Sekunde zu früh."
+    },
+    {
+      "id": "npc-fremder-confrontation",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — confrontation",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ich lege die Münze mit dem eingestanzten Kratzer auf den Tisch zwischen uns.\n\nDer zwielichtige Mann betrachtet sie lange. Sein Gesicht verrät nichts. Dann: \"Du bist nicht wie die anderen.\"\n\n\"Die anderen haben nach dem Raub aufgehört. Haben die Stadt verlassen oder geschwiegen. Du nicht.\"\n\n\"Ich habe dich ausgewählt. Nicht nur wegen des Goldes — um zu sehen, was du daraus machst. Du hast Stärke gezeigt. Im Jagdgebiet. Im Gespräch. Sogar hier, jetzt.\"\n\n\"Der Schatten will wissen, wer du bist. Ich werde ihm sagen, dass du jemand bist, mit dem man rechnet.\"\n\nEr schiebt die Münze zu mir zurück. \"Behalte sie. Als Erinnerung.\""
+    },
+    {
+      "id": "npc-fremder-confrontationEnd",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — confrontationEnd",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Das Gold?\" Er lacht leise. \"Das ist längst weg. Aber du bist hier, und das ist mehr wert.\"\n\n\"Leb gut, Fremder. Wir werden uns wiedersehen.\" Er erhebt sich und verlässt die Taverne — langsam, ohne Eile, als wäre er nie bedroht gewesen."
+    },
+    {
+      "id": "npc-fremder-postConfrontation",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — postConfrontation",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Der zwielichtige Mann ist nicht mehr hier. Nur sein leerer Stuhl erinnert an das Gespräch."
+    },
+    {
+      "id": "npc-fremder-fremderGeheimnisCue",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — fremderGeheimnisCue",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Der leere Stuhl. Ich denke nach.\n\nOswin hat ihn einmal erwähnt — eine \"Investition in Informationen\". Mira war nervös, als ich von ihm sprach.\n\nJemand hier kennt ihn. Ich muss nur fragen."
+    },
+    {
+      "id": "npc-fremder-identityReveal",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — identityReveal",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er sitzt wieder. Natürlich sitzt er wieder.\n\nAls ich mich setze, schaut er mich anders an. \"Du hast gefragt. Ich habe es gehört.\"\n\n\"Mein Name ist nicht wichtig. Aber Lethkar...\" Er lächelt, kaum sichtbar. \"...dort kennt man mich. Und bald wirst du es auch tun.\""
+    },
+    {
+      "id": "npc-fremder-identityReveal2",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — identityReveal2",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Weil du nicht aufgehört hast nachzufragen. Das bedeutet, dass du bereit bist.\"\n\nEr steht auf. Legt ein kleines gefaltetes Papier auf den Tisch. \"Das ist eine Adresse in Lethkar. Finde sie. Nenn meinen Namen: Serin.\"\n\n\"Bis dahin — viel Erfolg. Du wirst es brauchen.\""
+    },
+    {
+      "id": "npc-fremder-finaleDialog",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Ein zwielichtiger Mann — finaleDialog",
+      "voice": "Enceladus",
+      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er sitzt an seinem üblichen Platz. Aber heute kommt er mir entgegen, bevor ich ihn ansprich.\n\n\"Du hast dir einen Ruf gemacht, Serin... verzeiht. Alten Reflex.\"\n\n\"Treutheim hat dir alles gegeben, was es hat. Der Rest liegt woanders.\"\n\n\"Lethkar. Nördlich, durch den Bergpass. Du wirst nicht leicht hinkommen — aber du wirst ankommen.\"\n\nEr schiebt mir ein kleines, gefaltetes Stück Pergament zu. Keine Worte mehr."
+    },
+    {
+      "id": "npc-sivert-firstMeet",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — firstMeet",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Du arbeitest auf dem Feld.\" Er stellt seinen Becher ab. Keine Frage — eine Feststellung. \"Das sieht man sofort. Treutheim, wenn ich richtig schätze.\"\n\n\"Mein Name ist Sivert. Ich berate Hofbesitzer, wie sie mehr aus ihrer Arbeit herausholen. Was du beherrschst, ist Fleiß. Was dir noch fehlt, ist Methode.\""
+    },
+    {
+      "id": "npc-sivert-erklaerung",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — erklaerung",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Feldarbeit sieht einfach aus — ist sie nicht. Nicht wenn man sie wirklich beherrscht. Handgelenk, Atemrhythmus, wann man zieht, wann man schiebt. Die meisten lernen das nie, weil sie nie aufhören, einfach zu schuften.\"\n\n\"Ich kann dir zeigen, was dir fehlt. Nicht mehr Kraft — ein anderes Denken. Das Ergebnis ist dasselbe Feld, dieselbe Schaufel. Aber was du herausholst, ist ein anderes.\""
+    },
+    {
+      "id": "npc-sivert-angebot",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — angebot",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Drei Stunden. Acht Hundert Gold — meine Zeit ist knapp, mein Wissen nicht billig. Danach arbeitest du anders, als du es je getan hast.\""
+    },
+    {
+      "id": "npc-sivert-abwarten",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — abwarten",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Noch nicht soweit. Das akzeptiere ich.\" Er hebt seinen Becher. \"Die Tür bleibt offen.\""
+    },
+    {
+      "id": "npc-sivert-profiDone",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — profiDone",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Die Technik gehört dir jetzt.\" Er wendet sich seinem Becher zu. \"Übe sie. Was du damit machst, liegt bei dir.\"\n\nIch spüre, dass das Gespräch beendet ist — nicht unfreundlich, nur abgeschlossen."
+    },
+    {
+      "id": "npc-sivert-masterDone",
+      "phase": 3,
+      "category": "npc-dialog",
+      "title": "Sivert — masterDone",
+      "voice": "Charon",
+      "style": "Du sprichst eine feste Rolle: ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser Autorität und kurzen Denkpausen — nie hektisch, nie werbend. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "\"Du siehst aus wie jemand, der es kapiert hat.\" Ein knappes Nicken. Mehr gibt es von ihm nicht.\n\nIch glaube, das ist das größte Kompliment, das Sivert je macht."
     }
   ]
 }

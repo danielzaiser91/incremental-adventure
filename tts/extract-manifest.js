@@ -3,7 +3,9 @@
    Extrahiert vertonbare Einheiten aus den Spieldateien, aktuell:
    - Phase 1: STORY_ENTRIES (script/story.js) — 1 Datei pro Eintrag
    - Phase 2: EP_SKILL_TREE learnDialogs (script/experience.js)
-   Spätere Phasen (NPCs, Quests, …) werden hier ergänzt.
+   - Phase 3: NPC-Dialogknoten (script/npc.js), story-kritische NPCs
+   Spätere Phasen (Neben-NPCs, Quests, …) werden hier ergänzt — für
+   Phase 4 reicht `ACTIVE_NPC_PHASES` um 4 zu erweitern.
    Idempotent: bestehende manifest.json wird überschrieben, die
    Fortschritts-Daten liegen separat in progress.json.
    ══════════════════════════════════════════════════════════════ */
@@ -19,9 +21,26 @@ const ROOT = path.join(__dirname, '..');
 /* Spieldateien deklarieren nur Konstanten/Funktionen — Top-Level führt nichts
    aus. Ein leerer Sandbox-Kontext reicht; Funktionswerte (unlockFlag etc.)
    werden nie aufgerufen. */
-function evalGameFile(relPath, resultExpr) {
+function evalGameFile(relPath, resultExpr, sandbox = {}) {
   const src = fs.readFileSync(path.join(ROOT, relPath), 'utf8');
-  return vm.runInNewContext(src + '\n;' + resultExpr, {}, { filename: relPath });
+  return vm.runInNewContext(src + '\n;' + resultExpr, sandbox, { filename: relPath });
+}
+
+/* npc.js referenziert im Gegensatz zu story.js/experience.js schon beim Laden
+   fremde Globals (z.B. `location: CONTENT.TAVERNE`). Dieser Stub-Sandbox
+   liefert für jede unbekannte Variable und jeden Property-Zugriff darauf
+   wieder denselben Proxy — echte Built-ins (Object, Math, …) bleiben echt. */
+function stubSandbox() {
+  const stub = new Proxy(function () {}, {
+    get: (t, k) => (k === Symbol.toPrimitive || k === 'toString' ? () => '' : stub),
+    apply: () => stub,
+    construct: () => stub
+  });
+  return new Proxy({}, {
+    has: () => true,
+    get: (t, k) => (k in globalThis ? globalThis[k] : (k in t ? t[k] : stub)),
+    set: (t, k, v) => { t[k] = v; return true; }
+  });
 }
 
 const NARRATOR_VOICE = 'Iapetus';
@@ -90,6 +109,99 @@ for (const node of skillTree) {
   }
 }
 
+/* ── Phase 3/4 — NPC-Dialogknoten ──────────────────────────────
+   Pro NPC eine feste, einmal gewählte Gemini-Stimme (ändert sich nie mehr,
+   sonst klingt derselbe Charakter zwischen zwei Knoten wie zwei Personen)
+   plus eine Persona-Zeile, die aus der `tagline` des NPCs abgeleitet ist.
+   Knotentexte mischen Erzähl-Regie ("Korbin lacht trocken.") mit wörtlicher
+   Rede — beides spricht die NPC-Stimme, der Erzähler (Iapetus) bleibt für
+   Story/Monologe reserviert. */
+const NPC_PROFILES = {
+  /* Phase 3 — story-kritische NPCs */
+  sivert: { phase: 3, voice: 'Charon', persona:
+    'ein ruhiger, wohlüberlegter Agrarberater Mitte vierzig, der auf Reisen ist. ' +
+    'Er sagt wenig und meint jedes Wort: sachlich, unaufgeregt, mit leiser ' +
+    'Autorität und kurzen Denkpausen — nie hektisch, nie werbend' },
+  brakka: { phase: 3, voice: 'Algenib', persona:
+    'ein kräftiger Schmied mit rauer, tiefer Stimme und trockenem Humor. ' +
+    'Er redet kurz angebunden und poltert gern, hat aber ein warmes Herz unter ' +
+    'der harten Schale — Spott klingt bei ihm freundlich, nie gehässig' },
+  fremder: { phase: 3, voice: 'Enceladus', persona:
+    'ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig ' +
+    'wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der ' +
+    'Hut — lauernd und ausweichend, niemals laut' },
+  mira: { phase: 3, voice: 'Aoede', persona:
+    'eine junge, charmante und gewitzte Frau mit einem Lächeln in der Stimme. ' +
+    'Sie spricht leicht und spielerisch, gern mit neckischem Unterton, und ' +
+    'lässt durchklingen, dass sie mehr weiß, als sie zugibt' },
+  oswin: { phase: 3, voice: 'Orus', persona:
+    'ein hochnäsiger Mann, der nur mit denen spricht, die etwas vorzuweisen ' +
+    'haben. Sein Ton ist kühl, gedehnt und betont gelangweilt, mit spöttischem ' +
+    'Unterton und herablassender Höflichkeit' },
+  /* Phase 4 — Neben-NPCs (Stimmen vorab festgelegt, noch nicht aktiv) */
+  wirt: { phase: 4, voice: 'Umbriel', persona:
+    'ein herzlicher Wirt mit warmer, gelassener Stimme, der Fremden gegenüber ' +
+    'aber wachsam bleibt und die Stimme senkt, wenn es heikel wird' },
+  kommandant: { phase: 4, voice: 'Alnilam', persona:
+    'ein strammer, disziplinierter Wachkommandant. Klare, feste Kommandostimme, ' +
+    'knappe Sätze, sparsam mit Lob' },
+  vorarbeiter: { phase: 4, voice: 'Gacrux', persona:
+    'ein wortkarger, fairer Vorarbeiter mit rauer, gesetzter Stimme — wer ' +
+    'ordentlich schuftet, hört den Respekt heraus' },
+  greta: { phase: 4, voice: 'Despina', persona:
+    'eine geschäftstüchtige, freundliche Krämerin; flüssig und zugewandt im Ton, ' +
+    'mit hörbarer Begeisterung, sobald sie eine neue Idee hat' },
+  torben: { phase: 4, voice: 'Rasalgethi', persona:
+    'ein Gildenvorsteher, der jeden hat kommen und gehen sehen: gemessen, ' +
+    'nüchtern, mit einem Anflug von Müdigkeit hinter der Sachlichkeit' },
+  strassenkehrer: { phase: 4, voice: 'Zubenelgenubi', persona:
+    'ein alter Straßenkehrer, der jede Gasse kennt und gern darüber redet — ' +
+    'plaudernd, umgangssprachlich, mit brüchiger Altersstimme' }
+};
+const ACTIVE_NPC_PHASES = new Set([3]);
+
+function npcStyle(persona) {
+  return (
+    `Du sprichst eine feste Rolle: ${persona}. Dieses Timbre und diese ` +
+    'Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig ' +
+    'vom Inhalt — es ist immer dieselbe Person.\n' +
+    'Der Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in ' +
+    'Anführungszeichen. Sprich beides in derselben Rollenstimme: die ' +
+    'Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede ' +
+    'voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\n' +
+    'Sprich niemals monoton, aber auch nicht theatralisch überzogen — ' +
+    'glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll ' +
+    'durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\n' +
+    'Lies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu ' +
+    'verändern, hinzuzufügen oder wegzulassen:'
+  );
+}
+
+const npcs = evalGameFile('script/npc.js', 'NPCS', stubSandbox());
+const npcSkipped = [];
+for (const [npcId, npc] of Object.entries(npcs)) {
+  const profile = NPC_PROFILES[npcId];
+  if (!profile) { npcSkipped.push(`${npcId} (kein Stimmprofil)`); continue; }
+  if (!ACTIVE_NPC_PHASES.has(profile.phase)) continue;
+  for (const [nodeId, node] of Object.entries(npc.nodes || {})) {
+    /* Knoten mit dynamischem Text (text: () => …) hängen vom Spielstand ab —
+       nicht statisch vertonbar, bewusst ausgelassen. */
+    if (!Array.isArray(node.text) || !node.text.length) {
+      npcSkipped.push(`${npcId}.${nodeId} (kein statisches text-Array)`);
+      continue;
+    }
+    units.push({
+      id: `npc-${npcId}-${nodeId}`,
+      phase: profile.phase,
+      category: 'npc-dialog',
+      title: `${npc.name} — ${nodeId}`,
+      voice: profile.voice,
+      style: npcStyle(profile.persona),
+      text: node.text.join('\n\n')
+    });
+  }
+}
+
 const totalChars = units.reduce((s, u) => s + u.text.length, 0);
 fs.writeFileSync(
   path.join(__dirname, 'manifest.json'),
@@ -99,3 +211,4 @@ console.log(`manifest.json: ${units.length} Einheiten, ${totalChars} Zeichen`);
 const byPhase = {};
 for (const u of units) byPhase[u.phase] = (byPhase[u.phase] || 0) + 1;
 for (const [p, n] of Object.entries(byPhase)) console.log(`  Phase ${p}: ${n} Einheiten`);
+if (npcSkipped.length) console.log(`  übersprungen: ${npcSkipped.join(', ')}`);

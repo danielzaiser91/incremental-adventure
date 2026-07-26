@@ -28,22 +28,28 @@ mit dem neuen Modell.
 
 - **Modell: `gemini-3.1-flash-tts-preview`** (Wechsel 19.07.2026, siehe
   Qualitäts-Check oben). Preis lt. Google-Preisseite: $1,00/1 Mio.
-  Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt) — Free-Tier-
-  Tageslimit für dieses Modell noch nicht empirisch verifiziert (Ablauf wie
-  bei 2.5 Flash: das Skript stoppt sauber bei 429 und loggt die Quota-ID,
-  daraus ergibt sich der reale Wert beim nächsten Lauf).
+  Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt). Free-Tier-
+  Tageslimit verifiziert: **10 erfolgreiche Generierungen/Tag** — nur
+  erfolgreiche Requests zählen, Leer-/Fehlantworten nicht.
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
   Wortwörtlichkeits-Anweisung (gegen Artikel-/Wort-Drift)
-- NPC-Stimmen: pro NPC eine eigene Stimme (Zuordnung in `extract-manifest.js`,
-  wird bei Phase 3 festgelegt)
+- NPC-Stimmen: pro NPC eine feste eigene Stimme, Zuordnung + Persona-Prompt in
+  `NPC_PROFILES` (`extract-manifest.js`), festgelegt 26.07.2026 — Sivert
+  `Charon`, Brakka `Algenib`, Fremder `Enceladus`, Mira `Aoede`, Oswin `Orus`;
+  Phase 4 vorbereitet: Korbin `Umbriel`, Roswald `Alnilam`, Vorarbeiter
+  `Gacrux`, Greta `Despina`, Torben `Rasalgethi`, Straßenkehrer
+  `Zubenelgenubi`. Stimmen nie nachträglich ändern (sonst klingt derselbe
+  Charakter zwischen zwei Knoten wie zwei Personen). NPC-Knoten mischen
+  Regie-Sätze und wörtliche Rede — beides spricht die NPC-Stimme, `Iapetus`
+  bleibt dem Erzähler vorbehalten.
 - Audio-Format: 24 kHz PCM → WAV in `tts/output/` (gitignored). Kompression zu
   Opus/MP3 folgt, sobald ffmpeg installiert ist — erst dann kommen Audiodateien
   ins Repo/Spiel.
 - Täglicher Ablauf: `node tts/generate-batch.js` — nimmt die nächsten offenen
-  Einheiten aus `tts/manifest.json` (Default-Limit vorläufig 30, bis das echte
-  Tageslimit von 3.1 Flash TTS bekannt ist), wartet 21 s zwischen Requests
+  Einheiten aus `tts/manifest.json` (Default-Limit 10 = Tageslimit),
+  wartet 21 s zwischen Requests
   (3 RPM), stoppt sauber bei 429 (Tageslimit) und loggt unten ins
   Aktivitäts-Log.
 - **Automatisiert:** Geplante Aufgabe `tts-daily-batch-incremental-adventure`
@@ -68,19 +74,26 @@ mit dem neuen Modell.
   - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
-- [ ] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *läuft, 27/29*
-- [ ] **Phase 3 — Story-kritische NPCs** (~143 Knoten: Sivert 84, Brakka 23,
-      Fremder 12, Mira 12, Oswin 12) — Extraktion npc.js noch zu ergänzen
-- [ ] **Phase 4 — Neben-NPCs** (~24 Knoten: Korbin 7, Roswald 7, Vorarbeiter,
-      Greta, Torben, Straßenkehrer)
+- [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
+- [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
+      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 7/65*.
+      Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
+      Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
+      gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
+      hängt vom Spielstand ab → nicht statisch vertonbar).
+- [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
+      Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
+      Knoten bei Roswald und Greta fällt weg).
+      Stimmen + Persona sind in `extract-manifest.js` bereits festgelegt →
+      zum Start nur `ACTIVE_NPC_PHASES` um `4` erweitern.
 - [ ] **Phase 5 — Quests & Objectives** (~186 Kurztexte, quests.js + objective.js)
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - [ ] **Phase 7 — optional: Achievements** (79 Einheiten)
 
-Grobe Zeitschätzung bei 10/Tag (verifiziertes Limit für 3.1 Flash TTS, gleicher
-Wert wie zuvor): Phase 1–2 bis ~23.07., Phase 3–4 bis ~12.08., Phase 5 bis
-~31.08., Phase 6–7 bis ~Anfang Oktober 2026.
+Grobe Zeitschätzung bei 10/Tag (Stand 26.07.2026, nach Korrektur der
+Phase-3-Knotenzahl von ~143 auf 65): Phase 1–2 erledigt, Phase 3 bis ~02.08.,
+Phase 4 bis ~05.08., Phase 5 bis ~24.08., Phase 6–7 bis ~Ende September 2026.
 
 ## TODO — Wort-Highlighting-Prototyp, offene Bugs (Test 20.07.2026, 00:23 Uhr)
 
@@ -158,3 +171,7 @@ nachgelagerter Extra-Lauf.
 - 25.07.2026 00:30 — Batch: 10 Dateien (skill-thrift-l1 … skill-quickLearner-l1), 189 s Audio, komplett. Gesamt: 53/65 im Manifest.
 - 25.07.2026 22:14 — Batch: 9 Dateien (skill-quickLearner-l2 … skill-instinkt), 187 s Audio, komplett. Gesamt: 62/65 im Manifest.
 - 25.07.2026 22:15 — Batch: 1 Dateien (skill-quickLearner-l4 … skill-quickLearner-l4), 10 s Audio, komplett. Gesamt: 63/65 im Manifest.
+- 26.07.2026 22:11 — Batch: 2 Dateien (skill-kaltbluetig … skill-unzerstoerbar), 39 s Audio, komplett. Gesamt: 65/65 im Manifest.
+- 26.07.2026 22:18 — Batch: 7 Dateien (npc-mira-drink … npc-mira-letterDelivered), 92 s Audio, komplett. Gesamt: 72/130 im Manifest.
+- 26.07.2026 22:18 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 72/130 im Manifest.
+- 26.07.2026 22:20 — Phasen 1+2 abgeschlossen (65/65). Manifest um Phase 3 erweitert (NPC-Dialogknoten aus npc.js, 65 Einheiten, feste Stimme + Persona pro NPC) → 130 Einheiten gesamt. OFFEN: `npc-mira-greet` scheitert reproduzierbar (2×) mit HTTP 400 „Request contains an invalid argument" — kein Quota-/Billing-Fehler, Text ist unauffällig (96 Zeichen, nur Umlaute als Nicht-ASCII), identische Request-Struktur wie die 7 erfolgreichen Mira-Knoten desselben Laufs. Steht in progress.json unter „failed", nächster Batch versucht es automatisch erneut; falls es erneut scheitert, gezielt untersuchen (Verdacht: inhaltlicher Filter auf dieser Textkombination).

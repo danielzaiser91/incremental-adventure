@@ -314,7 +314,57 @@
       "file": "skill-quickLearner-l4.wav",
       "seconds": 10.3,
       "date": "2026-07-25T20:15:09.357Z"
+    },
+    "skill-kaltbluetig": {
+      "file": "skill-kaltbluetig.wav",
+      "seconds": 17.2,
+      "date": "2026-07-26T20:10:36.333Z"
+    },
+    "skill-unzerstoerbar": {
+      "file": "skill-unzerstoerbar.wav",
+      "seconds": 22,
+      "date": "2026-07-26T20:11:10.942Z"
+    },
+    "npc-mira-drink": {
+      "file": "npc-mira-drink.wav",
+      "seconds": 11.7,
+      "date": "2026-07-26T20:15:21.662Z"
+    },
+    "npc-mira-smalltalk": {
+      "file": "npc-mira-smalltalk.wav",
+      "seconds": 7.5,
+      "date": "2026-07-26T20:15:47.615Z"
+    },
+    "npc-mira-friendly": {
+      "file": "npc-mira-friendly.wav",
+      "seconds": 7.3,
+      "date": "2026-07-26T20:16:13.804Z"
+    },
+    "npc-mira-letterOffer": {
+      "file": "npc-mira-letterOffer.wav",
+      "seconds": 16.6,
+      "date": "2026-07-26T20:16:45.731Z"
+    },
+    "npc-mira-letterWhyNot": {
+      "file": "npc-mira-letterWhyNot.wav",
+      "seconds": 31.5,
+      "date": "2026-07-26T20:17:25.502Z"
+    },
+    "npc-mira-letterReminder": {
+      "file": "npc-mira-letterReminder.wav",
+      "seconds": 6.6,
+      "date": "2026-07-26T20:17:51.901Z"
+    },
+    "npc-mira-letterDelivered": {
+      "file": "npc-mira-letterDelivered.wav",
+      "seconds": 10.6,
+      "date": "2026-07-26T20:18:21.546Z"
     }
   },
-  "failed": {}
+  "failed": {
+    "npc-mira-greet": {
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
+      "date": "2026-07-26T20:18:34.933Z"
+    }
+  }
 }
