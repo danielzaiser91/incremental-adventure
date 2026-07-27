@@ -359,12 +359,62 @@
       "file": "npc-mira-letterDelivered.wav",
       "seconds": 10.6,
       "date": "2026-07-26T20:18:21.546Z"
+    },
+    "npc-mira-detectiveAsk": {
+      "file": "npc-mira-detectiveAsk.wav",
+      "seconds": 14.2,
+      "date": "2026-07-27T20:11:15.890Z"
+    },
+    "npc-mira-detectiveReveal": {
+      "file": "npc-mira-detectiveReveal.wav",
+      "seconds": 27.6,
+      "date": "2026-07-27T20:11:53.009Z"
+    },
+    "npc-mira-givesBrief": {
+      "file": "npc-mira-givesBrief.wav",
+      "seconds": 32.1,
+      "date": "2026-07-27T20:12:29.568Z"
+    },
+    "npc-mira-friendlyAfterReveal": {
+      "file": "npc-mira-friendlyAfterReveal.wav",
+      "seconds": 6.3,
+      "date": "2026-07-27T20:12:57.021Z"
+    },
+    "npc-oswin-oswinsAuftragOffer": {
+      "file": "npc-oswin-oswinsAuftragOffer.wav",
+      "seconds": 30.6,
+      "date": "2026-07-27T20:13:36.075Z"
+    },
+    "npc-oswin-oswinsAbweis": {
+      "file": "npc-oswin-oswinsAbweis.wav",
+      "seconds": 6.5,
+      "date": "2026-07-27T20:14:07.424Z"
+    },
+    "npc-oswin-oswinsAuftragActive": {
+      "file": "npc-oswin-oswinsAuftragActive.wav",
+      "seconds": 15.1,
+      "date": "2026-07-27T20:14:36.778Z"
+    },
+    "npc-oswin-oswinsAuftragDone": {
+      "file": "npc-oswin-oswinsAuftragDone.wav",
+      "seconds": 26.1,
+      "date": "2026-07-27T20:15:12.982Z"
+    },
+    "npc-oswin-greet": {
+      "file": "npc-oswin-greet.wav",
+      "seconds": 9.5,
+      "date": "2026-07-27T20:15:44.774Z"
+    },
+    "npc-oswin-houseOffer": {
+      "file": "npc-oswin-houseOffer.wav",
+      "seconds": 40.9,
+      "date": "2026-07-27T20:16:36.651Z"
     }
   },
   "failed": {
     "npc-mira-greet": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-07-26T20:18:34.933Z"
+      "date": "2026-07-27T20:10:44.449Z"
     }
   }
 }

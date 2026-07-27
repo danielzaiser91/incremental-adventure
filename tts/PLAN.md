@@ -76,7 +76,7 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 7/65*.
+      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 17/65*.
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
@@ -175,3 +175,6 @@ nachgelagerter Extra-Lauf.
 - 26.07.2026 22:18 — Batch: 7 Dateien (npc-mira-drink … npc-mira-letterDelivered), 92 s Audio, komplett. Gesamt: 72/130 im Manifest.
 - 26.07.2026 22:18 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 72/130 im Manifest.
 - 26.07.2026 22:20 — Phasen 1+2 abgeschlossen (65/65). Manifest um Phase 3 erweitert (NPC-Dialogknoten aus npc.js, 65 Einheiten, feste Stimme + Persona pro NPC) → 130 Einheiten gesamt. OFFEN: `npc-mira-greet` scheitert reproduzierbar (2×) mit HTTP 400 „Request contains an invalid argument" — kein Quota-/Billing-Fehler, Text ist unauffällig (96 Zeichen, nur Umlaute als Nicht-ASCII), identische Request-Struktur wie die 7 erfolgreichen Mira-Knoten desselben Laufs. Steht in progress.json unter „failed", nächster Batch versucht es automatisch erneut; falls es erneut scheitert, gezielt untersuchen (Verdacht: inhaltlicher Filter auf dieser Textkombination).
+- 27.07.2026 22:15 — Batch: 9 Dateien (npc-mira-detectiveAsk … npc-oswin-greet), 168 s Audio, komplett. Gesamt: 81/130 im Manifest.
+- 27.07.2026 22:16 — Batch: 1 Dateien (npc-oswin-houseOffer … npc-oswin-houseOffer), 41 s Audio, komplett. Gesamt: 82/130 im Manifest.
+- 27.07.2026 22:17 — `npc-mira-greet` scheitert weiterhin (3. Versuch, gleicher HTTP 400 „Request contains an invalid argument") — kein Quota-/Billing-Fehler, verbraucht keine Quota. Ab jetzt nicht mehr blind im Batch wiederholen, sondern gezielt untersuchen (Verdacht: inhaltlicher Filter / Zeichenkombination im Text dieses Knotens). Tagesausbeute trotzdem voll: 10 erfolgreiche Generierungen.
