@@ -29,6 +29,13 @@ const MODEL = 'gemini-3.1-flash-tts-preview';
    alten Modell: GenerateRequestsPerDayPerProjectPerModel-FreeTier, quotaValue 10. */
 const BATCH_LIMIT_DEFAULT = 10;
 const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
+/* Einheiten, die reproduzierbar an einem NICHT-Quota-Fehler scheitern und
+   deshalb keinen Batch-Slot mehr blockieren sollen (sie zählen sonst gegen
+   --limit und drücken die Tagesausbeute unter 10). npc-mira-greet: 3× HTTP 400
+   "Request contains an invalid argument" (26./27.07.2026) — Verdacht:
+   inhaltlicher Filter auf dieser Textkombination, siehe PLAN.md.
+   Mit --only <id> lässt sich eine übersprungene Einheit weiterhin gezielt testen. */
+const SKIP_IDS = new Set(['npc-mira-greet']);
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');
@@ -123,7 +130,9 @@ async function main() {
     pending = manifest.units.filter(u => u.id === onlyId);
     if (!pending.length) throw new Error(`Einheit "${onlyId}" nicht im Manifest gefunden`);
   } else {
-    pending = manifest.units.filter(u => !progress.done[u.id]);
+    pending = manifest.units.filter(u => !progress.done[u.id] && !SKIP_IDS.has(u.id));
+    const skipped = manifest.units.filter(u => !progress.done[u.id] && SKIP_IDS.has(u.id));
+    if (skipped.length) console.log(`Übersprungen (SKIP_IDS): ${skipped.map(u => u.id).join(', ')}`);
   }
   const batch = onlyId ? pending : pending.slice(0, limit);
   if (!batch.length) { console.log('Nichts offen — alles vertont.'); return; }

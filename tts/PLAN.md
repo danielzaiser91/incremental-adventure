@@ -29,8 +29,10 @@ mit dem neuen Modell.
 - **Modell: `gemini-3.1-flash-tts-preview`** (Wechsel 19.07.2026, siehe
   Qualitäts-Check oben). Preis lt. Google-Preisseite: $1,00/1 Mio.
   Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt). Free-Tier-
-  Tageslimit verifiziert: **10 erfolgreiche Generierungen/Tag** — nur
-  erfolgreiche Requests zählen, Leer-/Fehlantworten nicht.
+  Tageslimit verifiziert: **10 Generierungen/Tag**. Leerantworten
+  (`finishReason: OTHER` / „Keine Audio-Daten") und HTTP 400 verbrauchen
+  KEINE Quota und dürfen am selben Tag erneut versucht werden — **HTTP 503
+  dagegen schon** (verifiziert 28.07.2026, siehe Aktivitäts-Log).
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -76,7 +78,7 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 17/65*.
+      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 26/65*.
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
@@ -178,3 +180,6 @@ nachgelagerter Extra-Lauf.
 - 27.07.2026 22:15 — Batch: 9 Dateien (npc-mira-detectiveAsk … npc-oswin-greet), 168 s Audio, komplett. Gesamt: 81/130 im Manifest.
 - 27.07.2026 22:16 — Batch: 1 Dateien (npc-oswin-houseOffer … npc-oswin-houseOffer), 41 s Audio, komplett. Gesamt: 82/130 im Manifest.
 - 27.07.2026 22:17 — `npc-mira-greet` scheitert weiterhin (3. Versuch, gleicher HTTP 400 „Request contains an invalid argument") — kein Quota-/Billing-Fehler, verbraucht keine Quota. Ab jetzt nicht mehr blind im Batch wiederholen, sondern gezielt untersuchen (Verdacht: inhaltlicher Filter / Zeichenkombination im Text dieses Knotens). Tagesausbeute trotzdem voll: 10 erfolgreiche Generierungen.
+- 28.07.2026 22:15 — Batch: 9 Dateien (npc-oswin-greetHomeOwner … npc-brakka-explain), 194 s Audio, komplett. Gesamt: 91/130 im Manifest.
+- 28.07.2026 22:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 91/130 im Manifest.
+- 28.07.2026 22:17 — Zwei Erkenntnisse aus dem Lauf: (1) `SKIP_IDS` in `generate-batch.js` ergänzt — `npc-mira-greet` läuft nicht mehr blind im Batch mit, weil es sonst einen der 10 Slots blockiert (mit `--only` weiterhin gezielt testbar). (2) **HTTP 503 verbraucht Quota.** `npc-oswin-houseBought` scheiterte als erster Request des Batches mit 503 („model experiencing high demand"); der anschließende Einzel-Retry lief sofort in ein echtes 429 mit quotaValue 10 — 9 erfolgreiche + 1× 503 = 10 verbrauchte Requests. Anders als Leerantworten (`finishReason: OTHER`) darf ein 503 also NICHT als kostenloser Fehlschlag behandelt und am selben Tag nachgeholt werden. `npc-oswin-houseBought` steht in „failed" (429) und wird morgen automatisch mitgenommen.

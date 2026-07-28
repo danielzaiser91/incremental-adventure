@@ -409,12 +409,61 @@
       "file": "npc-oswin-houseOffer.wav",
       "seconds": 40.9,
       "date": "2026-07-27T20:16:36.651Z"
+    },
+    "npc-oswin-greetHomeOwner": {
+      "file": "npc-oswin-greetHomeOwner.wav",
+      "seconds": 10.3,
+      "date": "2026-07-28T20:11:10.603Z"
+    },
+    "npc-oswin-smithOffer": {
+      "file": "npc-oswin-smithOffer.wav",
+      "seconds": 23.1,
+      "date": "2026-07-28T20:11:42.976Z"
+    },
+    "npc-oswin-smithBought": {
+      "file": "npc-oswin-smithBought.wav",
+      "seconds": 10.6,
+      "date": "2026-07-28T20:12:11.914Z"
+    },
+    "npc-oswin-fremderHint": {
+      "file": "npc-oswin-fremderHint.wav",
+      "seconds": 29.5,
+      "date": "2026-07-28T20:12:50.276Z"
+    },
+    "npc-oswin-teacherHint": {
+      "file": "npc-oswin-teacherHint.wav",
+      "seconds": 48.4,
+      "date": "2026-07-28T20:13:41.961Z"
+    },
+    "npc-brakka-tooSoon": {
+      "file": "npc-brakka-tooSoon.wav",
+      "seconds": 8.9,
+      "date": "2026-07-28T20:14:10.190Z"
+    },
+    "npc-brakka-oswinsNachricht": {
+      "file": "npc-brakka-oswinsNachricht.wav",
+      "seconds": 25.6,
+      "date": "2026-07-28T20:14:46.128Z"
+    },
+    "npc-brakka-offer": {
+      "file": "npc-brakka-offer.wav",
+      "seconds": 16.5,
+      "date": "2026-07-28T20:15:17.566Z"
+    },
+    "npc-brakka-explain": {
+      "file": "npc-brakka-explain.wav",
+      "seconds": 21.4,
+      "date": "2026-07-28T20:15:53.154Z"
     }
   },
   "failed": {
     "npc-mira-greet": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
       "date": "2026-07-27T20:10:44.449Z"
+    },
+    "npc-oswin-houseBought": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 56.330425163s.\",\n    \"status\": \"RESOURCE_EXH",
+      "date": "2026-07-28T20:16:03.516Z"
     }
   }
 }
