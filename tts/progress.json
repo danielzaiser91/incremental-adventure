@@ -454,16 +454,62 @@
       "file": "npc-brakka-explain.wav",
       "seconds": 21.4,
       "date": "2026-07-28T20:15:53.154Z"
+    },
+    "npc-oswin-houseBought": {
+      "file": "npc-oswin-houseBought.wav",
+      "seconds": 26.7,
+      "date": "2026-07-29T20:10:42.549Z"
+    },
+    "npc-brakka-waiting": {
+      "file": "npc-brakka-waiting.wav",
+      "seconds": 7.4,
+      "date": "2026-07-29T20:11:09.412Z"
+    },
+    "npc-brakka-turnIn": {
+      "file": "npc-brakka-turnIn.wav",
+      "seconds": 25.4,
+      "date": "2026-07-29T20:11:46.253Z"
+    },
+    "npc-brakka-idle": {
+      "file": "npc-brakka-idle.wav",
+      "seconds": 9.4,
+      "date": "2026-07-29T20:12:15.615Z"
+    },
+    "npc-brakka-guildPending": {
+      "file": "npc-brakka-guildPending.wav",
+      "seconds": 8.6,
+      "date": "2026-07-29T20:12:44.305Z"
+    },
+    "npc-brakka-guildExplain": {
+      "file": "npc-brakka-guildExplain.wav",
+      "seconds": 34.8,
+      "date": "2026-07-29T20:13:26.302Z"
+    },
+    "npc-brakka-guildReadyCheck": {
+      "file": "npc-brakka-guildReadyCheck.wav",
+      "seconds": 7.6,
+      "date": "2026-07-29T20:13:54.931Z"
+    },
+    "npc-brakka-guildEnd": {
+      "file": "npc-brakka-guildEnd.wav",
+      "seconds": 25.4,
+      "date": "2026-07-29T20:14:30.923Z"
+    },
+    "npc-brakka-guildFinished": {
+      "file": "npc-brakka-guildFinished.wav",
+      "seconds": 5.5,
+      "date": "2026-07-29T20:14:56.705Z"
+    },
+    "npc-brakka-brakkaWarum": {
+      "file": "npc-brakka-brakkaWarum.wav",
+      "seconds": 35.6,
+      "date": "2026-07-29T20:15:43.327Z"
     }
   },
   "failed": {
     "npc-mira-greet": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
       "date": "2026-07-27T20:10:44.449Z"
-    },
-    "npc-oswin-houseBought": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 56.330425163s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-07-28T20:16:03.516Z"
     }
   }
 }
