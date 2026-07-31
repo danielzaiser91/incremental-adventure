@@ -504,6 +504,56 @@
       "file": "npc-brakka-brakkaWarum.wav",
       "seconds": 35.6,
       "date": "2026-07-29T20:15:43.327Z"
+    },
+    "npc-brakka-gildeDetails": {
+      "file": "npc-brakka-gildeDetails.wav",
+      "seconds": 47.3,
+      "date": "2026-07-31T01:52:44.760Z"
+    },
+    "npc-brakka-gildeZukunft": {
+      "file": "npc-brakka-gildeZukunft.wav",
+      "seconds": 31.6,
+      "date": "2026-07-31T01:53:23.783Z"
+    },
+    "npc-brakka-waldtrollRumor": {
+      "file": "npc-brakka-waldtrollRumor.wav",
+      "seconds": 25.7,
+      "date": "2026-07-31T01:54:00.998Z"
+    },
+    "npc-brakka-gildePruefungTurnIn": {
+      "file": "npc-brakka-gildePruefungTurnIn.wav",
+      "seconds": 21.8,
+      "date": "2026-07-31T01:54:36.203Z"
+    },
+    "npc-brakka-waldtrollTurnIn": {
+      "file": "npc-brakka-waldtrollTurnIn.wav",
+      "seconds": 22.6,
+      "date": "2026-07-31T01:55:11.733Z"
+    },
+    "npc-brakka-brennenderMutOffer": {
+      "file": "npc-brakka-brennenderMutOffer.wav",
+      "seconds": 26.4,
+      "date": "2026-07-31T01:55:48.641Z"
+    },
+    "npc-brakka-brennenderMutTurnIn": {
+      "file": "npc-brakka-brennenderMutTurnIn.wav",
+      "seconds": 26.7,
+      "date": "2026-07-31T01:56:26.925Z"
+    },
+    "npc-brakka-detectiveReveal": {
+      "file": "npc-brakka-detectiveReveal.wav",
+      "seconds": 46.4,
+      "date": "2026-07-31T01:57:15.106Z"
+    },
+    "npc-brakka-receiveLetter": {
+      "file": "npc-brakka-receiveLetter.wav",
+      "seconds": 14.9,
+      "date": "2026-07-31T01:57:46.090Z"
+    },
+    "npc-brakka-whyMiraSent": {
+      "file": "npc-brakka-whyMiraSent.wav",
+      "seconds": 26.7,
+      "date": "2026-07-31T01:58:20.265Z"
     }
   },
   "failed": {

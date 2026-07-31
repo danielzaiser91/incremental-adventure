@@ -78,7 +78,9 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 36/65*.
+      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 46/65*
+      (Mira, Oswin, Brakka fertig; offen: Fremder 12, Sivert 6, plus der
+      dauerhaft blockierte Knoten `npc-mira-greet`).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
@@ -184,3 +186,4 @@ nachgelagerter Extra-Lauf.
 - 28.07.2026 22:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 91/130 im Manifest.
 - 28.07.2026 22:17 — Zwei Erkenntnisse aus dem Lauf: (1) `SKIP_IDS` in `generate-batch.js` ergänzt — `npc-mira-greet` läuft nicht mehr blind im Batch mit, weil es sonst einen der 10 Slots blockiert (mit `--only` weiterhin gezielt testbar). (2) **HTTP 503 verbraucht Quota.** `npc-oswin-houseBought` scheiterte als erster Request des Batches mit 503 („model experiencing high demand"); der anschließende Einzel-Retry lief sofort in ein echtes 429 mit quotaValue 10 — 9 erfolgreiche + 1× 503 = 10 verbrauchte Requests. Anders als Leerantworten (`finishReason: OTHER`) darf ein 503 also NICHT als kostenloser Fehlschlag behandelt und am selben Tag nachgeholt werden. `npc-oswin-houseBought` steht in „failed" (429) und wird morgen automatisch mitgenommen.
 - 29.07.2026 22:15 — Batch: 10 Dateien (npc-oswin-houseBought … npc-brakka-brakkaWarum), 186 s Audio, komplett. Gesamt: 101/130 im Manifest.
+- 31.07.2026 03:58 — Batch: 10 Dateien (npc-brakka-gildeDetails … npc-brakka-whyMiraSent), 290 s Audio, komplett. Gesamt: 111/130 im Manifest.
