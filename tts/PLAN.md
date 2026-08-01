@@ -29,10 +29,13 @@ mit dem neuen Modell.
 - **Modell: `gemini-3.1-flash-tts-preview`** (Wechsel 19.07.2026, siehe
   Qualitäts-Check oben). Preis lt. Google-Preisseite: $1,00/1 Mio.
   Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt). Free-Tier-
-  Tageslimit verifiziert: **10 Generierungen/Tag**. Leerantworten
-  (`finishReason: OTHER` / „Keine Audio-Daten") und HTTP 400 verbrauchen
-  KEINE Quota und dürfen am selben Tag erneut versucht werden — **HTTP 503
-  dagegen schon** (verifiziert 28.07.2026, siehe Aktivitäts-Log).
+  Tageslimit verifiziert: **10 Requests/Tag**. HTTP 400 verbraucht keine
+  Quota. **HTTP 503 verbraucht Quota** (verifiziert 28.07.2026). Leerantworten
+  (`finishReason: OTHER` / „Keine Audio-Daten") galten bis 30.07.2026 als
+  quota-frei — **am 31.07.2026 widerlegt**: 7 OK + 2 Leerantworten + 1× 503 =
+  10 Requests, der elfte Request lief sofort ins 429. Annahme daher: **jeder
+  Request zählt**. Same-Day-Retry nach einer Leerantwort nur, solange die
+  Tagessumme aller Requests unter 10 liegt (siehe Aktivitäts-Log).
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -78,8 +81,8 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 46/65*
-      (Mira, Oswin, Brakka fertig; offen: Fremder 12, Sivert 6, plus der
+      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 53/65*
+      (Mira, Oswin, Brakka fertig; offen: Fremder 5, Sivert 6, plus der
       dauerhaft blockierte Knoten `npc-mira-greet`).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
@@ -187,3 +190,6 @@ nachgelagerter Extra-Lauf.
 - 28.07.2026 22:17 — Zwei Erkenntnisse aus dem Lauf: (1) `SKIP_IDS` in `generate-batch.js` ergänzt — `npc-mira-greet` läuft nicht mehr blind im Batch mit, weil es sonst einen der 10 Slots blockiert (mit `--only` weiterhin gezielt testbar). (2) **HTTP 503 verbraucht Quota.** `npc-oswin-houseBought` scheiterte als erster Request des Batches mit 503 („model experiencing high demand"); der anschließende Einzel-Retry lief sofort in ein echtes 429 mit quotaValue 10 — 9 erfolgreiche + 1× 503 = 10 verbrauchte Requests. Anders als Leerantworten (`finishReason: OTHER`) darf ein 503 also NICHT als kostenloser Fehlschlag behandelt und am selben Tag nachgeholt werden. `npc-oswin-houseBought` steht in „failed" (429) und wird morgen automatisch mitgenommen.
 - 29.07.2026 22:15 — Batch: 10 Dateien (npc-oswin-houseBought … npc-brakka-brakkaWarum), 186 s Audio, komplett. Gesamt: 101/130 im Manifest.
 - 31.07.2026 03:58 — Batch: 10 Dateien (npc-brakka-gildeDetails … npc-brakka-whyMiraSent), 290 s Audio, komplett. Gesamt: 111/130 im Manifest.
+- 31.07.2026 22:15 — Batch: 7 Dateien (npc-fremder-greet … npc-fremder-postConfrontation), 140 s Audio, komplett. Gesamt: 118/130 im Manifest.
+- 31.07.2026 22:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 118/130 im Manifest.
+- 31.07.2026 22:17 — **Widerspruch zur bisherigen Quota-Annahme:** Der Lauf bestand aus genau 10 Requests (7 OK, 2 Leerantworten `finishReason: OTHER` bei `npc-fremder-cryptic` und `npc-fremder-fremderGeheimnisCue`, 1× HTTP 503 bei `npc-fremder-identityReveal`). Der anschließende Same-Day-Retry von `npc-fremder-cryptic` lief sofort in ein echtes 429 (quotaValue 10). Damit zählen offenbar **alle Requests** gegen das Tageslimit — auch Leerantworten, entgegen der bisher notierten Regel „`OTHER` verbraucht keine Quota" (Stand 20.07.2026). Ab dem nächsten Lauf gilt daher: nach einer Leerantwort höchstens EIN Retry, und nur solange die Summe aller Requests des Tages unter 10 liegt. Die drei Fehlschläge stehen in „failed" und werden morgen automatisch mitgenommen.

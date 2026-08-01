@@ -554,12 +554,59 @@
       "file": "npc-brakka-whyMiraSent.wav",
       "seconds": 26.7,
       "date": "2026-07-31T01:58:20.265Z"
+    },
+    "npc-fremder-greet": {
+      "file": "npc-fremder-greet.wav",
+      "seconds": 16,
+      "date": "2026-07-31T20:10:54.977Z"
+    },
+    "npc-fremder-who": {
+      "file": "npc-fremder-who.wav",
+      "seconds": 13.2,
+      "date": "2026-07-31T20:11:24.840Z"
+    },
+    "npc-fremder-threat": {
+      "file": "npc-fremder-threat.wav",
+      "seconds": 9.6,
+      "date": "2026-07-31T20:12:26.361Z"
+    },
+    "npc-fremder-watching": {
+      "file": "npc-fremder-watching.wav",
+      "seconds": 15.8,
+      "date": "2026-07-31T20:12:57.499Z"
+    },
+    "npc-fremder-confrontation": {
+      "file": "npc-fremder-confrontation.wav",
+      "seconds": 50.5,
+      "date": "2026-07-31T20:13:49.739Z"
+    },
+    "npc-fremder-confrontationEnd": {
+      "file": "npc-fremder-confrontationEnd.wav",
+      "seconds": 26.4,
+      "date": "2026-07-31T20:14:28.690Z"
+    },
+    "npc-fremder-postConfrontation": {
+      "file": "npc-fremder-postConfrontation.wav",
+      "seconds": 8.5,
+      "date": "2026-07-31T20:14:55.697Z"
     }
   },
   "failed": {
     "npc-mira-greet": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
       "date": "2026-07-27T20:10:44.449Z"
+    },
+    "npc-fremder-cryptic": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 8.705925217s.\",\n    \"status\": \"RESOURCE_EXHA",
+      "date": "2026-07-31T20:16:07.285Z"
+    },
+    "npc-fremder-fremderGeheimnisCue": {
+      "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 287,\n    \"candidatesTokenCount\": 537,\n    \"totalTokenCount\": 824,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 287\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 537\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  },\n ",
+      "date": "2026-07-31T20:15:27.464Z"
+    },
+    "npc-fremder-identityReveal": {
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "date": "2026-07-31T20:15:49.242Z"
     }
   }
 }
