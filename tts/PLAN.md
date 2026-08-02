@@ -80,19 +80,22 @@ mit dem neuen Modell.
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
-- [ ] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *läuft seit 26.07.2026, 53/65*
-      (Mira, Oswin, Brakka fertig; offen: Fremder 5, Sivert 6, plus der
-      dauerhaft blockierte Knoten `npc-mira-greet`).
+- [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
+      Oswin 12, Fremder 12, Sivert 6) — *abgeschlossen 02.08.2026, 63/65*
+      (alle NPCs fertig bis auf zwei dauerhaft blockierte Knoten:
+      `npc-mira-greet` — 3× HTTP 400 „invalid argument", und
+      `npc-fremder-finaleDialog` — 3× Leerantwort `finishReason: OTHER`.
+      Beide brauchen eine gezielte Untersuchung, nicht weitere Blind-Retries;
+      Verdacht in beiden Fällen: inhaltlicher Filter auf dem Knotentext).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
       hängt vom Spielstand ab → nicht statisch vertonbar).
 - [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
       Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
-      Knoten bei Roswald und Greta fällt weg).
-      Stimmen + Persona sind in `extract-manifest.js` bereits festgelegt →
-      zum Start nur `ACTIVE_NPC_PHASES` um `4` erweitern.
+      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 6/24*
+      (Wirt/Korbin fertig). `ACTIVE_NPC_PHASES` steht auf `{3, 4}`, Manifest
+      umfasst jetzt 154 Einheiten.
 - [ ] **Phase 5 — Quests & Objectives** (~186 Kurztexte, quests.js + objective.js)
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
@@ -193,3 +196,8 @@ nachgelagerter Extra-Lauf.
 - 31.07.2026 22:15 — Batch: 7 Dateien (npc-fremder-greet … npc-fremder-postConfrontation), 140 s Audio, komplett. Gesamt: 118/130 im Manifest.
 - 31.07.2026 22:16 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 118/130 im Manifest.
 - 31.07.2026 22:17 — **Widerspruch zur bisherigen Quota-Annahme:** Der Lauf bestand aus genau 10 Requests (7 OK, 2 Leerantworten `finishReason: OTHER` bei `npc-fremder-cryptic` und `npc-fremder-fremderGeheimnisCue`, 1× HTTP 503 bei `npc-fremder-identityReveal`). Der anschließende Same-Day-Retry von `npc-fremder-cryptic` lief sofort in ein echtes 429 (quotaValue 10). Damit zählen offenbar **alle Requests** gegen das Tageslimit — auch Leerantworten, entgegen der bisher notierten Regel „`OTHER` verbraucht keine Quota" (Stand 20.07.2026). Ab dem nächsten Lauf gilt daher: nach einer Leerantwort höchstens EIN Retry, und nur solange die Summe aller Requests des Tages unter 10 liegt. Die drei Fehlschläge stehen in „failed" und werden morgen automatisch mitgenommen.
+- 01.08.2026 22:15 — Batch: 8 Dateien (npc-fremder-fremderGeheimnisCue … npc-sivert-profiDone), 177 s Audio, komplett. Gesamt: 126/130 im Manifest.
+- 02.08.2026 22:11 — Batch: 2 Dateien (npc-fremder-cryptic … npc-sivert-masterDone), 33 s Audio, komplett. Gesamt: 128/130 im Manifest.
+- 02.08.2026 22:12 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 128/130 im Manifest.
+- 02.08.2026 23:46 — Batch: 6 Dateien (npc-wirt-jobAdvice … npc-wirt-chapter2greet), 111 s Audio, komplett. Gesamt: 134/154 im Manifest.
+- 02.08.2026 23:50 — Tagesbilanz: 10 Requests (8 OK, 2 Leerantworten). `npc-fremder-finaleDialog` liefert jetzt zum **3. Mal** `finishReason: OTHER` ohne Audio (410 Zeichen, Enceladus-Stimme) — wie `npc-mira-greet` (3× HTTP 400) ab jetzt nicht mehr blind im Batch mitschleifen, sondern gezielt untersuchen (Textkürzung/Umformulierung testen). Phase 3 damit als abgeschlossen markiert (63/65, 2 dauerhaft blockiert). Manifest um **Phase 4** erweitert (`ACTIVE_NPC_PHASES = {3, 4}`, +24 Neben-NPC-Knoten → 154 gesamt); ausgelassen mangels statischem text-Array: `oswin.business`, `greta.reminder`, `greta.petCatch`, `kommandant.recruit`.

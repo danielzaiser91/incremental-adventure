@@ -158,7 +158,7 @@ const NPC_PROFILES = {
     'ein alter Straßenkehrer, der jede Gasse kennt und gern darüber redet — ' +
     'plaudernd, umgangssprachlich, mit brüchiger Altersstimme' }
 };
-const ACTIVE_NPC_PHASES = new Set([3]);
+const ACTIVE_NPC_PHASES = new Set([3, 4]);
 
 function npcStyle(persona) {
   return (

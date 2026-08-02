@@ -589,6 +589,86 @@
       "file": "npc-fremder-postConfrontation.wav",
       "seconds": 8.5,
       "date": "2026-07-31T20:14:55.697Z"
+    },
+    "npc-fremder-fremderGeheimnisCue": {
+      "file": "npc-fremder-fremderGeheimnisCue.wav",
+      "seconds": 18.4,
+      "date": "2026-08-01T20:11:01.286Z"
+    },
+    "npc-fremder-identityReveal": {
+      "file": "npc-fremder-identityReveal.wav",
+      "seconds": 26.4,
+      "date": "2026-08-01T20:11:41.397Z"
+    },
+    "npc-fremder-identityReveal2": {
+      "file": "npc-fremder-identityReveal2.wav",
+      "seconds": 29.1,
+      "date": "2026-08-01T20:12:18.944Z"
+    },
+    "npc-sivert-firstMeet": {
+      "file": "npc-sivert-firstMeet.wav",
+      "seconds": 28.3,
+      "date": "2026-08-01T20:13:39.960Z"
+    },
+    "npc-sivert-erklaerung": {
+      "file": "npc-sivert-erklaerung.wav",
+      "seconds": 31.1,
+      "date": "2026-08-01T20:14:20.760Z"
+    },
+    "npc-sivert-angebot": {
+      "file": "npc-sivert-angebot.wav",
+      "seconds": 17.4,
+      "date": "2026-08-01T20:14:52.566Z"
+    },
+    "npc-sivert-abwarten": {
+      "file": "npc-sivert-abwarten.wav",
+      "seconds": 8.5,
+      "date": "2026-08-01T20:15:19.645Z"
+    },
+    "npc-sivert-profiDone": {
+      "file": "npc-sivert-profiDone.wav",
+      "seconds": 17.6,
+      "date": "2026-08-01T20:15:52.266Z"
+    },
+    "npc-fremder-cryptic": {
+      "file": "npc-fremder-cryptic.wav",
+      "seconds": 18.5,
+      "date": "2026-08-02T20:10:33.557Z"
+    },
+    "npc-sivert-masterDone": {
+      "file": "npc-sivert-masterDone.wav",
+      "seconds": 14.2,
+      "date": "2026-08-02T20:11:48.645Z"
+    },
+    "npc-wirt-jobAdvice": {
+      "file": "npc-wirt-jobAdvice.wav",
+      "seconds": 18.2,
+      "date": "2026-08-02T21:43:22.825Z"
+    },
+    "npc-wirt-greet": {
+      "file": "npc-wirt-greet.wav",
+      "seconds": 6.8,
+      "date": "2026-08-02T21:43:48.253Z"
+    },
+    "npc-wirt-gossip": {
+      "file": "npc-wirt-gossip.wav",
+      "seconds": 11.6,
+      "date": "2026-08-02T21:44:15.903Z"
+    },
+    "npc-wirt-chapter2intro": {
+      "file": "npc-wirt-chapter2intro.wav",
+      "seconds": 25,
+      "date": "2026-08-02T21:44:51.961Z"
+    },
+    "npc-wirt-chapter2reveal": {
+      "file": "npc-wirt-chapter2reveal.wav",
+      "seconds": 42.2,
+      "date": "2026-08-02T21:45:38.812Z"
+    },
+    "npc-wirt-chapter2greet": {
+      "file": "npc-wirt-chapter2greet.wav",
+      "seconds": 7.1,
+      "date": "2026-08-02T21:46:05.555Z"
     }
   },
   "failed": {
@@ -596,17 +676,9 @@
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
       "date": "2026-07-27T20:10:44.449Z"
     },
-    "npc-fremder-cryptic": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 8.705925217s.\",\n    \"status\": \"RESOURCE_EXHA",
-      "date": "2026-07-31T20:16:07.285Z"
-    },
-    "npc-fremder-fremderGeheimnisCue": {
-      "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 287,\n    \"candidatesTokenCount\": 537,\n    \"totalTokenCount\": 824,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 287\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 537\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  },\n ",
-      "date": "2026-07-31T20:15:27.464Z"
-    },
-    "npc-fremder-identityReveal": {
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "date": "2026-07-31T20:15:49.242Z"
+    "npc-fremder-finaleDialog": {
+      "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 349,\n    \"candidatesTokenCount\": 1222,\n    \"totalTokenCount\": 1571,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 349\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 1222\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  }",
+      "date": "2026-08-02T20:12:30.746Z"
     }
   }
 }
