@@ -669,6 +669,36 @@
       "file": "npc-wirt-chapter2greet.wav",
       "seconds": 7.1,
       "date": "2026-08-02T21:46:05.555Z"
+    },
+    "npc-wirt-chapter2idle": {
+      "file": "npc-wirt-chapter2idle.wav",
+      "seconds": 7.7,
+      "date": "2026-08-03T20:10:43.913Z"
+    },
+    "npc-vorarbeiter-praise": {
+      "file": "npc-vorarbeiter-praise.wav",
+      "seconds": 35,
+      "date": "2026-08-03T20:11:22.481Z"
+    },
+    "npc-vorarbeiter-idle": {
+      "file": "npc-vorarbeiter-idle.wav",
+      "seconds": 10.6,
+      "date": "2026-08-03T20:12:22.500Z"
+    },
+    "npc-greta-offer": {
+      "file": "npc-greta-offer.wav",
+      "seconds": 24.6,
+      "date": "2026-08-03T20:12:55.951Z"
+    },
+    "npc-greta-idle": {
+      "file": "npc-greta-idle.wav",
+      "seconds": 6.1,
+      "date": "2026-08-03T20:13:51.742Z"
+    },
+    "npc-kommandant-recruitAccepted": {
+      "file": "npc-kommandant-recruitAccepted.wav",
+      "seconds": 13,
+      "date": "2026-08-03T20:14:46.425Z"
     }
   },
   "failed": {
@@ -679,6 +709,22 @@
     "npc-fremder-finaleDialog": {
       "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 349,\n    \"candidatesTokenCount\": 1222,\n    \"totalTokenCount\": 1571,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 349\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 1222\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  }",
       "date": "2026-08-02T20:12:30.746Z"
+    },
+    "npc-vorarbeiter-praiseFarewell": {
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 16.064407729s.\",\n    \"status\": \"RESOURCE_EXH",
+      "date": "2026-08-03T20:15:54.568Z"
+    },
+    "npc-greta-turnIn": {
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
+      "date": "2026-08-03T20:13:22.631Z"
+    },
+    "npc-kommandant-offer": {
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
+      "date": "2026-08-03T20:14:17.092Z"
+    },
+    "npc-kommandant-recruitDeclined": {
+      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
+      "date": "2026-08-03T20:15:16.644Z"
     }
   }
 }

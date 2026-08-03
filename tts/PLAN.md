@@ -29,13 +29,14 @@ mit dem neuen Modell.
 - **Modell: `gemini-3.1-flash-tts-preview`** (Wechsel 19.07.2026, siehe
   Qualitäts-Check oben). Preis lt. Google-Preisseite: $1,00/1 Mio.
   Input-Tokens, $20,00/1 Mio. Audio-Output-Tokens (bezahlt). Free-Tier-
-  Tageslimit verifiziert: **10 Requests/Tag**. HTTP 400 verbraucht keine
-  Quota. **HTTP 503 verbraucht Quota** (verifiziert 28.07.2026). Leerantworten
-  (`finishReason: OTHER` / „Keine Audio-Daten") galten bis 30.07.2026 als
-  quota-frei — **am 31.07.2026 widerlegt**: 7 OK + 2 Leerantworten + 1× 503 =
-  10 Requests, der elfte Request lief sofort ins 429. Annahme daher: **jeder
-  Request zählt**. Same-Day-Retry nach einer Leerantwort nur, solange die
-  Tagessumme aller Requests unter 10 liegt (siehe Aktivitäts-Log).
+  Tageslimit verifiziert: **10 Requests/Tag**. **Jeder Request zählt — auch
+  fehlgeschlagene.** Belegt für HTTP 503 (28.07.2026), Leerantworten
+  (`finishReason: OTHER`, 31.07.2026) und zuletzt **HTTP 400** (03.08.2026:
+  6 OK + 4× 400 = 10 Requests, der elfte lief sofort ins 429 — die frühere
+  Notiz „HTTP 400 verbraucht keine Quota" ist damit widerlegt). Konsequenz:
+  Same-Day-Retry nach einem Fehlschlag nur, solange die Tagessumme aller
+  Requests unter 10 liegt (siehe Aktivitäts-Log) — praktisch also fast nie,
+  weil das Batch-Skript bis 10 Requests durchläuft.
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -93,9 +94,13 @@ mit dem neuen Modell.
       hängt vom Spielstand ab → nicht statisch vertonbar).
 - [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
       Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
-      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 6/24*
-      (Wirt/Korbin fertig). `ACTIVE_NPC_PHASES` steht auf `{3, 4}`, Manifest
-      umfasst jetzt 154 Einheiten.
+      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 12/24*
+      (Wirt/Korbin fertig, Vorarbeiter/Greta/Kommandant teilweise).
+      `ACTIVE_NPC_PHASES` steht auf `{3, 4}`, Manifest umfasst jetzt 154
+      Einheiten. Offen in „failed" seit 03.08.2026 (je 1× HTTP 400):
+      `npc-vorarbeiter-praiseFarewell`, `npc-greta-turnIn`,
+      `npc-kommandant-offer`, `npc-kommandant-recruitDeclined` — werden beim
+      nächsten Lauf automatisch erneut versucht.
 - [ ] **Phase 5 — Quests & Objectives** (~186 Kurztexte, quests.js + objective.js)
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
@@ -201,3 +206,6 @@ nachgelagerter Extra-Lauf.
 - 02.08.2026 22:12 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 128/130 im Manifest.
 - 02.08.2026 23:46 — Batch: 6 Dateien (npc-wirt-jobAdvice … npc-wirt-chapter2greet), 111 s Audio, komplett. Gesamt: 134/154 im Manifest.
 - 02.08.2026 23:50 — Tagesbilanz: 10 Requests (8 OK, 2 Leerantworten). `npc-fremder-finaleDialog` liefert jetzt zum **3. Mal** `finishReason: OTHER` ohne Audio (410 Zeichen, Enceladus-Stimme) — wie `npc-mira-greet` (3× HTTP 400) ab jetzt nicht mehr blind im Batch mitschleifen, sondern gezielt untersuchen (Textkürzung/Umformulierung testen). Phase 3 damit als abgeschlossen markiert (63/65, 2 dauerhaft blockiert). Manifest um **Phase 4** erweitert (`ACTIVE_NPC_PHASES = {3, 4}`, +24 Neben-NPC-Knoten → 154 gesamt); ausgelassen mangels statischem text-Array: `oswin.business`, `greta.reminder`, `greta.petCatch`, `kommandant.recruit`.
+- 03.08.2026 22:15 — Batch: 6 Dateien (npc-wirt-chapter2idle … npc-kommandant-recruitAccepted), 97 s Audio, komplett. Gesamt: 140/154 im Manifest.
+- 03.08.2026 22:15 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 140/154 im Manifest.
+- 04.08.2026 00:15 — **Widerlegt: HTTP 400 verbraucht doch Quota.** Tagesbilanz 03.08.: 6 OK + 4× HTTP 400 „Request contains an invalid argument" = 10 Requests; der Same-Day-Retry von `npc-vorarbeiter-praiseFarewell` (Request 11) lief sofort ins 429 mit quotaValue 10. Die Rahmendaten-Notiz „HTTP 400 verbraucht keine Quota" ist damit korrigiert — es zählt jeder Request, unabhängig vom Ausgang. Neu in „failed": `npc-vorarbeiter-praiseFarewell`, `npc-greta-turnIn`, `npc-kommandant-offer`, `npc-kommandant-recruitDeclined`. Auffällig: 400er traten bis gestern nur bei einem einzigen Knoten (`npc-mira-greet`) auf, heute bei vier auf einmal quer über drei NPCs/Stimmen (Gacrux, Despina, Alnilam) — die Texte sind unauffällig (Regie-Satz + wörtliche Rede, 54–330 Zeichen), erfolgreiche Knoten desselben Laufs sehen strukturell identisch aus. Verdacht daher eher API-seitige Änderung/Instabilität als Inhaltsfilter. Ein Retry-Durchgang am nächsten Tag zeigt, ob es transient war; erst bei erneutem Scheitern gezielt untersuchen.
