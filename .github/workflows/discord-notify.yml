@@ -77,7 +77,7 @@ jobs:
           NEW_ID=""
           SAME_VERSION_PATCH_FAILED=false
 
-          MENTION="<@&1518368928370528256>"
+          MENTION="<@&1535341238000295976>"
           # Discord-Limit: 2000 Zeichen gesamt inkl. Mention+Newline (23 Zeichen)
           FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
           if [ "${#FULL_MSG}" -gt 1999 ]; then
@@ -136,7 +136,7 @@ jobs:
           EXISTING_ID="${{ steps.ids.outputs.status_msg_id }}"
           NEW_ID=""
 
-          MENTION="<@&1518378825451311105>"
+          MENTION="<@&1535341238000295976>"
           FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
           if [ "${#FULL_MSG}" -gt 1999 ]; then
             echo "WARNUNG: Status-Nachricht zu lang (${#FULL_MSG} Zeichen), kürze auf 1999..."
