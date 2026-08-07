@@ -104,10 +104,14 @@ mit dem neuen Modell.
       Vorarbeiter 2/3, Greta 2/3, Torben 0/3).
       `ACTIVE_NPC_PHASES` steht auf `{3, 4}`, Manifest umfasst jetzt 154
       Einheiten. Offen in „failed" (Stand 07.08.2026):
-      `npc-vorarbeiter-praiseFarewell` (2× HTTP 400), `npc-greta-turnIn`
-      (503, dann 400), `npc-kommandant-offer` (400, dann 503),
-      `npc-kommandant-kampfRoutineOffer` (1× HTTP 400) — werden beim
-      nächsten Lauf automatisch erneut versucht.
+      `npc-vorarbeiter-praiseFarewell` (3× HTTP 400, davon einmal bei leerer
+      Quota → einheitsspezifisch, nicht transient), `npc-greta-turnIn`
+      (503, dann 2× 400 — ebenfalls einmal bei leerer Quota),
+      `npc-kommandant-offer` (400, 503, 429),
+      `npc-kommandant-kampfRoutineOffer` (1× HTTP 400),
+      `npc-torben-willkommen` (429, reiner Limit-Fehler) — die 429er werden
+      beim nächsten Lauf automatisch mitgenommen; die beiden hartnäckigen
+      400er brauchen eine Textuntersuchung statt weiterer Blind-Retries.
 - [ ] **Phase 5 — Quests & Objectives** (~186 Kurztexte, quests.js + objective.js)
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
@@ -220,3 +224,5 @@ nachgelagerter Extra-Lauf.
 - 07.08.2026 18:23 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 145/154 im Manifest.
 - 07.08.2026 18:23 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 145/154 im Manifest.
 - 07.08.2026 18:25 — Tagesbilanz: 12 Requests (5 OK, 3× HTTP 400, 2× HTTP 503, 1× Leerantwort `OTHER`, 1× 429). **Neue Erkenntnis: HTTP 400 wird vor der Quota-Prüfung ausgewertet.** Der Same-Day-Retry von `npc-greta-turnIn` lieferte 400 statt 429 — das sah nach freier Quota aus, war aber keine; der anschließende Probe-Request mit einer unauffälligen Einheit (`npc-torben-willkommen`) lief sofort ins 429 mit quotaValue 10. Merksatz: Quota-Stand nur mit einer bisher fehlerfreien Einheit prüfen, nie mit einer 400er-Einheit. Weiterer Beleg gegen die Inhaltsfilter-These: `npc-greta-turnIn` lieferte im Batch 503 und beim Retry 400 — derselbe Text, zwei verschiedene Fehler → API-seitige Instabilität. `npc-fremder-finaleDialog` scheiterte zum **4. Mal** mit `finishReason: OTHER` und ist jetzt wie `npc-mira-greet` in `SKIP_IDS` aufgenommen, damit es keinen Tages-Slot mehr verbrennt (mit `--only` weiterhin testbar).
+- 07.08.2026 22:11 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 145/154 im Manifest.
+- 07.08.2026 22:12 — Zweiter Lauf desselben Tages (geplante Aufgabe um 22:10, Quota war seit 18:22 erschöpft): 0 neue Dateien, erwartungsgemäß. **Nebenbefund mit Erkenntniswert:** Die beiden ersten Einheiten des Laufs, `npc-vorarbeiter-praiseFarewell` und `npc-greta-turnIn`, lieferten bei *nachweislich leerer Quota* erneut HTTP 400 — erst die dritte Einheit (`npc-kommandant-offer`) bekam das 429. Das bestätigt die Regel „400 wird vor der Quota-Prüfung ausgewertet" ein zweites Mal und erlaubt zugleich einen kostenlosen Test: Da diese beiden Knoten auch quotafrei mit 400 scheitern (jeweils 3. Fehlschlag in Folge), ist ihr Fehler **nicht** transiente API-Last, sondern einheitsspezifisch — dieselbe Signatur wie `npc-mira-greet`. Nächster Schritt für diese beiden: gezielte Textuntersuchung (Kürzen/Umformulieren, dann `--only`), nicht weitere Blind-Retries. Praktischer Nutzen: 400er-Kandidaten lassen sich an einem Tag mit erschöpfter Quota gratis prüfen.
