@@ -728,7 +728,7 @@ function showIncompatibleSaveDialog(raw) {
       }] : []),
       {
         label: '💬 Bug melden (Discord)',
-        onClick: () => window.open('https://discord.gg/QuMTbDAfPd', '_blank')
+        onClick: () => window.open('https://discord.gg/Mx3VYHWuZE', '_blank')
       },
       {
         label: 'Neu starten',

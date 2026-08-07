@@ -1312,7 +1312,7 @@ function triggerChapter2Victory() {
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
           Bleib auf dem Laufenden über zukünftige Updates:<br>
-          <a href="https://discord.gg/QuMTbDAfPd" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
+          <a href="https://discord.gg/Mx3VYHWuZE" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
           Danke fürs Spielen — wir hoffen, es hat Spaß gemacht. ✨
         </p>
       `,
@@ -1643,7 +1643,7 @@ function triggerValdrisSieg(exil) {
         <hr style="border-color:var(--border);margin:12px 0">
         <p style="color:var(--text-lo);font-size:0.85em;text-align:center">
           Bleib auf dem Laufenden:<br>
-          <a href="https://discord.gg/QuMTbDAfPd" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
+          <a href="https://discord.gg/Mx3VYHWuZE" target="_blank" style="color:var(--c-reward)">👾 Discord — Chroniken des vergessenen Weges</a><br><br>
           Danke fürs Spielen. ✨
         </p>
       `,
