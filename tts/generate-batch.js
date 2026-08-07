@@ -35,7 +35,9 @@ const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
    "Request contains an invalid argument" (26./27.07.2026) — Verdacht:
    inhaltlicher Filter auf dieser Textkombination, siehe PLAN.md.
    Mit --only <id> lässt sich eine übersprungene Einheit weiterhin gezielt testen. */
-const SKIP_IDS = new Set(['npc-mira-greet']);
+// Dauerhaft blockierte Knoten: würden im Batch nur einen der 10 Tages-Slots
+// verbrennen. Mit --only weiterhin gezielt testbar.
+const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog']);
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');
