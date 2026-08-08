@@ -1,8 +1,3 @@
-Lies `c:\code\ai\ai helper files\timestamp_prompt.md` und befolge die Regel für jede Antwort.
-Pflicht-Auslöser (lies die Datei sofort, bevor du antwortest):
-- Gesprächsbeginn / erste Antwort
-- Kontext wurde komprimiert (erkennbar: Zusammenfassung am Anfang mit "This session is being continued from a previous conversation")
-
 # CLAUDE.md — Projektregeln für Claude Code
 
 ## ⚠️ PFLICHT bei jedem Commit mit Spieler-sichtbaren Änderungen
@@ -33,8 +28,9 @@ Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes
 
 | Kanal | Channel-ID | Verwendung |
 |---|---|---|
-| `#patchnotes` | `1518367613640507552` | Minor/Major-Releases → `pending-patchnotes.md` → PATCH (gleiche Version) / POST mit @Patchnotes (neue Version) |
-| `#status` | `1518378043830304808` | Patch-Versionen + Bugs → `pending-status.md` → immer DELETE + neu POST mit @Hotfix-Ping |
+| `#patchnotes` | `1518367613640507552` | Minor/Major-Releases → `pending-patchnotes.md` → PATCH (gleiche Version) / POST mit @Chroniken News (neue Version) |
+| `#status` | `1518378043830304808` | Patch-Versionen + Bugs → `pending-status.md` → immer DELETE + neu POST mit @Chroniken News |
+| `#info` | `1535430446299611246` | Kurzbeschreibung + Link, schreibgeschützt |
 | `#feedback` | `1518385990409129984` | Spieler-Bug-Reports — nur lesen, nicht schreiben |
 | `#allgemein` | `1518367128686952491` | Allgemeiner Chat |
 | `#spoiler-erlaubt` | `1518372670163390504` | Spoiler-Diskussionen |
@@ -42,7 +38,12 @@ Der Discord-Bot springt NUR an wenn `pending-status.md` oder `pending-patchnotes
 | `#kapitel-1` | `1518385791682740426` | Kapitel-1-Diskussionen |
 | `#kapitel-2` | `1518385813103050822` | Kapitel-2-Diskussionen |
 | `#moderator-only` | `1518391365333946540` | Nur Mods |
-| `#eingangshalle` | `1518590738211012628` | Eingangsbereich |
+
+Seit 07.08.2026 liegen diese Kanäle nicht mehr in einem eigenen Server, sondern in der Kategorie
+„🎮 Chroniken des vergessenen Weges" des gemeinsamen Servers **Daniels Apps und Games**. Die
+Kanal-IDs sind dieselben geblieben. Sichtbar ist die Kategorie nur mit der Rolle
+`Chroniken des vergessenen Weges`, die man sich unter „Kanäle & Rollen" selbst gibt.
+Ping-Rolle für Releases: `Chroniken News` = `1535341238000295976`.
 
 **Server-ID:** `1518367128074457209`
 **Bot-ID:** `1519669988229779506` (Chroniken Bot — Token in my_secrets.md Zeile 22)

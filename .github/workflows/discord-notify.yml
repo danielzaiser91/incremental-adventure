@@ -77,7 +77,8 @@ jobs:
           NEW_ID=""
           SAME_VERSION_PATCH_FAILED=false
 
-          MENTION="<@&1535341238000295976>"
+          ROLE_ID="1535341238000295976"
+          MENTION="<@&${ROLE_ID}>"
           # Discord-Limit: 2000 Zeichen gesamt inkl. Mention+Newline (23 Zeichen)
           FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
           if [ "${#FULL_MSG}" -gt 1999 ]; then
@@ -87,7 +88,7 @@ jobs:
 
           if [ -n "$VERSION" ] && [ "$VERSION" = "$LAST_VERSION" ] && [ -n "$EXISTING_ID" ]; then
             echo "Selbe Version ($VERSION), versuche PATCH auf $EXISTING_ID..."
-            PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
+            PAYLOAD=$(jq -n --arg c "$FULL_MSG" --arg r "$ROLE_ID"               '{content: $c, allowed_mentions: {roles: [$r]}}')
             HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
@@ -111,7 +112,7 @@ jobs:
                 "${{ secrets.DISCORD_WEBHOOK_PATCHNOTES }}/messages/${EXISTING_ID}" || true
               echo "Alte Nachricht $EXISTING_ID gelöscht (PATCH fehlgeschlagen, selbe Version)."
             fi
-            PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
+            PAYLOAD=$(jq -n --arg c "$FULL_MSG" --arg r "$ROLE_ID"               '{content: $c, allowed_mentions: {roles: [$r]}}')
             RESP=$(curl -s -X POST \
               -H "Content-Type: application/json" \
               -d "$PAYLOAD" \
@@ -136,7 +137,8 @@ jobs:
           EXISTING_ID="${{ steps.ids.outputs.status_msg_id }}"
           NEW_ID=""
 
-          MENTION="<@&1535341238000295976>"
+          ROLE_ID="1535341238000295976"
+          MENTION="<@&${ROLE_ID}>"
           FULL_MSG="${MENTION}"$'\n'"${CONTENT}"
           if [ "${#FULL_MSG}" -gt 1999 ]; then
             echo "WARNUNG: Status-Nachricht zu lang (${#FULL_MSG} Zeichen), kürze auf 1999..."
@@ -149,7 +151,7 @@ jobs:
             echo "Alte Status-Nachricht $EXISTING_ID gelöscht."
           fi
 
-          PAYLOAD=$(jq -n --arg c "$FULL_MSG" '{content: $c}')
+          PAYLOAD=$(jq -n --arg c "$FULL_MSG" --arg r "$ROLE_ID"               '{content: $c, allowed_mentions: {roles: [$r]}}')
           RESP=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD" \
