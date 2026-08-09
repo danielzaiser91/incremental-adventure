@@ -724,6 +724,31 @@
       "file": "npc-strassenkehrer-greet.wav",
       "seconds": 52.3,
       "date": "2026-08-07T16:21:39.042Z"
+    },
+    "npc-vorarbeiter-praiseFarewell": {
+      "file": "npc-vorarbeiter-praiseFarewell.wav",
+      "seconds": 8.1,
+      "date": "2026-08-09T00:03:37.099Z"
+    },
+    "npc-torben-willkommen": {
+      "file": "npc-torben-willkommen.wav",
+      "seconds": 29.6,
+      "date": "2026-08-09T00:05:19.924Z"
+    },
+    "npc-torben-aufnahme": {
+      "file": "npc-torben-aufnahme.wav",
+      "seconds": 35.8,
+      "date": "2026-08-09T00:06:00.099Z"
+    },
+    "npc-torben-idle": {
+      "file": "npc-torben-idle.wav",
+      "seconds": 5.9,
+      "date": "2026-08-09T00:06:24.993Z"
+    },
+    "npc-kommandant-kampfRoutineOffer": {
+      "file": "npc-kommandant-kampfRoutineOffer.wav",
+      "seconds": 20.2,
+      "date": "2026-08-09T00:07:13.785Z"
     }
   },
   "failed": {
@@ -735,25 +760,13 @@
       "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 349,\n    \"candidatesTokenCount\": 1033,\n    \"totalTokenCount\": 1382,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 349\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 1033\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  }",
       "date": "2026-08-07T16:22:21.524Z"
     },
-    "npc-vorarbeiter-praiseFarewell": {
-      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-08-07T20:10:57.340Z"
-    },
     "npc-greta-turnIn": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-08-07T20:11:26.899Z"
+      "date": "2026-08-09T00:06:53.437Z"
     },
     "npc-kommandant-offer": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 11.851969672s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-08-07T20:11:48.031Z"
-    },
-    "npc-kommandant-kampfRoutineOffer": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-08-07T16:19:53.315Z"
-    },
-    "npc-torben-willkommen": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 41.134013233s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-08-07T16:23:44.196Z"
+      "date": "2026-08-09T00:07:25.268Z"
     }
   }
 }

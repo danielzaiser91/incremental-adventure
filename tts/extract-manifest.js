@@ -3,9 +3,10 @@
    Extrahiert vertonbare Einheiten aus den Spieldateien, aktuell:
    - Phase 1: STORY_ENTRIES (script/story.js) — 1 Datei pro Eintrag
    - Phase 2: EP_SKILL_TREE learnDialogs (script/experience.js)
-   - Phase 3: NPC-Dialogknoten (script/npc.js), story-kritische NPCs
-   Spätere Phasen (Neben-NPCs, Quests, …) werden hier ergänzt — für
-   Phase 4 reicht `ACTIVE_NPC_PHASES` um 4 zu erweitern.
+   - Phase 3/4: NPC-Dialogknoten (script/npc.js), siehe `ACTIVE_NPC_PHASES`
+   - Phase 5: Quest-Beschreibungen (script/quests.js) + Zieltexte
+     (script/objective.js)
+   Spätere Phasen (Welt-Flavor, Achievements) werden hier ergänzt.
    Idempotent: bestehende manifest.json wird überschrieben, die
    Fortschritts-Daten liegen separat in progress.json.
    ══════════════════════════════════════════════════════════════ */
@@ -15,6 +16,7 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const crypto = require('crypto');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -202,6 +204,66 @@ for (const [npcId, npc] of Object.entries(npcs)) {
   }
 }
 
+/* ── Phase 5 — Quests & Objectives ─────────────────────────────
+   Beides sind Ich-Texte des Spielers (Tagebuch-/Zielperspektive) → Erzähler-
+   stimme Iapetus, kein eigenes Stimmprofil.
+   Quests: pro Quest eine Einheit je Zustand aus `descByState`. Zustände mit
+   dynamischem Text (`descByState.x` als Funktion) hängen vom Spielstand ab und
+   werden ausgelassen — dieselbe Regel wie bei den NPC-Knoten.
+   Objectives: `getObjectiveText()` ist Code, keine Datenstruktur — die Texte
+   werden daher aus dem Quelltext der Funktion gelesen. Nur einfache String-
+   Literale; Template-Literale (`${mutNeeded}` etc.) sind laufzeitabhängig und
+   fallen bewusst heraus. Die ID ist ein Kurz-Hash des Textes, weil es keinen
+   stabilen Schlüssel gibt (eine laufende Nummer würde sich bei jeder Umsortie-
+   rung im Code verschieben und bereits vertonte Einheiten neu zuordnen).
+   Ausgelassen: `getExplicitGoalText()` — reine Funktionslabels ("Die Taverne
+   aufsuchen.") bzw. Zahlenanzeigen. */
+const questSkipped = [];
+const questDefs = evalGameFile('script/quests.js', 'QUEST_DEFS');
+for (const q of questDefs) {
+  for (const [state, desc] of Object.entries(q.descByState || {})) {
+    if (typeof desc !== 'string' || !desc.trim()) {
+      questSkipped.push(`${q.id}.${state} (kein statischer Text)`);
+      continue;
+    }
+    units.push({
+      id: `quest-${q.id}-${state}`,
+      phase: 5,
+      category: 'quest-desc',
+      title: `${q.title} — ${state}`,
+      voice: NARRATOR_VOICE,
+      style: NARRATOR_STYLE,
+      text: desc
+    });
+  }
+}
+
+function objectiveTexts() {
+  const src = fs.readFileSync(path.join(ROOT, 'script/objective.js'), 'utf8');
+  const start = src.indexOf('{', src.indexOf('function getObjectiveText'));
+  let depth = 0, end = start;
+  for (; end < src.length; end++) {
+    if (src[end] === '{') depth++;
+    else if (src[end] === '}' && --depth === 0) break;
+  }
+  const body = src.slice(start, end);
+  return [...body.matchAll(/return\s+'((?:[^'\\]|\\.)*)'/g)]
+    .map(m => m[1].replace(/\\'/g, "'").replace(/\\\\/g, '\\'));
+}
+
+for (const text of objectiveTexts()) {
+  const hash = crypto.createHash('sha1').update(text).digest('hex').slice(0, 8);
+  units.push({
+    id: `objective-${hash}`,
+    phase: 5,
+    category: 'objective',
+    title: text.slice(0, 48) + (text.length > 48 ? '…' : ''),
+    voice: NARRATOR_VOICE,
+    style: NARRATOR_STYLE,
+    text
+  });
+}
+
 const totalChars = units.reduce((s, u) => s + u.text.length, 0);
 fs.writeFileSync(
   path.join(__dirname, 'manifest.json'),
@@ -211,4 +273,5 @@ console.log(`manifest.json: ${units.length} Einheiten, ${totalChars} Zeichen`);
 const byPhase = {};
 for (const u of units) byPhase[u.phase] = (byPhase[u.phase] || 0) + 1;
 for (const [p, n] of Object.entries(byPhase)) console.log(`  Phase ${p}: ${n} Einheiten`);
-if (npcSkipped.length) console.log(`  übersprungen: ${npcSkipped.join(', ')}`);
+const skipped = [...npcSkipped, ...questSkipped];
+if (skipped.length) console.log(`  übersprungen: ${skipped.join(', ')}`);

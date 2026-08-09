@@ -42,6 +42,16 @@ mit dem neuen Modell.
   Same-Day-Retry nach einem Fehlschlag nur, solange die Tagessumme aller
   Requests unter 10 liegt (siehe Aktivitäts-Log) — praktisch also fast nie,
   weil das Batch-Skript bis 10 Requests durchläuft.
+- **HTTP 400 ist transient, nicht einheitsspezifisch (09.08.2026 belegt).**
+  `npc-vorarbeiter-praiseFarewell` (3× 400, davon einmal bei leerer Quota) und
+  `npc-kommandant-kampfRoutineOffer` liefen unverändert durch — ohne jede
+  Textänderung. Die Vermutung „400 bei leerer Quota ⇒ Fehler steckt im Text"
+  (Log 07.08.) ist damit widerlegt: Da 400 vor der Quota-Prüfung greift, sagt
+  ein 400 bei leerer Quota **nichts** über die Ursache aus, es beweist nur, dass
+  die Validierung zuerst läuft. Konsequenz: 400er-Einheiten gehören **nicht** in
+  `SKIP_IDS` — sie kosten zwar einen Tages-Slot, holen sich aber irgendwann
+  selbst. Nur reproduzierbare Leerantworten (`finishReason: OTHER`) rechtfertigen
+  einen SKIP-Eintrag.
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -81,7 +91,9 @@ mit dem neuen Modell.
   - [x] Free-Tier-Limit für `gemini-3.1-flash-tts-preview` verifiziert:
         ebenfalls **10 Requests/Tag** (identische Quota-ID/-Wert wie beim
         alten Modell) — Batch-Default auf 10 zurückgesetzt
-  - [ ] ffmpeg installieren → WAV→Opus-Konvertierung ergänzen
+  - [ ] WAV→Opus-Konvertierung ergänzen — *ffmpeg ist seit spätestens
+        09.08.2026 installiert (8.1.2, `Gyan.FFmpeg` via winget, im PATH);
+        es fehlt nur noch der Konvertierungsschritt im Batch*
   - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
         Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
@@ -99,20 +111,25 @@ mit dem neuen Modell.
       hängt vom Spielstand ab → nicht statisch vertonbar).
 - [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
       Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
-      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 17/24*
-      (Wirt/Korbin 7/7 und Straßenkehrer 1/1 fertig, Kommandant 5/7,
-      Vorarbeiter 2/3, Greta 2/3, Torben 0/3).
-      `ACTIVE_NPC_PHASES` steht auf `{3, 4}`, Manifest umfasst jetzt 154
-      Einheiten. Offen in „failed" (Stand 07.08.2026):
-      `npc-vorarbeiter-praiseFarewell` (3× HTTP 400, davon einmal bei leerer
-      Quota → einheitsspezifisch, nicht transient), `npc-greta-turnIn`
-      (503, dann 2× 400 — ebenfalls einmal bei leerer Quota),
-      `npc-kommandant-offer` (400, 503, 429),
-      `npc-kommandant-kampfRoutineOffer` (1× HTTP 400),
-      `npc-torben-willkommen` (429, reiner Limit-Fehler) — die 429er werden
-      beim nächsten Lauf automatisch mitgenommen; die beiden hartnäckigen
-      400er brauchen eine Textuntersuchung statt weiterer Blind-Retries.
-- [ ] **Phase 5 — Quests & Objectives** (~186 Kurztexte, quests.js + objective.js)
+      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 22/24*
+      (Wirt/Korbin 7/7, Straßenkehrer 1/1, Vorarbeiter 3/3 und Torben 3/3
+      fertig, Kommandant 6/7, Greta 2/3).
+      `ACTIVE_NPC_PHASES` steht auf `{3, 4}`. Offen in „failed" (Stand
+      09.08.2026): `npc-greta-turnIn` (5× HTTP 400) und `npc-kommandant-offer`
+      (4× HTTP 400) — werden beim nächsten Lauf automatisch mitgenommen,
+      **kein** SKIP_IDS-Eintrag, siehe nächster Absatz.
+- [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
+      Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
+      Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
+      `getObjectiveText()` (objective.js). Beides Ich-Perspektive → Erzähler-
+      stimme Iapetus. Objective-IDs sind ein Kurz-Hash des Textes
+      (`objective-<sha1[0..8]>`), weil es dort keinen stabilen Schlüssel gibt.
+      Ausgelassen: 7 Quest-Zustände mit Funktions-Text (`gildePruefung.active`,
+      `brennenderMut.active`, `wissensdurst10.active`, `lethkarMarkt.active`,
+      `gildeSchulden.active`, `bruderschaftBeweis.active`,
+      `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
+      (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
+      Manifest umfasst damit 331 Einheiten.
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - [ ] **Phase 7 — optional: Achievements** (79 Einheiten)
@@ -226,3 +243,8 @@ nachgelagerter Extra-Lauf.
 - 07.08.2026 18:25 — Tagesbilanz: 12 Requests (5 OK, 3× HTTP 400, 2× HTTP 503, 1× Leerantwort `OTHER`, 1× 429). **Neue Erkenntnis: HTTP 400 wird vor der Quota-Prüfung ausgewertet.** Der Same-Day-Retry von `npc-greta-turnIn` lieferte 400 statt 429 — das sah nach freier Quota aus, war aber keine; der anschließende Probe-Request mit einer unauffälligen Einheit (`npc-torben-willkommen`) lief sofort ins 429 mit quotaValue 10. Merksatz: Quota-Stand nur mit einer bisher fehlerfreien Einheit prüfen, nie mit einer 400er-Einheit. Weiterer Beleg gegen die Inhaltsfilter-These: `npc-greta-turnIn` lieferte im Batch 503 und beim Retry 400 — derselbe Text, zwei verschiedene Fehler → API-seitige Instabilität. `npc-fremder-finaleDialog` scheiterte zum **4. Mal** mit `finishReason: OTHER` und ist jetzt wie `npc-mira-greet` in `SKIP_IDS` aufgenommen, damit es keinen Tages-Slot mehr verbrennt (mit `--only` weiterhin testbar).
 - 07.08.2026 22:11 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 145/154 im Manifest.
 - 07.08.2026 22:12 — Zweiter Lauf desselben Tages (geplante Aufgabe um 22:10, Quota war seit 18:22 erschöpft): 0 neue Dateien, erwartungsgemäß. **Nebenbefund mit Erkenntniswert:** Die beiden ersten Einheiten des Laufs, `npc-vorarbeiter-praiseFarewell` und `npc-greta-turnIn`, lieferten bei *nachweislich leerer Quota* erneut HTTP 400 — erst die dritte Einheit (`npc-kommandant-offer`) bekam das 429. Das bestätigt die Regel „400 wird vor der Quota-Prüfung ausgewertet" ein zweites Mal und erlaubt zugleich einen kostenlosen Test: Da diese beiden Knoten auch quotafrei mit 400 scheitern (jeweils 3. Fehlschlag in Folge), ist ihr Fehler **nicht** transiente API-Last, sondern einheitsspezifisch — dieselbe Signatur wie `npc-mira-greet`. Nächster Schritt für diese beiden: gezielte Textuntersuchung (Kürzen/Umformulieren, dann `--only`), nicht weitere Blind-Retries. Praktischer Nutzen: 400er-Kandidaten lassen sich an einem Tag mit erschöpfter Quota gratis prüfen.
+- 09.08.2026 02:06 — Batch: 4 Dateien (npc-vorarbeiter-praiseFarewell … npc-torben-idle), 79 s Audio, komplett. Gesamt: 149/154 im Manifest.
+- 09.08.2026 02:06 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 149/154 im Manifest.
+- 09.08.2026 02:07 — Batch: 1 Dateien (npc-kommandant-kampfRoutineOffer … npc-kommandant-kampfRoutineOffer), 20 s Audio, komplett. Gesamt: 150/154 im Manifest.
+- 09.08.2026 02:07 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 150/154 im Manifest.
+- 09.08.2026 02:12 — Tagesbilanz: 10 Requests (5 OK, 5× HTTP 400), Quota damit ausgeschöpft, kein 429 mehr provoziert. **Widerlegt: HTTP 400 ist doch transient.** `npc-vorarbeiter-praiseFarewell` lief als erste Einheit des Batches problemlos durch — dieselbe Einheit, die am 07.08. bei nachweislich leerer Quota mit 400 scheiterte und daraufhin als „einheitsspezifisch" eingestuft wurde. Ebenso `npc-kommandant-kampfRoutineOffer` beim ersten Retry. Beide Texte sind unverändert. Der Trugschluss vom 07.08. lag darin, aus „400 auch ohne Quota" auf eine Textursache zu schließen — 400 wird schlicht vor der Quota-Prüfung ausgewertet und sagt über die Ursache nichts. Konsequenz in den Rahmendaten festgehalten: 400er kommen **nicht** in `SKIP_IDS`, nur wiederholte Leerantworten. Restlich offen: `npc-greta-turnIn` (5. 400) und `npc-kommandant-offer` (4. 400) — beide bleiben im normalen Batch. Da diese zwei allein die Tagesquota nicht füllen, wurde das Manifest um **Phase 5** erweitert (177 Einheiten: 139 Quest-Beschreibungen + 38 Zieltexte) → 331 Einheiten gesamt, damit morgen wieder 10 Slots nutzbar sind. **Nebenbefund:** ffmpeg ist inzwischen installiert und im PATH (`Gyan.FFmpeg` via winget) — der Phase-0-Punkt „WAV→Opus-Konvertierung" ist damit nicht mehr blockiert.
