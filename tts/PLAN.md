@@ -76,6 +76,11 @@ mit dem neuen Modell.
 - **Automatisiert:** Geplante Aufgabe `tts-daily-batch-incremental-adventure`
   (Claude-Desktop, täglich ~22:00 Uhr) führt den Batch aus, pflegt diese Datei
   und pusht. Läuft nur, wenn die App offen ist — sonst beim nächsten App-Start.
+- **Umgebungs-Stolperfalle im Bash-Werkzeug (10.08.2026):** Dort fehlen `node`
+  und die Kernwerkzeuge im PATH, und `git push` stirbt still mit Exit 128, weil
+  die Credential-Helper nicht anlaufen. Rezept (PATH-Export + `GIT_ASKPASS`-Bat
+  mit `gh auth token`) steht in Kategorie 1 von
+  `C:\code\ai\ai helper files\ai_agent_learnings.md`.
 
 ## Meilenstein-Checkliste
 
