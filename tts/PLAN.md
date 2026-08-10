@@ -111,13 +111,14 @@ mit dem neuen Modell.
       hängt vom Spielstand ab → nicht statisch vertonbar).
 - [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
       Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
-      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 22/24*
-      (Wirt/Korbin 7/7, Straßenkehrer 1/1, Vorarbeiter 3/3 und Torben 3/3
-      fertig, Kommandant 6/7, Greta 2/3).
+      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 23/24*
+      (Wirt/Korbin 7/7, Straßenkehrer 1/1, Vorarbeiter 3/3, Torben 3/3 und
+      Kommandant 7/7 fertig, Greta 2/3).
       `ACTIVE_NPC_PHASES` steht auf `{3, 4}`. Offen in „failed" (Stand
-      09.08.2026): `npc-greta-turnIn` (5× HTTP 400) und `npc-kommandant-offer`
-      (4× HTTP 400) — werden beim nächsten Lauf automatisch mitgenommen,
-      **kein** SKIP_IDS-Eintrag, siehe nächster Absatz.
+      10.08.2026): nur noch `npc-greta-turnIn` (6× HTTP 400) —
+      `npc-kommandant-offer` lief am 10.08. unverändert durch, nach 4 vorherigen
+      400ern (erneuter Beleg für die Transienz). Wird beim nächsten Lauf
+      automatisch mitgenommen, **kein** SKIP_IDS-Eintrag, siehe nächster Absatz.
 - [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
       Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
       Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
@@ -129,7 +130,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten.
+      Manifest umfasst damit 331 Einheiten. *Stand 10.08.2026: 8/177
+      (Quests 8/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - [ ] **Phase 7 — optional: Achievements** (79 Einheiten)
@@ -248,3 +250,5 @@ nachgelagerter Extra-Lauf.
 - 09.08.2026 02:07 — Batch: 1 Dateien (npc-kommandant-kampfRoutineOffer … npc-kommandant-kampfRoutineOffer), 20 s Audio, komplett. Gesamt: 150/154 im Manifest.
 - 09.08.2026 02:07 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 150/154 im Manifest.
 - 09.08.2026 02:12 — Tagesbilanz: 10 Requests (5 OK, 5× HTTP 400), Quota damit ausgeschöpft, kein 429 mehr provoziert. **Widerlegt: HTTP 400 ist doch transient.** `npc-vorarbeiter-praiseFarewell` lief als erste Einheit des Batches problemlos durch — dieselbe Einheit, die am 07.08. bei nachweislich leerer Quota mit 400 scheiterte und daraufhin als „einheitsspezifisch" eingestuft wurde. Ebenso `npc-kommandant-kampfRoutineOffer` beim ersten Retry. Beide Texte sind unverändert. Der Trugschluss vom 07.08. lag darin, aus „400 auch ohne Quota" auf eine Textursache zu schließen — 400 wird schlicht vor der Quota-Prüfung ausgewertet und sagt über die Ursache nichts. Konsequenz in den Rahmendaten festgehalten: 400er kommen **nicht** in `SKIP_IDS`, nur wiederholte Leerantworten. Restlich offen: `npc-greta-turnIn` (5. 400) und `npc-kommandant-offer` (4. 400) — beide bleiben im normalen Batch. Da diese zwei allein die Tagesquota nicht füllen, wurde das Manifest um **Phase 5** erweitert (177 Einheiten: 139 Quest-Beschreibungen + 38 Zieltexte) → 331 Einheiten gesamt, damit morgen wieder 10 Slots nutzbar sind. **Nebenbefund:** ffmpeg ist inzwischen installiert und im PATH (`Gyan.FFmpeg` via winget) — der Phase-0-Punkt „WAV→Opus-Konvertierung" ist damit nicht mehr blockiert.
+- 10.08.2026 22:59 — Batch: 9 Dateien (npc-kommandant-offer … quest-miraLetter-rewarded), 68 s Audio, komplett. Gesamt: 159/331 im Manifest.
+- 10.08.2026 23:02 — Tagesbilanz: 10 Requests (9 OK, 1× HTTP 400), Quota damit ausgeschöpft, kein 429 provoziert, kein Same-Day-Retry (Leerantworten gab es keine). **Phase 5 hat begonnen** — die ersten 8 Quest-Beschreibungen (`quest-nightWatch-*`, `quest-miraLetter-*`) sind vertont. `npc-kommandant-offer` lief nach 4 vorherigen 400ern unverändert durch und bestätigt damit erneut, dass HTTP 400 transient ist. Einziger Rest aus Phase 4: `npc-greta-turnIn` (jetzt 6. 400 in Folge) — bleibt im normalen Batch, aber der Knoten ist damit der hartnäckigste 400er-Fall; falls er auch nach zwei weiteren Läufen nicht durchgeht, gezielt per Textkürzung untersuchen statt weiter blind mitzuschleifen.

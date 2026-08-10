@@ -749,6 +749,51 @@
       "file": "npc-kommandant-kampfRoutineOffer.wav",
       "seconds": 20.2,
       "date": "2026-08-09T00:07:13.785Z"
+    },
+    "npc-kommandant-offer": {
+      "file": "npc-kommandant-offer.wav",
+      "seconds": 22.2,
+      "date": "2026-08-10T20:56:33.871Z"
+    },
+    "quest-nightWatch-unstarted": {
+      "file": "quest-nightWatch-unstarted.wav",
+      "seconds": 5.8,
+      "date": "2026-08-10T20:56:59.431Z"
+    },
+    "quest-nightWatch-active": {
+      "file": "quest-nightWatch-active.wav",
+      "seconds": 6.6,
+      "date": "2026-08-10T20:57:25.460Z"
+    },
+    "quest-nightWatch-done": {
+      "file": "quest-nightWatch-done.wav",
+      "seconds": 8.2,
+      "date": "2026-08-10T20:57:52.285Z"
+    },
+    "quest-nightWatch-rewarded": {
+      "file": "quest-nightWatch-rewarded.wav",
+      "seconds": 7.2,
+      "date": "2026-08-10T20:58:17.811Z"
+    },
+    "quest-miraLetter-unstarted": {
+      "file": "quest-miraLetter-unstarted.wav",
+      "seconds": 2.1,
+      "date": "2026-08-10T20:58:41.321Z"
+    },
+    "quest-miraLetter-active": {
+      "file": "quest-miraLetter-active.wav",
+      "seconds": 6.5,
+      "date": "2026-08-10T20:59:07.031Z"
+    },
+    "quest-miraLetter-delivered": {
+      "file": "quest-miraLetter-delivered.wav",
+      "seconds": 4.5,
+      "date": "2026-08-10T20:59:30.746Z"
+    },
+    "quest-miraLetter-rewarded": {
+      "file": "quest-miraLetter-rewarded.wav",
+      "seconds": 4.6,
+      "date": "2026-08-10T20:59:54.899Z"
     }
   },
   "failed": {
@@ -762,11 +807,7 @@
     },
     "npc-greta-turnIn": {
       "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-08-09T00:06:53.437Z"
-    },
-    "npc-kommandant-offer": {
-      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-08-09T00:07:25.268Z"
+      "date": "2026-08-10T20:55:58.814Z"
     }
   }
 }
