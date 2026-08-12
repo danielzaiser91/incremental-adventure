@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 5.154,
+      "text": "Brakka erklärt, was es für die Registrierung als Abenteurer braucht.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.421,
+          "end": 0.943,
+          "score": 0.849
+        },
+        {
+          "word": "erklärt,",
+          "start": 0.983,
+          "end": 1.584,
+          "score": 0.938
+        },
+        {
+          "word": "was",
+          "start": 1.624,
+          "end": 1.745,
+          "score": 0.911
+        },
+        {
+          "word": "es",
+          "start": 1.785,
+          "end": 1.905,
+          "score": 0.85
+        },
+        {
+          "word": "für",
+          "start": 1.945,
+          "end": 2.046,
+          "score": 0.997
+        },
+        {
+          "word": "die",
+          "start": 2.066,
+          "end": 2.186,
+          "score": 0.789
+        },
+        {
+          "word": "Registrierung",
+          "start": 2.226,
+          "end": 2.988,
+          "score": 0.855
+        },
+        {
+          "word": "als",
+          "start": 3.008,
+          "end": 3.269,
+          "score": 0.904
+        },
+        {
+          "word": "Abenteurer",
+          "start": 3.309,
+          "end": 3.871,
+          "score": 0.969
+        },
+        {
+          "word": "braucht.",
+          "start": 3.911,
+          "end": 5.154,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 5.174,
+      "end": 6.919,
+      "text": "Mit ihm sprechen, wenn ich bereit bin.",
+      "words": [
+        {
+          "word": "Mit",
+          "start": 5.174,
+          "end": 5.355,
+          "score": 0.989
+        },
+        {
+          "word": "ihm",
+          "start": 5.395,
+          "end": 5.595,
+          "score": 0.906
+        },
+        {
+          "word": "sprechen,",
+          "start": 5.636,
+          "end": 6.237,
+          "score": 0.959
+        },
+        {
+          "word": "wenn",
+          "start": 6.257,
+          "end": 6.378,
+          "score": 0.903
+        },
+        {
+          "word": "ich",
+          "start": 6.418,
+          "end": 6.518,
+          "score": 0.835
+        },
+        {
+          "word": "bereit",
+          "start": 6.558,
+          "end": 6.799,
+          "score": 0.928
+        },
+        {
+          "word": "bin.",
+          "start": 6.819,
+          "end": 6.919,
+          "score": 0.776
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.421,
+      "end": 0.943,
+      "score": 0.849
+    },
+    {
+      "word": "erklärt,",
+      "start": 0.983,
+      "end": 1.584,
+      "score": 0.938
+    },
+    {
+      "word": "was",
+      "start": 1.624,
+      "end": 1.745,
+      "score": 0.911
+    },
+    {
+      "word": "es",
+      "start": 1.785,
+      "end": 1.905,
+      "score": 0.85
+    },
+    {
+      "word": "für",
+      "start": 1.945,
+      "end": 2.046,
+      "score": 0.997
+    },
+    {
+      "word": "die",
+      "start": 2.066,
+      "end": 2.186,
+      "score": 0.789
+    },
+    {
+      "word": "Registrierung",
+      "start": 2.226,
+      "end": 2.988,
+      "score": 0.855
+    },
+    {
+      "word": "als",
+      "start": 3.008,
+      "end": 3.269,
+      "score": 0.904
+    },
+    {
+      "word": "Abenteurer",
+      "start": 3.309,
+      "end": 3.871,
+      "score": 0.969
+    },
+    {
+      "word": "braucht.",
+      "start": 3.911,
+      "end": 5.154,
+      "score": 0.957
+    },
+    {
+      "word": "Mit",
+      "start": 5.174,
+      "end": 5.355,
+      "score": 0.989
+    },
+    {
+      "word": "ihm",
+      "start": 5.395,
+      "end": 5.595,
+      "score": 0.906
+    },
+    {
+      "word": "sprechen,",
+      "start": 5.636,
+      "end": 6.237,
+      "score": 0.959
+    },
+    {
+      "word": "wenn",
+      "start": 6.257,
+      "end": 6.378,
+      "score": 0.903
+    },
+    {
+      "word": "ich",
+      "start": 6.418,
+      "end": 6.518,
+      "score": 0.835
+    },
+    {
+      "word": "bereit",
+      "start": 6.558,
+      "end": 6.799,
+      "score": 0.928
+    },
+    {
+      "word": "bin.",
+      "start": 6.819,
+      "end": 6.919,
+      "score": 0.776
+    }
+  ]
+}

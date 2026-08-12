@@ -1,0 +1,193 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 6.179,
+      "text": "Greta braucht je 5 Holz, Stein und Wildkraut vom Sammelplatz, um ihr Sortiment zu erweitern.",
+      "words": [
+        {
+          "word": "Greta",
+          "start": 0.381,
+          "end": 0.823,
+          "score": 0.888
+        },
+        {
+          "word": "braucht",
+          "start": 0.863,
+          "end": 1.244,
+          "score": 0.903
+        },
+        {
+          "word": "je",
+          "start": 1.284,
+          "end": 1.585,
+          "score": 0.922
+        },
+        {
+          "word": "5",
+          "start": 1.685,
+          "end": 1.886,
+          "score": 0.893
+        },
+        {
+          "word": "Holz,",
+          "start": 1.946,
+          "end": 2.648,
+          "score": 0.955
+        },
+        {
+          "word": "Stein",
+          "start": 2.688,
+          "end": 3.17,
+          "score": 0.889
+        },
+        {
+          "word": "und",
+          "start": 3.19,
+          "end": 3.43,
+          "score": 0.801
+        },
+        {
+          "word": "Wildkraut",
+          "start": 3.451,
+          "end": 4.052,
+          "score": 0.896
+        },
+        {
+          "word": "vom",
+          "start": 4.072,
+          "end": 4.233,
+          "score": 0.957
+        },
+        {
+          "word": "Sammelplatz,",
+          "start": 4.273,
+          "end": 4.935,
+          "score": 0.92
+        },
+        {
+          "word": "um",
+          "start": 4.975,
+          "end": 5.096,
+          "score": 0.906
+        },
+        {
+          "word": "ihr",
+          "start": 5.136,
+          "end": 5.236,
+          "score": 0.889
+        },
+        {
+          "word": "Sortiment",
+          "start": 5.256,
+          "end": 5.677,
+          "score": 0.872
+        },
+        {
+          "word": "zu",
+          "start": 5.697,
+          "end": 5.778,
+          "score": 0.896
+        },
+        {
+          "word": "erweitern.",
+          "start": 5.838,
+          "end": 6.179,
+          "score": 0.944
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Greta",
+      "start": 0.381,
+      "end": 0.823,
+      "score": 0.888
+    },
+    {
+      "word": "braucht",
+      "start": 0.863,
+      "end": 1.244,
+      "score": 0.903
+    },
+    {
+      "word": "je",
+      "start": 1.284,
+      "end": 1.585,
+      "score": 0.922
+    },
+    {
+      "word": "5",
+      "start": 1.685,
+      "end": 1.886,
+      "score": 0.893
+    },
+    {
+      "word": "Holz,",
+      "start": 1.946,
+      "end": 2.648,
+      "score": 0.955
+    },
+    {
+      "word": "Stein",
+      "start": 2.688,
+      "end": 3.17,
+      "score": 0.889
+    },
+    {
+      "word": "und",
+      "start": 3.19,
+      "end": 3.43,
+      "score": 0.801
+    },
+    {
+      "word": "Wildkraut",
+      "start": 3.451,
+      "end": 4.052,
+      "score": 0.896
+    },
+    {
+      "word": "vom",
+      "start": 4.072,
+      "end": 4.233,
+      "score": 0.957
+    },
+    {
+      "word": "Sammelplatz,",
+      "start": 4.273,
+      "end": 4.935,
+      "score": 0.92
+    },
+    {
+      "word": "um",
+      "start": 4.975,
+      "end": 5.096,
+      "score": 0.906
+    },
+    {
+      "word": "ihr",
+      "start": 5.136,
+      "end": 5.236,
+      "score": 0.889
+    },
+    {
+      "word": "Sortiment",
+      "start": 5.256,
+      "end": 5.677,
+      "score": 0.872
+    },
+    {
+      "word": "zu",
+      "start": 5.697,
+      "end": 5.778,
+      "score": 0.896
+    },
+    {
+      "word": "erweitern.",
+      "start": 5.838,
+      "end": 6.179,
+      "score": 0.944
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.959,
+      "text": "Abgeschlossen — Greta verkauft jetzt Rohstoffe und neue Ausrüstung.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.064,
+          "score": 0.895
+        },
+        {
+          "word": "—",
+          "start": 1.787,
+          "end": 1.807,
+          "score": 0.412
+        },
+        {
+          "word": "Greta",
+          "start": 1.847,
+          "end": 2.329,
+          "score": 0.912
+        },
+        {
+          "word": "verkauft",
+          "start": 2.369,
+          "end": 2.81,
+          "score": 0.923
+        },
+        {
+          "word": "jetzt",
+          "start": 2.831,
+          "end": 3.112,
+          "score": 0.895
+        },
+        {
+          "word": "Rohstoffe",
+          "start": 3.152,
+          "end": 3.794,
+          "score": 0.894
+        },
+        {
+          "word": "und",
+          "start": 3.814,
+          "end": 4.055,
+          "score": 0.877
+        },
+        {
+          "word": "neue",
+          "start": 4.075,
+          "end": 4.376,
+          "score": 0.894
+        },
+        {
+          "word": "Ausrüstung.",
+          "start": 4.416,
+          "end": 4.959,
+          "score": 0.974
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.064,
+      "score": 0.895
+    },
+    {
+      "word": "—",
+      "start": 1.787,
+      "end": 1.807,
+      "score": 0.412
+    },
+    {
+      "word": "Greta",
+      "start": 1.847,
+      "end": 2.329,
+      "score": 0.912
+    },
+    {
+      "word": "verkauft",
+      "start": 2.369,
+      "end": 2.81,
+      "score": 0.923
+    },
+    {
+      "word": "jetzt",
+      "start": 2.831,
+      "end": 3.112,
+      "score": 0.895
+    },
+    {
+      "word": "Rohstoffe",
+      "start": 3.152,
+      "end": 3.794,
+      "score": 0.894
+    },
+    {
+      "word": "und",
+      "start": 3.814,
+      "end": 4.055,
+      "score": 0.877
+    },
+    {
+      "word": "neue",
+      "start": 4.075,
+      "end": 4.376,
+      "score": 0.894
+    },
+    {
+      "word": "Ausrüstung.",
+      "start": 4.416,
+      "end": 4.959,
+      "score": 0.974
+    }
+  ]
+}

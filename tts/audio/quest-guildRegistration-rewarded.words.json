@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.642,
+      "end": 3.872,
+      "text": "Abgeschlossen — vorerst.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.642,
+          "end": 1.224,
+          "score": 0.897
+        },
+        {
+          "word": "—",
+          "start": 2.006,
+          "end": 2.026,
+          "score": 0.915
+        },
+        {
+          "word": "vorerst.",
+          "start": 2.066,
+          "end": 3.872,
+          "score": 0.959
+        }
+      ]
+    },
+    {
+      "start": 3.892,
+      "end": 5.999,
+      "text": "Mehr dazu in einem zukünftigen Update.",
+      "words": [
+        {
+          "word": "Mehr",
+          "start": 3.892,
+          "end": 4.073,
+          "score": 0.891
+        },
+        {
+          "word": "dazu",
+          "start": 4.093,
+          "end": 4.534,
+          "score": 0.978
+        },
+        {
+          "word": "in",
+          "start": 4.574,
+          "end": 4.715,
+          "score": 0.997
+        },
+        {
+          "word": "einem",
+          "start": 4.755,
+          "end": 5.036,
+          "score": 0.994
+        },
+        {
+          "word": "zukünftigen",
+          "start": 5.076,
+          "end": 5.698,
+          "score": 0.884
+        },
+        {
+          "word": "Update.",
+          "start": 5.738,
+          "end": 5.999,
+          "score": 0.463
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.642,
+      "end": 1.224,
+      "score": 0.897
+    },
+    {
+      "word": "—",
+      "start": 2.006,
+      "end": 2.026,
+      "score": 0.915
+    },
+    {
+      "word": "vorerst.",
+      "start": 2.066,
+      "end": 3.872,
+      "score": 0.959
+    },
+    {
+      "word": "Mehr",
+      "start": 3.892,
+      "end": 4.073,
+      "score": 0.891
+    },
+    {
+      "word": "dazu",
+      "start": 4.093,
+      "end": 4.534,
+      "score": 0.978
+    },
+    {
+      "word": "in",
+      "start": 4.574,
+      "end": 4.715,
+      "score": 0.997
+    },
+    {
+      "word": "einem",
+      "start": 4.755,
+      "end": 5.036,
+      "score": 0.994
+    },
+    {
+      "word": "zukünftigen",
+      "start": 5.076,
+      "end": 5.698,
+      "score": 0.884
+    },
+    {
+      "word": "Update.",
+      "start": 5.738,
+      "end": 5.999,
+      "score": 0.463
+    }
+  ]
+}

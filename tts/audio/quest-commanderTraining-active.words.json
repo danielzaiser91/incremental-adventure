@@ -1,0 +1,181 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 4.998,
+      "text": "Kommandant Roswald hat mich in die Taverne eingeladen, um über die Nachtwache zu reden.",
+      "words": [
+        {
+          "word": "Kommandant",
+          "start": 0.401,
+          "end": 0.883,
+          "score": 0.819
+        },
+        {
+          "word": "Roswald",
+          "start": 0.964,
+          "end": 1.546,
+          "score": 0.887
+        },
+        {
+          "word": "hat",
+          "start": 1.566,
+          "end": 1.706,
+          "score": 0.983
+        },
+        {
+          "word": "mich",
+          "start": 1.726,
+          "end": 1.847,
+          "score": 0.865
+        },
+        {
+          "word": "in",
+          "start": 1.887,
+          "end": 1.987,
+          "score": 0.535
+        },
+        {
+          "word": "die",
+          "start": 2.007,
+          "end": 2.088,
+          "score": 0.834
+        },
+        {
+          "word": "Taverne",
+          "start": 2.108,
+          "end": 2.549,
+          "score": 0.923
+        },
+        {
+          "word": "eingeladen,",
+          "start": 2.589,
+          "end": 3.533,
+          "score": 0.896
+        },
+        {
+          "word": "um",
+          "start": 3.573,
+          "end": 3.754,
+          "score": 0.948
+        },
+        {
+          "word": "über",
+          "start": 3.794,
+          "end": 3.954,
+          "score": 0.999
+        },
+        {
+          "word": "die",
+          "start": 3.975,
+          "end": 4.095,
+          "score": 0.722
+        },
+        {
+          "word": "Nachtwache",
+          "start": 4.115,
+          "end": 4.617,
+          "score": 0.909
+        },
+        {
+          "word": "zu",
+          "start": 4.657,
+          "end": 4.757,
+          "score": 0.966
+        },
+        {
+          "word": "reden.",
+          "start": 4.798,
+          "end": 4.998,
+          "score": 0.972
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Kommandant",
+      "start": 0.401,
+      "end": 0.883,
+      "score": 0.819
+    },
+    {
+      "word": "Roswald",
+      "start": 0.964,
+      "end": 1.546,
+      "score": 0.887
+    },
+    {
+      "word": "hat",
+      "start": 1.566,
+      "end": 1.706,
+      "score": 0.983
+    },
+    {
+      "word": "mich",
+      "start": 1.726,
+      "end": 1.847,
+      "score": 0.865
+    },
+    {
+      "word": "in",
+      "start": 1.887,
+      "end": 1.987,
+      "score": 0.535
+    },
+    {
+      "word": "die",
+      "start": 2.007,
+      "end": 2.088,
+      "score": 0.834
+    },
+    {
+      "word": "Taverne",
+      "start": 2.108,
+      "end": 2.549,
+      "score": 0.923
+    },
+    {
+      "word": "eingeladen,",
+      "start": 2.589,
+      "end": 3.533,
+      "score": 0.896
+    },
+    {
+      "word": "um",
+      "start": 3.573,
+      "end": 3.754,
+      "score": 0.948
+    },
+    {
+      "word": "über",
+      "start": 3.794,
+      "end": 3.954,
+      "score": 0.999
+    },
+    {
+      "word": "die",
+      "start": 3.975,
+      "end": 4.095,
+      "score": 0.722
+    },
+    {
+      "word": "Nachtwache",
+      "start": 4.115,
+      "end": 4.617,
+      "score": 0.909
+    },
+    {
+      "word": "zu",
+      "start": 4.657,
+      "end": 4.757,
+      "score": 0.966
+    },
+    {
+      "word": "reden.",
+      "start": 4.798,
+      "end": 4.998,
+      "score": 0.972
+    }
+  ]
+}

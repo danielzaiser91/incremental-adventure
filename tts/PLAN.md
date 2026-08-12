@@ -56,7 +56,10 @@ mit dem neuen Modell.
   auch mit umformulierter Textvariante (`TTS_TEXT_OVERRIDES`). Das ist keine
   Transienz mehr; der Knoten steht doch in `SKIP_IDS`, die Ursachen-Isolation
   (Text vs. Stimme vs. Stil) übernimmt die Gratis-Diagnostik `tts/probe.js`
-  bei leerer Quota (Schritt 3 der Nacht-Routine).
+  bei leerer Quota (Schritt 3 der Nacht-Routine). **Aufgeklärt 12.08.2026:**
+  Derselbe Text mit derselben Stimme, aber Erzähler-Stil statt Greta-Persona,
+  lief sofort mit HTTP 200 durch → Auslöser ist der Persona-Stil-Prompt, nicht
+  der Knotentext. Siehe Phase 4.
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -141,9 +144,13 @@ mit dem neuen Modell.
       Textvariante via `TTS_TEXT_OVERRIDES` in extract-manifest.js — beide
       400). Damit ist die Transienz-These für DIESEN Knoten widerlegt und er
       steht seit 12.08. doch in `SKIP_IDS` (Ausnahme von der 09.08.-Regel
-      „400er nicht skippen": die galt für transiente Fälle). Nächster Schritt:
-      Gratis-Diagnostik bei leerer Quota via `tts/probe.js` (Stimme/Stil/Text
-      isolieren), übernimmt die Nacht-Routine.
+      „400er nicht skippen": die galt für transiente Fälle).
+      **Diagnostik gelaufen (12.08.2026, 22:19):** Erste Sonde
+      (`--narrator-style`, Stimme Despina unverändert) lieferte **HTTP 200 mit
+      Audio** — Text und Stimme sind also unschuldig, ausgelöst hat den 400 der
+      **Greta-Persona-Stil-Prompt** aus `NPC_PROFILES`. Nächster Schritt:
+      Stil-Prompt für Greta umformulieren (oder gezielter Style-Override für
+      diesen Knoten) und `npc-greta-turnIn` aus `SKIP_IDS` nehmen.
 - [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
       Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
       Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
@@ -155,8 +162,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten. *Stand 10.08.2026: 8/177
-      (Quests 8/139, Objectives 0/38).*
+      Manifest umfasst damit 331 Einheiten. *Stand 12.08.2026: 20/177
+      (Quests 20/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -290,3 +297,6 @@ nachgelagerter Extra-Lauf.
 - 12.08.2026 13:15 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.
 - 12.08.2026 13:16 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.
 - 12.08.2026 13:35 — Manueller Arbeitsblock (Session): npc-greta-turnIn 7.+8. HTTP 400 (auch mit Textvariante) → SKIP_IDS + probe.js-Diagnostik an die Nacht-Routine übergeben. Opus-Pipeline + Auto-Alignment in generate-batch.js integriert, 163 Bestands-WAVs konvertiert. v0.22.10 released (Dialog-Button „Schließen“). Einbau-Entscheidung Daniel: direkt umsetzen — Spiel lädt aus tts/audio/ (56 Paare veröffentlicht), Audio-UI nur mit Wort-Timing. Phase 7 gestrichen. Alignment-Backlog läuft. 2 Quota-Slots verbraucht, 8 für die Nacht-Routine übrig.
+- 12.08.2026 22:15 — Batch: 8 Dateien (quest-kraemerinBusiness-invited … quest-commanderTraining-active), 40 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 171/331 im Manifest.
+- 12.08.2026 22:16 — `publish-audio.js`: 8 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 8 Einheiten fehlerfrei.
+- 12.08.2026 22:19 — **Diagnostik `npc-greta-turnIn` aufgeklärt (Sonde 1 von 4 reichte).** `node tts/probe.js npc-greta-turnIn --narrator-style` (Stimme Despina unverändert, nur Stil getauscht) lieferte **HTTP 200 mit Audio** — der Knoten ist damit generierbar. Ergebnis: Weder Text noch Stimme lösen die 8 HTTP 400 aus, sondern der **Greta-Persona-Stil-Prompt** aus `NPC_PROFILES`. Die restlichen drei Sonden entfielen planmäßig, weil ein 200 einen Quota-Slot kostet. **Nebenbefund zur Quota:** Die Sonde war der 12. Request des Tages und lief NACH einem echten 429 (Request 11) trotzdem durch — die Tagesgrenze von 10 ist also nicht hart, das 429 kam mit `retryDelay: 18s`. Nicht überinterpretieren, aber im Blick behalten. Nächster Schritt für den Knoten: Greta-Stil-Prompt umformulieren (Verdacht: der Rollensatz „geschäftstüchtige, freundliche Krämerin …" in Kombination mit dem Regie-/Rede-Absatz), dann aus `SKIP_IDS` nehmen und regulär mitlaufen lassen — keine weiteren Blind-Retries.
