@@ -1,10 +1,11 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.23.0-alpha
+**Aktuelle Version:** v0.23.1-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 
 **Zuletzt gefixt / geändert:**
+- Technische Build-Anzeige oben links (Überbleibsel aus der Testphase) wird nicht mehr eingeblendet
 - Dialoge: Der letzte Button einer Serie heißt jetzt „Schließen" statt „Weiter" — kein irritierendes „Weiter", das in Wahrheit schließt
 - Yevas Handelsnetz-Quest: Investitionsangebot war nach Abschluss der Schulden-Quest nicht erreichbar, Wartetimer wurde nie gestartet — behoben
 - Gildenmeisterin Yeva nicht ansprechbar trotz aktiver Quest — behoben

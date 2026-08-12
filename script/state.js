@@ -6,7 +6,7 @@
 'use strict';
 
 const SAVE_KEY = 'chronicles_v1';
-const GAME_VERSION = '0.23.0-alpha';
+const GAME_VERSION = '0.23.1-alpha';
 const WORK_DURATION_BASE_MS = 2000;
 
 /* ── Enum-Konstanten — verhindert Tippfehler bei Magic Strings ──────────── */
@@ -267,6 +267,9 @@ const SAVE_CHANGELOG = {
    Wird nach einem Update-Banner-Reload als Dialog angezeigt.
    Kein Spoiler-System nötig — der Spieler hat die Version bewusst geladen. */
 const VERSION_NOTES = {
+  '0.23.1-alpha': [
+    { cat: 'Bugfix', text: 'Die technische Build-Anzeige oben links wird nicht mehr eingeblendet — sie war ein Überbleibsel aus der Testphase.' },
+  ],
   '0.23.0-alpha': [
     { cat: 'Neuerung', text: 'Die Story-Chronik hat eine Stimme: Jeder Story-Dialog bietet eine Vorlese-Steuerung mit Wort-für-Wort-Hervorhebung und seitenweisem Stopp. Die Wiedergabe startet nur per Klick.' },
   ],

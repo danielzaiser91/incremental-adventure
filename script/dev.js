@@ -14,6 +14,20 @@ window.devMode = function() {
   render();
 };
 
+/** Schaltet den Entwickler-Modus wieder ab (Button im Dev-Panel). */
+function disableDevMode() {
+  gameFlags.devModeEnabled = false;
+  showToast('Entwickler-Modus beendet.', TOAST.INFO);
+  render();
+}
+
+/** Blendet das Build-Badge oben links passend zum Entwickler-Modus ein/aus.
+    Wird aus render() (main.js) aufgerufen, damit jede Umschaltung greift. */
+function updateDevBadge() {
+  const badge = document.getElementById('dev-build-badge');
+  if (badge) badge.classList.toggle('hidden', !gameFlags.devModeEnabled);
+}
+
 /** Lauscht auf die Tastenkombination "daniel" (ohne Eingabefeld), wenn
     man sich auf der Einstellungs-Seite befindet — aktiviert den Dev-Modus. */
 function setupDevKeyListener() {
@@ -44,6 +58,12 @@ function renderDevPanel(container) {
   container.innerHTML = `
     <div class="settings-group dev-panel">
       <div class="settings-group-title">🛠 Entwickler-Optionen</div>
+
+      <div class="dev-row">
+        <label class="dev-label">Entwickler-Modus</label>
+        <button class="dev-btn dev-btn-warn" onclick="disableDevMode()"
+          title="Blendet Dev-Panel und Build-Anzeige wieder aus">Beenden</button>
+      </div>
 
       <div class="dev-row">
         <label class="dev-label">Gold setzen</label>

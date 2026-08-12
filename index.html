@@ -12,11 +12,11 @@
 </head>
 <body>
 
-  <!-- ══ DEV-BUILD-BADGE: NUR TTS-Vertonungs-Prototyp (tts/PLAN.md), zeigt
-       den Cache-Bust-Stand statisch an, damit im Test klar ist, ob der
-       Browser wirklich die neueste Version geladen hat. Vor echtem Release
-       wieder entfernen — kein Spieler-Feature. -->
-  <div id="dev-build-badge">Build v1</div>
+  <!-- ══ DEV-BUILD-BADGE: zeigt den Cache-Bust-Stand an, damit im Test klar
+       ist, ob der Browser wirklich die neueste Version geladen hat. Nur im
+       Entwickler-Modus sichtbar (updateDevBadge() in dev.js schaltet um) —
+       kein Spieler-Feature. -->
+  <div id="dev-build-badge" class="hidden">Build v1</div>
 
   <!-- ══ UPDATE-BANNER: neue Version verfügbar ═══════════════════ -->
   <div id="update-banner" class="hidden" onclick="saveAndReload()">

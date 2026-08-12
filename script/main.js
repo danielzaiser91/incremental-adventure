@@ -14,6 +14,7 @@ function render() {
   renderContent();
   renderStats();
   renderObjective();
+  updateDevBadge();
   updateMusicForContext();
 }
 

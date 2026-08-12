@@ -11,6 +11,11 @@ Alle Versionen, neueste zuerst. Patch-Versionen (Bugfix-only) werden als Unterab
 - Audio-Dateien + Wort-Timings liegen versioniert unter `tts/audio/`; die Steuerung erscheint nur bei Einträgen mit Timing-Daten
 - Vertonungen für NPC-Dialoge, Skill-Monologe und Quests sind bereits produziert und werden in kommenden Versionen ins Spiel eingebunden
 
+**Bugfixes (v0.23.1)**
+
+### v0.23.1
+- Die technische Build-Anzeige oben links wird nicht mehr eingeblendet — sie war ein Überbleibsel aus der Testphase
+
 ---
 
 ## v0.22 — Feldarbeit-Meisterschaft & Schlaf-Feintuning
