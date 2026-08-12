@@ -70,6 +70,30 @@ function init() {
   prefetchAllStoryWords();
   if (shouldAutoLoad()) loadGame();
   else render();
+
+  // ═══ TEST-OVERRIDE — AUSKOMMENTIERT LASSEN ════════════════════════════════
+  // Setzt den Spielstand hart auf "Nacht, am Schlafplatz, kurz vor der ersten
+  // Nacht (story-1.3)" — für den story-1-3-Highlighting-Test. Ein Klick auf
+  // "Schlafen" (Straße) löst story-1.3 dann sofort aus.
+  // Zum Testen den Block einkommentieren, danach WIEDER auskommentieren:
+  // aktiv committet landet jeder Spieler in diesem Zustand, weil dieses Repo
+  // automatisch auf GitHub Pages ausgeliefert wird.
+  // storyState = 10102;
+  // gameFlags.jobUnlocked = true;
+  // gameFlags.jobSearchDialogShown = true;
+  // gameFlags.milestoneStrangerTriggered = true;
+  // gameFlags.firstNightDialogShown = true;
+  // gameFlags.firstSleepTriggered = false;
+  // resources.totalGoldEarned = 10;
+  // gameClock.hour = 23;
+  // if (!shownDialogs.includes('1.1')) shownDialogs.push('1.1');
+  // if (!shownDialogs.includes('1.2')) shownDialogs.push('1.2');
+  // navLevel = NAV_LEVEL.STADT;
+  // currentCity = CONTENT.TREUTHEIM;
+  // currentContent = CONTENT.SCHLAFPLATZ;
+  // render();
+  // ═══ ENDE TEST-OVERRIDE ═══════════════════════════════════════════════════
+
   applySelectionSetting();
   setupAutoSave();
   setupAutomation();

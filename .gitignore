@@ -11,11 +11,16 @@ test/screenshots/
 test/walkthrough_k*.md
 .env.local
 
-# TTS-Audio (unkomprimiert, lokal — bis Opus-Kompression steht). Die
-# Wort-Zeitstempel (*.words.json, siehe tts/align/) sind winzige Textdateien
-# und werden bewusst NICHT ignoriert — die braucht das Wort-Highlighting auch
-# im deployten Spiel, unabhängig vom noch fehlenden Audio-Rollout.
+# TTS-Pipeline: tts/audio/ ist der EINZIGE veröffentlichte Ort und liegt im
+# Repo — dort stehen Opus-Datei und Wort-Zeitstempel jeder fertigen Einheit,
+# beides braucht das Spiel im Betrieb. Alles hier drunter sind reine
+# Arbeitsverzeichnisse: output/ enthält die WAV-Rohaufnahmen (publish-audio.js
+# verschiebt das fertige Opus samt Timings nach audio/), align/ die Ein- und
+# Ausgabe des Forced-Alignment. Nichts davon gehört ins Repo, sonst liegt
+# dieselbe Vertonung zweimal darin.
 tts/output/
+tts/align/*.txt
+tts/align/*.words.json
 
 # TTS-Forced-Alignment: lokale Python-venv + Modell-Cache (nicht Teil des Repos)
 tts/align/.venv/

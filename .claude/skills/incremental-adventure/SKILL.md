@@ -148,7 +148,22 @@ Weg: `npx playwright install chromium` (lädt nach
 Node-Skript mit `require('playwright')` (lokal installieren, **nicht**
 `npx playwright` für das Test-Skript selbst — `npx` löst das Modul
 nicht für `require()` auf). Python `http.server` im Projektordner für
-den simplen Static-Server reicht.
+den simplen Static-Server reicht — **außer beim Testen der
+TTS-Vertonung** (`<audio>`-Seeking, `script/dialog.js`): Pythons
+`http.server` unterstützt keine HTTP-Range-Requests (verifiziert per
+`curl -I -H "Range: bytes=..."` → immer `200 OK` mit vollem
+`Content-Length`, nie `206 Partial Content`). Dadurch bleibt
+`player.seekable` bei `[[0,0]]` hängen, selbst wenn die Datei komplett
+geladen ist (`readyState=4`) — jeder Versuch, `player.currentTime` auf
+einen Seitenanfang zu setzen, wird dann still ignoriert und die
+Wiedergabe beginnt wieder bei 0. Sieht aus wie ein Bug im
+Highlighting-/Seek-Code, ist aber ein reines Testserver-Artefakt.
+Fix: `.claude/launch.json` nutzt für diesen Server `npx serve` statt
+`python -m http.server` (unterstützt Range, verifiziert per selbem
+`curl`-Check → `206 Partial Content` + `Accept-Ranges: bytes`) — bei
+jedem Test, der Audio-Seek/Wort-Highlighting/Seiten-Pausieren betrifft,
+sicherstellen, dass der laufende Server tatsächlich `npx serve` ist,
+nicht versehentlich wieder `python -m http.server`.
 
 **Schneller testen, nicht Echtzeit abwarten:** Für zeit-/
 bedürfnisabhängige Mechaniken (Müdigkeit, Hunger, Tageszeit,
