@@ -1,0 +1,1003 @@
+{
+  "segments": [
+    {
+      "start": 0.52,
+      "end": 3.422,
+      "text": "Korbin zieht mich nah zu sich heran.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.52,
+          "end": 1.001,
+          "score": 0.694
+        },
+        {
+          "word": "zieht",
+          "start": 1.041,
+          "end": 1.281,
+          "score": 0.778
+        },
+        {
+          "word": "mich",
+          "start": 1.301,
+          "end": 1.541,
+          "score": 0.95
+        },
+        {
+          "word": "nah",
+          "start": 1.581,
+          "end": 1.861,
+          "score": 0.767
+        },
+        {
+          "word": "zu",
+          "start": 1.901,
+          "end": 2.061,
+          "score": 0.966
+        },
+        {
+          "word": "sich",
+          "start": 2.101,
+          "end": 2.241,
+          "score": 0.953
+        },
+        {
+          "word": "heran.",
+          "start": 2.281,
+          "end": 3.422,
+          "score": 0.967
+        }
+      ]
+    },
+    {
+      "start": 3.442,
+      "end": 5.883,
+      "text": "Sein Atem riecht nach Bier und nach Vorsicht.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 3.442,
+          "end": 3.642,
+          "score": 0.804
+        },
+        {
+          "word": "Atem",
+          "start": 3.682,
+          "end": 3.982,
+          "score": 0.86
+        },
+        {
+          "word": "riecht",
+          "start": 4.082,
+          "end": 4.262,
+          "score": 0.783
+        },
+        {
+          "word": "nach",
+          "start": 4.302,
+          "end": 4.503,
+          "score": 0.94
+        },
+        {
+          "word": "Bier",
+          "start": 4.543,
+          "end": 5.023,
+          "score": 0.871
+        },
+        {
+          "word": "und",
+          "start": 5.063,
+          "end": 5.223,
+          "score": 0.79
+        },
+        {
+          "word": "nach",
+          "start": 5.263,
+          "end": 5.463,
+          "score": 0.859
+        },
+        {
+          "word": "Vorsicht.",
+          "start": 5.503,
+          "end": 5.883,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 7.424,
+      "end": 9.986,
+      "text": "»Drei Neue allein in diesem Monat.",
+      "words": [
+        {
+          "word": "»Drei",
+          "start": 7.424,
+          "end": 7.824,
+          "score": 0.881
+        },
+        {
+          "word": "Neue",
+          "start": 7.864,
+          "end": 8.205,
+          "score": 0.974
+        },
+        {
+          "word": "allein",
+          "start": 8.245,
+          "end": 8.645,
+          "score": 0.91
+        },
+        {
+          "word": "in",
+          "start": 8.685,
+          "end": 8.785,
+          "score": 0.99
+        },
+        {
+          "word": "diesem",
+          "start": 8.825,
+          "end": 9.065,
+          "score": 0.814
+        },
+        {
+          "word": "Monat.",
+          "start": 9.105,
+          "end": 9.986,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 10.026,
+      "end": 14.588,
+      "text": "Immer dasselbe: ankommen, schuften, beraubt werden.",
+      "words": [
+        {
+          "word": "Immer",
+          "start": 10.026,
+          "end": 10.226,
+          "score": 0.94
+        },
+        {
+          "word": "dasselbe:",
+          "start": 10.266,
+          "end": 11.326,
+          "score": 0.92
+        },
+        {
+          "word": "ankommen,",
+          "start": 11.366,
+          "end": 12.167,
+          "score": 0.903
+        },
+        {
+          "word": "schuften,",
+          "start": 12.207,
+          "end": 13.007,
+          "score": 0.895
+        },
+        {
+          "word": "beraubt",
+          "start": 13.027,
+          "end": 13.448,
+          "score": 0.924
+        },
+        {
+          "word": "werden.",
+          "start": 13.488,
+          "end": 14.588,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 14.608,
+      "end": 21.732,
+      "text": "Du bist nicht der Erste, Fremder.« »Es gibt einen in dieser Stadt, den alle nur den Schatten nennen.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 14.608,
+          "end": 14.728,
+          "score": 0.82
+        },
+        {
+          "word": "bist",
+          "start": 14.748,
+          "end": 15.008,
+          "score": 0.776
+        },
+        {
+          "word": "nicht",
+          "start": 15.028,
+          "end": 15.229,
+          "score": 0.788
+        },
+        {
+          "word": "der",
+          "start": 15.269,
+          "end": 15.409,
+          "score": 0.875
+        },
+        {
+          "word": "Erste,",
+          "start": 15.469,
+          "end": 15.769,
+          "score": 0.934
+        },
+        {
+          "word": "Fremder.«",
+          "start": 15.809,
+          "end": 17.57,
+          "score": 0.929
+        },
+        {
+          "word": "»Es",
+          "start": 17.59,
+          "end": 17.79,
+          "score": 0.889
+        },
+        {
+          "word": "gibt",
+          "start": 17.81,
+          "end": 18.09,
+          "score": 0.975
+        },
+        {
+          "word": "einen",
+          "start": 18.13,
+          "end": 18.41,
+          "score": 0.883
+        },
+        {
+          "word": "in",
+          "start": 18.45,
+          "end": 18.55,
+          "score": 0.942
+        },
+        {
+          "word": "dieser",
+          "start": 18.59,
+          "end": 18.811,
+          "score": 0.815
+        },
+        {
+          "word": "Stadt,",
+          "start": 18.831,
+          "end": 19.351,
+          "score": 0.821
+        },
+        {
+          "word": "den",
+          "start": 19.371,
+          "end": 19.591,
+          "score": 0.749
+        },
+        {
+          "word": "alle",
+          "start": 19.631,
+          "end": 19.831,
+          "score": 0.89
+        },
+        {
+          "word": "nur",
+          "start": 19.851,
+          "end": 20.011,
+          "score": 0.987
+        },
+        {
+          "word": "den",
+          "start": 20.031,
+          "end": 20.231,
+          "score": 0.818
+        },
+        {
+          "word": "Schatten",
+          "start": 20.251,
+          "end": 20.632,
+          "score": 0.896
+        },
+        {
+          "word": "nennen.",
+          "start": 20.652,
+          "end": 21.732,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 21.772,
+      "end": 24.074,
+      "text": "Er sucht sich die Neuen aus.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 21.772,
+          "end": 22.032,
+          "score": 0.792
+        },
+        {
+          "word": "sucht",
+          "start": 22.072,
+          "end": 22.333,
+          "score": 0.865
+        },
+        {
+          "word": "sich",
+          "start": 22.373,
+          "end": 22.533,
+          "score": 0.919
+        },
+        {
+          "word": "die",
+          "start": 22.553,
+          "end": 22.733,
+          "score": 0.973
+        },
+        {
+          "word": "Neuen",
+          "start": 22.773,
+          "end": 23.073,
+          "score": 0.901
+        },
+        {
+          "word": "aus.",
+          "start": 23.133,
+          "end": 24.074,
+          "score": 0.929
+        }
+      ]
+    },
+    {
+      "start": 24.114,
+      "end": 35.04,
+      "text": "Einen, dem er traut, schickt er vor — einen, der beobachtet und entscheidet, ob die Beute sich lohnt.« Mir wird kalt, obwohl die Wärme der Taverne mich umfängt.",
+      "words": [
+        {
+          "word": "Einen,",
+          "start": 24.114,
+          "end": 24.374,
+          "score": 0.834
+        },
+        {
+          "word": "dem",
+          "start": 24.394,
+          "end": 24.574,
+          "score": 0.925
+        },
+        {
+          "word": "er",
+          "start": 24.594,
+          "end": 24.714,
+          "score": 0.784
+        },
+        {
+          "word": "traut,",
+          "start": 24.754,
+          "end": 25.114,
+          "score": 0.861
+        },
+        {
+          "word": "schickt",
+          "start": 25.134,
+          "end": 25.394,
+          "score": 0.906
+        },
+        {
+          "word": "er",
+          "start": 25.434,
+          "end": 25.554,
+          "score": 0.77
+        },
+        {
+          "word": "vor",
+          "start": 25.594,
+          "end": 25.735,
+          "score": 0.916
+        },
+        {
+          "word": "—",
+          "start": 26.315,
+          "end": 26.335,
+          "score": 0.936
+        },
+        {
+          "word": "einen,",
+          "start": 26.355,
+          "end": 26.615,
+          "score": 0.917
+        },
+        {
+          "word": "der",
+          "start": 26.635,
+          "end": 26.755,
+          "score": 0.826
+        },
+        {
+          "word": "beobachtet",
+          "start": 26.795,
+          "end": 27.476,
+          "score": 0.913
+        },
+        {
+          "word": "und",
+          "start": 27.516,
+          "end": 27.696,
+          "score": 0.798
+        },
+        {
+          "word": "entscheidet,",
+          "start": 27.736,
+          "end": 28.256,
+          "score": 0.903
+        },
+        {
+          "word": "ob",
+          "start": 28.276,
+          "end": 28.416,
+          "score": 0.949
+        },
+        {
+          "word": "die",
+          "start": 28.456,
+          "end": 28.576,
+          "score": 0.915
+        },
+        {
+          "word": "Beute",
+          "start": 28.616,
+          "end": 28.956,
+          "score": 0.865
+        },
+        {
+          "word": "sich",
+          "start": 28.976,
+          "end": 29.156,
+          "score": 0.912
+        },
+        {
+          "word": "lohnt.«",
+          "start": 29.196,
+          "end": 31.738,
+          "score": 0.832
+        },
+        {
+          "word": "Mir",
+          "start": 31.758,
+          "end": 31.898,
+          "score": 0.723
+        },
+        {
+          "word": "wird",
+          "start": 31.938,
+          "end": 32.118,
+          "score": 0.978
+        },
+        {
+          "word": "kalt,",
+          "start": 32.158,
+          "end": 33.159,
+          "score": 0.975
+        },
+        {
+          "word": "obwohl",
+          "start": 33.179,
+          "end": 33.499,
+          "score": 0.938
+        },
+        {
+          "word": "die",
+          "start": 33.519,
+          "end": 33.639,
+          "score": 0.737
+        },
+        {
+          "word": "Wärme",
+          "start": 33.679,
+          "end": 33.959,
+          "score": 0.947
+        },
+        {
+          "word": "der",
+          "start": 33.999,
+          "end": 34.099,
+          "score": 0.892
+        },
+        {
+          "word": "Taverne",
+          "start": 34.119,
+          "end": 34.519,
+          "score": 0.737
+        },
+        {
+          "word": "mich",
+          "start": 34.56,
+          "end": 34.7,
+          "score": 0.788
+        },
+        {
+          "word": "umfängt.",
+          "start": 34.74,
+          "end": 35.04,
+          "score": 0.934
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.52,
+      "end": 1.001,
+      "score": 0.694
+    },
+    {
+      "word": "zieht",
+      "start": 1.041,
+      "end": 1.281,
+      "score": 0.778
+    },
+    {
+      "word": "mich",
+      "start": 1.301,
+      "end": 1.541,
+      "score": 0.95
+    },
+    {
+      "word": "nah",
+      "start": 1.581,
+      "end": 1.861,
+      "score": 0.767
+    },
+    {
+      "word": "zu",
+      "start": 1.901,
+      "end": 2.061,
+      "score": 0.966
+    },
+    {
+      "word": "sich",
+      "start": 2.101,
+      "end": 2.241,
+      "score": 0.953
+    },
+    {
+      "word": "heran.",
+      "start": 2.281,
+      "end": 3.422,
+      "score": 0.967
+    },
+    {
+      "word": "Sein",
+      "start": 3.442,
+      "end": 3.642,
+      "score": 0.804
+    },
+    {
+      "word": "Atem",
+      "start": 3.682,
+      "end": 3.982,
+      "score": 0.86
+    },
+    {
+      "word": "riecht",
+      "start": 4.082,
+      "end": 4.262,
+      "score": 0.783
+    },
+    {
+      "word": "nach",
+      "start": 4.302,
+      "end": 4.503,
+      "score": 0.94
+    },
+    {
+      "word": "Bier",
+      "start": 4.543,
+      "end": 5.023,
+      "score": 0.871
+    },
+    {
+      "word": "und",
+      "start": 5.063,
+      "end": 5.223,
+      "score": 0.79
+    },
+    {
+      "word": "nach",
+      "start": 5.263,
+      "end": 5.463,
+      "score": 0.859
+    },
+    {
+      "word": "Vorsicht.",
+      "start": 5.503,
+      "end": 5.883,
+      "score": 0.932
+    },
+    {
+      "word": "»Drei",
+      "start": 7.424,
+      "end": 7.824,
+      "score": 0.881
+    },
+    {
+      "word": "Neue",
+      "start": 7.864,
+      "end": 8.205,
+      "score": 0.974
+    },
+    {
+      "word": "allein",
+      "start": 8.245,
+      "end": 8.645,
+      "score": 0.91
+    },
+    {
+      "word": "in",
+      "start": 8.685,
+      "end": 8.785,
+      "score": 0.99
+    },
+    {
+      "word": "diesem",
+      "start": 8.825,
+      "end": 9.065,
+      "score": 0.814
+    },
+    {
+      "word": "Monat.",
+      "start": 9.105,
+      "end": 9.986,
+      "score": 0.914
+    },
+    {
+      "word": "Immer",
+      "start": 10.026,
+      "end": 10.226,
+      "score": 0.94
+    },
+    {
+      "word": "dasselbe:",
+      "start": 10.266,
+      "end": 11.326,
+      "score": 0.92
+    },
+    {
+      "word": "ankommen,",
+      "start": 11.366,
+      "end": 12.167,
+      "score": 0.903
+    },
+    {
+      "word": "schuften,",
+      "start": 12.207,
+      "end": 13.007,
+      "score": 0.895
+    },
+    {
+      "word": "beraubt",
+      "start": 13.027,
+      "end": 13.448,
+      "score": 0.924
+    },
+    {
+      "word": "werden.",
+      "start": 13.488,
+      "end": 14.588,
+      "score": 0.945
+    },
+    {
+      "word": "Du",
+      "start": 14.608,
+      "end": 14.728,
+      "score": 0.82
+    },
+    {
+      "word": "bist",
+      "start": 14.748,
+      "end": 15.008,
+      "score": 0.776
+    },
+    {
+      "word": "nicht",
+      "start": 15.028,
+      "end": 15.229,
+      "score": 0.788
+    },
+    {
+      "word": "der",
+      "start": 15.269,
+      "end": 15.409,
+      "score": 0.875
+    },
+    {
+      "word": "Erste,",
+      "start": 15.469,
+      "end": 15.769,
+      "score": 0.934
+    },
+    {
+      "word": "Fremder.«",
+      "start": 15.809,
+      "end": 17.57,
+      "score": 0.929
+    },
+    {
+      "word": "»Es",
+      "start": 17.59,
+      "end": 17.79,
+      "score": 0.889
+    },
+    {
+      "word": "gibt",
+      "start": 17.81,
+      "end": 18.09,
+      "score": 0.975
+    },
+    {
+      "word": "einen",
+      "start": 18.13,
+      "end": 18.41,
+      "score": 0.883
+    },
+    {
+      "word": "in",
+      "start": 18.45,
+      "end": 18.55,
+      "score": 0.942
+    },
+    {
+      "word": "dieser",
+      "start": 18.59,
+      "end": 18.811,
+      "score": 0.815
+    },
+    {
+      "word": "Stadt,",
+      "start": 18.831,
+      "end": 19.351,
+      "score": 0.821
+    },
+    {
+      "word": "den",
+      "start": 19.371,
+      "end": 19.591,
+      "score": 0.749
+    },
+    {
+      "word": "alle",
+      "start": 19.631,
+      "end": 19.831,
+      "score": 0.89
+    },
+    {
+      "word": "nur",
+      "start": 19.851,
+      "end": 20.011,
+      "score": 0.987
+    },
+    {
+      "word": "den",
+      "start": 20.031,
+      "end": 20.231,
+      "score": 0.818
+    },
+    {
+      "word": "Schatten",
+      "start": 20.251,
+      "end": 20.632,
+      "score": 0.896
+    },
+    {
+      "word": "nennen.",
+      "start": 20.652,
+      "end": 21.732,
+      "score": 0.926
+    },
+    {
+      "word": "Er",
+      "start": 21.772,
+      "end": 22.032,
+      "score": 0.792
+    },
+    {
+      "word": "sucht",
+      "start": 22.072,
+      "end": 22.333,
+      "score": 0.865
+    },
+    {
+      "word": "sich",
+      "start": 22.373,
+      "end": 22.533,
+      "score": 0.919
+    },
+    {
+      "word": "die",
+      "start": 22.553,
+      "end": 22.733,
+      "score": 0.973
+    },
+    {
+      "word": "Neuen",
+      "start": 22.773,
+      "end": 23.073,
+      "score": 0.901
+    },
+    {
+      "word": "aus.",
+      "start": 23.133,
+      "end": 24.074,
+      "score": 0.929
+    },
+    {
+      "word": "Einen,",
+      "start": 24.114,
+      "end": 24.374,
+      "score": 0.834
+    },
+    {
+      "word": "dem",
+      "start": 24.394,
+      "end": 24.574,
+      "score": 0.925
+    },
+    {
+      "word": "er",
+      "start": 24.594,
+      "end": 24.714,
+      "score": 0.784
+    },
+    {
+      "word": "traut,",
+      "start": 24.754,
+      "end": 25.114,
+      "score": 0.861
+    },
+    {
+      "word": "schickt",
+      "start": 25.134,
+      "end": 25.394,
+      "score": 0.906
+    },
+    {
+      "word": "er",
+      "start": 25.434,
+      "end": 25.554,
+      "score": 0.77
+    },
+    {
+      "word": "vor",
+      "start": 25.594,
+      "end": 25.735,
+      "score": 0.916
+    },
+    {
+      "word": "—",
+      "start": 26.315,
+      "end": 26.335,
+      "score": 0.936
+    },
+    {
+      "word": "einen,",
+      "start": 26.355,
+      "end": 26.615,
+      "score": 0.917
+    },
+    {
+      "word": "der",
+      "start": 26.635,
+      "end": 26.755,
+      "score": 0.826
+    },
+    {
+      "word": "beobachtet",
+      "start": 26.795,
+      "end": 27.476,
+      "score": 0.913
+    },
+    {
+      "word": "und",
+      "start": 27.516,
+      "end": 27.696,
+      "score": 0.798
+    },
+    {
+      "word": "entscheidet,",
+      "start": 27.736,
+      "end": 28.256,
+      "score": 0.903
+    },
+    {
+      "word": "ob",
+      "start": 28.276,
+      "end": 28.416,
+      "score": 0.949
+    },
+    {
+      "word": "die",
+      "start": 28.456,
+      "end": 28.576,
+      "score": 0.915
+    },
+    {
+      "word": "Beute",
+      "start": 28.616,
+      "end": 28.956,
+      "score": 0.865
+    },
+    {
+      "word": "sich",
+      "start": 28.976,
+      "end": 29.156,
+      "score": 0.912
+    },
+    {
+      "word": "lohnt.«",
+      "start": 29.196,
+      "end": 31.738,
+      "score": 0.832
+    },
+    {
+      "word": "Mir",
+      "start": 31.758,
+      "end": 31.898,
+      "score": 0.723
+    },
+    {
+      "word": "wird",
+      "start": 31.938,
+      "end": 32.118,
+      "score": 0.978
+    },
+    {
+      "word": "kalt,",
+      "start": 32.158,
+      "end": 33.159,
+      "score": 0.975
+    },
+    {
+      "word": "obwohl",
+      "start": 33.179,
+      "end": 33.499,
+      "score": 0.938
+    },
+    {
+      "word": "die",
+      "start": 33.519,
+      "end": 33.639,
+      "score": 0.737
+    },
+    {
+      "word": "Wärme",
+      "start": 33.679,
+      "end": 33.959,
+      "score": 0.947
+    },
+    {
+      "word": "der",
+      "start": 33.999,
+      "end": 34.099,
+      "score": 0.892
+    },
+    {
+      "word": "Taverne",
+      "start": 34.119,
+      "end": 34.519,
+      "score": 0.737
+    },
+    {
+      "word": "mich",
+      "start": 34.56,
+      "end": 34.7,
+      "score": 0.788
+    },
+    {
+      "word": "umfängt.",
+      "start": 34.74,
+      "end": 35.04,
+      "score": 0.934
+    }
+  ]
+}

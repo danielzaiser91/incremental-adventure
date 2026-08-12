@@ -1,0 +1,554 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 5.704,
+      "text": "Oswin hebt die Augenbraue, kaum merklich.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.44,
+          "end": 1.001,
+          "score": 0.771
+        },
+        {
+          "word": "hebt",
+          "start": 1.061,
+          "end": 1.401,
+          "score": 0.915
+        },
+        {
+          "word": "die",
+          "start": 1.441,
+          "end": 1.681,
+          "score": 0.908
+        },
+        {
+          "word": "Augenbraue,",
+          "start": 1.741,
+          "end": 3.283,
+          "score": 0.957
+        },
+        {
+          "word": "kaum",
+          "start": 3.323,
+          "end": 3.783,
+          "score": 0.939
+        },
+        {
+          "word": "merklich.",
+          "start": 3.823,
+          "end": 5.704,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 5.764,
+      "end": 7.226,
+      "text": "\"Ah.",
+      "words": [
+        {
+          "word": "\"Ah.",
+          "start": 5.764,
+          "end": 7.226,
+          "score": 0.566
+        }
+      ]
+    },
+    {
+      "start": 7.266,
+      "end": 10.508,
+      "text": "Du hast es tatsächlich getan.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 7.266,
+          "end": 7.386,
+          "score": 0.868
+        },
+        {
+          "word": "hast",
+          "start": 7.426,
+          "end": 7.666,
+          "score": 0.893
+        },
+        {
+          "word": "es",
+          "start": 7.706,
+          "end": 7.946,
+          "score": 0.954
+        },
+        {
+          "word": "tatsächlich",
+          "start": 8.006,
+          "end": 9.047,
+          "score": 0.889
+        },
+        {
+          "word": "getan.\"",
+          "start": 9.087,
+          "end": 10.508,
+          "score": 0.994
+        }
+      ]
+    },
+    {
+      "start": 10.568,
+      "end": 14.451,
+      "text": "Er nickt, kurz und knapp.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 10.568,
+          "end": 10.748,
+          "score": 0.952
+        },
+        {
+          "word": "nickt,",
+          "start": 10.788,
+          "end": 11.729,
+          "score": 0.959
+        },
+        {
+          "word": "kurz",
+          "start": 11.789,
+          "end": 12.269,
+          "score": 0.866
+        },
+        {
+          "word": "und",
+          "start": 12.329,
+          "end": 12.57,
+          "score": 0.989
+        },
+        {
+          "word": "knapp.",
+          "start": 12.63,
+          "end": 14.451,
+          "score": 0.971
+        }
+      ]
+    },
+    {
+      "start": 14.471,
+      "end": 15.512,
+      "text": "\"Hier.",
+      "words": [
+        {
+          "word": "\"Hier.",
+          "start": 14.471,
+          "end": 15.512,
+          "score": 0.778
+        }
+      ]
+    },
+    {
+      "start": 15.552,
+      "end": 17.593,
+      "text": "Du hast dir das verdient.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 15.552,
+          "end": 15.672,
+          "score": 0.772
+        },
+        {
+          "word": "hast",
+          "start": 15.712,
+          "end": 15.912,
+          "score": 0.924
+        },
+        {
+          "word": "dir",
+          "start": 15.932,
+          "end": 16.072,
+          "score": 0.504
+        },
+        {
+          "word": "das",
+          "start": 16.112,
+          "end": 16.312,
+          "score": 0.926
+        },
+        {
+          "word": "verdient.",
+          "start": 16.333,
+          "end": 17.593,
+          "score": 0.853
+        }
+      ]
+    },
+    {
+      "start": 17.634,
+      "end": 21.997,
+      "text": "Und — ich merke mir das.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 17.634,
+          "end": 18.814,
+          "score": 0.974
+        },
+        {
+          "word": "—",
+          "start": 18.834,
+          "end": 18.854,
+          "score": 0.976
+        },
+        {
+          "word": "ich",
+          "start": 18.874,
+          "end": 19.155,
+          "score": 0.909
+        },
+        {
+          "word": "merke",
+          "start": 19.215,
+          "end": 19.695,
+          "score": 0.987
+        },
+        {
+          "word": "mir",
+          "start": 19.735,
+          "end": 19.955,
+          "score": 0.945
+        },
+        {
+          "word": "das.\"",
+          "start": 19.995,
+          "end": 21.997,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 22.037,
+      "end": 25.66,
+      "text": "Zum ersten Mal sieht er mich an, als wäre ich ein Mensch.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 22.037,
+          "end": 22.337,
+          "score": 0.846
+        },
+        {
+          "word": "ersten",
+          "start": 22.397,
+          "end": 22.858,
+          "score": 0.811
+        },
+        {
+          "word": "Mal",
+          "start": 22.918,
+          "end": 23.258,
+          "score": 0.891
+        },
+        {
+          "word": "sieht",
+          "start": 23.278,
+          "end": 23.418,
+          "score": 0.933
+        },
+        {
+          "word": "er",
+          "start": 23.478,
+          "end": 23.558,
+          "score": 0.799
+        },
+        {
+          "word": "mich",
+          "start": 23.598,
+          "end": 23.818,
+          "score": 0.918
+        },
+        {
+          "word": "an,",
+          "start": 23.858,
+          "end": 24.118,
+          "score": 0.944
+        },
+        {
+          "word": "als",
+          "start": 24.158,
+          "end": 24.419,
+          "score": 0.931
+        },
+        {
+          "word": "wäre",
+          "start": 24.459,
+          "end": 24.719,
+          "score": 0.931
+        },
+        {
+          "word": "ich",
+          "start": 24.739,
+          "end": 24.939,
+          "score": 0.797
+        },
+        {
+          "word": "ein",
+          "start": 24.959,
+          "end": 25.239,
+          "score": 0.757
+        },
+        {
+          "word": "Mensch.",
+          "start": 25.279,
+          "end": 25.66,
+          "score": 0.818
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.44,
+      "end": 1.001,
+      "score": 0.771
+    },
+    {
+      "word": "hebt",
+      "start": 1.061,
+      "end": 1.401,
+      "score": 0.915
+    },
+    {
+      "word": "die",
+      "start": 1.441,
+      "end": 1.681,
+      "score": 0.908
+    },
+    {
+      "word": "Augenbraue,",
+      "start": 1.741,
+      "end": 3.283,
+      "score": 0.957
+    },
+    {
+      "word": "kaum",
+      "start": 3.323,
+      "end": 3.783,
+      "score": 0.939
+    },
+    {
+      "word": "merklich.",
+      "start": 3.823,
+      "end": 5.704,
+      "score": 0.871
+    },
+    {
+      "word": "\"Ah.",
+      "start": 5.764,
+      "end": 7.226,
+      "score": 0.566
+    },
+    {
+      "word": "Du",
+      "start": 7.266,
+      "end": 7.386,
+      "score": 0.868
+    },
+    {
+      "word": "hast",
+      "start": 7.426,
+      "end": 7.666,
+      "score": 0.893
+    },
+    {
+      "word": "es",
+      "start": 7.706,
+      "end": 7.946,
+      "score": 0.954
+    },
+    {
+      "word": "tatsächlich",
+      "start": 8.006,
+      "end": 9.047,
+      "score": 0.889
+    },
+    {
+      "word": "getan.\"",
+      "start": 9.087,
+      "end": 10.508,
+      "score": 0.994
+    },
+    {
+      "word": "Er",
+      "start": 10.568,
+      "end": 10.748,
+      "score": 0.952
+    },
+    {
+      "word": "nickt,",
+      "start": 10.788,
+      "end": 11.729,
+      "score": 0.959
+    },
+    {
+      "word": "kurz",
+      "start": 11.789,
+      "end": 12.269,
+      "score": 0.866
+    },
+    {
+      "word": "und",
+      "start": 12.329,
+      "end": 12.57,
+      "score": 0.989
+    },
+    {
+      "word": "knapp.",
+      "start": 12.63,
+      "end": 14.451,
+      "score": 0.971
+    },
+    {
+      "word": "\"Hier.",
+      "start": 14.471,
+      "end": 15.512,
+      "score": 0.778
+    },
+    {
+      "word": "Du",
+      "start": 15.552,
+      "end": 15.672,
+      "score": 0.772
+    },
+    {
+      "word": "hast",
+      "start": 15.712,
+      "end": 15.912,
+      "score": 0.924
+    },
+    {
+      "word": "dir",
+      "start": 15.932,
+      "end": 16.072,
+      "score": 0.504
+    },
+    {
+      "word": "das",
+      "start": 16.112,
+      "end": 16.312,
+      "score": 0.926
+    },
+    {
+      "word": "verdient.",
+      "start": 16.333,
+      "end": 17.593,
+      "score": 0.853
+    },
+    {
+      "word": "Und",
+      "start": 17.634,
+      "end": 18.814,
+      "score": 0.974
+    },
+    {
+      "word": "—",
+      "start": 18.834,
+      "end": 18.854,
+      "score": 0.976
+    },
+    {
+      "word": "ich",
+      "start": 18.874,
+      "end": 19.155,
+      "score": 0.909
+    },
+    {
+      "word": "merke",
+      "start": 19.215,
+      "end": 19.695,
+      "score": 0.987
+    },
+    {
+      "word": "mir",
+      "start": 19.735,
+      "end": 19.955,
+      "score": 0.945
+    },
+    {
+      "word": "das.\"",
+      "start": 19.995,
+      "end": 21.997,
+      "score": 0.939
+    },
+    {
+      "word": "Zum",
+      "start": 22.037,
+      "end": 22.337,
+      "score": 0.846
+    },
+    {
+      "word": "ersten",
+      "start": 22.397,
+      "end": 22.858,
+      "score": 0.811
+    },
+    {
+      "word": "Mal",
+      "start": 22.918,
+      "end": 23.258,
+      "score": 0.891
+    },
+    {
+      "word": "sieht",
+      "start": 23.278,
+      "end": 23.418,
+      "score": 0.933
+    },
+    {
+      "word": "er",
+      "start": 23.478,
+      "end": 23.558,
+      "score": 0.799
+    },
+    {
+      "word": "mich",
+      "start": 23.598,
+      "end": 23.818,
+      "score": 0.918
+    },
+    {
+      "word": "an,",
+      "start": 23.858,
+      "end": 24.118,
+      "score": 0.944
+    },
+    {
+      "word": "als",
+      "start": 24.158,
+      "end": 24.419,
+      "score": 0.931
+    },
+    {
+      "word": "wäre",
+      "start": 24.459,
+      "end": 24.719,
+      "score": 0.931
+    },
+    {
+      "word": "ich",
+      "start": 24.739,
+      "end": 24.939,
+      "score": 0.797
+    },
+    {
+      "word": "ein",
+      "start": 24.959,
+      "end": 25.239,
+      "score": 0.757
+    },
+    {
+      "word": "Mensch.",
+      "start": 25.279,
+      "end": 25.66,
+      "score": 0.818
+    }
+  ]
+}

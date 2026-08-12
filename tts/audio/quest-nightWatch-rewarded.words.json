@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.851,
+      "text": "Abgeschlossen — Brakka hat sich bedankt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.461,
+          "end": 1.043,
+          "score": 0.872
+        },
+        {
+          "word": "—",
+          "start": 1.665,
+          "end": 1.685,
+          "score": 0.257
+        },
+        {
+          "word": "Brakka",
+          "start": 1.725,
+          "end": 2.186,
+          "score": 0.871
+        },
+        {
+          "word": "hat",
+          "start": 2.226,
+          "end": 2.367,
+          "score": 0.947
+        },
+        {
+          "word": "sich",
+          "start": 2.387,
+          "end": 2.567,
+          "score": 0.998
+        },
+        {
+          "word": "bedankt.",
+          "start": 2.607,
+          "end": 3.851,
+          "score": 0.986
+        }
+      ]
+    },
+    {
+      "start": 3.871,
+      "end": 6.759,
+      "text": "Ich kann von nun an jede Nacht als Stadtwache arbeiten.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.871,
+          "end": 3.951,
+          "score": 0.827
+        },
+        {
+          "word": "kann",
+          "start": 3.991,
+          "end": 4.172,
+          "score": 0.89
+        },
+        {
+          "word": "von",
+          "start": 4.192,
+          "end": 4.392,
+          "score": 0.991
+        },
+        {
+          "word": "nun",
+          "start": 4.432,
+          "end": 4.633,
+          "score": 0.951
+        },
+        {
+          "word": "an",
+          "start": 4.673,
+          "end": 4.934,
+          "score": 0.983
+        },
+        {
+          "word": "jede",
+          "start": 4.974,
+          "end": 5.275,
+          "score": 0.832
+        },
+        {
+          "word": "Nacht",
+          "start": 5.315,
+          "end": 5.576,
+          "score": 0.987
+        },
+        {
+          "word": "als",
+          "start": 5.616,
+          "end": 5.776,
+          "score": 0.993
+        },
+        {
+          "word": "Stadtwache",
+          "start": 5.836,
+          "end": 6.338,
+          "score": 0.877
+        },
+        {
+          "word": "arbeiten.",
+          "start": 6.398,
+          "end": 6.759,
+          "score": 0.905
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.461,
+      "end": 1.043,
+      "score": 0.872
+    },
+    {
+      "word": "—",
+      "start": 1.665,
+      "end": 1.685,
+      "score": 0.257
+    },
+    {
+      "word": "Brakka",
+      "start": 1.725,
+      "end": 2.186,
+      "score": 0.871
+    },
+    {
+      "word": "hat",
+      "start": 2.226,
+      "end": 2.367,
+      "score": 0.947
+    },
+    {
+      "word": "sich",
+      "start": 2.387,
+      "end": 2.567,
+      "score": 0.998
+    },
+    {
+      "word": "bedankt.",
+      "start": 2.607,
+      "end": 3.851,
+      "score": 0.986
+    },
+    {
+      "word": "Ich",
+      "start": 3.871,
+      "end": 3.951,
+      "score": 0.827
+    },
+    {
+      "word": "kann",
+      "start": 3.991,
+      "end": 4.172,
+      "score": 0.89
+    },
+    {
+      "word": "von",
+      "start": 4.192,
+      "end": 4.392,
+      "score": 0.991
+    },
+    {
+      "word": "nun",
+      "start": 4.432,
+      "end": 4.633,
+      "score": 0.951
+    },
+    {
+      "word": "an",
+      "start": 4.673,
+      "end": 4.934,
+      "score": 0.983
+    },
+    {
+      "word": "jede",
+      "start": 4.974,
+      "end": 5.275,
+      "score": 0.832
+    },
+    {
+      "word": "Nacht",
+      "start": 5.315,
+      "end": 5.576,
+      "score": 0.987
+    },
+    {
+      "word": "als",
+      "start": 5.616,
+      "end": 5.776,
+      "score": 0.993
+    },
+    {
+      "word": "Stadtwache",
+      "start": 5.836,
+      "end": 6.338,
+      "score": 0.877
+    },
+    {
+      "word": "arbeiten.",
+      "start": 6.398,
+      "end": 6.759,
+      "score": 0.905
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 5.807,
+      "text": "Der Körper hat gelernt, während der Pause effizienter zu regenerieren.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.521,
+          "end": 0.701,
+          "score": 0.691
+        },
+        {
+          "word": "Körper",
+          "start": 0.721,
+          "end": 1.121,
+          "score": 0.858
+        },
+        {
+          "word": "hat",
+          "start": 1.141,
+          "end": 1.362,
+          "score": 0.885
+        },
+        {
+          "word": "gelernt,",
+          "start": 1.382,
+          "end": 2.243,
+          "score": 0.896
+        },
+        {
+          "word": "während",
+          "start": 2.263,
+          "end": 2.583,
+          "score": 0.882
+        },
+        {
+          "word": "der",
+          "start": 2.603,
+          "end": 2.743,
+          "score": 0.963
+        },
+        {
+          "word": "Pause",
+          "start": 2.783,
+          "end": 3.324,
+          "score": 0.94
+        },
+        {
+          "word": "effizienter",
+          "start": 3.364,
+          "end": 4.165,
+          "score": 0.881
+        },
+        {
+          "word": "zu",
+          "start": 4.185,
+          "end": 4.285,
+          "score": 0.997
+        },
+        {
+          "word": "regenerieren.",
+          "start": 4.345,
+          "end": 5.807,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 5.847,
+      "end": 9.591,
+      "text": "Weniger Hunger danach — nicht weil ich gegessen habe.",
+      "words": [
+        {
+          "word": "Weniger",
+          "start": 5.847,
+          "end": 6.207,
+          "score": 0.908
+        },
+        {
+          "word": "Hunger",
+          "start": 6.247,
+          "end": 6.467,
+          "score": 0.964
+        },
+        {
+          "word": "danach",
+          "start": 6.487,
+          "end": 6.828,
+          "score": 0.84
+        },
+        {
+          "word": "—",
+          "start": 7.268,
+          "end": 7.469,
+          "score": 0.783
+        },
+        {
+          "word": "nicht",
+          "start": 7.489,
+          "end": 7.689,
+          "score": 0.85
+        },
+        {
+          "word": "weil",
+          "start": 7.709,
+          "end": 7.829,
+          "score": 0.953
+        },
+        {
+          "word": "ich",
+          "start": 7.849,
+          "end": 7.969,
+          "score": 0.833
+        },
+        {
+          "word": "gegessen",
+          "start": 8.009,
+          "end": 8.37,
+          "score": 0.934
+        },
+        {
+          "word": "habe.",
+          "start": 8.39,
+          "end": 9.591,
+          "score": 0.987
+        }
+      ]
+    },
+    {
+      "start": 9.651,
+      "end": 13.636,
+      "text": "Echte Erholung verringert, wie dringend die Mahlzeit wird.",
+      "words": [
+        {
+          "word": "Echte",
+          "start": 9.651,
+          "end": 9.991,
+          "score": 0.837
+        },
+        {
+          "word": "Erholung",
+          "start": 10.031,
+          "end": 10.672,
+          "score": 0.927
+        },
+        {
+          "word": "verringert,",
+          "start": 10.712,
+          "end": 11.373,
+          "score": 0.933
+        },
+        {
+          "word": "wie",
+          "start": 11.393,
+          "end": 11.613,
+          "score": 0.975
+        },
+        {
+          "word": "dringend",
+          "start": 11.653,
+          "end": 12.094,
+          "score": 0.954
+        },
+        {
+          "word": "die",
+          "start": 12.114,
+          "end": 12.234,
+          "score": 0.777
+        },
+        {
+          "word": "Mahlzeit",
+          "start": 12.314,
+          "end": 12.775,
+          "score": 0.819
+        },
+        {
+          "word": "wird.",
+          "start": 12.795,
+          "end": 13.636,
+          "score": 0.814
+        }
+      ]
+    },
+    {
+      "start": 13.656,
+      "end": 17.059,
+      "text": "Das ist kein Trick — das ist das Ergebnis langer Übung.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 13.656,
+          "end": 13.796,
+          "score": 0.866
+        },
+        {
+          "word": "ist",
+          "start": 13.816,
+          "end": 13.996,
+          "score": 0.911
+        },
+        {
+          "word": "kein",
+          "start": 14.016,
+          "end": 14.196,
+          "score": 0.869
+        },
+        {
+          "word": "Trick",
+          "start": 14.236,
+          "end": 14.436,
+          "score": 0.894
+        },
+        {
+          "word": "—",
+          "start": 14.977,
+          "end": 14.997,
+          "score": 0.099
+        },
+        {
+          "word": "das",
+          "start": 15.037,
+          "end": 15.157,
+          "score": 0.931
+        },
+        {
+          "word": "ist",
+          "start": 15.197,
+          "end": 15.338,
+          "score": 0.874
+        },
+        {
+          "word": "das",
+          "start": 15.358,
+          "end": 15.558,
+          "score": 0.954
+        },
+        {
+          "word": "Ergebnis",
+          "start": 15.618,
+          "end": 16.379,
+          "score": 0.926
+        },
+        {
+          "word": "langer",
+          "start": 16.419,
+          "end": 16.799,
+          "score": 0.888
+        },
+        {
+          "word": "Übung.",
+          "start": 16.859,
+          "end": 17.059,
+          "score": 0.78
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.521,
+      "end": 0.701,
+      "score": 0.691
+    },
+    {
+      "word": "Körper",
+      "start": 0.721,
+      "end": 1.121,
+      "score": 0.858
+    },
+    {
+      "word": "hat",
+      "start": 1.141,
+      "end": 1.362,
+      "score": 0.885
+    },
+    {
+      "word": "gelernt,",
+      "start": 1.382,
+      "end": 2.243,
+      "score": 0.896
+    },
+    {
+      "word": "während",
+      "start": 2.263,
+      "end": 2.583,
+      "score": 0.882
+    },
+    {
+      "word": "der",
+      "start": 2.603,
+      "end": 2.743,
+      "score": 0.963
+    },
+    {
+      "word": "Pause",
+      "start": 2.783,
+      "end": 3.324,
+      "score": 0.94
+    },
+    {
+      "word": "effizienter",
+      "start": 3.364,
+      "end": 4.165,
+      "score": 0.881
+    },
+    {
+      "word": "zu",
+      "start": 4.185,
+      "end": 4.285,
+      "score": 0.997
+    },
+    {
+      "word": "regenerieren.",
+      "start": 4.345,
+      "end": 5.807,
+      "score": 0.931
+    },
+    {
+      "word": "Weniger",
+      "start": 5.847,
+      "end": 6.207,
+      "score": 0.908
+    },
+    {
+      "word": "Hunger",
+      "start": 6.247,
+      "end": 6.467,
+      "score": 0.964
+    },
+    {
+      "word": "danach",
+      "start": 6.487,
+      "end": 6.828,
+      "score": 0.84
+    },
+    {
+      "word": "—",
+      "start": 7.268,
+      "end": 7.469,
+      "score": 0.783
+    },
+    {
+      "word": "nicht",
+      "start": 7.489,
+      "end": 7.689,
+      "score": 0.85
+    },
+    {
+      "word": "weil",
+      "start": 7.709,
+      "end": 7.829,
+      "score": 0.953
+    },
+    {
+      "word": "ich",
+      "start": 7.849,
+      "end": 7.969,
+      "score": 0.833
+    },
+    {
+      "word": "gegessen",
+      "start": 8.009,
+      "end": 8.37,
+      "score": 0.934
+    },
+    {
+      "word": "habe.",
+      "start": 8.39,
+      "end": 9.591,
+      "score": 0.987
+    },
+    {
+      "word": "Echte",
+      "start": 9.651,
+      "end": 9.991,
+      "score": 0.837
+    },
+    {
+      "word": "Erholung",
+      "start": 10.031,
+      "end": 10.672,
+      "score": 0.927
+    },
+    {
+      "word": "verringert,",
+      "start": 10.712,
+      "end": 11.373,
+      "score": 0.933
+    },
+    {
+      "word": "wie",
+      "start": 11.393,
+      "end": 11.613,
+      "score": 0.975
+    },
+    {
+      "word": "dringend",
+      "start": 11.653,
+      "end": 12.094,
+      "score": 0.954
+    },
+    {
+      "word": "die",
+      "start": 12.114,
+      "end": 12.234,
+      "score": 0.777
+    },
+    {
+      "word": "Mahlzeit",
+      "start": 12.314,
+      "end": 12.775,
+      "score": 0.819
+    },
+    {
+      "word": "wird.",
+      "start": 12.795,
+      "end": 13.636,
+      "score": 0.814
+    },
+    {
+      "word": "Das",
+      "start": 13.656,
+      "end": 13.796,
+      "score": 0.866
+    },
+    {
+      "word": "ist",
+      "start": 13.816,
+      "end": 13.996,
+      "score": 0.911
+    },
+    {
+      "word": "kein",
+      "start": 14.016,
+      "end": 14.196,
+      "score": 0.869
+    },
+    {
+      "word": "Trick",
+      "start": 14.236,
+      "end": 14.436,
+      "score": 0.894
+    },
+    {
+      "word": "—",
+      "start": 14.977,
+      "end": 14.997,
+      "score": 0.099
+    },
+    {
+      "word": "das",
+      "start": 15.037,
+      "end": 15.157,
+      "score": 0.931
+    },
+    {
+      "word": "ist",
+      "start": 15.197,
+      "end": 15.338,
+      "score": 0.874
+    },
+    {
+      "word": "das",
+      "start": 15.358,
+      "end": 15.558,
+      "score": 0.954
+    },
+    {
+      "word": "Ergebnis",
+      "start": 15.618,
+      "end": 16.379,
+      "score": 0.926
+    },
+    {
+      "word": "langer",
+      "start": 16.419,
+      "end": 16.799,
+      "score": 0.888
+    },
+    {
+      "word": "Übung.",
+      "start": 16.859,
+      "end": 17.059,
+      "score": 0.78
+    }
+  ]
+}

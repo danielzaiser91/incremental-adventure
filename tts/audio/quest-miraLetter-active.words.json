@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.293,
+      "text": "Mira hat mir einen versiegelten Brief für Brakka mitgegeben.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.481,
+          "end": 0.903,
+          "score": 0.892
+        },
+        {
+          "word": "hat",
+          "start": 0.923,
+          "end": 1.083,
+          "score": 0.99
+        },
+        {
+          "word": "mir",
+          "start": 1.123,
+          "end": 1.284,
+          "score": 0.871
+        },
+        {
+          "word": "einen",
+          "start": 1.304,
+          "end": 1.525,
+          "score": 0.671
+        },
+        {
+          "word": "versiegelten",
+          "start": 1.565,
+          "end": 2.167,
+          "score": 0.933
+        },
+        {
+          "word": "Brief",
+          "start": 2.207,
+          "end": 2.508,
+          "score": 0.925
+        },
+        {
+          "word": "für",
+          "start": 2.528,
+          "end": 2.668,
+          "score": 0.994
+        },
+        {
+          "word": "Brakka",
+          "start": 2.708,
+          "end": 3.009,
+          "score": 0.818
+        },
+        {
+          "word": "mitgegeben.",
+          "start": 3.029,
+          "end": 4.293,
+          "score": 0.909
+        }
+      ]
+    },
+    {
+      "start": 4.353,
+      "end": 6.059,
+      "text": "Ich sollte ihn in der Taverne abgeben.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.353,
+          "end": 4.434,
+          "score": 0.995
+        },
+        {
+          "word": "sollte",
+          "start": 4.474,
+          "end": 4.775,
+          "score": 0.84
+        },
+        {
+          "word": "ihn",
+          "start": 4.815,
+          "end": 4.975,
+          "score": 0.759
+        },
+        {
+          "word": "in",
+          "start": 5.015,
+          "end": 5.076,
+          "score": 0.754
+        },
+        {
+          "word": "der",
+          "start": 5.116,
+          "end": 5.216,
+          "score": 0.862
+        },
+        {
+          "word": "Taverne",
+          "start": 5.236,
+          "end": 5.678,
+          "score": 0.913
+        },
+        {
+          "word": "abgeben.",
+          "start": 5.718,
+          "end": 6.059,
+          "score": 0.851
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.481,
+      "end": 0.903,
+      "score": 0.892
+    },
+    {
+      "word": "hat",
+      "start": 0.923,
+      "end": 1.083,
+      "score": 0.99
+    },
+    {
+      "word": "mir",
+      "start": 1.123,
+      "end": 1.284,
+      "score": 0.871
+    },
+    {
+      "word": "einen",
+      "start": 1.304,
+      "end": 1.525,
+      "score": 0.671
+    },
+    {
+      "word": "versiegelten",
+      "start": 1.565,
+      "end": 2.167,
+      "score": 0.933
+    },
+    {
+      "word": "Brief",
+      "start": 2.207,
+      "end": 2.508,
+      "score": 0.925
+    },
+    {
+      "word": "für",
+      "start": 2.528,
+      "end": 2.668,
+      "score": 0.994
+    },
+    {
+      "word": "Brakka",
+      "start": 2.708,
+      "end": 3.009,
+      "score": 0.818
+    },
+    {
+      "word": "mitgegeben.",
+      "start": 3.029,
+      "end": 4.293,
+      "score": 0.909
+    },
+    {
+      "word": "Ich",
+      "start": 4.353,
+      "end": 4.434,
+      "score": 0.995
+    },
+    {
+      "word": "sollte",
+      "start": 4.474,
+      "end": 4.775,
+      "score": 0.84
+    },
+    {
+      "word": "ihn",
+      "start": 4.815,
+      "end": 4.975,
+      "score": 0.759
+    },
+    {
+      "word": "in",
+      "start": 5.015,
+      "end": 5.076,
+      "score": 0.754
+    },
+    {
+      "word": "der",
+      "start": 5.116,
+      "end": 5.216,
+      "score": 0.862
+    },
+    {
+      "word": "Taverne",
+      "start": 5.236,
+      "end": 5.678,
+      "score": 0.913
+    },
+    {
+      "word": "abgeben.",
+      "start": 5.718,
+      "end": 6.059,
+      "score": 0.851
+    }
+  ]
+}

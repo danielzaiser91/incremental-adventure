@@ -1,0 +1,315 @@
+{
+  "segments": [
+    {
+      "start": 1.301,
+      "end": 3.684,
+      "text": "\"Drei Stunden.",
+      "words": [
+        {
+          "word": "\"Drei",
+          "start": 1.301,
+          "end": 1.742,
+          "score": 0.825
+        },
+        {
+          "word": "Stunden.",
+          "start": 1.802,
+          "end": 3.684,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 3.724,
+      "end": 12.635,
+      "text": "Acht Hundert Gold — meine Zeit ist knapp, mein Wissen nicht billig.",
+      "words": [
+        {
+          "word": "Acht",
+          "start": 3.724,
+          "end": 3.864,
+          "score": 0.974
+        },
+        {
+          "word": "Hundert",
+          "start": 4.005,
+          "end": 4.345,
+          "score": 0.857
+        },
+        {
+          "word": "Gold",
+          "start": 4.385,
+          "end": 4.685,
+          "score": 0.929
+        },
+        {
+          "word": "—",
+          "start": 6.367,
+          "end": 6.387,
+          "score": 0.968
+        },
+        {
+          "word": "meine",
+          "start": 6.427,
+          "end": 6.728,
+          "score": 0.906
+        },
+        {
+          "word": "Zeit",
+          "start": 6.768,
+          "end": 7.028,
+          "score": 0.92
+        },
+        {
+          "word": "ist",
+          "start": 7.068,
+          "end": 7.288,
+          "score": 0.878
+        },
+        {
+          "word": "knapp,",
+          "start": 7.328,
+          "end": 8.81,
+          "score": 0.94
+        },
+        {
+          "word": "mein",
+          "start": 8.85,
+          "end": 9.11,
+          "score": 0.743
+        },
+        {
+          "word": "Wissen",
+          "start": 9.151,
+          "end": 9.551,
+          "score": 0.867
+        },
+        {
+          "word": "nicht",
+          "start": 9.571,
+          "end": 9.851,
+          "score": 0.823
+        },
+        {
+          "word": "billig.",
+          "start": 9.871,
+          "end": 12.635,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 12.655,
+      "end": 16.499,
+      "text": "Danach arbeitest du anders, als du es je getan hast.\"",
+      "words": [
+        {
+          "word": "Danach",
+          "start": 12.655,
+          "end": 13.375,
+          "score": 0.874
+        },
+        {
+          "word": "arbeitest",
+          "start": 13.435,
+          "end": 13.896,
+          "score": 0.723
+        },
+        {
+          "word": "du",
+          "start": 13.936,
+          "end": 14.136,
+          "score": 0.84
+        },
+        {
+          "word": "anders,",
+          "start": 14.196,
+          "end": 14.977,
+          "score": 0.905
+        },
+        {
+          "word": "als",
+          "start": 15.017,
+          "end": 15.177,
+          "score": 0.93
+        },
+        {
+          "word": "du",
+          "start": 15.217,
+          "end": 15.338,
+          "score": 0.778
+        },
+        {
+          "word": "es",
+          "start": 15.378,
+          "end": 15.578,
+          "score": 0.742
+        },
+        {
+          "word": "je",
+          "start": 15.598,
+          "end": 15.798,
+          "score": 0.794
+        },
+        {
+          "word": "getan",
+          "start": 15.818,
+          "end": 16.199,
+          "score": 0.925
+        },
+        {
+          "word": "hast.\"",
+          "start": 16.239,
+          "end": 16.499,
+          "score": 0.45
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Drei",
+      "start": 1.301,
+      "end": 1.742,
+      "score": 0.825
+    },
+    {
+      "word": "Stunden.",
+      "start": 1.802,
+      "end": 3.684,
+      "score": 0.901
+    },
+    {
+      "word": "Acht",
+      "start": 3.724,
+      "end": 3.864,
+      "score": 0.974
+    },
+    {
+      "word": "Hundert",
+      "start": 4.005,
+      "end": 4.345,
+      "score": 0.857
+    },
+    {
+      "word": "Gold",
+      "start": 4.385,
+      "end": 4.685,
+      "score": 0.929
+    },
+    {
+      "word": "—",
+      "start": 6.367,
+      "end": 6.387,
+      "score": 0.968
+    },
+    {
+      "word": "meine",
+      "start": 6.427,
+      "end": 6.728,
+      "score": 0.906
+    },
+    {
+      "word": "Zeit",
+      "start": 6.768,
+      "end": 7.028,
+      "score": 0.92
+    },
+    {
+      "word": "ist",
+      "start": 7.068,
+      "end": 7.288,
+      "score": 0.878
+    },
+    {
+      "word": "knapp,",
+      "start": 7.328,
+      "end": 8.81,
+      "score": 0.94
+    },
+    {
+      "word": "mein",
+      "start": 8.85,
+      "end": 9.11,
+      "score": 0.743
+    },
+    {
+      "word": "Wissen",
+      "start": 9.151,
+      "end": 9.551,
+      "score": 0.867
+    },
+    {
+      "word": "nicht",
+      "start": 9.571,
+      "end": 9.851,
+      "score": 0.823
+    },
+    {
+      "word": "billig.",
+      "start": 9.871,
+      "end": 12.635,
+      "score": 0.935
+    },
+    {
+      "word": "Danach",
+      "start": 12.655,
+      "end": 13.375,
+      "score": 0.874
+    },
+    {
+      "word": "arbeitest",
+      "start": 13.435,
+      "end": 13.896,
+      "score": 0.723
+    },
+    {
+      "word": "du",
+      "start": 13.936,
+      "end": 14.136,
+      "score": 0.84
+    },
+    {
+      "word": "anders,",
+      "start": 14.196,
+      "end": 14.977,
+      "score": 0.905
+    },
+    {
+      "word": "als",
+      "start": 15.017,
+      "end": 15.177,
+      "score": 0.93
+    },
+    {
+      "word": "du",
+      "start": 15.217,
+      "end": 15.338,
+      "score": 0.778
+    },
+    {
+      "word": "es",
+      "start": 15.378,
+      "end": 15.578,
+      "score": 0.742
+    },
+    {
+      "word": "je",
+      "start": 15.598,
+      "end": 15.798,
+      "score": 0.794
+    },
+    {
+      "word": "getan",
+      "start": 15.818,
+      "end": 16.199,
+      "score": 0.925
+    },
+    {
+      "word": "hast.\"",
+      "start": 16.239,
+      "end": 16.499,
+      "score": 0.45
+    }
+  ]
+}

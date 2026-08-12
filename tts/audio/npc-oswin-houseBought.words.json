@@ -1,0 +1,523 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 5.444,
+      "text": "Oswin nimmt das Gold, ohne es zu zählen.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.48,
+          "end": 1.321,
+          "score": 0.793
+        },
+        {
+          "word": "nimmt",
+          "start": 1.341,
+          "end": 1.721,
+          "score": 0.796
+        },
+        {
+          "word": "das",
+          "start": 1.761,
+          "end": 2.082,
+          "score": 0.922
+        },
+        {
+          "word": "Gold,",
+          "start": 2.122,
+          "end": 3.222,
+          "score": 0.784
+        },
+        {
+          "word": "ohne",
+          "start": 3.282,
+          "end": 3.543,
+          "score": 0.788
+        },
+        {
+          "word": "es",
+          "start": 3.583,
+          "end": 3.803,
+          "score": 0.94
+        },
+        {
+          "word": "zu",
+          "start": 3.843,
+          "end": 4.023,
+          "score": 0.995
+        },
+        {
+          "word": "zählen.",
+          "start": 4.103,
+          "end": 5.444,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 5.484,
+      "end": 10.688,
+      "text": "Er faltet das Papier zusammen und schiebt es mir zu.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 5.484,
+          "end": 5.564,
+          "score": 0.948
+        },
+        {
+          "word": "faltet",
+          "start": 5.624,
+          "end": 5.984,
+          "score": 0.906
+        },
+        {
+          "word": "das",
+          "start": 6.004,
+          "end": 6.225,
+          "score": 0.901
+        },
+        {
+          "word": "Papier",
+          "start": 6.245,
+          "end": 6.745,
+          "score": 0.771
+        },
+        {
+          "word": "zusammen",
+          "start": 6.785,
+          "end": 7.526,
+          "score": 0.945
+        },
+        {
+          "word": "und",
+          "start": 7.566,
+          "end": 7.946,
+          "score": 0.976
+        },
+        {
+          "word": "schiebt",
+          "start": 8.006,
+          "end": 8.286,
+          "score": 0.851
+        },
+        {
+          "word": "es",
+          "start": 8.346,
+          "end": 8.486,
+          "score": 0.986
+        },
+        {
+          "word": "mir",
+          "start": 8.526,
+          "end": 8.807,
+          "score": 0.889
+        },
+        {
+          "word": "zu.",
+          "start": 8.887,
+          "end": 10.688,
+          "score": 0.825
+        }
+      ]
+    },
+    {
+      "start": 10.708,
+      "end": 12.509,
+      "text": "\"Glückwunsch.",
+      "words": [
+        {
+          "word": "\"Glückwunsch.",
+          "start": 10.708,
+          "end": 12.509,
+          "score": 0.82
+        }
+      ]
+    },
+    {
+      "start": 12.529,
+      "end": 15.612,
+      "text": "Du bist jetzt Hauseigentümer.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 12.529,
+          "end": 12.689,
+          "score": 0.816
+        },
+        {
+          "word": "bist",
+          "start": 12.71,
+          "end": 12.97,
+          "score": 0.808
+        },
+        {
+          "word": "jetzt",
+          "start": 12.99,
+          "end": 13.37,
+          "score": 0.947
+        },
+        {
+          "word": "Hauseigentümer.\"",
+          "start": 13.41,
+          "end": 15.612,
+          "score": 0.848
+        }
+      ]
+    },
+    {
+      "start": 15.632,
+      "end": 18.074,
+      "text": "Eine kurze Pause.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 15.632,
+          "end": 15.952,
+          "score": 0.825
+        },
+        {
+          "word": "kurze",
+          "start": 15.992,
+          "end": 16.392,
+          "score": 0.956
+        },
+        {
+          "word": "Pause.",
+          "start": 16.432,
+          "end": 18.074,
+          "score": 0.821
+        }
+      ]
+    },
+    {
+      "start": 18.094,
+      "end": 23.237,
+      "text": "\"Treutheim gewinnt mit jedem Tag.\"",
+      "words": [
+        {
+          "word": "\"Treutheim",
+          "start": 18.094,
+          "end": 19.054,
+          "score": 0.901
+        },
+        {
+          "word": "gewinnt",
+          "start": 19.094,
+          "end": 19.735,
+          "score": 0.908
+        },
+        {
+          "word": "mit",
+          "start": 19.775,
+          "end": 20.175,
+          "score": 0.974
+        },
+        {
+          "word": "jedem",
+          "start": 20.235,
+          "end": 20.736,
+          "score": 0.86
+        },
+        {
+          "word": "Tag.\"",
+          "start": 20.796,
+          "end": 23.237,
+          "score": 0.82
+        }
+      ]
+    },
+    {
+      "start": 23.297,
+      "end": 26.18,
+      "text": "Ich glaube, das war sein Versuch eines Witzes.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 23.297,
+          "end": 23.538,
+          "score": 0.686
+        },
+        {
+          "word": "glaube,",
+          "start": 23.598,
+          "end": 23.998,
+          "score": 0.888
+        },
+        {
+          "word": "das",
+          "start": 24.018,
+          "end": 24.198,
+          "score": 0.946
+        },
+        {
+          "word": "war",
+          "start": 24.238,
+          "end": 24.418,
+          "score": 0.985
+        },
+        {
+          "word": "sein",
+          "start": 24.438,
+          "end": 24.698,
+          "score": 0.792
+        },
+        {
+          "word": "Versuch",
+          "start": 24.739,
+          "end": 25.259,
+          "score": 0.91
+        },
+        {
+          "word": "eines",
+          "start": 25.299,
+          "end": 25.639,
+          "score": 0.915
+        },
+        {
+          "word": "Witzes.",
+          "start": 25.719,
+          "end": 26.18,
+          "score": 0.904
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.48,
+      "end": 1.321,
+      "score": 0.793
+    },
+    {
+      "word": "nimmt",
+      "start": 1.341,
+      "end": 1.721,
+      "score": 0.796
+    },
+    {
+      "word": "das",
+      "start": 1.761,
+      "end": 2.082,
+      "score": 0.922
+    },
+    {
+      "word": "Gold,",
+      "start": 2.122,
+      "end": 3.222,
+      "score": 0.784
+    },
+    {
+      "word": "ohne",
+      "start": 3.282,
+      "end": 3.543,
+      "score": 0.788
+    },
+    {
+      "word": "es",
+      "start": 3.583,
+      "end": 3.803,
+      "score": 0.94
+    },
+    {
+      "word": "zu",
+      "start": 3.843,
+      "end": 4.023,
+      "score": 0.995
+    },
+    {
+      "word": "zählen.",
+      "start": 4.103,
+      "end": 5.444,
+      "score": 0.93
+    },
+    {
+      "word": "Er",
+      "start": 5.484,
+      "end": 5.564,
+      "score": 0.948
+    },
+    {
+      "word": "faltet",
+      "start": 5.624,
+      "end": 5.984,
+      "score": 0.906
+    },
+    {
+      "word": "das",
+      "start": 6.004,
+      "end": 6.225,
+      "score": 0.901
+    },
+    {
+      "word": "Papier",
+      "start": 6.245,
+      "end": 6.745,
+      "score": 0.771
+    },
+    {
+      "word": "zusammen",
+      "start": 6.785,
+      "end": 7.526,
+      "score": 0.945
+    },
+    {
+      "word": "und",
+      "start": 7.566,
+      "end": 7.946,
+      "score": 0.976
+    },
+    {
+      "word": "schiebt",
+      "start": 8.006,
+      "end": 8.286,
+      "score": 0.851
+    },
+    {
+      "word": "es",
+      "start": 8.346,
+      "end": 8.486,
+      "score": 0.986
+    },
+    {
+      "word": "mir",
+      "start": 8.526,
+      "end": 8.807,
+      "score": 0.889
+    },
+    {
+      "word": "zu.",
+      "start": 8.887,
+      "end": 10.688,
+      "score": 0.825
+    },
+    {
+      "word": "\"Glückwunsch.",
+      "start": 10.708,
+      "end": 12.509,
+      "score": 0.82
+    },
+    {
+      "word": "Du",
+      "start": 12.529,
+      "end": 12.689,
+      "score": 0.816
+    },
+    {
+      "word": "bist",
+      "start": 12.71,
+      "end": 12.97,
+      "score": 0.808
+    },
+    {
+      "word": "jetzt",
+      "start": 12.99,
+      "end": 13.37,
+      "score": 0.947
+    },
+    {
+      "word": "Hauseigentümer.\"",
+      "start": 13.41,
+      "end": 15.612,
+      "score": 0.848
+    },
+    {
+      "word": "Eine",
+      "start": 15.632,
+      "end": 15.952,
+      "score": 0.825
+    },
+    {
+      "word": "kurze",
+      "start": 15.992,
+      "end": 16.392,
+      "score": 0.956
+    },
+    {
+      "word": "Pause.",
+      "start": 16.432,
+      "end": 18.074,
+      "score": 0.821
+    },
+    {
+      "word": "\"Treutheim",
+      "start": 18.094,
+      "end": 19.054,
+      "score": 0.901
+    },
+    {
+      "word": "gewinnt",
+      "start": 19.094,
+      "end": 19.735,
+      "score": 0.908
+    },
+    {
+      "word": "mit",
+      "start": 19.775,
+      "end": 20.175,
+      "score": 0.974
+    },
+    {
+      "word": "jedem",
+      "start": 20.235,
+      "end": 20.736,
+      "score": 0.86
+    },
+    {
+      "word": "Tag.\"",
+      "start": 20.796,
+      "end": 23.237,
+      "score": 0.82
+    },
+    {
+      "word": "Ich",
+      "start": 23.297,
+      "end": 23.538,
+      "score": 0.686
+    },
+    {
+      "word": "glaube,",
+      "start": 23.598,
+      "end": 23.998,
+      "score": 0.888
+    },
+    {
+      "word": "das",
+      "start": 24.018,
+      "end": 24.198,
+      "score": 0.946
+    },
+    {
+      "word": "war",
+      "start": 24.238,
+      "end": 24.418,
+      "score": 0.985
+    },
+    {
+      "word": "sein",
+      "start": 24.438,
+      "end": 24.698,
+      "score": 0.792
+    },
+    {
+      "word": "Versuch",
+      "start": 24.739,
+      "end": 25.259,
+      "score": 0.91
+    },
+    {
+      "word": "eines",
+      "start": 25.299,
+      "end": 25.639,
+      "score": 0.915
+    },
+    {
+      "word": "Witzes.",
+      "start": 25.719,
+      "end": 26.18,
+      "score": 0.904
+    }
+  ]
+}

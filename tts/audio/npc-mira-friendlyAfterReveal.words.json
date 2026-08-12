@@ -1,0 +1,195 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.11,
+      "text": "Mira nickt mir zu, als ich näherkomme.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.461,
+          "end": 0.762,
+          "score": 0.772
+        },
+        {
+          "word": "nickt",
+          "start": 0.803,
+          "end": 1.063,
+          "score": 0.779
+        },
+        {
+          "word": "mir",
+          "start": 1.083,
+          "end": 1.284,
+          "score": 0.849
+        },
+        {
+          "word": "zu,",
+          "start": 1.324,
+          "end": 1.525,
+          "score": 0.963
+        },
+        {
+          "word": "als",
+          "start": 1.545,
+          "end": 1.685,
+          "score": 0.991
+        },
+        {
+          "word": "ich",
+          "start": 1.746,
+          "end": 1.906,
+          "score": 0.823
+        },
+        {
+          "word": "näherkomme.",
+          "start": 1.926,
+          "end": 3.11,
+          "score": 0.768
+        }
+      ]
+    },
+    {
+      "start": 3.15,
+      "end": 5.156,
+      "text": "Keine Spielchen mehr.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 3.15,
+          "end": 3.451,
+          "score": 0.743
+        },
+        {
+          "word": "Spielchen",
+          "start": 3.471,
+          "end": 3.953,
+          "score": 0.773
+        },
+        {
+          "word": "mehr.",
+          "start": 3.973,
+          "end": 5.156,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 5.176,
+      "end": 6.019,
+      "text": "\"Wie läuft die Sache?\"",
+      "words": [
+        {
+          "word": "\"Wie",
+          "start": 5.176,
+          "end": 5.337,
+          "score": 0.504
+        },
+        {
+          "word": "läuft",
+          "start": 5.377,
+          "end": 5.638,
+          "score": 0.954
+        },
+        {
+          "word": "die",
+          "start": 5.658,
+          "end": 5.758,
+          "score": 0.784
+        },
+        {
+          "word": "Sache?\"",
+          "start": 5.798,
+          "end": 6.019,
+          "score": 0.643
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.461,
+      "end": 0.762,
+      "score": 0.772
+    },
+    {
+      "word": "nickt",
+      "start": 0.803,
+      "end": 1.063,
+      "score": 0.779
+    },
+    {
+      "word": "mir",
+      "start": 1.083,
+      "end": 1.284,
+      "score": 0.849
+    },
+    {
+      "word": "zu,",
+      "start": 1.324,
+      "end": 1.525,
+      "score": 0.963
+    },
+    {
+      "word": "als",
+      "start": 1.545,
+      "end": 1.685,
+      "score": 0.991
+    },
+    {
+      "word": "ich",
+      "start": 1.746,
+      "end": 1.906,
+      "score": 0.823
+    },
+    {
+      "word": "näherkomme.",
+      "start": 1.926,
+      "end": 3.11,
+      "score": 0.768
+    },
+    {
+      "word": "Keine",
+      "start": 3.15,
+      "end": 3.451,
+      "score": 0.743
+    },
+    {
+      "word": "Spielchen",
+      "start": 3.471,
+      "end": 3.953,
+      "score": 0.773
+    },
+    {
+      "word": "mehr.",
+      "start": 3.973,
+      "end": 5.156,
+      "score": 0.823
+    },
+    {
+      "word": "\"Wie",
+      "start": 5.176,
+      "end": 5.337,
+      "score": 0.504
+    },
+    {
+      "word": "läuft",
+      "start": 5.377,
+      "end": 5.638,
+      "score": 0.954
+    },
+    {
+      "word": "die",
+      "start": 5.658,
+      "end": 5.758,
+      "score": 0.784
+    },
+    {
+      "word": "Sache?\"",
+      "start": 5.798,
+      "end": 6.019,
+      "score": 0.643
+    }
+  ]
+}

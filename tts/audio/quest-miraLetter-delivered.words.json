@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 2.612,
+      "text": "Brief bei Brakka abgegeben.",
+      "words": [
+        {
+          "word": "Brief",
+          "start": 0.462,
+          "end": 0.804,
+          "score": 0.849
+        },
+        {
+          "word": "bei",
+          "start": 0.844,
+          "end": 1.025,
+          "score": 0.95
+        },
+        {
+          "word": "Brakka",
+          "start": 1.065,
+          "end": 1.426,
+          "score": 0.791
+        },
+        {
+          "word": "abgegeben.",
+          "start": 1.466,
+          "end": 2.612,
+          "score": 0.893
+        }
+      ]
+    },
+    {
+      "start": 2.752,
+      "end": 4.158,
+      "text": "Ich sollte Mira davon berichten.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 2.752,
+          "end": 2.873,
+          "score": 0.73
+        },
+        {
+          "word": "sollte",
+          "start": 2.893,
+          "end": 3.194,
+          "score": 0.894
+        },
+        {
+          "word": "Mira",
+          "start": 3.214,
+          "end": 3.495,
+          "score": 0.801
+        },
+        {
+          "word": "davon",
+          "start": 3.516,
+          "end": 3.777,
+          "score": 0.998
+        },
+        {
+          "word": "berichten.",
+          "start": 3.817,
+          "end": 4.158,
+          "score": 0.855
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brief",
+      "start": 0.462,
+      "end": 0.804,
+      "score": 0.849
+    },
+    {
+      "word": "bei",
+      "start": 0.844,
+      "end": 1.025,
+      "score": 0.95
+    },
+    {
+      "word": "Brakka",
+      "start": 1.065,
+      "end": 1.426,
+      "score": 0.791
+    },
+    {
+      "word": "abgegeben.",
+      "start": 1.466,
+      "end": 2.612,
+      "score": 0.893
+    },
+    {
+      "word": "Ich",
+      "start": 2.752,
+      "end": 2.873,
+      "score": 0.73
+    },
+    {
+      "word": "sollte",
+      "start": 2.893,
+      "end": 3.194,
+      "score": 0.894
+    },
+    {
+      "word": "Mira",
+      "start": 3.214,
+      "end": 3.495,
+      "score": 0.801
+    },
+    {
+      "word": "davon",
+      "start": 3.516,
+      "end": 3.777,
+      "score": 0.998
+    },
+    {
+      "word": "berichten.",
+      "start": 3.817,
+      "end": 4.158,
+      "score": 0.855
+    }
+  ]
+}

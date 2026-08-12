@@ -1,0 +1,492 @@
+{
+  "segments": [
+    {
+      "start": 0.661,
+      "end": 2.282,
+      "text": "Zweiter Anlauf.",
+      "words": [
+        {
+          "word": "Zweiter",
+          "start": 0.661,
+          "end": 1.021,
+          "score": 0.824
+        },
+        {
+          "word": "Anlauf.",
+          "start": 1.061,
+          "end": 2.282,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 2.302,
+      "end": 4.184,
+      "text": "Neues Kapitel.",
+      "words": [
+        {
+          "word": "Neues",
+          "start": 2.302,
+          "end": 2.623,
+          "score": 0.93
+        },
+        {
+          "word": "Kapitel.",
+          "start": 2.663,
+          "end": 4.184,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 4.224,
+      "end": 8.568,
+      "text": "Ich dachte, es wäre genauso zermürbend wie das erste Mal.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.224,
+          "end": 4.324,
+          "score": 0.864
+        },
+        {
+          "word": "dachte,",
+          "start": 4.384,
+          "end": 4.624,
+          "score": 0.871
+        },
+        {
+          "word": "es",
+          "start": 4.664,
+          "end": 4.785,
+          "score": 0.85
+        },
+        {
+          "word": "wäre",
+          "start": 4.805,
+          "end": 5.045,
+          "score": 0.868
+        },
+        {
+          "word": "genauso",
+          "start": 5.105,
+          "end": 5.605,
+          "score": 0.883
+        },
+        {
+          "word": "zermürbend",
+          "start": 5.645,
+          "end": 6.286,
+          "score": 0.876
+        },
+        {
+          "word": "wie",
+          "start": 6.306,
+          "end": 6.406,
+          "score": 0.915
+        },
+        {
+          "word": "das",
+          "start": 6.446,
+          "end": 6.646,
+          "score": 0.847
+        },
+        {
+          "word": "erste",
+          "start": 6.686,
+          "end": 6.927,
+          "score": 0.891
+        },
+        {
+          "word": "Mal.",
+          "start": 6.987,
+          "end": 8.568,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 8.588,
+      "end": 14.274,
+      "text": "Dann griff ich den Spaten und merkte: die Bewegungen sitzen.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 8.588,
+          "end": 8.808,
+          "score": 0.884
+        },
+        {
+          "word": "griff",
+          "start": 8.909,
+          "end": 9.089,
+          "score": 0.891
+        },
+        {
+          "word": "ich",
+          "start": 9.129,
+          "end": 9.269,
+          "score": 0.852
+        },
+        {
+          "word": "den",
+          "start": 9.309,
+          "end": 9.449,
+          "score": 0.948
+        },
+        {
+          "word": "Spaten",
+          "start": 9.489,
+          "end": 10.71,
+          "score": 0.929
+        },
+        {
+          "word": "und",
+          "start": 10.73,
+          "end": 10.93,
+          "score": 0.917
+        },
+        {
+          "word": "merkte:",
+          "start": 10.971,
+          "end": 12.172,
+          "score": 0.92
+        },
+        {
+          "word": "die",
+          "start": 12.192,
+          "end": 12.312,
+          "score": 0.852
+        },
+        {
+          "word": "Bewegungen",
+          "start": 12.332,
+          "end": 12.992,
+          "score": 0.946
+        },
+        {
+          "word": "sitzen.",
+          "start": 13.032,
+          "end": 14.274,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 14.294,
+      "end": 16.876,
+      "text": "Meine Hände erinnern sich.",
+      "words": [
+        {
+          "word": "Meine",
+          "start": 14.294,
+          "end": 14.554,
+          "score": 0.955
+        },
+        {
+          "word": "Hände",
+          "start": 14.594,
+          "end": 14.954,
+          "score": 0.848
+        },
+        {
+          "word": "erinnern",
+          "start": 14.994,
+          "end": 15.435,
+          "score": 0.892
+        },
+        {
+          "word": "sich.",
+          "start": 15.475,
+          "end": 16.876,
+          "score": 0.87
+        }
+      ]
+    },
+    {
+      "start": 16.916,
+      "end": 20.5,
+      "text": "Was ich einmal gelernt habe, nimmt mir keiner mehr.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 16.916,
+          "end": 17.016,
+          "score": 0.974
+        },
+        {
+          "word": "ich",
+          "start": 17.056,
+          "end": 17.277,
+          "score": 0.955
+        },
+        {
+          "word": "einmal",
+          "start": 17.297,
+          "end": 17.597,
+          "score": 0.805
+        },
+        {
+          "word": "gelernt",
+          "start": 17.637,
+          "end": 17.977,
+          "score": 0.839
+        },
+        {
+          "word": "habe,",
+          "start": 18.017,
+          "end": 19.439,
+          "score": 0.945
+        },
+        {
+          "word": "nimmt",
+          "start": 19.459,
+          "end": 19.699,
+          "score": 0.982
+        },
+        {
+          "word": "mir",
+          "start": 19.739,
+          "end": 19.999,
+          "score": 0.834
+        },
+        {
+          "word": "keiner",
+          "start": 20.039,
+          "end": 20.319,
+          "score": 0.93
+        },
+        {
+          "word": "mehr.",
+          "start": 20.36,
+          "end": 20.5,
+          "score": 0.746
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zweiter",
+      "start": 0.661,
+      "end": 1.021,
+      "score": 0.824
+    },
+    {
+      "word": "Anlauf.",
+      "start": 1.061,
+      "end": 2.282,
+      "score": 0.933
+    },
+    {
+      "word": "Neues",
+      "start": 2.302,
+      "end": 2.623,
+      "score": 0.93
+    },
+    {
+      "word": "Kapitel.",
+      "start": 2.663,
+      "end": 4.184,
+      "score": 0.944
+    },
+    {
+      "word": "Ich",
+      "start": 4.224,
+      "end": 4.324,
+      "score": 0.864
+    },
+    {
+      "word": "dachte,",
+      "start": 4.384,
+      "end": 4.624,
+      "score": 0.871
+    },
+    {
+      "word": "es",
+      "start": 4.664,
+      "end": 4.785,
+      "score": 0.85
+    },
+    {
+      "word": "wäre",
+      "start": 4.805,
+      "end": 5.045,
+      "score": 0.868
+    },
+    {
+      "word": "genauso",
+      "start": 5.105,
+      "end": 5.605,
+      "score": 0.883
+    },
+    {
+      "word": "zermürbend",
+      "start": 5.645,
+      "end": 6.286,
+      "score": 0.876
+    },
+    {
+      "word": "wie",
+      "start": 6.306,
+      "end": 6.406,
+      "score": 0.915
+    },
+    {
+      "word": "das",
+      "start": 6.446,
+      "end": 6.646,
+      "score": 0.847
+    },
+    {
+      "word": "erste",
+      "start": 6.686,
+      "end": 6.927,
+      "score": 0.891
+    },
+    {
+      "word": "Mal.",
+      "start": 6.987,
+      "end": 8.568,
+      "score": 0.918
+    },
+    {
+      "word": "Dann",
+      "start": 8.588,
+      "end": 8.808,
+      "score": 0.884
+    },
+    {
+      "word": "griff",
+      "start": 8.909,
+      "end": 9.089,
+      "score": 0.891
+    },
+    {
+      "word": "ich",
+      "start": 9.129,
+      "end": 9.269,
+      "score": 0.852
+    },
+    {
+      "word": "den",
+      "start": 9.309,
+      "end": 9.449,
+      "score": 0.948
+    },
+    {
+      "word": "Spaten",
+      "start": 9.489,
+      "end": 10.71,
+      "score": 0.929
+    },
+    {
+      "word": "und",
+      "start": 10.73,
+      "end": 10.93,
+      "score": 0.917
+    },
+    {
+      "word": "merkte:",
+      "start": 10.971,
+      "end": 12.172,
+      "score": 0.92
+    },
+    {
+      "word": "die",
+      "start": 12.192,
+      "end": 12.312,
+      "score": 0.852
+    },
+    {
+      "word": "Bewegungen",
+      "start": 12.332,
+      "end": 12.992,
+      "score": 0.946
+    },
+    {
+      "word": "sitzen.",
+      "start": 13.032,
+      "end": 14.274,
+      "score": 0.935
+    },
+    {
+      "word": "Meine",
+      "start": 14.294,
+      "end": 14.554,
+      "score": 0.955
+    },
+    {
+      "word": "Hände",
+      "start": 14.594,
+      "end": 14.954,
+      "score": 0.848
+    },
+    {
+      "word": "erinnern",
+      "start": 14.994,
+      "end": 15.435,
+      "score": 0.892
+    },
+    {
+      "word": "sich.",
+      "start": 15.475,
+      "end": 16.876,
+      "score": 0.87
+    },
+    {
+      "word": "Was",
+      "start": 16.916,
+      "end": 17.016,
+      "score": 0.974
+    },
+    {
+      "word": "ich",
+      "start": 17.056,
+      "end": 17.277,
+      "score": 0.955
+    },
+    {
+      "word": "einmal",
+      "start": 17.297,
+      "end": 17.597,
+      "score": 0.805
+    },
+    {
+      "word": "gelernt",
+      "start": 17.637,
+      "end": 17.977,
+      "score": 0.839
+    },
+    {
+      "word": "habe,",
+      "start": 18.017,
+      "end": 19.439,
+      "score": 0.945
+    },
+    {
+      "word": "nimmt",
+      "start": 19.459,
+      "end": 19.699,
+      "score": 0.982
+    },
+    {
+      "word": "mir",
+      "start": 19.739,
+      "end": 19.999,
+      "score": 0.834
+    },
+    {
+      "word": "keiner",
+      "start": 20.039,
+      "end": 20.319,
+      "score": 0.93
+    },
+    {
+      "word": "mehr.",
+      "start": 20.36,
+      "end": 20.5,
+      "score": 0.746
+    }
+  ]
+}

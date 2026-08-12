@@ -1,0 +1,291 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 5.169,
+      "text": "Manchmal weiß ich schon, wie es geht, bevor ich es ausprobiert habe.",
+      "words": [
+        {
+          "word": "Manchmal",
+          "start": 0.441,
+          "end": 1.042,
+          "score": 0.87
+        },
+        {
+          "word": "weiß",
+          "start": 1.082,
+          "end": 1.282,
+          "score": 0.991
+        },
+        {
+          "word": "ich",
+          "start": 1.322,
+          "end": 1.483,
+          "score": 0.826
+        },
+        {
+          "word": "schon,",
+          "start": 1.523,
+          "end": 1.763,
+          "score": 0.926
+        },
+        {
+          "word": "wie",
+          "start": 1.803,
+          "end": 1.943,
+          "score": 0.792
+        },
+        {
+          "word": "es",
+          "start": 1.984,
+          "end": 2.164,
+          "score": 0.853
+        },
+        {
+          "word": "geht,",
+          "start": 2.204,
+          "end": 2.725,
+          "score": 0.94
+        },
+        {
+          "word": "bevor",
+          "start": 2.745,
+          "end": 3.166,
+          "score": 0.951
+        },
+        {
+          "word": "ich",
+          "start": 3.206,
+          "end": 3.306,
+          "score": 0.899
+        },
+        {
+          "word": "es",
+          "start": 3.346,
+          "end": 3.546,
+          "score": 0.852
+        },
+        {
+          "word": "ausprobiert",
+          "start": 3.566,
+          "end": 4.147,
+          "score": 0.839
+        },
+        {
+          "word": "habe.",
+          "start": 4.187,
+          "end": 5.169,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "start": 5.189,
+      "end": 8.295,
+      "text": "Das Hirn füllt die Lücken selbst.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 5.189,
+          "end": 5.45,
+          "score": 0.822
+        },
+        {
+          "word": "Hirn",
+          "start": 5.49,
+          "end": 6.011,
+          "score": 0.858
+        },
+        {
+          "word": "füllt",
+          "start": 6.051,
+          "end": 6.351,
+          "score": 0.86
+        },
+        {
+          "word": "die",
+          "start": 6.371,
+          "end": 6.532,
+          "score": 0.771
+        },
+        {
+          "word": "Lücken",
+          "start": 6.572,
+          "end": 6.952,
+          "score": 0.955
+        },
+        {
+          "word": "selbst.",
+          "start": 6.992,
+          "end": 8.295,
+          "score": 0.897
+        }
+      ]
+    },
+    {
+      "start": 8.335,
+      "end": 10.819,
+      "text": "Lernen beschleunigt das Lernen.",
+      "words": [
+        {
+          "word": "Lernen",
+          "start": 8.335,
+          "end": 9.337,
+          "score": 0.892
+        },
+        {
+          "word": "beschleunigt",
+          "start": 9.377,
+          "end": 10.158,
+          "score": 0.841
+        },
+        {
+          "word": "das",
+          "start": 10.198,
+          "end": 10.459,
+          "score": 0.966
+        },
+        {
+          "word": "Lernen.",
+          "start": 10.499,
+          "end": 10.819,
+          "score": 0.815
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Manchmal",
+      "start": 0.441,
+      "end": 1.042,
+      "score": 0.87
+    },
+    {
+      "word": "weiß",
+      "start": 1.082,
+      "end": 1.282,
+      "score": 0.991
+    },
+    {
+      "word": "ich",
+      "start": 1.322,
+      "end": 1.483,
+      "score": 0.826
+    },
+    {
+      "word": "schon,",
+      "start": 1.523,
+      "end": 1.763,
+      "score": 0.926
+    },
+    {
+      "word": "wie",
+      "start": 1.803,
+      "end": 1.943,
+      "score": 0.792
+    },
+    {
+      "word": "es",
+      "start": 1.984,
+      "end": 2.164,
+      "score": 0.853
+    },
+    {
+      "word": "geht,",
+      "start": 2.204,
+      "end": 2.725,
+      "score": 0.94
+    },
+    {
+      "word": "bevor",
+      "start": 2.745,
+      "end": 3.166,
+      "score": 0.951
+    },
+    {
+      "word": "ich",
+      "start": 3.206,
+      "end": 3.306,
+      "score": 0.899
+    },
+    {
+      "word": "es",
+      "start": 3.346,
+      "end": 3.546,
+      "score": 0.852
+    },
+    {
+      "word": "ausprobiert",
+      "start": 3.566,
+      "end": 4.147,
+      "score": 0.839
+    },
+    {
+      "word": "habe.",
+      "start": 4.187,
+      "end": 5.169,
+      "score": 0.995
+    },
+    {
+      "word": "Das",
+      "start": 5.189,
+      "end": 5.45,
+      "score": 0.822
+    },
+    {
+      "word": "Hirn",
+      "start": 5.49,
+      "end": 6.011,
+      "score": 0.858
+    },
+    {
+      "word": "füllt",
+      "start": 6.051,
+      "end": 6.351,
+      "score": 0.86
+    },
+    {
+      "word": "die",
+      "start": 6.371,
+      "end": 6.532,
+      "score": 0.771
+    },
+    {
+      "word": "Lücken",
+      "start": 6.572,
+      "end": 6.952,
+      "score": 0.955
+    },
+    {
+      "word": "selbst.",
+      "start": 6.992,
+      "end": 8.295,
+      "score": 0.897
+    },
+    {
+      "word": "Lernen",
+      "start": 8.335,
+      "end": 9.337,
+      "score": 0.892
+    },
+    {
+      "word": "beschleunigt",
+      "start": 9.377,
+      "end": 10.158,
+      "score": 0.841
+    },
+    {
+      "word": "das",
+      "start": 10.198,
+      "end": 10.459,
+      "score": 0.966
+    },
+    {
+      "word": "Lernen.",
+      "start": 10.499,
+      "end": 10.819,
+      "score": 0.815
+    }
+  ]
+}

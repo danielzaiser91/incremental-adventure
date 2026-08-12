@@ -1,0 +1,744 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 4.584,
+      "text": "Roswald nickt mir knapp zu, ohne aufzustehen.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.44,
+          "end": 0.961,
+          "score": 0.764
+        },
+        {
+          "word": "nickt",
+          "start": 1.001,
+          "end": 1.221,
+          "score": 0.752
+        },
+        {
+          "word": "mir",
+          "start": 1.241,
+          "end": 1.401,
+          "score": 0.758
+        },
+        {
+          "word": "knapp",
+          "start": 1.441,
+          "end": 1.762,
+          "score": 0.952
+        },
+        {
+          "word": "zu,",
+          "start": 1.802,
+          "end": 2.382,
+          "score": 0.962
+        },
+        {
+          "word": "ohne",
+          "start": 2.442,
+          "end": 2.742,
+          "score": 0.87
+        },
+        {
+          "word": "aufzustehen.",
+          "start": 2.783,
+          "end": 4.584,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 4.604,
+      "end": 9.288,
+      "text": "\"Drei Nächte Wache, ohne dass mir jemand was Schlechtes über dich erzählt hat.",
+      "words": [
+        {
+          "word": "\"Drei",
+          "start": 4.604,
+          "end": 4.924,
+          "score": 0.984
+        },
+        {
+          "word": "Nächte",
+          "start": 4.964,
+          "end": 5.325,
+          "score": 0.923
+        },
+        {
+          "word": "Wache,",
+          "start": 5.345,
+          "end": 6.106,
+          "score": 0.971
+        },
+        {
+          "word": "ohne",
+          "start": 6.146,
+          "end": 6.366,
+          "score": 0.76
+        },
+        {
+          "word": "dass",
+          "start": 6.386,
+          "end": 6.566,
+          "score": 0.914
+        },
+        {
+          "word": "mir",
+          "start": 6.586,
+          "end": 6.766,
+          "score": 0.888
+        },
+        {
+          "word": "jemand",
+          "start": 6.806,
+          "end": 7.026,
+          "score": 0.918
+        },
+        {
+          "word": "was",
+          "start": 7.086,
+          "end": 7.206,
+          "score": 0.97
+        },
+        {
+          "word": "Schlechtes",
+          "start": 7.247,
+          "end": 7.687,
+          "score": 0.881
+        },
+        {
+          "word": "über",
+          "start": 7.707,
+          "end": 7.827,
+          "score": 0.966
+        },
+        {
+          "word": "dich",
+          "start": 7.847,
+          "end": 8.027,
+          "score": 0.703
+        },
+        {
+          "word": "erzählt",
+          "start": 8.047,
+          "end": 8.348,
+          "score": 0.922
+        },
+        {
+          "word": "hat.",
+          "start": 8.368,
+          "end": 9.288,
+          "score": 0.857
+        }
+      ]
+    },
+    {
+      "start": 9.328,
+      "end": 12.651,
+      "text": "Das ist mehr, als ich von den meisten Neuen sage.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 9.328,
+          "end": 9.489,
+          "score": 0.914
+        },
+        {
+          "word": "ist",
+          "start": 9.529,
+          "end": 9.709,
+          "score": 0.854
+        },
+        {
+          "word": "mehr,",
+          "start": 9.729,
+          "end": 10.009,
+          "score": 0.814
+        },
+        {
+          "word": "als",
+          "start": 10.029,
+          "end": 10.149,
+          "score": 0.878
+        },
+        {
+          "word": "ich",
+          "start": 10.189,
+          "end": 10.289,
+          "score": 0.973
+        },
+        {
+          "word": "von",
+          "start": 10.329,
+          "end": 10.449,
+          "score": 0.99
+        },
+        {
+          "word": "den",
+          "start": 10.469,
+          "end": 10.61,
+          "score": 0.697
+        },
+        {
+          "word": "meisten",
+          "start": 10.65,
+          "end": 11.01,
+          "score": 0.87
+        },
+        {
+          "word": "Neuen",
+          "start": 11.05,
+          "end": 11.27,
+          "score": 0.84
+        },
+        {
+          "word": "sage.\"",
+          "start": 11.31,
+          "end": 12.651,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 12.691,
+      "end": 18.116,
+      "text": "\"Ich kann dir zeigen, wie man es richtig macht — wo man hinschaut, wann man die Runde wechselt.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 12.691,
+          "end": 12.832,
+          "score": 0.69
+        },
+        {
+          "word": "kann",
+          "start": 12.852,
+          "end": 13.012,
+          "score": 0.868
+        },
+        {
+          "word": "dir",
+          "start": 13.052,
+          "end": 13.252,
+          "score": 0.576
+        },
+        {
+          "word": "zeigen,",
+          "start": 13.292,
+          "end": 13.612,
+          "score": 0.893
+        },
+        {
+          "word": "wie",
+          "start": 13.632,
+          "end": 13.732,
+          "score": 0.912
+        },
+        {
+          "word": "man",
+          "start": 13.772,
+          "end": 13.872,
+          "score": 0.948
+        },
+        {
+          "word": "es",
+          "start": 13.913,
+          "end": 14.073,
+          "score": 0.862
+        },
+        {
+          "word": "richtig",
+          "start": 14.113,
+          "end": 14.433,
+          "score": 0.917
+        },
+        {
+          "word": "macht",
+          "start": 14.473,
+          "end": 14.633,
+          "score": 0.977
+        },
+        {
+          "word": "—",
+          "start": 15.134,
+          "end": 15.154,
+          "score": 0.035
+        },
+        {
+          "word": "wo",
+          "start": 15.174,
+          "end": 15.314,
+          "score": 0.803
+        },
+        {
+          "word": "man",
+          "start": 15.334,
+          "end": 15.514,
+          "score": 0.865
+        },
+        {
+          "word": "hinschaut,",
+          "start": 15.534,
+          "end": 16.315,
+          "score": 0.817
+        },
+        {
+          "word": "wann",
+          "start": 16.335,
+          "end": 16.515,
+          "score": 0.961
+        },
+        {
+          "word": "man",
+          "start": 16.535,
+          "end": 16.695,
+          "score": 0.871
+        },
+        {
+          "word": "die",
+          "start": 16.715,
+          "end": 16.815,
+          "score": 0.754
+        },
+        {
+          "word": "Runde",
+          "start": 16.855,
+          "end": 17.115,
+          "score": 0.973
+        },
+        {
+          "word": "wechselt.",
+          "start": 17.155,
+          "end": 18.116,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 18.136,
+      "end": 21.379,
+      "text": "Das spart dir Kraft UND bringt dir mehr Lohn.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 18.136,
+          "end": 18.317,
+          "score": 0.967
+        },
+        {
+          "word": "spart",
+          "start": 18.357,
+          "end": 18.577,
+          "score": 0.968
+        },
+        {
+          "word": "dir",
+          "start": 18.597,
+          "end": 18.797,
+          "score": 0.621
+        },
+        {
+          "word": "Kraft",
+          "start": 18.837,
+          "end": 19.417,
+          "score": 0.889
+        },
+        {
+          "word": "UND",
+          "start": 19.458,
+          "end": 19.698,
+          "score": 0.889
+        },
+        {
+          "word": "bringt",
+          "start": 19.718,
+          "end": 19.958,
+          "score": 0.864
+        },
+        {
+          "word": "dir",
+          "start": 19.978,
+          "end": 20.158,
+          "score": 0.506
+        },
+        {
+          "word": "mehr",
+          "start": 20.178,
+          "end": 20.378,
+          "score": 0.862
+        },
+        {
+          "word": "Lohn.",
+          "start": 20.418,
+          "end": 21.379,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 21.439,
+      "end": 21.86,
+      "text": "Interesse?\"",
+      "words": [
+        {
+          "word": "Interesse?\"",
+          "start": 21.439,
+          "end": 21.86,
+          "score": 0.862
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.44,
+      "end": 0.961,
+      "score": 0.764
+    },
+    {
+      "word": "nickt",
+      "start": 1.001,
+      "end": 1.221,
+      "score": 0.752
+    },
+    {
+      "word": "mir",
+      "start": 1.241,
+      "end": 1.401,
+      "score": 0.758
+    },
+    {
+      "word": "knapp",
+      "start": 1.441,
+      "end": 1.762,
+      "score": 0.952
+    },
+    {
+      "word": "zu,",
+      "start": 1.802,
+      "end": 2.382,
+      "score": 0.962
+    },
+    {
+      "word": "ohne",
+      "start": 2.442,
+      "end": 2.742,
+      "score": 0.87
+    },
+    {
+      "word": "aufzustehen.",
+      "start": 2.783,
+      "end": 4.584,
+      "score": 0.932
+    },
+    {
+      "word": "\"Drei",
+      "start": 4.604,
+      "end": 4.924,
+      "score": 0.984
+    },
+    {
+      "word": "Nächte",
+      "start": 4.964,
+      "end": 5.325,
+      "score": 0.923
+    },
+    {
+      "word": "Wache,",
+      "start": 5.345,
+      "end": 6.106,
+      "score": 0.971
+    },
+    {
+      "word": "ohne",
+      "start": 6.146,
+      "end": 6.366,
+      "score": 0.76
+    },
+    {
+      "word": "dass",
+      "start": 6.386,
+      "end": 6.566,
+      "score": 0.914
+    },
+    {
+      "word": "mir",
+      "start": 6.586,
+      "end": 6.766,
+      "score": 0.888
+    },
+    {
+      "word": "jemand",
+      "start": 6.806,
+      "end": 7.026,
+      "score": 0.918
+    },
+    {
+      "word": "was",
+      "start": 7.086,
+      "end": 7.206,
+      "score": 0.97
+    },
+    {
+      "word": "Schlechtes",
+      "start": 7.247,
+      "end": 7.687,
+      "score": 0.881
+    },
+    {
+      "word": "über",
+      "start": 7.707,
+      "end": 7.827,
+      "score": 0.966
+    },
+    {
+      "word": "dich",
+      "start": 7.847,
+      "end": 8.027,
+      "score": 0.703
+    },
+    {
+      "word": "erzählt",
+      "start": 8.047,
+      "end": 8.348,
+      "score": 0.922
+    },
+    {
+      "word": "hat.",
+      "start": 8.368,
+      "end": 9.288,
+      "score": 0.857
+    },
+    {
+      "word": "Das",
+      "start": 9.328,
+      "end": 9.489,
+      "score": 0.914
+    },
+    {
+      "word": "ist",
+      "start": 9.529,
+      "end": 9.709,
+      "score": 0.854
+    },
+    {
+      "word": "mehr,",
+      "start": 9.729,
+      "end": 10.009,
+      "score": 0.814
+    },
+    {
+      "word": "als",
+      "start": 10.029,
+      "end": 10.149,
+      "score": 0.878
+    },
+    {
+      "word": "ich",
+      "start": 10.189,
+      "end": 10.289,
+      "score": 0.973
+    },
+    {
+      "word": "von",
+      "start": 10.329,
+      "end": 10.449,
+      "score": 0.99
+    },
+    {
+      "word": "den",
+      "start": 10.469,
+      "end": 10.61,
+      "score": 0.697
+    },
+    {
+      "word": "meisten",
+      "start": 10.65,
+      "end": 11.01,
+      "score": 0.87
+    },
+    {
+      "word": "Neuen",
+      "start": 11.05,
+      "end": 11.27,
+      "score": 0.84
+    },
+    {
+      "word": "sage.\"",
+      "start": 11.31,
+      "end": 12.651,
+      "score": 0.958
+    },
+    {
+      "word": "\"Ich",
+      "start": 12.691,
+      "end": 12.832,
+      "score": 0.69
+    },
+    {
+      "word": "kann",
+      "start": 12.852,
+      "end": 13.012,
+      "score": 0.868
+    },
+    {
+      "word": "dir",
+      "start": 13.052,
+      "end": 13.252,
+      "score": 0.576
+    },
+    {
+      "word": "zeigen,",
+      "start": 13.292,
+      "end": 13.612,
+      "score": 0.893
+    },
+    {
+      "word": "wie",
+      "start": 13.632,
+      "end": 13.732,
+      "score": 0.912
+    },
+    {
+      "word": "man",
+      "start": 13.772,
+      "end": 13.872,
+      "score": 0.948
+    },
+    {
+      "word": "es",
+      "start": 13.913,
+      "end": 14.073,
+      "score": 0.862
+    },
+    {
+      "word": "richtig",
+      "start": 14.113,
+      "end": 14.433,
+      "score": 0.917
+    },
+    {
+      "word": "macht",
+      "start": 14.473,
+      "end": 14.633,
+      "score": 0.977
+    },
+    {
+      "word": "—",
+      "start": 15.134,
+      "end": 15.154,
+      "score": 0.035
+    },
+    {
+      "word": "wo",
+      "start": 15.174,
+      "end": 15.314,
+      "score": 0.803
+    },
+    {
+      "word": "man",
+      "start": 15.334,
+      "end": 15.514,
+      "score": 0.865
+    },
+    {
+      "word": "hinschaut,",
+      "start": 15.534,
+      "end": 16.315,
+      "score": 0.817
+    },
+    {
+      "word": "wann",
+      "start": 16.335,
+      "end": 16.515,
+      "score": 0.961
+    },
+    {
+      "word": "man",
+      "start": 16.535,
+      "end": 16.695,
+      "score": 0.871
+    },
+    {
+      "word": "die",
+      "start": 16.715,
+      "end": 16.815,
+      "score": 0.754
+    },
+    {
+      "word": "Runde",
+      "start": 16.855,
+      "end": 17.115,
+      "score": 0.973
+    },
+    {
+      "word": "wechselt.",
+      "start": 17.155,
+      "end": 18.116,
+      "score": 0.865
+    },
+    {
+      "word": "Das",
+      "start": 18.136,
+      "end": 18.317,
+      "score": 0.967
+    },
+    {
+      "word": "spart",
+      "start": 18.357,
+      "end": 18.577,
+      "score": 0.968
+    },
+    {
+      "word": "dir",
+      "start": 18.597,
+      "end": 18.797,
+      "score": 0.621
+    },
+    {
+      "word": "Kraft",
+      "start": 18.837,
+      "end": 19.417,
+      "score": 0.889
+    },
+    {
+      "word": "UND",
+      "start": 19.458,
+      "end": 19.698,
+      "score": 0.889
+    },
+    {
+      "word": "bringt",
+      "start": 19.718,
+      "end": 19.958,
+      "score": 0.864
+    },
+    {
+      "word": "dir",
+      "start": 19.978,
+      "end": 20.158,
+      "score": 0.506
+    },
+    {
+      "word": "mehr",
+      "start": 20.178,
+      "end": 20.378,
+      "score": 0.862
+    },
+    {
+      "word": "Lohn.",
+      "start": 20.418,
+      "end": 21.379,
+      "score": 0.912
+    },
+    {
+      "word": "Interesse?\"",
+      "start": 21.439,
+      "end": 21.86,
+      "score": 0.862
+    }
+  ]
+}

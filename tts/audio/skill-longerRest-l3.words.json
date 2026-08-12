@@ -1,0 +1,463 @@
+{
+  "segments": [
+    {
+      "start": 0.661,
+      "end": 2.322,
+      "text": "Eine Stunde.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 0.661,
+          "end": 0.921,
+          "score": 0.706
+        },
+        {
+          "word": "Stunde.",
+          "start": 0.961,
+          "end": 2.322,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 2.342,
+      "end": 4.865,
+      "text": "Manche würden sagen: zu lang.",
+      "words": [
+        {
+          "word": "Manche",
+          "start": 2.342,
+          "end": 2.643,
+          "score": 0.89
+        },
+        {
+          "word": "würden",
+          "start": 2.663,
+          "end": 2.963,
+          "score": 0.914
+        },
+        {
+          "word": "sagen:",
+          "start": 2.983,
+          "end": 3.484,
+          "score": 0.932
+        },
+        {
+          "word": "zu",
+          "start": 3.524,
+          "end": 3.704,
+          "score": 0.97
+        },
+        {
+          "word": "lang.",
+          "start": 3.744,
+          "end": 4.865,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 4.905,
+      "end": 7.988,
+      "text": "Ich sage: endlich genug.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.905,
+          "end": 5.085,
+          "score": 0.785
+        },
+        {
+          "word": "sage:",
+          "start": 5.125,
+          "end": 6.106,
+          "score": 0.821
+        },
+        {
+          "word": "endlich",
+          "start": 6.146,
+          "end": 6.647,
+          "score": 0.905
+        },
+        {
+          "word": "genug.",
+          "start": 6.667,
+          "end": 7.988,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 8.008,
+      "end": 11.231,
+      "text": "Ich schlafe nicht — aber ich lasse los.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 8.008,
+          "end": 8.128,
+          "score": 0.801
+        },
+        {
+          "word": "schlafe",
+          "start": 8.148,
+          "end": 8.529,
+          "score": 0.847
+        },
+        {
+          "word": "nicht",
+          "start": 8.569,
+          "end": 8.709,
+          "score": 0.933
+        },
+        {
+          "word": "—",
+          "start": 9.329,
+          "end": 9.349,
+          "score": 0.982
+        },
+        {
+          "word": "aber",
+          "start": 9.369,
+          "end": 9.53,
+          "score": 0.994
+        },
+        {
+          "word": "ich",
+          "start": 9.57,
+          "end": 9.69,
+          "score": 0.739
+        },
+        {
+          "word": "lasse",
+          "start": 9.73,
+          "end": 10.03,
+          "score": 0.9
+        },
+        {
+          "word": "los.",
+          "start": 10.07,
+          "end": 11.231,
+          "score": 0.976
+        }
+      ]
+    },
+    {
+      "start": 11.251,
+      "end": 15.776,
+      "text": "Gedanken, Anspannung, das ständige Rechnen im Kopf.",
+      "words": [
+        {
+          "word": "Gedanken,",
+          "start": 11.251,
+          "end": 12.272,
+          "score": 0.959
+        },
+        {
+          "word": "Anspannung,",
+          "start": 12.292,
+          "end": 13.193,
+          "score": 0.918
+        },
+        {
+          "word": "das",
+          "start": 13.233,
+          "end": 13.434,
+          "score": 0.846
+        },
+        {
+          "word": "ständige",
+          "start": 13.474,
+          "end": 13.894,
+          "score": 0.941
+        },
+        {
+          "word": "Rechnen",
+          "start": 13.954,
+          "end": 14.294,
+          "score": 0.892
+        },
+        {
+          "word": "im",
+          "start": 14.334,
+          "end": 14.455,
+          "score": 0.995
+        },
+        {
+          "word": "Kopf.",
+          "start": 14.495,
+          "end": 15.776,
+          "score": 0.981
+        }
+      ]
+    },
+    {
+      "start": 15.796,
+      "end": 17.578,
+      "text": "Völlige Stille.",
+      "words": [
+        {
+          "word": "Völlige",
+          "start": 15.796,
+          "end": 16.196,
+          "score": 0.971
+        },
+        {
+          "word": "Stille.",
+          "start": 16.236,
+          "end": 17.578,
+          "score": 0.749
+        }
+      ]
+    },
+    {
+      "start": 17.598,
+      "end": 19.5,
+      "text": "Danach bin ich besser als vorher.",
+      "words": [
+        {
+          "word": "Danach",
+          "start": 17.598,
+          "end": 18.118,
+          "score": 0.868
+        },
+        {
+          "word": "bin",
+          "start": 18.158,
+          "end": 18.278,
+          "score": 0.953
+        },
+        {
+          "word": "ich",
+          "start": 18.318,
+          "end": 18.559,
+          "score": 0.85
+        },
+        {
+          "word": "besser",
+          "start": 18.599,
+          "end": 18.899,
+          "score": 0.838
+        },
+        {
+          "word": "als",
+          "start": 18.919,
+          "end": 19.139,
+          "score": 0.956
+        },
+        {
+          "word": "vorher.",
+          "start": 19.179,
+          "end": 19.5,
+          "score": 0.859
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Eine",
+      "start": 0.661,
+      "end": 0.921,
+      "score": 0.706
+    },
+    {
+      "word": "Stunde.",
+      "start": 0.961,
+      "end": 2.322,
+      "score": 0.916
+    },
+    {
+      "word": "Manche",
+      "start": 2.342,
+      "end": 2.643,
+      "score": 0.89
+    },
+    {
+      "word": "würden",
+      "start": 2.663,
+      "end": 2.963,
+      "score": 0.914
+    },
+    {
+      "word": "sagen:",
+      "start": 2.983,
+      "end": 3.484,
+      "score": 0.932
+    },
+    {
+      "word": "zu",
+      "start": 3.524,
+      "end": 3.704,
+      "score": 0.97
+    },
+    {
+      "word": "lang.",
+      "start": 3.744,
+      "end": 4.865,
+      "score": 0.877
+    },
+    {
+      "word": "Ich",
+      "start": 4.905,
+      "end": 5.085,
+      "score": 0.785
+    },
+    {
+      "word": "sage:",
+      "start": 5.125,
+      "end": 6.106,
+      "score": 0.821
+    },
+    {
+      "word": "endlich",
+      "start": 6.146,
+      "end": 6.647,
+      "score": 0.905
+    },
+    {
+      "word": "genug.",
+      "start": 6.667,
+      "end": 7.988,
+      "score": 0.956
+    },
+    {
+      "word": "Ich",
+      "start": 8.008,
+      "end": 8.128,
+      "score": 0.801
+    },
+    {
+      "word": "schlafe",
+      "start": 8.148,
+      "end": 8.529,
+      "score": 0.847
+    },
+    {
+      "word": "nicht",
+      "start": 8.569,
+      "end": 8.709,
+      "score": 0.933
+    },
+    {
+      "word": "—",
+      "start": 9.329,
+      "end": 9.349,
+      "score": 0.982
+    },
+    {
+      "word": "aber",
+      "start": 9.369,
+      "end": 9.53,
+      "score": 0.994
+    },
+    {
+      "word": "ich",
+      "start": 9.57,
+      "end": 9.69,
+      "score": 0.739
+    },
+    {
+      "word": "lasse",
+      "start": 9.73,
+      "end": 10.03,
+      "score": 0.9
+    },
+    {
+      "word": "los.",
+      "start": 10.07,
+      "end": 11.231,
+      "score": 0.976
+    },
+    {
+      "word": "Gedanken,",
+      "start": 11.251,
+      "end": 12.272,
+      "score": 0.959
+    },
+    {
+      "word": "Anspannung,",
+      "start": 12.292,
+      "end": 13.193,
+      "score": 0.918
+    },
+    {
+      "word": "das",
+      "start": 13.233,
+      "end": 13.434,
+      "score": 0.846
+    },
+    {
+      "word": "ständige",
+      "start": 13.474,
+      "end": 13.894,
+      "score": 0.941
+    },
+    {
+      "word": "Rechnen",
+      "start": 13.954,
+      "end": 14.294,
+      "score": 0.892
+    },
+    {
+      "word": "im",
+      "start": 14.334,
+      "end": 14.455,
+      "score": 0.995
+    },
+    {
+      "word": "Kopf.",
+      "start": 14.495,
+      "end": 15.776,
+      "score": 0.981
+    },
+    {
+      "word": "Völlige",
+      "start": 15.796,
+      "end": 16.196,
+      "score": 0.971
+    },
+    {
+      "word": "Stille.",
+      "start": 16.236,
+      "end": 17.578,
+      "score": 0.749
+    },
+    {
+      "word": "Danach",
+      "start": 17.598,
+      "end": 18.118,
+      "score": 0.868
+    },
+    {
+      "word": "bin",
+      "start": 18.158,
+      "end": 18.278,
+      "score": 0.953
+    },
+    {
+      "word": "ich",
+      "start": 18.318,
+      "end": 18.559,
+      "score": 0.85
+    },
+    {
+      "word": "besser",
+      "start": 18.599,
+      "end": 18.899,
+      "score": 0.838
+    },
+    {
+      "word": "als",
+      "start": 18.919,
+      "end": 19.139,
+      "score": 0.956
+    },
+    {
+      "word": "vorher.",
+      "start": 19.179,
+      "end": 19.5,
+      "score": 0.859
+    }
+  ]
+}

@@ -1,0 +1,727 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 6.365,
+      "text": "Brakka lehnt sich zurück und betrachtet mich mit einem Ausdruck, den ich noch nicht an ihm kenne.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.48,
+          "end": 0.921,
+          "score": 0.594
+        },
+        {
+          "word": "lehnt",
+          "start": 0.961,
+          "end": 1.221,
+          "score": 0.692
+        },
+        {
+          "word": "sich",
+          "start": 1.261,
+          "end": 1.501,
+          "score": 0.854
+        },
+        {
+          "word": "zurück",
+          "start": 1.541,
+          "end": 2.102,
+          "score": 0.864
+        },
+        {
+          "word": "und",
+          "start": 2.142,
+          "end": 2.342,
+          "score": 0.922
+        },
+        {
+          "word": "betrachtet",
+          "start": 2.382,
+          "end": 2.922,
+          "score": 0.843
+        },
+        {
+          "word": "mich",
+          "start": 2.962,
+          "end": 3.182,
+          "score": 0.67
+        },
+        {
+          "word": "mit",
+          "start": 3.202,
+          "end": 3.323,
+          "score": 0.904
+        },
+        {
+          "word": "einem",
+          "start": 3.363,
+          "end": 3.663,
+          "score": 0.821
+        },
+        {
+          "word": "Ausdruck,",
+          "start": 3.703,
+          "end": 4.303,
+          "score": 0.98
+        },
+        {
+          "word": "den",
+          "start": 4.323,
+          "end": 4.443,
+          "score": 0.76
+        },
+        {
+          "word": "ich",
+          "start": 4.483,
+          "end": 4.583,
+          "score": 0.84
+        },
+        {
+          "word": "noch",
+          "start": 4.623,
+          "end": 4.784,
+          "score": 0.816
+        },
+        {
+          "word": "nicht",
+          "start": 4.804,
+          "end": 4.964,
+          "score": 0.902
+        },
+        {
+          "word": "an",
+          "start": 5.004,
+          "end": 5.104,
+          "score": 0.882
+        },
+        {
+          "word": "ihm",
+          "start": 5.144,
+          "end": 5.324,
+          "score": 0.815
+        },
+        {
+          "word": "kenne.",
+          "start": 5.364,
+          "end": 6.365,
+          "score": 0.974
+        }
+      ]
+    },
+    {
+      "start": 6.425,
+      "end": 7.566,
+      "text": "Ernsthaft.",
+      "words": [
+        {
+          "word": "Ernsthaft.",
+          "start": 6.425,
+          "end": 7.566,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 7.606,
+      "end": 9.587,
+      "text": "Fast respektvoll.",
+      "words": [
+        {
+          "word": "Fast",
+          "start": 7.606,
+          "end": 7.866,
+          "score": 0.912
+        },
+        {
+          "word": "respektvoll.",
+          "start": 7.906,
+          "end": 9.587,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 9.607,
+      "end": 15.131,
+      "text": "\"Ich kenne Leute, die kommen einmal zur Wache und denken, sie haben etwas bewiesen.\"",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 9.607,
+          "end": 9.727,
+          "score": 0.814
+        },
+        {
+          "word": "kenne",
+          "start": 9.747,
+          "end": 10.048,
+          "score": 0.907
+        },
+        {
+          "word": "Leute,",
+          "start": 10.088,
+          "end": 10.428,
+          "score": 0.828
+        },
+        {
+          "word": "die",
+          "start": 10.448,
+          "end": 10.568,
+          "score": 0.771
+        },
+        {
+          "word": "kommen",
+          "start": 10.608,
+          "end": 11.008,
+          "score": 0.937
+        },
+        {
+          "word": "einmal",
+          "start": 11.048,
+          "end": 11.469,
+          "score": 0.91
+        },
+        {
+          "word": "zur",
+          "start": 11.489,
+          "end": 11.689,
+          "score": 0.876
+        },
+        {
+          "word": "Wache",
+          "start": 11.709,
+          "end": 12.169,
+          "score": 0.971
+        },
+        {
+          "word": "und",
+          "start": 12.209,
+          "end": 12.389,
+          "score": 0.952
+        },
+        {
+          "word": "denken,",
+          "start": 12.429,
+          "end": 12.75,
+          "score": 0.873
+        },
+        {
+          "word": "sie",
+          "start": 12.77,
+          "end": 12.91,
+          "score": 0.855
+        },
+        {
+          "word": "haben",
+          "start": 12.93,
+          "end": 13.19,
+          "score": 0.912
+        },
+        {
+          "word": "etwas",
+          "start": 13.21,
+          "end": 13.53,
+          "score": 0.89
+        },
+        {
+          "word": "bewiesen.\"",
+          "start": 13.55,
+          "end": 15.131,
+          "score": 0.863
+        }
+      ]
+    },
+    {
+      "start": 15.151,
+      "end": 17.934,
+      "text": "\"Drei Tagesschichten hintereinander.",
+      "words": [
+        {
+          "word": "\"Drei",
+          "start": 15.151,
+          "end": 15.532,
+          "score": 0.74
+        },
+        {
+          "word": "Tagesschichten",
+          "start": 15.572,
+          "end": 16.452,
+          "score": 0.897
+        },
+        {
+          "word": "hintereinander.",
+          "start": 16.472,
+          "end": 17.934,
+          "score": 0.953
+        }
+      ]
+    },
+    {
+      "start": 18.014,
+      "end": 19.855,
+      "text": "Ohne Ausreden.",
+      "words": [
+        {
+          "word": "Ohne",
+          "start": 18.014,
+          "end": 18.354,
+          "score": 0.851
+        },
+        {
+          "word": "Ausreden.",
+          "start": 18.414,
+          "end": 19.855,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 19.915,
+      "end": 26.08,
+      "text": "Wenn du das schaffst, vertraue ich dir — und das bedeutet in Treutheim mehr, als du ahnst.\"",
+      "words": [
+        {
+          "word": "Wenn",
+          "start": 19.915,
+          "end": 20.075,
+          "score": 0.86
+        },
+        {
+          "word": "du",
+          "start": 20.095,
+          "end": 20.295,
+          "score": 0.89
+        },
+        {
+          "word": "das",
+          "start": 20.335,
+          "end": 20.516,
+          "score": 0.965
+        },
+        {
+          "word": "schaffst,",
+          "start": 20.556,
+          "end": 21.296,
+          "score": 0.84
+        },
+        {
+          "word": "vertraue",
+          "start": 21.316,
+          "end": 21.756,
+          "score": 0.902
+        },
+        {
+          "word": "ich",
+          "start": 21.796,
+          "end": 21.937,
+          "score": 0.796
+        },
+        {
+          "word": "dir",
+          "start": 21.977,
+          "end": 22.917,
+          "score": 0.808
+        },
+        {
+          "word": "—",
+          "start": 22.937,
+          "end": 22.957,
+          "score": 0.979
+        },
+        {
+          "word": "und",
+          "start": 22.997,
+          "end": 23.218,
+          "score": 0.955
+        },
+        {
+          "word": "das",
+          "start": 23.258,
+          "end": 23.518,
+          "score": 0.955
+        },
+        {
+          "word": "bedeutet",
+          "start": 23.558,
+          "end": 23.978,
+          "score": 0.917
+        },
+        {
+          "word": "in",
+          "start": 24.018,
+          "end": 24.198,
+          "score": 0.692
+        },
+        {
+          "word": "Treutheim",
+          "start": 24.218,
+          "end": 24.859,
+          "score": 0.94
+        },
+        {
+          "word": "mehr,",
+          "start": 24.899,
+          "end": 25.199,
+          "score": 0.969
+        },
+        {
+          "word": "als",
+          "start": 25.239,
+          "end": 25.419,
+          "score": 0.789
+        },
+        {
+          "word": "du",
+          "start": 25.459,
+          "end": 25.659,
+          "score": 0.96
+        },
+        {
+          "word": "ahnst.\"",
+          "start": 25.719,
+          "end": 26.08,
+          "score": 0.673
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.48,
+      "end": 0.921,
+      "score": 0.594
+    },
+    {
+      "word": "lehnt",
+      "start": 0.961,
+      "end": 1.221,
+      "score": 0.692
+    },
+    {
+      "word": "sich",
+      "start": 1.261,
+      "end": 1.501,
+      "score": 0.854
+    },
+    {
+      "word": "zurück",
+      "start": 1.541,
+      "end": 2.102,
+      "score": 0.864
+    },
+    {
+      "word": "und",
+      "start": 2.142,
+      "end": 2.342,
+      "score": 0.922
+    },
+    {
+      "word": "betrachtet",
+      "start": 2.382,
+      "end": 2.922,
+      "score": 0.843
+    },
+    {
+      "word": "mich",
+      "start": 2.962,
+      "end": 3.182,
+      "score": 0.67
+    },
+    {
+      "word": "mit",
+      "start": 3.202,
+      "end": 3.323,
+      "score": 0.904
+    },
+    {
+      "word": "einem",
+      "start": 3.363,
+      "end": 3.663,
+      "score": 0.821
+    },
+    {
+      "word": "Ausdruck,",
+      "start": 3.703,
+      "end": 4.303,
+      "score": 0.98
+    },
+    {
+      "word": "den",
+      "start": 4.323,
+      "end": 4.443,
+      "score": 0.76
+    },
+    {
+      "word": "ich",
+      "start": 4.483,
+      "end": 4.583,
+      "score": 0.84
+    },
+    {
+      "word": "noch",
+      "start": 4.623,
+      "end": 4.784,
+      "score": 0.816
+    },
+    {
+      "word": "nicht",
+      "start": 4.804,
+      "end": 4.964,
+      "score": 0.902
+    },
+    {
+      "word": "an",
+      "start": 5.004,
+      "end": 5.104,
+      "score": 0.882
+    },
+    {
+      "word": "ihm",
+      "start": 5.144,
+      "end": 5.324,
+      "score": 0.815
+    },
+    {
+      "word": "kenne.",
+      "start": 5.364,
+      "end": 6.365,
+      "score": 0.974
+    },
+    {
+      "word": "Ernsthaft.",
+      "start": 6.425,
+      "end": 7.566,
+      "score": 0.93
+    },
+    {
+      "word": "Fast",
+      "start": 7.606,
+      "end": 7.866,
+      "score": 0.912
+    },
+    {
+      "word": "respektvoll.",
+      "start": 7.906,
+      "end": 9.587,
+      "score": 0.938
+    },
+    {
+      "word": "\"Ich",
+      "start": 9.607,
+      "end": 9.727,
+      "score": 0.814
+    },
+    {
+      "word": "kenne",
+      "start": 9.747,
+      "end": 10.048,
+      "score": 0.907
+    },
+    {
+      "word": "Leute,",
+      "start": 10.088,
+      "end": 10.428,
+      "score": 0.828
+    },
+    {
+      "word": "die",
+      "start": 10.448,
+      "end": 10.568,
+      "score": 0.771
+    },
+    {
+      "word": "kommen",
+      "start": 10.608,
+      "end": 11.008,
+      "score": 0.937
+    },
+    {
+      "word": "einmal",
+      "start": 11.048,
+      "end": 11.469,
+      "score": 0.91
+    },
+    {
+      "word": "zur",
+      "start": 11.489,
+      "end": 11.689,
+      "score": 0.876
+    },
+    {
+      "word": "Wache",
+      "start": 11.709,
+      "end": 12.169,
+      "score": 0.971
+    },
+    {
+      "word": "und",
+      "start": 12.209,
+      "end": 12.389,
+      "score": 0.952
+    },
+    {
+      "word": "denken,",
+      "start": 12.429,
+      "end": 12.75,
+      "score": 0.873
+    },
+    {
+      "word": "sie",
+      "start": 12.77,
+      "end": 12.91,
+      "score": 0.855
+    },
+    {
+      "word": "haben",
+      "start": 12.93,
+      "end": 13.19,
+      "score": 0.912
+    },
+    {
+      "word": "etwas",
+      "start": 13.21,
+      "end": 13.53,
+      "score": 0.89
+    },
+    {
+      "word": "bewiesen.\"",
+      "start": 13.55,
+      "end": 15.131,
+      "score": 0.863
+    },
+    {
+      "word": "\"Drei",
+      "start": 15.151,
+      "end": 15.532,
+      "score": 0.74
+    },
+    {
+      "word": "Tagesschichten",
+      "start": 15.572,
+      "end": 16.452,
+      "score": 0.897
+    },
+    {
+      "word": "hintereinander.",
+      "start": 16.472,
+      "end": 17.934,
+      "score": 0.953
+    },
+    {
+      "word": "Ohne",
+      "start": 18.014,
+      "end": 18.354,
+      "score": 0.851
+    },
+    {
+      "word": "Ausreden.",
+      "start": 18.414,
+      "end": 19.855,
+      "score": 0.931
+    },
+    {
+      "word": "Wenn",
+      "start": 19.915,
+      "end": 20.075,
+      "score": 0.86
+    },
+    {
+      "word": "du",
+      "start": 20.095,
+      "end": 20.295,
+      "score": 0.89
+    },
+    {
+      "word": "das",
+      "start": 20.335,
+      "end": 20.516,
+      "score": 0.965
+    },
+    {
+      "word": "schaffst,",
+      "start": 20.556,
+      "end": 21.296,
+      "score": 0.84
+    },
+    {
+      "word": "vertraue",
+      "start": 21.316,
+      "end": 21.756,
+      "score": 0.902
+    },
+    {
+      "word": "ich",
+      "start": 21.796,
+      "end": 21.937,
+      "score": 0.796
+    },
+    {
+      "word": "dir",
+      "start": 21.977,
+      "end": 22.917,
+      "score": 0.808
+    },
+    {
+      "word": "—",
+      "start": 22.937,
+      "end": 22.957,
+      "score": 0.979
+    },
+    {
+      "word": "und",
+      "start": 22.997,
+      "end": 23.218,
+      "score": 0.955
+    },
+    {
+      "word": "das",
+      "start": 23.258,
+      "end": 23.518,
+      "score": 0.955
+    },
+    {
+      "word": "bedeutet",
+      "start": 23.558,
+      "end": 23.978,
+      "score": 0.917
+    },
+    {
+      "word": "in",
+      "start": 24.018,
+      "end": 24.198,
+      "score": 0.692
+    },
+    {
+      "word": "Treutheim",
+      "start": 24.218,
+      "end": 24.859,
+      "score": 0.94
+    },
+    {
+      "word": "mehr,",
+      "start": 24.899,
+      "end": 25.199,
+      "score": 0.969
+    },
+    {
+      "word": "als",
+      "start": 25.239,
+      "end": 25.419,
+      "score": 0.789
+    },
+    {
+      "word": "du",
+      "start": 25.459,
+      "end": 25.659,
+      "score": 0.96
+    },
+    {
+      "word": "ahnst.\"",
+      "start": 25.719,
+      "end": 26.08,
+      "score": 0.673
+    }
+  ]
+}

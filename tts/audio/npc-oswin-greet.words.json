@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 7.155,
+      "text": "Oswin mustert mich von oben bis unten und verzieht das Gesicht.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.441,
+          "end": 1.082,
+          "score": 0.892
+        },
+        {
+          "word": "mustert",
+          "start": 1.142,
+          "end": 1.684,
+          "score": 0.882
+        },
+        {
+          "word": "mich",
+          "start": 1.704,
+          "end": 1.904,
+          "score": 0.824
+        },
+        {
+          "word": "von",
+          "start": 1.924,
+          "end": 2.305,
+          "score": 0.977
+        },
+        {
+          "word": "oben",
+          "start": 2.405,
+          "end": 2.826,
+          "score": 0.891
+        },
+        {
+          "word": "bis",
+          "start": 2.866,
+          "end": 3.227,
+          "score": 0.991
+        },
+        {
+          "word": "unten",
+          "start": 3.307,
+          "end": 4.329,
+          "score": 0.973
+        },
+        {
+          "word": "und",
+          "start": 4.369,
+          "end": 4.57,
+          "score": 0.94
+        },
+        {
+          "word": "verzieht",
+          "start": 4.59,
+          "end": 5.151,
+          "score": 0.901
+        },
+        {
+          "word": "das",
+          "start": 5.171,
+          "end": 5.391,
+          "score": 0.979
+        },
+        {
+          "word": "Gesicht.",
+          "start": 5.431,
+          "end": 7.155,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 7.175,
+      "end": 9.079,
+      "text": "\"Wer hat dich hereingelassen?\"",
+      "words": [
+        {
+          "word": "\"Wer",
+          "start": 7.175,
+          "end": 7.556,
+          "score": 0.927
+        },
+        {
+          "word": "hat",
+          "start": 7.596,
+          "end": 7.776,
+          "score": 0.785
+        },
+        {
+          "word": "dich",
+          "start": 7.796,
+          "end": 8.017,
+          "score": 0.542
+        },
+        {
+          "word": "hereingelassen?\"",
+          "start": 8.057,
+          "end": 9.079,
+          "score": 0.842
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.441,
+      "end": 1.082,
+      "score": 0.892
+    },
+    {
+      "word": "mustert",
+      "start": 1.142,
+      "end": 1.684,
+      "score": 0.882
+    },
+    {
+      "word": "mich",
+      "start": 1.704,
+      "end": 1.904,
+      "score": 0.824
+    },
+    {
+      "word": "von",
+      "start": 1.924,
+      "end": 2.305,
+      "score": 0.977
+    },
+    {
+      "word": "oben",
+      "start": 2.405,
+      "end": 2.826,
+      "score": 0.891
+    },
+    {
+      "word": "bis",
+      "start": 2.866,
+      "end": 3.227,
+      "score": 0.991
+    },
+    {
+      "word": "unten",
+      "start": 3.307,
+      "end": 4.329,
+      "score": 0.973
+    },
+    {
+      "word": "und",
+      "start": 4.369,
+      "end": 4.57,
+      "score": 0.94
+    },
+    {
+      "word": "verzieht",
+      "start": 4.59,
+      "end": 5.151,
+      "score": 0.901
+    },
+    {
+      "word": "das",
+      "start": 5.171,
+      "end": 5.391,
+      "score": 0.979
+    },
+    {
+      "word": "Gesicht.",
+      "start": 5.431,
+      "end": 7.155,
+      "score": 0.924
+    },
+    {
+      "word": "\"Wer",
+      "start": 7.175,
+      "end": 7.556,
+      "score": 0.927
+    },
+    {
+      "word": "hat",
+      "start": 7.596,
+      "end": 7.776,
+      "score": 0.785
+    },
+    {
+      "word": "dich",
+      "start": 7.796,
+      "end": 8.017,
+      "score": 0.542
+    },
+    {
+      "word": "hereingelassen?\"",
+      "start": 8.057,
+      "end": 9.079,
+      "score": 0.842
+    }
+  ]
+}

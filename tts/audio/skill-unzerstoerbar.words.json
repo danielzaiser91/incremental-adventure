@@ -1,0 +1,617 @@
+{
+  "segments": [
+    {
+      "start": 0.601,
+      "end": 6.126,
+      "text": "Ich habe mehr verloren als die meisten Menschen hier je besitzen werden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.601,
+          "end": 0.721,
+          "score": 0.41
+        },
+        {
+          "word": "habe",
+          "start": 0.761,
+          "end": 1.161,
+          "score": 0.811
+        },
+        {
+          "word": "mehr",
+          "start": 1.181,
+          "end": 1.461,
+          "score": 0.773
+        },
+        {
+          "word": "verloren",
+          "start": 1.501,
+          "end": 2.022,
+          "score": 0.881
+        },
+        {
+          "word": "als",
+          "start": 2.062,
+          "end": 2.302,
+          "score": 0.922
+        },
+        {
+          "word": "die",
+          "start": 2.322,
+          "end": 2.542,
+          "score": 0.909
+        },
+        {
+          "word": "meisten",
+          "start": 2.582,
+          "end": 3.063,
+          "score": 0.846
+        },
+        {
+          "word": "Menschen",
+          "start": 3.083,
+          "end": 3.483,
+          "score": 0.772
+        },
+        {
+          "word": "hier",
+          "start": 3.543,
+          "end": 3.844,
+          "score": 0.572
+        },
+        {
+          "word": "je",
+          "start": 3.884,
+          "end": 4.044,
+          "score": 0.958
+        },
+        {
+          "word": "besitzen",
+          "start": 4.084,
+          "end": 4.724,
+          "score": 0.922
+        },
+        {
+          "word": "werden.",
+          "start": 4.764,
+          "end": 6.126,
+          "score": 0.851
+        }
+      ]
+    },
+    {
+      "start": 6.146,
+      "end": 8.508,
+      "text": "Und ich stehe noch.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 6.146,
+          "end": 6.346,
+          "score": 0.79
+        },
+        {
+          "word": "ich",
+          "start": 6.386,
+          "end": 6.506,
+          "score": 0.783
+        },
+        {
+          "word": "stehe",
+          "start": 6.566,
+          "end": 6.886,
+          "score": 0.858
+        },
+        {
+          "word": "noch.",
+          "start": 6.926,
+          "end": 8.508,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 8.548,
+      "end": 10.93,
+      "text": "Das ist keine Heldengeschichte.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 8.548,
+          "end": 8.708,
+          "score": 0.817
+        },
+        {
+          "word": "ist",
+          "start": 8.748,
+          "end": 8.968,
+          "score": 0.803
+        },
+        {
+          "word": "keine",
+          "start": 8.988,
+          "end": 9.248,
+          "score": 0.96
+        },
+        {
+          "word": "Heldengeschichte.",
+          "start": 9.288,
+          "end": 10.93,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 10.97,
+      "end": 17.276,
+      "text": "Das ist das, was passiert, wenn man immer wieder aufsteht, bis man es nicht mehr anders kann.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 10.97,
+          "end": 11.11,
+          "score": 0.848
+        },
+        {
+          "word": "ist",
+          "start": 11.15,
+          "end": 11.37,
+          "score": 0.838
+        },
+        {
+          "word": "das,",
+          "start": 11.39,
+          "end": 11.631,
+          "score": 0.844
+        },
+        {
+          "word": "was",
+          "start": 11.671,
+          "end": 11.871,
+          "score": 0.958
+        },
+        {
+          "word": "passiert,",
+          "start": 11.911,
+          "end": 12.351,
+          "score": 0.888
+        },
+        {
+          "word": "wenn",
+          "start": 12.371,
+          "end": 12.491,
+          "score": 0.994
+        },
+        {
+          "word": "man",
+          "start": 12.531,
+          "end": 12.852,
+          "score": 0.988
+        },
+        {
+          "word": "immer",
+          "start": 12.912,
+          "end": 13.212,
+          "score": 0.954
+        },
+        {
+          "word": "wieder",
+          "start": 13.252,
+          "end": 13.572,
+          "score": 0.885
+        },
+        {
+          "word": "aufsteht,",
+          "start": 13.612,
+          "end": 14.733,
+          "score": 0.914
+        },
+        {
+          "word": "bis",
+          "start": 14.753,
+          "end": 14.954,
+          "score": 0.86
+        },
+        {
+          "word": "man",
+          "start": 14.974,
+          "end": 15.154,
+          "score": 0.933
+        },
+        {
+          "word": "es",
+          "start": 15.194,
+          "end": 15.354,
+          "score": 0.889
+        },
+        {
+          "word": "nicht",
+          "start": 15.374,
+          "end": 15.554,
+          "score": 0.837
+        },
+        {
+          "word": "mehr",
+          "start": 15.574,
+          "end": 15.734,
+          "score": 0.853
+        },
+        {
+          "word": "anders",
+          "start": 15.754,
+          "end": 16.075,
+          "score": 0.594
+        },
+        {
+          "word": "kann.",
+          "start": 16.095,
+          "end": 17.276,
+          "score": 0.971
+        }
+      ]
+    },
+    {
+      "start": 17.296,
+      "end": 21.52,
+      "text": "Bis Weitermachen keine Entscheidung mehr ist — sondern wer man ist.",
+      "words": [
+        {
+          "word": "Bis",
+          "start": 17.296,
+          "end": 17.616,
+          "score": 0.865
+        },
+        {
+          "word": "Weitermachen",
+          "start": 17.656,
+          "end": 18.377,
+          "score": 0.875
+        },
+        {
+          "word": "keine",
+          "start": 18.397,
+          "end": 18.637,
+          "score": 0.815
+        },
+        {
+          "word": "Entscheidung",
+          "start": 18.677,
+          "end": 19.137,
+          "score": 0.823
+        },
+        {
+          "word": "mehr",
+          "start": 19.177,
+          "end": 19.338,
+          "score": 0.766
+        },
+        {
+          "word": "ist",
+          "start": 19.398,
+          "end": 19.498,
+          "score": 0.784
+        },
+        {
+          "word": "—",
+          "start": 20.278,
+          "end": 20.298,
+          "score": 0.931
+        },
+        {
+          "word": "sondern",
+          "start": 20.319,
+          "end": 20.759,
+          "score": 0.888
+        },
+        {
+          "word": "wer",
+          "start": 20.799,
+          "end": 20.979,
+          "score": 0.901
+        },
+        {
+          "word": "man",
+          "start": 21.019,
+          "end": 21.279,
+          "score": 0.863
+        },
+        {
+          "word": "ist.",
+          "start": 21.339,
+          "end": 21.52,
+          "score": 0.674
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.601,
+      "end": 0.721,
+      "score": 0.41
+    },
+    {
+      "word": "habe",
+      "start": 0.761,
+      "end": 1.161,
+      "score": 0.811
+    },
+    {
+      "word": "mehr",
+      "start": 1.181,
+      "end": 1.461,
+      "score": 0.773
+    },
+    {
+      "word": "verloren",
+      "start": 1.501,
+      "end": 2.022,
+      "score": 0.881
+    },
+    {
+      "word": "als",
+      "start": 2.062,
+      "end": 2.302,
+      "score": 0.922
+    },
+    {
+      "word": "die",
+      "start": 2.322,
+      "end": 2.542,
+      "score": 0.909
+    },
+    {
+      "word": "meisten",
+      "start": 2.582,
+      "end": 3.063,
+      "score": 0.846
+    },
+    {
+      "word": "Menschen",
+      "start": 3.083,
+      "end": 3.483,
+      "score": 0.772
+    },
+    {
+      "word": "hier",
+      "start": 3.543,
+      "end": 3.844,
+      "score": 0.572
+    },
+    {
+      "word": "je",
+      "start": 3.884,
+      "end": 4.044,
+      "score": 0.958
+    },
+    {
+      "word": "besitzen",
+      "start": 4.084,
+      "end": 4.724,
+      "score": 0.922
+    },
+    {
+      "word": "werden.",
+      "start": 4.764,
+      "end": 6.126,
+      "score": 0.851
+    },
+    {
+      "word": "Und",
+      "start": 6.146,
+      "end": 6.346,
+      "score": 0.79
+    },
+    {
+      "word": "ich",
+      "start": 6.386,
+      "end": 6.506,
+      "score": 0.783
+    },
+    {
+      "word": "stehe",
+      "start": 6.566,
+      "end": 6.886,
+      "score": 0.858
+    },
+    {
+      "word": "noch.",
+      "start": 6.926,
+      "end": 8.508,
+      "score": 0.85
+    },
+    {
+      "word": "Das",
+      "start": 8.548,
+      "end": 8.708,
+      "score": 0.817
+    },
+    {
+      "word": "ist",
+      "start": 8.748,
+      "end": 8.968,
+      "score": 0.803
+    },
+    {
+      "word": "keine",
+      "start": 8.988,
+      "end": 9.248,
+      "score": 0.96
+    },
+    {
+      "word": "Heldengeschichte.",
+      "start": 9.288,
+      "end": 10.93,
+      "score": 0.877
+    },
+    {
+      "word": "Das",
+      "start": 10.97,
+      "end": 11.11,
+      "score": 0.848
+    },
+    {
+      "word": "ist",
+      "start": 11.15,
+      "end": 11.37,
+      "score": 0.838
+    },
+    {
+      "word": "das,",
+      "start": 11.39,
+      "end": 11.631,
+      "score": 0.844
+    },
+    {
+      "word": "was",
+      "start": 11.671,
+      "end": 11.871,
+      "score": 0.958
+    },
+    {
+      "word": "passiert,",
+      "start": 11.911,
+      "end": 12.351,
+      "score": 0.888
+    },
+    {
+      "word": "wenn",
+      "start": 12.371,
+      "end": 12.491,
+      "score": 0.994
+    },
+    {
+      "word": "man",
+      "start": 12.531,
+      "end": 12.852,
+      "score": 0.988
+    },
+    {
+      "word": "immer",
+      "start": 12.912,
+      "end": 13.212,
+      "score": 0.954
+    },
+    {
+      "word": "wieder",
+      "start": 13.252,
+      "end": 13.572,
+      "score": 0.885
+    },
+    {
+      "word": "aufsteht,",
+      "start": 13.612,
+      "end": 14.733,
+      "score": 0.914
+    },
+    {
+      "word": "bis",
+      "start": 14.753,
+      "end": 14.954,
+      "score": 0.86
+    },
+    {
+      "word": "man",
+      "start": 14.974,
+      "end": 15.154,
+      "score": 0.933
+    },
+    {
+      "word": "es",
+      "start": 15.194,
+      "end": 15.354,
+      "score": 0.889
+    },
+    {
+      "word": "nicht",
+      "start": 15.374,
+      "end": 15.554,
+      "score": 0.837
+    },
+    {
+      "word": "mehr",
+      "start": 15.574,
+      "end": 15.734,
+      "score": 0.853
+    },
+    {
+      "word": "anders",
+      "start": 15.754,
+      "end": 16.075,
+      "score": 0.594
+    },
+    {
+      "word": "kann.",
+      "start": 16.095,
+      "end": 17.276,
+      "score": 0.971
+    },
+    {
+      "word": "Bis",
+      "start": 17.296,
+      "end": 17.616,
+      "score": 0.865
+    },
+    {
+      "word": "Weitermachen",
+      "start": 17.656,
+      "end": 18.377,
+      "score": 0.875
+    },
+    {
+      "word": "keine",
+      "start": 18.397,
+      "end": 18.637,
+      "score": 0.815
+    },
+    {
+      "word": "Entscheidung",
+      "start": 18.677,
+      "end": 19.137,
+      "score": 0.823
+    },
+    {
+      "word": "mehr",
+      "start": 19.177,
+      "end": 19.338,
+      "score": 0.766
+    },
+    {
+      "word": "ist",
+      "start": 19.398,
+      "end": 19.498,
+      "score": 0.784
+    },
+    {
+      "word": "—",
+      "start": 20.278,
+      "end": 20.298,
+      "score": 0.931
+    },
+    {
+      "word": "sondern",
+      "start": 20.319,
+      "end": 20.759,
+      "score": 0.888
+    },
+    {
+      "word": "wer",
+      "start": 20.799,
+      "end": 20.979,
+      "score": 0.901
+    },
+    {
+      "word": "man",
+      "start": 21.019,
+      "end": 21.279,
+      "score": 0.863
+    },
+    {
+      "word": "ist.",
+      "start": 21.339,
+      "end": 21.52,
+      "score": 0.674
+    }
+  ]
+}

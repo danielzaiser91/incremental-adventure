@@ -1,0 +1,207 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 3.67,
+      "text": "Brakka mustert mich von oben bis unten.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.381,
+          "end": 0.983,
+          "score": 0.883
+        },
+        {
+          "word": "mustert",
+          "start": 1.023,
+          "end": 1.464,
+          "score": 0.89
+        },
+        {
+          "word": "mich",
+          "start": 1.504,
+          "end": 1.684,
+          "score": 0.837
+        },
+        {
+          "word": "von",
+          "start": 1.725,
+          "end": 1.945,
+          "score": 0.997
+        },
+        {
+          "word": "oben",
+          "start": 2.005,
+          "end": 2.246,
+          "score": 0.883
+        },
+        {
+          "word": "bis",
+          "start": 2.286,
+          "end": 2.446,
+          "score": 0.881
+        },
+        {
+          "word": "unten.",
+          "start": 2.487,
+          "end": 3.67,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 3.73,
+      "end": 4.712,
+      "text": "\"Na?",
+      "words": [
+        {
+          "word": "\"Na?",
+          "start": 3.73,
+          "end": 4.712,
+          "score": 0.735
+        }
+      ]
+    },
+    {
+      "start": 4.733,
+      "end": 7.179,
+      "text": "Bereit, oder verschwendest du nur meine Zeit?\"",
+      "words": [
+        {
+          "word": "Bereit,",
+          "start": 4.733,
+          "end": 5.515,
+          "score": 0.942
+        },
+        {
+          "word": "oder",
+          "start": 5.555,
+          "end": 5.815,
+          "score": 0.746
+        },
+        {
+          "word": "verschwendest",
+          "start": 5.835,
+          "end": 6.357,
+          "score": 0.788
+        },
+        {
+          "word": "du",
+          "start": 6.377,
+          "end": 6.477,
+          "score": 0.248
+        },
+        {
+          "word": "nur",
+          "start": 6.497,
+          "end": 6.638,
+          "score": 0.88
+        },
+        {
+          "word": "meine",
+          "start": 6.678,
+          "end": 6.898,
+          "score": 0.746
+        },
+        {
+          "word": "Zeit?\"",
+          "start": 6.938,
+          "end": 7.179,
+          "score": 0.701
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.381,
+      "end": 0.983,
+      "score": 0.883
+    },
+    {
+      "word": "mustert",
+      "start": 1.023,
+      "end": 1.464,
+      "score": 0.89
+    },
+    {
+      "word": "mich",
+      "start": 1.504,
+      "end": 1.684,
+      "score": 0.837
+    },
+    {
+      "word": "von",
+      "start": 1.725,
+      "end": 1.945,
+      "score": 0.997
+    },
+    {
+      "word": "oben",
+      "start": 2.005,
+      "end": 2.246,
+      "score": 0.883
+    },
+    {
+      "word": "bis",
+      "start": 2.286,
+      "end": 2.446,
+      "score": 0.881
+    },
+    {
+      "word": "unten.",
+      "start": 2.487,
+      "end": 3.67,
+      "score": 0.973
+    },
+    {
+      "word": "\"Na?",
+      "start": 3.73,
+      "end": 4.712,
+      "score": 0.735
+    },
+    {
+      "word": "Bereit,",
+      "start": 4.733,
+      "end": 5.515,
+      "score": 0.942
+    },
+    {
+      "word": "oder",
+      "start": 5.555,
+      "end": 5.815,
+      "score": 0.746
+    },
+    {
+      "word": "verschwendest",
+      "start": 5.835,
+      "end": 6.357,
+      "score": 0.788
+    },
+    {
+      "word": "du",
+      "start": 6.377,
+      "end": 6.477,
+      "score": 0.248
+    },
+    {
+      "word": "nur",
+      "start": 6.497,
+      "end": 6.638,
+      "score": 0.88
+    },
+    {
+      "word": "meine",
+      "start": 6.678,
+      "end": 6.898,
+      "score": 0.746
+    },
+    {
+      "word": "Zeit?\"",
+      "start": 6.938,
+      "end": 7.179,
+      "score": 0.701
+    }
+  ]
+}

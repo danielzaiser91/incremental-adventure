@@ -1,0 +1,885 @@
+{
+  "segments": [
+    {
+      "start": 0.7,
+      "end": 2.762,
+      "text": "Jedes Geräusch.",
+      "words": [
+        {
+          "word": "Jedes",
+          "start": 0.7,
+          "end": 1.101,
+          "score": 0.854
+        },
+        {
+          "word": "Geräusch.",
+          "start": 1.141,
+          "end": 2.762,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 2.782,
+      "end": 6.084,
+      "text": "Jede Schulter, die sich zu früh dreht.",
+      "words": [
+        {
+          "word": "Jede",
+          "start": 2.782,
+          "end": 3.102,
+          "score": 0.982
+        },
+        {
+          "word": "Schulter,",
+          "start": 3.162,
+          "end": 3.642,
+          "score": 0.851
+        },
+        {
+          "word": "die",
+          "start": 3.662,
+          "end": 3.782,
+          "score": 0.864
+        },
+        {
+          "word": "sich",
+          "start": 3.822,
+          "end": 4.062,
+          "score": 0.888
+        },
+        {
+          "word": "zu",
+          "start": 4.102,
+          "end": 4.323,
+          "score": 0.98
+        },
+        {
+          "word": "früh",
+          "start": 4.403,
+          "end": 4.683,
+          "score": 0.829
+        },
+        {
+          "word": "dreht.",
+          "start": 4.723,
+          "end": 6.084,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 6.104,
+      "end": 10.486,
+      "text": "Jeder Schatten, der einen Lidschlag zu lange steht.",
+      "words": [
+        {
+          "word": "Jeder",
+          "start": 6.104,
+          "end": 6.464,
+          "score": 0.953
+        },
+        {
+          "word": "Schatten,",
+          "start": 6.504,
+          "end": 6.924,
+          "score": 0.891
+        },
+        {
+          "word": "der",
+          "start": 6.944,
+          "end": 7.104,
+          "score": 0.947
+        },
+        {
+          "word": "einen",
+          "start": 7.144,
+          "end": 7.444,
+          "score": 0.843
+        },
+        {
+          "word": "Lidschlag",
+          "start": 7.504,
+          "end": 8.165,
+          "score": 0.724
+        },
+        {
+          "word": "zu",
+          "start": 8.205,
+          "end": 8.425,
+          "score": 0.989
+        },
+        {
+          "word": "lange",
+          "start": 8.465,
+          "end": 8.765,
+          "score": 0.92
+        },
+        {
+          "word": "steht.",
+          "start": 8.805,
+          "end": 10.486,
+          "score": 0.977
+        }
+      ]
+    },
+    {
+      "start": 10.546,
+      "end": 13.728,
+      "text": "Ja, ich bin misstrauisch geworden.",
+      "words": [
+        {
+          "word": "Ja,",
+          "start": 10.546,
+          "end": 11.507,
+          "score": 0.862
+        },
+        {
+          "word": "ich",
+          "start": 11.547,
+          "end": 11.647,
+          "score": 0.841
+        },
+        {
+          "word": "bin",
+          "start": 11.687,
+          "end": 11.887,
+          "score": 0.977
+        },
+        {
+          "word": "misstrauisch",
+          "start": 11.907,
+          "end": 12.447,
+          "score": 0.865
+        },
+        {
+          "word": "geworden.",
+          "start": 12.467,
+          "end": 13.728,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 13.748,
+      "end": 20.612,
+      "text": "Manchmal sage ich es mir laut vor, als würde es dadurch leichter zu tragen.",
+      "words": [
+        {
+          "word": "Manchmal",
+          "start": 13.748,
+          "end": 14.588,
+          "score": 0.722
+        },
+        {
+          "word": "sage",
+          "start": 14.608,
+          "end": 14.829,
+          "score": 0.863
+        },
+        {
+          "word": "ich",
+          "start": 14.869,
+          "end": 14.969,
+          "score": 0.908
+        },
+        {
+          "word": "es",
+          "start": 15.009,
+          "end": 15.129,
+          "score": 0.779
+        },
+        {
+          "word": "mir",
+          "start": 15.149,
+          "end": 15.349,
+          "score": 0.958
+        },
+        {
+          "word": "laut",
+          "start": 15.389,
+          "end": 15.689,
+          "score": 0.961
+        },
+        {
+          "word": "vor,",
+          "start": 15.729,
+          "end": 16.45,
+          "score": 0.972
+        },
+        {
+          "word": "als",
+          "start": 16.49,
+          "end": 16.73,
+          "score": 0.931
+        },
+        {
+          "word": "würde",
+          "start": 16.77,
+          "end": 16.95,
+          "score": 0.975
+        },
+        {
+          "word": "es",
+          "start": 16.99,
+          "end": 17.11,
+          "score": 0.883
+        },
+        {
+          "word": "dadurch",
+          "start": 17.13,
+          "end": 17.47,
+          "score": 0.926
+        },
+        {
+          "word": "leichter",
+          "start": 17.53,
+          "end": 17.87,
+          "score": 0.86
+        },
+        {
+          "word": "zu",
+          "start": 17.89,
+          "end": 17.99,
+          "score": 0.996
+        },
+        {
+          "word": "tragen.",
+          "start": 18.03,
+          "end": 20.612,
+          "score": 0.919
+        }
+      ]
+    },
+    {
+      "start": 20.632,
+      "end": 22.653,
+      "text": "Doch es schärft den Blick.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 20.632,
+          "end": 20.772,
+          "score": 0.806
+        },
+        {
+          "word": "es",
+          "start": 20.832,
+          "end": 20.972,
+          "score": 0.759
+        },
+        {
+          "word": "schärft",
+          "start": 21.012,
+          "end": 21.332,
+          "score": 0.87
+        },
+        {
+          "word": "den",
+          "start": 21.352,
+          "end": 21.472,
+          "score": 0.714
+        },
+        {
+          "word": "Blick.",
+          "start": 21.512,
+          "end": 22.653,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 22.693,
+      "end": 27.096,
+      "text": "Ich erkenne jetzt Muster, wo ich früher nur Zufall sah.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 22.693,
+          "end": 22.813,
+          "score": 0.831
+        },
+        {
+          "word": "erkenne",
+          "start": 22.853,
+          "end": 23.213,
+          "score": 0.952
+        },
+        {
+          "word": "jetzt",
+          "start": 23.233,
+          "end": 23.514,
+          "score": 0.947
+        },
+        {
+          "word": "Muster,",
+          "start": 23.554,
+          "end": 23.974,
+          "score": 0.889
+        },
+        {
+          "word": "wo",
+          "start": 23.994,
+          "end": 24.094,
+          "score": 0.937
+        },
+        {
+          "word": "ich",
+          "start": 24.154,
+          "end": 24.294,
+          "score": 0.802
+        },
+        {
+          "word": "früher",
+          "start": 24.334,
+          "end": 24.654,
+          "score": 0.77
+        },
+        {
+          "word": "nur",
+          "start": 24.674,
+          "end": 24.914,
+          "score": 0.944
+        },
+        {
+          "word": "Zufall",
+          "start": 24.954,
+          "end": 25.335,
+          "score": 0.945
+        },
+        {
+          "word": "sah.",
+          "start": 25.355,
+          "end": 27.096,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 27.136,
+      "end": 33.239,
+      "text": "Also fange ich von vorn an — nicht, weil ich muss, sondern weil ich will.",
+      "words": [
+        {
+          "word": "Also",
+          "start": 27.136,
+          "end": 27.636,
+          "score": 0.85
+        },
+        {
+          "word": "fange",
+          "start": 27.656,
+          "end": 27.816,
+          "score": 0.822
+        },
+        {
+          "word": "ich",
+          "start": 27.856,
+          "end": 27.956,
+          "score": 0.676
+        },
+        {
+          "word": "von",
+          "start": 27.976,
+          "end": 28.136,
+          "score": 0.864
+        },
+        {
+          "word": "vorn",
+          "start": 28.196,
+          "end": 28.376,
+          "score": 0.592
+        },
+        {
+          "word": "an",
+          "start": 28.436,
+          "end": 28.557,
+          "score": 0.754
+        },
+        {
+          "word": "—",
+          "start": 29.517,
+          "end": 29.537,
+          "score": 0.9
+        },
+        {
+          "word": "nicht,",
+          "start": 29.557,
+          "end": 29.757,
+          "score": 0.918
+        },
+        {
+          "word": "weil",
+          "start": 29.777,
+          "end": 29.917,
+          "score": 0.854
+        },
+        {
+          "word": "ich",
+          "start": 29.957,
+          "end": 30.137,
+          "score": 0.857
+        },
+        {
+          "word": "muss,",
+          "start": 30.178,
+          "end": 31.338,
+          "score": 0.961
+        },
+        {
+          "word": "sondern",
+          "start": 31.378,
+          "end": 31.618,
+          "score": 0.894
+        },
+        {
+          "word": "weil",
+          "start": 31.638,
+          "end": 31.778,
+          "score": 0.808
+        },
+        {
+          "word": "ich",
+          "start": 31.818,
+          "end": 31.979,
+          "score": 0.852
+        },
+        {
+          "word": "will.",
+          "start": 31.999,
+          "end": 33.239,
+          "score": 0.878
+        }
+      ]
+    },
+    {
+      "start": 33.279,
+      "end": 34.08,
+      "text": "Klüger diesmal.",
+      "words": [
+        {
+          "word": "Klüger",
+          "start": 33.279,
+          "end": 33.7,
+          "score": 0.93
+        },
+        {
+          "word": "diesmal.",
+          "start": 33.72,
+          "end": 34.08,
+          "score": 0.779
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Jedes",
+      "start": 0.7,
+      "end": 1.101,
+      "score": 0.854
+    },
+    {
+      "word": "Geräusch.",
+      "start": 1.141,
+      "end": 2.762,
+      "score": 0.86
+    },
+    {
+      "word": "Jede",
+      "start": 2.782,
+      "end": 3.102,
+      "score": 0.982
+    },
+    {
+      "word": "Schulter,",
+      "start": 3.162,
+      "end": 3.642,
+      "score": 0.851
+    },
+    {
+      "word": "die",
+      "start": 3.662,
+      "end": 3.782,
+      "score": 0.864
+    },
+    {
+      "word": "sich",
+      "start": 3.822,
+      "end": 4.062,
+      "score": 0.888
+    },
+    {
+      "word": "zu",
+      "start": 4.102,
+      "end": 4.323,
+      "score": 0.98
+    },
+    {
+      "word": "früh",
+      "start": 4.403,
+      "end": 4.683,
+      "score": 0.829
+    },
+    {
+      "word": "dreht.",
+      "start": 4.723,
+      "end": 6.084,
+      "score": 0.89
+    },
+    {
+      "word": "Jeder",
+      "start": 6.104,
+      "end": 6.464,
+      "score": 0.953
+    },
+    {
+      "word": "Schatten,",
+      "start": 6.504,
+      "end": 6.924,
+      "score": 0.891
+    },
+    {
+      "word": "der",
+      "start": 6.944,
+      "end": 7.104,
+      "score": 0.947
+    },
+    {
+      "word": "einen",
+      "start": 7.144,
+      "end": 7.444,
+      "score": 0.843
+    },
+    {
+      "word": "Lidschlag",
+      "start": 7.504,
+      "end": 8.165,
+      "score": 0.724
+    },
+    {
+      "word": "zu",
+      "start": 8.205,
+      "end": 8.425,
+      "score": 0.989
+    },
+    {
+      "word": "lange",
+      "start": 8.465,
+      "end": 8.765,
+      "score": 0.92
+    },
+    {
+      "word": "steht.",
+      "start": 8.805,
+      "end": 10.486,
+      "score": 0.977
+    },
+    {
+      "word": "Ja,",
+      "start": 10.546,
+      "end": 11.507,
+      "score": 0.862
+    },
+    {
+      "word": "ich",
+      "start": 11.547,
+      "end": 11.647,
+      "score": 0.841
+    },
+    {
+      "word": "bin",
+      "start": 11.687,
+      "end": 11.887,
+      "score": 0.977
+    },
+    {
+      "word": "misstrauisch",
+      "start": 11.907,
+      "end": 12.447,
+      "score": 0.865
+    },
+    {
+      "word": "geworden.",
+      "start": 12.467,
+      "end": 13.728,
+      "score": 0.938
+    },
+    {
+      "word": "Manchmal",
+      "start": 13.748,
+      "end": 14.588,
+      "score": 0.722
+    },
+    {
+      "word": "sage",
+      "start": 14.608,
+      "end": 14.829,
+      "score": 0.863
+    },
+    {
+      "word": "ich",
+      "start": 14.869,
+      "end": 14.969,
+      "score": 0.908
+    },
+    {
+      "word": "es",
+      "start": 15.009,
+      "end": 15.129,
+      "score": 0.779
+    },
+    {
+      "word": "mir",
+      "start": 15.149,
+      "end": 15.349,
+      "score": 0.958
+    },
+    {
+      "word": "laut",
+      "start": 15.389,
+      "end": 15.689,
+      "score": 0.961
+    },
+    {
+      "word": "vor,",
+      "start": 15.729,
+      "end": 16.45,
+      "score": 0.972
+    },
+    {
+      "word": "als",
+      "start": 16.49,
+      "end": 16.73,
+      "score": 0.931
+    },
+    {
+      "word": "würde",
+      "start": 16.77,
+      "end": 16.95,
+      "score": 0.975
+    },
+    {
+      "word": "es",
+      "start": 16.99,
+      "end": 17.11,
+      "score": 0.883
+    },
+    {
+      "word": "dadurch",
+      "start": 17.13,
+      "end": 17.47,
+      "score": 0.926
+    },
+    {
+      "word": "leichter",
+      "start": 17.53,
+      "end": 17.87,
+      "score": 0.86
+    },
+    {
+      "word": "zu",
+      "start": 17.89,
+      "end": 17.99,
+      "score": 0.996
+    },
+    {
+      "word": "tragen.",
+      "start": 18.03,
+      "end": 20.612,
+      "score": 0.919
+    },
+    {
+      "word": "Doch",
+      "start": 20.632,
+      "end": 20.772,
+      "score": 0.806
+    },
+    {
+      "word": "es",
+      "start": 20.832,
+      "end": 20.972,
+      "score": 0.759
+    },
+    {
+      "word": "schärft",
+      "start": 21.012,
+      "end": 21.332,
+      "score": 0.87
+    },
+    {
+      "word": "den",
+      "start": 21.352,
+      "end": 21.472,
+      "score": 0.714
+    },
+    {
+      "word": "Blick.",
+      "start": 21.512,
+      "end": 22.653,
+      "score": 0.918
+    },
+    {
+      "word": "Ich",
+      "start": 22.693,
+      "end": 22.813,
+      "score": 0.831
+    },
+    {
+      "word": "erkenne",
+      "start": 22.853,
+      "end": 23.213,
+      "score": 0.952
+    },
+    {
+      "word": "jetzt",
+      "start": 23.233,
+      "end": 23.514,
+      "score": 0.947
+    },
+    {
+      "word": "Muster,",
+      "start": 23.554,
+      "end": 23.974,
+      "score": 0.889
+    },
+    {
+      "word": "wo",
+      "start": 23.994,
+      "end": 24.094,
+      "score": 0.937
+    },
+    {
+      "word": "ich",
+      "start": 24.154,
+      "end": 24.294,
+      "score": 0.802
+    },
+    {
+      "word": "früher",
+      "start": 24.334,
+      "end": 24.654,
+      "score": 0.77
+    },
+    {
+      "word": "nur",
+      "start": 24.674,
+      "end": 24.914,
+      "score": 0.944
+    },
+    {
+      "word": "Zufall",
+      "start": 24.954,
+      "end": 25.335,
+      "score": 0.945
+    },
+    {
+      "word": "sah.",
+      "start": 25.355,
+      "end": 27.096,
+      "score": 0.884
+    },
+    {
+      "word": "Also",
+      "start": 27.136,
+      "end": 27.636,
+      "score": 0.85
+    },
+    {
+      "word": "fange",
+      "start": 27.656,
+      "end": 27.816,
+      "score": 0.822
+    },
+    {
+      "word": "ich",
+      "start": 27.856,
+      "end": 27.956,
+      "score": 0.676
+    },
+    {
+      "word": "von",
+      "start": 27.976,
+      "end": 28.136,
+      "score": 0.864
+    },
+    {
+      "word": "vorn",
+      "start": 28.196,
+      "end": 28.376,
+      "score": 0.592
+    },
+    {
+      "word": "an",
+      "start": 28.436,
+      "end": 28.557,
+      "score": 0.754
+    },
+    {
+      "word": "—",
+      "start": 29.517,
+      "end": 29.537,
+      "score": 0.9
+    },
+    {
+      "word": "nicht,",
+      "start": 29.557,
+      "end": 29.757,
+      "score": 0.918
+    },
+    {
+      "word": "weil",
+      "start": 29.777,
+      "end": 29.917,
+      "score": 0.854
+    },
+    {
+      "word": "ich",
+      "start": 29.957,
+      "end": 30.137,
+      "score": 0.857
+    },
+    {
+      "word": "muss,",
+      "start": 30.178,
+      "end": 31.338,
+      "score": 0.961
+    },
+    {
+      "word": "sondern",
+      "start": 31.378,
+      "end": 31.618,
+      "score": 0.894
+    },
+    {
+      "word": "weil",
+      "start": 31.638,
+      "end": 31.778,
+      "score": 0.808
+    },
+    {
+      "word": "ich",
+      "start": 31.818,
+      "end": 31.979,
+      "score": 0.852
+    },
+    {
+      "word": "will.",
+      "start": 31.999,
+      "end": 33.239,
+      "score": 0.878
+    },
+    {
+      "word": "Klüger",
+      "start": 33.279,
+      "end": 33.7,
+      "score": 0.93
+    },
+    {
+      "word": "diesmal.",
+      "start": 33.72,
+      "end": 34.08,
+      "score": 0.779
+    }
+  ]
+}

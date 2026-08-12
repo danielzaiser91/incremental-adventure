@@ -1,0 +1,725 @@
+{
+  "segments": [
+    {
+      "start": 0.38,
+      "end": 8.886,
+      "text": "In der Taverne sitzt eine Frau mit dem Abzeichen der Alchemisten und sieht mich an, als hätte sie auf mein Kommen gewartet.",
+      "words": [
+        {
+          "word": "In",
+          "start": 0.38,
+          "end": 0.56,
+          "score": 0.324
+        },
+        {
+          "word": "der",
+          "start": 0.58,
+          "end": 0.701,
+          "score": 0.873
+        },
+        {
+          "word": "Taverne",
+          "start": 0.741,
+          "end": 1.381,
+          "score": 0.937
+        },
+        {
+          "word": "sitzt",
+          "start": 1.421,
+          "end": 1.701,
+          "score": 0.953
+        },
+        {
+          "word": "eine",
+          "start": 1.741,
+          "end": 1.981,
+          "score": 0.956
+        },
+        {
+          "word": "Frau",
+          "start": 2.021,
+          "end": 2.282,
+          "score": 0.964
+        },
+        {
+          "word": "mit",
+          "start": 2.322,
+          "end": 2.442,
+          "score": 0.917
+        },
+        {
+          "word": "dem",
+          "start": 2.482,
+          "end": 2.702,
+          "score": 0.972
+        },
+        {
+          "word": "Abzeichen",
+          "start": 2.742,
+          "end": 3.262,
+          "score": 0.899
+        },
+        {
+          "word": "der",
+          "start": 3.302,
+          "end": 3.422,
+          "score": 0.825
+        },
+        {
+          "word": "Alchemisten",
+          "start": 3.463,
+          "end": 4.683,
+          "score": 0.915
+        },
+        {
+          "word": "und",
+          "start": 4.723,
+          "end": 4.924,
+          "score": 0.837
+        },
+        {
+          "word": "sieht",
+          "start": 4.944,
+          "end": 5.164,
+          "score": 0.901
+        },
+        {
+          "word": "mich",
+          "start": 5.184,
+          "end": 5.404,
+          "score": 0.979
+        },
+        {
+          "word": "an,",
+          "start": 5.444,
+          "end": 5.664,
+          "score": 0.917
+        },
+        {
+          "word": "als",
+          "start": 5.684,
+          "end": 5.864,
+          "score": 0.894
+        },
+        {
+          "word": "hätte",
+          "start": 5.904,
+          "end": 6.124,
+          "score": 0.885
+        },
+        {
+          "word": "sie",
+          "start": 6.144,
+          "end": 6.265,
+          "score": 0.974
+        },
+        {
+          "word": "auf",
+          "start": 6.305,
+          "end": 6.445,
+          "score": 0.917
+        },
+        {
+          "word": "mein",
+          "start": 6.465,
+          "end": 6.665,
+          "score": 0.666
+        },
+        {
+          "word": "Kommen",
+          "start": 6.685,
+          "end": 7.005,
+          "score": 0.88
+        },
+        {
+          "word": "gewartet.",
+          "start": 7.025,
+          "end": 8.886,
+          "score": 0.967
+        }
+      ]
+    },
+    {
+      "start": 8.906,
+      "end": 16.432,
+      "text": "»Du siehst aus wie einer, der aus Treutheim kommt.« Ich frage mich, was mein Gesicht ihr verrät.",
+      "words": [
+        {
+          "word": "»Du",
+          "start": 8.906,
+          "end": 9.067,
+          "score": 0.736
+        },
+        {
+          "word": "siehst",
+          "start": 9.107,
+          "end": 9.407,
+          "score": 0.746
+        },
+        {
+          "word": "aus",
+          "start": 9.447,
+          "end": 9.607,
+          "score": 0.986
+        },
+        {
+          "word": "wie",
+          "start": 9.647,
+          "end": 9.847,
+          "score": 0.986
+        },
+        {
+          "word": "einer,",
+          "start": 9.887,
+          "end": 10.147,
+          "score": 0.975
+        },
+        {
+          "word": "der",
+          "start": 10.167,
+          "end": 10.307,
+          "score": 0.821
+        },
+        {
+          "word": "aus",
+          "start": 10.348,
+          "end": 10.588,
+          "score": 0.836
+        },
+        {
+          "word": "Treutheim",
+          "start": 10.648,
+          "end": 11.248,
+          "score": 0.853
+        },
+        {
+          "word": "kommt.«",
+          "start": 11.268,
+          "end": 12.929,
+          "score": 0.939
+        },
+        {
+          "word": "Ich",
+          "start": 12.969,
+          "end": 13.11,
+          "score": 0.821
+        },
+        {
+          "word": "frage",
+          "start": 13.15,
+          "end": 13.45,
+          "score": 0.927
+        },
+        {
+          "word": "mich,",
+          "start": 13.47,
+          "end": 13.65,
+          "score": 0.897
+        },
+        {
+          "word": "was",
+          "start": 13.67,
+          "end": 13.83,
+          "score": 0.925
+        },
+        {
+          "word": "mein",
+          "start": 13.85,
+          "end": 14.05,
+          "score": 0.768
+        },
+        {
+          "word": "Gesicht",
+          "start": 14.07,
+          "end": 14.41,
+          "score": 0.944
+        },
+        {
+          "word": "ihr",
+          "start": 14.451,
+          "end": 14.571,
+          "score": 0.924
+        },
+        {
+          "word": "verrät.",
+          "start": 14.611,
+          "end": 16.432,
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "start": 16.472,
+      "end": 18.173,
+      "text": "Varena.",
+      "words": [
+        {
+          "word": "Varena.",
+          "start": 16.472,
+          "end": 18.173,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 18.233,
+      "end": 20.475,
+      "text": "Ihr Name bleibt haften.",
+      "words": [
+        {
+          "word": "Ihr",
+          "start": 18.233,
+          "end": 18.433,
+          "score": 0.875
+        },
+        {
+          "word": "Name",
+          "start": 18.473,
+          "end": 18.774,
+          "score": 0.946
+        },
+        {
+          "word": "bleibt",
+          "start": 18.794,
+          "end": 19.174,
+          "score": 0.863
+        },
+        {
+          "word": "haften.",
+          "start": 19.214,
+          "end": 20.475,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 20.515,
+      "end": 26.9,
+      "text": "Und die Art, wie sie spricht — genau, klar, kein Wort zu viel.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 20.515,
+          "end": 20.675,
+          "score": 0.829
+        },
+        {
+          "word": "die",
+          "start": 20.695,
+          "end": 20.875,
+          "score": 0.874
+        },
+        {
+          "word": "Art,",
+          "start": 20.915,
+          "end": 21.155,
+          "score": 0.951
+        },
+        {
+          "word": "wie",
+          "start": 21.175,
+          "end": 21.295,
+          "score": 0.948
+        },
+        {
+          "word": "sie",
+          "start": 21.315,
+          "end": 21.496,
+          "score": 0.877
+        },
+        {
+          "word": "spricht",
+          "start": 21.536,
+          "end": 21.876,
+          "score": 0.909
+        },
+        {
+          "word": "—",
+          "start": 22.897,
+          "end": 22.917,
+          "score": 0.947
+        },
+        {
+          "word": "genau,",
+          "start": 22.957,
+          "end": 24.438,
+          "score": 0.839
+        },
+        {
+          "word": "klar,",
+          "start": 24.478,
+          "end": 25.859,
+          "score": 0.928
+        },
+        {
+          "word": "kein",
+          "start": 25.879,
+          "end": 26.179,
+          "score": 0.784
+        },
+        {
+          "word": "Wort",
+          "start": 26.239,
+          "end": 26.479,
+          "score": 0.948
+        },
+        {
+          "word": "zu",
+          "start": 26.499,
+          "end": 26.679,
+          "score": 0.974
+        },
+        {
+          "word": "viel.",
+          "start": 26.739,
+          "end": 26.9,
+          "score": 0.823
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "In",
+      "start": 0.38,
+      "end": 0.56,
+      "score": 0.324
+    },
+    {
+      "word": "der",
+      "start": 0.58,
+      "end": 0.701,
+      "score": 0.873
+    },
+    {
+      "word": "Taverne",
+      "start": 0.741,
+      "end": 1.381,
+      "score": 0.937
+    },
+    {
+      "word": "sitzt",
+      "start": 1.421,
+      "end": 1.701,
+      "score": 0.953
+    },
+    {
+      "word": "eine",
+      "start": 1.741,
+      "end": 1.981,
+      "score": 0.956
+    },
+    {
+      "word": "Frau",
+      "start": 2.021,
+      "end": 2.282,
+      "score": 0.964
+    },
+    {
+      "word": "mit",
+      "start": 2.322,
+      "end": 2.442,
+      "score": 0.917
+    },
+    {
+      "word": "dem",
+      "start": 2.482,
+      "end": 2.702,
+      "score": 0.972
+    },
+    {
+      "word": "Abzeichen",
+      "start": 2.742,
+      "end": 3.262,
+      "score": 0.899
+    },
+    {
+      "word": "der",
+      "start": 3.302,
+      "end": 3.422,
+      "score": 0.825
+    },
+    {
+      "word": "Alchemisten",
+      "start": 3.463,
+      "end": 4.683,
+      "score": 0.915
+    },
+    {
+      "word": "und",
+      "start": 4.723,
+      "end": 4.924,
+      "score": 0.837
+    },
+    {
+      "word": "sieht",
+      "start": 4.944,
+      "end": 5.164,
+      "score": 0.901
+    },
+    {
+      "word": "mich",
+      "start": 5.184,
+      "end": 5.404,
+      "score": 0.979
+    },
+    {
+      "word": "an,",
+      "start": 5.444,
+      "end": 5.664,
+      "score": 0.917
+    },
+    {
+      "word": "als",
+      "start": 5.684,
+      "end": 5.864,
+      "score": 0.894
+    },
+    {
+      "word": "hätte",
+      "start": 5.904,
+      "end": 6.124,
+      "score": 0.885
+    },
+    {
+      "word": "sie",
+      "start": 6.144,
+      "end": 6.265,
+      "score": 0.974
+    },
+    {
+      "word": "auf",
+      "start": 6.305,
+      "end": 6.445,
+      "score": 0.917
+    },
+    {
+      "word": "mein",
+      "start": 6.465,
+      "end": 6.665,
+      "score": 0.666
+    },
+    {
+      "word": "Kommen",
+      "start": 6.685,
+      "end": 7.005,
+      "score": 0.88
+    },
+    {
+      "word": "gewartet.",
+      "start": 7.025,
+      "end": 8.886,
+      "score": 0.967
+    },
+    {
+      "word": "»Du",
+      "start": 8.906,
+      "end": 9.067,
+      "score": 0.736
+    },
+    {
+      "word": "siehst",
+      "start": 9.107,
+      "end": 9.407,
+      "score": 0.746
+    },
+    {
+      "word": "aus",
+      "start": 9.447,
+      "end": 9.607,
+      "score": 0.986
+    },
+    {
+      "word": "wie",
+      "start": 9.647,
+      "end": 9.847,
+      "score": 0.986
+    },
+    {
+      "word": "einer,",
+      "start": 9.887,
+      "end": 10.147,
+      "score": 0.975
+    },
+    {
+      "word": "der",
+      "start": 10.167,
+      "end": 10.307,
+      "score": 0.821
+    },
+    {
+      "word": "aus",
+      "start": 10.348,
+      "end": 10.588,
+      "score": 0.836
+    },
+    {
+      "word": "Treutheim",
+      "start": 10.648,
+      "end": 11.248,
+      "score": 0.853
+    },
+    {
+      "word": "kommt.«",
+      "start": 11.268,
+      "end": 12.929,
+      "score": 0.939
+    },
+    {
+      "word": "Ich",
+      "start": 12.969,
+      "end": 13.11,
+      "score": 0.821
+    },
+    {
+      "word": "frage",
+      "start": 13.15,
+      "end": 13.45,
+      "score": 0.927
+    },
+    {
+      "word": "mich,",
+      "start": 13.47,
+      "end": 13.65,
+      "score": 0.897
+    },
+    {
+      "word": "was",
+      "start": 13.67,
+      "end": 13.83,
+      "score": 0.925
+    },
+    {
+      "word": "mein",
+      "start": 13.85,
+      "end": 14.05,
+      "score": 0.768
+    },
+    {
+      "word": "Gesicht",
+      "start": 14.07,
+      "end": 14.41,
+      "score": 0.944
+    },
+    {
+      "word": "ihr",
+      "start": 14.451,
+      "end": 14.571,
+      "score": 0.924
+    },
+    {
+      "word": "verrät.",
+      "start": 14.611,
+      "end": 16.432,
+      "score": 0.75
+    },
+    {
+      "word": "Varena.",
+      "start": 16.472,
+      "end": 18.173,
+      "score": 0.865
+    },
+    {
+      "word": "Ihr",
+      "start": 18.233,
+      "end": 18.433,
+      "score": 0.875
+    },
+    {
+      "word": "Name",
+      "start": 18.473,
+      "end": 18.774,
+      "score": 0.946
+    },
+    {
+      "word": "bleibt",
+      "start": 18.794,
+      "end": 19.174,
+      "score": 0.863
+    },
+    {
+      "word": "haften.",
+      "start": 19.214,
+      "end": 20.475,
+      "score": 0.89
+    },
+    {
+      "word": "Und",
+      "start": 20.515,
+      "end": 20.675,
+      "score": 0.829
+    },
+    {
+      "word": "die",
+      "start": 20.695,
+      "end": 20.875,
+      "score": 0.874
+    },
+    {
+      "word": "Art,",
+      "start": 20.915,
+      "end": 21.155,
+      "score": 0.951
+    },
+    {
+      "word": "wie",
+      "start": 21.175,
+      "end": 21.295,
+      "score": 0.948
+    },
+    {
+      "word": "sie",
+      "start": 21.315,
+      "end": 21.496,
+      "score": 0.877
+    },
+    {
+      "word": "spricht",
+      "start": 21.536,
+      "end": 21.876,
+      "score": 0.909
+    },
+    {
+      "word": "—",
+      "start": 22.897,
+      "end": 22.917,
+      "score": 0.947
+    },
+    {
+      "word": "genau,",
+      "start": 22.957,
+      "end": 24.438,
+      "score": 0.839
+    },
+    {
+      "word": "klar,",
+      "start": 24.478,
+      "end": 25.859,
+      "score": 0.928
+    },
+    {
+      "word": "kein",
+      "start": 25.879,
+      "end": 26.179,
+      "score": 0.784
+    },
+    {
+      "word": "Wort",
+      "start": 26.239,
+      "end": 26.479,
+      "score": 0.948
+    },
+    {
+      "word": "zu",
+      "start": 26.499,
+      "end": 26.679,
+      "score": 0.974
+    },
+    {
+      "word": "viel.",
+      "start": 26.739,
+      "end": 26.9,
+      "score": 0.823
+    }
+  ]
+}

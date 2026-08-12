@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.582,
+      "end": 2.81,
+      "text": "Noch nicht begonnen.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 0.582,
+          "end": 0.863,
+          "score": 0.967
+        },
+        {
+          "word": "nicht",
+          "start": 0.903,
+          "end": 1.164,
+          "score": 0.827
+        },
+        {
+          "word": "begonnen.",
+          "start": 1.204,
+          "end": 2.81,
+          "score": 0.965
+        }
+      ]
+    },
+    {
+      "start": 2.83,
+      "end": 5.459,
+      "text": "Vielleicht weiß jemand in der Taverne mehr über die Nachtwache.",
+      "words": [
+        {
+          "word": "Vielleicht",
+          "start": 2.83,
+          "end": 3.191,
+          "score": 0.822
+        },
+        {
+          "word": "weiß",
+          "start": 3.231,
+          "end": 3.472,
+          "score": 0.956
+        },
+        {
+          "word": "jemand",
+          "start": 3.492,
+          "end": 3.753,
+          "score": 0.931
+        },
+        {
+          "word": "in",
+          "start": 3.793,
+          "end": 3.853,
+          "score": 0.996
+        },
+        {
+          "word": "der",
+          "start": 3.893,
+          "end": 3.994,
+          "score": 0.724
+        },
+        {
+          "word": "Taverne",
+          "start": 4.014,
+          "end": 4.515,
+          "score": 0.919
+        },
+        {
+          "word": "mehr",
+          "start": 4.536,
+          "end": 4.756,
+          "score": 0.905
+        },
+        {
+          "word": "über",
+          "start": 4.776,
+          "end": 4.937,
+          "score": 0.9
+        },
+        {
+          "word": "die",
+          "start": 4.957,
+          "end": 5.057,
+          "score": 0.82
+        },
+        {
+          "word": "Nachtwache.",
+          "start": 5.097,
+          "end": 5.459,
+          "score": 0.875
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Noch",
+      "start": 0.582,
+      "end": 0.863,
+      "score": 0.967
+    },
+    {
+      "word": "nicht",
+      "start": 0.903,
+      "end": 1.164,
+      "score": 0.827
+    },
+    {
+      "word": "begonnen.",
+      "start": 1.204,
+      "end": 2.81,
+      "score": 0.965
+    },
+    {
+      "word": "Vielleicht",
+      "start": 2.83,
+      "end": 3.191,
+      "score": 0.822
+    },
+    {
+      "word": "weiß",
+      "start": 3.231,
+      "end": 3.472,
+      "score": 0.956
+    },
+    {
+      "word": "jemand",
+      "start": 3.492,
+      "end": 3.753,
+      "score": 0.931
+    },
+    {
+      "word": "in",
+      "start": 3.793,
+      "end": 3.853,
+      "score": 0.996
+    },
+    {
+      "word": "der",
+      "start": 3.893,
+      "end": 3.994,
+      "score": 0.724
+    },
+    {
+      "word": "Taverne",
+      "start": 4.014,
+      "end": 4.515,
+      "score": 0.919
+    },
+    {
+      "word": "mehr",
+      "start": 4.536,
+      "end": 4.756,
+      "score": 0.905
+    },
+    {
+      "word": "über",
+      "start": 4.776,
+      "end": 4.937,
+      "score": 0.9
+    },
+    {
+      "word": "die",
+      "start": 4.957,
+      "end": 5.057,
+      "score": 0.82
+    },
+    {
+      "word": "Nachtwache.",
+      "start": 5.097,
+      "end": 5.459,
+      "score": 0.875
+    }
+  ]
+}

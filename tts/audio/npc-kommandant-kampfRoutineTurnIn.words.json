@@ -1,0 +1,559 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 2.623,
+      "text": "Roswald schaut mich kurz an.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.541,
+          "end": 1.021,
+          "score": 0.903
+        },
+        {
+          "word": "schaut",
+          "start": 1.061,
+          "end": 1.321,
+          "score": 0.85
+        },
+        {
+          "word": "mich",
+          "start": 1.361,
+          "end": 1.522,
+          "score": 0.879
+        },
+        {
+          "word": "kurz",
+          "start": 1.562,
+          "end": 1.822,
+          "score": 0.991
+        },
+        {
+          "word": "an.",
+          "start": 1.862,
+          "end": 2.623,
+          "score": 0.742
+        }
+      ]
+    },
+    {
+      "start": 2.643,
+      "end": 5.065,
+      "text": "Dann nickt er.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 2.643,
+          "end": 2.923,
+          "score": 0.912
+        },
+        {
+          "word": "nickt",
+          "start": 2.963,
+          "end": 3.183,
+          "score": 0.753
+        },
+        {
+          "word": "er.",
+          "start": 3.243,
+          "end": 5.065,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 5.085,
+      "end": 7.127,
+      "text": "\"Du hast die Bedingungen erfüllt.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 5.085,
+          "end": 5.245,
+          "score": 0.872
+        },
+        {
+          "word": "hast",
+          "start": 5.285,
+          "end": 5.506,
+          "score": 0.884
+        },
+        {
+          "word": "die",
+          "start": 5.546,
+          "end": 5.666,
+          "score": 0.832
+        },
+        {
+          "word": "Bedingungen",
+          "start": 5.706,
+          "end": 6.226,
+          "score": 0.917
+        },
+        {
+          "word": "erfüllt.",
+          "start": 6.266,
+          "end": 7.127,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 7.167,
+      "end": 9.37,
+      "text": "Ich sehe es.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 7.167,
+          "end": 7.347,
+          "score": 0.777
+        },
+        {
+          "word": "sehe",
+          "start": 7.388,
+          "end": 7.628,
+          "score": 0.846
+        },
+        {
+          "word": "es.\"",
+          "start": 7.688,
+          "end": 9.37,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 9.41,
+      "end": 16.357,
+      "text": "Er steht auf, legt mir kurz die Hand auf die Schulter — dann nimmt er sie sofort wieder weg.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 9.41,
+          "end": 9.47,
+          "score": 0.725
+        },
+        {
+          "word": "steht",
+          "start": 9.51,
+          "end": 9.83,
+          "score": 0.807
+        },
+        {
+          "word": "auf,",
+          "start": 9.87,
+          "end": 10.531,
+          "score": 0.81
+        },
+        {
+          "word": "legt",
+          "start": 10.571,
+          "end": 10.751,
+          "score": 0.663
+        },
+        {
+          "word": "mir",
+          "start": 10.771,
+          "end": 10.971,
+          "score": 0.859
+        },
+        {
+          "word": "kurz",
+          "start": 11.011,
+          "end": 11.251,
+          "score": 0.946
+        },
+        {
+          "word": "die",
+          "start": 11.292,
+          "end": 11.392,
+          "score": 0.989
+        },
+        {
+          "word": "Hand",
+          "start": 11.432,
+          "end": 11.612,
+          "score": 0.985
+        },
+        {
+          "word": "auf",
+          "start": 11.632,
+          "end": 11.752,
+          "score": 0.846
+        },
+        {
+          "word": "die",
+          "start": 11.792,
+          "end": 11.872,
+          "score": 0.868
+        },
+        {
+          "word": "Schulter",
+          "start": 11.912,
+          "end": 12.192,
+          "score": 0.844
+        },
+        {
+          "word": "—",
+          "start": 12.933,
+          "end": 12.953,
+          "score": 0.934
+        },
+        {
+          "word": "dann",
+          "start": 12.973,
+          "end": 13.173,
+          "score": 0.949
+        },
+        {
+          "word": "nimmt",
+          "start": 13.213,
+          "end": 13.374,
+          "score": 0.97
+        },
+        {
+          "word": "er",
+          "start": 13.414,
+          "end": 13.494,
+          "score": 0.892
+        },
+        {
+          "word": "sie",
+          "start": 13.514,
+          "end": 13.634,
+          "score": 0.91
+        },
+        {
+          "word": "sofort",
+          "start": 13.674,
+          "end": 14.034,
+          "score": 0.91
+        },
+        {
+          "word": "wieder",
+          "start": 14.054,
+          "end": 14.235,
+          "score": 0.933
+        },
+        {
+          "word": "weg.",
+          "start": 14.275,
+          "end": 16.357,
+          "score": 0.994
+        }
+      ]
+    },
+    {
+      "start": 16.377,
+      "end": 18.599,
+      "text": "\"Du bist robuster geworden.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 16.377,
+          "end": 16.597,
+          "score": 0.829
+        },
+        {
+          "word": "bist",
+          "start": 16.617,
+          "end": 16.817,
+          "score": 0.835
+        },
+        {
+          "word": "robuster",
+          "start": 16.857,
+          "end": 17.358,
+          "score": 0.878
+        },
+        {
+          "word": "geworden.",
+          "start": 17.378,
+          "end": 18.599,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 18.619,
+      "end": 19.22,
+      "text": "Das hält an.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 18.619,
+          "end": 18.819,
+          "score": 0.952
+        },
+        {
+          "word": "hält",
+          "start": 18.839,
+          "end": 19.099,
+          "score": 0.93
+        },
+        {
+          "word": "an.\"",
+          "start": 19.12,
+          "end": 19.22,
+          "score": 0.468
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.541,
+      "end": 1.021,
+      "score": 0.903
+    },
+    {
+      "word": "schaut",
+      "start": 1.061,
+      "end": 1.321,
+      "score": 0.85
+    },
+    {
+      "word": "mich",
+      "start": 1.361,
+      "end": 1.522,
+      "score": 0.879
+    },
+    {
+      "word": "kurz",
+      "start": 1.562,
+      "end": 1.822,
+      "score": 0.991
+    },
+    {
+      "word": "an.",
+      "start": 1.862,
+      "end": 2.623,
+      "score": 0.742
+    },
+    {
+      "word": "Dann",
+      "start": 2.643,
+      "end": 2.923,
+      "score": 0.912
+    },
+    {
+      "word": "nickt",
+      "start": 2.963,
+      "end": 3.183,
+      "score": 0.753
+    },
+    {
+      "word": "er.",
+      "start": 3.243,
+      "end": 5.065,
+      "score": 0.942
+    },
+    {
+      "word": "\"Du",
+      "start": 5.085,
+      "end": 5.245,
+      "score": 0.872
+    },
+    {
+      "word": "hast",
+      "start": 5.285,
+      "end": 5.506,
+      "score": 0.884
+    },
+    {
+      "word": "die",
+      "start": 5.546,
+      "end": 5.666,
+      "score": 0.832
+    },
+    {
+      "word": "Bedingungen",
+      "start": 5.706,
+      "end": 6.226,
+      "score": 0.917
+    },
+    {
+      "word": "erfüllt.",
+      "start": 6.266,
+      "end": 7.127,
+      "score": 0.92
+    },
+    {
+      "word": "Ich",
+      "start": 7.167,
+      "end": 7.347,
+      "score": 0.777
+    },
+    {
+      "word": "sehe",
+      "start": 7.388,
+      "end": 7.628,
+      "score": 0.846
+    },
+    {
+      "word": "es.\"",
+      "start": 7.688,
+      "end": 9.37,
+      "score": 0.892
+    },
+    {
+      "word": "Er",
+      "start": 9.41,
+      "end": 9.47,
+      "score": 0.725
+    },
+    {
+      "word": "steht",
+      "start": 9.51,
+      "end": 9.83,
+      "score": 0.807
+    },
+    {
+      "word": "auf,",
+      "start": 9.87,
+      "end": 10.531,
+      "score": 0.81
+    },
+    {
+      "word": "legt",
+      "start": 10.571,
+      "end": 10.751,
+      "score": 0.663
+    },
+    {
+      "word": "mir",
+      "start": 10.771,
+      "end": 10.971,
+      "score": 0.859
+    },
+    {
+      "word": "kurz",
+      "start": 11.011,
+      "end": 11.251,
+      "score": 0.946
+    },
+    {
+      "word": "die",
+      "start": 11.292,
+      "end": 11.392,
+      "score": 0.989
+    },
+    {
+      "word": "Hand",
+      "start": 11.432,
+      "end": 11.612,
+      "score": 0.985
+    },
+    {
+      "word": "auf",
+      "start": 11.632,
+      "end": 11.752,
+      "score": 0.846
+    },
+    {
+      "word": "die",
+      "start": 11.792,
+      "end": 11.872,
+      "score": 0.868
+    },
+    {
+      "word": "Schulter",
+      "start": 11.912,
+      "end": 12.192,
+      "score": 0.844
+    },
+    {
+      "word": "—",
+      "start": 12.933,
+      "end": 12.953,
+      "score": 0.934
+    },
+    {
+      "word": "dann",
+      "start": 12.973,
+      "end": 13.173,
+      "score": 0.949
+    },
+    {
+      "word": "nimmt",
+      "start": 13.213,
+      "end": 13.374,
+      "score": 0.97
+    },
+    {
+      "word": "er",
+      "start": 13.414,
+      "end": 13.494,
+      "score": 0.892
+    },
+    {
+      "word": "sie",
+      "start": 13.514,
+      "end": 13.634,
+      "score": 0.91
+    },
+    {
+      "word": "sofort",
+      "start": 13.674,
+      "end": 14.034,
+      "score": 0.91
+    },
+    {
+      "word": "wieder",
+      "start": 14.054,
+      "end": 14.235,
+      "score": 0.933
+    },
+    {
+      "word": "weg.",
+      "start": 14.275,
+      "end": 16.357,
+      "score": 0.994
+    },
+    {
+      "word": "\"Du",
+      "start": 16.377,
+      "end": 16.597,
+      "score": 0.829
+    },
+    {
+      "word": "bist",
+      "start": 16.617,
+      "end": 16.817,
+      "score": 0.835
+    },
+    {
+      "word": "robuster",
+      "start": 16.857,
+      "end": 17.358,
+      "score": 0.878
+    },
+    {
+      "word": "geworden.",
+      "start": 17.378,
+      "end": 18.599,
+      "score": 0.898
+    },
+    {
+      "word": "Das",
+      "start": 18.619,
+      "end": 18.819,
+      "score": 0.952
+    },
+    {
+      "word": "hält",
+      "start": 18.839,
+      "end": 19.099,
+      "score": 0.93
+    },
+    {
+      "word": "an.\"",
+      "start": 19.12,
+      "end": 19.22,
+      "score": 0.468
+    }
+  ]
+}

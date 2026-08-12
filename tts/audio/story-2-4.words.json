@@ -1,0 +1,962 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 2.562,
+      "text": "Mira lächelt nicht mehr.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.48,
+          "end": 0.881,
+          "score": 0.744
+        },
+        {
+          "word": "lächelt",
+          "start": 0.921,
+          "end": 1.261,
+          "score": 0.798
+        },
+        {
+          "word": "nicht",
+          "start": 1.301,
+          "end": 1.481,
+          "score": 0.822
+        },
+        {
+          "word": "mehr.",
+          "start": 1.501,
+          "end": 2.562,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 2.582,
+      "end": 8.185,
+      "text": "Zum ersten Mal, seit ich sie kenne, sprechen wir wie zwei, die einander ebenbürtig sind.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 2.582,
+          "end": 2.802,
+          "score": 0.955
+        },
+        {
+          "word": "ersten",
+          "start": 2.842,
+          "end": 3.142,
+          "score": 0.9
+        },
+        {
+          "word": "Mal,",
+          "start": 3.182,
+          "end": 3.422,
+          "score": 0.944
+        },
+        {
+          "word": "seit",
+          "start": 3.442,
+          "end": 3.582,
+          "score": 0.779
+        },
+        {
+          "word": "ich",
+          "start": 3.622,
+          "end": 3.722,
+          "score": 0.987
+        },
+        {
+          "word": "sie",
+          "start": 3.762,
+          "end": 3.902,
+          "score": 0.935
+        },
+        {
+          "word": "kenne,",
+          "start": 3.923,
+          "end": 4.263,
+          "score": 0.959
+        },
+        {
+          "word": "sprechen",
+          "start": 4.283,
+          "end": 4.643,
+          "score": 0.826
+        },
+        {
+          "word": "wir",
+          "start": 4.663,
+          "end": 4.803,
+          "score": 0.862
+        },
+        {
+          "word": "wie",
+          "start": 4.843,
+          "end": 5.063,
+          "score": 0.977
+        },
+        {
+          "word": "zwei,",
+          "start": 5.103,
+          "end": 5.403,
+          "score": 0.977
+        },
+        {
+          "word": "die",
+          "start": 5.423,
+          "end": 5.524,
+          "score": 0.953
+        },
+        {
+          "word": "einander",
+          "start": 5.564,
+          "end": 6.024,
+          "score": 0.857
+        },
+        {
+          "word": "ebenbürtig",
+          "start": 6.064,
+          "end": 6.644,
+          "score": 0.865
+        },
+        {
+          "word": "sind.",
+          "start": 6.684,
+          "end": 8.185,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 8.205,
+      "end": 12.588,
+      "text": "»Der Brief, den ich dir für Brakka mitgab — er war eine Warnung.",
+      "words": [
+        {
+          "word": "»Der",
+          "start": 8.205,
+          "end": 8.385,
+          "score": 0.975
+        },
+        {
+          "word": "Brief,",
+          "start": 8.425,
+          "end": 8.706,
+          "score": 0.862
+        },
+        {
+          "word": "den",
+          "start": 8.726,
+          "end": 8.846,
+          "score": 0.703
+        },
+        {
+          "word": "ich",
+          "start": 8.886,
+          "end": 8.966,
+          "score": 0.961
+        },
+        {
+          "word": "dir",
+          "start": 8.986,
+          "end": 9.146,
+          "score": 0.71
+        },
+        {
+          "word": "für",
+          "start": 9.166,
+          "end": 9.286,
+          "score": 0.91
+        },
+        {
+          "word": "Brakka",
+          "start": 9.306,
+          "end": 9.606,
+          "score": 0.771
+        },
+        {
+          "word": "mitgab",
+          "start": 9.626,
+          "end": 10.647,
+          "score": 0.917
+        },
+        {
+          "word": "—",
+          "start": 10.667,
+          "end": 10.687,
+          "score": 0.943
+        },
+        {
+          "word": "er",
+          "start": 10.707,
+          "end": 10.807,
+          "score": 0.802
+        },
+        {
+          "word": "war",
+          "start": 10.847,
+          "end": 10.987,
+          "score": 0.925
+        },
+        {
+          "word": "eine",
+          "start": 11.027,
+          "end": 11.247,
+          "score": 0.793
+        },
+        {
+          "word": "Warnung.",
+          "start": 11.287,
+          "end": 12.588,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 12.628,
+      "end": 14.769,
+      "text": "Brakka weiß, wer der Schatten ist.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 12.628,
+          "end": 13.048,
+          "score": 0.826
+        },
+        {
+          "word": "weiß,",
+          "start": 13.088,
+          "end": 13.329,
+          "score": 0.782
+        },
+        {
+          "word": "wer",
+          "start": 13.349,
+          "end": 13.509,
+          "score": 0.739
+        },
+        {
+          "word": "der",
+          "start": 13.529,
+          "end": 13.629,
+          "score": 0.566
+        },
+        {
+          "word": "Schatten",
+          "start": 13.649,
+          "end": 13.969,
+          "score": 0.884
+        },
+        {
+          "word": "ist.",
+          "start": 14.009,
+          "end": 14.769,
+          "score": 0.776
+        }
+      ]
+    },
+    {
+      "start": 14.809,
+      "end": 19.072,
+      "text": "Er hat nur nie ein Wort verloren.« »Ich auch nicht.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 14.809,
+          "end": 14.869,
+          "score": 0.976
+        },
+        {
+          "word": "hat",
+          "start": 14.91,
+          "end": 15.09,
+          "score": 0.94
+        },
+        {
+          "word": "nur",
+          "start": 15.11,
+          "end": 15.29,
+          "score": 0.934
+        },
+        {
+          "word": "nie",
+          "start": 15.31,
+          "end": 15.51,
+          "score": 0.98
+        },
+        {
+          "word": "ein",
+          "start": 15.55,
+          "end": 15.69,
+          "score": 0.868
+        },
+        {
+          "word": "Wort",
+          "start": 15.71,
+          "end": 15.93,
+          "score": 0.982
+        },
+        {
+          "word": "verloren.«",
+          "start": 15.95,
+          "end": 17.571,
+          "score": 0.847
+        },
+        {
+          "word": "»Ich",
+          "start": 17.591,
+          "end": 17.811,
+          "score": 0.877
+        },
+        {
+          "word": "auch",
+          "start": 17.851,
+          "end": 18.052,
+          "score": 0.778
+        },
+        {
+          "word": "nicht.",
+          "start": 18.092,
+          "end": 19.072,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 19.092,
+      "end": 20.973,
+      "text": "Weil Reden gefährlich ist.",
+      "words": [
+        {
+          "word": "Weil",
+          "start": 19.092,
+          "end": 19.272,
+          "score": 0.967
+        },
+        {
+          "word": "Reden",
+          "start": 19.312,
+          "end": 19.572,
+          "score": 0.851
+        },
+        {
+          "word": "gefährlich",
+          "start": 19.613,
+          "end": 20.053,
+          "score": 0.945
+        },
+        {
+          "word": "ist.",
+          "start": 20.093,
+          "end": 20.973,
+          "score": 0.903
+        }
+      ]
+    },
+    {
+      "start": 20.993,
+      "end": 22.694,
+      "text": "Aber du fragst.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 20.993,
+          "end": 21.214,
+          "score": 0.78
+        },
+        {
+          "word": "du",
+          "start": 21.254,
+          "end": 21.454,
+          "score": 0.89
+        },
+        {
+          "word": "fragst.",
+          "start": 21.494,
+          "end": 22.694,
+          "score": 0.905
+        }
+      ]
+    },
+    {
+      "start": 22.714,
+      "end": 30.499,
+      "text": "Und das verändert etwas.« Sie wendet sich ab, als fürchtete sie, es zu bereuen, sähe sie mich noch länger an.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 22.714,
+          "end": 22.915,
+          "score": 0.914
+        },
+        {
+          "word": "das",
+          "start": 22.955,
+          "end": 23.175,
+          "score": 0.92
+        },
+        {
+          "word": "verändert",
+          "start": 23.195,
+          "end": 23.655,
+          "score": 0.912
+        },
+        {
+          "word": "etwas.«",
+          "start": 23.695,
+          "end": 25.576,
+          "score": 0.901
+        },
+        {
+          "word": "Sie",
+          "start": 25.596,
+          "end": 25.696,
+          "score": 0.954
+        },
+        {
+          "word": "wendet",
+          "start": 25.756,
+          "end": 26.037,
+          "score": 0.894
+        },
+        {
+          "word": "sich",
+          "start": 26.057,
+          "end": 26.257,
+          "score": 0.975
+        },
+        {
+          "word": "ab,",
+          "start": 26.297,
+          "end": 27.057,
+          "score": 0.956
+        },
+        {
+          "word": "als",
+          "start": 27.097,
+          "end": 27.317,
+          "score": 0.961
+        },
+        {
+          "word": "fürchtete",
+          "start": 27.357,
+          "end": 27.838,
+          "score": 0.871
+        },
+        {
+          "word": "sie,",
+          "start": 27.858,
+          "end": 27.998,
+          "score": 0.813
+        },
+        {
+          "word": "es",
+          "start": 28.018,
+          "end": 28.218,
+          "score": 0.958
+        },
+        {
+          "word": "zu",
+          "start": 28.238,
+          "end": 28.358,
+          "score": 0.972
+        },
+        {
+          "word": "bereuen,",
+          "start": 28.378,
+          "end": 29.339,
+          "score": 0.808
+        },
+        {
+          "word": "sähe",
+          "start": 29.359,
+          "end": 29.599,
+          "score": 0.774
+        },
+        {
+          "word": "sie",
+          "start": 29.619,
+          "end": 29.739,
+          "score": 0.882
+        },
+        {
+          "word": "mich",
+          "start": 29.759,
+          "end": 29.899,
+          "score": 0.868
+        },
+        {
+          "word": "noch",
+          "start": 29.939,
+          "end": 30.099,
+          "score": 0.907
+        },
+        {
+          "word": "länger",
+          "start": 30.119,
+          "end": 30.379,
+          "score": 0.967
+        },
+        {
+          "word": "an.",
+          "start": 30.419,
+          "end": 30.499,
+          "score": 0.84
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.48,
+      "end": 0.881,
+      "score": 0.744
+    },
+    {
+      "word": "lächelt",
+      "start": 0.921,
+      "end": 1.261,
+      "score": 0.798
+    },
+    {
+      "word": "nicht",
+      "start": 1.301,
+      "end": 1.481,
+      "score": 0.822
+    },
+    {
+      "word": "mehr.",
+      "start": 1.501,
+      "end": 2.562,
+      "score": 0.86
+    },
+    {
+      "word": "Zum",
+      "start": 2.582,
+      "end": 2.802,
+      "score": 0.955
+    },
+    {
+      "word": "ersten",
+      "start": 2.842,
+      "end": 3.142,
+      "score": 0.9
+    },
+    {
+      "word": "Mal,",
+      "start": 3.182,
+      "end": 3.422,
+      "score": 0.944
+    },
+    {
+      "word": "seit",
+      "start": 3.442,
+      "end": 3.582,
+      "score": 0.779
+    },
+    {
+      "word": "ich",
+      "start": 3.622,
+      "end": 3.722,
+      "score": 0.987
+    },
+    {
+      "word": "sie",
+      "start": 3.762,
+      "end": 3.902,
+      "score": 0.935
+    },
+    {
+      "word": "kenne,",
+      "start": 3.923,
+      "end": 4.263,
+      "score": 0.959
+    },
+    {
+      "word": "sprechen",
+      "start": 4.283,
+      "end": 4.643,
+      "score": 0.826
+    },
+    {
+      "word": "wir",
+      "start": 4.663,
+      "end": 4.803,
+      "score": 0.862
+    },
+    {
+      "word": "wie",
+      "start": 4.843,
+      "end": 5.063,
+      "score": 0.977
+    },
+    {
+      "word": "zwei,",
+      "start": 5.103,
+      "end": 5.403,
+      "score": 0.977
+    },
+    {
+      "word": "die",
+      "start": 5.423,
+      "end": 5.524,
+      "score": 0.953
+    },
+    {
+      "word": "einander",
+      "start": 5.564,
+      "end": 6.024,
+      "score": 0.857
+    },
+    {
+      "word": "ebenbürtig",
+      "start": 6.064,
+      "end": 6.644,
+      "score": 0.865
+    },
+    {
+      "word": "sind.",
+      "start": 6.684,
+      "end": 8.185,
+      "score": 0.94
+    },
+    {
+      "word": "»Der",
+      "start": 8.205,
+      "end": 8.385,
+      "score": 0.975
+    },
+    {
+      "word": "Brief,",
+      "start": 8.425,
+      "end": 8.706,
+      "score": 0.862
+    },
+    {
+      "word": "den",
+      "start": 8.726,
+      "end": 8.846,
+      "score": 0.703
+    },
+    {
+      "word": "ich",
+      "start": 8.886,
+      "end": 8.966,
+      "score": 0.961
+    },
+    {
+      "word": "dir",
+      "start": 8.986,
+      "end": 9.146,
+      "score": 0.71
+    },
+    {
+      "word": "für",
+      "start": 9.166,
+      "end": 9.286,
+      "score": 0.91
+    },
+    {
+      "word": "Brakka",
+      "start": 9.306,
+      "end": 9.606,
+      "score": 0.771
+    },
+    {
+      "word": "mitgab",
+      "start": 9.626,
+      "end": 10.647,
+      "score": 0.917
+    },
+    {
+      "word": "—",
+      "start": 10.667,
+      "end": 10.687,
+      "score": 0.943
+    },
+    {
+      "word": "er",
+      "start": 10.707,
+      "end": 10.807,
+      "score": 0.802
+    },
+    {
+      "word": "war",
+      "start": 10.847,
+      "end": 10.987,
+      "score": 0.925
+    },
+    {
+      "word": "eine",
+      "start": 11.027,
+      "end": 11.247,
+      "score": 0.793
+    },
+    {
+      "word": "Warnung.",
+      "start": 11.287,
+      "end": 12.588,
+      "score": 0.952
+    },
+    {
+      "word": "Brakka",
+      "start": 12.628,
+      "end": 13.048,
+      "score": 0.826
+    },
+    {
+      "word": "weiß,",
+      "start": 13.088,
+      "end": 13.329,
+      "score": 0.782
+    },
+    {
+      "word": "wer",
+      "start": 13.349,
+      "end": 13.509,
+      "score": 0.739
+    },
+    {
+      "word": "der",
+      "start": 13.529,
+      "end": 13.629,
+      "score": 0.566
+    },
+    {
+      "word": "Schatten",
+      "start": 13.649,
+      "end": 13.969,
+      "score": 0.884
+    },
+    {
+      "word": "ist.",
+      "start": 14.009,
+      "end": 14.769,
+      "score": 0.776
+    },
+    {
+      "word": "Er",
+      "start": 14.809,
+      "end": 14.869,
+      "score": 0.976
+    },
+    {
+      "word": "hat",
+      "start": 14.91,
+      "end": 15.09,
+      "score": 0.94
+    },
+    {
+      "word": "nur",
+      "start": 15.11,
+      "end": 15.29,
+      "score": 0.934
+    },
+    {
+      "word": "nie",
+      "start": 15.31,
+      "end": 15.51,
+      "score": 0.98
+    },
+    {
+      "word": "ein",
+      "start": 15.55,
+      "end": 15.69,
+      "score": 0.868
+    },
+    {
+      "word": "Wort",
+      "start": 15.71,
+      "end": 15.93,
+      "score": 0.982
+    },
+    {
+      "word": "verloren.«",
+      "start": 15.95,
+      "end": 17.571,
+      "score": 0.847
+    },
+    {
+      "word": "»Ich",
+      "start": 17.591,
+      "end": 17.811,
+      "score": 0.877
+    },
+    {
+      "word": "auch",
+      "start": 17.851,
+      "end": 18.052,
+      "score": 0.778
+    },
+    {
+      "word": "nicht.",
+      "start": 18.092,
+      "end": 19.072,
+      "score": 0.914
+    },
+    {
+      "word": "Weil",
+      "start": 19.092,
+      "end": 19.272,
+      "score": 0.967
+    },
+    {
+      "word": "Reden",
+      "start": 19.312,
+      "end": 19.572,
+      "score": 0.851
+    },
+    {
+      "word": "gefährlich",
+      "start": 19.613,
+      "end": 20.053,
+      "score": 0.945
+    },
+    {
+      "word": "ist.",
+      "start": 20.093,
+      "end": 20.973,
+      "score": 0.903
+    },
+    {
+      "word": "Aber",
+      "start": 20.993,
+      "end": 21.214,
+      "score": 0.78
+    },
+    {
+      "word": "du",
+      "start": 21.254,
+      "end": 21.454,
+      "score": 0.89
+    },
+    {
+      "word": "fragst.",
+      "start": 21.494,
+      "end": 22.694,
+      "score": 0.905
+    },
+    {
+      "word": "Und",
+      "start": 22.714,
+      "end": 22.915,
+      "score": 0.914
+    },
+    {
+      "word": "das",
+      "start": 22.955,
+      "end": 23.175,
+      "score": 0.92
+    },
+    {
+      "word": "verändert",
+      "start": 23.195,
+      "end": 23.655,
+      "score": 0.912
+    },
+    {
+      "word": "etwas.«",
+      "start": 23.695,
+      "end": 25.576,
+      "score": 0.901
+    },
+    {
+      "word": "Sie",
+      "start": 25.596,
+      "end": 25.696,
+      "score": 0.954
+    },
+    {
+      "word": "wendet",
+      "start": 25.756,
+      "end": 26.037,
+      "score": 0.894
+    },
+    {
+      "word": "sich",
+      "start": 26.057,
+      "end": 26.257,
+      "score": 0.975
+    },
+    {
+      "word": "ab,",
+      "start": 26.297,
+      "end": 27.057,
+      "score": 0.956
+    },
+    {
+      "word": "als",
+      "start": 27.097,
+      "end": 27.317,
+      "score": 0.961
+    },
+    {
+      "word": "fürchtete",
+      "start": 27.357,
+      "end": 27.838,
+      "score": 0.871
+    },
+    {
+      "word": "sie,",
+      "start": 27.858,
+      "end": 27.998,
+      "score": 0.813
+    },
+    {
+      "word": "es",
+      "start": 28.018,
+      "end": 28.218,
+      "score": 0.958
+    },
+    {
+      "word": "zu",
+      "start": 28.238,
+      "end": 28.358,
+      "score": 0.972
+    },
+    {
+      "word": "bereuen,",
+      "start": 28.378,
+      "end": 29.339,
+      "score": 0.808
+    },
+    {
+      "word": "sähe",
+      "start": 29.359,
+      "end": 29.599,
+      "score": 0.774
+    },
+    {
+      "word": "sie",
+      "start": 29.619,
+      "end": 29.739,
+      "score": 0.882
+    },
+    {
+      "word": "mich",
+      "start": 29.759,
+      "end": 29.899,
+      "score": 0.868
+    },
+    {
+      "word": "noch",
+      "start": 29.939,
+      "end": 30.099,
+      "score": 0.907
+    },
+    {
+      "word": "länger",
+      "start": 30.119,
+      "end": 30.379,
+      "score": 0.967
+    },
+    {
+      "word": "an.",
+      "start": 30.419,
+      "end": 30.499,
+      "score": 0.84
+    }
+  ]
+}

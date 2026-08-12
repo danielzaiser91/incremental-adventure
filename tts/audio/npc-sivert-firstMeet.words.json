@@ -1,0 +1,657 @@
+{
+  "segments": [
+    {
+      "start": 0.3,
+      "end": 3.162,
+      "text": "\"Du arbeitest auf dem Feld.\"",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 0.3,
+          "end": 0.901,
+          "score": 0.688
+        },
+        {
+          "word": "arbeitest",
+          "start": 0.961,
+          "end": 1.501,
+          "score": 0.825
+        },
+        {
+          "word": "auf",
+          "start": 1.521,
+          "end": 1.621,
+          "score": 0.833
+        },
+        {
+          "word": "dem",
+          "start": 1.661,
+          "end": 1.901,
+          "score": 0.899
+        },
+        {
+          "word": "Feld.\"",
+          "start": 1.961,
+          "end": 3.162,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 3.202,
+      "end": 5.404,
+      "text": "Er stellt seinen Becher ab.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.202,
+          "end": 3.302,
+          "score": 0.862
+        },
+        {
+          "word": "stellt",
+          "start": 3.342,
+          "end": 3.623,
+          "score": 0.928
+        },
+        {
+          "word": "seinen",
+          "start": 3.643,
+          "end": 3.863,
+          "score": 0.806
+        },
+        {
+          "word": "Becher",
+          "start": 3.903,
+          "end": 4.183,
+          "score": 0.856
+        },
+        {
+          "word": "ab.",
+          "start": 4.223,
+          "end": 5.404,
+          "score": 0.993
+        }
+      ]
+    },
+    {
+      "start": 5.424,
+      "end": 8.806,
+      "text": "Keine Frage — eine Feststellung.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 5.424,
+          "end": 5.684,
+          "score": 0.87
+        },
+        {
+          "word": "Frage",
+          "start": 5.724,
+          "end": 6.024,
+          "score": 0.992
+        },
+        {
+          "word": "—",
+          "start": 6.625,
+          "end": 6.645,
+          "score": 0.598
+        },
+        {
+          "word": "eine",
+          "start": 6.705,
+          "end": 7.005,
+          "score": 0.845
+        },
+        {
+          "word": "Feststellung.",
+          "start": 7.045,
+          "end": 8.806,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 8.826,
+      "end": 10.728,
+      "text": "\"Das sieht man sofort.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 8.826,
+          "end": 8.966,
+          "score": 0.772
+        },
+        {
+          "word": "sieht",
+          "start": 8.986,
+          "end": 9.146,
+          "score": 0.665
+        },
+        {
+          "word": "man",
+          "start": 9.186,
+          "end": 9.287,
+          "score": 0.834
+        },
+        {
+          "word": "sofort.",
+          "start": 9.327,
+          "end": 10.728,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 10.748,
+      "end": 14.951,
+      "text": "Treutheim, wenn ich richtig schätze.\"",
+      "words": [
+        {
+          "word": "Treutheim,",
+          "start": 10.748,
+          "end": 11.708,
+          "score": 0.89
+        },
+        {
+          "word": "wenn",
+          "start": 11.728,
+          "end": 11.848,
+          "score": 0.882
+        },
+        {
+          "word": "ich",
+          "start": 11.888,
+          "end": 12.008,
+          "score": 0.817
+        },
+        {
+          "word": "richtig",
+          "start": 12.029,
+          "end": 12.249,
+          "score": 0.898
+        },
+        {
+          "word": "schätze.\"",
+          "start": 12.289,
+          "end": 14.951,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 14.971,
+      "end": 17.272,
+      "text": "\"Mein Name ist Sivert.",
+      "words": [
+        {
+          "word": "\"Mein",
+          "start": 14.971,
+          "end": 15.151,
+          "score": 0.826
+        },
+        {
+          "word": "Name",
+          "start": 15.171,
+          "end": 15.451,
+          "score": 0.93
+        },
+        {
+          "word": "ist",
+          "start": 15.491,
+          "end": 15.791,
+          "score": 0.84
+        },
+        {
+          "word": "Sivert.",
+          "start": 15.831,
+          "end": 17.272,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 17.312,
+      "end": 22.356,
+      "text": "Ich berate Hofbesitzer, wie sie mehr aus ihrer Arbeit herausholen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 17.312,
+          "end": 17.432,
+          "score": 0.828
+        },
+        {
+          "word": "berate",
+          "start": 17.452,
+          "end": 17.853,
+          "score": 0.958
+        },
+        {
+          "word": "Hofbesitzer,",
+          "start": 17.873,
+          "end": 19.013,
+          "score": 0.832
+        },
+        {
+          "word": "wie",
+          "start": 19.033,
+          "end": 19.174,
+          "score": 0.904
+        },
+        {
+          "word": "sie",
+          "start": 19.194,
+          "end": 19.414,
+          "score": 0.873
+        },
+        {
+          "word": "mehr",
+          "start": 19.454,
+          "end": 19.694,
+          "score": 0.859
+        },
+        {
+          "word": "aus",
+          "start": 19.714,
+          "end": 19.894,
+          "score": 0.79
+        },
+        {
+          "word": "ihrer",
+          "start": 19.934,
+          "end": 20.134,
+          "score": 0.959
+        },
+        {
+          "word": "Arbeit",
+          "start": 20.174,
+          "end": 20.474,
+          "score": 0.985
+        },
+        {
+          "word": "herausholen.",
+          "start": 20.494,
+          "end": 22.356,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 22.396,
+      "end": 25.718,
+      "text": "Was du beherrschst, ist Fleiß.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 22.396,
+          "end": 22.616,
+          "score": 0.979
+        },
+        {
+          "word": "du",
+          "start": 22.656,
+          "end": 22.776,
+          "score": 0.889
+        },
+        {
+          "word": "beherrschst,",
+          "start": 22.816,
+          "end": 23.857,
+          "score": 0.824
+        },
+        {
+          "word": "ist",
+          "start": 23.897,
+          "end": 24.137,
+          "score": 0.991
+        },
+        {
+          "word": "Fleiß.",
+          "start": 24.197,
+          "end": 25.718,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 25.758,
+      "end": 27.94,
+      "text": "Was dir noch fehlt, ist Methode.\"",
+      "words": [
+        {
+          "word": "Was",
+          "start": 25.758,
+          "end": 25.878,
+          "score": 0.981
+        },
+        {
+          "word": "dir",
+          "start": 25.898,
+          "end": 26.018,
+          "score": 0.61
+        },
+        {
+          "word": "noch",
+          "start": 26.038,
+          "end": 26.199,
+          "score": 0.933
+        },
+        {
+          "word": "fehlt,",
+          "start": 26.259,
+          "end": 27.059,
+          "score": 0.969
+        },
+        {
+          "word": "ist",
+          "start": 27.099,
+          "end": 27.399,
+          "score": 0.878
+        },
+        {
+          "word": "Methode.\"",
+          "start": 27.439,
+          "end": 27.94,
+          "score": 0.724
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Du",
+      "start": 0.3,
+      "end": 0.901,
+      "score": 0.688
+    },
+    {
+      "word": "arbeitest",
+      "start": 0.961,
+      "end": 1.501,
+      "score": 0.825
+    },
+    {
+      "word": "auf",
+      "start": 1.521,
+      "end": 1.621,
+      "score": 0.833
+    },
+    {
+      "word": "dem",
+      "start": 1.661,
+      "end": 1.901,
+      "score": 0.899
+    },
+    {
+      "word": "Feld.\"",
+      "start": 1.961,
+      "end": 3.162,
+      "score": 0.865
+    },
+    {
+      "word": "Er",
+      "start": 3.202,
+      "end": 3.302,
+      "score": 0.862
+    },
+    {
+      "word": "stellt",
+      "start": 3.342,
+      "end": 3.623,
+      "score": 0.928
+    },
+    {
+      "word": "seinen",
+      "start": 3.643,
+      "end": 3.863,
+      "score": 0.806
+    },
+    {
+      "word": "Becher",
+      "start": 3.903,
+      "end": 4.183,
+      "score": 0.856
+    },
+    {
+      "word": "ab.",
+      "start": 4.223,
+      "end": 5.404,
+      "score": 0.993
+    },
+    {
+      "word": "Keine",
+      "start": 5.424,
+      "end": 5.684,
+      "score": 0.87
+    },
+    {
+      "word": "Frage",
+      "start": 5.724,
+      "end": 6.024,
+      "score": 0.992
+    },
+    {
+      "word": "—",
+      "start": 6.625,
+      "end": 6.645,
+      "score": 0.598
+    },
+    {
+      "word": "eine",
+      "start": 6.705,
+      "end": 7.005,
+      "score": 0.845
+    },
+    {
+      "word": "Feststellung.",
+      "start": 7.045,
+      "end": 8.806,
+      "score": 0.956
+    },
+    {
+      "word": "\"Das",
+      "start": 8.826,
+      "end": 8.966,
+      "score": 0.772
+    },
+    {
+      "word": "sieht",
+      "start": 8.986,
+      "end": 9.146,
+      "score": 0.665
+    },
+    {
+      "word": "man",
+      "start": 9.186,
+      "end": 9.287,
+      "score": 0.834
+    },
+    {
+      "word": "sofort.",
+      "start": 9.327,
+      "end": 10.728,
+      "score": 0.941
+    },
+    {
+      "word": "Treutheim,",
+      "start": 10.748,
+      "end": 11.708,
+      "score": 0.89
+    },
+    {
+      "word": "wenn",
+      "start": 11.728,
+      "end": 11.848,
+      "score": 0.882
+    },
+    {
+      "word": "ich",
+      "start": 11.888,
+      "end": 12.008,
+      "score": 0.817
+    },
+    {
+      "word": "richtig",
+      "start": 12.029,
+      "end": 12.249,
+      "score": 0.898
+    },
+    {
+      "word": "schätze.\"",
+      "start": 12.289,
+      "end": 14.951,
+      "score": 0.859
+    },
+    {
+      "word": "\"Mein",
+      "start": 14.971,
+      "end": 15.151,
+      "score": 0.826
+    },
+    {
+      "word": "Name",
+      "start": 15.171,
+      "end": 15.451,
+      "score": 0.93
+    },
+    {
+      "word": "ist",
+      "start": 15.491,
+      "end": 15.791,
+      "score": 0.84
+    },
+    {
+      "word": "Sivert.",
+      "start": 15.831,
+      "end": 17.272,
+      "score": 0.827
+    },
+    {
+      "word": "Ich",
+      "start": 17.312,
+      "end": 17.432,
+      "score": 0.828
+    },
+    {
+      "word": "berate",
+      "start": 17.452,
+      "end": 17.853,
+      "score": 0.958
+    },
+    {
+      "word": "Hofbesitzer,",
+      "start": 17.873,
+      "end": 19.013,
+      "score": 0.832
+    },
+    {
+      "word": "wie",
+      "start": 19.033,
+      "end": 19.174,
+      "score": 0.904
+    },
+    {
+      "word": "sie",
+      "start": 19.194,
+      "end": 19.414,
+      "score": 0.873
+    },
+    {
+      "word": "mehr",
+      "start": 19.454,
+      "end": 19.694,
+      "score": 0.859
+    },
+    {
+      "word": "aus",
+      "start": 19.714,
+      "end": 19.894,
+      "score": 0.79
+    },
+    {
+      "word": "ihrer",
+      "start": 19.934,
+      "end": 20.134,
+      "score": 0.959
+    },
+    {
+      "word": "Arbeit",
+      "start": 20.174,
+      "end": 20.474,
+      "score": 0.985
+    },
+    {
+      "word": "herausholen.",
+      "start": 20.494,
+      "end": 22.356,
+      "score": 0.865
+    },
+    {
+      "word": "Was",
+      "start": 22.396,
+      "end": 22.616,
+      "score": 0.979
+    },
+    {
+      "word": "du",
+      "start": 22.656,
+      "end": 22.776,
+      "score": 0.889
+    },
+    {
+      "word": "beherrschst,",
+      "start": 22.816,
+      "end": 23.857,
+      "score": 0.824
+    },
+    {
+      "word": "ist",
+      "start": 23.897,
+      "end": 24.137,
+      "score": 0.991
+    },
+    {
+      "word": "Fleiß.",
+      "start": 24.197,
+      "end": 25.718,
+      "score": 0.932
+    },
+    {
+      "word": "Was",
+      "start": 25.758,
+      "end": 25.878,
+      "score": 0.981
+    },
+    {
+      "word": "dir",
+      "start": 25.898,
+      "end": 26.018,
+      "score": 0.61
+    },
+    {
+      "word": "noch",
+      "start": 26.038,
+      "end": 26.199,
+      "score": 0.933
+    },
+    {
+      "word": "fehlt,",
+      "start": 26.259,
+      "end": 27.059,
+      "score": 0.969
+    },
+    {
+      "word": "ist",
+      "start": 27.099,
+      "end": 27.399,
+      "score": 0.878
+    },
+    {
+      "word": "Methode.\"",
+      "start": 27.439,
+      "end": 27.94,
+      "score": 0.724
+    }
+  ]
+}

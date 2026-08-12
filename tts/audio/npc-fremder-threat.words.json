@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 5.091,
+      "text": "Er lacht trocken, kein Funken Wärme darin.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.501,
+          "end": 0.701,
+          "score": 0.799
+        },
+        {
+          "word": "lacht",
+          "start": 0.742,
+          "end": 1.122,
+          "score": 0.908
+        },
+        {
+          "word": "trocken,",
+          "start": 1.162,
+          "end": 2.205,
+          "score": 0.95
+        },
+        {
+          "word": "kein",
+          "start": 2.245,
+          "end": 2.605,
+          "score": 0.885
+        },
+        {
+          "word": "Funken",
+          "start": 2.666,
+          "end": 3.127,
+          "score": 0.742
+        },
+        {
+          "word": "Wärme",
+          "start": 3.167,
+          "end": 3.527,
+          "score": 0.921
+        },
+        {
+          "word": "darin.",
+          "start": 3.547,
+          "end": 5.091,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 5.111,
+      "end": 7.035,
+      "text": "\"Nenn es, wie du willst.",
+      "words": [
+        {
+          "word": "\"Nenn",
+          "start": 5.111,
+          "end": 5.351,
+          "score": 0.905
+        },
+        {
+          "word": "es,",
+          "start": 5.391,
+          "end": 5.532,
+          "score": 0.721
+        },
+        {
+          "word": "wie",
+          "start": 5.572,
+          "end": 5.652,
+          "score": 0.617
+        },
+        {
+          "word": "du",
+          "start": 5.692,
+          "end": 5.852,
+          "score": 0.896
+        },
+        {
+          "word": "willst.",
+          "start": 5.892,
+          "end": 7.035,
+          "score": 0.922
+        }
+      ]
+    },
+    {
+      "start": 7.055,
+      "end": 9.299,
+      "text": "Ich hab nur gesagt, was ich gesehen habe.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 7.055,
+          "end": 7.155,
+          "score": 0.91
+        },
+        {
+          "word": "hab",
+          "start": 7.195,
+          "end": 7.416,
+          "score": 0.917
+        },
+        {
+          "word": "nur",
+          "start": 7.436,
+          "end": 7.656,
+          "score": 0.961
+        },
+        {
+          "word": "gesagt,",
+          "start": 7.696,
+          "end": 8.077,
+          "score": 0.868
+        },
+        {
+          "word": "was",
+          "start": 8.097,
+          "end": 8.237,
+          "score": 0.877
+        },
+        {
+          "word": "ich",
+          "start": 8.277,
+          "end": 8.418,
+          "score": 0.845
+        },
+        {
+          "word": "gesehen",
+          "start": 8.458,
+          "end": 8.879,
+          "score": 0.757
+        },
+        {
+          "word": "habe.\"",
+          "start": 8.919,
+          "end": 9.299,
+          "score": 0.682
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.501,
+      "end": 0.701,
+      "score": 0.799
+    },
+    {
+      "word": "lacht",
+      "start": 0.742,
+      "end": 1.122,
+      "score": 0.908
+    },
+    {
+      "word": "trocken,",
+      "start": 1.162,
+      "end": 2.205,
+      "score": 0.95
+    },
+    {
+      "word": "kein",
+      "start": 2.245,
+      "end": 2.605,
+      "score": 0.885
+    },
+    {
+      "word": "Funken",
+      "start": 2.666,
+      "end": 3.127,
+      "score": 0.742
+    },
+    {
+      "word": "Wärme",
+      "start": 3.167,
+      "end": 3.527,
+      "score": 0.921
+    },
+    {
+      "word": "darin.",
+      "start": 3.547,
+      "end": 5.091,
+      "score": 0.938
+    },
+    {
+      "word": "\"Nenn",
+      "start": 5.111,
+      "end": 5.351,
+      "score": 0.905
+    },
+    {
+      "word": "es,",
+      "start": 5.391,
+      "end": 5.532,
+      "score": 0.721
+    },
+    {
+      "word": "wie",
+      "start": 5.572,
+      "end": 5.652,
+      "score": 0.617
+    },
+    {
+      "word": "du",
+      "start": 5.692,
+      "end": 5.852,
+      "score": 0.896
+    },
+    {
+      "word": "willst.",
+      "start": 5.892,
+      "end": 7.035,
+      "score": 0.922
+    },
+    {
+      "word": "Ich",
+      "start": 7.055,
+      "end": 7.155,
+      "score": 0.91
+    },
+    {
+      "word": "hab",
+      "start": 7.195,
+      "end": 7.416,
+      "score": 0.917
+    },
+    {
+      "word": "nur",
+      "start": 7.436,
+      "end": 7.656,
+      "score": 0.961
+    },
+    {
+      "word": "gesagt,",
+      "start": 7.696,
+      "end": 8.077,
+      "score": 0.868
+    },
+    {
+      "word": "was",
+      "start": 8.097,
+      "end": 8.237,
+      "score": 0.877
+    },
+    {
+      "word": "ich",
+      "start": 8.277,
+      "end": 8.418,
+      "score": 0.845
+    },
+    {
+      "word": "gesehen",
+      "start": 8.458,
+      "end": 8.879,
+      "score": 0.757
+    },
+    {
+      "word": "habe.\"",
+      "start": 8.919,
+      "end": 9.299,
+      "score": 0.682
+    }
+  ]
+}

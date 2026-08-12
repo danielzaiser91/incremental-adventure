@@ -1,0 +1,839 @@
+{
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 3.082,
+      "text": "Er sitzt mir gegenüber.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.5,
+          "end": 0.64,
+          "score": 0.645
+        },
+        {
+          "word": "sitzt",
+          "start": 0.66,
+          "end": 0.921,
+          "score": 0.811
+        },
+        {
+          "word": "mir",
+          "start": 0.941,
+          "end": 1.081,
+          "score": 0.908
+        },
+        {
+          "word": "gegenüber.",
+          "start": 1.101,
+          "end": 3.082,
+          "score": 0.891
+        }
+      ]
+    },
+    {
+      "start": 3.102,
+      "end": 5.823,
+      "text": "Zum ersten Mal.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 3.102,
+          "end": 3.382,
+          "score": 0.991
+        },
+        {
+          "word": "ersten",
+          "start": 3.442,
+          "end": 3.802,
+          "score": 0.853
+        },
+        {
+          "word": "Mal.",
+          "start": 3.862,
+          "end": 5.823,
+          "score": 0.759
+        }
+      ]
+    },
+    {
+      "start": 5.863,
+      "end": 8.224,
+      "text": "Jünger ist er, als ich dachte.",
+      "words": [
+        {
+          "word": "Jünger",
+          "start": 5.863,
+          "end": 6.203,
+          "score": 0.887
+        },
+        {
+          "word": "ist",
+          "start": 6.243,
+          "end": 6.403,
+          "score": 0.745
+        },
+        {
+          "word": "er,",
+          "start": 6.444,
+          "end": 6.584,
+          "score": 0.93
+        },
+        {
+          "word": "als",
+          "start": 6.604,
+          "end": 6.704,
+          "score": 0.974
+        },
+        {
+          "word": "ich",
+          "start": 6.764,
+          "end": 6.864,
+          "score": 0.927
+        },
+        {
+          "word": "dachte.",
+          "start": 6.904,
+          "end": 8.224,
+          "score": 0.964
+        }
+      ]
+    },
+    {
+      "start": 8.285,
+      "end": 9.825,
+      "text": "Ruhiger.",
+      "words": [
+        {
+          "word": "Ruhiger.",
+          "start": 8.285,
+          "end": 9.825,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 9.845,
+      "end": 13.547,
+      "text": "Kein Messer, kein Wächter in Sichtweite.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 9.845,
+          "end": 10.045,
+          "score": 0.894
+        },
+        {
+          "word": "Messer,",
+          "start": 10.086,
+          "end": 10.806,
+          "score": 0.875
+        },
+        {
+          "word": "kein",
+          "start": 10.826,
+          "end": 11.046,
+          "score": 0.74
+        },
+        {
+          "word": "Wächter",
+          "start": 11.086,
+          "end": 11.386,
+          "score": 0.835
+        },
+        {
+          "word": "in",
+          "start": 11.406,
+          "end": 11.526,
+          "score": 0.834
+        },
+        {
+          "word": "Sichtweite.",
+          "start": 11.546,
+          "end": 13.547,
+          "score": 0.863
+        }
+      ]
+    },
+    {
+      "start": 13.587,
+      "end": 17.63,
+      "text": "»Ich baue etwas, das Bestand hat«, sagt er.",
+      "words": [
+        {
+          "word": "»Ich",
+          "start": 13.587,
+          "end": 13.848,
+          "score": 0.767
+        },
+        {
+          "word": "baue",
+          "start": 13.908,
+          "end": 14.248,
+          "score": 0.964
+        },
+        {
+          "word": "etwas,",
+          "start": 14.288,
+          "end": 14.668,
+          "score": 0.948
+        },
+        {
+          "word": "das",
+          "start": 14.688,
+          "end": 14.888,
+          "score": 0.892
+        },
+        {
+          "word": "Bestand",
+          "start": 14.928,
+          "end": 15.368,
+          "score": 0.885
+        },
+        {
+          "word": "hat«,",
+          "start": 15.388,
+          "end": 16.169,
+          "score": 0.916
+        },
+        {
+          "word": "sagt",
+          "start": 16.189,
+          "end": 16.389,
+          "score": 0.986
+        },
+        {
+          "word": "er.",
+          "start": 16.429,
+          "end": 17.63,
+          "score": 0.849
+        }
+      ]
+    },
+    {
+      "start": 17.65,
+      "end": 18.85,
+      "text": "»Du auch.",
+      "words": [
+        {
+          "word": "»Du",
+          "start": 17.65,
+          "end": 17.89,
+          "score": 0.91
+        },
+        {
+          "word": "auch.",
+          "start": 17.93,
+          "end": 18.85,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 18.87,
+      "end": 23.453,
+      "text": "Das sieht man dir an.« »Warum nicht gemeinsam?",
+      "words": [
+        {
+          "word": "Das",
+          "start": 18.87,
+          "end": 19.01,
+          "score": 0.941
+        },
+        {
+          "word": "sieht",
+          "start": 19.05,
+          "end": 19.23,
+          "score": 0.913
+        },
+        {
+          "word": "man",
+          "start": 19.251,
+          "end": 19.371,
+          "score": 0.83
+        },
+        {
+          "word": "dir",
+          "start": 19.411,
+          "end": 19.551,
+          "score": 0.598
+        },
+        {
+          "word": "an.«",
+          "start": 19.571,
+          "end": 21.192,
+          "score": 0.773
+        },
+        {
+          "word": "»Warum",
+          "start": 21.212,
+          "end": 21.632,
+          "score": 0.977
+        },
+        {
+          "word": "nicht",
+          "start": 21.672,
+          "end": 21.912,
+          "score": 0.82
+        },
+        {
+          "word": "gemeinsam?",
+          "start": 21.932,
+          "end": 23.453,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 23.473,
+      "end": 30.777,
+      "text": "Du erhältst, was du suchst — und ich, was ich suche.« Ich habe keine Antwort.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 23.473,
+          "end": 23.653,
+          "score": 0.93
+        },
+        {
+          "word": "erhältst,",
+          "start": 23.693,
+          "end": 24.133,
+          "score": 0.887
+        },
+        {
+          "word": "was",
+          "start": 24.173,
+          "end": 24.313,
+          "score": 0.987
+        },
+        {
+          "word": "du",
+          "start": 24.353,
+          "end": 24.513,
+          "score": 0.864
+        },
+        {
+          "word": "suchst",
+          "start": 24.553,
+          "end": 24.854,
+          "score": 0.919
+        },
+        {
+          "word": "—",
+          "start": 25.434,
+          "end": 25.454,
+          "score": 0.927
+        },
+        {
+          "word": "und",
+          "start": 25.474,
+          "end": 25.734,
+          "score": 0.859
+        },
+        {
+          "word": "ich,",
+          "start": 25.774,
+          "end": 26.194,
+          "score": 0.928
+        },
+        {
+          "word": "was",
+          "start": 26.234,
+          "end": 26.414,
+          "score": 0.987
+        },
+        {
+          "word": "ich",
+          "start": 26.474,
+          "end": 26.615,
+          "score": 0.792
+        },
+        {
+          "word": "suche.«",
+          "start": 26.655,
+          "end": 28.516,
+          "score": 0.957
+        },
+        {
+          "word": "Ich",
+          "start": 28.556,
+          "end": 28.696,
+          "score": 0.819
+        },
+        {
+          "word": "habe",
+          "start": 28.736,
+          "end": 28.976,
+          "score": 0.98
+        },
+        {
+          "word": "keine",
+          "start": 29.016,
+          "end": 29.216,
+          "score": 0.803
+        },
+        {
+          "word": "Antwort.",
+          "start": 29.256,
+          "end": 30.777,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 30.797,
+      "end": 33.858,
+      "text": "Jedenfalls nicht sogleich.",
+      "words": [
+        {
+          "word": "Jedenfalls",
+          "start": 30.797,
+          "end": 31.257,
+          "score": 0.891
+        },
+        {
+          "word": "nicht",
+          "start": 31.277,
+          "end": 31.437,
+          "score": 0.851
+        },
+        {
+          "word": "sogleich.",
+          "start": 31.457,
+          "end": 33.858,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 33.899,
+      "end": 36.24,
+      "text": "Es ist das schwerste Gespräch meines Lebens.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 33.899,
+          "end": 34.039,
+          "score": 0.871
+        },
+        {
+          "word": "ist",
+          "start": 34.079,
+          "end": 34.239,
+          "score": 0.943
+        },
+        {
+          "word": "das",
+          "start": 34.279,
+          "end": 34.499,
+          "score": 0.95
+        },
+        {
+          "word": "schwerste",
+          "start": 34.539,
+          "end": 35.079,
+          "score": 0.82
+        },
+        {
+          "word": "Gespräch",
+          "start": 35.099,
+          "end": 35.639,
+          "score": 0.82
+        },
+        {
+          "word": "meines",
+          "start": 35.659,
+          "end": 35.92,
+          "score": 0.893
+        },
+        {
+          "word": "Lebens.",
+          "start": 35.96,
+          "end": 36.24,
+          "score": 0.906
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.5,
+      "end": 0.64,
+      "score": 0.645
+    },
+    {
+      "word": "sitzt",
+      "start": 0.66,
+      "end": 0.921,
+      "score": 0.811
+    },
+    {
+      "word": "mir",
+      "start": 0.941,
+      "end": 1.081,
+      "score": 0.908
+    },
+    {
+      "word": "gegenüber.",
+      "start": 1.101,
+      "end": 3.082,
+      "score": 0.891
+    },
+    {
+      "word": "Zum",
+      "start": 3.102,
+      "end": 3.382,
+      "score": 0.991
+    },
+    {
+      "word": "ersten",
+      "start": 3.442,
+      "end": 3.802,
+      "score": 0.853
+    },
+    {
+      "word": "Mal.",
+      "start": 3.862,
+      "end": 5.823,
+      "score": 0.759
+    },
+    {
+      "word": "Jünger",
+      "start": 5.863,
+      "end": 6.203,
+      "score": 0.887
+    },
+    {
+      "word": "ist",
+      "start": 6.243,
+      "end": 6.403,
+      "score": 0.745
+    },
+    {
+      "word": "er,",
+      "start": 6.444,
+      "end": 6.584,
+      "score": 0.93
+    },
+    {
+      "word": "als",
+      "start": 6.604,
+      "end": 6.704,
+      "score": 0.974
+    },
+    {
+      "word": "ich",
+      "start": 6.764,
+      "end": 6.864,
+      "score": 0.927
+    },
+    {
+      "word": "dachte.",
+      "start": 6.904,
+      "end": 8.224,
+      "score": 0.964
+    },
+    {
+      "word": "Ruhiger.",
+      "start": 8.285,
+      "end": 9.825,
+      "score": 0.885
+    },
+    {
+      "word": "Kein",
+      "start": 9.845,
+      "end": 10.045,
+      "score": 0.894
+    },
+    {
+      "word": "Messer,",
+      "start": 10.086,
+      "end": 10.806,
+      "score": 0.875
+    },
+    {
+      "word": "kein",
+      "start": 10.826,
+      "end": 11.046,
+      "score": 0.74
+    },
+    {
+      "word": "Wächter",
+      "start": 11.086,
+      "end": 11.386,
+      "score": 0.835
+    },
+    {
+      "word": "in",
+      "start": 11.406,
+      "end": 11.526,
+      "score": 0.834
+    },
+    {
+      "word": "Sichtweite.",
+      "start": 11.546,
+      "end": 13.547,
+      "score": 0.863
+    },
+    {
+      "word": "»Ich",
+      "start": 13.587,
+      "end": 13.848,
+      "score": 0.767
+    },
+    {
+      "word": "baue",
+      "start": 13.908,
+      "end": 14.248,
+      "score": 0.964
+    },
+    {
+      "word": "etwas,",
+      "start": 14.288,
+      "end": 14.668,
+      "score": 0.948
+    },
+    {
+      "word": "das",
+      "start": 14.688,
+      "end": 14.888,
+      "score": 0.892
+    },
+    {
+      "word": "Bestand",
+      "start": 14.928,
+      "end": 15.368,
+      "score": 0.885
+    },
+    {
+      "word": "hat«,",
+      "start": 15.388,
+      "end": 16.169,
+      "score": 0.916
+    },
+    {
+      "word": "sagt",
+      "start": 16.189,
+      "end": 16.389,
+      "score": 0.986
+    },
+    {
+      "word": "er.",
+      "start": 16.429,
+      "end": 17.63,
+      "score": 0.849
+    },
+    {
+      "word": "»Du",
+      "start": 17.65,
+      "end": 17.89,
+      "score": 0.91
+    },
+    {
+      "word": "auch.",
+      "start": 17.93,
+      "end": 18.85,
+      "score": 0.955
+    },
+    {
+      "word": "Das",
+      "start": 18.87,
+      "end": 19.01,
+      "score": 0.941
+    },
+    {
+      "word": "sieht",
+      "start": 19.05,
+      "end": 19.23,
+      "score": 0.913
+    },
+    {
+      "word": "man",
+      "start": 19.251,
+      "end": 19.371,
+      "score": 0.83
+    },
+    {
+      "word": "dir",
+      "start": 19.411,
+      "end": 19.551,
+      "score": 0.598
+    },
+    {
+      "word": "an.«",
+      "start": 19.571,
+      "end": 21.192,
+      "score": 0.773
+    },
+    {
+      "word": "»Warum",
+      "start": 21.212,
+      "end": 21.632,
+      "score": 0.977
+    },
+    {
+      "word": "nicht",
+      "start": 21.672,
+      "end": 21.912,
+      "score": 0.82
+    },
+    {
+      "word": "gemeinsam?",
+      "start": 21.932,
+      "end": 23.453,
+      "score": 0.973
+    },
+    {
+      "word": "Du",
+      "start": 23.473,
+      "end": 23.653,
+      "score": 0.93
+    },
+    {
+      "word": "erhältst,",
+      "start": 23.693,
+      "end": 24.133,
+      "score": 0.887
+    },
+    {
+      "word": "was",
+      "start": 24.173,
+      "end": 24.313,
+      "score": 0.987
+    },
+    {
+      "word": "du",
+      "start": 24.353,
+      "end": 24.513,
+      "score": 0.864
+    },
+    {
+      "word": "suchst",
+      "start": 24.553,
+      "end": 24.854,
+      "score": 0.919
+    },
+    {
+      "word": "—",
+      "start": 25.434,
+      "end": 25.454,
+      "score": 0.927
+    },
+    {
+      "word": "und",
+      "start": 25.474,
+      "end": 25.734,
+      "score": 0.859
+    },
+    {
+      "word": "ich,",
+      "start": 25.774,
+      "end": 26.194,
+      "score": 0.928
+    },
+    {
+      "word": "was",
+      "start": 26.234,
+      "end": 26.414,
+      "score": 0.987
+    },
+    {
+      "word": "ich",
+      "start": 26.474,
+      "end": 26.615,
+      "score": 0.792
+    },
+    {
+      "word": "suche.«",
+      "start": 26.655,
+      "end": 28.516,
+      "score": 0.957
+    },
+    {
+      "word": "Ich",
+      "start": 28.556,
+      "end": 28.696,
+      "score": 0.819
+    },
+    {
+      "word": "habe",
+      "start": 28.736,
+      "end": 28.976,
+      "score": 0.98
+    },
+    {
+      "word": "keine",
+      "start": 29.016,
+      "end": 29.216,
+      "score": 0.803
+    },
+    {
+      "word": "Antwort.",
+      "start": 29.256,
+      "end": 30.777,
+      "score": 0.942
+    },
+    {
+      "word": "Jedenfalls",
+      "start": 30.797,
+      "end": 31.257,
+      "score": 0.891
+    },
+    {
+      "word": "nicht",
+      "start": 31.277,
+      "end": 31.437,
+      "score": 0.851
+    },
+    {
+      "word": "sogleich.",
+      "start": 31.457,
+      "end": 33.858,
+      "score": 0.906
+    },
+    {
+      "word": "Es",
+      "start": 33.899,
+      "end": 34.039,
+      "score": 0.871
+    },
+    {
+      "word": "ist",
+      "start": 34.079,
+      "end": 34.239,
+      "score": 0.943
+    },
+    {
+      "word": "das",
+      "start": 34.279,
+      "end": 34.499,
+      "score": 0.95
+    },
+    {
+      "word": "schwerste",
+      "start": 34.539,
+      "end": 35.079,
+      "score": 0.82
+    },
+    {
+      "word": "Gespräch",
+      "start": 35.099,
+      "end": 35.639,
+      "score": 0.82
+    },
+    {
+      "word": "meines",
+      "start": 35.659,
+      "end": 35.92,
+      "score": 0.893
+    },
+    {
+      "word": "Lebens.",
+      "start": 35.96,
+      "end": 36.24,
+      "score": 0.906
+    }
+  ]
+}

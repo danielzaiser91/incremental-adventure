@@ -1,0 +1,207 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 1.504,
+      "text": "\"Nun?",
+      "words": [
+        {
+          "word": "\"Nun?\"",
+          "start": 0.501,
+          "end": 1.504,
+          "score": 0.824
+        }
+      ]
+    },
+    {
+      "start": 0.762,
+      "end": 4.973,
+      "text": "\", fragt Brakka und hebt eine Augenbraue.",
+      "words": [
+        {
+          "word": "\",",
+          "start": 0.762,
+          "end": 1.524,
+          "score": 0.938
+        },
+        {
+          "word": "fragt",
+          "start": 1.564,
+          "end": 1.925,
+          "score": 0.975
+        },
+        {
+          "word": "Brakka",
+          "start": 1.945,
+          "end": 2.767,
+          "score": 0.896
+        },
+        {
+          "word": "und",
+          "start": 2.808,
+          "end": 2.988,
+          "score": 0.801
+        },
+        {
+          "word": "hebt",
+          "start": 3.008,
+          "end": 3.289,
+          "score": 0.964
+        },
+        {
+          "word": "eine",
+          "start": 3.329,
+          "end": 3.509,
+          "score": 0.914
+        },
+        {
+          "word": "Augenbraue.",
+          "start": 3.55,
+          "end": 4.973,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 4.993,
+      "end": 6.979,
+      "text": "\"Hast du heute Nacht schon Wache gehalten?\"",
+      "words": [
+        {
+          "word": "\"Hast",
+          "start": 4.993,
+          "end": 5.254,
+          "score": 0.647
+        },
+        {
+          "word": "du",
+          "start": 5.294,
+          "end": 5.415,
+          "score": 0.852
+        },
+        {
+          "word": "heute",
+          "start": 5.455,
+          "end": 5.736,
+          "score": 0.894
+        },
+        {
+          "word": "Nacht",
+          "start": 5.776,
+          "end": 5.956,
+          "score": 0.696
+        },
+        {
+          "word": "schon",
+          "start": 5.976,
+          "end": 6.257,
+          "score": 0.843
+        },
+        {
+          "word": "Wache",
+          "start": 6.297,
+          "end": 6.558,
+          "score": 0.921
+        },
+        {
+          "word": "gehalten?\"",
+          "start": 6.598,
+          "end": 6.979,
+          "score": 0.822
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Nun?\"",
+      "start": 0.501,
+      "end": 1.504,
+      "score": 0.824
+    },
+    {
+      "word": "\",",
+      "start": 0.762,
+      "end": 1.524,
+      "score": 0.938
+    },
+    {
+      "word": "fragt",
+      "start": 1.564,
+      "end": 1.925,
+      "score": 0.975
+    },
+    {
+      "word": "Brakka",
+      "start": 1.945,
+      "end": 2.767,
+      "score": 0.896
+    },
+    {
+      "word": "und",
+      "start": 2.808,
+      "end": 2.988,
+      "score": 0.801
+    },
+    {
+      "word": "hebt",
+      "start": 3.008,
+      "end": 3.289,
+      "score": 0.964
+    },
+    {
+      "word": "eine",
+      "start": 3.329,
+      "end": 3.509,
+      "score": 0.914
+    },
+    {
+      "word": "Augenbraue.",
+      "start": 3.55,
+      "end": 4.973,
+      "score": 0.932
+    },
+    {
+      "word": "\"Hast",
+      "start": 4.993,
+      "end": 5.254,
+      "score": 0.647
+    },
+    {
+      "word": "du",
+      "start": 5.294,
+      "end": 5.415,
+      "score": 0.852
+    },
+    {
+      "word": "heute",
+      "start": 5.455,
+      "end": 5.736,
+      "score": 0.894
+    },
+    {
+      "word": "Nacht",
+      "start": 5.776,
+      "end": 5.956,
+      "score": 0.696
+    },
+    {
+      "word": "schon",
+      "start": 5.976,
+      "end": 6.257,
+      "score": 0.843
+    },
+    {
+      "word": "Wache",
+      "start": 6.297,
+      "end": 6.558,
+      "score": 0.921
+    },
+    {
+      "word": "gehalten?\"",
+      "start": 6.598,
+      "end": 6.979,
+      "score": 0.822
+    }
+  ]
+}

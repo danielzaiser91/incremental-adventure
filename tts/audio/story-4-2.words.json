@@ -1,0 +1,820 @@
+{
+  "segments": [
+    {
+      "start": 0.9,
+      "end": 3.902,
+      "text": "Drei Kräfte halten Velmark zusammen.",
+      "words": [
+        {
+          "word": "Drei",
+          "start": 0.9,
+          "end": 1.161,
+          "score": 0.78
+        },
+        {
+          "word": "Kräfte",
+          "start": 1.221,
+          "end": 1.741,
+          "score": 0.941
+        },
+        {
+          "word": "halten",
+          "start": 1.781,
+          "end": 2.161,
+          "score": 0.966
+        },
+        {
+          "word": "Velmark",
+          "start": 2.181,
+          "end": 2.661,
+          "score": 0.75
+        },
+        {
+          "word": "zusammen.",
+          "start": 2.681,
+          "end": 3.902,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 3.922,
+      "end": 7.144,
+      "text": "Die Händlergilde: Wer zahlt, hat recht.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.922,
+          "end": 4.062,
+          "score": 0.981
+        },
+        {
+          "word": "Händlergilde:",
+          "start": 4.102,
+          "end": 5.363,
+          "score": 0.94
+        },
+        {
+          "word": "Wer",
+          "start": 5.383,
+          "end": 5.603,
+          "score": 0.862
+        },
+        {
+          "word": "zahlt,",
+          "start": 5.643,
+          "end": 6.063,
+          "score": 0.901
+        },
+        {
+          "word": "hat",
+          "start": 6.083,
+          "end": 6.263,
+          "score": 0.991
+        },
+        {
+          "word": "recht.",
+          "start": 6.303,
+          "end": 7.144,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 7.184,
+      "end": 10.386,
+      "text": "Eine alte Wahrheit, aber sie trägt.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 7.184,
+          "end": 7.464,
+          "score": 0.86
+        },
+        {
+          "word": "alte",
+          "start": 7.504,
+          "end": 7.764,
+          "score": 0.987
+        },
+        {
+          "word": "Wahrheit,",
+          "start": 7.804,
+          "end": 8.605,
+          "score": 0.954
+        },
+        {
+          "word": "aber",
+          "start": 8.625,
+          "end": 8.825,
+          "score": 0.841
+        },
+        {
+          "word": "sie",
+          "start": 8.865,
+          "end": 8.965,
+          "score": 0.979
+        },
+        {
+          "word": "trägt.",
+          "start": 9.005,
+          "end": 10.386,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 10.406,
+      "end": 17.249,
+      "text": "Die Eiserne Bruderschaft: Söldner und Wächter, Männer mit breiten Schultern und kurzem Gedächtnis.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 10.406,
+          "end": 10.646,
+          "score": 0.851
+        },
+        {
+          "word": "Eiserne",
+          "start": 10.706,
+          "end": 11.126,
+          "score": 0.924
+        },
+        {
+          "word": "Bruderschaft:",
+          "start": 11.146,
+          "end": 12.487,
+          "score": 0.866
+        },
+        {
+          "word": "Söldner",
+          "start": 12.527,
+          "end": 12.947,
+          "score": 0.855
+        },
+        {
+          "word": "und",
+          "start": 12.967,
+          "end": 13.107,
+          "score": 0.933
+        },
+        {
+          "word": "Wächter,",
+          "start": 13.147,
+          "end": 13.908,
+          "score": 0.95
+        },
+        {
+          "word": "Männer",
+          "start": 13.928,
+          "end": 14.208,
+          "score": 0.973
+        },
+        {
+          "word": "mit",
+          "start": 14.248,
+          "end": 14.408,
+          "score": 0.998
+        },
+        {
+          "word": "breiten",
+          "start": 14.448,
+          "end": 14.868,
+          "score": 0.958
+        },
+        {
+          "word": "Schultern",
+          "start": 14.908,
+          "end": 15.348,
+          "score": 0.811
+        },
+        {
+          "word": "und",
+          "start": 15.368,
+          "end": 15.609,
+          "score": 0.91
+        },
+        {
+          "word": "kurzem",
+          "start": 15.649,
+          "end": 16.009,
+          "score": 0.955
+        },
+        {
+          "word": "Gedächtnis.",
+          "start": 16.049,
+          "end": 17.249,
+          "score": 0.805
+        }
+      ]
+    },
+    {
+      "start": 17.269,
+      "end": 19.571,
+      "text": "Doch sie hören auf Stärke.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 17.269,
+          "end": 17.45,
+          "score": 0.784
+        },
+        {
+          "word": "sie",
+          "start": 17.49,
+          "end": 17.67,
+          "score": 0.916
+        },
+        {
+          "word": "hören",
+          "start": 17.71,
+          "end": 17.99,
+          "score": 0.883
+        },
+        {
+          "word": "auf",
+          "start": 18.01,
+          "end": 18.19,
+          "score": 0.986
+        },
+        {
+          "word": "Stärke.",
+          "start": 18.23,
+          "end": 19.571,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 19.611,
+      "end": 24.213,
+      "text": "Das Stadtarchiv: Aufzeichnungen, Recht, Geschichte.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 19.611,
+          "end": 19.831,
+          "score": 0.964
+        },
+        {
+          "word": "Stadtarchiv:",
+          "start": 19.871,
+          "end": 21.312,
+          "score": 0.82
+        },
+        {
+          "word": "Aufzeichnungen,",
+          "start": 21.332,
+          "end": 22.332,
+          "score": 0.91
+        },
+        {
+          "word": "Recht,",
+          "start": 22.372,
+          "end": 22.973,
+          "score": 0.841
+        },
+        {
+          "word": "Geschichte.",
+          "start": 23.013,
+          "end": 24.213,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 24.233,
+      "end": 28.256,
+      "text": "Die stillste der drei — und wohl die mächtigste.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 24.233,
+          "end": 24.373,
+          "score": 0.802
+        },
+        {
+          "word": "stillste",
+          "start": 24.413,
+          "end": 24.874,
+          "score": 0.95
+        },
+        {
+          "word": "der",
+          "start": 24.894,
+          "end": 25.014,
+          "score": 0.982
+        },
+        {
+          "word": "drei",
+          "start": 25.034,
+          "end": 25.854,
+          "score": 0.89
+        },
+        {
+          "word": "—",
+          "start": 25.874,
+          "end": 25.894,
+          "score": 0.965
+        },
+        {
+          "word": "und",
+          "start": 25.914,
+          "end": 26.174,
+          "score": 0.973
+        },
+        {
+          "word": "wohl",
+          "start": 26.194,
+          "end": 26.374,
+          "score": 0.892
+        },
+        {
+          "word": "die",
+          "start": 26.414,
+          "end": 26.515,
+          "score": 0.992
+        },
+        {
+          "word": "mächtigste.",
+          "start": 26.575,
+          "end": 28.256,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 28.276,
+      "end": 33.658,
+      "text": "Und in allen dreien, irgendwo verborgen: Valdris.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 28.276,
+          "end": 28.496,
+          "score": 0.984
+        },
+        {
+          "word": "in",
+          "start": 28.536,
+          "end": 28.716,
+          "score": 0.996
+        },
+        {
+          "word": "allen",
+          "start": 28.776,
+          "end": 29.056,
+          "score": 0.92
+        },
+        {
+          "word": "dreien,",
+          "start": 29.076,
+          "end": 30.157,
+          "score": 0.734
+        },
+        {
+          "word": "irgendwo",
+          "start": 30.217,
+          "end": 30.717,
+          "score": 0.807
+        },
+        {
+          "word": "verborgen:",
+          "start": 30.757,
+          "end": 32.198,
+          "score": 0.861
+        },
+        {
+          "word": "Valdris.",
+          "start": 32.238,
+          "end": 33.658,
+          "score": 0.71
+        }
+      ]
+    },
+    {
+      "start": 33.698,
+      "end": 35.239,
+      "text": "Nicht zu sehen.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 33.698,
+          "end": 33.919,
+          "score": 0.836
+        },
+        {
+          "word": "zu",
+          "start": 33.939,
+          "end": 34.059,
+          "score": 0.894
+        },
+        {
+          "word": "sehen.",
+          "start": 34.099,
+          "end": 35.239,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 35.279,
+      "end": 36.04,
+      "text": "Aber zu spüren.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 35.279,
+          "end": 35.499,
+          "score": 0.953
+        },
+        {
+          "word": "zu",
+          "start": 35.519,
+          "end": 35.66,
+          "score": 0.828
+        },
+        {
+          "word": "spüren.",
+          "start": 35.7,
+          "end": 36.04,
+          "score": 0.987
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Drei",
+      "start": 0.9,
+      "end": 1.161,
+      "score": 0.78
+    },
+    {
+      "word": "Kräfte",
+      "start": 1.221,
+      "end": 1.741,
+      "score": 0.941
+    },
+    {
+      "word": "halten",
+      "start": 1.781,
+      "end": 2.161,
+      "score": 0.966
+    },
+    {
+      "word": "Velmark",
+      "start": 2.181,
+      "end": 2.661,
+      "score": 0.75
+    },
+    {
+      "word": "zusammen.",
+      "start": 2.681,
+      "end": 3.902,
+      "score": 0.823
+    },
+    {
+      "word": "Die",
+      "start": 3.922,
+      "end": 4.062,
+      "score": 0.981
+    },
+    {
+      "word": "Händlergilde:",
+      "start": 4.102,
+      "end": 5.363,
+      "score": 0.94
+    },
+    {
+      "word": "Wer",
+      "start": 5.383,
+      "end": 5.603,
+      "score": 0.862
+    },
+    {
+      "word": "zahlt,",
+      "start": 5.643,
+      "end": 6.063,
+      "score": 0.901
+    },
+    {
+      "word": "hat",
+      "start": 6.083,
+      "end": 6.263,
+      "score": 0.991
+    },
+    {
+      "word": "recht.",
+      "start": 6.303,
+      "end": 7.144,
+      "score": 0.901
+    },
+    {
+      "word": "Eine",
+      "start": 7.184,
+      "end": 7.464,
+      "score": 0.86
+    },
+    {
+      "word": "alte",
+      "start": 7.504,
+      "end": 7.764,
+      "score": 0.987
+    },
+    {
+      "word": "Wahrheit,",
+      "start": 7.804,
+      "end": 8.605,
+      "score": 0.954
+    },
+    {
+      "word": "aber",
+      "start": 8.625,
+      "end": 8.825,
+      "score": 0.841
+    },
+    {
+      "word": "sie",
+      "start": 8.865,
+      "end": 8.965,
+      "score": 0.979
+    },
+    {
+      "word": "trägt.",
+      "start": 9.005,
+      "end": 10.386,
+      "score": 0.946
+    },
+    {
+      "word": "Die",
+      "start": 10.406,
+      "end": 10.646,
+      "score": 0.851
+    },
+    {
+      "word": "Eiserne",
+      "start": 10.706,
+      "end": 11.126,
+      "score": 0.924
+    },
+    {
+      "word": "Bruderschaft:",
+      "start": 11.146,
+      "end": 12.487,
+      "score": 0.866
+    },
+    {
+      "word": "Söldner",
+      "start": 12.527,
+      "end": 12.947,
+      "score": 0.855
+    },
+    {
+      "word": "und",
+      "start": 12.967,
+      "end": 13.107,
+      "score": 0.933
+    },
+    {
+      "word": "Wächter,",
+      "start": 13.147,
+      "end": 13.908,
+      "score": 0.95
+    },
+    {
+      "word": "Männer",
+      "start": 13.928,
+      "end": 14.208,
+      "score": 0.973
+    },
+    {
+      "word": "mit",
+      "start": 14.248,
+      "end": 14.408,
+      "score": 0.998
+    },
+    {
+      "word": "breiten",
+      "start": 14.448,
+      "end": 14.868,
+      "score": 0.958
+    },
+    {
+      "word": "Schultern",
+      "start": 14.908,
+      "end": 15.348,
+      "score": 0.811
+    },
+    {
+      "word": "und",
+      "start": 15.368,
+      "end": 15.609,
+      "score": 0.91
+    },
+    {
+      "word": "kurzem",
+      "start": 15.649,
+      "end": 16.009,
+      "score": 0.955
+    },
+    {
+      "word": "Gedächtnis.",
+      "start": 16.049,
+      "end": 17.249,
+      "score": 0.805
+    },
+    {
+      "word": "Doch",
+      "start": 17.269,
+      "end": 17.45,
+      "score": 0.784
+    },
+    {
+      "word": "sie",
+      "start": 17.49,
+      "end": 17.67,
+      "score": 0.916
+    },
+    {
+      "word": "hören",
+      "start": 17.71,
+      "end": 17.99,
+      "score": 0.883
+    },
+    {
+      "word": "auf",
+      "start": 18.01,
+      "end": 18.19,
+      "score": 0.986
+    },
+    {
+      "word": "Stärke.",
+      "start": 18.23,
+      "end": 19.571,
+      "score": 0.869
+    },
+    {
+      "word": "Das",
+      "start": 19.611,
+      "end": 19.831,
+      "score": 0.964
+    },
+    {
+      "word": "Stadtarchiv:",
+      "start": 19.871,
+      "end": 21.312,
+      "score": 0.82
+    },
+    {
+      "word": "Aufzeichnungen,",
+      "start": 21.332,
+      "end": 22.332,
+      "score": 0.91
+    },
+    {
+      "word": "Recht,",
+      "start": 22.372,
+      "end": 22.973,
+      "score": 0.841
+    },
+    {
+      "word": "Geschichte.",
+      "start": 23.013,
+      "end": 24.213,
+      "score": 0.906
+    },
+    {
+      "word": "Die",
+      "start": 24.233,
+      "end": 24.373,
+      "score": 0.802
+    },
+    {
+      "word": "stillste",
+      "start": 24.413,
+      "end": 24.874,
+      "score": 0.95
+    },
+    {
+      "word": "der",
+      "start": 24.894,
+      "end": 25.014,
+      "score": 0.982
+    },
+    {
+      "word": "drei",
+      "start": 25.034,
+      "end": 25.854,
+      "score": 0.89
+    },
+    {
+      "word": "—",
+      "start": 25.874,
+      "end": 25.894,
+      "score": 0.965
+    },
+    {
+      "word": "und",
+      "start": 25.914,
+      "end": 26.174,
+      "score": 0.973
+    },
+    {
+      "word": "wohl",
+      "start": 26.194,
+      "end": 26.374,
+      "score": 0.892
+    },
+    {
+      "word": "die",
+      "start": 26.414,
+      "end": 26.515,
+      "score": 0.992
+    },
+    {
+      "word": "mächtigste.",
+      "start": 26.575,
+      "end": 28.256,
+      "score": 0.968
+    },
+    {
+      "word": "Und",
+      "start": 28.276,
+      "end": 28.496,
+      "score": 0.984
+    },
+    {
+      "word": "in",
+      "start": 28.536,
+      "end": 28.716,
+      "score": 0.996
+    },
+    {
+      "word": "allen",
+      "start": 28.776,
+      "end": 29.056,
+      "score": 0.92
+    },
+    {
+      "word": "dreien,",
+      "start": 29.076,
+      "end": 30.157,
+      "score": 0.734
+    },
+    {
+      "word": "irgendwo",
+      "start": 30.217,
+      "end": 30.717,
+      "score": 0.807
+    },
+    {
+      "word": "verborgen:",
+      "start": 30.757,
+      "end": 32.198,
+      "score": 0.861
+    },
+    {
+      "word": "Valdris.",
+      "start": 32.238,
+      "end": 33.658,
+      "score": 0.71
+    },
+    {
+      "word": "Nicht",
+      "start": 33.698,
+      "end": 33.919,
+      "score": 0.836
+    },
+    {
+      "word": "zu",
+      "start": 33.939,
+      "end": 34.059,
+      "score": 0.894
+    },
+    {
+      "word": "sehen.",
+      "start": 34.099,
+      "end": 35.239,
+      "score": 0.923
+    },
+    {
+      "word": "Aber",
+      "start": 35.279,
+      "end": 35.499,
+      "score": 0.953
+    },
+    {
+      "word": "zu",
+      "start": 35.519,
+      "end": 35.66,
+      "score": 0.828
+    },
+    {
+      "word": "spüren.",
+      "start": 35.7,
+      "end": 36.04,
+      "score": 0.987
+    }
+  ]
+}

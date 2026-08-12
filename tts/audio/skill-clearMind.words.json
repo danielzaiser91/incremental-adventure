@@ -1,0 +1,564 @@
+{
+  "segments": [
+    {
+      "start": 0.56,
+      "end": 5.204,
+      "text": "Jedes Mal von vorn anfangen hat etwas in mir verändert.",
+      "words": [
+        {
+          "word": "Jedes",
+          "start": 0.56,
+          "end": 0.861,
+          "score": 0.916
+        },
+        {
+          "word": "Mal",
+          "start": 0.941,
+          "end": 1.161,
+          "score": 0.817
+        },
+        {
+          "word": "von",
+          "start": 1.201,
+          "end": 1.441,
+          "score": 0.978
+        },
+        {
+          "word": "vorn",
+          "start": 1.501,
+          "end": 1.842,
+          "score": 0.731
+        },
+        {
+          "word": "anfangen",
+          "start": 1.862,
+          "end": 2.402,
+          "score": 0.867
+        },
+        {
+          "word": "hat",
+          "start": 2.442,
+          "end": 3.003,
+          "score": 0.971
+        },
+        {
+          "word": "etwas",
+          "start": 3.023,
+          "end": 3.343,
+          "score": 0.874
+        },
+        {
+          "word": "in",
+          "start": 3.383,
+          "end": 3.503,
+          "score": 0.66
+        },
+        {
+          "word": "mir",
+          "start": 3.523,
+          "end": 3.703,
+          "score": 0.832
+        },
+        {
+          "word": "verändert.",
+          "start": 3.743,
+          "end": 5.204,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 5.224,
+      "end": 11.25,
+      "text": "Die Aufregung der ersten Versuche ist weg — zurück bleibt Klarheit.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 5.224,
+          "end": 5.385,
+          "score": 0.811
+        },
+        {
+          "word": "Aufregung",
+          "start": 5.445,
+          "end": 5.965,
+          "score": 0.917
+        },
+        {
+          "word": "der",
+          "start": 5.985,
+          "end": 6.125,
+          "score": 0.938
+        },
+        {
+          "word": "ersten",
+          "start": 6.185,
+          "end": 6.546,
+          "score": 0.963
+        },
+        {
+          "word": "Versuche",
+          "start": 6.586,
+          "end": 6.966,
+          "score": 0.922
+        },
+        {
+          "word": "ist",
+          "start": 7.006,
+          "end": 7.146,
+          "score": 0.874
+        },
+        {
+          "word": "weg",
+          "start": 7.206,
+          "end": 7.346,
+          "score": 0.98
+        },
+        {
+          "word": "—",
+          "start": 8.247,
+          "end": 8.267,
+          "score": 0.969
+        },
+        {
+          "word": "zurück",
+          "start": 8.307,
+          "end": 8.788,
+          "score": 0.977
+        },
+        {
+          "word": "bleibt",
+          "start": 8.828,
+          "end": 9.328,
+          "score": 0.982
+        },
+        {
+          "word": "Klarheit.",
+          "start": 9.368,
+          "end": 11.25,
+          "score": 0.969
+        }
+      ]
+    },
+    {
+      "start": 11.29,
+      "end": 14.452,
+      "text": "Ich sehe jetzt, was wirklich zählt.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 11.29,
+          "end": 11.55,
+          "score": 0.876
+        },
+        {
+          "word": "sehe",
+          "start": 11.59,
+          "end": 11.93,
+          "score": 0.918
+        },
+        {
+          "word": "jetzt,",
+          "start": 11.95,
+          "end": 12.271,
+          "score": 0.954
+        },
+        {
+          "word": "was",
+          "start": 12.311,
+          "end": 12.631,
+          "score": 0.992
+        },
+        {
+          "word": "wirklich",
+          "start": 12.671,
+          "end": 13.091,
+          "score": 0.928
+        },
+        {
+          "word": "zählt.",
+          "start": 13.151,
+          "end": 14.452,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 14.472,
+      "end": 16.414,
+      "text": "Gold ist flüchtig.",
+      "words": [
+        {
+          "word": "Gold",
+          "start": 14.472,
+          "end": 14.713,
+          "score": 0.916
+        },
+        {
+          "word": "ist",
+          "start": 14.773,
+          "end": 15.013,
+          "score": 0.897
+        },
+        {
+          "word": "flüchtig.",
+          "start": 15.053,
+          "end": 16.414,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 16.434,
+      "end": 19.277,
+      "text": "Was ich verstehe, bleibt.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 16.434,
+          "end": 16.654,
+          "score": 0.978
+        },
+        {
+          "word": "ich",
+          "start": 16.694,
+          "end": 16.854,
+          "score": 0.899
+        },
+        {
+          "word": "verstehe,",
+          "start": 16.894,
+          "end": 17.695,
+          "score": 0.852
+        },
+        {
+          "word": "bleibt.",
+          "start": 17.735,
+          "end": 19.277,
+          "score": 0.911
+        }
+      ]
+    },
+    {
+      "start": 19.297,
+      "end": 22.96,
+      "text": "Beim nächsten Neuanfang nehme ich mehr mit als bisher.",
+      "words": [
+        {
+          "word": "Beim",
+          "start": 19.297,
+          "end": 19.557,
+          "score": 0.863
+        },
+        {
+          "word": "nächsten",
+          "start": 19.597,
+          "end": 20.037,
+          "score": 0.865
+        },
+        {
+          "word": "Neuanfang",
+          "start": 20.077,
+          "end": 21.298,
+          "score": 0.987
+        },
+        {
+          "word": "nehme",
+          "start": 21.338,
+          "end": 21.558,
+          "score": 0.798
+        },
+        {
+          "word": "ich",
+          "start": 21.598,
+          "end": 21.899,
+          "score": 0.914
+        },
+        {
+          "word": "mehr",
+          "start": 21.919,
+          "end": 22.159,
+          "score": 0.855
+        },
+        {
+          "word": "mit",
+          "start": 22.199,
+          "end": 22.439,
+          "score": 0.939
+        },
+        {
+          "word": "als",
+          "start": 22.459,
+          "end": 22.659,
+          "score": 0.799
+        },
+        {
+          "word": "bisher.",
+          "start": 22.699,
+          "end": 22.96,
+          "score": 0.744
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Jedes",
+      "start": 0.56,
+      "end": 0.861,
+      "score": 0.916
+    },
+    {
+      "word": "Mal",
+      "start": 0.941,
+      "end": 1.161,
+      "score": 0.817
+    },
+    {
+      "word": "von",
+      "start": 1.201,
+      "end": 1.441,
+      "score": 0.978
+    },
+    {
+      "word": "vorn",
+      "start": 1.501,
+      "end": 1.842,
+      "score": 0.731
+    },
+    {
+      "word": "anfangen",
+      "start": 1.862,
+      "end": 2.402,
+      "score": 0.867
+    },
+    {
+      "word": "hat",
+      "start": 2.442,
+      "end": 3.003,
+      "score": 0.971
+    },
+    {
+      "word": "etwas",
+      "start": 3.023,
+      "end": 3.343,
+      "score": 0.874
+    },
+    {
+      "word": "in",
+      "start": 3.383,
+      "end": 3.503,
+      "score": 0.66
+    },
+    {
+      "word": "mir",
+      "start": 3.523,
+      "end": 3.703,
+      "score": 0.832
+    },
+    {
+      "word": "verändert.",
+      "start": 3.743,
+      "end": 5.204,
+      "score": 0.951
+    },
+    {
+      "word": "Die",
+      "start": 5.224,
+      "end": 5.385,
+      "score": 0.811
+    },
+    {
+      "word": "Aufregung",
+      "start": 5.445,
+      "end": 5.965,
+      "score": 0.917
+    },
+    {
+      "word": "der",
+      "start": 5.985,
+      "end": 6.125,
+      "score": 0.938
+    },
+    {
+      "word": "ersten",
+      "start": 6.185,
+      "end": 6.546,
+      "score": 0.963
+    },
+    {
+      "word": "Versuche",
+      "start": 6.586,
+      "end": 6.966,
+      "score": 0.922
+    },
+    {
+      "word": "ist",
+      "start": 7.006,
+      "end": 7.146,
+      "score": 0.874
+    },
+    {
+      "word": "weg",
+      "start": 7.206,
+      "end": 7.346,
+      "score": 0.98
+    },
+    {
+      "word": "—",
+      "start": 8.247,
+      "end": 8.267,
+      "score": 0.969
+    },
+    {
+      "word": "zurück",
+      "start": 8.307,
+      "end": 8.788,
+      "score": 0.977
+    },
+    {
+      "word": "bleibt",
+      "start": 8.828,
+      "end": 9.328,
+      "score": 0.982
+    },
+    {
+      "word": "Klarheit.",
+      "start": 9.368,
+      "end": 11.25,
+      "score": 0.969
+    },
+    {
+      "word": "Ich",
+      "start": 11.29,
+      "end": 11.55,
+      "score": 0.876
+    },
+    {
+      "word": "sehe",
+      "start": 11.59,
+      "end": 11.93,
+      "score": 0.918
+    },
+    {
+      "word": "jetzt,",
+      "start": 11.95,
+      "end": 12.271,
+      "score": 0.954
+    },
+    {
+      "word": "was",
+      "start": 12.311,
+      "end": 12.631,
+      "score": 0.992
+    },
+    {
+      "word": "wirklich",
+      "start": 12.671,
+      "end": 13.091,
+      "score": 0.928
+    },
+    {
+      "word": "zählt.",
+      "start": 13.151,
+      "end": 14.452,
+      "score": 0.955
+    },
+    {
+      "word": "Gold",
+      "start": 14.472,
+      "end": 14.713,
+      "score": 0.916
+    },
+    {
+      "word": "ist",
+      "start": 14.773,
+      "end": 15.013,
+      "score": 0.897
+    },
+    {
+      "word": "flüchtig.",
+      "start": 15.053,
+      "end": 16.414,
+      "score": 0.916
+    },
+    {
+      "word": "Was",
+      "start": 16.434,
+      "end": 16.654,
+      "score": 0.978
+    },
+    {
+      "word": "ich",
+      "start": 16.694,
+      "end": 16.854,
+      "score": 0.899
+    },
+    {
+      "word": "verstehe,",
+      "start": 16.894,
+      "end": 17.695,
+      "score": 0.852
+    },
+    {
+      "word": "bleibt.",
+      "start": 17.735,
+      "end": 19.277,
+      "score": 0.911
+    },
+    {
+      "word": "Beim",
+      "start": 19.297,
+      "end": 19.557,
+      "score": 0.863
+    },
+    {
+      "word": "nächsten",
+      "start": 19.597,
+      "end": 20.037,
+      "score": 0.865
+    },
+    {
+      "word": "Neuanfang",
+      "start": 20.077,
+      "end": 21.298,
+      "score": 0.987
+    },
+    {
+      "word": "nehme",
+      "start": 21.338,
+      "end": 21.558,
+      "score": 0.798
+    },
+    {
+      "word": "ich",
+      "start": 21.598,
+      "end": 21.899,
+      "score": 0.914
+    },
+    {
+      "word": "mehr",
+      "start": 21.919,
+      "end": 22.159,
+      "score": 0.855
+    },
+    {
+      "word": "mit",
+      "start": 22.199,
+      "end": 22.439,
+      "score": 0.939
+    },
+    {
+      "word": "als",
+      "start": 22.459,
+      "end": 22.659,
+      "score": 0.799
+    },
+    {
+      "word": "bisher.",
+      "start": 22.699,
+      "end": 22.96,
+      "score": 0.744
+    }
+  ]
+}

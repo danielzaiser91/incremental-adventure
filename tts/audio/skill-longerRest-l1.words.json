@@ -1,0 +1,449 @@
+{
+  "segments": [
+    {
+      "start": 0.581,
+      "end": 3.864,
+      "text": "Fünfzehn Minuten sind keine Pause.",
+      "words": [
+        {
+          "word": "Fünfzehn",
+          "start": 0.581,
+          "end": 1.021,
+          "score": 0.879
+        },
+        {
+          "word": "Minuten",
+          "start": 1.041,
+          "end": 1.962,
+          "score": 0.85
+        },
+        {
+          "word": "sind",
+          "start": 2.002,
+          "end": 2.283,
+          "score": 0.965
+        },
+        {
+          "word": "keine",
+          "start": 2.303,
+          "end": 2.523,
+          "score": 0.932
+        },
+        {
+          "word": "Pause.",
+          "start": 2.563,
+          "end": 3.864,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 3.884,
+      "end": 7.989,
+      "text": "Ich habe das immer gedacht, aber nie zugegeben.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.884,
+          "end": 3.944,
+          "score": 0.994
+        },
+        {
+          "word": "habe",
+          "start": 3.984,
+          "end": 4.145,
+          "score": 0.814
+        },
+        {
+          "word": "das",
+          "start": 4.165,
+          "end": 4.305,
+          "score": 0.865
+        },
+        {
+          "word": "immer",
+          "start": 4.325,
+          "end": 4.505,
+          "score": 0.94
+        },
+        {
+          "word": "gedacht,",
+          "start": 4.545,
+          "end": 5.526,
+          "score": 0.822
+        },
+        {
+          "word": "aber",
+          "start": 5.566,
+          "end": 5.826,
+          "score": 0.963
+        },
+        {
+          "word": "nie",
+          "start": 5.846,
+          "end": 6.067,
+          "score": 0.794
+        },
+        {
+          "word": "zugegeben.",
+          "start": 6.107,
+          "end": 7.989,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 8.009,
+      "end": 9.851,
+      "text": "Dreißig Minuten.",
+      "words": [
+        {
+          "word": "Dreißig",
+          "start": 8.009,
+          "end": 8.429,
+          "score": 0.951
+        },
+        {
+          "word": "Minuten.",
+          "start": 8.449,
+          "end": 9.851,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 9.871,
+      "end": 16.518,
+      "text": "Der Körper entspannt tatsächlich — die Schultern sinken, die Hände hören auf zu zittern.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 9.871,
+          "end": 10.031,
+          "score": 0.793
+        },
+        {
+          "word": "Körper",
+          "start": 10.071,
+          "end": 10.391,
+          "score": 0.963
+        },
+        {
+          "word": "entspannt",
+          "start": 10.432,
+          "end": 10.972,
+          "score": 0.912
+        },
+        {
+          "word": "tatsächlich",
+          "start": 11.012,
+          "end": 11.553,
+          "score": 0.913
+        },
+        {
+          "word": "—",
+          "start": 11.573,
+          "end": 12.254,
+          "score": 0.968
+        },
+        {
+          "word": "die",
+          "start": 12.274,
+          "end": 12.394,
+          "score": 0.911
+        },
+        {
+          "word": "Schultern",
+          "start": 12.434,
+          "end": 12.834,
+          "score": 0.909
+        },
+        {
+          "word": "sinken,",
+          "start": 12.874,
+          "end": 13.955,
+          "score": 0.898
+        },
+        {
+          "word": "die",
+          "start": 13.975,
+          "end": 14.116,
+          "score": 0.832
+        },
+        {
+          "word": "Hände",
+          "start": 14.136,
+          "end": 14.376,
+          "score": 0.888
+        },
+        {
+          "word": "hören",
+          "start": 14.416,
+          "end": 14.656,
+          "score": 0.841
+        },
+        {
+          "word": "auf",
+          "start": 14.676,
+          "end": 14.836,
+          "score": 0.989
+        },
+        {
+          "word": "zu",
+          "start": 14.876,
+          "end": 14.997,
+          "score": 0.994
+        },
+        {
+          "word": "zittern.",
+          "start": 15.057,
+          "end": 16.518,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 16.538,
+      "end": 17.72,
+      "text": "So soll eine Pause sein.",
+      "words": [
+        {
+          "word": "So",
+          "start": 16.538,
+          "end": 16.739,
+          "score": 0.994
+        },
+        {
+          "word": "soll",
+          "start": 16.779,
+          "end": 16.999,
+          "score": 0.955
+        },
+        {
+          "word": "eine",
+          "start": 17.019,
+          "end": 17.179,
+          "score": 0.883
+        },
+        {
+          "word": "Pause",
+          "start": 17.199,
+          "end": 17.519,
+          "score": 0.988
+        },
+        {
+          "word": "sein.",
+          "start": 17.559,
+          "end": 17.72,
+          "score": 0.799
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Fünfzehn",
+      "start": 0.581,
+      "end": 1.021,
+      "score": 0.879
+    },
+    {
+      "word": "Minuten",
+      "start": 1.041,
+      "end": 1.962,
+      "score": 0.85
+    },
+    {
+      "word": "sind",
+      "start": 2.002,
+      "end": 2.283,
+      "score": 0.965
+    },
+    {
+      "word": "keine",
+      "start": 2.303,
+      "end": 2.523,
+      "score": 0.932
+    },
+    {
+      "word": "Pause.",
+      "start": 2.563,
+      "end": 3.864,
+      "score": 0.951
+    },
+    {
+      "word": "Ich",
+      "start": 3.884,
+      "end": 3.944,
+      "score": 0.994
+    },
+    {
+      "word": "habe",
+      "start": 3.984,
+      "end": 4.145,
+      "score": 0.814
+    },
+    {
+      "word": "das",
+      "start": 4.165,
+      "end": 4.305,
+      "score": 0.865
+    },
+    {
+      "word": "immer",
+      "start": 4.325,
+      "end": 4.505,
+      "score": 0.94
+    },
+    {
+      "word": "gedacht,",
+      "start": 4.545,
+      "end": 5.526,
+      "score": 0.822
+    },
+    {
+      "word": "aber",
+      "start": 5.566,
+      "end": 5.826,
+      "score": 0.963
+    },
+    {
+      "word": "nie",
+      "start": 5.846,
+      "end": 6.067,
+      "score": 0.794
+    },
+    {
+      "word": "zugegeben.",
+      "start": 6.107,
+      "end": 7.989,
+      "score": 0.942
+    },
+    {
+      "word": "Dreißig",
+      "start": 8.009,
+      "end": 8.429,
+      "score": 0.951
+    },
+    {
+      "word": "Minuten.",
+      "start": 8.449,
+      "end": 9.851,
+      "score": 0.827
+    },
+    {
+      "word": "Der",
+      "start": 9.871,
+      "end": 10.031,
+      "score": 0.793
+    },
+    {
+      "word": "Körper",
+      "start": 10.071,
+      "end": 10.391,
+      "score": 0.963
+    },
+    {
+      "word": "entspannt",
+      "start": 10.432,
+      "end": 10.972,
+      "score": 0.912
+    },
+    {
+      "word": "tatsächlich",
+      "start": 11.012,
+      "end": 11.553,
+      "score": 0.913
+    },
+    {
+      "word": "—",
+      "start": 11.573,
+      "end": 12.254,
+      "score": 0.968
+    },
+    {
+      "word": "die",
+      "start": 12.274,
+      "end": 12.394,
+      "score": 0.911
+    },
+    {
+      "word": "Schultern",
+      "start": 12.434,
+      "end": 12.834,
+      "score": 0.909
+    },
+    {
+      "word": "sinken,",
+      "start": 12.874,
+      "end": 13.955,
+      "score": 0.898
+    },
+    {
+      "word": "die",
+      "start": 13.975,
+      "end": 14.116,
+      "score": 0.832
+    },
+    {
+      "word": "Hände",
+      "start": 14.136,
+      "end": 14.376,
+      "score": 0.888
+    },
+    {
+      "word": "hören",
+      "start": 14.416,
+      "end": 14.656,
+      "score": 0.841
+    },
+    {
+      "word": "auf",
+      "start": 14.676,
+      "end": 14.836,
+      "score": 0.989
+    },
+    {
+      "word": "zu",
+      "start": 14.876,
+      "end": 14.997,
+      "score": 0.994
+    },
+    {
+      "word": "zittern.",
+      "start": 15.057,
+      "end": 16.518,
+      "score": 0.906
+    },
+    {
+      "word": "So",
+      "start": 16.538,
+      "end": 16.739,
+      "score": 0.994
+    },
+    {
+      "word": "soll",
+      "start": 16.779,
+      "end": 16.999,
+      "score": 0.955
+    },
+    {
+      "word": "eine",
+      "start": 17.019,
+      "end": 17.179,
+      "score": 0.883
+    },
+    {
+      "word": "Pause",
+      "start": 17.199,
+      "end": 17.519,
+      "score": 0.988
+    },
+    {
+      "word": "sein.",
+      "start": 17.559,
+      "end": 17.72,
+      "score": 0.799
+    }
+  ]
+}

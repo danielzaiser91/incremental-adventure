@@ -1,0 +1,236 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 2.328,
+      "text": "Greta nickt mir zu.",
+      "words": [
+        {
+          "word": "Greta",
+          "start": 0.401,
+          "end": 0.863,
+          "score": 0.84
+        },
+        {
+          "word": "nickt",
+          "start": 0.883,
+          "end": 1.124,
+          "score": 0.781
+        },
+        {
+          "word": "mir",
+          "start": 1.144,
+          "end": 1.344,
+          "score": 0.895
+        },
+        {
+          "word": "zu.",
+          "start": 1.385,
+          "end": 2.328,
+          "score": 0.839
+        }
+      ]
+    },
+    {
+      "start": 2.348,
+      "end": 5.799,
+      "text": "\"Bring mir gerne mal wieder ein paar Rohstoffe — ich kauf sie dir ab.\"",
+      "words": [
+        {
+          "word": "\"Bring",
+          "start": 2.348,
+          "end": 2.629,
+          "score": 0.88
+        },
+        {
+          "word": "mir",
+          "start": 2.649,
+          "end": 2.869,
+          "score": 0.736
+        },
+        {
+          "word": "gerne",
+          "start": 2.889,
+          "end": 3.15,
+          "score": 0.916
+        },
+        {
+          "word": "mal",
+          "start": 3.251,
+          "end": 3.391,
+          "score": 0.91
+        },
+        {
+          "word": "wieder",
+          "start": 3.411,
+          "end": 3.612,
+          "score": 0.783
+        },
+        {
+          "word": "ein",
+          "start": 3.652,
+          "end": 3.772,
+          "score": 0.599
+        },
+        {
+          "word": "paar",
+          "start": 3.792,
+          "end": 4.013,
+          "score": 0.787
+        },
+        {
+          "word": "Rohstoffe",
+          "start": 4.033,
+          "end": 4.555,
+          "score": 0.87
+        },
+        {
+          "word": "—",
+          "start": 4.936,
+          "end": 4.956,
+          "score": 0.962
+        },
+        {
+          "word": "ich",
+          "start": 4.976,
+          "end": 5.117,
+          "score": 0.84
+        },
+        {
+          "word": "kauf",
+          "start": 5.157,
+          "end": 5.378,
+          "score": 0.924
+        },
+        {
+          "word": "sie",
+          "start": 5.398,
+          "end": 5.498,
+          "score": 0.868
+        },
+        {
+          "word": "dir",
+          "start": 5.538,
+          "end": 5.658,
+          "score": 0.631
+        },
+        {
+          "word": "ab.\"",
+          "start": 5.679,
+          "end": 5.799,
+          "score": 0.422
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Greta",
+      "start": 0.401,
+      "end": 0.863,
+      "score": 0.84
+    },
+    {
+      "word": "nickt",
+      "start": 0.883,
+      "end": 1.124,
+      "score": 0.781
+    },
+    {
+      "word": "mir",
+      "start": 1.144,
+      "end": 1.344,
+      "score": 0.895
+    },
+    {
+      "word": "zu.",
+      "start": 1.385,
+      "end": 2.328,
+      "score": 0.839
+    },
+    {
+      "word": "\"Bring",
+      "start": 2.348,
+      "end": 2.629,
+      "score": 0.88
+    },
+    {
+      "word": "mir",
+      "start": 2.649,
+      "end": 2.869,
+      "score": 0.736
+    },
+    {
+      "word": "gerne",
+      "start": 2.889,
+      "end": 3.15,
+      "score": 0.916
+    },
+    {
+      "word": "mal",
+      "start": 3.251,
+      "end": 3.391,
+      "score": 0.91
+    },
+    {
+      "word": "wieder",
+      "start": 3.411,
+      "end": 3.612,
+      "score": 0.783
+    },
+    {
+      "word": "ein",
+      "start": 3.652,
+      "end": 3.772,
+      "score": 0.599
+    },
+    {
+      "word": "paar",
+      "start": 3.792,
+      "end": 4.013,
+      "score": 0.787
+    },
+    {
+      "word": "Rohstoffe",
+      "start": 4.033,
+      "end": 4.555,
+      "score": 0.87
+    },
+    {
+      "word": "—",
+      "start": 4.936,
+      "end": 4.956,
+      "score": 0.962
+    },
+    {
+      "word": "ich",
+      "start": 4.976,
+      "end": 5.117,
+      "score": 0.84
+    },
+    {
+      "word": "kauf",
+      "start": 5.157,
+      "end": 5.378,
+      "score": 0.924
+    },
+    {
+      "word": "sie",
+      "start": 5.398,
+      "end": 5.498,
+      "score": 0.868
+    },
+    {
+      "word": "dir",
+      "start": 5.538,
+      "end": 5.658,
+      "score": 0.631
+    },
+    {
+      "word": "ab.\"",
+      "start": 5.679,
+      "end": 5.799,
+      "score": 0.422
+    }
+  ]
+}

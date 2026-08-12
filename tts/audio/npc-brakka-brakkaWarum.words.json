@@ -1,0 +1,1120 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 2.802,
+      "text": "Brakka stellt den Krug ab.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.46,
+          "end": 0.921,
+          "score": 0.745
+        },
+        {
+          "word": "stellt",
+          "start": 0.981,
+          "end": 1.261,
+          "score": 0.92
+        },
+        {
+          "word": "den",
+          "start": 1.301,
+          "end": 1.481,
+          "score": 0.966
+        },
+        {
+          "word": "Krug",
+          "start": 1.521,
+          "end": 1.881,
+          "score": 0.948
+        },
+        {
+          "word": "ab.",
+          "start": 1.921,
+          "end": 2.802,
+          "score": 0.925
+        }
+      ]
+    },
+    {
+      "start": 2.842,
+      "end": 6.564,
+      "text": "Sein Blick streift mich — kurz, gewogen.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 2.842,
+          "end": 3.022,
+          "score": 0.734
+        },
+        {
+          "word": "Blick",
+          "start": 3.062,
+          "end": 3.302,
+          "score": 0.989
+        },
+        {
+          "word": "streift",
+          "start": 3.362,
+          "end": 3.802,
+          "score": 0.877
+        },
+        {
+          "word": "mich",
+          "start": 3.822,
+          "end": 4.483,
+          "score": 0.889
+        },
+        {
+          "word": "—",
+          "start": 4.503,
+          "end": 4.523,
+          "score": 0.997
+        },
+        {
+          "word": "kurz,",
+          "start": 4.543,
+          "end": 5.283,
+          "score": 0.83
+        },
+        {
+          "word": "gewogen.",
+          "start": 5.323,
+          "end": 6.564,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 6.604,
+      "end": 10.546,
+      "text": "Als zählte er etwas nach, das er nicht laut sagen wird.",
+      "words": [
+        {
+          "word": "Als",
+          "start": 6.604,
+          "end": 6.864,
+          "score": 0.969
+        },
+        {
+          "word": "zählte",
+          "start": 6.924,
+          "end": 7.244,
+          "score": 0.786
+        },
+        {
+          "word": "er",
+          "start": 7.284,
+          "end": 7.424,
+          "score": 0.786
+        },
+        {
+          "word": "etwas",
+          "start": 7.464,
+          "end": 7.864,
+          "score": 0.997
+        },
+        {
+          "word": "nach,",
+          "start": 7.904,
+          "end": 8.205,
+          "score": 0.871
+        },
+        {
+          "word": "das",
+          "start": 8.225,
+          "end": 8.385,
+          "score": 0.865
+        },
+        {
+          "word": "er",
+          "start": 8.425,
+          "end": 8.545,
+          "score": 0.822
+        },
+        {
+          "word": "nicht",
+          "start": 8.585,
+          "end": 8.805,
+          "score": 0.927
+        },
+        {
+          "word": "laut",
+          "start": 8.865,
+          "end": 9.125,
+          "score": 0.871
+        },
+        {
+          "word": "sagen",
+          "start": 9.165,
+          "end": 9.485,
+          "score": 0.955
+        },
+        {
+          "word": "wird.",
+          "start": 9.525,
+          "end": 10.546,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 10.566,
+      "end": 14.268,
+      "text": "\"In meinen Jahren hab ich viele durch diese Tür kommen sehen.",
+      "words": [
+        {
+          "word": "\"In",
+          "start": 10.566,
+          "end": 10.746,
+          "score": 0.895
+        },
+        {
+          "word": "meinen",
+          "start": 10.786,
+          "end": 11.086,
+          "score": 0.885
+        },
+        {
+          "word": "Jahren",
+          "start": 11.126,
+          "end": 11.466,
+          "score": 0.788
+        },
+        {
+          "word": "hab",
+          "start": 11.486,
+          "end": 11.627,
+          "score": 0.724
+        },
+        {
+          "word": "ich",
+          "start": 11.667,
+          "end": 11.887,
+          "score": 0.674
+        },
+        {
+          "word": "viele",
+          "start": 11.927,
+          "end": 12.187,
+          "score": 0.93
+        },
+        {
+          "word": "durch",
+          "start": 12.207,
+          "end": 12.407,
+          "score": 0.822
+        },
+        {
+          "word": "diese",
+          "start": 12.447,
+          "end": 12.687,
+          "score": 0.877
+        },
+        {
+          "word": "Tür",
+          "start": 12.727,
+          "end": 12.967,
+          "score": 0.951
+        },
+        {
+          "word": "kommen",
+          "start": 13.007,
+          "end": 13.267,
+          "score": 0.925
+        },
+        {
+          "word": "sehen.",
+          "start": 13.307,
+          "end": 14.268,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 14.288,
+      "end": 19.811,
+      "text": "Die meisten witterten dasselbe: Ruhm, Gold, am liebsten beides.\"",
+      "words": [
+        {
+          "word": "Die",
+          "start": 14.288,
+          "end": 14.408,
+          "score": 0.718
+        },
+        {
+          "word": "meisten",
+          "start": 14.448,
+          "end": 14.808,
+          "score": 0.822
+        },
+        {
+          "word": "witterten",
+          "start": 14.828,
+          "end": 15.229,
+          "score": 0.916
+        },
+        {
+          "word": "dasselbe:",
+          "start": 15.269,
+          "end": 16.249,
+          "score": 0.885
+        },
+        {
+          "word": "Ruhm,",
+          "start": 16.329,
+          "end": 17.11,
+          "score": 0.839
+        },
+        {
+          "word": "Gold,",
+          "start": 17.13,
+          "end": 17.87,
+          "score": 0.957
+        },
+        {
+          "word": "am",
+          "start": 17.91,
+          "end": 18.07,
+          "score": 0.84
+        },
+        {
+          "word": "liebsten",
+          "start": 18.11,
+          "end": 18.51,
+          "score": 0.965
+        },
+        {
+          "word": "beides.\"",
+          "start": 18.53,
+          "end": 19.811,
+          "score": 0.851
+        }
+      ]
+    },
+    {
+      "start": 19.831,
+      "end": 22.152,
+      "text": "\"Du hast von nichts davon geredet.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 19.831,
+          "end": 20.031,
+          "score": 0.949
+        },
+        {
+          "word": "hast",
+          "start": 20.071,
+          "end": 20.271,
+          "score": 0.911
+        },
+        {
+          "word": "von",
+          "start": 20.311,
+          "end": 20.471,
+          "score": 0.989
+        },
+        {
+          "word": "nichts",
+          "start": 20.512,
+          "end": 20.772,
+          "score": 0.803
+        },
+        {
+          "word": "davon",
+          "start": 20.812,
+          "end": 21.112,
+          "score": 0.966
+        },
+        {
+          "word": "geredet.",
+          "start": 21.132,
+          "end": 22.152,
+          "score": 0.874
+        }
+      ]
+    },
+    {
+      "start": 22.172,
+      "end": 25.114,
+      "text": "Du hast gefragt, wie es mir geht.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 22.172,
+          "end": 22.313,
+          "score": 0.976
+        },
+        {
+          "word": "hast",
+          "start": 22.353,
+          "end": 22.573,
+          "score": 0.924
+        },
+        {
+          "word": "gefragt,",
+          "start": 22.613,
+          "end": 23.033,
+          "score": 0.887
+        },
+        {
+          "word": "wie",
+          "start": 23.053,
+          "end": 23.173,
+          "score": 0.8
+        },
+        {
+          "word": "es",
+          "start": 23.213,
+          "end": 23.353,
+          "score": 0.817
+        },
+        {
+          "word": "mir",
+          "start": 23.373,
+          "end": 23.513,
+          "score": 0.89
+        },
+        {
+          "word": "geht.\"",
+          "start": 23.553,
+          "end": 25.114,
+          "score": 0.88
+        }
+      ]
+    },
+    {
+      "start": 25.134,
+      "end": 28.516,
+      "text": "Die schwielige Hand legt sich wieder um den Krug.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 25.134,
+          "end": 25.314,
+          "score": 0.897
+        },
+        {
+          "word": "schwielige",
+          "start": 25.334,
+          "end": 25.895,
+          "score": 0.787
+        },
+        {
+          "word": "Hand",
+          "start": 25.935,
+          "end": 26.195,
+          "score": 0.97
+        },
+        {
+          "word": "legt",
+          "start": 26.235,
+          "end": 26.475,
+          "score": 0.798
+        },
+        {
+          "word": "sich",
+          "start": 26.495,
+          "end": 26.675,
+          "score": 0.852
+        },
+        {
+          "word": "wieder",
+          "start": 26.715,
+          "end": 26.935,
+          "score": 0.815
+        },
+        {
+          "word": "um",
+          "start": 26.955,
+          "end": 27.075,
+          "score": 0.788
+        },
+        {
+          "word": "den",
+          "start": 27.095,
+          "end": 27.255,
+          "score": 0.93
+        },
+        {
+          "word": "Krug.",
+          "start": 27.295,
+          "end": 28.516,
+          "score": 0.972
+        }
+      ]
+    },
+    {
+      "start": 28.536,
+      "end": 30.397,
+      "text": "\"Das war genug.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 28.536,
+          "end": 28.856,
+          "score": 0.832
+        },
+        {
+          "word": "war",
+          "start": 28.896,
+          "end": 29.076,
+          "score": 0.982
+        },
+        {
+          "word": "genug.",
+          "start": 29.116,
+          "end": 30.397,
+          "score": 0.842
+        }
+      ]
+    },
+    {
+      "start": 30.437,
+      "end": 35.32,
+      "text": "Jetzt zeig mir, dass ich mich nicht verschätzt hab — dann gibt es zwischen uns nichts weiter zu reden.\"",
+      "words": [
+        {
+          "word": "Jetzt",
+          "start": 30.437,
+          "end": 30.677,
+          "score": 0.801
+        },
+        {
+          "word": "zeig",
+          "start": 30.717,
+          "end": 30.957,
+          "score": 0.872
+        },
+        {
+          "word": "mir,",
+          "start": 30.977,
+          "end": 31.097,
+          "score": 0.75
+        },
+        {
+          "word": "dass",
+          "start": 31.117,
+          "end": 31.258,
+          "score": 0.909
+        },
+        {
+          "word": "ich",
+          "start": 31.298,
+          "end": 31.398,
+          "score": 0.835
+        },
+        {
+          "word": "mich",
+          "start": 31.438,
+          "end": 31.558,
+          "score": 0.873
+        },
+        {
+          "word": "nicht",
+          "start": 31.598,
+          "end": 31.778,
+          "score": 0.853
+        },
+        {
+          "word": "verschätzt",
+          "start": 31.818,
+          "end": 32.238,
+          "score": 0.831
+        },
+        {
+          "word": "hab",
+          "start": 32.258,
+          "end": 32.418,
+          "score": 0.913
+        },
+        {
+          "word": "—",
+          "start": 33.039,
+          "end": 33.059,
+          "score": 0.892
+        },
+        {
+          "word": "dann",
+          "start": 33.079,
+          "end": 33.319,
+          "score": 0.969
+        },
+        {
+          "word": "gibt",
+          "start": 33.359,
+          "end": 33.499,
+          "score": 0.976
+        },
+        {
+          "word": "es",
+          "start": 33.559,
+          "end": 33.699,
+          "score": 0.891
+        },
+        {
+          "word": "zwischen",
+          "start": 33.719,
+          "end": 34.019,
+          "score": 0.768
+        },
+        {
+          "word": "uns",
+          "start": 34.059,
+          "end": 34.279,
+          "score": 0.993
+        },
+        {
+          "word": "nichts",
+          "start": 34.319,
+          "end": 34.599,
+          "score": 0.762
+        },
+        {
+          "word": "weiter",
+          "start": 34.619,
+          "end": 34.92,
+          "score": 0.856
+        },
+        {
+          "word": "zu",
+          "start": 34.96,
+          "end": 35.04,
+          "score": 0.996
+        },
+        {
+          "word": "reden.\"",
+          "start": 35.1,
+          "end": 35.32,
+          "score": 0.815
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.46,
+      "end": 0.921,
+      "score": 0.745
+    },
+    {
+      "word": "stellt",
+      "start": 0.981,
+      "end": 1.261,
+      "score": 0.92
+    },
+    {
+      "word": "den",
+      "start": 1.301,
+      "end": 1.481,
+      "score": 0.966
+    },
+    {
+      "word": "Krug",
+      "start": 1.521,
+      "end": 1.881,
+      "score": 0.948
+    },
+    {
+      "word": "ab.",
+      "start": 1.921,
+      "end": 2.802,
+      "score": 0.925
+    },
+    {
+      "word": "Sein",
+      "start": 2.842,
+      "end": 3.022,
+      "score": 0.734
+    },
+    {
+      "word": "Blick",
+      "start": 3.062,
+      "end": 3.302,
+      "score": 0.989
+    },
+    {
+      "word": "streift",
+      "start": 3.362,
+      "end": 3.802,
+      "score": 0.877
+    },
+    {
+      "word": "mich",
+      "start": 3.822,
+      "end": 4.483,
+      "score": 0.889
+    },
+    {
+      "word": "—",
+      "start": 4.503,
+      "end": 4.523,
+      "score": 0.997
+    },
+    {
+      "word": "kurz,",
+      "start": 4.543,
+      "end": 5.283,
+      "score": 0.83
+    },
+    {
+      "word": "gewogen.",
+      "start": 5.323,
+      "end": 6.564,
+      "score": 0.918
+    },
+    {
+      "word": "Als",
+      "start": 6.604,
+      "end": 6.864,
+      "score": 0.969
+    },
+    {
+      "word": "zählte",
+      "start": 6.924,
+      "end": 7.244,
+      "score": 0.786
+    },
+    {
+      "word": "er",
+      "start": 7.284,
+      "end": 7.424,
+      "score": 0.786
+    },
+    {
+      "word": "etwas",
+      "start": 7.464,
+      "end": 7.864,
+      "score": 0.997
+    },
+    {
+      "word": "nach,",
+      "start": 7.904,
+      "end": 8.205,
+      "score": 0.871
+    },
+    {
+      "word": "das",
+      "start": 8.225,
+      "end": 8.385,
+      "score": 0.865
+    },
+    {
+      "word": "er",
+      "start": 8.425,
+      "end": 8.545,
+      "score": 0.822
+    },
+    {
+      "word": "nicht",
+      "start": 8.585,
+      "end": 8.805,
+      "score": 0.927
+    },
+    {
+      "word": "laut",
+      "start": 8.865,
+      "end": 9.125,
+      "score": 0.871
+    },
+    {
+      "word": "sagen",
+      "start": 9.165,
+      "end": 9.485,
+      "score": 0.955
+    },
+    {
+      "word": "wird.",
+      "start": 9.525,
+      "end": 10.546,
+      "score": 0.961
+    },
+    {
+      "word": "\"In",
+      "start": 10.566,
+      "end": 10.746,
+      "score": 0.895
+    },
+    {
+      "word": "meinen",
+      "start": 10.786,
+      "end": 11.086,
+      "score": 0.885
+    },
+    {
+      "word": "Jahren",
+      "start": 11.126,
+      "end": 11.466,
+      "score": 0.788
+    },
+    {
+      "word": "hab",
+      "start": 11.486,
+      "end": 11.627,
+      "score": 0.724
+    },
+    {
+      "word": "ich",
+      "start": 11.667,
+      "end": 11.887,
+      "score": 0.674
+    },
+    {
+      "word": "viele",
+      "start": 11.927,
+      "end": 12.187,
+      "score": 0.93
+    },
+    {
+      "word": "durch",
+      "start": 12.207,
+      "end": 12.407,
+      "score": 0.822
+    },
+    {
+      "word": "diese",
+      "start": 12.447,
+      "end": 12.687,
+      "score": 0.877
+    },
+    {
+      "word": "Tür",
+      "start": 12.727,
+      "end": 12.967,
+      "score": 0.951
+    },
+    {
+      "word": "kommen",
+      "start": 13.007,
+      "end": 13.267,
+      "score": 0.925
+    },
+    {
+      "word": "sehen.",
+      "start": 13.307,
+      "end": 14.268,
+      "score": 0.923
+    },
+    {
+      "word": "Die",
+      "start": 14.288,
+      "end": 14.408,
+      "score": 0.718
+    },
+    {
+      "word": "meisten",
+      "start": 14.448,
+      "end": 14.808,
+      "score": 0.822
+    },
+    {
+      "word": "witterten",
+      "start": 14.828,
+      "end": 15.229,
+      "score": 0.916
+    },
+    {
+      "word": "dasselbe:",
+      "start": 15.269,
+      "end": 16.249,
+      "score": 0.885
+    },
+    {
+      "word": "Ruhm,",
+      "start": 16.329,
+      "end": 17.11,
+      "score": 0.839
+    },
+    {
+      "word": "Gold,",
+      "start": 17.13,
+      "end": 17.87,
+      "score": 0.957
+    },
+    {
+      "word": "am",
+      "start": 17.91,
+      "end": 18.07,
+      "score": 0.84
+    },
+    {
+      "word": "liebsten",
+      "start": 18.11,
+      "end": 18.51,
+      "score": 0.965
+    },
+    {
+      "word": "beides.\"",
+      "start": 18.53,
+      "end": 19.811,
+      "score": 0.851
+    },
+    {
+      "word": "\"Du",
+      "start": 19.831,
+      "end": 20.031,
+      "score": 0.949
+    },
+    {
+      "word": "hast",
+      "start": 20.071,
+      "end": 20.271,
+      "score": 0.911
+    },
+    {
+      "word": "von",
+      "start": 20.311,
+      "end": 20.471,
+      "score": 0.989
+    },
+    {
+      "word": "nichts",
+      "start": 20.512,
+      "end": 20.772,
+      "score": 0.803
+    },
+    {
+      "word": "davon",
+      "start": 20.812,
+      "end": 21.112,
+      "score": 0.966
+    },
+    {
+      "word": "geredet.",
+      "start": 21.132,
+      "end": 22.152,
+      "score": 0.874
+    },
+    {
+      "word": "Du",
+      "start": 22.172,
+      "end": 22.313,
+      "score": 0.976
+    },
+    {
+      "word": "hast",
+      "start": 22.353,
+      "end": 22.573,
+      "score": 0.924
+    },
+    {
+      "word": "gefragt,",
+      "start": 22.613,
+      "end": 23.033,
+      "score": 0.887
+    },
+    {
+      "word": "wie",
+      "start": 23.053,
+      "end": 23.173,
+      "score": 0.8
+    },
+    {
+      "word": "es",
+      "start": 23.213,
+      "end": 23.353,
+      "score": 0.817
+    },
+    {
+      "word": "mir",
+      "start": 23.373,
+      "end": 23.513,
+      "score": 0.89
+    },
+    {
+      "word": "geht.\"",
+      "start": 23.553,
+      "end": 25.114,
+      "score": 0.88
+    },
+    {
+      "word": "Die",
+      "start": 25.134,
+      "end": 25.314,
+      "score": 0.897
+    },
+    {
+      "word": "schwielige",
+      "start": 25.334,
+      "end": 25.895,
+      "score": 0.787
+    },
+    {
+      "word": "Hand",
+      "start": 25.935,
+      "end": 26.195,
+      "score": 0.97
+    },
+    {
+      "word": "legt",
+      "start": 26.235,
+      "end": 26.475,
+      "score": 0.798
+    },
+    {
+      "word": "sich",
+      "start": 26.495,
+      "end": 26.675,
+      "score": 0.852
+    },
+    {
+      "word": "wieder",
+      "start": 26.715,
+      "end": 26.935,
+      "score": 0.815
+    },
+    {
+      "word": "um",
+      "start": 26.955,
+      "end": 27.075,
+      "score": 0.788
+    },
+    {
+      "word": "den",
+      "start": 27.095,
+      "end": 27.255,
+      "score": 0.93
+    },
+    {
+      "word": "Krug.",
+      "start": 27.295,
+      "end": 28.516,
+      "score": 0.972
+    },
+    {
+      "word": "\"Das",
+      "start": 28.536,
+      "end": 28.856,
+      "score": 0.832
+    },
+    {
+      "word": "war",
+      "start": 28.896,
+      "end": 29.076,
+      "score": 0.982
+    },
+    {
+      "word": "genug.",
+      "start": 29.116,
+      "end": 30.397,
+      "score": 0.842
+    },
+    {
+      "word": "Jetzt",
+      "start": 30.437,
+      "end": 30.677,
+      "score": 0.801
+    },
+    {
+      "word": "zeig",
+      "start": 30.717,
+      "end": 30.957,
+      "score": 0.872
+    },
+    {
+      "word": "mir,",
+      "start": 30.977,
+      "end": 31.097,
+      "score": 0.75
+    },
+    {
+      "word": "dass",
+      "start": 31.117,
+      "end": 31.258,
+      "score": 0.909
+    },
+    {
+      "word": "ich",
+      "start": 31.298,
+      "end": 31.398,
+      "score": 0.835
+    },
+    {
+      "word": "mich",
+      "start": 31.438,
+      "end": 31.558,
+      "score": 0.873
+    },
+    {
+      "word": "nicht",
+      "start": 31.598,
+      "end": 31.778,
+      "score": 0.853
+    },
+    {
+      "word": "verschätzt",
+      "start": 31.818,
+      "end": 32.238,
+      "score": 0.831
+    },
+    {
+      "word": "hab",
+      "start": 32.258,
+      "end": 32.418,
+      "score": 0.913
+    },
+    {
+      "word": "—",
+      "start": 33.039,
+      "end": 33.059,
+      "score": 0.892
+    },
+    {
+      "word": "dann",
+      "start": 33.079,
+      "end": 33.319,
+      "score": 0.969
+    },
+    {
+      "word": "gibt",
+      "start": 33.359,
+      "end": 33.499,
+      "score": 0.976
+    },
+    {
+      "word": "es",
+      "start": 33.559,
+      "end": 33.699,
+      "score": 0.891
+    },
+    {
+      "word": "zwischen",
+      "start": 33.719,
+      "end": 34.019,
+      "score": 0.768
+    },
+    {
+      "word": "uns",
+      "start": 34.059,
+      "end": 34.279,
+      "score": 0.993
+    },
+    {
+      "word": "nichts",
+      "start": 34.319,
+      "end": 34.599,
+      "score": 0.762
+    },
+    {
+      "word": "weiter",
+      "start": 34.619,
+      "end": 34.92,
+      "score": 0.856
+    },
+    {
+      "word": "zu",
+      "start": 34.96,
+      "end": 35.04,
+      "score": 0.996
+    },
+    {
+      "word": "reden.\"",
+      "start": 35.1,
+      "end": 35.32,
+      "score": 0.815
+    }
+  ]
+}

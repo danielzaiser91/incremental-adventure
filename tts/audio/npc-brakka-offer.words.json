@@ -1,0 +1,466 @@
+{
+  "segments": [
+    {
+      "start": 0.36,
+      "end": 5.927,
+      "text": "Brakka stellt seinen Krug ab und betrachtet mich nachdenklich.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.36,
+          "end": 0.901,
+          "score": 0.842
+        },
+        {
+          "word": "stellt",
+          "start": 0.941,
+          "end": 1.262,
+          "score": 0.953
+        },
+        {
+          "word": "seinen",
+          "start": 1.302,
+          "end": 1.602,
+          "score": 0.832
+        },
+        {
+          "word": "Krug",
+          "start": 1.662,
+          "end": 2.042,
+          "score": 0.935
+        },
+        {
+          "word": "ab",
+          "start": 2.083,
+          "end": 2.583,
+          "score": 0.995
+        },
+        {
+          "word": "und",
+          "start": 2.623,
+          "end": 2.803,
+          "score": 0.938
+        },
+        {
+          "word": "betrachtet",
+          "start": 2.843,
+          "end": 3.384,
+          "score": 0.849
+        },
+        {
+          "word": "mich",
+          "start": 3.424,
+          "end": 3.664,
+          "score": 0.879
+        },
+        {
+          "word": "nachdenklich.",
+          "start": 3.704,
+          "end": 5.927,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 5.967,
+      "end": 9.812,
+      "text": "\"Du willst dir wohl auch beim Waffenschmied die Klinge ansehen, hm?",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 5.967,
+          "end": 6.127,
+          "score": 0.69
+        },
+        {
+          "word": "willst",
+          "start": 6.147,
+          "end": 6.388,
+          "score": 0.668
+        },
+        {
+          "word": "dir",
+          "start": 6.408,
+          "end": 6.548,
+          "score": 0.498
+        },
+        {
+          "word": "wohl",
+          "start": 6.568,
+          "end": 6.768,
+          "score": 0.867
+        },
+        {
+          "word": "auch",
+          "start": 6.788,
+          "end": 6.948,
+          "score": 0.969
+        },
+        {
+          "word": "beim",
+          "start": 6.988,
+          "end": 7.189,
+          "score": 0.797
+        },
+        {
+          "word": "Waffenschmied",
+          "start": 7.229,
+          "end": 7.729,
+          "score": 0.781
+        },
+        {
+          "word": "die",
+          "start": 7.749,
+          "end": 7.93,
+          "score": 0.692
+        },
+        {
+          "word": "Klinge",
+          "start": 7.95,
+          "end": 8.29,
+          "score": 0.901
+        },
+        {
+          "word": "ansehen,",
+          "start": 8.33,
+          "end": 8.711,
+          "score": 0.79
+        },
+        {
+          "word": "hm?",
+          "start": 8.751,
+          "end": 9.812,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 9.832,
+      "end": 14.578,
+      "text": "Vergiss es — der verkauft nur an registrierte Abenteurer.\"",
+      "words": [
+        {
+          "word": "Vergiss",
+          "start": 9.832,
+          "end": 10.232,
+          "score": 0.879
+        },
+        {
+          "word": "es",
+          "start": 10.272,
+          "end": 10.373,
+          "score": 0.929
+        },
+        {
+          "word": "—",
+          "start": 10.893,
+          "end": 10.913,
+          "score": 0.843
+        },
+        {
+          "word": "der",
+          "start": 10.933,
+          "end": 11.093,
+          "score": 0.926
+        },
+        {
+          "word": "verkauft",
+          "start": 11.113,
+          "end": 11.554,
+          "score": 0.988
+        },
+        {
+          "word": "nur",
+          "start": 11.594,
+          "end": 11.734,
+          "score": 0.921
+        },
+        {
+          "word": "an",
+          "start": 11.774,
+          "end": 11.914,
+          "score": 0.854
+        },
+        {
+          "word": "registrierte",
+          "start": 11.954,
+          "end": 12.715,
+          "score": 0.895
+        },
+        {
+          "word": "Abenteurer.\"",
+          "start": 12.755,
+          "end": 14.578,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 14.598,
+      "end": 16.14,
+      "text": "\"Willst du wissen, wie man das wird?\"",
+      "words": [
+        {
+          "word": "\"Willst",
+          "start": 14.598,
+          "end": 14.858,
+          "score": 0.76
+        },
+        {
+          "word": "du",
+          "start": 14.878,
+          "end": 15.058,
+          "score": 0.509
+        },
+        {
+          "word": "wissen,",
+          "start": 15.078,
+          "end": 15.359,
+          "score": 0.974
+        },
+        {
+          "word": "wie",
+          "start": 15.379,
+          "end": 15.479,
+          "score": 0.983
+        },
+        {
+          "word": "man",
+          "start": 15.519,
+          "end": 15.659,
+          "score": 0.938
+        },
+        {
+          "word": "das",
+          "start": 15.679,
+          "end": 15.899,
+          "score": 0.993
+        },
+        {
+          "word": "wird?\"",
+          "start": 15.959,
+          "end": 16.14,
+          "score": 0.773
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.36,
+      "end": 0.901,
+      "score": 0.842
+    },
+    {
+      "word": "stellt",
+      "start": 0.941,
+      "end": 1.262,
+      "score": 0.953
+    },
+    {
+      "word": "seinen",
+      "start": 1.302,
+      "end": 1.602,
+      "score": 0.832
+    },
+    {
+      "word": "Krug",
+      "start": 1.662,
+      "end": 2.042,
+      "score": 0.935
+    },
+    {
+      "word": "ab",
+      "start": 2.083,
+      "end": 2.583,
+      "score": 0.995
+    },
+    {
+      "word": "und",
+      "start": 2.623,
+      "end": 2.803,
+      "score": 0.938
+    },
+    {
+      "word": "betrachtet",
+      "start": 2.843,
+      "end": 3.384,
+      "score": 0.849
+    },
+    {
+      "word": "mich",
+      "start": 3.424,
+      "end": 3.664,
+      "score": 0.879
+    },
+    {
+      "word": "nachdenklich.",
+      "start": 3.704,
+      "end": 5.927,
+      "score": 0.935
+    },
+    {
+      "word": "\"Du",
+      "start": 5.967,
+      "end": 6.127,
+      "score": 0.69
+    },
+    {
+      "word": "willst",
+      "start": 6.147,
+      "end": 6.388,
+      "score": 0.668
+    },
+    {
+      "word": "dir",
+      "start": 6.408,
+      "end": 6.548,
+      "score": 0.498
+    },
+    {
+      "word": "wohl",
+      "start": 6.568,
+      "end": 6.768,
+      "score": 0.867
+    },
+    {
+      "word": "auch",
+      "start": 6.788,
+      "end": 6.948,
+      "score": 0.969
+    },
+    {
+      "word": "beim",
+      "start": 6.988,
+      "end": 7.189,
+      "score": 0.797
+    },
+    {
+      "word": "Waffenschmied",
+      "start": 7.229,
+      "end": 7.729,
+      "score": 0.781
+    },
+    {
+      "word": "die",
+      "start": 7.749,
+      "end": 7.93,
+      "score": 0.692
+    },
+    {
+      "word": "Klinge",
+      "start": 7.95,
+      "end": 8.29,
+      "score": 0.901
+    },
+    {
+      "word": "ansehen,",
+      "start": 8.33,
+      "end": 8.711,
+      "score": 0.79
+    },
+    {
+      "word": "hm?",
+      "start": 8.751,
+      "end": 9.812,
+      "score": 0.933
+    },
+    {
+      "word": "Vergiss",
+      "start": 9.832,
+      "end": 10.232,
+      "score": 0.879
+    },
+    {
+      "word": "es",
+      "start": 10.272,
+      "end": 10.373,
+      "score": 0.929
+    },
+    {
+      "word": "—",
+      "start": 10.893,
+      "end": 10.913,
+      "score": 0.843
+    },
+    {
+      "word": "der",
+      "start": 10.933,
+      "end": 11.093,
+      "score": 0.926
+    },
+    {
+      "word": "verkauft",
+      "start": 11.113,
+      "end": 11.554,
+      "score": 0.988
+    },
+    {
+      "word": "nur",
+      "start": 11.594,
+      "end": 11.734,
+      "score": 0.921
+    },
+    {
+      "word": "an",
+      "start": 11.774,
+      "end": 11.914,
+      "score": 0.854
+    },
+    {
+      "word": "registrierte",
+      "start": 11.954,
+      "end": 12.715,
+      "score": 0.895
+    },
+    {
+      "word": "Abenteurer.\"",
+      "start": 12.755,
+      "end": 14.578,
+      "score": 0.882
+    },
+    {
+      "word": "\"Willst",
+      "start": 14.598,
+      "end": 14.858,
+      "score": 0.76
+    },
+    {
+      "word": "du",
+      "start": 14.878,
+      "end": 15.058,
+      "score": 0.509
+    },
+    {
+      "word": "wissen,",
+      "start": 15.078,
+      "end": 15.359,
+      "score": 0.974
+    },
+    {
+      "word": "wie",
+      "start": 15.379,
+      "end": 15.479,
+      "score": 0.983
+    },
+    {
+      "word": "man",
+      "start": 15.519,
+      "end": 15.659,
+      "score": 0.938
+    },
+    {
+      "word": "das",
+      "start": 15.679,
+      "end": 15.899,
+      "score": 0.993
+    },
+    {
+      "word": "wird?\"",
+      "start": 15.959,
+      "end": 16.14,
+      "score": 0.773
+    }
+  ]
+}

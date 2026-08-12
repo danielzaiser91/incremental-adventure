@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 4.034,
+      "text": "\"Die Gilde ist stolz auf dich, Abenteurer.",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 0.381,
+          "end": 0.602,
+          "score": 0.75
+        },
+        {
+          "word": "Gilde",
+          "start": 0.642,
+          "end": 1.044,
+          "score": 0.847
+        },
+        {
+          "word": "ist",
+          "start": 1.084,
+          "end": 1.365,
+          "score": 0.811
+        },
+        {
+          "word": "stolz",
+          "start": 1.405,
+          "end": 1.746,
+          "score": 0.935
+        },
+        {
+          "word": "auf",
+          "start": 1.786,
+          "end": 1.947,
+          "score": 0.981
+        },
+        {
+          "word": "dich,",
+          "start": 1.987,
+          "end": 2.508,
+          "score": 0.895
+        },
+        {
+          "word": "Abenteurer.",
+          "start": 2.549,
+          "end": 4.034,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 4.074,
+      "end": 5.599,
+      "text": "Geh und mach weiter so.\"",
+      "words": [
+        {
+          "word": "Geh",
+          "start": 4.074,
+          "end": 4.455,
+          "score": 0.916
+        },
+        {
+          "word": "und",
+          "start": 4.495,
+          "end": 4.756,
+          "score": 0.968
+        },
+        {
+          "word": "mach",
+          "start": 4.796,
+          "end": 5.017,
+          "score": 0.979
+        },
+        {
+          "word": "weiter",
+          "start": 5.037,
+          "end": 5.398,
+          "score": 0.992
+        },
+        {
+          "word": "so.\"",
+          "start": 5.438,
+          "end": 5.599,
+          "score": 0.689
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Die",
+      "start": 0.381,
+      "end": 0.602,
+      "score": 0.75
+    },
+    {
+      "word": "Gilde",
+      "start": 0.642,
+      "end": 1.044,
+      "score": 0.847
+    },
+    {
+      "word": "ist",
+      "start": 1.084,
+      "end": 1.365,
+      "score": 0.811
+    },
+    {
+      "word": "stolz",
+      "start": 1.405,
+      "end": 1.746,
+      "score": 0.935
+    },
+    {
+      "word": "auf",
+      "start": 1.786,
+      "end": 1.947,
+      "score": 0.981
+    },
+    {
+      "word": "dich,",
+      "start": 1.987,
+      "end": 2.508,
+      "score": 0.895
+    },
+    {
+      "word": "Abenteurer.",
+      "start": 2.549,
+      "end": 4.034,
+      "score": 0.833
+    },
+    {
+      "word": "Geh",
+      "start": 4.074,
+      "end": 4.455,
+      "score": 0.916
+    },
+    {
+      "word": "und",
+      "start": 4.495,
+      "end": 4.756,
+      "score": 0.968
+    },
+    {
+      "word": "mach",
+      "start": 4.796,
+      "end": 5.017,
+      "score": 0.979
+    },
+    {
+      "word": "weiter",
+      "start": 5.037,
+      "end": 5.398,
+      "score": 0.992
+    },
+    {
+      "word": "so.\"",
+      "start": 5.438,
+      "end": 5.599,
+      "score": 0.689
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.281,
+      "end": 3.929,
+      "text": "Der zwielichtige Mann ist nicht mehr hier.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.281,
+          "end": 0.441,
+          "score": 0.621
+        },
+        {
+          "word": "zwielichtige",
+          "start": 0.621,
+          "end": 1.504,
+          "score": 0.866
+        },
+        {
+          "word": "Mann",
+          "start": 1.524,
+          "end": 1.904,
+          "score": 0.908
+        },
+        {
+          "word": "ist",
+          "start": 1.965,
+          "end": 2.205,
+          "score": 0.814
+        },
+        {
+          "word": "nicht",
+          "start": 2.245,
+          "end": 2.446,
+          "score": 0.783
+        },
+        {
+          "word": "mehr",
+          "start": 2.486,
+          "end": 2.726,
+          "score": 0.798
+        },
+        {
+          "word": "hier.",
+          "start": 2.746,
+          "end": 3.929,
+          "score": 0.831
+        }
+      ]
+    },
+    {
+      "start": 3.949,
+      "end": 7.137,
+      "text": "Nur sein leerer Stuhl erinnert an das Gespräch.",
+      "words": [
+        {
+          "word": "Nur",
+          "start": 3.949,
+          "end": 4.25,
+          "score": 0.986
+        },
+        {
+          "word": "sein",
+          "start": 4.29,
+          "end": 4.571,
+          "score": 0.804
+        },
+        {
+          "word": "leerer",
+          "start": 4.611,
+          "end": 5.052,
+          "score": 0.89
+        },
+        {
+          "word": "Stuhl",
+          "start": 5.092,
+          "end": 5.794,
+          "score": 0.903
+        },
+        {
+          "word": "erinnert",
+          "start": 5.834,
+          "end": 6.295,
+          "score": 0.949
+        },
+        {
+          "word": "an",
+          "start": 6.335,
+          "end": 6.395,
+          "score": 0.878
+        },
+        {
+          "word": "das",
+          "start": 6.435,
+          "end": 6.616,
+          "score": 0.845
+        },
+        {
+          "word": "Gespräch.",
+          "start": 6.656,
+          "end": 7.137,
+          "score": 0.884
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.281,
+      "end": 0.441,
+      "score": 0.621
+    },
+    {
+      "word": "zwielichtige",
+      "start": 0.621,
+      "end": 1.504,
+      "score": 0.866
+    },
+    {
+      "word": "Mann",
+      "start": 1.524,
+      "end": 1.904,
+      "score": 0.908
+    },
+    {
+      "word": "ist",
+      "start": 1.965,
+      "end": 2.205,
+      "score": 0.814
+    },
+    {
+      "word": "nicht",
+      "start": 2.245,
+      "end": 2.446,
+      "score": 0.783
+    },
+    {
+      "word": "mehr",
+      "start": 2.486,
+      "end": 2.726,
+      "score": 0.798
+    },
+    {
+      "word": "hier.",
+      "start": 2.746,
+      "end": 3.929,
+      "score": 0.831
+    },
+    {
+      "word": "Nur",
+      "start": 3.949,
+      "end": 4.25,
+      "score": 0.986
+    },
+    {
+      "word": "sein",
+      "start": 4.29,
+      "end": 4.571,
+      "score": 0.804
+    },
+    {
+      "word": "leerer",
+      "start": 4.611,
+      "end": 5.052,
+      "score": 0.89
+    },
+    {
+      "word": "Stuhl",
+      "start": 5.092,
+      "end": 5.794,
+      "score": 0.903
+    },
+    {
+      "word": "erinnert",
+      "start": 5.834,
+      "end": 6.295,
+      "score": 0.949
+    },
+    {
+      "word": "an",
+      "start": 6.335,
+      "end": 6.395,
+      "score": 0.878
+    },
+    {
+      "word": "das",
+      "start": 6.435,
+      "end": 6.616,
+      "score": 0.845
+    },
+    {
+      "word": "Gespräch.",
+      "start": 6.656,
+      "end": 7.137,
+      "score": 0.884
+    }
+  ]
+}

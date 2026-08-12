@@ -1,0 +1,487 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 3.244,
+      "text": "Korbin lacht trocken.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.501,
+          "end": 1.061,
+          "score": 0.82
+        },
+        {
+          "word": "lacht",
+          "start": 1.121,
+          "end": 1.402,
+          "score": 0.821
+        },
+        {
+          "word": "trocken.",
+          "start": 1.462,
+          "end": 3.244,
+          "score": 0.808
+        }
+      ]
+    },
+    {
+      "start": 3.364,
+      "end": 4.645,
+      "text": "\"Reich werden?",
+      "words": [
+        {
+          "word": "\"Reich",
+          "start": 3.364,
+          "end": 3.704,
+          "score": 0.871
+        },
+        {
+          "word": "werden?",
+          "start": 3.744,
+          "end": 4.645,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 4.665,
+      "end": 6.807,
+      "text": "Hier in Treutheim?\"",
+      "words": [
+        {
+          "word": "Hier",
+          "start": 4.665,
+          "end": 5.005,
+          "score": 0.852
+        },
+        {
+          "word": "in",
+          "start": 5.046,
+          "end": 5.266,
+          "score": 0.915
+        },
+        {
+          "word": "Treutheim?\"",
+          "start": 5.286,
+          "end": 6.807,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 6.827,
+      "end": 10.191,
+      "text": "\"Das hier ist kaum mehr als ein Dorf mit Stadtmauer.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 6.827,
+          "end": 7.048,
+          "score": 0.786
+        },
+        {
+          "word": "hier",
+          "start": 7.068,
+          "end": 7.228,
+          "score": 0.8
+        },
+        {
+          "word": "ist",
+          "start": 7.248,
+          "end": 7.448,
+          "score": 0.81
+        },
+        {
+          "word": "kaum",
+          "start": 7.468,
+          "end": 7.728,
+          "score": 0.882
+        },
+        {
+          "word": "mehr",
+          "start": 7.769,
+          "end": 7.949,
+          "score": 0.781
+        },
+        {
+          "word": "als",
+          "start": 7.989,
+          "end": 8.149,
+          "score": 0.917
+        },
+        {
+          "word": "ein",
+          "start": 8.169,
+          "end": 8.329,
+          "score": 0.703
+        },
+        {
+          "word": "Dorf",
+          "start": 8.369,
+          "end": 8.73,
+          "score": 0.72
+        },
+        {
+          "word": "mit",
+          "start": 8.75,
+          "end": 8.93,
+          "score": 0.971
+        },
+        {
+          "word": "Stadtmauer.",
+          "start": 8.99,
+          "end": 10.191,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 10.251,
+      "end": 12.654,
+      "text": "Arbeit ist Mangelware.\"",
+      "words": [
+        {
+          "word": "Arbeit",
+          "start": 10.251,
+          "end": 10.652,
+          "score": 0.916
+        },
+        {
+          "word": "ist",
+          "start": 10.692,
+          "end": 10.952,
+          "score": 0.858
+        },
+        {
+          "word": "Mangelware.\"",
+          "start": 10.992,
+          "end": 12.654,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 12.674,
+      "end": 16.238,
+      "text": "\"Aber die Felder vor dem Tor suchen immer Hände.",
+      "words": [
+        {
+          "word": "\"Aber",
+          "start": 12.674,
+          "end": 13.154,
+          "score": 0.964
+        },
+        {
+          "word": "die",
+          "start": 13.194,
+          "end": 13.355,
+          "score": 0.923
+        },
+        {
+          "word": "Felder",
+          "start": 13.415,
+          "end": 13.795,
+          "score": 0.876
+        },
+        {
+          "word": "vor",
+          "start": 13.815,
+          "end": 13.935,
+          "score": 0.998
+        },
+        {
+          "word": "dem",
+          "start": 13.975,
+          "end": 14.135,
+          "score": 0.922
+        },
+        {
+          "word": "Tor",
+          "start": 14.176,
+          "end": 14.536,
+          "score": 0.852
+        },
+        {
+          "word": "suchen",
+          "start": 14.576,
+          "end": 14.916,
+          "score": 0.941
+        },
+        {
+          "word": "immer",
+          "start": 14.956,
+          "end": 15.197,
+          "score": 0.961
+        },
+        {
+          "word": "Hände.",
+          "start": 15.237,
+          "end": 16.238,
+          "score": 0.984
+        }
+      ]
+    },
+    {
+      "start": 16.258,
+      "end": 17.86,
+      "text": "Jeder fängt mal klein an, Fremder.\"",
+      "words": [
+        {
+          "word": "Jeder",
+          "start": 16.258,
+          "end": 16.538,
+          "score": 0.945
+        },
+        {
+          "word": "fängt",
+          "start": 16.578,
+          "end": 16.758,
+          "score": 0.833
+        },
+        {
+          "word": "mal",
+          "start": 16.818,
+          "end": 17.019,
+          "score": 0.935
+        },
+        {
+          "word": "klein",
+          "start": 17.059,
+          "end": 17.339,
+          "score": 0.804
+        },
+        {
+          "word": "an,",
+          "start": 17.379,
+          "end": 17.499,
+          "score": 0.67
+        },
+        {
+          "word": "Fremder.\"",
+          "start": 17.539,
+          "end": 17.86,
+          "score": 0.779
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.501,
+      "end": 1.061,
+      "score": 0.82
+    },
+    {
+      "word": "lacht",
+      "start": 1.121,
+      "end": 1.402,
+      "score": 0.821
+    },
+    {
+      "word": "trocken.",
+      "start": 1.462,
+      "end": 3.244,
+      "score": 0.808
+    },
+    {
+      "word": "\"Reich",
+      "start": 3.364,
+      "end": 3.704,
+      "score": 0.871
+    },
+    {
+      "word": "werden?",
+      "start": 3.744,
+      "end": 4.645,
+      "score": 0.932
+    },
+    {
+      "word": "Hier",
+      "start": 4.665,
+      "end": 5.005,
+      "score": 0.852
+    },
+    {
+      "word": "in",
+      "start": 5.046,
+      "end": 5.266,
+      "score": 0.915
+    },
+    {
+      "word": "Treutheim?\"",
+      "start": 5.286,
+      "end": 6.807,
+      "score": 0.84
+    },
+    {
+      "word": "\"Das",
+      "start": 6.827,
+      "end": 7.048,
+      "score": 0.786
+    },
+    {
+      "word": "hier",
+      "start": 7.068,
+      "end": 7.228,
+      "score": 0.8
+    },
+    {
+      "word": "ist",
+      "start": 7.248,
+      "end": 7.448,
+      "score": 0.81
+    },
+    {
+      "word": "kaum",
+      "start": 7.468,
+      "end": 7.728,
+      "score": 0.882
+    },
+    {
+      "word": "mehr",
+      "start": 7.769,
+      "end": 7.949,
+      "score": 0.781
+    },
+    {
+      "word": "als",
+      "start": 7.989,
+      "end": 8.149,
+      "score": 0.917
+    },
+    {
+      "word": "ein",
+      "start": 8.169,
+      "end": 8.329,
+      "score": 0.703
+    },
+    {
+      "word": "Dorf",
+      "start": 8.369,
+      "end": 8.73,
+      "score": 0.72
+    },
+    {
+      "word": "mit",
+      "start": 8.75,
+      "end": 8.93,
+      "score": 0.971
+    },
+    {
+      "word": "Stadtmauer.",
+      "start": 8.99,
+      "end": 10.191,
+      "score": 0.948
+    },
+    {
+      "word": "Arbeit",
+      "start": 10.251,
+      "end": 10.652,
+      "score": 0.916
+    },
+    {
+      "word": "ist",
+      "start": 10.692,
+      "end": 10.952,
+      "score": 0.858
+    },
+    {
+      "word": "Mangelware.\"",
+      "start": 10.992,
+      "end": 12.654,
+      "score": 0.84
+    },
+    {
+      "word": "\"Aber",
+      "start": 12.674,
+      "end": 13.154,
+      "score": 0.964
+    },
+    {
+      "word": "die",
+      "start": 13.194,
+      "end": 13.355,
+      "score": 0.923
+    },
+    {
+      "word": "Felder",
+      "start": 13.415,
+      "end": 13.795,
+      "score": 0.876
+    },
+    {
+      "word": "vor",
+      "start": 13.815,
+      "end": 13.935,
+      "score": 0.998
+    },
+    {
+      "word": "dem",
+      "start": 13.975,
+      "end": 14.135,
+      "score": 0.922
+    },
+    {
+      "word": "Tor",
+      "start": 14.176,
+      "end": 14.536,
+      "score": 0.852
+    },
+    {
+      "word": "suchen",
+      "start": 14.576,
+      "end": 14.916,
+      "score": 0.941
+    },
+    {
+      "word": "immer",
+      "start": 14.956,
+      "end": 15.197,
+      "score": 0.961
+    },
+    {
+      "word": "Hände.",
+      "start": 15.237,
+      "end": 16.238,
+      "score": 0.984
+    },
+    {
+      "word": "Jeder",
+      "start": 16.258,
+      "end": 16.538,
+      "score": 0.945
+    },
+    {
+      "word": "fängt",
+      "start": 16.578,
+      "end": 16.758,
+      "score": 0.833
+    },
+    {
+      "word": "mal",
+      "start": 16.818,
+      "end": 17.019,
+      "score": 0.935
+    },
+    {
+      "word": "klein",
+      "start": 17.059,
+      "end": 17.339,
+      "score": 0.804
+    },
+    {
+      "word": "an,",
+      "start": 17.379,
+      "end": 17.499,
+      "score": 0.67
+    },
+    {
+      "word": "Fremder.\"",
+      "start": 17.539,
+      "end": 17.86,
+      "score": 0.779
+    }
+  ]
+}

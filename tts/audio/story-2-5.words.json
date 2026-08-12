@@ -1,0 +1,1046 @@
+{
+  "segments": [
+    {
+      "start": 0.42,
+      "end": 3.022,
+      "text": "Brakka legt den Hammer aus der Hand.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.42,
+          "end": 0.8,
+          "score": 0.831
+        },
+        {
+          "word": "legt",
+          "start": 0.84,
+          "end": 1.061,
+          "score": 0.855
+        },
+        {
+          "word": "den",
+          "start": 1.081,
+          "end": 1.261,
+          "score": 0.888
+        },
+        {
+          "word": "Hammer",
+          "start": 1.301,
+          "end": 1.621,
+          "score": 0.92
+        },
+        {
+          "word": "aus",
+          "start": 1.661,
+          "end": 1.821,
+          "score": 0.743
+        },
+        {
+          "word": "der",
+          "start": 1.841,
+          "end": 1.941,
+          "score": 0.981
+        },
+        {
+          "word": "Hand.",
+          "start": 1.961,
+          "end": 3.022,
+          "score": 0.917
+        }
+      ]
+    },
+    {
+      "start": 3.042,
+      "end": 6.444,
+      "text": "Zum ersten Mal, seit ich ihn kenne.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 3.042,
+          "end": 3.362,
+          "score": 0.808
+        },
+        {
+          "word": "ersten",
+          "start": 3.402,
+          "end": 3.802,
+          "score": 0.82
+        },
+        {
+          "word": "Mal,",
+          "start": 3.862,
+          "end": 4.162,
+          "score": 0.884
+        },
+        {
+          "word": "seit",
+          "start": 4.182,
+          "end": 4.342,
+          "score": 0.781
+        },
+        {
+          "word": "ich",
+          "start": 4.362,
+          "end": 4.483,
+          "score": 0.532
+        },
+        {
+          "word": "ihn",
+          "start": 4.503,
+          "end": 4.643,
+          "score": 0.353
+        },
+        {
+          "word": "kenne.",
+          "start": 4.683,
+          "end": 6.444,
+          "score": 0.909
+        }
+      ]
+    },
+    {
+      "start": 6.464,
+      "end": 10.826,
+      "text": "»Der Mann, der immer in der Taverne hockt — er ist kein Dieb.",
+      "words": [
+        {
+          "word": "»Der",
+          "start": 6.464,
+          "end": 6.644,
+          "score": 0.963
+        },
+        {
+          "word": "Mann,",
+          "start": 6.704,
+          "end": 6.924,
+          "score": 0.917
+        },
+        {
+          "word": "der",
+          "start": 6.944,
+          "end": 7.124,
+          "score": 0.95
+        },
+        {
+          "word": "immer",
+          "start": 7.164,
+          "end": 7.364,
+          "score": 0.958
+        },
+        {
+          "word": "in",
+          "start": 7.404,
+          "end": 7.484,
+          "score": 0.832
+        },
+        {
+          "word": "der",
+          "start": 7.524,
+          "end": 7.624,
+          "score": 0.823
+        },
+        {
+          "word": "Taverne",
+          "start": 7.644,
+          "end": 8.085,
+          "score": 0.879
+        },
+        {
+          "word": "hockt",
+          "start": 8.105,
+          "end": 8.365,
+          "score": 0.669
+        },
+        {
+          "word": "—",
+          "start": 9.145,
+          "end": 9.165,
+          "score": 0.219
+        },
+        {
+          "word": "er",
+          "start": 9.225,
+          "end": 9.385,
+          "score": 0.766
+        },
+        {
+          "word": "ist",
+          "start": 9.425,
+          "end": 9.625,
+          "score": 0.795
+        },
+        {
+          "word": "kein",
+          "start": 9.666,
+          "end": 9.866,
+          "score": 0.853
+        },
+        {
+          "word": "Dieb.",
+          "start": 9.906,
+          "end": 10.826,
+          "score": 0.74
+        }
+      ]
+    },
+    {
+      "start": 10.886,
+      "end": 12.467,
+      "text": "Er ist der Späher.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 10.886,
+          "end": 11.006,
+          "score": 0.766
+        },
+        {
+          "word": "ist",
+          "start": 11.026,
+          "end": 11.166,
+          "score": 0.81
+        },
+        {
+          "word": "der",
+          "start": 11.186,
+          "end": 11.326,
+          "score": 0.705
+        },
+        {
+          "word": "Späher.",
+          "start": 11.366,
+          "end": 12.467,
+          "score": 0.637
+        }
+      ]
+    },
+    {
+      "start": 12.527,
+      "end": 20.071,
+      "text": "Er beobachtet, er wählt aus, er meldet weiter.« »Dieses Gesicht kenne ich seit Jahren.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 12.527,
+          "end": 12.667,
+          "score": 0.714
+        },
+        {
+          "word": "beobachtet,",
+          "start": 12.707,
+          "end": 13.728,
+          "score": 0.91
+        },
+        {
+          "word": "er",
+          "start": 13.788,
+          "end": 13.928,
+          "score": 0.842
+        },
+        {
+          "word": "wählt",
+          "start": 13.948,
+          "end": 14.228,
+          "score": 0.589
+        },
+        {
+          "word": "aus,",
+          "start": 14.268,
+          "end": 15.069,
+          "score": 0.772
+        },
+        {
+          "word": "er",
+          "start": 15.129,
+          "end": 15.229,
+          "score": 0.841
+        },
+        {
+          "word": "meldet",
+          "start": 15.269,
+          "end": 15.569,
+          "score": 0.943
+        },
+        {
+          "word": "weiter.«",
+          "start": 15.609,
+          "end": 17.41,
+          "score": 0.884
+        },
+        {
+          "word": "»Dieses",
+          "start": 17.43,
+          "end": 17.85,
+          "score": 0.858
+        },
+        {
+          "word": "Gesicht",
+          "start": 17.89,
+          "end": 18.31,
+          "score": 0.902
+        },
+        {
+          "word": "kenne",
+          "start": 18.35,
+          "end": 18.531,
+          "score": 0.891
+        },
+        {
+          "word": "ich",
+          "start": 18.571,
+          "end": 18.711,
+          "score": 0.802
+        },
+        {
+          "word": "seit",
+          "start": 18.731,
+          "end": 19.091,
+          "score": 0.863
+        },
+        {
+          "word": "Jahren.",
+          "start": 19.131,
+          "end": 20.071,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 20.111,
+      "end": 22.273,
+      "text": "Immer hat er nur zugesehen.",
+      "words": [
+        {
+          "word": "Immer",
+          "start": 20.111,
+          "end": 20.372,
+          "score": 0.953
+        },
+        {
+          "word": "hat",
+          "start": 20.392,
+          "end": 20.572,
+          "score": 0.855
+        },
+        {
+          "word": "er",
+          "start": 20.612,
+          "end": 20.732,
+          "score": 0.704
+        },
+        {
+          "word": "nur",
+          "start": 20.752,
+          "end": 21.052,
+          "score": 0.85
+        },
+        {
+          "word": "zugesehen.",
+          "start": 21.112,
+          "end": 22.273,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 22.313,
+      "end": 29.737,
+      "text": "Und ich war zu feige, den Mund aufzumachen.« Sein Blick liegt schwer wie Eisen auf mir.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 22.313,
+          "end": 22.493,
+          "score": 0.578
+        },
+        {
+          "word": "ich",
+          "start": 22.533,
+          "end": 22.633,
+          "score": 0.887
+        },
+        {
+          "word": "war",
+          "start": 22.693,
+          "end": 22.873,
+          "score": 0.977
+        },
+        {
+          "word": "zu",
+          "start": 22.913,
+          "end": 23.113,
+          "score": 0.974
+        },
+        {
+          "word": "feige,",
+          "start": 23.173,
+          "end": 23.493,
+          "score": 0.97
+        },
+        {
+          "word": "den",
+          "start": 23.513,
+          "end": 23.654,
+          "score": 0.891
+        },
+        {
+          "word": "Mund",
+          "start": 23.694,
+          "end": 23.874,
+          "score": 0.918
+        },
+        {
+          "word": "aufzumachen.«",
+          "start": 23.894,
+          "end": 26.235,
+          "score": 0.92
+        },
+        {
+          "word": "Sein",
+          "start": 26.255,
+          "end": 26.455,
+          "score": 0.639
+        },
+        {
+          "word": "Blick",
+          "start": 26.495,
+          "end": 26.735,
+          "score": 0.958
+        },
+        {
+          "word": "liegt",
+          "start": 26.795,
+          "end": 27.075,
+          "score": 0.885
+        },
+        {
+          "word": "schwer",
+          "start": 27.115,
+          "end": 27.496,
+          "score": 0.749
+        },
+        {
+          "word": "wie",
+          "start": 27.516,
+          "end": 27.756,
+          "score": 0.862
+        },
+        {
+          "word": "Eisen",
+          "start": 27.816,
+          "end": 28.136,
+          "score": 0.815
+        },
+        {
+          "word": "auf",
+          "start": 28.176,
+          "end": 28.356,
+          "score": 0.963
+        },
+        {
+          "word": "mir.",
+          "start": 28.396,
+          "end": 29.737,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 29.757,
+      "end": 34.64,
+      "text": "»Willst du dem ein Ende setzen, dann halte etwas in der Hand, wenn du ihn stellst.«",
+      "words": [
+        {
+          "word": "»Willst",
+          "start": 29.757,
+          "end": 30.037,
+          "score": 0.526
+        },
+        {
+          "word": "du",
+          "start": 30.077,
+          "end": 30.237,
+          "score": 0.482
+        },
+        {
+          "word": "dem",
+          "start": 30.257,
+          "end": 30.477,
+          "score": 0.883
+        },
+        {
+          "word": "ein",
+          "start": 30.517,
+          "end": 30.718,
+          "score": 0.826
+        },
+        {
+          "word": "Ende",
+          "start": 30.778,
+          "end": 31.018,
+          "score": 0.918
+        },
+        {
+          "word": "setzen,",
+          "start": 31.058,
+          "end": 32.098,
+          "score": 0.942
+        },
+        {
+          "word": "dann",
+          "start": 32.118,
+          "end": 32.419,
+          "score": 0.942
+        },
+        {
+          "word": "halte",
+          "start": 32.439,
+          "end": 32.819,
+          "score": 0.919
+        },
+        {
+          "word": "etwas",
+          "start": 32.859,
+          "end": 33.159,
+          "score": 0.973
+        },
+        {
+          "word": "in",
+          "start": 33.199,
+          "end": 33.299,
+          "score": 0.823
+        },
+        {
+          "word": "der",
+          "start": 33.319,
+          "end": 33.479,
+          "score": 0.945
+        },
+        {
+          "word": "Hand,",
+          "start": 33.519,
+          "end": 33.759,
+          "score": 0.841
+        },
+        {
+          "word": "wenn",
+          "start": 33.779,
+          "end": 33.919,
+          "score": 0.918
+        },
+        {
+          "word": "du",
+          "start": 33.939,
+          "end": 34.039,
+          "score": 0.81
+        },
+        {
+          "word": "ihn",
+          "start": 34.079,
+          "end": 34.24,
+          "score": 0.635
+        },
+        {
+          "word": "stellst.«",
+          "start": 34.28,
+          "end": 34.64,
+          "score": 0.778
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.42,
+      "end": 0.8,
+      "score": 0.831
+    },
+    {
+      "word": "legt",
+      "start": 0.84,
+      "end": 1.061,
+      "score": 0.855
+    },
+    {
+      "word": "den",
+      "start": 1.081,
+      "end": 1.261,
+      "score": 0.888
+    },
+    {
+      "word": "Hammer",
+      "start": 1.301,
+      "end": 1.621,
+      "score": 0.92
+    },
+    {
+      "word": "aus",
+      "start": 1.661,
+      "end": 1.821,
+      "score": 0.743
+    },
+    {
+      "word": "der",
+      "start": 1.841,
+      "end": 1.941,
+      "score": 0.981
+    },
+    {
+      "word": "Hand.",
+      "start": 1.961,
+      "end": 3.022,
+      "score": 0.917
+    },
+    {
+      "word": "Zum",
+      "start": 3.042,
+      "end": 3.362,
+      "score": 0.808
+    },
+    {
+      "word": "ersten",
+      "start": 3.402,
+      "end": 3.802,
+      "score": 0.82
+    },
+    {
+      "word": "Mal,",
+      "start": 3.862,
+      "end": 4.162,
+      "score": 0.884
+    },
+    {
+      "word": "seit",
+      "start": 4.182,
+      "end": 4.342,
+      "score": 0.781
+    },
+    {
+      "word": "ich",
+      "start": 4.362,
+      "end": 4.483,
+      "score": 0.532
+    },
+    {
+      "word": "ihn",
+      "start": 4.503,
+      "end": 4.643,
+      "score": 0.353
+    },
+    {
+      "word": "kenne.",
+      "start": 4.683,
+      "end": 6.444,
+      "score": 0.909
+    },
+    {
+      "word": "»Der",
+      "start": 6.464,
+      "end": 6.644,
+      "score": 0.963
+    },
+    {
+      "word": "Mann,",
+      "start": 6.704,
+      "end": 6.924,
+      "score": 0.917
+    },
+    {
+      "word": "der",
+      "start": 6.944,
+      "end": 7.124,
+      "score": 0.95
+    },
+    {
+      "word": "immer",
+      "start": 7.164,
+      "end": 7.364,
+      "score": 0.958
+    },
+    {
+      "word": "in",
+      "start": 7.404,
+      "end": 7.484,
+      "score": 0.832
+    },
+    {
+      "word": "der",
+      "start": 7.524,
+      "end": 7.624,
+      "score": 0.823
+    },
+    {
+      "word": "Taverne",
+      "start": 7.644,
+      "end": 8.085,
+      "score": 0.879
+    },
+    {
+      "word": "hockt",
+      "start": 8.105,
+      "end": 8.365,
+      "score": 0.669
+    },
+    {
+      "word": "—",
+      "start": 9.145,
+      "end": 9.165,
+      "score": 0.219
+    },
+    {
+      "word": "er",
+      "start": 9.225,
+      "end": 9.385,
+      "score": 0.766
+    },
+    {
+      "word": "ist",
+      "start": 9.425,
+      "end": 9.625,
+      "score": 0.795
+    },
+    {
+      "word": "kein",
+      "start": 9.666,
+      "end": 9.866,
+      "score": 0.853
+    },
+    {
+      "word": "Dieb.",
+      "start": 9.906,
+      "end": 10.826,
+      "score": 0.74
+    },
+    {
+      "word": "Er",
+      "start": 10.886,
+      "end": 11.006,
+      "score": 0.766
+    },
+    {
+      "word": "ist",
+      "start": 11.026,
+      "end": 11.166,
+      "score": 0.81
+    },
+    {
+      "word": "der",
+      "start": 11.186,
+      "end": 11.326,
+      "score": 0.705
+    },
+    {
+      "word": "Späher.",
+      "start": 11.366,
+      "end": 12.467,
+      "score": 0.637
+    },
+    {
+      "word": "Er",
+      "start": 12.527,
+      "end": 12.667,
+      "score": 0.714
+    },
+    {
+      "word": "beobachtet,",
+      "start": 12.707,
+      "end": 13.728,
+      "score": 0.91
+    },
+    {
+      "word": "er",
+      "start": 13.788,
+      "end": 13.928,
+      "score": 0.842
+    },
+    {
+      "word": "wählt",
+      "start": 13.948,
+      "end": 14.228,
+      "score": 0.589
+    },
+    {
+      "word": "aus,",
+      "start": 14.268,
+      "end": 15.069,
+      "score": 0.772
+    },
+    {
+      "word": "er",
+      "start": 15.129,
+      "end": 15.229,
+      "score": 0.841
+    },
+    {
+      "word": "meldet",
+      "start": 15.269,
+      "end": 15.569,
+      "score": 0.943
+    },
+    {
+      "word": "weiter.«",
+      "start": 15.609,
+      "end": 17.41,
+      "score": 0.884
+    },
+    {
+      "word": "»Dieses",
+      "start": 17.43,
+      "end": 17.85,
+      "score": 0.858
+    },
+    {
+      "word": "Gesicht",
+      "start": 17.89,
+      "end": 18.31,
+      "score": 0.902
+    },
+    {
+      "word": "kenne",
+      "start": 18.35,
+      "end": 18.531,
+      "score": 0.891
+    },
+    {
+      "word": "ich",
+      "start": 18.571,
+      "end": 18.711,
+      "score": 0.802
+    },
+    {
+      "word": "seit",
+      "start": 18.731,
+      "end": 19.091,
+      "score": 0.863
+    },
+    {
+      "word": "Jahren.",
+      "start": 19.131,
+      "end": 20.071,
+      "score": 0.916
+    },
+    {
+      "word": "Immer",
+      "start": 20.111,
+      "end": 20.372,
+      "score": 0.953
+    },
+    {
+      "word": "hat",
+      "start": 20.392,
+      "end": 20.572,
+      "score": 0.855
+    },
+    {
+      "word": "er",
+      "start": 20.612,
+      "end": 20.732,
+      "score": 0.704
+    },
+    {
+      "word": "nur",
+      "start": 20.752,
+      "end": 21.052,
+      "score": 0.85
+    },
+    {
+      "word": "zugesehen.",
+      "start": 21.112,
+      "end": 22.273,
+      "score": 0.931
+    },
+    {
+      "word": "Und",
+      "start": 22.313,
+      "end": 22.493,
+      "score": 0.578
+    },
+    {
+      "word": "ich",
+      "start": 22.533,
+      "end": 22.633,
+      "score": 0.887
+    },
+    {
+      "word": "war",
+      "start": 22.693,
+      "end": 22.873,
+      "score": 0.977
+    },
+    {
+      "word": "zu",
+      "start": 22.913,
+      "end": 23.113,
+      "score": 0.974
+    },
+    {
+      "word": "feige,",
+      "start": 23.173,
+      "end": 23.493,
+      "score": 0.97
+    },
+    {
+      "word": "den",
+      "start": 23.513,
+      "end": 23.654,
+      "score": 0.891
+    },
+    {
+      "word": "Mund",
+      "start": 23.694,
+      "end": 23.874,
+      "score": 0.918
+    },
+    {
+      "word": "aufzumachen.«",
+      "start": 23.894,
+      "end": 26.235,
+      "score": 0.92
+    },
+    {
+      "word": "Sein",
+      "start": 26.255,
+      "end": 26.455,
+      "score": 0.639
+    },
+    {
+      "word": "Blick",
+      "start": 26.495,
+      "end": 26.735,
+      "score": 0.958
+    },
+    {
+      "word": "liegt",
+      "start": 26.795,
+      "end": 27.075,
+      "score": 0.885
+    },
+    {
+      "word": "schwer",
+      "start": 27.115,
+      "end": 27.496,
+      "score": 0.749
+    },
+    {
+      "word": "wie",
+      "start": 27.516,
+      "end": 27.756,
+      "score": 0.862
+    },
+    {
+      "word": "Eisen",
+      "start": 27.816,
+      "end": 28.136,
+      "score": 0.815
+    },
+    {
+      "word": "auf",
+      "start": 28.176,
+      "end": 28.356,
+      "score": 0.963
+    },
+    {
+      "word": "mir.",
+      "start": 28.396,
+      "end": 29.737,
+      "score": 0.869
+    },
+    {
+      "word": "»Willst",
+      "start": 29.757,
+      "end": 30.037,
+      "score": 0.526
+    },
+    {
+      "word": "du",
+      "start": 30.077,
+      "end": 30.237,
+      "score": 0.482
+    },
+    {
+      "word": "dem",
+      "start": 30.257,
+      "end": 30.477,
+      "score": 0.883
+    },
+    {
+      "word": "ein",
+      "start": 30.517,
+      "end": 30.718,
+      "score": 0.826
+    },
+    {
+      "word": "Ende",
+      "start": 30.778,
+      "end": 31.018,
+      "score": 0.918
+    },
+    {
+      "word": "setzen,",
+      "start": 31.058,
+      "end": 32.098,
+      "score": 0.942
+    },
+    {
+      "word": "dann",
+      "start": 32.118,
+      "end": 32.419,
+      "score": 0.942
+    },
+    {
+      "word": "halte",
+      "start": 32.439,
+      "end": 32.819,
+      "score": 0.919
+    },
+    {
+      "word": "etwas",
+      "start": 32.859,
+      "end": 33.159,
+      "score": 0.973
+    },
+    {
+      "word": "in",
+      "start": 33.199,
+      "end": 33.299,
+      "score": 0.823
+    },
+    {
+      "word": "der",
+      "start": 33.319,
+      "end": 33.479,
+      "score": 0.945
+    },
+    {
+      "word": "Hand,",
+      "start": 33.519,
+      "end": 33.759,
+      "score": 0.841
+    },
+    {
+      "word": "wenn",
+      "start": 33.779,
+      "end": 33.919,
+      "score": 0.918
+    },
+    {
+      "word": "du",
+      "start": 33.939,
+      "end": 34.039,
+      "score": 0.81
+    },
+    {
+      "word": "ihn",
+      "start": 34.079,
+      "end": 34.24,
+      "score": 0.635
+    },
+    {
+      "word": "stellst.«",
+      "start": 34.28,
+      "end": 34.64,
+      "score": 0.778
+    }
+  ]
+}

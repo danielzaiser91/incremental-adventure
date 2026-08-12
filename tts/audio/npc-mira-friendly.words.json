@@ -1,0 +1,171 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 2.226,
+      "text": "Mira lächelt, als ich näherkomme.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.481,
+          "end": 0.862,
+          "score": 0.798
+        },
+        {
+          "word": "lächelt,",
+          "start": 0.923,
+          "end": 1.324,
+          "score": 0.81
+        },
+        {
+          "word": "als",
+          "start": 1.344,
+          "end": 1.484,
+          "score": 0.994
+        },
+        {
+          "word": "ich",
+          "start": 1.524,
+          "end": 1.665,
+          "score": 0.772
+        },
+        {
+          "word": "näherkomme.",
+          "start": 1.685,
+          "end": 2.226,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 3.229,
+      "end": 6.317,
+      "text": "\"Na, mein Spendierfreund ist zurück.",
+      "words": [
+        {
+          "word": "\"Na,",
+          "start": 3.229,
+          "end": 4.011,
+          "score": 0.911
+        },
+        {
+          "word": "mein",
+          "start": 4.031,
+          "end": 4.212,
+          "score": 0.776
+        },
+        {
+          "word": "Spendierfreund",
+          "start": 4.252,
+          "end": 5.174,
+          "score": 0.831
+        },
+        {
+          "word": "ist",
+          "start": 5.234,
+          "end": 5.435,
+          "score": 0.848
+        },
+        {
+          "word": "zurück.",
+          "start": 5.455,
+          "end": 6.317,
+          "score": 0.853
+        }
+      ]
+    },
+    {
+      "start": 6.357,
+      "end": 6.879,
+      "text": "Was gibt's?\"",
+      "words": [
+        {
+          "word": "Was",
+          "start": 6.357,
+          "end": 6.518,
+          "score": 0.788
+        },
+        {
+          "word": "gibt's?\"",
+          "start": 6.578,
+          "end": 6.879,
+          "score": 0.538
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.481,
+      "end": 0.862,
+      "score": 0.798
+    },
+    {
+      "word": "lächelt,",
+      "start": 0.923,
+      "end": 1.324,
+      "score": 0.81
+    },
+    {
+      "word": "als",
+      "start": 1.344,
+      "end": 1.484,
+      "score": 0.994
+    },
+    {
+      "word": "ich",
+      "start": 1.524,
+      "end": 1.665,
+      "score": 0.772
+    },
+    {
+      "word": "näherkomme.",
+      "start": 1.685,
+      "end": 2.226,
+      "score": 0.923
+    },
+    {
+      "word": "\"Na,",
+      "start": 3.229,
+      "end": 4.011,
+      "score": 0.911
+    },
+    {
+      "word": "mein",
+      "start": 4.031,
+      "end": 4.212,
+      "score": 0.776
+    },
+    {
+      "word": "Spendierfreund",
+      "start": 4.252,
+      "end": 5.174,
+      "score": 0.831
+    },
+    {
+      "word": "ist",
+      "start": 5.234,
+      "end": 5.435,
+      "score": 0.848
+    },
+    {
+      "word": "zurück.",
+      "start": 5.455,
+      "end": 6.317,
+      "score": 0.853
+    },
+    {
+      "word": "Was",
+      "start": 6.357,
+      "end": 6.518,
+      "score": 0.788
+    },
+    {
+      "word": "gibt's?\"",
+      "start": 6.578,
+      "end": 6.879,
+      "score": 0.538
+    }
+  ]
+}

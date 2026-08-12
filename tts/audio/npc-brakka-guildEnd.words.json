@@ -1,0 +1,772 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 2.282,
+      "text": "Brakka nickt knapp.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.48,
+          "end": 0.941,
+          "score": 0.803
+        },
+        {
+          "word": "nickt",
+          "start": 0.961,
+          "end": 1.241,
+          "score": 0.667
+        },
+        {
+          "word": "knapp.",
+          "start": 1.301,
+          "end": 2.282,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 2.302,
+      "end": 4.263,
+      "text": "\"Dann ist es Zeit, Fremder.",
+      "words": [
+        {
+          "word": "\"Dann",
+          "start": 2.302,
+          "end": 2.582,
+          "score": 0.643
+        },
+        {
+          "word": "ist",
+          "start": 2.602,
+          "end": 2.782,
+          "score": 0.736
+        },
+        {
+          "word": "es",
+          "start": 2.842,
+          "end": 3.022,
+          "score": 0.722
+        },
+        {
+          "word": "Zeit,",
+          "start": 3.062,
+          "end": 3.283,
+          "score": 0.801
+        },
+        {
+          "word": "Fremder.",
+          "start": 3.323,
+          "end": 4.263,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 4.283,
+      "end": 6.885,
+      "text": "Die Gilde wird von dir hören.\"",
+      "words": [
+        {
+          "word": "Die",
+          "start": 4.283,
+          "end": 4.464,
+          "score": 0.799
+        },
+        {
+          "word": "Gilde",
+          "start": 4.484,
+          "end": 4.784,
+          "score": 0.968
+        },
+        {
+          "word": "wird",
+          "start": 4.804,
+          "end": 4.984,
+          "score": 0.862
+        },
+        {
+          "word": "von",
+          "start": 5.024,
+          "end": 5.144,
+          "score": 0.962
+        },
+        {
+          "word": "dir",
+          "start": 5.164,
+          "end": 5.344,
+          "score": 0.717
+        },
+        {
+          "word": "hören.\"",
+          "start": 5.384,
+          "end": 6.885,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 6.905,
+      "end": 9.648,
+      "text": "\"Aber erst zeig mir, dass du dich schlägst.",
+      "words": [
+        {
+          "word": "\"Aber",
+          "start": 6.905,
+          "end": 7.266,
+          "score": 0.938
+        },
+        {
+          "word": "erst",
+          "start": 7.306,
+          "end": 7.586,
+          "score": 0.945
+        },
+        {
+          "word": "zeig",
+          "start": 7.626,
+          "end": 7.886,
+          "score": 0.82
+        },
+        {
+          "word": "mir,",
+          "start": 7.906,
+          "end": 8.046,
+          "score": 0.965
+        },
+        {
+          "word": "dass",
+          "start": 8.066,
+          "end": 8.206,
+          "score": 0.959
+        },
+        {
+          "word": "du",
+          "start": 8.247,
+          "end": 8.327,
+          "score": 0.748
+        },
+        {
+          "word": "dich",
+          "start": 8.347,
+          "end": 8.507,
+          "score": 0.663
+        },
+        {
+          "word": "schlägst.",
+          "start": 8.547,
+          "end": 9.648,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 9.688,
+      "end": 15.112,
+      "text": "Südlich der Stadt gibt es ein Jagdgebiet — lass die Wölfe dort deine Visitenkarte sein.",
+      "words": [
+        {
+          "word": "Südlich",
+          "start": 9.688,
+          "end": 10.088,
+          "score": 0.925
+        },
+        {
+          "word": "der",
+          "start": 10.128,
+          "end": 10.248,
+          "score": 0.762
+        },
+        {
+          "word": "Stadt",
+          "start": 10.268,
+          "end": 10.508,
+          "score": 0.801
+        },
+        {
+          "word": "gibt",
+          "start": 10.548,
+          "end": 10.688,
+          "score": 0.898
+        },
+        {
+          "word": "es",
+          "start": 10.728,
+          "end": 10.849,
+          "score": 0.845
+        },
+        {
+          "word": "ein",
+          "start": 10.869,
+          "end": 11.009,
+          "score": 0.58
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 11.049,
+          "end": 11.569,
+          "score": 0.769
+        },
+        {
+          "word": "—",
+          "start": 12.17,
+          "end": 12.19,
+          "score": 0.449
+        },
+        {
+          "word": "lass",
+          "start": 12.23,
+          "end": 12.45,
+          "score": 0.883
+        },
+        {
+          "word": "die",
+          "start": 12.47,
+          "end": 12.61,
+          "score": 0.805
+        },
+        {
+          "word": "Wölfe",
+          "start": 12.63,
+          "end": 12.99,
+          "score": 0.953
+        },
+        {
+          "word": "dort",
+          "start": 13.01,
+          "end": 13.19,
+          "score": 0.99
+        },
+        {
+          "word": "deine",
+          "start": 13.21,
+          "end": 13.411,
+          "score": 0.732
+        },
+        {
+          "word": "Visitenkarte",
+          "start": 13.431,
+          "end": 14.231,
+          "score": 0.894
+        },
+        {
+          "word": "sein.",
+          "start": 14.271,
+          "end": 15.112,
+          "score": 0.925
+        }
+      ]
+    },
+    {
+      "start": 15.132,
+      "end": 19.075,
+      "text": "Komm zurück, wenn du weißt, was du drauf hast.\"",
+      "words": [
+        {
+          "word": "Komm",
+          "start": 15.132,
+          "end": 15.412,
+          "score": 0.814
+        },
+        {
+          "word": "zurück,",
+          "start": 15.432,
+          "end": 15.712,
+          "score": 0.941
+        },
+        {
+          "word": "wenn",
+          "start": 15.732,
+          "end": 15.832,
+          "score": 0.987
+        },
+        {
+          "word": "du",
+          "start": 15.853,
+          "end": 16.053,
+          "score": 0.73
+        },
+        {
+          "word": "weißt,",
+          "start": 16.073,
+          "end": 16.293,
+          "score": 0.914
+        },
+        {
+          "word": "was",
+          "start": 16.333,
+          "end": 16.453,
+          "score": 0.868
+        },
+        {
+          "word": "du",
+          "start": 16.473,
+          "end": 16.593,
+          "score": 0.942
+        },
+        {
+          "word": "drauf",
+          "start": 16.633,
+          "end": 16.833,
+          "score": 0.874
+        },
+        {
+          "word": "hast.\"",
+          "start": 16.873,
+          "end": 19.075,
+          "score": 0.815
+        }
+      ]
+    },
+    {
+      "start": 19.135,
+      "end": 20.776,
+      "text": "Er dreht sich um.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 19.135,
+          "end": 19.295,
+          "score": 0.633
+        },
+        {
+          "word": "dreht",
+          "start": 19.335,
+          "end": 19.575,
+          "score": 0.556
+        },
+        {
+          "word": "sich",
+          "start": 19.595,
+          "end": 19.776,
+          "score": 0.947
+        },
+        {
+          "word": "um.",
+          "start": 19.816,
+          "end": 20.776,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "start": 20.796,
+      "end": 22.238,
+      "text": "Kein Händeschütteln.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 20.796,
+          "end": 20.997,
+          "score": 0.79
+        },
+        {
+          "word": "Händeschütteln.",
+          "start": 21.017,
+          "end": 22.238,
+          "score": 0.852
+        }
+      ]
+    },
+    {
+      "start": 22.278,
+      "end": 23.919,
+      "text": "Keine Umarmung.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 22.278,
+          "end": 22.498,
+          "score": 0.909
+        },
+        {
+          "word": "Umarmung.",
+          "start": 22.538,
+          "end": 23.919,
+          "score": 0.983
+        }
+      ]
+    },
+    {
+      "start": 23.939,
+      "end": 24.92,
+      "text": "Nur ein neuer Weg.",
+      "words": [
+        {
+          "word": "Nur",
+          "start": 23.939,
+          "end": 24.199,
+          "score": 0.898
+        },
+        {
+          "word": "ein",
+          "start": 24.239,
+          "end": 24.419,
+          "score": 0.867
+        },
+        {
+          "word": "neuer",
+          "start": 24.459,
+          "end": 24.76,
+          "score": 0.91
+        },
+        {
+          "word": "Weg.",
+          "start": 24.78,
+          "end": 24.92,
+          "score": 0.596
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.48,
+      "end": 0.941,
+      "score": 0.803
+    },
+    {
+      "word": "nickt",
+      "start": 0.961,
+      "end": 1.241,
+      "score": 0.667
+    },
+    {
+      "word": "knapp.",
+      "start": 1.301,
+      "end": 2.282,
+      "score": 0.823
+    },
+    {
+      "word": "\"Dann",
+      "start": 2.302,
+      "end": 2.582,
+      "score": 0.643
+    },
+    {
+      "word": "ist",
+      "start": 2.602,
+      "end": 2.782,
+      "score": 0.736
+    },
+    {
+      "word": "es",
+      "start": 2.842,
+      "end": 3.022,
+      "score": 0.722
+    },
+    {
+      "word": "Zeit,",
+      "start": 3.062,
+      "end": 3.283,
+      "score": 0.801
+    },
+    {
+      "word": "Fremder.",
+      "start": 3.323,
+      "end": 4.263,
+      "score": 0.901
+    },
+    {
+      "word": "Die",
+      "start": 4.283,
+      "end": 4.464,
+      "score": 0.799
+    },
+    {
+      "word": "Gilde",
+      "start": 4.484,
+      "end": 4.784,
+      "score": 0.968
+    },
+    {
+      "word": "wird",
+      "start": 4.804,
+      "end": 4.984,
+      "score": 0.862
+    },
+    {
+      "word": "von",
+      "start": 5.024,
+      "end": 5.144,
+      "score": 0.962
+    },
+    {
+      "word": "dir",
+      "start": 5.164,
+      "end": 5.344,
+      "score": 0.717
+    },
+    {
+      "word": "hören.\"",
+      "start": 5.384,
+      "end": 6.885,
+      "score": 0.914
+    },
+    {
+      "word": "\"Aber",
+      "start": 6.905,
+      "end": 7.266,
+      "score": 0.938
+    },
+    {
+      "word": "erst",
+      "start": 7.306,
+      "end": 7.586,
+      "score": 0.945
+    },
+    {
+      "word": "zeig",
+      "start": 7.626,
+      "end": 7.886,
+      "score": 0.82
+    },
+    {
+      "word": "mir,",
+      "start": 7.906,
+      "end": 8.046,
+      "score": 0.965
+    },
+    {
+      "word": "dass",
+      "start": 8.066,
+      "end": 8.206,
+      "score": 0.959
+    },
+    {
+      "word": "du",
+      "start": 8.247,
+      "end": 8.327,
+      "score": 0.748
+    },
+    {
+      "word": "dich",
+      "start": 8.347,
+      "end": 8.507,
+      "score": 0.663
+    },
+    {
+      "word": "schlägst.",
+      "start": 8.547,
+      "end": 9.648,
+      "score": 0.858
+    },
+    {
+      "word": "Südlich",
+      "start": 9.688,
+      "end": 10.088,
+      "score": 0.925
+    },
+    {
+      "word": "der",
+      "start": 10.128,
+      "end": 10.248,
+      "score": 0.762
+    },
+    {
+      "word": "Stadt",
+      "start": 10.268,
+      "end": 10.508,
+      "score": 0.801
+    },
+    {
+      "word": "gibt",
+      "start": 10.548,
+      "end": 10.688,
+      "score": 0.898
+    },
+    {
+      "word": "es",
+      "start": 10.728,
+      "end": 10.849,
+      "score": 0.845
+    },
+    {
+      "word": "ein",
+      "start": 10.869,
+      "end": 11.009,
+      "score": 0.58
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 11.049,
+      "end": 11.569,
+      "score": 0.769
+    },
+    {
+      "word": "—",
+      "start": 12.17,
+      "end": 12.19,
+      "score": 0.449
+    },
+    {
+      "word": "lass",
+      "start": 12.23,
+      "end": 12.45,
+      "score": 0.883
+    },
+    {
+      "word": "die",
+      "start": 12.47,
+      "end": 12.61,
+      "score": 0.805
+    },
+    {
+      "word": "Wölfe",
+      "start": 12.63,
+      "end": 12.99,
+      "score": 0.953
+    },
+    {
+      "word": "dort",
+      "start": 13.01,
+      "end": 13.19,
+      "score": 0.99
+    },
+    {
+      "word": "deine",
+      "start": 13.21,
+      "end": 13.411,
+      "score": 0.732
+    },
+    {
+      "word": "Visitenkarte",
+      "start": 13.431,
+      "end": 14.231,
+      "score": 0.894
+    },
+    {
+      "word": "sein.",
+      "start": 14.271,
+      "end": 15.112,
+      "score": 0.925
+    },
+    {
+      "word": "Komm",
+      "start": 15.132,
+      "end": 15.412,
+      "score": 0.814
+    },
+    {
+      "word": "zurück,",
+      "start": 15.432,
+      "end": 15.712,
+      "score": 0.941
+    },
+    {
+      "word": "wenn",
+      "start": 15.732,
+      "end": 15.832,
+      "score": 0.987
+    },
+    {
+      "word": "du",
+      "start": 15.853,
+      "end": 16.053,
+      "score": 0.73
+    },
+    {
+      "word": "weißt,",
+      "start": 16.073,
+      "end": 16.293,
+      "score": 0.914
+    },
+    {
+      "word": "was",
+      "start": 16.333,
+      "end": 16.453,
+      "score": 0.868
+    },
+    {
+      "word": "du",
+      "start": 16.473,
+      "end": 16.593,
+      "score": 0.942
+    },
+    {
+      "word": "drauf",
+      "start": 16.633,
+      "end": 16.833,
+      "score": 0.874
+    },
+    {
+      "word": "hast.\"",
+      "start": 16.873,
+      "end": 19.075,
+      "score": 0.815
+    },
+    {
+      "word": "Er",
+      "start": 19.135,
+      "end": 19.295,
+      "score": 0.633
+    },
+    {
+      "word": "dreht",
+      "start": 19.335,
+      "end": 19.575,
+      "score": 0.556
+    },
+    {
+      "word": "sich",
+      "start": 19.595,
+      "end": 19.776,
+      "score": 0.947
+    },
+    {
+      "word": "um.",
+      "start": 19.816,
+      "end": 20.776,
+      "score": 0.99
+    },
+    {
+      "word": "Kein",
+      "start": 20.796,
+      "end": 20.997,
+      "score": 0.79
+    },
+    {
+      "word": "Händeschütteln.",
+      "start": 21.017,
+      "end": 22.238,
+      "score": 0.852
+    },
+    {
+      "word": "Keine",
+      "start": 22.278,
+      "end": 22.498,
+      "score": 0.909
+    },
+    {
+      "word": "Umarmung.",
+      "start": 22.538,
+      "end": 23.919,
+      "score": 0.983
+    },
+    {
+      "word": "Nur",
+      "start": 23.939,
+      "end": 24.199,
+      "score": 0.898
+    },
+    {
+      "word": "ein",
+      "start": 24.239,
+      "end": 24.419,
+      "score": 0.867
+    },
+    {
+      "word": "neuer",
+      "start": 24.459,
+      "end": 24.76,
+      "score": 0.91
+    },
+    {
+      "word": "Weg.",
+      "start": 24.78,
+      "end": 24.92,
+      "score": 0.596
+    }
+  ]
+}

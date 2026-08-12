@@ -1,0 +1,226 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.427,
+      "text": "Oswin nickt mir knapp zu.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.461,
+          "end": 1.022,
+          "score": 0.784
+        },
+        {
+          "word": "nickt",
+          "start": 1.062,
+          "end": 1.363,
+          "score": 0.768
+        },
+        {
+          "word": "mir",
+          "start": 1.403,
+          "end": 1.563,
+          "score": 0.962
+        },
+        {
+          "word": "knapp",
+          "start": 1.623,
+          "end": 2.124,
+          "score": 0.941
+        },
+        {
+          "word": "zu.",
+          "start": 2.164,
+          "end": 3.427,
+          "score": 0.721
+        }
+      ]
+    },
+    {
+      "start": 3.447,
+      "end": 5.851,
+      "text": "\"Der Hauseigentümer.\"",
+      "words": [
+        {
+          "word": "\"Der",
+          "start": 3.447,
+          "end": 3.727,
+          "score": 0.93
+        },
+        {
+          "word": "Hauseigentümer.\"",
+          "start": 3.767,
+          "end": 5.851,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 5.891,
+      "end": 7.535,
+      "text": "So nennt er mich jetzt.",
+      "words": [
+        {
+          "word": "So",
+          "start": 5.891,
+          "end": 6.172,
+          "score": 0.905
+        },
+        {
+          "word": "nennt",
+          "start": 6.192,
+          "end": 6.473,
+          "score": 0.883
+        },
+        {
+          "word": "er",
+          "start": 6.513,
+          "end": 6.613,
+          "score": 0.858
+        },
+        {
+          "word": "mich",
+          "start": 6.653,
+          "end": 6.833,
+          "score": 0.861
+        },
+        {
+          "word": "jetzt.",
+          "start": 6.853,
+          "end": 7.535,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 7.555,
+      "end": 9.719,
+      "text": "Nicht Name — Kategorie.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 7.555,
+          "end": 7.935,
+          "score": 0.958
+        },
+        {
+          "word": "Name",
+          "start": 7.995,
+          "end": 8.336,
+          "score": 0.983
+        },
+        {
+          "word": "—",
+          "start": 9.017,
+          "end": 9.038,
+          "score": 0.352
+        },
+        {
+          "word": "Kategorie.",
+          "start": 9.078,
+          "end": 9.719,
+          "score": 0.937
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.461,
+      "end": 1.022,
+      "score": 0.784
+    },
+    {
+      "word": "nickt",
+      "start": 1.062,
+      "end": 1.363,
+      "score": 0.768
+    },
+    {
+      "word": "mir",
+      "start": 1.403,
+      "end": 1.563,
+      "score": 0.962
+    },
+    {
+      "word": "knapp",
+      "start": 1.623,
+      "end": 2.124,
+      "score": 0.941
+    },
+    {
+      "word": "zu.",
+      "start": 2.164,
+      "end": 3.427,
+      "score": 0.721
+    },
+    {
+      "word": "\"Der",
+      "start": 3.447,
+      "end": 3.727,
+      "score": 0.93
+    },
+    {
+      "word": "Hauseigentümer.\"",
+      "start": 3.767,
+      "end": 5.851,
+      "score": 0.914
+    },
+    {
+      "word": "So",
+      "start": 5.891,
+      "end": 6.172,
+      "score": 0.905
+    },
+    {
+      "word": "nennt",
+      "start": 6.192,
+      "end": 6.473,
+      "score": 0.883
+    },
+    {
+      "word": "er",
+      "start": 6.513,
+      "end": 6.613,
+      "score": 0.858
+    },
+    {
+      "word": "mich",
+      "start": 6.653,
+      "end": 6.833,
+      "score": 0.861
+    },
+    {
+      "word": "jetzt.",
+      "start": 6.853,
+      "end": 7.535,
+      "score": 0.955
+    },
+    {
+      "word": "Nicht",
+      "start": 7.555,
+      "end": 7.935,
+      "score": 0.958
+    },
+    {
+      "word": "Name",
+      "start": 7.995,
+      "end": 8.336,
+      "score": 0.983
+    },
+    {
+      "word": "—",
+      "start": 9.017,
+      "end": 9.038,
+      "score": 0.352
+    },
+    {
+      "word": "Kategorie.",
+      "start": 9.078,
+      "end": 9.719,
+      "score": 0.937
+    }
+  ]
+}

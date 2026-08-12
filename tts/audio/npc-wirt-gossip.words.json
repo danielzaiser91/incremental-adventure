@@ -1,0 +1,315 @@
+{
+  "segments": [
+    {
+      "start": 0.601,
+      "end": 5.109,
+      "text": "\"Nichts Gutes\", murmelt er und senkt die Stimme.",
+      "words": [
+        {
+          "word": "\"Nichts",
+          "start": 0.601,
+          "end": 1.182,
+          "score": 0.803
+        },
+        {
+          "word": "Gutes\",",
+          "start": 1.242,
+          "end": 2.344,
+          "score": 0.895
+        },
+        {
+          "word": "murmelt",
+          "start": 2.364,
+          "end": 2.785,
+          "score": 0.788
+        },
+        {
+          "word": "er",
+          "start": 2.845,
+          "end": 3.165,
+          "score": 0.845
+        },
+        {
+          "word": "und",
+          "start": 3.226,
+          "end": 3.486,
+          "score": 0.9
+        },
+        {
+          "word": "senkt",
+          "start": 3.506,
+          "end": 3.807,
+          "score": 0.814
+        },
+        {
+          "word": "die",
+          "start": 3.827,
+          "end": 3.927,
+          "score": 0.925
+        },
+        {
+          "word": "Stimme.",
+          "start": 3.967,
+          "end": 5.109,
+          "score": 0.824
+        }
+      ]
+    },
+    {
+      "start": 5.129,
+      "end": 9.396,
+      "text": "\"Seit der Raubserie reden alle nur noch über Vorsicht.",
+      "words": [
+        {
+          "word": "\"Seit",
+          "start": 5.129,
+          "end": 5.389,
+          "score": 0.959
+        },
+        {
+          "word": "der",
+          "start": 5.409,
+          "end": 5.55,
+          "score": 0.98
+        },
+        {
+          "word": "Raubserie",
+          "start": 5.61,
+          "end": 6.531,
+          "score": 0.918
+        },
+        {
+          "word": "reden",
+          "start": 6.571,
+          "end": 6.972,
+          "score": 0.959
+        },
+        {
+          "word": "alle",
+          "start": 7.012,
+          "end": 7.313,
+          "score": 0.966
+        },
+        {
+          "word": "nur",
+          "start": 7.353,
+          "end": 7.553,
+          "score": 0.992
+        },
+        {
+          "word": "noch",
+          "start": 7.593,
+          "end": 7.813,
+          "score": 0.957
+        },
+        {
+          "word": "über",
+          "start": 7.834,
+          "end": 8.114,
+          "score": 0.934
+        },
+        {
+          "word": "Vorsicht.",
+          "start": 8.154,
+          "end": 9.396,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 9.436,
+      "end": 11.219,
+      "text": "Pass auf dein Gold auf, hörst du?\"",
+      "words": [
+        {
+          "word": "Pass",
+          "start": 9.436,
+          "end": 9.697,
+          "score": 0.699
+        },
+        {
+          "word": "auf",
+          "start": 9.737,
+          "end": 9.917,
+          "score": 0.956
+        },
+        {
+          "word": "dein",
+          "start": 9.937,
+          "end": 10.158,
+          "score": 0.867
+        },
+        {
+          "word": "Gold",
+          "start": 10.178,
+          "end": 10.498,
+          "score": 0.962
+        },
+        {
+          "word": "auf,",
+          "start": 10.538,
+          "end": 10.859,
+          "score": 0.878
+        },
+        {
+          "word": "hörst",
+          "start": 10.879,
+          "end": 11.099,
+          "score": 0.936
+        },
+        {
+          "word": "du?\"",
+          "start": 11.119,
+          "end": 11.219,
+          "score": 0.583
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Nichts",
+      "start": 0.601,
+      "end": 1.182,
+      "score": 0.803
+    },
+    {
+      "word": "Gutes\",",
+      "start": 1.242,
+      "end": 2.344,
+      "score": 0.895
+    },
+    {
+      "word": "murmelt",
+      "start": 2.364,
+      "end": 2.785,
+      "score": 0.788
+    },
+    {
+      "word": "er",
+      "start": 2.845,
+      "end": 3.165,
+      "score": 0.845
+    },
+    {
+      "word": "und",
+      "start": 3.226,
+      "end": 3.486,
+      "score": 0.9
+    },
+    {
+      "word": "senkt",
+      "start": 3.506,
+      "end": 3.807,
+      "score": 0.814
+    },
+    {
+      "word": "die",
+      "start": 3.827,
+      "end": 3.927,
+      "score": 0.925
+    },
+    {
+      "word": "Stimme.",
+      "start": 3.967,
+      "end": 5.109,
+      "score": 0.824
+    },
+    {
+      "word": "\"Seit",
+      "start": 5.129,
+      "end": 5.389,
+      "score": 0.959
+    },
+    {
+      "word": "der",
+      "start": 5.409,
+      "end": 5.55,
+      "score": 0.98
+    },
+    {
+      "word": "Raubserie",
+      "start": 5.61,
+      "end": 6.531,
+      "score": 0.918
+    },
+    {
+      "word": "reden",
+      "start": 6.571,
+      "end": 6.972,
+      "score": 0.959
+    },
+    {
+      "word": "alle",
+      "start": 7.012,
+      "end": 7.313,
+      "score": 0.966
+    },
+    {
+      "word": "nur",
+      "start": 7.353,
+      "end": 7.553,
+      "score": 0.992
+    },
+    {
+      "word": "noch",
+      "start": 7.593,
+      "end": 7.813,
+      "score": 0.957
+    },
+    {
+      "word": "über",
+      "start": 7.834,
+      "end": 8.114,
+      "score": 0.934
+    },
+    {
+      "word": "Vorsicht.",
+      "start": 8.154,
+      "end": 9.396,
+      "score": 0.913
+    },
+    {
+      "word": "Pass",
+      "start": 9.436,
+      "end": 9.697,
+      "score": 0.699
+    },
+    {
+      "word": "auf",
+      "start": 9.737,
+      "end": 9.917,
+      "score": 0.956
+    },
+    {
+      "word": "dein",
+      "start": 9.937,
+      "end": 10.158,
+      "score": 0.867
+    },
+    {
+      "word": "Gold",
+      "start": 10.178,
+      "end": 10.498,
+      "score": 0.962
+    },
+    {
+      "word": "auf,",
+      "start": 10.538,
+      "end": 10.859,
+      "score": 0.878
+    },
+    {
+      "word": "hörst",
+      "start": 10.879,
+      "end": 11.099,
+      "score": 0.936
+    },
+    {
+      "word": "du?\"",
+      "start": 11.119,
+      "end": 11.219,
+      "score": 0.583
+    }
+  ]
+}

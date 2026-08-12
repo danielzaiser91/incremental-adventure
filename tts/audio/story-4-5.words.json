@@ -1,0 +1,967 @@
+{
+  "segments": [
+    {
+      "start": 0.3,
+      "end": 3.202,
+      "text": "Ein Brief, ohne Absender.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.3,
+          "end": 0.48,
+          "score": 0.721
+        },
+        {
+          "word": "Brief,",
+          "start": 0.52,
+          "end": 1.361,
+          "score": 0.842
+        },
+        {
+          "word": "ohne",
+          "start": 1.421,
+          "end": 1.781,
+          "score": 0.835
+        },
+        {
+          "word": "Absender.",
+          "start": 1.821,
+          "end": 3.202,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 3.222,
+      "end": 8.965,
+      "text": "Die Handschrift ist mir fremd — und doch weiß ich auf der Stelle, von wem er stammt.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.222,
+          "end": 3.382,
+          "score": 0.79
+        },
+        {
+          "word": "Handschrift",
+          "start": 3.422,
+          "end": 3.942,
+          "score": 0.944
+        },
+        {
+          "word": "ist",
+          "start": 3.982,
+          "end": 4.143,
+          "score": 0.777
+        },
+        {
+          "word": "mir",
+          "start": 4.163,
+          "end": 4.363,
+          "score": 0.741
+        },
+        {
+          "word": "fremd",
+          "start": 4.403,
+          "end": 4.723,
+          "score": 0.843
+        },
+        {
+          "word": "—",
+          "start": 5.443,
+          "end": 5.463,
+          "score": 0.935
+        },
+        {
+          "word": "und",
+          "start": 5.483,
+          "end": 5.743,
+          "score": 0.671
+        },
+        {
+          "word": "doch",
+          "start": 5.764,
+          "end": 5.964,
+          "score": 0.916
+        },
+        {
+          "word": "weiß",
+          "start": 5.984,
+          "end": 6.164,
+          "score": 0.984
+        },
+        {
+          "word": "ich",
+          "start": 6.204,
+          "end": 6.344,
+          "score": 0.931
+        },
+        {
+          "word": "auf",
+          "start": 6.384,
+          "end": 6.504,
+          "score": 0.987
+        },
+        {
+          "word": "der",
+          "start": 6.544,
+          "end": 6.704,
+          "score": 0.822
+        },
+        {
+          "word": "Stelle,",
+          "start": 6.764,
+          "end": 7.124,
+          "score": 0.9
+        },
+        {
+          "word": "von",
+          "start": 7.144,
+          "end": 7.284,
+          "score": 0.986
+        },
+        {
+          "word": "wem",
+          "start": 7.324,
+          "end": 7.525,
+          "score": 0.917
+        },
+        {
+          "word": "er",
+          "start": 7.565,
+          "end": 7.605,
+          "score": 0.994
+        },
+        {
+          "word": "stammt.",
+          "start": 7.645,
+          "end": 8.965,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 8.985,
+      "end": 13.308,
+      "text": "»Es ist mir nicht entgangen, dass du in Velmark eingetroffen bist.",
+      "words": [
+        {
+          "word": "»Es",
+          "start": 8.985,
+          "end": 9.186,
+          "score": 0.909
+        },
+        {
+          "word": "ist",
+          "start": 9.246,
+          "end": 9.426,
+          "score": 0.787
+        },
+        {
+          "word": "mir",
+          "start": 9.446,
+          "end": 9.606,
+          "score": 0.96
+        },
+        {
+          "word": "nicht",
+          "start": 9.646,
+          "end": 9.846,
+          "score": 0.923
+        },
+        {
+          "word": "entgangen,",
+          "start": 9.886,
+          "end": 10.446,
+          "score": 0.865
+        },
+        {
+          "word": "dass",
+          "start": 10.466,
+          "end": 10.666,
+          "score": 0.872
+        },
+        {
+          "word": "du",
+          "start": 10.707,
+          "end": 10.847,
+          "score": 0.736
+        },
+        {
+          "word": "in",
+          "start": 10.887,
+          "end": 11.047,
+          "score": 0.976
+        },
+        {
+          "word": "Velmark",
+          "start": 11.067,
+          "end": 11.627,
+          "score": 0.898
+        },
+        {
+          "word": "eingetroffen",
+          "start": 11.667,
+          "end": 12.227,
+          "score": 0.923
+        },
+        {
+          "word": "bist.",
+          "start": 12.247,
+          "end": 13.308,
+          "score": 0.905
+        }
+      ]
+    },
+    {
+      "start": 13.328,
+      "end": 18.391,
+      "text": "Kein Zufall, vermute ich.« »Wir könnten reden, wenn du magst.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 13.328,
+          "end": 13.568,
+          "score": 0.844
+        },
+        {
+          "word": "Zufall,",
+          "start": 13.608,
+          "end": 14.289,
+          "score": 0.998
+        },
+        {
+          "word": "vermute",
+          "start": 14.309,
+          "end": 14.649,
+          "score": 0.961
+        },
+        {
+          "word": "ich.«",
+          "start": 14.669,
+          "end": 16.03,
+          "score": 0.788
+        },
+        {
+          "word": "»Wir",
+          "start": 16.05,
+          "end": 16.23,
+          "score": 0.862
+        },
+        {
+          "word": "könnten",
+          "start": 16.27,
+          "end": 16.65,
+          "score": 0.897
+        },
+        {
+          "word": "reden,",
+          "start": 16.69,
+          "end": 17.03,
+          "score": 0.878
+        },
+        {
+          "word": "wenn",
+          "start": 17.05,
+          "end": 17.15,
+          "score": 0.798
+        },
+        {
+          "word": "du",
+          "start": 17.19,
+          "end": 17.311,
+          "score": 0.682
+        },
+        {
+          "word": "magst.",
+          "start": 17.351,
+          "end": 18.391,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 18.431,
+      "end": 22.614,
+      "text": "Ganz unverbindlich.« Er weiß, dass ich hier bin.",
+      "words": [
+        {
+          "word": "Ganz",
+          "start": 18.431,
+          "end": 18.711,
+          "score": 0.997
+        },
+        {
+          "word": "unverbindlich.«",
+          "start": 18.771,
+          "end": 20.693,
+          "score": 0.879
+        },
+        {
+          "word": "Er",
+          "start": 20.773,
+          "end": 20.933,
+          "score": 0.853
+        },
+        {
+          "word": "weiß,",
+          "start": 20.973,
+          "end": 21.233,
+          "score": 0.908
+        },
+        {
+          "word": "dass",
+          "start": 21.253,
+          "end": 21.413,
+          "score": 0.846
+        },
+        {
+          "word": "ich",
+          "start": 21.453,
+          "end": 21.573,
+          "score": 0.844
+        },
+        {
+          "word": "hier",
+          "start": 21.613,
+          "end": 21.753,
+          "score": 0.85
+        },
+        {
+          "word": "bin.",
+          "start": 21.773,
+          "end": 22.614,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 22.654,
+      "end": 27.677,
+      "text": "Er fragt nicht, was ich will — er nimmt einfach an, dass wir dasselbe begehren.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 22.654,
+          "end": 22.774,
+          "score": 0.87
+        },
+        {
+          "word": "fragt",
+          "start": 22.814,
+          "end": 23.074,
+          "score": 0.882
+        },
+        {
+          "word": "nicht,",
+          "start": 23.094,
+          "end": 23.294,
+          "score": 0.96
+        },
+        {
+          "word": "was",
+          "start": 23.314,
+          "end": 23.434,
+          "score": 0.878
+        },
+        {
+          "word": "ich",
+          "start": 23.474,
+          "end": 23.614,
+          "score": 0.951
+        },
+        {
+          "word": "will",
+          "start": 23.654,
+          "end": 24.195,
+          "score": 0.993
+        },
+        {
+          "word": "—",
+          "start": 24.215,
+          "end": 24.235,
+          "score": 0.946
+        },
+        {
+          "word": "er",
+          "start": 24.275,
+          "end": 24.375,
+          "score": 0.722
+        },
+        {
+          "word": "nimmt",
+          "start": 24.395,
+          "end": 24.635,
+          "score": 0.94
+        },
+        {
+          "word": "einfach",
+          "start": 24.675,
+          "end": 25.035,
+          "score": 0.848
+        },
+        {
+          "word": "an,",
+          "start": 25.055,
+          "end": 25.235,
+          "score": 0.915
+        },
+        {
+          "word": "dass",
+          "start": 25.255,
+          "end": 25.395,
+          "score": 0.979
+        },
+        {
+          "word": "wir",
+          "start": 25.415,
+          "end": 25.536,
+          "score": 0.992
+        },
+        {
+          "word": "dasselbe",
+          "start": 25.576,
+          "end": 26.016,
+          "score": 0.942
+        },
+        {
+          "word": "begehren.",
+          "start": 26.056,
+          "end": 27.677,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 27.717,
+      "end": 32.52,
+      "text": "Das ist die gefährlichste Art von Feind: einer, der nicht irrt.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 27.717,
+          "end": 28.337,
+          "score": 0.928
+        },
+        {
+          "word": "ist",
+          "start": 28.377,
+          "end": 28.537,
+          "score": 0.974
+        },
+        {
+          "word": "die",
+          "start": 28.577,
+          "end": 28.657,
+          "score": 0.837
+        },
+        {
+          "word": "gefährlichste",
+          "start": 28.717,
+          "end": 29.438,
+          "score": 0.832
+        },
+        {
+          "word": "Art",
+          "start": 29.498,
+          "end": 29.658,
+          "score": 0.998
+        },
+        {
+          "word": "von",
+          "start": 29.698,
+          "end": 29.838,
+          "score": 0.989
+        },
+        {
+          "word": "Feind:",
+          "start": 29.898,
+          "end": 31.039,
+          "score": 0.909
+        },
+        {
+          "word": "einer,",
+          "start": 31.079,
+          "end": 31.719,
+          "score": 0.855
+        },
+        {
+          "word": "der",
+          "start": 31.739,
+          "end": 31.999,
+          "score": 0.836
+        },
+        {
+          "word": "nicht",
+          "start": 32.02,
+          "end": 32.3,
+          "score": 0.989
+        },
+        {
+          "word": "irrt.",
+          "start": 32.36,
+          "end": 32.52,
+          "score": 0.711
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.3,
+      "end": 0.48,
+      "score": 0.721
+    },
+    {
+      "word": "Brief,",
+      "start": 0.52,
+      "end": 1.361,
+      "score": 0.842
+    },
+    {
+      "word": "ohne",
+      "start": 1.421,
+      "end": 1.781,
+      "score": 0.835
+    },
+    {
+      "word": "Absender.",
+      "start": 1.821,
+      "end": 3.202,
+      "score": 0.968
+    },
+    {
+      "word": "Die",
+      "start": 3.222,
+      "end": 3.382,
+      "score": 0.79
+    },
+    {
+      "word": "Handschrift",
+      "start": 3.422,
+      "end": 3.942,
+      "score": 0.944
+    },
+    {
+      "word": "ist",
+      "start": 3.982,
+      "end": 4.143,
+      "score": 0.777
+    },
+    {
+      "word": "mir",
+      "start": 4.163,
+      "end": 4.363,
+      "score": 0.741
+    },
+    {
+      "word": "fremd",
+      "start": 4.403,
+      "end": 4.723,
+      "score": 0.843
+    },
+    {
+      "word": "—",
+      "start": 5.443,
+      "end": 5.463,
+      "score": 0.935
+    },
+    {
+      "word": "und",
+      "start": 5.483,
+      "end": 5.743,
+      "score": 0.671
+    },
+    {
+      "word": "doch",
+      "start": 5.764,
+      "end": 5.964,
+      "score": 0.916
+    },
+    {
+      "word": "weiß",
+      "start": 5.984,
+      "end": 6.164,
+      "score": 0.984
+    },
+    {
+      "word": "ich",
+      "start": 6.204,
+      "end": 6.344,
+      "score": 0.931
+    },
+    {
+      "word": "auf",
+      "start": 6.384,
+      "end": 6.504,
+      "score": 0.987
+    },
+    {
+      "word": "der",
+      "start": 6.544,
+      "end": 6.704,
+      "score": 0.822
+    },
+    {
+      "word": "Stelle,",
+      "start": 6.764,
+      "end": 7.124,
+      "score": 0.9
+    },
+    {
+      "word": "von",
+      "start": 7.144,
+      "end": 7.284,
+      "score": 0.986
+    },
+    {
+      "word": "wem",
+      "start": 7.324,
+      "end": 7.525,
+      "score": 0.917
+    },
+    {
+      "word": "er",
+      "start": 7.565,
+      "end": 7.605,
+      "score": 0.994
+    },
+    {
+      "word": "stammt.",
+      "start": 7.645,
+      "end": 8.965,
+      "score": 0.926
+    },
+    {
+      "word": "»Es",
+      "start": 8.985,
+      "end": 9.186,
+      "score": 0.909
+    },
+    {
+      "word": "ist",
+      "start": 9.246,
+      "end": 9.426,
+      "score": 0.787
+    },
+    {
+      "word": "mir",
+      "start": 9.446,
+      "end": 9.606,
+      "score": 0.96
+    },
+    {
+      "word": "nicht",
+      "start": 9.646,
+      "end": 9.846,
+      "score": 0.923
+    },
+    {
+      "word": "entgangen,",
+      "start": 9.886,
+      "end": 10.446,
+      "score": 0.865
+    },
+    {
+      "word": "dass",
+      "start": 10.466,
+      "end": 10.666,
+      "score": 0.872
+    },
+    {
+      "word": "du",
+      "start": 10.707,
+      "end": 10.847,
+      "score": 0.736
+    },
+    {
+      "word": "in",
+      "start": 10.887,
+      "end": 11.047,
+      "score": 0.976
+    },
+    {
+      "word": "Velmark",
+      "start": 11.067,
+      "end": 11.627,
+      "score": 0.898
+    },
+    {
+      "word": "eingetroffen",
+      "start": 11.667,
+      "end": 12.227,
+      "score": 0.923
+    },
+    {
+      "word": "bist.",
+      "start": 12.247,
+      "end": 13.308,
+      "score": 0.905
+    },
+    {
+      "word": "Kein",
+      "start": 13.328,
+      "end": 13.568,
+      "score": 0.844
+    },
+    {
+      "word": "Zufall,",
+      "start": 13.608,
+      "end": 14.289,
+      "score": 0.998
+    },
+    {
+      "word": "vermute",
+      "start": 14.309,
+      "end": 14.649,
+      "score": 0.961
+    },
+    {
+      "word": "ich.«",
+      "start": 14.669,
+      "end": 16.03,
+      "score": 0.788
+    },
+    {
+      "word": "»Wir",
+      "start": 16.05,
+      "end": 16.23,
+      "score": 0.862
+    },
+    {
+      "word": "könnten",
+      "start": 16.27,
+      "end": 16.65,
+      "score": 0.897
+    },
+    {
+      "word": "reden,",
+      "start": 16.69,
+      "end": 17.03,
+      "score": 0.878
+    },
+    {
+      "word": "wenn",
+      "start": 17.05,
+      "end": 17.15,
+      "score": 0.798
+    },
+    {
+      "word": "du",
+      "start": 17.19,
+      "end": 17.311,
+      "score": 0.682
+    },
+    {
+      "word": "magst.",
+      "start": 17.351,
+      "end": 18.391,
+      "score": 0.833
+    },
+    {
+      "word": "Ganz",
+      "start": 18.431,
+      "end": 18.711,
+      "score": 0.997
+    },
+    {
+      "word": "unverbindlich.«",
+      "start": 18.771,
+      "end": 20.693,
+      "score": 0.879
+    },
+    {
+      "word": "Er",
+      "start": 20.773,
+      "end": 20.933,
+      "score": 0.853
+    },
+    {
+      "word": "weiß,",
+      "start": 20.973,
+      "end": 21.233,
+      "score": 0.908
+    },
+    {
+      "word": "dass",
+      "start": 21.253,
+      "end": 21.413,
+      "score": 0.846
+    },
+    {
+      "word": "ich",
+      "start": 21.453,
+      "end": 21.573,
+      "score": 0.844
+    },
+    {
+      "word": "hier",
+      "start": 21.613,
+      "end": 21.753,
+      "score": 0.85
+    },
+    {
+      "word": "bin.",
+      "start": 21.773,
+      "end": 22.614,
+      "score": 0.941
+    },
+    {
+      "word": "Er",
+      "start": 22.654,
+      "end": 22.774,
+      "score": 0.87
+    },
+    {
+      "word": "fragt",
+      "start": 22.814,
+      "end": 23.074,
+      "score": 0.882
+    },
+    {
+      "word": "nicht,",
+      "start": 23.094,
+      "end": 23.294,
+      "score": 0.96
+    },
+    {
+      "word": "was",
+      "start": 23.314,
+      "end": 23.434,
+      "score": 0.878
+    },
+    {
+      "word": "ich",
+      "start": 23.474,
+      "end": 23.614,
+      "score": 0.951
+    },
+    {
+      "word": "will",
+      "start": 23.654,
+      "end": 24.195,
+      "score": 0.993
+    },
+    {
+      "word": "—",
+      "start": 24.215,
+      "end": 24.235,
+      "score": 0.946
+    },
+    {
+      "word": "er",
+      "start": 24.275,
+      "end": 24.375,
+      "score": 0.722
+    },
+    {
+      "word": "nimmt",
+      "start": 24.395,
+      "end": 24.635,
+      "score": 0.94
+    },
+    {
+      "word": "einfach",
+      "start": 24.675,
+      "end": 25.035,
+      "score": 0.848
+    },
+    {
+      "word": "an,",
+      "start": 25.055,
+      "end": 25.235,
+      "score": 0.915
+    },
+    {
+      "word": "dass",
+      "start": 25.255,
+      "end": 25.395,
+      "score": 0.979
+    },
+    {
+      "word": "wir",
+      "start": 25.415,
+      "end": 25.536,
+      "score": 0.992
+    },
+    {
+      "word": "dasselbe",
+      "start": 25.576,
+      "end": 26.016,
+      "score": 0.942
+    },
+    {
+      "word": "begehren.",
+      "start": 26.056,
+      "end": 27.677,
+      "score": 0.948
+    },
+    {
+      "word": "Das",
+      "start": 27.717,
+      "end": 28.337,
+      "score": 0.928
+    },
+    {
+      "word": "ist",
+      "start": 28.377,
+      "end": 28.537,
+      "score": 0.974
+    },
+    {
+      "word": "die",
+      "start": 28.577,
+      "end": 28.657,
+      "score": 0.837
+    },
+    {
+      "word": "gefährlichste",
+      "start": 28.717,
+      "end": 29.438,
+      "score": 0.832
+    },
+    {
+      "word": "Art",
+      "start": 29.498,
+      "end": 29.658,
+      "score": 0.998
+    },
+    {
+      "word": "von",
+      "start": 29.698,
+      "end": 29.838,
+      "score": 0.989
+    },
+    {
+      "word": "Feind:",
+      "start": 29.898,
+      "end": 31.039,
+      "score": 0.909
+    },
+    {
+      "word": "einer,",
+      "start": 31.079,
+      "end": 31.719,
+      "score": 0.855
+    },
+    {
+      "word": "der",
+      "start": 31.739,
+      "end": 31.999,
+      "score": 0.836
+    },
+    {
+      "word": "nicht",
+      "start": 32.02,
+      "end": 32.3,
+      "score": 0.989
+    },
+    {
+      "word": "irrt.",
+      "start": 32.36,
+      "end": 32.52,
+      "score": 0.711
+    }
+  ]
+}

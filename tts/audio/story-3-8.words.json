@@ -1,0 +1,1027 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 5.563,
+      "text": "»Du hast das Lager gefunden.« Varena sagt es ohne Überraschung.",
+      "words": [
+        {
+          "word": "»Du",
+          "start": 0.4,
+          "end": 0.52,
+          "score": 0.519
+        },
+        {
+          "word": "hast",
+          "start": 0.54,
+          "end": 0.72,
+          "score": 0.655
+        },
+        {
+          "word": "das",
+          "start": 0.74,
+          "end": 0.961,
+          "score": 0.837
+        },
+        {
+          "word": "Lager",
+          "start": 1.021,
+          "end": 1.321,
+          "score": 0.977
+        },
+        {
+          "word": "gefunden.«",
+          "start": 1.361,
+          "end": 2.721,
+          "score": 0.913
+        },
+        {
+          "word": "Varena",
+          "start": 2.761,
+          "end": 3.302,
+          "score": 0.803
+        },
+        {
+          "word": "sagt",
+          "start": 3.342,
+          "end": 3.522,
+          "score": 0.935
+        },
+        {
+          "word": "es",
+          "start": 3.562,
+          "end": 3.822,
+          "score": 0.962
+        },
+        {
+          "word": "ohne",
+          "start": 3.882,
+          "end": 4.142,
+          "score": 0.909
+        },
+        {
+          "word": "Überraschung.",
+          "start": 4.182,
+          "end": 5.563,
+          "score": 0.861
+        }
+      ]
+    },
+    {
+      "start": 5.583,
+      "end": 11.766,
+      "text": "»Das heißt, er zieht sich zurück.« »Valdris ist nicht von hier.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 5.583,
+          "end": 5.803,
+          "score": 0.907
+        },
+        {
+          "word": "heißt,",
+          "start": 5.823,
+          "end": 6.724,
+          "score": 0.956
+        },
+        {
+          "word": "er",
+          "start": 6.764,
+          "end": 6.884,
+          "score": 0.772
+        },
+        {
+          "word": "zieht",
+          "start": 6.924,
+          "end": 7.104,
+          "score": 0.81
+        },
+        {
+          "word": "sich",
+          "start": 7.144,
+          "end": 7.344,
+          "score": 0.859
+        },
+        {
+          "word": "zurück.«",
+          "start": 7.384,
+          "end": 9.485,
+          "score": 0.95
+        },
+        {
+          "word": "»Valdris",
+          "start": 9.505,
+          "end": 10.065,
+          "score": 0.696
+        },
+        {
+          "word": "ist",
+          "start": 10.125,
+          "end": 10.326,
+          "score": 0.906
+        },
+        {
+          "word": "nicht",
+          "start": 10.366,
+          "end": 10.546,
+          "score": 0.944
+        },
+        {
+          "word": "von",
+          "start": 10.586,
+          "end": 10.766,
+          "score": 0.955
+        },
+        {
+          "word": "hier.",
+          "start": 10.806,
+          "end": 11.766,
+          "score": 0.831
+        }
+      ]
+    },
+    {
+      "start": 11.806,
+      "end": 20.371,
+      "text": "Er stammt aus dem Osten, aus einer Stadt, die auf Handelswegen errichtet wurde.« »Was er hier betreibt, ist nur ein Vorposten.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 11.806,
+          "end": 11.906,
+          "score": 0.802
+        },
+        {
+          "word": "stammt",
+          "start": 11.926,
+          "end": 12.207,
+          "score": 0.825
+        },
+        {
+          "word": "aus",
+          "start": 12.227,
+          "end": 12.347,
+          "score": 0.831
+        },
+        {
+          "word": "dem",
+          "start": 12.367,
+          "end": 12.547,
+          "score": 0.98
+        },
+        {
+          "word": "Osten,",
+          "start": 12.607,
+          "end": 13.287,
+          "score": 0.986
+        },
+        {
+          "word": "aus",
+          "start": 13.307,
+          "end": 13.447,
+          "score": 0.845
+        },
+        {
+          "word": "einer",
+          "start": 13.487,
+          "end": 13.687,
+          "score": 0.925
+        },
+        {
+          "word": "Stadt,",
+          "start": 13.707,
+          "end": 13.988,
+          "score": 0.912
+        },
+        {
+          "word": "die",
+          "start": 14.008,
+          "end": 14.128,
+          "score": 0.887
+        },
+        {
+          "word": "auf",
+          "start": 14.168,
+          "end": 14.328,
+          "score": 0.93
+        },
+        {
+          "word": "Handelswegen",
+          "start": 14.368,
+          "end": 15.008,
+          "score": 0.892
+        },
+        {
+          "word": "errichtet",
+          "start": 15.028,
+          "end": 15.408,
+          "score": 0.898
+        },
+        {
+          "word": "wurde.«",
+          "start": 15.448,
+          "end": 17.029,
+          "score": 0.959
+        },
+        {
+          "word": "»Was",
+          "start": 17.049,
+          "end": 17.229,
+          "score": 0.774
+        },
+        {
+          "word": "er",
+          "start": 17.269,
+          "end": 17.389,
+          "score": 0.763
+        },
+        {
+          "word": "hier",
+          "start": 17.409,
+          "end": 17.589,
+          "score": 0.897
+        },
+        {
+          "word": "betreibt,",
+          "start": 17.629,
+          "end": 18.13,
+          "score": 0.955
+        },
+        {
+          "word": "ist",
+          "start": 18.17,
+          "end": 18.35,
+          "score": 0.942
+        },
+        {
+          "word": "nur",
+          "start": 18.39,
+          "end": 18.51,
+          "score": 0.915
+        },
+        {
+          "word": "ein",
+          "start": 18.55,
+          "end": 18.73,
+          "score": 0.74
+        },
+        {
+          "word": "Vorposten.",
+          "start": 18.77,
+          "end": 20.371,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 20.391,
+      "end": 27.615,
+      "text": "Lethkar ist nicht sein Ziel — es ist sein Sprungbrett.« Ich frage, wohin er springt.",
+      "words": [
+        {
+          "word": "Lethkar",
+          "start": 20.391,
+          "end": 20.891,
+          "score": 0.826
+        },
+        {
+          "word": "ist",
+          "start": 20.931,
+          "end": 21.091,
+          "score": 0.837
+        },
+        {
+          "word": "nicht",
+          "start": 21.111,
+          "end": 21.291,
+          "score": 0.852
+        },
+        {
+          "word": "sein",
+          "start": 21.331,
+          "end": 21.532,
+          "score": 0.735
+        },
+        {
+          "word": "Ziel",
+          "start": 21.572,
+          "end": 21.772,
+          "score": 0.886
+        },
+        {
+          "word": "—",
+          "start": 22.592,
+          "end": 22.612,
+          "score": 0.968
+        },
+        {
+          "word": "es",
+          "start": 22.652,
+          "end": 22.772,
+          "score": 0.843
+        },
+        {
+          "word": "ist",
+          "start": 22.812,
+          "end": 22.992,
+          "score": 0.774
+        },
+        {
+          "word": "sein",
+          "start": 23.012,
+          "end": 23.192,
+          "score": 0.7
+        },
+        {
+          "word": "Sprungbrett.«",
+          "start": 23.212,
+          "end": 25.174,
+          "score": 0.902
+        },
+        {
+          "word": "Ich",
+          "start": 25.214,
+          "end": 25.334,
+          "score": 0.858
+        },
+        {
+          "word": "frage,",
+          "start": 25.374,
+          "end": 25.774,
+          "score": 0.884
+        },
+        {
+          "word": "wohin",
+          "start": 25.814,
+          "end": 26.174,
+          "score": 0.947
+        },
+        {
+          "word": "er",
+          "start": 26.214,
+          "end": 26.294,
+          "score": 0.764
+        },
+        {
+          "word": "springt.",
+          "start": 26.314,
+          "end": 27.615,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 27.635,
+      "end": 30.336,
+      "text": "Sie schüttelt den Kopf.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 27.635,
+          "end": 27.755,
+          "score": 0.948
+        },
+        {
+          "word": "schüttelt",
+          "start": 27.775,
+          "end": 28.075,
+          "score": 0.916
+        },
+        {
+          "word": "den",
+          "start": 28.115,
+          "end": 28.235,
+          "score": 0.935
+        },
+        {
+          "word": "Kopf.",
+          "start": 28.255,
+          "end": 30.336,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 30.356,
+      "end": 33.478,
+      "text": "»Das ist die Frage, die du beantworten musst.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 30.356,
+          "end": 30.576,
+          "score": 0.926
+        },
+        {
+          "word": "ist",
+          "start": 30.616,
+          "end": 30.777,
+          "score": 0.854
+        },
+        {
+          "word": "die",
+          "start": 30.817,
+          "end": 30.937,
+          "score": 0.754
+        },
+        {
+          "word": "Frage,",
+          "start": 30.977,
+          "end": 31.317,
+          "score": 0.984
+        },
+        {
+          "word": "die",
+          "start": 31.337,
+          "end": 31.497,
+          "score": 0.917
+        },
+        {
+          "word": "du",
+          "start": 31.517,
+          "end": 31.677,
+          "score": 0.974
+        },
+        {
+          "word": "beantworten",
+          "start": 31.697,
+          "end": 32.257,
+          "score": 0.895
+        },
+        {
+          "word": "musst.",
+          "start": 32.277,
+          "end": 33.478,
+          "score": 0.96
+        }
+      ]
+    },
+    {
+      "start": 33.518,
+      "end": 36.84,
+      "text": "Ich kenne nur den Namen — und weiß, dass er nicht innehält.«",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 33.518,
+          "end": 33.638,
+          "score": 0.829
+        },
+        {
+          "word": "kenne",
+          "start": 33.658,
+          "end": 33.938,
+          "score": 0.844
+        },
+        {
+          "word": "nur",
+          "start": 33.958,
+          "end": 34.098,
+          "score": 0.979
+        },
+        {
+          "word": "den",
+          "start": 34.118,
+          "end": 34.258,
+          "score": 0.945
+        },
+        {
+          "word": "Namen",
+          "start": 34.298,
+          "end": 34.539,
+          "score": 0.995
+        },
+        {
+          "word": "—",
+          "start": 35.319,
+          "end": 35.339,
+          "score": 0.994
+        },
+        {
+          "word": "und",
+          "start": 35.359,
+          "end": 35.579,
+          "score": 0.939
+        },
+        {
+          "word": "weiß,",
+          "start": 35.599,
+          "end": 35.899,
+          "score": 0.871
+        },
+        {
+          "word": "dass",
+          "start": 35.919,
+          "end": 36.079,
+          "score": 0.867
+        },
+        {
+          "word": "er",
+          "start": 36.099,
+          "end": 36.199,
+          "score": 0.74
+        },
+        {
+          "word": "nicht",
+          "start": 36.219,
+          "end": 36.44,
+          "score": 0.861
+        },
+        {
+          "word": "innehält.«",
+          "start": 36.5,
+          "end": 36.84,
+          "score": 0.681
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "»Du",
+      "start": 0.4,
+      "end": 0.52,
+      "score": 0.519
+    },
+    {
+      "word": "hast",
+      "start": 0.54,
+      "end": 0.72,
+      "score": 0.655
+    },
+    {
+      "word": "das",
+      "start": 0.74,
+      "end": 0.961,
+      "score": 0.837
+    },
+    {
+      "word": "Lager",
+      "start": 1.021,
+      "end": 1.321,
+      "score": 0.977
+    },
+    {
+      "word": "gefunden.«",
+      "start": 1.361,
+      "end": 2.721,
+      "score": 0.913
+    },
+    {
+      "word": "Varena",
+      "start": 2.761,
+      "end": 3.302,
+      "score": 0.803
+    },
+    {
+      "word": "sagt",
+      "start": 3.342,
+      "end": 3.522,
+      "score": 0.935
+    },
+    {
+      "word": "es",
+      "start": 3.562,
+      "end": 3.822,
+      "score": 0.962
+    },
+    {
+      "word": "ohne",
+      "start": 3.882,
+      "end": 4.142,
+      "score": 0.909
+    },
+    {
+      "word": "Überraschung.",
+      "start": 4.182,
+      "end": 5.563,
+      "score": 0.861
+    },
+    {
+      "word": "»Das",
+      "start": 5.583,
+      "end": 5.803,
+      "score": 0.907
+    },
+    {
+      "word": "heißt,",
+      "start": 5.823,
+      "end": 6.724,
+      "score": 0.956
+    },
+    {
+      "word": "er",
+      "start": 6.764,
+      "end": 6.884,
+      "score": 0.772
+    },
+    {
+      "word": "zieht",
+      "start": 6.924,
+      "end": 7.104,
+      "score": 0.81
+    },
+    {
+      "word": "sich",
+      "start": 7.144,
+      "end": 7.344,
+      "score": 0.859
+    },
+    {
+      "word": "zurück.«",
+      "start": 7.384,
+      "end": 9.485,
+      "score": 0.95
+    },
+    {
+      "word": "»Valdris",
+      "start": 9.505,
+      "end": 10.065,
+      "score": 0.696
+    },
+    {
+      "word": "ist",
+      "start": 10.125,
+      "end": 10.326,
+      "score": 0.906
+    },
+    {
+      "word": "nicht",
+      "start": 10.366,
+      "end": 10.546,
+      "score": 0.944
+    },
+    {
+      "word": "von",
+      "start": 10.586,
+      "end": 10.766,
+      "score": 0.955
+    },
+    {
+      "word": "hier.",
+      "start": 10.806,
+      "end": 11.766,
+      "score": 0.831
+    },
+    {
+      "word": "Er",
+      "start": 11.806,
+      "end": 11.906,
+      "score": 0.802
+    },
+    {
+      "word": "stammt",
+      "start": 11.926,
+      "end": 12.207,
+      "score": 0.825
+    },
+    {
+      "word": "aus",
+      "start": 12.227,
+      "end": 12.347,
+      "score": 0.831
+    },
+    {
+      "word": "dem",
+      "start": 12.367,
+      "end": 12.547,
+      "score": 0.98
+    },
+    {
+      "word": "Osten,",
+      "start": 12.607,
+      "end": 13.287,
+      "score": 0.986
+    },
+    {
+      "word": "aus",
+      "start": 13.307,
+      "end": 13.447,
+      "score": 0.845
+    },
+    {
+      "word": "einer",
+      "start": 13.487,
+      "end": 13.687,
+      "score": 0.925
+    },
+    {
+      "word": "Stadt,",
+      "start": 13.707,
+      "end": 13.988,
+      "score": 0.912
+    },
+    {
+      "word": "die",
+      "start": 14.008,
+      "end": 14.128,
+      "score": 0.887
+    },
+    {
+      "word": "auf",
+      "start": 14.168,
+      "end": 14.328,
+      "score": 0.93
+    },
+    {
+      "word": "Handelswegen",
+      "start": 14.368,
+      "end": 15.008,
+      "score": 0.892
+    },
+    {
+      "word": "errichtet",
+      "start": 15.028,
+      "end": 15.408,
+      "score": 0.898
+    },
+    {
+      "word": "wurde.«",
+      "start": 15.448,
+      "end": 17.029,
+      "score": 0.959
+    },
+    {
+      "word": "»Was",
+      "start": 17.049,
+      "end": 17.229,
+      "score": 0.774
+    },
+    {
+      "word": "er",
+      "start": 17.269,
+      "end": 17.389,
+      "score": 0.763
+    },
+    {
+      "word": "hier",
+      "start": 17.409,
+      "end": 17.589,
+      "score": 0.897
+    },
+    {
+      "word": "betreibt,",
+      "start": 17.629,
+      "end": 18.13,
+      "score": 0.955
+    },
+    {
+      "word": "ist",
+      "start": 18.17,
+      "end": 18.35,
+      "score": 0.942
+    },
+    {
+      "word": "nur",
+      "start": 18.39,
+      "end": 18.51,
+      "score": 0.915
+    },
+    {
+      "word": "ein",
+      "start": 18.55,
+      "end": 18.73,
+      "score": 0.74
+    },
+    {
+      "word": "Vorposten.",
+      "start": 18.77,
+      "end": 20.371,
+      "score": 0.956
+    },
+    {
+      "word": "Lethkar",
+      "start": 20.391,
+      "end": 20.891,
+      "score": 0.826
+    },
+    {
+      "word": "ist",
+      "start": 20.931,
+      "end": 21.091,
+      "score": 0.837
+    },
+    {
+      "word": "nicht",
+      "start": 21.111,
+      "end": 21.291,
+      "score": 0.852
+    },
+    {
+      "word": "sein",
+      "start": 21.331,
+      "end": 21.532,
+      "score": 0.735
+    },
+    {
+      "word": "Ziel",
+      "start": 21.572,
+      "end": 21.772,
+      "score": 0.886
+    },
+    {
+      "word": "—",
+      "start": 22.592,
+      "end": 22.612,
+      "score": 0.968
+    },
+    {
+      "word": "es",
+      "start": 22.652,
+      "end": 22.772,
+      "score": 0.843
+    },
+    {
+      "word": "ist",
+      "start": 22.812,
+      "end": 22.992,
+      "score": 0.774
+    },
+    {
+      "word": "sein",
+      "start": 23.012,
+      "end": 23.192,
+      "score": 0.7
+    },
+    {
+      "word": "Sprungbrett.«",
+      "start": 23.212,
+      "end": 25.174,
+      "score": 0.902
+    },
+    {
+      "word": "Ich",
+      "start": 25.214,
+      "end": 25.334,
+      "score": 0.858
+    },
+    {
+      "word": "frage,",
+      "start": 25.374,
+      "end": 25.774,
+      "score": 0.884
+    },
+    {
+      "word": "wohin",
+      "start": 25.814,
+      "end": 26.174,
+      "score": 0.947
+    },
+    {
+      "word": "er",
+      "start": 26.214,
+      "end": 26.294,
+      "score": 0.764
+    },
+    {
+      "word": "springt.",
+      "start": 26.314,
+      "end": 27.615,
+      "score": 0.961
+    },
+    {
+      "word": "Sie",
+      "start": 27.635,
+      "end": 27.755,
+      "score": 0.948
+    },
+    {
+      "word": "schüttelt",
+      "start": 27.775,
+      "end": 28.075,
+      "score": 0.916
+    },
+    {
+      "word": "den",
+      "start": 28.115,
+      "end": 28.235,
+      "score": 0.935
+    },
+    {
+      "word": "Kopf.",
+      "start": 28.255,
+      "end": 30.336,
+      "score": 0.916
+    },
+    {
+      "word": "»Das",
+      "start": 30.356,
+      "end": 30.576,
+      "score": 0.926
+    },
+    {
+      "word": "ist",
+      "start": 30.616,
+      "end": 30.777,
+      "score": 0.854
+    },
+    {
+      "word": "die",
+      "start": 30.817,
+      "end": 30.937,
+      "score": 0.754
+    },
+    {
+      "word": "Frage,",
+      "start": 30.977,
+      "end": 31.317,
+      "score": 0.984
+    },
+    {
+      "word": "die",
+      "start": 31.337,
+      "end": 31.497,
+      "score": 0.917
+    },
+    {
+      "word": "du",
+      "start": 31.517,
+      "end": 31.677,
+      "score": 0.974
+    },
+    {
+      "word": "beantworten",
+      "start": 31.697,
+      "end": 32.257,
+      "score": 0.895
+    },
+    {
+      "word": "musst.",
+      "start": 32.277,
+      "end": 33.478,
+      "score": 0.96
+    },
+    {
+      "word": "Ich",
+      "start": 33.518,
+      "end": 33.638,
+      "score": 0.829
+    },
+    {
+      "word": "kenne",
+      "start": 33.658,
+      "end": 33.938,
+      "score": 0.844
+    },
+    {
+      "word": "nur",
+      "start": 33.958,
+      "end": 34.098,
+      "score": 0.979
+    },
+    {
+      "word": "den",
+      "start": 34.118,
+      "end": 34.258,
+      "score": 0.945
+    },
+    {
+      "word": "Namen",
+      "start": 34.298,
+      "end": 34.539,
+      "score": 0.995
+    },
+    {
+      "word": "—",
+      "start": 35.319,
+      "end": 35.339,
+      "score": 0.994
+    },
+    {
+      "word": "und",
+      "start": 35.359,
+      "end": 35.579,
+      "score": 0.939
+    },
+    {
+      "word": "weiß,",
+      "start": 35.599,
+      "end": 35.899,
+      "score": 0.871
+    },
+    {
+      "word": "dass",
+      "start": 35.919,
+      "end": 36.079,
+      "score": 0.867
+    },
+    {
+      "word": "er",
+      "start": 36.099,
+      "end": 36.199,
+      "score": 0.74
+    },
+    {
+      "word": "nicht",
+      "start": 36.219,
+      "end": 36.44,
+      "score": 0.861
+    },
+    {
+      "word": "innehält.«",
+      "start": 36.5,
+      "end": 36.84,
+      "score": 0.681
+    }
+  ]
+}

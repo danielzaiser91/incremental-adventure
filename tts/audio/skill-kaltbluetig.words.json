@@ -1,0 +1,420 @@
+{
+  "segments": [
+    {
+      "start": 0.581,
+      "end": 1.682,
+      "text": "Kalt.",
+      "words": [
+        {
+          "word": "Kalt.",
+          "start": 0.581,
+          "end": 1.682,
+          "score": 0.806
+        }
+      ]
+    },
+    {
+      "start": 1.722,
+      "end": 2.843,
+      "text": "Klar.",
+      "words": [
+        {
+          "word": "Klar.",
+          "start": 1.722,
+          "end": 2.843,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 2.863,
+      "end": 4.926,
+      "text": "Unerschütterlich.",
+      "words": [
+        {
+          "word": "Unerschütterlich.",
+          "start": 2.863,
+          "end": 4.926,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 4.986,
+      "end": 7.449,
+      "text": "Das bin ich jetzt.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 4.986,
+          "end": 5.306,
+          "score": 0.905
+        },
+        {
+          "word": "bin",
+          "start": 5.326,
+          "end": 5.486,
+          "score": 0.927
+        },
+        {
+          "word": "ich",
+          "start": 5.546,
+          "end": 5.727,
+          "score": 0.941
+        },
+        {
+          "word": "jetzt.",
+          "start": 5.767,
+          "end": 7.449,
+          "score": 0.88
+        }
+      ]
+    },
+    {
+      "start": 7.489,
+      "end": 13.796,
+      "text": "Nicht weil ich kein Herz mehr habe — sondern weil ich gelernt habe, es zu beherrschen.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 7.489,
+          "end": 7.689,
+          "score": 0.894
+        },
+        {
+          "word": "weil",
+          "start": 7.709,
+          "end": 7.849,
+          "score": 0.958
+        },
+        {
+          "word": "ich",
+          "start": 7.889,
+          "end": 8.009,
+          "score": 0.954
+        },
+        {
+          "word": "kein",
+          "start": 8.029,
+          "end": 8.25,
+          "score": 0.823
+        },
+        {
+          "word": "Herz",
+          "start": 8.27,
+          "end": 8.53,
+          "score": 0.971
+        },
+        {
+          "word": "mehr",
+          "start": 8.57,
+          "end": 8.71,
+          "score": 0.797
+        },
+        {
+          "word": "habe",
+          "start": 8.73,
+          "end": 8.95,
+          "score": 0.95
+        },
+        {
+          "word": "—",
+          "start": 9.811,
+          "end": 9.831,
+          "score": 0.634
+        },
+        {
+          "word": "sondern",
+          "start": 9.851,
+          "end": 10.232,
+          "score": 0.898
+        },
+        {
+          "word": "weil",
+          "start": 10.252,
+          "end": 10.392,
+          "score": 0.94
+        },
+        {
+          "word": "ich",
+          "start": 10.432,
+          "end": 10.612,
+          "score": 0.841
+        },
+        {
+          "word": "gelernt",
+          "start": 10.652,
+          "end": 11.093,
+          "score": 0.924
+        },
+        {
+          "word": "habe,",
+          "start": 11.133,
+          "end": 11.433,
+          "score": 0.917
+        },
+        {
+          "word": "es",
+          "start": 11.473,
+          "end": 11.654,
+          "score": 0.77
+        },
+        {
+          "word": "zu",
+          "start": 11.694,
+          "end": 11.794,
+          "score": 0.996
+        },
+        {
+          "word": "beherrschen.",
+          "start": 11.834,
+          "end": 13.796,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 13.816,
+      "end": 16.82,
+      "text": "Jeder Neuanfang lehrt mich mehr als der letzte.",
+      "words": [
+        {
+          "word": "Jeder",
+          "start": 13.816,
+          "end": 14.136,
+          "score": 0.943
+        },
+        {
+          "word": "Neuanfang",
+          "start": 14.176,
+          "end": 14.857,
+          "score": 0.894
+        },
+        {
+          "word": "lehrt",
+          "start": 14.897,
+          "end": 15.158,
+          "score": 0.876
+        },
+        {
+          "word": "mich",
+          "start": 15.178,
+          "end": 15.478,
+          "score": 0.728
+        },
+        {
+          "word": "mehr",
+          "start": 15.518,
+          "end": 16.159,
+          "score": 0.92
+        },
+        {
+          "word": "als",
+          "start": 16.199,
+          "end": 16.399,
+          "score": 0.996
+        },
+        {
+          "word": "der",
+          "start": 16.439,
+          "end": 16.539,
+          "score": 0.905
+        },
+        {
+          "word": "letzte.",
+          "start": 16.579,
+          "end": 16.82,
+          "score": 0.801
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Kalt.",
+      "start": 0.581,
+      "end": 1.682,
+      "score": 0.806
+    },
+    {
+      "word": "Klar.",
+      "start": 1.722,
+      "end": 2.843,
+      "score": 0.941
+    },
+    {
+      "word": "Unerschütterlich.",
+      "start": 2.863,
+      "end": 4.926,
+      "score": 0.868
+    },
+    {
+      "word": "Das",
+      "start": 4.986,
+      "end": 5.306,
+      "score": 0.905
+    },
+    {
+      "word": "bin",
+      "start": 5.326,
+      "end": 5.486,
+      "score": 0.927
+    },
+    {
+      "word": "ich",
+      "start": 5.546,
+      "end": 5.727,
+      "score": 0.941
+    },
+    {
+      "word": "jetzt.",
+      "start": 5.767,
+      "end": 7.449,
+      "score": 0.88
+    },
+    {
+      "word": "Nicht",
+      "start": 7.489,
+      "end": 7.689,
+      "score": 0.894
+    },
+    {
+      "word": "weil",
+      "start": 7.709,
+      "end": 7.849,
+      "score": 0.958
+    },
+    {
+      "word": "ich",
+      "start": 7.889,
+      "end": 8.009,
+      "score": 0.954
+    },
+    {
+      "word": "kein",
+      "start": 8.029,
+      "end": 8.25,
+      "score": 0.823
+    },
+    {
+      "word": "Herz",
+      "start": 8.27,
+      "end": 8.53,
+      "score": 0.971
+    },
+    {
+      "word": "mehr",
+      "start": 8.57,
+      "end": 8.71,
+      "score": 0.797
+    },
+    {
+      "word": "habe",
+      "start": 8.73,
+      "end": 8.95,
+      "score": 0.95
+    },
+    {
+      "word": "—",
+      "start": 9.811,
+      "end": 9.831,
+      "score": 0.634
+    },
+    {
+      "word": "sondern",
+      "start": 9.851,
+      "end": 10.232,
+      "score": 0.898
+    },
+    {
+      "word": "weil",
+      "start": 10.252,
+      "end": 10.392,
+      "score": 0.94
+    },
+    {
+      "word": "ich",
+      "start": 10.432,
+      "end": 10.612,
+      "score": 0.841
+    },
+    {
+      "word": "gelernt",
+      "start": 10.652,
+      "end": 11.093,
+      "score": 0.924
+    },
+    {
+      "word": "habe,",
+      "start": 11.133,
+      "end": 11.433,
+      "score": 0.917
+    },
+    {
+      "word": "es",
+      "start": 11.473,
+      "end": 11.654,
+      "score": 0.77
+    },
+    {
+      "word": "zu",
+      "start": 11.694,
+      "end": 11.794,
+      "score": 0.996
+    },
+    {
+      "word": "beherrschen.",
+      "start": 11.834,
+      "end": 13.796,
+      "score": 0.916
+    },
+    {
+      "word": "Jeder",
+      "start": 13.816,
+      "end": 14.136,
+      "score": 0.943
+    },
+    {
+      "word": "Neuanfang",
+      "start": 14.176,
+      "end": 14.857,
+      "score": 0.894
+    },
+    {
+      "word": "lehrt",
+      "start": 14.897,
+      "end": 15.158,
+      "score": 0.876
+    },
+    {
+      "word": "mich",
+      "start": 15.178,
+      "end": 15.478,
+      "score": 0.728
+    },
+    {
+      "word": "mehr",
+      "start": 15.518,
+      "end": 16.159,
+      "score": 0.92
+    },
+    {
+      "word": "als",
+      "start": 16.199,
+      "end": 16.399,
+      "score": 0.996
+    },
+    {
+      "word": "der",
+      "start": 16.439,
+      "end": 16.539,
+      "score": 0.905
+    },
+    {
+      "word": "letzte.",
+      "start": 16.579,
+      "end": 16.82,
+      "score": 0.801
+    }
+  ]
+}

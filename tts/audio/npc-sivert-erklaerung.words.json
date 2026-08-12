@@ -1,0 +1,806 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 4.323,
+      "text": "\"Feldarbeit sieht einfach aus — ist sie nicht.",
+      "words": [
+        {
+          "word": "\"Feldarbeit",
+          "start": 0.46,
+          "end": 1.241,
+          "score": 0.783
+        },
+        {
+          "word": "sieht",
+          "start": 1.261,
+          "end": 1.541,
+          "score": 0.884
+        },
+        {
+          "word": "einfach",
+          "start": 1.561,
+          "end": 1.921,
+          "score": 0.859
+        },
+        {
+          "word": "aus",
+          "start": 2.021,
+          "end": 2.221,
+          "score": 0.907
+        },
+        {
+          "word": "—",
+          "start": 2.902,
+          "end": 2.922,
+          "score": 0.401
+        },
+        {
+          "word": "ist",
+          "start": 2.962,
+          "end": 3.122,
+          "score": 0.851
+        },
+        {
+          "word": "sie",
+          "start": 3.162,
+          "end": 3.302,
+          "score": 0.817
+        },
+        {
+          "word": "nicht.",
+          "start": 3.322,
+          "end": 4.323,
+          "score": 0.893
+        }
+      ]
+    },
+    {
+      "start": 4.343,
+      "end": 7.105,
+      "text": "Nicht wenn man sie wirklich beherrscht.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 4.343,
+          "end": 4.603,
+          "score": 0.793
+        },
+        {
+          "word": "wenn",
+          "start": 4.643,
+          "end": 4.783,
+          "score": 0.996
+        },
+        {
+          "word": "man",
+          "start": 4.823,
+          "end": 4.963,
+          "score": 0.938
+        },
+        {
+          "word": "sie",
+          "start": 5.003,
+          "end": 5.243,
+          "score": 0.933
+        },
+        {
+          "word": "wirklich",
+          "start": 5.283,
+          "end": 5.644,
+          "score": 0.94
+        },
+        {
+          "word": "beherrscht.",
+          "start": 5.684,
+          "end": 7.105,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 7.125,
+      "end": 12.828,
+      "text": "Handgelenk, Atemrhythmus, wann man zieht, wann man schiebt.",
+      "words": [
+        {
+          "word": "Handgelenk,",
+          "start": 7.125,
+          "end": 8.385,
+          "score": 0.9
+        },
+        {
+          "word": "Atemrhythmus,",
+          "start": 8.445,
+          "end": 9.786,
+          "score": 0.816
+        },
+        {
+          "word": "wann",
+          "start": 9.806,
+          "end": 9.986,
+          "score": 0.922
+        },
+        {
+          "word": "man",
+          "start": 10.026,
+          "end": 10.227,
+          "score": 0.984
+        },
+        {
+          "word": "zieht,",
+          "start": 10.287,
+          "end": 11.087,
+          "score": 0.796
+        },
+        {
+          "word": "wann",
+          "start": 11.107,
+          "end": 11.287,
+          "score": 0.869
+        },
+        {
+          "word": "man",
+          "start": 11.307,
+          "end": 11.447,
+          "score": 0.892
+        },
+        {
+          "word": "schiebt.",
+          "start": 11.487,
+          "end": 12.828,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 12.848,
+      "end": 18.012,
+      "text": "Die meisten lernen das nie, weil sie nie aufhören, einfach zu schuften.\"",
+      "words": [
+        {
+          "word": "Die",
+          "start": 12.848,
+          "end": 12.968,
+          "score": 0.89
+        },
+        {
+          "word": "meisten",
+          "start": 13.008,
+          "end": 13.369,
+          "score": 0.937
+        },
+        {
+          "word": "lernen",
+          "start": 13.409,
+          "end": 13.709,
+          "score": 0.893
+        },
+        {
+          "word": "das",
+          "start": 13.729,
+          "end": 13.949,
+          "score": 0.928
+        },
+        {
+          "word": "nie,",
+          "start": 13.989,
+          "end": 14.569,
+          "score": 0.99
+        },
+        {
+          "word": "weil",
+          "start": 14.609,
+          "end": 14.749,
+          "score": 0.983
+        },
+        {
+          "word": "sie",
+          "start": 14.79,
+          "end": 14.95,
+          "score": 0.995
+        },
+        {
+          "word": "nie",
+          "start": 14.99,
+          "end": 15.23,
+          "score": 0.941
+        },
+        {
+          "word": "aufhören,",
+          "start": 15.25,
+          "end": 15.93,
+          "score": 0.894
+        },
+        {
+          "word": "einfach",
+          "start": 15.97,
+          "end": 16.351,
+          "score": 0.917
+        },
+        {
+          "word": "zu",
+          "start": 16.391,
+          "end": 16.491,
+          "score": 0.885
+        },
+        {
+          "word": "schuften.\"",
+          "start": 16.531,
+          "end": 18.012,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 18.032,
+      "end": 20.573,
+      "text": "\"Ich kann dir zeigen, was dir fehlt.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 18.032,
+          "end": 18.192,
+          "score": 0.836
+        },
+        {
+          "word": "kann",
+          "start": 18.232,
+          "end": 18.392,
+          "score": 0.907
+        },
+        {
+          "word": "dir",
+          "start": 18.412,
+          "end": 18.632,
+          "score": 0.632
+        },
+        {
+          "word": "zeigen,",
+          "start": 18.672,
+          "end": 19.032,
+          "score": 0.881
+        },
+        {
+          "word": "was",
+          "start": 19.052,
+          "end": 19.192,
+          "score": 0.879
+        },
+        {
+          "word": "dir",
+          "start": 19.212,
+          "end": 19.412,
+          "score": 0.682
+        },
+        {
+          "word": "fehlt.",
+          "start": 19.473,
+          "end": 20.573,
+          "score": 0.984
+        }
+      ]
+    },
+    {
+      "start": 20.593,
+      "end": 23.955,
+      "text": "Nicht mehr Kraft — ein anderes Denken.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 20.593,
+          "end": 20.793,
+          "score": 0.929
+        },
+        {
+          "word": "mehr",
+          "start": 20.813,
+          "end": 21.014,
+          "score": 0.897
+        },
+        {
+          "word": "Kraft",
+          "start": 21.054,
+          "end": 21.354,
+          "score": 0.81
+        },
+        {
+          "word": "—",
+          "start": 22.014,
+          "end": 22.034,
+          "score": 0.984
+        },
+        {
+          "word": "ein",
+          "start": 22.054,
+          "end": 22.294,
+          "score": 0.748
+        },
+        {
+          "word": "anderes",
+          "start": 22.334,
+          "end": 22.735,
+          "score": 0.912
+        },
+        {
+          "word": "Denken.",
+          "start": 22.795,
+          "end": 23.955,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 23.975,
+      "end": 28.018,
+      "text": "Das Ergebnis ist dasselbe Feld, dieselbe Schaufel.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 23.975,
+          "end": 24.156,
+          "score": 0.882
+        },
+        {
+          "word": "Ergebnis",
+          "start": 24.196,
+          "end": 24.756,
+          "score": 0.893
+        },
+        {
+          "word": "ist",
+          "start": 24.816,
+          "end": 24.936,
+          "score": 0.935
+        },
+        {
+          "word": "dasselbe",
+          "start": 24.976,
+          "end": 25.456,
+          "score": 0.909
+        },
+        {
+          "word": "Feld,",
+          "start": 25.496,
+          "end": 26.377,
+          "score": 0.664
+        },
+        {
+          "word": "dieselbe",
+          "start": 26.397,
+          "end": 26.817,
+          "score": 0.903
+        },
+        {
+          "word": "Schaufel.",
+          "start": 26.857,
+          "end": 28.018,
+          "score": 0.963
+        }
+      ]
+    },
+    {
+      "start": 28.038,
+      "end": 30.66,
+      "text": "Aber was du herausholst, ist ein anderes.\"",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 28.038,
+          "end": 28.238,
+          "score": 0.87
+        },
+        {
+          "word": "was",
+          "start": 28.278,
+          "end": 28.398,
+          "score": 0.981
+        },
+        {
+          "word": "du",
+          "start": 28.418,
+          "end": 28.598,
+          "score": 0.906
+        },
+        {
+          "word": "herausholst,",
+          "start": 28.618,
+          "end": 29.899,
+          "score": 0.885
+        },
+        {
+          "word": "ist",
+          "start": 29.919,
+          "end": 30.079,
+          "score": 0.978
+        },
+        {
+          "word": "ein",
+          "start": 30.119,
+          "end": 30.239,
+          "score": 0.843
+        },
+        {
+          "word": "anderes.\"",
+          "start": 30.279,
+          "end": 30.66,
+          "score": 0.806
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Feldarbeit",
+      "start": 0.46,
+      "end": 1.241,
+      "score": 0.783
+    },
+    {
+      "word": "sieht",
+      "start": 1.261,
+      "end": 1.541,
+      "score": 0.884
+    },
+    {
+      "word": "einfach",
+      "start": 1.561,
+      "end": 1.921,
+      "score": 0.859
+    },
+    {
+      "word": "aus",
+      "start": 2.021,
+      "end": 2.221,
+      "score": 0.907
+    },
+    {
+      "word": "—",
+      "start": 2.902,
+      "end": 2.922,
+      "score": 0.401
+    },
+    {
+      "word": "ist",
+      "start": 2.962,
+      "end": 3.122,
+      "score": 0.851
+    },
+    {
+      "word": "sie",
+      "start": 3.162,
+      "end": 3.302,
+      "score": 0.817
+    },
+    {
+      "word": "nicht.",
+      "start": 3.322,
+      "end": 4.323,
+      "score": 0.893
+    },
+    {
+      "word": "Nicht",
+      "start": 4.343,
+      "end": 4.603,
+      "score": 0.793
+    },
+    {
+      "word": "wenn",
+      "start": 4.643,
+      "end": 4.783,
+      "score": 0.996
+    },
+    {
+      "word": "man",
+      "start": 4.823,
+      "end": 4.963,
+      "score": 0.938
+    },
+    {
+      "word": "sie",
+      "start": 5.003,
+      "end": 5.243,
+      "score": 0.933
+    },
+    {
+      "word": "wirklich",
+      "start": 5.283,
+      "end": 5.644,
+      "score": 0.94
+    },
+    {
+      "word": "beherrscht.",
+      "start": 5.684,
+      "end": 7.105,
+      "score": 0.871
+    },
+    {
+      "word": "Handgelenk,",
+      "start": 7.125,
+      "end": 8.385,
+      "score": 0.9
+    },
+    {
+      "word": "Atemrhythmus,",
+      "start": 8.445,
+      "end": 9.786,
+      "score": 0.816
+    },
+    {
+      "word": "wann",
+      "start": 9.806,
+      "end": 9.986,
+      "score": 0.922
+    },
+    {
+      "word": "man",
+      "start": 10.026,
+      "end": 10.227,
+      "score": 0.984
+    },
+    {
+      "word": "zieht,",
+      "start": 10.287,
+      "end": 11.087,
+      "score": 0.796
+    },
+    {
+      "word": "wann",
+      "start": 11.107,
+      "end": 11.287,
+      "score": 0.869
+    },
+    {
+      "word": "man",
+      "start": 11.307,
+      "end": 11.447,
+      "score": 0.892
+    },
+    {
+      "word": "schiebt.",
+      "start": 11.487,
+      "end": 12.828,
+      "score": 0.924
+    },
+    {
+      "word": "Die",
+      "start": 12.848,
+      "end": 12.968,
+      "score": 0.89
+    },
+    {
+      "word": "meisten",
+      "start": 13.008,
+      "end": 13.369,
+      "score": 0.937
+    },
+    {
+      "word": "lernen",
+      "start": 13.409,
+      "end": 13.709,
+      "score": 0.893
+    },
+    {
+      "word": "das",
+      "start": 13.729,
+      "end": 13.949,
+      "score": 0.928
+    },
+    {
+      "word": "nie,",
+      "start": 13.989,
+      "end": 14.569,
+      "score": 0.99
+    },
+    {
+      "word": "weil",
+      "start": 14.609,
+      "end": 14.749,
+      "score": 0.983
+    },
+    {
+      "word": "sie",
+      "start": 14.79,
+      "end": 14.95,
+      "score": 0.995
+    },
+    {
+      "word": "nie",
+      "start": 14.99,
+      "end": 15.23,
+      "score": 0.941
+    },
+    {
+      "word": "aufhören,",
+      "start": 15.25,
+      "end": 15.93,
+      "score": 0.894
+    },
+    {
+      "word": "einfach",
+      "start": 15.97,
+      "end": 16.351,
+      "score": 0.917
+    },
+    {
+      "word": "zu",
+      "start": 16.391,
+      "end": 16.491,
+      "score": 0.885
+    },
+    {
+      "word": "schuften.\"",
+      "start": 16.531,
+      "end": 18.012,
+      "score": 0.884
+    },
+    {
+      "word": "\"Ich",
+      "start": 18.032,
+      "end": 18.192,
+      "score": 0.836
+    },
+    {
+      "word": "kann",
+      "start": 18.232,
+      "end": 18.392,
+      "score": 0.907
+    },
+    {
+      "word": "dir",
+      "start": 18.412,
+      "end": 18.632,
+      "score": 0.632
+    },
+    {
+      "word": "zeigen,",
+      "start": 18.672,
+      "end": 19.032,
+      "score": 0.881
+    },
+    {
+      "word": "was",
+      "start": 19.052,
+      "end": 19.192,
+      "score": 0.879
+    },
+    {
+      "word": "dir",
+      "start": 19.212,
+      "end": 19.412,
+      "score": 0.682
+    },
+    {
+      "word": "fehlt.",
+      "start": 19.473,
+      "end": 20.573,
+      "score": 0.984
+    },
+    {
+      "word": "Nicht",
+      "start": 20.593,
+      "end": 20.793,
+      "score": 0.929
+    },
+    {
+      "word": "mehr",
+      "start": 20.813,
+      "end": 21.014,
+      "score": 0.897
+    },
+    {
+      "word": "Kraft",
+      "start": 21.054,
+      "end": 21.354,
+      "score": 0.81
+    },
+    {
+      "word": "—",
+      "start": 22.014,
+      "end": 22.034,
+      "score": 0.984
+    },
+    {
+      "word": "ein",
+      "start": 22.054,
+      "end": 22.294,
+      "score": 0.748
+    },
+    {
+      "word": "anderes",
+      "start": 22.334,
+      "end": 22.735,
+      "score": 0.912
+    },
+    {
+      "word": "Denken.",
+      "start": 22.795,
+      "end": 23.955,
+      "score": 0.94
+    },
+    {
+      "word": "Das",
+      "start": 23.975,
+      "end": 24.156,
+      "score": 0.882
+    },
+    {
+      "word": "Ergebnis",
+      "start": 24.196,
+      "end": 24.756,
+      "score": 0.893
+    },
+    {
+      "word": "ist",
+      "start": 24.816,
+      "end": 24.936,
+      "score": 0.935
+    },
+    {
+      "word": "dasselbe",
+      "start": 24.976,
+      "end": 25.456,
+      "score": 0.909
+    },
+    {
+      "word": "Feld,",
+      "start": 25.496,
+      "end": 26.377,
+      "score": 0.664
+    },
+    {
+      "word": "dieselbe",
+      "start": 26.397,
+      "end": 26.817,
+      "score": 0.903
+    },
+    {
+      "word": "Schaufel.",
+      "start": 26.857,
+      "end": 28.018,
+      "score": 0.963
+    },
+    {
+      "word": "Aber",
+      "start": 28.038,
+      "end": 28.238,
+      "score": 0.87
+    },
+    {
+      "word": "was",
+      "start": 28.278,
+      "end": 28.398,
+      "score": 0.981
+    },
+    {
+      "word": "du",
+      "start": 28.418,
+      "end": 28.598,
+      "score": 0.906
+    },
+    {
+      "word": "herausholst,",
+      "start": 28.618,
+      "end": 29.899,
+      "score": 0.885
+    },
+    {
+      "word": "ist",
+      "start": 29.919,
+      "end": 30.079,
+      "score": 0.978
+    },
+    {
+      "word": "ein",
+      "start": 30.119,
+      "end": 30.239,
+      "score": 0.843
+    },
+    {
+      "word": "anderes.\"",
+      "start": 30.279,
+      "end": 30.66,
+      "score": 0.806
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "segments": [
+    {
+      "start": 0.981,
+      "end": 3.042,
+      "text": "\"Das Gold?\"",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 0.981,
+          "end": 1.321,
+          "score": 0.724
+        },
+        {
+          "word": "Gold?\"",
+          "start": 1.361,
+          "end": 3.042,
+          "score": 0.763
+        }
+      ]
+    },
+    {
+      "start": 3.102,
+      "end": 5.004,
+      "text": "Er lacht leise.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.102,
+          "end": 3.323,
+          "score": 0.882
+        },
+        {
+          "word": "lacht",
+          "start": 3.363,
+          "end": 3.723,
+          "score": 0.783
+        },
+        {
+          "word": "leise.",
+          "start": 3.763,
+          "end": 5.004,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 5.024,
+      "end": 6.965,
+      "text": "\"Das ist längst weg.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 5.024,
+          "end": 5.184,
+          "score": 0.741
+        },
+        {
+          "word": "ist",
+          "start": 5.224,
+          "end": 5.404,
+          "score": 0.869
+        },
+        {
+          "word": "längst",
+          "start": 5.444,
+          "end": 5.804,
+          "score": 0.971
+        },
+        {
+          "word": "weg.",
+          "start": 5.864,
+          "end": 6.965,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 7.025,
+      "end": 12.249,
+      "text": "Aber du bist hier, und das ist mehr wert.\"",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 7.025,
+          "end": 7.346,
+          "score": 0.921
+        },
+        {
+          "word": "du",
+          "start": 7.386,
+          "end": 7.606,
+          "score": 0.76
+        },
+        {
+          "word": "bist",
+          "start": 7.626,
+          "end": 8.066,
+          "score": 0.873
+        },
+        {
+          "word": "hier,",
+          "start": 8.106,
+          "end": 9.087,
+          "score": 0.774
+        },
+        {
+          "word": "und",
+          "start": 9.107,
+          "end": 9.307,
+          "score": 0.889
+        },
+        {
+          "word": "das",
+          "start": 9.327,
+          "end": 9.467,
+          "score": 0.888
+        },
+        {
+          "word": "ist",
+          "start": 9.507,
+          "end": 9.787,
+          "score": 0.818
+        },
+        {
+          "word": "mehr",
+          "start": 9.827,
+          "end": 10.048,
+          "score": 0.961
+        },
+        {
+          "word": "wert.\"",
+          "start": 10.108,
+          "end": 12.249,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 12.269,
+      "end": 14.251,
+      "text": "\"Leb gut, Fremder.",
+      "words": [
+        {
+          "word": "\"Leb",
+          "start": 12.269,
+          "end": 12.57,
+          "score": 0.921
+        },
+        {
+          "word": "gut,",
+          "start": 12.59,
+          "end": 12.87,
+          "score": 0.812
+        },
+        {
+          "word": "Fremder.",
+          "start": 12.93,
+          "end": 14.251,
+          "score": 0.883
+        }
+      ]
+    },
+    {
+      "start": 14.271,
+      "end": 18.074,
+      "text": "Wir werden uns wiedersehen.\"",
+      "words": [
+        {
+          "word": "Wir",
+          "start": 14.271,
+          "end": 14.451,
+          "score": 0.902
+        },
+        {
+          "word": "werden",
+          "start": 14.491,
+          "end": 14.771,
+          "score": 0.912
+        },
+        {
+          "word": "uns",
+          "start": 14.811,
+          "end": 15.091,
+          "score": 0.994
+        },
+        {
+          "word": "wiedersehen.\"",
+          "start": 15.131,
+          "end": 18.074,
+          "score": 0.81
+        }
+      ]
+    },
+    {
+      "start": 18.154,
+      "end": 26.02,
+      "text": "Er erhebt sich und verlässt die Taverne — langsam, ohne Eile, als wäre er nie bedroht gewesen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 18.154,
+          "end": 18.314,
+          "score": 0.652
+        },
+        {
+          "word": "erhebt",
+          "start": 18.374,
+          "end": 18.874,
+          "score": 0.89
+        },
+        {
+          "word": "sich",
+          "start": 18.914,
+          "end": 19.415,
+          "score": 0.97
+        },
+        {
+          "word": "und",
+          "start": 19.455,
+          "end": 19.655,
+          "score": 0.855
+        },
+        {
+          "word": "verlässt",
+          "start": 19.695,
+          "end": 20.075,
+          "score": 0.86
+        },
+        {
+          "word": "die",
+          "start": 20.095,
+          "end": 20.235,
+          "score": 0.663
+        },
+        {
+          "word": "Taverne",
+          "start": 20.255,
+          "end": 20.776,
+          "score": 0.871
+        },
+        {
+          "word": "—",
+          "start": 21.596,
+          "end": 21.616,
+          "score": 0.889
+        },
+        {
+          "word": "langsam,",
+          "start": 21.636,
+          "end": 22.617,
+          "score": 0.965
+        },
+        {
+          "word": "ohne",
+          "start": 22.677,
+          "end": 23.017,
+          "score": 0.85
+        },
+        {
+          "word": "Eile,",
+          "start": 23.077,
+          "end": 24.198,
+          "score": 0.971
+        },
+        {
+          "word": "als",
+          "start": 24.238,
+          "end": 24.378,
+          "score": 0.965
+        },
+        {
+          "word": "wäre",
+          "start": 24.418,
+          "end": 24.639,
+          "score": 0.77
+        },
+        {
+          "word": "er",
+          "start": 24.779,
+          "end": 24.899,
+          "score": 0.388
+        },
+        {
+          "word": "nie",
+          "start": 24.919,
+          "end": 25.059,
+          "score": 0.874
+        },
+        {
+          "word": "bedroht",
+          "start": 25.099,
+          "end": 25.559,
+          "score": 0.702
+        },
+        {
+          "word": "gewesen.",
+          "start": 25.599,
+          "end": 26.02,
+          "score": 0.819
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Das",
+      "start": 0.981,
+      "end": 1.321,
+      "score": 0.724
+    },
+    {
+      "word": "Gold?\"",
+      "start": 1.361,
+      "end": 3.042,
+      "score": 0.763
+    },
+    {
+      "word": "Er",
+      "start": 3.102,
+      "end": 3.323,
+      "score": 0.882
+    },
+    {
+      "word": "lacht",
+      "start": 3.363,
+      "end": 3.723,
+      "score": 0.783
+    },
+    {
+      "word": "leise.",
+      "start": 3.763,
+      "end": 5.004,
+      "score": 0.92
+    },
+    {
+      "word": "\"Das",
+      "start": 5.024,
+      "end": 5.184,
+      "score": 0.741
+    },
+    {
+      "word": "ist",
+      "start": 5.224,
+      "end": 5.404,
+      "score": 0.869
+    },
+    {
+      "word": "längst",
+      "start": 5.444,
+      "end": 5.804,
+      "score": 0.971
+    },
+    {
+      "word": "weg.",
+      "start": 5.864,
+      "end": 6.965,
+      "score": 0.952
+    },
+    {
+      "word": "Aber",
+      "start": 7.025,
+      "end": 7.346,
+      "score": 0.921
+    },
+    {
+      "word": "du",
+      "start": 7.386,
+      "end": 7.606,
+      "score": 0.76
+    },
+    {
+      "word": "bist",
+      "start": 7.626,
+      "end": 8.066,
+      "score": 0.873
+    },
+    {
+      "word": "hier,",
+      "start": 8.106,
+      "end": 9.087,
+      "score": 0.774
+    },
+    {
+      "word": "und",
+      "start": 9.107,
+      "end": 9.307,
+      "score": 0.889
+    },
+    {
+      "word": "das",
+      "start": 9.327,
+      "end": 9.467,
+      "score": 0.888
+    },
+    {
+      "word": "ist",
+      "start": 9.507,
+      "end": 9.787,
+      "score": 0.818
+    },
+    {
+      "word": "mehr",
+      "start": 9.827,
+      "end": 10.048,
+      "score": 0.961
+    },
+    {
+      "word": "wert.\"",
+      "start": 10.108,
+      "end": 12.249,
+      "score": 0.827
+    },
+    {
+      "word": "\"Leb",
+      "start": 12.269,
+      "end": 12.57,
+      "score": 0.921
+    },
+    {
+      "word": "gut,",
+      "start": 12.59,
+      "end": 12.87,
+      "score": 0.812
+    },
+    {
+      "word": "Fremder.",
+      "start": 12.93,
+      "end": 14.251,
+      "score": 0.883
+    },
+    {
+      "word": "Wir",
+      "start": 14.271,
+      "end": 14.451,
+      "score": 0.902
+    },
+    {
+      "word": "werden",
+      "start": 14.491,
+      "end": 14.771,
+      "score": 0.912
+    },
+    {
+      "word": "uns",
+      "start": 14.811,
+      "end": 15.091,
+      "score": 0.994
+    },
+    {
+      "word": "wiedersehen.\"",
+      "start": 15.131,
+      "end": 18.074,
+      "score": 0.81
+    },
+    {
+      "word": "Er",
+      "start": 18.154,
+      "end": 18.314,
+      "score": 0.652
+    },
+    {
+      "word": "erhebt",
+      "start": 18.374,
+      "end": 18.874,
+      "score": 0.89
+    },
+    {
+      "word": "sich",
+      "start": 18.914,
+      "end": 19.415,
+      "score": 0.97
+    },
+    {
+      "word": "und",
+      "start": 19.455,
+      "end": 19.655,
+      "score": 0.855
+    },
+    {
+      "word": "verlässt",
+      "start": 19.695,
+      "end": 20.075,
+      "score": 0.86
+    },
+    {
+      "word": "die",
+      "start": 20.095,
+      "end": 20.235,
+      "score": 0.663
+    },
+    {
+      "word": "Taverne",
+      "start": 20.255,
+      "end": 20.776,
+      "score": 0.871
+    },
+    {
+      "word": "—",
+      "start": 21.596,
+      "end": 21.616,
+      "score": 0.889
+    },
+    {
+      "word": "langsam,",
+      "start": 21.636,
+      "end": 22.617,
+      "score": 0.965
+    },
+    {
+      "word": "ohne",
+      "start": 22.677,
+      "end": 23.017,
+      "score": 0.85
+    },
+    {
+      "word": "Eile,",
+      "start": 23.077,
+      "end": 24.198,
+      "score": 0.971
+    },
+    {
+      "word": "als",
+      "start": 24.238,
+      "end": 24.378,
+      "score": 0.965
+    },
+    {
+      "word": "wäre",
+      "start": 24.418,
+      "end": 24.639,
+      "score": 0.77
+    },
+    {
+      "word": "er",
+      "start": 24.779,
+      "end": 24.899,
+      "score": 0.388
+    },
+    {
+      "word": "nie",
+      "start": 24.919,
+      "end": 25.059,
+      "score": 0.874
+    },
+    {
+      "word": "bedroht",
+      "start": 25.099,
+      "end": 25.559,
+      "score": 0.702
+    },
+    {
+      "word": "gewesen.",
+      "start": 25.599,
+      "end": 26.02,
+      "score": 0.819
+    }
+  ]
+}

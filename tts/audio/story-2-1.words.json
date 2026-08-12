@@ -1,0 +1,1091 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 6.743,
+      "text": "Ein Rascheln hinter mir — und ich wirbele herum, ehe ein Gedanke mich daran hindern kann.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.48,
+          "end": 0.88,
+          "score": 0.601
+        },
+        {
+          "word": "Rascheln",
+          "start": 0.96,
+          "end": 1.341,
+          "score": 0.784
+        },
+        {
+          "word": "hinter",
+          "start": 1.361,
+          "end": 1.601,
+          "score": 0.897
+        },
+        {
+          "word": "mir",
+          "start": 1.641,
+          "end": 1.781,
+          "score": 0.826
+        },
+        {
+          "word": "—",
+          "start": 2.481,
+          "end": 2.501,
+          "score": 0.501
+        },
+        {
+          "word": "und",
+          "start": 2.521,
+          "end": 2.701,
+          "score": 0.854
+        },
+        {
+          "word": "ich",
+          "start": 2.741,
+          "end": 2.961,
+          "score": 0.692
+        },
+        {
+          "word": "wirbele",
+          "start": 2.981,
+          "end": 3.382,
+          "score": 0.785
+        },
+        {
+          "word": "herum,",
+          "start": 3.402,
+          "end": 3.842,
+          "score": 0.799
+        },
+        {
+          "word": "ehe",
+          "start": 3.882,
+          "end": 4.082,
+          "score": 0.83
+        },
+        {
+          "word": "ein",
+          "start": 4.122,
+          "end": 4.302,
+          "score": 0.687
+        },
+        {
+          "word": "Gedanke",
+          "start": 4.322,
+          "end": 4.682,
+          "score": 0.795
+        },
+        {
+          "word": "mich",
+          "start": 4.702,
+          "end": 4.822,
+          "score": 0.895
+        },
+        {
+          "word": "daran",
+          "start": 4.862,
+          "end": 5.082,
+          "score": 0.859
+        },
+        {
+          "word": "hindern",
+          "start": 5.102,
+          "end": 5.362,
+          "score": 0.89
+        },
+        {
+          "word": "kann.",
+          "start": 5.402,
+          "end": 6.743,
+          "score": 0.867
+        }
+      ]
+    },
+    {
+      "start": 6.783,
+      "end": 8.604,
+      "text": "Es geht zu schnell für Angst.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 6.783,
+          "end": 6.883,
+          "score": 0.751
+        },
+        {
+          "word": "geht",
+          "start": 6.903,
+          "end": 7.063,
+          "score": 0.514
+        },
+        {
+          "word": "zu",
+          "start": 7.083,
+          "end": 7.203,
+          "score": 0.319
+        },
+        {
+          "word": "schnell",
+          "start": 7.223,
+          "end": 7.443,
+          "score": 0.897
+        },
+        {
+          "word": "für",
+          "start": 7.483,
+          "end": 7.603,
+          "score": 0.865
+        },
+        {
+          "word": "Angst.",
+          "start": 7.643,
+          "end": 8.604,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 8.624,
+      "end": 13.066,
+      "text": "Ein Hieb, ein Taumel, Staub auf den Lippen.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 8.624,
+          "end": 8.784,
+          "score": 0.702
+        },
+        {
+          "word": "Hieb,",
+          "start": 8.864,
+          "end": 9.784,
+          "score": 0.789
+        },
+        {
+          "word": "ein",
+          "start": 9.804,
+          "end": 10.025,
+          "score": 0.685
+        },
+        {
+          "word": "Taumel,",
+          "start": 10.085,
+          "end": 11.105,
+          "score": 0.897
+        },
+        {
+          "word": "Staub",
+          "start": 11.145,
+          "end": 11.425,
+          "score": 0.948
+        },
+        {
+          "word": "auf",
+          "start": 11.445,
+          "end": 11.565,
+          "score": 0.772
+        },
+        {
+          "word": "den",
+          "start": 11.585,
+          "end": 11.705,
+          "score": 0.868
+        },
+        {
+          "word": "Lippen.",
+          "start": 11.725,
+          "end": 13.066,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 13.086,
+      "end": 15.507,
+      "text": "Dann Stille.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 13.086,
+          "end": 13.326,
+          "score": 0.918
+        },
+        {
+          "word": "Stille.",
+          "start": 13.366,
+          "end": 15.507,
+          "score": 0.805
+        }
+      ]
+    },
+    {
+      "start": 15.547,
+      "end": 22.53,
+      "text": "Ich stehe über dem gestürzten Räuber und höre erst jetzt, wie laut mein eigener Atem geht.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 15.547,
+          "end": 15.627,
+          "score": 0.963
+        },
+        {
+          "word": "stehe",
+          "start": 15.667,
+          "end": 16.047,
+          "score": 0.821
+        },
+        {
+          "word": "über",
+          "start": 16.067,
+          "end": 16.227,
+          "score": 0.953
+        },
+        {
+          "word": "dem",
+          "start": 16.247,
+          "end": 16.427,
+          "score": 0.876
+        },
+        {
+          "word": "gestürzten",
+          "start": 16.447,
+          "end": 16.948,
+          "score": 0.98
+        },
+        {
+          "word": "Räuber",
+          "start": 17.008,
+          "end": 18.048,
+          "score": 0.923
+        },
+        {
+          "word": "und",
+          "start": 18.068,
+          "end": 18.268,
+          "score": 0.825
+        },
+        {
+          "word": "höre",
+          "start": 18.288,
+          "end": 18.488,
+          "score": 0.896
+        },
+        {
+          "word": "erst",
+          "start": 18.528,
+          "end": 18.728,
+          "score": 0.739
+        },
+        {
+          "word": "jetzt,",
+          "start": 18.769,
+          "end": 19.009,
+          "score": 0.874
+        },
+        {
+          "word": "wie",
+          "start": 19.029,
+          "end": 19.209,
+          "score": 0.833
+        },
+        {
+          "word": "laut",
+          "start": 19.249,
+          "end": 19.529,
+          "score": 0.976
+        },
+        {
+          "word": "mein",
+          "start": 19.549,
+          "end": 19.769,
+          "score": 0.793
+        },
+        {
+          "word": "eigener",
+          "start": 19.809,
+          "end": 20.129,
+          "score": 0.893
+        },
+        {
+          "word": "Atem",
+          "start": 20.169,
+          "end": 20.449,
+          "score": 0.874
+        },
+        {
+          "word": "geht.",
+          "start": 20.469,
+          "end": 22.53,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 22.55,
+      "end": 24.771,
+      "text": "Das erste Mal.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 22.55,
+          "end": 22.75,
+          "score": 0.878
+        },
+        {
+          "word": "erste",
+          "start": 22.81,
+          "end": 23.05,
+          "score": 0.938
+        },
+        {
+          "word": "Mal.",
+          "start": 23.09,
+          "end": 24.771,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 24.811,
+      "end": 28.573,
+      "text": "Ich hätte erwartet, mich schlechter zu fühlen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 24.811,
+          "end": 24.951,
+          "score": 0.854
+        },
+        {
+          "word": "hätte",
+          "start": 24.991,
+          "end": 25.231,
+          "score": 0.842
+        },
+        {
+          "word": "erwartet,",
+          "start": 25.271,
+          "end": 25.672,
+          "score": 0.862
+        },
+        {
+          "word": "mich",
+          "start": 25.692,
+          "end": 25.892,
+          "score": 0.828
+        },
+        {
+          "word": "schlechter",
+          "start": 25.912,
+          "end": 26.332,
+          "score": 0.937
+        },
+        {
+          "word": "zu",
+          "start": 26.352,
+          "end": 26.472,
+          "score": 0.892
+        },
+        {
+          "word": "fühlen.",
+          "start": 26.532,
+          "end": 28.573,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 28.613,
+      "end": 32.495,
+      "text": "Stattdessen eine seltsame, klare Ruhe.",
+      "words": [
+        {
+          "word": "Stattdessen",
+          "start": 28.613,
+          "end": 29.113,
+          "score": 0.913
+        },
+        {
+          "word": "eine",
+          "start": 29.153,
+          "end": 29.894,
+          "score": 0.93
+        },
+        {
+          "word": "seltsame,",
+          "start": 29.934,
+          "end": 30.554,
+          "score": 0.834
+        },
+        {
+          "word": "klare",
+          "start": 30.594,
+          "end": 30.974,
+          "score": 0.987
+        },
+        {
+          "word": "Ruhe.",
+          "start": 31.054,
+          "end": 32.495,
+          "score": 0.824
+        }
+      ]
+    },
+    {
+      "start": 32.535,
+      "end": 39.198,
+      "text": "Und die Gewissheit: Ich bin nicht mehr der, der einst durch dieses Stadttor kam.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 32.535,
+          "end": 32.735,
+          "score": 0.892
+        },
+        {
+          "word": "die",
+          "start": 32.775,
+          "end": 32.855,
+          "score": 0.959
+        },
+        {
+          "word": "Gewissheit:",
+          "start": 32.895,
+          "end": 34.576,
+          "score": 0.91
+        },
+        {
+          "word": "Ich",
+          "start": 34.596,
+          "end": 34.756,
+          "score": 0.859
+        },
+        {
+          "word": "bin",
+          "start": 34.796,
+          "end": 34.956,
+          "score": 0.876
+        },
+        {
+          "word": "nicht",
+          "start": 34.996,
+          "end": 35.196,
+          "score": 0.856
+        },
+        {
+          "word": "mehr",
+          "start": 35.216,
+          "end": 35.436,
+          "score": 0.944
+        },
+        {
+          "word": "der,",
+          "start": 35.476,
+          "end": 35.736,
+          "score": 0.911
+        },
+        {
+          "word": "der",
+          "start": 35.756,
+          "end": 35.976,
+          "score": 0.934
+        },
+        {
+          "word": "einst",
+          "start": 36.016,
+          "end": 36.236,
+          "score": 0.873
+        },
+        {
+          "word": "durch",
+          "start": 36.276,
+          "end": 36.457,
+          "score": 0.845
+        },
+        {
+          "word": "dieses",
+          "start": 36.497,
+          "end": 36.737,
+          "score": 0.886
+        },
+        {
+          "word": "Stadttor",
+          "start": 36.777,
+          "end": 37.197,
+          "score": 0.791
+        },
+        {
+          "word": "kam.",
+          "start": 37.217,
+          "end": 39.198,
+          "score": 0.767
+        }
+      ]
+    },
+    {
+      "start": 39.218,
+      "end": 43.14,
+      "text": "Dieser hier hat sich gewehrt.",
+      "words": [
+        {
+          "word": "Dieser",
+          "start": 39.218,
+          "end": 39.518,
+          "score": 0.878
+        },
+        {
+          "word": "hier",
+          "start": 39.538,
+          "end": 40.718,
+          "score": 0.749
+        },
+        {
+          "word": "hat",
+          "start": 40.758,
+          "end": 40.899,
+          "score": 0.918
+        },
+        {
+          "word": "sich",
+          "start": 40.939,
+          "end": 41.119,
+          "score": 0.888
+        },
+        {
+          "word": "gewehrt.",
+          "start": 41.139,
+          "end": 43.14,
+          "score": 0.792
+        }
+      ]
+    },
+    {
+      "start": 43.18,
+      "end": 43.58,
+      "text": "Ich auch.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 43.18,
+          "end": 43.38,
+          "score": 0.837
+        },
+        {
+          "word": "auch.",
+          "start": 43.42,
+          "end": 43.58,
+          "score": 0.714
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.48,
+      "end": 0.88,
+      "score": 0.601
+    },
+    {
+      "word": "Rascheln",
+      "start": 0.96,
+      "end": 1.341,
+      "score": 0.784
+    },
+    {
+      "word": "hinter",
+      "start": 1.361,
+      "end": 1.601,
+      "score": 0.897
+    },
+    {
+      "word": "mir",
+      "start": 1.641,
+      "end": 1.781,
+      "score": 0.826
+    },
+    {
+      "word": "—",
+      "start": 2.481,
+      "end": 2.501,
+      "score": 0.501
+    },
+    {
+      "word": "und",
+      "start": 2.521,
+      "end": 2.701,
+      "score": 0.854
+    },
+    {
+      "word": "ich",
+      "start": 2.741,
+      "end": 2.961,
+      "score": 0.692
+    },
+    {
+      "word": "wirbele",
+      "start": 2.981,
+      "end": 3.382,
+      "score": 0.785
+    },
+    {
+      "word": "herum,",
+      "start": 3.402,
+      "end": 3.842,
+      "score": 0.799
+    },
+    {
+      "word": "ehe",
+      "start": 3.882,
+      "end": 4.082,
+      "score": 0.83
+    },
+    {
+      "word": "ein",
+      "start": 4.122,
+      "end": 4.302,
+      "score": 0.687
+    },
+    {
+      "word": "Gedanke",
+      "start": 4.322,
+      "end": 4.682,
+      "score": 0.795
+    },
+    {
+      "word": "mich",
+      "start": 4.702,
+      "end": 4.822,
+      "score": 0.895
+    },
+    {
+      "word": "daran",
+      "start": 4.862,
+      "end": 5.082,
+      "score": 0.859
+    },
+    {
+      "word": "hindern",
+      "start": 5.102,
+      "end": 5.362,
+      "score": 0.89
+    },
+    {
+      "word": "kann.",
+      "start": 5.402,
+      "end": 6.743,
+      "score": 0.867
+    },
+    {
+      "word": "Es",
+      "start": 6.783,
+      "end": 6.883,
+      "score": 0.751
+    },
+    {
+      "word": "geht",
+      "start": 6.903,
+      "end": 7.063,
+      "score": 0.514
+    },
+    {
+      "word": "zu",
+      "start": 7.083,
+      "end": 7.203,
+      "score": 0.319
+    },
+    {
+      "word": "schnell",
+      "start": 7.223,
+      "end": 7.443,
+      "score": 0.897
+    },
+    {
+      "word": "für",
+      "start": 7.483,
+      "end": 7.603,
+      "score": 0.865
+    },
+    {
+      "word": "Angst.",
+      "start": 7.643,
+      "end": 8.604,
+      "score": 0.924
+    },
+    {
+      "word": "Ein",
+      "start": 8.624,
+      "end": 8.784,
+      "score": 0.702
+    },
+    {
+      "word": "Hieb,",
+      "start": 8.864,
+      "end": 9.784,
+      "score": 0.789
+    },
+    {
+      "word": "ein",
+      "start": 9.804,
+      "end": 10.025,
+      "score": 0.685
+    },
+    {
+      "word": "Taumel,",
+      "start": 10.085,
+      "end": 11.105,
+      "score": 0.897
+    },
+    {
+      "word": "Staub",
+      "start": 11.145,
+      "end": 11.425,
+      "score": 0.948
+    },
+    {
+      "word": "auf",
+      "start": 11.445,
+      "end": 11.565,
+      "score": 0.772
+    },
+    {
+      "word": "den",
+      "start": 11.585,
+      "end": 11.705,
+      "score": 0.868
+    },
+    {
+      "word": "Lippen.",
+      "start": 11.725,
+      "end": 13.066,
+      "score": 0.948
+    },
+    {
+      "word": "Dann",
+      "start": 13.086,
+      "end": 13.326,
+      "score": 0.918
+    },
+    {
+      "word": "Stille.",
+      "start": 13.366,
+      "end": 15.507,
+      "score": 0.805
+    },
+    {
+      "word": "Ich",
+      "start": 15.547,
+      "end": 15.627,
+      "score": 0.963
+    },
+    {
+      "word": "stehe",
+      "start": 15.667,
+      "end": 16.047,
+      "score": 0.821
+    },
+    {
+      "word": "über",
+      "start": 16.067,
+      "end": 16.227,
+      "score": 0.953
+    },
+    {
+      "word": "dem",
+      "start": 16.247,
+      "end": 16.427,
+      "score": 0.876
+    },
+    {
+      "word": "gestürzten",
+      "start": 16.447,
+      "end": 16.948,
+      "score": 0.98
+    },
+    {
+      "word": "Räuber",
+      "start": 17.008,
+      "end": 18.048,
+      "score": 0.923
+    },
+    {
+      "word": "und",
+      "start": 18.068,
+      "end": 18.268,
+      "score": 0.825
+    },
+    {
+      "word": "höre",
+      "start": 18.288,
+      "end": 18.488,
+      "score": 0.896
+    },
+    {
+      "word": "erst",
+      "start": 18.528,
+      "end": 18.728,
+      "score": 0.739
+    },
+    {
+      "word": "jetzt,",
+      "start": 18.769,
+      "end": 19.009,
+      "score": 0.874
+    },
+    {
+      "word": "wie",
+      "start": 19.029,
+      "end": 19.209,
+      "score": 0.833
+    },
+    {
+      "word": "laut",
+      "start": 19.249,
+      "end": 19.529,
+      "score": 0.976
+    },
+    {
+      "word": "mein",
+      "start": 19.549,
+      "end": 19.769,
+      "score": 0.793
+    },
+    {
+      "word": "eigener",
+      "start": 19.809,
+      "end": 20.129,
+      "score": 0.893
+    },
+    {
+      "word": "Atem",
+      "start": 20.169,
+      "end": 20.449,
+      "score": 0.874
+    },
+    {
+      "word": "geht.",
+      "start": 20.469,
+      "end": 22.53,
+      "score": 0.957
+    },
+    {
+      "word": "Das",
+      "start": 22.55,
+      "end": 22.75,
+      "score": 0.878
+    },
+    {
+      "word": "erste",
+      "start": 22.81,
+      "end": 23.05,
+      "score": 0.938
+    },
+    {
+      "word": "Mal.",
+      "start": 23.09,
+      "end": 24.771,
+      "score": 0.939
+    },
+    {
+      "word": "Ich",
+      "start": 24.811,
+      "end": 24.951,
+      "score": 0.854
+    },
+    {
+      "word": "hätte",
+      "start": 24.991,
+      "end": 25.231,
+      "score": 0.842
+    },
+    {
+      "word": "erwartet,",
+      "start": 25.271,
+      "end": 25.672,
+      "score": 0.862
+    },
+    {
+      "word": "mich",
+      "start": 25.692,
+      "end": 25.892,
+      "score": 0.828
+    },
+    {
+      "word": "schlechter",
+      "start": 25.912,
+      "end": 26.332,
+      "score": 0.937
+    },
+    {
+      "word": "zu",
+      "start": 26.352,
+      "end": 26.472,
+      "score": 0.892
+    },
+    {
+      "word": "fühlen.",
+      "start": 26.532,
+      "end": 28.573,
+      "score": 0.91
+    },
+    {
+      "word": "Stattdessen",
+      "start": 28.613,
+      "end": 29.113,
+      "score": 0.913
+    },
+    {
+      "word": "eine",
+      "start": 29.153,
+      "end": 29.894,
+      "score": 0.93
+    },
+    {
+      "word": "seltsame,",
+      "start": 29.934,
+      "end": 30.554,
+      "score": 0.834
+    },
+    {
+      "word": "klare",
+      "start": 30.594,
+      "end": 30.974,
+      "score": 0.987
+    },
+    {
+      "word": "Ruhe.",
+      "start": 31.054,
+      "end": 32.495,
+      "score": 0.824
+    },
+    {
+      "word": "Und",
+      "start": 32.535,
+      "end": 32.735,
+      "score": 0.892
+    },
+    {
+      "word": "die",
+      "start": 32.775,
+      "end": 32.855,
+      "score": 0.959
+    },
+    {
+      "word": "Gewissheit:",
+      "start": 32.895,
+      "end": 34.576,
+      "score": 0.91
+    },
+    {
+      "word": "Ich",
+      "start": 34.596,
+      "end": 34.756,
+      "score": 0.859
+    },
+    {
+      "word": "bin",
+      "start": 34.796,
+      "end": 34.956,
+      "score": 0.876
+    },
+    {
+      "word": "nicht",
+      "start": 34.996,
+      "end": 35.196,
+      "score": 0.856
+    },
+    {
+      "word": "mehr",
+      "start": 35.216,
+      "end": 35.436,
+      "score": 0.944
+    },
+    {
+      "word": "der,",
+      "start": 35.476,
+      "end": 35.736,
+      "score": 0.911
+    },
+    {
+      "word": "der",
+      "start": 35.756,
+      "end": 35.976,
+      "score": 0.934
+    },
+    {
+      "word": "einst",
+      "start": 36.016,
+      "end": 36.236,
+      "score": 0.873
+    },
+    {
+      "word": "durch",
+      "start": 36.276,
+      "end": 36.457,
+      "score": 0.845
+    },
+    {
+      "word": "dieses",
+      "start": 36.497,
+      "end": 36.737,
+      "score": 0.886
+    },
+    {
+      "word": "Stadttor",
+      "start": 36.777,
+      "end": 37.197,
+      "score": 0.791
+    },
+    {
+      "word": "kam.",
+      "start": 37.217,
+      "end": 39.198,
+      "score": 0.767
+    },
+    {
+      "word": "Dieser",
+      "start": 39.218,
+      "end": 39.518,
+      "score": 0.878
+    },
+    {
+      "word": "hier",
+      "start": 39.538,
+      "end": 40.718,
+      "score": 0.749
+    },
+    {
+      "word": "hat",
+      "start": 40.758,
+      "end": 40.899,
+      "score": 0.918
+    },
+    {
+      "word": "sich",
+      "start": 40.939,
+      "end": 41.119,
+      "score": 0.888
+    },
+    {
+      "word": "gewehrt.",
+      "start": 41.139,
+      "end": 43.14,
+      "score": 0.792
+    },
+    {
+      "word": "Ich",
+      "start": 43.18,
+      "end": 43.38,
+      "score": 0.837
+    },
+    {
+      "word": "auch.",
+      "start": 43.42,
+      "end": 43.58,
+      "score": 0.714
+    }
+  ]
+}

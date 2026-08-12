@@ -1,0 +1,303 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 2.386,
+      "text": "Brakka winkt ab.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.441,
+          "end": 0.882,
+          "score": 0.836
+        },
+        {
+          "word": "winkt",
+          "start": 0.922,
+          "end": 1.223,
+          "score": 0.847
+        },
+        {
+          "word": "ab.",
+          "start": 1.243,
+          "end": 2.386,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 2.406,
+      "end": 4.31,
+      "text": "\"Eine Sache nach der anderen.",
+      "words": [
+        {
+          "word": "\"Eine",
+          "start": 2.406,
+          "end": 2.726,
+          "score": 0.789
+        },
+        {
+          "word": "Sache",
+          "start": 2.766,
+          "end": 3.067,
+          "score": 0.955
+        },
+        {
+          "word": "nach",
+          "start": 3.087,
+          "end": 3.248,
+          "score": 0.963
+        },
+        {
+          "word": "der",
+          "start": 3.268,
+          "end": 3.448,
+          "score": 0.912
+        },
+        {
+          "word": "anderen.",
+          "start": 3.488,
+          "end": 4.31,
+          "score": 0.83
+        }
+      ]
+    },
+    {
+      "start": 4.35,
+      "end": 8.219,
+      "text": "Du merkst schon, wann es Zeit ist — vorher kann ich dir auch nicht weiterhelfen.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 4.35,
+          "end": 4.531,
+          "score": 0.966
+        },
+        {
+          "word": "merkst",
+          "start": 4.571,
+          "end": 4.871,
+          "score": 0.878
+        },
+        {
+          "word": "schon,",
+          "start": 4.911,
+          "end": 5.112,
+          "score": 0.799
+        },
+        {
+          "word": "wann",
+          "start": 5.132,
+          "end": 5.292,
+          "score": 0.652
+        },
+        {
+          "word": "es",
+          "start": 5.332,
+          "end": 5.473,
+          "score": 0.86
+        },
+        {
+          "word": "Zeit",
+          "start": 5.513,
+          "end": 5.753,
+          "score": 0.885
+        },
+        {
+          "word": "ist",
+          "start": 5.793,
+          "end": 6.435,
+          "score": 0.982
+        },
+        {
+          "word": "—",
+          "start": 6.455,
+          "end": 6.475,
+          "score": 0.991
+        },
+        {
+          "word": "vorher",
+          "start": 6.515,
+          "end": 6.856,
+          "score": 0.889
+        },
+        {
+          "word": "kann",
+          "start": 6.896,
+          "end": 7.036,
+          "score": 0.916
+        },
+        {
+          "word": "ich",
+          "start": 7.076,
+          "end": 7.177,
+          "score": 0.803
+        },
+        {
+          "word": "dir",
+          "start": 7.217,
+          "end": 7.297,
+          "score": 0.549
+        },
+        {
+          "word": "auch",
+          "start": 7.317,
+          "end": 7.457,
+          "score": 0.869
+        },
+        {
+          "word": "nicht",
+          "start": 7.497,
+          "end": 7.678,
+          "score": 0.855
+        },
+        {
+          "word": "weiterhelfen.\"",
+          "start": 7.698,
+          "end": 8.219,
+          "score": 0.805
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.441,
+      "end": 0.882,
+      "score": 0.836
+    },
+    {
+      "word": "winkt",
+      "start": 0.922,
+      "end": 1.223,
+      "score": 0.847
+    },
+    {
+      "word": "ab.",
+      "start": 1.243,
+      "end": 2.386,
+      "score": 0.945
+    },
+    {
+      "word": "\"Eine",
+      "start": 2.406,
+      "end": 2.726,
+      "score": 0.789
+    },
+    {
+      "word": "Sache",
+      "start": 2.766,
+      "end": 3.067,
+      "score": 0.955
+    },
+    {
+      "word": "nach",
+      "start": 3.087,
+      "end": 3.248,
+      "score": 0.963
+    },
+    {
+      "word": "der",
+      "start": 3.268,
+      "end": 3.448,
+      "score": 0.912
+    },
+    {
+      "word": "anderen.",
+      "start": 3.488,
+      "end": 4.31,
+      "score": 0.83
+    },
+    {
+      "word": "Du",
+      "start": 4.35,
+      "end": 4.531,
+      "score": 0.966
+    },
+    {
+      "word": "merkst",
+      "start": 4.571,
+      "end": 4.871,
+      "score": 0.878
+    },
+    {
+      "word": "schon,",
+      "start": 4.911,
+      "end": 5.112,
+      "score": 0.799
+    },
+    {
+      "word": "wann",
+      "start": 5.132,
+      "end": 5.292,
+      "score": 0.652
+    },
+    {
+      "word": "es",
+      "start": 5.332,
+      "end": 5.473,
+      "score": 0.86
+    },
+    {
+      "word": "Zeit",
+      "start": 5.513,
+      "end": 5.753,
+      "score": 0.885
+    },
+    {
+      "word": "ist",
+      "start": 5.793,
+      "end": 6.435,
+      "score": 0.982
+    },
+    {
+      "word": "—",
+      "start": 6.455,
+      "end": 6.475,
+      "score": 0.991
+    },
+    {
+      "word": "vorher",
+      "start": 6.515,
+      "end": 6.856,
+      "score": 0.889
+    },
+    {
+      "word": "kann",
+      "start": 6.896,
+      "end": 7.036,
+      "score": 0.916
+    },
+    {
+      "word": "ich",
+      "start": 7.076,
+      "end": 7.177,
+      "score": 0.803
+    },
+    {
+      "word": "dir",
+      "start": 7.217,
+      "end": 7.297,
+      "score": 0.549
+    },
+    {
+      "word": "auch",
+      "start": 7.317,
+      "end": 7.457,
+      "score": 0.869
+    },
+    {
+      "word": "nicht",
+      "start": 7.497,
+      "end": 7.678,
+      "score": 0.855
+    },
+    {
+      "word": "weiterhelfen.\"",
+      "start": 7.698,
+      "end": 8.219,
+      "score": 0.805
+    }
+  ]
+}

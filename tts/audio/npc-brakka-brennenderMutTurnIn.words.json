@@ -1,0 +1,635 @@
+{
+  "segments": [
+    {
+      "start": 0.38,
+      "end": 4.663,
+      "text": "Brakka hört mich kommen, bevor ich ihn anspreche.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.38,
+          "end": 0.941,
+          "score": 0.852
+        },
+        {
+          "word": "hört",
+          "start": 1.001,
+          "end": 1.261,
+          "score": 0.951
+        },
+        {
+          "word": "mich",
+          "start": 1.301,
+          "end": 1.521,
+          "score": 0.826
+        },
+        {
+          "word": "kommen,",
+          "start": 1.561,
+          "end": 2.062,
+          "score": 0.986
+        },
+        {
+          "word": "bevor",
+          "start": 2.082,
+          "end": 2.382,
+          "score": 0.884
+        },
+        {
+          "word": "ich",
+          "start": 2.422,
+          "end": 2.542,
+          "score": 0.713
+        },
+        {
+          "word": "ihn",
+          "start": 2.582,
+          "end": 2.802,
+          "score": 0.695
+        },
+        {
+          "word": "anspreche.",
+          "start": 2.842,
+          "end": 4.663,
+          "score": 0.889
+        }
+      ]
+    },
+    {
+      "start": 4.684,
+      "end": 6.805,
+      "text": "\"Drei Schichten.\"",
+      "words": [
+        {
+          "word": "\"Drei",
+          "start": 4.684,
+          "end": 5.124,
+          "score": 0.791
+        },
+        {
+          "word": "Schichten.\"",
+          "start": 5.184,
+          "end": 6.805,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 6.865,
+      "end": 8.506,
+      "text": "Er dreht sich um.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 6.865,
+          "end": 6.965,
+          "score": 0.727
+        },
+        {
+          "word": "dreht",
+          "start": 7.005,
+          "end": 7.265,
+          "score": 0.787
+        },
+        {
+          "word": "sich",
+          "start": 7.285,
+          "end": 7.506,
+          "score": 0.958
+        },
+        {
+          "word": "um.",
+          "start": 7.566,
+          "end": 8.506,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 8.546,
+      "end": 12.209,
+      "text": "Er sieht mich an — anders als sonst.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 8.546,
+          "end": 8.666,
+          "score": 0.8
+        },
+        {
+          "word": "sieht",
+          "start": 8.687,
+          "end": 8.867,
+          "score": 0.835
+        },
+        {
+          "word": "mich",
+          "start": 8.887,
+          "end": 9.087,
+          "score": 0.822
+        },
+        {
+          "word": "an",
+          "start": 9.127,
+          "end": 10.068,
+          "score": 0.904
+        },
+        {
+          "word": "—",
+          "start": 10.088,
+          "end": 10.108,
+          "score": 0.998
+        },
+        {
+          "word": "anders",
+          "start": 10.128,
+          "end": 10.528,
+          "score": 0.938
+        },
+        {
+          "word": "als",
+          "start": 10.568,
+          "end": 10.728,
+          "score": 0.833
+        },
+        {
+          "word": "sonst.",
+          "start": 10.768,
+          "end": 12.209,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 12.229,
+      "end": 14.891,
+      "text": "\"Nicht zwei, nicht halb.",
+      "words": [
+        {
+          "word": "\"Nicht",
+          "start": 12.229,
+          "end": 12.569,
+          "score": 0.852
+        },
+        {
+          "word": "zwei,",
+          "start": 12.609,
+          "end": 13.57,
+          "score": 0.968
+        },
+        {
+          "word": "nicht",
+          "start": 13.59,
+          "end": 13.85,
+          "score": 0.838
+        },
+        {
+          "word": "halb.",
+          "start": 13.89,
+          "end": 14.891,
+          "score": 0.981
+        }
+      ]
+    },
+    {
+      "start": 14.931,
+      "end": 15.952,
+      "text": "Drei.",
+      "words": [
+        {
+          "word": "Drei.",
+          "start": 14.931,
+          "end": 15.952,
+          "score": 0.893
+        }
+      ]
+    },
+    {
+      "start": 16.032,
+      "end": 18.514,
+      "text": "Ohne Ausreden.\"",
+      "words": [
+        {
+          "word": "Ohne",
+          "start": 16.032,
+          "end": 16.452,
+          "score": 0.935
+        },
+        {
+          "word": "Ausreden.\"",
+          "start": 16.512,
+          "end": 18.514,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 18.534,
+      "end": 21.056,
+      "text": "\"Das nennt man Charakter.\"",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 18.534,
+          "end": 18.834,
+          "score": 0.887
+        },
+        {
+          "word": "nennt",
+          "start": 18.874,
+          "end": 19.134,
+          "score": 0.978
+        },
+        {
+          "word": "man",
+          "start": 19.174,
+          "end": 19.375,
+          "score": 0.864
+        },
+        {
+          "word": "Charakter.\"",
+          "start": 19.415,
+          "end": 21.056,
+          "score": 0.883
+        }
+      ]
+    },
+    {
+      "start": 21.096,
+      "end": 23.117,
+      "text": "Er streckt die Hand aus.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 21.096,
+          "end": 21.196,
+          "score": 0.819
+        },
+        {
+          "word": "streckt",
+          "start": 21.236,
+          "end": 21.496,
+          "score": 0.916
+        },
+        {
+          "word": "die",
+          "start": 21.516,
+          "end": 21.616,
+          "score": 0.776
+        },
+        {
+          "word": "Hand",
+          "start": 21.636,
+          "end": 21.836,
+          "score": 0.954
+        },
+        {
+          "word": "aus.",
+          "start": 21.876,
+          "end": 23.117,
+          "score": 0.985
+        }
+      ]
+    },
+    {
+      "start": 23.137,
+      "end": 25.259,
+      "text": "\"Du hast mein Vertrauen.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 23.137,
+          "end": 23.398,
+          "score": 0.747
+        },
+        {
+          "word": "hast",
+          "start": 23.438,
+          "end": 23.698,
+          "score": 0.902
+        },
+        {
+          "word": "mein",
+          "start": 23.738,
+          "end": 23.938,
+          "score": 0.794
+        },
+        {
+          "word": "Vertrauen.",
+          "start": 23.978,
+          "end": 25.259,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 25.299,
+      "end": 26.2,
+      "text": "Das ist nicht nichts.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 25.299,
+          "end": 25.439,
+          "score": 0.992
+        },
+        {
+          "word": "ist",
+          "start": 25.499,
+          "end": 25.659,
+          "score": 0.99
+        },
+        {
+          "word": "nicht",
+          "start": 25.699,
+          "end": 25.919,
+          "score": 0.887
+        },
+        {
+          "word": "nichts.\"",
+          "start": 25.959,
+          "end": 26.2,
+          "score": 0.726
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.38,
+      "end": 0.941,
+      "score": 0.852
+    },
+    {
+      "word": "hört",
+      "start": 1.001,
+      "end": 1.261,
+      "score": 0.951
+    },
+    {
+      "word": "mich",
+      "start": 1.301,
+      "end": 1.521,
+      "score": 0.826
+    },
+    {
+      "word": "kommen,",
+      "start": 1.561,
+      "end": 2.062,
+      "score": 0.986
+    },
+    {
+      "word": "bevor",
+      "start": 2.082,
+      "end": 2.382,
+      "score": 0.884
+    },
+    {
+      "word": "ich",
+      "start": 2.422,
+      "end": 2.542,
+      "score": 0.713
+    },
+    {
+      "word": "ihn",
+      "start": 2.582,
+      "end": 2.802,
+      "score": 0.695
+    },
+    {
+      "word": "anspreche.",
+      "start": 2.842,
+      "end": 4.663,
+      "score": 0.889
+    },
+    {
+      "word": "\"Drei",
+      "start": 4.684,
+      "end": 5.124,
+      "score": 0.791
+    },
+    {
+      "word": "Schichten.\"",
+      "start": 5.184,
+      "end": 6.805,
+      "score": 0.899
+    },
+    {
+      "word": "Er",
+      "start": 6.865,
+      "end": 6.965,
+      "score": 0.727
+    },
+    {
+      "word": "dreht",
+      "start": 7.005,
+      "end": 7.265,
+      "score": 0.787
+    },
+    {
+      "word": "sich",
+      "start": 7.285,
+      "end": 7.506,
+      "score": 0.958
+    },
+    {
+      "word": "um.",
+      "start": 7.566,
+      "end": 8.506,
+      "score": 0.979
+    },
+    {
+      "word": "Er",
+      "start": 8.546,
+      "end": 8.666,
+      "score": 0.8
+    },
+    {
+      "word": "sieht",
+      "start": 8.687,
+      "end": 8.867,
+      "score": 0.835
+    },
+    {
+      "word": "mich",
+      "start": 8.887,
+      "end": 9.087,
+      "score": 0.822
+    },
+    {
+      "word": "an",
+      "start": 9.127,
+      "end": 10.068,
+      "score": 0.904
+    },
+    {
+      "word": "—",
+      "start": 10.088,
+      "end": 10.108,
+      "score": 0.998
+    },
+    {
+      "word": "anders",
+      "start": 10.128,
+      "end": 10.528,
+      "score": 0.938
+    },
+    {
+      "word": "als",
+      "start": 10.568,
+      "end": 10.728,
+      "score": 0.833
+    },
+    {
+      "word": "sonst.",
+      "start": 10.768,
+      "end": 12.209,
+      "score": 0.896
+    },
+    {
+      "word": "\"Nicht",
+      "start": 12.229,
+      "end": 12.569,
+      "score": 0.852
+    },
+    {
+      "word": "zwei,",
+      "start": 12.609,
+      "end": 13.57,
+      "score": 0.968
+    },
+    {
+      "word": "nicht",
+      "start": 13.59,
+      "end": 13.85,
+      "score": 0.838
+    },
+    {
+      "word": "halb.",
+      "start": 13.89,
+      "end": 14.891,
+      "score": 0.981
+    },
+    {
+      "word": "Drei.",
+      "start": 14.931,
+      "end": 15.952,
+      "score": 0.893
+    },
+    {
+      "word": "Ohne",
+      "start": 16.032,
+      "end": 16.452,
+      "score": 0.935
+    },
+    {
+      "word": "Ausreden.\"",
+      "start": 16.512,
+      "end": 18.514,
+      "score": 0.936
+    },
+    {
+      "word": "\"Das",
+      "start": 18.534,
+      "end": 18.834,
+      "score": 0.887
+    },
+    {
+      "word": "nennt",
+      "start": 18.874,
+      "end": 19.134,
+      "score": 0.978
+    },
+    {
+      "word": "man",
+      "start": 19.174,
+      "end": 19.375,
+      "score": 0.864
+    },
+    {
+      "word": "Charakter.\"",
+      "start": 19.415,
+      "end": 21.056,
+      "score": 0.883
+    },
+    {
+      "word": "Er",
+      "start": 21.096,
+      "end": 21.196,
+      "score": 0.819
+    },
+    {
+      "word": "streckt",
+      "start": 21.236,
+      "end": 21.496,
+      "score": 0.916
+    },
+    {
+      "word": "die",
+      "start": 21.516,
+      "end": 21.616,
+      "score": 0.776
+    },
+    {
+      "word": "Hand",
+      "start": 21.636,
+      "end": 21.836,
+      "score": 0.954
+    },
+    {
+      "word": "aus.",
+      "start": 21.876,
+      "end": 23.117,
+      "score": 0.985
+    },
+    {
+      "word": "\"Du",
+      "start": 23.137,
+      "end": 23.398,
+      "score": 0.747
+    },
+    {
+      "word": "hast",
+      "start": 23.438,
+      "end": 23.698,
+      "score": 0.902
+    },
+    {
+      "word": "mein",
+      "start": 23.738,
+      "end": 23.938,
+      "score": 0.794
+    },
+    {
+      "word": "Vertrauen.",
+      "start": 23.978,
+      "end": 25.259,
+      "score": 0.933
+    },
+    {
+      "word": "Das",
+      "start": 25.299,
+      "end": 25.439,
+      "score": 0.992
+    },
+    {
+      "word": "ist",
+      "start": 25.499,
+      "end": 25.659,
+      "score": 0.99
+    },
+    {
+      "word": "nicht",
+      "start": 25.699,
+      "end": 25.919,
+      "score": 0.887
+    },
+    {
+      "word": "nichts.\"",
+      "start": 25.959,
+      "end": 26.2,
+      "score": 0.726
+    }
+  ]
+}

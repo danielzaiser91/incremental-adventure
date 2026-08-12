@@ -1,0 +1,782 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 6.085,
+      "text": "Brakka hebt kaum die Augenbraue — als hätte er die Frage erwartet.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.4,
+          "end": 0.781,
+          "score": 0.84
+        },
+        {
+          "word": "hebt",
+          "start": 0.981,
+          "end": 1.341,
+          "score": 0.952
+        },
+        {
+          "word": "kaum",
+          "start": 1.381,
+          "end": 1.641,
+          "score": 0.859
+        },
+        {
+          "word": "die",
+          "start": 1.681,
+          "end": 1.821,
+          "score": 0.943
+        },
+        {
+          "word": "Augenbraue",
+          "start": 1.861,
+          "end": 2.442,
+          "score": 0.94
+        },
+        {
+          "word": "—",
+          "start": 3.202,
+          "end": 3.282,
+          "score": 0.504
+        },
+        {
+          "word": "als",
+          "start": 3.322,
+          "end": 3.463,
+          "score": 0.806
+        },
+        {
+          "word": "hätte",
+          "start": 3.483,
+          "end": 3.703,
+          "score": 0.859
+        },
+        {
+          "word": "er",
+          "start": 3.743,
+          "end": 3.843,
+          "score": 0.797
+        },
+        {
+          "word": "die",
+          "start": 3.883,
+          "end": 3.963,
+          "score": 0.827
+        },
+        {
+          "word": "Frage",
+          "start": 4.003,
+          "end": 4.343,
+          "score": 0.888
+        },
+        {
+          "word": "erwartet.",
+          "start": 4.383,
+          "end": 6.085,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 6.105,
+      "end": 9.447,
+      "text": "\"Weil Mira klug ist\", sagt er knapp.",
+      "words": [
+        {
+          "word": "\"Weil",
+          "start": 6.105,
+          "end": 6.425,
+          "score": 0.912
+        },
+        {
+          "word": "Mira",
+          "start": 6.445,
+          "end": 6.905,
+          "score": 0.938
+        },
+        {
+          "word": "klug",
+          "start": 6.945,
+          "end": 7.265,
+          "score": 0.926
+        },
+        {
+          "word": "ist\",",
+          "start": 7.325,
+          "end": 7.966,
+          "score": 0.966
+        },
+        {
+          "word": "sagt",
+          "start": 7.986,
+          "end": 8.206,
+          "score": 0.899
+        },
+        {
+          "word": "er",
+          "start": 8.246,
+          "end": 8.326,
+          "score": 0.746
+        },
+        {
+          "word": "knapp.",
+          "start": 8.366,
+          "end": 9.447,
+          "score": 0.992
+        }
+      ]
+    },
+    {
+      "start": 9.467,
+      "end": 13.43,
+      "text": "\"Sie weiß, wen man sieht — und wen man sich merkt.\"",
+      "words": [
+        {
+          "word": "\"Sie",
+          "start": 9.467,
+          "end": 9.707,
+          "score": 0.729
+        },
+        {
+          "word": "weiß,",
+          "start": 9.747,
+          "end": 10.028,
+          "score": 0.928
+        },
+        {
+          "word": "wen",
+          "start": 10.048,
+          "end": 10.208,
+          "score": 0.904
+        },
+        {
+          "word": "man",
+          "start": 10.248,
+          "end": 10.468,
+          "score": 0.955
+        },
+        {
+          "word": "sieht",
+          "start": 10.508,
+          "end": 11.188,
+          "score": 0.875
+        },
+        {
+          "word": "—",
+          "start": 11.208,
+          "end": 11.228,
+          "score": 0.967
+        },
+        {
+          "word": "und",
+          "start": 11.248,
+          "end": 11.429,
+          "score": 0.941
+        },
+        {
+          "word": "wen",
+          "start": 11.449,
+          "end": 11.609,
+          "score": 0.848
+        },
+        {
+          "word": "man",
+          "start": 11.629,
+          "end": 11.769,
+          "score": 0.994
+        },
+        {
+          "word": "sich",
+          "start": 11.809,
+          "end": 12.049,
+          "score": 0.916
+        },
+        {
+          "word": "merkt.\"",
+          "start": 12.089,
+          "end": 13.43,
+          "score": 0.83
+        }
+      ]
+    },
+    {
+      "start": 13.55,
+      "end": 15.432,
+      "text": "\"Ein Fremder fällt auf.",
+      "words": [
+        {
+          "word": "\"Ein",
+          "start": 13.55,
+          "end": 13.75,
+          "score": 0.618
+        },
+        {
+          "word": "Fremder",
+          "start": 13.79,
+          "end": 14.191,
+          "score": 0.881
+        },
+        {
+          "word": "fällt",
+          "start": 14.231,
+          "end": 14.511,
+          "score": 0.508
+        },
+        {
+          "word": "auf.",
+          "start": 14.551,
+          "end": 15.432,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 15.452,
+      "end": 17.393,
+      "text": "Mira merkt man sich.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 15.452,
+          "end": 15.952,
+          "score": 0.937
+        },
+        {
+          "word": "merkt",
+          "start": 15.972,
+          "end": 16.252,
+          "score": 0.901
+        },
+        {
+          "word": "man",
+          "start": 16.292,
+          "end": 16.452,
+          "score": 0.989
+        },
+        {
+          "word": "sich.",
+          "start": 16.492,
+          "end": 17.393,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 17.413,
+      "end": 23.698,
+      "text": "Das ist der Unterschied zwischen einer Botschaft, die ankommt, und einem Problem, das sich von selbst löst.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 17.413,
+          "end": 17.553,
+          "score": 0.926
+        },
+        {
+          "word": "ist",
+          "start": 17.593,
+          "end": 17.713,
+          "score": 0.729
+        },
+        {
+          "word": "der",
+          "start": 17.733,
+          "end": 17.853,
+          "score": 0.94
+        },
+        {
+          "word": "Unterschied",
+          "start": 17.893,
+          "end": 18.354,
+          "score": 0.869
+        },
+        {
+          "word": "zwischen",
+          "start": 18.394,
+          "end": 18.674,
+          "score": 0.84
+        },
+        {
+          "word": "einer",
+          "start": 18.714,
+          "end": 18.934,
+          "score": 0.922
+        },
+        {
+          "word": "Botschaft,",
+          "start": 18.974,
+          "end": 19.395,
+          "score": 0.902
+        },
+        {
+          "word": "die",
+          "start": 19.435,
+          "end": 19.595,
+          "score": 0.796
+        },
+        {
+          "word": "ankommt,",
+          "start": 19.635,
+          "end": 20.515,
+          "score": 0.938
+        },
+        {
+          "word": "und",
+          "start": 20.555,
+          "end": 20.696,
+          "score": 0.964
+        },
+        {
+          "word": "einem",
+          "start": 20.736,
+          "end": 20.936,
+          "score": 0.607
+        },
+        {
+          "word": "Problem,",
+          "start": 20.976,
+          "end": 21.416,
+          "score": 0.865
+        },
+        {
+          "word": "das",
+          "start": 21.436,
+          "end": 21.576,
+          "score": 0.861
+        },
+        {
+          "word": "sich",
+          "start": 21.596,
+          "end": 21.736,
+          "score": 0.923
+        },
+        {
+          "word": "von",
+          "start": 21.776,
+          "end": 21.996,
+          "score": 0.943
+        },
+        {
+          "word": "selbst",
+          "start": 22.017,
+          "end": 22.337,
+          "score": 0.946
+        },
+        {
+          "word": "löst.\"",
+          "start": 22.397,
+          "end": 23.698,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 23.758,
+      "end": 25.639,
+      "text": "Er faltet den Brief.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 23.758,
+          "end": 23.858,
+          "score": 0.918
+        },
+        {
+          "word": "faltet",
+          "start": 23.918,
+          "end": 24.238,
+          "score": 0.828
+        },
+        {
+          "word": "den",
+          "start": 24.278,
+          "end": 24.418,
+          "score": 0.931
+        },
+        {
+          "word": "Brief.",
+          "start": 24.458,
+          "end": 25.639,
+          "score": 0.908
+        }
+      ]
+    },
+    {
+      "start": 25.659,
+      "end": 26.18,
+      "text": "\"Verstanden?\"",
+      "words": [
+        {
+          "word": "\"Verstanden?\"",
+          "start": 25.659,
+          "end": 26.18,
+          "score": 0.861
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.4,
+      "end": 0.781,
+      "score": 0.84
+    },
+    {
+      "word": "hebt",
+      "start": 0.981,
+      "end": 1.341,
+      "score": 0.952
+    },
+    {
+      "word": "kaum",
+      "start": 1.381,
+      "end": 1.641,
+      "score": 0.859
+    },
+    {
+      "word": "die",
+      "start": 1.681,
+      "end": 1.821,
+      "score": 0.943
+    },
+    {
+      "word": "Augenbraue",
+      "start": 1.861,
+      "end": 2.442,
+      "score": 0.94
+    },
+    {
+      "word": "—",
+      "start": 3.202,
+      "end": 3.282,
+      "score": 0.504
+    },
+    {
+      "word": "als",
+      "start": 3.322,
+      "end": 3.463,
+      "score": 0.806
+    },
+    {
+      "word": "hätte",
+      "start": 3.483,
+      "end": 3.703,
+      "score": 0.859
+    },
+    {
+      "word": "er",
+      "start": 3.743,
+      "end": 3.843,
+      "score": 0.797
+    },
+    {
+      "word": "die",
+      "start": 3.883,
+      "end": 3.963,
+      "score": 0.827
+    },
+    {
+      "word": "Frage",
+      "start": 4.003,
+      "end": 4.343,
+      "score": 0.888
+    },
+    {
+      "word": "erwartet.",
+      "start": 4.383,
+      "end": 6.085,
+      "score": 0.952
+    },
+    {
+      "word": "\"Weil",
+      "start": 6.105,
+      "end": 6.425,
+      "score": 0.912
+    },
+    {
+      "word": "Mira",
+      "start": 6.445,
+      "end": 6.905,
+      "score": 0.938
+    },
+    {
+      "word": "klug",
+      "start": 6.945,
+      "end": 7.265,
+      "score": 0.926
+    },
+    {
+      "word": "ist\",",
+      "start": 7.325,
+      "end": 7.966,
+      "score": 0.966
+    },
+    {
+      "word": "sagt",
+      "start": 7.986,
+      "end": 8.206,
+      "score": 0.899
+    },
+    {
+      "word": "er",
+      "start": 8.246,
+      "end": 8.326,
+      "score": 0.746
+    },
+    {
+      "word": "knapp.",
+      "start": 8.366,
+      "end": 9.447,
+      "score": 0.992
+    },
+    {
+      "word": "\"Sie",
+      "start": 9.467,
+      "end": 9.707,
+      "score": 0.729
+    },
+    {
+      "word": "weiß,",
+      "start": 9.747,
+      "end": 10.028,
+      "score": 0.928
+    },
+    {
+      "word": "wen",
+      "start": 10.048,
+      "end": 10.208,
+      "score": 0.904
+    },
+    {
+      "word": "man",
+      "start": 10.248,
+      "end": 10.468,
+      "score": 0.955
+    },
+    {
+      "word": "sieht",
+      "start": 10.508,
+      "end": 11.188,
+      "score": 0.875
+    },
+    {
+      "word": "—",
+      "start": 11.208,
+      "end": 11.228,
+      "score": 0.967
+    },
+    {
+      "word": "und",
+      "start": 11.248,
+      "end": 11.429,
+      "score": 0.941
+    },
+    {
+      "word": "wen",
+      "start": 11.449,
+      "end": 11.609,
+      "score": 0.848
+    },
+    {
+      "word": "man",
+      "start": 11.629,
+      "end": 11.769,
+      "score": 0.994
+    },
+    {
+      "word": "sich",
+      "start": 11.809,
+      "end": 12.049,
+      "score": 0.916
+    },
+    {
+      "word": "merkt.\"",
+      "start": 12.089,
+      "end": 13.43,
+      "score": 0.83
+    },
+    {
+      "word": "\"Ein",
+      "start": 13.55,
+      "end": 13.75,
+      "score": 0.618
+    },
+    {
+      "word": "Fremder",
+      "start": 13.79,
+      "end": 14.191,
+      "score": 0.881
+    },
+    {
+      "word": "fällt",
+      "start": 14.231,
+      "end": 14.511,
+      "score": 0.508
+    },
+    {
+      "word": "auf.",
+      "start": 14.551,
+      "end": 15.432,
+      "score": 0.868
+    },
+    {
+      "word": "Mira",
+      "start": 15.452,
+      "end": 15.952,
+      "score": 0.937
+    },
+    {
+      "word": "merkt",
+      "start": 15.972,
+      "end": 16.252,
+      "score": 0.901
+    },
+    {
+      "word": "man",
+      "start": 16.292,
+      "end": 16.452,
+      "score": 0.989
+    },
+    {
+      "word": "sich.",
+      "start": 16.492,
+      "end": 17.393,
+      "score": 0.823
+    },
+    {
+      "word": "Das",
+      "start": 17.413,
+      "end": 17.553,
+      "score": 0.926
+    },
+    {
+      "word": "ist",
+      "start": 17.593,
+      "end": 17.713,
+      "score": 0.729
+    },
+    {
+      "word": "der",
+      "start": 17.733,
+      "end": 17.853,
+      "score": 0.94
+    },
+    {
+      "word": "Unterschied",
+      "start": 17.893,
+      "end": 18.354,
+      "score": 0.869
+    },
+    {
+      "word": "zwischen",
+      "start": 18.394,
+      "end": 18.674,
+      "score": 0.84
+    },
+    {
+      "word": "einer",
+      "start": 18.714,
+      "end": 18.934,
+      "score": 0.922
+    },
+    {
+      "word": "Botschaft,",
+      "start": 18.974,
+      "end": 19.395,
+      "score": 0.902
+    },
+    {
+      "word": "die",
+      "start": 19.435,
+      "end": 19.595,
+      "score": 0.796
+    },
+    {
+      "word": "ankommt,",
+      "start": 19.635,
+      "end": 20.515,
+      "score": 0.938
+    },
+    {
+      "word": "und",
+      "start": 20.555,
+      "end": 20.696,
+      "score": 0.964
+    },
+    {
+      "word": "einem",
+      "start": 20.736,
+      "end": 20.936,
+      "score": 0.607
+    },
+    {
+      "word": "Problem,",
+      "start": 20.976,
+      "end": 21.416,
+      "score": 0.865
+    },
+    {
+      "word": "das",
+      "start": 21.436,
+      "end": 21.576,
+      "score": 0.861
+    },
+    {
+      "word": "sich",
+      "start": 21.596,
+      "end": 21.736,
+      "score": 0.923
+    },
+    {
+      "word": "von",
+      "start": 21.776,
+      "end": 21.996,
+      "score": 0.943
+    },
+    {
+      "word": "selbst",
+      "start": 22.017,
+      "end": 22.337,
+      "score": 0.946
+    },
+    {
+      "word": "löst.\"",
+      "start": 22.397,
+      "end": 23.698,
+      "score": 0.961
+    },
+    {
+      "word": "Er",
+      "start": 23.758,
+      "end": 23.858,
+      "score": 0.918
+    },
+    {
+      "word": "faltet",
+      "start": 23.918,
+      "end": 24.238,
+      "score": 0.828
+    },
+    {
+      "word": "den",
+      "start": 24.278,
+      "end": 24.418,
+      "score": 0.931
+    },
+    {
+      "word": "Brief.",
+      "start": 24.458,
+      "end": 25.639,
+      "score": 0.908
+    },
+    {
+      "word": "\"Verstanden?\"",
+      "start": 25.659,
+      "end": 26.18,
+      "score": 0.861
+    }
+  ]
+}

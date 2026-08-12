@@ -1,0 +1,1368 @@
+{
+  "segments": [
+    {
+      "start": 0.04,
+      "end": 6.323,
+      "text": "Ich lege die Münze mit dem eingestanzten Kratzer auf den Tisch zwischen uns.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.04,
+          "end": 1.0,
+          "score": 0.285
+        },
+        {
+          "word": "lege",
+          "start": 1.06,
+          "end": 1.321,
+          "score": 0.532
+        },
+        {
+          "word": "die",
+          "start": 1.341,
+          "end": 1.521,
+          "score": 0.932
+        },
+        {
+          "word": "Münze",
+          "start": 1.561,
+          "end": 2.001,
+          "score": 0.832
+        },
+        {
+          "word": "mit",
+          "start": 2.021,
+          "end": 2.141,
+          "score": 0.948
+        },
+        {
+          "word": "dem",
+          "start": 2.181,
+          "end": 2.381,
+          "score": 0.988
+        },
+        {
+          "word": "eingestanzten",
+          "start": 2.421,
+          "end": 3.261,
+          "score": 0.859
+        },
+        {
+          "word": "Kratzer",
+          "start": 3.321,
+          "end": 3.761,
+          "score": 0.735
+        },
+        {
+          "word": "auf",
+          "start": 3.802,
+          "end": 3.942,
+          "score": 0.904
+        },
+        {
+          "word": "den",
+          "start": 3.962,
+          "end": 4.162,
+          "score": 0.944
+        },
+        {
+          "word": "Tisch",
+          "start": 4.222,
+          "end": 4.602,
+          "score": 0.629
+        },
+        {
+          "word": "zwischen",
+          "start": 4.622,
+          "end": 4.962,
+          "score": 0.727
+        },
+        {
+          "word": "uns.",
+          "start": 5.002,
+          "end": 6.323,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 6.343,
+      "end": 9.424,
+      "text": "Der zwielichtige Mann betrachtet sie lange.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 6.343,
+          "end": 6.583,
+          "score": 0.746
+        },
+        {
+          "word": "zwielichtige",
+          "start": 6.603,
+          "end": 7.303,
+          "score": 0.786
+        },
+        {
+          "word": "Mann",
+          "start": 7.343,
+          "end": 7.623,
+          "score": 0.713
+        },
+        {
+          "word": "betrachtet",
+          "start": 7.643,
+          "end": 8.263,
+          "score": 0.897
+        },
+        {
+          "word": "sie",
+          "start": 8.303,
+          "end": 8.443,
+          "score": 0.922
+        },
+        {
+          "word": "lange.",
+          "start": 8.463,
+          "end": 9.424,
+          "score": 0.83
+        }
+      ]
+    },
+    {
+      "start": 9.444,
+      "end": 11.625,
+      "text": "Sein Gesicht verrät nichts.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 9.444,
+          "end": 9.704,
+          "score": 0.587
+        },
+        {
+          "word": "Gesicht",
+          "start": 9.724,
+          "end": 10.044,
+          "score": 0.942
+        },
+        {
+          "word": "verrät",
+          "start": 10.084,
+          "end": 10.484,
+          "score": 0.75
+        },
+        {
+          "word": "nichts.",
+          "start": 10.524,
+          "end": 11.625,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 11.665,
+      "end": 14.386,
+      "text": "Dann: \"Du bist nicht wie die anderen.\"",
+      "words": [
+        {
+          "word": "Dann:",
+          "start": 11.665,
+          "end": 12.925,
+          "score": 0.892
+        },
+        {
+          "word": "\"Du",
+          "start": 12.945,
+          "end": 13.165,
+          "score": 0.799
+        },
+        {
+          "word": "bist",
+          "start": 13.205,
+          "end": 13.465,
+          "score": 0.841
+        },
+        {
+          "word": "nicht",
+          "start": 13.485,
+          "end": 13.705,
+          "score": 0.931
+        },
+        {
+          "word": "wie",
+          "start": 13.745,
+          "end": 13.825,
+          "score": 0.945
+        },
+        {
+          "word": "die",
+          "start": 13.865,
+          "end": 14.006,
+          "score": 0.802
+        },
+        {
+          "word": "anderen.\"",
+          "start": 14.046,
+          "end": 14.386,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 15.746,
+      "end": 18.547,
+      "text": "\"Die anderen haben nach dem Raub aufgehört.",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 15.746,
+          "end": 15.946,
+          "score": 0.848
+        },
+        {
+          "word": "anderen",
+          "start": 15.986,
+          "end": 16.407,
+          "score": 0.861
+        },
+        {
+          "word": "haben",
+          "start": 16.427,
+          "end": 16.727,
+          "score": 0.92
+        },
+        {
+          "word": "nach",
+          "start": 16.767,
+          "end": 16.947,
+          "score": 0.85
+        },
+        {
+          "word": "dem",
+          "start": 16.987,
+          "end": 17.107,
+          "score": 0.974
+        },
+        {
+          "word": "Raub",
+          "start": 17.167,
+          "end": 17.507,
+          "score": 0.935
+        },
+        {
+          "word": "aufgehört.",
+          "start": 17.547,
+          "end": 18.547,
+          "score": 0.904
+        }
+      ]
+    },
+    {
+      "start": 18.567,
+      "end": 21.428,
+      "text": "Haben die Stadt verlassen oder geschwiegen.",
+      "words": [
+        {
+          "word": "Haben",
+          "start": 18.567,
+          "end": 18.787,
+          "score": 0.93
+        },
+        {
+          "word": "die",
+          "start": 18.827,
+          "end": 18.927,
+          "score": 0.93
+        },
+        {
+          "word": "Stadt",
+          "start": 18.968,
+          "end": 19.248,
+          "score": 0.91
+        },
+        {
+          "word": "verlassen",
+          "start": 19.288,
+          "end": 20.068,
+          "score": 0.932
+        },
+        {
+          "word": "oder",
+          "start": 20.108,
+          "end": 20.288,
+          "score": 0.956
+        },
+        {
+          "word": "geschwiegen.",
+          "start": 20.328,
+          "end": 21.428,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 21.469,
+      "end": 23.409,
+      "text": "Du nicht.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 21.469,
+          "end": 21.669,
+          "score": 0.74
+        },
+        {
+          "word": "nicht.\"",
+          "start": 21.709,
+          "end": 23.409,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 23.429,
+      "end": 25.43,
+      "text": "\"Ich habe dich ausgewählt.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 23.429,
+          "end": 23.649,
+          "score": 0.688
+        },
+        {
+          "word": "habe",
+          "start": 23.689,
+          "end": 23.949,
+          "score": 0.883
+        },
+        {
+          "word": "dich",
+          "start": 23.969,
+          "end": 24.23,
+          "score": 0.742
+        },
+        {
+          "word": "ausgewählt.",
+          "start": 24.25,
+          "end": 25.43,
+          "score": 0.844
+        }
+      ]
+    },
+    {
+      "start": 25.45,
+      "end": 29.672,
+      "text": "Nicht nur wegen des Goldes — um zu sehen, was du daraus machst.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 25.45,
+          "end": 25.67,
+          "score": 0.878
+        },
+        {
+          "word": "nur",
+          "start": 25.71,
+          "end": 25.83,
+          "score": 0.943
+        },
+        {
+          "word": "wegen",
+          "start": 25.87,
+          "end": 26.07,
+          "score": 0.862
+        },
+        {
+          "word": "des",
+          "start": 26.11,
+          "end": 26.27,
+          "score": 0.889
+        },
+        {
+          "word": "Goldes",
+          "start": 26.31,
+          "end": 27.131,
+          "score": 0.965
+        },
+        {
+          "word": "—",
+          "start": 27.151,
+          "end": 27.171,
+          "score": 0.908
+        },
+        {
+          "word": "um",
+          "start": 27.191,
+          "end": 27.371,
+          "score": 0.776
+        },
+        {
+          "word": "zu",
+          "start": 27.411,
+          "end": 27.551,
+          "score": 0.835
+        },
+        {
+          "word": "sehen,",
+          "start": 27.591,
+          "end": 27.851,
+          "score": 0.775
+        },
+        {
+          "word": "was",
+          "start": 27.871,
+          "end": 27.991,
+          "score": 0.961
+        },
+        {
+          "word": "du",
+          "start": 28.011,
+          "end": 28.131,
+          "score": 0.873
+        },
+        {
+          "word": "daraus",
+          "start": 28.151,
+          "end": 28.491,
+          "score": 0.893
+        },
+        {
+          "word": "machst.",
+          "start": 28.531,
+          "end": 29.672,
+          "score": 0.799
+        }
+      ]
+    },
+    {
+      "start": 29.692,
+      "end": 31.573,
+      "text": "Du hast Stärke gezeigt.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 29.692,
+          "end": 29.812,
+          "score": 0.785
+        },
+        {
+          "word": "hast",
+          "start": 29.832,
+          "end": 30.172,
+          "score": 0.794
+        },
+        {
+          "word": "Stärke",
+          "start": 30.212,
+          "end": 30.572,
+          "score": 0.955
+        },
+        {
+          "word": "gezeigt.",
+          "start": 30.612,
+          "end": 31.573,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 31.613,
+      "end": 32.853,
+      "text": "Im Jagdgebiet.",
+      "words": [
+        {
+          "word": "Im",
+          "start": 31.613,
+          "end": 31.793,
+          "score": 0.94
+        },
+        {
+          "word": "Jagdgebiet.",
+          "start": 31.833,
+          "end": 32.853,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 32.873,
+      "end": 34.234,
+      "text": "Im Gespräch.",
+      "words": [
+        {
+          "word": "Im",
+          "start": 32.873,
+          "end": 33.033,
+          "score": 0.868
+        },
+        {
+          "word": "Gespräch.",
+          "start": 33.053,
+          "end": 34.234,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 34.254,
+      "end": 36.995,
+      "text": "Sogar hier, jetzt.\"",
+      "words": [
+        {
+          "word": "Sogar",
+          "start": 34.254,
+          "end": 34.574,
+          "score": 0.934
+        },
+        {
+          "word": "hier,",
+          "start": 34.614,
+          "end": 35.194,
+          "score": 0.874
+        },
+        {
+          "word": "jetzt.\"",
+          "start": 35.214,
+          "end": 36.995,
+          "score": 0.846
+        }
+      ]
+    },
+    {
+      "start": 37.015,
+      "end": 40.176,
+      "text": "\"Der Schatten will wissen, wer du bist.",
+      "words": [
+        {
+          "word": "\"Der",
+          "start": 37.015,
+          "end": 37.255,
+          "score": 0.869
+        },
+        {
+          "word": "Schatten",
+          "start": 37.295,
+          "end": 37.775,
+          "score": 0.792
+        },
+        {
+          "word": "will",
+          "start": 37.795,
+          "end": 38.075,
+          "score": 0.878
+        },
+        {
+          "word": "wissen,",
+          "start": 38.115,
+          "end": 38.475,
+          "score": 0.867
+        },
+        {
+          "word": "wer",
+          "start": 38.495,
+          "end": 38.615,
+          "score": 0.893
+        },
+        {
+          "word": "du",
+          "start": 38.655,
+          "end": 38.875,
+          "score": 0.647
+        },
+        {
+          "word": "bist.",
+          "start": 38.915,
+          "end": 40.176,
+          "score": 0.774
+        }
+      ]
+    },
+    {
+      "start": 40.216,
+      "end": 44.518,
+      "text": "Ich werde ihm sagen, dass du jemand bist, mit dem man rechnet.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 40.216,
+          "end": 40.336,
+          "score": 0.726
+        },
+        {
+          "word": "werde",
+          "start": 40.376,
+          "end": 40.616,
+          "score": 0.843
+        },
+        {
+          "word": "ihm",
+          "start": 40.656,
+          "end": 40.836,
+          "score": 0.756
+        },
+        {
+          "word": "sagen,",
+          "start": 40.856,
+          "end": 41.136,
+          "score": 0.891
+        },
+        {
+          "word": "dass",
+          "start": 41.156,
+          "end": 41.296,
+          "score": 0.781
+        },
+        {
+          "word": "du",
+          "start": 41.316,
+          "end": 41.456,
+          "score": 0.84
+        },
+        {
+          "word": "jemand",
+          "start": 41.476,
+          "end": 41.797,
+          "score": 0.823
+        },
+        {
+          "word": "bist,",
+          "start": 41.837,
+          "end": 42.077,
+          "score": 0.819
+        },
+        {
+          "word": "mit",
+          "start": 42.097,
+          "end": 42.217,
+          "score": 0.863
+        },
+        {
+          "word": "dem",
+          "start": 42.237,
+          "end": 42.357,
+          "score": 0.704
+        },
+        {
+          "word": "man",
+          "start": 42.377,
+          "end": 42.597,
+          "score": 0.928
+        },
+        {
+          "word": "rechnet.\"",
+          "start": 42.637,
+          "end": 44.518,
+          "score": 0.905
+        }
+      ]
+    },
+    {
+      "start": 44.578,
+      "end": 47.379,
+      "text": "Er schiebt die Münze zu mir zurück.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 44.578,
+          "end": 44.738,
+          "score": 0.63
+        },
+        {
+          "word": "schiebt",
+          "start": 44.778,
+          "end": 45.058,
+          "score": 0.825
+        },
+        {
+          "word": "die",
+          "start": 45.078,
+          "end": 45.198,
+          "score": 0.901
+        },
+        {
+          "word": "Münze",
+          "start": 45.218,
+          "end": 45.598,
+          "score": 0.864
+        },
+        {
+          "word": "zu",
+          "start": 45.638,
+          "end": 45.738,
+          "score": 0.968
+        },
+        {
+          "word": "mir",
+          "start": 45.778,
+          "end": 45.918,
+          "score": 0.958
+        },
+        {
+          "word": "zurück.",
+          "start": 45.958,
+          "end": 47.379,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 47.399,
+      "end": 49.059,
+      "text": "\"Behalte sie.",
+      "words": [
+        {
+          "word": "\"Behalte",
+          "start": 47.399,
+          "end": 47.939,
+          "score": 0.762
+        },
+        {
+          "word": "sie.",
+          "start": 47.979,
+          "end": 49.059,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 49.099,
+      "end": 49.88,
+      "text": "Als Erinnerung.\"",
+      "words": [
+        {
+          "word": "Als",
+          "start": 49.099,
+          "end": 49.28,
+          "score": 0.919
+        },
+        {
+          "word": "Erinnerung.\"",
+          "start": 49.32,
+          "end": 49.88,
+          "score": 0.574
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.04,
+      "end": 1.0,
+      "score": 0.285
+    },
+    {
+      "word": "lege",
+      "start": 1.06,
+      "end": 1.321,
+      "score": 0.532
+    },
+    {
+      "word": "die",
+      "start": 1.341,
+      "end": 1.521,
+      "score": 0.932
+    },
+    {
+      "word": "Münze",
+      "start": 1.561,
+      "end": 2.001,
+      "score": 0.832
+    },
+    {
+      "word": "mit",
+      "start": 2.021,
+      "end": 2.141,
+      "score": 0.948
+    },
+    {
+      "word": "dem",
+      "start": 2.181,
+      "end": 2.381,
+      "score": 0.988
+    },
+    {
+      "word": "eingestanzten",
+      "start": 2.421,
+      "end": 3.261,
+      "score": 0.859
+    },
+    {
+      "word": "Kratzer",
+      "start": 3.321,
+      "end": 3.761,
+      "score": 0.735
+    },
+    {
+      "word": "auf",
+      "start": 3.802,
+      "end": 3.942,
+      "score": 0.904
+    },
+    {
+      "word": "den",
+      "start": 3.962,
+      "end": 4.162,
+      "score": 0.944
+    },
+    {
+      "word": "Tisch",
+      "start": 4.222,
+      "end": 4.602,
+      "score": 0.629
+    },
+    {
+      "word": "zwischen",
+      "start": 4.622,
+      "end": 4.962,
+      "score": 0.727
+    },
+    {
+      "word": "uns.",
+      "start": 5.002,
+      "end": 6.323,
+      "score": 0.948
+    },
+    {
+      "word": "Der",
+      "start": 6.343,
+      "end": 6.583,
+      "score": 0.746
+    },
+    {
+      "word": "zwielichtige",
+      "start": 6.603,
+      "end": 7.303,
+      "score": 0.786
+    },
+    {
+      "word": "Mann",
+      "start": 7.343,
+      "end": 7.623,
+      "score": 0.713
+    },
+    {
+      "word": "betrachtet",
+      "start": 7.643,
+      "end": 8.263,
+      "score": 0.897
+    },
+    {
+      "word": "sie",
+      "start": 8.303,
+      "end": 8.443,
+      "score": 0.922
+    },
+    {
+      "word": "lange.",
+      "start": 8.463,
+      "end": 9.424,
+      "score": 0.83
+    },
+    {
+      "word": "Sein",
+      "start": 9.444,
+      "end": 9.704,
+      "score": 0.587
+    },
+    {
+      "word": "Gesicht",
+      "start": 9.724,
+      "end": 10.044,
+      "score": 0.942
+    },
+    {
+      "word": "verrät",
+      "start": 10.084,
+      "end": 10.484,
+      "score": 0.75
+    },
+    {
+      "word": "nichts.",
+      "start": 10.524,
+      "end": 11.625,
+      "score": 0.877
+    },
+    {
+      "word": "Dann:",
+      "start": 11.665,
+      "end": 12.925,
+      "score": 0.892
+    },
+    {
+      "word": "\"Du",
+      "start": 12.945,
+      "end": 13.165,
+      "score": 0.799
+    },
+    {
+      "word": "bist",
+      "start": 13.205,
+      "end": 13.465,
+      "score": 0.841
+    },
+    {
+      "word": "nicht",
+      "start": 13.485,
+      "end": 13.705,
+      "score": 0.931
+    },
+    {
+      "word": "wie",
+      "start": 13.745,
+      "end": 13.825,
+      "score": 0.945
+    },
+    {
+      "word": "die",
+      "start": 13.865,
+      "end": 14.006,
+      "score": 0.802
+    },
+    {
+      "word": "anderen.\"",
+      "start": 14.046,
+      "end": 14.386,
+      "score": 0.85
+    },
+    {
+      "word": "\"Die",
+      "start": 15.746,
+      "end": 15.946,
+      "score": 0.848
+    },
+    {
+      "word": "anderen",
+      "start": 15.986,
+      "end": 16.407,
+      "score": 0.861
+    },
+    {
+      "word": "haben",
+      "start": 16.427,
+      "end": 16.727,
+      "score": 0.92
+    },
+    {
+      "word": "nach",
+      "start": 16.767,
+      "end": 16.947,
+      "score": 0.85
+    },
+    {
+      "word": "dem",
+      "start": 16.987,
+      "end": 17.107,
+      "score": 0.974
+    },
+    {
+      "word": "Raub",
+      "start": 17.167,
+      "end": 17.507,
+      "score": 0.935
+    },
+    {
+      "word": "aufgehört.",
+      "start": 17.547,
+      "end": 18.547,
+      "score": 0.904
+    },
+    {
+      "word": "Haben",
+      "start": 18.567,
+      "end": 18.787,
+      "score": 0.93
+    },
+    {
+      "word": "die",
+      "start": 18.827,
+      "end": 18.927,
+      "score": 0.93
+    },
+    {
+      "word": "Stadt",
+      "start": 18.968,
+      "end": 19.248,
+      "score": 0.91
+    },
+    {
+      "word": "verlassen",
+      "start": 19.288,
+      "end": 20.068,
+      "score": 0.932
+    },
+    {
+      "word": "oder",
+      "start": 20.108,
+      "end": 20.288,
+      "score": 0.956
+    },
+    {
+      "word": "geschwiegen.",
+      "start": 20.328,
+      "end": 21.428,
+      "score": 0.898
+    },
+    {
+      "word": "Du",
+      "start": 21.469,
+      "end": 21.669,
+      "score": 0.74
+    },
+    {
+      "word": "nicht.\"",
+      "start": 21.709,
+      "end": 23.409,
+      "score": 0.84
+    },
+    {
+      "word": "\"Ich",
+      "start": 23.429,
+      "end": 23.649,
+      "score": 0.688
+    },
+    {
+      "word": "habe",
+      "start": 23.689,
+      "end": 23.949,
+      "score": 0.883
+    },
+    {
+      "word": "dich",
+      "start": 23.969,
+      "end": 24.23,
+      "score": 0.742
+    },
+    {
+      "word": "ausgewählt.",
+      "start": 24.25,
+      "end": 25.43,
+      "score": 0.844
+    },
+    {
+      "word": "Nicht",
+      "start": 25.45,
+      "end": 25.67,
+      "score": 0.878
+    },
+    {
+      "word": "nur",
+      "start": 25.71,
+      "end": 25.83,
+      "score": 0.943
+    },
+    {
+      "word": "wegen",
+      "start": 25.87,
+      "end": 26.07,
+      "score": 0.862
+    },
+    {
+      "word": "des",
+      "start": 26.11,
+      "end": 26.27,
+      "score": 0.889
+    },
+    {
+      "word": "Goldes",
+      "start": 26.31,
+      "end": 27.131,
+      "score": 0.965
+    },
+    {
+      "word": "—",
+      "start": 27.151,
+      "end": 27.171,
+      "score": 0.908
+    },
+    {
+      "word": "um",
+      "start": 27.191,
+      "end": 27.371,
+      "score": 0.776
+    },
+    {
+      "word": "zu",
+      "start": 27.411,
+      "end": 27.551,
+      "score": 0.835
+    },
+    {
+      "word": "sehen,",
+      "start": 27.591,
+      "end": 27.851,
+      "score": 0.775
+    },
+    {
+      "word": "was",
+      "start": 27.871,
+      "end": 27.991,
+      "score": 0.961
+    },
+    {
+      "word": "du",
+      "start": 28.011,
+      "end": 28.131,
+      "score": 0.873
+    },
+    {
+      "word": "daraus",
+      "start": 28.151,
+      "end": 28.491,
+      "score": 0.893
+    },
+    {
+      "word": "machst.",
+      "start": 28.531,
+      "end": 29.672,
+      "score": 0.799
+    },
+    {
+      "word": "Du",
+      "start": 29.692,
+      "end": 29.812,
+      "score": 0.785
+    },
+    {
+      "word": "hast",
+      "start": 29.832,
+      "end": 30.172,
+      "score": 0.794
+    },
+    {
+      "word": "Stärke",
+      "start": 30.212,
+      "end": 30.572,
+      "score": 0.955
+    },
+    {
+      "word": "gezeigt.",
+      "start": 30.612,
+      "end": 31.573,
+      "score": 0.912
+    },
+    {
+      "word": "Im",
+      "start": 31.613,
+      "end": 31.793,
+      "score": 0.94
+    },
+    {
+      "word": "Jagdgebiet.",
+      "start": 31.833,
+      "end": 32.853,
+      "score": 0.91
+    },
+    {
+      "word": "Im",
+      "start": 32.873,
+      "end": 33.033,
+      "score": 0.868
+    },
+    {
+      "word": "Gespräch.",
+      "start": 33.053,
+      "end": 34.234,
+      "score": 0.951
+    },
+    {
+      "word": "Sogar",
+      "start": 34.254,
+      "end": 34.574,
+      "score": 0.934
+    },
+    {
+      "word": "hier,",
+      "start": 34.614,
+      "end": 35.194,
+      "score": 0.874
+    },
+    {
+      "word": "jetzt.\"",
+      "start": 35.214,
+      "end": 36.995,
+      "score": 0.846
+    },
+    {
+      "word": "\"Der",
+      "start": 37.015,
+      "end": 37.255,
+      "score": 0.869
+    },
+    {
+      "word": "Schatten",
+      "start": 37.295,
+      "end": 37.775,
+      "score": 0.792
+    },
+    {
+      "word": "will",
+      "start": 37.795,
+      "end": 38.075,
+      "score": 0.878
+    },
+    {
+      "word": "wissen,",
+      "start": 38.115,
+      "end": 38.475,
+      "score": 0.867
+    },
+    {
+      "word": "wer",
+      "start": 38.495,
+      "end": 38.615,
+      "score": 0.893
+    },
+    {
+      "word": "du",
+      "start": 38.655,
+      "end": 38.875,
+      "score": 0.647
+    },
+    {
+      "word": "bist.",
+      "start": 38.915,
+      "end": 40.176,
+      "score": 0.774
+    },
+    {
+      "word": "Ich",
+      "start": 40.216,
+      "end": 40.336,
+      "score": 0.726
+    },
+    {
+      "word": "werde",
+      "start": 40.376,
+      "end": 40.616,
+      "score": 0.843
+    },
+    {
+      "word": "ihm",
+      "start": 40.656,
+      "end": 40.836,
+      "score": 0.756
+    },
+    {
+      "word": "sagen,",
+      "start": 40.856,
+      "end": 41.136,
+      "score": 0.891
+    },
+    {
+      "word": "dass",
+      "start": 41.156,
+      "end": 41.296,
+      "score": 0.781
+    },
+    {
+      "word": "du",
+      "start": 41.316,
+      "end": 41.456,
+      "score": 0.84
+    },
+    {
+      "word": "jemand",
+      "start": 41.476,
+      "end": 41.797,
+      "score": 0.823
+    },
+    {
+      "word": "bist,",
+      "start": 41.837,
+      "end": 42.077,
+      "score": 0.819
+    },
+    {
+      "word": "mit",
+      "start": 42.097,
+      "end": 42.217,
+      "score": 0.863
+    },
+    {
+      "word": "dem",
+      "start": 42.237,
+      "end": 42.357,
+      "score": 0.704
+    },
+    {
+      "word": "man",
+      "start": 42.377,
+      "end": 42.597,
+      "score": 0.928
+    },
+    {
+      "word": "rechnet.\"",
+      "start": 42.637,
+      "end": 44.518,
+      "score": 0.905
+    },
+    {
+      "word": "Er",
+      "start": 44.578,
+      "end": 44.738,
+      "score": 0.63
+    },
+    {
+      "word": "schiebt",
+      "start": 44.778,
+      "end": 45.058,
+      "score": 0.825
+    },
+    {
+      "word": "die",
+      "start": 45.078,
+      "end": 45.198,
+      "score": 0.901
+    },
+    {
+      "word": "Münze",
+      "start": 45.218,
+      "end": 45.598,
+      "score": 0.864
+    },
+    {
+      "word": "zu",
+      "start": 45.638,
+      "end": 45.738,
+      "score": 0.968
+    },
+    {
+      "word": "mir",
+      "start": 45.778,
+      "end": 45.918,
+      "score": 0.958
+    },
+    {
+      "word": "zurück.",
+      "start": 45.958,
+      "end": 47.379,
+      "score": 0.935
+    },
+    {
+      "word": "\"Behalte",
+      "start": 47.399,
+      "end": 47.939,
+      "score": 0.762
+    },
+    {
+      "word": "sie.",
+      "start": 47.979,
+      "end": 49.059,
+      "score": 0.887
+    },
+    {
+      "word": "Als",
+      "start": 49.099,
+      "end": 49.28,
+      "score": 0.919
+    },
+    {
+      "word": "Erinnerung.\"",
+      "start": 49.32,
+      "end": 49.88,
+      "score": 0.574
+    }
+  ]
+}

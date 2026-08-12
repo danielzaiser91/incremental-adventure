@@ -1,0 +1,1007 @@
+{
+  "segments": [
+    {
+      "start": 0.52,
+      "end": 4.763,
+      "text": "Der Vorarbeiter winkt mich zu seinem Tisch und stellt sein Bier ab.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.52,
+          "end": 0.64,
+          "score": 0.386
+        },
+        {
+          "word": "Vorarbeiter",
+          "start": 0.68,
+          "end": 1.381,
+          "score": 0.624
+        },
+        {
+          "word": "winkt",
+          "start": 1.421,
+          "end": 1.661,
+          "score": 0.817
+        },
+        {
+          "word": "mich",
+          "start": 1.681,
+          "end": 1.881,
+          "score": 0.914
+        },
+        {
+          "word": "zu",
+          "start": 1.901,
+          "end": 2.041,
+          "score": 0.917
+        },
+        {
+          "word": "seinem",
+          "start": 2.061,
+          "end": 2.401,
+          "score": 0.959
+        },
+        {
+          "word": "Tisch",
+          "start": 2.441,
+          "end": 2.722,
+          "score": 0.802
+        },
+        {
+          "word": "und",
+          "start": 2.762,
+          "end": 2.922,
+          "score": 0.878
+        },
+        {
+          "word": "stellt",
+          "start": 2.962,
+          "end": 3.242,
+          "score": 0.876
+        },
+        {
+          "word": "sein",
+          "start": 3.282,
+          "end": 3.482,
+          "score": 0.796
+        },
+        {
+          "word": "Bier",
+          "start": 3.522,
+          "end": 3.762,
+          "score": 0.838
+        },
+        {
+          "word": "ab.",
+          "start": 3.782,
+          "end": 4.763,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 4.783,
+      "end": 6.364,
+      "text": "\"Da bist du ja.",
+      "words": [
+        {
+          "word": "\"Da",
+          "start": 4.783,
+          "end": 4.983,
+          "score": 0.73
+        },
+        {
+          "word": "bist",
+          "start": 5.003,
+          "end": 5.163,
+          "score": 0.831
+        },
+        {
+          "word": "du",
+          "start": 5.203,
+          "end": 5.323,
+          "score": 0.665
+        },
+        {
+          "word": "ja.",
+          "start": 5.363,
+          "end": 6.364,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 6.404,
+      "end": 7.945,
+      "text": "Setz dich.\"",
+      "words": [
+        {
+          "word": "Setz",
+          "start": 6.404,
+          "end": 6.664,
+          "score": 0.908
+        },
+        {
+          "word": "dich.\"",
+          "start": 6.684,
+          "end": 7.945,
+          "score": 0.809
+        }
+      ]
+    },
+    {
+      "start": 7.985,
+      "end": 10.106,
+      "text": "Er hebt sein Glas.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 7.985,
+          "end": 8.105,
+          "score": 0.626
+        },
+        {
+          "word": "hebt",
+          "start": 8.165,
+          "end": 8.425,
+          "score": 0.73
+        },
+        {
+          "word": "sein",
+          "start": 8.445,
+          "end": 8.625,
+          "score": 0.746
+        },
+        {
+          "word": "Glas.",
+          "start": 8.665,
+          "end": 10.106,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 10.126,
+      "end": 13.548,
+      "text": "\"Du schuftest ordentlich, ohne zu meckern.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 10.126,
+          "end": 10.306,
+          "score": 0.757
+        },
+        {
+          "word": "schuftest",
+          "start": 10.346,
+          "end": 10.946,
+          "score": 0.841
+        },
+        {
+          "word": "ordentlich,",
+          "start": 10.986,
+          "end": 11.927,
+          "score": 0.9
+        },
+        {
+          "word": "ohne",
+          "start": 11.967,
+          "end": 12.267,
+          "score": 0.836
+        },
+        {
+          "word": "zu",
+          "start": 12.287,
+          "end": 12.427,
+          "score": 0.99
+        },
+        {
+          "word": "meckern.",
+          "start": 12.487,
+          "end": 13.548,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 13.588,
+      "end": 15.749,
+      "text": "Das sieht man nicht oft.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 13.588,
+          "end": 13.768,
+          "score": 0.879
+        },
+        {
+          "word": "sieht",
+          "start": 13.808,
+          "end": 13.988,
+          "score": 0.801
+        },
+        {
+          "word": "man",
+          "start": 14.028,
+          "end": 14.168,
+          "score": 0.909
+        },
+        {
+          "word": "nicht",
+          "start": 14.188,
+          "end": 14.368,
+          "score": 0.814
+        },
+        {
+          "word": "oft.\"",
+          "start": 14.428,
+          "end": 15.749,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 15.769,
+      "end": 22.193,
+      "text": "\"Die meisten hier jammern beim ersten Sonnenbrand oder schleichen sich davon, sobald keiner hinsieht.",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 15.769,
+          "end": 15.949,
+          "score": 0.924
+        },
+        {
+          "word": "meisten",
+          "start": 15.989,
+          "end": 16.369,
+          "score": 0.907
+        },
+        {
+          "word": "hier",
+          "start": 16.409,
+          "end": 16.69,
+          "score": 0.941
+        },
+        {
+          "word": "jammern",
+          "start": 16.71,
+          "end": 17.03,
+          "score": 0.881
+        },
+        {
+          "word": "beim",
+          "start": 17.07,
+          "end": 17.33,
+          "score": 0.918
+        },
+        {
+          "word": "ersten",
+          "start": 17.39,
+          "end": 17.75,
+          "score": 0.898
+        },
+        {
+          "word": "Sonnenbrand",
+          "start": 17.79,
+          "end": 18.871,
+          "score": 0.873
+        },
+        {
+          "word": "oder",
+          "start": 18.911,
+          "end": 19.151,
+          "score": 0.893
+        },
+        {
+          "word": "schleichen",
+          "start": 19.191,
+          "end": 19.571,
+          "score": 0.885
+        },
+        {
+          "word": "sich",
+          "start": 19.611,
+          "end": 19.751,
+          "score": 0.965
+        },
+        {
+          "word": "davon,",
+          "start": 19.771,
+          "end": 20.172,
+          "score": 0.854
+        },
+        {
+          "word": "sobald",
+          "start": 20.192,
+          "end": 20.572,
+          "score": 0.784
+        },
+        {
+          "word": "keiner",
+          "start": 20.592,
+          "end": 20.872,
+          "score": 0.922
+        },
+        {
+          "word": "hinsieht.",
+          "start": 20.892,
+          "end": 22.193,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 22.233,
+      "end": 23.754,
+      "text": "Du nicht.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 22.233,
+          "end": 22.433,
+          "score": 0.972
+        },
+        {
+          "word": "nicht.",
+          "start": 22.473,
+          "end": 23.754,
+          "score": 0.893
+        }
+      ]
+    },
+    {
+      "start": 23.774,
+      "end": 29.617,
+      "text": "Verlässliche Leute sind selten — und die bezahle ich auch dafür, dass sie bleiben.\"",
+      "words": [
+        {
+          "word": "Verlässliche",
+          "start": 23.774,
+          "end": 24.374,
+          "score": 0.917
+        },
+        {
+          "word": "Leute",
+          "start": 24.394,
+          "end": 24.694,
+          "score": 0.92
+        },
+        {
+          "word": "sind",
+          "start": 24.714,
+          "end": 24.934,
+          "score": 0.967
+        },
+        {
+          "word": "selten",
+          "start": 24.974,
+          "end": 25.274,
+          "score": 0.989
+        },
+        {
+          "word": "—",
+          "start": 25.995,
+          "end": 26.015,
+          "score": 0.968
+        },
+        {
+          "word": "und",
+          "start": 26.035,
+          "end": 26.215,
+          "score": 0.926
+        },
+        {
+          "word": "die",
+          "start": 26.255,
+          "end": 26.395,
+          "score": 0.922
+        },
+        {
+          "word": "bezahle",
+          "start": 26.435,
+          "end": 26.815,
+          "score": 0.849
+        },
+        {
+          "word": "ich",
+          "start": 26.835,
+          "end": 26.975,
+          "score": 0.887
+        },
+        {
+          "word": "auch",
+          "start": 26.995,
+          "end": 27.155,
+          "score": 0.923
+        },
+        {
+          "word": "dafür,",
+          "start": 27.196,
+          "end": 27.836,
+          "score": 0.955
+        },
+        {
+          "word": "dass",
+          "start": 27.856,
+          "end": 27.996,
+          "score": 0.981
+        },
+        {
+          "word": "sie",
+          "start": 28.036,
+          "end": 28.156,
+          "score": 0.906
+        },
+        {
+          "word": "bleiben.\"",
+          "start": 28.196,
+          "end": 29.617,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 29.657,
+      "end": 31.618,
+      "text": "Er grinst kurz.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 29.657,
+          "end": 29.797,
+          "score": 0.864
+        },
+        {
+          "word": "grinst",
+          "start": 29.837,
+          "end": 30.217,
+          "score": 0.81
+        },
+        {
+          "word": "kurz.",
+          "start": 30.257,
+          "end": 31.618,
+          "score": 0.927
+        }
+      ]
+    },
+    {
+      "start": 31.658,
+      "end": 35.02,
+      "text": "\"Ab jetzt gibt's ein, zwei Groschen mehr pro Stunde für dich.\"",
+      "words": [
+        {
+          "word": "\"Ab",
+          "start": 31.658,
+          "end": 31.898,
+          "score": 0.889
+        },
+        {
+          "word": "jetzt",
+          "start": 31.938,
+          "end": 32.178,
+          "score": 0.87
+        },
+        {
+          "word": "gibt's",
+          "start": 32.218,
+          "end": 32.559,
+          "score": 0.746
+        },
+        {
+          "word": "ein,",
+          "start": 32.599,
+          "end": 32.819,
+          "score": 0.83
+        },
+        {
+          "word": "zwei",
+          "start": 32.839,
+          "end": 33.119,
+          "score": 0.889
+        },
+        {
+          "word": "Groschen",
+          "start": 33.139,
+          "end": 33.519,
+          "score": 0.868
+        },
+        {
+          "word": "mehr",
+          "start": 33.559,
+          "end": 33.759,
+          "score": 0.926
+        },
+        {
+          "word": "pro",
+          "start": 33.799,
+          "end": 33.979,
+          "score": 0.963
+        },
+        {
+          "word": "Stunde",
+          "start": 34.019,
+          "end": 34.36,
+          "score": 0.951
+        },
+        {
+          "word": "für",
+          "start": 34.4,
+          "end": 34.5,
+          "score": 0.936
+        },
+        {
+          "word": "dich.\"",
+          "start": 34.52,
+          "end": 35.02,
+          "score": 0.71
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.52,
+      "end": 0.64,
+      "score": 0.386
+    },
+    {
+      "word": "Vorarbeiter",
+      "start": 0.68,
+      "end": 1.381,
+      "score": 0.624
+    },
+    {
+      "word": "winkt",
+      "start": 1.421,
+      "end": 1.661,
+      "score": 0.817
+    },
+    {
+      "word": "mich",
+      "start": 1.681,
+      "end": 1.881,
+      "score": 0.914
+    },
+    {
+      "word": "zu",
+      "start": 1.901,
+      "end": 2.041,
+      "score": 0.917
+    },
+    {
+      "word": "seinem",
+      "start": 2.061,
+      "end": 2.401,
+      "score": 0.959
+    },
+    {
+      "word": "Tisch",
+      "start": 2.441,
+      "end": 2.722,
+      "score": 0.802
+    },
+    {
+      "word": "und",
+      "start": 2.762,
+      "end": 2.922,
+      "score": 0.878
+    },
+    {
+      "word": "stellt",
+      "start": 2.962,
+      "end": 3.242,
+      "score": 0.876
+    },
+    {
+      "word": "sein",
+      "start": 3.282,
+      "end": 3.482,
+      "score": 0.796
+    },
+    {
+      "word": "Bier",
+      "start": 3.522,
+      "end": 3.762,
+      "score": 0.838
+    },
+    {
+      "word": "ab.",
+      "start": 3.782,
+      "end": 4.763,
+      "score": 0.945
+    },
+    {
+      "word": "\"Da",
+      "start": 4.783,
+      "end": 4.983,
+      "score": 0.73
+    },
+    {
+      "word": "bist",
+      "start": 5.003,
+      "end": 5.163,
+      "score": 0.831
+    },
+    {
+      "word": "du",
+      "start": 5.203,
+      "end": 5.323,
+      "score": 0.665
+    },
+    {
+      "word": "ja.",
+      "start": 5.363,
+      "end": 6.364,
+      "score": 0.858
+    },
+    {
+      "word": "Setz",
+      "start": 6.404,
+      "end": 6.664,
+      "score": 0.908
+    },
+    {
+      "word": "dich.\"",
+      "start": 6.684,
+      "end": 7.945,
+      "score": 0.809
+    },
+    {
+      "word": "Er",
+      "start": 7.985,
+      "end": 8.105,
+      "score": 0.626
+    },
+    {
+      "word": "hebt",
+      "start": 8.165,
+      "end": 8.425,
+      "score": 0.73
+    },
+    {
+      "word": "sein",
+      "start": 8.445,
+      "end": 8.625,
+      "score": 0.746
+    },
+    {
+      "word": "Glas.",
+      "start": 8.665,
+      "end": 10.106,
+      "score": 0.833
+    },
+    {
+      "word": "\"Du",
+      "start": 10.126,
+      "end": 10.306,
+      "score": 0.757
+    },
+    {
+      "word": "schuftest",
+      "start": 10.346,
+      "end": 10.946,
+      "score": 0.841
+    },
+    {
+      "word": "ordentlich,",
+      "start": 10.986,
+      "end": 11.927,
+      "score": 0.9
+    },
+    {
+      "word": "ohne",
+      "start": 11.967,
+      "end": 12.267,
+      "score": 0.836
+    },
+    {
+      "word": "zu",
+      "start": 12.287,
+      "end": 12.427,
+      "score": 0.99
+    },
+    {
+      "word": "meckern.",
+      "start": 12.487,
+      "end": 13.548,
+      "score": 0.942
+    },
+    {
+      "word": "Das",
+      "start": 13.588,
+      "end": 13.768,
+      "score": 0.879
+    },
+    {
+      "word": "sieht",
+      "start": 13.808,
+      "end": 13.988,
+      "score": 0.801
+    },
+    {
+      "word": "man",
+      "start": 14.028,
+      "end": 14.168,
+      "score": 0.909
+    },
+    {
+      "word": "nicht",
+      "start": 14.188,
+      "end": 14.368,
+      "score": 0.814
+    },
+    {
+      "word": "oft.\"",
+      "start": 14.428,
+      "end": 15.749,
+      "score": 0.871
+    },
+    {
+      "word": "\"Die",
+      "start": 15.769,
+      "end": 15.949,
+      "score": 0.924
+    },
+    {
+      "word": "meisten",
+      "start": 15.989,
+      "end": 16.369,
+      "score": 0.907
+    },
+    {
+      "word": "hier",
+      "start": 16.409,
+      "end": 16.69,
+      "score": 0.941
+    },
+    {
+      "word": "jammern",
+      "start": 16.71,
+      "end": 17.03,
+      "score": 0.881
+    },
+    {
+      "word": "beim",
+      "start": 17.07,
+      "end": 17.33,
+      "score": 0.918
+    },
+    {
+      "word": "ersten",
+      "start": 17.39,
+      "end": 17.75,
+      "score": 0.898
+    },
+    {
+      "word": "Sonnenbrand",
+      "start": 17.79,
+      "end": 18.871,
+      "score": 0.873
+    },
+    {
+      "word": "oder",
+      "start": 18.911,
+      "end": 19.151,
+      "score": 0.893
+    },
+    {
+      "word": "schleichen",
+      "start": 19.191,
+      "end": 19.571,
+      "score": 0.885
+    },
+    {
+      "word": "sich",
+      "start": 19.611,
+      "end": 19.751,
+      "score": 0.965
+    },
+    {
+      "word": "davon,",
+      "start": 19.771,
+      "end": 20.172,
+      "score": 0.854
+    },
+    {
+      "word": "sobald",
+      "start": 20.192,
+      "end": 20.572,
+      "score": 0.784
+    },
+    {
+      "word": "keiner",
+      "start": 20.592,
+      "end": 20.872,
+      "score": 0.922
+    },
+    {
+      "word": "hinsieht.",
+      "start": 20.892,
+      "end": 22.193,
+      "score": 0.894
+    },
+    {
+      "word": "Du",
+      "start": 22.233,
+      "end": 22.433,
+      "score": 0.972
+    },
+    {
+      "word": "nicht.",
+      "start": 22.473,
+      "end": 23.754,
+      "score": 0.893
+    },
+    {
+      "word": "Verlässliche",
+      "start": 23.774,
+      "end": 24.374,
+      "score": 0.917
+    },
+    {
+      "word": "Leute",
+      "start": 24.394,
+      "end": 24.694,
+      "score": 0.92
+    },
+    {
+      "word": "sind",
+      "start": 24.714,
+      "end": 24.934,
+      "score": 0.967
+    },
+    {
+      "word": "selten",
+      "start": 24.974,
+      "end": 25.274,
+      "score": 0.989
+    },
+    {
+      "word": "—",
+      "start": 25.995,
+      "end": 26.015,
+      "score": 0.968
+    },
+    {
+      "word": "und",
+      "start": 26.035,
+      "end": 26.215,
+      "score": 0.926
+    },
+    {
+      "word": "die",
+      "start": 26.255,
+      "end": 26.395,
+      "score": 0.922
+    },
+    {
+      "word": "bezahle",
+      "start": 26.435,
+      "end": 26.815,
+      "score": 0.849
+    },
+    {
+      "word": "ich",
+      "start": 26.835,
+      "end": 26.975,
+      "score": 0.887
+    },
+    {
+      "word": "auch",
+      "start": 26.995,
+      "end": 27.155,
+      "score": 0.923
+    },
+    {
+      "word": "dafür,",
+      "start": 27.196,
+      "end": 27.836,
+      "score": 0.955
+    },
+    {
+      "word": "dass",
+      "start": 27.856,
+      "end": 27.996,
+      "score": 0.981
+    },
+    {
+      "word": "sie",
+      "start": 28.036,
+      "end": 28.156,
+      "score": 0.906
+    },
+    {
+      "word": "bleiben.\"",
+      "start": 28.196,
+      "end": 29.617,
+      "score": 0.973
+    },
+    {
+      "word": "Er",
+      "start": 29.657,
+      "end": 29.797,
+      "score": 0.864
+    },
+    {
+      "word": "grinst",
+      "start": 29.837,
+      "end": 30.217,
+      "score": 0.81
+    },
+    {
+      "word": "kurz.",
+      "start": 30.257,
+      "end": 31.618,
+      "score": 0.927
+    },
+    {
+      "word": "\"Ab",
+      "start": 31.658,
+      "end": 31.898,
+      "score": 0.889
+    },
+    {
+      "word": "jetzt",
+      "start": 31.938,
+      "end": 32.178,
+      "score": 0.87
+    },
+    {
+      "word": "gibt's",
+      "start": 32.218,
+      "end": 32.559,
+      "score": 0.746
+    },
+    {
+      "word": "ein,",
+      "start": 32.599,
+      "end": 32.819,
+      "score": 0.83
+    },
+    {
+      "word": "zwei",
+      "start": 32.839,
+      "end": 33.119,
+      "score": 0.889
+    },
+    {
+      "word": "Groschen",
+      "start": 33.139,
+      "end": 33.519,
+      "score": 0.868
+    },
+    {
+      "word": "mehr",
+      "start": 33.559,
+      "end": 33.759,
+      "score": 0.926
+    },
+    {
+      "word": "pro",
+      "start": 33.799,
+      "end": 33.979,
+      "score": 0.963
+    },
+    {
+      "word": "Stunde",
+      "start": 34.019,
+      "end": 34.36,
+      "score": 0.951
+    },
+    {
+      "word": "für",
+      "start": 34.4,
+      "end": 34.5,
+      "score": 0.936
+    },
+    {
+      "word": "dich.\"",
+      "start": 34.52,
+      "end": 35.02,
+      "score": 0.71
+    }
+  ]
+}

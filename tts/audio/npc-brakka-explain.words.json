@@ -1,0 +1,689 @@
+{
+  "segments": [
+    {
+      "start": 0.28,
+      "end": 6.226,
+      "text": "\"Beweise erstmal, dass du wach bleiben kannst, wenn es drauf ankommt\", sagt er trocken.",
+      "words": [
+        {
+          "word": "\"Beweise",
+          "start": 0.28,
+          "end": 1.021,
+          "score": 0.754
+        },
+        {
+          "word": "erstmal,",
+          "start": 1.081,
+          "end": 1.541,
+          "score": 0.809
+        },
+        {
+          "word": "dass",
+          "start": 1.561,
+          "end": 1.762,
+          "score": 0.77
+        },
+        {
+          "word": "du",
+          "start": 1.782,
+          "end": 2.022,
+          "score": 0.944
+        },
+        {
+          "word": "wach",
+          "start": 2.062,
+          "end": 2.322,
+          "score": 0.796
+        },
+        {
+          "word": "bleiben",
+          "start": 2.362,
+          "end": 2.743,
+          "score": 0.893
+        },
+        {
+          "word": "kannst,",
+          "start": 2.783,
+          "end": 3.123,
+          "score": 0.84
+        },
+        {
+          "word": "wenn",
+          "start": 3.143,
+          "end": 3.283,
+          "score": 0.92
+        },
+        {
+          "word": "es",
+          "start": 3.323,
+          "end": 3.383,
+          "score": 0.724
+        },
+        {
+          "word": "drauf",
+          "start": 3.423,
+          "end": 3.703,
+          "score": 0.767
+        },
+        {
+          "word": "ankommt\",",
+          "start": 3.743,
+          "end": 4.784,
+          "score": 0.869
+        },
+        {
+          "word": "sagt",
+          "start": 4.825,
+          "end": 5.065,
+          "score": 0.869
+        },
+        {
+          "word": "er",
+          "start": 5.105,
+          "end": 5.205,
+          "score": 0.883
+        },
+        {
+          "word": "trocken.",
+          "start": 5.245,
+          "end": 6.226,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 6.246,
+      "end": 9.129,
+      "text": "\"Halte heute Nacht Wache vor dem Stadttor.",
+      "words": [
+        {
+          "word": "\"Halte",
+          "start": 6.246,
+          "end": 6.606,
+          "score": 0.844
+        },
+        {
+          "word": "heute",
+          "start": 6.626,
+          "end": 6.906,
+          "score": 0.946
+        },
+        {
+          "word": "Nacht",
+          "start": 6.946,
+          "end": 7.247,
+          "score": 0.889
+        },
+        {
+          "word": "Wache",
+          "start": 7.287,
+          "end": 7.607,
+          "score": 0.985
+        },
+        {
+          "word": "vor",
+          "start": 7.647,
+          "end": 7.767,
+          "score": 0.944
+        },
+        {
+          "word": "dem",
+          "start": 7.807,
+          "end": 7.987,
+          "score": 0.782
+        },
+        {
+          "word": "Stadttor.",
+          "start": 8.028,
+          "end": 9.129,
+          "score": 0.772
+        }
+      ]
+    },
+    {
+      "start": 9.169,
+      "end": 12.091,
+      "text": "Schaffst du das, sprich wieder mit mir.\"",
+      "words": [
+        {
+          "word": "Schaffst",
+          "start": 9.169,
+          "end": 9.469,
+          "score": 0.662
+        },
+        {
+          "word": "du",
+          "start": 9.489,
+          "end": 9.649,
+          "score": 0.7
+        },
+        {
+          "word": "das,",
+          "start": 9.669,
+          "end": 10.29,
+          "score": 0.809
+        },
+        {
+          "word": "sprich",
+          "start": 10.33,
+          "end": 10.67,
+          "score": 0.952
+        },
+        {
+          "word": "wieder",
+          "start": 10.69,
+          "end": 10.89,
+          "score": 0.925
+        },
+        {
+          "word": "mit",
+          "start": 10.93,
+          "end": 11.09,
+          "score": 0.934
+        },
+        {
+          "word": "mir.\"",
+          "start": 11.13,
+          "end": 12.091,
+          "score": 0.953
+        }
+      ]
+    },
+    {
+      "start": 12.111,
+      "end": 18.778,
+      "text": "\"Und komm nicht zu früh — die Wachen wechseln erst um 22 Uhr, wenn die Nacht richtig einbricht.",
+      "words": [
+        {
+          "word": "\"Und",
+          "start": 12.111,
+          "end": 12.392,
+          "score": 0.887
+        },
+        {
+          "word": "komm",
+          "start": 12.432,
+          "end": 12.652,
+          "score": 0.883
+        },
+        {
+          "word": "nicht",
+          "start": 12.692,
+          "end": 12.912,
+          "score": 0.859
+        },
+        {
+          "word": "zu",
+          "start": 12.932,
+          "end": 13.092,
+          "score": 0.988
+        },
+        {
+          "word": "früh",
+          "start": 13.132,
+          "end": 13.332,
+          "score": 0.94
+        },
+        {
+          "word": "—",
+          "start": 13.833,
+          "end": 13.853,
+          "score": 0.597
+        },
+        {
+          "word": "die",
+          "start": 13.873,
+          "end": 14.053,
+          "score": 0.916
+        },
+        {
+          "word": "Wachen",
+          "start": 14.093,
+          "end": 14.413,
+          "score": 0.911
+        },
+        {
+          "word": "wechseln",
+          "start": 14.454,
+          "end": 14.814,
+          "score": 0.831
+        },
+        {
+          "word": "erst",
+          "start": 14.854,
+          "end": 15.034,
+          "score": 0.815
+        },
+        {
+          "word": "um",
+          "start": 15.074,
+          "end": 15.294,
+          "score": 0.945
+        },
+        {
+          "word": "22",
+          "start": 15.855,
+          "end": 16.175,
+          "score": 0.823
+        },
+        {
+          "word": "Uhr,",
+          "start": 16.255,
+          "end": 16.596,
+          "score": 0.764
+        },
+        {
+          "word": "wenn",
+          "start": 16.616,
+          "end": 16.796,
+          "score": 0.902
+        },
+        {
+          "word": "die",
+          "start": 16.816,
+          "end": 16.956,
+          "score": 0.775
+        },
+        {
+          "word": "Nacht",
+          "start": 16.996,
+          "end": 17.236,
+          "score": 0.854
+        },
+        {
+          "word": "richtig",
+          "start": 17.276,
+          "end": 17.697,
+          "score": 0.925
+        },
+        {
+          "word": "einbricht.",
+          "start": 17.737,
+          "end": 18.778,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 18.818,
+      "end": 21.02,
+      "text": "Vorher lässt dich am Tor sowieso keiner ran.\"",
+      "words": [
+        {
+          "word": "Vorher",
+          "start": 18.818,
+          "end": 19.218,
+          "score": 0.903
+        },
+        {
+          "word": "lässt",
+          "start": 19.258,
+          "end": 19.438,
+          "score": 0.884
+        },
+        {
+          "word": "dich",
+          "start": 19.458,
+          "end": 19.578,
+          "score": 0.63
+        },
+        {
+          "word": "am",
+          "start": 19.638,
+          "end": 19.758,
+          "score": 0.912
+        },
+        {
+          "word": "Tor",
+          "start": 19.799,
+          "end": 20.019,
+          "score": 0.85
+        },
+        {
+          "word": "sowieso",
+          "start": 20.059,
+          "end": 20.519,
+          "score": 0.907
+        },
+        {
+          "word": "keiner",
+          "start": 20.559,
+          "end": 20.759,
+          "score": 0.669
+        },
+        {
+          "word": "ran.\"",
+          "start": 20.859,
+          "end": 21.02,
+          "score": 0.711
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Beweise",
+      "start": 0.28,
+      "end": 1.021,
+      "score": 0.754
+    },
+    {
+      "word": "erstmal,",
+      "start": 1.081,
+      "end": 1.541,
+      "score": 0.809
+    },
+    {
+      "word": "dass",
+      "start": 1.561,
+      "end": 1.762,
+      "score": 0.77
+    },
+    {
+      "word": "du",
+      "start": 1.782,
+      "end": 2.022,
+      "score": 0.944
+    },
+    {
+      "word": "wach",
+      "start": 2.062,
+      "end": 2.322,
+      "score": 0.796
+    },
+    {
+      "word": "bleiben",
+      "start": 2.362,
+      "end": 2.743,
+      "score": 0.893
+    },
+    {
+      "word": "kannst,",
+      "start": 2.783,
+      "end": 3.123,
+      "score": 0.84
+    },
+    {
+      "word": "wenn",
+      "start": 3.143,
+      "end": 3.283,
+      "score": 0.92
+    },
+    {
+      "word": "es",
+      "start": 3.323,
+      "end": 3.383,
+      "score": 0.724
+    },
+    {
+      "word": "drauf",
+      "start": 3.423,
+      "end": 3.703,
+      "score": 0.767
+    },
+    {
+      "word": "ankommt\",",
+      "start": 3.743,
+      "end": 4.784,
+      "score": 0.869
+    },
+    {
+      "word": "sagt",
+      "start": 4.825,
+      "end": 5.065,
+      "score": 0.869
+    },
+    {
+      "word": "er",
+      "start": 5.105,
+      "end": 5.205,
+      "score": 0.883
+    },
+    {
+      "word": "trocken.",
+      "start": 5.245,
+      "end": 6.226,
+      "score": 0.892
+    },
+    {
+      "word": "\"Halte",
+      "start": 6.246,
+      "end": 6.606,
+      "score": 0.844
+    },
+    {
+      "word": "heute",
+      "start": 6.626,
+      "end": 6.906,
+      "score": 0.946
+    },
+    {
+      "word": "Nacht",
+      "start": 6.946,
+      "end": 7.247,
+      "score": 0.889
+    },
+    {
+      "word": "Wache",
+      "start": 7.287,
+      "end": 7.607,
+      "score": 0.985
+    },
+    {
+      "word": "vor",
+      "start": 7.647,
+      "end": 7.767,
+      "score": 0.944
+    },
+    {
+      "word": "dem",
+      "start": 7.807,
+      "end": 7.987,
+      "score": 0.782
+    },
+    {
+      "word": "Stadttor.",
+      "start": 8.028,
+      "end": 9.129,
+      "score": 0.772
+    },
+    {
+      "word": "Schaffst",
+      "start": 9.169,
+      "end": 9.469,
+      "score": 0.662
+    },
+    {
+      "word": "du",
+      "start": 9.489,
+      "end": 9.649,
+      "score": 0.7
+    },
+    {
+      "word": "das,",
+      "start": 9.669,
+      "end": 10.29,
+      "score": 0.809
+    },
+    {
+      "word": "sprich",
+      "start": 10.33,
+      "end": 10.67,
+      "score": 0.952
+    },
+    {
+      "word": "wieder",
+      "start": 10.69,
+      "end": 10.89,
+      "score": 0.925
+    },
+    {
+      "word": "mit",
+      "start": 10.93,
+      "end": 11.09,
+      "score": 0.934
+    },
+    {
+      "word": "mir.\"",
+      "start": 11.13,
+      "end": 12.091,
+      "score": 0.953
+    },
+    {
+      "word": "\"Und",
+      "start": 12.111,
+      "end": 12.392,
+      "score": 0.887
+    },
+    {
+      "word": "komm",
+      "start": 12.432,
+      "end": 12.652,
+      "score": 0.883
+    },
+    {
+      "word": "nicht",
+      "start": 12.692,
+      "end": 12.912,
+      "score": 0.859
+    },
+    {
+      "word": "zu",
+      "start": 12.932,
+      "end": 13.092,
+      "score": 0.988
+    },
+    {
+      "word": "früh",
+      "start": 13.132,
+      "end": 13.332,
+      "score": 0.94
+    },
+    {
+      "word": "—",
+      "start": 13.833,
+      "end": 13.853,
+      "score": 0.597
+    },
+    {
+      "word": "die",
+      "start": 13.873,
+      "end": 14.053,
+      "score": 0.916
+    },
+    {
+      "word": "Wachen",
+      "start": 14.093,
+      "end": 14.413,
+      "score": 0.911
+    },
+    {
+      "word": "wechseln",
+      "start": 14.454,
+      "end": 14.814,
+      "score": 0.831
+    },
+    {
+      "word": "erst",
+      "start": 14.854,
+      "end": 15.034,
+      "score": 0.815
+    },
+    {
+      "word": "um",
+      "start": 15.074,
+      "end": 15.294,
+      "score": 0.945
+    },
+    {
+      "word": "22",
+      "start": 15.855,
+      "end": 16.175,
+      "score": 0.823
+    },
+    {
+      "word": "Uhr,",
+      "start": 16.255,
+      "end": 16.596,
+      "score": 0.764
+    },
+    {
+      "word": "wenn",
+      "start": 16.616,
+      "end": 16.796,
+      "score": 0.902
+    },
+    {
+      "word": "die",
+      "start": 16.816,
+      "end": 16.956,
+      "score": 0.775
+    },
+    {
+      "word": "Nacht",
+      "start": 16.996,
+      "end": 17.236,
+      "score": 0.854
+    },
+    {
+      "word": "richtig",
+      "start": 17.276,
+      "end": 17.697,
+      "score": 0.925
+    },
+    {
+      "word": "einbricht.",
+      "start": 17.737,
+      "end": 18.778,
+      "score": 0.868
+    },
+    {
+      "word": "Vorher",
+      "start": 18.818,
+      "end": 19.218,
+      "score": 0.903
+    },
+    {
+      "word": "lässt",
+      "start": 19.258,
+      "end": 19.438,
+      "score": 0.884
+    },
+    {
+      "word": "dich",
+      "start": 19.458,
+      "end": 19.578,
+      "score": 0.63
+    },
+    {
+      "word": "am",
+      "start": 19.638,
+      "end": 19.758,
+      "score": 0.912
+    },
+    {
+      "word": "Tor",
+      "start": 19.799,
+      "end": 20.019,
+      "score": 0.85
+    },
+    {
+      "word": "sowieso",
+      "start": 20.059,
+      "end": 20.519,
+      "score": 0.907
+    },
+    {
+      "word": "keiner",
+      "start": 20.559,
+      "end": 20.759,
+      "score": 0.669
+    },
+    {
+      "word": "ran.\"",
+      "start": 20.859,
+      "end": 21.02,
+      "score": 0.711
+    }
+  ]
+}

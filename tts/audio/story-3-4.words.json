@@ -1,0 +1,626 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 4.143,
+      "text": "»Du weißt mehr, als du zeigst«, sagt Thessa.",
+      "words": [
+        {
+          "word": "»Du",
+          "start": 0.4,
+          "end": 0.58,
+          "score": 0.462
+        },
+        {
+          "word": "weißt",
+          "start": 0.6,
+          "end": 0.981,
+          "score": 0.827
+        },
+        {
+          "word": "mehr,",
+          "start": 1.001,
+          "end": 1.261,
+          "score": 0.86
+        },
+        {
+          "word": "als",
+          "start": 1.281,
+          "end": 1.461,
+          "score": 0.921
+        },
+        {
+          "word": "du",
+          "start": 1.481,
+          "end": 1.721,
+          "score": 0.819
+        },
+        {
+          "word": "zeigst«,",
+          "start": 1.761,
+          "end": 2.722,
+          "score": 0.815
+        },
+        {
+          "word": "sagt",
+          "start": 2.742,
+          "end": 2.942,
+          "score": 0.899
+        },
+        {
+          "word": "Thessa.",
+          "start": 2.982,
+          "end": 4.143,
+          "score": 0.651
+        }
+      ]
+    },
+    {
+      "start": 4.163,
+      "end": 12.089,
+      "text": "»Das ist gut.« Sie schiebt mir ein Buch über den Tisch — Aufzeichnungen über die Händlernetze von Lethkar.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 4.163,
+          "end": 4.323,
+          "score": 0.833
+        },
+        {
+          "word": "ist",
+          "start": 4.363,
+          "end": 4.543,
+          "score": 0.843
+        },
+        {
+          "word": "gut.«",
+          "start": 4.583,
+          "end": 6.264,
+          "score": 0.976
+        },
+        {
+          "word": "Sie",
+          "start": 6.284,
+          "end": 6.405,
+          "score": 0.785
+        },
+        {
+          "word": "schiebt",
+          "start": 6.425,
+          "end": 6.665,
+          "score": 0.877
+        },
+        {
+          "word": "mir",
+          "start": 6.685,
+          "end": 6.825,
+          "score": 0.826
+        },
+        {
+          "word": "ein",
+          "start": 6.845,
+          "end": 6.985,
+          "score": 0.61
+        },
+        {
+          "word": "Buch",
+          "start": 7.005,
+          "end": 7.245,
+          "score": 0.964
+        },
+        {
+          "word": "über",
+          "start": 7.265,
+          "end": 7.425,
+          "score": 0.816
+        },
+        {
+          "word": "den",
+          "start": 7.445,
+          "end": 7.605,
+          "score": 0.956
+        },
+        {
+          "word": "Tisch",
+          "start": 7.645,
+          "end": 7.846,
+          "score": 0.888
+        },
+        {
+          "word": "—",
+          "start": 8.686,
+          "end": 8.706,
+          "score": 0.995
+        },
+        {
+          "word": "Aufzeichnungen",
+          "start": 8.726,
+          "end": 9.487,
+          "score": 0.911
+        },
+        {
+          "word": "über",
+          "start": 9.507,
+          "end": 9.667,
+          "score": 0.797
+        },
+        {
+          "word": "die",
+          "start": 9.687,
+          "end": 9.807,
+          "score": 0.677
+        },
+        {
+          "word": "Händlernetze",
+          "start": 9.847,
+          "end": 10.487,
+          "score": 0.904
+        },
+        {
+          "word": "von",
+          "start": 10.527,
+          "end": 10.688,
+          "score": 0.992
+        },
+        {
+          "word": "Lethkar.",
+          "start": 10.728,
+          "end": 12.089,
+          "score": 0.765
+        }
+      ]
+    },
+    {
+      "start": 12.129,
+      "end": 16.432,
+      "text": "Namen, Verbindungen, Schulden.",
+      "words": [
+        {
+          "word": "Namen,",
+          "start": 12.129,
+          "end": 12.929,
+          "score": 0.953
+        },
+        {
+          "word": "Verbindungen,",
+          "start": 12.949,
+          "end": 14.25,
+          "score": 0.929
+        },
+        {
+          "word": "Schulden.",
+          "start": 14.29,
+          "end": 16.432,
+          "score": 0.853
+        }
+      ]
+    },
+    {
+      "start": 16.472,
+      "end": 19.414,
+      "text": "Valdris' Name steht dreimal darin.",
+      "words": [
+        {
+          "word": "Valdris'",
+          "start": 16.472,
+          "end": 16.892,
+          "score": 0.706
+        },
+        {
+          "word": "Name",
+          "start": 16.912,
+          "end": 17.232,
+          "score": 0.886
+        },
+        {
+          "word": "steht",
+          "start": 17.272,
+          "end": 17.572,
+          "score": 0.971
+        },
+        {
+          "word": "dreimal",
+          "start": 17.613,
+          "end": 18.133,
+          "score": 0.812
+        },
+        {
+          "word": "darin.",
+          "start": 18.153,
+          "end": 19.414,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 19.454,
+      "end": 21.395,
+      "text": "Stets als Gläubiger.",
+      "words": [
+        {
+          "word": "Stets",
+          "start": 19.454,
+          "end": 19.774,
+          "score": 0.848
+        },
+        {
+          "word": "als",
+          "start": 19.814,
+          "end": 19.994,
+          "score": 0.993
+        },
+        {
+          "word": "Gläubiger.",
+          "start": 20.034,
+          "end": 21.395,
+          "score": 0.959
+        }
+      ]
+    },
+    {
+      "start": 21.415,
+      "end": 24.277,
+      "text": "Niemals als Schuldner.",
+      "words": [
+        {
+          "word": "Niemals",
+          "start": 21.415,
+          "end": 21.876,
+          "score": 0.917
+        },
+        {
+          "word": "als",
+          "start": 21.916,
+          "end": 22.076,
+          "score": 0.938
+        },
+        {
+          "word": "Schuldner.",
+          "start": 22.116,
+          "end": 24.277,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 24.297,
+      "end": 26.259,
+      "text": "Das erklärt manches.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 24.297,
+          "end": 24.497,
+          "score": 0.967
+        },
+        {
+          "word": "erklärt",
+          "start": 24.557,
+          "end": 24.918,
+          "score": 0.904
+        },
+        {
+          "word": "manches.",
+          "start": 24.938,
+          "end": 26.259,
+          "score": 0.802
+        }
+      ]
+    },
+    {
+      "start": 26.299,
+      "end": 27.72,
+      "text": "Und macht alles verwickelter.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 26.299,
+          "end": 26.459,
+          "score": 0.981
+        },
+        {
+          "word": "macht",
+          "start": 26.499,
+          "end": 26.859,
+          "score": 0.917
+        },
+        {
+          "word": "alles",
+          "start": 26.899,
+          "end": 27.199,
+          "score": 0.964
+        },
+        {
+          "word": "verwickelter.",
+          "start": 27.219,
+          "end": 27.72,
+          "score": 0.825
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "»Du",
+      "start": 0.4,
+      "end": 0.58,
+      "score": 0.462
+    },
+    {
+      "word": "weißt",
+      "start": 0.6,
+      "end": 0.981,
+      "score": 0.827
+    },
+    {
+      "word": "mehr,",
+      "start": 1.001,
+      "end": 1.261,
+      "score": 0.86
+    },
+    {
+      "word": "als",
+      "start": 1.281,
+      "end": 1.461,
+      "score": 0.921
+    },
+    {
+      "word": "du",
+      "start": 1.481,
+      "end": 1.721,
+      "score": 0.819
+    },
+    {
+      "word": "zeigst«,",
+      "start": 1.761,
+      "end": 2.722,
+      "score": 0.815
+    },
+    {
+      "word": "sagt",
+      "start": 2.742,
+      "end": 2.942,
+      "score": 0.899
+    },
+    {
+      "word": "Thessa.",
+      "start": 2.982,
+      "end": 4.143,
+      "score": 0.651
+    },
+    {
+      "word": "»Das",
+      "start": 4.163,
+      "end": 4.323,
+      "score": 0.833
+    },
+    {
+      "word": "ist",
+      "start": 4.363,
+      "end": 4.543,
+      "score": 0.843
+    },
+    {
+      "word": "gut.«",
+      "start": 4.583,
+      "end": 6.264,
+      "score": 0.976
+    },
+    {
+      "word": "Sie",
+      "start": 6.284,
+      "end": 6.405,
+      "score": 0.785
+    },
+    {
+      "word": "schiebt",
+      "start": 6.425,
+      "end": 6.665,
+      "score": 0.877
+    },
+    {
+      "word": "mir",
+      "start": 6.685,
+      "end": 6.825,
+      "score": 0.826
+    },
+    {
+      "word": "ein",
+      "start": 6.845,
+      "end": 6.985,
+      "score": 0.61
+    },
+    {
+      "word": "Buch",
+      "start": 7.005,
+      "end": 7.245,
+      "score": 0.964
+    },
+    {
+      "word": "über",
+      "start": 7.265,
+      "end": 7.425,
+      "score": 0.816
+    },
+    {
+      "word": "den",
+      "start": 7.445,
+      "end": 7.605,
+      "score": 0.956
+    },
+    {
+      "word": "Tisch",
+      "start": 7.645,
+      "end": 7.846,
+      "score": 0.888
+    },
+    {
+      "word": "—",
+      "start": 8.686,
+      "end": 8.706,
+      "score": 0.995
+    },
+    {
+      "word": "Aufzeichnungen",
+      "start": 8.726,
+      "end": 9.487,
+      "score": 0.911
+    },
+    {
+      "word": "über",
+      "start": 9.507,
+      "end": 9.667,
+      "score": 0.797
+    },
+    {
+      "word": "die",
+      "start": 9.687,
+      "end": 9.807,
+      "score": 0.677
+    },
+    {
+      "word": "Händlernetze",
+      "start": 9.847,
+      "end": 10.487,
+      "score": 0.904
+    },
+    {
+      "word": "von",
+      "start": 10.527,
+      "end": 10.688,
+      "score": 0.992
+    },
+    {
+      "word": "Lethkar.",
+      "start": 10.728,
+      "end": 12.089,
+      "score": 0.765
+    },
+    {
+      "word": "Namen,",
+      "start": 12.129,
+      "end": 12.929,
+      "score": 0.953
+    },
+    {
+      "word": "Verbindungen,",
+      "start": 12.949,
+      "end": 14.25,
+      "score": 0.929
+    },
+    {
+      "word": "Schulden.",
+      "start": 14.29,
+      "end": 16.432,
+      "score": 0.853
+    },
+    {
+      "word": "Valdris'",
+      "start": 16.472,
+      "end": 16.892,
+      "score": 0.706
+    },
+    {
+      "word": "Name",
+      "start": 16.912,
+      "end": 17.232,
+      "score": 0.886
+    },
+    {
+      "word": "steht",
+      "start": 17.272,
+      "end": 17.572,
+      "score": 0.971
+    },
+    {
+      "word": "dreimal",
+      "start": 17.613,
+      "end": 18.133,
+      "score": 0.812
+    },
+    {
+      "word": "darin.",
+      "start": 18.153,
+      "end": 19.414,
+      "score": 0.946
+    },
+    {
+      "word": "Stets",
+      "start": 19.454,
+      "end": 19.774,
+      "score": 0.848
+    },
+    {
+      "word": "als",
+      "start": 19.814,
+      "end": 19.994,
+      "score": 0.993
+    },
+    {
+      "word": "Gläubiger.",
+      "start": 20.034,
+      "end": 21.395,
+      "score": 0.959
+    },
+    {
+      "word": "Niemals",
+      "start": 21.415,
+      "end": 21.876,
+      "score": 0.917
+    },
+    {
+      "word": "als",
+      "start": 21.916,
+      "end": 22.076,
+      "score": 0.938
+    },
+    {
+      "word": "Schuldner.",
+      "start": 22.116,
+      "end": 24.277,
+      "score": 0.956
+    },
+    {
+      "word": "Das",
+      "start": 24.297,
+      "end": 24.497,
+      "score": 0.967
+    },
+    {
+      "word": "erklärt",
+      "start": 24.557,
+      "end": 24.918,
+      "score": 0.904
+    },
+    {
+      "word": "manches.",
+      "start": 24.938,
+      "end": 26.259,
+      "score": 0.802
+    },
+    {
+      "word": "Und",
+      "start": 26.299,
+      "end": 26.459,
+      "score": 0.981
+    },
+    {
+      "word": "macht",
+      "start": 26.499,
+      "end": 26.859,
+      "score": 0.917
+    },
+    {
+      "word": "alles",
+      "start": 26.899,
+      "end": 27.199,
+      "score": 0.964
+    },
+    {
+      "word": "verwickelter.",
+      "start": 27.219,
+      "end": 27.72,
+      "score": 0.825
+    }
+  ]
+}

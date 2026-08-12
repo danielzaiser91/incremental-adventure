@@ -1,0 +1,526 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 4.906,
+      "text": "Mira zieht mich kurz zur Seite, ihre sonst so spöttische Stimme wird leiser.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.441,
+          "end": 0.821,
+          "score": 0.818
+        },
+        {
+          "word": "zieht",
+          "start": 0.861,
+          "end": 1.081,
+          "score": 0.864
+        },
+        {
+          "word": "mich",
+          "start": 1.101,
+          "end": 1.302,
+          "score": 0.83
+        },
+        {
+          "word": "kurz",
+          "start": 1.342,
+          "end": 1.622,
+          "score": 0.907
+        },
+        {
+          "word": "zur",
+          "start": 1.662,
+          "end": 1.802,
+          "score": 0.842
+        },
+        {
+          "word": "Seite,",
+          "start": 1.842,
+          "end": 2.663,
+          "score": 0.892
+        },
+        {
+          "word": "ihre",
+          "start": 2.683,
+          "end": 2.924,
+          "score": 0.903
+        },
+        {
+          "word": "sonst",
+          "start": 2.964,
+          "end": 3.244,
+          "score": 0.918
+        },
+        {
+          "word": "so",
+          "start": 3.284,
+          "end": 3.464,
+          "score": 0.954
+        },
+        {
+          "word": "spöttische",
+          "start": 3.504,
+          "end": 4.005,
+          "score": 0.898
+        },
+        {
+          "word": "Stimme",
+          "start": 4.045,
+          "end": 4.345,
+          "score": 0.971
+        },
+        {
+          "word": "wird",
+          "start": 4.365,
+          "end": 4.545,
+          "score": 0.86
+        },
+        {
+          "word": "leiser.",
+          "start": 4.586,
+          "end": 4.906,
+          "score": 0.812
+        }
+      ]
+    },
+    {
+      "start": 5.927,
+      "end": 9.411,
+      "text": "\"Du kommst doch öfter mit Brakka klar, oder?\"",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 5.927,
+          "end": 6.127,
+          "score": 0.457
+        },
+        {
+          "word": "kommst",
+          "start": 6.147,
+          "end": 6.428,
+          "score": 0.673
+        },
+        {
+          "word": "doch",
+          "start": 6.468,
+          "end": 6.648,
+          "score": 0.926
+        },
+        {
+          "word": "öfter",
+          "start": 6.688,
+          "end": 6.968,
+          "score": 0.856
+        },
+        {
+          "word": "mit",
+          "start": 7.008,
+          "end": 7.169,
+          "score": 0.996
+        },
+        {
+          "word": "Brakka",
+          "start": 7.209,
+          "end": 7.589,
+          "score": 0.788
+        },
+        {
+          "word": "klar,",
+          "start": 7.609,
+          "end": 7.97,
+          "score": 0.868
+        },
+        {
+          "word": "oder?\"",
+          "start": 7.99,
+          "end": 9.411,
+          "score": 0.922
+        }
+      ]
+    },
+    {
+      "start": 9.431,
+      "end": 13.997,
+      "text": "\"Gib ihm das hier — aber lass es niemand anderen sehen.\"",
+      "words": [
+        {
+          "word": "\"Gib",
+          "start": 9.431,
+          "end": 9.612,
+          "score": 0.714
+        },
+        {
+          "word": "ihm",
+          "start": 9.652,
+          "end": 9.872,
+          "score": 0.812
+        },
+        {
+          "word": "das",
+          "start": 9.912,
+          "end": 10.112,
+          "score": 0.888
+        },
+        {
+          "word": "hier",
+          "start": 10.132,
+          "end": 10.272,
+          "score": 0.868
+        },
+        {
+          "word": "—",
+          "start": 10.993,
+          "end": 11.013,
+          "score": 0.909
+        },
+        {
+          "word": "aber",
+          "start": 11.033,
+          "end": 11.454,
+          "score": 0.866
+        },
+        {
+          "word": "lass",
+          "start": 11.494,
+          "end": 11.674,
+          "score": 0.939
+        },
+        {
+          "word": "es",
+          "start": 11.714,
+          "end": 11.914,
+          "score": 0.842
+        },
+        {
+          "word": "niemand",
+          "start": 11.954,
+          "end": 12.355,
+          "score": 0.859
+        },
+        {
+          "word": "anderen",
+          "start": 12.395,
+          "end": 12.755,
+          "score": 0.902
+        },
+        {
+          "word": "sehen.\"",
+          "start": 12.795,
+          "end": 13.997,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 14.017,
+      "end": 16.199,
+      "text": "Sie drückt mir einen versiegelten Brief in die Hand.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 14.017,
+          "end": 14.157,
+          "score": 0.953
+        },
+        {
+          "word": "drückt",
+          "start": 14.197,
+          "end": 14.457,
+          "score": 0.928
+        },
+        {
+          "word": "mir",
+          "start": 14.477,
+          "end": 14.678,
+          "score": 0.959
+        },
+        {
+          "word": "einen",
+          "start": 14.718,
+          "end": 14.958,
+          "score": 0.752
+        },
+        {
+          "word": "versiegelten",
+          "start": 14.978,
+          "end": 15.499,
+          "score": 0.941
+        },
+        {
+          "word": "Brief",
+          "start": 15.539,
+          "end": 15.779,
+          "score": 0.963
+        },
+        {
+          "word": "in",
+          "start": 15.819,
+          "end": 15.899,
+          "score": 0.889
+        },
+        {
+          "word": "die",
+          "start": 15.919,
+          "end": 16.019,
+          "score": 0.841
+        },
+        {
+          "word": "Hand.",
+          "start": 16.059,
+          "end": 16.199,
+          "score": 0.793
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.441,
+      "end": 0.821,
+      "score": 0.818
+    },
+    {
+      "word": "zieht",
+      "start": 0.861,
+      "end": 1.081,
+      "score": 0.864
+    },
+    {
+      "word": "mich",
+      "start": 1.101,
+      "end": 1.302,
+      "score": 0.83
+    },
+    {
+      "word": "kurz",
+      "start": 1.342,
+      "end": 1.622,
+      "score": 0.907
+    },
+    {
+      "word": "zur",
+      "start": 1.662,
+      "end": 1.802,
+      "score": 0.842
+    },
+    {
+      "word": "Seite,",
+      "start": 1.842,
+      "end": 2.663,
+      "score": 0.892
+    },
+    {
+      "word": "ihre",
+      "start": 2.683,
+      "end": 2.924,
+      "score": 0.903
+    },
+    {
+      "word": "sonst",
+      "start": 2.964,
+      "end": 3.244,
+      "score": 0.918
+    },
+    {
+      "word": "so",
+      "start": 3.284,
+      "end": 3.464,
+      "score": 0.954
+    },
+    {
+      "word": "spöttische",
+      "start": 3.504,
+      "end": 4.005,
+      "score": 0.898
+    },
+    {
+      "word": "Stimme",
+      "start": 4.045,
+      "end": 4.345,
+      "score": 0.971
+    },
+    {
+      "word": "wird",
+      "start": 4.365,
+      "end": 4.545,
+      "score": 0.86
+    },
+    {
+      "word": "leiser.",
+      "start": 4.586,
+      "end": 4.906,
+      "score": 0.812
+    },
+    {
+      "word": "\"Du",
+      "start": 5.927,
+      "end": 6.127,
+      "score": 0.457
+    },
+    {
+      "word": "kommst",
+      "start": 6.147,
+      "end": 6.428,
+      "score": 0.673
+    },
+    {
+      "word": "doch",
+      "start": 6.468,
+      "end": 6.648,
+      "score": 0.926
+    },
+    {
+      "word": "öfter",
+      "start": 6.688,
+      "end": 6.968,
+      "score": 0.856
+    },
+    {
+      "word": "mit",
+      "start": 7.008,
+      "end": 7.169,
+      "score": 0.996
+    },
+    {
+      "word": "Brakka",
+      "start": 7.209,
+      "end": 7.589,
+      "score": 0.788
+    },
+    {
+      "word": "klar,",
+      "start": 7.609,
+      "end": 7.97,
+      "score": 0.868
+    },
+    {
+      "word": "oder?\"",
+      "start": 7.99,
+      "end": 9.411,
+      "score": 0.922
+    },
+    {
+      "word": "\"Gib",
+      "start": 9.431,
+      "end": 9.612,
+      "score": 0.714
+    },
+    {
+      "word": "ihm",
+      "start": 9.652,
+      "end": 9.872,
+      "score": 0.812
+    },
+    {
+      "word": "das",
+      "start": 9.912,
+      "end": 10.112,
+      "score": 0.888
+    },
+    {
+      "word": "hier",
+      "start": 10.132,
+      "end": 10.272,
+      "score": 0.868
+    },
+    {
+      "word": "—",
+      "start": 10.993,
+      "end": 11.013,
+      "score": 0.909
+    },
+    {
+      "word": "aber",
+      "start": 11.033,
+      "end": 11.454,
+      "score": 0.866
+    },
+    {
+      "word": "lass",
+      "start": 11.494,
+      "end": 11.674,
+      "score": 0.939
+    },
+    {
+      "word": "es",
+      "start": 11.714,
+      "end": 11.914,
+      "score": 0.842
+    },
+    {
+      "word": "niemand",
+      "start": 11.954,
+      "end": 12.355,
+      "score": 0.859
+    },
+    {
+      "word": "anderen",
+      "start": 12.395,
+      "end": 12.755,
+      "score": 0.902
+    },
+    {
+      "word": "sehen.\"",
+      "start": 12.795,
+      "end": 13.997,
+      "score": 0.946
+    },
+    {
+      "word": "Sie",
+      "start": 14.017,
+      "end": 14.157,
+      "score": 0.953
+    },
+    {
+      "word": "drückt",
+      "start": 14.197,
+      "end": 14.457,
+      "score": 0.928
+    },
+    {
+      "word": "mir",
+      "start": 14.477,
+      "end": 14.678,
+      "score": 0.959
+    },
+    {
+      "word": "einen",
+      "start": 14.718,
+      "end": 14.958,
+      "score": 0.752
+    },
+    {
+      "word": "versiegelten",
+      "start": 14.978,
+      "end": 15.499,
+      "score": 0.941
+    },
+    {
+      "word": "Brief",
+      "start": 15.539,
+      "end": 15.779,
+      "score": 0.963
+    },
+    {
+      "word": "in",
+      "start": 15.819,
+      "end": 15.899,
+      "score": 0.889
+    },
+    {
+      "word": "die",
+      "start": 15.919,
+      "end": 16.019,
+      "score": 0.841
+    },
+    {
+      "word": "Hand.",
+      "start": 16.059,
+      "end": 16.199,
+      "score": 0.793
+    }
+  ]
+}

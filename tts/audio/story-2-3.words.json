@@ -1,0 +1,847 @@
+{
+  "segments": [
+    {
+      "start": 1.121,
+      "end": 10.846,
+      "text": "Zwischen der armseligen Habe eines Räubers, den ich eben niedergestreckt habe, liegt etwas, das nicht hierhergehört.",
+      "words": [
+        {
+          "word": "Zwischen",
+          "start": 1.121,
+          "end": 1.461,
+          "score": 0.728
+        },
+        {
+          "word": "der",
+          "start": 1.501,
+          "end": 1.801,
+          "score": 0.924
+        },
+        {
+          "word": "armseligen",
+          "start": 1.861,
+          "end": 2.641,
+          "score": 0.904
+        },
+        {
+          "word": "Habe",
+          "start": 2.682,
+          "end": 3.042,
+          "score": 0.92
+        },
+        {
+          "word": "eines",
+          "start": 3.062,
+          "end": 3.322,
+          "score": 0.858
+        },
+        {
+          "word": "Räubers,",
+          "start": 3.402,
+          "end": 4.082,
+          "score": 0.856
+        },
+        {
+          "word": "den",
+          "start": 4.102,
+          "end": 4.242,
+          "score": 0.849
+        },
+        {
+          "word": "ich",
+          "start": 4.282,
+          "end": 4.503,
+          "score": 0.826
+        },
+        {
+          "word": "eben",
+          "start": 4.563,
+          "end": 4.783,
+          "score": 0.947
+        },
+        {
+          "word": "niedergestreckt",
+          "start": 4.803,
+          "end": 5.443,
+          "score": 0.913
+        },
+        {
+          "word": "habe,",
+          "start": 5.463,
+          "end": 6.444,
+          "score": 0.912
+        },
+        {
+          "word": "liegt",
+          "start": 6.484,
+          "end": 6.804,
+          "score": 0.83
+        },
+        {
+          "word": "etwas,",
+          "start": 6.824,
+          "end": 7.264,
+          "score": 0.98
+        },
+        {
+          "word": "das",
+          "start": 7.284,
+          "end": 7.644,
+          "score": 0.939
+        },
+        {
+          "word": "nicht",
+          "start": 7.684,
+          "end": 8.005,
+          "score": 0.915
+        },
+        {
+          "word": "hierhergehört.",
+          "start": 8.045,
+          "end": 10.846,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 10.886,
+      "end": 12.927,
+      "text": "Eine Münze.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 10.886,
+          "end": 11.186,
+          "score": 0.842
+        },
+        {
+          "word": "Münze.",
+          "start": 11.226,
+          "end": 12.927,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 12.967,
+      "end": 20.512,
+      "text": "Meine Münze — ich erkenne den Kratzer, den ich ihr selbst einst bei einem Sturz beigebracht habe.",
+      "words": [
+        {
+          "word": "Meine",
+          "start": 12.967,
+          "end": 13.287,
+          "score": 0.928
+        },
+        {
+          "word": "Münze",
+          "start": 13.328,
+          "end": 13.648,
+          "score": 0.816
+        },
+        {
+          "word": "—",
+          "start": 14.308,
+          "end": 14.328,
+          "score": 0.474
+        },
+        {
+          "word": "ich",
+          "start": 14.368,
+          "end": 14.548,
+          "score": 0.764
+        },
+        {
+          "word": "erkenne",
+          "start": 14.588,
+          "end": 14.948,
+          "score": 0.953
+        },
+        {
+          "word": "den",
+          "start": 14.968,
+          "end": 15.149,
+          "score": 0.879
+        },
+        {
+          "word": "Kratzer,",
+          "start": 15.189,
+          "end": 15.809,
+          "score": 0.841
+        },
+        {
+          "word": "den",
+          "start": 15.829,
+          "end": 15.949,
+          "score": 0.81
+        },
+        {
+          "word": "ich",
+          "start": 15.989,
+          "end": 16.069,
+          "score": 0.985
+        },
+        {
+          "word": "ihr",
+          "start": 16.109,
+          "end": 16.269,
+          "score": 0.923
+        },
+        {
+          "word": "selbst",
+          "start": 16.309,
+          "end": 16.609,
+          "score": 0.913
+        },
+        {
+          "word": "einst",
+          "start": 16.649,
+          "end": 16.87,
+          "score": 0.724
+        },
+        {
+          "word": "bei",
+          "start": 16.89,
+          "end": 16.99,
+          "score": 0.981
+        },
+        {
+          "word": "einem",
+          "start": 17.01,
+          "end": 17.21,
+          "score": 0.882
+        },
+        {
+          "word": "Sturz",
+          "start": 17.25,
+          "end": 17.55,
+          "score": 0.885
+        },
+        {
+          "word": "beigebracht",
+          "start": 17.57,
+          "end": 18.05,
+          "score": 0.912
+        },
+        {
+          "word": "habe.",
+          "start": 18.07,
+          "end": 20.512,
+          "score": 0.964
+        }
+      ]
+    },
+    {
+      "start": 20.552,
+      "end": 23.173,
+      "text": "Der Dieb hat das Gold nicht behalten.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 20.552,
+          "end": 20.752,
+          "score": 0.918
+        },
+        {
+          "word": "Dieb",
+          "start": 20.792,
+          "end": 20.992,
+          "score": 0.739
+        },
+        {
+          "word": "hat",
+          "start": 21.032,
+          "end": 21.172,
+          "score": 0.742
+        },
+        {
+          "word": "das",
+          "start": 21.192,
+          "end": 21.392,
+          "score": 0.908
+        },
+        {
+          "word": "Gold",
+          "start": 21.412,
+          "end": 21.672,
+          "score": 0.927
+        },
+        {
+          "word": "nicht",
+          "start": 21.692,
+          "end": 21.932,
+          "score": 0.86
+        },
+        {
+          "word": "behalten.",
+          "start": 21.952,
+          "end": 23.173,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 23.213,
+      "end": 30.137,
+      "text": "Er hat es weitergereicht, hinaus zu jemandem, der mit diesen Räubern unter einer Decke steckt.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 23.213,
+          "end": 23.293,
+          "score": 0.698
+        },
+        {
+          "word": "hat",
+          "start": 23.313,
+          "end": 23.433,
+          "score": 0.511
+        },
+        {
+          "word": "es",
+          "start": 23.473,
+          "end": 23.653,
+          "score": 0.791
+        },
+        {
+          "word": "weitergereicht,",
+          "start": 23.693,
+          "end": 24.634,
+          "score": 0.907
+        },
+        {
+          "word": "hinaus",
+          "start": 24.654,
+          "end": 25.154,
+          "score": 0.906
+        },
+        {
+          "word": "zu",
+          "start": 25.174,
+          "end": 25.294,
+          "score": 0.982
+        },
+        {
+          "word": "jemandem,",
+          "start": 25.334,
+          "end": 25.735,
+          "score": 0.728
+        },
+        {
+          "word": "der",
+          "start": 25.755,
+          "end": 25.875,
+          "score": 0.798
+        },
+        {
+          "word": "mit",
+          "start": 25.915,
+          "end": 26.015,
+          "score": 0.897
+        },
+        {
+          "word": "diesen",
+          "start": 26.035,
+          "end": 26.255,
+          "score": 0.845
+        },
+        {
+          "word": "Räubern",
+          "start": 26.295,
+          "end": 26.635,
+          "score": 0.93
+        },
+        {
+          "word": "unter",
+          "start": 26.655,
+          "end": 26.875,
+          "score": 0.883
+        },
+        {
+          "word": "einer",
+          "start": 26.915,
+          "end": 27.135,
+          "score": 0.777
+        },
+        {
+          "word": "Decke",
+          "start": 27.175,
+          "end": 27.435,
+          "score": 0.9
+        },
+        {
+          "word": "steckt.",
+          "start": 27.495,
+          "end": 30.137,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 30.177,
+      "end": 34.159,
+      "text": "Das ist kein gewöhnlicher Straßenraub.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 30.177,
+          "end": 30.337,
+          "score": 0.933
+        },
+        {
+          "word": "ist",
+          "start": 30.377,
+          "end": 30.637,
+          "score": 0.89
+        },
+        {
+          "word": "kein",
+          "start": 30.677,
+          "end": 30.897,
+          "score": 0.83
+        },
+        {
+          "word": "gewöhnlicher",
+          "start": 30.937,
+          "end": 31.538,
+          "score": 0.774
+        },
+        {
+          "word": "Straßenraub.",
+          "start": 31.578,
+          "end": 34.159,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 34.179,
+      "end": 35.06,
+      "text": "Das ist ein Netz.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 34.179,
+          "end": 34.359,
+          "score": 0.825
+        },
+        {
+          "word": "ist",
+          "start": 34.399,
+          "end": 34.6,
+          "score": 0.789
+        },
+        {
+          "word": "ein",
+          "start": 34.62,
+          "end": 34.82,
+          "score": 0.904
+        },
+        {
+          "word": "Netz.",
+          "start": 34.86,
+          "end": 35.06,
+          "score": 0.989
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zwischen",
+      "start": 1.121,
+      "end": 1.461,
+      "score": 0.728
+    },
+    {
+      "word": "der",
+      "start": 1.501,
+      "end": 1.801,
+      "score": 0.924
+    },
+    {
+      "word": "armseligen",
+      "start": 1.861,
+      "end": 2.641,
+      "score": 0.904
+    },
+    {
+      "word": "Habe",
+      "start": 2.682,
+      "end": 3.042,
+      "score": 0.92
+    },
+    {
+      "word": "eines",
+      "start": 3.062,
+      "end": 3.322,
+      "score": 0.858
+    },
+    {
+      "word": "Räubers,",
+      "start": 3.402,
+      "end": 4.082,
+      "score": 0.856
+    },
+    {
+      "word": "den",
+      "start": 4.102,
+      "end": 4.242,
+      "score": 0.849
+    },
+    {
+      "word": "ich",
+      "start": 4.282,
+      "end": 4.503,
+      "score": 0.826
+    },
+    {
+      "word": "eben",
+      "start": 4.563,
+      "end": 4.783,
+      "score": 0.947
+    },
+    {
+      "word": "niedergestreckt",
+      "start": 4.803,
+      "end": 5.443,
+      "score": 0.913
+    },
+    {
+      "word": "habe,",
+      "start": 5.463,
+      "end": 6.444,
+      "score": 0.912
+    },
+    {
+      "word": "liegt",
+      "start": 6.484,
+      "end": 6.804,
+      "score": 0.83
+    },
+    {
+      "word": "etwas,",
+      "start": 6.824,
+      "end": 7.264,
+      "score": 0.98
+    },
+    {
+      "word": "das",
+      "start": 7.284,
+      "end": 7.644,
+      "score": 0.939
+    },
+    {
+      "word": "nicht",
+      "start": 7.684,
+      "end": 8.005,
+      "score": 0.915
+    },
+    {
+      "word": "hierhergehört.",
+      "start": 8.045,
+      "end": 10.846,
+      "score": 0.887
+    },
+    {
+      "word": "Eine",
+      "start": 10.886,
+      "end": 11.186,
+      "score": 0.842
+    },
+    {
+      "word": "Münze.",
+      "start": 11.226,
+      "end": 12.927,
+      "score": 0.933
+    },
+    {
+      "word": "Meine",
+      "start": 12.967,
+      "end": 13.287,
+      "score": 0.928
+    },
+    {
+      "word": "Münze",
+      "start": 13.328,
+      "end": 13.648,
+      "score": 0.816
+    },
+    {
+      "word": "—",
+      "start": 14.308,
+      "end": 14.328,
+      "score": 0.474
+    },
+    {
+      "word": "ich",
+      "start": 14.368,
+      "end": 14.548,
+      "score": 0.764
+    },
+    {
+      "word": "erkenne",
+      "start": 14.588,
+      "end": 14.948,
+      "score": 0.953
+    },
+    {
+      "word": "den",
+      "start": 14.968,
+      "end": 15.149,
+      "score": 0.879
+    },
+    {
+      "word": "Kratzer,",
+      "start": 15.189,
+      "end": 15.809,
+      "score": 0.841
+    },
+    {
+      "word": "den",
+      "start": 15.829,
+      "end": 15.949,
+      "score": 0.81
+    },
+    {
+      "word": "ich",
+      "start": 15.989,
+      "end": 16.069,
+      "score": 0.985
+    },
+    {
+      "word": "ihr",
+      "start": 16.109,
+      "end": 16.269,
+      "score": 0.923
+    },
+    {
+      "word": "selbst",
+      "start": 16.309,
+      "end": 16.609,
+      "score": 0.913
+    },
+    {
+      "word": "einst",
+      "start": 16.649,
+      "end": 16.87,
+      "score": 0.724
+    },
+    {
+      "word": "bei",
+      "start": 16.89,
+      "end": 16.99,
+      "score": 0.981
+    },
+    {
+      "word": "einem",
+      "start": 17.01,
+      "end": 17.21,
+      "score": 0.882
+    },
+    {
+      "word": "Sturz",
+      "start": 17.25,
+      "end": 17.55,
+      "score": 0.885
+    },
+    {
+      "word": "beigebracht",
+      "start": 17.57,
+      "end": 18.05,
+      "score": 0.912
+    },
+    {
+      "word": "habe.",
+      "start": 18.07,
+      "end": 20.512,
+      "score": 0.964
+    },
+    {
+      "word": "Der",
+      "start": 20.552,
+      "end": 20.752,
+      "score": 0.918
+    },
+    {
+      "word": "Dieb",
+      "start": 20.792,
+      "end": 20.992,
+      "score": 0.739
+    },
+    {
+      "word": "hat",
+      "start": 21.032,
+      "end": 21.172,
+      "score": 0.742
+    },
+    {
+      "word": "das",
+      "start": 21.192,
+      "end": 21.392,
+      "score": 0.908
+    },
+    {
+      "word": "Gold",
+      "start": 21.412,
+      "end": 21.672,
+      "score": 0.927
+    },
+    {
+      "word": "nicht",
+      "start": 21.692,
+      "end": 21.932,
+      "score": 0.86
+    },
+    {
+      "word": "behalten.",
+      "start": 21.952,
+      "end": 23.173,
+      "score": 0.932
+    },
+    {
+      "word": "Er",
+      "start": 23.213,
+      "end": 23.293,
+      "score": 0.698
+    },
+    {
+      "word": "hat",
+      "start": 23.313,
+      "end": 23.433,
+      "score": 0.511
+    },
+    {
+      "word": "es",
+      "start": 23.473,
+      "end": 23.653,
+      "score": 0.791
+    },
+    {
+      "word": "weitergereicht,",
+      "start": 23.693,
+      "end": 24.634,
+      "score": 0.907
+    },
+    {
+      "word": "hinaus",
+      "start": 24.654,
+      "end": 25.154,
+      "score": 0.906
+    },
+    {
+      "word": "zu",
+      "start": 25.174,
+      "end": 25.294,
+      "score": 0.982
+    },
+    {
+      "word": "jemandem,",
+      "start": 25.334,
+      "end": 25.735,
+      "score": 0.728
+    },
+    {
+      "word": "der",
+      "start": 25.755,
+      "end": 25.875,
+      "score": 0.798
+    },
+    {
+      "word": "mit",
+      "start": 25.915,
+      "end": 26.015,
+      "score": 0.897
+    },
+    {
+      "word": "diesen",
+      "start": 26.035,
+      "end": 26.255,
+      "score": 0.845
+    },
+    {
+      "word": "Räubern",
+      "start": 26.295,
+      "end": 26.635,
+      "score": 0.93
+    },
+    {
+      "word": "unter",
+      "start": 26.655,
+      "end": 26.875,
+      "score": 0.883
+    },
+    {
+      "word": "einer",
+      "start": 26.915,
+      "end": 27.135,
+      "score": 0.777
+    },
+    {
+      "word": "Decke",
+      "start": 27.175,
+      "end": 27.435,
+      "score": 0.9
+    },
+    {
+      "word": "steckt.",
+      "start": 27.495,
+      "end": 30.137,
+      "score": 0.935
+    },
+    {
+      "word": "Das",
+      "start": 30.177,
+      "end": 30.337,
+      "score": 0.933
+    },
+    {
+      "word": "ist",
+      "start": 30.377,
+      "end": 30.637,
+      "score": 0.89
+    },
+    {
+      "word": "kein",
+      "start": 30.677,
+      "end": 30.897,
+      "score": 0.83
+    },
+    {
+      "word": "gewöhnlicher",
+      "start": 30.937,
+      "end": 31.538,
+      "score": 0.774
+    },
+    {
+      "word": "Straßenraub.",
+      "start": 31.578,
+      "end": 34.159,
+      "score": 0.902
+    },
+    {
+      "word": "Das",
+      "start": 34.179,
+      "end": 34.359,
+      "score": 0.825
+    },
+    {
+      "word": "ist",
+      "start": 34.399,
+      "end": 34.6,
+      "score": 0.789
+    },
+    {
+      "word": "ein",
+      "start": 34.62,
+      "end": 34.82,
+      "score": 0.904
+    },
+    {
+      "word": "Netz.",
+      "start": 34.86,
+      "end": 35.06,
+      "score": 0.989
+    }
+  ]
+}

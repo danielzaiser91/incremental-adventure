@@ -1,0 +1,346 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 5.648,
+      "text": "Mira sieht mich an — diesmal kein Lächeln, kein Spiel.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.521,
+          "end": 0.881,
+          "score": 0.903
+        },
+        {
+          "word": "sieht",
+          "start": 0.921,
+          "end": 1.122,
+          "score": 0.707
+        },
+        {
+          "word": "mich",
+          "start": 1.142,
+          "end": 1.322,
+          "score": 0.802
+        },
+        {
+          "word": "an",
+          "start": 1.382,
+          "end": 1.502,
+          "score": 0.894
+        },
+        {
+          "word": "—",
+          "start": 2.303,
+          "end": 2.323,
+          "score": 0.978
+        },
+        {
+          "word": "diesmal",
+          "start": 2.343,
+          "end": 2.904,
+          "score": 0.862
+        },
+        {
+          "word": "kein",
+          "start": 2.944,
+          "end": 3.144,
+          "score": 0.764
+        },
+        {
+          "word": "Lächeln,",
+          "start": 3.184,
+          "end": 4.066,
+          "score": 0.841
+        },
+        {
+          "word": "kein",
+          "start": 4.086,
+          "end": 4.306,
+          "score": 0.726
+        },
+        {
+          "word": "Spiel.",
+          "start": 4.346,
+          "end": 5.648,
+          "score": 0.851
+        }
+      ]
+    },
+    {
+      "start": 5.668,
+      "end": 8.111,
+      "text": "Sie hat mein Gesicht gerade genug gelesen.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 5.668,
+          "end": 5.768,
+          "score": 0.904
+        },
+        {
+          "word": "hat",
+          "start": 5.788,
+          "end": 5.968,
+          "score": 0.953
+        },
+        {
+          "word": "mein",
+          "start": 6.008,
+          "end": 6.189,
+          "score": 0.644
+        },
+        {
+          "word": "Gesicht",
+          "start": 6.209,
+          "end": 6.589,
+          "score": 0.837
+        },
+        {
+          "word": "gerade",
+          "start": 6.649,
+          "end": 7.21,
+          "score": 0.926
+        },
+        {
+          "word": "genug",
+          "start": 7.25,
+          "end": 7.671,
+          "score": 0.947
+        },
+        {
+          "word": "gelesen.",
+          "start": 7.711,
+          "end": 8.111,
+          "score": 0.873
+        }
+      ]
+    },
+    {
+      "start": 9.473,
+      "end": 12.838,
+      "text": "\"Du fragst nach dem Schatten.\"",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 9.473,
+          "end": 9.754,
+          "score": 0.815
+        },
+        {
+          "word": "fragst",
+          "start": 9.794,
+          "end": 10.254,
+          "score": 0.906
+        },
+        {
+          "word": "nach",
+          "start": 10.275,
+          "end": 10.455,
+          "score": 0.986
+        },
+        {
+          "word": "dem",
+          "start": 10.495,
+          "end": 10.715,
+          "score": 0.976
+        },
+        {
+          "word": "Schatten.\"",
+          "start": 10.775,
+          "end": 12.838,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 12.878,
+      "end": 13.719,
+      "text": "Es ist keine Frage.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 12.878,
+          "end": 12.978,
+          "score": 0.891
+        },
+        {
+          "word": "ist",
+          "start": 13.018,
+          "end": 13.219,
+          "score": 0.988
+        },
+        {
+          "word": "keine",
+          "start": 13.259,
+          "end": 13.459,
+          "score": 0.819
+        },
+        {
+          "word": "Frage.",
+          "start": 13.499,
+          "end": 13.719,
+          "score": 0.826
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.521,
+      "end": 0.881,
+      "score": 0.903
+    },
+    {
+      "word": "sieht",
+      "start": 0.921,
+      "end": 1.122,
+      "score": 0.707
+    },
+    {
+      "word": "mich",
+      "start": 1.142,
+      "end": 1.322,
+      "score": 0.802
+    },
+    {
+      "word": "an",
+      "start": 1.382,
+      "end": 1.502,
+      "score": 0.894
+    },
+    {
+      "word": "—",
+      "start": 2.303,
+      "end": 2.323,
+      "score": 0.978
+    },
+    {
+      "word": "diesmal",
+      "start": 2.343,
+      "end": 2.904,
+      "score": 0.862
+    },
+    {
+      "word": "kein",
+      "start": 2.944,
+      "end": 3.144,
+      "score": 0.764
+    },
+    {
+      "word": "Lächeln,",
+      "start": 3.184,
+      "end": 4.066,
+      "score": 0.841
+    },
+    {
+      "word": "kein",
+      "start": 4.086,
+      "end": 4.306,
+      "score": 0.726
+    },
+    {
+      "word": "Spiel.",
+      "start": 4.346,
+      "end": 5.648,
+      "score": 0.851
+    },
+    {
+      "word": "Sie",
+      "start": 5.668,
+      "end": 5.768,
+      "score": 0.904
+    },
+    {
+      "word": "hat",
+      "start": 5.788,
+      "end": 5.968,
+      "score": 0.953
+    },
+    {
+      "word": "mein",
+      "start": 6.008,
+      "end": 6.189,
+      "score": 0.644
+    },
+    {
+      "word": "Gesicht",
+      "start": 6.209,
+      "end": 6.589,
+      "score": 0.837
+    },
+    {
+      "word": "gerade",
+      "start": 6.649,
+      "end": 7.21,
+      "score": 0.926
+    },
+    {
+      "word": "genug",
+      "start": 7.25,
+      "end": 7.671,
+      "score": 0.947
+    },
+    {
+      "word": "gelesen.",
+      "start": 7.711,
+      "end": 8.111,
+      "score": 0.873
+    },
+    {
+      "word": "\"Du",
+      "start": 9.473,
+      "end": 9.754,
+      "score": 0.815
+    },
+    {
+      "word": "fragst",
+      "start": 9.794,
+      "end": 10.254,
+      "score": 0.906
+    },
+    {
+      "word": "nach",
+      "start": 10.275,
+      "end": 10.455,
+      "score": 0.986
+    },
+    {
+      "word": "dem",
+      "start": 10.495,
+      "end": 10.715,
+      "score": 0.976
+    },
+    {
+      "word": "Schatten.\"",
+      "start": 10.775,
+      "end": 12.838,
+      "score": 0.894
+    },
+    {
+      "word": "Es",
+      "start": 12.878,
+      "end": 12.978,
+      "score": 0.891
+    },
+    {
+      "word": "ist",
+      "start": 13.018,
+      "end": 13.219,
+      "score": 0.988
+    },
+    {
+      "word": "keine",
+      "start": 13.259,
+      "end": 13.459,
+      "score": 0.819
+    },
+    {
+      "word": "Frage.",
+      "start": 13.499,
+      "end": 13.719,
+      "score": 0.826
+    }
+  ]
+}

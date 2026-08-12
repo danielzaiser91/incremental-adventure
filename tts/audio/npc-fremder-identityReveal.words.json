@@ -1,0 +1,609 @@
+{
+  "segments": [
+    {
+      "start": 0.42,
+      "end": 2.102,
+      "text": "Er sitzt wieder.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.42,
+          "end": 0.58,
+          "score": 0.776
+        },
+        {
+          "word": "sitzt",
+          "start": 0.64,
+          "end": 0.961,
+          "score": 0.948
+        },
+        {
+          "word": "wieder.",
+          "start": 1.001,
+          "end": 2.102,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 2.142,
+      "end": 5.264,
+      "text": "Natürlich sitzt er wieder.",
+      "words": [
+        {
+          "word": "Natürlich",
+          "start": 2.142,
+          "end": 2.802,
+          "score": 0.892
+        },
+        {
+          "word": "sitzt",
+          "start": 2.842,
+          "end": 3.082,
+          "score": 0.966
+        },
+        {
+          "word": "er",
+          "start": 3.142,
+          "end": 3.262,
+          "score": 0.84
+        },
+        {
+          "word": "wieder.",
+          "start": 3.282,
+          "end": 5.264,
+          "score": 0.893
+        }
+      ]
+    },
+    {
+      "start": 5.284,
+      "end": 8.767,
+      "text": "Als ich mich setze, schaut er mich anders an.",
+      "words": [
+        {
+          "word": "Als",
+          "start": 5.284,
+          "end": 5.464,
+          "score": 0.862
+        },
+        {
+          "word": "ich",
+          "start": 5.504,
+          "end": 5.604,
+          "score": 0.856
+        },
+        {
+          "word": "mich",
+          "start": 5.644,
+          "end": 5.804,
+          "score": 0.892
+        },
+        {
+          "word": "setze,",
+          "start": 5.844,
+          "end": 6.385,
+          "score": 0.93
+        },
+        {
+          "word": "schaut",
+          "start": 6.405,
+          "end": 6.625,
+          "score": 0.764
+        },
+        {
+          "word": "er",
+          "start": 6.705,
+          "end": 6.785,
+          "score": 0.827
+        },
+        {
+          "word": "mich",
+          "start": 6.825,
+          "end": 7.005,
+          "score": 0.939
+        },
+        {
+          "word": "anders",
+          "start": 7.045,
+          "end": 7.406,
+          "score": 0.709
+        },
+        {
+          "word": "an.",
+          "start": 7.446,
+          "end": 8.767,
+          "score": 0.985
+        }
+      ]
+    },
+    {
+      "start": 8.787,
+      "end": 10.368,
+      "text": "\"Du hast gefragt.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 8.787,
+          "end": 8.967,
+          "score": 0.926
+        },
+        {
+          "word": "hast",
+          "start": 8.987,
+          "end": 9.287,
+          "score": 0.818
+        },
+        {
+          "word": "gefragt.",
+          "start": 9.327,
+          "end": 10.368,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 10.428,
+      "end": 13.29,
+      "text": "Ich habe es gehört.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 10.428,
+          "end": 10.548,
+          "score": 0.911
+        },
+        {
+          "word": "habe",
+          "start": 10.588,
+          "end": 10.808,
+          "score": 0.878
+        },
+        {
+          "word": "es",
+          "start": 10.868,
+          "end": 11.028,
+          "score": 0.934
+        },
+        {
+          "word": "gehört.\"",
+          "start": 11.068,
+          "end": 13.29,
+          "score": 0.78
+        }
+      ]
+    },
+    {
+      "start": 13.31,
+      "end": 15.612,
+      "text": "\"Mein Name ist nicht wichtig.",
+      "words": [
+        {
+          "word": "\"Mein",
+          "start": 13.31,
+          "end": 13.63,
+          "score": 0.898
+        },
+        {
+          "word": "Name",
+          "start": 13.67,
+          "end": 14.011,
+          "score": 0.904
+        },
+        {
+          "word": "ist",
+          "start": 14.071,
+          "end": 14.251,
+          "score": 0.788
+        },
+        {
+          "word": "nicht",
+          "start": 14.291,
+          "end": 14.531,
+          "score": 0.975
+        },
+        {
+          "word": "wichtig.",
+          "start": 14.571,
+          "end": 15.612,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 15.672,
+      "end": 20.375,
+      "text": "Aber Lethkar...\" Er lächelt, kaum sichtbar.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 15.672,
+          "end": 16.452,
+          "score": 0.993
+        },
+        {
+          "word": "Lethkar...\"",
+          "start": 16.513,
+          "end": 18.354,
+          "score": 0.678
+        },
+        {
+          "word": "Er",
+          "start": 18.394,
+          "end": 18.574,
+          "score": 0.798
+        },
+        {
+          "word": "lächelt,",
+          "start": 18.614,
+          "end": 19.595,
+          "score": 0.858
+        },
+        {
+          "word": "kaum",
+          "start": 19.615,
+          "end": 19.915,
+          "score": 0.784
+        },
+        {
+          "word": "sichtbar.",
+          "start": 19.955,
+          "end": 20.375,
+          "score": 0.825
+        }
+      ]
+    },
+    {
+      "start": 20.395,
+      "end": 23.818,
+      "text": "\"...dort kennt man mich.",
+      "words": [
+        {
+          "word": "\"...dort",
+          "start": 20.395,
+          "end": 22.157,
+          "score": 0.823
+        },
+        {
+          "word": "kennt",
+          "start": 22.197,
+          "end": 22.497,
+          "score": 0.765
+        },
+        {
+          "word": "man",
+          "start": 22.517,
+          "end": 22.697,
+          "score": 0.942
+        },
+        {
+          "word": "mich.",
+          "start": 22.737,
+          "end": 23.818,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 23.838,
+      "end": 25.98,
+      "text": "Und bald wirst du es auch tun.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 23.838,
+          "end": 24.078,
+          "score": 0.888
+        },
+        {
+          "word": "bald",
+          "start": 24.118,
+          "end": 24.779,
+          "score": 0.896
+        },
+        {
+          "word": "wirst",
+          "start": 24.799,
+          "end": 25.019,
+          "score": 0.584
+        },
+        {
+          "word": "du",
+          "start": 25.039,
+          "end": 25.139,
+          "score": 0.739
+        },
+        {
+          "word": "es",
+          "start": 25.179,
+          "end": 25.379,
+          "score": 0.737
+        },
+        {
+          "word": "auch",
+          "start": 25.439,
+          "end": 25.619,
+          "score": 0.8
+        },
+        {
+          "word": "tun.\"",
+          "start": 25.639,
+          "end": 25.98,
+          "score": 0.766
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.42,
+      "end": 0.58,
+      "score": 0.776
+    },
+    {
+      "word": "sitzt",
+      "start": 0.64,
+      "end": 0.961,
+      "score": 0.948
+    },
+    {
+      "word": "wieder.",
+      "start": 1.001,
+      "end": 2.102,
+      "score": 0.923
+    },
+    {
+      "word": "Natürlich",
+      "start": 2.142,
+      "end": 2.802,
+      "score": 0.892
+    },
+    {
+      "word": "sitzt",
+      "start": 2.842,
+      "end": 3.082,
+      "score": 0.966
+    },
+    {
+      "word": "er",
+      "start": 3.142,
+      "end": 3.262,
+      "score": 0.84
+    },
+    {
+      "word": "wieder.",
+      "start": 3.282,
+      "end": 5.264,
+      "score": 0.893
+    },
+    {
+      "word": "Als",
+      "start": 5.284,
+      "end": 5.464,
+      "score": 0.862
+    },
+    {
+      "word": "ich",
+      "start": 5.504,
+      "end": 5.604,
+      "score": 0.856
+    },
+    {
+      "word": "mich",
+      "start": 5.644,
+      "end": 5.804,
+      "score": 0.892
+    },
+    {
+      "word": "setze,",
+      "start": 5.844,
+      "end": 6.385,
+      "score": 0.93
+    },
+    {
+      "word": "schaut",
+      "start": 6.405,
+      "end": 6.625,
+      "score": 0.764
+    },
+    {
+      "word": "er",
+      "start": 6.705,
+      "end": 6.785,
+      "score": 0.827
+    },
+    {
+      "word": "mich",
+      "start": 6.825,
+      "end": 7.005,
+      "score": 0.939
+    },
+    {
+      "word": "anders",
+      "start": 7.045,
+      "end": 7.406,
+      "score": 0.709
+    },
+    {
+      "word": "an.",
+      "start": 7.446,
+      "end": 8.767,
+      "score": 0.985
+    },
+    {
+      "word": "\"Du",
+      "start": 8.787,
+      "end": 8.967,
+      "score": 0.926
+    },
+    {
+      "word": "hast",
+      "start": 8.987,
+      "end": 9.287,
+      "score": 0.818
+    },
+    {
+      "word": "gefragt.",
+      "start": 9.327,
+      "end": 10.368,
+      "score": 0.973
+    },
+    {
+      "word": "Ich",
+      "start": 10.428,
+      "end": 10.548,
+      "score": 0.911
+    },
+    {
+      "word": "habe",
+      "start": 10.588,
+      "end": 10.808,
+      "score": 0.878
+    },
+    {
+      "word": "es",
+      "start": 10.868,
+      "end": 11.028,
+      "score": 0.934
+    },
+    {
+      "word": "gehört.\"",
+      "start": 11.068,
+      "end": 13.29,
+      "score": 0.78
+    },
+    {
+      "word": "\"Mein",
+      "start": 13.31,
+      "end": 13.63,
+      "score": 0.898
+    },
+    {
+      "word": "Name",
+      "start": 13.67,
+      "end": 14.011,
+      "score": 0.904
+    },
+    {
+      "word": "ist",
+      "start": 14.071,
+      "end": 14.251,
+      "score": 0.788
+    },
+    {
+      "word": "nicht",
+      "start": 14.291,
+      "end": 14.531,
+      "score": 0.975
+    },
+    {
+      "word": "wichtig.",
+      "start": 14.571,
+      "end": 15.612,
+      "score": 0.968
+    },
+    {
+      "word": "Aber",
+      "start": 15.672,
+      "end": 16.452,
+      "score": 0.993
+    },
+    {
+      "word": "Lethkar...\"",
+      "start": 16.513,
+      "end": 18.354,
+      "score": 0.678
+    },
+    {
+      "word": "Er",
+      "start": 18.394,
+      "end": 18.574,
+      "score": 0.798
+    },
+    {
+      "word": "lächelt,",
+      "start": 18.614,
+      "end": 19.595,
+      "score": 0.858
+    },
+    {
+      "word": "kaum",
+      "start": 19.615,
+      "end": 19.915,
+      "score": 0.784
+    },
+    {
+      "word": "sichtbar.",
+      "start": 19.955,
+      "end": 20.375,
+      "score": 0.825
+    },
+    {
+      "word": "\"...dort",
+      "start": 20.395,
+      "end": 22.157,
+      "score": 0.823
+    },
+    {
+      "word": "kennt",
+      "start": 22.197,
+      "end": 22.497,
+      "score": 0.765
+    },
+    {
+      "word": "man",
+      "start": 22.517,
+      "end": 22.697,
+      "score": 0.942
+    },
+    {
+      "word": "mich.",
+      "start": 22.737,
+      "end": 23.818,
+      "score": 0.941
+    },
+    {
+      "word": "Und",
+      "start": 23.838,
+      "end": 24.078,
+      "score": 0.888
+    },
+    {
+      "word": "bald",
+      "start": 24.118,
+      "end": 24.779,
+      "score": 0.896
+    },
+    {
+      "word": "wirst",
+      "start": 24.799,
+      "end": 25.019,
+      "score": 0.584
+    },
+    {
+      "word": "du",
+      "start": 25.039,
+      "end": 25.139,
+      "score": 0.739
+    },
+    {
+      "word": "es",
+      "start": 25.179,
+      "end": 25.379,
+      "score": 0.737
+    },
+    {
+      "word": "auch",
+      "start": 25.439,
+      "end": 25.619,
+      "score": 0.8
+    },
+    {
+      "word": "tun.\"",
+      "start": 25.639,
+      "end": 25.98,
+      "score": 0.766
+    }
+  ]
+}

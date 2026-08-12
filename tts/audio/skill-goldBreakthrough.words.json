@@ -1,0 +1,569 @@
+{
+  "segments": [
+    {
+      "start": 0.42,
+      "end": 8.007,
+      "text": "Ich dachte, ein Neuanfang ist immer gleich — alles weg, ein EP, von vorn.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.42,
+          "end": 0.721,
+          "score": 0.816
+        },
+        {
+          "word": "dachte,",
+          "start": 0.781,
+          "end": 1.802,
+          "score": 0.928
+        },
+        {
+          "word": "ein",
+          "start": 1.842,
+          "end": 2.102,
+          "score": 0.716
+        },
+        {
+          "word": "Neuanfang",
+          "start": 2.142,
+          "end": 2.762,
+          "score": 0.885
+        },
+        {
+          "word": "ist",
+          "start": 2.802,
+          "end": 3.063,
+          "score": 0.946
+        },
+        {
+          "word": "immer",
+          "start": 3.103,
+          "end": 3.383,
+          "score": 0.827
+        },
+        {
+          "word": "gleich",
+          "start": 3.423,
+          "end": 3.683,
+          "score": 0.934
+        },
+        {
+          "word": "—",
+          "start": 4.484,
+          "end": 4.504,
+          "score": 0.966
+        },
+        {
+          "word": "alles",
+          "start": 4.524,
+          "end": 4.764,
+          "score": 0.933
+        },
+        {
+          "word": "weg,",
+          "start": 4.824,
+          "end": 5.465,
+          "score": 0.933
+        },
+        {
+          "word": "ein",
+          "start": 5.505,
+          "end": 5.725,
+          "score": 0.793
+        },
+        {
+          "word": "EP,",
+          "start": 5.785,
+          "end": 6.345,
+          "score": 0.947
+        },
+        {
+          "word": "von",
+          "start": 6.365,
+          "end": 6.506,
+          "score": 0.978
+        },
+        {
+          "word": "vorn.",
+          "start": 6.546,
+          "end": 8.007,
+          "score": 0.759
+        }
+      ]
+    },
+    {
+      "start": 8.047,
+      "end": 10.989,
+      "text": "Aber das stimmt nicht ganz.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 8.047,
+          "end": 8.227,
+          "score": 0.989
+        },
+        {
+          "word": "das",
+          "start": 8.247,
+          "end": 8.427,
+          "score": 0.908
+        },
+        {
+          "word": "stimmt",
+          "start": 8.487,
+          "end": 8.807,
+          "score": 0.996
+        },
+        {
+          "word": "nicht",
+          "start": 8.848,
+          "end": 9.068,
+          "score": 0.978
+        },
+        {
+          "word": "ganz.",
+          "start": 9.108,
+          "end": 10.989,
+          "score": 0.907
+        }
+      ]
+    },
+    {
+      "start": 11.009,
+      "end": 15.453,
+      "text": "Wie weit ich komme, bevor ich aufhöre, macht den Unterschied.",
+      "words": [
+        {
+          "word": "Wie",
+          "start": 11.009,
+          "end": 11.21,
+          "score": 0.955
+        },
+        {
+          "word": "weit",
+          "start": 11.25,
+          "end": 11.51,
+          "score": 0.982
+        },
+        {
+          "word": "ich",
+          "start": 11.55,
+          "end": 11.77,
+          "score": 0.828
+        },
+        {
+          "word": "komme,",
+          "start": 11.81,
+          "end": 12.15,
+          "score": 0.975
+        },
+        {
+          "word": "bevor",
+          "start": 12.17,
+          "end": 12.631,
+          "score": 0.904
+        },
+        {
+          "word": "ich",
+          "start": 12.671,
+          "end": 12.851,
+          "score": 0.875
+        },
+        {
+          "word": "aufhöre,",
+          "start": 12.891,
+          "end": 13.672,
+          "score": 0.911
+        },
+        {
+          "word": "macht",
+          "start": 13.692,
+          "end": 13.872,
+          "score": 0.839
+        },
+        {
+          "word": "den",
+          "start": 13.892,
+          "end": 14.052,
+          "score": 0.979
+        },
+        {
+          "word": "Unterschied.",
+          "start": 14.092,
+          "end": 15.453,
+          "score": 0.879
+        }
+      ]
+    },
+    {
+      "start": 15.473,
+      "end": 20.177,
+      "text": "Mehr riskiert, mehr zurückgelassen, mehr gelernt.",
+      "words": [
+        {
+          "word": "Mehr",
+          "start": 15.473,
+          "end": 15.653,
+          "score": 0.769
+        },
+        {
+          "word": "riskiert,",
+          "start": 15.693,
+          "end": 16.634,
+          "score": 0.887
+        },
+        {
+          "word": "mehr",
+          "start": 16.654,
+          "end": 16.874,
+          "score": 0.839
+        },
+        {
+          "word": "zurückgelassen,",
+          "start": 16.914,
+          "end": 18.035,
+          "score": 0.927
+        },
+        {
+          "word": "mehr",
+          "start": 18.055,
+          "end": 18.256,
+          "score": 0.852
+        },
+        {
+          "word": "gelernt.",
+          "start": 18.296,
+          "end": 20.177,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 20.197,
+      "end": 23.14,
+      "text": "Das ist keine Mystik — das ist eine Formel.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 20.197,
+          "end": 20.337,
+          "score": 0.867
+        },
+        {
+          "word": "ist",
+          "start": 20.377,
+          "end": 20.638,
+          "score": 0.807
+        },
+        {
+          "word": "keine",
+          "start": 20.658,
+          "end": 20.878,
+          "score": 0.94
+        },
+        {
+          "word": "Mystik",
+          "start": 20.918,
+          "end": 21.298,
+          "score": 0.866
+        },
+        {
+          "word": "—",
+          "start": 22.279,
+          "end": 22.299,
+          "score": 0.826
+        },
+        {
+          "word": "das",
+          "start": 22.319,
+          "end": 22.439,
+          "score": 0.953
+        },
+        {
+          "word": "ist",
+          "start": 22.479,
+          "end": 22.639,
+          "score": 0.914
+        },
+        {
+          "word": "eine",
+          "start": 22.679,
+          "end": 22.839,
+          "score": 0.876
+        },
+        {
+          "word": "Formel.",
+          "start": 22.879,
+          "end": 23.14,
+          "score": 0.69
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.42,
+      "end": 0.721,
+      "score": 0.816
+    },
+    {
+      "word": "dachte,",
+      "start": 0.781,
+      "end": 1.802,
+      "score": 0.928
+    },
+    {
+      "word": "ein",
+      "start": 1.842,
+      "end": 2.102,
+      "score": 0.716
+    },
+    {
+      "word": "Neuanfang",
+      "start": 2.142,
+      "end": 2.762,
+      "score": 0.885
+    },
+    {
+      "word": "ist",
+      "start": 2.802,
+      "end": 3.063,
+      "score": 0.946
+    },
+    {
+      "word": "immer",
+      "start": 3.103,
+      "end": 3.383,
+      "score": 0.827
+    },
+    {
+      "word": "gleich",
+      "start": 3.423,
+      "end": 3.683,
+      "score": 0.934
+    },
+    {
+      "word": "—",
+      "start": 4.484,
+      "end": 4.504,
+      "score": 0.966
+    },
+    {
+      "word": "alles",
+      "start": 4.524,
+      "end": 4.764,
+      "score": 0.933
+    },
+    {
+      "word": "weg,",
+      "start": 4.824,
+      "end": 5.465,
+      "score": 0.933
+    },
+    {
+      "word": "ein",
+      "start": 5.505,
+      "end": 5.725,
+      "score": 0.793
+    },
+    {
+      "word": "EP,",
+      "start": 5.785,
+      "end": 6.345,
+      "score": 0.947
+    },
+    {
+      "word": "von",
+      "start": 6.365,
+      "end": 6.506,
+      "score": 0.978
+    },
+    {
+      "word": "vorn.",
+      "start": 6.546,
+      "end": 8.007,
+      "score": 0.759
+    },
+    {
+      "word": "Aber",
+      "start": 8.047,
+      "end": 8.227,
+      "score": 0.989
+    },
+    {
+      "word": "das",
+      "start": 8.247,
+      "end": 8.427,
+      "score": 0.908
+    },
+    {
+      "word": "stimmt",
+      "start": 8.487,
+      "end": 8.807,
+      "score": 0.996
+    },
+    {
+      "word": "nicht",
+      "start": 8.848,
+      "end": 9.068,
+      "score": 0.978
+    },
+    {
+      "word": "ganz.",
+      "start": 9.108,
+      "end": 10.989,
+      "score": 0.907
+    },
+    {
+      "word": "Wie",
+      "start": 11.009,
+      "end": 11.21,
+      "score": 0.955
+    },
+    {
+      "word": "weit",
+      "start": 11.25,
+      "end": 11.51,
+      "score": 0.982
+    },
+    {
+      "word": "ich",
+      "start": 11.55,
+      "end": 11.77,
+      "score": 0.828
+    },
+    {
+      "word": "komme,",
+      "start": 11.81,
+      "end": 12.15,
+      "score": 0.975
+    },
+    {
+      "word": "bevor",
+      "start": 12.17,
+      "end": 12.631,
+      "score": 0.904
+    },
+    {
+      "word": "ich",
+      "start": 12.671,
+      "end": 12.851,
+      "score": 0.875
+    },
+    {
+      "word": "aufhöre,",
+      "start": 12.891,
+      "end": 13.672,
+      "score": 0.911
+    },
+    {
+      "word": "macht",
+      "start": 13.692,
+      "end": 13.872,
+      "score": 0.839
+    },
+    {
+      "word": "den",
+      "start": 13.892,
+      "end": 14.052,
+      "score": 0.979
+    },
+    {
+      "word": "Unterschied.",
+      "start": 14.092,
+      "end": 15.453,
+      "score": 0.879
+    },
+    {
+      "word": "Mehr",
+      "start": 15.473,
+      "end": 15.653,
+      "score": 0.769
+    },
+    {
+      "word": "riskiert,",
+      "start": 15.693,
+      "end": 16.634,
+      "score": 0.887
+    },
+    {
+      "word": "mehr",
+      "start": 16.654,
+      "end": 16.874,
+      "score": 0.839
+    },
+    {
+      "word": "zurückgelassen,",
+      "start": 16.914,
+      "end": 18.035,
+      "score": 0.927
+    },
+    {
+      "word": "mehr",
+      "start": 18.055,
+      "end": 18.256,
+      "score": 0.852
+    },
+    {
+      "word": "gelernt.",
+      "start": 18.296,
+      "end": 20.177,
+      "score": 0.938
+    },
+    {
+      "word": "Das",
+      "start": 20.197,
+      "end": 20.337,
+      "score": 0.867
+    },
+    {
+      "word": "ist",
+      "start": 20.377,
+      "end": 20.638,
+      "score": 0.807
+    },
+    {
+      "word": "keine",
+      "start": 20.658,
+      "end": 20.878,
+      "score": 0.94
+    },
+    {
+      "word": "Mystik",
+      "start": 20.918,
+      "end": 21.298,
+      "score": 0.866
+    },
+    {
+      "word": "—",
+      "start": 22.279,
+      "end": 22.299,
+      "score": 0.826
+    },
+    {
+      "word": "das",
+      "start": 22.319,
+      "end": 22.439,
+      "score": 0.953
+    },
+    {
+      "word": "ist",
+      "start": 22.479,
+      "end": 22.639,
+      "score": 0.914
+    },
+    {
+      "word": "eine",
+      "start": 22.679,
+      "end": 22.839,
+      "score": 0.876
+    },
+    {
+      "word": "Formel.",
+      "start": 22.879,
+      "end": 23.14,
+      "score": 0.69
+    }
+  ]
+}

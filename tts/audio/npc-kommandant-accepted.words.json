@@ -1,0 +1,171 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.048,
+      "text": "Roswald hebt zwei Finger zum Gruß.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.461,
+          "end": 0.902,
+          "score": 0.73
+        },
+        {
+          "word": "hebt",
+          "start": 0.943,
+          "end": 1.203,
+          "score": 0.692
+        },
+        {
+          "word": "zwei",
+          "start": 1.223,
+          "end": 1.504,
+          "score": 0.835
+        },
+        {
+          "word": "Finger",
+          "start": 1.564,
+          "end": 1.865,
+          "score": 0.87
+        },
+        {
+          "word": "zum",
+          "start": 1.885,
+          "end": 2.045,
+          "score": 0.811
+        },
+        {
+          "word": "Gruß.",
+          "start": 2.086,
+          "end": 3.048,
+          "score": 0.722
+        }
+      ]
+    },
+    {
+      "start": 3.068,
+      "end": 5.635,
+      "text": "\"Schicht läuft gut?\"",
+      "words": [
+        {
+          "word": "\"Schicht",
+          "start": 3.068,
+          "end": 3.429,
+          "score": 0.785
+        },
+        {
+          "word": "läuft",
+          "start": 3.469,
+          "end": 3.69,
+          "score": 0.825
+        },
+        {
+          "word": "gut?\"",
+          "start": 3.73,
+          "end": 5.635,
+          "score": 0.648
+        }
+      ]
+    },
+    {
+      "start": 5.675,
+      "end": 6.838,
+      "text": "Keine Antwort erwartet.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 5.675,
+          "end": 5.976,
+          "score": 0.749
+        },
+        {
+          "word": "Antwort",
+          "start": 6.056,
+          "end": 6.457,
+          "score": 0.84
+        },
+        {
+          "word": "erwartet.",
+          "start": 6.497,
+          "end": 6.838,
+          "score": 0.461
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.461,
+      "end": 0.902,
+      "score": 0.73
+    },
+    {
+      "word": "hebt",
+      "start": 0.943,
+      "end": 1.203,
+      "score": 0.692
+    },
+    {
+      "word": "zwei",
+      "start": 1.223,
+      "end": 1.504,
+      "score": 0.835
+    },
+    {
+      "word": "Finger",
+      "start": 1.564,
+      "end": 1.865,
+      "score": 0.87
+    },
+    {
+      "word": "zum",
+      "start": 1.885,
+      "end": 2.045,
+      "score": 0.811
+    },
+    {
+      "word": "Gruß.",
+      "start": 2.086,
+      "end": 3.048,
+      "score": 0.722
+    },
+    {
+      "word": "\"Schicht",
+      "start": 3.068,
+      "end": 3.429,
+      "score": 0.785
+    },
+    {
+      "word": "läuft",
+      "start": 3.469,
+      "end": 3.69,
+      "score": 0.825
+    },
+    {
+      "word": "gut?\"",
+      "start": 3.73,
+      "end": 5.635,
+      "score": 0.648
+    },
+    {
+      "word": "Keine",
+      "start": 5.675,
+      "end": 5.976,
+      "score": 0.749
+    },
+    {
+      "word": "Antwort",
+      "start": 6.056,
+      "end": 6.457,
+      "score": 0.84
+    },
+    {
+      "word": "erwartet.",
+      "start": 6.497,
+      "end": 6.838,
+      "score": 0.461
+    }
+  ]
+}

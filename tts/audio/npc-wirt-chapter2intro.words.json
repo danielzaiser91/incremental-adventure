@@ -1,0 +1,835 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 7.006,
+      "text": "Korbin zieht mich nah heran, als ich die Taverne betrete, sein Blick fliegt kurz zur Tür.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.46,
+          "end": 0.981,
+          "score": 0.797
+        },
+        {
+          "word": "zieht",
+          "start": 1.021,
+          "end": 1.241,
+          "score": 0.865
+        },
+        {
+          "word": "mich",
+          "start": 1.281,
+          "end": 1.541,
+          "score": 0.902
+        },
+        {
+          "word": "nah",
+          "start": 1.601,
+          "end": 1.841,
+          "score": 0.918
+        },
+        {
+          "word": "heran,",
+          "start": 1.882,
+          "end": 2.342,
+          "score": 0.854
+        },
+        {
+          "word": "als",
+          "start": 2.362,
+          "end": 2.502,
+          "score": 0.878
+        },
+        {
+          "word": "ich",
+          "start": 2.542,
+          "end": 2.662,
+          "score": 0.834
+        },
+        {
+          "word": "die",
+          "start": 2.682,
+          "end": 2.782,
+          "score": 0.773
+        },
+        {
+          "word": "Taverne",
+          "start": 2.802,
+          "end": 3.243,
+          "score": 0.807
+        },
+        {
+          "word": "betrete,",
+          "start": 3.283,
+          "end": 4.263,
+          "score": 0.916
+        },
+        {
+          "word": "sein",
+          "start": 4.283,
+          "end": 4.524,
+          "score": 0.791
+        },
+        {
+          "word": "Blick",
+          "start": 4.564,
+          "end": 4.884,
+          "score": 0.968
+        },
+        {
+          "word": "fliegt",
+          "start": 4.944,
+          "end": 5.264,
+          "score": 0.813
+        },
+        {
+          "word": "kurz",
+          "start": 5.304,
+          "end": 5.624,
+          "score": 0.942
+        },
+        {
+          "word": "zur",
+          "start": 5.665,
+          "end": 5.825,
+          "score": 0.794
+        },
+        {
+          "word": "Tür.",
+          "start": 5.865,
+          "end": 7.006,
+          "score": 0.864
+        }
+      ]
+    },
+    {
+      "start": 7.166,
+      "end": 9.688,
+      "text": "\"Ich hab dich draußen kämpfen sehen, Fremder.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 7.166,
+          "end": 7.306,
+          "score": 0.735
+        },
+        {
+          "word": "hab",
+          "start": 7.346,
+          "end": 7.526,
+          "score": 0.768
+        },
+        {
+          "word": "dich",
+          "start": 7.546,
+          "end": 7.706,
+          "score": 0.672
+        },
+        {
+          "word": "draußen",
+          "start": 7.746,
+          "end": 8.126,
+          "score": 0.833
+        },
+        {
+          "word": "kämpfen",
+          "start": 8.167,
+          "end": 8.547,
+          "score": 0.846
+        },
+        {
+          "word": "sehen,",
+          "start": 8.567,
+          "end": 8.807,
+          "score": 0.794
+        },
+        {
+          "word": "Fremder.",
+          "start": 8.827,
+          "end": 9.688,
+          "score": 0.825
+        }
+      ]
+    },
+    {
+      "start": 9.708,
+      "end": 12.43,
+      "text": "Du bist nicht mehr das, was du warst, als du ankamst.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 9.708,
+          "end": 9.828,
+          "score": 0.822
+        },
+        {
+          "word": "bist",
+          "start": 9.848,
+          "end": 10.108,
+          "score": 0.773
+        },
+        {
+          "word": "nicht",
+          "start": 10.128,
+          "end": 10.328,
+          "score": 0.874
+        },
+        {
+          "word": "mehr",
+          "start": 10.368,
+          "end": 10.608,
+          "score": 0.886
+        },
+        {
+          "word": "das,",
+          "start": 10.649,
+          "end": 10.869,
+          "score": 0.911
+        },
+        {
+          "word": "was",
+          "start": 10.909,
+          "end": 11.049,
+          "score": 0.932
+        },
+        {
+          "word": "du",
+          "start": 11.069,
+          "end": 11.229,
+          "score": 0.898
+        },
+        {
+          "word": "warst,",
+          "start": 11.269,
+          "end": 11.569,
+          "score": 0.825
+        },
+        {
+          "word": "als",
+          "start": 11.589,
+          "end": 11.729,
+          "score": 0.911
+        },
+        {
+          "word": "du",
+          "start": 11.749,
+          "end": 11.869,
+          "score": 0.874
+        },
+        {
+          "word": "ankamst.\"",
+          "start": 11.91,
+          "end": 12.43,
+          "score": 0.777
+        }
+      ]
+    },
+    {
+      "start": 13.471,
+      "end": 16.333,
+      "text": "\"Ich kenn dich noch, als du frisch hereingekommen bist.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 13.471,
+          "end": 13.651,
+          "score": 0.818
+        },
+        {
+          "word": "kenn",
+          "start": 13.691,
+          "end": 13.891,
+          "score": 0.723
+        },
+        {
+          "word": "dich",
+          "start": 13.911,
+          "end": 14.111,
+          "score": 0.582
+        },
+        {
+          "word": "noch,",
+          "start": 14.151,
+          "end": 14.351,
+          "score": 0.96
+        },
+        {
+          "word": "als",
+          "start": 14.371,
+          "end": 14.532,
+          "score": 0.882
+        },
+        {
+          "word": "du",
+          "start": 14.572,
+          "end": 14.732,
+          "score": 0.905
+        },
+        {
+          "word": "frisch",
+          "start": 14.772,
+          "end": 15.012,
+          "score": 0.742
+        },
+        {
+          "word": "hereingekommen",
+          "start": 15.052,
+          "end": 15.693,
+          "score": 0.938
+        },
+        {
+          "word": "bist.",
+          "start": 15.713,
+          "end": 16.333,
+          "score": 0.746
+        }
+      ]
+    },
+    {
+      "start": 16.353,
+      "end": 18.775,
+      "text": "Du warst ein leichtes Ziel.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 16.353,
+          "end": 16.493,
+          "score": 0.801
+        },
+        {
+          "word": "warst",
+          "start": 16.533,
+          "end": 16.773,
+          "score": 0.76
+        },
+        {
+          "word": "ein",
+          "start": 16.813,
+          "end": 16.994,
+          "score": 0.95
+        },
+        {
+          "word": "leichtes",
+          "start": 17.054,
+          "end": 17.514,
+          "score": 0.943
+        },
+        {
+          "word": "Ziel.\"",
+          "start": 17.554,
+          "end": 18.775,
+          "score": 0.822
+        }
+      ]
+    },
+    {
+      "start": 18.795,
+      "end": 22.638,
+      "text": "\"Weißt du, du bist nicht der Erste, dem das passiert ist.",
+      "words": [
+        {
+          "word": "\"Weißt",
+          "start": 18.795,
+          "end": 19.055,
+          "score": 0.642
+        },
+        {
+          "word": "du,",
+          "start": 19.075,
+          "end": 19.776,
+          "score": 0.793
+        },
+        {
+          "word": "du",
+          "start": 19.796,
+          "end": 19.916,
+          "score": 0.806
+        },
+        {
+          "word": "bist",
+          "start": 19.936,
+          "end": 20.216,
+          "score": 0.874
+        },
+        {
+          "word": "nicht",
+          "start": 20.236,
+          "end": 20.456,
+          "score": 0.773
+        },
+        {
+          "word": "der",
+          "start": 20.496,
+          "end": 20.737,
+          "score": 0.749
+        },
+        {
+          "word": "Erste,",
+          "start": 20.797,
+          "end": 21.077,
+          "score": 0.892
+        },
+        {
+          "word": "dem",
+          "start": 21.097,
+          "end": 21.277,
+          "score": 0.795
+        },
+        {
+          "word": "das",
+          "start": 21.297,
+          "end": 21.437,
+          "score": 0.814
+        },
+        {
+          "word": "passiert",
+          "start": 21.477,
+          "end": 21.797,
+          "score": 0.927
+        },
+        {
+          "word": "ist.",
+          "start": 21.857,
+          "end": 22.638,
+          "score": 0.873
+        }
+      ]
+    },
+    {
+      "start": 22.698,
+      "end": 24.54,
+      "text": "Es gibt jemanden in dieser Stadt...\"",
+      "words": [
+        {
+          "word": "Es",
+          "start": 22.698,
+          "end": 22.918,
+          "score": 0.915
+        },
+        {
+          "word": "gibt",
+          "start": 22.938,
+          "end": 23.219,
+          "score": 0.731
+        },
+        {
+          "word": "jemanden",
+          "start": 23.259,
+          "end": 23.739,
+          "score": 0.929
+        },
+        {
+          "word": "in",
+          "start": 23.779,
+          "end": 23.899,
+          "score": 0.974
+        },
+        {
+          "word": "dieser",
+          "start": 23.919,
+          "end": 24.179,
+          "score": 0.912
+        },
+        {
+          "word": "Stadt...\"",
+          "start": 24.239,
+          "end": 24.54,
+          "score": 0.601
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.46,
+      "end": 0.981,
+      "score": 0.797
+    },
+    {
+      "word": "zieht",
+      "start": 1.021,
+      "end": 1.241,
+      "score": 0.865
+    },
+    {
+      "word": "mich",
+      "start": 1.281,
+      "end": 1.541,
+      "score": 0.902
+    },
+    {
+      "word": "nah",
+      "start": 1.601,
+      "end": 1.841,
+      "score": 0.918
+    },
+    {
+      "word": "heran,",
+      "start": 1.882,
+      "end": 2.342,
+      "score": 0.854
+    },
+    {
+      "word": "als",
+      "start": 2.362,
+      "end": 2.502,
+      "score": 0.878
+    },
+    {
+      "word": "ich",
+      "start": 2.542,
+      "end": 2.662,
+      "score": 0.834
+    },
+    {
+      "word": "die",
+      "start": 2.682,
+      "end": 2.782,
+      "score": 0.773
+    },
+    {
+      "word": "Taverne",
+      "start": 2.802,
+      "end": 3.243,
+      "score": 0.807
+    },
+    {
+      "word": "betrete,",
+      "start": 3.283,
+      "end": 4.263,
+      "score": 0.916
+    },
+    {
+      "word": "sein",
+      "start": 4.283,
+      "end": 4.524,
+      "score": 0.791
+    },
+    {
+      "word": "Blick",
+      "start": 4.564,
+      "end": 4.884,
+      "score": 0.968
+    },
+    {
+      "word": "fliegt",
+      "start": 4.944,
+      "end": 5.264,
+      "score": 0.813
+    },
+    {
+      "word": "kurz",
+      "start": 5.304,
+      "end": 5.624,
+      "score": 0.942
+    },
+    {
+      "word": "zur",
+      "start": 5.665,
+      "end": 5.825,
+      "score": 0.794
+    },
+    {
+      "word": "Tür.",
+      "start": 5.865,
+      "end": 7.006,
+      "score": 0.864
+    },
+    {
+      "word": "\"Ich",
+      "start": 7.166,
+      "end": 7.306,
+      "score": 0.735
+    },
+    {
+      "word": "hab",
+      "start": 7.346,
+      "end": 7.526,
+      "score": 0.768
+    },
+    {
+      "word": "dich",
+      "start": 7.546,
+      "end": 7.706,
+      "score": 0.672
+    },
+    {
+      "word": "draußen",
+      "start": 7.746,
+      "end": 8.126,
+      "score": 0.833
+    },
+    {
+      "word": "kämpfen",
+      "start": 8.167,
+      "end": 8.547,
+      "score": 0.846
+    },
+    {
+      "word": "sehen,",
+      "start": 8.567,
+      "end": 8.807,
+      "score": 0.794
+    },
+    {
+      "word": "Fremder.",
+      "start": 8.827,
+      "end": 9.688,
+      "score": 0.825
+    },
+    {
+      "word": "Du",
+      "start": 9.708,
+      "end": 9.828,
+      "score": 0.822
+    },
+    {
+      "word": "bist",
+      "start": 9.848,
+      "end": 10.108,
+      "score": 0.773
+    },
+    {
+      "word": "nicht",
+      "start": 10.128,
+      "end": 10.328,
+      "score": 0.874
+    },
+    {
+      "word": "mehr",
+      "start": 10.368,
+      "end": 10.608,
+      "score": 0.886
+    },
+    {
+      "word": "das,",
+      "start": 10.649,
+      "end": 10.869,
+      "score": 0.911
+    },
+    {
+      "word": "was",
+      "start": 10.909,
+      "end": 11.049,
+      "score": 0.932
+    },
+    {
+      "word": "du",
+      "start": 11.069,
+      "end": 11.229,
+      "score": 0.898
+    },
+    {
+      "word": "warst,",
+      "start": 11.269,
+      "end": 11.569,
+      "score": 0.825
+    },
+    {
+      "word": "als",
+      "start": 11.589,
+      "end": 11.729,
+      "score": 0.911
+    },
+    {
+      "word": "du",
+      "start": 11.749,
+      "end": 11.869,
+      "score": 0.874
+    },
+    {
+      "word": "ankamst.\"",
+      "start": 11.91,
+      "end": 12.43,
+      "score": 0.777
+    },
+    {
+      "word": "\"Ich",
+      "start": 13.471,
+      "end": 13.651,
+      "score": 0.818
+    },
+    {
+      "word": "kenn",
+      "start": 13.691,
+      "end": 13.891,
+      "score": 0.723
+    },
+    {
+      "word": "dich",
+      "start": 13.911,
+      "end": 14.111,
+      "score": 0.582
+    },
+    {
+      "word": "noch,",
+      "start": 14.151,
+      "end": 14.351,
+      "score": 0.96
+    },
+    {
+      "word": "als",
+      "start": 14.371,
+      "end": 14.532,
+      "score": 0.882
+    },
+    {
+      "word": "du",
+      "start": 14.572,
+      "end": 14.732,
+      "score": 0.905
+    },
+    {
+      "word": "frisch",
+      "start": 14.772,
+      "end": 15.012,
+      "score": 0.742
+    },
+    {
+      "word": "hereingekommen",
+      "start": 15.052,
+      "end": 15.693,
+      "score": 0.938
+    },
+    {
+      "word": "bist.",
+      "start": 15.713,
+      "end": 16.333,
+      "score": 0.746
+    },
+    {
+      "word": "Du",
+      "start": 16.353,
+      "end": 16.493,
+      "score": 0.801
+    },
+    {
+      "word": "warst",
+      "start": 16.533,
+      "end": 16.773,
+      "score": 0.76
+    },
+    {
+      "word": "ein",
+      "start": 16.813,
+      "end": 16.994,
+      "score": 0.95
+    },
+    {
+      "word": "leichtes",
+      "start": 17.054,
+      "end": 17.514,
+      "score": 0.943
+    },
+    {
+      "word": "Ziel.\"",
+      "start": 17.554,
+      "end": 18.775,
+      "score": 0.822
+    },
+    {
+      "word": "\"Weißt",
+      "start": 18.795,
+      "end": 19.055,
+      "score": 0.642
+    },
+    {
+      "word": "du,",
+      "start": 19.075,
+      "end": 19.776,
+      "score": 0.793
+    },
+    {
+      "word": "du",
+      "start": 19.796,
+      "end": 19.916,
+      "score": 0.806
+    },
+    {
+      "word": "bist",
+      "start": 19.936,
+      "end": 20.216,
+      "score": 0.874
+    },
+    {
+      "word": "nicht",
+      "start": 20.236,
+      "end": 20.456,
+      "score": 0.773
+    },
+    {
+      "word": "der",
+      "start": 20.496,
+      "end": 20.737,
+      "score": 0.749
+    },
+    {
+      "word": "Erste,",
+      "start": 20.797,
+      "end": 21.077,
+      "score": 0.892
+    },
+    {
+      "word": "dem",
+      "start": 21.097,
+      "end": 21.277,
+      "score": 0.795
+    },
+    {
+      "word": "das",
+      "start": 21.297,
+      "end": 21.437,
+      "score": 0.814
+    },
+    {
+      "word": "passiert",
+      "start": 21.477,
+      "end": 21.797,
+      "score": 0.927
+    },
+    {
+      "word": "ist.",
+      "start": 21.857,
+      "end": 22.638,
+      "score": 0.873
+    },
+    {
+      "word": "Es",
+      "start": 22.698,
+      "end": 22.918,
+      "score": 0.915
+    },
+    {
+      "word": "gibt",
+      "start": 22.938,
+      "end": 23.219,
+      "score": 0.731
+    },
+    {
+      "word": "jemanden",
+      "start": 23.259,
+      "end": 23.739,
+      "score": 0.929
+    },
+    {
+      "word": "in",
+      "start": 23.779,
+      "end": 23.899,
+      "score": 0.974
+    },
+    {
+      "word": "dieser",
+      "start": 23.919,
+      "end": 24.179,
+      "score": 0.912
+    },
+    {
+      "word": "Stadt...\"",
+      "start": 24.239,
+      "end": 24.54,
+      "score": 0.601
+    }
+  ]
+}

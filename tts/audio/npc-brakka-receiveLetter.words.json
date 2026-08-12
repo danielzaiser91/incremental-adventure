@@ -1,0 +1,490 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 3.425,
+      "text": "Ich reiche Brakka den versiegelten Brief.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.521,
+          "end": 0.641,
+          "score": 0.44
+        },
+        {
+          "word": "reiche",
+          "start": 0.721,
+          "end": 1.081,
+          "score": 0.816
+        },
+        {
+          "word": "Brakka",
+          "start": 1.101,
+          "end": 1.522,
+          "score": 0.788
+        },
+        {
+          "word": "den",
+          "start": 1.542,
+          "end": 1.762,
+          "score": 0.625
+        },
+        {
+          "word": "versiegelten",
+          "start": 1.782,
+          "end": 2.403,
+          "score": 0.939
+        },
+        {
+          "word": "Brief.",
+          "start": 2.443,
+          "end": 3.425,
+          "score": 0.848
+        }
+      ]
+    },
+    {
+      "start": 3.505,
+      "end": 8.211,
+      "text": "Er liest ihn kurz, sein Grinsen verschwindet für einen Moment.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.505,
+          "end": 3.645,
+          "score": 0.771
+        },
+        {
+          "word": "liest",
+          "start": 3.685,
+          "end": 3.945,
+          "score": 0.799
+        },
+        {
+          "word": "ihn",
+          "start": 3.985,
+          "end": 4.206,
+          "score": 0.62
+        },
+        {
+          "word": "kurz,",
+          "start": 4.226,
+          "end": 5.027,
+          "score": 0.979
+        },
+        {
+          "word": "sein",
+          "start": 5.087,
+          "end": 5.387,
+          "score": 0.787
+        },
+        {
+          "word": "Grinsen",
+          "start": 5.407,
+          "end": 5.928,
+          "score": 0.879
+        },
+        {
+          "word": "verschwindet",
+          "start": 5.968,
+          "end": 6.529,
+          "score": 0.883
+        },
+        {
+          "word": "für",
+          "start": 6.549,
+          "end": 6.689,
+          "score": 0.838
+        },
+        {
+          "word": "einen",
+          "start": 6.729,
+          "end": 6.909,
+          "score": 0.843
+        },
+        {
+          "word": "Moment.",
+          "start": 6.929,
+          "end": 8.211,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 8.231,
+      "end": 10.915,
+      "text": "\"Sag Mira, ich kümmere mich drum.\"",
+      "words": [
+        {
+          "word": "\"Sag",
+          "start": 8.231,
+          "end": 8.571,
+          "score": 0.859
+        },
+        {
+          "word": "Mira,",
+          "start": 8.592,
+          "end": 9.032,
+          "score": 0.796
+        },
+        {
+          "word": "ich",
+          "start": 9.072,
+          "end": 9.252,
+          "score": 0.806
+        },
+        {
+          "word": "kümmere",
+          "start": 9.272,
+          "end": 9.553,
+          "score": 0.797
+        },
+        {
+          "word": "mich",
+          "start": 9.573,
+          "end": 9.733,
+          "score": 0.815
+        },
+        {
+          "word": "drum.\"",
+          "start": 9.753,
+          "end": 10.915,
+          "score": 0.759
+        }
+      ]
+    },
+    {
+      "start": 10.975,
+      "end": 14.6,
+      "text": "Er steckt den Brief weg und drückt mir zum Dank ein paar Münzen in die Hand.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 10.975,
+          "end": 11.115,
+          "score": 0.886
+        },
+        {
+          "word": "steckt",
+          "start": 11.155,
+          "end": 11.415,
+          "score": 0.916
+        },
+        {
+          "word": "den",
+          "start": 11.435,
+          "end": 11.596,
+          "score": 0.678
+        },
+        {
+          "word": "Brief",
+          "start": 11.616,
+          "end": 11.856,
+          "score": 0.892
+        },
+        {
+          "word": "weg",
+          "start": 11.876,
+          "end": 12.236,
+          "score": 0.97
+        },
+        {
+          "word": "und",
+          "start": 12.276,
+          "end": 12.477,
+          "score": 0.925
+        },
+        {
+          "word": "drückt",
+          "start": 12.497,
+          "end": 12.737,
+          "score": 0.86
+        },
+        {
+          "word": "mir",
+          "start": 12.757,
+          "end": 12.937,
+          "score": 0.907
+        },
+        {
+          "word": "zum",
+          "start": 12.957,
+          "end": 13.158,
+          "score": 0.697
+        },
+        {
+          "word": "Dank",
+          "start": 13.178,
+          "end": 13.418,
+          "score": 0.877
+        },
+        {
+          "word": "ein",
+          "start": 13.458,
+          "end": 13.578,
+          "score": 0.812
+        },
+        {
+          "word": "paar",
+          "start": 13.598,
+          "end": 13.758,
+          "score": 0.726
+        },
+        {
+          "word": "Münzen",
+          "start": 13.798,
+          "end": 14.179,
+          "score": 0.863
+        },
+        {
+          "word": "in",
+          "start": 14.219,
+          "end": 14.299,
+          "score": 0.861
+        },
+        {
+          "word": "die",
+          "start": 14.319,
+          "end": 14.419,
+          "score": 0.889
+        },
+        {
+          "word": "Hand.",
+          "start": 14.459,
+          "end": 14.6,
+          "score": 0.691
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.521,
+      "end": 0.641,
+      "score": 0.44
+    },
+    {
+      "word": "reiche",
+      "start": 0.721,
+      "end": 1.081,
+      "score": 0.816
+    },
+    {
+      "word": "Brakka",
+      "start": 1.101,
+      "end": 1.522,
+      "score": 0.788
+    },
+    {
+      "word": "den",
+      "start": 1.542,
+      "end": 1.762,
+      "score": 0.625
+    },
+    {
+      "word": "versiegelten",
+      "start": 1.782,
+      "end": 2.403,
+      "score": 0.939
+    },
+    {
+      "word": "Brief.",
+      "start": 2.443,
+      "end": 3.425,
+      "score": 0.848
+    },
+    {
+      "word": "Er",
+      "start": 3.505,
+      "end": 3.645,
+      "score": 0.771
+    },
+    {
+      "word": "liest",
+      "start": 3.685,
+      "end": 3.945,
+      "score": 0.799
+    },
+    {
+      "word": "ihn",
+      "start": 3.985,
+      "end": 4.206,
+      "score": 0.62
+    },
+    {
+      "word": "kurz,",
+      "start": 4.226,
+      "end": 5.027,
+      "score": 0.979
+    },
+    {
+      "word": "sein",
+      "start": 5.087,
+      "end": 5.387,
+      "score": 0.787
+    },
+    {
+      "word": "Grinsen",
+      "start": 5.407,
+      "end": 5.928,
+      "score": 0.879
+    },
+    {
+      "word": "verschwindet",
+      "start": 5.968,
+      "end": 6.529,
+      "score": 0.883
+    },
+    {
+      "word": "für",
+      "start": 6.549,
+      "end": 6.689,
+      "score": 0.838
+    },
+    {
+      "word": "einen",
+      "start": 6.729,
+      "end": 6.909,
+      "score": 0.843
+    },
+    {
+      "word": "Moment.",
+      "start": 6.929,
+      "end": 8.211,
+      "score": 0.933
+    },
+    {
+      "word": "\"Sag",
+      "start": 8.231,
+      "end": 8.571,
+      "score": 0.859
+    },
+    {
+      "word": "Mira,",
+      "start": 8.592,
+      "end": 9.032,
+      "score": 0.796
+    },
+    {
+      "word": "ich",
+      "start": 9.072,
+      "end": 9.252,
+      "score": 0.806
+    },
+    {
+      "word": "kümmere",
+      "start": 9.272,
+      "end": 9.553,
+      "score": 0.797
+    },
+    {
+      "word": "mich",
+      "start": 9.573,
+      "end": 9.733,
+      "score": 0.815
+    },
+    {
+      "word": "drum.\"",
+      "start": 9.753,
+      "end": 10.915,
+      "score": 0.759
+    },
+    {
+      "word": "Er",
+      "start": 10.975,
+      "end": 11.115,
+      "score": 0.886
+    },
+    {
+      "word": "steckt",
+      "start": 11.155,
+      "end": 11.415,
+      "score": 0.916
+    },
+    {
+      "word": "den",
+      "start": 11.435,
+      "end": 11.596,
+      "score": 0.678
+    },
+    {
+      "word": "Brief",
+      "start": 11.616,
+      "end": 11.856,
+      "score": 0.892
+    },
+    {
+      "word": "weg",
+      "start": 11.876,
+      "end": 12.236,
+      "score": 0.97
+    },
+    {
+      "word": "und",
+      "start": 12.276,
+      "end": 12.477,
+      "score": 0.925
+    },
+    {
+      "word": "drückt",
+      "start": 12.497,
+      "end": 12.737,
+      "score": 0.86
+    },
+    {
+      "word": "mir",
+      "start": 12.757,
+      "end": 12.937,
+      "score": 0.907
+    },
+    {
+      "word": "zum",
+      "start": 12.957,
+      "end": 13.158,
+      "score": 0.697
+    },
+    {
+      "word": "Dank",
+      "start": 13.178,
+      "end": 13.418,
+      "score": 0.877
+    },
+    {
+      "word": "ein",
+      "start": 13.458,
+      "end": 13.578,
+      "score": 0.812
+    },
+    {
+      "word": "paar",
+      "start": 13.598,
+      "end": 13.758,
+      "score": 0.726
+    },
+    {
+      "word": "Münzen",
+      "start": 13.798,
+      "end": 14.179,
+      "score": 0.863
+    },
+    {
+      "word": "in",
+      "start": 14.219,
+      "end": 14.299,
+      "score": 0.861
+    },
+    {
+      "word": "die",
+      "start": 14.319,
+      "end": 14.419,
+      "score": 0.889
+    },
+    {
+      "word": "Hand.",
+      "start": 14.459,
+      "end": 14.6,
+      "score": 0.691
+    }
+  ]
+}

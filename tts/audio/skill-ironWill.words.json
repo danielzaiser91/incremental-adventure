@@ -1,0 +1,427 @@
+{
+  "segments": [
+    {
+      "start": 0.741,
+      "end": 2.162,
+      "text": "Hunger.",
+      "words": [
+        {
+          "word": "Hunger.",
+          "start": 0.741,
+          "end": 2.162,
+          "score": 0.988
+        }
+      ]
+    },
+    {
+      "start": 2.202,
+      "end": 3.844,
+      "text": "Wieder.",
+      "words": [
+        {
+          "word": "Wieder.",
+          "start": 2.202,
+          "end": 3.844,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 3.864,
+      "end": 7.328,
+      "text": "Früher hätte er mir die Hände zittern lassen.",
+      "words": [
+        {
+          "word": "Früher",
+          "start": 3.864,
+          "end": 4.285,
+          "score": 0.774
+        },
+        {
+          "word": "hätte",
+          "start": 4.325,
+          "end": 4.545,
+          "score": 0.923
+        },
+        {
+          "word": "er",
+          "start": 4.585,
+          "end": 4.665,
+          "score": 0.833
+        },
+        {
+          "word": "mir",
+          "start": 4.685,
+          "end": 4.825,
+          "score": 0.899
+        },
+        {
+          "word": "die",
+          "start": 4.865,
+          "end": 4.965,
+          "score": 0.778
+        },
+        {
+          "word": "Hände",
+          "start": 4.985,
+          "end": 5.286,
+          "score": 0.926
+        },
+        {
+          "word": "zittern",
+          "start": 5.326,
+          "end": 5.606,
+          "score": 0.935
+        },
+        {
+          "word": "lassen.",
+          "start": 5.646,
+          "end": 7.328,
+          "score": 0.992
+        }
+      ]
+    },
+    {
+      "start": 7.348,
+      "end": 10.932,
+      "text": "Jetzt ist er nur noch Lärm im Hintergrund.",
+      "words": [
+        {
+          "word": "Jetzt",
+          "start": 7.348,
+          "end": 7.648,
+          "score": 0.963
+        },
+        {
+          "word": "ist",
+          "start": 7.688,
+          "end": 7.789,
+          "score": 0.891
+        },
+        {
+          "word": "er",
+          "start": 7.849,
+          "end": 7.949,
+          "score": 0.982
+        },
+        {
+          "word": "nur",
+          "start": 7.969,
+          "end": 8.109,
+          "score": 0.988
+        },
+        {
+          "word": "noch",
+          "start": 8.129,
+          "end": 8.389,
+          "score": 0.85
+        },
+        {
+          "word": "Lärm",
+          "start": 8.429,
+          "end": 8.71,
+          "score": 0.808
+        },
+        {
+          "word": "im",
+          "start": 8.75,
+          "end": 8.89,
+          "score": 0.863
+        },
+        {
+          "word": "Hintergrund.",
+          "start": 8.91,
+          "end": 10.932,
+          "score": 0.903
+        }
+      ]
+    },
+    {
+      "start": 10.992,
+      "end": 13.054,
+      "text": "Ich arbeite trotzdem.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 10.992,
+          "end": 11.172,
+          "score": 0.954
+        },
+        {
+          "word": "arbeite",
+          "start": 11.232,
+          "end": 11.633,
+          "score": 0.879
+        },
+        {
+          "word": "trotzdem.",
+          "start": 11.653,
+          "end": 13.054,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 13.074,
+      "end": 16.859,
+      "text": "Nicht dagegen ankämpfen — einfach weitermachen.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 13.074,
+          "end": 13.235,
+          "score": 0.855
+        },
+        {
+          "word": "dagegen",
+          "start": 13.275,
+          "end": 13.675,
+          "score": 0.984
+        },
+        {
+          "word": "ankämpfen",
+          "start": 13.715,
+          "end": 14.256,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 15.037,
+          "end": 15.057,
+          "score": 0.978
+        },
+        {
+          "word": "einfach",
+          "start": 15.077,
+          "end": 15.397,
+          "score": 0.909
+        },
+        {
+          "word": "weitermachen.",
+          "start": 15.437,
+          "end": 16.859,
+          "score": 0.925
+        }
+      ]
+    },
+    {
+      "start": 16.899,
+      "end": 17.78,
+      "text": "Das ist die Lektion.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 16.899,
+          "end": 17.099,
+          "score": 0.919
+        },
+        {
+          "word": "ist",
+          "start": 17.139,
+          "end": 17.279,
+          "score": 0.933
+        },
+        {
+          "word": "die",
+          "start": 17.299,
+          "end": 17.379,
+          "score": 0.847
+        },
+        {
+          "word": "Lektion.",
+          "start": 17.419,
+          "end": 17.78,
+          "score": 0.947
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Hunger.",
+      "start": 0.741,
+      "end": 2.162,
+      "score": 0.988
+    },
+    {
+      "word": "Wieder.",
+      "start": 2.202,
+      "end": 3.844,
+      "score": 0.948
+    },
+    {
+      "word": "Früher",
+      "start": 3.864,
+      "end": 4.285,
+      "score": 0.774
+    },
+    {
+      "word": "hätte",
+      "start": 4.325,
+      "end": 4.545,
+      "score": 0.923
+    },
+    {
+      "word": "er",
+      "start": 4.585,
+      "end": 4.665,
+      "score": 0.833
+    },
+    {
+      "word": "mir",
+      "start": 4.685,
+      "end": 4.825,
+      "score": 0.899
+    },
+    {
+      "word": "die",
+      "start": 4.865,
+      "end": 4.965,
+      "score": 0.778
+    },
+    {
+      "word": "Hände",
+      "start": 4.985,
+      "end": 5.286,
+      "score": 0.926
+    },
+    {
+      "word": "zittern",
+      "start": 5.326,
+      "end": 5.606,
+      "score": 0.935
+    },
+    {
+      "word": "lassen.",
+      "start": 5.646,
+      "end": 7.328,
+      "score": 0.992
+    },
+    {
+      "word": "Jetzt",
+      "start": 7.348,
+      "end": 7.648,
+      "score": 0.963
+    },
+    {
+      "word": "ist",
+      "start": 7.688,
+      "end": 7.789,
+      "score": 0.891
+    },
+    {
+      "word": "er",
+      "start": 7.849,
+      "end": 7.949,
+      "score": 0.982
+    },
+    {
+      "word": "nur",
+      "start": 7.969,
+      "end": 8.109,
+      "score": 0.988
+    },
+    {
+      "word": "noch",
+      "start": 8.129,
+      "end": 8.389,
+      "score": 0.85
+    },
+    {
+      "word": "Lärm",
+      "start": 8.429,
+      "end": 8.71,
+      "score": 0.808
+    },
+    {
+      "word": "im",
+      "start": 8.75,
+      "end": 8.89,
+      "score": 0.863
+    },
+    {
+      "word": "Hintergrund.",
+      "start": 8.91,
+      "end": 10.932,
+      "score": 0.903
+    },
+    {
+      "word": "Ich",
+      "start": 10.992,
+      "end": 11.172,
+      "score": 0.954
+    },
+    {
+      "word": "arbeite",
+      "start": 11.232,
+      "end": 11.633,
+      "score": 0.879
+    },
+    {
+      "word": "trotzdem.",
+      "start": 11.653,
+      "end": 13.054,
+      "score": 0.952
+    },
+    {
+      "word": "Nicht",
+      "start": 13.074,
+      "end": 13.235,
+      "score": 0.855
+    },
+    {
+      "word": "dagegen",
+      "start": 13.275,
+      "end": 13.675,
+      "score": 0.984
+    },
+    {
+      "word": "ankämpfen",
+      "start": 13.715,
+      "end": 14.256,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 15.037,
+      "end": 15.057,
+      "score": 0.978
+    },
+    {
+      "word": "einfach",
+      "start": 15.077,
+      "end": 15.397,
+      "score": 0.909
+    },
+    {
+      "word": "weitermachen.",
+      "start": 15.437,
+      "end": 16.859,
+      "score": 0.925
+    },
+    {
+      "word": "Das",
+      "start": 16.899,
+      "end": 17.099,
+      "score": 0.919
+    },
+    {
+      "word": "ist",
+      "start": 17.139,
+      "end": 17.279,
+      "score": 0.933
+    },
+    {
+      "word": "die",
+      "start": 17.299,
+      "end": 17.379,
+      "score": 0.847
+    },
+    {
+      "word": "Lektion.",
+      "start": 17.419,
+      "end": 17.78,
+      "score": 0.947
+    }
+  ]
+}

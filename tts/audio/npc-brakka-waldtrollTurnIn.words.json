@@ -1,0 +1,638 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 2.362,
+      "text": "Brakka starrt mich an.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.4,
+          "end": 0.921,
+          "score": 0.816
+        },
+        {
+          "word": "starrt",
+          "start": 0.961,
+          "end": 1.321,
+          "score": 0.793
+        },
+        {
+          "word": "mich",
+          "start": 1.361,
+          "end": 1.561,
+          "score": 0.93
+        },
+        {
+          "word": "an.",
+          "start": 1.621,
+          "end": 2.362,
+          "score": 0.751
+        }
+      ]
+    },
+    {
+      "start": 2.382,
+      "end": 6.165,
+      "text": "Dann lacht er — kurz, aber echt.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 2.382,
+          "end": 2.662,
+          "score": 0.953
+        },
+        {
+          "word": "lacht",
+          "start": 2.682,
+          "end": 2.983,
+          "score": 0.883
+        },
+        {
+          "word": "er",
+          "start": 3.023,
+          "end": 3.643,
+          "score": 0.984
+        },
+        {
+          "word": "—",
+          "start": 3.663,
+          "end": 3.683,
+          "score": 0.992
+        },
+        {
+          "word": "kurz,",
+          "start": 3.723,
+          "end": 4.424,
+          "score": 0.892
+        },
+        {
+          "word": "aber",
+          "start": 4.444,
+          "end": 4.664,
+          "score": 0.954
+        },
+        {
+          "word": "echt.",
+          "start": 4.744,
+          "end": 6.165,
+          "score": 0.969
+        }
+      ]
+    },
+    {
+      "start": 6.185,
+      "end": 7.767,
+      "text": "\"Den Waldtroll.",
+      "words": [
+        {
+          "word": "\"Den",
+          "start": 6.185,
+          "end": 6.466,
+          "score": 0.946
+        },
+        {
+          "word": "Waldtroll.",
+          "start": 6.506,
+          "end": 7.767,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 7.787,
+      "end": 11.47,
+      "text": "Du hast ihn tatsächlich besiegt.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 7.787,
+          "end": 7.867,
+          "score": 0.814
+        },
+        {
+          "word": "hast",
+          "start": 7.907,
+          "end": 8.047,
+          "score": 0.566
+        },
+        {
+          "word": "ihn",
+          "start": 8.107,
+          "end": 8.287,
+          "score": 0.494
+        },
+        {
+          "word": "tatsächlich",
+          "start": 8.327,
+          "end": 8.968,
+          "score": 0.875
+        },
+        {
+          "word": "besiegt.\"",
+          "start": 9.008,
+          "end": 11.47,
+          "score": 0.962
+        }
+      ]
+    },
+    {
+      "start": 11.49,
+      "end": 16.154,
+      "text": "\"Ich dachte, du kommst irgendwann zurück und sagst mir, du hast ihn nicht mal gefunden.\"",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 11.49,
+          "end": 11.61,
+          "score": 0.714
+        },
+        {
+          "word": "dachte,",
+          "start": 11.65,
+          "end": 11.911,
+          "score": 0.824
+        },
+        {
+          "word": "du",
+          "start": 11.931,
+          "end": 12.031,
+          "score": 0.758
+        },
+        {
+          "word": "kommst",
+          "start": 12.051,
+          "end": 12.311,
+          "score": 0.816
+        },
+        {
+          "word": "irgendwann",
+          "start": 12.331,
+          "end": 12.731,
+          "score": 0.811
+        },
+        {
+          "word": "zurück",
+          "start": 12.771,
+          "end": 13.052,
+          "score": 0.899
+        },
+        {
+          "word": "und",
+          "start": 13.092,
+          "end": 13.232,
+          "score": 0.915
+        },
+        {
+          "word": "sagst",
+          "start": 13.272,
+          "end": 13.512,
+          "score": 0.804
+        },
+        {
+          "word": "mir,",
+          "start": 13.532,
+          "end": 13.672,
+          "score": 0.701
+        },
+        {
+          "word": "du",
+          "start": 13.692,
+          "end": 13.792,
+          "score": 0.844
+        },
+        {
+          "word": "hast",
+          "start": 13.812,
+          "end": 13.952,
+          "score": 0.802
+        },
+        {
+          "word": "ihn",
+          "start": 14.012,
+          "end": 14.112,
+          "score": 0.673
+        },
+        {
+          "word": "nicht",
+          "start": 14.153,
+          "end": 14.253,
+          "score": 0.993
+        },
+        {
+          "word": "mal",
+          "start": 14.353,
+          "end": 14.453,
+          "score": 0.973
+        },
+        {
+          "word": "gefunden.\"",
+          "start": 14.513,
+          "end": 16.154,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 16.194,
+      "end": 19.237,
+      "text": "Er schiebt mir einen schweren Beutel zu.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 16.194,
+          "end": 16.274,
+          "score": 0.937
+        },
+        {
+          "word": "schiebt",
+          "start": 16.314,
+          "end": 16.595,
+          "score": 0.824
+        },
+        {
+          "word": "mir",
+          "start": 16.635,
+          "end": 16.795,
+          "score": 0.982
+        },
+        {
+          "word": "einen",
+          "start": 16.815,
+          "end": 17.035,
+          "score": 0.682
+        },
+        {
+          "word": "schweren",
+          "start": 17.075,
+          "end": 17.556,
+          "score": 0.855
+        },
+        {
+          "word": "Beutel",
+          "start": 17.596,
+          "end": 18.016,
+          "score": 0.904
+        },
+        {
+          "word": "zu.",
+          "start": 18.056,
+          "end": 19.237,
+          "score": 0.991
+        }
+      ]
+    },
+    {
+      "start": 19.257,
+      "end": 20.939,
+      "text": "\"Gut gemacht, Fremder.",
+      "words": [
+        {
+          "word": "\"Gut",
+          "start": 19.257,
+          "end": 19.477,
+          "score": 0.964
+        },
+        {
+          "word": "gemacht,",
+          "start": 19.517,
+          "end": 19.818,
+          "score": 0.804
+        },
+        {
+          "word": "Fremder.",
+          "start": 19.858,
+          "end": 20.939,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 20.979,
+      "end": 22.26,
+      "text": "Du bist kein Fremder mehr.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 20.979,
+          "end": 21.119,
+          "score": 0.839
+        },
+        {
+          "word": "bist",
+          "start": 21.159,
+          "end": 21.439,
+          "score": 0.784
+        },
+        {
+          "word": "kein",
+          "start": 21.479,
+          "end": 21.659,
+          "score": 0.755
+        },
+        {
+          "word": "Fremder",
+          "start": 21.699,
+          "end": 22.1,
+          "score": 0.804
+        },
+        {
+          "word": "mehr.\"",
+          "start": 22.12,
+          "end": 22.26,
+          "score": 0.561
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.4,
+      "end": 0.921,
+      "score": 0.816
+    },
+    {
+      "word": "starrt",
+      "start": 0.961,
+      "end": 1.321,
+      "score": 0.793
+    },
+    {
+      "word": "mich",
+      "start": 1.361,
+      "end": 1.561,
+      "score": 0.93
+    },
+    {
+      "word": "an.",
+      "start": 1.621,
+      "end": 2.362,
+      "score": 0.751
+    },
+    {
+      "word": "Dann",
+      "start": 2.382,
+      "end": 2.662,
+      "score": 0.953
+    },
+    {
+      "word": "lacht",
+      "start": 2.682,
+      "end": 2.983,
+      "score": 0.883
+    },
+    {
+      "word": "er",
+      "start": 3.023,
+      "end": 3.643,
+      "score": 0.984
+    },
+    {
+      "word": "—",
+      "start": 3.663,
+      "end": 3.683,
+      "score": 0.992
+    },
+    {
+      "word": "kurz,",
+      "start": 3.723,
+      "end": 4.424,
+      "score": 0.892
+    },
+    {
+      "word": "aber",
+      "start": 4.444,
+      "end": 4.664,
+      "score": 0.954
+    },
+    {
+      "word": "echt.",
+      "start": 4.744,
+      "end": 6.165,
+      "score": 0.969
+    },
+    {
+      "word": "\"Den",
+      "start": 6.185,
+      "end": 6.466,
+      "score": 0.946
+    },
+    {
+      "word": "Waldtroll.",
+      "start": 6.506,
+      "end": 7.767,
+      "score": 0.918
+    },
+    {
+      "word": "Du",
+      "start": 7.787,
+      "end": 7.867,
+      "score": 0.814
+    },
+    {
+      "word": "hast",
+      "start": 7.907,
+      "end": 8.047,
+      "score": 0.566
+    },
+    {
+      "word": "ihn",
+      "start": 8.107,
+      "end": 8.287,
+      "score": 0.494
+    },
+    {
+      "word": "tatsächlich",
+      "start": 8.327,
+      "end": 8.968,
+      "score": 0.875
+    },
+    {
+      "word": "besiegt.\"",
+      "start": 9.008,
+      "end": 11.47,
+      "score": 0.962
+    },
+    {
+      "word": "\"Ich",
+      "start": 11.49,
+      "end": 11.61,
+      "score": 0.714
+    },
+    {
+      "word": "dachte,",
+      "start": 11.65,
+      "end": 11.911,
+      "score": 0.824
+    },
+    {
+      "word": "du",
+      "start": 11.931,
+      "end": 12.031,
+      "score": 0.758
+    },
+    {
+      "word": "kommst",
+      "start": 12.051,
+      "end": 12.311,
+      "score": 0.816
+    },
+    {
+      "word": "irgendwann",
+      "start": 12.331,
+      "end": 12.731,
+      "score": 0.811
+    },
+    {
+      "word": "zurück",
+      "start": 12.771,
+      "end": 13.052,
+      "score": 0.899
+    },
+    {
+      "word": "und",
+      "start": 13.092,
+      "end": 13.232,
+      "score": 0.915
+    },
+    {
+      "word": "sagst",
+      "start": 13.272,
+      "end": 13.512,
+      "score": 0.804
+    },
+    {
+      "word": "mir,",
+      "start": 13.532,
+      "end": 13.672,
+      "score": 0.701
+    },
+    {
+      "word": "du",
+      "start": 13.692,
+      "end": 13.792,
+      "score": 0.844
+    },
+    {
+      "word": "hast",
+      "start": 13.812,
+      "end": 13.952,
+      "score": 0.802
+    },
+    {
+      "word": "ihn",
+      "start": 14.012,
+      "end": 14.112,
+      "score": 0.673
+    },
+    {
+      "word": "nicht",
+      "start": 14.153,
+      "end": 14.253,
+      "score": 0.993
+    },
+    {
+      "word": "mal",
+      "start": 14.353,
+      "end": 14.453,
+      "score": 0.973
+    },
+    {
+      "word": "gefunden.\"",
+      "start": 14.513,
+      "end": 16.154,
+      "score": 0.933
+    },
+    {
+      "word": "Er",
+      "start": 16.194,
+      "end": 16.274,
+      "score": 0.937
+    },
+    {
+      "word": "schiebt",
+      "start": 16.314,
+      "end": 16.595,
+      "score": 0.824
+    },
+    {
+      "word": "mir",
+      "start": 16.635,
+      "end": 16.795,
+      "score": 0.982
+    },
+    {
+      "word": "einen",
+      "start": 16.815,
+      "end": 17.035,
+      "score": 0.682
+    },
+    {
+      "word": "schweren",
+      "start": 17.075,
+      "end": 17.556,
+      "score": 0.855
+    },
+    {
+      "word": "Beutel",
+      "start": 17.596,
+      "end": 18.016,
+      "score": 0.904
+    },
+    {
+      "word": "zu.",
+      "start": 18.056,
+      "end": 19.237,
+      "score": 0.991
+    },
+    {
+      "word": "\"Gut",
+      "start": 19.257,
+      "end": 19.477,
+      "score": 0.964
+    },
+    {
+      "word": "gemacht,",
+      "start": 19.517,
+      "end": 19.818,
+      "score": 0.804
+    },
+    {
+      "word": "Fremder.",
+      "start": 19.858,
+      "end": 20.939,
+      "score": 0.92
+    },
+    {
+      "word": "Du",
+      "start": 20.979,
+      "end": 21.119,
+      "score": 0.839
+    },
+    {
+      "word": "bist",
+      "start": 21.159,
+      "end": 21.439,
+      "score": 0.784
+    },
+    {
+      "word": "kein",
+      "start": 21.479,
+      "end": 21.659,
+      "score": 0.755
+    },
+    {
+      "word": "Fremder",
+      "start": 21.699,
+      "end": 22.1,
+      "score": 0.804
+    },
+    {
+      "word": "mehr.\"",
+      "start": 22.12,
+      "end": 22.26,
+      "score": 0.561
+    }
+  ]
+}

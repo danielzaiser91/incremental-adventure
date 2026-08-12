@@ -1,0 +1,236 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 2.787,
+      "text": "Nachtwache gehalten!",
+      "words": [
+        {
+          "word": "Nachtwache",
+          "start": 0.561,
+          "end": 1.083,
+          "score": 0.866
+        },
+        {
+          "word": "gehalten!",
+          "start": 1.123,
+          "end": 2.787,
+          "score": 0.875
+        }
+      ]
+    },
+    {
+      "start": 2.847,
+      "end": 7.859,
+      "text": "Erst zu Brakka in der Taverne zurückkehren, um zu berichten — vorher geht es nicht erneut.",
+      "words": [
+        {
+          "word": "Erst",
+          "start": 2.847,
+          "end": 3.128,
+          "score": 0.919
+        },
+        {
+          "word": "zu",
+          "start": 3.168,
+          "end": 3.288,
+          "score": 0.97
+        },
+        {
+          "word": "Brakka",
+          "start": 3.328,
+          "end": 3.729,
+          "score": 0.833
+        },
+        {
+          "word": "in",
+          "start": 3.749,
+          "end": 3.829,
+          "score": 0.837
+        },
+        {
+          "word": "der",
+          "start": 3.849,
+          "end": 3.95,
+          "score": 0.842
+        },
+        {
+          "word": "Taverne",
+          "start": 3.99,
+          "end": 4.471,
+          "score": 0.915
+        },
+        {
+          "word": "zurückkehren,",
+          "start": 4.511,
+          "end": 5.092,
+          "score": 0.933
+        },
+        {
+          "word": "um",
+          "start": 5.112,
+          "end": 5.273,
+          "score": 0.849
+        },
+        {
+          "word": "zu",
+          "start": 5.313,
+          "end": 5.393,
+          "score": 0.953
+        },
+        {
+          "word": "berichten",
+          "start": 5.413,
+          "end": 5.774,
+          "score": 0.917
+        },
+        {
+          "word": "—",
+          "start": 6.536,
+          "end": 6.556,
+          "score": 0.973
+        },
+        {
+          "word": "vorher",
+          "start": 6.596,
+          "end": 6.977,
+          "score": 0.913
+        },
+        {
+          "word": "geht",
+          "start": 6.997,
+          "end": 7.137,
+          "score": 0.861
+        },
+        {
+          "word": "es",
+          "start": 7.178,
+          "end": 7.318,
+          "score": 0.911
+        },
+        {
+          "word": "nicht",
+          "start": 7.358,
+          "end": 7.558,
+          "score": 0.866
+        },
+        {
+          "word": "erneut.",
+          "start": 7.599,
+          "end": 7.859,
+          "score": 0.808
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Nachtwache",
+      "start": 0.561,
+      "end": 1.083,
+      "score": 0.866
+    },
+    {
+      "word": "gehalten!",
+      "start": 1.123,
+      "end": 2.787,
+      "score": 0.875
+    },
+    {
+      "word": "Erst",
+      "start": 2.847,
+      "end": 3.128,
+      "score": 0.919
+    },
+    {
+      "word": "zu",
+      "start": 3.168,
+      "end": 3.288,
+      "score": 0.97
+    },
+    {
+      "word": "Brakka",
+      "start": 3.328,
+      "end": 3.729,
+      "score": 0.833
+    },
+    {
+      "word": "in",
+      "start": 3.749,
+      "end": 3.829,
+      "score": 0.837
+    },
+    {
+      "word": "der",
+      "start": 3.849,
+      "end": 3.95,
+      "score": 0.842
+    },
+    {
+      "word": "Taverne",
+      "start": 3.99,
+      "end": 4.471,
+      "score": 0.915
+    },
+    {
+      "word": "zurückkehren,",
+      "start": 4.511,
+      "end": 5.092,
+      "score": 0.933
+    },
+    {
+      "word": "um",
+      "start": 5.112,
+      "end": 5.273,
+      "score": 0.849
+    },
+    {
+      "word": "zu",
+      "start": 5.313,
+      "end": 5.393,
+      "score": 0.953
+    },
+    {
+      "word": "berichten",
+      "start": 5.413,
+      "end": 5.774,
+      "score": 0.917
+    },
+    {
+      "word": "—",
+      "start": 6.536,
+      "end": 6.556,
+      "score": 0.973
+    },
+    {
+      "word": "vorher",
+      "start": 6.596,
+      "end": 6.977,
+      "score": 0.913
+    },
+    {
+      "word": "geht",
+      "start": 6.997,
+      "end": 7.137,
+      "score": 0.861
+    },
+    {
+      "word": "es",
+      "start": 7.178,
+      "end": 7.318,
+      "score": 0.911
+    },
+    {
+      "word": "nicht",
+      "start": 7.358,
+      "end": 7.558,
+      "score": 0.866
+    },
+    {
+      "word": "erneut.",
+      "start": 7.599,
+      "end": 7.859,
+      "score": 0.808
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "segments": [
+    {
+      "start": 0.42,
+      "end": 4.765,
+      "text": "Beim Krämer heute: doppelt so lange gehandelt wie nötig.",
+      "words": [
+        {
+          "word": "Beim",
+          "start": 0.42,
+          "end": 0.621,
+          "score": 0.881
+        },
+        {
+          "word": "Krämer",
+          "start": 0.661,
+          "end": 1.081,
+          "score": 0.916
+        },
+        {
+          "word": "heute:",
+          "start": 1.121,
+          "end": 2.002,
+          "score": 0.918
+        },
+        {
+          "word": "doppelt",
+          "start": 2.022,
+          "end": 2.402,
+          "score": 0.909
+        },
+        {
+          "word": "so",
+          "start": 2.422,
+          "end": 2.583,
+          "score": 0.996
+        },
+        {
+          "word": "lange",
+          "start": 2.623,
+          "end": 2.883,
+          "score": 0.982
+        },
+        {
+          "word": "gehandelt",
+          "start": 2.923,
+          "end": 3.383,
+          "score": 0.919
+        },
+        {
+          "word": "wie",
+          "start": 3.403,
+          "end": 3.584,
+          "score": 0.964
+        },
+        {
+          "word": "nötig.",
+          "start": 3.604,
+          "end": 4.765,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 4.805,
+      "end": 8.188,
+      "text": "Ergebnis: ein Brot billiger.",
+      "words": [
+        {
+          "word": "Ergebnis:",
+          "start": 4.805,
+          "end": 6.026,
+          "score": 0.955
+        },
+        {
+          "word": "ein",
+          "start": 6.066,
+          "end": 6.286,
+          "score": 0.881
+        },
+        {
+          "word": "Brot",
+          "start": 6.326,
+          "end": 6.667,
+          "score": 0.901
+        },
+        {
+          "word": "billiger.",
+          "start": 6.687,
+          "end": 8.188,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 8.208,
+      "end": 10.17,
+      "text": "Nicht spektakulär.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 8.208,
+          "end": 8.368,
+          "score": 0.988
+        },
+        {
+          "word": "spektakulär.",
+          "start": 8.429,
+          "end": 10.17,
+          "score": 0.829
+        }
+      ]
+    },
+    {
+      "start": 10.21,
+      "end": 13.353,
+      "text": "Aber ich kenne jetzt die Preise.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 10.21,
+          "end": 10.851,
+          "score": 0.994
+        },
+        {
+          "word": "ich",
+          "start": 10.911,
+          "end": 11.131,
+          "score": 0.911
+        },
+        {
+          "word": "kenne",
+          "start": 11.171,
+          "end": 11.472,
+          "score": 0.928
+        },
+        {
+          "word": "jetzt",
+          "start": 11.512,
+          "end": 11.752,
+          "score": 0.96
+        },
+        {
+          "word": "die",
+          "start": 11.772,
+          "end": 11.892,
+          "score": 0.913
+        },
+        {
+          "word": "Preise.",
+          "start": 11.952,
+          "end": 13.353,
+          "score": 0.994
+        }
+      ]
+    },
+    {
+      "start": 13.374,
+      "end": 16.156,
+      "text": "Wo ist Spielraum, wo nicht.",
+      "words": [
+        {
+          "word": "Wo",
+          "start": 13.374,
+          "end": 13.534,
+          "score": 0.918
+        },
+        {
+          "word": "ist",
+          "start": 13.574,
+          "end": 13.794,
+          "score": 0.822
+        },
+        {
+          "word": "Spielraum,",
+          "start": 13.814,
+          "end": 14.755,
+          "score": 0.912
+        },
+        {
+          "word": "wo",
+          "start": 14.795,
+          "end": 14.935,
+          "score": 0.986
+        },
+        {
+          "word": "nicht.",
+          "start": 14.975,
+          "end": 16.156,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 16.176,
+      "end": 19.44,
+      "text": "Das nächste Mal weiß ich es schon beim Betreten des Ladens.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 16.176,
+          "end": 16.357,
+          "score": 0.989
+        },
+        {
+          "word": "nächste",
+          "start": 16.397,
+          "end": 16.697,
+          "score": 0.848
+        },
+        {
+          "word": "Mal",
+          "start": 16.737,
+          "end": 17.498,
+          "score": 0.985
+        },
+        {
+          "word": "weiß",
+          "start": 17.538,
+          "end": 17.718,
+          "score": 0.902
+        },
+        {
+          "word": "ich",
+          "start": 17.758,
+          "end": 17.838,
+          "score": 0.994
+        },
+        {
+          "word": "es",
+          "start": 17.878,
+          "end": 17.998,
+          "score": 0.474
+        },
+        {
+          "word": "schon",
+          "start": 18.018,
+          "end": 18.218,
+          "score": 0.841
+        },
+        {
+          "word": "beim",
+          "start": 18.258,
+          "end": 18.439,
+          "score": 0.804
+        },
+        {
+          "word": "Betreten",
+          "start": 18.459,
+          "end": 18.899,
+          "score": 0.879
+        },
+        {
+          "word": "des",
+          "start": 18.939,
+          "end": 19.059,
+          "score": 0.904
+        },
+        {
+          "word": "Ladens.",
+          "start": 19.119,
+          "end": 19.44,
+          "score": 0.746
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Beim",
+      "start": 0.42,
+      "end": 0.621,
+      "score": 0.881
+    },
+    {
+      "word": "Krämer",
+      "start": 0.661,
+      "end": 1.081,
+      "score": 0.916
+    },
+    {
+      "word": "heute:",
+      "start": 1.121,
+      "end": 2.002,
+      "score": 0.918
+    },
+    {
+      "word": "doppelt",
+      "start": 2.022,
+      "end": 2.402,
+      "score": 0.909
+    },
+    {
+      "word": "so",
+      "start": 2.422,
+      "end": 2.583,
+      "score": 0.996
+    },
+    {
+      "word": "lange",
+      "start": 2.623,
+      "end": 2.883,
+      "score": 0.982
+    },
+    {
+      "word": "gehandelt",
+      "start": 2.923,
+      "end": 3.383,
+      "score": 0.919
+    },
+    {
+      "word": "wie",
+      "start": 3.403,
+      "end": 3.584,
+      "score": 0.964
+    },
+    {
+      "word": "nötig.",
+      "start": 3.604,
+      "end": 4.765,
+      "score": 0.973
+    },
+    {
+      "word": "Ergebnis:",
+      "start": 4.805,
+      "end": 6.026,
+      "score": 0.955
+    },
+    {
+      "word": "ein",
+      "start": 6.066,
+      "end": 6.286,
+      "score": 0.881
+    },
+    {
+      "word": "Brot",
+      "start": 6.326,
+      "end": 6.667,
+      "score": 0.901
+    },
+    {
+      "word": "billiger.",
+      "start": 6.687,
+      "end": 8.188,
+      "score": 0.901
+    },
+    {
+      "word": "Nicht",
+      "start": 8.208,
+      "end": 8.368,
+      "score": 0.988
+    },
+    {
+      "word": "spektakulär.",
+      "start": 8.429,
+      "end": 10.17,
+      "score": 0.829
+    },
+    {
+      "word": "Aber",
+      "start": 10.21,
+      "end": 10.851,
+      "score": 0.994
+    },
+    {
+      "word": "ich",
+      "start": 10.911,
+      "end": 11.131,
+      "score": 0.911
+    },
+    {
+      "word": "kenne",
+      "start": 11.171,
+      "end": 11.472,
+      "score": 0.928
+    },
+    {
+      "word": "jetzt",
+      "start": 11.512,
+      "end": 11.752,
+      "score": 0.96
+    },
+    {
+      "word": "die",
+      "start": 11.772,
+      "end": 11.892,
+      "score": 0.913
+    },
+    {
+      "word": "Preise.",
+      "start": 11.952,
+      "end": 13.353,
+      "score": 0.994
+    },
+    {
+      "word": "Wo",
+      "start": 13.374,
+      "end": 13.534,
+      "score": 0.918
+    },
+    {
+      "word": "ist",
+      "start": 13.574,
+      "end": 13.794,
+      "score": 0.822
+    },
+    {
+      "word": "Spielraum,",
+      "start": 13.814,
+      "end": 14.755,
+      "score": 0.912
+    },
+    {
+      "word": "wo",
+      "start": 14.795,
+      "end": 14.935,
+      "score": 0.986
+    },
+    {
+      "word": "nicht.",
+      "start": 14.975,
+      "end": 16.156,
+      "score": 0.961
+    },
+    {
+      "word": "Das",
+      "start": 16.176,
+      "end": 16.357,
+      "score": 0.989
+    },
+    {
+      "word": "nächste",
+      "start": 16.397,
+      "end": 16.697,
+      "score": 0.848
+    },
+    {
+      "word": "Mal",
+      "start": 16.737,
+      "end": 17.498,
+      "score": 0.985
+    },
+    {
+      "word": "weiß",
+      "start": 17.538,
+      "end": 17.718,
+      "score": 0.902
+    },
+    {
+      "word": "ich",
+      "start": 17.758,
+      "end": 17.838,
+      "score": 0.994
+    },
+    {
+      "word": "es",
+      "start": 17.878,
+      "end": 17.998,
+      "score": 0.474
+    },
+    {
+      "word": "schon",
+      "start": 18.018,
+      "end": 18.218,
+      "score": 0.841
+    },
+    {
+      "word": "beim",
+      "start": 18.258,
+      "end": 18.439,
+      "score": 0.804
+    },
+    {
+      "word": "Betreten",
+      "start": 18.459,
+      "end": 18.899,
+      "score": 0.879
+    },
+    {
+      "word": "des",
+      "start": 18.939,
+      "end": 19.059,
+      "score": 0.904
+    },
+    {
+      "word": "Ladens.",
+      "start": 19.119,
+      "end": 19.44,
+      "score": 0.746
+    }
+  ]
+}

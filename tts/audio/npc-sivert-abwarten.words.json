@@ -1,0 +1,202 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 1.945,
+      "text": "\"Noch nicht soweit.",
+      "words": [
+        {
+          "word": "\"Noch",
+          "start": 0.441,
+          "end": 0.642,
+          "score": 0.858
+        },
+        {
+          "word": "nicht",
+          "start": 0.682,
+          "end": 0.902,
+          "score": 0.801
+        },
+        {
+          "word": "soweit.",
+          "start": 0.942,
+          "end": 1.945,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 1.965,
+      "end": 4.47,
+      "text": "Das akzeptiere ich.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 1.965,
+          "end": 2.386,
+          "score": 0.906
+        },
+        {
+          "word": "akzeptiere",
+          "start": 2.406,
+          "end": 2.947,
+          "score": 0.789
+        },
+        {
+          "word": "ich.\"",
+          "start": 2.987,
+          "end": 4.47,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 4.531,
+      "end": 6.936,
+      "text": "Er hebt seinen Becher.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 4.531,
+          "end": 4.731,
+          "score": 0.941
+        },
+        {
+          "word": "hebt",
+          "start": 4.811,
+          "end": 5.032,
+          "score": 0.932
+        },
+        {
+          "word": "seinen",
+          "start": 5.072,
+          "end": 5.373,
+          "score": 0.642
+        },
+        {
+          "word": "Becher.",
+          "start": 5.413,
+          "end": 6.936,
+          "score": 0.777
+        }
+      ]
+    },
+    {
+      "start": 6.956,
+      "end": 8.139,
+      "text": "\"Die Tür bleibt offen.\"",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 6.956,
+          "end": 7.197,
+          "score": 0.868
+        },
+        {
+          "word": "Tür",
+          "start": 7.237,
+          "end": 7.518,
+          "score": 0.893
+        },
+        {
+          "word": "bleibt",
+          "start": 7.538,
+          "end": 7.878,
+          "score": 0.929
+        },
+        {
+          "word": "offen.\"",
+          "start": 7.919,
+          "end": 8.139,
+          "score": 0.842
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Noch",
+      "start": 0.441,
+      "end": 0.642,
+      "score": 0.858
+    },
+    {
+      "word": "nicht",
+      "start": 0.682,
+      "end": 0.902,
+      "score": 0.801
+    },
+    {
+      "word": "soweit.",
+      "start": 0.942,
+      "end": 1.945,
+      "score": 0.933
+    },
+    {
+      "word": "Das",
+      "start": 1.965,
+      "end": 2.386,
+      "score": 0.906
+    },
+    {
+      "word": "akzeptiere",
+      "start": 2.406,
+      "end": 2.947,
+      "score": 0.789
+    },
+    {
+      "word": "ich.\"",
+      "start": 2.987,
+      "end": 4.47,
+      "score": 0.868
+    },
+    {
+      "word": "Er",
+      "start": 4.531,
+      "end": 4.731,
+      "score": 0.941
+    },
+    {
+      "word": "hebt",
+      "start": 4.811,
+      "end": 5.032,
+      "score": 0.932
+    },
+    {
+      "word": "seinen",
+      "start": 5.072,
+      "end": 5.373,
+      "score": 0.642
+    },
+    {
+      "word": "Becher.",
+      "start": 5.413,
+      "end": 6.936,
+      "score": 0.777
+    },
+    {
+      "word": "\"Die",
+      "start": 6.956,
+      "end": 7.197,
+      "score": 0.868
+    },
+    {
+      "word": "Tür",
+      "start": 7.237,
+      "end": 7.518,
+      "score": 0.893
+    },
+    {
+      "word": "bleibt",
+      "start": 7.538,
+      "end": 7.878,
+      "score": 0.929
+    },
+    {
+      "word": "offen.\"",
+      "start": 7.919,
+      "end": 8.139,
+      "score": 0.842
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 3.464,
+      "text": "Aus der Nähe wirkt er noch zwielichtiger.",
+      "words": [
+        {
+          "word": "Aus",
+          "start": 0.541,
+          "end": 0.641,
+          "score": 0.646
+        },
+        {
+          "word": "der",
+          "start": 0.661,
+          "end": 0.821,
+          "score": 0.785
+        },
+        {
+          "word": "Nähe",
+          "start": 0.861,
+          "end": 1.302,
+          "score": 0.791
+        },
+        {
+          "word": "wirkt",
+          "start": 1.342,
+          "end": 1.562,
+          "score": 0.704
+        },
+        {
+          "word": "er",
+          "start": 1.602,
+          "end": 1.742,
+          "score": 0.738
+        },
+        {
+          "word": "noch",
+          "start": 1.762,
+          "end": 2.003,
+          "score": 0.759
+        },
+        {
+          "word": "zwielichtiger.",
+          "start": 2.043,
+          "end": 3.464,
+          "score": 0.843
+        }
+      ]
+    },
+    {
+      "start": 3.524,
+      "end": 7.69,
+      "text": "Er nickt mir knapp zu, ohne wirklich herzusehen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.524,
+          "end": 3.745,
+          "score": 0.69
+        },
+        {
+          "word": "nickt",
+          "start": 3.765,
+          "end": 4.025,
+          "score": 0.866
+        },
+        {
+          "word": "mir",
+          "start": 4.045,
+          "end": 4.205,
+          "score": 0.863
+        },
+        {
+          "word": "knapp",
+          "start": 4.265,
+          "end": 4.626,
+          "score": 0.921
+        },
+        {
+          "word": "zu,",
+          "start": 4.686,
+          "end": 5.166,
+          "score": 0.957
+        },
+        {
+          "word": "ohne",
+          "start": 5.207,
+          "end": 5.467,
+          "score": 0.863
+        },
+        {
+          "word": "wirklich",
+          "start": 5.507,
+          "end": 5.847,
+          "score": 0.983
+        },
+        {
+          "word": "herzusehen.",
+          "start": 5.887,
+          "end": 7.69,
+          "score": 0.927
+        }
+      ]
+    },
+    {
+      "start": 7.71,
+      "end": 9.872,
+      "text": "\"Suchst du was?\"",
+      "words": [
+        {
+          "word": "\"Suchst",
+          "start": 7.71,
+          "end": 8.01,
+          "score": 0.62
+        },
+        {
+          "word": "du",
+          "start": 8.03,
+          "end": 8.17,
+          "score": 0.587
+        },
+        {
+          "word": "was?\"",
+          "start": 8.23,
+          "end": 9.872,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 9.892,
+      "end": 15.599,
+      "text": "Sein Blick streift kurz meinen Geldbeutel — dann wieder mein Gesicht, als wäre nichts gewesen.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 9.892,
+          "end": 10.133,
+          "score": 0.859
+        },
+        {
+          "word": "Blick",
+          "start": 10.173,
+          "end": 10.513,
+          "score": 0.957
+        },
+        {
+          "word": "streift",
+          "start": 10.593,
+          "end": 11.134,
+          "score": 0.932
+        },
+        {
+          "word": "kurz",
+          "start": 11.174,
+          "end": 11.454,
+          "score": 0.998
+        },
+        {
+          "word": "meinen",
+          "start": 11.474,
+          "end": 11.755,
+          "score": 0.831
+        },
+        {
+          "word": "Geldbeutel",
+          "start": 11.795,
+          "end": 12.315,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 12.956,
+          "end": 12.976,
+          "score": 0.926
+        },
+        {
+          "word": "dann",
+          "start": 12.996,
+          "end": 13.176,
+          "score": 0.975
+        },
+        {
+          "word": "wieder",
+          "start": 13.196,
+          "end": 13.377,
+          "score": 0.948
+        },
+        {
+          "word": "mein",
+          "start": 13.417,
+          "end": 13.597,
+          "score": 0.717
+        },
+        {
+          "word": "Gesicht,",
+          "start": 13.617,
+          "end": 14.438,
+          "score": 0.892
+        },
+        {
+          "word": "als",
+          "start": 14.458,
+          "end": 14.618,
+          "score": 0.864
+        },
+        {
+          "word": "wäre",
+          "start": 14.638,
+          "end": 14.899,
+          "score": 0.822
+        },
+        {
+          "word": "nichts",
+          "start": 14.919,
+          "end": 15.199,
+          "score": 0.837
+        },
+        {
+          "word": "gewesen.",
+          "start": 15.219,
+          "end": 15.599,
+          "score": 0.795
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Aus",
+      "start": 0.541,
+      "end": 0.641,
+      "score": 0.646
+    },
+    {
+      "word": "der",
+      "start": 0.661,
+      "end": 0.821,
+      "score": 0.785
+    },
+    {
+      "word": "Nähe",
+      "start": 0.861,
+      "end": 1.302,
+      "score": 0.791
+    },
+    {
+      "word": "wirkt",
+      "start": 1.342,
+      "end": 1.562,
+      "score": 0.704
+    },
+    {
+      "word": "er",
+      "start": 1.602,
+      "end": 1.742,
+      "score": 0.738
+    },
+    {
+      "word": "noch",
+      "start": 1.762,
+      "end": 2.003,
+      "score": 0.759
+    },
+    {
+      "word": "zwielichtiger.",
+      "start": 2.043,
+      "end": 3.464,
+      "score": 0.843
+    },
+    {
+      "word": "Er",
+      "start": 3.524,
+      "end": 3.745,
+      "score": 0.69
+    },
+    {
+      "word": "nickt",
+      "start": 3.765,
+      "end": 4.025,
+      "score": 0.866
+    },
+    {
+      "word": "mir",
+      "start": 4.045,
+      "end": 4.205,
+      "score": 0.863
+    },
+    {
+      "word": "knapp",
+      "start": 4.265,
+      "end": 4.626,
+      "score": 0.921
+    },
+    {
+      "word": "zu,",
+      "start": 4.686,
+      "end": 5.166,
+      "score": 0.957
+    },
+    {
+      "word": "ohne",
+      "start": 5.207,
+      "end": 5.467,
+      "score": 0.863
+    },
+    {
+      "word": "wirklich",
+      "start": 5.507,
+      "end": 5.847,
+      "score": 0.983
+    },
+    {
+      "word": "herzusehen.",
+      "start": 5.887,
+      "end": 7.69,
+      "score": 0.927
+    },
+    {
+      "word": "\"Suchst",
+      "start": 7.71,
+      "end": 8.01,
+      "score": 0.62
+    },
+    {
+      "word": "du",
+      "start": 8.03,
+      "end": 8.17,
+      "score": 0.587
+    },
+    {
+      "word": "was?\"",
+      "start": 8.23,
+      "end": 9.872,
+      "score": 0.91
+    },
+    {
+      "word": "Sein",
+      "start": 9.892,
+      "end": 10.133,
+      "score": 0.859
+    },
+    {
+      "word": "Blick",
+      "start": 10.173,
+      "end": 10.513,
+      "score": 0.957
+    },
+    {
+      "word": "streift",
+      "start": 10.593,
+      "end": 11.134,
+      "score": 0.932
+    },
+    {
+      "word": "kurz",
+      "start": 11.174,
+      "end": 11.454,
+      "score": 0.998
+    },
+    {
+      "word": "meinen",
+      "start": 11.474,
+      "end": 11.755,
+      "score": 0.831
+    },
+    {
+      "word": "Geldbeutel",
+      "start": 11.795,
+      "end": 12.315,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 12.956,
+      "end": 12.976,
+      "score": 0.926
+    },
+    {
+      "word": "dann",
+      "start": 12.996,
+      "end": 13.176,
+      "score": 0.975
+    },
+    {
+      "word": "wieder",
+      "start": 13.196,
+      "end": 13.377,
+      "score": 0.948
+    },
+    {
+      "word": "mein",
+      "start": 13.417,
+      "end": 13.597,
+      "score": 0.717
+    },
+    {
+      "word": "Gesicht,",
+      "start": 13.617,
+      "end": 14.438,
+      "score": 0.892
+    },
+    {
+      "word": "als",
+      "start": 14.458,
+      "end": 14.618,
+      "score": 0.864
+    },
+    {
+      "word": "wäre",
+      "start": 14.638,
+      "end": 14.899,
+      "score": 0.822
+    },
+    {
+      "word": "nichts",
+      "start": 14.919,
+      "end": 15.199,
+      "score": 0.837
+    },
+    {
+      "word": "gewesen.",
+      "start": 15.219,
+      "end": 15.599,
+      "score": 0.795
+    }
+  ]
+}

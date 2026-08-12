@@ -1,0 +1,1520 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 3.541,
+      "text": "Jeder Knochen liegt mir schwer im Leib.",
+      "words": [
+        {
+          "word": "Jeder",
+          "start": 0.48,
+          "end": 0.8,
+          "score": 0.845
+        },
+        {
+          "word": "Knochen",
+          "start": 0.86,
+          "end": 1.38,
+          "score": 0.798
+        },
+        {
+          "word": "liegt",
+          "start": 1.4,
+          "end": 1.621,
+          "score": 0.874
+        },
+        {
+          "word": "mir",
+          "start": 1.641,
+          "end": 1.821,
+          "score": 0.9
+        },
+        {
+          "word": "schwer",
+          "start": 1.861,
+          "end": 2.181,
+          "score": 0.767
+        },
+        {
+          "word": "im",
+          "start": 2.221,
+          "end": 2.301,
+          "score": 0.89
+        },
+        {
+          "word": "Leib.",
+          "start": 2.381,
+          "end": 3.541,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 3.561,
+      "end": 8.623,
+      "text": "Der erste Tag ist vorüber — und es war nur der erste.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 3.561,
+          "end": 3.801,
+          "score": 0.81
+        },
+        {
+          "word": "erste",
+          "start": 3.861,
+          "end": 4.261,
+          "score": 0.948
+        },
+        {
+          "word": "Tag",
+          "start": 4.281,
+          "end": 4.502,
+          "score": 0.987
+        },
+        {
+          "word": "ist",
+          "start": 4.542,
+          "end": 4.722,
+          "score": 0.909
+        },
+        {
+          "word": "vorüber",
+          "start": 4.742,
+          "end": 5.082,
+          "score": 0.854
+        },
+        {
+          "word": "—",
+          "start": 5.802,
+          "end": 5.822,
+          "score": 0.837
+        },
+        {
+          "word": "und",
+          "start": 5.842,
+          "end": 5.962,
+          "score": 0.859
+        },
+        {
+          "word": "es",
+          "start": 6.002,
+          "end": 6.082,
+          "score": 0.682
+        },
+        {
+          "word": "war",
+          "start": 6.102,
+          "end": 6.222,
+          "score": 0.89
+        },
+        {
+          "word": "nur",
+          "start": 6.262,
+          "end": 6.362,
+          "score": 0.987
+        },
+        {
+          "word": "der",
+          "start": 6.402,
+          "end": 6.602,
+          "score": 0.893
+        },
+        {
+          "word": "erste.",
+          "start": 6.662,
+          "end": 8.623,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 8.663,
+      "end": 13.065,
+      "text": "Ehrlich gesagt: rauer, als ich es mir ausgemalt hatte.",
+      "words": [
+        {
+          "word": "Ehrlich",
+          "start": 8.663,
+          "end": 9.003,
+          "score": 0.88
+        },
+        {
+          "word": "gesagt:",
+          "start": 9.023,
+          "end": 10.204,
+          "score": 0.863
+        },
+        {
+          "word": "rauer,",
+          "start": 10.304,
+          "end": 10.664,
+          "score": 0.929
+        },
+        {
+          "word": "als",
+          "start": 10.704,
+          "end": 10.844,
+          "score": 0.869
+        },
+        {
+          "word": "ich",
+          "start": 10.864,
+          "end": 10.964,
+          "score": 0.895
+        },
+        {
+          "word": "es",
+          "start": 11.004,
+          "end": 11.104,
+          "score": 0.89
+        },
+        {
+          "word": "mir",
+          "start": 11.124,
+          "end": 11.284,
+          "score": 0.806
+        },
+        {
+          "word": "ausgemalt",
+          "start": 11.304,
+          "end": 11.744,
+          "score": 0.838
+        },
+        {
+          "word": "hatte.",
+          "start": 11.764,
+          "end": 13.065,
+          "score": 0.929
+        }
+      ]
+    },
+    {
+      "start": 13.085,
+      "end": 17.006,
+      "text": "Schuften für ein paar Münzen, die kaum das Brot decken.",
+      "words": [
+        {
+          "word": "Schuften",
+          "start": 13.085,
+          "end": 13.545,
+          "score": 0.863
+        },
+        {
+          "word": "für",
+          "start": 13.565,
+          "end": 13.685,
+          "score": 0.891
+        },
+        {
+          "word": "ein",
+          "start": 13.705,
+          "end": 13.825,
+          "score": 0.483
+        },
+        {
+          "word": "paar",
+          "start": 13.865,
+          "end": 14.065,
+          "score": 0.772
+        },
+        {
+          "word": "Münzen,",
+          "start": 14.085,
+          "end": 14.525,
+          "score": 0.92
+        },
+        {
+          "word": "die",
+          "start": 14.545,
+          "end": 14.685,
+          "score": 0.943
+        },
+        {
+          "word": "kaum",
+          "start": 14.725,
+          "end": 14.925,
+          "score": 0.92
+        },
+        {
+          "word": "das",
+          "start": 14.965,
+          "end": 15.165,
+          "score": 0.92
+        },
+        {
+          "word": "Brot",
+          "start": 15.185,
+          "end": 15.465,
+          "score": 0.729
+        },
+        {
+          "word": "decken.",
+          "start": 15.505,
+          "end": 17.006,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 17.046,
+      "end": 21.648,
+      "text": "War es das, wofür ich mein Zuhause hinter mir gelassen habe?",
+      "words": [
+        {
+          "word": "War",
+          "start": 17.046,
+          "end": 17.206,
+          "score": 0.807
+        },
+        {
+          "word": "es",
+          "start": 17.246,
+          "end": 17.506,
+          "score": 0.912
+        },
+        {
+          "word": "das,",
+          "start": 17.526,
+          "end": 17.786,
+          "score": 0.774
+        },
+        {
+          "word": "wofür",
+          "start": 17.806,
+          "end": 18.106,
+          "score": 0.811
+        },
+        {
+          "word": "ich",
+          "start": 18.126,
+          "end": 18.246,
+          "score": 0.784
+        },
+        {
+          "word": "mein",
+          "start": 18.286,
+          "end": 18.486,
+          "score": 0.605
+        },
+        {
+          "word": "Zuhause",
+          "start": 18.526,
+          "end": 18.967,
+          "score": 0.966
+        },
+        {
+          "word": "hinter",
+          "start": 19.007,
+          "end": 19.207,
+          "score": 0.907
+        },
+        {
+          "word": "mir",
+          "start": 19.247,
+          "end": 19.367,
+          "score": 0.949
+        },
+        {
+          "word": "gelassen",
+          "start": 19.407,
+          "end": 19.707,
+          "score": 0.933
+        },
+        {
+          "word": "habe?",
+          "start": 19.747,
+          "end": 21.648,
+          "score": 0.963
+        }
+      ]
+    },
+    {
+      "start": 21.668,
+      "end": 24.889,
+      "text": "Doch dort wartet nur derselbe Acker.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 21.668,
+          "end": 21.888,
+          "score": 0.805
+        },
+        {
+          "word": "dort",
+          "start": 21.928,
+          "end": 22.648,
+          "score": 0.944
+        },
+        {
+          "word": "wartet",
+          "start": 22.708,
+          "end": 23.008,
+          "score": 0.928
+        },
+        {
+          "word": "nur",
+          "start": 23.028,
+          "end": 23.168,
+          "score": 0.903
+        },
+        {
+          "word": "derselbe",
+          "start": 23.188,
+          "end": 23.628,
+          "score": 0.858
+        },
+        {
+          "word": "Acker.",
+          "start": 23.668,
+          "end": 24.889,
+          "score": 0.828
+        }
+      ]
+    },
+    {
+      "start": 24.909,
+      "end": 30.971,
+      "text": "Derselbe Tag, der sich dreht und dreht, bis er einen Menschen ganz verbraucht.",
+      "words": [
+        {
+          "word": "Derselbe",
+          "start": 24.909,
+          "end": 25.509,
+          "score": 0.911
+        },
+        {
+          "word": "Tag,",
+          "start": 25.549,
+          "end": 25.829,
+          "score": 0.912
+        },
+        {
+          "word": "der",
+          "start": 25.849,
+          "end": 25.969,
+          "score": 0.823
+        },
+        {
+          "word": "sich",
+          "start": 25.989,
+          "end": 26.229,
+          "score": 0.846
+        },
+        {
+          "word": "dreht",
+          "start": 26.269,
+          "end": 26.669,
+          "score": 0.852
+        },
+        {
+          "word": "und",
+          "start": 26.689,
+          "end": 26.949,
+          "score": 0.88
+        },
+        {
+          "word": "dreht,",
+          "start": 26.989,
+          "end": 27.39,
+          "score": 0.888
+        },
+        {
+          "word": "bis",
+          "start": 27.43,
+          "end": 27.53,
+          "score": 0.939
+        },
+        {
+          "word": "er",
+          "start": 27.57,
+          "end": 27.65,
+          "score": 0.654
+        },
+        {
+          "word": "einen",
+          "start": 27.67,
+          "end": 27.87,
+          "score": 0.773
+        },
+        {
+          "word": "Menschen",
+          "start": 27.89,
+          "end": 28.31,
+          "score": 0.755
+        },
+        {
+          "word": "ganz",
+          "start": 28.35,
+          "end": 28.57,
+          "score": 0.993
+        },
+        {
+          "word": "verbraucht.",
+          "start": 28.61,
+          "end": 30.971,
+          "score": 0.921
+        }
+      ]
+    },
+    {
+      "start": 31.011,
+      "end": 32.311,
+      "text": "Nein.",
+      "words": [
+        {
+          "word": "Nein.",
+          "start": 31.011,
+          "end": 32.311,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 32.331,
+      "end": 35.412,
+      "text": "Ich will mehr sein als ein Paar müder Hände.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 32.331,
+          "end": 32.411,
+          "score": 0.95
+        },
+        {
+          "word": "will",
+          "start": 32.451,
+          "end": 32.751,
+          "score": 0.98
+        },
+        {
+          "word": "mehr",
+          "start": 32.771,
+          "end": 32.991,
+          "score": 0.735
+        },
+        {
+          "word": "sein",
+          "start": 33.011,
+          "end": 33.212,
+          "score": 0.918
+        },
+        {
+          "word": "als",
+          "start": 33.252,
+          "end": 33.372,
+          "score": 0.883
+        },
+        {
+          "word": "ein",
+          "start": 33.412,
+          "end": 33.512,
+          "score": 0.652
+        },
+        {
+          "word": "Paar",
+          "start": 33.532,
+          "end": 33.732,
+          "score": 0.613
+        },
+        {
+          "word": "müder",
+          "start": 33.752,
+          "end": 34.072,
+          "score": 0.943
+        },
+        {
+          "word": "Hände.",
+          "start": 34.112,
+          "end": 35.412,
+          "score": 0.799
+        }
+      ]
+    },
+    {
+      "start": 35.452,
+      "end": 40.314,
+      "text": "Ich will weiter, hinaus, hinauf.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 35.452,
+          "end": 35.552,
+          "score": 0.878
+        },
+        {
+          "word": "will",
+          "start": 35.592,
+          "end": 35.852,
+          "score": 0.984
+        },
+        {
+          "word": "weiter,",
+          "start": 35.892,
+          "end": 36.833,
+          "score": 0.915
+        },
+        {
+          "word": "hinaus,",
+          "start": 36.873,
+          "end": 38.133,
+          "score": 0.936
+        },
+        {
+          "word": "hinauf.",
+          "start": 38.153,
+          "end": 40.314,
+          "score": 0.816
+        }
+      ]
+    },
+    {
+      "start": 40.334,
+      "end": 46.336,
+      "text": "Und manchmal, tief in der Erschöpfung, regt sich etwas in mir.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 40.334,
+          "end": 40.554,
+          "score": 0.862
+        },
+        {
+          "word": "manchmal,",
+          "start": 40.574,
+          "end": 41.915,
+          "score": 0.857
+        },
+        {
+          "word": "tief",
+          "start": 41.955,
+          "end": 42.275,
+          "score": 0.859
+        },
+        {
+          "word": "in",
+          "start": 42.315,
+          "end": 42.395,
+          "score": 0.869
+        },
+        {
+          "word": "der",
+          "start": 42.415,
+          "end": 42.515,
+          "score": 0.798
+        },
+        {
+          "word": "Erschöpfung,",
+          "start": 42.555,
+          "end": 43.995,
+          "score": 0.855
+        },
+        {
+          "word": "regt",
+          "start": 44.035,
+          "end": 44.295,
+          "score": 0.858
+        },
+        {
+          "word": "sich",
+          "start": 44.315,
+          "end": 44.495,
+          "score": 0.89
+        },
+        {
+          "word": "etwas",
+          "start": 44.535,
+          "end": 44.796,
+          "score": 0.912
+        },
+        {
+          "word": "in",
+          "start": 44.816,
+          "end": 44.956,
+          "score": 0.754
+        },
+        {
+          "word": "mir.",
+          "start": 44.976,
+          "end": 46.336,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 46.376,
+      "end": 51.258,
+      "text": "Ein Kribbeln, das mehr verspricht, als ich zu glauben wage.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 46.376,
+          "end": 46.616,
+          "score": 0.613
+        },
+        {
+          "word": "Kribbeln,",
+          "start": 46.656,
+          "end": 47.076,
+          "score": 0.824
+        },
+        {
+          "word": "das",
+          "start": 47.096,
+          "end": 47.396,
+          "score": 0.907
+        },
+        {
+          "word": "mehr",
+          "start": 47.436,
+          "end": 47.637,
+          "score": 0.942
+        },
+        {
+          "word": "verspricht,",
+          "start": 47.657,
+          "end": 48.137,
+          "score": 0.914
+        },
+        {
+          "word": "als",
+          "start": 48.157,
+          "end": 48.277,
+          "score": 0.879
+        },
+        {
+          "word": "ich",
+          "start": 48.317,
+          "end": 48.437,
+          "score": 0.824
+        },
+        {
+          "word": "zu",
+          "start": 48.477,
+          "end": 48.577,
+          "score": 0.992
+        },
+        {
+          "word": "glauben",
+          "start": 48.617,
+          "end": 48.917,
+          "score": 0.911
+        },
+        {
+          "word": "wage.",
+          "start": 48.937,
+          "end": 51.258,
+          "score": 0.836
+        }
+      ]
+    },
+    {
+      "start": 51.278,
+      "end": 53.639,
+      "text": "Morgen geht es weiter.",
+      "words": [
+        {
+          "word": "Morgen",
+          "start": 51.278,
+          "end": 51.518,
+          "score": 0.919
+        },
+        {
+          "word": "geht",
+          "start": 51.558,
+          "end": 51.678,
+          "score": 0.918
+        },
+        {
+          "word": "es",
+          "start": 51.718,
+          "end": 51.838,
+          "score": 0.85
+        },
+        {
+          "word": "weiter.",
+          "start": 51.858,
+          "end": 53.639,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 53.699,
+      "end": 57.12,
+      "text": "Ändert es niemand für mich, dann ändere ich es selbst.",
+      "words": [
+        {
+          "word": "Ändert",
+          "start": 53.699,
+          "end": 53.919,
+          "score": 0.931
+        },
+        {
+          "word": "es",
+          "start": 53.959,
+          "end": 54.159,
+          "score": 0.914
+        },
+        {
+          "word": "niemand",
+          "start": 54.199,
+          "end": 54.499,
+          "score": 0.903
+        },
+        {
+          "word": "für",
+          "start": 54.539,
+          "end": 54.639,
+          "score": 0.968
+        },
+        {
+          "word": "mich,",
+          "start": 54.679,
+          "end": 56.059,
+          "score": 0.928
+        },
+        {
+          "word": "dann",
+          "start": 56.079,
+          "end": 56.26,
+          "score": 0.977
+        },
+        {
+          "word": "ändere",
+          "start": 56.3,
+          "end": 56.58,
+          "score": 0.852
+        },
+        {
+          "word": "ich",
+          "start": 56.6,
+          "end": 56.7,
+          "score": 0.815
+        },
+        {
+          "word": "es",
+          "start": 56.74,
+          "end": 56.86,
+          "score": 0.75
+        },
+        {
+          "word": "selbst.",
+          "start": 56.9,
+          "end": 57.12,
+          "score": 0.792
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Jeder",
+      "start": 0.48,
+      "end": 0.8,
+      "score": 0.845
+    },
+    {
+      "word": "Knochen",
+      "start": 0.86,
+      "end": 1.38,
+      "score": 0.798
+    },
+    {
+      "word": "liegt",
+      "start": 1.4,
+      "end": 1.621,
+      "score": 0.874
+    },
+    {
+      "word": "mir",
+      "start": 1.641,
+      "end": 1.821,
+      "score": 0.9
+    },
+    {
+      "word": "schwer",
+      "start": 1.861,
+      "end": 2.181,
+      "score": 0.767
+    },
+    {
+      "word": "im",
+      "start": 2.221,
+      "end": 2.301,
+      "score": 0.89
+    },
+    {
+      "word": "Leib.",
+      "start": 2.381,
+      "end": 3.541,
+      "score": 0.884
+    },
+    {
+      "word": "Der",
+      "start": 3.561,
+      "end": 3.801,
+      "score": 0.81
+    },
+    {
+      "word": "erste",
+      "start": 3.861,
+      "end": 4.261,
+      "score": 0.948
+    },
+    {
+      "word": "Tag",
+      "start": 4.281,
+      "end": 4.502,
+      "score": 0.987
+    },
+    {
+      "word": "ist",
+      "start": 4.542,
+      "end": 4.722,
+      "score": 0.909
+    },
+    {
+      "word": "vorüber",
+      "start": 4.742,
+      "end": 5.082,
+      "score": 0.854
+    },
+    {
+      "word": "—",
+      "start": 5.802,
+      "end": 5.822,
+      "score": 0.837
+    },
+    {
+      "word": "und",
+      "start": 5.842,
+      "end": 5.962,
+      "score": 0.859
+    },
+    {
+      "word": "es",
+      "start": 6.002,
+      "end": 6.082,
+      "score": 0.682
+    },
+    {
+      "word": "war",
+      "start": 6.102,
+      "end": 6.222,
+      "score": 0.89
+    },
+    {
+      "word": "nur",
+      "start": 6.262,
+      "end": 6.362,
+      "score": 0.987
+    },
+    {
+      "word": "der",
+      "start": 6.402,
+      "end": 6.602,
+      "score": 0.893
+    },
+    {
+      "word": "erste.",
+      "start": 6.662,
+      "end": 8.623,
+      "score": 0.914
+    },
+    {
+      "word": "Ehrlich",
+      "start": 8.663,
+      "end": 9.003,
+      "score": 0.88
+    },
+    {
+      "word": "gesagt:",
+      "start": 9.023,
+      "end": 10.204,
+      "score": 0.863
+    },
+    {
+      "word": "rauer,",
+      "start": 10.304,
+      "end": 10.664,
+      "score": 0.929
+    },
+    {
+      "word": "als",
+      "start": 10.704,
+      "end": 10.844,
+      "score": 0.869
+    },
+    {
+      "word": "ich",
+      "start": 10.864,
+      "end": 10.964,
+      "score": 0.895
+    },
+    {
+      "word": "es",
+      "start": 11.004,
+      "end": 11.104,
+      "score": 0.89
+    },
+    {
+      "word": "mir",
+      "start": 11.124,
+      "end": 11.284,
+      "score": 0.806
+    },
+    {
+      "word": "ausgemalt",
+      "start": 11.304,
+      "end": 11.744,
+      "score": 0.838
+    },
+    {
+      "word": "hatte.",
+      "start": 11.764,
+      "end": 13.065,
+      "score": 0.929
+    },
+    {
+      "word": "Schuften",
+      "start": 13.085,
+      "end": 13.545,
+      "score": 0.863
+    },
+    {
+      "word": "für",
+      "start": 13.565,
+      "end": 13.685,
+      "score": 0.891
+    },
+    {
+      "word": "ein",
+      "start": 13.705,
+      "end": 13.825,
+      "score": 0.483
+    },
+    {
+      "word": "paar",
+      "start": 13.865,
+      "end": 14.065,
+      "score": 0.772
+    },
+    {
+      "word": "Münzen,",
+      "start": 14.085,
+      "end": 14.525,
+      "score": 0.92
+    },
+    {
+      "word": "die",
+      "start": 14.545,
+      "end": 14.685,
+      "score": 0.943
+    },
+    {
+      "word": "kaum",
+      "start": 14.725,
+      "end": 14.925,
+      "score": 0.92
+    },
+    {
+      "word": "das",
+      "start": 14.965,
+      "end": 15.165,
+      "score": 0.92
+    },
+    {
+      "word": "Brot",
+      "start": 15.185,
+      "end": 15.465,
+      "score": 0.729
+    },
+    {
+      "word": "decken.",
+      "start": 15.505,
+      "end": 17.006,
+      "score": 0.979
+    },
+    {
+      "word": "War",
+      "start": 17.046,
+      "end": 17.206,
+      "score": 0.807
+    },
+    {
+      "word": "es",
+      "start": 17.246,
+      "end": 17.506,
+      "score": 0.912
+    },
+    {
+      "word": "das,",
+      "start": 17.526,
+      "end": 17.786,
+      "score": 0.774
+    },
+    {
+      "word": "wofür",
+      "start": 17.806,
+      "end": 18.106,
+      "score": 0.811
+    },
+    {
+      "word": "ich",
+      "start": 18.126,
+      "end": 18.246,
+      "score": 0.784
+    },
+    {
+      "word": "mein",
+      "start": 18.286,
+      "end": 18.486,
+      "score": 0.605
+    },
+    {
+      "word": "Zuhause",
+      "start": 18.526,
+      "end": 18.967,
+      "score": 0.966
+    },
+    {
+      "word": "hinter",
+      "start": 19.007,
+      "end": 19.207,
+      "score": 0.907
+    },
+    {
+      "word": "mir",
+      "start": 19.247,
+      "end": 19.367,
+      "score": 0.949
+    },
+    {
+      "word": "gelassen",
+      "start": 19.407,
+      "end": 19.707,
+      "score": 0.933
+    },
+    {
+      "word": "habe?",
+      "start": 19.747,
+      "end": 21.648,
+      "score": 0.963
+    },
+    {
+      "word": "Doch",
+      "start": 21.668,
+      "end": 21.888,
+      "score": 0.805
+    },
+    {
+      "word": "dort",
+      "start": 21.928,
+      "end": 22.648,
+      "score": 0.944
+    },
+    {
+      "word": "wartet",
+      "start": 22.708,
+      "end": 23.008,
+      "score": 0.928
+    },
+    {
+      "word": "nur",
+      "start": 23.028,
+      "end": 23.168,
+      "score": 0.903
+    },
+    {
+      "word": "derselbe",
+      "start": 23.188,
+      "end": 23.628,
+      "score": 0.858
+    },
+    {
+      "word": "Acker.",
+      "start": 23.668,
+      "end": 24.889,
+      "score": 0.828
+    },
+    {
+      "word": "Derselbe",
+      "start": 24.909,
+      "end": 25.509,
+      "score": 0.911
+    },
+    {
+      "word": "Tag,",
+      "start": 25.549,
+      "end": 25.829,
+      "score": 0.912
+    },
+    {
+      "word": "der",
+      "start": 25.849,
+      "end": 25.969,
+      "score": 0.823
+    },
+    {
+      "word": "sich",
+      "start": 25.989,
+      "end": 26.229,
+      "score": 0.846
+    },
+    {
+      "word": "dreht",
+      "start": 26.269,
+      "end": 26.669,
+      "score": 0.852
+    },
+    {
+      "word": "und",
+      "start": 26.689,
+      "end": 26.949,
+      "score": 0.88
+    },
+    {
+      "word": "dreht,",
+      "start": 26.989,
+      "end": 27.39,
+      "score": 0.888
+    },
+    {
+      "word": "bis",
+      "start": 27.43,
+      "end": 27.53,
+      "score": 0.939
+    },
+    {
+      "word": "er",
+      "start": 27.57,
+      "end": 27.65,
+      "score": 0.654
+    },
+    {
+      "word": "einen",
+      "start": 27.67,
+      "end": 27.87,
+      "score": 0.773
+    },
+    {
+      "word": "Menschen",
+      "start": 27.89,
+      "end": 28.31,
+      "score": 0.755
+    },
+    {
+      "word": "ganz",
+      "start": 28.35,
+      "end": 28.57,
+      "score": 0.993
+    },
+    {
+      "word": "verbraucht.",
+      "start": 28.61,
+      "end": 30.971,
+      "score": 0.921
+    },
+    {
+      "word": "Nein.",
+      "start": 31.011,
+      "end": 32.311,
+      "score": 0.941
+    },
+    {
+      "word": "Ich",
+      "start": 32.331,
+      "end": 32.411,
+      "score": 0.95
+    },
+    {
+      "word": "will",
+      "start": 32.451,
+      "end": 32.751,
+      "score": 0.98
+    },
+    {
+      "word": "mehr",
+      "start": 32.771,
+      "end": 32.991,
+      "score": 0.735
+    },
+    {
+      "word": "sein",
+      "start": 33.011,
+      "end": 33.212,
+      "score": 0.918
+    },
+    {
+      "word": "als",
+      "start": 33.252,
+      "end": 33.372,
+      "score": 0.883
+    },
+    {
+      "word": "ein",
+      "start": 33.412,
+      "end": 33.512,
+      "score": 0.652
+    },
+    {
+      "word": "Paar",
+      "start": 33.532,
+      "end": 33.732,
+      "score": 0.613
+    },
+    {
+      "word": "müder",
+      "start": 33.752,
+      "end": 34.072,
+      "score": 0.943
+    },
+    {
+      "word": "Hände.",
+      "start": 34.112,
+      "end": 35.412,
+      "score": 0.799
+    },
+    {
+      "word": "Ich",
+      "start": 35.452,
+      "end": 35.552,
+      "score": 0.878
+    },
+    {
+      "word": "will",
+      "start": 35.592,
+      "end": 35.852,
+      "score": 0.984
+    },
+    {
+      "word": "weiter,",
+      "start": 35.892,
+      "end": 36.833,
+      "score": 0.915
+    },
+    {
+      "word": "hinaus,",
+      "start": 36.873,
+      "end": 38.133,
+      "score": 0.936
+    },
+    {
+      "word": "hinauf.",
+      "start": 38.153,
+      "end": 40.314,
+      "score": 0.816
+    },
+    {
+      "word": "Und",
+      "start": 40.334,
+      "end": 40.554,
+      "score": 0.862
+    },
+    {
+      "word": "manchmal,",
+      "start": 40.574,
+      "end": 41.915,
+      "score": 0.857
+    },
+    {
+      "word": "tief",
+      "start": 41.955,
+      "end": 42.275,
+      "score": 0.859
+    },
+    {
+      "word": "in",
+      "start": 42.315,
+      "end": 42.395,
+      "score": 0.869
+    },
+    {
+      "word": "der",
+      "start": 42.415,
+      "end": 42.515,
+      "score": 0.798
+    },
+    {
+      "word": "Erschöpfung,",
+      "start": 42.555,
+      "end": 43.995,
+      "score": 0.855
+    },
+    {
+      "word": "regt",
+      "start": 44.035,
+      "end": 44.295,
+      "score": 0.858
+    },
+    {
+      "word": "sich",
+      "start": 44.315,
+      "end": 44.495,
+      "score": 0.89
+    },
+    {
+      "word": "etwas",
+      "start": 44.535,
+      "end": 44.796,
+      "score": 0.912
+    },
+    {
+      "word": "in",
+      "start": 44.816,
+      "end": 44.956,
+      "score": 0.754
+    },
+    {
+      "word": "mir.",
+      "start": 44.976,
+      "end": 46.336,
+      "score": 0.89
+    },
+    {
+      "word": "Ein",
+      "start": 46.376,
+      "end": 46.616,
+      "score": 0.613
+    },
+    {
+      "word": "Kribbeln,",
+      "start": 46.656,
+      "end": 47.076,
+      "score": 0.824
+    },
+    {
+      "word": "das",
+      "start": 47.096,
+      "end": 47.396,
+      "score": 0.907
+    },
+    {
+      "word": "mehr",
+      "start": 47.436,
+      "end": 47.637,
+      "score": 0.942
+    },
+    {
+      "word": "verspricht,",
+      "start": 47.657,
+      "end": 48.137,
+      "score": 0.914
+    },
+    {
+      "word": "als",
+      "start": 48.157,
+      "end": 48.277,
+      "score": 0.879
+    },
+    {
+      "word": "ich",
+      "start": 48.317,
+      "end": 48.437,
+      "score": 0.824
+    },
+    {
+      "word": "zu",
+      "start": 48.477,
+      "end": 48.577,
+      "score": 0.992
+    },
+    {
+      "word": "glauben",
+      "start": 48.617,
+      "end": 48.917,
+      "score": 0.911
+    },
+    {
+      "word": "wage.",
+      "start": 48.937,
+      "end": 51.258,
+      "score": 0.836
+    },
+    {
+      "word": "Morgen",
+      "start": 51.278,
+      "end": 51.518,
+      "score": 0.919
+    },
+    {
+      "word": "geht",
+      "start": 51.558,
+      "end": 51.678,
+      "score": 0.918
+    },
+    {
+      "word": "es",
+      "start": 51.718,
+      "end": 51.838,
+      "score": 0.85
+    },
+    {
+      "word": "weiter.",
+      "start": 51.858,
+      "end": 53.639,
+      "score": 0.938
+    },
+    {
+      "word": "Ändert",
+      "start": 53.699,
+      "end": 53.919,
+      "score": 0.931
+    },
+    {
+      "word": "es",
+      "start": 53.959,
+      "end": 54.159,
+      "score": 0.914
+    },
+    {
+      "word": "niemand",
+      "start": 54.199,
+      "end": 54.499,
+      "score": 0.903
+    },
+    {
+      "word": "für",
+      "start": 54.539,
+      "end": 54.639,
+      "score": 0.968
+    },
+    {
+      "word": "mich,",
+      "start": 54.679,
+      "end": 56.059,
+      "score": 0.928
+    },
+    {
+      "word": "dann",
+      "start": 56.079,
+      "end": 56.26,
+      "score": 0.977
+    },
+    {
+      "word": "ändere",
+      "start": 56.3,
+      "end": 56.58,
+      "score": 0.852
+    },
+    {
+      "word": "ich",
+      "start": 56.6,
+      "end": 56.7,
+      "score": 0.815
+    },
+    {
+      "word": "es",
+      "start": 56.74,
+      "end": 56.86,
+      "score": 0.75
+    },
+    {
+      "word": "selbst.",
+      "start": 56.9,
+      "end": 57.12,
+      "score": 0.792
+    }
+  ]
+}

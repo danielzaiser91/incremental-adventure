@@ -1,0 +1,557 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 2.042,
+      "text": "Nicht mehr wütend.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 0.44,
+          "end": 0.641,
+          "score": 0.818
+        },
+        {
+          "word": "mehr",
+          "start": 0.661,
+          "end": 0.881,
+          "score": 0.846
+        },
+        {
+          "word": "wütend.",
+          "start": 0.921,
+          "end": 2.042,
+          "score": 0.927
+        }
+      ]
+    },
+    {
+      "start": 2.062,
+      "end": 3.824,
+      "text": "Nicht mehr ängstlich.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 2.062,
+          "end": 2.242,
+          "score": 0.864
+        },
+        {
+          "word": "mehr",
+          "start": 2.262,
+          "end": 2.423,
+          "score": 0.862
+        },
+        {
+          "word": "ängstlich.",
+          "start": 2.463,
+          "end": 3.824,
+          "score": 0.879
+        }
+      ]
+    },
+    {
+      "start": 3.864,
+      "end": 8.869,
+      "text": "Ich sehe jetzt Möglichkeiten, die früher im Lärm der Angst untergingen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.864,
+          "end": 4.004,
+          "score": 0.842
+        },
+        {
+          "word": "sehe",
+          "start": 4.044,
+          "end": 4.305,
+          "score": 0.942
+        },
+        {
+          "word": "jetzt",
+          "start": 4.325,
+          "end": 4.625,
+          "score": 0.815
+        },
+        {
+          "word": "Möglichkeiten,",
+          "start": 4.665,
+          "end": 5.386,
+          "score": 0.883
+        },
+        {
+          "word": "die",
+          "start": 5.406,
+          "end": 5.586,
+          "score": 0.94
+        },
+        {
+          "word": "früher",
+          "start": 5.626,
+          "end": 5.986,
+          "score": 0.836
+        },
+        {
+          "word": "im",
+          "start": 6.026,
+          "end": 6.227,
+          "score": 0.986
+        },
+        {
+          "word": "Lärm",
+          "start": 6.287,
+          "end": 6.567,
+          "score": 0.919
+        },
+        {
+          "word": "der",
+          "start": 6.587,
+          "end": 6.747,
+          "score": 0.833
+        },
+        {
+          "word": "Angst",
+          "start": 6.807,
+          "end": 7.107,
+          "score": 0.987
+        },
+        {
+          "word": "untergingen.",
+          "start": 7.168,
+          "end": 8.869,
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "start": 8.909,
+      "end": 15.997,
+      "text": "Der Fremde hat mich viermal ausgeraubt — und jedes Mal habe ich mehr mitgenommen als er mir lassen wollte.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 8.909,
+          "end": 9.03,
+          "score": 0.99
+        },
+        {
+          "word": "Fremde",
+          "start": 9.09,
+          "end": 9.41,
+          "score": 0.931
+        },
+        {
+          "word": "hat",
+          "start": 9.43,
+          "end": 9.59,
+          "score": 0.951
+        },
+        {
+          "word": "mich",
+          "start": 9.63,
+          "end": 9.87,
+          "score": 0.881
+        },
+        {
+          "word": "viermal",
+          "start": 9.91,
+          "end": 10.431,
+          "score": 0.885
+        },
+        {
+          "word": "ausgeraubt",
+          "start": 10.471,
+          "end": 11.012,
+          "score": 0.922
+        },
+        {
+          "word": "—",
+          "start": 11.652,
+          "end": 11.672,
+          "score": 0.612
+        },
+        {
+          "word": "und",
+          "start": 11.692,
+          "end": 12.073,
+          "score": 0.967
+        },
+        {
+          "word": "jedes",
+          "start": 12.133,
+          "end": 12.473,
+          "score": 0.872
+        },
+        {
+          "word": "Mal",
+          "start": 12.553,
+          "end": 12.813,
+          "score": 0.941
+        },
+        {
+          "word": "habe",
+          "start": 12.834,
+          "end": 12.954,
+          "score": 0.901
+        },
+        {
+          "word": "ich",
+          "start": 12.994,
+          "end": 13.234,
+          "score": 0.688
+        },
+        {
+          "word": "mehr",
+          "start": 13.274,
+          "end": 13.514,
+          "score": 0.906
+        },
+        {
+          "word": "mitgenommen",
+          "start": 13.554,
+          "end": 14.095,
+          "score": 0.941
+        },
+        {
+          "word": "als",
+          "start": 14.135,
+          "end": 14.255,
+          "score": 0.894
+        },
+        {
+          "word": "er",
+          "start": 14.295,
+          "end": 14.375,
+          "score": 0.563
+        },
+        {
+          "word": "mir",
+          "start": 14.395,
+          "end": 14.535,
+          "score": 0.742
+        },
+        {
+          "word": "lassen",
+          "start": 14.575,
+          "end": 14.796,
+          "score": 0.956
+        },
+        {
+          "word": "wollte.",
+          "start": 14.836,
+          "end": 15.997,
+          "score": 0.97
+        }
+      ]
+    },
+    {
+      "start": 16.037,
+      "end": 18.62,
+      "text": "Den Instinkt kann er mir nicht stehlen.",
+      "words": [
+        {
+          "word": "Den",
+          "start": 16.037,
+          "end": 16.237,
+          "score": 0.833
+        },
+        {
+          "word": "Instinkt",
+          "start": 16.277,
+          "end": 17.639,
+          "score": 0.875
+        },
+        {
+          "word": "kann",
+          "start": 17.679,
+          "end": 17.779,
+          "score": 0.98
+        },
+        {
+          "word": "er",
+          "start": 17.819,
+          "end": 17.899,
+          "score": 0.22
+        },
+        {
+          "word": "mir",
+          "start": 17.919,
+          "end": 18.079,
+          "score": 0.624
+        },
+        {
+          "word": "nicht",
+          "start": 18.119,
+          "end": 18.299,
+          "score": 0.886
+        },
+        {
+          "word": "stehlen.",
+          "start": 18.359,
+          "end": 18.62,
+          "score": 0.85
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Nicht",
+      "start": 0.44,
+      "end": 0.641,
+      "score": 0.818
+    },
+    {
+      "word": "mehr",
+      "start": 0.661,
+      "end": 0.881,
+      "score": 0.846
+    },
+    {
+      "word": "wütend.",
+      "start": 0.921,
+      "end": 2.042,
+      "score": 0.927
+    },
+    {
+      "word": "Nicht",
+      "start": 2.062,
+      "end": 2.242,
+      "score": 0.864
+    },
+    {
+      "word": "mehr",
+      "start": 2.262,
+      "end": 2.423,
+      "score": 0.862
+    },
+    {
+      "word": "ängstlich.",
+      "start": 2.463,
+      "end": 3.824,
+      "score": 0.879
+    },
+    {
+      "word": "Ich",
+      "start": 3.864,
+      "end": 4.004,
+      "score": 0.842
+    },
+    {
+      "word": "sehe",
+      "start": 4.044,
+      "end": 4.305,
+      "score": 0.942
+    },
+    {
+      "word": "jetzt",
+      "start": 4.325,
+      "end": 4.625,
+      "score": 0.815
+    },
+    {
+      "word": "Möglichkeiten,",
+      "start": 4.665,
+      "end": 5.386,
+      "score": 0.883
+    },
+    {
+      "word": "die",
+      "start": 5.406,
+      "end": 5.586,
+      "score": 0.94
+    },
+    {
+      "word": "früher",
+      "start": 5.626,
+      "end": 5.986,
+      "score": 0.836
+    },
+    {
+      "word": "im",
+      "start": 6.026,
+      "end": 6.227,
+      "score": 0.986
+    },
+    {
+      "word": "Lärm",
+      "start": 6.287,
+      "end": 6.567,
+      "score": 0.919
+    },
+    {
+      "word": "der",
+      "start": 6.587,
+      "end": 6.747,
+      "score": 0.833
+    },
+    {
+      "word": "Angst",
+      "start": 6.807,
+      "end": 7.107,
+      "score": 0.987
+    },
+    {
+      "word": "untergingen.",
+      "start": 7.168,
+      "end": 8.869,
+      "score": 0.811
+    },
+    {
+      "word": "Der",
+      "start": 8.909,
+      "end": 9.03,
+      "score": 0.99
+    },
+    {
+      "word": "Fremde",
+      "start": 9.09,
+      "end": 9.41,
+      "score": 0.931
+    },
+    {
+      "word": "hat",
+      "start": 9.43,
+      "end": 9.59,
+      "score": 0.951
+    },
+    {
+      "word": "mich",
+      "start": 9.63,
+      "end": 9.87,
+      "score": 0.881
+    },
+    {
+      "word": "viermal",
+      "start": 9.91,
+      "end": 10.431,
+      "score": 0.885
+    },
+    {
+      "word": "ausgeraubt",
+      "start": 10.471,
+      "end": 11.012,
+      "score": 0.922
+    },
+    {
+      "word": "—",
+      "start": 11.652,
+      "end": 11.672,
+      "score": 0.612
+    },
+    {
+      "word": "und",
+      "start": 11.692,
+      "end": 12.073,
+      "score": 0.967
+    },
+    {
+      "word": "jedes",
+      "start": 12.133,
+      "end": 12.473,
+      "score": 0.872
+    },
+    {
+      "word": "Mal",
+      "start": 12.553,
+      "end": 12.813,
+      "score": 0.941
+    },
+    {
+      "word": "habe",
+      "start": 12.834,
+      "end": 12.954,
+      "score": 0.901
+    },
+    {
+      "word": "ich",
+      "start": 12.994,
+      "end": 13.234,
+      "score": 0.688
+    },
+    {
+      "word": "mehr",
+      "start": 13.274,
+      "end": 13.514,
+      "score": 0.906
+    },
+    {
+      "word": "mitgenommen",
+      "start": 13.554,
+      "end": 14.095,
+      "score": 0.941
+    },
+    {
+      "word": "als",
+      "start": 14.135,
+      "end": 14.255,
+      "score": 0.894
+    },
+    {
+      "word": "er",
+      "start": 14.295,
+      "end": 14.375,
+      "score": 0.563
+    },
+    {
+      "word": "mir",
+      "start": 14.395,
+      "end": 14.535,
+      "score": 0.742
+    },
+    {
+      "word": "lassen",
+      "start": 14.575,
+      "end": 14.796,
+      "score": 0.956
+    },
+    {
+      "word": "wollte.",
+      "start": 14.836,
+      "end": 15.997,
+      "score": 0.97
+    },
+    {
+      "word": "Den",
+      "start": 16.037,
+      "end": 16.237,
+      "score": 0.833
+    },
+    {
+      "word": "Instinkt",
+      "start": 16.277,
+      "end": 17.639,
+      "score": 0.875
+    },
+    {
+      "word": "kann",
+      "start": 17.679,
+      "end": 17.779,
+      "score": 0.98
+    },
+    {
+      "word": "er",
+      "start": 17.819,
+      "end": 17.899,
+      "score": 0.22
+    },
+    {
+      "word": "mir",
+      "start": 17.919,
+      "end": 18.079,
+      "score": 0.624
+    },
+    {
+      "word": "nicht",
+      "start": 18.119,
+      "end": 18.299,
+      "score": 0.886
+    },
+    {
+      "word": "stehlen.",
+      "start": 18.359,
+      "end": 18.62,
+      "score": 0.85
+    }
+  ]
+}

@@ -1,0 +1,815 @@
+{
+  "segments": [
+    {
+      "start": 0.42,
+      "end": 4.283,
+      "text": "\"Der Brief, den ich dir für Brakka gegeben habe?\"",
+      "words": [
+        {
+          "word": "\"Der",
+          "start": 0.42,
+          "end": 0.761,
+          "score": 0.707
+        },
+        {
+          "word": "Brief,",
+          "start": 0.801,
+          "end": 1.121,
+          "score": 0.881
+        },
+        {
+          "word": "den",
+          "start": 1.161,
+          "end": 1.321,
+          "score": 0.794
+        },
+        {
+          "word": "ich",
+          "start": 1.341,
+          "end": 1.461,
+          "score": 0.827
+        },
+        {
+          "word": "dir",
+          "start": 1.481,
+          "end": 1.721,
+          "score": 0.753
+        },
+        {
+          "word": "für",
+          "start": 1.741,
+          "end": 1.961,
+          "score": 0.924
+        },
+        {
+          "word": "Brakka",
+          "start": 2.001,
+          "end": 2.422,
+          "score": 0.864
+        },
+        {
+          "word": "gegeben",
+          "start": 2.442,
+          "end": 2.882,
+          "score": 0.947
+        },
+        {
+          "word": "habe?\"",
+          "start": 2.902,
+          "end": 4.283,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 4.303,
+      "end": 8.206,
+      "text": "Sie trinkt einen Schluck, langsamer als nötig.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 4.303,
+          "end": 4.483,
+          "score": 0.817
+        },
+        {
+          "word": "trinkt",
+          "start": 4.523,
+          "end": 4.823,
+          "score": 0.798
+        },
+        {
+          "word": "einen",
+          "start": 4.844,
+          "end": 5.064,
+          "score": 0.776
+        },
+        {
+          "word": "Schluck,",
+          "start": 5.104,
+          "end": 5.964,
+          "score": 0.788
+        },
+        {
+          "word": "langsamer",
+          "start": 6.004,
+          "end": 6.485,
+          "score": 0.91
+        },
+        {
+          "word": "als",
+          "start": 6.505,
+          "end": 6.685,
+          "score": 0.979
+        },
+        {
+          "word": "nötig.",
+          "start": 6.725,
+          "end": 8.206,
+          "score": 0.987
+        }
+      ]
+    },
+    {
+      "start": 8.226,
+      "end": 10.548,
+      "text": "\"Es war eine Warnung.",
+      "words": [
+        {
+          "word": "\"Es",
+          "start": 8.226,
+          "end": 8.526,
+          "score": 0.922
+        },
+        {
+          "word": "war",
+          "start": 8.566,
+          "end": 8.826,
+          "score": 0.99
+        },
+        {
+          "word": "eine",
+          "start": 8.866,
+          "end": 9.147,
+          "score": 0.782
+        },
+        {
+          "word": "Warnung.",
+          "start": 9.187,
+          "end": 10.548,
+          "score": 0.974
+        }
+      ]
+    },
+    {
+      "start": 10.568,
+      "end": 12.849,
+      "text": "Brakka weiß, wer der Schatten ist.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 10.568,
+          "end": 11.088,
+          "score": 0.802
+        },
+        {
+          "word": "weiß,",
+          "start": 11.128,
+          "end": 11.408,
+          "score": 0.77
+        },
+        {
+          "word": "wer",
+          "start": 11.428,
+          "end": 11.588,
+          "score": 0.872
+        },
+        {
+          "word": "der",
+          "start": 11.608,
+          "end": 11.728,
+          "score": 0.562
+        },
+        {
+          "word": "Schatten",
+          "start": 11.749,
+          "end": 12.089,
+          "score": 0.863
+        },
+        {
+          "word": "ist.",
+          "start": 12.129,
+          "end": 12.849,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 12.889,
+      "end": 15.311,
+      "text": "Er weiß es seit Jahren.\"",
+      "words": [
+        {
+          "word": "Er",
+          "start": 12.889,
+          "end": 13.049,
+          "score": 0.621
+        },
+        {
+          "word": "weiß",
+          "start": 13.069,
+          "end": 13.23,
+          "score": 0.922
+        },
+        {
+          "word": "es",
+          "start": 13.29,
+          "end": 13.39,
+          "score": 0.861
+        },
+        {
+          "word": "seit",
+          "start": 13.41,
+          "end": 13.63,
+          "score": 0.92
+        },
+        {
+          "word": "Jahren.\"",
+          "start": 13.67,
+          "end": 15.311,
+          "score": 0.815
+        }
+      ]
+    },
+    {
+      "start": 15.331,
+      "end": 16.872,
+      "text": "\"Ich auch.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 15.331,
+          "end": 15.611,
+          "score": 0.843
+        },
+        {
+          "word": "auch.",
+          "start": 15.651,
+          "end": 16.872,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 16.892,
+      "end": 19.614,
+      "text": "Aber Wissen ohne Schutz ist gefährlich.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 16.892,
+          "end": 17.132,
+          "score": 0.942
+        },
+        {
+          "word": "Wissen",
+          "start": 17.172,
+          "end": 17.513,
+          "score": 0.958
+        },
+        {
+          "word": "ohne",
+          "start": 17.533,
+          "end": 17.773,
+          "score": 0.806
+        },
+        {
+          "word": "Schutz",
+          "start": 17.813,
+          "end": 18.093,
+          "score": 0.899
+        },
+        {
+          "word": "ist",
+          "start": 18.113,
+          "end": 18.293,
+          "score": 0.87
+        },
+        {
+          "word": "gefährlich.",
+          "start": 18.333,
+          "end": 19.614,
+          "score": 0.856
+        }
+      ]
+    },
+    {
+      "start": 19.634,
+      "end": 21.656,
+      "text": "Du bist jetzt stark genug.",
+      "words": [
+        {
+          "word": "Du",
+          "start": 19.634,
+          "end": 19.794,
+          "score": 0.861
+        },
+        {
+          "word": "bist",
+          "start": 19.814,
+          "end": 19.974,
+          "score": 0.67
+        },
+        {
+          "word": "jetzt",
+          "start": 19.994,
+          "end": 20.315,
+          "score": 0.958
+        },
+        {
+          "word": "stark",
+          "start": 20.335,
+          "end": 20.575,
+          "score": 0.967
+        },
+        {
+          "word": "genug.",
+          "start": 20.615,
+          "end": 21.656,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 21.696,
+      "end": 24.318,
+      "text": "Er wird reden, wenn du ihn fragst.\"",
+      "words": [
+        {
+          "word": "Er",
+          "start": 21.696,
+          "end": 21.816,
+          "score": 0.826
+        },
+        {
+          "word": "wird",
+          "start": 21.836,
+          "end": 22.016,
+          "score": 0.953
+        },
+        {
+          "word": "reden,",
+          "start": 22.056,
+          "end": 22.316,
+          "score": 0.817
+        },
+        {
+          "word": "wenn",
+          "start": 22.336,
+          "end": 22.456,
+          "score": 0.942
+        },
+        {
+          "word": "du",
+          "start": 22.476,
+          "end": 22.576,
+          "score": 0.65
+        },
+        {
+          "word": "ihn",
+          "start": 22.596,
+          "end": 22.736,
+          "score": 0.686
+        },
+        {
+          "word": "fragst.\"",
+          "start": 22.777,
+          "end": 24.318,
+          "score": 0.813
+        }
+      ]
+    },
+    {
+      "start": 24.338,
+      "end": 25.779,
+      "text": "\"Geh zu Brakka.",
+      "words": [
+        {
+          "word": "\"Geh",
+          "start": 24.338,
+          "end": 24.578,
+          "score": 0.8
+        },
+        {
+          "word": "zu",
+          "start": 24.598,
+          "end": 24.718,
+          "score": 0.958
+        },
+        {
+          "word": "Brakka.",
+          "start": 24.738,
+          "end": 25.779,
+          "score": 0.767
+        }
+      ]
+    },
+    {
+      "start": 25.799,
+      "end": 27.2,
+      "text": "Sag ihm, dass ich dich geschickt habe.\"",
+      "words": [
+        {
+          "word": "Sag",
+          "start": 25.799,
+          "end": 25.999,
+          "score": 0.911
+        },
+        {
+          "word": "ihm,",
+          "start": 26.019,
+          "end": 26.179,
+          "score": 0.719
+        },
+        {
+          "word": "dass",
+          "start": 26.199,
+          "end": 26.339,
+          "score": 0.816
+        },
+        {
+          "word": "ich",
+          "start": 26.379,
+          "end": 26.479,
+          "score": 0.768
+        },
+        {
+          "word": "dich",
+          "start": 26.499,
+          "end": 26.679,
+          "score": 0.543
+        },
+        {
+          "word": "geschickt",
+          "start": 26.699,
+          "end": 26.98,
+          "score": 0.895
+        },
+        {
+          "word": "habe.\"",
+          "start": 27.02,
+          "end": 27.2,
+          "score": 0.812
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Der",
+      "start": 0.42,
+      "end": 0.761,
+      "score": 0.707
+    },
+    {
+      "word": "Brief,",
+      "start": 0.801,
+      "end": 1.121,
+      "score": 0.881
+    },
+    {
+      "word": "den",
+      "start": 1.161,
+      "end": 1.321,
+      "score": 0.794
+    },
+    {
+      "word": "ich",
+      "start": 1.341,
+      "end": 1.461,
+      "score": 0.827
+    },
+    {
+      "word": "dir",
+      "start": 1.481,
+      "end": 1.721,
+      "score": 0.753
+    },
+    {
+      "word": "für",
+      "start": 1.741,
+      "end": 1.961,
+      "score": 0.924
+    },
+    {
+      "word": "Brakka",
+      "start": 2.001,
+      "end": 2.422,
+      "score": 0.864
+    },
+    {
+      "word": "gegeben",
+      "start": 2.442,
+      "end": 2.882,
+      "score": 0.947
+    },
+    {
+      "word": "habe?\"",
+      "start": 2.902,
+      "end": 4.283,
+      "score": 0.865
+    },
+    {
+      "word": "Sie",
+      "start": 4.303,
+      "end": 4.483,
+      "score": 0.817
+    },
+    {
+      "word": "trinkt",
+      "start": 4.523,
+      "end": 4.823,
+      "score": 0.798
+    },
+    {
+      "word": "einen",
+      "start": 4.844,
+      "end": 5.064,
+      "score": 0.776
+    },
+    {
+      "word": "Schluck,",
+      "start": 5.104,
+      "end": 5.964,
+      "score": 0.788
+    },
+    {
+      "word": "langsamer",
+      "start": 6.004,
+      "end": 6.485,
+      "score": 0.91
+    },
+    {
+      "word": "als",
+      "start": 6.505,
+      "end": 6.685,
+      "score": 0.979
+    },
+    {
+      "word": "nötig.",
+      "start": 6.725,
+      "end": 8.206,
+      "score": 0.987
+    },
+    {
+      "word": "\"Es",
+      "start": 8.226,
+      "end": 8.526,
+      "score": 0.922
+    },
+    {
+      "word": "war",
+      "start": 8.566,
+      "end": 8.826,
+      "score": 0.99
+    },
+    {
+      "word": "eine",
+      "start": 8.866,
+      "end": 9.147,
+      "score": 0.782
+    },
+    {
+      "word": "Warnung.",
+      "start": 9.187,
+      "end": 10.548,
+      "score": 0.974
+    },
+    {
+      "word": "Brakka",
+      "start": 10.568,
+      "end": 11.088,
+      "score": 0.802
+    },
+    {
+      "word": "weiß,",
+      "start": 11.128,
+      "end": 11.408,
+      "score": 0.77
+    },
+    {
+      "word": "wer",
+      "start": 11.428,
+      "end": 11.588,
+      "score": 0.872
+    },
+    {
+      "word": "der",
+      "start": 11.608,
+      "end": 11.728,
+      "score": 0.562
+    },
+    {
+      "word": "Schatten",
+      "start": 11.749,
+      "end": 12.089,
+      "score": 0.863
+    },
+    {
+      "word": "ist.",
+      "start": 12.129,
+      "end": 12.849,
+      "score": 0.91
+    },
+    {
+      "word": "Er",
+      "start": 12.889,
+      "end": 13.049,
+      "score": 0.621
+    },
+    {
+      "word": "weiß",
+      "start": 13.069,
+      "end": 13.23,
+      "score": 0.922
+    },
+    {
+      "word": "es",
+      "start": 13.29,
+      "end": 13.39,
+      "score": 0.861
+    },
+    {
+      "word": "seit",
+      "start": 13.41,
+      "end": 13.63,
+      "score": 0.92
+    },
+    {
+      "word": "Jahren.\"",
+      "start": 13.67,
+      "end": 15.311,
+      "score": 0.815
+    },
+    {
+      "word": "\"Ich",
+      "start": 15.331,
+      "end": 15.611,
+      "score": 0.843
+    },
+    {
+      "word": "auch.",
+      "start": 15.651,
+      "end": 16.872,
+      "score": 0.85
+    },
+    {
+      "word": "Aber",
+      "start": 16.892,
+      "end": 17.132,
+      "score": 0.942
+    },
+    {
+      "word": "Wissen",
+      "start": 17.172,
+      "end": 17.513,
+      "score": 0.958
+    },
+    {
+      "word": "ohne",
+      "start": 17.533,
+      "end": 17.773,
+      "score": 0.806
+    },
+    {
+      "word": "Schutz",
+      "start": 17.813,
+      "end": 18.093,
+      "score": 0.899
+    },
+    {
+      "word": "ist",
+      "start": 18.113,
+      "end": 18.293,
+      "score": 0.87
+    },
+    {
+      "word": "gefährlich.",
+      "start": 18.333,
+      "end": 19.614,
+      "score": 0.856
+    },
+    {
+      "word": "Du",
+      "start": 19.634,
+      "end": 19.794,
+      "score": 0.861
+    },
+    {
+      "word": "bist",
+      "start": 19.814,
+      "end": 19.974,
+      "score": 0.67
+    },
+    {
+      "word": "jetzt",
+      "start": 19.994,
+      "end": 20.315,
+      "score": 0.958
+    },
+    {
+      "word": "stark",
+      "start": 20.335,
+      "end": 20.575,
+      "score": 0.967
+    },
+    {
+      "word": "genug.",
+      "start": 20.615,
+      "end": 21.656,
+      "score": 0.932
+    },
+    {
+      "word": "Er",
+      "start": 21.696,
+      "end": 21.816,
+      "score": 0.826
+    },
+    {
+      "word": "wird",
+      "start": 21.836,
+      "end": 22.016,
+      "score": 0.953
+    },
+    {
+      "word": "reden,",
+      "start": 22.056,
+      "end": 22.316,
+      "score": 0.817
+    },
+    {
+      "word": "wenn",
+      "start": 22.336,
+      "end": 22.456,
+      "score": 0.942
+    },
+    {
+      "word": "du",
+      "start": 22.476,
+      "end": 22.576,
+      "score": 0.65
+    },
+    {
+      "word": "ihn",
+      "start": 22.596,
+      "end": 22.736,
+      "score": 0.686
+    },
+    {
+      "word": "fragst.\"",
+      "start": 22.777,
+      "end": 24.318,
+      "score": 0.813
+    },
+    {
+      "word": "\"Geh",
+      "start": 24.338,
+      "end": 24.578,
+      "score": 0.8
+    },
+    {
+      "word": "zu",
+      "start": 24.598,
+      "end": 24.718,
+      "score": 0.958
+    },
+    {
+      "word": "Brakka.",
+      "start": 24.738,
+      "end": 25.779,
+      "score": 0.767
+    },
+    {
+      "word": "Sag",
+      "start": 25.799,
+      "end": 25.999,
+      "score": 0.911
+    },
+    {
+      "word": "ihm,",
+      "start": 26.019,
+      "end": 26.179,
+      "score": 0.719
+    },
+    {
+      "word": "dass",
+      "start": 26.199,
+      "end": 26.339,
+      "score": 0.816
+    },
+    {
+      "word": "ich",
+      "start": 26.379,
+      "end": 26.479,
+      "score": 0.768
+    },
+    {
+      "word": "dich",
+      "start": 26.499,
+      "end": 26.679,
+      "score": 0.543
+    },
+    {
+      "word": "geschickt",
+      "start": 26.699,
+      "end": 26.98,
+      "score": 0.895
+    },
+    {
+      "word": "habe.\"",
+      "start": 27.02,
+      "end": 27.2,
+      "score": 0.812
+    }
+  ]
+}

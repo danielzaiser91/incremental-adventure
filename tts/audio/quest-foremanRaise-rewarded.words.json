@@ -1,0 +1,97 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 3.998,
+      "text": "Abgeschlossen — mein Lohn ist dauerhaft gestiegen.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.502,
+          "end": 1.065,
+          "score": 0.856
+        },
+        {
+          "word": "—",
+          "start": 1.848,
+          "end": 1.869,
+          "score": 0.696
+        },
+        {
+          "word": "mein",
+          "start": 1.909,
+          "end": 2.13,
+          "score": 0.816
+        },
+        {
+          "word": "Lohn",
+          "start": 2.19,
+          "end": 2.592,
+          "score": 0.796
+        },
+        {
+          "word": "ist",
+          "start": 2.632,
+          "end": 2.974,
+          "score": 0.971
+        },
+        {
+          "word": "dauerhaft",
+          "start": 3.014,
+          "end": 3.596,
+          "score": 0.84
+        },
+        {
+          "word": "gestiegen.",
+          "start": 3.617,
+          "end": 3.998,
+          "score": 0.937
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.502,
+      "end": 1.065,
+      "score": 0.856
+    },
+    {
+      "word": "—",
+      "start": 1.848,
+      "end": 1.869,
+      "score": 0.696
+    },
+    {
+      "word": "mein",
+      "start": 1.909,
+      "end": 2.13,
+      "score": 0.816
+    },
+    {
+      "word": "Lohn",
+      "start": 2.19,
+      "end": 2.592,
+      "score": 0.796
+    },
+    {
+      "word": "ist",
+      "start": 2.632,
+      "end": 2.974,
+      "score": 0.971
+    },
+    {
+      "word": "dauerhaft",
+      "start": 3.014,
+      "end": 3.596,
+      "score": 0.84
+    },
+    {
+      "word": "gestiegen.",
+      "start": 3.617,
+      "end": 3.998,
+      "score": 0.937
+    }
+  ]
+}

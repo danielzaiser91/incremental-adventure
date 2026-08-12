@@ -1,0 +1,583 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 4.464,
+      "text": "Brakka schaut mich ruhig an, während ich erzähle.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.44,
+          "end": 1.041,
+          "score": 0.696
+        },
+        {
+          "word": "schaut",
+          "start": 1.101,
+          "end": 1.401,
+          "score": 0.85
+        },
+        {
+          "word": "mich",
+          "start": 1.441,
+          "end": 1.662,
+          "score": 0.862
+        },
+        {
+          "word": "ruhig",
+          "start": 1.722,
+          "end": 2.162,
+          "score": 0.873
+        },
+        {
+          "word": "an,",
+          "start": 2.202,
+          "end": 2.763,
+          "score": 0.949
+        },
+        {
+          "word": "während",
+          "start": 2.783,
+          "end": 3.023,
+          "score": 0.865
+        },
+        {
+          "word": "ich",
+          "start": 3.063,
+          "end": 3.183,
+          "score": 0.898
+        },
+        {
+          "word": "erzähle.",
+          "start": 3.223,
+          "end": 4.464,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 4.524,
+      "end": 6.506,
+      "text": "Fünf Kämpfe.",
+      "words": [
+        {
+          "word": "Fünf",
+          "start": 4.524,
+          "end": 4.945,
+          "score": 0.994
+        },
+        {
+          "word": "Kämpfe.",
+          "start": 4.985,
+          "end": 6.506,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 6.526,
+      "end": 9.128,
+      "text": "\"Na gut\", sagt er schließlich.",
+      "words": [
+        {
+          "word": "\"Na",
+          "start": 6.526,
+          "end": 6.786,
+          "score": 0.808
+        },
+        {
+          "word": "gut\",",
+          "start": 6.806,
+          "end": 7.567,
+          "score": 0.786
+        },
+        {
+          "word": "sagt",
+          "start": 7.607,
+          "end": 7.767,
+          "score": 0.974
+        },
+        {
+          "word": "er",
+          "start": 7.827,
+          "end": 7.907,
+          "score": 0.521
+        },
+        {
+          "word": "schließlich.",
+          "start": 7.927,
+          "end": 9.128,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 9.148,
+      "end": 11.871,
+      "text": "\"Du hast bewiesen, dass du kämpfen kannst.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 9.148,
+          "end": 9.309,
+          "score": 0.756
+        },
+        {
+          "word": "hast",
+          "start": 9.349,
+          "end": 9.609,
+          "score": 0.58
+        },
+        {
+          "word": "bewiesen,",
+          "start": 9.629,
+          "end": 10.089,
+          "score": 0.879
+        },
+        {
+          "word": "dass",
+          "start": 10.109,
+          "end": 10.289,
+          "score": 0.856
+        },
+        {
+          "word": "du",
+          "start": 10.309,
+          "end": 10.47,
+          "score": 0.891
+        },
+        {
+          "word": "kämpfen",
+          "start": 10.51,
+          "end": 10.85,
+          "score": 0.943
+        },
+        {
+          "word": "kannst.",
+          "start": 10.89,
+          "end": 11.871,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 11.891,
+      "end": 13.913,
+      "text": "Nicht nur zuhören.\"",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 11.891,
+          "end": 12.111,
+          "score": 0.837
+        },
+        {
+          "word": "nur",
+          "start": 12.131,
+          "end": 12.391,
+          "score": 0.812
+        },
+        {
+          "word": "zuhören.\"",
+          "start": 12.431,
+          "end": 13.913,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 13.933,
+      "end": 17.276,
+      "text": "\"Das tiefe Jagdgebiet ist dir jetzt zugänglich.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 13.933,
+          "end": 14.233,
+          "score": 0.95
+        },
+        {
+          "word": "tiefe",
+          "start": 14.293,
+          "end": 14.673,
+          "score": 0.94
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 14.714,
+          "end": 15.354,
+          "score": 0.875
+        },
+        {
+          "word": "ist",
+          "start": 15.394,
+          "end": 15.514,
+          "score": 0.606
+        },
+        {
+          "word": "dir",
+          "start": 15.554,
+          "end": 15.734,
+          "score": 0.681
+        },
+        {
+          "word": "jetzt",
+          "start": 15.754,
+          "end": 16.055,
+          "score": 0.87
+        },
+        {
+          "word": "zugänglich.",
+          "start": 16.075,
+          "end": 17.276,
+          "score": 0.878
+        }
+      ]
+    },
+    {
+      "start": 17.316,
+      "end": 21.36,
+      "text": "Und hier — zweihundert Gold dafür, dass du mich nicht enttäuscht hast.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 17.316,
+          "end": 17.496,
+          "score": 0.92
+        },
+        {
+          "word": "hier",
+          "start": 17.516,
+          "end": 18.477,
+          "score": 0.948
+        },
+        {
+          "word": "—",
+          "start": 18.497,
+          "end": 18.517,
+          "score": 0.975
+        },
+        {
+          "word": "zweihundert",
+          "start": 18.557,
+          "end": 19.118,
+          "score": 0.836
+        },
+        {
+          "word": "Gold",
+          "start": 19.138,
+          "end": 19.658,
+          "score": 0.866
+        },
+        {
+          "word": "dafür,",
+          "start": 19.698,
+          "end": 19.978,
+          "score": 0.949
+        },
+        {
+          "word": "dass",
+          "start": 19.998,
+          "end": 20.139,
+          "score": 0.738
+        },
+        {
+          "word": "du",
+          "start": 20.159,
+          "end": 20.279,
+          "score": 0.782
+        },
+        {
+          "word": "mich",
+          "start": 20.299,
+          "end": 20.459,
+          "score": 0.595
+        },
+        {
+          "word": "nicht",
+          "start": 20.499,
+          "end": 20.699,
+          "score": 0.852
+        },
+        {
+          "word": "enttäuscht",
+          "start": 20.739,
+          "end": 21.159,
+          "score": 0.81
+        },
+        {
+          "word": "hast.\"",
+          "start": 21.179,
+          "end": 21.36,
+          "score": 0.803
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.44,
+      "end": 1.041,
+      "score": 0.696
+    },
+    {
+      "word": "schaut",
+      "start": 1.101,
+      "end": 1.401,
+      "score": 0.85
+    },
+    {
+      "word": "mich",
+      "start": 1.441,
+      "end": 1.662,
+      "score": 0.862
+    },
+    {
+      "word": "ruhig",
+      "start": 1.722,
+      "end": 2.162,
+      "score": 0.873
+    },
+    {
+      "word": "an,",
+      "start": 2.202,
+      "end": 2.763,
+      "score": 0.949
+    },
+    {
+      "word": "während",
+      "start": 2.783,
+      "end": 3.023,
+      "score": 0.865
+    },
+    {
+      "word": "ich",
+      "start": 3.063,
+      "end": 3.183,
+      "score": 0.898
+    },
+    {
+      "word": "erzähle.",
+      "start": 3.223,
+      "end": 4.464,
+      "score": 0.961
+    },
+    {
+      "word": "Fünf",
+      "start": 4.524,
+      "end": 4.945,
+      "score": 0.994
+    },
+    {
+      "word": "Kämpfe.",
+      "start": 4.985,
+      "end": 6.506,
+      "score": 0.884
+    },
+    {
+      "word": "\"Na",
+      "start": 6.526,
+      "end": 6.786,
+      "score": 0.808
+    },
+    {
+      "word": "gut\",",
+      "start": 6.806,
+      "end": 7.567,
+      "score": 0.786
+    },
+    {
+      "word": "sagt",
+      "start": 7.607,
+      "end": 7.767,
+      "score": 0.974
+    },
+    {
+      "word": "er",
+      "start": 7.827,
+      "end": 7.907,
+      "score": 0.521
+    },
+    {
+      "word": "schließlich.",
+      "start": 7.927,
+      "end": 9.128,
+      "score": 0.823
+    },
+    {
+      "word": "\"Du",
+      "start": 9.148,
+      "end": 9.309,
+      "score": 0.756
+    },
+    {
+      "word": "hast",
+      "start": 9.349,
+      "end": 9.609,
+      "score": 0.58
+    },
+    {
+      "word": "bewiesen,",
+      "start": 9.629,
+      "end": 10.089,
+      "score": 0.879
+    },
+    {
+      "word": "dass",
+      "start": 10.109,
+      "end": 10.289,
+      "score": 0.856
+    },
+    {
+      "word": "du",
+      "start": 10.309,
+      "end": 10.47,
+      "score": 0.891
+    },
+    {
+      "word": "kämpfen",
+      "start": 10.51,
+      "end": 10.85,
+      "score": 0.943
+    },
+    {
+      "word": "kannst.",
+      "start": 10.89,
+      "end": 11.871,
+      "score": 0.916
+    },
+    {
+      "word": "Nicht",
+      "start": 11.891,
+      "end": 12.111,
+      "score": 0.837
+    },
+    {
+      "word": "nur",
+      "start": 12.131,
+      "end": 12.391,
+      "score": 0.812
+    },
+    {
+      "word": "zuhören.\"",
+      "start": 12.431,
+      "end": 13.913,
+      "score": 0.957
+    },
+    {
+      "word": "\"Das",
+      "start": 13.933,
+      "end": 14.233,
+      "score": 0.95
+    },
+    {
+      "word": "tiefe",
+      "start": 14.293,
+      "end": 14.673,
+      "score": 0.94
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 14.714,
+      "end": 15.354,
+      "score": 0.875
+    },
+    {
+      "word": "ist",
+      "start": 15.394,
+      "end": 15.514,
+      "score": 0.606
+    },
+    {
+      "word": "dir",
+      "start": 15.554,
+      "end": 15.734,
+      "score": 0.681
+    },
+    {
+      "word": "jetzt",
+      "start": 15.754,
+      "end": 16.055,
+      "score": 0.87
+    },
+    {
+      "word": "zugänglich.",
+      "start": 16.075,
+      "end": 17.276,
+      "score": 0.878
+    },
+    {
+      "word": "Und",
+      "start": 17.316,
+      "end": 17.496,
+      "score": 0.92
+    },
+    {
+      "word": "hier",
+      "start": 17.516,
+      "end": 18.477,
+      "score": 0.948
+    },
+    {
+      "word": "—",
+      "start": 18.497,
+      "end": 18.517,
+      "score": 0.975
+    },
+    {
+      "word": "zweihundert",
+      "start": 18.557,
+      "end": 19.118,
+      "score": 0.836
+    },
+    {
+      "word": "Gold",
+      "start": 19.138,
+      "end": 19.658,
+      "score": 0.866
+    },
+    {
+      "word": "dafür,",
+      "start": 19.698,
+      "end": 19.978,
+      "score": 0.949
+    },
+    {
+      "word": "dass",
+      "start": 19.998,
+      "end": 20.139,
+      "score": 0.738
+    },
+    {
+      "word": "du",
+      "start": 20.159,
+      "end": 20.279,
+      "score": 0.782
+    },
+    {
+      "word": "mich",
+      "start": 20.299,
+      "end": 20.459,
+      "score": 0.595
+    },
+    {
+      "word": "nicht",
+      "start": 20.499,
+      "end": 20.699,
+      "score": 0.852
+    },
+    {
+      "word": "enttäuscht",
+      "start": 20.739,
+      "end": 21.159,
+      "score": 0.81
+    },
+    {
+      "word": "hast.\"",
+      "start": 21.179,
+      "end": 21.36,
+      "score": 0.803
+    }
+  ]
+}

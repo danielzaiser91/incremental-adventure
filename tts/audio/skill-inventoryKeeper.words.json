@@ -1,0 +1,545 @@
+{
+  "segments": [
+    {
+      "start": 0.761,
+      "end": 4.264,
+      "text": "Ich habe meinen Rucksack ausgepackt und neu geordnet.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.761,
+          "end": 0.841,
+          "score": 0.604
+        },
+        {
+          "word": "habe",
+          "start": 0.861,
+          "end": 1.061,
+          "score": 0.716
+        },
+        {
+          "word": "meinen",
+          "start": 1.081,
+          "end": 1.261,
+          "score": 0.727
+        },
+        {
+          "word": "Rucksack",
+          "start": 1.301,
+          "end": 1.702,
+          "score": 0.773
+        },
+        {
+          "word": "ausgepackt",
+          "start": 1.742,
+          "end": 2.583,
+          "score": 0.949
+        },
+        {
+          "word": "und",
+          "start": 2.603,
+          "end": 2.843,
+          "score": 0.792
+        },
+        {
+          "word": "neu",
+          "start": 2.863,
+          "end": 3.043,
+          "score": 0.977
+        },
+        {
+          "word": "geordnet.",
+          "start": 3.083,
+          "end": 4.264,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 4.324,
+      "end": 9.91,
+      "text": "Was vorne liegt, was hinten, was nah am Körper — nichts mehr dem Zufall überlassen.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 4.324,
+          "end": 4.585,
+          "score": 0.949
+        },
+        {
+          "word": "vorne",
+          "start": 4.625,
+          "end": 4.965,
+          "score": 0.961
+        },
+        {
+          "word": "liegt,",
+          "start": 5.005,
+          "end": 5.485,
+          "score": 0.942
+        },
+        {
+          "word": "was",
+          "start": 5.526,
+          "end": 5.706,
+          "score": 0.945
+        },
+        {
+          "word": "hinten,",
+          "start": 5.746,
+          "end": 6.527,
+          "score": 0.918
+        },
+        {
+          "word": "was",
+          "start": 6.567,
+          "end": 6.767,
+          "score": 0.872
+        },
+        {
+          "word": "nah",
+          "start": 6.787,
+          "end": 6.967,
+          "score": 0.951
+        },
+        {
+          "word": "am",
+          "start": 7.007,
+          "end": 7.147,
+          "score": 0.958
+        },
+        {
+          "word": "Körper",
+          "start": 7.187,
+          "end": 7.507,
+          "score": 0.971
+        },
+        {
+          "word": "—",
+          "start": 8.368,
+          "end": 8.388,
+          "score": 0.983
+        },
+        {
+          "word": "nichts",
+          "start": 8.408,
+          "end": 8.669,
+          "score": 0.812
+        },
+        {
+          "word": "mehr",
+          "start": 8.689,
+          "end": 8.869,
+          "score": 0.869
+        },
+        {
+          "word": "dem",
+          "start": 8.909,
+          "end": 9.089,
+          "score": 0.886
+        },
+        {
+          "word": "Zufall",
+          "start": 9.129,
+          "end": 9.489,
+          "score": 0.974
+        },
+        {
+          "word": "überlassen.",
+          "start": 9.53,
+          "end": 9.91,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 10.891,
+      "end": 15.996,
+      "text": "Wenn ich alles zurücklassen müsste, nähme ich wenigstens das Wichtigste mit.",
+      "words": [
+        {
+          "word": "Wenn",
+          "start": 10.891,
+          "end": 11.091,
+          "score": 0.615
+        },
+        {
+          "word": "ich",
+          "start": 11.131,
+          "end": 11.331,
+          "score": 0.961
+        },
+        {
+          "word": "alles",
+          "start": 11.371,
+          "end": 11.692,
+          "score": 0.959
+        },
+        {
+          "word": "zurücklassen",
+          "start": 11.732,
+          "end": 12.272,
+          "score": 0.891
+        },
+        {
+          "word": "müsste,",
+          "start": 12.292,
+          "end": 13.233,
+          "score": 0.972
+        },
+        {
+          "word": "nähme",
+          "start": 13.273,
+          "end": 13.453,
+          "score": 0.823
+        },
+        {
+          "word": "ich",
+          "start": 13.473,
+          "end": 13.674,
+          "score": 0.87
+        },
+        {
+          "word": "wenigstens",
+          "start": 13.714,
+          "end": 14.194,
+          "score": 0.91
+        },
+        {
+          "word": "das",
+          "start": 14.234,
+          "end": 14.474,
+          "score": 0.867
+        },
+        {
+          "word": "Wichtigste",
+          "start": 14.494,
+          "end": 14.935,
+          "score": 0.919
+        },
+        {
+          "word": "mit.",
+          "start": 14.955,
+          "end": 15.996,
+          "score": 0.77
+        }
+      ]
+    },
+    {
+      "start": 16.036,
+      "end": 18.478,
+      "text": "Kein zufälliges Sortiment mehr.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 16.036,
+          "end": 16.336,
+          "score": 0.738
+        },
+        {
+          "word": "zufälliges",
+          "start": 16.376,
+          "end": 16.937,
+          "score": 0.941
+        },
+        {
+          "word": "Sortiment",
+          "start": 16.977,
+          "end": 17.477,
+          "score": 0.91
+        },
+        {
+          "word": "mehr.",
+          "start": 17.497,
+          "end": 18.478,
+          "score": 0.657
+        }
+      ]
+    },
+    {
+      "start": 18.518,
+      "end": 19.66,
+      "text": "Alles hat seinen Platz.",
+      "words": [
+        {
+          "word": "Alles",
+          "start": 18.518,
+          "end": 18.919,
+          "score": 0.966
+        },
+        {
+          "word": "hat",
+          "start": 18.939,
+          "end": 19.139,
+          "score": 0.926
+        },
+        {
+          "word": "seinen",
+          "start": 19.159,
+          "end": 19.399,
+          "score": 0.866
+        },
+        {
+          "word": "Platz.",
+          "start": 19.439,
+          "end": 19.66,
+          "score": 0.886
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.761,
+      "end": 0.841,
+      "score": 0.604
+    },
+    {
+      "word": "habe",
+      "start": 0.861,
+      "end": 1.061,
+      "score": 0.716
+    },
+    {
+      "word": "meinen",
+      "start": 1.081,
+      "end": 1.261,
+      "score": 0.727
+    },
+    {
+      "word": "Rucksack",
+      "start": 1.301,
+      "end": 1.702,
+      "score": 0.773
+    },
+    {
+      "word": "ausgepackt",
+      "start": 1.742,
+      "end": 2.583,
+      "score": 0.949
+    },
+    {
+      "word": "und",
+      "start": 2.603,
+      "end": 2.843,
+      "score": 0.792
+    },
+    {
+      "word": "neu",
+      "start": 2.863,
+      "end": 3.043,
+      "score": 0.977
+    },
+    {
+      "word": "geordnet.",
+      "start": 3.083,
+      "end": 4.264,
+      "score": 0.926
+    },
+    {
+      "word": "Was",
+      "start": 4.324,
+      "end": 4.585,
+      "score": 0.949
+    },
+    {
+      "word": "vorne",
+      "start": 4.625,
+      "end": 4.965,
+      "score": 0.961
+    },
+    {
+      "word": "liegt,",
+      "start": 5.005,
+      "end": 5.485,
+      "score": 0.942
+    },
+    {
+      "word": "was",
+      "start": 5.526,
+      "end": 5.706,
+      "score": 0.945
+    },
+    {
+      "word": "hinten,",
+      "start": 5.746,
+      "end": 6.527,
+      "score": 0.918
+    },
+    {
+      "word": "was",
+      "start": 6.567,
+      "end": 6.767,
+      "score": 0.872
+    },
+    {
+      "word": "nah",
+      "start": 6.787,
+      "end": 6.967,
+      "score": 0.951
+    },
+    {
+      "word": "am",
+      "start": 7.007,
+      "end": 7.147,
+      "score": 0.958
+    },
+    {
+      "word": "Körper",
+      "start": 7.187,
+      "end": 7.507,
+      "score": 0.971
+    },
+    {
+      "word": "—",
+      "start": 8.368,
+      "end": 8.388,
+      "score": 0.983
+    },
+    {
+      "word": "nichts",
+      "start": 8.408,
+      "end": 8.669,
+      "score": 0.812
+    },
+    {
+      "word": "mehr",
+      "start": 8.689,
+      "end": 8.869,
+      "score": 0.869
+    },
+    {
+      "word": "dem",
+      "start": 8.909,
+      "end": 9.089,
+      "score": 0.886
+    },
+    {
+      "word": "Zufall",
+      "start": 9.129,
+      "end": 9.489,
+      "score": 0.974
+    },
+    {
+      "word": "überlassen.",
+      "start": 9.53,
+      "end": 9.91,
+      "score": 0.936
+    },
+    {
+      "word": "Wenn",
+      "start": 10.891,
+      "end": 11.091,
+      "score": 0.615
+    },
+    {
+      "word": "ich",
+      "start": 11.131,
+      "end": 11.331,
+      "score": 0.961
+    },
+    {
+      "word": "alles",
+      "start": 11.371,
+      "end": 11.692,
+      "score": 0.959
+    },
+    {
+      "word": "zurücklassen",
+      "start": 11.732,
+      "end": 12.272,
+      "score": 0.891
+    },
+    {
+      "word": "müsste,",
+      "start": 12.292,
+      "end": 13.233,
+      "score": 0.972
+    },
+    {
+      "word": "nähme",
+      "start": 13.273,
+      "end": 13.453,
+      "score": 0.823
+    },
+    {
+      "word": "ich",
+      "start": 13.473,
+      "end": 13.674,
+      "score": 0.87
+    },
+    {
+      "word": "wenigstens",
+      "start": 13.714,
+      "end": 14.194,
+      "score": 0.91
+    },
+    {
+      "word": "das",
+      "start": 14.234,
+      "end": 14.474,
+      "score": 0.867
+    },
+    {
+      "word": "Wichtigste",
+      "start": 14.494,
+      "end": 14.935,
+      "score": 0.919
+    },
+    {
+      "word": "mit.",
+      "start": 14.955,
+      "end": 15.996,
+      "score": 0.77
+    },
+    {
+      "word": "Kein",
+      "start": 16.036,
+      "end": 16.336,
+      "score": 0.738
+    },
+    {
+      "word": "zufälliges",
+      "start": 16.376,
+      "end": 16.937,
+      "score": 0.941
+    },
+    {
+      "word": "Sortiment",
+      "start": 16.977,
+      "end": 17.477,
+      "score": 0.91
+    },
+    {
+      "word": "mehr.",
+      "start": 17.497,
+      "end": 18.478,
+      "score": 0.657
+    },
+    {
+      "word": "Alles",
+      "start": 18.518,
+      "end": 18.919,
+      "score": 0.966
+    },
+    {
+      "word": "hat",
+      "start": 18.939,
+      "end": 19.139,
+      "score": 0.926
+    },
+    {
+      "word": "seinen",
+      "start": 19.159,
+      "end": 19.399,
+      "score": 0.866
+    },
+    {
+      "word": "Platz.",
+      "start": 19.439,
+      "end": 19.66,
+      "score": 0.886
+    }
+  ]
+}

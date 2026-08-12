@@ -1,0 +1,904 @@
+{
+  "segments": [
+    {
+      "start": 0.68,
+      "end": 2.061,
+      "text": "Viermal.",
+      "words": [
+        {
+          "word": "Viermal.",
+          "start": 0.68,
+          "end": 2.061,
+          "score": 0.783
+        }
+      ]
+    },
+    {
+      "start": 2.081,
+      "end": 7.364,
+      "text": "Viermal ausgeraubt, viermal mit leeren Händen wieder aufgestanden.",
+      "words": [
+        {
+          "word": "Viermal",
+          "start": 2.081,
+          "end": 2.682,
+          "score": 0.874
+        },
+        {
+          "word": "ausgeraubt,",
+          "start": 2.722,
+          "end": 3.842,
+          "score": 0.94
+        },
+        {
+          "word": "viermal",
+          "start": 3.862,
+          "end": 4.363,
+          "score": 0.878
+        },
+        {
+          "word": "mit",
+          "start": 4.403,
+          "end": 4.563,
+          "score": 0.995
+        },
+        {
+          "word": "leeren",
+          "start": 4.623,
+          "end": 5.063,
+          "score": 0.802
+        },
+        {
+          "word": "Händen",
+          "start": 5.103,
+          "end": 5.423,
+          "score": 0.907
+        },
+        {
+          "word": "wieder",
+          "start": 5.463,
+          "end": 5.683,
+          "score": 0.931
+        },
+        {
+          "word": "aufgestanden.",
+          "start": 5.703,
+          "end": 7.364,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 7.404,
+      "end": 11.247,
+      "text": "Ich kann nicht mehr so tun, als wäre das alles in Ordnung.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 7.404,
+          "end": 7.645,
+          "score": 0.818
+        },
+        {
+          "word": "kann",
+          "start": 7.685,
+          "end": 7.845,
+          "score": 0.872
+        },
+        {
+          "word": "nicht",
+          "start": 7.865,
+          "end": 8.045,
+          "score": 0.845
+        },
+        {
+          "word": "mehr",
+          "start": 8.065,
+          "end": 8.225,
+          "score": 0.79
+        },
+        {
+          "word": "so",
+          "start": 8.245,
+          "end": 8.385,
+          "score": 0.992
+        },
+        {
+          "word": "tun,",
+          "start": 8.425,
+          "end": 8.665,
+          "score": 0.95
+        },
+        {
+          "word": "als",
+          "start": 8.685,
+          "end": 8.825,
+          "score": 0.976
+        },
+        {
+          "word": "wäre",
+          "start": 8.845,
+          "end": 9.045,
+          "score": 0.754
+        },
+        {
+          "word": "das",
+          "start": 9.065,
+          "end": 9.245,
+          "score": 0.918
+        },
+        {
+          "word": "alles",
+          "start": 9.265,
+          "end": 9.486,
+          "score": 0.903
+        },
+        {
+          "word": "in",
+          "start": 9.526,
+          "end": 9.686,
+          "score": 0.922
+        },
+        {
+          "word": "Ordnung.",
+          "start": 9.746,
+          "end": 11.247,
+          "score": 0.876
+        }
+      ]
+    },
+    {
+      "start": 11.287,
+      "end": 13.648,
+      "text": "Ich bin paranoid geworden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 11.287,
+          "end": 11.487,
+          "score": 0.751
+        },
+        {
+          "word": "bin",
+          "start": 11.507,
+          "end": 11.767,
+          "score": 0.936
+        },
+        {
+          "word": "paranoid",
+          "start": 11.807,
+          "end": 12.387,
+          "score": 0.909
+        },
+        {
+          "word": "geworden.",
+          "start": 12.407,
+          "end": 13.648,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 13.688,
+      "end": 16.97,
+      "text": "Jedes Geräusch, jeder Schatten.",
+      "words": [
+        {
+          "word": "Jedes",
+          "start": 13.688,
+          "end": 14.028,
+          "score": 0.987
+        },
+        {
+          "word": "Geräusch,",
+          "start": 14.068,
+          "end": 14.889,
+          "score": 0.847
+        },
+        {
+          "word": "jeder",
+          "start": 14.929,
+          "end": 15.229,
+          "score": 0.965
+        },
+        {
+          "word": "Schatten.",
+          "start": 15.269,
+          "end": 16.97,
+          "score": 0.814
+        }
+      ]
+    },
+    {
+      "start": 17.05,
+      "end": 23.254,
+      "text": "Aber vielleicht ist das gar nicht so falsch — wer ständig auf der Hut ist, übersieht weniger.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 17.05,
+          "end": 17.37,
+          "score": 0.94
+        },
+        {
+          "word": "vielleicht",
+          "start": 17.41,
+          "end": 17.75,
+          "score": 0.893
+        },
+        {
+          "word": "ist",
+          "start": 17.791,
+          "end": 17.911,
+          "score": 0.842
+        },
+        {
+          "word": "das",
+          "start": 17.931,
+          "end": 18.091,
+          "score": 0.861
+        },
+        {
+          "word": "gar",
+          "start": 18.111,
+          "end": 18.211,
+          "score": 0.939
+        },
+        {
+          "word": "nicht",
+          "start": 18.231,
+          "end": 18.391,
+          "score": 0.897
+        },
+        {
+          "word": "so",
+          "start": 18.431,
+          "end": 18.591,
+          "score": 0.788
+        },
+        {
+          "word": "falsch",
+          "start": 18.631,
+          "end": 18.851,
+          "score": 0.863
+        },
+        {
+          "word": "—",
+          "start": 19.712,
+          "end": 19.732,
+          "score": 0.21
+        },
+        {
+          "word": "wer",
+          "start": 19.752,
+          "end": 19.972,
+          "score": 0.762
+        },
+        {
+          "word": "ständig",
+          "start": 20.012,
+          "end": 20.372,
+          "score": 0.936
+        },
+        {
+          "word": "auf",
+          "start": 20.412,
+          "end": 20.532,
+          "score": 0.882
+        },
+        {
+          "word": "der",
+          "start": 20.552,
+          "end": 20.672,
+          "score": 0.848
+        },
+        {
+          "word": "Hut",
+          "start": 20.692,
+          "end": 20.892,
+          "score": 0.844
+        },
+        {
+          "word": "ist,",
+          "start": 20.932,
+          "end": 21.152,
+          "score": 0.948
+        },
+        {
+          "word": "übersieht",
+          "start": 21.172,
+          "end": 21.673,
+          "score": 0.917
+        },
+        {
+          "word": "weniger.",
+          "start": 21.713,
+          "end": 23.254,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 23.314,
+      "end": 26.195,
+      "text": "Ich fange an, das alles anders zu sehen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 23.314,
+          "end": 23.514,
+          "score": 0.746
+        },
+        {
+          "word": "fange",
+          "start": 23.554,
+          "end": 23.874,
+          "score": 0.796
+        },
+        {
+          "word": "an,",
+          "start": 23.914,
+          "end": 24.014,
+          "score": 0.829
+        },
+        {
+          "word": "das",
+          "start": 24.054,
+          "end": 24.314,
+          "score": 0.81
+        },
+        {
+          "word": "alles",
+          "start": 24.354,
+          "end": 24.655,
+          "score": 0.855
+        },
+        {
+          "word": "anders",
+          "start": 24.695,
+          "end": 25.015,
+          "score": 0.856
+        },
+        {
+          "word": "zu",
+          "start": 25.055,
+          "end": 25.155,
+          "score": 0.919
+        },
+        {
+          "word": "sehen.",
+          "start": 25.195,
+          "end": 26.195,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 26.215,
+      "end": 29.938,
+      "text": "Nicht blind schuften — sondern denken.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 26.215,
+          "end": 26.516,
+          "score": 0.907
+        },
+        {
+          "word": "blind",
+          "start": 26.556,
+          "end": 26.856,
+          "score": 0.907
+        },
+        {
+          "word": "schuften",
+          "start": 26.896,
+          "end": 27.276,
+          "score": 0.928
+        },
+        {
+          "word": "—",
+          "start": 28.037,
+          "end": 28.057,
+          "score": 0.775
+        },
+        {
+          "word": "sondern",
+          "start": 28.077,
+          "end": 28.477,
+          "score": 0.933
+        },
+        {
+          "word": "denken.",
+          "start": 28.517,
+          "end": 29.938,
+          "score": 0.927
+        }
+      ]
+    },
+    {
+      "start": 29.978,
+      "end": 32.259,
+      "text": "Das kostet mich Nerven.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 29.978,
+          "end": 30.278,
+          "score": 0.968
+        },
+        {
+          "word": "kostet",
+          "start": 30.318,
+          "end": 30.658,
+          "score": 0.928
+        },
+        {
+          "word": "mich",
+          "start": 30.678,
+          "end": 30.858,
+          "score": 0.927
+        },
+        {
+          "word": "Nerven.",
+          "start": 30.898,
+          "end": 32.259,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 32.299,
+      "end": 33.42,
+      "text": "Aber es bringt mich weiter.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 32.299,
+          "end": 32.499,
+          "score": 0.896
+        },
+        {
+          "word": "es",
+          "start": 32.539,
+          "end": 32.679,
+          "score": 0.962
+        },
+        {
+          "word": "bringt",
+          "start": 32.699,
+          "end": 32.959,
+          "score": 0.903
+        },
+        {
+          "word": "mich",
+          "start": 32.979,
+          "end": 33.16,
+          "score": 0.939
+        },
+        {
+          "word": "weiter.",
+          "start": 33.2,
+          "end": 33.42,
+          "score": 0.85
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Viermal.",
+      "start": 0.68,
+      "end": 2.061,
+      "score": 0.783
+    },
+    {
+      "word": "Viermal",
+      "start": 2.081,
+      "end": 2.682,
+      "score": 0.874
+    },
+    {
+      "word": "ausgeraubt,",
+      "start": 2.722,
+      "end": 3.842,
+      "score": 0.94
+    },
+    {
+      "word": "viermal",
+      "start": 3.862,
+      "end": 4.363,
+      "score": 0.878
+    },
+    {
+      "word": "mit",
+      "start": 4.403,
+      "end": 4.563,
+      "score": 0.995
+    },
+    {
+      "word": "leeren",
+      "start": 4.623,
+      "end": 5.063,
+      "score": 0.802
+    },
+    {
+      "word": "Händen",
+      "start": 5.103,
+      "end": 5.423,
+      "score": 0.907
+    },
+    {
+      "word": "wieder",
+      "start": 5.463,
+      "end": 5.683,
+      "score": 0.931
+    },
+    {
+      "word": "aufgestanden.",
+      "start": 5.703,
+      "end": 7.364,
+      "score": 0.871
+    },
+    {
+      "word": "Ich",
+      "start": 7.404,
+      "end": 7.645,
+      "score": 0.818
+    },
+    {
+      "word": "kann",
+      "start": 7.685,
+      "end": 7.845,
+      "score": 0.872
+    },
+    {
+      "word": "nicht",
+      "start": 7.865,
+      "end": 8.045,
+      "score": 0.845
+    },
+    {
+      "word": "mehr",
+      "start": 8.065,
+      "end": 8.225,
+      "score": 0.79
+    },
+    {
+      "word": "so",
+      "start": 8.245,
+      "end": 8.385,
+      "score": 0.992
+    },
+    {
+      "word": "tun,",
+      "start": 8.425,
+      "end": 8.665,
+      "score": 0.95
+    },
+    {
+      "word": "als",
+      "start": 8.685,
+      "end": 8.825,
+      "score": 0.976
+    },
+    {
+      "word": "wäre",
+      "start": 8.845,
+      "end": 9.045,
+      "score": 0.754
+    },
+    {
+      "word": "das",
+      "start": 9.065,
+      "end": 9.245,
+      "score": 0.918
+    },
+    {
+      "word": "alles",
+      "start": 9.265,
+      "end": 9.486,
+      "score": 0.903
+    },
+    {
+      "word": "in",
+      "start": 9.526,
+      "end": 9.686,
+      "score": 0.922
+    },
+    {
+      "word": "Ordnung.",
+      "start": 9.746,
+      "end": 11.247,
+      "score": 0.876
+    },
+    {
+      "word": "Ich",
+      "start": 11.287,
+      "end": 11.487,
+      "score": 0.751
+    },
+    {
+      "word": "bin",
+      "start": 11.507,
+      "end": 11.767,
+      "score": 0.936
+    },
+    {
+      "word": "paranoid",
+      "start": 11.807,
+      "end": 12.387,
+      "score": 0.909
+    },
+    {
+      "word": "geworden.",
+      "start": 12.407,
+      "end": 13.648,
+      "score": 0.923
+    },
+    {
+      "word": "Jedes",
+      "start": 13.688,
+      "end": 14.028,
+      "score": 0.987
+    },
+    {
+      "word": "Geräusch,",
+      "start": 14.068,
+      "end": 14.889,
+      "score": 0.847
+    },
+    {
+      "word": "jeder",
+      "start": 14.929,
+      "end": 15.229,
+      "score": 0.965
+    },
+    {
+      "word": "Schatten.",
+      "start": 15.269,
+      "end": 16.97,
+      "score": 0.814
+    },
+    {
+      "word": "Aber",
+      "start": 17.05,
+      "end": 17.37,
+      "score": 0.94
+    },
+    {
+      "word": "vielleicht",
+      "start": 17.41,
+      "end": 17.75,
+      "score": 0.893
+    },
+    {
+      "word": "ist",
+      "start": 17.791,
+      "end": 17.911,
+      "score": 0.842
+    },
+    {
+      "word": "das",
+      "start": 17.931,
+      "end": 18.091,
+      "score": 0.861
+    },
+    {
+      "word": "gar",
+      "start": 18.111,
+      "end": 18.211,
+      "score": 0.939
+    },
+    {
+      "word": "nicht",
+      "start": 18.231,
+      "end": 18.391,
+      "score": 0.897
+    },
+    {
+      "word": "so",
+      "start": 18.431,
+      "end": 18.591,
+      "score": 0.788
+    },
+    {
+      "word": "falsch",
+      "start": 18.631,
+      "end": 18.851,
+      "score": 0.863
+    },
+    {
+      "word": "—",
+      "start": 19.712,
+      "end": 19.732,
+      "score": 0.21
+    },
+    {
+      "word": "wer",
+      "start": 19.752,
+      "end": 19.972,
+      "score": 0.762
+    },
+    {
+      "word": "ständig",
+      "start": 20.012,
+      "end": 20.372,
+      "score": 0.936
+    },
+    {
+      "word": "auf",
+      "start": 20.412,
+      "end": 20.532,
+      "score": 0.882
+    },
+    {
+      "word": "der",
+      "start": 20.552,
+      "end": 20.672,
+      "score": 0.848
+    },
+    {
+      "word": "Hut",
+      "start": 20.692,
+      "end": 20.892,
+      "score": 0.844
+    },
+    {
+      "word": "ist,",
+      "start": 20.932,
+      "end": 21.152,
+      "score": 0.948
+    },
+    {
+      "word": "übersieht",
+      "start": 21.172,
+      "end": 21.673,
+      "score": 0.917
+    },
+    {
+      "word": "weniger.",
+      "start": 21.713,
+      "end": 23.254,
+      "score": 0.898
+    },
+    {
+      "word": "Ich",
+      "start": 23.314,
+      "end": 23.514,
+      "score": 0.746
+    },
+    {
+      "word": "fange",
+      "start": 23.554,
+      "end": 23.874,
+      "score": 0.796
+    },
+    {
+      "word": "an,",
+      "start": 23.914,
+      "end": 24.014,
+      "score": 0.829
+    },
+    {
+      "word": "das",
+      "start": 24.054,
+      "end": 24.314,
+      "score": 0.81
+    },
+    {
+      "word": "alles",
+      "start": 24.354,
+      "end": 24.655,
+      "score": 0.855
+    },
+    {
+      "word": "anders",
+      "start": 24.695,
+      "end": 25.015,
+      "score": 0.856
+    },
+    {
+      "word": "zu",
+      "start": 25.055,
+      "end": 25.155,
+      "score": 0.919
+    },
+    {
+      "word": "sehen.",
+      "start": 25.195,
+      "end": 26.195,
+      "score": 0.882
+    },
+    {
+      "word": "Nicht",
+      "start": 26.215,
+      "end": 26.516,
+      "score": 0.907
+    },
+    {
+      "word": "blind",
+      "start": 26.556,
+      "end": 26.856,
+      "score": 0.907
+    },
+    {
+      "word": "schuften",
+      "start": 26.896,
+      "end": 27.276,
+      "score": 0.928
+    },
+    {
+      "word": "—",
+      "start": 28.037,
+      "end": 28.057,
+      "score": 0.775
+    },
+    {
+      "word": "sondern",
+      "start": 28.077,
+      "end": 28.477,
+      "score": 0.933
+    },
+    {
+      "word": "denken.",
+      "start": 28.517,
+      "end": 29.938,
+      "score": 0.927
+    },
+    {
+      "word": "Das",
+      "start": 29.978,
+      "end": 30.278,
+      "score": 0.968
+    },
+    {
+      "word": "kostet",
+      "start": 30.318,
+      "end": 30.658,
+      "score": 0.928
+    },
+    {
+      "word": "mich",
+      "start": 30.678,
+      "end": 30.858,
+      "score": 0.927
+    },
+    {
+      "word": "Nerven.",
+      "start": 30.898,
+      "end": 32.259,
+      "score": 0.858
+    },
+    {
+      "word": "Aber",
+      "start": 32.299,
+      "end": 32.499,
+      "score": 0.896
+    },
+    {
+      "word": "es",
+      "start": 32.539,
+      "end": 32.679,
+      "score": 0.962
+    },
+    {
+      "word": "bringt",
+      "start": 32.699,
+      "end": 32.959,
+      "score": 0.903
+    },
+    {
+      "word": "mich",
+      "start": 32.979,
+      "end": 33.16,
+      "score": 0.939
+    },
+    {
+      "word": "weiter.",
+      "start": 33.2,
+      "end": 33.42,
+      "score": 0.85
+    }
+  ]
+}

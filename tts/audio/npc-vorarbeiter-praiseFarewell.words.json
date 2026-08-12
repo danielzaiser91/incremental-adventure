@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 3.288,
+      "text": "Er hebt sein Glas mir zu.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.561,
+          "end": 0.622,
+          "score": 0.916
+        },
+        {
+          "word": "hebt",
+          "start": 0.642,
+          "end": 0.922,
+          "score": 0.964
+        },
+        {
+          "word": "sein",
+          "start": 0.962,
+          "end": 1.163,
+          "score": 0.668
+        },
+        {
+          "word": "Glas",
+          "start": 1.203,
+          "end": 1.524,
+          "score": 0.917
+        },
+        {
+          "word": "mir",
+          "start": 1.544,
+          "end": 1.764,
+          "score": 0.847
+        },
+        {
+          "word": "zu.",
+          "start": 1.804,
+          "end": 3.288,
+          "score": 0.721
+        }
+      ]
+    },
+    {
+      "start": 3.308,
+      "end": 5.514,
+      "text": "\"Bis morgen auf dem Feld.",
+      "words": [
+        {
+          "word": "\"Bis",
+          "start": 3.308,
+          "end": 3.569,
+          "score": 0.465
+        },
+        {
+          "word": "morgen",
+          "start": 3.609,
+          "end": 3.89,
+          "score": 0.916
+        },
+        {
+          "word": "auf",
+          "start": 3.91,
+          "end": 4.03,
+          "score": 0.82
+        },
+        {
+          "word": "dem",
+          "start": 4.07,
+          "end": 4.23,
+          "score": 0.984
+        },
+        {
+          "word": "Feld.",
+          "start": 4.291,
+          "end": 5.514,
+          "score": 0.966
+        }
+      ]
+    },
+    {
+      "start": 5.574,
+      "end": 7.659,
+      "text": "Und lass dir die Münzen nicht gleich wieder abnehmen.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 5.574,
+          "end": 5.734,
+          "score": 0.946
+        },
+        {
+          "word": "lass",
+          "start": 5.754,
+          "end": 5.935,
+          "score": 0.822
+        },
+        {
+          "word": "dir",
+          "start": 5.955,
+          "end": 6.115,
+          "score": 0.661
+        },
+        {
+          "word": "die",
+          "start": 6.135,
+          "end": 6.235,
+          "score": 0.819
+        },
+        {
+          "word": "Münzen",
+          "start": 6.255,
+          "end": 6.576,
+          "score": 0.765
+        },
+        {
+          "word": "nicht",
+          "start": 6.616,
+          "end": 6.737,
+          "score": 0.915
+        },
+        {
+          "word": "gleich",
+          "start": 6.757,
+          "end": 6.997,
+          "score": 0.778
+        },
+        {
+          "word": "wieder",
+          "start": 7.037,
+          "end": 7.218,
+          "score": 0.985
+        },
+        {
+          "word": "abnehmen.\"",
+          "start": 7.258,
+          "end": 7.659,
+          "score": 0.879
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.561,
+      "end": 0.622,
+      "score": 0.916
+    },
+    {
+      "word": "hebt",
+      "start": 0.642,
+      "end": 0.922,
+      "score": 0.964
+    },
+    {
+      "word": "sein",
+      "start": 0.962,
+      "end": 1.163,
+      "score": 0.668
+    },
+    {
+      "word": "Glas",
+      "start": 1.203,
+      "end": 1.524,
+      "score": 0.917
+    },
+    {
+      "word": "mir",
+      "start": 1.544,
+      "end": 1.764,
+      "score": 0.847
+    },
+    {
+      "word": "zu.",
+      "start": 1.804,
+      "end": 3.288,
+      "score": 0.721
+    },
+    {
+      "word": "\"Bis",
+      "start": 3.308,
+      "end": 3.569,
+      "score": 0.465
+    },
+    {
+      "word": "morgen",
+      "start": 3.609,
+      "end": 3.89,
+      "score": 0.916
+    },
+    {
+      "word": "auf",
+      "start": 3.91,
+      "end": 4.03,
+      "score": 0.82
+    },
+    {
+      "word": "dem",
+      "start": 4.07,
+      "end": 4.23,
+      "score": 0.984
+    },
+    {
+      "word": "Feld.",
+      "start": 4.291,
+      "end": 5.514,
+      "score": 0.966
+    },
+    {
+      "word": "Und",
+      "start": 5.574,
+      "end": 5.734,
+      "score": 0.946
+    },
+    {
+      "word": "lass",
+      "start": 5.754,
+      "end": 5.935,
+      "score": 0.822
+    },
+    {
+      "word": "dir",
+      "start": 5.955,
+      "end": 6.115,
+      "score": 0.661
+    },
+    {
+      "word": "die",
+      "start": 6.135,
+      "end": 6.235,
+      "score": 0.819
+    },
+    {
+      "word": "Münzen",
+      "start": 6.255,
+      "end": 6.576,
+      "score": 0.765
+    },
+    {
+      "word": "nicht",
+      "start": 6.616,
+      "end": 6.737,
+      "score": 0.915
+    },
+    {
+      "word": "gleich",
+      "start": 6.757,
+      "end": 6.997,
+      "score": 0.778
+    },
+    {
+      "word": "wieder",
+      "start": 7.037,
+      "end": 7.218,
+      "score": 0.985
+    },
+    {
+      "word": "abnehmen.\"",
+      "start": 7.258,
+      "end": 7.659,
+      "score": 0.879
+    }
+  ]
+}

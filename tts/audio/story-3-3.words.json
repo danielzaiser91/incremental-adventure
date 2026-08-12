@@ -1,0 +1,689 @@
+{
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 9.266,
+      "text": "Es riecht nach Schwefel, nach nassem Stein und nach etwas Süßlichem, das ich nicht zu benennen weiß.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 0.5,
+          "end": 0.68,
+          "score": 0.55
+        },
+        {
+          "word": "riecht",
+          "start": 0.74,
+          "end": 1.061,
+          "score": 0.761
+        },
+        {
+          "word": "nach",
+          "start": 1.101,
+          "end": 1.341,
+          "score": 0.894
+        },
+        {
+          "word": "Schwefel,",
+          "start": 1.381,
+          "end": 2.602,
+          "score": 0.874
+        },
+        {
+          "word": "nach",
+          "start": 2.642,
+          "end": 2.982,
+          "score": 0.895
+        },
+        {
+          "word": "nassem",
+          "start": 3.022,
+          "end": 3.402,
+          "score": 0.99
+        },
+        {
+          "word": "Stein",
+          "start": 3.462,
+          "end": 4.463,
+          "score": 0.897
+        },
+        {
+          "word": "und",
+          "start": 4.483,
+          "end": 4.883,
+          "score": 0.805
+        },
+        {
+          "word": "nach",
+          "start": 4.923,
+          "end": 5.083,
+          "score": 0.858
+        },
+        {
+          "word": "etwas",
+          "start": 5.123,
+          "end": 5.464,
+          "score": 0.837
+        },
+        {
+          "word": "Süßlichem,",
+          "start": 5.524,
+          "end": 6.444,
+          "score": 0.938
+        },
+        {
+          "word": "das",
+          "start": 6.464,
+          "end": 6.604,
+          "score": 0.839
+        },
+        {
+          "word": "ich",
+          "start": 6.644,
+          "end": 6.764,
+          "score": 0.801
+        },
+        {
+          "word": "nicht",
+          "start": 6.804,
+          "end": 7.005,
+          "score": 0.811
+        },
+        {
+          "word": "zu",
+          "start": 7.025,
+          "end": 7.105,
+          "score": 0.92
+        },
+        {
+          "word": "benennen",
+          "start": 7.145,
+          "end": 7.545,
+          "score": 0.889
+        },
+        {
+          "word": "weiß.",
+          "start": 7.585,
+          "end": 9.266,
+          "score": 0.982
+        }
+      ]
+    },
+    {
+      "start": 9.306,
+      "end": 19.473,
+      "text": "Varena zeigt mir die fünf Aspekte: Feuer, Wasser, Erde, Luft — und Äther.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 9.306,
+          "end": 9.967,
+          "score": 0.85
+        },
+        {
+          "word": "zeigt",
+          "start": 9.987,
+          "end": 10.287,
+          "score": 0.98
+        },
+        {
+          "word": "mir",
+          "start": 10.327,
+          "end": 10.507,
+          "score": 0.896
+        },
+        {
+          "word": "die",
+          "start": 10.547,
+          "end": 10.747,
+          "score": 0.823
+        },
+        {
+          "word": "fünf",
+          "start": 10.787,
+          "end": 11.107,
+          "score": 0.983
+        },
+        {
+          "word": "Aspekte:",
+          "start": 11.167,
+          "end": 12.548,
+          "score": 0.942
+        },
+        {
+          "word": "Feuer,",
+          "start": 12.588,
+          "end": 13.569,
+          "score": 0.922
+        },
+        {
+          "word": "Wasser,",
+          "start": 13.629,
+          "end": 14.65,
+          "score": 0.889
+        },
+        {
+          "word": "Erde,",
+          "start": 14.71,
+          "end": 15.79,
+          "score": 0.955
+        },
+        {
+          "word": "Luft",
+          "start": 15.83,
+          "end": 16.111,
+          "score": 0.858
+        },
+        {
+          "word": "—",
+          "start": 16.951,
+          "end": 16.971,
+          "score": 0.977
+        },
+        {
+          "word": "und",
+          "start": 17.011,
+          "end": 17.451,
+          "score": 0.973
+        },
+        {
+          "word": "Äther.",
+          "start": 17.532,
+          "end": 19.473,
+          "score": 0.691
+        }
+      ]
+    },
+    {
+      "start": 19.493,
+      "end": 23.716,
+      "text": "»Das hier ist kein Handwerk.« Sie tippt auf die Tischplatte.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 19.493,
+          "end": 19.733,
+          "score": 0.876
+        },
+        {
+          "word": "hier",
+          "start": 19.773,
+          "end": 19.973,
+          "score": 0.828
+        },
+        {
+          "word": "ist",
+          "start": 20.013,
+          "end": 20.273,
+          "score": 0.78
+        },
+        {
+          "word": "kein",
+          "start": 20.293,
+          "end": 20.513,
+          "score": 0.75
+        },
+        {
+          "word": "Handwerk.«",
+          "start": 20.554,
+          "end": 21.694,
+          "score": 0.835
+        },
+        {
+          "word": "Sie",
+          "start": 21.714,
+          "end": 21.834,
+          "score": 0.906
+        },
+        {
+          "word": "tippt",
+          "start": 21.874,
+          "end": 22.095,
+          "score": 0.751
+        },
+        {
+          "word": "auf",
+          "start": 22.135,
+          "end": 22.255,
+          "score": 0.761
+        },
+        {
+          "word": "die",
+          "start": 22.275,
+          "end": 22.375,
+          "score": 0.715
+        },
+        {
+          "word": "Tischplatte.",
+          "start": 22.395,
+          "end": 23.716,
+          "score": 0.768
+        }
+      ]
+    },
+    {
+      "start": 23.736,
+      "end": 28.299,
+      "text": "»Das ist Verstehen.« Ich glaube ihr.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 23.736,
+          "end": 24.076,
+          "score": 0.836
+        },
+        {
+          "word": "ist",
+          "start": 24.116,
+          "end": 24.456,
+          "score": 0.767
+        },
+        {
+          "word": "Verstehen.«",
+          "start": 24.476,
+          "end": 26.678,
+          "score": 0.91
+        },
+        {
+          "word": "Ich",
+          "start": 26.718,
+          "end": 26.918,
+          "score": 0.646
+        },
+        {
+          "word": "glaube",
+          "start": 26.938,
+          "end": 27.238,
+          "score": 0.88
+        },
+        {
+          "word": "ihr.",
+          "start": 27.298,
+          "end": 28.299,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 28.339,
+      "end": 30.1,
+      "text": "Was nicht heißt, dass ich es schon verstehe.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 28.339,
+          "end": 28.559,
+          "score": 0.903
+        },
+        {
+          "word": "nicht",
+          "start": 28.579,
+          "end": 28.779,
+          "score": 0.954
+        },
+        {
+          "word": "heißt,",
+          "start": 28.799,
+          "end": 29.059,
+          "score": 0.915
+        },
+        {
+          "word": "dass",
+          "start": 29.079,
+          "end": 29.259,
+          "score": 0.879
+        },
+        {
+          "word": "ich",
+          "start": 29.299,
+          "end": 29.379,
+          "score": 0.951
+        },
+        {
+          "word": "es",
+          "start": 29.419,
+          "end": 29.519,
+          "score": 0.73
+        },
+        {
+          "word": "schon",
+          "start": 29.559,
+          "end": 29.76,
+          "score": 0.914
+        },
+        {
+          "word": "verstehe.",
+          "start": 29.8,
+          "end": 30.1,
+          "score": 0.946
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Es",
+      "start": 0.5,
+      "end": 0.68,
+      "score": 0.55
+    },
+    {
+      "word": "riecht",
+      "start": 0.74,
+      "end": 1.061,
+      "score": 0.761
+    },
+    {
+      "word": "nach",
+      "start": 1.101,
+      "end": 1.341,
+      "score": 0.894
+    },
+    {
+      "word": "Schwefel,",
+      "start": 1.381,
+      "end": 2.602,
+      "score": 0.874
+    },
+    {
+      "word": "nach",
+      "start": 2.642,
+      "end": 2.982,
+      "score": 0.895
+    },
+    {
+      "word": "nassem",
+      "start": 3.022,
+      "end": 3.402,
+      "score": 0.99
+    },
+    {
+      "word": "Stein",
+      "start": 3.462,
+      "end": 4.463,
+      "score": 0.897
+    },
+    {
+      "word": "und",
+      "start": 4.483,
+      "end": 4.883,
+      "score": 0.805
+    },
+    {
+      "word": "nach",
+      "start": 4.923,
+      "end": 5.083,
+      "score": 0.858
+    },
+    {
+      "word": "etwas",
+      "start": 5.123,
+      "end": 5.464,
+      "score": 0.837
+    },
+    {
+      "word": "Süßlichem,",
+      "start": 5.524,
+      "end": 6.444,
+      "score": 0.938
+    },
+    {
+      "word": "das",
+      "start": 6.464,
+      "end": 6.604,
+      "score": 0.839
+    },
+    {
+      "word": "ich",
+      "start": 6.644,
+      "end": 6.764,
+      "score": 0.801
+    },
+    {
+      "word": "nicht",
+      "start": 6.804,
+      "end": 7.005,
+      "score": 0.811
+    },
+    {
+      "word": "zu",
+      "start": 7.025,
+      "end": 7.105,
+      "score": 0.92
+    },
+    {
+      "word": "benennen",
+      "start": 7.145,
+      "end": 7.545,
+      "score": 0.889
+    },
+    {
+      "word": "weiß.",
+      "start": 7.585,
+      "end": 9.266,
+      "score": 0.982
+    },
+    {
+      "word": "Varena",
+      "start": 9.306,
+      "end": 9.967,
+      "score": 0.85
+    },
+    {
+      "word": "zeigt",
+      "start": 9.987,
+      "end": 10.287,
+      "score": 0.98
+    },
+    {
+      "word": "mir",
+      "start": 10.327,
+      "end": 10.507,
+      "score": 0.896
+    },
+    {
+      "word": "die",
+      "start": 10.547,
+      "end": 10.747,
+      "score": 0.823
+    },
+    {
+      "word": "fünf",
+      "start": 10.787,
+      "end": 11.107,
+      "score": 0.983
+    },
+    {
+      "word": "Aspekte:",
+      "start": 11.167,
+      "end": 12.548,
+      "score": 0.942
+    },
+    {
+      "word": "Feuer,",
+      "start": 12.588,
+      "end": 13.569,
+      "score": 0.922
+    },
+    {
+      "word": "Wasser,",
+      "start": 13.629,
+      "end": 14.65,
+      "score": 0.889
+    },
+    {
+      "word": "Erde,",
+      "start": 14.71,
+      "end": 15.79,
+      "score": 0.955
+    },
+    {
+      "word": "Luft",
+      "start": 15.83,
+      "end": 16.111,
+      "score": 0.858
+    },
+    {
+      "word": "—",
+      "start": 16.951,
+      "end": 16.971,
+      "score": 0.977
+    },
+    {
+      "word": "und",
+      "start": 17.011,
+      "end": 17.451,
+      "score": 0.973
+    },
+    {
+      "word": "Äther.",
+      "start": 17.532,
+      "end": 19.473,
+      "score": 0.691
+    },
+    {
+      "word": "»Das",
+      "start": 19.493,
+      "end": 19.733,
+      "score": 0.876
+    },
+    {
+      "word": "hier",
+      "start": 19.773,
+      "end": 19.973,
+      "score": 0.828
+    },
+    {
+      "word": "ist",
+      "start": 20.013,
+      "end": 20.273,
+      "score": 0.78
+    },
+    {
+      "word": "kein",
+      "start": 20.293,
+      "end": 20.513,
+      "score": 0.75
+    },
+    {
+      "word": "Handwerk.«",
+      "start": 20.554,
+      "end": 21.694,
+      "score": 0.835
+    },
+    {
+      "word": "Sie",
+      "start": 21.714,
+      "end": 21.834,
+      "score": 0.906
+    },
+    {
+      "word": "tippt",
+      "start": 21.874,
+      "end": 22.095,
+      "score": 0.751
+    },
+    {
+      "word": "auf",
+      "start": 22.135,
+      "end": 22.255,
+      "score": 0.761
+    },
+    {
+      "word": "die",
+      "start": 22.275,
+      "end": 22.375,
+      "score": 0.715
+    },
+    {
+      "word": "Tischplatte.",
+      "start": 22.395,
+      "end": 23.716,
+      "score": 0.768
+    },
+    {
+      "word": "»Das",
+      "start": 23.736,
+      "end": 24.076,
+      "score": 0.836
+    },
+    {
+      "word": "ist",
+      "start": 24.116,
+      "end": 24.456,
+      "score": 0.767
+    },
+    {
+      "word": "Verstehen.«",
+      "start": 24.476,
+      "end": 26.678,
+      "score": 0.91
+    },
+    {
+      "word": "Ich",
+      "start": 26.718,
+      "end": 26.918,
+      "score": 0.646
+    },
+    {
+      "word": "glaube",
+      "start": 26.938,
+      "end": 27.238,
+      "score": 0.88
+    },
+    {
+      "word": "ihr.",
+      "start": 27.298,
+      "end": 28.299,
+      "score": 0.923
+    },
+    {
+      "word": "Was",
+      "start": 28.339,
+      "end": 28.559,
+      "score": 0.903
+    },
+    {
+      "word": "nicht",
+      "start": 28.579,
+      "end": 28.779,
+      "score": 0.954
+    },
+    {
+      "word": "heißt,",
+      "start": 28.799,
+      "end": 29.059,
+      "score": 0.915
+    },
+    {
+      "word": "dass",
+      "start": 29.079,
+      "end": 29.259,
+      "score": 0.879
+    },
+    {
+      "word": "ich",
+      "start": 29.299,
+      "end": 29.379,
+      "score": 0.951
+    },
+    {
+      "word": "es",
+      "start": 29.419,
+      "end": 29.519,
+      "score": 0.73
+    },
+    {
+      "word": "schon",
+      "start": 29.559,
+      "end": 29.76,
+      "score": 0.914
+    },
+    {
+      "word": "verstehe.",
+      "start": 29.8,
+      "end": 30.1,
+      "score": 0.946
+    }
+  ]
+}

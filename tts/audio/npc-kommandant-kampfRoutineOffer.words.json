@@ -1,0 +1,439 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 3.744,
+      "text": "Roswald legt seinen Stift nieder.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.48,
+          "end": 1.081,
+          "score": 0.884
+        },
+        {
+          "word": "legt",
+          "start": 1.101,
+          "end": 1.341,
+          "score": 0.889
+        },
+        {
+          "word": "seinen",
+          "start": 1.361,
+          "end": 1.662,
+          "score": 0.874
+        },
+        {
+          "word": "Stift",
+          "start": 1.702,
+          "end": 2.102,
+          "score": 0.964
+        },
+        {
+          "word": "nieder.",
+          "start": 2.142,
+          "end": 3.744,
+          "score": 0.908
+        }
+      ]
+    },
+    {
+      "start": 3.784,
+      "end": 5.866,
+      "text": "Betrachtet mich.",
+      "words": [
+        {
+          "word": "Betrachtet",
+          "start": 3.784,
+          "end": 4.424,
+          "score": 0.877
+        },
+        {
+          "word": "mich.",
+          "start": 4.444,
+          "end": 5.866,
+          "score": 0.821
+        }
+      ]
+    },
+    {
+      "start": 5.886,
+      "end": 9.149,
+      "text": "\"Du hast gelernt, einen Treffer zu landen.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 5.886,
+          "end": 6.046,
+          "score": 0.769
+        },
+        {
+          "word": "hast",
+          "start": 6.066,
+          "end": 6.326,
+          "score": 0.879
+        },
+        {
+          "word": "gelernt,",
+          "start": 6.366,
+          "end": 6.847,
+          "score": 0.941
+        },
+        {
+          "word": "einen",
+          "start": 6.887,
+          "end": 7.107,
+          "score": 0.931
+        },
+        {
+          "word": "Treffer",
+          "start": 7.187,
+          "end": 7.567,
+          "score": 0.978
+        },
+        {
+          "word": "zu",
+          "start": 7.608,
+          "end": 7.708,
+          "score": 0.946
+        },
+        {
+          "word": "landen.",
+          "start": 7.748,
+          "end": 9.149,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 9.169,
+      "end": 12.432,
+      "text": "Das ist mehr als die meisten.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 9.169,
+          "end": 9.329,
+          "score": 0.976
+        },
+        {
+          "word": "ist",
+          "start": 9.369,
+          "end": 9.65,
+          "score": 0.835
+        },
+        {
+          "word": "mehr",
+          "start": 9.69,
+          "end": 10.01,
+          "score": 0.929
+        },
+        {
+          "word": "als",
+          "start": 10.05,
+          "end": 10.27,
+          "score": 0.95
+        },
+        {
+          "word": "die",
+          "start": 10.29,
+          "end": 10.45,
+          "score": 0.917
+        },
+        {
+          "word": "meisten.\"",
+          "start": 10.49,
+          "end": 12.432,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 12.452,
+      "end": 14.454,
+      "text": "Eine Pause.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 12.452,
+          "end": 12.653,
+          "score": 0.858
+        },
+        {
+          "word": "Pause.",
+          "start": 12.693,
+          "end": 14.454,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 14.474,
+      "end": 18.698,
+      "text": "\"Zwei Schichten Stadtwache, fünf weitere Kämpfe.",
+      "words": [
+        {
+          "word": "\"Zwei",
+          "start": 14.474,
+          "end": 14.755,
+          "score": 0.743
+        },
+        {
+          "word": "Schichten",
+          "start": 14.795,
+          "end": 15.255,
+          "score": 0.907
+        },
+        {
+          "word": "Stadtwache,",
+          "start": 15.295,
+          "end": 16.636,
+          "score": 0.953
+        },
+        {
+          "word": "fünf",
+          "start": 16.656,
+          "end": 16.977,
+          "score": 0.996
+        },
+        {
+          "word": "weitere",
+          "start": 17.017,
+          "end": 17.377,
+          "score": 0.9
+        },
+        {
+          "word": "Kämpfe.",
+          "start": 17.417,
+          "end": 18.698,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 18.739,
+      "end": 19.78,
+      "text": "Dann reden wir wieder.\"",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 18.739,
+          "end": 19.079,
+          "score": 0.972
+        },
+        {
+          "word": "reden",
+          "start": 19.119,
+          "end": 19.399,
+          "score": 0.76
+        },
+        {
+          "word": "wir",
+          "start": 19.419,
+          "end": 19.559,
+          "score": 0.996
+        },
+        {
+          "word": "wieder.\"",
+          "start": 19.579,
+          "end": 19.78,
+          "score": 0.691
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.48,
+      "end": 1.081,
+      "score": 0.884
+    },
+    {
+      "word": "legt",
+      "start": 1.101,
+      "end": 1.341,
+      "score": 0.889
+    },
+    {
+      "word": "seinen",
+      "start": 1.361,
+      "end": 1.662,
+      "score": 0.874
+    },
+    {
+      "word": "Stift",
+      "start": 1.702,
+      "end": 2.102,
+      "score": 0.964
+    },
+    {
+      "word": "nieder.",
+      "start": 2.142,
+      "end": 3.744,
+      "score": 0.908
+    },
+    {
+      "word": "Betrachtet",
+      "start": 3.784,
+      "end": 4.424,
+      "score": 0.877
+    },
+    {
+      "word": "mich.",
+      "start": 4.444,
+      "end": 5.866,
+      "score": 0.821
+    },
+    {
+      "word": "\"Du",
+      "start": 5.886,
+      "end": 6.046,
+      "score": 0.769
+    },
+    {
+      "word": "hast",
+      "start": 6.066,
+      "end": 6.326,
+      "score": 0.879
+    },
+    {
+      "word": "gelernt,",
+      "start": 6.366,
+      "end": 6.847,
+      "score": 0.941
+    },
+    {
+      "word": "einen",
+      "start": 6.887,
+      "end": 7.107,
+      "score": 0.931
+    },
+    {
+      "word": "Treffer",
+      "start": 7.187,
+      "end": 7.567,
+      "score": 0.978
+    },
+    {
+      "word": "zu",
+      "start": 7.608,
+      "end": 7.708,
+      "score": 0.946
+    },
+    {
+      "word": "landen.",
+      "start": 7.748,
+      "end": 9.149,
+      "score": 0.918
+    },
+    {
+      "word": "Das",
+      "start": 9.169,
+      "end": 9.329,
+      "score": 0.976
+    },
+    {
+      "word": "ist",
+      "start": 9.369,
+      "end": 9.65,
+      "score": 0.835
+    },
+    {
+      "word": "mehr",
+      "start": 9.69,
+      "end": 10.01,
+      "score": 0.929
+    },
+    {
+      "word": "als",
+      "start": 10.05,
+      "end": 10.27,
+      "score": 0.95
+    },
+    {
+      "word": "die",
+      "start": 10.29,
+      "end": 10.45,
+      "score": 0.917
+    },
+    {
+      "word": "meisten.\"",
+      "start": 10.49,
+      "end": 12.432,
+      "score": 0.947
+    },
+    {
+      "word": "Eine",
+      "start": 12.452,
+      "end": 12.653,
+      "score": 0.858
+    },
+    {
+      "word": "Pause.",
+      "start": 12.693,
+      "end": 14.454,
+      "score": 0.882
+    },
+    {
+      "word": "\"Zwei",
+      "start": 14.474,
+      "end": 14.755,
+      "score": 0.743
+    },
+    {
+      "word": "Schichten",
+      "start": 14.795,
+      "end": 15.255,
+      "score": 0.907
+    },
+    {
+      "word": "Stadtwache,",
+      "start": 15.295,
+      "end": 16.636,
+      "score": 0.953
+    },
+    {
+      "word": "fünf",
+      "start": 16.656,
+      "end": 16.977,
+      "score": 0.996
+    },
+    {
+      "word": "weitere",
+      "start": 17.017,
+      "end": 17.377,
+      "score": 0.9
+    },
+    {
+      "word": "Kämpfe.",
+      "start": 17.417,
+      "end": 18.698,
+      "score": 0.918
+    },
+    {
+      "word": "Dann",
+      "start": 18.739,
+      "end": 19.079,
+      "score": 0.972
+    },
+    {
+      "word": "reden",
+      "start": 19.119,
+      "end": 19.399,
+      "score": 0.76
+    },
+    {
+      "word": "wir",
+      "start": 19.419,
+      "end": 19.559,
+      "score": 0.996
+    },
+    {
+      "word": "wieder.\"",
+      "start": 19.579,
+      "end": 19.78,
+      "score": 0.691
+    }
+  ]
+}

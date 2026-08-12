@@ -2,7 +2,7 @@
   "segments": [
     {
       "start": 0.5,
-      "end": 9.067,
+      "end": 9.047,
       "text": "Der Hof meiner Familie gab nie mehr her als Mehltau im Korn und einen Vater, der lieber fluchte als hoffte.",
       "words": [
         {
@@ -122,21 +122,21 @@
         {
           "word": "hoffte.",
           "start": 7.346,
-          "end": 9.067,
-          "score": 0.947
+          "end": 9.047,
+          "score": 0.94
         }
       ]
     },
     {
-      "start": 9.087,
+      "start": 9.067,
       "end": 13.17,
       "text": "Sechzehn Jahre lang habe ich davon geträumt, von hier fortzugehen.",
       "words": [
         {
           "word": "Sechzehn",
-          "start": 9.087,
+          "start": 9.067,
           "end": 9.587,
-          "score": 0.709
+          "score": 0.708
         },
         {
           "word": "Jahre",
@@ -257,7 +257,7 @@
           "word": "mir.",
           "start": 16.152,
           "end": 17.834,
-          "score": 0.854
+          "score": 0.86
         }
       ]
     },
@@ -496,14 +496,14 @@
     {
       "word": "hoffte.",
       "start": 7.346,
-      "end": 9.067,
-      "score": 0.947
+      "end": 9.047,
+      "score": 0.94
     },
     {
       "word": "Sechzehn",
-      "start": 9.087,
+      "start": 9.067,
       "end": 9.587,
-      "score": 0.709
+      "score": 0.708
     },
     {
       "word": "Jahre",
@@ -617,7 +617,7 @@
       "word": "mir.",
       "start": 16.152,
       "end": 17.834,
-      "score": 0.854
+      "score": 0.86
     },
     {
       "word": "Vor",

@@ -1,0 +1,1175 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 7.144,
+      "text": "Ich sitze auf den Stufen vor der Taverne, und meine Gedanken gehen den Weg zurück, den ich gekommen bin.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.44,
+          "end": 0.6,
+          "score": 0.586
+        },
+        {
+          "word": "sitze",
+          "start": 0.64,
+          "end": 0.9,
+          "score": 0.768
+        },
+        {
+          "word": "auf",
+          "start": 0.92,
+          "end": 1.041,
+          "score": 0.775
+        },
+        {
+          "word": "den",
+          "start": 1.061,
+          "end": 1.201,
+          "score": 0.927
+        },
+        {
+          "word": "Stufen",
+          "start": 1.261,
+          "end": 1.661,
+          "score": 0.943
+        },
+        {
+          "word": "vor",
+          "start": 1.701,
+          "end": 1.801,
+          "score": 0.853
+        },
+        {
+          "word": "der",
+          "start": 1.821,
+          "end": 1.941,
+          "score": 0.869
+        },
+        {
+          "word": "Taverne,",
+          "start": 1.981,
+          "end": 3.022,
+          "score": 0.881
+        },
+        {
+          "word": "und",
+          "start": 3.042,
+          "end": 3.242,
+          "score": 0.92
+        },
+        {
+          "word": "meine",
+          "start": 3.262,
+          "end": 3.482,
+          "score": 0.855
+        },
+        {
+          "word": "Gedanken",
+          "start": 3.502,
+          "end": 3.962,
+          "score": 0.836
+        },
+        {
+          "word": "gehen",
+          "start": 3.982,
+          "end": 4.202,
+          "score": 0.933
+        },
+        {
+          "word": "den",
+          "start": 4.242,
+          "end": 4.422,
+          "score": 0.919
+        },
+        {
+          "word": "Weg",
+          "start": 4.462,
+          "end": 4.722,
+          "score": 0.987
+        },
+        {
+          "word": "zurück,",
+          "start": 4.782,
+          "end": 5.143,
+          "score": 0.909
+        },
+        {
+          "word": "den",
+          "start": 5.163,
+          "end": 5.283,
+          "score": 0.741
+        },
+        {
+          "word": "ich",
+          "start": 5.323,
+          "end": 5.463,
+          "score": 0.917
+        },
+        {
+          "word": "gekommen",
+          "start": 5.483,
+          "end": 5.863,
+          "score": 0.856
+        },
+        {
+          "word": "bin.",
+          "start": 5.903,
+          "end": 7.144,
+          "score": 0.496
+        }
+      ]
+    },
+    {
+      "start": 7.164,
+      "end": 9.745,
+      "text": "Als Niemand bin ich hier eingetroffen.",
+      "words": [
+        {
+          "word": "Als",
+          "start": 7.164,
+          "end": 7.464,
+          "score": 0.957
+        },
+        {
+          "word": "Niemand",
+          "start": 7.504,
+          "end": 8.004,
+          "score": 0.774
+        },
+        {
+          "word": "bin",
+          "start": 8.024,
+          "end": 8.144,
+          "score": 0.356
+        },
+        {
+          "word": "ich",
+          "start": 8.164,
+          "end": 8.264,
+          "score": 0.697
+        },
+        {
+          "word": "hier",
+          "start": 8.284,
+          "end": 8.424,
+          "score": 0.839
+        },
+        {
+          "word": "eingetroffen.",
+          "start": 8.444,
+          "end": 9.745,
+          "score": 0.965
+        }
+      ]
+    },
+    {
+      "start": 9.785,
+      "end": 14.468,
+      "text": "Ein Bauernjunge mit leeren Taschen und Träumen, die kein Maß kannten.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 9.785,
+          "end": 9.965,
+          "score": 0.775
+        },
+        {
+          "word": "Bauernjunge",
+          "start": 9.985,
+          "end": 10.606,
+          "score": 0.913
+        },
+        {
+          "word": "mit",
+          "start": 10.646,
+          "end": 10.806,
+          "score": 0.947
+        },
+        {
+          "word": "leeren",
+          "start": 10.846,
+          "end": 11.166,
+          "score": 0.793
+        },
+        {
+          "word": "Taschen",
+          "start": 11.206,
+          "end": 11.646,
+          "score": 0.894
+        },
+        {
+          "word": "und",
+          "start": 11.686,
+          "end": 11.906,
+          "score": 0.943
+        },
+        {
+          "word": "Träumen,",
+          "start": 11.966,
+          "end": 12.386,
+          "score": 0.834
+        },
+        {
+          "word": "die",
+          "start": 12.406,
+          "end": 12.547,
+          "score": 0.975
+        },
+        {
+          "word": "kein",
+          "start": 12.587,
+          "end": 12.787,
+          "score": 0.689
+        },
+        {
+          "word": "Maß",
+          "start": 12.807,
+          "end": 13.067,
+          "score": 0.938
+        },
+        {
+          "word": "kannten.",
+          "start": 13.087,
+          "end": 14.468,
+          "score": 0.917
+        }
+      ]
+    },
+    {
+      "start": 14.488,
+      "end": 15.888,
+      "text": "Und nun?",
+      "words": [
+        {
+          "word": "Und",
+          "start": 14.488,
+          "end": 14.708,
+          "score": 0.84
+        },
+        {
+          "word": "nun?",
+          "start": 14.748,
+          "end": 15.888,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 15.928,
+      "end": 23.312,
+      "text": "Ich habe Blut vergossen, Gold gewonnen und verloren, Freunde gefunden und Feinde, nach denen ich nie gesucht habe.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 15.928,
+          "end": 16.008,
+          "score": 0.858
+        },
+        {
+          "word": "habe",
+          "start": 16.048,
+          "end": 16.308,
+          "score": 0.858
+        },
+        {
+          "word": "Blut",
+          "start": 16.348,
+          "end": 16.649,
+          "score": 0.948
+        },
+        {
+          "word": "vergossen,",
+          "start": 16.669,
+          "end": 17.349,
+          "score": 0.915
+        },
+        {
+          "word": "Gold",
+          "start": 17.369,
+          "end": 17.689,
+          "score": 0.817
+        },
+        {
+          "word": "gewonnen",
+          "start": 17.709,
+          "end": 18.089,
+          "score": 0.888
+        },
+        {
+          "word": "und",
+          "start": 18.129,
+          "end": 18.31,
+          "score": 0.854
+        },
+        {
+          "word": "verloren,",
+          "start": 18.35,
+          "end": 19.25,
+          "score": 0.954
+        },
+        {
+          "word": "Freunde",
+          "start": 19.27,
+          "end": 19.63,
+          "score": 0.952
+        },
+        {
+          "word": "gefunden",
+          "start": 19.67,
+          "end": 20.17,
+          "score": 0.964
+        },
+        {
+          "word": "und",
+          "start": 20.211,
+          "end": 20.391,
+          "score": 0.914
+        },
+        {
+          "word": "Feinde,",
+          "start": 20.431,
+          "end": 20.791,
+          "score": 0.955
+        },
+        {
+          "word": "nach",
+          "start": 20.811,
+          "end": 20.931,
+          "score": 0.91
+        },
+        {
+          "word": "denen",
+          "start": 20.951,
+          "end": 21.131,
+          "score": 0.557
+        },
+        {
+          "word": "ich",
+          "start": 21.191,
+          "end": 21.331,
+          "score": 0.913
+        },
+        {
+          "word": "nie",
+          "start": 21.371,
+          "end": 21.571,
+          "score": 0.809
+        },
+        {
+          "word": "gesucht",
+          "start": 21.611,
+          "end": 21.931,
+          "score": 0.896
+        },
+        {
+          "word": "habe.",
+          "start": 21.951,
+          "end": 23.312,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 23.372,
+      "end": 25.633,
+      "text": "Treutheim war nie das Ziel.",
+      "words": [
+        {
+          "word": "Treutheim",
+          "start": 23.372,
+          "end": 23.972,
+          "score": 0.824
+        },
+        {
+          "word": "war",
+          "start": 24.012,
+          "end": 24.253,
+          "score": 0.869
+        },
+        {
+          "word": "nie",
+          "start": 24.293,
+          "end": 24.413,
+          "score": 0.837
+        },
+        {
+          "word": "das",
+          "start": 24.453,
+          "end": 24.693,
+          "score": 0.916
+        },
+        {
+          "word": "Ziel.",
+          "start": 24.753,
+          "end": 25.633,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 25.673,
+      "end": 28.215,
+      "text": "Immer nur die erste Station.",
+      "words": [
+        {
+          "word": "Immer",
+          "start": 25.673,
+          "end": 25.893,
+          "score": 0.859
+        },
+        {
+          "word": "nur",
+          "start": 25.913,
+          "end": 26.054,
+          "score": 0.838
+        },
+        {
+          "word": "die",
+          "start": 26.074,
+          "end": 26.214,
+          "score": 0.801
+        },
+        {
+          "word": "erste",
+          "start": 26.274,
+          "end": 26.514,
+          "score": 0.929
+        },
+        {
+          "word": "Station.",
+          "start": 26.554,
+          "end": 28.215,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 28.235,
+      "end": 30.596,
+      "text": "Der Schatten ist noch dort draußen.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 28.235,
+          "end": 28.435,
+          "score": 0.916
+        },
+        {
+          "word": "Schatten",
+          "start": 28.475,
+          "end": 28.895,
+          "score": 0.828
+        },
+        {
+          "word": "ist",
+          "start": 28.935,
+          "end": 29.095,
+          "score": 0.867
+        },
+        {
+          "word": "noch",
+          "start": 29.115,
+          "end": 29.275,
+          "score": 0.906
+        },
+        {
+          "word": "dort",
+          "start": 29.295,
+          "end": 29.455,
+          "score": 0.894
+        },
+        {
+          "word": "draußen.",
+          "start": 29.475,
+          "end": 30.596,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 30.616,
+      "end": 33.317,
+      "text": "Und er weiß, dass es mich gibt.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 30.616,
+          "end": 30.776,
+          "score": 0.803
+        },
+        {
+          "word": "er",
+          "start": 30.816,
+          "end": 30.936,
+          "score": 0.975
+        },
+        {
+          "word": "weiß,",
+          "start": 30.976,
+          "end": 31.216,
+          "score": 0.949
+        },
+        {
+          "word": "dass",
+          "start": 31.236,
+          "end": 31.376,
+          "score": 0.878
+        },
+        {
+          "word": "es",
+          "start": 31.416,
+          "end": 31.516,
+          "score": 0.929
+        },
+        {
+          "word": "mich",
+          "start": 31.556,
+          "end": 31.736,
+          "score": 0.904
+        },
+        {
+          "word": "gibt.",
+          "start": 31.757,
+          "end": 33.317,
+          "score": 0.988
+        }
+      ]
+    },
+    {
+      "start": 33.357,
+      "end": 35.458,
+      "text": "Das ist kein Ende.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 33.357,
+          "end": 33.537,
+          "score": 0.97
+        },
+        {
+          "word": "ist",
+          "start": 33.577,
+          "end": 33.818,
+          "score": 0.871
+        },
+        {
+          "word": "kein",
+          "start": 33.838,
+          "end": 34.118,
+          "score": 0.76
+        },
+        {
+          "word": "Ende.",
+          "start": 34.158,
+          "end": 35.458,
+          "score": 0.814
+        }
+      ]
+    },
+    {
+      "start": 35.498,
+      "end": 38.1,
+      "text": "Das ist der Anfang von etwas weit Größerem.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 35.498,
+          "end": 35.779,
+          "score": 0.964
+        },
+        {
+          "word": "ist",
+          "start": 35.819,
+          "end": 35.979,
+          "score": 0.831
+        },
+        {
+          "word": "der",
+          "start": 35.999,
+          "end": 36.219,
+          "score": 0.815
+        },
+        {
+          "word": "Anfang",
+          "start": 36.259,
+          "end": 36.659,
+          "score": 0.955
+        },
+        {
+          "word": "von",
+          "start": 36.679,
+          "end": 36.839,
+          "score": 0.91
+        },
+        {
+          "word": "etwas",
+          "start": 36.859,
+          "end": 37.239,
+          "score": 0.821
+        },
+        {
+          "word": "weit",
+          "start": 37.259,
+          "end": 37.54,
+          "score": 0.906
+        },
+        {
+          "word": "Größerem.",
+          "start": 37.58,
+          "end": 38.1,
+          "score": 0.827
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.44,
+      "end": 0.6,
+      "score": 0.586
+    },
+    {
+      "word": "sitze",
+      "start": 0.64,
+      "end": 0.9,
+      "score": 0.768
+    },
+    {
+      "word": "auf",
+      "start": 0.92,
+      "end": 1.041,
+      "score": 0.775
+    },
+    {
+      "word": "den",
+      "start": 1.061,
+      "end": 1.201,
+      "score": 0.927
+    },
+    {
+      "word": "Stufen",
+      "start": 1.261,
+      "end": 1.661,
+      "score": 0.943
+    },
+    {
+      "word": "vor",
+      "start": 1.701,
+      "end": 1.801,
+      "score": 0.853
+    },
+    {
+      "word": "der",
+      "start": 1.821,
+      "end": 1.941,
+      "score": 0.869
+    },
+    {
+      "word": "Taverne,",
+      "start": 1.981,
+      "end": 3.022,
+      "score": 0.881
+    },
+    {
+      "word": "und",
+      "start": 3.042,
+      "end": 3.242,
+      "score": 0.92
+    },
+    {
+      "word": "meine",
+      "start": 3.262,
+      "end": 3.482,
+      "score": 0.855
+    },
+    {
+      "word": "Gedanken",
+      "start": 3.502,
+      "end": 3.962,
+      "score": 0.836
+    },
+    {
+      "word": "gehen",
+      "start": 3.982,
+      "end": 4.202,
+      "score": 0.933
+    },
+    {
+      "word": "den",
+      "start": 4.242,
+      "end": 4.422,
+      "score": 0.919
+    },
+    {
+      "word": "Weg",
+      "start": 4.462,
+      "end": 4.722,
+      "score": 0.987
+    },
+    {
+      "word": "zurück,",
+      "start": 4.782,
+      "end": 5.143,
+      "score": 0.909
+    },
+    {
+      "word": "den",
+      "start": 5.163,
+      "end": 5.283,
+      "score": 0.741
+    },
+    {
+      "word": "ich",
+      "start": 5.323,
+      "end": 5.463,
+      "score": 0.917
+    },
+    {
+      "word": "gekommen",
+      "start": 5.483,
+      "end": 5.863,
+      "score": 0.856
+    },
+    {
+      "word": "bin.",
+      "start": 5.903,
+      "end": 7.144,
+      "score": 0.496
+    },
+    {
+      "word": "Als",
+      "start": 7.164,
+      "end": 7.464,
+      "score": 0.957
+    },
+    {
+      "word": "Niemand",
+      "start": 7.504,
+      "end": 8.004,
+      "score": 0.774
+    },
+    {
+      "word": "bin",
+      "start": 8.024,
+      "end": 8.144,
+      "score": 0.356
+    },
+    {
+      "word": "ich",
+      "start": 8.164,
+      "end": 8.264,
+      "score": 0.697
+    },
+    {
+      "word": "hier",
+      "start": 8.284,
+      "end": 8.424,
+      "score": 0.839
+    },
+    {
+      "word": "eingetroffen.",
+      "start": 8.444,
+      "end": 9.745,
+      "score": 0.965
+    },
+    {
+      "word": "Ein",
+      "start": 9.785,
+      "end": 9.965,
+      "score": 0.775
+    },
+    {
+      "word": "Bauernjunge",
+      "start": 9.985,
+      "end": 10.606,
+      "score": 0.913
+    },
+    {
+      "word": "mit",
+      "start": 10.646,
+      "end": 10.806,
+      "score": 0.947
+    },
+    {
+      "word": "leeren",
+      "start": 10.846,
+      "end": 11.166,
+      "score": 0.793
+    },
+    {
+      "word": "Taschen",
+      "start": 11.206,
+      "end": 11.646,
+      "score": 0.894
+    },
+    {
+      "word": "und",
+      "start": 11.686,
+      "end": 11.906,
+      "score": 0.943
+    },
+    {
+      "word": "Träumen,",
+      "start": 11.966,
+      "end": 12.386,
+      "score": 0.834
+    },
+    {
+      "word": "die",
+      "start": 12.406,
+      "end": 12.547,
+      "score": 0.975
+    },
+    {
+      "word": "kein",
+      "start": 12.587,
+      "end": 12.787,
+      "score": 0.689
+    },
+    {
+      "word": "Maß",
+      "start": 12.807,
+      "end": 13.067,
+      "score": 0.938
+    },
+    {
+      "word": "kannten.",
+      "start": 13.087,
+      "end": 14.468,
+      "score": 0.917
+    },
+    {
+      "word": "Und",
+      "start": 14.488,
+      "end": 14.708,
+      "score": 0.84
+    },
+    {
+      "word": "nun?",
+      "start": 14.748,
+      "end": 15.888,
+      "score": 0.938
+    },
+    {
+      "word": "Ich",
+      "start": 15.928,
+      "end": 16.008,
+      "score": 0.858
+    },
+    {
+      "word": "habe",
+      "start": 16.048,
+      "end": 16.308,
+      "score": 0.858
+    },
+    {
+      "word": "Blut",
+      "start": 16.348,
+      "end": 16.649,
+      "score": 0.948
+    },
+    {
+      "word": "vergossen,",
+      "start": 16.669,
+      "end": 17.349,
+      "score": 0.915
+    },
+    {
+      "word": "Gold",
+      "start": 17.369,
+      "end": 17.689,
+      "score": 0.817
+    },
+    {
+      "word": "gewonnen",
+      "start": 17.709,
+      "end": 18.089,
+      "score": 0.888
+    },
+    {
+      "word": "und",
+      "start": 18.129,
+      "end": 18.31,
+      "score": 0.854
+    },
+    {
+      "word": "verloren,",
+      "start": 18.35,
+      "end": 19.25,
+      "score": 0.954
+    },
+    {
+      "word": "Freunde",
+      "start": 19.27,
+      "end": 19.63,
+      "score": 0.952
+    },
+    {
+      "word": "gefunden",
+      "start": 19.67,
+      "end": 20.17,
+      "score": 0.964
+    },
+    {
+      "word": "und",
+      "start": 20.211,
+      "end": 20.391,
+      "score": 0.914
+    },
+    {
+      "word": "Feinde,",
+      "start": 20.431,
+      "end": 20.791,
+      "score": 0.955
+    },
+    {
+      "word": "nach",
+      "start": 20.811,
+      "end": 20.931,
+      "score": 0.91
+    },
+    {
+      "word": "denen",
+      "start": 20.951,
+      "end": 21.131,
+      "score": 0.557
+    },
+    {
+      "word": "ich",
+      "start": 21.191,
+      "end": 21.331,
+      "score": 0.913
+    },
+    {
+      "word": "nie",
+      "start": 21.371,
+      "end": 21.571,
+      "score": 0.809
+    },
+    {
+      "word": "gesucht",
+      "start": 21.611,
+      "end": 21.931,
+      "score": 0.896
+    },
+    {
+      "word": "habe.",
+      "start": 21.951,
+      "end": 23.312,
+      "score": 0.942
+    },
+    {
+      "word": "Treutheim",
+      "start": 23.372,
+      "end": 23.972,
+      "score": 0.824
+    },
+    {
+      "word": "war",
+      "start": 24.012,
+      "end": 24.253,
+      "score": 0.869
+    },
+    {
+      "word": "nie",
+      "start": 24.293,
+      "end": 24.413,
+      "score": 0.837
+    },
+    {
+      "word": "das",
+      "start": 24.453,
+      "end": 24.693,
+      "score": 0.916
+    },
+    {
+      "word": "Ziel.",
+      "start": 24.753,
+      "end": 25.633,
+      "score": 0.869
+    },
+    {
+      "word": "Immer",
+      "start": 25.673,
+      "end": 25.893,
+      "score": 0.859
+    },
+    {
+      "word": "nur",
+      "start": 25.913,
+      "end": 26.054,
+      "score": 0.838
+    },
+    {
+      "word": "die",
+      "start": 26.074,
+      "end": 26.214,
+      "score": 0.801
+    },
+    {
+      "word": "erste",
+      "start": 26.274,
+      "end": 26.514,
+      "score": 0.929
+    },
+    {
+      "word": "Station.",
+      "start": 26.554,
+      "end": 28.215,
+      "score": 0.913
+    },
+    {
+      "word": "Der",
+      "start": 28.235,
+      "end": 28.435,
+      "score": 0.916
+    },
+    {
+      "word": "Schatten",
+      "start": 28.475,
+      "end": 28.895,
+      "score": 0.828
+    },
+    {
+      "word": "ist",
+      "start": 28.935,
+      "end": 29.095,
+      "score": 0.867
+    },
+    {
+      "word": "noch",
+      "start": 29.115,
+      "end": 29.275,
+      "score": 0.906
+    },
+    {
+      "word": "dort",
+      "start": 29.295,
+      "end": 29.455,
+      "score": 0.894
+    },
+    {
+      "word": "draußen.",
+      "start": 29.475,
+      "end": 30.596,
+      "score": 0.887
+    },
+    {
+      "word": "Und",
+      "start": 30.616,
+      "end": 30.776,
+      "score": 0.803
+    },
+    {
+      "word": "er",
+      "start": 30.816,
+      "end": 30.936,
+      "score": 0.975
+    },
+    {
+      "word": "weiß,",
+      "start": 30.976,
+      "end": 31.216,
+      "score": 0.949
+    },
+    {
+      "word": "dass",
+      "start": 31.236,
+      "end": 31.376,
+      "score": 0.878
+    },
+    {
+      "word": "es",
+      "start": 31.416,
+      "end": 31.516,
+      "score": 0.929
+    },
+    {
+      "word": "mich",
+      "start": 31.556,
+      "end": 31.736,
+      "score": 0.904
+    },
+    {
+      "word": "gibt.",
+      "start": 31.757,
+      "end": 33.317,
+      "score": 0.988
+    },
+    {
+      "word": "Das",
+      "start": 33.357,
+      "end": 33.537,
+      "score": 0.97
+    },
+    {
+      "word": "ist",
+      "start": 33.577,
+      "end": 33.818,
+      "score": 0.871
+    },
+    {
+      "word": "kein",
+      "start": 33.838,
+      "end": 34.118,
+      "score": 0.76
+    },
+    {
+      "word": "Ende.",
+      "start": 34.158,
+      "end": 35.458,
+      "score": 0.814
+    },
+    {
+      "word": "Das",
+      "start": 35.498,
+      "end": 35.779,
+      "score": 0.964
+    },
+    {
+      "word": "ist",
+      "start": 35.819,
+      "end": 35.979,
+      "score": 0.831
+    },
+    {
+      "word": "der",
+      "start": 35.999,
+      "end": 36.219,
+      "score": 0.815
+    },
+    {
+      "word": "Anfang",
+      "start": 36.259,
+      "end": 36.659,
+      "score": 0.955
+    },
+    {
+      "word": "von",
+      "start": 36.679,
+      "end": 36.839,
+      "score": 0.91
+    },
+    {
+      "word": "etwas",
+      "start": 36.859,
+      "end": 37.239,
+      "score": 0.821
+    },
+    {
+      "word": "weit",
+      "start": 37.259,
+      "end": 37.54,
+      "score": 0.906
+    },
+    {
+      "word": "Größerem.",
+      "start": 37.58,
+      "end": 38.1,
+      "score": 0.827
+    }
+  ]
+}

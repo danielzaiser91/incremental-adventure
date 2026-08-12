@@ -1,0 +1,470 @@
+{
+  "segments": [
+    {
+      "start": 0.54,
+      "end": 2.362,
+      "text": "\"Schmieden.\"",
+      "words": [
+        {
+          "word": "\"Schmieden.\"",
+          "start": 0.54,
+          "end": 2.362,
+          "score": 0.776
+        }
+      ]
+    },
+    {
+      "start": 2.402,
+      "end": 4.644,
+      "text": "Oswin lehnt sich zurück.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 2.402,
+          "end": 2.943,
+          "score": 0.781
+        },
+        {
+          "word": "lehnt",
+          "start": 2.963,
+          "end": 3.243,
+          "score": 0.772
+        },
+        {
+          "word": "sich",
+          "start": 3.263,
+          "end": 3.503,
+          "score": 0.99
+        },
+        {
+          "word": "zurück.",
+          "start": 3.543,
+          "end": 4.644,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 4.664,
+      "end": 7.767,
+      "text": "\"Das ist keine Hobbybastelei.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 4.664,
+          "end": 4.864,
+          "score": 0.918
+        },
+        {
+          "word": "ist",
+          "start": 4.904,
+          "end": 5.164,
+          "score": 0.992
+        },
+        {
+          "word": "keine",
+          "start": 5.205,
+          "end": 5.605,
+          "score": 0.904
+        },
+        {
+          "word": "Hobbybastelei.",
+          "start": 5.705,
+          "end": 7.767,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 7.787,
+      "end": 13.492,
+      "text": "Du brauchst einen Amboss, einen Ofen, richtiges Werkzeug.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 7.787,
+          "end": 7.907,
+          "score": 0.916
+        },
+        {
+          "word": "brauchst",
+          "start": 7.927,
+          "end": 8.227,
+          "score": 0.706
+        },
+        {
+          "word": "einen",
+          "start": 8.267,
+          "end": 8.527,
+          "score": 0.902
+        },
+        {
+          "word": "Amboss,",
+          "start": 8.607,
+          "end": 9.588,
+          "score": 0.947
+        },
+        {
+          "word": "einen",
+          "start": 9.608,
+          "end": 9.869,
+          "score": 0.815
+        },
+        {
+          "word": "Ofen,",
+          "start": 9.969,
+          "end": 10.969,
+          "score": 0.808
+        },
+        {
+          "word": "richtiges",
+          "start": 11.03,
+          "end": 11.63,
+          "score": 0.914
+        },
+        {
+          "word": "Werkzeug.\"",
+          "start": 11.69,
+          "end": 13.492,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 13.512,
+      "end": 16.514,
+      "text": "\"Ein Schlosser aus der Süderstraße macht sowas.",
+      "words": [
+        {
+          "word": "\"Ein",
+          "start": 13.512,
+          "end": 13.712,
+          "score": 0.734
+        },
+        {
+          "word": "Schlosser",
+          "start": 13.732,
+          "end": 14.132,
+          "score": 0.869
+        },
+        {
+          "word": "aus",
+          "start": 14.172,
+          "end": 14.312,
+          "score": 0.917
+        },
+        {
+          "word": "der",
+          "start": 14.332,
+          "end": 14.473,
+          "score": 0.913
+        },
+        {
+          "word": "Süderstraße",
+          "start": 14.513,
+          "end": 15.173,
+          "score": 0.902
+        },
+        {
+          "word": "macht",
+          "start": 15.213,
+          "end": 15.413,
+          "score": 0.817
+        },
+        {
+          "word": "sowas.",
+          "start": 15.433,
+          "end": 16.514,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 16.554,
+      "end": 18.696,
+      "text": "Zwölfhundert Gold.",
+      "words": [
+        {
+          "word": "Zwölfhundert",
+          "start": 16.554,
+          "end": 17.495,
+          "score": 0.859
+        },
+        {
+          "word": "Gold.",
+          "start": 17.555,
+          "end": 18.696,
+          "score": 0.819
+        }
+      ]
+    },
+    {
+      "start": 18.736,
+      "end": 22.099,
+      "text": "Nicht billig, aber sauber gebaut.\"",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 18.736,
+          "end": 18.976,
+          "score": 0.84
+        },
+        {
+          "word": "billig,",
+          "start": 19.016,
+          "end": 19.797,
+          "score": 0.709
+        },
+        {
+          "word": "aber",
+          "start": 19.837,
+          "end": 20.358,
+          "score": 0.924
+        },
+        {
+          "word": "sauber",
+          "start": 20.378,
+          "end": 20.718,
+          "score": 0.924
+        },
+        {
+          "word": "gebaut.\"",
+          "start": 20.758,
+          "end": 22.099,
+          "score": 0.867
+        }
+      ]
+    },
+    {
+      "start": 22.119,
+      "end": 22.82,
+      "text": "\"Willst du das?\"",
+      "words": [
+        {
+          "word": "\"Willst",
+          "start": 22.119,
+          "end": 22.399,
+          "score": 0.645
+        },
+        {
+          "word": "du",
+          "start": 22.439,
+          "end": 22.56,
+          "score": 0.472
+        },
+        {
+          "word": "das?\"",
+          "start": 22.6,
+          "end": 22.82,
+          "score": 0.582
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Schmieden.\"",
+      "start": 0.54,
+      "end": 2.362,
+      "score": 0.776
+    },
+    {
+      "word": "Oswin",
+      "start": 2.402,
+      "end": 2.943,
+      "score": 0.781
+    },
+    {
+      "word": "lehnt",
+      "start": 2.963,
+      "end": 3.243,
+      "score": 0.772
+    },
+    {
+      "word": "sich",
+      "start": 3.263,
+      "end": 3.503,
+      "score": 0.99
+    },
+    {
+      "word": "zurück.",
+      "start": 3.543,
+      "end": 4.644,
+      "score": 0.968
+    },
+    {
+      "word": "\"Das",
+      "start": 4.664,
+      "end": 4.864,
+      "score": 0.918
+    },
+    {
+      "word": "ist",
+      "start": 4.904,
+      "end": 5.164,
+      "score": 0.992
+    },
+    {
+      "word": "keine",
+      "start": 5.205,
+      "end": 5.605,
+      "score": 0.904
+    },
+    {
+      "word": "Hobbybastelei.",
+      "start": 5.705,
+      "end": 7.767,
+      "score": 0.939
+    },
+    {
+      "word": "Du",
+      "start": 7.787,
+      "end": 7.907,
+      "score": 0.916
+    },
+    {
+      "word": "brauchst",
+      "start": 7.927,
+      "end": 8.227,
+      "score": 0.706
+    },
+    {
+      "word": "einen",
+      "start": 8.267,
+      "end": 8.527,
+      "score": 0.902
+    },
+    {
+      "word": "Amboss,",
+      "start": 8.607,
+      "end": 9.588,
+      "score": 0.947
+    },
+    {
+      "word": "einen",
+      "start": 9.608,
+      "end": 9.869,
+      "score": 0.815
+    },
+    {
+      "word": "Ofen,",
+      "start": 9.969,
+      "end": 10.969,
+      "score": 0.808
+    },
+    {
+      "word": "richtiges",
+      "start": 11.03,
+      "end": 11.63,
+      "score": 0.914
+    },
+    {
+      "word": "Werkzeug.\"",
+      "start": 11.69,
+      "end": 13.492,
+      "score": 0.859
+    },
+    {
+      "word": "\"Ein",
+      "start": 13.512,
+      "end": 13.712,
+      "score": 0.734
+    },
+    {
+      "word": "Schlosser",
+      "start": 13.732,
+      "end": 14.132,
+      "score": 0.869
+    },
+    {
+      "word": "aus",
+      "start": 14.172,
+      "end": 14.312,
+      "score": 0.917
+    },
+    {
+      "word": "der",
+      "start": 14.332,
+      "end": 14.473,
+      "score": 0.913
+    },
+    {
+      "word": "Süderstraße",
+      "start": 14.513,
+      "end": 15.173,
+      "score": 0.902
+    },
+    {
+      "word": "macht",
+      "start": 15.213,
+      "end": 15.413,
+      "score": 0.817
+    },
+    {
+      "word": "sowas.",
+      "start": 15.433,
+      "end": 16.514,
+      "score": 0.882
+    },
+    {
+      "word": "Zwölfhundert",
+      "start": 16.554,
+      "end": 17.495,
+      "score": 0.859
+    },
+    {
+      "word": "Gold.",
+      "start": 17.555,
+      "end": 18.696,
+      "score": 0.819
+    },
+    {
+      "word": "Nicht",
+      "start": 18.736,
+      "end": 18.976,
+      "score": 0.84
+    },
+    {
+      "word": "billig,",
+      "start": 19.016,
+      "end": 19.797,
+      "score": 0.709
+    },
+    {
+      "word": "aber",
+      "start": 19.837,
+      "end": 20.358,
+      "score": 0.924
+    },
+    {
+      "word": "sauber",
+      "start": 20.378,
+      "end": 20.718,
+      "score": 0.924
+    },
+    {
+      "word": "gebaut.\"",
+      "start": 20.758,
+      "end": 22.099,
+      "score": 0.867
+    },
+    {
+      "word": "\"Willst",
+      "start": 22.119,
+      "end": 22.399,
+      "score": 0.645
+    },
+    {
+      "word": "du",
+      "start": 22.439,
+      "end": 22.56,
+      "score": 0.472
+    },
+    {
+      "word": "das?\"",
+      "start": 22.6,
+      "end": 22.82,
+      "score": 0.582
+    }
+  ]
+}

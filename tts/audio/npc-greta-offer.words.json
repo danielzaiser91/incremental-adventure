@@ -1,0 +1,744 @@
+{
+  "segments": [
+    {
+      "start": 0.3,
+      "end": 1.962,
+      "text": "\"Da bist du ja!\"",
+      "words": [
+        {
+          "word": "\"Da",
+          "start": 0.3,
+          "end": 0.58,
+          "score": 0.658
+        },
+        {
+          "word": "bist",
+          "start": 0.621,
+          "end": 0.801,
+          "score": 0.64
+        },
+        {
+          "word": "du",
+          "start": 0.821,
+          "end": 0.981,
+          "score": 0.684
+        },
+        {
+          "word": "ja!\"",
+          "start": 1.021,
+          "end": 1.962,
+          "score": 0.757
+        }
+      ]
+    },
+    {
+      "start": 2.022,
+      "end": 4.564,
+      "text": "Greta rückt einen Hocker zurecht.",
+      "words": [
+        {
+          "word": "Greta",
+          "start": 2.022,
+          "end": 2.462,
+          "score": 0.825
+        },
+        {
+          "word": "rückt",
+          "start": 2.522,
+          "end": 2.782,
+          "score": 0.871
+        },
+        {
+          "word": "einen",
+          "start": 2.802,
+          "end": 3.062,
+          "score": 0.877
+        },
+        {
+          "word": "Hocker",
+          "start": 3.103,
+          "end": 3.383,
+          "score": 0.936
+        },
+        {
+          "word": "zurecht.",
+          "start": 3.403,
+          "end": 4.564,
+          "score": 0.823
+        }
+      ]
+    },
+    {
+      "start": 4.584,
+      "end": 11.97,
+      "text": "\"Also, meine Idee: Ich will mein Sortiment erweitern — Werkzeug, bessere Ausrüstung, solche Sachen.\"",
+      "words": [
+        {
+          "word": "\"Also,",
+          "start": 4.584,
+          "end": 5.244,
+          "score": 0.788
+        },
+        {
+          "word": "meine",
+          "start": 5.284,
+          "end": 5.585,
+          "score": 0.789
+        },
+        {
+          "word": "Idee:",
+          "start": 5.625,
+          "end": 6.305,
+          "score": 0.983
+        },
+        {
+          "word": "Ich",
+          "start": 6.345,
+          "end": 6.545,
+          "score": 0.731
+        },
+        {
+          "word": "will",
+          "start": 6.565,
+          "end": 6.786,
+          "score": 0.976
+        },
+        {
+          "word": "mein",
+          "start": 6.826,
+          "end": 7.026,
+          "score": 0.636
+        },
+        {
+          "word": "Sortiment",
+          "start": 7.046,
+          "end": 7.746,
+          "score": 0.93
+        },
+        {
+          "word": "erweitern",
+          "start": 7.766,
+          "end": 8.147,
+          "score": 0.937
+        },
+        {
+          "word": "—",
+          "start": 8.607,
+          "end": 8.627,
+          "score": 0.973
+        },
+        {
+          "word": "Werkzeug,",
+          "start": 8.667,
+          "end": 9.508,
+          "score": 0.921
+        },
+        {
+          "word": "bessere",
+          "start": 9.528,
+          "end": 9.868,
+          "score": 0.88
+        },
+        {
+          "word": "Ausrüstung,",
+          "start": 9.928,
+          "end": 10.569,
+          "score": 0.931
+        },
+        {
+          "word": "solche",
+          "start": 10.589,
+          "end": 10.849,
+          "score": 0.787
+        },
+        {
+          "word": "Sachen.\"",
+          "start": 10.889,
+          "end": 11.97,
+          "score": 0.856
+        }
+      ]
+    },
+    {
+      "start": 11.99,
+      "end": 16.473,
+      "text": "\"Dafür brauche ich Rohstoffe: Holz, Stein und ein paar Kräuter.",
+      "words": [
+        {
+          "word": "\"Dafür",
+          "start": 11.99,
+          "end": 12.29,
+          "score": 0.858
+        },
+        {
+          "word": "brauche",
+          "start": 12.33,
+          "end": 12.59,
+          "score": 0.884
+        },
+        {
+          "word": "ich",
+          "start": 12.63,
+          "end": 12.85,
+          "score": 0.841
+        },
+        {
+          "word": "Rohstoffe:",
+          "start": 12.89,
+          "end": 13.791,
+          "score": 0.902
+        },
+        {
+          "word": "Holz,",
+          "start": 13.831,
+          "end": 14.352,
+          "score": 0.792
+        },
+        {
+          "word": "Stein",
+          "start": 14.412,
+          "end": 14.912,
+          "score": 0.854
+        },
+        {
+          "word": "und",
+          "start": 14.932,
+          "end": 15.072,
+          "score": 0.69
+        },
+        {
+          "word": "ein",
+          "start": 15.112,
+          "end": 15.212,
+          "score": 0.703
+        },
+        {
+          "word": "paar",
+          "start": 15.252,
+          "end": 15.372,
+          "score": 0.685
+        },
+        {
+          "word": "Kräuter.",
+          "start": 15.393,
+          "end": 16.473,
+          "score": 0.831
+        }
+      ]
+    },
+    {
+      "start": 16.493,
+      "end": 20.537,
+      "text": "Sammelst du mir davon je fünf, helfe ich dir dafür weiter.\"",
+      "words": [
+        {
+          "word": "Sammelst",
+          "start": 16.493,
+          "end": 16.814,
+          "score": 0.896
+        },
+        {
+          "word": "du",
+          "start": 16.834,
+          "end": 16.934,
+          "score": 0.422
+        },
+        {
+          "word": "mir",
+          "start": 16.954,
+          "end": 17.074,
+          "score": 0.701
+        },
+        {
+          "word": "davon",
+          "start": 17.114,
+          "end": 17.434,
+          "score": 0.972
+        },
+        {
+          "word": "je",
+          "start": 17.474,
+          "end": 17.814,
+          "score": 0.691
+        },
+        {
+          "word": "fünf,",
+          "start": 17.834,
+          "end": 18.395,
+          "score": 0.83
+        },
+        {
+          "word": "helfe",
+          "start": 18.435,
+          "end": 18.695,
+          "score": 0.946
+        },
+        {
+          "word": "ich",
+          "start": 18.735,
+          "end": 18.835,
+          "score": 0.976
+        },
+        {
+          "word": "dir",
+          "start": 18.855,
+          "end": 18.995,
+          "score": 0.574
+        },
+        {
+          "word": "dafür",
+          "start": 19.015,
+          "end": 19.276,
+          "score": 0.939
+        },
+        {
+          "word": "weiter.\"",
+          "start": 19.296,
+          "end": 20.537,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 20.557,
+      "end": 24.24,
+      "text": "\"Werkzeug dafür findest du bei mir im Laden, sobald du weißt, wonach du suchst.\"",
+      "words": [
+        {
+          "word": "\"Werkzeug",
+          "start": 20.557,
+          "end": 21.077,
+          "score": 0.917
+        },
+        {
+          "word": "dafür",
+          "start": 21.117,
+          "end": 21.417,
+          "score": 0.958
+        },
+        {
+          "word": "findest",
+          "start": 21.457,
+          "end": 21.718,
+          "score": 0.743
+        },
+        {
+          "word": "du",
+          "start": 21.738,
+          "end": 21.818,
+          "score": 0.673
+        },
+        {
+          "word": "bei",
+          "start": 21.838,
+          "end": 21.998,
+          "score": 0.816
+        },
+        {
+          "word": "mir",
+          "start": 22.018,
+          "end": 22.198,
+          "score": 0.844
+        },
+        {
+          "word": "im",
+          "start": 22.218,
+          "end": 22.318,
+          "score": 0.962
+        },
+        {
+          "word": "Laden,",
+          "start": 22.358,
+          "end": 22.879,
+          "score": 0.939
+        },
+        {
+          "word": "sobald",
+          "start": 22.899,
+          "end": 23.199,
+          "score": 0.872
+        },
+        {
+          "word": "du",
+          "start": 23.219,
+          "end": 23.299,
+          "score": 0.45
+        },
+        {
+          "word": "weißt,",
+          "start": 23.339,
+          "end": 23.559,
+          "score": 0.845
+        },
+        {
+          "word": "wonach",
+          "start": 23.579,
+          "end": 23.839,
+          "score": 0.924
+        },
+        {
+          "word": "du",
+          "start": 23.879,
+          "end": 23.959,
+          "score": 0.743
+        },
+        {
+          "word": "suchst.\"",
+          "start": 24.0,
+          "end": 24.24,
+          "score": 0.698
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Da",
+      "start": 0.3,
+      "end": 0.58,
+      "score": 0.658
+    },
+    {
+      "word": "bist",
+      "start": 0.621,
+      "end": 0.801,
+      "score": 0.64
+    },
+    {
+      "word": "du",
+      "start": 0.821,
+      "end": 0.981,
+      "score": 0.684
+    },
+    {
+      "word": "ja!\"",
+      "start": 1.021,
+      "end": 1.962,
+      "score": 0.757
+    },
+    {
+      "word": "Greta",
+      "start": 2.022,
+      "end": 2.462,
+      "score": 0.825
+    },
+    {
+      "word": "rückt",
+      "start": 2.522,
+      "end": 2.782,
+      "score": 0.871
+    },
+    {
+      "word": "einen",
+      "start": 2.802,
+      "end": 3.062,
+      "score": 0.877
+    },
+    {
+      "word": "Hocker",
+      "start": 3.103,
+      "end": 3.383,
+      "score": 0.936
+    },
+    {
+      "word": "zurecht.",
+      "start": 3.403,
+      "end": 4.564,
+      "score": 0.823
+    },
+    {
+      "word": "\"Also,",
+      "start": 4.584,
+      "end": 5.244,
+      "score": 0.788
+    },
+    {
+      "word": "meine",
+      "start": 5.284,
+      "end": 5.585,
+      "score": 0.789
+    },
+    {
+      "word": "Idee:",
+      "start": 5.625,
+      "end": 6.305,
+      "score": 0.983
+    },
+    {
+      "word": "Ich",
+      "start": 6.345,
+      "end": 6.545,
+      "score": 0.731
+    },
+    {
+      "word": "will",
+      "start": 6.565,
+      "end": 6.786,
+      "score": 0.976
+    },
+    {
+      "word": "mein",
+      "start": 6.826,
+      "end": 7.026,
+      "score": 0.636
+    },
+    {
+      "word": "Sortiment",
+      "start": 7.046,
+      "end": 7.746,
+      "score": 0.93
+    },
+    {
+      "word": "erweitern",
+      "start": 7.766,
+      "end": 8.147,
+      "score": 0.937
+    },
+    {
+      "word": "—",
+      "start": 8.607,
+      "end": 8.627,
+      "score": 0.973
+    },
+    {
+      "word": "Werkzeug,",
+      "start": 8.667,
+      "end": 9.508,
+      "score": 0.921
+    },
+    {
+      "word": "bessere",
+      "start": 9.528,
+      "end": 9.868,
+      "score": 0.88
+    },
+    {
+      "word": "Ausrüstung,",
+      "start": 9.928,
+      "end": 10.569,
+      "score": 0.931
+    },
+    {
+      "word": "solche",
+      "start": 10.589,
+      "end": 10.849,
+      "score": 0.787
+    },
+    {
+      "word": "Sachen.\"",
+      "start": 10.889,
+      "end": 11.97,
+      "score": 0.856
+    },
+    {
+      "word": "\"Dafür",
+      "start": 11.99,
+      "end": 12.29,
+      "score": 0.858
+    },
+    {
+      "word": "brauche",
+      "start": 12.33,
+      "end": 12.59,
+      "score": 0.884
+    },
+    {
+      "word": "ich",
+      "start": 12.63,
+      "end": 12.85,
+      "score": 0.841
+    },
+    {
+      "word": "Rohstoffe:",
+      "start": 12.89,
+      "end": 13.791,
+      "score": 0.902
+    },
+    {
+      "word": "Holz,",
+      "start": 13.831,
+      "end": 14.352,
+      "score": 0.792
+    },
+    {
+      "word": "Stein",
+      "start": 14.412,
+      "end": 14.912,
+      "score": 0.854
+    },
+    {
+      "word": "und",
+      "start": 14.932,
+      "end": 15.072,
+      "score": 0.69
+    },
+    {
+      "word": "ein",
+      "start": 15.112,
+      "end": 15.212,
+      "score": 0.703
+    },
+    {
+      "word": "paar",
+      "start": 15.252,
+      "end": 15.372,
+      "score": 0.685
+    },
+    {
+      "word": "Kräuter.",
+      "start": 15.393,
+      "end": 16.473,
+      "score": 0.831
+    },
+    {
+      "word": "Sammelst",
+      "start": 16.493,
+      "end": 16.814,
+      "score": 0.896
+    },
+    {
+      "word": "du",
+      "start": 16.834,
+      "end": 16.934,
+      "score": 0.422
+    },
+    {
+      "word": "mir",
+      "start": 16.954,
+      "end": 17.074,
+      "score": 0.701
+    },
+    {
+      "word": "davon",
+      "start": 17.114,
+      "end": 17.434,
+      "score": 0.972
+    },
+    {
+      "word": "je",
+      "start": 17.474,
+      "end": 17.814,
+      "score": 0.691
+    },
+    {
+      "word": "fünf,",
+      "start": 17.834,
+      "end": 18.395,
+      "score": 0.83
+    },
+    {
+      "word": "helfe",
+      "start": 18.435,
+      "end": 18.695,
+      "score": 0.946
+    },
+    {
+      "word": "ich",
+      "start": 18.735,
+      "end": 18.835,
+      "score": 0.976
+    },
+    {
+      "word": "dir",
+      "start": 18.855,
+      "end": 18.995,
+      "score": 0.574
+    },
+    {
+      "word": "dafür",
+      "start": 19.015,
+      "end": 19.276,
+      "score": 0.939
+    },
+    {
+      "word": "weiter.\"",
+      "start": 19.296,
+      "end": 20.537,
+      "score": 0.973
+    },
+    {
+      "word": "\"Werkzeug",
+      "start": 20.557,
+      "end": 21.077,
+      "score": 0.917
+    },
+    {
+      "word": "dafür",
+      "start": 21.117,
+      "end": 21.417,
+      "score": 0.958
+    },
+    {
+      "word": "findest",
+      "start": 21.457,
+      "end": 21.718,
+      "score": 0.743
+    },
+    {
+      "word": "du",
+      "start": 21.738,
+      "end": 21.818,
+      "score": 0.673
+    },
+    {
+      "word": "bei",
+      "start": 21.838,
+      "end": 21.998,
+      "score": 0.816
+    },
+    {
+      "word": "mir",
+      "start": 22.018,
+      "end": 22.198,
+      "score": 0.844
+    },
+    {
+      "word": "im",
+      "start": 22.218,
+      "end": 22.318,
+      "score": 0.962
+    },
+    {
+      "word": "Laden,",
+      "start": 22.358,
+      "end": 22.879,
+      "score": 0.939
+    },
+    {
+      "word": "sobald",
+      "start": 22.899,
+      "end": 23.199,
+      "score": 0.872
+    },
+    {
+      "word": "du",
+      "start": 23.219,
+      "end": 23.299,
+      "score": 0.45
+    },
+    {
+      "word": "weißt,",
+      "start": 23.339,
+      "end": 23.559,
+      "score": 0.845
+    },
+    {
+      "word": "wonach",
+      "start": 23.579,
+      "end": 23.839,
+      "score": 0.924
+    },
+    {
+      "word": "du",
+      "start": 23.879,
+      "end": 23.959,
+      "score": 0.743
+    },
+    {
+      "word": "suchst.\"",
+      "start": 24.0,
+      "end": 24.24,
+      "score": 0.698
+    }
+  ]
+}

@@ -1,0 +1,1186 @@
+{
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 6.303,
+      "text": "Brakka lehnt sich gegen die Wand, die Balken knarren unter ihm.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.5,
+          "end": 1.08,
+          "score": 0.489
+        },
+        {
+          "word": "lehnt",
+          "start": 1.12,
+          "end": 1.381,
+          "score": 0.712
+        },
+        {
+          "word": "sich",
+          "start": 1.421,
+          "end": 1.641,
+          "score": 0.808
+        },
+        {
+          "word": "gegen",
+          "start": 1.661,
+          "end": 1.921,
+          "score": 0.885
+        },
+        {
+          "word": "die",
+          "start": 1.941,
+          "end": 2.081,
+          "score": 0.822
+        },
+        {
+          "word": "Wand,",
+          "start": 2.121,
+          "end": 3.041,
+          "score": 0.973
+        },
+        {
+          "word": "die",
+          "start": 3.061,
+          "end": 3.261,
+          "score": 0.866
+        },
+        {
+          "word": "Balken",
+          "start": 3.301,
+          "end": 3.762,
+          "score": 0.944
+        },
+        {
+          "word": "knarren",
+          "start": 3.802,
+          "end": 4.342,
+          "score": 0.849
+        },
+        {
+          "word": "unter",
+          "start": 4.362,
+          "end": 4.642,
+          "score": 0.975
+        },
+        {
+          "word": "ihm.",
+          "start": 4.702,
+          "end": 6.303,
+          "score": 0.628
+        }
+      ]
+    },
+    {
+      "start": 6.323,
+      "end": 8.384,
+      "text": "\"Die Gilde ist kein Orden.",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 6.323,
+          "end": 6.503,
+          "score": 0.842
+        },
+        {
+          "word": "Gilde",
+          "start": 6.543,
+          "end": 6.903,
+          "score": 0.956
+        },
+        {
+          "word": "ist",
+          "start": 6.963,
+          "end": 7.163,
+          "score": 0.886
+        },
+        {
+          "word": "kein",
+          "start": 7.183,
+          "end": 7.483,
+          "score": 0.894
+        },
+        {
+          "word": "Orden.",
+          "start": 7.543,
+          "end": 8.384,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 8.404,
+      "end": 10.665,
+      "text": "Kein Heilsversprechen.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 8.404,
+          "end": 8.724,
+          "score": 0.831
+        },
+        {
+          "word": "Heilsversprechen.",
+          "start": 8.764,
+          "end": 10.665,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 10.745,
+      "end": 15.346,
+      "text": "Arbeit ist es — mit einem Stempel drauf.\"",
+      "words": [
+        {
+          "word": "Arbeit",
+          "start": 10.745,
+          "end": 11.205,
+          "score": 0.959
+        },
+        {
+          "word": "ist",
+          "start": 11.265,
+          "end": 11.425,
+          "score": 0.911
+        },
+        {
+          "word": "es",
+          "start": 11.485,
+          "end": 12.265,
+          "score": 0.976
+        },
+        {
+          "word": "—",
+          "start": 12.285,
+          "end": 12.305,
+          "score": 0.973
+        },
+        {
+          "word": "mit",
+          "start": 12.325,
+          "end": 12.405,
+          "score": 0.852
+        },
+        {
+          "word": "einem",
+          "start": 12.425,
+          "end": 12.705,
+          "score": 0.451
+        },
+        {
+          "word": "Stempel",
+          "start": 12.745,
+          "end": 13.166,
+          "score": 0.893
+        },
+        {
+          "word": "drauf.\"",
+          "start": 13.206,
+          "end": 15.346,
+          "score": 0.787
+        }
+      ]
+    },
+    {
+      "start": 15.367,
+      "end": 16.867,
+      "text": "\"Verträge.",
+      "words": [
+        {
+          "word": "\"Verträge.",
+          "start": 15.367,
+          "end": 16.867,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 16.907,
+      "end": 19.208,
+      "text": "Händler ohne eigene Wachen.",
+      "words": [
+        {
+          "word": "Händler",
+          "start": 16.907,
+          "end": 17.427,
+          "score": 0.905
+        },
+        {
+          "word": "ohne",
+          "start": 17.467,
+          "end": 17.727,
+          "score": 0.814
+        },
+        {
+          "word": "eigene",
+          "start": 17.768,
+          "end": 18.108,
+          "score": 0.832
+        },
+        {
+          "word": "Wachen.",
+          "start": 18.148,
+          "end": 19.208,
+          "score": 0.836
+        }
+      ]
+    },
+    {
+      "start": 19.228,
+      "end": 22.169,
+      "text": "Bauern, die ein Vieh loswerden wollen.",
+      "words": [
+        {
+          "word": "Bauern,",
+          "start": 19.228,
+          "end": 19.688,
+          "score": 0.827
+        },
+        {
+          "word": "die",
+          "start": 19.708,
+          "end": 19.868,
+          "score": 0.761
+        },
+        {
+          "word": "ein",
+          "start": 19.888,
+          "end": 20.088,
+          "score": 0.738
+        },
+        {
+          "word": "Vieh",
+          "start": 20.129,
+          "end": 20.329,
+          "score": 0.691
+        },
+        {
+          "word": "loswerden",
+          "start": 20.349,
+          "end": 20.949,
+          "score": 0.904
+        },
+        {
+          "word": "wollen.",
+          "start": 20.989,
+          "end": 22.169,
+          "score": 0.984
+        }
+      ]
+    },
+    {
+      "start": 22.209,
+      "end": 26.151,
+      "text": "Und Dinge, vor denen andere lieber wegsehen.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 22.209,
+          "end": 22.51,
+          "score": 0.748
+        },
+        {
+          "word": "Dinge,",
+          "start": 22.55,
+          "end": 22.99,
+          "score": 0.798
+        },
+        {
+          "word": "vor",
+          "start": 23.01,
+          "end": 23.17,
+          "score": 0.951
+        },
+        {
+          "word": "denen",
+          "start": 23.19,
+          "end": 23.55,
+          "score": 0.902
+        },
+        {
+          "word": "andere",
+          "start": 23.61,
+          "end": 23.95,
+          "score": 0.914
+        },
+        {
+          "word": "lieber",
+          "start": 23.99,
+          "end": 24.29,
+          "score": 0.921
+        },
+        {
+          "word": "wegsehen.\"",
+          "start": 24.31,
+          "end": 26.151,
+          "score": 0.878
+        }
+      ]
+    },
+    {
+      "start": 26.171,
+      "end": 28.232,
+      "text": "\"Dafür kriegst du Zugang.",
+      "words": [
+        {
+          "word": "\"Dafür",
+          "start": 26.171,
+          "end": 26.551,
+          "score": 0.636
+        },
+        {
+          "word": "kriegst",
+          "start": 26.571,
+          "end": 26.851,
+          "score": 0.791
+        },
+        {
+          "word": "du",
+          "start": 26.871,
+          "end": 27.091,
+          "score": 0.715
+        },
+        {
+          "word": "Zugang.",
+          "start": 27.111,
+          "end": 28.232,
+          "score": 0.991
+        }
+      ]
+    },
+    {
+      "start": 28.252,
+      "end": 29.753,
+      "text": "Zum Waffenschmied.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 28.252,
+          "end": 28.452,
+          "score": 0.992
+        },
+        {
+          "word": "Waffenschmied.",
+          "start": 28.492,
+          "end": 29.753,
+          "score": 0.845
+        }
+      ]
+    },
+    {
+      "start": 29.773,
+      "end": 31.513,
+      "text": "Zum Jagdgebiet.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 29.773,
+          "end": 29.953,
+          "score": 0.872
+        },
+        {
+          "word": "Jagdgebiet.",
+          "start": 30.013,
+          "end": 31.513,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 31.553,
+      "end": 36.375,
+      "text": "Zu Leuten, die dir sonst die Tür vor der Nase zuschlagen würden.\"",
+      "words": [
+        {
+          "word": "Zu",
+          "start": 31.553,
+          "end": 31.693,
+          "score": 0.944
+        },
+        {
+          "word": "Leuten,",
+          "start": 31.733,
+          "end": 32.154,
+          "score": 0.902
+        },
+        {
+          "word": "die",
+          "start": 32.174,
+          "end": 32.254,
+          "score": 0.962
+        },
+        {
+          "word": "dir",
+          "start": 32.294,
+          "end": 32.494,
+          "score": 0.713
+        },
+        {
+          "word": "sonst",
+          "start": 32.514,
+          "end": 32.774,
+          "score": 0.823
+        },
+        {
+          "word": "die",
+          "start": 32.814,
+          "end": 32.974,
+          "score": 0.726
+        },
+        {
+          "word": "Tür",
+          "start": 33.014,
+          "end": 33.274,
+          "score": 0.945
+        },
+        {
+          "word": "vor",
+          "start": 33.314,
+          "end": 33.414,
+          "score": 0.986
+        },
+        {
+          "word": "der",
+          "start": 33.434,
+          "end": 33.594,
+          "score": 0.869
+        },
+        {
+          "word": "Nase",
+          "start": 33.654,
+          "end": 34.054,
+          "score": 0.99
+        },
+        {
+          "word": "zuschlagen",
+          "start": 34.074,
+          "end": 34.615,
+          "score": 0.821
+        },
+        {
+          "word": "würden.\"",
+          "start": 34.655,
+          "end": 36.375,
+          "score": 0.928
+        }
+      ]
+    },
+    {
+      "start": 36.395,
+      "end": 39.437,
+      "text": "Sein Blick fällt in den Krug.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 36.395,
+          "end": 36.615,
+          "score": 0.664
+        },
+        {
+          "word": "Blick",
+          "start": 36.635,
+          "end": 36.916,
+          "score": 0.934
+        },
+        {
+          "word": "fällt",
+          "start": 36.956,
+          "end": 37.216,
+          "score": 0.822
+        },
+        {
+          "word": "in",
+          "start": 37.236,
+          "end": 37.336,
+          "score": 0.893
+        },
+        {
+          "word": "den",
+          "start": 37.356,
+          "end": 37.516,
+          "score": 0.911
+        },
+        {
+          "word": "Krug.",
+          "start": 37.576,
+          "end": 39.437,
+          "score": 0.883
+        }
+      ]
+    },
+    {
+      "start": 39.597,
+      "end": 43.678,
+      "text": "\"Ich kenn die Gilde länger, als mir manchmal lieb ist.\"",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 39.597,
+          "end": 39.757,
+          "score": 0.587
+        },
+        {
+          "word": "kenn",
+          "start": 39.797,
+          "end": 40.037,
+          "score": 0.673
+        },
+        {
+          "word": "die",
+          "start": 40.057,
+          "end": 40.217,
+          "score": 0.935
+        },
+        {
+          "word": "Gilde",
+          "start": 40.257,
+          "end": 40.677,
+          "score": 0.902
+        },
+        {
+          "word": "länger,",
+          "start": 40.697,
+          "end": 41.017,
+          "score": 0.973
+        },
+        {
+          "word": "als",
+          "start": 41.057,
+          "end": 41.217,
+          "score": 0.934
+        },
+        {
+          "word": "mir",
+          "start": 41.237,
+          "end": 41.418,
+          "score": 0.864
+        },
+        {
+          "word": "manchmal",
+          "start": 41.458,
+          "end": 41.918,
+          "score": 0.851
+        },
+        {
+          "word": "lieb",
+          "start": 41.958,
+          "end": 42.198,
+          "score": 0.839
+        },
+        {
+          "word": "ist.\"",
+          "start": 42.258,
+          "end": 43.678,
+          "score": 0.822
+        }
+      ]
+    },
+    {
+      "start": 43.718,
+      "end": 45.359,
+      "text": "Dann trinkt er.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 43.718,
+          "end": 43.919,
+          "score": 0.946
+        },
+        {
+          "word": "trinkt",
+          "start": 43.959,
+          "end": 44.279,
+          "score": 0.878
+        },
+        {
+          "word": "er.",
+          "start": 44.359,
+          "end": 45.359,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 45.379,
+      "end": 46.92,
+      "text": "Mehr ist dazu nicht zu holen.",
+      "words": [
+        {
+          "word": "Mehr",
+          "start": 45.379,
+          "end": 45.579,
+          "score": 0.784
+        },
+        {
+          "word": "ist",
+          "start": 45.619,
+          "end": 45.799,
+          "score": 0.92
+        },
+        {
+          "word": "dazu",
+          "start": 45.839,
+          "end": 46.2,
+          "score": 0.962
+        },
+        {
+          "word": "nicht",
+          "start": 46.24,
+          "end": 46.46,
+          "score": 0.954
+        },
+        {
+          "word": "zu",
+          "start": 46.5,
+          "end": 46.62,
+          "score": 0.994
+        },
+        {
+          "word": "holen.",
+          "start": 46.68,
+          "end": 46.92,
+          "score": 0.917
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.5,
+      "end": 1.08,
+      "score": 0.489
+    },
+    {
+      "word": "lehnt",
+      "start": 1.12,
+      "end": 1.381,
+      "score": 0.712
+    },
+    {
+      "word": "sich",
+      "start": 1.421,
+      "end": 1.641,
+      "score": 0.808
+    },
+    {
+      "word": "gegen",
+      "start": 1.661,
+      "end": 1.921,
+      "score": 0.885
+    },
+    {
+      "word": "die",
+      "start": 1.941,
+      "end": 2.081,
+      "score": 0.822
+    },
+    {
+      "word": "Wand,",
+      "start": 2.121,
+      "end": 3.041,
+      "score": 0.973
+    },
+    {
+      "word": "die",
+      "start": 3.061,
+      "end": 3.261,
+      "score": 0.866
+    },
+    {
+      "word": "Balken",
+      "start": 3.301,
+      "end": 3.762,
+      "score": 0.944
+    },
+    {
+      "word": "knarren",
+      "start": 3.802,
+      "end": 4.342,
+      "score": 0.849
+    },
+    {
+      "word": "unter",
+      "start": 4.362,
+      "end": 4.642,
+      "score": 0.975
+    },
+    {
+      "word": "ihm.",
+      "start": 4.702,
+      "end": 6.303,
+      "score": 0.628
+    },
+    {
+      "word": "\"Die",
+      "start": 6.323,
+      "end": 6.503,
+      "score": 0.842
+    },
+    {
+      "word": "Gilde",
+      "start": 6.543,
+      "end": 6.903,
+      "score": 0.956
+    },
+    {
+      "word": "ist",
+      "start": 6.963,
+      "end": 7.163,
+      "score": 0.886
+    },
+    {
+      "word": "kein",
+      "start": 7.183,
+      "end": 7.483,
+      "score": 0.894
+    },
+    {
+      "word": "Orden.",
+      "start": 7.543,
+      "end": 8.384,
+      "score": 0.868
+    },
+    {
+      "word": "Kein",
+      "start": 8.404,
+      "end": 8.724,
+      "score": 0.831
+    },
+    {
+      "word": "Heilsversprechen.",
+      "start": 8.764,
+      "end": 10.665,
+      "score": 0.926
+    },
+    {
+      "word": "Arbeit",
+      "start": 10.745,
+      "end": 11.205,
+      "score": 0.959
+    },
+    {
+      "word": "ist",
+      "start": 11.265,
+      "end": 11.425,
+      "score": 0.911
+    },
+    {
+      "word": "es",
+      "start": 11.485,
+      "end": 12.265,
+      "score": 0.976
+    },
+    {
+      "word": "—",
+      "start": 12.285,
+      "end": 12.305,
+      "score": 0.973
+    },
+    {
+      "word": "mit",
+      "start": 12.325,
+      "end": 12.405,
+      "score": 0.852
+    },
+    {
+      "word": "einem",
+      "start": 12.425,
+      "end": 12.705,
+      "score": 0.451
+    },
+    {
+      "word": "Stempel",
+      "start": 12.745,
+      "end": 13.166,
+      "score": 0.893
+    },
+    {
+      "word": "drauf.\"",
+      "start": 13.206,
+      "end": 15.346,
+      "score": 0.787
+    },
+    {
+      "word": "\"Verträge.",
+      "start": 15.367,
+      "end": 16.867,
+      "score": 0.942
+    },
+    {
+      "word": "Händler",
+      "start": 16.907,
+      "end": 17.427,
+      "score": 0.905
+    },
+    {
+      "word": "ohne",
+      "start": 17.467,
+      "end": 17.727,
+      "score": 0.814
+    },
+    {
+      "word": "eigene",
+      "start": 17.768,
+      "end": 18.108,
+      "score": 0.832
+    },
+    {
+      "word": "Wachen.",
+      "start": 18.148,
+      "end": 19.208,
+      "score": 0.836
+    },
+    {
+      "word": "Bauern,",
+      "start": 19.228,
+      "end": 19.688,
+      "score": 0.827
+    },
+    {
+      "word": "die",
+      "start": 19.708,
+      "end": 19.868,
+      "score": 0.761
+    },
+    {
+      "word": "ein",
+      "start": 19.888,
+      "end": 20.088,
+      "score": 0.738
+    },
+    {
+      "word": "Vieh",
+      "start": 20.129,
+      "end": 20.329,
+      "score": 0.691
+    },
+    {
+      "word": "loswerden",
+      "start": 20.349,
+      "end": 20.949,
+      "score": 0.904
+    },
+    {
+      "word": "wollen.",
+      "start": 20.989,
+      "end": 22.169,
+      "score": 0.984
+    },
+    {
+      "word": "Und",
+      "start": 22.209,
+      "end": 22.51,
+      "score": 0.748
+    },
+    {
+      "word": "Dinge,",
+      "start": 22.55,
+      "end": 22.99,
+      "score": 0.798
+    },
+    {
+      "word": "vor",
+      "start": 23.01,
+      "end": 23.17,
+      "score": 0.951
+    },
+    {
+      "word": "denen",
+      "start": 23.19,
+      "end": 23.55,
+      "score": 0.902
+    },
+    {
+      "word": "andere",
+      "start": 23.61,
+      "end": 23.95,
+      "score": 0.914
+    },
+    {
+      "word": "lieber",
+      "start": 23.99,
+      "end": 24.29,
+      "score": 0.921
+    },
+    {
+      "word": "wegsehen.\"",
+      "start": 24.31,
+      "end": 26.151,
+      "score": 0.878
+    },
+    {
+      "word": "\"Dafür",
+      "start": 26.171,
+      "end": 26.551,
+      "score": 0.636
+    },
+    {
+      "word": "kriegst",
+      "start": 26.571,
+      "end": 26.851,
+      "score": 0.791
+    },
+    {
+      "word": "du",
+      "start": 26.871,
+      "end": 27.091,
+      "score": 0.715
+    },
+    {
+      "word": "Zugang.",
+      "start": 27.111,
+      "end": 28.232,
+      "score": 0.991
+    },
+    {
+      "word": "Zum",
+      "start": 28.252,
+      "end": 28.452,
+      "score": 0.992
+    },
+    {
+      "word": "Waffenschmied.",
+      "start": 28.492,
+      "end": 29.753,
+      "score": 0.845
+    },
+    {
+      "word": "Zum",
+      "start": 29.773,
+      "end": 29.953,
+      "score": 0.872
+    },
+    {
+      "word": "Jagdgebiet.",
+      "start": 30.013,
+      "end": 31.513,
+      "score": 0.931
+    },
+    {
+      "word": "Zu",
+      "start": 31.553,
+      "end": 31.693,
+      "score": 0.944
+    },
+    {
+      "word": "Leuten,",
+      "start": 31.733,
+      "end": 32.154,
+      "score": 0.902
+    },
+    {
+      "word": "die",
+      "start": 32.174,
+      "end": 32.254,
+      "score": 0.962
+    },
+    {
+      "word": "dir",
+      "start": 32.294,
+      "end": 32.494,
+      "score": 0.713
+    },
+    {
+      "word": "sonst",
+      "start": 32.514,
+      "end": 32.774,
+      "score": 0.823
+    },
+    {
+      "word": "die",
+      "start": 32.814,
+      "end": 32.974,
+      "score": 0.726
+    },
+    {
+      "word": "Tür",
+      "start": 33.014,
+      "end": 33.274,
+      "score": 0.945
+    },
+    {
+      "word": "vor",
+      "start": 33.314,
+      "end": 33.414,
+      "score": 0.986
+    },
+    {
+      "word": "der",
+      "start": 33.434,
+      "end": 33.594,
+      "score": 0.869
+    },
+    {
+      "word": "Nase",
+      "start": 33.654,
+      "end": 34.054,
+      "score": 0.99
+    },
+    {
+      "word": "zuschlagen",
+      "start": 34.074,
+      "end": 34.615,
+      "score": 0.821
+    },
+    {
+      "word": "würden.\"",
+      "start": 34.655,
+      "end": 36.375,
+      "score": 0.928
+    },
+    {
+      "word": "Sein",
+      "start": 36.395,
+      "end": 36.615,
+      "score": 0.664
+    },
+    {
+      "word": "Blick",
+      "start": 36.635,
+      "end": 36.916,
+      "score": 0.934
+    },
+    {
+      "word": "fällt",
+      "start": 36.956,
+      "end": 37.216,
+      "score": 0.822
+    },
+    {
+      "word": "in",
+      "start": 37.236,
+      "end": 37.336,
+      "score": 0.893
+    },
+    {
+      "word": "den",
+      "start": 37.356,
+      "end": 37.516,
+      "score": 0.911
+    },
+    {
+      "word": "Krug.",
+      "start": 37.576,
+      "end": 39.437,
+      "score": 0.883
+    },
+    {
+      "word": "\"Ich",
+      "start": 39.597,
+      "end": 39.757,
+      "score": 0.587
+    },
+    {
+      "word": "kenn",
+      "start": 39.797,
+      "end": 40.037,
+      "score": 0.673
+    },
+    {
+      "word": "die",
+      "start": 40.057,
+      "end": 40.217,
+      "score": 0.935
+    },
+    {
+      "word": "Gilde",
+      "start": 40.257,
+      "end": 40.677,
+      "score": 0.902
+    },
+    {
+      "word": "länger,",
+      "start": 40.697,
+      "end": 41.017,
+      "score": 0.973
+    },
+    {
+      "word": "als",
+      "start": 41.057,
+      "end": 41.217,
+      "score": 0.934
+    },
+    {
+      "word": "mir",
+      "start": 41.237,
+      "end": 41.418,
+      "score": 0.864
+    },
+    {
+      "word": "manchmal",
+      "start": 41.458,
+      "end": 41.918,
+      "score": 0.851
+    },
+    {
+      "word": "lieb",
+      "start": 41.958,
+      "end": 42.198,
+      "score": 0.839
+    },
+    {
+      "word": "ist.\"",
+      "start": 42.258,
+      "end": 43.678,
+      "score": 0.822
+    },
+    {
+      "word": "Dann",
+      "start": 43.718,
+      "end": 43.919,
+      "score": 0.946
+    },
+    {
+      "word": "trinkt",
+      "start": 43.959,
+      "end": 44.279,
+      "score": 0.878
+    },
+    {
+      "word": "er.",
+      "start": 44.359,
+      "end": 45.359,
+      "score": 0.941
+    },
+    {
+      "word": "Mehr",
+      "start": 45.379,
+      "end": 45.579,
+      "score": 0.784
+    },
+    {
+      "word": "ist",
+      "start": 45.619,
+      "end": 45.799,
+      "score": 0.92
+    },
+    {
+      "word": "dazu",
+      "start": 45.839,
+      "end": 46.2,
+      "score": 0.962
+    },
+    {
+      "word": "nicht",
+      "start": 46.24,
+      "end": 46.46,
+      "score": 0.954
+    },
+    {
+      "word": "zu",
+      "start": 46.5,
+      "end": 46.62,
+      "score": 0.994
+    },
+    {
+      "word": "holen.",
+      "start": 46.68,
+      "end": 46.92,
+      "score": 0.917
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 4.023,
+      "text": "\"Weil du nicht aufgehört hast nachzufragen.",
+      "words": [
+        {
+          "word": "\"Weil",
+          "start": 0.4,
+          "end": 0.66,
+          "score": 0.735
+        },
+        {
+          "word": "du",
+          "start": 0.68,
+          "end": 0.861,
+          "score": 0.384
+        },
+        {
+          "word": "nicht",
+          "start": 0.901,
+          "end": 1.201,
+          "score": 0.836
+        },
+        {
+          "word": "aufgehört",
+          "start": 1.241,
+          "end": 1.901,
+          "score": 0.881
+        },
+        {
+          "word": "hast",
+          "start": 1.921,
+          "end": 2.322,
+          "score": 0.832
+        },
+        {
+          "word": "nachzufragen.",
+          "start": 2.362,
+          "end": 4.023,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 4.063,
+      "end": 8.186,
+      "text": "Das bedeutet, dass du bereit bist.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 4.063,
+          "end": 4.303,
+          "score": 0.829
+        },
+        {
+          "word": "bedeutet,",
+          "start": 4.323,
+          "end": 5.184,
+          "score": 0.922
+        },
+        {
+          "word": "dass",
+          "start": 5.224,
+          "end": 5.404,
+          "score": 0.861
+        },
+        {
+          "word": "du",
+          "start": 5.424,
+          "end": 5.564,
+          "score": 0.834
+        },
+        {
+          "word": "bereit",
+          "start": 5.584,
+          "end": 6.104,
+          "score": 0.875
+        },
+        {
+          "word": "bist.\"",
+          "start": 6.124,
+          "end": 8.186,
+          "score": 0.87
+        }
+      ]
+    },
+    {
+      "start": 8.226,
+      "end": 9.867,
+      "text": "Er steht auf.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 8.226,
+          "end": 8.346,
+          "score": 0.808
+        },
+        {
+          "word": "steht",
+          "start": 8.386,
+          "end": 8.686,
+          "score": 0.909
+        },
+        {
+          "word": "auf.",
+          "start": 8.746,
+          "end": 9.867,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 9.907,
+      "end": 12.789,
+      "text": "Legt ein kleines gefaltetes Papier auf den Tisch.",
+      "words": [
+        {
+          "word": "Legt",
+          "start": 9.907,
+          "end": 10.187,
+          "score": 0.864
+        },
+        {
+          "word": "ein",
+          "start": 10.207,
+          "end": 10.387,
+          "score": 0.897
+        },
+        {
+          "word": "kleines",
+          "start": 10.427,
+          "end": 10.928,
+          "score": 0.838
+        },
+        {
+          "word": "gefaltetes",
+          "start": 10.948,
+          "end": 11.648,
+          "score": 0.995
+        },
+        {
+          "word": "Papier",
+          "start": 11.688,
+          "end": 12.148,
+          "score": 0.892
+        },
+        {
+          "word": "auf",
+          "start": 12.188,
+          "end": 12.328,
+          "score": 0.827
+        },
+        {
+          "word": "den",
+          "start": 12.348,
+          "end": 12.529,
+          "score": 0.618
+        },
+        {
+          "word": "Tisch.",
+          "start": 12.569,
+          "end": 12.789,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 13.93,
+      "end": 17.012,
+      "text": "\"Das ist eine Adresse in Lethkar.",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 13.93,
+          "end": 14.27,
+          "score": 0.898
+        },
+        {
+          "word": "ist",
+          "start": 14.31,
+          "end": 14.59,
+          "score": 0.938
+        },
+        {
+          "word": "eine",
+          "start": 14.63,
+          "end": 14.83,
+          "score": 0.734
+        },
+        {
+          "word": "Adresse",
+          "start": 14.87,
+          "end": 15.391,
+          "score": 0.975
+        },
+        {
+          "word": "in",
+          "start": 15.431,
+          "end": 15.591,
+          "score": 0.953
+        },
+        {
+          "word": "Lethkar.",
+          "start": 15.631,
+          "end": 17.012,
+          "score": 0.824
+        }
+      ]
+    },
+    {
+      "start": 17.052,
+      "end": 18.373,
+      "text": "Finde sie.",
+      "words": [
+        {
+          "word": "Finde",
+          "start": 17.052,
+          "end": 17.352,
+          "score": 0.941
+        },
+        {
+          "word": "sie.",
+          "start": 17.392,
+          "end": 18.373,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 18.413,
+      "end": 23.136,
+      "text": "Nenn meinen Namen: Serin.\"",
+      "words": [
+        {
+          "word": "Nenn",
+          "start": 18.413,
+          "end": 18.713,
+          "score": 0.904
+        },
+        {
+          "word": "meinen",
+          "start": 18.753,
+          "end": 19.053,
+          "score": 0.933
+        },
+        {
+          "word": "Namen:",
+          "start": 19.113,
+          "end": 20.474,
+          "score": 0.977
+        },
+        {
+          "word": "Serin.\"",
+          "start": 20.514,
+          "end": 23.136,
+          "score": 0.791
+        }
+      ]
+    },
+    {
+      "start": 23.156,
+      "end": 27.399,
+      "text": "\"Bis dahin — viel Erfolg.",
+      "words": [
+        {
+          "word": "\"Bis",
+          "start": 23.156,
+          "end": 23.456,
+          "score": 0.696
+        },
+        {
+          "word": "dahin",
+          "start": 23.496,
+          "end": 23.896,
+          "score": 0.814
+        },
+        {
+          "word": "—",
+          "start": 24.977,
+          "end": 24.997,
+          "score": 0.927
+        },
+        {
+          "word": "viel",
+          "start": 25.017,
+          "end": 25.357,
+          "score": 0.908
+        },
+        {
+          "word": "Erfolg.",
+          "start": 25.417,
+          "end": 27.399,
+          "score": 0.929
+        }
+      ]
+    },
+    {
+      "start": 27.439,
+      "end": 28.82,
+      "text": "Du wirst es brauchen.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 27.439,
+          "end": 27.679,
+          "score": 0.904
+        },
+        {
+          "word": "wirst",
+          "start": 27.719,
+          "end": 28.059,
+          "score": 0.821
+        },
+        {
+          "word": "es",
+          "start": 28.119,
+          "end": 28.339,
+          "score": 0.974
+        },
+        {
+          "word": "brauchen.\"",
+          "start": 28.379,
+          "end": 28.82,
+          "score": 0.772
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Weil",
+      "start": 0.4,
+      "end": 0.66,
+      "score": 0.735
+    },
+    {
+      "word": "du",
+      "start": 0.68,
+      "end": 0.861,
+      "score": 0.384
+    },
+    {
+      "word": "nicht",
+      "start": 0.901,
+      "end": 1.201,
+      "score": 0.836
+    },
+    {
+      "word": "aufgehört",
+      "start": 1.241,
+      "end": 1.901,
+      "score": 0.881
+    },
+    {
+      "word": "hast",
+      "start": 1.921,
+      "end": 2.322,
+      "score": 0.832
+    },
+    {
+      "word": "nachzufragen.",
+      "start": 2.362,
+      "end": 4.023,
+      "score": 0.918
+    },
+    {
+      "word": "Das",
+      "start": 4.063,
+      "end": 4.303,
+      "score": 0.829
+    },
+    {
+      "word": "bedeutet,",
+      "start": 4.323,
+      "end": 5.184,
+      "score": 0.922
+    },
+    {
+      "word": "dass",
+      "start": 5.224,
+      "end": 5.404,
+      "score": 0.861
+    },
+    {
+      "word": "du",
+      "start": 5.424,
+      "end": 5.564,
+      "score": 0.834
+    },
+    {
+      "word": "bereit",
+      "start": 5.584,
+      "end": 6.104,
+      "score": 0.875
+    },
+    {
+      "word": "bist.\"",
+      "start": 6.124,
+      "end": 8.186,
+      "score": 0.87
+    },
+    {
+      "word": "Er",
+      "start": 8.226,
+      "end": 8.346,
+      "score": 0.808
+    },
+    {
+      "word": "steht",
+      "start": 8.386,
+      "end": 8.686,
+      "score": 0.909
+    },
+    {
+      "word": "auf.",
+      "start": 8.746,
+      "end": 9.867,
+      "score": 0.979
+    },
+    {
+      "word": "Legt",
+      "start": 9.907,
+      "end": 10.187,
+      "score": 0.864
+    },
+    {
+      "word": "ein",
+      "start": 10.207,
+      "end": 10.387,
+      "score": 0.897
+    },
+    {
+      "word": "kleines",
+      "start": 10.427,
+      "end": 10.928,
+      "score": 0.838
+    },
+    {
+      "word": "gefaltetes",
+      "start": 10.948,
+      "end": 11.648,
+      "score": 0.995
+    },
+    {
+      "word": "Papier",
+      "start": 11.688,
+      "end": 12.148,
+      "score": 0.892
+    },
+    {
+      "word": "auf",
+      "start": 12.188,
+      "end": 12.328,
+      "score": 0.827
+    },
+    {
+      "word": "den",
+      "start": 12.348,
+      "end": 12.529,
+      "score": 0.618
+    },
+    {
+      "word": "Tisch.",
+      "start": 12.569,
+      "end": 12.789,
+      "score": 0.906
+    },
+    {
+      "word": "\"Das",
+      "start": 13.93,
+      "end": 14.27,
+      "score": 0.898
+    },
+    {
+      "word": "ist",
+      "start": 14.31,
+      "end": 14.59,
+      "score": 0.938
+    },
+    {
+      "word": "eine",
+      "start": 14.63,
+      "end": 14.83,
+      "score": 0.734
+    },
+    {
+      "word": "Adresse",
+      "start": 14.87,
+      "end": 15.391,
+      "score": 0.975
+    },
+    {
+      "word": "in",
+      "start": 15.431,
+      "end": 15.591,
+      "score": 0.953
+    },
+    {
+      "word": "Lethkar.",
+      "start": 15.631,
+      "end": 17.012,
+      "score": 0.824
+    },
+    {
+      "word": "Finde",
+      "start": 17.052,
+      "end": 17.352,
+      "score": 0.941
+    },
+    {
+      "word": "sie.",
+      "start": 17.392,
+      "end": 18.373,
+      "score": 0.913
+    },
+    {
+      "word": "Nenn",
+      "start": 18.413,
+      "end": 18.713,
+      "score": 0.904
+    },
+    {
+      "word": "meinen",
+      "start": 18.753,
+      "end": 19.053,
+      "score": 0.933
+    },
+    {
+      "word": "Namen:",
+      "start": 19.113,
+      "end": 20.474,
+      "score": 0.977
+    },
+    {
+      "word": "Serin.\"",
+      "start": 20.514,
+      "end": 23.136,
+      "score": 0.791
+    },
+    {
+      "word": "\"Bis",
+      "start": 23.156,
+      "end": 23.456,
+      "score": 0.696
+    },
+    {
+      "word": "dahin",
+      "start": 23.496,
+      "end": 23.896,
+      "score": 0.814
+    },
+    {
+      "word": "—",
+      "start": 24.977,
+      "end": 24.997,
+      "score": 0.927
+    },
+    {
+      "word": "viel",
+      "start": 25.017,
+      "end": 25.357,
+      "score": 0.908
+    },
+    {
+      "word": "Erfolg.",
+      "start": 25.417,
+      "end": 27.399,
+      "score": 0.929
+    },
+    {
+      "word": "Du",
+      "start": 27.439,
+      "end": 27.679,
+      "score": 0.904
+    },
+    {
+      "word": "wirst",
+      "start": 27.719,
+      "end": 28.059,
+      "score": 0.821
+    },
+    {
+      "word": "es",
+      "start": 28.119,
+      "end": 28.339,
+      "score": 0.974
+    },
+    {
+      "word": "brauchen.\"",
+      "start": 28.379,
+      "end": 28.82,
+      "score": 0.772
+    }
+  ]
+}

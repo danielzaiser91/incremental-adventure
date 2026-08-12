@@ -1,0 +1,375 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 3.486,
+      "text": "Sie nimmt einen Schluck und grinst.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 0.481,
+          "end": 0.621,
+          "score": 0.805
+        },
+        {
+          "word": "nimmt",
+          "start": 0.641,
+          "end": 0.922,
+          "score": 0.895
+        },
+        {
+          "word": "einen",
+          "start": 0.942,
+          "end": 1.102,
+          "score": 0.693
+        },
+        {
+          "word": "Schluck",
+          "start": 1.122,
+          "end": 1.963,
+          "score": 0.865
+        },
+        {
+          "word": "und",
+          "start": 2.003,
+          "end": 2.204,
+          "score": 0.894
+        },
+        {
+          "word": "grinst.",
+          "start": 2.244,
+          "end": 3.486,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 3.606,
+      "end": 8.935,
+      "text": "\"Na siehst du, du bist gar nicht so verloren, wie du aussiehst.\"",
+      "words": [
+        {
+          "word": "\"Na",
+          "start": 3.606,
+          "end": 3.847,
+          "score": 0.767
+        },
+        {
+          "word": "siehst",
+          "start": 3.887,
+          "end": 4.187,
+          "score": 0.775
+        },
+        {
+          "word": "du,",
+          "start": 4.207,
+          "end": 4.888,
+          "score": 0.799
+        },
+        {
+          "word": "du",
+          "start": 4.928,
+          "end": 5.069,
+          "score": 0.846
+        },
+        {
+          "word": "bist",
+          "start": 5.109,
+          "end": 5.349,
+          "score": 0.936
+        },
+        {
+          "word": "gar",
+          "start": 5.369,
+          "end": 5.529,
+          "score": 0.997
+        },
+        {
+          "word": "nicht",
+          "start": 5.57,
+          "end": 5.89,
+          "score": 0.734
+        },
+        {
+          "word": "so",
+          "start": 5.93,
+          "end": 6.251,
+          "score": 0.957
+        },
+        {
+          "word": "verloren,",
+          "start": 6.291,
+          "end": 6.731,
+          "score": 0.914
+        },
+        {
+          "word": "wie",
+          "start": 6.752,
+          "end": 6.832,
+          "score": 0.75
+        },
+        {
+          "word": "du",
+          "start": 6.852,
+          "end": 6.992,
+          "score": 0.932
+        },
+        {
+          "word": "aussiehst.\"",
+          "start": 7.052,
+          "end": 8.935,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "start": 8.955,
+      "end": 11.339,
+      "text": "Beim Abschied drückt sie mir ein Stück Brot in die Hand.",
+      "words": [
+        {
+          "word": "Beim",
+          "start": 8.955,
+          "end": 9.216,
+          "score": 0.902
+        },
+        {
+          "word": "Abschied",
+          "start": 9.256,
+          "end": 9.636,
+          "score": 0.818
+        },
+        {
+          "word": "drückt",
+          "start": 9.656,
+          "end": 9.897,
+          "score": 0.879
+        },
+        {
+          "word": "sie",
+          "start": 9.937,
+          "end": 10.037,
+          "score": 0.911
+        },
+        {
+          "word": "mir",
+          "start": 10.057,
+          "end": 10.217,
+          "score": 0.931
+        },
+        {
+          "word": "ein",
+          "start": 10.237,
+          "end": 10.358,
+          "score": 0.612
+        },
+        {
+          "word": "Stück",
+          "start": 10.398,
+          "end": 10.618,
+          "score": 0.879
+        },
+        {
+          "word": "Brot",
+          "start": 10.638,
+          "end": 10.919,
+          "score": 0.856
+        },
+        {
+          "word": "in",
+          "start": 10.959,
+          "end": 11.039,
+          "score": 0.891
+        },
+        {
+          "word": "die",
+          "start": 11.059,
+          "end": 11.159,
+          "score": 0.683
+        },
+        {
+          "word": "Hand.",
+          "start": 11.199,
+          "end": 11.339,
+          "score": 0.799
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sie",
+      "start": 0.481,
+      "end": 0.621,
+      "score": 0.805
+    },
+    {
+      "word": "nimmt",
+      "start": 0.641,
+      "end": 0.922,
+      "score": 0.895
+    },
+    {
+      "word": "einen",
+      "start": 0.942,
+      "end": 1.102,
+      "score": 0.693
+    },
+    {
+      "word": "Schluck",
+      "start": 1.122,
+      "end": 1.963,
+      "score": 0.865
+    },
+    {
+      "word": "und",
+      "start": 2.003,
+      "end": 2.204,
+      "score": 0.894
+    },
+    {
+      "word": "grinst.",
+      "start": 2.244,
+      "end": 3.486,
+      "score": 0.944
+    },
+    {
+      "word": "\"Na",
+      "start": 3.606,
+      "end": 3.847,
+      "score": 0.767
+    },
+    {
+      "word": "siehst",
+      "start": 3.887,
+      "end": 4.187,
+      "score": 0.775
+    },
+    {
+      "word": "du,",
+      "start": 4.207,
+      "end": 4.888,
+      "score": 0.799
+    },
+    {
+      "word": "du",
+      "start": 4.928,
+      "end": 5.069,
+      "score": 0.846
+    },
+    {
+      "word": "bist",
+      "start": 5.109,
+      "end": 5.349,
+      "score": 0.936
+    },
+    {
+      "word": "gar",
+      "start": 5.369,
+      "end": 5.529,
+      "score": 0.997
+    },
+    {
+      "word": "nicht",
+      "start": 5.57,
+      "end": 5.89,
+      "score": 0.734
+    },
+    {
+      "word": "so",
+      "start": 5.93,
+      "end": 6.251,
+      "score": 0.957
+    },
+    {
+      "word": "verloren,",
+      "start": 6.291,
+      "end": 6.731,
+      "score": 0.914
+    },
+    {
+      "word": "wie",
+      "start": 6.752,
+      "end": 6.832,
+      "score": 0.75
+    },
+    {
+      "word": "du",
+      "start": 6.852,
+      "end": 6.992,
+      "score": 0.932
+    },
+    {
+      "word": "aussiehst.\"",
+      "start": 7.052,
+      "end": 8.935,
+      "score": 0.9
+    },
+    {
+      "word": "Beim",
+      "start": 8.955,
+      "end": 9.216,
+      "score": 0.902
+    },
+    {
+      "word": "Abschied",
+      "start": 9.256,
+      "end": 9.636,
+      "score": 0.818
+    },
+    {
+      "word": "drückt",
+      "start": 9.656,
+      "end": 9.897,
+      "score": 0.879
+    },
+    {
+      "word": "sie",
+      "start": 9.937,
+      "end": 10.037,
+      "score": 0.911
+    },
+    {
+      "word": "mir",
+      "start": 10.057,
+      "end": 10.217,
+      "score": 0.931
+    },
+    {
+      "word": "ein",
+      "start": 10.237,
+      "end": 10.358,
+      "score": 0.612
+    },
+    {
+      "word": "Stück",
+      "start": 10.398,
+      "end": 10.618,
+      "score": 0.879
+    },
+    {
+      "word": "Brot",
+      "start": 10.638,
+      "end": 10.919,
+      "score": 0.856
+    },
+    {
+      "word": "in",
+      "start": 10.959,
+      "end": 11.039,
+      "score": 0.891
+    },
+    {
+      "word": "die",
+      "start": 11.059,
+      "end": 11.159,
+      "score": 0.683
+    },
+    {
+      "word": "Hand.",
+      "start": 11.199,
+      "end": 11.339,
+      "score": 0.799
+    }
+  ]
+}

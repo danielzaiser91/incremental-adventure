@@ -1,6 +1,6 @@
 ## 🐛 Bug-Status — Chroniken des vergessenen Weges
 
-**Aktuelle Version:** v0.22.10-alpha
+**Aktuelle Version:** v0.23.0-alpha
 
 **Bekannte Fehler:** Keine kritischen Fehler bekannt.
 

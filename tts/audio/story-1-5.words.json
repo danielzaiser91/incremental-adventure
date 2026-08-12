@@ -1,0 +1,1081 @@
+{
+  "segments": [
+    {
+      "start": 0.96,
+      "end": 3.562,
+      "text": "Marktplatz, Mittagsstunde.",
+      "words": [
+        {
+          "word": "Marktplatz,",
+          "start": 0.96,
+          "end": 2.081,
+          "score": 0.604
+        },
+        {
+          "word": "Mittagsstunde.",
+          "start": 2.101,
+          "end": 3.562,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 3.662,
+      "end": 7.804,
+      "text": "Hundert Stimmen, der Geruch von gebratenem Fleisch.",
+      "words": [
+        {
+          "word": "Hundert",
+          "start": 3.662,
+          "end": 4.022,
+          "score": 0.882
+        },
+        {
+          "word": "Stimmen,",
+          "start": 4.062,
+          "end": 4.802,
+          "score": 0.861
+        },
+        {
+          "word": "der",
+          "start": 4.822,
+          "end": 4.942,
+          "score": 0.964
+        },
+        {
+          "word": "Geruch",
+          "start": 4.982,
+          "end": 5.403,
+          "score": 0.972
+        },
+        {
+          "word": "von",
+          "start": 5.443,
+          "end": 5.623,
+          "score": 0.944
+        },
+        {
+          "word": "gebratenem",
+          "start": 5.643,
+          "end": 6.343,
+          "score": 0.889
+        },
+        {
+          "word": "Fleisch.",
+          "start": 6.403,
+          "end": 7.804,
+          "score": 0.835
+        }
+      ]
+    },
+    {
+      "start": 7.844,
+      "end": 11.306,
+      "text": "Diesmal klemme ich den Beutel fest unter dem Arm.",
+      "words": [
+        {
+          "word": "Diesmal",
+          "start": 7.844,
+          "end": 8.264,
+          "score": 0.875
+        },
+        {
+          "word": "klemme",
+          "start": 8.304,
+          "end": 8.484,
+          "score": 0.707
+        },
+        {
+          "word": "ich",
+          "start": 8.504,
+          "end": 8.624,
+          "score": 0.846
+        },
+        {
+          "word": "den",
+          "start": 8.664,
+          "end": 8.784,
+          "score": 0.935
+        },
+        {
+          "word": "Beutel",
+          "start": 8.804,
+          "end": 9.185,
+          "score": 0.821
+        },
+        {
+          "word": "fest",
+          "start": 9.225,
+          "end": 9.465,
+          "score": 0.977
+        },
+        {
+          "word": "unter",
+          "start": 9.485,
+          "end": 9.685,
+          "score": 0.856
+        },
+        {
+          "word": "dem",
+          "start": 9.705,
+          "end": 9.845,
+          "score": 0.928
+        },
+        {
+          "word": "Arm.",
+          "start": 9.885,
+          "end": 11.306,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 11.346,
+      "end": 13.447,
+      "text": "Nicht fest genug.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 11.346,
+          "end": 11.626,
+          "score": 0.913
+        },
+        {
+          "word": "fest",
+          "start": 11.666,
+          "end": 11.926,
+          "score": 0.974
+        },
+        {
+          "word": "genug.",
+          "start": 11.966,
+          "end": 13.447,
+          "score": 0.959
+        }
+      ]
+    },
+    {
+      "start": 13.487,
+      "end": 21.931,
+      "text": "Ein Ellenbogen in die Seite, eine Drehung — und er ist schon drei Schritte fort, ehe ich mein Stolpern abgefangen habe.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 13.487,
+          "end": 13.847,
+          "score": 0.74
+        },
+        {
+          "word": "Ellenbogen",
+          "start": 13.907,
+          "end": 14.467,
+          "score": 0.88
+        },
+        {
+          "word": "in",
+          "start": 14.487,
+          "end": 14.567,
+          "score": 0.847
+        },
+        {
+          "word": "die",
+          "start": 14.607,
+          "end": 14.707,
+          "score": 0.883
+        },
+        {
+          "word": "Seite,",
+          "start": 14.747,
+          "end": 15.348,
+          "score": 0.966
+        },
+        {
+          "word": "eine",
+          "start": 15.368,
+          "end": 15.528,
+          "score": 0.94
+        },
+        {
+          "word": "Drehung",
+          "start": 15.588,
+          "end": 16.668,
+          "score": 0.879
+        },
+        {
+          "word": "—",
+          "start": 16.688,
+          "end": 16.708,
+          "score": 0.975
+        },
+        {
+          "word": "und",
+          "start": 16.728,
+          "end": 17.008,
+          "score": 0.84
+        },
+        {
+          "word": "er",
+          "start": 17.068,
+          "end": 17.208,
+          "score": 0.9
+        },
+        {
+          "word": "ist",
+          "start": 17.248,
+          "end": 17.429,
+          "score": 0.952
+        },
+        {
+          "word": "schon",
+          "start": 17.469,
+          "end": 17.749,
+          "score": 0.889
+        },
+        {
+          "word": "drei",
+          "start": 17.769,
+          "end": 18.029,
+          "score": 0.955
+        },
+        {
+          "word": "Schritte",
+          "start": 18.069,
+          "end": 18.469,
+          "score": 0.827
+        },
+        {
+          "word": "fort,",
+          "start": 18.529,
+          "end": 18.869,
+          "score": 0.856
+        },
+        {
+          "word": "ehe",
+          "start": 18.929,
+          "end": 19.069,
+          "score": 0.765
+        },
+        {
+          "word": "ich",
+          "start": 19.089,
+          "end": 19.169,
+          "score": 0.84
+        },
+        {
+          "word": "mein",
+          "start": 19.229,
+          "end": 19.43,
+          "score": 0.498
+        },
+        {
+          "word": "Stolpern",
+          "start": 19.45,
+          "end": 19.83,
+          "score": 0.737
+        },
+        {
+          "word": "abgefangen",
+          "start": 19.85,
+          "end": 20.27,
+          "score": 0.858
+        },
+        {
+          "word": "habe.",
+          "start": 20.29,
+          "end": 21.931,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 21.971,
+      "end": 23.732,
+      "text": "Einmal dreht er sich um.",
+      "words": [
+        {
+          "word": "Einmal",
+          "start": 21.971,
+          "end": 22.391,
+          "score": 0.893
+        },
+        {
+          "word": "dreht",
+          "start": 22.411,
+          "end": 22.591,
+          "score": 0.798
+        },
+        {
+          "word": "er",
+          "start": 22.631,
+          "end": 22.731,
+          "score": 0.638
+        },
+        {
+          "word": "sich",
+          "start": 22.751,
+          "end": 22.911,
+          "score": 0.858
+        },
+        {
+          "word": "um.",
+          "start": 22.931,
+          "end": 23.732,
+          "score": 0.697
+        }
+      ]
+    },
+    {
+      "start": 23.752,
+      "end": 25.272,
+      "text": "Sieht mich an.",
+      "words": [
+        {
+          "word": "Sieht",
+          "start": 23.752,
+          "end": 23.952,
+          "score": 0.898
+        },
+        {
+          "word": "mich",
+          "start": 23.992,
+          "end": 24.192,
+          "score": 0.843
+        },
+        {
+          "word": "an.",
+          "start": 24.232,
+          "end": 25.272,
+          "score": 0.725
+        }
+      ]
+    },
+    {
+      "start": 25.312,
+      "end": 27.694,
+      "text": "Und zwinkert.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 25.312,
+          "end": 25.653,
+          "score": 0.844
+        },
+        {
+          "word": "zwinkert.",
+          "start": 25.693,
+          "end": 27.694,
+          "score": 0.705
+        }
+      ]
+    },
+    {
+      "start": 27.714,
+      "end": 30.775,
+      "text": "Helles Tageslicht, hundert Zeugen.",
+      "words": [
+        {
+          "word": "Helles",
+          "start": 27.714,
+          "end": 28.174,
+          "score": 0.82
+        },
+        {
+          "word": "Tageslicht,",
+          "start": 28.214,
+          "end": 29.054,
+          "score": 0.758
+        },
+        {
+          "word": "hundert",
+          "start": 29.154,
+          "end": 29.555,
+          "score": 0.877
+        },
+        {
+          "word": "Zeugen.",
+          "start": 29.575,
+          "end": 30.775,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 30.795,
+      "end": 35.037,
+      "text": "Nicht einmal die Mühe macht er sich, sein Gesicht zu verbergen.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 30.795,
+          "end": 31.055,
+          "score": 0.9
+        },
+        {
+          "word": "einmal",
+          "start": 31.075,
+          "end": 31.375,
+          "score": 0.866
+        },
+        {
+          "word": "die",
+          "start": 31.395,
+          "end": 31.575,
+          "score": 0.695
+        },
+        {
+          "word": "Mühe",
+          "start": 31.616,
+          "end": 31.876,
+          "score": 0.759
+        },
+        {
+          "word": "macht",
+          "start": 31.916,
+          "end": 32.116,
+          "score": 0.967
+        },
+        {
+          "word": "er",
+          "start": 32.156,
+          "end": 32.236,
+          "score": 0.835
+        },
+        {
+          "word": "sich,",
+          "start": 32.256,
+          "end": 32.436,
+          "score": 0.942
+        },
+        {
+          "word": "sein",
+          "start": 32.456,
+          "end": 32.616,
+          "score": 0.729
+        },
+        {
+          "word": "Gesicht",
+          "start": 32.656,
+          "end": 32.976,
+          "score": 0.884
+        },
+        {
+          "word": "zu",
+          "start": 32.996,
+          "end": 33.096,
+          "score": 0.878
+        },
+        {
+          "word": "verbergen.",
+          "start": 33.116,
+          "end": 35.037,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 35.077,
+      "end": 37.719,
+      "text": "Vor Wut bin ich wie versteinert.",
+      "words": [
+        {
+          "word": "Vor",
+          "start": 35.077,
+          "end": 35.297,
+          "score": 0.751
+        },
+        {
+          "word": "Wut",
+          "start": 35.317,
+          "end": 35.617,
+          "score": 0.814
+        },
+        {
+          "word": "bin",
+          "start": 35.637,
+          "end": 35.758,
+          "score": 0.687
+        },
+        {
+          "word": "ich",
+          "start": 35.778,
+          "end": 35.898,
+          "score": 0.778
+        },
+        {
+          "word": "wie",
+          "start": 35.938,
+          "end": 36.118,
+          "score": 0.717
+        },
+        {
+          "word": "versteinert.",
+          "start": 36.158,
+          "end": 37.719,
+          "score": 0.703
+        }
+      ]
+    },
+    {
+      "start": 37.759,
+      "end": 38.979,
+      "text": "Er kennt mich.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 37.759,
+          "end": 37.879,
+          "score": 0.854
+        },
+        {
+          "word": "kennt",
+          "start": 37.919,
+          "end": 38.179,
+          "score": 0.864
+        },
+        {
+          "word": "mich.",
+          "start": 38.219,
+          "end": 38.979,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 38.999,
+      "end": 40.42,
+      "text": "Er weiß genau, wann ich komme.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 38.999,
+          "end": 39.099,
+          "score": 0.895
+        },
+        {
+          "word": "weiß",
+          "start": 39.119,
+          "end": 39.379,
+          "score": 0.959
+        },
+        {
+          "word": "genau,",
+          "start": 39.439,
+          "end": 39.84,
+          "score": 0.908
+        },
+        {
+          "word": "wann",
+          "start": 39.86,
+          "end": 40.04,
+          "score": 0.934
+        },
+        {
+          "word": "ich",
+          "start": 40.08,
+          "end": 40.22,
+          "score": 0.892
+        },
+        {
+          "word": "komme.",
+          "start": 40.24,
+          "end": 40.42,
+          "score": 0.947
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Marktplatz,",
+      "start": 0.96,
+      "end": 2.081,
+      "score": 0.604
+    },
+    {
+      "word": "Mittagsstunde.",
+      "start": 2.101,
+      "end": 3.562,
+      "score": 0.84
+    },
+    {
+      "word": "Hundert",
+      "start": 3.662,
+      "end": 4.022,
+      "score": 0.882
+    },
+    {
+      "word": "Stimmen,",
+      "start": 4.062,
+      "end": 4.802,
+      "score": 0.861
+    },
+    {
+      "word": "der",
+      "start": 4.822,
+      "end": 4.942,
+      "score": 0.964
+    },
+    {
+      "word": "Geruch",
+      "start": 4.982,
+      "end": 5.403,
+      "score": 0.972
+    },
+    {
+      "word": "von",
+      "start": 5.443,
+      "end": 5.623,
+      "score": 0.944
+    },
+    {
+      "word": "gebratenem",
+      "start": 5.643,
+      "end": 6.343,
+      "score": 0.889
+    },
+    {
+      "word": "Fleisch.",
+      "start": 6.403,
+      "end": 7.804,
+      "score": 0.835
+    },
+    {
+      "word": "Diesmal",
+      "start": 7.844,
+      "end": 8.264,
+      "score": 0.875
+    },
+    {
+      "word": "klemme",
+      "start": 8.304,
+      "end": 8.484,
+      "score": 0.707
+    },
+    {
+      "word": "ich",
+      "start": 8.504,
+      "end": 8.624,
+      "score": 0.846
+    },
+    {
+      "word": "den",
+      "start": 8.664,
+      "end": 8.784,
+      "score": 0.935
+    },
+    {
+      "word": "Beutel",
+      "start": 8.804,
+      "end": 9.185,
+      "score": 0.821
+    },
+    {
+      "word": "fest",
+      "start": 9.225,
+      "end": 9.465,
+      "score": 0.977
+    },
+    {
+      "word": "unter",
+      "start": 9.485,
+      "end": 9.685,
+      "score": 0.856
+    },
+    {
+      "word": "dem",
+      "start": 9.705,
+      "end": 9.845,
+      "score": 0.928
+    },
+    {
+      "word": "Arm.",
+      "start": 9.885,
+      "end": 11.306,
+      "score": 0.885
+    },
+    {
+      "word": "Nicht",
+      "start": 11.346,
+      "end": 11.626,
+      "score": 0.913
+    },
+    {
+      "word": "fest",
+      "start": 11.666,
+      "end": 11.926,
+      "score": 0.974
+    },
+    {
+      "word": "genug.",
+      "start": 11.966,
+      "end": 13.447,
+      "score": 0.959
+    },
+    {
+      "word": "Ein",
+      "start": 13.487,
+      "end": 13.847,
+      "score": 0.74
+    },
+    {
+      "word": "Ellenbogen",
+      "start": 13.907,
+      "end": 14.467,
+      "score": 0.88
+    },
+    {
+      "word": "in",
+      "start": 14.487,
+      "end": 14.567,
+      "score": 0.847
+    },
+    {
+      "word": "die",
+      "start": 14.607,
+      "end": 14.707,
+      "score": 0.883
+    },
+    {
+      "word": "Seite,",
+      "start": 14.747,
+      "end": 15.348,
+      "score": 0.966
+    },
+    {
+      "word": "eine",
+      "start": 15.368,
+      "end": 15.528,
+      "score": 0.94
+    },
+    {
+      "word": "Drehung",
+      "start": 15.588,
+      "end": 16.668,
+      "score": 0.879
+    },
+    {
+      "word": "—",
+      "start": 16.688,
+      "end": 16.708,
+      "score": 0.975
+    },
+    {
+      "word": "und",
+      "start": 16.728,
+      "end": 17.008,
+      "score": 0.84
+    },
+    {
+      "word": "er",
+      "start": 17.068,
+      "end": 17.208,
+      "score": 0.9
+    },
+    {
+      "word": "ist",
+      "start": 17.248,
+      "end": 17.429,
+      "score": 0.952
+    },
+    {
+      "word": "schon",
+      "start": 17.469,
+      "end": 17.749,
+      "score": 0.889
+    },
+    {
+      "word": "drei",
+      "start": 17.769,
+      "end": 18.029,
+      "score": 0.955
+    },
+    {
+      "word": "Schritte",
+      "start": 18.069,
+      "end": 18.469,
+      "score": 0.827
+    },
+    {
+      "word": "fort,",
+      "start": 18.529,
+      "end": 18.869,
+      "score": 0.856
+    },
+    {
+      "word": "ehe",
+      "start": 18.929,
+      "end": 19.069,
+      "score": 0.765
+    },
+    {
+      "word": "ich",
+      "start": 19.089,
+      "end": 19.169,
+      "score": 0.84
+    },
+    {
+      "word": "mein",
+      "start": 19.229,
+      "end": 19.43,
+      "score": 0.498
+    },
+    {
+      "word": "Stolpern",
+      "start": 19.45,
+      "end": 19.83,
+      "score": 0.737
+    },
+    {
+      "word": "abgefangen",
+      "start": 19.85,
+      "end": 20.27,
+      "score": 0.858
+    },
+    {
+      "word": "habe.",
+      "start": 20.29,
+      "end": 21.931,
+      "score": 0.936
+    },
+    {
+      "word": "Einmal",
+      "start": 21.971,
+      "end": 22.391,
+      "score": 0.893
+    },
+    {
+      "word": "dreht",
+      "start": 22.411,
+      "end": 22.591,
+      "score": 0.798
+    },
+    {
+      "word": "er",
+      "start": 22.631,
+      "end": 22.731,
+      "score": 0.638
+    },
+    {
+      "word": "sich",
+      "start": 22.751,
+      "end": 22.911,
+      "score": 0.858
+    },
+    {
+      "word": "um.",
+      "start": 22.931,
+      "end": 23.732,
+      "score": 0.697
+    },
+    {
+      "word": "Sieht",
+      "start": 23.752,
+      "end": 23.952,
+      "score": 0.898
+    },
+    {
+      "word": "mich",
+      "start": 23.992,
+      "end": 24.192,
+      "score": 0.843
+    },
+    {
+      "word": "an.",
+      "start": 24.232,
+      "end": 25.272,
+      "score": 0.725
+    },
+    {
+      "word": "Und",
+      "start": 25.312,
+      "end": 25.653,
+      "score": 0.844
+    },
+    {
+      "word": "zwinkert.",
+      "start": 25.693,
+      "end": 27.694,
+      "score": 0.705
+    },
+    {
+      "word": "Helles",
+      "start": 27.714,
+      "end": 28.174,
+      "score": 0.82
+    },
+    {
+      "word": "Tageslicht,",
+      "start": 28.214,
+      "end": 29.054,
+      "score": 0.758
+    },
+    {
+      "word": "hundert",
+      "start": 29.154,
+      "end": 29.555,
+      "score": 0.877
+    },
+    {
+      "word": "Zeugen.",
+      "start": 29.575,
+      "end": 30.775,
+      "score": 0.955
+    },
+    {
+      "word": "Nicht",
+      "start": 30.795,
+      "end": 31.055,
+      "score": 0.9
+    },
+    {
+      "word": "einmal",
+      "start": 31.075,
+      "end": 31.375,
+      "score": 0.866
+    },
+    {
+      "word": "die",
+      "start": 31.395,
+      "end": 31.575,
+      "score": 0.695
+    },
+    {
+      "word": "Mühe",
+      "start": 31.616,
+      "end": 31.876,
+      "score": 0.759
+    },
+    {
+      "word": "macht",
+      "start": 31.916,
+      "end": 32.116,
+      "score": 0.967
+    },
+    {
+      "word": "er",
+      "start": 32.156,
+      "end": 32.236,
+      "score": 0.835
+    },
+    {
+      "word": "sich,",
+      "start": 32.256,
+      "end": 32.436,
+      "score": 0.942
+    },
+    {
+      "word": "sein",
+      "start": 32.456,
+      "end": 32.616,
+      "score": 0.729
+    },
+    {
+      "word": "Gesicht",
+      "start": 32.656,
+      "end": 32.976,
+      "score": 0.884
+    },
+    {
+      "word": "zu",
+      "start": 32.996,
+      "end": 33.096,
+      "score": 0.878
+    },
+    {
+      "word": "verbergen.",
+      "start": 33.116,
+      "end": 35.037,
+      "score": 0.947
+    },
+    {
+      "word": "Vor",
+      "start": 35.077,
+      "end": 35.297,
+      "score": 0.751
+    },
+    {
+      "word": "Wut",
+      "start": 35.317,
+      "end": 35.617,
+      "score": 0.814
+    },
+    {
+      "word": "bin",
+      "start": 35.637,
+      "end": 35.758,
+      "score": 0.687
+    },
+    {
+      "word": "ich",
+      "start": 35.778,
+      "end": 35.898,
+      "score": 0.778
+    },
+    {
+      "word": "wie",
+      "start": 35.938,
+      "end": 36.118,
+      "score": 0.717
+    },
+    {
+      "word": "versteinert.",
+      "start": 36.158,
+      "end": 37.719,
+      "score": 0.703
+    },
+    {
+      "word": "Er",
+      "start": 37.759,
+      "end": 37.879,
+      "score": 0.854
+    },
+    {
+      "word": "kennt",
+      "start": 37.919,
+      "end": 38.179,
+      "score": 0.864
+    },
+    {
+      "word": "mich.",
+      "start": 38.219,
+      "end": 38.979,
+      "score": 0.84
+    },
+    {
+      "word": "Er",
+      "start": 38.999,
+      "end": 39.099,
+      "score": 0.895
+    },
+    {
+      "word": "weiß",
+      "start": 39.119,
+      "end": 39.379,
+      "score": 0.959
+    },
+    {
+      "word": "genau,",
+      "start": 39.439,
+      "end": 39.84,
+      "score": 0.908
+    },
+    {
+      "word": "wann",
+      "start": 39.86,
+      "end": 40.04,
+      "score": 0.934
+    },
+    {
+      "word": "ich",
+      "start": 40.08,
+      "end": 40.22,
+      "score": 0.892
+    },
+    {
+      "word": "komme.",
+      "start": 40.24,
+      "end": 40.42,
+      "score": 0.947
+    }
+  ]
+}

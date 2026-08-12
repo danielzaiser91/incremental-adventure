@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.583,
+      "end": 2.15,
+      "text": "\"Meinetwegen.",
+      "words": [
+        {
+          "word": "\"Meinetwegen.",
+          "start": 0.583,
+          "end": 2.15,
+          "score": 0.757
+        }
+      ]
+    },
+    {
+      "start": 2.19,
+      "end": 3.978,
+      "text": "Ich frage nochmal, wenn du bereit bist.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 2.19,
+          "end": 2.35,
+          "score": 0.846
+        },
+        {
+          "word": "frage",
+          "start": 2.37,
+          "end": 2.652,
+          "score": 0.83
+        },
+        {
+          "word": "nochmal,",
+          "start": 2.672,
+          "end": 3.234,
+          "score": 0.752
+        },
+        {
+          "word": "wenn",
+          "start": 3.254,
+          "end": 3.355,
+          "score": 0.721
+        },
+        {
+          "word": "du",
+          "start": 3.375,
+          "end": 3.516,
+          "score": 0.411
+        },
+        {
+          "word": "bereit",
+          "start": 3.536,
+          "end": 3.777,
+          "score": 0.609
+        },
+        {
+          "word": "bist.\"",
+          "start": 3.817,
+          "end": 3.978,
+          "score": 0.291
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Meinetwegen.",
+      "start": 0.583,
+      "end": 2.15,
+      "score": 0.757
+    },
+    {
+      "word": "Ich",
+      "start": 2.19,
+      "end": 2.35,
+      "score": 0.846
+    },
+    {
+      "word": "frage",
+      "start": 2.37,
+      "end": 2.652,
+      "score": 0.83
+    },
+    {
+      "word": "nochmal,",
+      "start": 2.672,
+      "end": 3.234,
+      "score": 0.752
+    },
+    {
+      "word": "wenn",
+      "start": 3.254,
+      "end": 3.355,
+      "score": 0.721
+    },
+    {
+      "word": "du",
+      "start": 3.375,
+      "end": 3.516,
+      "score": 0.411
+    },
+    {
+      "word": "bereit",
+      "start": 3.536,
+      "end": 3.777,
+      "score": 0.609
+    },
+    {
+      "word": "bist.\"",
+      "start": 3.817,
+      "end": 3.978,
+      "score": 0.291
+    }
+  ]
+}

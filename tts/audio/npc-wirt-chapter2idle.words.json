@@ -1,0 +1,248 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 5.855,
+      "text": "\"Besser, seit du angefangen hast, die Räuber dort draußen auszudünnen\", sagt er trocken.",
+      "words": [
+        {
+          "word": "\"Besser,",
+          "start": 0.421,
+          "end": 0.942,
+          "score": 0.907
+        },
+        {
+          "word": "seit",
+          "start": 0.963,
+          "end": 1.143,
+          "score": 0.79
+        },
+        {
+          "word": "du",
+          "start": 1.163,
+          "end": 1.323,
+          "score": 0.581
+        },
+        {
+          "word": "angefangen",
+          "start": 1.364,
+          "end": 1.865,
+          "score": 0.8
+        },
+        {
+          "word": "hast,",
+          "start": 1.885,
+          "end": 2.126,
+          "score": 0.795
+        },
+        {
+          "word": "die",
+          "start": 2.146,
+          "end": 2.266,
+          "score": 0.816
+        },
+        {
+          "word": "Räuber",
+          "start": 2.306,
+          "end": 2.707,
+          "score": 0.95
+        },
+        {
+          "word": "dort",
+          "start": 2.727,
+          "end": 2.908,
+          "score": 0.89
+        },
+        {
+          "word": "draußen",
+          "start": 2.928,
+          "end": 3.369,
+          "score": 0.886
+        },
+        {
+          "word": "auszudünnen\",",
+          "start": 3.409,
+          "end": 4.492,
+          "score": 0.92
+        },
+        {
+          "word": "sagt",
+          "start": 4.532,
+          "end": 4.732,
+          "score": 0.919
+        },
+        {
+          "word": "er",
+          "start": 4.772,
+          "end": 4.873,
+          "score": 0.933
+        },
+        {
+          "word": "trocken.",
+          "start": 4.913,
+          "end": 5.855,
+          "score": 0.853
+        }
+      ]
+    },
+    {
+      "start": 5.875,
+      "end": 7.279,
+      "text": "\"Die Leute trauen sich wieder raus.\"",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 5.875,
+          "end": 6.016,
+          "score": 0.883
+        },
+        {
+          "word": "Leute",
+          "start": 6.056,
+          "end": 6.337,
+          "score": 0.942
+        },
+        {
+          "word": "trauen",
+          "start": 6.357,
+          "end": 6.617,
+          "score": 0.814
+        },
+        {
+          "word": "sich",
+          "start": 6.657,
+          "end": 6.798,
+          "score": 0.993
+        },
+        {
+          "word": "wieder",
+          "start": 6.838,
+          "end": 6.978,
+          "score": 0.954
+        },
+        {
+          "word": "raus.\"",
+          "start": 7.058,
+          "end": 7.279,
+          "score": 0.674
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Besser,",
+      "start": 0.421,
+      "end": 0.942,
+      "score": 0.907
+    },
+    {
+      "word": "seit",
+      "start": 0.963,
+      "end": 1.143,
+      "score": 0.79
+    },
+    {
+      "word": "du",
+      "start": 1.163,
+      "end": 1.323,
+      "score": 0.581
+    },
+    {
+      "word": "angefangen",
+      "start": 1.364,
+      "end": 1.865,
+      "score": 0.8
+    },
+    {
+      "word": "hast,",
+      "start": 1.885,
+      "end": 2.126,
+      "score": 0.795
+    },
+    {
+      "word": "die",
+      "start": 2.146,
+      "end": 2.266,
+      "score": 0.816
+    },
+    {
+      "word": "Räuber",
+      "start": 2.306,
+      "end": 2.707,
+      "score": 0.95
+    },
+    {
+      "word": "dort",
+      "start": 2.727,
+      "end": 2.908,
+      "score": 0.89
+    },
+    {
+      "word": "draußen",
+      "start": 2.928,
+      "end": 3.369,
+      "score": 0.886
+    },
+    {
+      "word": "auszudünnen\",",
+      "start": 3.409,
+      "end": 4.492,
+      "score": 0.92
+    },
+    {
+      "word": "sagt",
+      "start": 4.532,
+      "end": 4.732,
+      "score": 0.919
+    },
+    {
+      "word": "er",
+      "start": 4.772,
+      "end": 4.873,
+      "score": 0.933
+    },
+    {
+      "word": "trocken.",
+      "start": 4.913,
+      "end": 5.855,
+      "score": 0.853
+    },
+    {
+      "word": "\"Die",
+      "start": 5.875,
+      "end": 6.016,
+      "score": 0.883
+    },
+    {
+      "word": "Leute",
+      "start": 6.056,
+      "end": 6.337,
+      "score": 0.942
+    },
+    {
+      "word": "trauen",
+      "start": 6.357,
+      "end": 6.617,
+      "score": 0.814
+    },
+    {
+      "word": "sich",
+      "start": 6.657,
+      "end": 6.798,
+      "score": 0.993
+    },
+    {
+      "word": "wieder",
+      "start": 6.838,
+      "end": 6.978,
+      "score": 0.954
+    },
+    {
+      "word": "raus.\"",
+      "start": 7.058,
+      "end": 7.279,
+      "score": 0.674
+    }
+  ]
+}

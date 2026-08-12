@@ -1,0 +1,169 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 6.219,
+      "text": "Angenommen: Heute Nacht Wache vor dem Stadttor halten — dann zu Brakka zurückkehren.",
+      "words": [
+        {
+          "word": "Angenommen:",
+          "start": 0.481,
+          "end": 1.866,
+          "score": 0.931
+        },
+        {
+          "word": "Heute",
+          "start": 1.886,
+          "end": 2.207,
+          "score": 0.992
+        },
+        {
+          "word": "Nacht",
+          "start": 2.247,
+          "end": 2.588,
+          "score": 0.939
+        },
+        {
+          "word": "Wache",
+          "start": 2.628,
+          "end": 2.909,
+          "score": 0.955
+        },
+        {
+          "word": "vor",
+          "start": 2.949,
+          "end": 3.069,
+          "score": 0.999
+        },
+        {
+          "word": "dem",
+          "start": 3.109,
+          "end": 3.25,
+          "score": 0.991
+        },
+        {
+          "word": "Stadttor",
+          "start": 3.31,
+          "end": 3.731,
+          "score": 0.912
+        },
+        {
+          "word": "halten",
+          "start": 3.771,
+          "end": 4.052,
+          "score": 0.954
+        },
+        {
+          "word": "—",
+          "start": 4.734,
+          "end": 4.754,
+          "score": 0.132
+        },
+        {
+          "word": "dann",
+          "start": 4.775,
+          "end": 5.075,
+          "score": 0.984
+        },
+        {
+          "word": "zu",
+          "start": 5.096,
+          "end": 5.256,
+          "score": 0.996
+        },
+        {
+          "word": "Brakka",
+          "start": 5.296,
+          "end": 5.677,
+          "score": 0.82
+        },
+        {
+          "word": "zurückkehren.",
+          "start": 5.717,
+          "end": 6.219,
+          "score": 0.907
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Angenommen:",
+      "start": 0.481,
+      "end": 1.866,
+      "score": 0.931
+    },
+    {
+      "word": "Heute",
+      "start": 1.886,
+      "end": 2.207,
+      "score": 0.992
+    },
+    {
+      "word": "Nacht",
+      "start": 2.247,
+      "end": 2.588,
+      "score": 0.939
+    },
+    {
+      "word": "Wache",
+      "start": 2.628,
+      "end": 2.909,
+      "score": 0.955
+    },
+    {
+      "word": "vor",
+      "start": 2.949,
+      "end": 3.069,
+      "score": 0.999
+    },
+    {
+      "word": "dem",
+      "start": 3.109,
+      "end": 3.25,
+      "score": 0.991
+    },
+    {
+      "word": "Stadttor",
+      "start": 3.31,
+      "end": 3.731,
+      "score": 0.912
+    },
+    {
+      "word": "halten",
+      "start": 3.771,
+      "end": 4.052,
+      "score": 0.954
+    },
+    {
+      "word": "—",
+      "start": 4.734,
+      "end": 4.754,
+      "score": 0.132
+    },
+    {
+      "word": "dann",
+      "start": 4.775,
+      "end": 5.075,
+      "score": 0.984
+    },
+    {
+      "word": "zu",
+      "start": 5.096,
+      "end": 5.256,
+      "score": 0.996
+    },
+    {
+      "word": "Brakka",
+      "start": 5.296,
+      "end": 5.677,
+      "score": 0.82
+    },
+    {
+      "word": "zurückkehren.",
+      "start": 5.717,
+      "end": 6.219,
+      "score": 0.907
+    }
+  ]
+}

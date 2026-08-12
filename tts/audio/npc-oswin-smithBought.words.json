@@ -1,0 +1,214 @@
+{
+  "segments": [
+    {
+      "start": 0.601,
+      "end": 3.547,
+      "text": "\"Schön\", sagt Oswin.",
+      "words": [
+        {
+          "word": "\"Schön\",",
+          "start": 0.601,
+          "end": 1.823,
+          "score": 0.796
+        },
+        {
+          "word": "sagt",
+          "start": 1.884,
+          "end": 2.164,
+          "score": 0.965
+        },
+        {
+          "word": "Oswin.",
+          "start": 2.224,
+          "end": 3.547,
+          "score": 0.836
+        }
+      ]
+    },
+    {
+      "start": 3.567,
+      "end": 6.532,
+      "text": "\"Hast du jetzt eine Schmiede.\"",
+      "words": [
+        {
+          "word": "\"Hast",
+          "start": 3.567,
+          "end": 3.827,
+          "score": 0.849
+        },
+        {
+          "word": "du",
+          "start": 3.847,
+          "end": 4.028,
+          "score": 0.74
+        },
+        {
+          "word": "jetzt",
+          "start": 4.048,
+          "end": 4.408,
+          "score": 0.949
+        },
+        {
+          "word": "eine",
+          "start": 4.448,
+          "end": 4.689,
+          "score": 0.844
+        },
+        {
+          "word": "Schmiede.\"",
+          "start": 4.749,
+          "end": 6.532,
+          "score": 0.832
+        }
+      ]
+    },
+    {
+      "start": 6.552,
+      "end": 8.596,
+      "text": "Eine weitere Pause.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 6.552,
+          "end": 6.773,
+          "score": 0.96
+        },
+        {
+          "word": "weitere",
+          "start": 6.813,
+          "end": 7.214,
+          "score": 0.951
+        },
+        {
+          "word": "Pause.",
+          "start": 7.254,
+          "end": 8.596,
+          "score": 0.987
+        }
+      ]
+    },
+    {
+      "start": 8.616,
+      "end": 10.019,
+      "text": "\"Du wirst es brauchen.\"",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 8.616,
+          "end": 8.837,
+          "score": 0.76
+        },
+        {
+          "word": "wirst",
+          "start": 8.877,
+          "end": 9.177,
+          "score": 0.774
+        },
+        {
+          "word": "es",
+          "start": 9.217,
+          "end": 9.458,
+          "score": 0.911
+        },
+        {
+          "word": "brauchen.\"",
+          "start": 9.518,
+          "end": 10.019,
+          "score": 0.637
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Schön\",",
+      "start": 0.601,
+      "end": 1.823,
+      "score": 0.796
+    },
+    {
+      "word": "sagt",
+      "start": 1.884,
+      "end": 2.164,
+      "score": 0.965
+    },
+    {
+      "word": "Oswin.",
+      "start": 2.224,
+      "end": 3.547,
+      "score": 0.836
+    },
+    {
+      "word": "\"Hast",
+      "start": 3.567,
+      "end": 3.827,
+      "score": 0.849
+    },
+    {
+      "word": "du",
+      "start": 3.847,
+      "end": 4.028,
+      "score": 0.74
+    },
+    {
+      "word": "jetzt",
+      "start": 4.048,
+      "end": 4.408,
+      "score": 0.949
+    },
+    {
+      "word": "eine",
+      "start": 4.448,
+      "end": 4.689,
+      "score": 0.844
+    },
+    {
+      "word": "Schmiede.\"",
+      "start": 4.749,
+      "end": 6.532,
+      "score": 0.832
+    },
+    {
+      "word": "Eine",
+      "start": 6.552,
+      "end": 6.773,
+      "score": 0.96
+    },
+    {
+      "word": "weitere",
+      "start": 6.813,
+      "end": 7.214,
+      "score": 0.951
+    },
+    {
+      "word": "Pause.",
+      "start": 7.254,
+      "end": 8.596,
+      "score": 0.987
+    },
+    {
+      "word": "\"Du",
+      "start": 8.616,
+      "end": 8.837,
+      "score": 0.76
+    },
+    {
+      "word": "wirst",
+      "start": 8.877,
+      "end": 9.177,
+      "score": 0.774
+    },
+    {
+      "word": "es",
+      "start": 9.217,
+      "end": 9.458,
+      "score": 0.911
+    },
+    {
+      "word": "brauchen.\"",
+      "start": 9.518,
+      "end": 10.019,
+      "score": 0.637
+    }
+  ]
+}

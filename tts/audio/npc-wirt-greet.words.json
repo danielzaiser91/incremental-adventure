@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 4.092,
+      "text": "Korbin wischt ein Glas trocken und nickt mir zu.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.401,
+          "end": 0.782,
+          "score": 0.811
+        },
+        {
+          "word": "wischt",
+          "start": 0.822,
+          "end": 1.063,
+          "score": 0.774
+        },
+        {
+          "word": "ein",
+          "start": 1.103,
+          "end": 1.244,
+          "score": 0.699
+        },
+        {
+          "word": "Glas",
+          "start": 1.284,
+          "end": 1.585,
+          "score": 0.944
+        },
+        {
+          "word": "trocken",
+          "start": 1.645,
+          "end": 2.146,
+          "score": 0.974
+        },
+        {
+          "word": "und",
+          "start": 2.186,
+          "end": 2.407,
+          "score": 0.917
+        },
+        {
+          "word": "nickt",
+          "start": 2.447,
+          "end": 2.648,
+          "score": 0.76
+        },
+        {
+          "word": "mir",
+          "start": 2.688,
+          "end": 2.868,
+          "score": 0.935
+        },
+        {
+          "word": "zu.",
+          "start": 2.909,
+          "end": 4.092,
+          "score": 0.661
+        }
+      ]
+    },
+    {
+      "start": 4.112,
+      "end": 5.596,
+      "text": "\"Setz dich, Fremder.",
+      "words": [
+        {
+          "word": "\"Setz",
+          "start": 4.112,
+          "end": 4.393,
+          "score": 0.858
+        },
+        {
+          "word": "dich,",
+          "start": 4.413,
+          "end": 4.533,
+          "score": 0.774
+        },
+        {
+          "word": "Fremder.",
+          "start": 4.553,
+          "end": 5.596,
+          "score": 0.874
+        }
+      ]
+    },
+    {
+      "start": 5.637,
+      "end": 6.459,
+      "text": "Was kann ich für dich tun?\"",
+      "words": [
+        {
+          "word": "Was",
+          "start": 5.637,
+          "end": 5.757,
+          "score": 0.94
+        },
+        {
+          "word": "kann",
+          "start": 5.797,
+          "end": 5.917,
+          "score": 0.916
+        },
+        {
+          "word": "ich",
+          "start": 5.958,
+          "end": 6.038,
+          "score": 0.832
+        },
+        {
+          "word": "für",
+          "start": 6.078,
+          "end": 6.178,
+          "score": 0.755
+        },
+        {
+          "word": "dich",
+          "start": 6.198,
+          "end": 6.319,
+          "score": 0.74
+        },
+        {
+          "word": "tun?\"",
+          "start": 6.339,
+          "end": 6.459,
+          "score": 0.519
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.401,
+      "end": 0.782,
+      "score": 0.811
+    },
+    {
+      "word": "wischt",
+      "start": 0.822,
+      "end": 1.063,
+      "score": 0.774
+    },
+    {
+      "word": "ein",
+      "start": 1.103,
+      "end": 1.244,
+      "score": 0.699
+    },
+    {
+      "word": "Glas",
+      "start": 1.284,
+      "end": 1.585,
+      "score": 0.944
+    },
+    {
+      "word": "trocken",
+      "start": 1.645,
+      "end": 2.146,
+      "score": 0.974
+    },
+    {
+      "word": "und",
+      "start": 2.186,
+      "end": 2.407,
+      "score": 0.917
+    },
+    {
+      "word": "nickt",
+      "start": 2.447,
+      "end": 2.648,
+      "score": 0.76
+    },
+    {
+      "word": "mir",
+      "start": 2.688,
+      "end": 2.868,
+      "score": 0.935
+    },
+    {
+      "word": "zu.",
+      "start": 2.909,
+      "end": 4.092,
+      "score": 0.661
+    },
+    {
+      "word": "\"Setz",
+      "start": 4.112,
+      "end": 4.393,
+      "score": 0.858
+    },
+    {
+      "word": "dich,",
+      "start": 4.413,
+      "end": 4.533,
+      "score": 0.774
+    },
+    {
+      "word": "Fremder.",
+      "start": 4.553,
+      "end": 5.596,
+      "score": 0.874
+    },
+    {
+      "word": "Was",
+      "start": 5.637,
+      "end": 5.757,
+      "score": 0.94
+    },
+    {
+      "word": "kann",
+      "start": 5.797,
+      "end": 5.917,
+      "score": 0.916
+    },
+    {
+      "word": "ich",
+      "start": 5.958,
+      "end": 6.038,
+      "score": 0.832
+    },
+    {
+      "word": "für",
+      "start": 6.078,
+      "end": 6.178,
+      "score": 0.755
+    },
+    {
+      "word": "dich",
+      "start": 6.198,
+      "end": 6.319,
+      "score": 0.74
+    },
+    {
+      "word": "tun?\"",
+      "start": 6.339,
+      "end": 6.459,
+      "score": 0.519
+    }
+  ]
+}

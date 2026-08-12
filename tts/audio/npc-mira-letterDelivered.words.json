@@ -1,0 +1,322 @@
+{
+  "segments": [
+    {
+      "start": 0.301,
+      "end": 4.268,
+      "text": "Mira lehnt sich zurück, als ich ihr von Brakka berichte.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.301,
+          "end": 0.721,
+          "score": 0.908
+        },
+        {
+          "word": "lehnt",
+          "start": 0.781,
+          "end": 0.982,
+          "score": 0.784
+        },
+        {
+          "word": "sich",
+          "start": 1.022,
+          "end": 1.242,
+          "score": 0.865
+        },
+        {
+          "word": "zurück,",
+          "start": 1.282,
+          "end": 1.743,
+          "score": 0.898
+        },
+        {
+          "word": "als",
+          "start": 1.783,
+          "end": 1.924,
+          "score": 0.952
+        },
+        {
+          "word": "ich",
+          "start": 1.964,
+          "end": 2.084,
+          "score": 0.856
+        },
+        {
+          "word": "ihr",
+          "start": 2.124,
+          "end": 2.244,
+          "score": 0.734
+        },
+        {
+          "word": "von",
+          "start": 2.264,
+          "end": 2.425,
+          "score": 0.994
+        },
+        {
+          "word": "Brakka",
+          "start": 2.465,
+          "end": 2.745,
+          "score": 0.885
+        },
+        {
+          "word": "berichte.",
+          "start": 2.785,
+          "end": 4.268,
+          "score": 0.789
+        }
+      ]
+    },
+    {
+      "start": 4.288,
+      "end": 5.731,
+      "text": "\"Na siehst du.",
+      "words": [
+        {
+          "word": "\"Na",
+          "start": 4.288,
+          "end": 4.549,
+          "score": 0.784
+        },
+        {
+          "word": "siehst",
+          "start": 4.609,
+          "end": 4.969,
+          "score": 0.611
+        },
+        {
+          "word": "du.",
+          "start": 5.009,
+          "end": 5.731,
+          "score": 0.646
+        }
+      ]
+    },
+    {
+      "start": 5.751,
+      "end": 7.494,
+      "text": "Hat doch geklappt.\"",
+      "words": [
+        {
+          "word": "Hat",
+          "start": 5.751,
+          "end": 5.911,
+          "score": 0.883
+        },
+        {
+          "word": "doch",
+          "start": 5.931,
+          "end": 6.112,
+          "score": 0.815
+        },
+        {
+          "word": "geklappt.\"",
+          "start": 6.132,
+          "end": 7.494,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 7.554,
+      "end": 10.34,
+      "text": "Ihr Grinsen wirkt für einen Moment fast aufrichtig.",
+      "words": [
+        {
+          "word": "Ihr",
+          "start": 7.554,
+          "end": 7.775,
+          "score": 0.651
+        },
+        {
+          "word": "Grinsen",
+          "start": 7.815,
+          "end": 8.296,
+          "score": 0.913
+        },
+        {
+          "word": "wirkt",
+          "start": 8.316,
+          "end": 8.536,
+          "score": 0.937
+        },
+        {
+          "word": "für",
+          "start": 8.556,
+          "end": 8.676,
+          "score": 0.969
+        },
+        {
+          "word": "einen",
+          "start": 8.716,
+          "end": 8.857,
+          "score": 0.675
+        },
+        {
+          "word": "Moment",
+          "start": 8.897,
+          "end": 9.378,
+          "score": 0.911
+        },
+        {
+          "word": "fast",
+          "start": 9.418,
+          "end": 9.798,
+          "score": 0.852
+        },
+        {
+          "word": "aufrichtig.",
+          "start": 9.839,
+          "end": 10.34,
+          "score": 0.848
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.301,
+      "end": 0.721,
+      "score": 0.908
+    },
+    {
+      "word": "lehnt",
+      "start": 0.781,
+      "end": 0.982,
+      "score": 0.784
+    },
+    {
+      "word": "sich",
+      "start": 1.022,
+      "end": 1.242,
+      "score": 0.865
+    },
+    {
+      "word": "zurück,",
+      "start": 1.282,
+      "end": 1.743,
+      "score": 0.898
+    },
+    {
+      "word": "als",
+      "start": 1.783,
+      "end": 1.924,
+      "score": 0.952
+    },
+    {
+      "word": "ich",
+      "start": 1.964,
+      "end": 2.084,
+      "score": 0.856
+    },
+    {
+      "word": "ihr",
+      "start": 2.124,
+      "end": 2.244,
+      "score": 0.734
+    },
+    {
+      "word": "von",
+      "start": 2.264,
+      "end": 2.425,
+      "score": 0.994
+    },
+    {
+      "word": "Brakka",
+      "start": 2.465,
+      "end": 2.745,
+      "score": 0.885
+    },
+    {
+      "word": "berichte.",
+      "start": 2.785,
+      "end": 4.268,
+      "score": 0.789
+    },
+    {
+      "word": "\"Na",
+      "start": 4.288,
+      "end": 4.549,
+      "score": 0.784
+    },
+    {
+      "word": "siehst",
+      "start": 4.609,
+      "end": 4.969,
+      "score": 0.611
+    },
+    {
+      "word": "du.",
+      "start": 5.009,
+      "end": 5.731,
+      "score": 0.646
+    },
+    {
+      "word": "Hat",
+      "start": 5.751,
+      "end": 5.911,
+      "score": 0.883
+    },
+    {
+      "word": "doch",
+      "start": 5.931,
+      "end": 6.112,
+      "score": 0.815
+    },
+    {
+      "word": "geklappt.\"",
+      "start": 6.132,
+      "end": 7.494,
+      "score": 0.84
+    },
+    {
+      "word": "Ihr",
+      "start": 7.554,
+      "end": 7.775,
+      "score": 0.651
+    },
+    {
+      "word": "Grinsen",
+      "start": 7.815,
+      "end": 8.296,
+      "score": 0.913
+    },
+    {
+      "word": "wirkt",
+      "start": 8.316,
+      "end": 8.536,
+      "score": 0.937
+    },
+    {
+      "word": "für",
+      "start": 8.556,
+      "end": 8.676,
+      "score": 0.969
+    },
+    {
+      "word": "einen",
+      "start": 8.716,
+      "end": 8.857,
+      "score": 0.675
+    },
+    {
+      "word": "Moment",
+      "start": 8.897,
+      "end": 9.378,
+      "score": 0.911
+    },
+    {
+      "word": "fast",
+      "start": 9.418,
+      "end": 9.798,
+      "score": 0.852
+    },
+    {
+      "word": "aufrichtig.",
+      "start": 9.839,
+      "end": 10.34,
+      "score": 0.848
+    }
+  ]
+}

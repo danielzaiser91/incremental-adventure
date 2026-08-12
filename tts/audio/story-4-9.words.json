@@ -1,0 +1,662 @@
+{
+  "segments": [
+    {
+      "start": 0.58,
+      "end": 2.462,
+      "text": "Alle drei.",
+      "words": [
+        {
+          "word": "Alle",
+          "start": 0.58,
+          "end": 0.801,
+          "score": 0.843
+        },
+        {
+          "word": "drei.",
+          "start": 0.841,
+          "end": 2.462,
+          "score": 0.777
+        }
+      ]
+    },
+    {
+      "start": 2.502,
+      "end": 5.044,
+      "text": "Es hat länger gedauert als gedacht.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 2.502,
+          "end": 2.622,
+          "score": 0.818
+        },
+        {
+          "word": "hat",
+          "start": 2.662,
+          "end": 2.862,
+          "score": 0.965
+        },
+        {
+          "word": "länger",
+          "start": 2.902,
+          "end": 3.163,
+          "score": 0.916
+        },
+        {
+          "word": "gedauert",
+          "start": 3.183,
+          "end": 3.583,
+          "score": 0.932
+        },
+        {
+          "word": "als",
+          "start": 3.623,
+          "end": 3.803,
+          "score": 0.942
+        },
+        {
+          "word": "gedacht.",
+          "start": 3.843,
+          "end": 5.044,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 5.064,
+      "end": 8.947,
+      "text": "Manches hat mich Dinge gekostet, die mir niemand zurückgibt.",
+      "words": [
+        {
+          "word": "Manches",
+          "start": 5.064,
+          "end": 5.424,
+          "score": 0.875
+        },
+        {
+          "word": "hat",
+          "start": 5.444,
+          "end": 5.604,
+          "score": 0.827
+        },
+        {
+          "word": "mich",
+          "start": 5.625,
+          "end": 5.825,
+          "score": 0.941
+        },
+        {
+          "word": "Dinge",
+          "start": 5.845,
+          "end": 6.085,
+          "score": 0.988
+        },
+        {
+          "word": "gekostet,",
+          "start": 6.125,
+          "end": 6.665,
+          "score": 0.869
+        },
+        {
+          "word": "die",
+          "start": 6.685,
+          "end": 6.805,
+          "score": 0.875
+        },
+        {
+          "word": "mir",
+          "start": 6.825,
+          "end": 7.046,
+          "score": 0.953
+        },
+        {
+          "word": "niemand",
+          "start": 7.086,
+          "end": 7.466,
+          "score": 0.854
+        },
+        {
+          "word": "zurückgibt.",
+          "start": 7.506,
+          "end": 8.947,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 8.967,
+      "end": 13.751,
+      "text": "Doch das Netz steht — meines, nicht seines.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 8.967,
+          "end": 9.147,
+          "score": 0.923
+        },
+        {
+          "word": "das",
+          "start": 9.167,
+          "end": 9.428,
+          "score": 0.947
+        },
+        {
+          "word": "Netz",
+          "start": 9.468,
+          "end": 9.708,
+          "score": 0.934
+        },
+        {
+          "word": "steht",
+          "start": 9.748,
+          "end": 10.028,
+          "score": 0.983
+        },
+        {
+          "word": "—",
+          "start": 10.889,
+          "end": 10.909,
+          "score": 0.993
+        },
+        {
+          "word": "meines,",
+          "start": 10.929,
+          "end": 11.809,
+          "score": 0.977
+        },
+        {
+          "word": "nicht",
+          "start": 11.829,
+          "end": 12.07,
+          "score": 0.87
+        },
+        {
+          "word": "seines.",
+          "start": 12.09,
+          "end": 13.751,
+          "score": 0.953
+        }
+      ]
+    },
+    {
+      "start": 13.791,
+      "end": 15.993,
+      "text": "Valdris ist eingekreist.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 13.791,
+          "end": 14.231,
+          "score": 0.839
+        },
+        {
+          "word": "ist",
+          "start": 14.271,
+          "end": 14.552,
+          "score": 0.869
+        },
+        {
+          "word": "eingekreist.",
+          "start": 14.612,
+          "end": 15.993,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 16.013,
+      "end": 17.354,
+      "text": "Nicht mit Waffen.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 16.013,
+          "end": 16.213,
+          "score": 0.805
+        },
+        {
+          "word": "mit",
+          "start": 16.233,
+          "end": 16.373,
+          "score": 0.891
+        },
+        {
+          "word": "Waffen.",
+          "start": 16.413,
+          "end": 17.354,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 17.374,
+      "end": 20.236,
+      "text": "Mit Macht und Bündnissen.",
+      "words": [
+        {
+          "word": "Mit",
+          "start": 17.374,
+          "end": 17.594,
+          "score": 0.842
+        },
+        {
+          "word": "Macht",
+          "start": 17.654,
+          "end": 18.255,
+          "score": 0.942
+        },
+        {
+          "word": "und",
+          "start": 18.295,
+          "end": 18.475,
+          "score": 0.957
+        },
+        {
+          "word": "Bündnissen.",
+          "start": 18.515,
+          "end": 20.236,
+          "score": 0.949
+        }
+      ]
+    },
+    {
+      "start": 20.296,
+      "end": 24.54,
+      "text": "Er kann sich nirgends mehr hinwenden, ohne einen zu verraten, der jetzt zu mir hält.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 20.296,
+          "end": 20.396,
+          "score": 0.777
+        },
+        {
+          "word": "kann",
+          "start": 20.436,
+          "end": 20.617,
+          "score": 0.851
+        },
+        {
+          "word": "sich",
+          "start": 20.637,
+          "end": 20.837,
+          "score": 0.882
+        },
+        {
+          "word": "nirgends",
+          "start": 20.877,
+          "end": 21.257,
+          "score": 0.761
+        },
+        {
+          "word": "mehr",
+          "start": 21.297,
+          "end": 21.457,
+          "score": 0.803
+        },
+        {
+          "word": "hinwenden,",
+          "start": 21.477,
+          "end": 22.258,
+          "score": 0.871
+        },
+        {
+          "word": "ohne",
+          "start": 22.278,
+          "end": 22.538,
+          "score": 0.795
+        },
+        {
+          "word": "einen",
+          "start": 22.578,
+          "end": 22.838,
+          "score": 0.832
+        },
+        {
+          "word": "zu",
+          "start": 22.858,
+          "end": 22.978,
+          "score": 0.758
+        },
+        {
+          "word": "verraten,",
+          "start": 22.998,
+          "end": 23.519,
+          "score": 0.937
+        },
+        {
+          "word": "der",
+          "start": 23.539,
+          "end": 23.699,
+          "score": 0.974
+        },
+        {
+          "word": "jetzt",
+          "start": 23.739,
+          "end": 23.999,
+          "score": 0.952
+        },
+        {
+          "word": "zu",
+          "start": 24.039,
+          "end": 24.159,
+          "score": 0.978
+        },
+        {
+          "word": "mir",
+          "start": 24.199,
+          "end": 24.34,
+          "score": 0.868
+        },
+        {
+          "word": "hält.",
+          "start": 24.38,
+          "end": 24.54,
+          "score": 0.914
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alle",
+      "start": 0.58,
+      "end": 0.801,
+      "score": 0.843
+    },
+    {
+      "word": "drei.",
+      "start": 0.841,
+      "end": 2.462,
+      "score": 0.777
+    },
+    {
+      "word": "Es",
+      "start": 2.502,
+      "end": 2.622,
+      "score": 0.818
+    },
+    {
+      "word": "hat",
+      "start": 2.662,
+      "end": 2.862,
+      "score": 0.965
+    },
+    {
+      "word": "länger",
+      "start": 2.902,
+      "end": 3.163,
+      "score": 0.916
+    },
+    {
+      "word": "gedauert",
+      "start": 3.183,
+      "end": 3.583,
+      "score": 0.932
+    },
+    {
+      "word": "als",
+      "start": 3.623,
+      "end": 3.803,
+      "score": 0.942
+    },
+    {
+      "word": "gedacht.",
+      "start": 3.843,
+      "end": 5.044,
+      "score": 0.84
+    },
+    {
+      "word": "Manches",
+      "start": 5.064,
+      "end": 5.424,
+      "score": 0.875
+    },
+    {
+      "word": "hat",
+      "start": 5.444,
+      "end": 5.604,
+      "score": 0.827
+    },
+    {
+      "word": "mich",
+      "start": 5.625,
+      "end": 5.825,
+      "score": 0.941
+    },
+    {
+      "word": "Dinge",
+      "start": 5.845,
+      "end": 6.085,
+      "score": 0.988
+    },
+    {
+      "word": "gekostet,",
+      "start": 6.125,
+      "end": 6.665,
+      "score": 0.869
+    },
+    {
+      "word": "die",
+      "start": 6.685,
+      "end": 6.805,
+      "score": 0.875
+    },
+    {
+      "word": "mir",
+      "start": 6.825,
+      "end": 7.046,
+      "score": 0.953
+    },
+    {
+      "word": "niemand",
+      "start": 7.086,
+      "end": 7.466,
+      "score": 0.854
+    },
+    {
+      "word": "zurückgibt.",
+      "start": 7.506,
+      "end": 8.947,
+      "score": 0.935
+    },
+    {
+      "word": "Doch",
+      "start": 8.967,
+      "end": 9.147,
+      "score": 0.923
+    },
+    {
+      "word": "das",
+      "start": 9.167,
+      "end": 9.428,
+      "score": 0.947
+    },
+    {
+      "word": "Netz",
+      "start": 9.468,
+      "end": 9.708,
+      "score": 0.934
+    },
+    {
+      "word": "steht",
+      "start": 9.748,
+      "end": 10.028,
+      "score": 0.983
+    },
+    {
+      "word": "—",
+      "start": 10.889,
+      "end": 10.909,
+      "score": 0.993
+    },
+    {
+      "word": "meines,",
+      "start": 10.929,
+      "end": 11.809,
+      "score": 0.977
+    },
+    {
+      "word": "nicht",
+      "start": 11.829,
+      "end": 12.07,
+      "score": 0.87
+    },
+    {
+      "word": "seines.",
+      "start": 12.09,
+      "end": 13.751,
+      "score": 0.953
+    },
+    {
+      "word": "Valdris",
+      "start": 13.791,
+      "end": 14.231,
+      "score": 0.839
+    },
+    {
+      "word": "ist",
+      "start": 14.271,
+      "end": 14.552,
+      "score": 0.869
+    },
+    {
+      "word": "eingekreist.",
+      "start": 14.612,
+      "end": 15.993,
+      "score": 0.899
+    },
+    {
+      "word": "Nicht",
+      "start": 16.013,
+      "end": 16.213,
+      "score": 0.805
+    },
+    {
+      "word": "mit",
+      "start": 16.233,
+      "end": 16.373,
+      "score": 0.891
+    },
+    {
+      "word": "Waffen.",
+      "start": 16.413,
+      "end": 17.354,
+      "score": 0.973
+    },
+    {
+      "word": "Mit",
+      "start": 17.374,
+      "end": 17.594,
+      "score": 0.842
+    },
+    {
+      "word": "Macht",
+      "start": 17.654,
+      "end": 18.255,
+      "score": 0.942
+    },
+    {
+      "word": "und",
+      "start": 18.295,
+      "end": 18.475,
+      "score": 0.957
+    },
+    {
+      "word": "Bündnissen.",
+      "start": 18.515,
+      "end": 20.236,
+      "score": 0.949
+    },
+    {
+      "word": "Er",
+      "start": 20.296,
+      "end": 20.396,
+      "score": 0.777
+    },
+    {
+      "word": "kann",
+      "start": 20.436,
+      "end": 20.617,
+      "score": 0.851
+    },
+    {
+      "word": "sich",
+      "start": 20.637,
+      "end": 20.837,
+      "score": 0.882
+    },
+    {
+      "word": "nirgends",
+      "start": 20.877,
+      "end": 21.257,
+      "score": 0.761
+    },
+    {
+      "word": "mehr",
+      "start": 21.297,
+      "end": 21.457,
+      "score": 0.803
+    },
+    {
+      "word": "hinwenden,",
+      "start": 21.477,
+      "end": 22.258,
+      "score": 0.871
+    },
+    {
+      "word": "ohne",
+      "start": 22.278,
+      "end": 22.538,
+      "score": 0.795
+    },
+    {
+      "word": "einen",
+      "start": 22.578,
+      "end": 22.838,
+      "score": 0.832
+    },
+    {
+      "word": "zu",
+      "start": 22.858,
+      "end": 22.978,
+      "score": 0.758
+    },
+    {
+      "word": "verraten,",
+      "start": 22.998,
+      "end": 23.519,
+      "score": 0.937
+    },
+    {
+      "word": "der",
+      "start": 23.539,
+      "end": 23.699,
+      "score": 0.974
+    },
+    {
+      "word": "jetzt",
+      "start": 23.739,
+      "end": 23.999,
+      "score": 0.952
+    },
+    {
+      "word": "zu",
+      "start": 24.039,
+      "end": 24.159,
+      "score": 0.978
+    },
+    {
+      "word": "mir",
+      "start": 24.199,
+      "end": 24.34,
+      "score": 0.868
+    },
+    {
+      "word": "hält.",
+      "start": 24.38,
+      "end": 24.54,
+      "score": 0.914
+    }
+  ]
+}

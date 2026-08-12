@@ -1,0 +1,291 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 2.865,
+      "text": "Die Kurve flacht sich ab.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.441,
+          "end": 0.621,
+          "score": 0.633
+        },
+        {
+          "word": "Kurve",
+          "start": 0.681,
+          "end": 1.182,
+          "score": 0.791
+        },
+        {
+          "word": "flacht",
+          "start": 1.262,
+          "end": 1.563,
+          "score": 0.878
+        },
+        {
+          "word": "sich",
+          "start": 1.603,
+          "end": 1.823,
+          "score": 0.959
+        },
+        {
+          "word": "ab.",
+          "start": 1.864,
+          "end": 2.865,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 2.885,
+      "end": 7.153,
+      "text": "Aber ich kenne sie jetzt — weiß, wie ich durchkomme.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 2.885,
+          "end": 3.146,
+          "score": 0.868
+        },
+        {
+          "word": "ich",
+          "start": 3.186,
+          "end": 3.386,
+          "score": 0.807
+        },
+        {
+          "word": "kenne",
+          "start": 3.426,
+          "end": 3.707,
+          "score": 0.976
+        },
+        {
+          "word": "sie",
+          "start": 3.727,
+          "end": 3.907,
+          "score": 0.942
+        },
+        {
+          "word": "jetzt",
+          "start": 3.927,
+          "end": 4.088,
+          "score": 0.951
+        },
+        {
+          "word": "—",
+          "start": 4.769,
+          "end": 4.789,
+          "score": 0.904
+        },
+        {
+          "word": "weiß,",
+          "start": 4.809,
+          "end": 5.17,
+          "score": 0.736
+        },
+        {
+          "word": "wie",
+          "start": 5.19,
+          "end": 5.31,
+          "score": 0.924
+        },
+        {
+          "word": "ich",
+          "start": 5.35,
+          "end": 5.571,
+          "score": 0.843
+        },
+        {
+          "word": "durchkomme.",
+          "start": 5.591,
+          "end": 7.153,
+          "score": 0.972
+        }
+      ]
+    },
+    {
+      "start": 7.174,
+      "end": 10.259,
+      "text": "Jeder Rückschlag ist nur der nächste Anlauf.",
+      "words": [
+        {
+          "word": "Jeder",
+          "start": 7.174,
+          "end": 7.554,
+          "score": 0.905
+        },
+        {
+          "word": "Rückschlag",
+          "start": 7.594,
+          "end": 8.476,
+          "score": 0.757
+        },
+        {
+          "word": "ist",
+          "start": 8.516,
+          "end": 8.817,
+          "score": 0.992
+        },
+        {
+          "word": "nur",
+          "start": 8.857,
+          "end": 9.097,
+          "score": 0.961
+        },
+        {
+          "word": "der",
+          "start": 9.117,
+          "end": 9.338,
+          "score": 0.822
+        },
+        {
+          "word": "nächste",
+          "start": 9.378,
+          "end": 9.819,
+          "score": 0.809
+        },
+        {
+          "word": "Anlauf.",
+          "start": 9.859,
+          "end": 10.259,
+          "score": 0.84
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.441,
+      "end": 0.621,
+      "score": 0.633
+    },
+    {
+      "word": "Kurve",
+      "start": 0.681,
+      "end": 1.182,
+      "score": 0.791
+    },
+    {
+      "word": "flacht",
+      "start": 1.262,
+      "end": 1.563,
+      "score": 0.878
+    },
+    {
+      "word": "sich",
+      "start": 1.603,
+      "end": 1.823,
+      "score": 0.959
+    },
+    {
+      "word": "ab.",
+      "start": 1.864,
+      "end": 2.865,
+      "score": 0.957
+    },
+    {
+      "word": "Aber",
+      "start": 2.885,
+      "end": 3.146,
+      "score": 0.868
+    },
+    {
+      "word": "ich",
+      "start": 3.186,
+      "end": 3.386,
+      "score": 0.807
+    },
+    {
+      "word": "kenne",
+      "start": 3.426,
+      "end": 3.707,
+      "score": 0.976
+    },
+    {
+      "word": "sie",
+      "start": 3.727,
+      "end": 3.907,
+      "score": 0.942
+    },
+    {
+      "word": "jetzt",
+      "start": 3.927,
+      "end": 4.088,
+      "score": 0.951
+    },
+    {
+      "word": "—",
+      "start": 4.769,
+      "end": 4.789,
+      "score": 0.904
+    },
+    {
+      "word": "weiß,",
+      "start": 4.809,
+      "end": 5.17,
+      "score": 0.736
+    },
+    {
+      "word": "wie",
+      "start": 5.19,
+      "end": 5.31,
+      "score": 0.924
+    },
+    {
+      "word": "ich",
+      "start": 5.35,
+      "end": 5.571,
+      "score": 0.843
+    },
+    {
+      "word": "durchkomme.",
+      "start": 5.591,
+      "end": 7.153,
+      "score": 0.972
+    },
+    {
+      "word": "Jeder",
+      "start": 7.174,
+      "end": 7.554,
+      "score": 0.905
+    },
+    {
+      "word": "Rückschlag",
+      "start": 7.594,
+      "end": 8.476,
+      "score": 0.757
+    },
+    {
+      "word": "ist",
+      "start": 8.516,
+      "end": 8.817,
+      "score": 0.992
+    },
+    {
+      "word": "nur",
+      "start": 8.857,
+      "end": 9.097,
+      "score": 0.961
+    },
+    {
+      "word": "der",
+      "start": 9.117,
+      "end": 9.338,
+      "score": 0.822
+    },
+    {
+      "word": "nächste",
+      "start": 9.378,
+      "end": 9.819,
+      "score": 0.809
+    },
+    {
+      "word": "Anlauf.",
+      "start": 9.859,
+      "end": 10.259,
+      "score": 0.84
+    }
+  ]
+}

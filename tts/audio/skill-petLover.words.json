@@ -1,0 +1,607 @@
+{
+  "segments": [
+    {
+      "start": 0.58,
+      "end": 4.984,
+      "text": "Das Tier hat mich mehr gelehrt als mancher Mensch.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.58,
+          "end": 0.861,
+          "score": 0.496
+        },
+        {
+          "word": "Tier",
+          "start": 0.881,
+          "end": 1.541,
+          "score": 0.756
+        },
+        {
+          "word": "hat",
+          "start": 1.561,
+          "end": 1.781,
+          "score": 0.88
+        },
+        {
+          "word": "mich",
+          "start": 1.801,
+          "end": 2.142,
+          "score": 0.94
+        },
+        {
+          "word": "mehr",
+          "start": 2.162,
+          "end": 2.402,
+          "score": 0.879
+        },
+        {
+          "word": "gelehrt",
+          "start": 2.442,
+          "end": 2.922,
+          "score": 0.844
+        },
+        {
+          "word": "als",
+          "start": 2.962,
+          "end": 3.242,
+          "score": 0.976
+        },
+        {
+          "word": "mancher",
+          "start": 3.282,
+          "end": 3.643,
+          "score": 0.815
+        },
+        {
+          "word": "Mensch.",
+          "start": 3.683,
+          "end": 4.984,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 5.024,
+      "end": 6.265,
+      "text": "Geduld.",
+      "words": [
+        {
+          "word": "Geduld.",
+          "start": 5.024,
+          "end": 6.265,
+          "score": 0.826
+        }
+      ]
+    },
+    {
+      "start": 6.285,
+      "end": 8.186,
+      "text": "Beständigkeit.",
+      "words": [
+        {
+          "word": "Beständigkeit.",
+          "start": 6.285,
+          "end": 8.186,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 8.206,
+      "end": 13.991,
+      "text": "Vertrauen, das man sich verdienen muss — und das man nicht einfach fordert.",
+      "words": [
+        {
+          "word": "Vertrauen,",
+          "start": 8.206,
+          "end": 8.747,
+          "score": 0.918
+        },
+        {
+          "word": "das",
+          "start": 8.767,
+          "end": 8.927,
+          "score": 0.929
+        },
+        {
+          "word": "man",
+          "start": 8.967,
+          "end": 9.087,
+          "score": 0.911
+        },
+        {
+          "word": "sich",
+          "start": 9.127,
+          "end": 9.327,
+          "score": 0.95
+        },
+        {
+          "word": "verdienen",
+          "start": 9.347,
+          "end": 9.867,
+          "score": 0.891
+        },
+        {
+          "word": "muss",
+          "start": 9.887,
+          "end": 10.068,
+          "score": 0.957
+        },
+        {
+          "word": "—",
+          "start": 10.748,
+          "end": 10.768,
+          "score": 0.636
+        },
+        {
+          "word": "und",
+          "start": 10.788,
+          "end": 10.888,
+          "score": 0.866
+        },
+        {
+          "word": "das",
+          "start": 10.908,
+          "end": 11.068,
+          "score": 0.879
+        },
+        {
+          "word": "man",
+          "start": 11.088,
+          "end": 11.228,
+          "score": 0.973
+        },
+        {
+          "word": "nicht",
+          "start": 11.248,
+          "end": 11.469,
+          "score": 0.93
+        },
+        {
+          "word": "einfach",
+          "start": 11.489,
+          "end": 11.849,
+          "score": 0.819
+        },
+        {
+          "word": "fordert.",
+          "start": 11.909,
+          "end": 13.991,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 14.031,
+      "end": 17.173,
+      "text": "Ich fange an zu verstehen, was es braucht.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 14.031,
+          "end": 14.151,
+          "score": 0.893
+        },
+        {
+          "word": "fange",
+          "start": 14.211,
+          "end": 14.431,
+          "score": 0.867
+        },
+        {
+          "word": "an",
+          "start": 14.471,
+          "end": 14.611,
+          "score": 0.866
+        },
+        {
+          "word": "zu",
+          "start": 14.651,
+          "end": 14.791,
+          "score": 0.948
+        },
+        {
+          "word": "verstehen,",
+          "start": 14.831,
+          "end": 15.372,
+          "score": 0.902
+        },
+        {
+          "word": "was",
+          "start": 15.392,
+          "end": 15.512,
+          "score": 0.851
+        },
+        {
+          "word": "es",
+          "start": 15.572,
+          "end": 15.732,
+          "score": 0.873
+        },
+        {
+          "word": "braucht.",
+          "start": 15.772,
+          "end": 17.173,
+          "score": 0.856
+        }
+      ]
+    },
+    {
+      "start": 17.213,
+      "end": 24.058,
+      "text": "Keine Tricks, keine Befehle — nur Zeit und Aufmerksamkeit.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 17.213,
+          "end": 17.433,
+          "score": 0.882
+        },
+        {
+          "word": "Tricks,",
+          "start": 17.493,
+          "end": 18.694,
+          "score": 0.914
+        },
+        {
+          "word": "keine",
+          "start": 18.714,
+          "end": 18.934,
+          "score": 0.912
+        },
+        {
+          "word": "Befehle",
+          "start": 18.974,
+          "end": 19.415,
+          "score": 0.949
+        },
+        {
+          "word": "—",
+          "start": 20.515,
+          "end": 20.535,
+          "score": 0.511
+        },
+        {
+          "word": "nur",
+          "start": 20.555,
+          "end": 20.896,
+          "score": 0.878
+        },
+        {
+          "word": "Zeit",
+          "start": 20.936,
+          "end": 21.656,
+          "score": 0.782
+        },
+        {
+          "word": "und",
+          "start": 21.676,
+          "end": 21.876,
+          "score": 0.739
+        },
+        {
+          "word": "Aufmerksamkeit.",
+          "start": 21.917,
+          "end": 24.058,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 24.078,
+      "end": 25.859,
+      "text": "Der Rest kommt von selbst.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 24.078,
+          "end": 24.198,
+          "score": 0.802
+        },
+        {
+          "word": "Rest",
+          "start": 24.258,
+          "end": 25.159,
+          "score": 0.662
+        },
+        {
+          "word": "kommt",
+          "start": 25.179,
+          "end": 25.379,
+          "score": 0.385
+        },
+        {
+          "word": "von",
+          "start": 25.419,
+          "end": 25.579,
+          "score": 0.646
+        },
+        {
+          "word": "selbst.",
+          "start": 25.619,
+          "end": 25.859,
+          "score": 0.7
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.58,
+      "end": 0.861,
+      "score": 0.496
+    },
+    {
+      "word": "Tier",
+      "start": 0.881,
+      "end": 1.541,
+      "score": 0.756
+    },
+    {
+      "word": "hat",
+      "start": 1.561,
+      "end": 1.781,
+      "score": 0.88
+    },
+    {
+      "word": "mich",
+      "start": 1.801,
+      "end": 2.142,
+      "score": 0.94
+    },
+    {
+      "word": "mehr",
+      "start": 2.162,
+      "end": 2.402,
+      "score": 0.879
+    },
+    {
+      "word": "gelehrt",
+      "start": 2.442,
+      "end": 2.922,
+      "score": 0.844
+    },
+    {
+      "word": "als",
+      "start": 2.962,
+      "end": 3.242,
+      "score": 0.976
+    },
+    {
+      "word": "mancher",
+      "start": 3.282,
+      "end": 3.643,
+      "score": 0.815
+    },
+    {
+      "word": "Mensch.",
+      "start": 3.683,
+      "end": 4.984,
+      "score": 0.858
+    },
+    {
+      "word": "Geduld.",
+      "start": 5.024,
+      "end": 6.265,
+      "score": 0.826
+    },
+    {
+      "word": "Beständigkeit.",
+      "start": 6.285,
+      "end": 8.186,
+      "score": 0.932
+    },
+    {
+      "word": "Vertrauen,",
+      "start": 8.206,
+      "end": 8.747,
+      "score": 0.918
+    },
+    {
+      "word": "das",
+      "start": 8.767,
+      "end": 8.927,
+      "score": 0.929
+    },
+    {
+      "word": "man",
+      "start": 8.967,
+      "end": 9.087,
+      "score": 0.911
+    },
+    {
+      "word": "sich",
+      "start": 9.127,
+      "end": 9.327,
+      "score": 0.95
+    },
+    {
+      "word": "verdienen",
+      "start": 9.347,
+      "end": 9.867,
+      "score": 0.891
+    },
+    {
+      "word": "muss",
+      "start": 9.887,
+      "end": 10.068,
+      "score": 0.957
+    },
+    {
+      "word": "—",
+      "start": 10.748,
+      "end": 10.768,
+      "score": 0.636
+    },
+    {
+      "word": "und",
+      "start": 10.788,
+      "end": 10.888,
+      "score": 0.866
+    },
+    {
+      "word": "das",
+      "start": 10.908,
+      "end": 11.068,
+      "score": 0.879
+    },
+    {
+      "word": "man",
+      "start": 11.088,
+      "end": 11.228,
+      "score": 0.973
+    },
+    {
+      "word": "nicht",
+      "start": 11.248,
+      "end": 11.469,
+      "score": 0.93
+    },
+    {
+      "word": "einfach",
+      "start": 11.489,
+      "end": 11.849,
+      "score": 0.819
+    },
+    {
+      "word": "fordert.",
+      "start": 11.909,
+      "end": 13.991,
+      "score": 0.924
+    },
+    {
+      "word": "Ich",
+      "start": 14.031,
+      "end": 14.151,
+      "score": 0.893
+    },
+    {
+      "word": "fange",
+      "start": 14.211,
+      "end": 14.431,
+      "score": 0.867
+    },
+    {
+      "word": "an",
+      "start": 14.471,
+      "end": 14.611,
+      "score": 0.866
+    },
+    {
+      "word": "zu",
+      "start": 14.651,
+      "end": 14.791,
+      "score": 0.948
+    },
+    {
+      "word": "verstehen,",
+      "start": 14.831,
+      "end": 15.372,
+      "score": 0.902
+    },
+    {
+      "word": "was",
+      "start": 15.392,
+      "end": 15.512,
+      "score": 0.851
+    },
+    {
+      "word": "es",
+      "start": 15.572,
+      "end": 15.732,
+      "score": 0.873
+    },
+    {
+      "word": "braucht.",
+      "start": 15.772,
+      "end": 17.173,
+      "score": 0.856
+    },
+    {
+      "word": "Keine",
+      "start": 17.213,
+      "end": 17.433,
+      "score": 0.882
+    },
+    {
+      "word": "Tricks,",
+      "start": 17.493,
+      "end": 18.694,
+      "score": 0.914
+    },
+    {
+      "word": "keine",
+      "start": 18.714,
+      "end": 18.934,
+      "score": 0.912
+    },
+    {
+      "word": "Befehle",
+      "start": 18.974,
+      "end": 19.415,
+      "score": 0.949
+    },
+    {
+      "word": "—",
+      "start": 20.515,
+      "end": 20.535,
+      "score": 0.511
+    },
+    {
+      "word": "nur",
+      "start": 20.555,
+      "end": 20.896,
+      "score": 0.878
+    },
+    {
+      "word": "Zeit",
+      "start": 20.936,
+      "end": 21.656,
+      "score": 0.782
+    },
+    {
+      "word": "und",
+      "start": 21.676,
+      "end": 21.876,
+      "score": 0.739
+    },
+    {
+      "word": "Aufmerksamkeit.",
+      "start": 21.917,
+      "end": 24.058,
+      "score": 0.92
+    },
+    {
+      "word": "Der",
+      "start": 24.078,
+      "end": 24.198,
+      "score": 0.802
+    },
+    {
+      "word": "Rest",
+      "start": 24.258,
+      "end": 25.159,
+      "score": 0.662
+    },
+    {
+      "word": "kommt",
+      "start": 25.179,
+      "end": 25.379,
+      "score": 0.385
+    },
+    {
+      "word": "von",
+      "start": 25.419,
+      "end": 25.579,
+      "score": 0.646
+    },
+    {
+      "word": "selbst.",
+      "start": 25.619,
+      "end": 25.859,
+      "score": 0.7
+    }
+  ]
+}

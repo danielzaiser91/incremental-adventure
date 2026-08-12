@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.361,
+      "end": 3.071,
+      "text": "Brakka hebt sein Glas.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.361,
+          "end": 0.923,
+          "score": 0.868
+        },
+        {
+          "word": "hebt",
+          "start": 0.964,
+          "end": 1.305,
+          "score": 0.811
+        },
+        {
+          "word": "sein",
+          "start": 1.325,
+          "end": 1.526,
+          "score": 0.833
+        },
+        {
+          "word": "Glas.",
+          "start": 1.566,
+          "end": 3.071,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 3.091,
+      "end": 5.079,
+      "text": "\"Geh und mach uns stolz, Fremder.\"",
+      "words": [
+        {
+          "word": "\"Geh",
+          "start": 3.091,
+          "end": 3.392,
+          "score": 0.889
+        },
+        {
+          "word": "und",
+          "start": 3.433,
+          "end": 3.633,
+          "score": 0.946
+        },
+        {
+          "word": "mach",
+          "start": 3.673,
+          "end": 3.854,
+          "score": 0.916
+        },
+        {
+          "word": "uns",
+          "start": 3.894,
+          "end": 4.095,
+          "score": 0.973
+        },
+        {
+          "word": "stolz,",
+          "start": 4.135,
+          "end": 4.657,
+          "score": 0.885
+        },
+        {
+          "word": "Fremder.\"",
+          "start": 4.697,
+          "end": 5.079,
+          "score": 0.783
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.361,
+      "end": 0.923,
+      "score": 0.868
+    },
+    {
+      "word": "hebt",
+      "start": 0.964,
+      "end": 1.305,
+      "score": 0.811
+    },
+    {
+      "word": "sein",
+      "start": 1.325,
+      "end": 1.526,
+      "score": 0.833
+    },
+    {
+      "word": "Glas.",
+      "start": 1.566,
+      "end": 3.071,
+      "score": 0.858
+    },
+    {
+      "word": "\"Geh",
+      "start": 3.091,
+      "end": 3.392,
+      "score": 0.889
+    },
+    {
+      "word": "und",
+      "start": 3.433,
+      "end": 3.633,
+      "score": 0.946
+    },
+    {
+      "word": "mach",
+      "start": 3.673,
+      "end": 3.854,
+      "score": 0.916
+    },
+    {
+      "word": "uns",
+      "start": 3.894,
+      "end": 4.095,
+      "score": 0.973
+    },
+    {
+      "word": "stolz,",
+      "start": 4.135,
+      "end": 4.657,
+      "score": 0.885
+    },
+    {
+      "word": "Fremder.\"",
+      "start": 4.697,
+      "end": 5.079,
+      "score": 0.783
+    }
+  ]
+}

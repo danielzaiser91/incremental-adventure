@@ -1,0 +1,305 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 6.168,
+      "text": "Oswin nickt mir kurz zu und senkt die Stimme.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.501,
+          "end": 1.222,
+          "score": 0.815
+        },
+        {
+          "word": "nickt",
+          "start": 1.242,
+          "end": 1.642,
+          "score": 0.88
+        },
+        {
+          "word": "mir",
+          "start": 1.682,
+          "end": 1.923,
+          "score": 0.934
+        },
+        {
+          "word": "kurz",
+          "start": 1.963,
+          "end": 2.563,
+          "score": 0.901
+        },
+        {
+          "word": "zu",
+          "start": 2.623,
+          "end": 3.384,
+          "score": 0.986
+        },
+        {
+          "word": "und",
+          "start": 3.425,
+          "end": 3.745,
+          "score": 0.86
+        },
+        {
+          "word": "senkt",
+          "start": 3.785,
+          "end": 4.266,
+          "score": 0.913
+        },
+        {
+          "word": "die",
+          "start": 4.306,
+          "end": 4.506,
+          "score": 0.845
+        },
+        {
+          "word": "Stimme.",
+          "start": 4.566,
+          "end": 6.168,
+          "score": 0.829
+        }
+      ]
+    },
+    {
+      "start": 6.188,
+      "end": 10.334,
+      "text": "\"Brakka — hast du ihn schon gefunden?\"",
+      "words": [
+        {
+          "word": "\"Brakka",
+          "start": 6.188,
+          "end": 6.909,
+          "score": 0.778
+        },
+        {
+          "word": "—",
+          "start": 7.61,
+          "end": 7.63,
+          "score": 0.98
+        },
+        {
+          "word": "hast",
+          "start": 7.65,
+          "end": 7.87,
+          "score": 0.774
+        },
+        {
+          "word": "du",
+          "start": 7.89,
+          "end": 7.991,
+          "score": 0.76
+        },
+        {
+          "word": "ihn",
+          "start": 8.031,
+          "end": 8.211,
+          "score": 0.721
+        },
+        {
+          "word": "schon",
+          "start": 8.251,
+          "end": 8.471,
+          "score": 0.957
+        },
+        {
+          "word": "gefunden?\"",
+          "start": 8.511,
+          "end": 10.334,
+          "score": 0.974
+        }
+      ]
+    },
+    {
+      "start": 10.374,
+      "end": 11.836,
+      "text": "Er wartet.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 10.374,
+          "end": 10.474,
+          "score": 0.958
+        },
+        {
+          "word": "wartet.",
+          "start": 10.534,
+          "end": 11.836,
+          "score": 0.978
+        }
+      ]
+    },
+    {
+      "start": 11.856,
+      "end": 13.217,
+      "text": "Kein Druck.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 11.856,
+          "end": 12.136,
+          "score": 0.755
+        },
+        {
+          "word": "Druck.",
+          "start": 12.156,
+          "end": 13.217,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 13.258,
+      "end": 14.379,
+      "text": "Nur Geduld.",
+      "words": [
+        {
+          "word": "Nur",
+          "start": 13.258,
+          "end": 13.798,
+          "score": 0.953
+        },
+        {
+          "word": "Geduld.",
+          "start": 13.818,
+          "end": 14.379,
+          "score": 0.705
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.501,
+      "end": 1.222,
+      "score": 0.815
+    },
+    {
+      "word": "nickt",
+      "start": 1.242,
+      "end": 1.642,
+      "score": 0.88
+    },
+    {
+      "word": "mir",
+      "start": 1.682,
+      "end": 1.923,
+      "score": 0.934
+    },
+    {
+      "word": "kurz",
+      "start": 1.963,
+      "end": 2.563,
+      "score": 0.901
+    },
+    {
+      "word": "zu",
+      "start": 2.623,
+      "end": 3.384,
+      "score": 0.986
+    },
+    {
+      "word": "und",
+      "start": 3.425,
+      "end": 3.745,
+      "score": 0.86
+    },
+    {
+      "word": "senkt",
+      "start": 3.785,
+      "end": 4.266,
+      "score": 0.913
+    },
+    {
+      "word": "die",
+      "start": 4.306,
+      "end": 4.506,
+      "score": 0.845
+    },
+    {
+      "word": "Stimme.",
+      "start": 4.566,
+      "end": 6.168,
+      "score": 0.829
+    },
+    {
+      "word": "\"Brakka",
+      "start": 6.188,
+      "end": 6.909,
+      "score": 0.778
+    },
+    {
+      "word": "—",
+      "start": 7.61,
+      "end": 7.63,
+      "score": 0.98
+    },
+    {
+      "word": "hast",
+      "start": 7.65,
+      "end": 7.87,
+      "score": 0.774
+    },
+    {
+      "word": "du",
+      "start": 7.89,
+      "end": 7.991,
+      "score": 0.76
+    },
+    {
+      "word": "ihn",
+      "start": 8.031,
+      "end": 8.211,
+      "score": 0.721
+    },
+    {
+      "word": "schon",
+      "start": 8.251,
+      "end": 8.471,
+      "score": 0.957
+    },
+    {
+      "word": "gefunden?\"",
+      "start": 8.511,
+      "end": 10.334,
+      "score": 0.974
+    },
+    {
+      "word": "Er",
+      "start": 10.374,
+      "end": 10.474,
+      "score": 0.958
+    },
+    {
+      "word": "wartet.",
+      "start": 10.534,
+      "end": 11.836,
+      "score": 0.978
+    },
+    {
+      "word": "Kein",
+      "start": 11.856,
+      "end": 12.136,
+      "score": 0.755
+    },
+    {
+      "word": "Druck.",
+      "start": 12.156,
+      "end": 13.217,
+      "score": 0.85
+    },
+    {
+      "word": "Nur",
+      "start": 13.258,
+      "end": 13.798,
+      "score": 0.953
+    },
+    {
+      "word": "Geduld.",
+      "start": 13.818,
+      "end": 14.379,
+      "score": 0.705
+    }
+  ]
+}

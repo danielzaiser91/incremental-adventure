@@ -540,18 +540,20 @@ function maybeShowStoryDialog(id, onClose) {
 function showStoryEntryDialog(entry, onClose) {
   const rawPages = Array.isArray(entry.text) ? entry.text : [entry.text];
   const pages = splitLongDialogPages(rawPages);
-  const audioSrc = getStoryAudioSrc(entry.id);
   // WICHTIG: synchron aus dem Vorab-Lade-Cache lesen (siehe
   // prefetchAllStoryWords(), main.js) statt hier `await fetch(...)` zu
   // machen. Ein `await` VOR dem ersten `play()` kostet die "echte
   // Nutzerinteraktion", die Browser fürs automatische Abspielen mit Ton
   // verlangen — der Klick auf "Weiter"/"Betreten" landet dann außerhalb der
   // Gesten-Kette, Autoplay wird lautlos vom Browser blockiert (Bug, User-
-  // Feedback 19.07.2026). Ist der Cache für diesen Eintrag ausnahmsweise noch
-  // nicht gefüllt (Eintrag erreicht, bevor der Prefetch fertig ist), fällt
-  // alles auf reinen Text ohne Highlighting zurück — kein Fehler, nur kein
-  // Wort-Highlighting für dieses eine Mal.
+  // Feedback 19.07.2026).
   const words = _storyWordsCache[entry.id] || null;
+  // Audio-Steuerung NUR bei vorhandenen Wort-Zeitstempeln (User-Entscheidung
+  // 12.08.2026): ohne words.json liefe die Wiedergabe unabhängig von den
+  // Dialogseiten durch (kein Seiten-Stopp, kein Seek, kein Highlighting) —
+  // das wirkt wie ein Defekt, nicht wie ein fehlendes Feature. Einträge ohne
+  // Timing-Daten zeigen deshalb gar keine Audio-UI.
+  const audioSrc = words ? getStoryAudioSrc(entry.id) : null;
   const pageWordSlices = words ? sliceWordsIntoPages(words, pages) : null;
 
   let i = 0;
@@ -652,11 +654,14 @@ function bindWordHighlight(slice) {
  * (noch nicht vertonter Eintrag, siehe tts/progress.json).
  */
 function getStoryAudioSrc(id) {
-  return `tts/output/story-${id.replace(/\./g, '-')}.wav`;
+  // tts/audio/ ist das VERÖFFENTLICHTE Verzeichnis (committed, Opus statt
+  // WAV — Umstellung 12.08.2026, siehe tts/publish-audio.js); tts/output/
+  // bleibt die lokale, gitignorierte Werkstatt der Vertonungs-Pipeline.
+  return `tts/audio/story-${id.replace(/\./g, '-')}.opus`;
 }
 
 /** Pfad zu den (eventuell noch nicht vorhandenen) Wort-Zeitstempeln eines
-    Story-Eintrags, siehe tts/align/align.py. */
+    Story-Eintrags, siehe tts/align/align_all.py. */
 function getStoryWordsSrc(id) {
-  return `tts/output/story-${id.replace(/\./g, '-')}.words.json`;
+  return `tts/audio/story-${id.replace(/\./g, '-')}.words.json`;
 }

@@ -1,0 +1,913 @@
+{
+  "segments": [
+    {
+      "start": 1.121,
+      "end": 2.862,
+      "text": "\"Was dich erwartet?\"",
+      "words": [
+        {
+          "word": "\"Was",
+          "start": 1.121,
+          "end": 1.341,
+          "score": 0.872
+        },
+        {
+          "word": "dich",
+          "start": 1.361,
+          "end": 1.601,
+          "score": 0.751
+        },
+        {
+          "word": "erwartet?\"",
+          "start": 1.641,
+          "end": 2.862,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 2.882,
+      "end": 5.063,
+      "text": "Ein kurzes, trockenes Lachen.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 2.882,
+          "end": 3.082,
+          "score": 0.747
+        },
+        {
+          "word": "kurzes,",
+          "start": 3.122,
+          "end": 3.542,
+          "score": 0.889
+        },
+        {
+          "word": "trockenes",
+          "start": 3.582,
+          "end": 4.083,
+          "score": 0.9
+        },
+        {
+          "word": "Lachen.",
+          "start": 4.123,
+          "end": 5.063,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 5.083,
+      "end": 6.064,
+      "text": "\"Aufträge.",
+      "words": [
+        {
+          "word": "\"Aufträge.",
+          "start": 5.083,
+          "end": 6.064,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 6.084,
+      "end": 8.886,
+      "text": "Manche stumpf, manche weniger.\"",
+      "words": [
+        {
+          "word": "Manche",
+          "start": 6.084,
+          "end": 6.384,
+          "score": 0.798
+        },
+        {
+          "word": "stumpf,",
+          "start": 6.444,
+          "end": 7.225,
+          "score": 0.905
+        },
+        {
+          "word": "manche",
+          "start": 7.245,
+          "end": 7.585,
+          "score": 0.752
+        },
+        {
+          "word": "weniger.\"",
+          "start": 7.625,
+          "end": 8.886,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 8.926,
+      "end": 11.467,
+      "text": "\"Respekt kommt nicht mit dem Stempel.",
+      "words": [
+        {
+          "word": "\"Respekt",
+          "start": 8.926,
+          "end": 9.606,
+          "score": 0.856
+        },
+        {
+          "word": "kommt",
+          "start": 9.626,
+          "end": 9.886,
+          "score": 0.953
+        },
+        {
+          "word": "nicht",
+          "start": 9.926,
+          "end": 10.126,
+          "score": 0.895
+        },
+        {
+          "word": "mit",
+          "start": 10.146,
+          "end": 10.246,
+          "score": 0.889
+        },
+        {
+          "word": "dem",
+          "start": 10.287,
+          "end": 10.467,
+          "score": 0.81
+        },
+        {
+          "word": "Stempel.",
+          "start": 10.527,
+          "end": 11.467,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 11.487,
+      "end": 16.871,
+      "text": "Den verdienst du dir Schritt für Schritt — sobald die Leute merken, dass du zurückkommst.\"",
+      "words": [
+        {
+          "word": "Den",
+          "start": 11.487,
+          "end": 11.727,
+          "score": 0.828
+        },
+        {
+          "word": "verdienst",
+          "start": 11.747,
+          "end": 12.128,
+          "score": 0.832
+        },
+        {
+          "word": "du",
+          "start": 12.168,
+          "end": 12.248,
+          "score": 0.487
+        },
+        {
+          "word": "dir",
+          "start": 12.268,
+          "end": 12.508,
+          "score": 0.743
+        },
+        {
+          "word": "Schritt",
+          "start": 12.528,
+          "end": 12.888,
+          "score": 0.871
+        },
+        {
+          "word": "für",
+          "start": 12.908,
+          "end": 13.108,
+          "score": 0.983
+        },
+        {
+          "word": "Schritt",
+          "start": 13.148,
+          "end": 13.428,
+          "score": 0.78
+        },
+        {
+          "word": "—",
+          "start": 13.869,
+          "end": 13.889,
+          "score": 0.872
+        },
+        {
+          "word": "sobald",
+          "start": 13.909,
+          "end": 14.249,
+          "score": 0.823
+        },
+        {
+          "word": "die",
+          "start": 14.289,
+          "end": 14.369,
+          "score": 0.972
+        },
+        {
+          "word": "Leute",
+          "start": 14.409,
+          "end": 14.689,
+          "score": 0.961
+        },
+        {
+          "word": "merken,",
+          "start": 14.709,
+          "end": 15.03,
+          "score": 0.921
+        },
+        {
+          "word": "dass",
+          "start": 15.05,
+          "end": 15.19,
+          "score": 0.795
+        },
+        {
+          "word": "du",
+          "start": 15.21,
+          "end": 15.35,
+          "score": 0.664
+        },
+        {
+          "word": "zurückkommst.\"",
+          "start": 15.39,
+          "end": 16.871,
+          "score": 0.965
+        }
+      ]
+    },
+    {
+      "start": 16.891,
+      "end": 18.212,
+      "text": "\"Fang vorne an.",
+      "words": [
+        {
+          "word": "\"Fang",
+          "start": 16.891,
+          "end": 17.131,
+          "score": 0.781
+        },
+        {
+          "word": "vorne",
+          "start": 17.191,
+          "end": 17.531,
+          "score": 0.862
+        },
+        {
+          "word": "an.",
+          "start": 17.551,
+          "end": 18.212,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 18.232,
+      "end": 20.273,
+      "text": "Der Waffenschmied lässt dich jetzt durch.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 18.232,
+          "end": 18.412,
+          "score": 0.962
+        },
+        {
+          "word": "Waffenschmied",
+          "start": 18.452,
+          "end": 18.992,
+          "score": 0.832
+        },
+        {
+          "word": "lässt",
+          "start": 19.012,
+          "end": 19.172,
+          "score": 0.875
+        },
+        {
+          "word": "dich",
+          "start": 19.192,
+          "end": 19.352,
+          "score": 0.617
+        },
+        {
+          "word": "jetzt",
+          "start": 19.372,
+          "end": 19.592,
+          "score": 0.887
+        },
+        {
+          "word": "durch.",
+          "start": 19.612,
+          "end": 20.273,
+          "score": 0.929
+        }
+      ]
+    },
+    {
+      "start": 20.293,
+      "end": 22.134,
+      "text": "Das Jagdgebiet kennst du schon.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 20.293,
+          "end": 20.413,
+          "score": 0.901
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 20.453,
+          "end": 20.993,
+          "score": 0.847
+        },
+        {
+          "word": "kennst",
+          "start": 21.013,
+          "end": 21.233,
+          "score": 0.7
+        },
+        {
+          "word": "du",
+          "start": 21.253,
+          "end": 21.354,
+          "score": 0.43
+        },
+        {
+          "word": "schon.",
+          "start": 21.374,
+          "end": 22.134,
+          "score": 0.841
+        }
+      ]
+    },
+    {
+      "start": 22.214,
+      "end": 24.035,
+      "text": "Also los.\"",
+      "words": [
+        {
+          "word": "Also",
+          "start": 22.214,
+          "end": 22.554,
+          "score": 0.948
+        },
+        {
+          "word": "los.\"",
+          "start": 22.614,
+          "end": 24.035,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 24.075,
+      "end": 28.458,
+      "text": "Er hebt den Krug — kein Toast, er will einfach trinken.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 24.075,
+          "end": 24.235,
+          "score": 0.902
+        },
+        {
+          "word": "hebt",
+          "start": 24.275,
+          "end": 24.516,
+          "score": 0.893
+        },
+        {
+          "word": "den",
+          "start": 24.556,
+          "end": 24.736,
+          "score": 0.95
+        },
+        {
+          "word": "Krug",
+          "start": 24.776,
+          "end": 24.996,
+          "score": 0.769
+        },
+        {
+          "word": "—",
+          "start": 25.516,
+          "end": 25.536,
+          "score": 0.889
+        },
+        {
+          "word": "kein",
+          "start": 25.556,
+          "end": 25.756,
+          "score": 0.58
+        },
+        {
+          "word": "Toast,",
+          "start": 25.796,
+          "end": 26.417,
+          "score": 0.596
+        },
+        {
+          "word": "er",
+          "start": 26.477,
+          "end": 26.597,
+          "score": 0.568
+        },
+        {
+          "word": "will",
+          "start": 26.617,
+          "end": 26.817,
+          "score": 0.884
+        },
+        {
+          "word": "einfach",
+          "start": 26.837,
+          "end": 27.117,
+          "score": 0.829
+        },
+        {
+          "word": "trinken.",
+          "start": 27.137,
+          "end": 28.458,
+          "score": 0.957
+        }
+      ]
+    },
+    {
+      "start": 28.478,
+      "end": 30.239,
+      "text": "\"Viel Erfolg, Fremder.",
+      "words": [
+        {
+          "word": "\"Viel",
+          "start": 28.478,
+          "end": 28.818,
+          "score": 0.852
+        },
+        {
+          "word": "Erfolg,",
+          "start": 28.858,
+          "end": 29.299,
+          "score": 0.859
+        },
+        {
+          "word": "Fremder.",
+          "start": 29.339,
+          "end": 30.239,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 30.259,
+      "end": 31.24,
+      "text": "Und das mein ich ernst.\"",
+      "words": [
+        {
+          "word": "Und",
+          "start": 30.259,
+          "end": 30.419,
+          "score": 0.806
+        },
+        {
+          "word": "das",
+          "start": 30.459,
+          "end": 30.619,
+          "score": 0.963
+        },
+        {
+          "word": "mein",
+          "start": 30.639,
+          "end": 30.799,
+          "score": 0.353
+        },
+        {
+          "word": "ich",
+          "start": 30.82,
+          "end": 30.98,
+          "score": 0.757
+        },
+        {
+          "word": "ernst.\"",
+          "start": 31.02,
+          "end": 31.24,
+          "score": 0.572
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Was",
+      "start": 1.121,
+      "end": 1.341,
+      "score": 0.872
+    },
+    {
+      "word": "dich",
+      "start": 1.361,
+      "end": 1.601,
+      "score": 0.751
+    },
+    {
+      "word": "erwartet?\"",
+      "start": 1.641,
+      "end": 2.862,
+      "score": 0.936
+    },
+    {
+      "word": "Ein",
+      "start": 2.882,
+      "end": 3.082,
+      "score": 0.747
+    },
+    {
+      "word": "kurzes,",
+      "start": 3.122,
+      "end": 3.542,
+      "score": 0.889
+    },
+    {
+      "word": "trockenes",
+      "start": 3.582,
+      "end": 4.083,
+      "score": 0.9
+    },
+    {
+      "word": "Lachen.",
+      "start": 4.123,
+      "end": 5.063,
+      "score": 0.84
+    },
+    {
+      "word": "\"Aufträge.",
+      "start": 5.083,
+      "end": 6.064,
+      "score": 0.973
+    },
+    {
+      "word": "Manche",
+      "start": 6.084,
+      "end": 6.384,
+      "score": 0.798
+    },
+    {
+      "word": "stumpf,",
+      "start": 6.444,
+      "end": 7.225,
+      "score": 0.905
+    },
+    {
+      "word": "manche",
+      "start": 7.245,
+      "end": 7.585,
+      "score": 0.752
+    },
+    {
+      "word": "weniger.\"",
+      "start": 7.625,
+      "end": 8.886,
+      "score": 0.884
+    },
+    {
+      "word": "\"Respekt",
+      "start": 8.926,
+      "end": 9.606,
+      "score": 0.856
+    },
+    {
+      "word": "kommt",
+      "start": 9.626,
+      "end": 9.886,
+      "score": 0.953
+    },
+    {
+      "word": "nicht",
+      "start": 9.926,
+      "end": 10.126,
+      "score": 0.895
+    },
+    {
+      "word": "mit",
+      "start": 10.146,
+      "end": 10.246,
+      "score": 0.889
+    },
+    {
+      "word": "dem",
+      "start": 10.287,
+      "end": 10.467,
+      "score": 0.81
+    },
+    {
+      "word": "Stempel.",
+      "start": 10.527,
+      "end": 11.467,
+      "score": 0.918
+    },
+    {
+      "word": "Den",
+      "start": 11.487,
+      "end": 11.727,
+      "score": 0.828
+    },
+    {
+      "word": "verdienst",
+      "start": 11.747,
+      "end": 12.128,
+      "score": 0.832
+    },
+    {
+      "word": "du",
+      "start": 12.168,
+      "end": 12.248,
+      "score": 0.487
+    },
+    {
+      "word": "dir",
+      "start": 12.268,
+      "end": 12.508,
+      "score": 0.743
+    },
+    {
+      "word": "Schritt",
+      "start": 12.528,
+      "end": 12.888,
+      "score": 0.871
+    },
+    {
+      "word": "für",
+      "start": 12.908,
+      "end": 13.108,
+      "score": 0.983
+    },
+    {
+      "word": "Schritt",
+      "start": 13.148,
+      "end": 13.428,
+      "score": 0.78
+    },
+    {
+      "word": "—",
+      "start": 13.869,
+      "end": 13.889,
+      "score": 0.872
+    },
+    {
+      "word": "sobald",
+      "start": 13.909,
+      "end": 14.249,
+      "score": 0.823
+    },
+    {
+      "word": "die",
+      "start": 14.289,
+      "end": 14.369,
+      "score": 0.972
+    },
+    {
+      "word": "Leute",
+      "start": 14.409,
+      "end": 14.689,
+      "score": 0.961
+    },
+    {
+      "word": "merken,",
+      "start": 14.709,
+      "end": 15.03,
+      "score": 0.921
+    },
+    {
+      "word": "dass",
+      "start": 15.05,
+      "end": 15.19,
+      "score": 0.795
+    },
+    {
+      "word": "du",
+      "start": 15.21,
+      "end": 15.35,
+      "score": 0.664
+    },
+    {
+      "word": "zurückkommst.\"",
+      "start": 15.39,
+      "end": 16.871,
+      "score": 0.965
+    },
+    {
+      "word": "\"Fang",
+      "start": 16.891,
+      "end": 17.131,
+      "score": 0.781
+    },
+    {
+      "word": "vorne",
+      "start": 17.191,
+      "end": 17.531,
+      "score": 0.862
+    },
+    {
+      "word": "an.",
+      "start": 17.551,
+      "end": 18.212,
+      "score": 0.945
+    },
+    {
+      "word": "Der",
+      "start": 18.232,
+      "end": 18.412,
+      "score": 0.962
+    },
+    {
+      "word": "Waffenschmied",
+      "start": 18.452,
+      "end": 18.992,
+      "score": 0.832
+    },
+    {
+      "word": "lässt",
+      "start": 19.012,
+      "end": 19.172,
+      "score": 0.875
+    },
+    {
+      "word": "dich",
+      "start": 19.192,
+      "end": 19.352,
+      "score": 0.617
+    },
+    {
+      "word": "jetzt",
+      "start": 19.372,
+      "end": 19.592,
+      "score": 0.887
+    },
+    {
+      "word": "durch.",
+      "start": 19.612,
+      "end": 20.273,
+      "score": 0.929
+    },
+    {
+      "word": "Das",
+      "start": 20.293,
+      "end": 20.413,
+      "score": 0.901
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 20.453,
+      "end": 20.993,
+      "score": 0.847
+    },
+    {
+      "word": "kennst",
+      "start": 21.013,
+      "end": 21.233,
+      "score": 0.7
+    },
+    {
+      "word": "du",
+      "start": 21.253,
+      "end": 21.354,
+      "score": 0.43
+    },
+    {
+      "word": "schon.",
+      "start": 21.374,
+      "end": 22.134,
+      "score": 0.841
+    },
+    {
+      "word": "Also",
+      "start": 22.214,
+      "end": 22.554,
+      "score": 0.948
+    },
+    {
+      "word": "los.\"",
+      "start": 22.614,
+      "end": 24.035,
+      "score": 0.936
+    },
+    {
+      "word": "Er",
+      "start": 24.075,
+      "end": 24.235,
+      "score": 0.902
+    },
+    {
+      "word": "hebt",
+      "start": 24.275,
+      "end": 24.516,
+      "score": 0.893
+    },
+    {
+      "word": "den",
+      "start": 24.556,
+      "end": 24.736,
+      "score": 0.95
+    },
+    {
+      "word": "Krug",
+      "start": 24.776,
+      "end": 24.996,
+      "score": 0.769
+    },
+    {
+      "word": "—",
+      "start": 25.516,
+      "end": 25.536,
+      "score": 0.889
+    },
+    {
+      "word": "kein",
+      "start": 25.556,
+      "end": 25.756,
+      "score": 0.58
+    },
+    {
+      "word": "Toast,",
+      "start": 25.796,
+      "end": 26.417,
+      "score": 0.596
+    },
+    {
+      "word": "er",
+      "start": 26.477,
+      "end": 26.597,
+      "score": 0.568
+    },
+    {
+      "word": "will",
+      "start": 26.617,
+      "end": 26.817,
+      "score": 0.884
+    },
+    {
+      "word": "einfach",
+      "start": 26.837,
+      "end": 27.117,
+      "score": 0.829
+    },
+    {
+      "word": "trinken.",
+      "start": 27.137,
+      "end": 28.458,
+      "score": 0.957
+    },
+    {
+      "word": "\"Viel",
+      "start": 28.478,
+      "end": 28.818,
+      "score": 0.852
+    },
+    {
+      "word": "Erfolg,",
+      "start": 28.858,
+      "end": 29.299,
+      "score": 0.859
+    },
+    {
+      "word": "Fremder.",
+      "start": 29.339,
+      "end": 30.239,
+      "score": 0.951
+    },
+    {
+      "word": "Und",
+      "start": 30.259,
+      "end": 30.419,
+      "score": 0.806
+    },
+    {
+      "word": "das",
+      "start": 30.459,
+      "end": 30.619,
+      "score": 0.963
+    },
+    {
+      "word": "mein",
+      "start": 30.639,
+      "end": 30.799,
+      "score": 0.353
+    },
+    {
+      "word": "ich",
+      "start": 30.82,
+      "end": 30.98,
+      "score": 0.757
+    },
+    {
+      "word": "ernst.\"",
+      "start": 31.02,
+      "end": 31.24,
+      "score": 0.572
+    }
+  ]
+}

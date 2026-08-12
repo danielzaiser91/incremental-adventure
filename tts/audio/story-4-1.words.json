@@ -1,0 +1,734 @@
+{
+  "segments": [
+    {
+      "start": 0.58,
+      "end": 2.161,
+      "text": "Velmark.",
+      "words": [
+        {
+          "word": "Velmark.",
+          "start": 0.58,
+          "end": 2.161,
+          "score": 0.879
+        }
+      ]
+    },
+    {
+      "start": 2.201,
+      "end": 5.864,
+      "text": "Größer als Lethkar, lauter dazu.",
+      "words": [
+        {
+          "word": "Größer",
+          "start": 2.201,
+          "end": 2.682,
+          "score": 0.918
+        },
+        {
+          "word": "als",
+          "start": 2.722,
+          "end": 2.902,
+          "score": 0.905
+        },
+        {
+          "word": "Lethkar,",
+          "start": 2.962,
+          "end": 4.143,
+          "score": 0.742
+        },
+        {
+          "word": "lauter",
+          "start": 4.183,
+          "end": 4.563,
+          "score": 0.915
+        },
+        {
+          "word": "dazu.",
+          "start": 4.603,
+          "end": 5.864,
+          "score": 0.993
+        }
+      ]
+    },
+    {
+      "start": 5.884,
+      "end": 12.548,
+      "text": "Mehr Stimmen, mehr Gerüche, mehr Menschen, die nichts voneinander wissen wollen.",
+      "words": [
+        {
+          "word": "Mehr",
+          "start": 5.884,
+          "end": 6.144,
+          "score": 0.841
+        },
+        {
+          "word": "Stimmen,",
+          "start": 6.184,
+          "end": 7.044,
+          "score": 0.924
+        },
+        {
+          "word": "mehr",
+          "start": 7.064,
+          "end": 7.305,
+          "score": 0.804
+        },
+        {
+          "word": "Gerüche,",
+          "start": 7.345,
+          "end": 8.545,
+          "score": 0.876
+        },
+        {
+          "word": "mehr",
+          "start": 8.585,
+          "end": 8.846,
+          "score": 0.837
+        },
+        {
+          "word": "Menschen,",
+          "start": 8.886,
+          "end": 9.306,
+          "score": 0.821
+        },
+        {
+          "word": "die",
+          "start": 9.326,
+          "end": 9.586,
+          "score": 0.81
+        },
+        {
+          "word": "nichts",
+          "start": 9.626,
+          "end": 9.946,
+          "score": 0.752
+        },
+        {
+          "word": "voneinander",
+          "start": 9.966,
+          "end": 10.527,
+          "score": 0.836
+        },
+        {
+          "word": "wissen",
+          "start": 10.547,
+          "end": 10.807,
+          "score": 0.859
+        },
+        {
+          "word": "wollen.",
+          "start": 10.827,
+          "end": 12.548,
+          "score": 0.927
+        }
+      ]
+    },
+    {
+      "start": 12.588,
+      "end": 15.27,
+      "text": "Niemand kennt mich hier.",
+      "words": [
+        {
+          "word": "Niemand",
+          "start": 12.588,
+          "end": 13.028,
+          "score": 0.887
+        },
+        {
+          "word": "kennt",
+          "start": 13.068,
+          "end": 13.328,
+          "score": 0.887
+        },
+        {
+          "word": "mich",
+          "start": 13.348,
+          "end": 13.528,
+          "score": 0.865
+        },
+        {
+          "word": "hier.",
+          "start": 13.548,
+          "end": 15.27,
+          "score": 0.897
+        }
+      ]
+    },
+    {
+      "start": 15.29,
+      "end": 16.63,
+      "text": "Gut so.",
+      "words": [
+        {
+          "word": "Gut",
+          "start": 15.29,
+          "end": 15.49,
+          "score": 0.977
+        },
+        {
+          "word": "so.",
+          "start": 15.51,
+          "end": 16.63,
+          "score": 0.969
+        }
+      ]
+    },
+    {
+      "start": 16.67,
+      "end": 20.153,
+      "text": "Ich kenne hier ebenso wenig jemanden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 16.67,
+          "end": 16.851,
+          "score": 0.834
+        },
+        {
+          "word": "kenne",
+          "start": 16.891,
+          "end": 17.111,
+          "score": 0.951
+        },
+        {
+          "word": "hier",
+          "start": 17.151,
+          "end": 17.371,
+          "score": 0.878
+        },
+        {
+          "word": "ebenso",
+          "start": 17.411,
+          "end": 17.771,
+          "score": 0.879
+        },
+        {
+          "word": "wenig",
+          "start": 17.791,
+          "end": 18.071,
+          "score": 0.781
+        },
+        {
+          "word": "jemanden.",
+          "start": 18.111,
+          "end": 20.153,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 20.193,
+      "end": 27.937,
+      "text": "Zum ersten Mal seit Treutheim bin ich wieder ein Niemand — doch diesmal weiß ich, was das bedeutet.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 20.193,
+          "end": 20.493,
+          "score": 0.965
+        },
+        {
+          "word": "ersten",
+          "start": 20.553,
+          "end": 20.913,
+          "score": 0.903
+        },
+        {
+          "word": "Mal",
+          "start": 20.993,
+          "end": 21.273,
+          "score": 0.869
+        },
+        {
+          "word": "seit",
+          "start": 21.313,
+          "end": 21.533,
+          "score": 0.97
+        },
+        {
+          "word": "Treutheim",
+          "start": 21.573,
+          "end": 22.474,
+          "score": 0.822
+        },
+        {
+          "word": "bin",
+          "start": 22.494,
+          "end": 22.594,
+          "score": 0.97
+        },
+        {
+          "word": "ich",
+          "start": 22.634,
+          "end": 22.774,
+          "score": 0.778
+        },
+        {
+          "word": "wieder",
+          "start": 22.794,
+          "end": 22.994,
+          "score": 0.912
+        },
+        {
+          "word": "ein",
+          "start": 23.034,
+          "end": 23.254,
+          "score": 0.938
+        },
+        {
+          "word": "Niemand",
+          "start": 23.295,
+          "end": 24.695,
+          "score": 0.849
+        },
+        {
+          "word": "—",
+          "start": 24.715,
+          "end": 24.735,
+          "score": 0.973
+        },
+        {
+          "word": "doch",
+          "start": 24.755,
+          "end": 24.976,
+          "score": 0.911
+        },
+        {
+          "word": "diesmal",
+          "start": 25.016,
+          "end": 25.556,
+          "score": 0.837
+        },
+        {
+          "word": "weiß",
+          "start": 25.596,
+          "end": 25.856,
+          "score": 0.979
+        },
+        {
+          "word": "ich,",
+          "start": 25.876,
+          "end": 26.036,
+          "score": 0.96
+        },
+        {
+          "word": "was",
+          "start": 26.076,
+          "end": 26.216,
+          "score": 0.914
+        },
+        {
+          "word": "das",
+          "start": 26.256,
+          "end": 26.456,
+          "score": 0.949
+        },
+        {
+          "word": "bedeutet.",
+          "start": 26.477,
+          "end": 27.937,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 27.977,
+      "end": 31.72,
+      "text": "Es bedeutet: Ich darf wählen, wer ich hier werde.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 27.977,
+          "end": 28.138,
+          "score": 0.945
+        },
+        {
+          "word": "bedeutet:",
+          "start": 28.178,
+          "end": 29.598,
+          "score": 0.871
+        },
+        {
+          "word": "Ich",
+          "start": 29.638,
+          "end": 29.879,
+          "score": 0.672
+        },
+        {
+          "word": "darf",
+          "start": 29.919,
+          "end": 30.279,
+          "score": 0.94
+        },
+        {
+          "word": "wählen,",
+          "start": 30.319,
+          "end": 30.799,
+          "score": 0.827
+        },
+        {
+          "word": "wer",
+          "start": 30.839,
+          "end": 31.039,
+          "score": 0.851
+        },
+        {
+          "word": "ich",
+          "start": 31.059,
+          "end": 31.219,
+          "score": 0.918
+        },
+        {
+          "word": "hier",
+          "start": 31.259,
+          "end": 31.46,
+          "score": 0.935
+        },
+        {
+          "word": "werde.",
+          "start": 31.5,
+          "end": 31.72,
+          "score": 0.711
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Velmark.",
+      "start": 0.58,
+      "end": 2.161,
+      "score": 0.879
+    },
+    {
+      "word": "Größer",
+      "start": 2.201,
+      "end": 2.682,
+      "score": 0.918
+    },
+    {
+      "word": "als",
+      "start": 2.722,
+      "end": 2.902,
+      "score": 0.905
+    },
+    {
+      "word": "Lethkar,",
+      "start": 2.962,
+      "end": 4.143,
+      "score": 0.742
+    },
+    {
+      "word": "lauter",
+      "start": 4.183,
+      "end": 4.563,
+      "score": 0.915
+    },
+    {
+      "word": "dazu.",
+      "start": 4.603,
+      "end": 5.864,
+      "score": 0.993
+    },
+    {
+      "word": "Mehr",
+      "start": 5.884,
+      "end": 6.144,
+      "score": 0.841
+    },
+    {
+      "word": "Stimmen,",
+      "start": 6.184,
+      "end": 7.044,
+      "score": 0.924
+    },
+    {
+      "word": "mehr",
+      "start": 7.064,
+      "end": 7.305,
+      "score": 0.804
+    },
+    {
+      "word": "Gerüche,",
+      "start": 7.345,
+      "end": 8.545,
+      "score": 0.876
+    },
+    {
+      "word": "mehr",
+      "start": 8.585,
+      "end": 8.846,
+      "score": 0.837
+    },
+    {
+      "word": "Menschen,",
+      "start": 8.886,
+      "end": 9.306,
+      "score": 0.821
+    },
+    {
+      "word": "die",
+      "start": 9.326,
+      "end": 9.586,
+      "score": 0.81
+    },
+    {
+      "word": "nichts",
+      "start": 9.626,
+      "end": 9.946,
+      "score": 0.752
+    },
+    {
+      "word": "voneinander",
+      "start": 9.966,
+      "end": 10.527,
+      "score": 0.836
+    },
+    {
+      "word": "wissen",
+      "start": 10.547,
+      "end": 10.807,
+      "score": 0.859
+    },
+    {
+      "word": "wollen.",
+      "start": 10.827,
+      "end": 12.548,
+      "score": 0.927
+    },
+    {
+      "word": "Niemand",
+      "start": 12.588,
+      "end": 13.028,
+      "score": 0.887
+    },
+    {
+      "word": "kennt",
+      "start": 13.068,
+      "end": 13.328,
+      "score": 0.887
+    },
+    {
+      "word": "mich",
+      "start": 13.348,
+      "end": 13.528,
+      "score": 0.865
+    },
+    {
+      "word": "hier.",
+      "start": 13.548,
+      "end": 15.27,
+      "score": 0.897
+    },
+    {
+      "word": "Gut",
+      "start": 15.29,
+      "end": 15.49,
+      "score": 0.977
+    },
+    {
+      "word": "so.",
+      "start": 15.51,
+      "end": 16.63,
+      "score": 0.969
+    },
+    {
+      "word": "Ich",
+      "start": 16.67,
+      "end": 16.851,
+      "score": 0.834
+    },
+    {
+      "word": "kenne",
+      "start": 16.891,
+      "end": 17.111,
+      "score": 0.951
+    },
+    {
+      "word": "hier",
+      "start": 17.151,
+      "end": 17.371,
+      "score": 0.878
+    },
+    {
+      "word": "ebenso",
+      "start": 17.411,
+      "end": 17.771,
+      "score": 0.879
+    },
+    {
+      "word": "wenig",
+      "start": 17.791,
+      "end": 18.071,
+      "score": 0.781
+    },
+    {
+      "word": "jemanden.",
+      "start": 18.111,
+      "end": 20.153,
+      "score": 0.858
+    },
+    {
+      "word": "Zum",
+      "start": 20.193,
+      "end": 20.493,
+      "score": 0.965
+    },
+    {
+      "word": "ersten",
+      "start": 20.553,
+      "end": 20.913,
+      "score": 0.903
+    },
+    {
+      "word": "Mal",
+      "start": 20.993,
+      "end": 21.273,
+      "score": 0.869
+    },
+    {
+      "word": "seit",
+      "start": 21.313,
+      "end": 21.533,
+      "score": 0.97
+    },
+    {
+      "word": "Treutheim",
+      "start": 21.573,
+      "end": 22.474,
+      "score": 0.822
+    },
+    {
+      "word": "bin",
+      "start": 22.494,
+      "end": 22.594,
+      "score": 0.97
+    },
+    {
+      "word": "ich",
+      "start": 22.634,
+      "end": 22.774,
+      "score": 0.778
+    },
+    {
+      "word": "wieder",
+      "start": 22.794,
+      "end": 22.994,
+      "score": 0.912
+    },
+    {
+      "word": "ein",
+      "start": 23.034,
+      "end": 23.254,
+      "score": 0.938
+    },
+    {
+      "word": "Niemand",
+      "start": 23.295,
+      "end": 24.695,
+      "score": 0.849
+    },
+    {
+      "word": "—",
+      "start": 24.715,
+      "end": 24.735,
+      "score": 0.973
+    },
+    {
+      "word": "doch",
+      "start": 24.755,
+      "end": 24.976,
+      "score": 0.911
+    },
+    {
+      "word": "diesmal",
+      "start": 25.016,
+      "end": 25.556,
+      "score": 0.837
+    },
+    {
+      "word": "weiß",
+      "start": 25.596,
+      "end": 25.856,
+      "score": 0.979
+    },
+    {
+      "word": "ich,",
+      "start": 25.876,
+      "end": 26.036,
+      "score": 0.96
+    },
+    {
+      "word": "was",
+      "start": 26.076,
+      "end": 26.216,
+      "score": 0.914
+    },
+    {
+      "word": "das",
+      "start": 26.256,
+      "end": 26.456,
+      "score": 0.949
+    },
+    {
+      "word": "bedeutet.",
+      "start": 26.477,
+      "end": 27.937,
+      "score": 0.933
+    },
+    {
+      "word": "Es",
+      "start": 27.977,
+      "end": 28.138,
+      "score": 0.945
+    },
+    {
+      "word": "bedeutet:",
+      "start": 28.178,
+      "end": 29.598,
+      "score": 0.871
+    },
+    {
+      "word": "Ich",
+      "start": 29.638,
+      "end": 29.879,
+      "score": 0.672
+    },
+    {
+      "word": "darf",
+      "start": 29.919,
+      "end": 30.279,
+      "score": 0.94
+    },
+    {
+      "word": "wählen,",
+      "start": 30.319,
+      "end": 30.799,
+      "score": 0.827
+    },
+    {
+      "word": "wer",
+      "start": 30.839,
+      "end": 31.039,
+      "score": 0.851
+    },
+    {
+      "word": "ich",
+      "start": 31.059,
+      "end": 31.219,
+      "score": 0.918
+    },
+    {
+      "word": "hier",
+      "start": 31.259,
+      "end": 31.46,
+      "score": 0.935
+    },
+    {
+      "word": "werde.",
+      "start": 31.5,
+      "end": 31.72,
+      "score": 0.711
+    }
+  ]
+}

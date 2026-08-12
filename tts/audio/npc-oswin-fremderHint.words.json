@@ -1,0 +1,609 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 3.502,
+      "text": "Oswin hebt eine Augenbraue.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.44,
+          "end": 1.121,
+          "score": 0.825
+        },
+        {
+          "word": "hebt",
+          "start": 1.161,
+          "end": 1.481,
+          "score": 0.89
+        },
+        {
+          "word": "eine",
+          "start": 1.501,
+          "end": 1.821,
+          "score": 0.939
+        },
+        {
+          "word": "Augenbraue.",
+          "start": 1.861,
+          "end": 3.502,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 3.522,
+      "end": 6.284,
+      "text": "\"Der Mann in der Ecke?\"",
+      "words": [
+        {
+          "word": "\"Der",
+          "start": 3.522,
+          "end": 4.003,
+          "score": 0.96
+        },
+        {
+          "word": "Mann",
+          "start": 4.043,
+          "end": 4.403,
+          "score": 0.899
+        },
+        {
+          "word": "in",
+          "start": 4.443,
+          "end": 4.583,
+          "score": 0.906
+        },
+        {
+          "word": "der",
+          "start": 4.623,
+          "end": 4.843,
+          "score": 0.879
+        },
+        {
+          "word": "Ecke?\"",
+          "start": 4.903,
+          "end": 6.284,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 6.344,
+      "end": 8.586,
+      "text": "Er senkt die Stimme.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 6.344,
+          "end": 6.645,
+          "score": 0.734
+        },
+        {
+          "word": "senkt",
+          "start": 6.685,
+          "end": 7.245,
+          "score": 0.948
+        },
+        {
+          "word": "die",
+          "start": 7.265,
+          "end": 7.385,
+          "score": 0.887
+        },
+        {
+          "word": "Stimme.",
+          "start": 7.425,
+          "end": 8.586,
+          "score": 0.994
+        }
+      ]
+    },
+    {
+      "start": 8.626,
+      "end": 10.827,
+      "text": "\"Er nennt sich Serin.",
+      "words": [
+        {
+          "word": "\"Er",
+          "start": 8.626,
+          "end": 8.806,
+          "score": 0.658
+        },
+        {
+          "word": "nennt",
+          "start": 8.846,
+          "end": 9.086,
+          "score": 0.826
+        },
+        {
+          "word": "sich",
+          "start": 9.106,
+          "end": 9.506,
+          "score": 0.931
+        },
+        {
+          "word": "Serin.",
+          "start": 9.566,
+          "end": 10.827,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 10.847,
+      "end": 13.509,
+      "text": "Zumindest in manchen Kreisen.",
+      "words": [
+        {
+          "word": "Zumindest",
+          "start": 10.847,
+          "end": 11.288,
+          "score": 0.899
+        },
+        {
+          "word": "in",
+          "start": 11.328,
+          "end": 11.568,
+          "score": 0.936
+        },
+        {
+          "word": "manchen",
+          "start": 11.608,
+          "end": 12.108,
+          "score": 0.849
+        },
+        {
+          "word": "Kreisen.",
+          "start": 12.168,
+          "end": 13.509,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 13.529,
+      "end": 21.855,
+      "text": "Früher Informationshandel — jetzt... weicher in der Außendarstellung, sagen Leute.\"",
+      "words": [
+        {
+          "word": "Früher",
+          "start": 13.529,
+          "end": 14.19,
+          "score": 0.755
+        },
+        {
+          "word": "Informationshandel",
+          "start": 14.23,
+          "end": 16.131,
+          "score": 0.951
+        },
+        {
+          "word": "—",
+          "start": 16.151,
+          "end": 16.171,
+          "score": 0.983
+        },
+        {
+          "word": "jetzt...",
+          "start": 16.211,
+          "end": 17.752,
+          "score": 0.861
+        },
+        {
+          "word": "weicher",
+          "start": 17.792,
+          "end": 18.212,
+          "score": 0.85
+        },
+        {
+          "word": "in",
+          "start": 18.232,
+          "end": 18.332,
+          "score": 0.962
+        },
+        {
+          "word": "der",
+          "start": 18.352,
+          "end": 18.513,
+          "score": 0.876
+        },
+        {
+          "word": "Außendarstellung,",
+          "start": 18.553,
+          "end": 19.914,
+          "score": 0.921
+        },
+        {
+          "word": "sagen",
+          "start": 19.954,
+          "end": 20.234,
+          "score": 0.953
+        },
+        {
+          "word": "Leute.\"",
+          "start": 20.274,
+          "end": 21.855,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 21.875,
+      "end": 23.896,
+      "text": "\"Ich würde ihn fragen.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 21.875,
+          "end": 22.135,
+          "score": 0.783
+        },
+        {
+          "word": "würde",
+          "start": 22.155,
+          "end": 22.415,
+          "score": 0.961
+        },
+        {
+          "word": "ihn",
+          "start": 22.455,
+          "end": 22.735,
+          "score": 0.769
+        },
+        {
+          "word": "fragen.",
+          "start": 22.795,
+          "end": 23.896,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "start": 23.936,
+      "end": 25.137,
+      "text": "Direkt.",
+      "words": [
+        {
+          "word": "Direkt.",
+          "start": 23.936,
+          "end": 25.137,
+          "score": 0.854
+        }
+      ]
+    },
+    {
+      "start": 25.197,
+      "end": 29.2,
+      "text": "Er respektiert Direktheit — im Gegensatz zu den meisten.\"",
+      "words": [
+        {
+          "word": "Er",
+          "start": 25.197,
+          "end": 25.557,
+          "score": 0.784
+        },
+        {
+          "word": "respektiert",
+          "start": 25.597,
+          "end": 26.498,
+          "score": 0.972
+        },
+        {
+          "word": "Direktheit",
+          "start": 26.518,
+          "end": 27.098,
+          "score": 0.944
+        },
+        {
+          "word": "—",
+          "start": 27.819,
+          "end": 27.839,
+          "score": 0.979
+        },
+        {
+          "word": "im",
+          "start": 27.859,
+          "end": 27.979,
+          "score": 0.986
+        },
+        {
+          "word": "Gegensatz",
+          "start": 28.019,
+          "end": 28.499,
+          "score": 0.954
+        },
+        {
+          "word": "zu",
+          "start": 28.539,
+          "end": 28.599,
+          "score": 0.996
+        },
+        {
+          "word": "den",
+          "start": 28.639,
+          "end": 28.78,
+          "score": 0.868
+        },
+        {
+          "word": "meisten.\"",
+          "start": 28.82,
+          "end": 29.2,
+          "score": 0.805
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.44,
+      "end": 1.121,
+      "score": 0.825
+    },
+    {
+      "word": "hebt",
+      "start": 1.161,
+      "end": 1.481,
+      "score": 0.89
+    },
+    {
+      "word": "eine",
+      "start": 1.501,
+      "end": 1.821,
+      "score": 0.939
+    },
+    {
+      "word": "Augenbraue.",
+      "start": 1.861,
+      "end": 3.502,
+      "score": 0.902
+    },
+    {
+      "word": "\"Der",
+      "start": 3.522,
+      "end": 4.003,
+      "score": 0.96
+    },
+    {
+      "word": "Mann",
+      "start": 4.043,
+      "end": 4.403,
+      "score": 0.899
+    },
+    {
+      "word": "in",
+      "start": 4.443,
+      "end": 4.583,
+      "score": 0.906
+    },
+    {
+      "word": "der",
+      "start": 4.623,
+      "end": 4.843,
+      "score": 0.879
+    },
+    {
+      "word": "Ecke?\"",
+      "start": 4.903,
+      "end": 6.284,
+      "score": 0.898
+    },
+    {
+      "word": "Er",
+      "start": 6.344,
+      "end": 6.645,
+      "score": 0.734
+    },
+    {
+      "word": "senkt",
+      "start": 6.685,
+      "end": 7.245,
+      "score": 0.948
+    },
+    {
+      "word": "die",
+      "start": 7.265,
+      "end": 7.385,
+      "score": 0.887
+    },
+    {
+      "word": "Stimme.",
+      "start": 7.425,
+      "end": 8.586,
+      "score": 0.994
+    },
+    {
+      "word": "\"Er",
+      "start": 8.626,
+      "end": 8.806,
+      "score": 0.658
+    },
+    {
+      "word": "nennt",
+      "start": 8.846,
+      "end": 9.086,
+      "score": 0.826
+    },
+    {
+      "word": "sich",
+      "start": 9.106,
+      "end": 9.506,
+      "score": 0.931
+    },
+    {
+      "word": "Serin.",
+      "start": 9.566,
+      "end": 10.827,
+      "score": 0.906
+    },
+    {
+      "word": "Zumindest",
+      "start": 10.847,
+      "end": 11.288,
+      "score": 0.899
+    },
+    {
+      "word": "in",
+      "start": 11.328,
+      "end": 11.568,
+      "score": 0.936
+    },
+    {
+      "word": "manchen",
+      "start": 11.608,
+      "end": 12.108,
+      "score": 0.849
+    },
+    {
+      "word": "Kreisen.",
+      "start": 12.168,
+      "end": 13.509,
+      "score": 0.924
+    },
+    {
+      "word": "Früher",
+      "start": 13.529,
+      "end": 14.19,
+      "score": 0.755
+    },
+    {
+      "word": "Informationshandel",
+      "start": 14.23,
+      "end": 16.131,
+      "score": 0.951
+    },
+    {
+      "word": "—",
+      "start": 16.151,
+      "end": 16.171,
+      "score": 0.983
+    },
+    {
+      "word": "jetzt...",
+      "start": 16.211,
+      "end": 17.752,
+      "score": 0.861
+    },
+    {
+      "word": "weicher",
+      "start": 17.792,
+      "end": 18.212,
+      "score": 0.85
+    },
+    {
+      "word": "in",
+      "start": 18.232,
+      "end": 18.332,
+      "score": 0.962
+    },
+    {
+      "word": "der",
+      "start": 18.352,
+      "end": 18.513,
+      "score": 0.876
+    },
+    {
+      "word": "Außendarstellung,",
+      "start": 18.553,
+      "end": 19.914,
+      "score": 0.921
+    },
+    {
+      "word": "sagen",
+      "start": 19.954,
+      "end": 20.234,
+      "score": 0.953
+    },
+    {
+      "word": "Leute.\"",
+      "start": 20.274,
+      "end": 21.855,
+      "score": 0.979
+    },
+    {
+      "word": "\"Ich",
+      "start": 21.875,
+      "end": 22.135,
+      "score": 0.783
+    },
+    {
+      "word": "würde",
+      "start": 22.155,
+      "end": 22.415,
+      "score": 0.961
+    },
+    {
+      "word": "ihn",
+      "start": 22.455,
+      "end": 22.735,
+      "score": 0.769
+    },
+    {
+      "word": "fragen.",
+      "start": 22.795,
+      "end": 23.896,
+      "score": 0.99
+    },
+    {
+      "word": "Direkt.",
+      "start": 23.936,
+      "end": 25.137,
+      "score": 0.854
+    },
+    {
+      "word": "Er",
+      "start": 25.197,
+      "end": 25.557,
+      "score": 0.784
+    },
+    {
+      "word": "respektiert",
+      "start": 25.597,
+      "end": 26.498,
+      "score": 0.972
+    },
+    {
+      "word": "Direktheit",
+      "start": 26.518,
+      "end": 27.098,
+      "score": 0.944
+    },
+    {
+      "word": "—",
+      "start": 27.819,
+      "end": 27.839,
+      "score": 0.979
+    },
+    {
+      "word": "im",
+      "start": 27.859,
+      "end": 27.979,
+      "score": 0.986
+    },
+    {
+      "word": "Gegensatz",
+      "start": 28.019,
+      "end": 28.499,
+      "score": 0.954
+    },
+    {
+      "word": "zu",
+      "start": 28.539,
+      "end": 28.599,
+      "score": 0.996
+    },
+    {
+      "word": "den",
+      "start": 28.639,
+      "end": 28.78,
+      "score": 0.868
+    },
+    {
+      "word": "meisten.\"",
+      "start": 28.82,
+      "end": 29.2,
+      "score": 0.805
+    }
+  ]
+}

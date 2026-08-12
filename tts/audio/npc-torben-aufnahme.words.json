@@ -1,0 +1,832 @@
+{
+  "segments": [
+    {
+      "start": 0.38,
+      "end": 2.581,
+      "text": "\"Gut genug.\"",
+      "words": [
+        {
+          "word": "\"Gut",
+          "start": 0.38,
+          "end": 0.62,
+          "score": 0.766
+        },
+        {
+          "word": "genug.\"",
+          "start": 0.66,
+          "end": 2.581,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 2.601,
+      "end": 9.245,
+      "text": "Er öffnet ein altes Buch und trägt etwas ein — meinen Namen, schätze ich.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 2.601,
+          "end": 2.681,
+          "score": 0.914
+        },
+        {
+          "word": "öffnet",
+          "start": 2.722,
+          "end": 3.022,
+          "score": 0.961
+        },
+        {
+          "word": "ein",
+          "start": 3.062,
+          "end": 3.182,
+          "score": 0.81
+        },
+        {
+          "word": "altes",
+          "start": 3.222,
+          "end": 3.562,
+          "score": 0.938
+        },
+        {
+          "word": "Buch",
+          "start": 3.602,
+          "end": 3.882,
+          "score": 0.818
+        },
+        {
+          "word": "und",
+          "start": 3.922,
+          "end": 4.122,
+          "score": 0.869
+        },
+        {
+          "word": "trägt",
+          "start": 4.142,
+          "end": 4.422,
+          "score": 0.919
+        },
+        {
+          "word": "etwas",
+          "start": 4.462,
+          "end": 4.723,
+          "score": 0.996
+        },
+        {
+          "word": "ein",
+          "start": 4.783,
+          "end": 4.923,
+          "score": 0.862
+        },
+        {
+          "word": "—",
+          "start": 5.983,
+          "end": 6.003,
+          "score": 0.995
+        },
+        {
+          "word": "meinen",
+          "start": 6.023,
+          "end": 6.264,
+          "score": 0.896
+        },
+        {
+          "word": "Namen,",
+          "start": 6.304,
+          "end": 6.664,
+          "score": 0.96
+        },
+        {
+          "word": "schätze",
+          "start": 6.704,
+          "end": 7.004,
+          "score": 0.855
+        },
+        {
+          "word": "ich.",
+          "start": 7.044,
+          "end": 9.245,
+          "score": 0.962
+        }
+      ]
+    },
+    {
+      "start": 9.265,
+      "end": 12.607,
+      "text": "\"Mit diesem Eintrag bist du Gildenmitglied.",
+      "words": [
+        {
+          "word": "\"Mit",
+          "start": 9.265,
+          "end": 9.485,
+          "score": 0.921
+        },
+        {
+          "word": "diesem",
+          "start": 9.505,
+          "end": 9.866,
+          "score": 0.91
+        },
+        {
+          "word": "Eintrag",
+          "start": 9.926,
+          "end": 10.446,
+          "score": 0.926
+        },
+        {
+          "word": "bist",
+          "start": 10.466,
+          "end": 10.626,
+          "score": 0.759
+        },
+        {
+          "word": "du",
+          "start": 10.666,
+          "end": 10.786,
+          "score": 0.642
+        },
+        {
+          "word": "Gildenmitglied.",
+          "start": 10.826,
+          "end": 12.607,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 12.627,
+      "end": 15.329,
+      "text": "Kein Rang, kein Titel.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 12.627,
+          "end": 12.807,
+          "score": 0.705
+        },
+        {
+          "word": "Rang,",
+          "start": 12.867,
+          "end": 13.628,
+          "score": 0.895
+        },
+        {
+          "word": "kein",
+          "start": 13.648,
+          "end": 13.868,
+          "score": 0.752
+        },
+        {
+          "word": "Titel.",
+          "start": 13.908,
+          "end": 15.329,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 15.349,
+      "end": 20.832,
+      "text": "Nur die Zugehörigkeit und was du daraus machst.\"",
+      "words": [
+        {
+          "word": "Nur",
+          "start": 15.349,
+          "end": 15.529,
+          "score": 0.781
+        },
+        {
+          "word": "die",
+          "start": 15.549,
+          "end": 15.669,
+          "score": 0.924
+        },
+        {
+          "word": "Zugehörigkeit",
+          "start": 15.709,
+          "end": 17.39,
+          "score": 0.945
+        },
+        {
+          "word": "und",
+          "start": 17.43,
+          "end": 17.61,
+          "score": 0.873
+        },
+        {
+          "word": "was",
+          "start": 17.67,
+          "end": 17.79,
+          "score": 0.943
+        },
+        {
+          "word": "du",
+          "start": 17.81,
+          "end": 17.91,
+          "score": 0.853
+        },
+        {
+          "word": "daraus",
+          "start": 17.95,
+          "end": 18.21,
+          "score": 0.895
+        },
+        {
+          "word": "machst.\"",
+          "start": 18.25,
+          "end": 20.832,
+          "score": 0.769
+        }
+      ]
+    },
+    {
+      "start": 20.852,
+      "end": 23.713,
+      "text": "\"Die Welt ist größer als Treutheim.",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 20.852,
+          "end": 20.972,
+          "score": 0.724
+        },
+        {
+          "word": "Welt",
+          "start": 21.012,
+          "end": 21.232,
+          "score": 0.879
+        },
+        {
+          "word": "ist",
+          "start": 21.292,
+          "end": 21.532,
+          "score": 0.896
+        },
+        {
+          "word": "größer",
+          "start": 21.572,
+          "end": 21.952,
+          "score": 0.935
+        },
+        {
+          "word": "als",
+          "start": 21.992,
+          "end": 22.172,
+          "score": 0.995
+        },
+        {
+          "word": "Treutheim.",
+          "start": 22.212,
+          "end": 23.713,
+          "score": 0.807
+        }
+      ]
+    },
+    {
+      "start": 23.733,
+      "end": 27.135,
+      "text": "Wenn der Weg dich ruft — folg ihm.",
+      "words": [
+        {
+          "word": "Wenn",
+          "start": 23.733,
+          "end": 23.893,
+          "score": 0.837
+        },
+        {
+          "word": "der",
+          "start": 23.913,
+          "end": 24.013,
+          "score": 0.909
+        },
+        {
+          "word": "Weg",
+          "start": 24.053,
+          "end": 24.214,
+          "score": 0.934
+        },
+        {
+          "word": "dich",
+          "start": 24.234,
+          "end": 24.414,
+          "score": 0.845
+        },
+        {
+          "word": "ruft",
+          "start": 24.454,
+          "end": 24.734,
+          "score": 0.974
+        },
+        {
+          "word": "—",
+          "start": 25.554,
+          "end": 25.574,
+          "score": 0.664
+        },
+        {
+          "word": "folg",
+          "start": 25.594,
+          "end": 25.814,
+          "score": 0.857
+        },
+        {
+          "word": "ihm.",
+          "start": 25.874,
+          "end": 27.135,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 27.175,
+      "end": 31.978,
+      "text": "Das ist alles, was die Gilde von dir erwartet.\"",
+      "words": [
+        {
+          "word": "Das",
+          "start": 27.175,
+          "end": 27.295,
+          "score": 0.829
+        },
+        {
+          "word": "ist",
+          "start": 27.315,
+          "end": 27.495,
+          "score": 0.734
+        },
+        {
+          "word": "alles,",
+          "start": 27.515,
+          "end": 27.776,
+          "score": 0.899
+        },
+        {
+          "word": "was",
+          "start": 27.816,
+          "end": 27.956,
+          "score": 0.895
+        },
+        {
+          "word": "die",
+          "start": 27.976,
+          "end": 28.056,
+          "score": 0.852
+        },
+        {
+          "word": "Gilde",
+          "start": 28.076,
+          "end": 28.316,
+          "score": 0.841
+        },
+        {
+          "word": "von",
+          "start": 28.336,
+          "end": 28.456,
+          "score": 0.907
+        },
+        {
+          "word": "dir",
+          "start": 28.476,
+          "end": 28.616,
+          "score": 0.649
+        },
+        {
+          "word": "erwartet.\"",
+          "start": 28.636,
+          "end": 31.978,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 32.018,
+      "end": 34.739,
+      "text": "Er reicht mir dreißig Gold.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 32.018,
+          "end": 32.098,
+          "score": 0.692
+        },
+        {
+          "word": "reicht",
+          "start": 32.158,
+          "end": 32.358,
+          "score": 0.991
+        },
+        {
+          "word": "mir",
+          "start": 32.378,
+          "end": 32.538,
+          "score": 0.798
+        },
+        {
+          "word": "dreißig",
+          "start": 32.558,
+          "end": 32.898,
+          "score": 0.93
+        },
+        {
+          "word": "Gold.",
+          "start": 32.938,
+          "end": 34.739,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 34.759,
+      "end": 35.44,
+      "text": "\"Startkapital.\"",
+      "words": [
+        {
+          "word": "\"Startkapital.\"",
+          "start": 34.759,
+          "end": 35.44,
+          "score": 0.822
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Gut",
+      "start": 0.38,
+      "end": 0.62,
+      "score": 0.766
+    },
+    {
+      "word": "genug.\"",
+      "start": 0.66,
+      "end": 2.581,
+      "score": 0.92
+    },
+    {
+      "word": "Er",
+      "start": 2.601,
+      "end": 2.681,
+      "score": 0.914
+    },
+    {
+      "word": "öffnet",
+      "start": 2.722,
+      "end": 3.022,
+      "score": 0.961
+    },
+    {
+      "word": "ein",
+      "start": 3.062,
+      "end": 3.182,
+      "score": 0.81
+    },
+    {
+      "word": "altes",
+      "start": 3.222,
+      "end": 3.562,
+      "score": 0.938
+    },
+    {
+      "word": "Buch",
+      "start": 3.602,
+      "end": 3.882,
+      "score": 0.818
+    },
+    {
+      "word": "und",
+      "start": 3.922,
+      "end": 4.122,
+      "score": 0.869
+    },
+    {
+      "word": "trägt",
+      "start": 4.142,
+      "end": 4.422,
+      "score": 0.919
+    },
+    {
+      "word": "etwas",
+      "start": 4.462,
+      "end": 4.723,
+      "score": 0.996
+    },
+    {
+      "word": "ein",
+      "start": 4.783,
+      "end": 4.923,
+      "score": 0.862
+    },
+    {
+      "word": "—",
+      "start": 5.983,
+      "end": 6.003,
+      "score": 0.995
+    },
+    {
+      "word": "meinen",
+      "start": 6.023,
+      "end": 6.264,
+      "score": 0.896
+    },
+    {
+      "word": "Namen,",
+      "start": 6.304,
+      "end": 6.664,
+      "score": 0.96
+    },
+    {
+      "word": "schätze",
+      "start": 6.704,
+      "end": 7.004,
+      "score": 0.855
+    },
+    {
+      "word": "ich.",
+      "start": 7.044,
+      "end": 9.245,
+      "score": 0.962
+    },
+    {
+      "word": "\"Mit",
+      "start": 9.265,
+      "end": 9.485,
+      "score": 0.921
+    },
+    {
+      "word": "diesem",
+      "start": 9.505,
+      "end": 9.866,
+      "score": 0.91
+    },
+    {
+      "word": "Eintrag",
+      "start": 9.926,
+      "end": 10.446,
+      "score": 0.926
+    },
+    {
+      "word": "bist",
+      "start": 10.466,
+      "end": 10.626,
+      "score": 0.759
+    },
+    {
+      "word": "du",
+      "start": 10.666,
+      "end": 10.786,
+      "score": 0.642
+    },
+    {
+      "word": "Gildenmitglied.",
+      "start": 10.826,
+      "end": 12.607,
+      "score": 0.906
+    },
+    {
+      "word": "Kein",
+      "start": 12.627,
+      "end": 12.807,
+      "score": 0.705
+    },
+    {
+      "word": "Rang,",
+      "start": 12.867,
+      "end": 13.628,
+      "score": 0.895
+    },
+    {
+      "word": "kein",
+      "start": 13.648,
+      "end": 13.868,
+      "score": 0.752
+    },
+    {
+      "word": "Titel.",
+      "start": 13.908,
+      "end": 15.329,
+      "score": 0.906
+    },
+    {
+      "word": "Nur",
+      "start": 15.349,
+      "end": 15.529,
+      "score": 0.781
+    },
+    {
+      "word": "die",
+      "start": 15.549,
+      "end": 15.669,
+      "score": 0.924
+    },
+    {
+      "word": "Zugehörigkeit",
+      "start": 15.709,
+      "end": 17.39,
+      "score": 0.945
+    },
+    {
+      "word": "und",
+      "start": 17.43,
+      "end": 17.61,
+      "score": 0.873
+    },
+    {
+      "word": "was",
+      "start": 17.67,
+      "end": 17.79,
+      "score": 0.943
+    },
+    {
+      "word": "du",
+      "start": 17.81,
+      "end": 17.91,
+      "score": 0.853
+    },
+    {
+      "word": "daraus",
+      "start": 17.95,
+      "end": 18.21,
+      "score": 0.895
+    },
+    {
+      "word": "machst.\"",
+      "start": 18.25,
+      "end": 20.832,
+      "score": 0.769
+    },
+    {
+      "word": "\"Die",
+      "start": 20.852,
+      "end": 20.972,
+      "score": 0.724
+    },
+    {
+      "word": "Welt",
+      "start": 21.012,
+      "end": 21.232,
+      "score": 0.879
+    },
+    {
+      "word": "ist",
+      "start": 21.292,
+      "end": 21.532,
+      "score": 0.896
+    },
+    {
+      "word": "größer",
+      "start": 21.572,
+      "end": 21.952,
+      "score": 0.935
+    },
+    {
+      "word": "als",
+      "start": 21.992,
+      "end": 22.172,
+      "score": 0.995
+    },
+    {
+      "word": "Treutheim.",
+      "start": 22.212,
+      "end": 23.713,
+      "score": 0.807
+    },
+    {
+      "word": "Wenn",
+      "start": 23.733,
+      "end": 23.893,
+      "score": 0.837
+    },
+    {
+      "word": "der",
+      "start": 23.913,
+      "end": 24.013,
+      "score": 0.909
+    },
+    {
+      "word": "Weg",
+      "start": 24.053,
+      "end": 24.214,
+      "score": 0.934
+    },
+    {
+      "word": "dich",
+      "start": 24.234,
+      "end": 24.414,
+      "score": 0.845
+    },
+    {
+      "word": "ruft",
+      "start": 24.454,
+      "end": 24.734,
+      "score": 0.974
+    },
+    {
+      "word": "—",
+      "start": 25.554,
+      "end": 25.574,
+      "score": 0.664
+    },
+    {
+      "word": "folg",
+      "start": 25.594,
+      "end": 25.814,
+      "score": 0.857
+    },
+    {
+      "word": "ihm.",
+      "start": 25.874,
+      "end": 27.135,
+      "score": 0.926
+    },
+    {
+      "word": "Das",
+      "start": 27.175,
+      "end": 27.295,
+      "score": 0.829
+    },
+    {
+      "word": "ist",
+      "start": 27.315,
+      "end": 27.495,
+      "score": 0.734
+    },
+    {
+      "word": "alles,",
+      "start": 27.515,
+      "end": 27.776,
+      "score": 0.899
+    },
+    {
+      "word": "was",
+      "start": 27.816,
+      "end": 27.956,
+      "score": 0.895
+    },
+    {
+      "word": "die",
+      "start": 27.976,
+      "end": 28.056,
+      "score": 0.852
+    },
+    {
+      "word": "Gilde",
+      "start": 28.076,
+      "end": 28.316,
+      "score": 0.841
+    },
+    {
+      "word": "von",
+      "start": 28.336,
+      "end": 28.456,
+      "score": 0.907
+    },
+    {
+      "word": "dir",
+      "start": 28.476,
+      "end": 28.616,
+      "score": 0.649
+    },
+    {
+      "word": "erwartet.\"",
+      "start": 28.636,
+      "end": 31.978,
+      "score": 0.94
+    },
+    {
+      "word": "Er",
+      "start": 32.018,
+      "end": 32.098,
+      "score": 0.692
+    },
+    {
+      "word": "reicht",
+      "start": 32.158,
+      "end": 32.358,
+      "score": 0.991
+    },
+    {
+      "word": "mir",
+      "start": 32.378,
+      "end": 32.538,
+      "score": 0.798
+    },
+    {
+      "word": "dreißig",
+      "start": 32.558,
+      "end": 32.898,
+      "score": 0.93
+    },
+    {
+      "word": "Gold.",
+      "start": 32.938,
+      "end": 34.739,
+      "score": 0.894
+    },
+    {
+      "word": "\"Startkapital.\"",
+      "start": 34.759,
+      "end": 35.44,
+      "score": 0.822
+    }
+  ]
+}

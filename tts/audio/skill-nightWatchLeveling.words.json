@@ -1,0 +1,624 @@
+{
+  "segments": [
+    {
+      "start": 0.661,
+      "end": 4.304,
+      "text": "Roswalds Unterweisung war kürzer als erwartet.",
+      "words": [
+        {
+          "word": "Roswalds",
+          "start": 0.661,
+          "end": 1.181,
+          "score": 0.64
+        },
+        {
+          "word": "Unterweisung",
+          "start": 1.221,
+          "end": 1.962,
+          "score": 0.887
+        },
+        {
+          "word": "war",
+          "start": 2.002,
+          "end": 2.282,
+          "score": 0.955
+        },
+        {
+          "word": "kürzer",
+          "start": 2.302,
+          "end": 2.682,
+          "score": 0.937
+        },
+        {
+          "word": "als",
+          "start": 2.722,
+          "end": 2.922,
+          "score": 0.87
+        },
+        {
+          "word": "erwartet.",
+          "start": 2.982,
+          "end": 4.304,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 4.324,
+      "end": 7.266,
+      "text": "„Die Nacht lehrt\", hat er gesagt.",
+      "words": [
+        {
+          "word": "„Die",
+          "start": 4.324,
+          "end": 4.604,
+          "score": 0.926
+        },
+        {
+          "word": "Nacht",
+          "start": 4.664,
+          "end": 5.084,
+          "score": 0.932
+        },
+        {
+          "word": "lehrt\",",
+          "start": 5.144,
+          "end": 5.805,
+          "score": 0.66
+        },
+        {
+          "word": "hat",
+          "start": 5.825,
+          "end": 5.985,
+          "score": 0.976
+        },
+        {
+          "word": "er",
+          "start": 6.025,
+          "end": 6.145,
+          "score": 0.918
+        },
+        {
+          "word": "gesagt.",
+          "start": 6.185,
+          "end": 7.266,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 7.286,
+      "end": 11.91,
+      "text": "„Aber nur den, der still genug ist, um zuzuhören.\"",
+      "words": [
+        {
+          "word": "„Aber",
+          "start": 7.286,
+          "end": 7.506,
+          "score": 0.982
+        },
+        {
+          "word": "nur",
+          "start": 7.546,
+          "end": 7.726,
+          "score": 0.988
+        },
+        {
+          "word": "den,",
+          "start": 7.746,
+          "end": 8.087,
+          "score": 0.906
+        },
+        {
+          "word": "der",
+          "start": 8.107,
+          "end": 8.327,
+          "score": 0.887
+        },
+        {
+          "word": "still",
+          "start": 8.387,
+          "end": 8.747,
+          "score": 0.786
+        },
+        {
+          "word": "genug",
+          "start": 8.787,
+          "end": 9.108,
+          "score": 0.895
+        },
+        {
+          "word": "ist,",
+          "start": 9.148,
+          "end": 9.428,
+          "score": 0.985
+        },
+        {
+          "word": "um",
+          "start": 9.448,
+          "end": 9.688,
+          "score": 0.992
+        },
+        {
+          "word": "zuzuhören.\"",
+          "start": 9.728,
+          "end": 11.91,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 11.95,
+      "end": 15.113,
+      "text": "Ich fange an zu verstehen, was er meint.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 11.95,
+          "end": 12.17,
+          "score": 0.792
+        },
+        {
+          "word": "fange",
+          "start": 12.21,
+          "end": 12.47,
+          "score": 0.838
+        },
+        {
+          "word": "an",
+          "start": 12.51,
+          "end": 12.671,
+          "score": 0.863
+        },
+        {
+          "word": "zu",
+          "start": 12.691,
+          "end": 12.851,
+          "score": 0.916
+        },
+        {
+          "word": "verstehen,",
+          "start": 12.891,
+          "end": 13.451,
+          "score": 0.897
+        },
+        {
+          "word": "was",
+          "start": 13.491,
+          "end": 13.691,
+          "score": 0.94
+        },
+        {
+          "word": "er",
+          "start": 13.731,
+          "end": 13.791,
+          "score": 0.825
+        },
+        {
+          "word": "meint.",
+          "start": 13.831,
+          "end": 15.113,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 15.133,
+      "end": 18.035,
+      "text": "Jede Patrouille schärft die Sinne.",
+      "words": [
+        {
+          "word": "Jede",
+          "start": 15.133,
+          "end": 15.393,
+          "score": 0.991
+        },
+        {
+          "word": "Patrouille",
+          "start": 15.433,
+          "end": 16.173,
+          "score": 0.802
+        },
+        {
+          "word": "schärft",
+          "start": 16.213,
+          "end": 16.594,
+          "score": 0.902
+        },
+        {
+          "word": "die",
+          "start": 16.614,
+          "end": 16.754,
+          "score": 0.962
+        },
+        {
+          "word": "Sinne.",
+          "start": 16.794,
+          "end": 18.035,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "start": 18.055,
+      "end": 23.68,
+      "text": "Was ich hier lerne, ist mehr als Wachtposten-Routine — es ist Aufmerksamkeit als Handwerk.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 18.055,
+          "end": 18.175,
+          "score": 0.905
+        },
+        {
+          "word": "ich",
+          "start": 18.215,
+          "end": 18.335,
+          "score": 0.95
+        },
+        {
+          "word": "hier",
+          "start": 18.375,
+          "end": 18.555,
+          "score": 0.795
+        },
+        {
+          "word": "lerne,",
+          "start": 18.595,
+          "end": 18.936,
+          "score": 0.916
+        },
+        {
+          "word": "ist",
+          "start": 18.956,
+          "end": 19.276,
+          "score": 0.946
+        },
+        {
+          "word": "mehr",
+          "start": 19.296,
+          "end": 19.556,
+          "score": 0.846
+        },
+        {
+          "word": "als",
+          "start": 19.596,
+          "end": 19.816,
+          "score": 0.947
+        },
+        {
+          "word": "Wachtposten-Routine",
+          "start": 19.856,
+          "end": 20.877,
+          "score": 0.902
+        },
+        {
+          "word": "—",
+          "start": 21.278,
+          "end": 21.298,
+          "score": 0.591
+        },
+        {
+          "word": "es",
+          "start": 21.338,
+          "end": 21.438,
+          "score": 0.984
+        },
+        {
+          "word": "ist",
+          "start": 21.478,
+          "end": 21.918,
+          "score": 0.872
+        },
+        {
+          "word": "Aufmerksamkeit",
+          "start": 21.958,
+          "end": 22.919,
+          "score": 0.907
+        },
+        {
+          "word": "als",
+          "start": 22.939,
+          "end": 23.179,
+          "score": 0.99
+        },
+        {
+          "word": "Handwerk.",
+          "start": 23.219,
+          "end": 23.68,
+          "score": 0.896
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswalds",
+      "start": 0.661,
+      "end": 1.181,
+      "score": 0.64
+    },
+    {
+      "word": "Unterweisung",
+      "start": 1.221,
+      "end": 1.962,
+      "score": 0.887
+    },
+    {
+      "word": "war",
+      "start": 2.002,
+      "end": 2.282,
+      "score": 0.955
+    },
+    {
+      "word": "kürzer",
+      "start": 2.302,
+      "end": 2.682,
+      "score": 0.937
+    },
+    {
+      "word": "als",
+      "start": 2.722,
+      "end": 2.922,
+      "score": 0.87
+    },
+    {
+      "word": "erwartet.",
+      "start": 2.982,
+      "end": 4.304,
+      "score": 0.955
+    },
+    {
+      "word": "„Die",
+      "start": 4.324,
+      "end": 4.604,
+      "score": 0.926
+    },
+    {
+      "word": "Nacht",
+      "start": 4.664,
+      "end": 5.084,
+      "score": 0.932
+    },
+    {
+      "word": "lehrt\",",
+      "start": 5.144,
+      "end": 5.805,
+      "score": 0.66
+    },
+    {
+      "word": "hat",
+      "start": 5.825,
+      "end": 5.985,
+      "score": 0.976
+    },
+    {
+      "word": "er",
+      "start": 6.025,
+      "end": 6.145,
+      "score": 0.918
+    },
+    {
+      "word": "gesagt.",
+      "start": 6.185,
+      "end": 7.266,
+      "score": 0.833
+    },
+    {
+      "word": "„Aber",
+      "start": 7.286,
+      "end": 7.506,
+      "score": 0.982
+    },
+    {
+      "word": "nur",
+      "start": 7.546,
+      "end": 7.726,
+      "score": 0.988
+    },
+    {
+      "word": "den,",
+      "start": 7.746,
+      "end": 8.087,
+      "score": 0.906
+    },
+    {
+      "word": "der",
+      "start": 8.107,
+      "end": 8.327,
+      "score": 0.887
+    },
+    {
+      "word": "still",
+      "start": 8.387,
+      "end": 8.747,
+      "score": 0.786
+    },
+    {
+      "word": "genug",
+      "start": 8.787,
+      "end": 9.108,
+      "score": 0.895
+    },
+    {
+      "word": "ist,",
+      "start": 9.148,
+      "end": 9.428,
+      "score": 0.985
+    },
+    {
+      "word": "um",
+      "start": 9.448,
+      "end": 9.688,
+      "score": 0.992
+    },
+    {
+      "word": "zuzuhören.\"",
+      "start": 9.728,
+      "end": 11.91,
+      "score": 0.932
+    },
+    {
+      "word": "Ich",
+      "start": 11.95,
+      "end": 12.17,
+      "score": 0.792
+    },
+    {
+      "word": "fange",
+      "start": 12.21,
+      "end": 12.47,
+      "score": 0.838
+    },
+    {
+      "word": "an",
+      "start": 12.51,
+      "end": 12.671,
+      "score": 0.863
+    },
+    {
+      "word": "zu",
+      "start": 12.691,
+      "end": 12.851,
+      "score": 0.916
+    },
+    {
+      "word": "verstehen,",
+      "start": 12.891,
+      "end": 13.451,
+      "score": 0.897
+    },
+    {
+      "word": "was",
+      "start": 13.491,
+      "end": 13.691,
+      "score": 0.94
+    },
+    {
+      "word": "er",
+      "start": 13.731,
+      "end": 13.791,
+      "score": 0.825
+    },
+    {
+      "word": "meint.",
+      "start": 13.831,
+      "end": 15.113,
+      "score": 0.961
+    },
+    {
+      "word": "Jede",
+      "start": 15.133,
+      "end": 15.393,
+      "score": 0.991
+    },
+    {
+      "word": "Patrouille",
+      "start": 15.433,
+      "end": 16.173,
+      "score": 0.802
+    },
+    {
+      "word": "schärft",
+      "start": 16.213,
+      "end": 16.594,
+      "score": 0.902
+    },
+    {
+      "word": "die",
+      "start": 16.614,
+      "end": 16.754,
+      "score": 0.962
+    },
+    {
+      "word": "Sinne.",
+      "start": 16.794,
+      "end": 18.035,
+      "score": 0.995
+    },
+    {
+      "word": "Was",
+      "start": 18.055,
+      "end": 18.175,
+      "score": 0.905
+    },
+    {
+      "word": "ich",
+      "start": 18.215,
+      "end": 18.335,
+      "score": 0.95
+    },
+    {
+      "word": "hier",
+      "start": 18.375,
+      "end": 18.555,
+      "score": 0.795
+    },
+    {
+      "word": "lerne,",
+      "start": 18.595,
+      "end": 18.936,
+      "score": 0.916
+    },
+    {
+      "word": "ist",
+      "start": 18.956,
+      "end": 19.276,
+      "score": 0.946
+    },
+    {
+      "word": "mehr",
+      "start": 19.296,
+      "end": 19.556,
+      "score": 0.846
+    },
+    {
+      "word": "als",
+      "start": 19.596,
+      "end": 19.816,
+      "score": 0.947
+    },
+    {
+      "word": "Wachtposten-Routine",
+      "start": 19.856,
+      "end": 20.877,
+      "score": 0.902
+    },
+    {
+      "word": "—",
+      "start": 21.278,
+      "end": 21.298,
+      "score": 0.591
+    },
+    {
+      "word": "es",
+      "start": 21.338,
+      "end": 21.438,
+      "score": 0.984
+    },
+    {
+      "word": "ist",
+      "start": 21.478,
+      "end": 21.918,
+      "score": 0.872
+    },
+    {
+      "word": "Aufmerksamkeit",
+      "start": 21.958,
+      "end": 22.919,
+      "score": 0.907
+    },
+    {
+      "word": "als",
+      "start": 22.939,
+      "end": 23.179,
+      "score": 0.99
+    },
+    {
+      "word": "Handwerk.",
+      "start": 23.219,
+      "end": 23.68,
+      "score": 0.896
+    }
+  ]
+}

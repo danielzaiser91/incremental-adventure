@@ -1,0 +1,629 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 6.807,
+      "text": "»Valdris.« Nun liegt der Name in der Luft, nicht mehr nur auf dem Papier.",
+      "words": [
+        {
+          "word": "»Valdris.«",
+          "start": 0.4,
+          "end": 2.262,
+          "score": 0.656
+        },
+        {
+          "word": "Nun",
+          "start": 2.302,
+          "end": 2.543,
+          "score": 0.81
+        },
+        {
+          "word": "liegt",
+          "start": 2.583,
+          "end": 2.783,
+          "score": 0.871
+        },
+        {
+          "word": "der",
+          "start": 2.803,
+          "end": 2.963,
+          "score": 0.879
+        },
+        {
+          "word": "Name",
+          "start": 3.003,
+          "end": 3.283,
+          "score": 0.96
+        },
+        {
+          "word": "in",
+          "start": 3.323,
+          "end": 3.404,
+          "score": 0.922
+        },
+        {
+          "word": "der",
+          "start": 3.424,
+          "end": 3.544,
+          "score": 0.834
+        },
+        {
+          "word": "Luft,",
+          "start": 3.604,
+          "end": 4.425,
+          "score": 0.819
+        },
+        {
+          "word": "nicht",
+          "start": 4.445,
+          "end": 4.605,
+          "score": 0.841
+        },
+        {
+          "word": "mehr",
+          "start": 4.625,
+          "end": 4.765,
+          "score": 0.792
+        },
+        {
+          "word": "nur",
+          "start": 4.805,
+          "end": 4.905,
+          "score": 0.957
+        },
+        {
+          "word": "auf",
+          "start": 4.945,
+          "end": 5.045,
+          "score": 0.869
+        },
+        {
+          "word": "dem",
+          "start": 5.085,
+          "end": 5.225,
+          "score": 0.936
+        },
+        {
+          "word": "Papier.",
+          "start": 5.266,
+          "end": 6.807,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 6.847,
+      "end": 8.989,
+      "text": "Ich weiß, wo das Haus steht.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.847,
+          "end": 7.027,
+          "score": 0.862
+        },
+        {
+          "word": "weiß,",
+          "start": 7.067,
+          "end": 7.348,
+          "score": 0.917
+        },
+        {
+          "word": "wo",
+          "start": 7.368,
+          "end": 7.488,
+          "score": 0.966
+        },
+        {
+          "word": "das",
+          "start": 7.528,
+          "end": 7.668,
+          "score": 0.914
+        },
+        {
+          "word": "Haus",
+          "start": 7.708,
+          "end": 7.888,
+          "score": 0.928
+        },
+        {
+          "word": "steht.",
+          "start": 7.948,
+          "end": 8.989,
+          "score": 0.969
+        }
+      ]
+    },
+    {
+      "start": 9.029,
+      "end": 12.934,
+      "text": "Und ich weiß, dass ich nicht allein dorthin gehen soll.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 9.029,
+          "end": 9.23,
+          "score": 0.744
+        },
+        {
+          "word": "ich",
+          "start": 9.25,
+          "end": 9.41,
+          "score": 0.885
+        },
+        {
+          "word": "weiß,",
+          "start": 9.43,
+          "end": 9.69,
+          "score": 0.903
+        },
+        {
+          "word": "dass",
+          "start": 9.71,
+          "end": 9.89,
+          "score": 0.817
+        },
+        {
+          "word": "ich",
+          "start": 9.91,
+          "end": 10.051,
+          "score": 0.802
+        },
+        {
+          "word": "nicht",
+          "start": 10.071,
+          "end": 10.291,
+          "score": 0.851
+        },
+        {
+          "word": "allein",
+          "start": 10.331,
+          "end": 10.631,
+          "score": 0.82
+        },
+        {
+          "word": "dorthin",
+          "start": 10.651,
+          "end": 10.991,
+          "score": 0.931
+        },
+        {
+          "word": "gehen",
+          "start": 11.012,
+          "end": 11.212,
+          "score": 0.802
+        },
+        {
+          "word": "soll.",
+          "start": 11.232,
+          "end": 12.934,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 12.954,
+      "end": 16.537,
+      "text": "Mira hat mir mehr mitgegeben, als ich ahnte.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 12.954,
+          "end": 13.234,
+          "score": 0.858
+        },
+        {
+          "word": "hat",
+          "start": 13.274,
+          "end": 13.454,
+          "score": 0.986
+        },
+        {
+          "word": "mir",
+          "start": 13.474,
+          "end": 13.674,
+          "score": 0.948
+        },
+        {
+          "word": "mehr",
+          "start": 13.714,
+          "end": 13.895,
+          "score": 0.848
+        },
+        {
+          "word": "mitgegeben,",
+          "start": 13.935,
+          "end": 14.515,
+          "score": 0.942
+        },
+        {
+          "word": "als",
+          "start": 14.535,
+          "end": 14.675,
+          "score": 0.951
+        },
+        {
+          "word": "ich",
+          "start": 14.715,
+          "end": 14.876,
+          "score": 0.941
+        },
+        {
+          "word": "ahnte.",
+          "start": 14.936,
+          "end": 16.537,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 16.577,
+      "end": 18.82,
+      "text": "Ich hoffe nur, sie weiß selbst, was sie damit getan hat.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 16.577,
+          "end": 16.677,
+          "score": 0.89
+        },
+        {
+          "word": "hoffe",
+          "start": 16.717,
+          "end": 16.998,
+          "score": 0.951
+        },
+        {
+          "word": "nur,",
+          "start": 17.018,
+          "end": 17.178,
+          "score": 0.875
+        },
+        {
+          "word": "sie",
+          "start": 17.198,
+          "end": 17.298,
+          "score": 0.965
+        },
+        {
+          "word": "weiß",
+          "start": 17.338,
+          "end": 17.578,
+          "score": 0.954
+        },
+        {
+          "word": "selbst,",
+          "start": 17.618,
+          "end": 17.859,
+          "score": 0.937
+        },
+        {
+          "word": "was",
+          "start": 17.899,
+          "end": 17.979,
+          "score": 0.876
+        },
+        {
+          "word": "sie",
+          "start": 18.019,
+          "end": 18.099,
+          "score": 0.918
+        },
+        {
+          "word": "damit",
+          "start": 18.119,
+          "end": 18.359,
+          "score": 0.965
+        },
+        {
+          "word": "getan",
+          "start": 18.399,
+          "end": 18.7,
+          "score": 0.912
+        },
+        {
+          "word": "hat.",
+          "start": 18.72,
+          "end": 18.82,
+          "score": 0.666
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "»Valdris.«",
+      "start": 0.4,
+      "end": 2.262,
+      "score": 0.656
+    },
+    {
+      "word": "Nun",
+      "start": 2.302,
+      "end": 2.543,
+      "score": 0.81
+    },
+    {
+      "word": "liegt",
+      "start": 2.583,
+      "end": 2.783,
+      "score": 0.871
+    },
+    {
+      "word": "der",
+      "start": 2.803,
+      "end": 2.963,
+      "score": 0.879
+    },
+    {
+      "word": "Name",
+      "start": 3.003,
+      "end": 3.283,
+      "score": 0.96
+    },
+    {
+      "word": "in",
+      "start": 3.323,
+      "end": 3.404,
+      "score": 0.922
+    },
+    {
+      "word": "der",
+      "start": 3.424,
+      "end": 3.544,
+      "score": 0.834
+    },
+    {
+      "word": "Luft,",
+      "start": 3.604,
+      "end": 4.425,
+      "score": 0.819
+    },
+    {
+      "word": "nicht",
+      "start": 4.445,
+      "end": 4.605,
+      "score": 0.841
+    },
+    {
+      "word": "mehr",
+      "start": 4.625,
+      "end": 4.765,
+      "score": 0.792
+    },
+    {
+      "word": "nur",
+      "start": 4.805,
+      "end": 4.905,
+      "score": 0.957
+    },
+    {
+      "word": "auf",
+      "start": 4.945,
+      "end": 5.045,
+      "score": 0.869
+    },
+    {
+      "word": "dem",
+      "start": 5.085,
+      "end": 5.225,
+      "score": 0.936
+    },
+    {
+      "word": "Papier.",
+      "start": 5.266,
+      "end": 6.807,
+      "score": 0.865
+    },
+    {
+      "word": "Ich",
+      "start": 6.847,
+      "end": 7.027,
+      "score": 0.862
+    },
+    {
+      "word": "weiß,",
+      "start": 7.067,
+      "end": 7.348,
+      "score": 0.917
+    },
+    {
+      "word": "wo",
+      "start": 7.368,
+      "end": 7.488,
+      "score": 0.966
+    },
+    {
+      "word": "das",
+      "start": 7.528,
+      "end": 7.668,
+      "score": 0.914
+    },
+    {
+      "word": "Haus",
+      "start": 7.708,
+      "end": 7.888,
+      "score": 0.928
+    },
+    {
+      "word": "steht.",
+      "start": 7.948,
+      "end": 8.989,
+      "score": 0.969
+    },
+    {
+      "word": "Und",
+      "start": 9.029,
+      "end": 9.23,
+      "score": 0.744
+    },
+    {
+      "word": "ich",
+      "start": 9.25,
+      "end": 9.41,
+      "score": 0.885
+    },
+    {
+      "word": "weiß,",
+      "start": 9.43,
+      "end": 9.69,
+      "score": 0.903
+    },
+    {
+      "word": "dass",
+      "start": 9.71,
+      "end": 9.89,
+      "score": 0.817
+    },
+    {
+      "word": "ich",
+      "start": 9.91,
+      "end": 10.051,
+      "score": 0.802
+    },
+    {
+      "word": "nicht",
+      "start": 10.071,
+      "end": 10.291,
+      "score": 0.851
+    },
+    {
+      "word": "allein",
+      "start": 10.331,
+      "end": 10.631,
+      "score": 0.82
+    },
+    {
+      "word": "dorthin",
+      "start": 10.651,
+      "end": 10.991,
+      "score": 0.931
+    },
+    {
+      "word": "gehen",
+      "start": 11.012,
+      "end": 11.212,
+      "score": 0.802
+    },
+    {
+      "word": "soll.",
+      "start": 11.232,
+      "end": 12.934,
+      "score": 0.968
+    },
+    {
+      "word": "Mira",
+      "start": 12.954,
+      "end": 13.234,
+      "score": 0.858
+    },
+    {
+      "word": "hat",
+      "start": 13.274,
+      "end": 13.454,
+      "score": 0.986
+    },
+    {
+      "word": "mir",
+      "start": 13.474,
+      "end": 13.674,
+      "score": 0.948
+    },
+    {
+      "word": "mehr",
+      "start": 13.714,
+      "end": 13.895,
+      "score": 0.848
+    },
+    {
+      "word": "mitgegeben,",
+      "start": 13.935,
+      "end": 14.515,
+      "score": 0.942
+    },
+    {
+      "word": "als",
+      "start": 14.535,
+      "end": 14.675,
+      "score": 0.951
+    },
+    {
+      "word": "ich",
+      "start": 14.715,
+      "end": 14.876,
+      "score": 0.941
+    },
+    {
+      "word": "ahnte.",
+      "start": 14.936,
+      "end": 16.537,
+      "score": 0.885
+    },
+    {
+      "word": "Ich",
+      "start": 16.577,
+      "end": 16.677,
+      "score": 0.89
+    },
+    {
+      "word": "hoffe",
+      "start": 16.717,
+      "end": 16.998,
+      "score": 0.951
+    },
+    {
+      "word": "nur,",
+      "start": 17.018,
+      "end": 17.178,
+      "score": 0.875
+    },
+    {
+      "word": "sie",
+      "start": 17.198,
+      "end": 17.298,
+      "score": 0.965
+    },
+    {
+      "word": "weiß",
+      "start": 17.338,
+      "end": 17.578,
+      "score": 0.954
+    },
+    {
+      "word": "selbst,",
+      "start": 17.618,
+      "end": 17.859,
+      "score": 0.937
+    },
+    {
+      "word": "was",
+      "start": 17.899,
+      "end": 17.979,
+      "score": 0.876
+    },
+    {
+      "word": "sie",
+      "start": 18.019,
+      "end": 18.099,
+      "score": 0.918
+    },
+    {
+      "word": "damit",
+      "start": 18.119,
+      "end": 18.359,
+      "score": 0.965
+    },
+    {
+      "word": "getan",
+      "start": 18.399,
+      "end": 18.7,
+      "score": 0.912
+    },
+    {
+      "word": "hat.",
+      "start": 18.72,
+      "end": 18.82,
+      "score": 0.666
+    }
+  ]
+}

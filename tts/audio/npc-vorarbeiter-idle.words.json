@@ -1,0 +1,145 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 6.092,
+      "text": "Der Vorarbeiter nickt mir knapp zu und trinkt in Ruhe weiter.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.421,
+          "end": 0.581,
+          "score": 0.869
+        },
+        {
+          "word": "Vorarbeiter",
+          "start": 0.621,
+          "end": 1.423,
+          "score": 0.97
+        },
+        {
+          "word": "nickt",
+          "start": 1.443,
+          "end": 1.703,
+          "score": 0.767
+        },
+        {
+          "word": "mir",
+          "start": 1.743,
+          "end": 1.904,
+          "score": 0.79
+        },
+        {
+          "word": "knapp",
+          "start": 1.964,
+          "end": 2.304,
+          "score": 0.946
+        },
+        {
+          "word": "zu",
+          "start": 2.344,
+          "end": 3.026,
+          "score": 0.994
+        },
+        {
+          "word": "und",
+          "start": 3.066,
+          "end": 3.266,
+          "score": 0.95
+        },
+        {
+          "word": "trinkt",
+          "start": 3.306,
+          "end": 3.607,
+          "score": 0.93
+        },
+        {
+          "word": "in",
+          "start": 3.647,
+          "end": 3.827,
+          "score": 0.926
+        },
+        {
+          "word": "Ruhe",
+          "start": 3.867,
+          "end": 4.168,
+          "score": 0.959
+        },
+        {
+          "word": "weiter.",
+          "start": 4.228,
+          "end": 6.092,
+          "score": 0.957
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.421,
+      "end": 0.581,
+      "score": 0.869
+    },
+    {
+      "word": "Vorarbeiter",
+      "start": 0.621,
+      "end": 1.423,
+      "score": 0.97
+    },
+    {
+      "word": "nickt",
+      "start": 1.443,
+      "end": 1.703,
+      "score": 0.767
+    },
+    {
+      "word": "mir",
+      "start": 1.743,
+      "end": 1.904,
+      "score": 0.79
+    },
+    {
+      "word": "knapp",
+      "start": 1.964,
+      "end": 2.304,
+      "score": 0.946
+    },
+    {
+      "word": "zu",
+      "start": 2.344,
+      "end": 3.026,
+      "score": 0.994
+    },
+    {
+      "word": "und",
+      "start": 3.066,
+      "end": 3.266,
+      "score": 0.95
+    },
+    {
+      "word": "trinkt",
+      "start": 3.306,
+      "end": 3.607,
+      "score": 0.93
+    },
+    {
+      "word": "in",
+      "start": 3.647,
+      "end": 3.827,
+      "score": 0.926
+    },
+    {
+      "word": "Ruhe",
+      "start": 3.867,
+      "end": 4.168,
+      "score": 0.959
+    },
+    {
+      "word": "weiter.",
+      "start": 4.228,
+      "end": 6.092,
+      "score": 0.957
+    }
+  ]
+}

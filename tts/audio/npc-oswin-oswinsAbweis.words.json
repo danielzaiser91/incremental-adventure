@@ -1,0 +1,159 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 2.568,
+      "text": "\"Wie du willst.\"",
+      "words": [
+        {
+          "word": "\"Wie",
+          "start": 0.481,
+          "end": 0.782,
+          "score": 0.687
+        },
+        {
+          "word": "du",
+          "start": 0.802,
+          "end": 1.063,
+          "score": 0.924
+        },
+        {
+          "word": "willst.\"",
+          "start": 1.123,
+          "end": 2.568,
+          "score": 0.754
+        }
+      ]
+    },
+    {
+      "start": 2.628,
+      "end": 4.674,
+      "text": "Er wendet sich ab.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 2.628,
+          "end": 2.728,
+          "score": 0.624
+        },
+        {
+          "word": "wendet",
+          "start": 2.869,
+          "end": 3.19,
+          "score": 0.974
+        },
+        {
+          "word": "sich",
+          "start": 3.23,
+          "end": 3.491,
+          "score": 0.927
+        },
+        {
+          "word": "ab.",
+          "start": 3.531,
+          "end": 4.674,
+          "score": 0.861
+        }
+      ]
+    },
+    {
+      "start": 4.714,
+      "end": 6.099,
+      "text": "\"Ich habe andere Wege.\"",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 4.714,
+          "end": 4.895,
+          "score": 0.831
+        },
+        {
+          "word": "habe",
+          "start": 4.935,
+          "end": 5.316,
+          "score": 0.9
+        },
+        {
+          "word": "andere",
+          "start": 5.376,
+          "end": 5.818,
+          "score": 0.899
+        },
+        {
+          "word": "Wege.\"",
+          "start": 5.858,
+          "end": 6.099,
+          "score": 0.618
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Wie",
+      "start": 0.481,
+      "end": 0.782,
+      "score": 0.687
+    },
+    {
+      "word": "du",
+      "start": 0.802,
+      "end": 1.063,
+      "score": 0.924
+    },
+    {
+      "word": "willst.\"",
+      "start": 1.123,
+      "end": 2.568,
+      "score": 0.754
+    },
+    {
+      "word": "Er",
+      "start": 2.628,
+      "end": 2.728,
+      "score": 0.624
+    },
+    {
+      "word": "wendet",
+      "start": 2.869,
+      "end": 3.19,
+      "score": 0.974
+    },
+    {
+      "word": "sich",
+      "start": 3.23,
+      "end": 3.491,
+      "score": 0.927
+    },
+    {
+      "word": "ab.",
+      "start": 3.531,
+      "end": 4.674,
+      "score": 0.861
+    },
+    {
+      "word": "\"Ich",
+      "start": 4.714,
+      "end": 4.895,
+      "score": 0.831
+    },
+    {
+      "word": "habe",
+      "start": 4.935,
+      "end": 5.316,
+      "score": 0.9
+    },
+    {
+      "word": "andere",
+      "start": 5.376,
+      "end": 5.818,
+      "score": 0.899
+    },
+    {
+      "word": "Wege.\"",
+      "start": 5.858,
+      "end": 6.099,
+      "score": 0.618
+    }
+  ]
+}

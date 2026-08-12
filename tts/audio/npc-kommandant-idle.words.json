@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.341,
+      "end": 3.951,
+      "text": "Roswald hebt zwei Finger zum Gruß, mehr nicht.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.341,
+          "end": 1.003,
+          "score": 0.911
+        },
+        {
+          "word": "hebt",
+          "start": 1.043,
+          "end": 1.344,
+          "score": 0.944
+        },
+        {
+          "word": "zwei",
+          "start": 1.384,
+          "end": 1.644,
+          "score": 0.978
+        },
+        {
+          "word": "Finger",
+          "start": 1.685,
+          "end": 1.965,
+          "score": 0.974
+        },
+        {
+          "word": "zum",
+          "start": 2.005,
+          "end": 2.146,
+          "score": 0.995
+        },
+        {
+          "word": "Gruß,",
+          "start": 2.186,
+          "end": 2.908,
+          "score": 0.952
+        },
+        {
+          "word": "mehr",
+          "start": 2.928,
+          "end": 3.108,
+          "score": 0.9
+        },
+        {
+          "word": "nicht.",
+          "start": 3.149,
+          "end": 3.951,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "start": 3.971,
+      "end": 5.876,
+      "text": "Männer wie er verschwenden keine Worte.",
+      "words": [
+        {
+          "word": "Männer",
+          "start": 3.971,
+          "end": 4.231,
+          "score": 0.869
+        },
+        {
+          "word": "wie",
+          "start": 4.251,
+          "end": 4.412,
+          "score": 0.957
+        },
+        {
+          "word": "er",
+          "start": 4.452,
+          "end": 4.713,
+          "score": 0.754
+        },
+        {
+          "word": "verschwenden",
+          "start": 4.733,
+          "end": 5.334,
+          "score": 0.895
+        },
+        {
+          "word": "keine",
+          "start": 5.375,
+          "end": 5.595,
+          "score": 0.889
+        },
+        {
+          "word": "Worte.",
+          "start": 5.615,
+          "end": 5.876,
+          "score": 0.926
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.341,
+      "end": 1.003,
+      "score": 0.911
+    },
+    {
+      "word": "hebt",
+      "start": 1.043,
+      "end": 1.344,
+      "score": 0.944
+    },
+    {
+      "word": "zwei",
+      "start": 1.384,
+      "end": 1.644,
+      "score": 0.978
+    },
+    {
+      "word": "Finger",
+      "start": 1.685,
+      "end": 1.965,
+      "score": 0.974
+    },
+    {
+      "word": "zum",
+      "start": 2.005,
+      "end": 2.146,
+      "score": 0.995
+    },
+    {
+      "word": "Gruß,",
+      "start": 2.186,
+      "end": 2.908,
+      "score": 0.952
+    },
+    {
+      "word": "mehr",
+      "start": 2.928,
+      "end": 3.108,
+      "score": 0.9
+    },
+    {
+      "word": "nicht.",
+      "start": 3.149,
+      "end": 3.951,
+      "score": 0.995
+    },
+    {
+      "word": "Männer",
+      "start": 3.971,
+      "end": 4.231,
+      "score": 0.869
+    },
+    {
+      "word": "wie",
+      "start": 4.251,
+      "end": 4.412,
+      "score": 0.957
+    },
+    {
+      "word": "er",
+      "start": 4.452,
+      "end": 4.713,
+      "score": 0.754
+    },
+    {
+      "word": "verschwenden",
+      "start": 4.733,
+      "end": 5.334,
+      "score": 0.895
+    },
+    {
+      "word": "keine",
+      "start": 5.375,
+      "end": 5.595,
+      "score": 0.889
+    },
+    {
+      "word": "Worte.",
+      "start": 5.615,
+      "end": 5.876,
+      "score": 0.926
+    }
+  ]
+}

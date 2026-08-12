@@ -1,0 +1,334 @@
+{
+  "segments": [
+    {
+      "start": 0.701,
+      "end": 2.985,
+      "text": "Ich bin kein Lehrling mehr.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.701,
+          "end": 0.922,
+          "score": 0.726
+        },
+        {
+          "word": "bin",
+          "start": 0.962,
+          "end": 1.222,
+          "score": 0.963
+        },
+        {
+          "word": "kein",
+          "start": 1.262,
+          "end": 1.462,
+          "score": 0.678
+        },
+        {
+          "word": "Lehrling",
+          "start": 1.503,
+          "end": 1.903,
+          "score": 0.859
+        },
+        {
+          "word": "mehr.",
+          "start": 1.923,
+          "end": 2.985,
+          "score": 0.812
+        }
+      ]
+    },
+    {
+      "start": 3.025,
+      "end": 9.095,
+      "text": "Die Arbeit sitzt tief — in den Händen, in der Haltung, in jedem Schritt.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.025,
+          "end": 3.205,
+          "score": 0.825
+        },
+        {
+          "word": "Arbeit",
+          "start": 3.245,
+          "end": 3.606,
+          "score": 0.901
+        },
+        {
+          "word": "sitzt",
+          "start": 3.646,
+          "end": 3.967,
+          "score": 0.78
+        },
+        {
+          "word": "tief",
+          "start": 4.007,
+          "end": 4.347,
+          "score": 0.931
+        },
+        {
+          "word": "—",
+          "start": 4.948,
+          "end": 4.968,
+          "score": 0.987
+        },
+        {
+          "word": "in",
+          "start": 4.988,
+          "end": 5.068,
+          "score": 0.964
+        },
+        {
+          "word": "den",
+          "start": 5.109,
+          "end": 5.269,
+          "score": 0.969
+        },
+        {
+          "word": "Händen,",
+          "start": 5.309,
+          "end": 6.17,
+          "score": 0.974
+        },
+        {
+          "word": "in",
+          "start": 6.19,
+          "end": 6.27,
+          "score": 0.974
+        },
+        {
+          "word": "der",
+          "start": 6.311,
+          "end": 6.391,
+          "score": 0.845
+        },
+        {
+          "word": "Haltung,",
+          "start": 6.471,
+          "end": 7.372,
+          "score": 0.953
+        },
+        {
+          "word": "in",
+          "start": 7.432,
+          "end": 7.633,
+          "score": 0.994
+        },
+        {
+          "word": "jedem",
+          "start": 7.673,
+          "end": 7.993,
+          "score": 0.929
+        },
+        {
+          "word": "Schritt.",
+          "start": 8.033,
+          "end": 9.095,
+          "score": 0.885
+        }
+      ]
+    },
+    {
+      "start": 9.135,
+      "end": 10.938,
+      "text": "Ich merke es.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 9.135,
+          "end": 9.296,
+          "score": 0.927
+        },
+        {
+          "word": "merke",
+          "start": 9.336,
+          "end": 9.636,
+          "score": 0.965
+        },
+        {
+          "word": "es.",
+          "start": 9.676,
+          "end": 10.938,
+          "score": 0.724
+        }
+      ]
+    },
+    {
+      "start": 10.958,
+      "end": 11.539,
+      "text": "Die anderen auch.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 10.958,
+          "end": 11.079,
+          "score": 0.897
+        },
+        {
+          "word": "anderen",
+          "start": 11.119,
+          "end": 11.399,
+          "score": 0.85
+        },
+        {
+          "word": "auch.",
+          "start": 11.439,
+          "end": 11.539,
+          "score": 0.768
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.701,
+      "end": 0.922,
+      "score": 0.726
+    },
+    {
+      "word": "bin",
+      "start": 0.962,
+      "end": 1.222,
+      "score": 0.963
+    },
+    {
+      "word": "kein",
+      "start": 1.262,
+      "end": 1.462,
+      "score": 0.678
+    },
+    {
+      "word": "Lehrling",
+      "start": 1.503,
+      "end": 1.903,
+      "score": 0.859
+    },
+    {
+      "word": "mehr.",
+      "start": 1.923,
+      "end": 2.985,
+      "score": 0.812
+    },
+    {
+      "word": "Die",
+      "start": 3.025,
+      "end": 3.205,
+      "score": 0.825
+    },
+    {
+      "word": "Arbeit",
+      "start": 3.245,
+      "end": 3.606,
+      "score": 0.901
+    },
+    {
+      "word": "sitzt",
+      "start": 3.646,
+      "end": 3.967,
+      "score": 0.78
+    },
+    {
+      "word": "tief",
+      "start": 4.007,
+      "end": 4.347,
+      "score": 0.931
+    },
+    {
+      "word": "—",
+      "start": 4.948,
+      "end": 4.968,
+      "score": 0.987
+    },
+    {
+      "word": "in",
+      "start": 4.988,
+      "end": 5.068,
+      "score": 0.964
+    },
+    {
+      "word": "den",
+      "start": 5.109,
+      "end": 5.269,
+      "score": 0.969
+    },
+    {
+      "word": "Händen,",
+      "start": 5.309,
+      "end": 6.17,
+      "score": 0.974
+    },
+    {
+      "word": "in",
+      "start": 6.19,
+      "end": 6.27,
+      "score": 0.974
+    },
+    {
+      "word": "der",
+      "start": 6.311,
+      "end": 6.391,
+      "score": 0.845
+    },
+    {
+      "word": "Haltung,",
+      "start": 6.471,
+      "end": 7.372,
+      "score": 0.953
+    },
+    {
+      "word": "in",
+      "start": 7.432,
+      "end": 7.633,
+      "score": 0.994
+    },
+    {
+      "word": "jedem",
+      "start": 7.673,
+      "end": 7.993,
+      "score": 0.929
+    },
+    {
+      "word": "Schritt.",
+      "start": 8.033,
+      "end": 9.095,
+      "score": 0.885
+    },
+    {
+      "word": "Ich",
+      "start": 9.135,
+      "end": 9.296,
+      "score": 0.927
+    },
+    {
+      "word": "merke",
+      "start": 9.336,
+      "end": 9.636,
+      "score": 0.965
+    },
+    {
+      "word": "es.",
+      "start": 9.676,
+      "end": 10.938,
+      "score": 0.724
+    },
+    {
+      "word": "Die",
+      "start": 10.958,
+      "end": 11.079,
+      "score": 0.897
+    },
+    {
+      "word": "anderen",
+      "start": 11.119,
+      "end": 11.399,
+      "score": 0.85
+    },
+    {
+      "word": "auch.",
+      "start": 11.439,
+      "end": 11.539,
+      "score": 0.768
+    }
+  ]
+}

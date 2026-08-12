@@ -1,0 +1,712 @@
+{
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 3.102,
+      "text": "Drei Tage Weg liegen hinter mir.",
+      "words": [
+        {
+          "word": "Drei",
+          "start": 0.5,
+          "end": 0.801,
+          "score": 0.79
+        },
+        {
+          "word": "Tage",
+          "start": 0.821,
+          "end": 1.201,
+          "score": 0.969
+        },
+        {
+          "word": "Weg",
+          "start": 1.241,
+          "end": 1.441,
+          "score": 0.989
+        },
+        {
+          "word": "liegen",
+          "start": 1.481,
+          "end": 1.741,
+          "score": 0.888
+        },
+        {
+          "word": "hinter",
+          "start": 1.761,
+          "end": 2.041,
+          "score": 0.978
+        },
+        {
+          "word": "mir.",
+          "start": 2.061,
+          "end": 3.102,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 3.122,
+      "end": 8.626,
+      "text": "Keine Räuber — aber auch keine Hand, die sich mir entgegenstreckte.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 3.122,
+          "end": 3.342,
+          "score": 0.909
+        },
+        {
+          "word": "Räuber",
+          "start": 3.402,
+          "end": 4.423,
+          "score": 0.99
+        },
+        {
+          "word": "—",
+          "start": 4.443,
+          "end": 4.463,
+          "score": 0.989
+        },
+        {
+          "word": "aber",
+          "start": 4.483,
+          "end": 4.623,
+          "score": 0.923
+        },
+        {
+          "word": "auch",
+          "start": 4.663,
+          "end": 4.943,
+          "score": 0.89
+        },
+        {
+          "word": "keine",
+          "start": 4.963,
+          "end": 5.264,
+          "score": 0.812
+        },
+        {
+          "word": "Hand,",
+          "start": 5.304,
+          "end": 5.544,
+          "score": 0.677
+        },
+        {
+          "word": "die",
+          "start": 5.564,
+          "end": 5.664,
+          "score": 0.8
+        },
+        {
+          "word": "sich",
+          "start": 5.704,
+          "end": 5.824,
+          "score": 0.873
+        },
+        {
+          "word": "mir",
+          "start": 5.864,
+          "end": 5.984,
+          "score": 0.964
+        },
+        {
+          "word": "entgegenstreckte.",
+          "start": 6.024,
+          "end": 8.626,
+          "score": 0.921
+        }
+      ]
+    },
+    {
+      "start": 8.686,
+      "end": 11.348,
+      "text": "Lethkar ist größer als Treutheim.",
+      "words": [
+        {
+          "word": "Lethkar",
+          "start": 8.686,
+          "end": 9.126,
+          "score": 0.812
+        },
+        {
+          "word": "ist",
+          "start": 9.166,
+          "end": 9.446,
+          "score": 0.875
+        },
+        {
+          "word": "größer",
+          "start": 9.466,
+          "end": 9.847,
+          "score": 0.746
+        },
+        {
+          "word": "als",
+          "start": 9.867,
+          "end": 10.047,
+          "score": 0.928
+        },
+        {
+          "word": "Treutheim.",
+          "start": 10.087,
+          "end": 11.348,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 11.388,
+      "end": 14.73,
+      "text": "Fremde Gerüche, fremde Gesichter.",
+      "words": [
+        {
+          "word": "Fremde",
+          "start": 11.388,
+          "end": 11.748,
+          "score": 0.926
+        },
+        {
+          "word": "Gerüche,",
+          "start": 11.788,
+          "end": 12.889,
+          "score": 0.871
+        },
+        {
+          "word": "fremde",
+          "start": 12.929,
+          "end": 13.229,
+          "score": 0.954
+        },
+        {
+          "word": "Gesichter.",
+          "start": 13.269,
+          "end": 14.73,
+          "score": 0.921
+        }
+      ]
+    },
+    {
+      "start": 14.75,
+      "end": 17.772,
+      "text": "Hier weiß niemand, wer ich bin.",
+      "words": [
+        {
+          "word": "Hier",
+          "start": 14.75,
+          "end": 14.95,
+          "score": 0.831
+        },
+        {
+          "word": "weiß",
+          "start": 14.99,
+          "end": 15.35,
+          "score": 0.968
+        },
+        {
+          "word": "niemand,",
+          "start": 15.37,
+          "end": 15.711,
+          "score": 0.923
+        },
+        {
+          "word": "wer",
+          "start": 15.751,
+          "end": 15.871,
+          "score": 0.831
+        },
+        {
+          "word": "ich",
+          "start": 15.891,
+          "end": 16.011,
+          "score": 0.837
+        },
+        {
+          "word": "bin.",
+          "start": 16.051,
+          "end": 17.772,
+          "score": 0.895
+        }
+      ]
+    },
+    {
+      "start": 17.812,
+      "end": 19.893,
+      "text": "Das ist ein Vorteil.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 17.812,
+          "end": 17.952,
+          "score": 0.954
+        },
+        {
+          "word": "ist",
+          "start": 18.012,
+          "end": 18.172,
+          "score": 0.982
+        },
+        {
+          "word": "ein",
+          "start": 18.212,
+          "end": 18.392,
+          "score": 0.722
+        },
+        {
+          "word": "Vorteil.",
+          "start": 18.432,
+          "end": 19.893,
+          "score": 0.991
+        }
+      ]
+    },
+    {
+      "start": 19.913,
+      "end": 22.535,
+      "text": "Vielleicht.",
+      "words": [
+        {
+          "word": "Vielleicht.",
+          "start": 19.913,
+          "end": 22.535,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 22.575,
+      "end": 26.278,
+      "text": "Die Adresse aus dem Brief liegt nördlich des Marktes.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 22.575,
+          "end": 22.695,
+          "score": 0.941
+        },
+        {
+          "word": "Adresse",
+          "start": 22.735,
+          "end": 23.176,
+          "score": 0.872
+        },
+        {
+          "word": "aus",
+          "start": 23.196,
+          "end": 23.336,
+          "score": 0.823
+        },
+        {
+          "word": "dem",
+          "start": 23.376,
+          "end": 23.516,
+          "score": 0.981
+        },
+        {
+          "word": "Brief",
+          "start": 23.556,
+          "end": 23.856,
+          "score": 0.805
+        },
+        {
+          "word": "liegt",
+          "start": 23.896,
+          "end": 24.196,
+          "score": 0.884
+        },
+        {
+          "word": "nördlich",
+          "start": 24.236,
+          "end": 24.657,
+          "score": 0.914
+        },
+        {
+          "word": "des",
+          "start": 24.677,
+          "end": 24.817,
+          "score": 0.875
+        },
+        {
+          "word": "Marktes.",
+          "start": 24.857,
+          "end": 26.278,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 26.318,
+      "end": 28.799,
+      "text": "Doch ich gehe nicht hin.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 26.318,
+          "end": 26.478,
+          "score": 0.856
+        },
+        {
+          "word": "ich",
+          "start": 26.518,
+          "end": 26.618,
+          "score": 0.884
+        },
+        {
+          "word": "gehe",
+          "start": 26.658,
+          "end": 26.878,
+          "score": 0.879
+        },
+        {
+          "word": "nicht",
+          "start": 26.918,
+          "end": 27.078,
+          "score": 0.917
+        },
+        {
+          "word": "hin.",
+          "start": 27.098,
+          "end": 28.799,
+          "score": 0.925
+        }
+      ]
+    },
+    {
+      "start": 28.819,
+      "end": 29.2,
+      "text": "Noch nicht.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 28.819,
+          "end": 29.02,
+          "score": 0.918
+        },
+        {
+          "word": "nicht.",
+          "start": 29.04,
+          "end": 29.2,
+          "score": 0.826
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Drei",
+      "start": 0.5,
+      "end": 0.801,
+      "score": 0.79
+    },
+    {
+      "word": "Tage",
+      "start": 0.821,
+      "end": 1.201,
+      "score": 0.969
+    },
+    {
+      "word": "Weg",
+      "start": 1.241,
+      "end": 1.441,
+      "score": 0.989
+    },
+    {
+      "word": "liegen",
+      "start": 1.481,
+      "end": 1.741,
+      "score": 0.888
+    },
+    {
+      "word": "hinter",
+      "start": 1.761,
+      "end": 2.041,
+      "score": 0.978
+    },
+    {
+      "word": "mir.",
+      "start": 2.061,
+      "end": 3.102,
+      "score": 0.933
+    },
+    {
+      "word": "Keine",
+      "start": 3.122,
+      "end": 3.342,
+      "score": 0.909
+    },
+    {
+      "word": "Räuber",
+      "start": 3.402,
+      "end": 4.423,
+      "score": 0.99
+    },
+    {
+      "word": "—",
+      "start": 4.443,
+      "end": 4.463,
+      "score": 0.989
+    },
+    {
+      "word": "aber",
+      "start": 4.483,
+      "end": 4.623,
+      "score": 0.923
+    },
+    {
+      "word": "auch",
+      "start": 4.663,
+      "end": 4.943,
+      "score": 0.89
+    },
+    {
+      "word": "keine",
+      "start": 4.963,
+      "end": 5.264,
+      "score": 0.812
+    },
+    {
+      "word": "Hand,",
+      "start": 5.304,
+      "end": 5.544,
+      "score": 0.677
+    },
+    {
+      "word": "die",
+      "start": 5.564,
+      "end": 5.664,
+      "score": 0.8
+    },
+    {
+      "word": "sich",
+      "start": 5.704,
+      "end": 5.824,
+      "score": 0.873
+    },
+    {
+      "word": "mir",
+      "start": 5.864,
+      "end": 5.984,
+      "score": 0.964
+    },
+    {
+      "word": "entgegenstreckte.",
+      "start": 6.024,
+      "end": 8.626,
+      "score": 0.921
+    },
+    {
+      "word": "Lethkar",
+      "start": 8.686,
+      "end": 9.126,
+      "score": 0.812
+    },
+    {
+      "word": "ist",
+      "start": 9.166,
+      "end": 9.446,
+      "score": 0.875
+    },
+    {
+      "word": "größer",
+      "start": 9.466,
+      "end": 9.847,
+      "score": 0.746
+    },
+    {
+      "word": "als",
+      "start": 9.867,
+      "end": 10.047,
+      "score": 0.928
+    },
+    {
+      "word": "Treutheim.",
+      "start": 10.087,
+      "end": 11.348,
+      "score": 0.932
+    },
+    {
+      "word": "Fremde",
+      "start": 11.388,
+      "end": 11.748,
+      "score": 0.926
+    },
+    {
+      "word": "Gerüche,",
+      "start": 11.788,
+      "end": 12.889,
+      "score": 0.871
+    },
+    {
+      "word": "fremde",
+      "start": 12.929,
+      "end": 13.229,
+      "score": 0.954
+    },
+    {
+      "word": "Gesichter.",
+      "start": 13.269,
+      "end": 14.73,
+      "score": 0.921
+    },
+    {
+      "word": "Hier",
+      "start": 14.75,
+      "end": 14.95,
+      "score": 0.831
+    },
+    {
+      "word": "weiß",
+      "start": 14.99,
+      "end": 15.35,
+      "score": 0.968
+    },
+    {
+      "word": "niemand,",
+      "start": 15.37,
+      "end": 15.711,
+      "score": 0.923
+    },
+    {
+      "word": "wer",
+      "start": 15.751,
+      "end": 15.871,
+      "score": 0.831
+    },
+    {
+      "word": "ich",
+      "start": 15.891,
+      "end": 16.011,
+      "score": 0.837
+    },
+    {
+      "word": "bin.",
+      "start": 16.051,
+      "end": 17.772,
+      "score": 0.895
+    },
+    {
+      "word": "Das",
+      "start": 17.812,
+      "end": 17.952,
+      "score": 0.954
+    },
+    {
+      "word": "ist",
+      "start": 18.012,
+      "end": 18.172,
+      "score": 0.982
+    },
+    {
+      "word": "ein",
+      "start": 18.212,
+      "end": 18.392,
+      "score": 0.722
+    },
+    {
+      "word": "Vorteil.",
+      "start": 18.432,
+      "end": 19.893,
+      "score": 0.991
+    },
+    {
+      "word": "Vielleicht.",
+      "start": 19.913,
+      "end": 22.535,
+      "score": 0.877
+    },
+    {
+      "word": "Die",
+      "start": 22.575,
+      "end": 22.695,
+      "score": 0.941
+    },
+    {
+      "word": "Adresse",
+      "start": 22.735,
+      "end": 23.176,
+      "score": 0.872
+    },
+    {
+      "word": "aus",
+      "start": 23.196,
+      "end": 23.336,
+      "score": 0.823
+    },
+    {
+      "word": "dem",
+      "start": 23.376,
+      "end": 23.516,
+      "score": 0.981
+    },
+    {
+      "word": "Brief",
+      "start": 23.556,
+      "end": 23.856,
+      "score": 0.805
+    },
+    {
+      "word": "liegt",
+      "start": 23.896,
+      "end": 24.196,
+      "score": 0.884
+    },
+    {
+      "word": "nördlich",
+      "start": 24.236,
+      "end": 24.657,
+      "score": 0.914
+    },
+    {
+      "word": "des",
+      "start": 24.677,
+      "end": 24.817,
+      "score": 0.875
+    },
+    {
+      "word": "Marktes.",
+      "start": 24.857,
+      "end": 26.278,
+      "score": 0.898
+    },
+    {
+      "word": "Doch",
+      "start": 26.318,
+      "end": 26.478,
+      "score": 0.856
+    },
+    {
+      "word": "ich",
+      "start": 26.518,
+      "end": 26.618,
+      "score": 0.884
+    },
+    {
+      "word": "gehe",
+      "start": 26.658,
+      "end": 26.878,
+      "score": 0.879
+    },
+    {
+      "word": "nicht",
+      "start": 26.918,
+      "end": 27.078,
+      "score": 0.917
+    },
+    {
+      "word": "hin.",
+      "start": 27.098,
+      "end": 28.799,
+      "score": 0.925
+    },
+    {
+      "word": "Noch",
+      "start": 28.819,
+      "end": 29.02,
+      "score": 0.918
+    },
+    {
+      "word": "nicht.",
+      "start": 29.04,
+      "end": 29.2,
+      "score": 0.826
+    }
+  ]
+}

@@ -1,0 +1,947 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 3.001,
+      "text": "Das Lager ist leer.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.44,
+          "end": 0.7,
+          "score": 0.787
+        },
+        {
+          "word": "Lager",
+          "start": 0.76,
+          "end": 1.16,
+          "score": 0.968
+        },
+        {
+          "word": "ist",
+          "start": 1.201,
+          "end": 1.521,
+          "score": 0.843
+        },
+        {
+          "word": "leer.",
+          "start": 1.581,
+          "end": 3.001,
+          "score": 0.805
+        }
+      ]
+    },
+    {
+      "start": 3.041,
+      "end": 4.662,
+      "text": "Zu leer.",
+      "words": [
+        {
+          "word": "Zu",
+          "start": 3.041,
+          "end": 3.281,
+          "score": 0.995
+        },
+        {
+          "word": "leer.",
+          "start": 3.341,
+          "end": 4.662,
+          "score": 0.851
+        }
+      ]
+    },
+    {
+      "start": 4.702,
+      "end": 10.905,
+      "text": "Jemand wusste, dass ich komme — oder sie sind aus eigenem Antrieb gegangen.",
+      "words": [
+        {
+          "word": "Jemand",
+          "start": 4.702,
+          "end": 5.142,
+          "score": 0.975
+        },
+        {
+          "word": "wusste,",
+          "start": 5.162,
+          "end": 5.562,
+          "score": 0.883
+        },
+        {
+          "word": "dass",
+          "start": 5.582,
+          "end": 5.742,
+          "score": 0.856
+        },
+        {
+          "word": "ich",
+          "start": 5.802,
+          "end": 5.943,
+          "score": 0.954
+        },
+        {
+          "word": "komme",
+          "start": 5.983,
+          "end": 7.163,
+          "score": 0.991
+        },
+        {
+          "word": "—",
+          "start": 7.183,
+          "end": 7.203,
+          "score": 0.989
+        },
+        {
+          "word": "oder",
+          "start": 7.223,
+          "end": 7.483,
+          "score": 0.95
+        },
+        {
+          "word": "sie",
+          "start": 7.503,
+          "end": 7.623,
+          "score": 0.865
+        },
+        {
+          "word": "sind",
+          "start": 7.643,
+          "end": 7.823,
+          "score": 0.976
+        },
+        {
+          "word": "aus",
+          "start": 7.863,
+          "end": 8.063,
+          "score": 0.833
+        },
+        {
+          "word": "eigenem",
+          "start": 8.083,
+          "end": 8.444,
+          "score": 0.836
+        },
+        {
+          "word": "Antrieb",
+          "start": 8.484,
+          "end": 8.844,
+          "score": 0.947
+        },
+        {
+          "word": "gegangen.",
+          "start": 8.884,
+          "end": 10.905,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 10.945,
+      "end": 21.009,
+      "text": "Doch ich finde, was sie zurückließen: Listen, Routen, Quittungen für Dienste, die keinen Namen tragen.",
+      "words": [
+        {
+          "word": "Doch",
+          "start": 10.945,
+          "end": 11.105,
+          "score": 0.818
+        },
+        {
+          "word": "ich",
+          "start": 11.145,
+          "end": 11.305,
+          "score": 0.747
+        },
+        {
+          "word": "finde,",
+          "start": 11.365,
+          "end": 11.645,
+          "score": 0.956
+        },
+        {
+          "word": "was",
+          "start": 11.665,
+          "end": 11.785,
+          "score": 0.886
+        },
+        {
+          "word": "sie",
+          "start": 11.805,
+          "end": 11.985,
+          "score": 0.893
+        },
+        {
+          "word": "zurückließen:",
+          "start": 12.025,
+          "end": 13.866,
+          "score": 0.954
+        },
+        {
+          "word": "Listen,",
+          "start": 13.926,
+          "end": 15.247,
+          "score": 0.82
+        },
+        {
+          "word": "Routen,",
+          "start": 15.307,
+          "end": 16.607,
+          "score": 0.793
+        },
+        {
+          "word": "Quittungen",
+          "start": 16.667,
+          "end": 17.247,
+          "score": 0.909
+        },
+        {
+          "word": "für",
+          "start": 17.267,
+          "end": 17.468,
+          "score": 0.99
+        },
+        {
+          "word": "Dienste,",
+          "start": 17.508,
+          "end": 17.968,
+          "score": 0.833
+        },
+        {
+          "word": "die",
+          "start": 17.988,
+          "end": 18.248,
+          "score": 0.805
+        },
+        {
+          "word": "keinen",
+          "start": 18.288,
+          "end": 18.648,
+          "score": 0.839
+        },
+        {
+          "word": "Namen",
+          "start": 18.668,
+          "end": 19.028,
+          "score": 0.898
+        },
+        {
+          "word": "tragen.",
+          "start": 19.068,
+          "end": 21.009,
+          "score": 0.953
+        }
+      ]
+    },
+    {
+      "start": 21.069,
+      "end": 24.11,
+      "text": "Und überall dasselbe Muster.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 21.069,
+          "end": 21.469,
+          "score": 0.924
+        },
+        {
+          "word": "überall",
+          "start": 21.529,
+          "end": 22.029,
+          "score": 0.98
+        },
+        {
+          "word": "dasselbe",
+          "start": 22.069,
+          "end": 22.65,
+          "score": 0.952
+        },
+        {
+          "word": "Muster.",
+          "start": 22.69,
+          "end": 24.11,
+          "score": 0.966
+        }
+      ]
+    },
+    {
+      "start": 24.13,
+      "end": 27.552,
+      "text": "Kein Raub — Beherrschung.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 24.13,
+          "end": 24.39,
+          "score": 0.891
+        },
+        {
+          "word": "Raub",
+          "start": 24.471,
+          "end": 24.771,
+          "score": 0.911
+        },
+        {
+          "word": "—",
+          "start": 25.731,
+          "end": 25.751,
+          "score": 0.506
+        },
+        {
+          "word": "Beherrschung.",
+          "start": 25.771,
+          "end": 27.552,
+          "score": 0.862
+        }
+      ]
+    },
+    {
+      "start": 27.592,
+      "end": 34.355,
+      "text": "Schulden, Geheimnisse, erkaufte Treue.",
+      "words": [
+        {
+          "word": "Schulden,",
+          "start": 27.592,
+          "end": 29.012,
+          "score": 0.838
+        },
+        {
+          "word": "Geheimnisse,",
+          "start": 29.032,
+          "end": 30.693,
+          "score": 0.875
+        },
+        {
+          "word": "erkaufte",
+          "start": 30.713,
+          "end": 31.414,
+          "score": 0.958
+        },
+        {
+          "word": "Treue.",
+          "start": 31.474,
+          "end": 34.355,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 34.395,
+      "end": 37.596,
+      "text": "Valdris baut kein Netz aus Verbrechern.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 34.395,
+          "end": 34.915,
+          "score": 0.768
+        },
+        {
+          "word": "baut",
+          "start": 34.955,
+          "end": 35.255,
+          "score": 0.897
+        },
+        {
+          "word": "kein",
+          "start": 35.295,
+          "end": 35.515,
+          "score": 0.859
+        },
+        {
+          "word": "Netz",
+          "start": 35.555,
+          "end": 35.795,
+          "score": 0.939
+        },
+        {
+          "word": "aus",
+          "start": 35.835,
+          "end": 36.056,
+          "score": 0.856
+        },
+        {
+          "word": "Verbrechern.",
+          "start": 36.096,
+          "end": 37.596,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 37.636,
+      "end": 42.038,
+      "text": "Er baut ein Netz aus Menschen, die ihm etwas schulden.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 37.636,
+          "end": 37.736,
+          "score": 0.876
+        },
+        {
+          "word": "baut",
+          "start": 37.796,
+          "end": 38.036,
+          "score": 0.965
+        },
+        {
+          "word": "ein",
+          "start": 38.076,
+          "end": 38.256,
+          "score": 0.933
+        },
+        {
+          "word": "Netz",
+          "start": 38.296,
+          "end": 38.597,
+          "score": 0.964
+        },
+        {
+          "word": "aus",
+          "start": 38.617,
+          "end": 38.977,
+          "score": 0.865
+        },
+        {
+          "word": "Menschen,",
+          "start": 38.997,
+          "end": 39.437,
+          "score": 0.766
+        },
+        {
+          "word": "die",
+          "start": 39.457,
+          "end": 39.577,
+          "score": 0.982
+        },
+        {
+          "word": "ihm",
+          "start": 39.617,
+          "end": 39.777,
+          "score": 0.76
+        },
+        {
+          "word": "etwas",
+          "start": 39.817,
+          "end": 40.157,
+          "score": 0.966
+        },
+        {
+          "word": "schulden.",
+          "start": 40.197,
+          "end": 42.038,
+          "score": 0.828
+        }
+      ]
+    },
+    {
+      "start": 42.078,
+      "end": 45.4,
+      "text": "Das lässt sich schwerer zerschlagen als eine Bande.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 42.078,
+          "end": 42.258,
+          "score": 0.966
+        },
+        {
+          "word": "lässt",
+          "start": 42.298,
+          "end": 42.538,
+          "score": 0.831
+        },
+        {
+          "word": "sich",
+          "start": 42.558,
+          "end": 42.738,
+          "score": 0.94
+        },
+        {
+          "word": "schwerer",
+          "start": 42.778,
+          "end": 43.199,
+          "score": 0.84
+        },
+        {
+          "word": "zerschlagen",
+          "start": 43.219,
+          "end": 43.759,
+          "score": 0.864
+        },
+        {
+          "word": "als",
+          "start": 43.779,
+          "end": 43.959,
+          "score": 0.967
+        },
+        {
+          "word": "eine",
+          "start": 43.999,
+          "end": 44.179,
+          "score": 0.816
+        },
+        {
+          "word": "Bande.",
+          "start": 44.219,
+          "end": 45.4,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 45.42,
+      "end": 46.1,
+      "text": "Weit schwerer.",
+      "words": [
+        {
+          "word": "Weit",
+          "start": 45.42,
+          "end": 45.72,
+          "score": 0.951
+        },
+        {
+          "word": "schwerer.",
+          "start": 45.74,
+          "end": 46.1,
+          "score": 0.764
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.44,
+      "end": 0.7,
+      "score": 0.787
+    },
+    {
+      "word": "Lager",
+      "start": 0.76,
+      "end": 1.16,
+      "score": 0.968
+    },
+    {
+      "word": "ist",
+      "start": 1.201,
+      "end": 1.521,
+      "score": 0.843
+    },
+    {
+      "word": "leer.",
+      "start": 1.581,
+      "end": 3.001,
+      "score": 0.805
+    },
+    {
+      "word": "Zu",
+      "start": 3.041,
+      "end": 3.281,
+      "score": 0.995
+    },
+    {
+      "word": "leer.",
+      "start": 3.341,
+      "end": 4.662,
+      "score": 0.851
+    },
+    {
+      "word": "Jemand",
+      "start": 4.702,
+      "end": 5.142,
+      "score": 0.975
+    },
+    {
+      "word": "wusste,",
+      "start": 5.162,
+      "end": 5.562,
+      "score": 0.883
+    },
+    {
+      "word": "dass",
+      "start": 5.582,
+      "end": 5.742,
+      "score": 0.856
+    },
+    {
+      "word": "ich",
+      "start": 5.802,
+      "end": 5.943,
+      "score": 0.954
+    },
+    {
+      "word": "komme",
+      "start": 5.983,
+      "end": 7.163,
+      "score": 0.991
+    },
+    {
+      "word": "—",
+      "start": 7.183,
+      "end": 7.203,
+      "score": 0.989
+    },
+    {
+      "word": "oder",
+      "start": 7.223,
+      "end": 7.483,
+      "score": 0.95
+    },
+    {
+      "word": "sie",
+      "start": 7.503,
+      "end": 7.623,
+      "score": 0.865
+    },
+    {
+      "word": "sind",
+      "start": 7.643,
+      "end": 7.823,
+      "score": 0.976
+    },
+    {
+      "word": "aus",
+      "start": 7.863,
+      "end": 8.063,
+      "score": 0.833
+    },
+    {
+      "word": "eigenem",
+      "start": 8.083,
+      "end": 8.444,
+      "score": 0.836
+    },
+    {
+      "word": "Antrieb",
+      "start": 8.484,
+      "end": 8.844,
+      "score": 0.947
+    },
+    {
+      "word": "gegangen.",
+      "start": 8.884,
+      "end": 10.905,
+      "score": 0.935
+    },
+    {
+      "word": "Doch",
+      "start": 10.945,
+      "end": 11.105,
+      "score": 0.818
+    },
+    {
+      "word": "ich",
+      "start": 11.145,
+      "end": 11.305,
+      "score": 0.747
+    },
+    {
+      "word": "finde,",
+      "start": 11.365,
+      "end": 11.645,
+      "score": 0.956
+    },
+    {
+      "word": "was",
+      "start": 11.665,
+      "end": 11.785,
+      "score": 0.886
+    },
+    {
+      "word": "sie",
+      "start": 11.805,
+      "end": 11.985,
+      "score": 0.893
+    },
+    {
+      "word": "zurückließen:",
+      "start": 12.025,
+      "end": 13.866,
+      "score": 0.954
+    },
+    {
+      "word": "Listen,",
+      "start": 13.926,
+      "end": 15.247,
+      "score": 0.82
+    },
+    {
+      "word": "Routen,",
+      "start": 15.307,
+      "end": 16.607,
+      "score": 0.793
+    },
+    {
+      "word": "Quittungen",
+      "start": 16.667,
+      "end": 17.247,
+      "score": 0.909
+    },
+    {
+      "word": "für",
+      "start": 17.267,
+      "end": 17.468,
+      "score": 0.99
+    },
+    {
+      "word": "Dienste,",
+      "start": 17.508,
+      "end": 17.968,
+      "score": 0.833
+    },
+    {
+      "word": "die",
+      "start": 17.988,
+      "end": 18.248,
+      "score": 0.805
+    },
+    {
+      "word": "keinen",
+      "start": 18.288,
+      "end": 18.648,
+      "score": 0.839
+    },
+    {
+      "word": "Namen",
+      "start": 18.668,
+      "end": 19.028,
+      "score": 0.898
+    },
+    {
+      "word": "tragen.",
+      "start": 19.068,
+      "end": 21.009,
+      "score": 0.953
+    },
+    {
+      "word": "Und",
+      "start": 21.069,
+      "end": 21.469,
+      "score": 0.924
+    },
+    {
+      "word": "überall",
+      "start": 21.529,
+      "end": 22.029,
+      "score": 0.98
+    },
+    {
+      "word": "dasselbe",
+      "start": 22.069,
+      "end": 22.65,
+      "score": 0.952
+    },
+    {
+      "word": "Muster.",
+      "start": 22.69,
+      "end": 24.11,
+      "score": 0.966
+    },
+    {
+      "word": "Kein",
+      "start": 24.13,
+      "end": 24.39,
+      "score": 0.891
+    },
+    {
+      "word": "Raub",
+      "start": 24.471,
+      "end": 24.771,
+      "score": 0.911
+    },
+    {
+      "word": "—",
+      "start": 25.731,
+      "end": 25.751,
+      "score": 0.506
+    },
+    {
+      "word": "Beherrschung.",
+      "start": 25.771,
+      "end": 27.552,
+      "score": 0.862
+    },
+    {
+      "word": "Schulden,",
+      "start": 27.592,
+      "end": 29.012,
+      "score": 0.838
+    },
+    {
+      "word": "Geheimnisse,",
+      "start": 29.032,
+      "end": 30.693,
+      "score": 0.875
+    },
+    {
+      "word": "erkaufte",
+      "start": 30.713,
+      "end": 31.414,
+      "score": 0.958
+    },
+    {
+      "word": "Treue.",
+      "start": 31.474,
+      "end": 34.355,
+      "score": 0.896
+    },
+    {
+      "word": "Valdris",
+      "start": 34.395,
+      "end": 34.915,
+      "score": 0.768
+    },
+    {
+      "word": "baut",
+      "start": 34.955,
+      "end": 35.255,
+      "score": 0.897
+    },
+    {
+      "word": "kein",
+      "start": 35.295,
+      "end": 35.515,
+      "score": 0.859
+    },
+    {
+      "word": "Netz",
+      "start": 35.555,
+      "end": 35.795,
+      "score": 0.939
+    },
+    {
+      "word": "aus",
+      "start": 35.835,
+      "end": 36.056,
+      "score": 0.856
+    },
+    {
+      "word": "Verbrechern.",
+      "start": 36.096,
+      "end": 37.596,
+      "score": 0.894
+    },
+    {
+      "word": "Er",
+      "start": 37.636,
+      "end": 37.736,
+      "score": 0.876
+    },
+    {
+      "word": "baut",
+      "start": 37.796,
+      "end": 38.036,
+      "score": 0.965
+    },
+    {
+      "word": "ein",
+      "start": 38.076,
+      "end": 38.256,
+      "score": 0.933
+    },
+    {
+      "word": "Netz",
+      "start": 38.296,
+      "end": 38.597,
+      "score": 0.964
+    },
+    {
+      "word": "aus",
+      "start": 38.617,
+      "end": 38.977,
+      "score": 0.865
+    },
+    {
+      "word": "Menschen,",
+      "start": 38.997,
+      "end": 39.437,
+      "score": 0.766
+    },
+    {
+      "word": "die",
+      "start": 39.457,
+      "end": 39.577,
+      "score": 0.982
+    },
+    {
+      "word": "ihm",
+      "start": 39.617,
+      "end": 39.777,
+      "score": 0.76
+    },
+    {
+      "word": "etwas",
+      "start": 39.817,
+      "end": 40.157,
+      "score": 0.966
+    },
+    {
+      "word": "schulden.",
+      "start": 40.197,
+      "end": 42.038,
+      "score": 0.828
+    },
+    {
+      "word": "Das",
+      "start": 42.078,
+      "end": 42.258,
+      "score": 0.966
+    },
+    {
+      "word": "lässt",
+      "start": 42.298,
+      "end": 42.538,
+      "score": 0.831
+    },
+    {
+      "word": "sich",
+      "start": 42.558,
+      "end": 42.738,
+      "score": 0.94
+    },
+    {
+      "word": "schwerer",
+      "start": 42.778,
+      "end": 43.199,
+      "score": 0.84
+    },
+    {
+      "word": "zerschlagen",
+      "start": 43.219,
+      "end": 43.759,
+      "score": 0.864
+    },
+    {
+      "word": "als",
+      "start": 43.779,
+      "end": 43.959,
+      "score": 0.967
+    },
+    {
+      "word": "eine",
+      "start": 43.999,
+      "end": 44.179,
+      "score": 0.816
+    },
+    {
+      "word": "Bande.",
+      "start": 44.219,
+      "end": 45.4,
+      "score": 0.899
+    },
+    {
+      "word": "Weit",
+      "start": 45.42,
+      "end": 45.72,
+      "score": 0.951
+    },
+    {
+      "word": "schwerer.",
+      "start": 45.74,
+      "end": 46.1,
+      "score": 0.764
+    }
+  ]
+}

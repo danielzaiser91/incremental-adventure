@@ -1,0 +1,1175 @@
+{
+  "segments": [
+    {
+      "start": 0.52,
+      "end": 2.881,
+      "text": "\"Drei Neue in diesem Monat.",
+      "words": [
+        {
+          "word": "\"Drei",
+          "start": 0.52,
+          "end": 0.92,
+          "score": 0.496
+        },
+        {
+          "word": "Neue",
+          "start": 0.96,
+          "end": 1.281,
+          "score": 0.804
+        },
+        {
+          "word": "in",
+          "start": 1.321,
+          "end": 1.481,
+          "score": 0.827
+        },
+        {
+          "word": "diesem",
+          "start": 1.501,
+          "end": 1.821,
+          "score": 0.837
+        },
+        {
+          "word": "Monat.",
+          "start": 1.841,
+          "end": 2.881,
+          "score": 0.938
+        }
+      ]
+    },
+    {
+      "start": 2.901,
+      "end": 8.264,
+      "text": "Immer dasselbe — ankommen, schuften, beraubt werden.\"",
+      "words": [
+        {
+          "word": "Immer",
+          "start": 2.901,
+          "end": 3.141,
+          "score": 0.965
+        },
+        {
+          "word": "dasselbe",
+          "start": 3.161,
+          "end": 4.362,
+          "score": 0.916
+        },
+        {
+          "word": "—",
+          "start": 4.382,
+          "end": 4.402,
+          "score": 0.957
+        },
+        {
+          "word": "ankommen,",
+          "start": 4.442,
+          "end": 5.323,
+          "score": 0.975
+        },
+        {
+          "word": "schuften,",
+          "start": 5.363,
+          "end": 6.243,
+          "score": 0.867
+        },
+        {
+          "word": "beraubt",
+          "start": 6.283,
+          "end": 6.723,
+          "score": 0.856
+        },
+        {
+          "word": "werden.\"",
+          "start": 6.763,
+          "end": 8.264,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 8.284,
+      "end": 12.226,
+      "text": "\"Es gibt jemanden, den alle hier nur den Schatten nennen.",
+      "words": [
+        {
+          "word": "\"Es",
+          "start": 8.284,
+          "end": 8.564,
+          "score": 0.924
+        },
+        {
+          "word": "gibt",
+          "start": 8.584,
+          "end": 8.904,
+          "score": 0.929
+        },
+        {
+          "word": "jemanden,",
+          "start": 8.924,
+          "end": 9.464,
+          "score": 0.872
+        },
+        {
+          "word": "den",
+          "start": 9.484,
+          "end": 9.845,
+          "score": 0.851
+        },
+        {
+          "word": "alle",
+          "start": 9.885,
+          "end": 10.205,
+          "score": 0.884
+        },
+        {
+          "word": "hier",
+          "start": 10.245,
+          "end": 10.465,
+          "score": 0.889
+        },
+        {
+          "word": "nur",
+          "start": 10.505,
+          "end": 10.665,
+          "score": 0.869
+        },
+        {
+          "word": "den",
+          "start": 10.685,
+          "end": 10.925,
+          "score": 0.906
+        },
+        {
+          "word": "Schatten",
+          "start": 10.965,
+          "end": 11.365,
+          "score": 0.844
+        },
+        {
+          "word": "nennen.",
+          "start": 11.405,
+          "end": 12.226,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 12.266,
+      "end": 14.107,
+      "text": "Er wählt die Neuen aus.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 12.266,
+          "end": 12.426,
+          "score": 0.875
+        },
+        {
+          "word": "wählt",
+          "start": 12.466,
+          "end": 12.726,
+          "score": 0.6
+        },
+        {
+          "word": "die",
+          "start": 12.746,
+          "end": 12.926,
+          "score": 0.894
+        },
+        {
+          "word": "Neuen",
+          "start": 12.966,
+          "end": 13.266,
+          "score": 0.819
+        },
+        {
+          "word": "aus.",
+          "start": 13.326,
+          "end": 14.107,
+          "score": 0.851
+        }
+      ]
+    },
+    {
+      "start": 14.127,
+      "end": 20.51,
+      "text": "Er schickt jemanden vor — einen Beobachter, der entscheidet, ob der Neue lohnend genug ist.\"",
+      "words": [
+        {
+          "word": "Er",
+          "start": 14.127,
+          "end": 14.247,
+          "score": 0.729
+        },
+        {
+          "word": "schickt",
+          "start": 14.267,
+          "end": 14.547,
+          "score": 0.713
+        },
+        {
+          "word": "jemanden",
+          "start": 14.587,
+          "end": 15.047,
+          "score": 0.941
+        },
+        {
+          "word": "vor",
+          "start": 15.107,
+          "end": 15.227,
+          "score": 0.938
+        },
+        {
+          "word": "—",
+          "start": 15.687,
+          "end": 15.707,
+          "score": 0.412
+        },
+        {
+          "word": "einen",
+          "start": 15.747,
+          "end": 16.008,
+          "score": 0.978
+        },
+        {
+          "word": "Beobachter,",
+          "start": 16.048,
+          "end": 16.748,
+          "score": 0.87
+        },
+        {
+          "word": "der",
+          "start": 16.768,
+          "end": 16.948,
+          "score": 0.775
+        },
+        {
+          "word": "entscheidet,",
+          "start": 16.968,
+          "end": 17.548,
+          "score": 0.837
+        },
+        {
+          "word": "ob",
+          "start": 17.568,
+          "end": 17.708,
+          "score": 0.974
+        },
+        {
+          "word": "der",
+          "start": 17.748,
+          "end": 17.949,
+          "score": 0.842
+        },
+        {
+          "word": "Neue",
+          "start": 17.969,
+          "end": 18.289,
+          "score": 0.972
+        },
+        {
+          "word": "lohnend",
+          "start": 18.349,
+          "end": 18.789,
+          "score": 0.919
+        },
+        {
+          "word": "genug",
+          "start": 18.829,
+          "end": 19.129,
+          "score": 0.857
+        },
+        {
+          "word": "ist.\"",
+          "start": 19.169,
+          "end": 20.51,
+          "score": 0.837
+        }
+      ]
+    },
+    {
+      "start": 20.53,
+      "end": 24.392,
+      "text": "\"Und wenn er es ist, holt er sich sein Teil.\"",
+      "words": [
+        {
+          "word": "\"Und",
+          "start": 20.53,
+          "end": 20.91,
+          "score": 0.658
+        },
+        {
+          "word": "wenn",
+          "start": 20.95,
+          "end": 21.11,
+          "score": 0.902
+        },
+        {
+          "word": "er",
+          "start": 21.15,
+          "end": 21.31,
+          "score": 0.8
+        },
+        {
+          "word": "es",
+          "start": 21.35,
+          "end": 21.53,
+          "score": 0.872
+        },
+        {
+          "word": "ist,",
+          "start": 21.57,
+          "end": 22.211,
+          "score": 0.802
+        },
+        {
+          "word": "holt",
+          "start": 22.251,
+          "end": 22.491,
+          "score": 0.946
+        },
+        {
+          "word": "er",
+          "start": 22.531,
+          "end": 22.651,
+          "score": 0.809
+        },
+        {
+          "word": "sich",
+          "start": 22.671,
+          "end": 22.871,
+          "score": 0.855
+        },
+        {
+          "word": "sein",
+          "start": 22.891,
+          "end": 23.131,
+          "score": 0.746
+        },
+        {
+          "word": "Teil.\"",
+          "start": 23.171,
+          "end": 24.392,
+          "score": 0.767
+        }
+      ]
+    },
+    {
+      "start": 24.432,
+      "end": 27.153,
+      "text": "Korbin tippt auf mein leeres Glas.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 24.432,
+          "end": 24.892,
+          "score": 0.877
+        },
+        {
+          "word": "tippt",
+          "start": 24.912,
+          "end": 25.192,
+          "score": 0.844
+        },
+        {
+          "word": "auf",
+          "start": 25.232,
+          "end": 25.392,
+          "score": 0.958
+        },
+        {
+          "word": "mein",
+          "start": 25.412,
+          "end": 25.612,
+          "score": 0.776
+        },
+        {
+          "word": "leeres",
+          "start": 25.632,
+          "end": 25.992,
+          "score": 0.806
+        },
+        {
+          "word": "Glas.",
+          "start": 26.052,
+          "end": 27.153,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 27.173,
+      "end": 30.354,
+      "text": "\"Du weißt, wovon ich rede.\"",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 27.173,
+          "end": 27.413,
+          "score": 0.771
+        },
+        {
+          "word": "weißt,",
+          "start": 27.433,
+          "end": 27.733,
+          "score": 0.883
+        },
+        {
+          "word": "wovon",
+          "start": 27.753,
+          "end": 28.053,
+          "score": 0.884
+        },
+        {
+          "word": "ich",
+          "start": 28.093,
+          "end": 28.233,
+          "score": 0.897
+        },
+        {
+          "word": "rede.\"",
+          "start": 28.273,
+          "end": 30.354,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 30.374,
+      "end": 37.498,
+      "text": "\"Wenn du herausfinden willst, wer dahintersteckt — ich rate dir: frag die, die länger hier sind als ich.",
+      "words": [
+        {
+          "word": "\"Wenn",
+          "start": 30.374,
+          "end": 30.594,
+          "score": 0.959
+        },
+        {
+          "word": "du",
+          "start": 30.635,
+          "end": 30.815,
+          "score": 0.896
+        },
+        {
+          "word": "herausfinden",
+          "start": 30.855,
+          "end": 31.675,
+          "score": 0.914
+        },
+        {
+          "word": "willst,",
+          "start": 31.695,
+          "end": 31.995,
+          "score": 0.826
+        },
+        {
+          "word": "wer",
+          "start": 32.035,
+          "end": 32.195,
+          "score": 0.722
+        },
+        {
+          "word": "dahintersteckt",
+          "start": 32.215,
+          "end": 32.956,
+          "score": 0.861
+        },
+        {
+          "word": "—",
+          "start": 33.536,
+          "end": 33.556,
+          "score": 0.836
+        },
+        {
+          "word": "ich",
+          "start": 33.596,
+          "end": 33.736,
+          "score": 0.671
+        },
+        {
+          "word": "rate",
+          "start": 33.856,
+          "end": 34.216,
+          "score": 0.952
+        },
+        {
+          "word": "dir:",
+          "start": 34.236,
+          "end": 34.817,
+          "score": 0.859
+        },
+        {
+          "word": "frag",
+          "start": 34.837,
+          "end": 35.277,
+          "score": 0.751
+        },
+        {
+          "word": "die,",
+          "start": 35.297,
+          "end": 35.517,
+          "score": 0.896
+        },
+        {
+          "word": "die",
+          "start": 35.537,
+          "end": 35.757,
+          "score": 0.81
+        },
+        {
+          "word": "länger",
+          "start": 35.797,
+          "end": 36.077,
+          "score": 0.966
+        },
+        {
+          "word": "hier",
+          "start": 36.117,
+          "end": 36.297,
+          "score": 0.861
+        },
+        {
+          "word": "sind",
+          "start": 36.337,
+          "end": 36.537,
+          "score": 0.853
+        },
+        {
+          "word": "als",
+          "start": 36.577,
+          "end": 36.737,
+          "score": 0.958
+        },
+        {
+          "word": "ich.",
+          "start": 36.777,
+          "end": 37.498,
+          "score": 0.821
+        }
+      ]
+    },
+    {
+      "start": 37.558,
+      "end": 39.459,
+      "text": "Fang im Jagdgebiet an.",
+      "words": [
+        {
+          "word": "Fang",
+          "start": 37.558,
+          "end": 37.798,
+          "score": 0.962
+        },
+        {
+          "word": "im",
+          "start": 37.838,
+          "end": 37.998,
+          "score": 0.994
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 38.038,
+          "end": 38.698,
+          "score": 0.928
+        },
+        {
+          "word": "an.",
+          "start": 38.758,
+          "end": 39.459,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 39.479,
+      "end": 41.7,
+      "text": "Die Räuber dort sind keine Zufälle.\"",
+      "words": [
+        {
+          "word": "Die",
+          "start": 39.479,
+          "end": 39.659,
+          "score": 0.929
+        },
+        {
+          "word": "Räuber",
+          "start": 39.719,
+          "end": 40.139,
+          "score": 0.912
+        },
+        {
+          "word": "dort",
+          "start": 40.179,
+          "end": 40.479,
+          "score": 0.907
+        },
+        {
+          "word": "sind",
+          "start": 40.499,
+          "end": 40.819,
+          "score": 0.949
+        },
+        {
+          "word": "keine",
+          "start": 40.859,
+          "end": 41.24,
+          "score": 0.877
+        },
+        {
+          "word": "Zufälle.\"",
+          "start": 41.26,
+          "end": 41.7,
+          "score": 0.852
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Drei",
+      "start": 0.52,
+      "end": 0.92,
+      "score": 0.496
+    },
+    {
+      "word": "Neue",
+      "start": 0.96,
+      "end": 1.281,
+      "score": 0.804
+    },
+    {
+      "word": "in",
+      "start": 1.321,
+      "end": 1.481,
+      "score": 0.827
+    },
+    {
+      "word": "diesem",
+      "start": 1.501,
+      "end": 1.821,
+      "score": 0.837
+    },
+    {
+      "word": "Monat.",
+      "start": 1.841,
+      "end": 2.881,
+      "score": 0.938
+    },
+    {
+      "word": "Immer",
+      "start": 2.901,
+      "end": 3.141,
+      "score": 0.965
+    },
+    {
+      "word": "dasselbe",
+      "start": 3.161,
+      "end": 4.362,
+      "score": 0.916
+    },
+    {
+      "word": "—",
+      "start": 4.382,
+      "end": 4.402,
+      "score": 0.957
+    },
+    {
+      "word": "ankommen,",
+      "start": 4.442,
+      "end": 5.323,
+      "score": 0.975
+    },
+    {
+      "word": "schuften,",
+      "start": 5.363,
+      "end": 6.243,
+      "score": 0.867
+    },
+    {
+      "word": "beraubt",
+      "start": 6.283,
+      "end": 6.723,
+      "score": 0.856
+    },
+    {
+      "word": "werden.\"",
+      "start": 6.763,
+      "end": 8.264,
+      "score": 0.906
+    },
+    {
+      "word": "\"Es",
+      "start": 8.284,
+      "end": 8.564,
+      "score": 0.924
+    },
+    {
+      "word": "gibt",
+      "start": 8.584,
+      "end": 8.904,
+      "score": 0.929
+    },
+    {
+      "word": "jemanden,",
+      "start": 8.924,
+      "end": 9.464,
+      "score": 0.872
+    },
+    {
+      "word": "den",
+      "start": 9.484,
+      "end": 9.845,
+      "score": 0.851
+    },
+    {
+      "word": "alle",
+      "start": 9.885,
+      "end": 10.205,
+      "score": 0.884
+    },
+    {
+      "word": "hier",
+      "start": 10.245,
+      "end": 10.465,
+      "score": 0.889
+    },
+    {
+      "word": "nur",
+      "start": 10.505,
+      "end": 10.665,
+      "score": 0.869
+    },
+    {
+      "word": "den",
+      "start": 10.685,
+      "end": 10.925,
+      "score": 0.906
+    },
+    {
+      "word": "Schatten",
+      "start": 10.965,
+      "end": 11.365,
+      "score": 0.844
+    },
+    {
+      "word": "nennen.",
+      "start": 11.405,
+      "end": 12.226,
+      "score": 0.94
+    },
+    {
+      "word": "Er",
+      "start": 12.266,
+      "end": 12.426,
+      "score": 0.875
+    },
+    {
+      "word": "wählt",
+      "start": 12.466,
+      "end": 12.726,
+      "score": 0.6
+    },
+    {
+      "word": "die",
+      "start": 12.746,
+      "end": 12.926,
+      "score": 0.894
+    },
+    {
+      "word": "Neuen",
+      "start": 12.966,
+      "end": 13.266,
+      "score": 0.819
+    },
+    {
+      "word": "aus.",
+      "start": 13.326,
+      "end": 14.107,
+      "score": 0.851
+    },
+    {
+      "word": "Er",
+      "start": 14.127,
+      "end": 14.247,
+      "score": 0.729
+    },
+    {
+      "word": "schickt",
+      "start": 14.267,
+      "end": 14.547,
+      "score": 0.713
+    },
+    {
+      "word": "jemanden",
+      "start": 14.587,
+      "end": 15.047,
+      "score": 0.941
+    },
+    {
+      "word": "vor",
+      "start": 15.107,
+      "end": 15.227,
+      "score": 0.938
+    },
+    {
+      "word": "—",
+      "start": 15.687,
+      "end": 15.707,
+      "score": 0.412
+    },
+    {
+      "word": "einen",
+      "start": 15.747,
+      "end": 16.008,
+      "score": 0.978
+    },
+    {
+      "word": "Beobachter,",
+      "start": 16.048,
+      "end": 16.748,
+      "score": 0.87
+    },
+    {
+      "word": "der",
+      "start": 16.768,
+      "end": 16.948,
+      "score": 0.775
+    },
+    {
+      "word": "entscheidet,",
+      "start": 16.968,
+      "end": 17.548,
+      "score": 0.837
+    },
+    {
+      "word": "ob",
+      "start": 17.568,
+      "end": 17.708,
+      "score": 0.974
+    },
+    {
+      "word": "der",
+      "start": 17.748,
+      "end": 17.949,
+      "score": 0.842
+    },
+    {
+      "word": "Neue",
+      "start": 17.969,
+      "end": 18.289,
+      "score": 0.972
+    },
+    {
+      "word": "lohnend",
+      "start": 18.349,
+      "end": 18.789,
+      "score": 0.919
+    },
+    {
+      "word": "genug",
+      "start": 18.829,
+      "end": 19.129,
+      "score": 0.857
+    },
+    {
+      "word": "ist.\"",
+      "start": 19.169,
+      "end": 20.51,
+      "score": 0.837
+    },
+    {
+      "word": "\"Und",
+      "start": 20.53,
+      "end": 20.91,
+      "score": 0.658
+    },
+    {
+      "word": "wenn",
+      "start": 20.95,
+      "end": 21.11,
+      "score": 0.902
+    },
+    {
+      "word": "er",
+      "start": 21.15,
+      "end": 21.31,
+      "score": 0.8
+    },
+    {
+      "word": "es",
+      "start": 21.35,
+      "end": 21.53,
+      "score": 0.872
+    },
+    {
+      "word": "ist,",
+      "start": 21.57,
+      "end": 22.211,
+      "score": 0.802
+    },
+    {
+      "word": "holt",
+      "start": 22.251,
+      "end": 22.491,
+      "score": 0.946
+    },
+    {
+      "word": "er",
+      "start": 22.531,
+      "end": 22.651,
+      "score": 0.809
+    },
+    {
+      "word": "sich",
+      "start": 22.671,
+      "end": 22.871,
+      "score": 0.855
+    },
+    {
+      "word": "sein",
+      "start": 22.891,
+      "end": 23.131,
+      "score": 0.746
+    },
+    {
+      "word": "Teil.\"",
+      "start": 23.171,
+      "end": 24.392,
+      "score": 0.767
+    },
+    {
+      "word": "Korbin",
+      "start": 24.432,
+      "end": 24.892,
+      "score": 0.877
+    },
+    {
+      "word": "tippt",
+      "start": 24.912,
+      "end": 25.192,
+      "score": 0.844
+    },
+    {
+      "word": "auf",
+      "start": 25.232,
+      "end": 25.392,
+      "score": 0.958
+    },
+    {
+      "word": "mein",
+      "start": 25.412,
+      "end": 25.612,
+      "score": 0.776
+    },
+    {
+      "word": "leeres",
+      "start": 25.632,
+      "end": 25.992,
+      "score": 0.806
+    },
+    {
+      "word": "Glas.",
+      "start": 26.052,
+      "end": 27.153,
+      "score": 0.932
+    },
+    {
+      "word": "\"Du",
+      "start": 27.173,
+      "end": 27.413,
+      "score": 0.771
+    },
+    {
+      "word": "weißt,",
+      "start": 27.433,
+      "end": 27.733,
+      "score": 0.883
+    },
+    {
+      "word": "wovon",
+      "start": 27.753,
+      "end": 28.053,
+      "score": 0.884
+    },
+    {
+      "word": "ich",
+      "start": 28.093,
+      "end": 28.233,
+      "score": 0.897
+    },
+    {
+      "word": "rede.\"",
+      "start": 28.273,
+      "end": 30.354,
+      "score": 0.871
+    },
+    {
+      "word": "\"Wenn",
+      "start": 30.374,
+      "end": 30.594,
+      "score": 0.959
+    },
+    {
+      "word": "du",
+      "start": 30.635,
+      "end": 30.815,
+      "score": 0.896
+    },
+    {
+      "word": "herausfinden",
+      "start": 30.855,
+      "end": 31.675,
+      "score": 0.914
+    },
+    {
+      "word": "willst,",
+      "start": 31.695,
+      "end": 31.995,
+      "score": 0.826
+    },
+    {
+      "word": "wer",
+      "start": 32.035,
+      "end": 32.195,
+      "score": 0.722
+    },
+    {
+      "word": "dahintersteckt",
+      "start": 32.215,
+      "end": 32.956,
+      "score": 0.861
+    },
+    {
+      "word": "—",
+      "start": 33.536,
+      "end": 33.556,
+      "score": 0.836
+    },
+    {
+      "word": "ich",
+      "start": 33.596,
+      "end": 33.736,
+      "score": 0.671
+    },
+    {
+      "word": "rate",
+      "start": 33.856,
+      "end": 34.216,
+      "score": 0.952
+    },
+    {
+      "word": "dir:",
+      "start": 34.236,
+      "end": 34.817,
+      "score": 0.859
+    },
+    {
+      "word": "frag",
+      "start": 34.837,
+      "end": 35.277,
+      "score": 0.751
+    },
+    {
+      "word": "die,",
+      "start": 35.297,
+      "end": 35.517,
+      "score": 0.896
+    },
+    {
+      "word": "die",
+      "start": 35.537,
+      "end": 35.757,
+      "score": 0.81
+    },
+    {
+      "word": "länger",
+      "start": 35.797,
+      "end": 36.077,
+      "score": 0.966
+    },
+    {
+      "word": "hier",
+      "start": 36.117,
+      "end": 36.297,
+      "score": 0.861
+    },
+    {
+      "word": "sind",
+      "start": 36.337,
+      "end": 36.537,
+      "score": 0.853
+    },
+    {
+      "word": "als",
+      "start": 36.577,
+      "end": 36.737,
+      "score": 0.958
+    },
+    {
+      "word": "ich.",
+      "start": 36.777,
+      "end": 37.498,
+      "score": 0.821
+    },
+    {
+      "word": "Fang",
+      "start": 37.558,
+      "end": 37.798,
+      "score": 0.962
+    },
+    {
+      "word": "im",
+      "start": 37.838,
+      "end": 37.998,
+      "score": 0.994
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 38.038,
+      "end": 38.698,
+      "score": 0.928
+    },
+    {
+      "word": "an.",
+      "start": 38.758,
+      "end": 39.459,
+      "score": 0.931
+    },
+    {
+      "word": "Die",
+      "start": 39.479,
+      "end": 39.659,
+      "score": 0.929
+    },
+    {
+      "word": "Räuber",
+      "start": 39.719,
+      "end": 40.139,
+      "score": 0.912
+    },
+    {
+      "word": "dort",
+      "start": 40.179,
+      "end": 40.479,
+      "score": 0.907
+    },
+    {
+      "word": "sind",
+      "start": 40.499,
+      "end": 40.819,
+      "score": 0.949
+    },
+    {
+      "word": "keine",
+      "start": 40.859,
+      "end": 41.24,
+      "score": 0.877
+    },
+    {
+      "word": "Zufälle.\"",
+      "start": 41.26,
+      "end": 41.7,
+      "score": 0.852
+    }
+  ]
+}

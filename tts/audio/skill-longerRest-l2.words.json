@@ -1,0 +1,413 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.945,
+      "text": "Ich habe angefangen, die Pause zu verfeinern.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.461,
+          "end": 0.561,
+          "score": 0.648
+        },
+        {
+          "word": "habe",
+          "start": 0.581,
+          "end": 0.861,
+          "score": 0.926
+        },
+        {
+          "word": "angefangen,",
+          "start": 0.901,
+          "end": 1.522,
+          "score": 0.944
+        },
+        {
+          "word": "die",
+          "start": 1.542,
+          "end": 1.722,
+          "score": 0.881
+        },
+        {
+          "word": "Pause",
+          "start": 1.782,
+          "end": 2.283,
+          "score": 0.935
+        },
+        {
+          "word": "zu",
+          "start": 2.323,
+          "end": 2.463,
+          "score": 0.995
+        },
+        {
+          "word": "verfeinern.",
+          "start": 2.503,
+          "end": 3.945,
+          "score": 0.855
+        }
+      ]
+    },
+    {
+      "start": 3.985,
+      "end": 7.028,
+      "text": "Weniger zappeln, mehr atmen.",
+      "words": [
+        {
+          "word": "Weniger",
+          "start": 3.985,
+          "end": 4.385,
+          "score": 0.853
+        },
+        {
+          "word": "zappeln,",
+          "start": 4.425,
+          "end": 5.366,
+          "score": 0.934
+        },
+        {
+          "word": "mehr",
+          "start": 5.386,
+          "end": 5.767,
+          "score": 0.824
+        },
+        {
+          "word": "atmen.",
+          "start": 5.827,
+          "end": 7.028,
+          "score": 0.827
+        }
+      ]
+    },
+    {
+      "start": 7.048,
+      "end": 10.112,
+      "text": "Die Erholung kommt tiefer.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 7.048,
+          "end": 7.189,
+          "score": 0.913
+        },
+        {
+          "word": "Erholung",
+          "start": 7.229,
+          "end": 7.849,
+          "score": 0.882
+        },
+        {
+          "word": "kommt",
+          "start": 7.869,
+          "end": 8.15,
+          "score": 0.832
+        },
+        {
+          "word": "tiefer.",
+          "start": 8.21,
+          "end": 10.112,
+          "score": 0.838
+        }
+      ]
+    },
+    {
+      "start": 10.152,
+      "end": 13.736,
+      "text": "Es ist eine Fertigkeit, sich richtig auszuruhen.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 10.152,
+          "end": 10.252,
+          "score": 0.925
+        },
+        {
+          "word": "ist",
+          "start": 10.292,
+          "end": 10.473,
+          "score": 0.993
+        },
+        {
+          "word": "eine",
+          "start": 10.513,
+          "end": 10.753,
+          "score": 0.815
+        },
+        {
+          "word": "Fertigkeit,",
+          "start": 10.793,
+          "end": 11.594,
+          "score": 0.924
+        },
+        {
+          "word": "sich",
+          "start": 11.614,
+          "end": 11.894,
+          "score": 0.866
+        },
+        {
+          "word": "richtig",
+          "start": 11.934,
+          "end": 12.295,
+          "score": 0.904
+        },
+        {
+          "word": "auszuruhen.",
+          "start": 12.335,
+          "end": 13.736,
+          "score": 0.844
+        }
+      ]
+    },
+    {
+      "start": 13.797,
+      "end": 16.259,
+      "text": "Ich übe sie — und es zahlt sich aus.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 13.797,
+          "end": 13.997,
+          "score": 0.915
+        },
+        {
+          "word": "übe",
+          "start": 14.037,
+          "end": 14.217,
+          "score": 0.922
+        },
+        {
+          "word": "sie",
+          "start": 14.257,
+          "end": 14.337,
+          "score": 0.829
+        },
+        {
+          "word": "—",
+          "start": 15.078,
+          "end": 15.098,
+          "score": 0.976
+        },
+        {
+          "word": "und",
+          "start": 15.118,
+          "end": 15.278,
+          "score": 0.916
+        },
+        {
+          "word": "es",
+          "start": 15.318,
+          "end": 15.599,
+          "score": 0.893
+        },
+        {
+          "word": "zahlt",
+          "start": 15.619,
+          "end": 15.879,
+          "score": 0.911
+        },
+        {
+          "word": "sich",
+          "start": 15.899,
+          "end": 16.079,
+          "score": 0.886
+        },
+        {
+          "word": "aus.",
+          "start": 16.139,
+          "end": 16.259,
+          "score": 0.902
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.461,
+      "end": 0.561,
+      "score": 0.648
+    },
+    {
+      "word": "habe",
+      "start": 0.581,
+      "end": 0.861,
+      "score": 0.926
+    },
+    {
+      "word": "angefangen,",
+      "start": 0.901,
+      "end": 1.522,
+      "score": 0.944
+    },
+    {
+      "word": "die",
+      "start": 1.542,
+      "end": 1.722,
+      "score": 0.881
+    },
+    {
+      "word": "Pause",
+      "start": 1.782,
+      "end": 2.283,
+      "score": 0.935
+    },
+    {
+      "word": "zu",
+      "start": 2.323,
+      "end": 2.463,
+      "score": 0.995
+    },
+    {
+      "word": "verfeinern.",
+      "start": 2.503,
+      "end": 3.945,
+      "score": 0.855
+    },
+    {
+      "word": "Weniger",
+      "start": 3.985,
+      "end": 4.385,
+      "score": 0.853
+    },
+    {
+      "word": "zappeln,",
+      "start": 4.425,
+      "end": 5.366,
+      "score": 0.934
+    },
+    {
+      "word": "mehr",
+      "start": 5.386,
+      "end": 5.767,
+      "score": 0.824
+    },
+    {
+      "word": "atmen.",
+      "start": 5.827,
+      "end": 7.028,
+      "score": 0.827
+    },
+    {
+      "word": "Die",
+      "start": 7.048,
+      "end": 7.189,
+      "score": 0.913
+    },
+    {
+      "word": "Erholung",
+      "start": 7.229,
+      "end": 7.849,
+      "score": 0.882
+    },
+    {
+      "word": "kommt",
+      "start": 7.869,
+      "end": 8.15,
+      "score": 0.832
+    },
+    {
+      "word": "tiefer.",
+      "start": 8.21,
+      "end": 10.112,
+      "score": 0.838
+    },
+    {
+      "word": "Es",
+      "start": 10.152,
+      "end": 10.252,
+      "score": 0.925
+    },
+    {
+      "word": "ist",
+      "start": 10.292,
+      "end": 10.473,
+      "score": 0.993
+    },
+    {
+      "word": "eine",
+      "start": 10.513,
+      "end": 10.753,
+      "score": 0.815
+    },
+    {
+      "word": "Fertigkeit,",
+      "start": 10.793,
+      "end": 11.594,
+      "score": 0.924
+    },
+    {
+      "word": "sich",
+      "start": 11.614,
+      "end": 11.894,
+      "score": 0.866
+    },
+    {
+      "word": "richtig",
+      "start": 11.934,
+      "end": 12.295,
+      "score": 0.904
+    },
+    {
+      "word": "auszuruhen.",
+      "start": 12.335,
+      "end": 13.736,
+      "score": 0.844
+    },
+    {
+      "word": "Ich",
+      "start": 13.797,
+      "end": 13.997,
+      "score": 0.915
+    },
+    {
+      "word": "übe",
+      "start": 14.037,
+      "end": 14.217,
+      "score": 0.922
+    },
+    {
+      "word": "sie",
+      "start": 14.257,
+      "end": 14.337,
+      "score": 0.829
+    },
+    {
+      "word": "—",
+      "start": 15.078,
+      "end": 15.098,
+      "score": 0.976
+    },
+    {
+      "word": "und",
+      "start": 15.118,
+      "end": 15.278,
+      "score": 0.916
+    },
+    {
+      "word": "es",
+      "start": 15.318,
+      "end": 15.599,
+      "score": 0.893
+    },
+    {
+      "word": "zahlt",
+      "start": 15.619,
+      "end": 15.879,
+      "score": 0.911
+    },
+    {
+      "word": "sich",
+      "start": 15.899,
+      "end": 16.079,
+      "score": 0.886
+    },
+    {
+      "word": "aus.",
+      "start": 16.139,
+      "end": 16.259,
+      "score": 0.902
+    }
+  ]
+}

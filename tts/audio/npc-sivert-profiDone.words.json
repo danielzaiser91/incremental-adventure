@@ -1,0 +1,425 @@
+{
+  "segments": [
+    {
+      "start": 0.38,
+      "end": 3.224,
+      "text": "\"Die Technik gehört dir jetzt.\"",
+      "words": [
+        {
+          "word": "\"Die",
+          "start": 0.38,
+          "end": 0.601,
+          "score": 0.744
+        },
+        {
+          "word": "Technik",
+          "start": 0.641,
+          "end": 1.081,
+          "score": 0.815
+        },
+        {
+          "word": "gehört",
+          "start": 1.121,
+          "end": 1.442,
+          "score": 0.892
+        },
+        {
+          "word": "dir",
+          "start": 1.482,
+          "end": 1.682,
+          "score": 0.489
+        },
+        {
+          "word": "jetzt.\"",
+          "start": 1.722,
+          "end": 3.224,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 3.244,
+      "end": 5.706,
+      "text": "Er wendet sich seinem Becher zu.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.244,
+          "end": 3.344,
+          "score": 0.754
+        },
+        {
+          "word": "wendet",
+          "start": 3.384,
+          "end": 3.684,
+          "score": 0.96
+        },
+        {
+          "word": "sich",
+          "start": 3.704,
+          "end": 3.844,
+          "score": 0.959
+        },
+        {
+          "word": "seinem",
+          "start": 3.884,
+          "end": 4.105,
+          "score": 0.885
+        },
+        {
+          "word": "Becher",
+          "start": 4.145,
+          "end": 4.465,
+          "score": 0.69
+        },
+        {
+          "word": "zu.",
+          "start": 4.505,
+          "end": 5.706,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "start": 5.727,
+      "end": 7.248,
+      "text": "\"Übe sie.",
+      "words": [
+        {
+          "word": "\"Übe",
+          "start": 5.727,
+          "end": 6.007,
+          "score": 0.975
+        },
+        {
+          "word": "sie.",
+          "start": 6.047,
+          "end": 7.248,
+          "score": 0.926
+        }
+      ]
+    },
+    {
+      "start": 7.308,
+      "end": 11.313,
+      "text": "Was du damit machst, liegt bei dir.\"",
+      "words": [
+        {
+          "word": "Was",
+          "start": 7.308,
+          "end": 7.448,
+          "score": 0.988
+        },
+        {
+          "word": "du",
+          "start": 7.489,
+          "end": 7.589,
+          "score": 0.529
+        },
+        {
+          "word": "damit",
+          "start": 7.629,
+          "end": 7.909,
+          "score": 0.986
+        },
+        {
+          "word": "machst,",
+          "start": 7.949,
+          "end": 8.83,
+          "score": 0.912
+        },
+        {
+          "word": "liegt",
+          "start": 8.85,
+          "end": 9.07,
+          "score": 0.868
+        },
+        {
+          "word": "bei",
+          "start": 9.09,
+          "end": 9.23,
+          "score": 0.992
+        },
+        {
+          "word": "dir.\"",
+          "start": 9.271,
+          "end": 11.313,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 11.333,
+      "end": 17.22,
+      "text": "Ich spüre, dass das Gespräch beendet ist — nicht unfreundlich, nur abgeschlossen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 11.333,
+          "end": 11.493,
+          "score": 0.785
+        },
+        {
+          "word": "spüre,",
+          "start": 11.553,
+          "end": 12.014,
+          "score": 0.84
+        },
+        {
+          "word": "dass",
+          "start": 12.034,
+          "end": 12.234,
+          "score": 0.902
+        },
+        {
+          "word": "das",
+          "start": 12.274,
+          "end": 12.454,
+          "score": 0.901
+        },
+        {
+          "word": "Gespräch",
+          "start": 12.474,
+          "end": 12.915,
+          "score": 0.972
+        },
+        {
+          "word": "beendet",
+          "start": 12.955,
+          "end": 13.395,
+          "score": 0.994
+        },
+        {
+          "word": "ist",
+          "start": 13.455,
+          "end": 13.575,
+          "score": 0.985
+        },
+        {
+          "word": "—",
+          "start": 14.597,
+          "end": 14.617,
+          "score": 0.193
+        },
+        {
+          "word": "nicht",
+          "start": 14.637,
+          "end": 14.877,
+          "score": 0.88
+        },
+        {
+          "word": "unfreundlich,",
+          "start": 14.937,
+          "end": 16.218,
+          "score": 0.862
+        },
+        {
+          "word": "nur",
+          "start": 16.258,
+          "end": 16.659,
+          "score": 0.887
+        },
+        {
+          "word": "abgeschlossen.",
+          "start": 16.699,
+          "end": 17.22,
+          "score": 0.941
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "\"Die",
+      "start": 0.38,
+      "end": 0.601,
+      "score": 0.744
+    },
+    {
+      "word": "Technik",
+      "start": 0.641,
+      "end": 1.081,
+      "score": 0.815
+    },
+    {
+      "word": "gehört",
+      "start": 1.121,
+      "end": 1.442,
+      "score": 0.892
+    },
+    {
+      "word": "dir",
+      "start": 1.482,
+      "end": 1.682,
+      "score": 0.489
+    },
+    {
+      "word": "jetzt.\"",
+      "start": 1.722,
+      "end": 3.224,
+      "score": 0.902
+    },
+    {
+      "word": "Er",
+      "start": 3.244,
+      "end": 3.344,
+      "score": 0.754
+    },
+    {
+      "word": "wendet",
+      "start": 3.384,
+      "end": 3.684,
+      "score": 0.96
+    },
+    {
+      "word": "sich",
+      "start": 3.704,
+      "end": 3.844,
+      "score": 0.959
+    },
+    {
+      "word": "seinem",
+      "start": 3.884,
+      "end": 4.105,
+      "score": 0.885
+    },
+    {
+      "word": "Becher",
+      "start": 4.145,
+      "end": 4.465,
+      "score": 0.69
+    },
+    {
+      "word": "zu.",
+      "start": 4.505,
+      "end": 5.706,
+      "score": 0.99
+    },
+    {
+      "word": "\"Übe",
+      "start": 5.727,
+      "end": 6.007,
+      "score": 0.975
+    },
+    {
+      "word": "sie.",
+      "start": 6.047,
+      "end": 7.248,
+      "score": 0.926
+    },
+    {
+      "word": "Was",
+      "start": 7.308,
+      "end": 7.448,
+      "score": 0.988
+    },
+    {
+      "word": "du",
+      "start": 7.489,
+      "end": 7.589,
+      "score": 0.529
+    },
+    {
+      "word": "damit",
+      "start": 7.629,
+      "end": 7.909,
+      "score": 0.986
+    },
+    {
+      "word": "machst,",
+      "start": 7.949,
+      "end": 8.83,
+      "score": 0.912
+    },
+    {
+      "word": "liegt",
+      "start": 8.85,
+      "end": 9.07,
+      "score": 0.868
+    },
+    {
+      "word": "bei",
+      "start": 9.09,
+      "end": 9.23,
+      "score": 0.992
+    },
+    {
+      "word": "dir.\"",
+      "start": 9.271,
+      "end": 11.313,
+      "score": 0.898
+    },
+    {
+      "word": "Ich",
+      "start": 11.333,
+      "end": 11.493,
+      "score": 0.785
+    },
+    {
+      "word": "spüre,",
+      "start": 11.553,
+      "end": 12.014,
+      "score": 0.84
+    },
+    {
+      "word": "dass",
+      "start": 12.034,
+      "end": 12.234,
+      "score": 0.902
+    },
+    {
+      "word": "das",
+      "start": 12.274,
+      "end": 12.454,
+      "score": 0.901
+    },
+    {
+      "word": "Gespräch",
+      "start": 12.474,
+      "end": 12.915,
+      "score": 0.972
+    },
+    {
+      "word": "beendet",
+      "start": 12.955,
+      "end": 13.395,
+      "score": 0.994
+    },
+    {
+      "word": "ist",
+      "start": 13.455,
+      "end": 13.575,
+      "score": 0.985
+    },
+    {
+      "word": "—",
+      "start": 14.597,
+      "end": 14.617,
+      "score": 0.193
+    },
+    {
+      "word": "nicht",
+      "start": 14.637,
+      "end": 14.877,
+      "score": 0.88
+    },
+    {
+      "word": "unfreundlich,",
+      "start": 14.937,
+      "end": 16.218,
+      "score": 0.862
+    },
+    {
+      "word": "nur",
+      "start": 16.258,
+      "end": 16.659,
+      "score": 0.887
+    },
+    {
+      "word": "abgeschlossen.",
+      "start": 16.699,
+      "end": 17.22,
+      "score": 0.941
+    }
+  ]
+}

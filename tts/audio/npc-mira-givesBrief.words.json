@@ -1,0 +1,928 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 4.403,
+      "text": "Mira wartet, bis niemand mehr in Hörweite ist.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.46,
+          "end": 0.881,
+          "score": 0.404
+        },
+        {
+          "word": "wartet,",
+          "start": 0.921,
+          "end": 1.461,
+          "score": 0.823
+        },
+        {
+          "word": "bis",
+          "start": 1.481,
+          "end": 1.761,
+          "score": 0.726
+        },
+        {
+          "word": "niemand",
+          "start": 1.781,
+          "end": 2.061,
+          "score": 0.789
+        },
+        {
+          "word": "mehr",
+          "start": 2.081,
+          "end": 2.181,
+          "score": 0.813
+        },
+        {
+          "word": "in",
+          "start": 2.241,
+          "end": 2.341,
+          "score": 0.352
+        },
+        {
+          "word": "Hörweite",
+          "start": 2.361,
+          "end": 2.822,
+          "score": 0.88
+        },
+        {
+          "word": "ist.",
+          "start": 2.882,
+          "end": 4.403,
+          "score": 0.807
+        }
+      ]
+    },
+    {
+      "start": 4.423,
+      "end": 7.505,
+      "text": "\"Ich habe lange gezögert, ob ich dir das gebe.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 4.423,
+          "end": 4.563,
+          "score": 0.873
+        },
+        {
+          "word": "habe",
+          "start": 4.583,
+          "end": 4.883,
+          "score": 0.896
+        },
+        {
+          "word": "lange",
+          "start": 4.903,
+          "end": 5.203,
+          "score": 0.841
+        },
+        {
+          "word": "gezögert,",
+          "start": 5.223,
+          "end": 5.804,
+          "score": 0.959
+        },
+        {
+          "word": "ob",
+          "start": 5.824,
+          "end": 5.904,
+          "score": 0.869
+        },
+        {
+          "word": "ich",
+          "start": 5.944,
+          "end": 6.024,
+          "score": 0.933
+        },
+        {
+          "word": "dir",
+          "start": 6.044,
+          "end": 6.164,
+          "score": 0.553
+        },
+        {
+          "word": "das",
+          "start": 6.204,
+          "end": 6.344,
+          "score": 0.85
+        },
+        {
+          "word": "gebe.",
+          "start": 6.364,
+          "end": 7.505,
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "start": 7.525,
+      "end": 12.508,
+      "text": "Aber du hast die Wahrheit gefunden, als andere weggeschaut haben.\"",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 7.525,
+          "end": 7.965,
+          "score": 0.903
+        },
+        {
+          "word": "du",
+          "start": 8.005,
+          "end": 8.185,
+          "score": 0.91
+        },
+        {
+          "word": "hast",
+          "start": 8.225,
+          "end": 8.465,
+          "score": 0.866
+        },
+        {
+          "word": "die",
+          "start": 8.505,
+          "end": 8.645,
+          "score": 0.776
+        },
+        {
+          "word": "Wahrheit",
+          "start": 8.685,
+          "end": 9.066,
+          "score": 0.904
+        },
+        {
+          "word": "gefunden,",
+          "start": 9.086,
+          "end": 9.766,
+          "score": 0.913
+        },
+        {
+          "word": "als",
+          "start": 9.806,
+          "end": 10.086,
+          "score": 0.956
+        },
+        {
+          "word": "andere",
+          "start": 10.126,
+          "end": 10.426,
+          "score": 0.856
+        },
+        {
+          "word": "weggeschaut",
+          "start": 10.447,
+          "end": 10.887,
+          "score": 0.925
+        },
+        {
+          "word": "haben.\"",
+          "start": 10.907,
+          "end": 12.508,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 12.548,
+      "end": 15.91,
+      "text": "Sie schiebt mir einen gefalteten Brief zu.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 12.548,
+          "end": 12.708,
+          "score": 0.847
+        },
+        {
+          "word": "schiebt",
+          "start": 12.748,
+          "end": 13.028,
+          "score": 0.883
+        },
+        {
+          "word": "mir",
+          "start": 13.048,
+          "end": 13.208,
+          "score": 0.892
+        },
+        {
+          "word": "einen",
+          "start": 13.228,
+          "end": 13.388,
+          "score": 0.692
+        },
+        {
+          "word": "gefalteten",
+          "start": 13.428,
+          "end": 13.909,
+          "score": 0.912
+        },
+        {
+          "word": "Brief",
+          "start": 13.969,
+          "end": 14.269,
+          "score": 0.854
+        },
+        {
+          "word": "zu.",
+          "start": 14.309,
+          "end": 15.91,
+          "score": 0.962
+        }
+      ]
+    },
+    {
+      "start": 15.93,
+      "end": 17.451,
+      "text": "\"Er ist verschlüsselt.",
+      "words": [
+        {
+          "word": "\"Er",
+          "start": 15.93,
+          "end": 16.07,
+          "score": 0.623
+        },
+        {
+          "word": "ist",
+          "start": 16.11,
+          "end": 16.29,
+          "score": 0.889
+        },
+        {
+          "word": "verschlüsselt.",
+          "start": 16.31,
+          "end": 17.451,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 17.491,
+      "end": 19.292,
+      "text": "Ich kann ihn nicht lesen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 17.491,
+          "end": 17.591,
+          "score": 0.76
+        },
+        {
+          "word": "kann",
+          "start": 17.611,
+          "end": 17.751,
+          "score": 0.947
+        },
+        {
+          "word": "ihn",
+          "start": 17.791,
+          "end": 17.911,
+          "score": 0.572
+        },
+        {
+          "word": "nicht",
+          "start": 17.931,
+          "end": 18.111,
+          "score": 0.747
+        },
+        {
+          "word": "lesen.",
+          "start": 18.151,
+          "end": 19.292,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 19.332,
+      "end": 23.555,
+      "text": "Aber jemand in Lethkar kann — Varena, am Hafen.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 19.332,
+          "end": 19.672,
+          "score": 0.878
+        },
+        {
+          "word": "jemand",
+          "start": 19.712,
+          "end": 20.052,
+          "score": 0.923
+        },
+        {
+          "word": "in",
+          "start": 20.072,
+          "end": 20.253,
+          "score": 0.87
+        },
+        {
+          "word": "Lethkar",
+          "start": 20.273,
+          "end": 20.693,
+          "score": 0.719
+        },
+        {
+          "word": "kann",
+          "start": 20.713,
+          "end": 21.774,
+          "score": 0.885
+        },
+        {
+          "word": "—",
+          "start": 21.794,
+          "end": 21.814,
+          "score": 0.977
+        },
+        {
+          "word": "Varena,",
+          "start": 21.834,
+          "end": 22.434,
+          "score": 0.892
+        },
+        {
+          "word": "am",
+          "start": 22.474,
+          "end": 22.614,
+          "score": 0.975
+        },
+        {
+          "word": "Hafen.",
+          "start": 22.634,
+          "end": 23.555,
+          "score": 0.929
+        }
+      ]
+    },
+    {
+      "start": 23.595,
+      "end": 25.576,
+      "text": "Sie ist eine alte Bekannte.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 23.595,
+          "end": 23.695,
+          "score": 0.872
+        },
+        {
+          "word": "ist",
+          "start": 23.715,
+          "end": 23.875,
+          "score": 0.75
+        },
+        {
+          "word": "eine",
+          "start": 23.895,
+          "end": 24.035,
+          "score": 0.847
+        },
+        {
+          "word": "alte",
+          "start": 24.075,
+          "end": 24.275,
+          "score": 0.891
+        },
+        {
+          "word": "Bekannte.",
+          "start": 24.315,
+          "end": 25.576,
+          "score": 0.837
+        }
+      ]
+    },
+    {
+      "start": 25.596,
+      "end": 28.438,
+      "text": "Sag ihr, du kommst von mir.\"",
+      "words": [
+        {
+          "word": "Sag",
+          "start": 25.596,
+          "end": 25.816,
+          "score": 0.9
+        },
+        {
+          "word": "ihr,",
+          "start": 25.876,
+          "end": 26.056,
+          "score": 0.819
+        },
+        {
+          "word": "du",
+          "start": 26.096,
+          "end": 26.216,
+          "score": 0.862
+        },
+        {
+          "word": "kommst",
+          "start": 26.236,
+          "end": 26.496,
+          "score": 0.866
+        },
+        {
+          "word": "von",
+          "start": 26.537,
+          "end": 26.677,
+          "score": 0.952
+        },
+        {
+          "word": "mir.\"",
+          "start": 26.697,
+          "end": 28.438,
+          "score": 0.754
+        }
+      ]
+    },
+    {
+      "start": 28.458,
+      "end": 32.1,
+      "text": "\"Tu mir einen Gefallen: Vergiss nicht, was darin steht.\"",
+      "words": [
+        {
+          "word": "\"Tu",
+          "start": 28.458,
+          "end": 28.678,
+          "score": 0.857
+        },
+        {
+          "word": "mir",
+          "start": 28.698,
+          "end": 28.898,
+          "score": 0.876
+        },
+        {
+          "word": "einen",
+          "start": 28.918,
+          "end": 29.118,
+          "score": 0.813
+        },
+        {
+          "word": "Gefallen:",
+          "start": 29.158,
+          "end": 30.399,
+          "score": 0.977
+        },
+        {
+          "word": "Vergiss",
+          "start": 30.419,
+          "end": 30.799,
+          "score": 0.726
+        },
+        {
+          "word": "nicht,",
+          "start": 30.839,
+          "end": 31.059,
+          "score": 0.946
+        },
+        {
+          "word": "was",
+          "start": 31.099,
+          "end": 31.219,
+          "score": 0.934
+        },
+        {
+          "word": "darin",
+          "start": 31.239,
+          "end": 31.46,
+          "score": 0.873
+        },
+        {
+          "word": "steht.\"",
+          "start": 31.5,
+          "end": 32.1,
+          "score": 0.735
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.46,
+      "end": 0.881,
+      "score": 0.404
+    },
+    {
+      "word": "wartet,",
+      "start": 0.921,
+      "end": 1.461,
+      "score": 0.823
+    },
+    {
+      "word": "bis",
+      "start": 1.481,
+      "end": 1.761,
+      "score": 0.726
+    },
+    {
+      "word": "niemand",
+      "start": 1.781,
+      "end": 2.061,
+      "score": 0.789
+    },
+    {
+      "word": "mehr",
+      "start": 2.081,
+      "end": 2.181,
+      "score": 0.813
+    },
+    {
+      "word": "in",
+      "start": 2.241,
+      "end": 2.341,
+      "score": 0.352
+    },
+    {
+      "word": "Hörweite",
+      "start": 2.361,
+      "end": 2.822,
+      "score": 0.88
+    },
+    {
+      "word": "ist.",
+      "start": 2.882,
+      "end": 4.403,
+      "score": 0.807
+    },
+    {
+      "word": "\"Ich",
+      "start": 4.423,
+      "end": 4.563,
+      "score": 0.873
+    },
+    {
+      "word": "habe",
+      "start": 4.583,
+      "end": 4.883,
+      "score": 0.896
+    },
+    {
+      "word": "lange",
+      "start": 4.903,
+      "end": 5.203,
+      "score": 0.841
+    },
+    {
+      "word": "gezögert,",
+      "start": 5.223,
+      "end": 5.804,
+      "score": 0.959
+    },
+    {
+      "word": "ob",
+      "start": 5.824,
+      "end": 5.904,
+      "score": 0.869
+    },
+    {
+      "word": "ich",
+      "start": 5.944,
+      "end": 6.024,
+      "score": 0.933
+    },
+    {
+      "word": "dir",
+      "start": 6.044,
+      "end": 6.164,
+      "score": 0.553
+    },
+    {
+      "word": "das",
+      "start": 6.204,
+      "end": 6.344,
+      "score": 0.85
+    },
+    {
+      "word": "gebe.",
+      "start": 6.364,
+      "end": 7.505,
+      "score": 0.92
+    },
+    {
+      "word": "Aber",
+      "start": 7.525,
+      "end": 7.965,
+      "score": 0.903
+    },
+    {
+      "word": "du",
+      "start": 8.005,
+      "end": 8.185,
+      "score": 0.91
+    },
+    {
+      "word": "hast",
+      "start": 8.225,
+      "end": 8.465,
+      "score": 0.866
+    },
+    {
+      "word": "die",
+      "start": 8.505,
+      "end": 8.645,
+      "score": 0.776
+    },
+    {
+      "word": "Wahrheit",
+      "start": 8.685,
+      "end": 9.066,
+      "score": 0.904
+    },
+    {
+      "word": "gefunden,",
+      "start": 9.086,
+      "end": 9.766,
+      "score": 0.913
+    },
+    {
+      "word": "als",
+      "start": 9.806,
+      "end": 10.086,
+      "score": 0.956
+    },
+    {
+      "word": "andere",
+      "start": 10.126,
+      "end": 10.426,
+      "score": 0.856
+    },
+    {
+      "word": "weggeschaut",
+      "start": 10.447,
+      "end": 10.887,
+      "score": 0.925
+    },
+    {
+      "word": "haben.\"",
+      "start": 10.907,
+      "end": 12.508,
+      "score": 0.931
+    },
+    {
+      "word": "Sie",
+      "start": 12.548,
+      "end": 12.708,
+      "score": 0.847
+    },
+    {
+      "word": "schiebt",
+      "start": 12.748,
+      "end": 13.028,
+      "score": 0.883
+    },
+    {
+      "word": "mir",
+      "start": 13.048,
+      "end": 13.208,
+      "score": 0.892
+    },
+    {
+      "word": "einen",
+      "start": 13.228,
+      "end": 13.388,
+      "score": 0.692
+    },
+    {
+      "word": "gefalteten",
+      "start": 13.428,
+      "end": 13.909,
+      "score": 0.912
+    },
+    {
+      "word": "Brief",
+      "start": 13.969,
+      "end": 14.269,
+      "score": 0.854
+    },
+    {
+      "word": "zu.",
+      "start": 14.309,
+      "end": 15.91,
+      "score": 0.962
+    },
+    {
+      "word": "\"Er",
+      "start": 15.93,
+      "end": 16.07,
+      "score": 0.623
+    },
+    {
+      "word": "ist",
+      "start": 16.11,
+      "end": 16.29,
+      "score": 0.889
+    },
+    {
+      "word": "verschlüsselt.",
+      "start": 16.31,
+      "end": 17.451,
+      "score": 0.871
+    },
+    {
+      "word": "Ich",
+      "start": 17.491,
+      "end": 17.591,
+      "score": 0.76
+    },
+    {
+      "word": "kann",
+      "start": 17.611,
+      "end": 17.751,
+      "score": 0.947
+    },
+    {
+      "word": "ihn",
+      "start": 17.791,
+      "end": 17.911,
+      "score": 0.572
+    },
+    {
+      "word": "nicht",
+      "start": 17.931,
+      "end": 18.111,
+      "score": 0.747
+    },
+    {
+      "word": "lesen.",
+      "start": 18.151,
+      "end": 19.292,
+      "score": 0.877
+    },
+    {
+      "word": "Aber",
+      "start": 19.332,
+      "end": 19.672,
+      "score": 0.878
+    },
+    {
+      "word": "jemand",
+      "start": 19.712,
+      "end": 20.052,
+      "score": 0.923
+    },
+    {
+      "word": "in",
+      "start": 20.072,
+      "end": 20.253,
+      "score": 0.87
+    },
+    {
+      "word": "Lethkar",
+      "start": 20.273,
+      "end": 20.693,
+      "score": 0.719
+    },
+    {
+      "word": "kann",
+      "start": 20.713,
+      "end": 21.774,
+      "score": 0.885
+    },
+    {
+      "word": "—",
+      "start": 21.794,
+      "end": 21.814,
+      "score": 0.977
+    },
+    {
+      "word": "Varena,",
+      "start": 21.834,
+      "end": 22.434,
+      "score": 0.892
+    },
+    {
+      "word": "am",
+      "start": 22.474,
+      "end": 22.614,
+      "score": 0.975
+    },
+    {
+      "word": "Hafen.",
+      "start": 22.634,
+      "end": 23.555,
+      "score": 0.929
+    },
+    {
+      "word": "Sie",
+      "start": 23.595,
+      "end": 23.695,
+      "score": 0.872
+    },
+    {
+      "word": "ist",
+      "start": 23.715,
+      "end": 23.875,
+      "score": 0.75
+    },
+    {
+      "word": "eine",
+      "start": 23.895,
+      "end": 24.035,
+      "score": 0.847
+    },
+    {
+      "word": "alte",
+      "start": 24.075,
+      "end": 24.275,
+      "score": 0.891
+    },
+    {
+      "word": "Bekannte.",
+      "start": 24.315,
+      "end": 25.576,
+      "score": 0.837
+    },
+    {
+      "word": "Sag",
+      "start": 25.596,
+      "end": 25.816,
+      "score": 0.9
+    },
+    {
+      "word": "ihr,",
+      "start": 25.876,
+      "end": 26.056,
+      "score": 0.819
+    },
+    {
+      "word": "du",
+      "start": 26.096,
+      "end": 26.216,
+      "score": 0.862
+    },
+    {
+      "word": "kommst",
+      "start": 26.236,
+      "end": 26.496,
+      "score": 0.866
+    },
+    {
+      "word": "von",
+      "start": 26.537,
+      "end": 26.677,
+      "score": 0.952
+    },
+    {
+      "word": "mir.\"",
+      "start": 26.697,
+      "end": 28.438,
+      "score": 0.754
+    },
+    {
+      "word": "\"Tu",
+      "start": 28.458,
+      "end": 28.678,
+      "score": 0.857
+    },
+    {
+      "word": "mir",
+      "start": 28.698,
+      "end": 28.898,
+      "score": 0.876
+    },
+    {
+      "word": "einen",
+      "start": 28.918,
+      "end": 29.118,
+      "score": 0.813
+    },
+    {
+      "word": "Gefallen:",
+      "start": 29.158,
+      "end": 30.399,
+      "score": 0.977
+    },
+    {
+      "word": "Vergiss",
+      "start": 30.419,
+      "end": 30.799,
+      "score": 0.726
+    },
+    {
+      "word": "nicht,",
+      "start": 30.839,
+      "end": 31.059,
+      "score": 0.946
+    },
+    {
+      "word": "was",
+      "start": 31.099,
+      "end": 31.219,
+      "score": 0.934
+    },
+    {
+      "word": "darin",
+      "start": 31.239,
+      "end": 31.46,
+      "score": 0.873
+    },
+    {
+      "word": "steht.\"",
+      "start": 31.5,
+      "end": 32.1,
+      "score": 0.735
+    }
+  ]
+}

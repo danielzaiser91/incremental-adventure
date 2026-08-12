@@ -1,0 +1,207 @@
+{
+  "segments": [
+    {
+      "start": 0.361,
+      "end": 3.57,
+      "text": "Korbin nickt mir knapp zu.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.361,
+          "end": 0.903,
+          "score": 0.874
+        },
+        {
+          "word": "nickt",
+          "start": 0.943,
+          "end": 1.203,
+          "score": 0.878
+        },
+        {
+          "word": "mir",
+          "start": 1.223,
+          "end": 1.404,
+          "score": 0.903
+        },
+        {
+          "word": "knapp",
+          "start": 1.444,
+          "end": 1.805,
+          "score": 0.971
+        },
+        {
+          "word": "zu.",
+          "start": 1.845,
+          "end": 3.57,
+          "score": 0.733
+        }
+      ]
+    },
+    {
+      "start": 3.59,
+      "end": 6.398,
+      "text": "\"Du siehst wie jemand aus, der Antworten sucht.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 3.59,
+          "end": 3.751,
+          "score": 0.569
+        },
+        {
+          "word": "siehst",
+          "start": 3.791,
+          "end": 4.051,
+          "score": 0.754
+        },
+        {
+          "word": "wie",
+          "start": 4.072,
+          "end": 4.212,
+          "score": 0.995
+        },
+        {
+          "word": "jemand",
+          "start": 4.232,
+          "end": 4.553,
+          "score": 0.901
+        },
+        {
+          "word": "aus,",
+          "start": 4.593,
+          "end": 4.814,
+          "score": 0.984
+        },
+        {
+          "word": "der",
+          "start": 4.834,
+          "end": 4.994,
+          "score": 0.873
+        },
+        {
+          "word": "Antworten",
+          "start": 5.034,
+          "end": 5.496,
+          "score": 0.844
+        },
+        {
+          "word": "sucht.",
+          "start": 5.536,
+          "end": 6.398,
+          "score": 0.886
+        }
+      ]
+    },
+    {
+      "start": 6.438,
+      "end": 6.719,
+      "text": "Was ist?\"",
+      "words": [
+        {
+          "word": "Was",
+          "start": 6.438,
+          "end": 6.579,
+          "score": 0.773
+        },
+        {
+          "word": "ist?\"",
+          "start": 6.619,
+          "end": 6.719,
+          "score": 0.54
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.361,
+      "end": 0.903,
+      "score": 0.874
+    },
+    {
+      "word": "nickt",
+      "start": 0.943,
+      "end": 1.203,
+      "score": 0.878
+    },
+    {
+      "word": "mir",
+      "start": 1.223,
+      "end": 1.404,
+      "score": 0.903
+    },
+    {
+      "word": "knapp",
+      "start": 1.444,
+      "end": 1.805,
+      "score": 0.971
+    },
+    {
+      "word": "zu.",
+      "start": 1.845,
+      "end": 3.57,
+      "score": 0.733
+    },
+    {
+      "word": "\"Du",
+      "start": 3.59,
+      "end": 3.751,
+      "score": 0.569
+    },
+    {
+      "word": "siehst",
+      "start": 3.791,
+      "end": 4.051,
+      "score": 0.754
+    },
+    {
+      "word": "wie",
+      "start": 4.072,
+      "end": 4.212,
+      "score": 0.995
+    },
+    {
+      "word": "jemand",
+      "start": 4.232,
+      "end": 4.553,
+      "score": 0.901
+    },
+    {
+      "word": "aus,",
+      "start": 4.593,
+      "end": 4.814,
+      "score": 0.984
+    },
+    {
+      "word": "der",
+      "start": 4.834,
+      "end": 4.994,
+      "score": 0.873
+    },
+    {
+      "word": "Antworten",
+      "start": 5.034,
+      "end": 5.496,
+      "score": 0.844
+    },
+    {
+      "word": "sucht.",
+      "start": 5.536,
+      "end": 6.398,
+      "score": 0.886
+    },
+    {
+      "word": "Was",
+      "start": 6.438,
+      "end": 6.579,
+      "score": 0.773
+    },
+    {
+      "word": "ist?\"",
+      "start": 6.619,
+      "end": 6.719,
+      "score": 0.54
+    }
+  ]
+}

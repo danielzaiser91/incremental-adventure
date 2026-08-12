@@ -52,6 +52,11 @@ mit dem neuen Modell.
   `SKIP_IDS` — sie kosten zwar einen Tages-Slot, holen sich aber irgendwann
   selbst. Nur reproduzierbare Leerantworten (`finishReason: OTHER`) rechtfertigen
   einen SKIP-Eintrag.
+  **Ausnahme (12.08.2026): `npc-greta-turnIn`** — 8× 400 in Folge über 5 Tage,
+  auch mit umformulierter Textvariante (`TTS_TEXT_OVERRIDES`). Das ist keine
+  Transienz mehr; der Knoten steht doch in `SKIP_IDS`, die Ursachen-Isolation
+  (Text vs. Stimme vs. Stil) übernimmt die Gratis-Diagnostik `tts/probe.js`
+  bei leerer Quota (Schritt 3 der Nacht-Routine).
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -65,9 +70,11 @@ mit dem neuen Modell.
   Charakter zwischen zwei Knoten wie zwei Personen). NPC-Knoten mischen
   Regie-Sätze und wörtliche Rede — beides spricht die NPC-Stimme, `Iapetus`
   bleibt dem Erzähler vorbehalten.
-- Audio-Format: 24 kHz PCM → WAV in `tts/output/` (gitignored). Kompression zu
-  Opus/MP3 folgt, sobald ffmpeg installiert ist — erst dann kommen Audiodateien
-  ins Repo/Spiel.
+- Audio-Format & Verzeichnisse (seit 12.08.2026): `tts/output/` ist die
+  gitignorierte Werkstatt (WAV + `output/opus/` + words.json, alles von
+  `generate-batch.js` automatisch erzeugt). Veröffentlicht wird über
+  `tts/publish-audio.js` nach `tts/audio/` (committed, Opus 32 kbps +
+  words.json) — nur Einheiten, die BEIDES haben; daraus lädt das Spiel.
 - Täglicher Ablauf: `node tts/generate-batch.js` — nimmt die nächsten offenen
   Einheiten aus `tts/manifest.json` (Default-Limit 10 = Tageslimit),
   wartet 21 s zwischen Requests
@@ -101,11 +108,15 @@ mit dem neuen Modell.
         `generate-batch.js` erledigt Opus + Alignment seit heute automatisch
         pro neuer Einheit (`postProcess()`). ffmpeg ist in
         `ai_agent_tools.md` dokumentiert.
-  - [ ] Einbau ins Spiel konzipieren (Abspiel-UI; das Ton-Verhalten im
-        fertigen Spiel ist eine offene Design-Entscheidung — die frühere
-        Auflage „immer stumm starten" stammte aus der alten Sound-Regel, die
-        seit der Präzisierung vom 31.07. nur noch den Claude-internen Preview
-        betrifft, nicht das Produkt)
+  - [ ] Einbau ins Spiel — **Entscheidung 12.08.2026 (Daniel): direkt
+        umsetzen.** Umsetzungsstand: Story-Audio lädt jetzt aus dem
+        committeten `tts/audio/` (Opus + words.json, befüllt über
+        `tts/publish-audio.js`); die Audio-UI erscheint NUR bei Einträgen
+        mit Wort-Timing (Fallback-Frage damit entschieden; verifiziert per
+        `test/story-audio-gating.js`). Offen bis zum Abhaken: Alignment-
+        Backlog fertig → restliche Paare veröffentlichen → Minor-Release
+        v0.23.0 mit pending-patchnotes (Discord-Freigabe durch Daniel laut
+        Release-Checkliste)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
@@ -148,13 +159,23 @@ mit dem neuen Modell.
       (Quests 8/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
-- [ ] **Phase 7 — optional: Achievements** (79 Einheiten)
+- ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
+      (Entscheidung Daniel: Achievements liest man eher, als dass man sie
+      hört; der Plan endet mit Phase 6)
 
 Grobe Zeitschätzung bei 10/Tag (Stand 26.07.2026, nach Korrektur der
 Phase-3-Knotenzahl von ~143 auf 65): Phase 1–2 erledigt, Phase 3 bis ~02.08.,
 Phase 4 bis ~05.08., Phase 5 bis ~24.08., Phase 6–7 bis ~Ende September 2026.
 
 ## TODO — Wort-Highlighting-Prototyp, offene Bugs (Test 20.07.2026, 00:23 Uhr)
+
+**Stand 12.08.2026 — Großteil erledigt:** Alignment-Rückstand läuft seit heute
+als Backlog-Lauf (`align_all.py`, Idle-Priorität) und ist ins Batch-Skript
+integriert (kein manueller Nachzieh-Schritt mehr). Die Fallback-Frage ist
+entschieden und umgesetzt: keine Audio-UI ohne Wort-Timing. Der letzte
+„Weiter"-Button heißt jetzt „Schließen" (v0.22.10). Offen aus diesem Abschnitt
+bleibt nur der Gegencheck des Wort-Highlightings durch einen echten Hör-Test,
+sobald v0.23.0 (Audio aus `tts/audio/`) live ist.
 
 Manueller Test durch User (nicht Browser-Automation) bei story-1.3 (Schlafplatz,
 Nacht, "Die erste Nacht") — **keine Code-Änderungen vorgenommen, nur notiert.**
@@ -268,3 +289,4 @@ nachgelagerter Extra-Lauf.
 - 10.08.2026 23:02 — Tagesbilanz: 10 Requests (9 OK, 1× HTTP 400), Quota damit ausgeschöpft, kein 429 provoziert, kein Same-Day-Retry (Leerantworten gab es keine). **Phase 5 hat begonnen** — die ersten 8 Quest-Beschreibungen (`quest-nightWatch-*`, `quest-miraLetter-*`) sind vertont. `npc-kommandant-offer` lief nach 4 vorherigen 400ern unverändert durch und bestätigt damit erneut, dass HTTP 400 transient ist. Einziger Rest aus Phase 4: `npc-greta-turnIn` (jetzt 6. 400 in Folge) — bleibt im normalen Batch, aber der Knoten ist damit der hartnäckigste 400er-Fall; falls er auch nach zwei weiteren Läufen nicht durchgeht, gezielt per Textkürzung untersuchen statt weiter blind mitzuschleifen.
 - 12.08.2026 13:15 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.
 - 12.08.2026 13:16 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.
+- 12.08.2026 13:35 — Manueller Arbeitsblock (Session): npc-greta-turnIn 7.+8. HTTP 400 (auch mit Textvariante) → SKIP_IDS + probe.js-Diagnostik an die Nacht-Routine übergeben. Opus-Pipeline + Auto-Alignment in generate-batch.js integriert, 163 Bestands-WAVs konvertiert. v0.22.10 released (Dialog-Button „Schließen“). Einbau-Entscheidung Daniel: direkt umsetzen — Spiel lädt aus tts/audio/ (56 Paare veröffentlicht), Audio-UI nur mit Wort-Timing. Phase 7 gestrichen. Alignment-Backlog läuft. 2 Quota-Slots verbraucht, 8 für die Nacht-Routine übrig.

@@ -1,0 +1,1477 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.182,
+      "text": "Der alte Mann lehnt an seinem Besen und mustert mich kurz, bevor er weiterkehrt.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.0,
+          "end": 1.06,
+          "score": 0.42
+        },
+        {
+          "word": "alte",
+          "start": 1.1,
+          "end": 1.441,
+          "score": 0.665
+        },
+        {
+          "word": "Mann",
+          "start": 1.481,
+          "end": 1.781,
+          "score": 0.575
+        },
+        {
+          "word": "lehnt",
+          "start": 1.841,
+          "end": 2.161,
+          "score": 0.767
+        },
+        {
+          "word": "an",
+          "start": 2.201,
+          "end": 2.361,
+          "score": 0.869
+        },
+        {
+          "word": "seinem",
+          "start": 2.381,
+          "end": 2.701,
+          "score": 0.919
+        },
+        {
+          "word": "Besen",
+          "start": 2.741,
+          "end": 3.541,
+          "score": 0.969
+        },
+        {
+          "word": "und",
+          "start": 3.561,
+          "end": 3.821,
+          "score": 0.858
+        },
+        {
+          "word": "mustert",
+          "start": 3.861,
+          "end": 4.302,
+          "score": 0.796
+        },
+        {
+          "word": "mich",
+          "start": 4.322,
+          "end": 4.542,
+          "score": 0.902
+        },
+        {
+          "word": "kurz,",
+          "start": 4.582,
+          "end": 5.102,
+          "score": 0.898
+        },
+        {
+          "word": "bevor",
+          "start": 5.122,
+          "end": 5.422,
+          "score": 0.972
+        },
+        {
+          "word": "er",
+          "start": 5.462,
+          "end": 5.562,
+          "score": 0.948
+        },
+        {
+          "word": "weiterkehrt.",
+          "start": 5.602,
+          "end": 6.182,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 7.103,
+      "end": 8.803,
+      "text": "\"Bist du neu hier?",
+      "words": [
+        {
+          "word": "\"Bist",
+          "start": 7.103,
+          "end": 7.323,
+          "score": 0.756
+        },
+        {
+          "word": "du",
+          "start": 7.343,
+          "end": 7.543,
+          "score": 0.812
+        },
+        {
+          "word": "neu",
+          "start": 7.563,
+          "end": 7.823,
+          "score": 0.967
+        },
+        {
+          "word": "hier?",
+          "start": 7.863,
+          "end": 8.803,
+          "score": 0.733
+        }
+      ]
+    },
+    {
+      "start": 8.843,
+      "end": 10.944,
+      "text": "Man sieht’s noch an dir.\"",
+      "words": [
+        {
+          "word": "Man",
+          "start": 8.843,
+          "end": 9.003,
+          "score": 0.838
+        },
+        {
+          "word": "sieht’s",
+          "start": 9.043,
+          "end": 9.344,
+          "score": 0.792
+        },
+        {
+          "word": "noch",
+          "start": 9.384,
+          "end": 9.544,
+          "score": 0.947
+        },
+        {
+          "word": "an",
+          "start": 9.584,
+          "end": 9.704,
+          "score": 0.909
+        },
+        {
+          "word": "dir.\"",
+          "start": 9.744,
+          "end": 10.944,
+          "score": 0.698
+        }
+      ]
+    },
+    {
+      "start": 10.964,
+      "end": 14.666,
+      "text": "\"Ich kehr diese Gassen seit dreißig Jahren.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 10.964,
+          "end": 11.264,
+          "score": 0.907
+        },
+        {
+          "word": "kehr",
+          "start": 11.324,
+          "end": 11.684,
+          "score": 0.822
+        },
+        {
+          "word": "diese",
+          "start": 11.704,
+          "end": 12.025,
+          "score": 0.93
+        },
+        {
+          "word": "Gassen",
+          "start": 12.085,
+          "end": 12.445,
+          "score": 0.932
+        },
+        {
+          "word": "seit",
+          "start": 12.465,
+          "end": 12.785,
+          "score": 0.97
+        },
+        {
+          "word": "dreißig",
+          "start": 12.845,
+          "end": 13.445,
+          "score": 0.886
+        },
+        {
+          "word": "Jahren.",
+          "start": 13.465,
+          "end": 14.666,
+          "score": 0.855
+        }
+      ]
+    },
+    {
+      "start": 14.686,
+      "end": 20.208,
+      "text": "Weißt du, was einem auffällt, wenn man so lange draußen ist, bevor die Stadt aufwacht?",
+      "words": [
+        {
+          "word": "Weißt",
+          "start": 14.686,
+          "end": 14.946,
+          "score": 0.714
+        },
+        {
+          "word": "du,",
+          "start": 14.986,
+          "end": 15.146,
+          "score": 0.754
+        },
+        {
+          "word": "was",
+          "start": 15.186,
+          "end": 15.386,
+          "score": 0.929
+        },
+        {
+          "word": "einem",
+          "start": 15.426,
+          "end": 15.706,
+          "score": 0.906
+        },
+        {
+          "word": "auffällt,",
+          "start": 15.766,
+          "end": 16.266,
+          "score": 0.92
+        },
+        {
+          "word": "wenn",
+          "start": 16.286,
+          "end": 16.406,
+          "score": 0.987
+        },
+        {
+          "word": "man",
+          "start": 16.446,
+          "end": 16.686,
+          "score": 0.963
+        },
+        {
+          "word": "so",
+          "start": 16.706,
+          "end": 16.926,
+          "score": 0.832
+        },
+        {
+          "word": "lange",
+          "start": 16.946,
+          "end": 17.227,
+          "score": 0.959
+        },
+        {
+          "word": "draußen",
+          "start": 17.247,
+          "end": 17.727,
+          "score": 0.858
+        },
+        {
+          "word": "ist,",
+          "start": 17.787,
+          "end": 18.187,
+          "score": 0.869
+        },
+        {
+          "word": "bevor",
+          "start": 18.207,
+          "end": 18.507,
+          "score": 0.962
+        },
+        {
+          "word": "die",
+          "start": 18.527,
+          "end": 18.647,
+          "score": 0.845
+        },
+        {
+          "word": "Stadt",
+          "start": 18.707,
+          "end": 18.987,
+          "score": 0.988
+        },
+        {
+          "word": "aufwacht?",
+          "start": 19.027,
+          "end": 20.208,
+          "score": 0.935
+        }
+      ]
+    },
+    {
+      "start": 20.228,
+      "end": 25.23,
+      "text": "Die Leute in ihren warmen Betten denken, Treutheim ist eine Stadt.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 20.228,
+          "end": 20.368,
+          "score": 0.919
+        },
+        {
+          "word": "Leute",
+          "start": 20.428,
+          "end": 20.768,
+          "score": 0.936
+        },
+        {
+          "word": "in",
+          "start": 20.808,
+          "end": 20.968,
+          "score": 0.706
+        },
+        {
+          "word": "ihren",
+          "start": 21.008,
+          "end": 21.248,
+          "score": 0.891
+        },
+        {
+          "word": "warmen",
+          "start": 21.288,
+          "end": 21.708,
+          "score": 0.931
+        },
+        {
+          "word": "Betten",
+          "start": 21.748,
+          "end": 22.088,
+          "score": 0.885
+        },
+        {
+          "word": "denken,",
+          "start": 22.108,
+          "end": 22.829,
+          "score": 0.951
+        },
+        {
+          "word": "Treutheim",
+          "start": 22.849,
+          "end": 23.569,
+          "score": 0.925
+        },
+        {
+          "word": "ist",
+          "start": 23.609,
+          "end": 23.809,
+          "score": 0.984
+        },
+        {
+          "word": "eine",
+          "start": 23.849,
+          "end": 24.049,
+          "score": 0.698
+        },
+        {
+          "word": "Stadt.",
+          "start": 24.109,
+          "end": 25.23,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "start": 25.27,
+      "end": 30.152,
+      "text": "Ich sag dir: bei Nacht gehören die Gassen jemand anderem.\"",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 25.27,
+          "end": 25.43,
+          "score": 0.685
+        },
+        {
+          "word": "sag",
+          "start": 25.45,
+          "end": 25.73,
+          "score": 0.939
+        },
+        {
+          "word": "dir:",
+          "start": 25.75,
+          "end": 26.39,
+          "score": 0.78
+        },
+        {
+          "word": "bei",
+          "start": 26.41,
+          "end": 26.67,
+          "score": 0.812
+        },
+        {
+          "word": "Nacht",
+          "start": 26.71,
+          "end": 27.09,
+          "score": 0.885
+        },
+        {
+          "word": "gehören",
+          "start": 27.13,
+          "end": 27.691,
+          "score": 0.944
+        },
+        {
+          "word": "die",
+          "start": 27.731,
+          "end": 27.891,
+          "score": 0.777
+        },
+        {
+          "word": "Gassen",
+          "start": 27.931,
+          "end": 28.331,
+          "score": 0.968
+        },
+        {
+          "word": "jemand",
+          "start": 28.351,
+          "end": 28.811,
+          "score": 0.985
+        },
+        {
+          "word": "anderem.\"",
+          "start": 28.871,
+          "end": 30.152,
+          "score": 0.865
+        }
+      ]
+    },
+    {
+      "start": 30.192,
+      "end": 36.014,
+      "text": "\"Ich hab Dinge gesehen, die kein Wirt und kein Händler je zu Gesicht kriegen.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 30.192,
+          "end": 30.332,
+          "score": 0.78
+        },
+        {
+          "word": "hab",
+          "start": 30.372,
+          "end": 30.672,
+          "score": 0.93
+        },
+        {
+          "word": "Dinge",
+          "start": 30.692,
+          "end": 31.012,
+          "score": 0.844
+        },
+        {
+          "word": "gesehen,",
+          "start": 31.052,
+          "end": 31.672,
+          "score": 0.957
+        },
+        {
+          "word": "die",
+          "start": 31.692,
+          "end": 31.952,
+          "score": 0.929
+        },
+        {
+          "word": "kein",
+          "start": 31.992,
+          "end": 32.332,
+          "score": 0.87
+        },
+        {
+          "word": "Wirt",
+          "start": 32.372,
+          "end": 32.753,
+          "score": 0.959
+        },
+        {
+          "word": "und",
+          "start": 32.793,
+          "end": 33.053,
+          "score": 0.929
+        },
+        {
+          "word": "kein",
+          "start": 33.073,
+          "end": 33.353,
+          "score": 0.778
+        },
+        {
+          "word": "Händler",
+          "start": 33.393,
+          "end": 33.893,
+          "score": 0.955
+        },
+        {
+          "word": "je",
+          "start": 33.933,
+          "end": 34.213,
+          "score": 0.982
+        },
+        {
+          "word": "zu",
+          "start": 34.253,
+          "end": 34.393,
+          "score": 0.91
+        },
+        {
+          "word": "Gesicht",
+          "start": 34.433,
+          "end": 34.833,
+          "score": 0.901
+        },
+        {
+          "word": "kriegen.",
+          "start": 34.873,
+          "end": 36.014,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 36.034,
+      "end": 37.474,
+      "text": "Manche scheu.",
+      "words": [
+        {
+          "word": "Manche",
+          "start": 36.034,
+          "end": 36.394,
+          "score": 0.794
+        },
+        {
+          "word": "scheu.",
+          "start": 36.454,
+          "end": 37.474,
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "start": 37.494,
+      "end": 39.175,
+      "text": "Manche klug.",
+      "words": [
+        {
+          "word": "Manche",
+          "start": 37.494,
+          "end": 37.854,
+          "score": 0.714
+        },
+        {
+          "word": "klug.",
+          "start": 37.915,
+          "end": 39.175,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 39.195,
+      "end": 45.838,
+      "text": "Manche — wenn man ihnen Zeit lässt und sie nicht erschreckt — kommen sogar von selbst näher.\"",
+      "words": [
+        {
+          "word": "Manche",
+          "start": 39.195,
+          "end": 39.535,
+          "score": 0.807
+        },
+        {
+          "word": "—",
+          "start": 40.115,
+          "end": 40.135,
+          "score": 0.971
+        },
+        {
+          "word": "wenn",
+          "start": 40.155,
+          "end": 40.315,
+          "score": 0.994
+        },
+        {
+          "word": "man",
+          "start": 40.335,
+          "end": 40.536,
+          "score": 0.954
+        },
+        {
+          "word": "ihnen",
+          "start": 40.576,
+          "end": 40.876,
+          "score": 0.883
+        },
+        {
+          "word": "Zeit",
+          "start": 40.916,
+          "end": 41.216,
+          "score": 0.954
+        },
+        {
+          "word": "lässt",
+          "start": 41.256,
+          "end": 41.576,
+          "score": 0.934
+        },
+        {
+          "word": "und",
+          "start": 41.616,
+          "end": 41.776,
+          "score": 0.92
+        },
+        {
+          "word": "sie",
+          "start": 41.816,
+          "end": 41.936,
+          "score": 0.92
+        },
+        {
+          "word": "nicht",
+          "start": 41.976,
+          "end": 42.156,
+          "score": 0.916
+        },
+        {
+          "word": "erschreckt",
+          "start": 42.196,
+          "end": 42.556,
+          "score": 0.891
+        },
+        {
+          "word": "—",
+          "start": 42.576,
+          "end": 43.237,
+          "score": 0.967
+        },
+        {
+          "word": "kommen",
+          "start": 43.277,
+          "end": 43.637,
+          "score": 0.948
+        },
+        {
+          "word": "sogar",
+          "start": 43.657,
+          "end": 43.957,
+          "score": 0.964
+        },
+        {
+          "word": "von",
+          "start": 43.997,
+          "end": 44.217,
+          "score": 0.988
+        },
+        {
+          "word": "selbst",
+          "start": 44.257,
+          "end": 44.657,
+          "score": 0.953
+        },
+        {
+          "word": "näher.\"",
+          "start": 44.697,
+          "end": 45.838,
+          "score": 0.584
+        }
+      ]
+    },
+    {
+      "start": 45.898,
+      "end": 49.539,
+      "text": "Er kehrt weiter, ohne mich noch einmal anzusehen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 45.898,
+          "end": 46.058,
+          "score": 0.915
+        },
+        {
+          "word": "kehrt",
+          "start": 46.078,
+          "end": 46.418,
+          "score": 0.921
+        },
+        {
+          "word": "weiter,",
+          "start": 46.458,
+          "end": 47.138,
+          "score": 0.968
+        },
+        {
+          "word": "ohne",
+          "start": 47.178,
+          "end": 47.378,
+          "score": 0.862
+        },
+        {
+          "word": "mich",
+          "start": 47.398,
+          "end": 47.578,
+          "score": 0.797
+        },
+        {
+          "word": "noch",
+          "start": 47.618,
+          "end": 47.798,
+          "score": 0.831
+        },
+        {
+          "word": "einmal",
+          "start": 47.818,
+          "end": 48.158,
+          "score": 0.837
+        },
+        {
+          "word": "anzusehen.",
+          "start": 48.178,
+          "end": 49.539,
+          "score": 0.919
+        }
+      ]
+    },
+    {
+      "start": 49.559,
+      "end": 51.92,
+      "text": "\"Aber das ist nichts für Ungeduldige.\"",
+      "words": [
+        {
+          "word": "\"Aber",
+          "start": 49.559,
+          "end": 49.919,
+          "score": 0.865
+        },
+        {
+          "word": "das",
+          "start": 49.959,
+          "end": 50.219,
+          "score": 0.958
+        },
+        {
+          "word": "ist",
+          "start": 50.259,
+          "end": 50.519,
+          "score": 0.95
+        },
+        {
+          "word": "nichts",
+          "start": 50.559,
+          "end": 50.879,
+          "score": 0.862
+        },
+        {
+          "word": "für",
+          "start": 50.919,
+          "end": 51.12,
+          "score": 0.954
+        },
+        {
+          "word": "Ungeduldige.\"",
+          "start": 51.18,
+          "end": 51.92,
+          "score": 0.806
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.0,
+      "end": 1.06,
+      "score": 0.42
+    },
+    {
+      "word": "alte",
+      "start": 1.1,
+      "end": 1.441,
+      "score": 0.665
+    },
+    {
+      "word": "Mann",
+      "start": 1.481,
+      "end": 1.781,
+      "score": 0.575
+    },
+    {
+      "word": "lehnt",
+      "start": 1.841,
+      "end": 2.161,
+      "score": 0.767
+    },
+    {
+      "word": "an",
+      "start": 2.201,
+      "end": 2.361,
+      "score": 0.869
+    },
+    {
+      "word": "seinem",
+      "start": 2.381,
+      "end": 2.701,
+      "score": 0.919
+    },
+    {
+      "word": "Besen",
+      "start": 2.741,
+      "end": 3.541,
+      "score": 0.969
+    },
+    {
+      "word": "und",
+      "start": 3.561,
+      "end": 3.821,
+      "score": 0.858
+    },
+    {
+      "word": "mustert",
+      "start": 3.861,
+      "end": 4.302,
+      "score": 0.796
+    },
+    {
+      "word": "mich",
+      "start": 4.322,
+      "end": 4.542,
+      "score": 0.902
+    },
+    {
+      "word": "kurz,",
+      "start": 4.582,
+      "end": 5.102,
+      "score": 0.898
+    },
+    {
+      "word": "bevor",
+      "start": 5.122,
+      "end": 5.422,
+      "score": 0.972
+    },
+    {
+      "word": "er",
+      "start": 5.462,
+      "end": 5.562,
+      "score": 0.948
+    },
+    {
+      "word": "weiterkehrt.",
+      "start": 5.602,
+      "end": 6.182,
+      "score": 0.91
+    },
+    {
+      "word": "\"Bist",
+      "start": 7.103,
+      "end": 7.323,
+      "score": 0.756
+    },
+    {
+      "word": "du",
+      "start": 7.343,
+      "end": 7.543,
+      "score": 0.812
+    },
+    {
+      "word": "neu",
+      "start": 7.563,
+      "end": 7.823,
+      "score": 0.967
+    },
+    {
+      "word": "hier?",
+      "start": 7.863,
+      "end": 8.803,
+      "score": 0.733
+    },
+    {
+      "word": "Man",
+      "start": 8.843,
+      "end": 9.003,
+      "score": 0.838
+    },
+    {
+      "word": "sieht’s",
+      "start": 9.043,
+      "end": 9.344,
+      "score": 0.792
+    },
+    {
+      "word": "noch",
+      "start": 9.384,
+      "end": 9.544,
+      "score": 0.947
+    },
+    {
+      "word": "an",
+      "start": 9.584,
+      "end": 9.704,
+      "score": 0.909
+    },
+    {
+      "word": "dir.\"",
+      "start": 9.744,
+      "end": 10.944,
+      "score": 0.698
+    },
+    {
+      "word": "\"Ich",
+      "start": 10.964,
+      "end": 11.264,
+      "score": 0.907
+    },
+    {
+      "word": "kehr",
+      "start": 11.324,
+      "end": 11.684,
+      "score": 0.822
+    },
+    {
+      "word": "diese",
+      "start": 11.704,
+      "end": 12.025,
+      "score": 0.93
+    },
+    {
+      "word": "Gassen",
+      "start": 12.085,
+      "end": 12.445,
+      "score": 0.932
+    },
+    {
+      "word": "seit",
+      "start": 12.465,
+      "end": 12.785,
+      "score": 0.97
+    },
+    {
+      "word": "dreißig",
+      "start": 12.845,
+      "end": 13.445,
+      "score": 0.886
+    },
+    {
+      "word": "Jahren.",
+      "start": 13.465,
+      "end": 14.666,
+      "score": 0.855
+    },
+    {
+      "word": "Weißt",
+      "start": 14.686,
+      "end": 14.946,
+      "score": 0.714
+    },
+    {
+      "word": "du,",
+      "start": 14.986,
+      "end": 15.146,
+      "score": 0.754
+    },
+    {
+      "word": "was",
+      "start": 15.186,
+      "end": 15.386,
+      "score": 0.929
+    },
+    {
+      "word": "einem",
+      "start": 15.426,
+      "end": 15.706,
+      "score": 0.906
+    },
+    {
+      "word": "auffällt,",
+      "start": 15.766,
+      "end": 16.266,
+      "score": 0.92
+    },
+    {
+      "word": "wenn",
+      "start": 16.286,
+      "end": 16.406,
+      "score": 0.987
+    },
+    {
+      "word": "man",
+      "start": 16.446,
+      "end": 16.686,
+      "score": 0.963
+    },
+    {
+      "word": "so",
+      "start": 16.706,
+      "end": 16.926,
+      "score": 0.832
+    },
+    {
+      "word": "lange",
+      "start": 16.946,
+      "end": 17.227,
+      "score": 0.959
+    },
+    {
+      "word": "draußen",
+      "start": 17.247,
+      "end": 17.727,
+      "score": 0.858
+    },
+    {
+      "word": "ist,",
+      "start": 17.787,
+      "end": 18.187,
+      "score": 0.869
+    },
+    {
+      "word": "bevor",
+      "start": 18.207,
+      "end": 18.507,
+      "score": 0.962
+    },
+    {
+      "word": "die",
+      "start": 18.527,
+      "end": 18.647,
+      "score": 0.845
+    },
+    {
+      "word": "Stadt",
+      "start": 18.707,
+      "end": 18.987,
+      "score": 0.988
+    },
+    {
+      "word": "aufwacht?",
+      "start": 19.027,
+      "end": 20.208,
+      "score": 0.935
+    },
+    {
+      "word": "Die",
+      "start": 20.228,
+      "end": 20.368,
+      "score": 0.919
+    },
+    {
+      "word": "Leute",
+      "start": 20.428,
+      "end": 20.768,
+      "score": 0.936
+    },
+    {
+      "word": "in",
+      "start": 20.808,
+      "end": 20.968,
+      "score": 0.706
+    },
+    {
+      "word": "ihren",
+      "start": 21.008,
+      "end": 21.248,
+      "score": 0.891
+    },
+    {
+      "word": "warmen",
+      "start": 21.288,
+      "end": 21.708,
+      "score": 0.931
+    },
+    {
+      "word": "Betten",
+      "start": 21.748,
+      "end": 22.088,
+      "score": 0.885
+    },
+    {
+      "word": "denken,",
+      "start": 22.108,
+      "end": 22.829,
+      "score": 0.951
+    },
+    {
+      "word": "Treutheim",
+      "start": 22.849,
+      "end": 23.569,
+      "score": 0.925
+    },
+    {
+      "word": "ist",
+      "start": 23.609,
+      "end": 23.809,
+      "score": 0.984
+    },
+    {
+      "word": "eine",
+      "start": 23.849,
+      "end": 24.049,
+      "score": 0.698
+    },
+    {
+      "word": "Stadt.",
+      "start": 24.109,
+      "end": 25.23,
+      "score": 0.9
+    },
+    {
+      "word": "Ich",
+      "start": 25.27,
+      "end": 25.43,
+      "score": 0.685
+    },
+    {
+      "word": "sag",
+      "start": 25.45,
+      "end": 25.73,
+      "score": 0.939
+    },
+    {
+      "word": "dir:",
+      "start": 25.75,
+      "end": 26.39,
+      "score": 0.78
+    },
+    {
+      "word": "bei",
+      "start": 26.41,
+      "end": 26.67,
+      "score": 0.812
+    },
+    {
+      "word": "Nacht",
+      "start": 26.71,
+      "end": 27.09,
+      "score": 0.885
+    },
+    {
+      "word": "gehören",
+      "start": 27.13,
+      "end": 27.691,
+      "score": 0.944
+    },
+    {
+      "word": "die",
+      "start": 27.731,
+      "end": 27.891,
+      "score": 0.777
+    },
+    {
+      "word": "Gassen",
+      "start": 27.931,
+      "end": 28.331,
+      "score": 0.968
+    },
+    {
+      "word": "jemand",
+      "start": 28.351,
+      "end": 28.811,
+      "score": 0.985
+    },
+    {
+      "word": "anderem.\"",
+      "start": 28.871,
+      "end": 30.152,
+      "score": 0.865
+    },
+    {
+      "word": "\"Ich",
+      "start": 30.192,
+      "end": 30.332,
+      "score": 0.78
+    },
+    {
+      "word": "hab",
+      "start": 30.372,
+      "end": 30.672,
+      "score": 0.93
+    },
+    {
+      "word": "Dinge",
+      "start": 30.692,
+      "end": 31.012,
+      "score": 0.844
+    },
+    {
+      "word": "gesehen,",
+      "start": 31.052,
+      "end": 31.672,
+      "score": 0.957
+    },
+    {
+      "word": "die",
+      "start": 31.692,
+      "end": 31.952,
+      "score": 0.929
+    },
+    {
+      "word": "kein",
+      "start": 31.992,
+      "end": 32.332,
+      "score": 0.87
+    },
+    {
+      "word": "Wirt",
+      "start": 32.372,
+      "end": 32.753,
+      "score": 0.959
+    },
+    {
+      "word": "und",
+      "start": 32.793,
+      "end": 33.053,
+      "score": 0.929
+    },
+    {
+      "word": "kein",
+      "start": 33.073,
+      "end": 33.353,
+      "score": 0.778
+    },
+    {
+      "word": "Händler",
+      "start": 33.393,
+      "end": 33.893,
+      "score": 0.955
+    },
+    {
+      "word": "je",
+      "start": 33.933,
+      "end": 34.213,
+      "score": 0.982
+    },
+    {
+      "word": "zu",
+      "start": 34.253,
+      "end": 34.393,
+      "score": 0.91
+    },
+    {
+      "word": "Gesicht",
+      "start": 34.433,
+      "end": 34.833,
+      "score": 0.901
+    },
+    {
+      "word": "kriegen.",
+      "start": 34.873,
+      "end": 36.014,
+      "score": 0.896
+    },
+    {
+      "word": "Manche",
+      "start": 36.034,
+      "end": 36.394,
+      "score": 0.794
+    },
+    {
+      "word": "scheu.",
+      "start": 36.454,
+      "end": 37.474,
+      "score": 0.8
+    },
+    {
+      "word": "Manche",
+      "start": 37.494,
+      "end": 37.854,
+      "score": 0.714
+    },
+    {
+      "word": "klug.",
+      "start": 37.915,
+      "end": 39.175,
+      "score": 0.918
+    },
+    {
+      "word": "Manche",
+      "start": 39.195,
+      "end": 39.535,
+      "score": 0.807
+    },
+    {
+      "word": "—",
+      "start": 40.115,
+      "end": 40.135,
+      "score": 0.971
+    },
+    {
+      "word": "wenn",
+      "start": 40.155,
+      "end": 40.315,
+      "score": 0.994
+    },
+    {
+      "word": "man",
+      "start": 40.335,
+      "end": 40.536,
+      "score": 0.954
+    },
+    {
+      "word": "ihnen",
+      "start": 40.576,
+      "end": 40.876,
+      "score": 0.883
+    },
+    {
+      "word": "Zeit",
+      "start": 40.916,
+      "end": 41.216,
+      "score": 0.954
+    },
+    {
+      "word": "lässt",
+      "start": 41.256,
+      "end": 41.576,
+      "score": 0.934
+    },
+    {
+      "word": "und",
+      "start": 41.616,
+      "end": 41.776,
+      "score": 0.92
+    },
+    {
+      "word": "sie",
+      "start": 41.816,
+      "end": 41.936,
+      "score": 0.92
+    },
+    {
+      "word": "nicht",
+      "start": 41.976,
+      "end": 42.156,
+      "score": 0.916
+    },
+    {
+      "word": "erschreckt",
+      "start": 42.196,
+      "end": 42.556,
+      "score": 0.891
+    },
+    {
+      "word": "—",
+      "start": 42.576,
+      "end": 43.237,
+      "score": 0.967
+    },
+    {
+      "word": "kommen",
+      "start": 43.277,
+      "end": 43.637,
+      "score": 0.948
+    },
+    {
+      "word": "sogar",
+      "start": 43.657,
+      "end": 43.957,
+      "score": 0.964
+    },
+    {
+      "word": "von",
+      "start": 43.997,
+      "end": 44.217,
+      "score": 0.988
+    },
+    {
+      "word": "selbst",
+      "start": 44.257,
+      "end": 44.657,
+      "score": 0.953
+    },
+    {
+      "word": "näher.\"",
+      "start": 44.697,
+      "end": 45.838,
+      "score": 0.584
+    },
+    {
+      "word": "Er",
+      "start": 45.898,
+      "end": 46.058,
+      "score": 0.915
+    },
+    {
+      "word": "kehrt",
+      "start": 46.078,
+      "end": 46.418,
+      "score": 0.921
+    },
+    {
+      "word": "weiter,",
+      "start": 46.458,
+      "end": 47.138,
+      "score": 0.968
+    },
+    {
+      "word": "ohne",
+      "start": 47.178,
+      "end": 47.378,
+      "score": 0.862
+    },
+    {
+      "word": "mich",
+      "start": 47.398,
+      "end": 47.578,
+      "score": 0.797
+    },
+    {
+      "word": "noch",
+      "start": 47.618,
+      "end": 47.798,
+      "score": 0.831
+    },
+    {
+      "word": "einmal",
+      "start": 47.818,
+      "end": 48.158,
+      "score": 0.837
+    },
+    {
+      "word": "anzusehen.",
+      "start": 48.178,
+      "end": 49.539,
+      "score": 0.919
+    },
+    {
+      "word": "\"Aber",
+      "start": 49.559,
+      "end": 49.919,
+      "score": 0.865
+    },
+    {
+      "word": "das",
+      "start": 49.959,
+      "end": 50.219,
+      "score": 0.958
+    },
+    {
+      "word": "ist",
+      "start": 50.259,
+      "end": 50.519,
+      "score": 0.95
+    },
+    {
+      "word": "nichts",
+      "start": 50.559,
+      "end": 50.879,
+      "score": 0.862
+    },
+    {
+      "word": "für",
+      "start": 50.919,
+      "end": 51.12,
+      "score": 0.954
+    },
+    {
+      "word": "Ungeduldige.\"",
+      "start": 51.18,
+      "end": 51.92,
+      "score": 0.806
+    }
+  ]
+}

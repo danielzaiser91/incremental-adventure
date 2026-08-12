@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.341,
+      "end": 4.089,
+      "text": "Brakka hebt seinen Krug, ohne aufzusehen.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.341,
+          "end": 0.862,
+          "score": 0.876
+        },
+        {
+          "word": "hebt",
+          "start": 0.922,
+          "end": 1.223,
+          "score": 0.93
+        },
+        {
+          "word": "seinen",
+          "start": 1.263,
+          "end": 1.563,
+          "score": 0.784
+        },
+        {
+          "word": "Krug,",
+          "start": 1.603,
+          "end": 2.285,
+          "score": 0.983
+        },
+        {
+          "word": "ohne",
+          "start": 2.325,
+          "end": 2.606,
+          "score": 0.911
+        },
+        {
+          "word": "aufzusehen.",
+          "start": 2.646,
+          "end": 4.089,
+          "score": 0.928
+        }
+      ]
+    },
+    {
+      "start": 4.109,
+      "end": 7.055,
+      "text": "\"Schon wieder wach geblieben letzte Nacht?",
+      "words": [
+        {
+          "word": "\"Schon",
+          "start": 4.109,
+          "end": 4.429,
+          "score": 0.745
+        },
+        {
+          "word": "wieder",
+          "start": 4.45,
+          "end": 4.67,
+          "score": 0.901
+        },
+        {
+          "word": "wach",
+          "start": 4.73,
+          "end": 4.931,
+          "score": 0.97
+        },
+        {
+          "word": "geblieben",
+          "start": 4.951,
+          "end": 5.432,
+          "score": 0.904
+        },
+        {
+          "word": "letzte",
+          "start": 5.472,
+          "end": 5.812,
+          "score": 0.882
+        },
+        {
+          "word": "Nacht?",
+          "start": 5.853,
+          "end": 7.055,
+          "score": 0.733
+        }
+      ]
+    },
+    {
+      "start": 7.075,
+      "end": 8.899,
+      "text": "Du wirst noch zur Eule, Fremder.\"",
+      "words": [
+        {
+          "word": "Du",
+          "start": 7.075,
+          "end": 7.175,
+          "score": 0.738
+        },
+        {
+          "word": "wirst",
+          "start": 7.215,
+          "end": 7.476,
+          "score": 0.469
+        },
+        {
+          "word": "noch",
+          "start": 7.516,
+          "end": 7.696,
+          "score": 0.919
+        },
+        {
+          "word": "zur",
+          "start": 7.716,
+          "end": 7.937,
+          "score": 0.894
+        },
+        {
+          "word": "Eule,",
+          "start": 7.997,
+          "end": 8.418,
+          "score": 0.792
+        },
+        {
+          "word": "Fremder.\"",
+          "start": 8.458,
+          "end": 8.899,
+          "score": 0.721
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.341,
+      "end": 0.862,
+      "score": 0.876
+    },
+    {
+      "word": "hebt",
+      "start": 0.922,
+      "end": 1.223,
+      "score": 0.93
+    },
+    {
+      "word": "seinen",
+      "start": 1.263,
+      "end": 1.563,
+      "score": 0.784
+    },
+    {
+      "word": "Krug,",
+      "start": 1.603,
+      "end": 2.285,
+      "score": 0.983
+    },
+    {
+      "word": "ohne",
+      "start": 2.325,
+      "end": 2.606,
+      "score": 0.911
+    },
+    {
+      "word": "aufzusehen.",
+      "start": 2.646,
+      "end": 4.089,
+      "score": 0.928
+    },
+    {
+      "word": "\"Schon",
+      "start": 4.109,
+      "end": 4.429,
+      "score": 0.745
+    },
+    {
+      "word": "wieder",
+      "start": 4.45,
+      "end": 4.67,
+      "score": 0.901
+    },
+    {
+      "word": "wach",
+      "start": 4.73,
+      "end": 4.931,
+      "score": 0.97
+    },
+    {
+      "word": "geblieben",
+      "start": 4.951,
+      "end": 5.432,
+      "score": 0.904
+    },
+    {
+      "word": "letzte",
+      "start": 5.472,
+      "end": 5.812,
+      "score": 0.882
+    },
+    {
+      "word": "Nacht?",
+      "start": 5.853,
+      "end": 7.055,
+      "score": 0.733
+    },
+    {
+      "word": "Du",
+      "start": 7.075,
+      "end": 7.175,
+      "score": 0.738
+    },
+    {
+      "word": "wirst",
+      "start": 7.215,
+      "end": 7.476,
+      "score": 0.469
+    },
+    {
+      "word": "noch",
+      "start": 7.516,
+      "end": 7.696,
+      "score": 0.919
+    },
+    {
+      "word": "zur",
+      "start": 7.716,
+      "end": 7.937,
+      "score": 0.894
+    },
+    {
+      "word": "Eule,",
+      "start": 7.997,
+      "end": 8.418,
+      "score": 0.792
+    },
+    {
+      "word": "Fremder.\"",
+      "start": 8.458,
+      "end": 8.899,
+      "score": 0.721
+    }
+  ]
+}

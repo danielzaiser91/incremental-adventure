@@ -1,0 +1,456 @@
+{
+  "segments": [
+    {
+      "start": 0.44,
+      "end": 2.602,
+      "text": "Die Panik ist weg.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.44,
+          "end": 0.621,
+          "score": 0.698
+        },
+        {
+          "word": "Panik",
+          "start": 0.681,
+          "end": 1.101,
+          "score": 0.869
+        },
+        {
+          "word": "ist",
+          "start": 1.141,
+          "end": 1.361,
+          "score": 0.929
+        },
+        {
+          "word": "weg.",
+          "start": 1.421,
+          "end": 2.602,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "start": 2.642,
+      "end": 7.727,
+      "text": "Was bleibt, ist Wachheit — aber kontrolliert.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 2.642,
+          "end": 2.823,
+          "score": 0.98
+        },
+        {
+          "word": "bleibt,",
+          "start": 2.843,
+          "end": 3.843,
+          "score": 0.987
+        },
+        {
+          "word": "ist",
+          "start": 3.883,
+          "end": 4.164,
+          "score": 0.808
+        },
+        {
+          "word": "Wachheit",
+          "start": 4.204,
+          "end": 5.545,
+          "score": 0.842
+        },
+        {
+          "word": "—",
+          "start": 5.565,
+          "end": 5.585,
+          "score": 0.993
+        },
+        {
+          "word": "aber",
+          "start": 5.605,
+          "end": 5.845,
+          "score": 0.991
+        },
+        {
+          "word": "kontrolliert.",
+          "start": 5.865,
+          "end": 7.727,
+          "score": 0.795
+        }
+      ]
+    },
+    {
+      "start": 7.767,
+      "end": 10.75,
+      "text": "Ich laufe nicht mehr davon.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 7.767,
+          "end": 7.887,
+          "score": 0.919
+        },
+        {
+          "word": "laufe",
+          "start": 7.967,
+          "end": 8.247,
+          "score": 0.915
+        },
+        {
+          "word": "nicht",
+          "start": 8.267,
+          "end": 8.427,
+          "score": 0.928
+        },
+        {
+          "word": "mehr",
+          "start": 8.448,
+          "end": 8.588,
+          "score": 0.878
+        },
+        {
+          "word": "davon.",
+          "start": 8.628,
+          "end": 10.75,
+          "score": 0.98
+        }
+      ]
+    },
+    {
+      "start": 10.77,
+      "end": 16.695,
+      "text": "Ich habe gelernt, die Angst arbeiten zu lassen, statt gegen mich.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 10.77,
+          "end": 10.85,
+          "score": 0.831
+        },
+        {
+          "word": "habe",
+          "start": 10.89,
+          "end": 11.15,
+          "score": 0.96
+        },
+        {
+          "word": "gelernt,",
+          "start": 11.17,
+          "end": 11.71,
+          "score": 0.944
+        },
+        {
+          "word": "die",
+          "start": 11.73,
+          "end": 11.911,
+          "score": 0.871
+        },
+        {
+          "word": "Angst",
+          "start": 11.971,
+          "end": 12.391,
+          "score": 0.948
+        },
+        {
+          "word": "arbeiten",
+          "start": 12.471,
+          "end": 12.992,
+          "score": 0.955
+        },
+        {
+          "word": "zu",
+          "start": 13.012,
+          "end": 13.112,
+          "score": 0.996
+        },
+        {
+          "word": "lassen,",
+          "start": 13.172,
+          "end": 14.213,
+          "score": 0.961
+        },
+        {
+          "word": "statt",
+          "start": 14.253,
+          "end": 14.573,
+          "score": 0.875
+        },
+        {
+          "word": "gegen",
+          "start": 14.613,
+          "end": 14.873,
+          "score": 0.938
+        },
+        {
+          "word": "mich.",
+          "start": 14.913,
+          "end": 16.695,
+          "score": 0.897
+        }
+      ]
+    },
+    {
+      "start": 16.735,
+      "end": 20.738,
+      "text": "Konzentration statt Verkrampfung.",
+      "words": [
+        {
+          "word": "Konzentration",
+          "start": 16.735,
+          "end": 18.276,
+          "score": 0.941
+        },
+        {
+          "word": "statt",
+          "start": 18.316,
+          "end": 18.577,
+          "score": 0.856
+        },
+        {
+          "word": "Verkrampfung.",
+          "start": 18.597,
+          "end": 20.738,
+          "score": 0.919
+        }
+      ]
+    },
+    {
+      "start": 20.758,
+      "end": 22.06,
+      "text": "Die Arbeit geht leichter.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 20.758,
+          "end": 20.979,
+          "score": 0.864
+        },
+        {
+          "word": "Arbeit",
+          "start": 21.019,
+          "end": 21.399,
+          "score": 0.951
+        },
+        {
+          "word": "geht",
+          "start": 21.439,
+          "end": 21.699,
+          "score": 0.843
+        },
+        {
+          "word": "leichter.",
+          "start": 21.759,
+          "end": 22.06,
+          "score": 0.853
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.44,
+      "end": 0.621,
+      "score": 0.698
+    },
+    {
+      "word": "Panik",
+      "start": 0.681,
+      "end": 1.101,
+      "score": 0.869
+    },
+    {
+      "word": "ist",
+      "start": 1.141,
+      "end": 1.361,
+      "score": 0.929
+    },
+    {
+      "word": "weg.",
+      "start": 1.421,
+      "end": 2.602,
+      "score": 0.99
+    },
+    {
+      "word": "Was",
+      "start": 2.642,
+      "end": 2.823,
+      "score": 0.98
+    },
+    {
+      "word": "bleibt,",
+      "start": 2.843,
+      "end": 3.843,
+      "score": 0.987
+    },
+    {
+      "word": "ist",
+      "start": 3.883,
+      "end": 4.164,
+      "score": 0.808
+    },
+    {
+      "word": "Wachheit",
+      "start": 4.204,
+      "end": 5.545,
+      "score": 0.842
+    },
+    {
+      "word": "—",
+      "start": 5.565,
+      "end": 5.585,
+      "score": 0.993
+    },
+    {
+      "word": "aber",
+      "start": 5.605,
+      "end": 5.845,
+      "score": 0.991
+    },
+    {
+      "word": "kontrolliert.",
+      "start": 5.865,
+      "end": 7.727,
+      "score": 0.795
+    },
+    {
+      "word": "Ich",
+      "start": 7.767,
+      "end": 7.887,
+      "score": 0.919
+    },
+    {
+      "word": "laufe",
+      "start": 7.967,
+      "end": 8.247,
+      "score": 0.915
+    },
+    {
+      "word": "nicht",
+      "start": 8.267,
+      "end": 8.427,
+      "score": 0.928
+    },
+    {
+      "word": "mehr",
+      "start": 8.448,
+      "end": 8.588,
+      "score": 0.878
+    },
+    {
+      "word": "davon.",
+      "start": 8.628,
+      "end": 10.75,
+      "score": 0.98
+    },
+    {
+      "word": "Ich",
+      "start": 10.77,
+      "end": 10.85,
+      "score": 0.831
+    },
+    {
+      "word": "habe",
+      "start": 10.89,
+      "end": 11.15,
+      "score": 0.96
+    },
+    {
+      "word": "gelernt,",
+      "start": 11.17,
+      "end": 11.71,
+      "score": 0.944
+    },
+    {
+      "word": "die",
+      "start": 11.73,
+      "end": 11.911,
+      "score": 0.871
+    },
+    {
+      "word": "Angst",
+      "start": 11.971,
+      "end": 12.391,
+      "score": 0.948
+    },
+    {
+      "word": "arbeiten",
+      "start": 12.471,
+      "end": 12.992,
+      "score": 0.955
+    },
+    {
+      "word": "zu",
+      "start": 13.012,
+      "end": 13.112,
+      "score": 0.996
+    },
+    {
+      "word": "lassen,",
+      "start": 13.172,
+      "end": 14.213,
+      "score": 0.961
+    },
+    {
+      "word": "statt",
+      "start": 14.253,
+      "end": 14.573,
+      "score": 0.875
+    },
+    {
+      "word": "gegen",
+      "start": 14.613,
+      "end": 14.873,
+      "score": 0.938
+    },
+    {
+      "word": "mich.",
+      "start": 14.913,
+      "end": 16.695,
+      "score": 0.897
+    },
+    {
+      "word": "Konzentration",
+      "start": 16.735,
+      "end": 18.276,
+      "score": 0.941
+    },
+    {
+      "word": "statt",
+      "start": 18.316,
+      "end": 18.577,
+      "score": 0.856
+    },
+    {
+      "word": "Verkrampfung.",
+      "start": 18.597,
+      "end": 20.738,
+      "score": 0.919
+    },
+    {
+      "word": "Die",
+      "start": 20.758,
+      "end": 20.979,
+      "score": 0.864
+    },
+    {
+      "word": "Arbeit",
+      "start": 21.019,
+      "end": 21.399,
+      "score": 0.951
+    },
+    {
+      "word": "geht",
+      "start": 21.439,
+      "end": 21.699,
+      "score": 0.843
+    },
+    {
+      "word": "leichter.",
+      "start": 21.759,
+      "end": 22.06,
+      "score": 0.853
+    }
+  ]
+}

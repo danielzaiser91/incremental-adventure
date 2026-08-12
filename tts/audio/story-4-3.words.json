@@ -1,0 +1,940 @@
+{
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 6.284,
+      "text": "Er sitzt in einer Taverne am Westkai, als wäre er nie fort gewesen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.5,
+          "end": 0.62,
+          "score": 0.558
+        },
+        {
+          "word": "sitzt",
+          "start": 0.66,
+          "end": 0.901,
+          "score": 0.675
+        },
+        {
+          "word": "in",
+          "start": 0.941,
+          "end": 1.101,
+          "score": 0.821
+        },
+        {
+          "word": "einer",
+          "start": 1.121,
+          "end": 1.361,
+          "score": 0.78
+        },
+        {
+          "word": "Taverne",
+          "start": 1.381,
+          "end": 1.981,
+          "score": 0.887
+        },
+        {
+          "word": "am",
+          "start": 2.021,
+          "end": 2.181,
+          "score": 0.99
+        },
+        {
+          "word": "Westkai,",
+          "start": 2.221,
+          "end": 3.262,
+          "score": 0.808
+        },
+        {
+          "word": "als",
+          "start": 3.302,
+          "end": 3.502,
+          "score": 0.914
+        },
+        {
+          "word": "wäre",
+          "start": 3.522,
+          "end": 3.762,
+          "score": 0.963
+        },
+        {
+          "word": "er",
+          "start": 3.802,
+          "end": 4.002,
+          "score": 0.811
+        },
+        {
+          "word": "nie",
+          "start": 4.042,
+          "end": 4.303,
+          "score": 0.935
+        },
+        {
+          "word": "fort",
+          "start": 4.343,
+          "end": 4.603,
+          "score": 0.991
+        },
+        {
+          "word": "gewesen.",
+          "start": 4.643,
+          "end": 6.284,
+          "score": 0.825
+        }
+      ]
+    },
+    {
+      "start": 6.304,
+      "end": 10.626,
+      "text": "»Ich habe mich gefragt, wann du auftauchst.« Kein Gruß.",
+      "words": [
+        {
+          "word": "»Ich",
+          "start": 6.304,
+          "end": 6.404,
+          "score": 0.77
+        },
+        {
+          "word": "habe",
+          "start": 6.424,
+          "end": 6.584,
+          "score": 0.88
+        },
+        {
+          "word": "mich",
+          "start": 6.604,
+          "end": 6.784,
+          "score": 0.833
+        },
+        {
+          "word": "gefragt,",
+          "start": 6.844,
+          "end": 7.384,
+          "score": 0.887
+        },
+        {
+          "word": "wann",
+          "start": 7.404,
+          "end": 7.544,
+          "score": 0.746
+        },
+        {
+          "word": "du",
+          "start": 7.564,
+          "end": 7.785,
+          "score": 0.874
+        },
+        {
+          "word": "auftauchst.«",
+          "start": 7.825,
+          "end": 9.446,
+          "score": 0.754
+        },
+        {
+          "word": "Kein",
+          "start": 9.466,
+          "end": 9.726,
+          "score": 0.836
+        },
+        {
+          "word": "Gruß.",
+          "start": 9.746,
+          "end": 10.626,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 10.646,
+      "end": 13.348,
+      "text": "Keine Überraschung.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 10.646,
+          "end": 10.946,
+          "score": 0.868
+        },
+        {
+          "word": "Überraschung.",
+          "start": 10.986,
+          "end": 13.348,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 13.388,
+      "end": 18.291,
+      "text": "Für Valdris arbeitet er nicht mehr — er ist ihm einen Schritt voraus.",
+      "words": [
+        {
+          "word": "Für",
+          "start": 13.388,
+          "end": 13.588,
+          "score": 0.944
+        },
+        {
+          "word": "Valdris",
+          "start": 13.628,
+          "end": 14.108,
+          "score": 0.708
+        },
+        {
+          "word": "arbeitet",
+          "start": 14.188,
+          "end": 14.589,
+          "score": 0.881
+        },
+        {
+          "word": "er",
+          "start": 14.649,
+          "end": 14.769,
+          "score": 0.607
+        },
+        {
+          "word": "nicht",
+          "start": 14.789,
+          "end": 14.969,
+          "score": 0.869
+        },
+        {
+          "word": "mehr",
+          "start": 15.009,
+          "end": 15.149,
+          "score": 0.927
+        },
+        {
+          "word": "—",
+          "start": 15.609,
+          "end": 15.629,
+          "score": 0.481
+        },
+        {
+          "word": "er",
+          "start": 15.669,
+          "end": 15.789,
+          "score": 0.87
+        },
+        {
+          "word": "ist",
+          "start": 15.829,
+          "end": 16.029,
+          "score": 0.853
+        },
+        {
+          "word": "ihm",
+          "start": 16.069,
+          "end": 16.35,
+          "score": 0.707
+        },
+        {
+          "word": "einen",
+          "start": 16.39,
+          "end": 16.67,
+          "score": 0.786
+        },
+        {
+          "word": "Schritt",
+          "start": 16.71,
+          "end": 17.03,
+          "score": 0.867
+        },
+        {
+          "word": "voraus.",
+          "start": 17.05,
+          "end": 18.291,
+          "score": 0.992
+        }
+      ]
+    },
+    {
+      "start": 18.311,
+      "end": 21.333,
+      "text": "Und mir einen hinterher.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 18.311,
+          "end": 18.591,
+          "score": 0.71
+        },
+        {
+          "word": "mir",
+          "start": 18.651,
+          "end": 19.071,
+          "score": 0.926
+        },
+        {
+          "word": "einen",
+          "start": 19.111,
+          "end": 19.411,
+          "score": 0.881
+        },
+        {
+          "word": "hinterher.",
+          "start": 19.431,
+          "end": 21.333,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 21.393,
+      "end": 23.094,
+      "text": "Er kennt diese Stadt.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 21.393,
+          "end": 21.553,
+          "score": 0.628
+        },
+        {
+          "word": "kennt",
+          "start": 21.573,
+          "end": 21.833,
+          "score": 0.868
+        },
+        {
+          "word": "diese",
+          "start": 21.853,
+          "end": 22.093,
+          "score": 0.94
+        },
+        {
+          "word": "Stadt.",
+          "start": 22.133,
+          "end": 23.094,
+          "score": 0.82
+        }
+      ]
+    },
+    {
+      "start": 23.114,
+      "end": 25.715,
+      "text": "Hier hat er einst für Valdris die Fäden geknüpft.",
+      "words": [
+        {
+          "word": "Hier",
+          "start": 23.114,
+          "end": 23.314,
+          "score": 0.812
+        },
+        {
+          "word": "hat",
+          "start": 23.334,
+          "end": 23.494,
+          "score": 0.942
+        },
+        {
+          "word": "er",
+          "start": 23.514,
+          "end": 23.654,
+          "score": 0.646
+        },
+        {
+          "word": "einst",
+          "start": 23.694,
+          "end": 23.994,
+          "score": 0.865
+        },
+        {
+          "word": "für",
+          "start": 24.014,
+          "end": 24.214,
+          "score": 0.966
+        },
+        {
+          "word": "Valdris",
+          "start": 24.234,
+          "end": 24.695,
+          "score": 0.79
+        },
+        {
+          "word": "die",
+          "start": 24.735,
+          "end": 24.875,
+          "score": 0.772
+        },
+        {
+          "word": "Fäden",
+          "start": 24.915,
+          "end": 25.255,
+          "score": 0.904
+        },
+        {
+          "word": "geknüpft.",
+          "start": 25.295,
+          "end": 25.715,
+          "score": 0.761
+        }
+      ]
+    },
+    {
+      "start": 27.016,
+      "end": 29.978,
+      "text": "»Jetzt weiß ich, wie sein Netz gewoben ist.",
+      "words": [
+        {
+          "word": "»Jetzt",
+          "start": 27.016,
+          "end": 27.476,
+          "score": 0.794
+        },
+        {
+          "word": "weiß",
+          "start": 27.496,
+          "end": 27.736,
+          "score": 0.673
+        },
+        {
+          "word": "ich,",
+          "start": 27.756,
+          "end": 27.936,
+          "score": 0.871
+        },
+        {
+          "word": "wie",
+          "start": 27.957,
+          "end": 28.057,
+          "score": 0.863
+        },
+        {
+          "word": "sein",
+          "start": 28.137,
+          "end": 28.357,
+          "score": 0.902
+        },
+        {
+          "word": "Netz",
+          "start": 28.397,
+          "end": 28.637,
+          "score": 0.996
+        },
+        {
+          "word": "gewoben",
+          "start": 28.677,
+          "end": 29.057,
+          "score": 0.888
+        },
+        {
+          "word": "ist.",
+          "start": 29.097,
+          "end": 29.978,
+          "score": 0.969
+        }
+      ]
+    },
+    {
+      "start": 29.998,
+      "end": 32.259,
+      "text": "Das macht mich nützlich für dich.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 29.998,
+          "end": 30.178,
+          "score": 0.956
+        },
+        {
+          "word": "macht",
+          "start": 30.218,
+          "end": 30.418,
+          "score": 0.8
+        },
+        {
+          "word": "mich",
+          "start": 30.438,
+          "end": 30.678,
+          "score": 0.944
+        },
+        {
+          "word": "nützlich",
+          "start": 30.698,
+          "end": 31.098,
+          "score": 0.992
+        },
+        {
+          "word": "für",
+          "start": 31.138,
+          "end": 31.238,
+          "score": 0.972
+        },
+        {
+          "word": "dich.",
+          "start": 31.258,
+          "end": 32.259,
+          "score": 0.764
+        }
+      ]
+    },
+    {
+      "start": 32.299,
+      "end": 33.5,
+      "text": "Und gefährlich für ihn.«",
+      "words": [
+        {
+          "word": "Und",
+          "start": 32.299,
+          "end": 32.519,
+          "score": 0.918
+        },
+        {
+          "word": "gefährlich",
+          "start": 32.559,
+          "end": 33.14,
+          "score": 0.841
+        },
+        {
+          "word": "für",
+          "start": 33.18,
+          "end": 33.34,
+          "score": 0.995
+        },
+        {
+          "word": "ihn.«",
+          "start": 33.38,
+          "end": 33.5,
+          "score": 0.836
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.5,
+      "end": 0.62,
+      "score": 0.558
+    },
+    {
+      "word": "sitzt",
+      "start": 0.66,
+      "end": 0.901,
+      "score": 0.675
+    },
+    {
+      "word": "in",
+      "start": 0.941,
+      "end": 1.101,
+      "score": 0.821
+    },
+    {
+      "word": "einer",
+      "start": 1.121,
+      "end": 1.361,
+      "score": 0.78
+    },
+    {
+      "word": "Taverne",
+      "start": 1.381,
+      "end": 1.981,
+      "score": 0.887
+    },
+    {
+      "word": "am",
+      "start": 2.021,
+      "end": 2.181,
+      "score": 0.99
+    },
+    {
+      "word": "Westkai,",
+      "start": 2.221,
+      "end": 3.262,
+      "score": 0.808
+    },
+    {
+      "word": "als",
+      "start": 3.302,
+      "end": 3.502,
+      "score": 0.914
+    },
+    {
+      "word": "wäre",
+      "start": 3.522,
+      "end": 3.762,
+      "score": 0.963
+    },
+    {
+      "word": "er",
+      "start": 3.802,
+      "end": 4.002,
+      "score": 0.811
+    },
+    {
+      "word": "nie",
+      "start": 4.042,
+      "end": 4.303,
+      "score": 0.935
+    },
+    {
+      "word": "fort",
+      "start": 4.343,
+      "end": 4.603,
+      "score": 0.991
+    },
+    {
+      "word": "gewesen.",
+      "start": 4.643,
+      "end": 6.284,
+      "score": 0.825
+    },
+    {
+      "word": "»Ich",
+      "start": 6.304,
+      "end": 6.404,
+      "score": 0.77
+    },
+    {
+      "word": "habe",
+      "start": 6.424,
+      "end": 6.584,
+      "score": 0.88
+    },
+    {
+      "word": "mich",
+      "start": 6.604,
+      "end": 6.784,
+      "score": 0.833
+    },
+    {
+      "word": "gefragt,",
+      "start": 6.844,
+      "end": 7.384,
+      "score": 0.887
+    },
+    {
+      "word": "wann",
+      "start": 7.404,
+      "end": 7.544,
+      "score": 0.746
+    },
+    {
+      "word": "du",
+      "start": 7.564,
+      "end": 7.785,
+      "score": 0.874
+    },
+    {
+      "word": "auftauchst.«",
+      "start": 7.825,
+      "end": 9.446,
+      "score": 0.754
+    },
+    {
+      "word": "Kein",
+      "start": 9.466,
+      "end": 9.726,
+      "score": 0.836
+    },
+    {
+      "word": "Gruß.",
+      "start": 9.746,
+      "end": 10.626,
+      "score": 0.899
+    },
+    {
+      "word": "Keine",
+      "start": 10.646,
+      "end": 10.946,
+      "score": 0.868
+    },
+    {
+      "word": "Überraschung.",
+      "start": 10.986,
+      "end": 13.348,
+      "score": 0.936
+    },
+    {
+      "word": "Für",
+      "start": 13.388,
+      "end": 13.588,
+      "score": 0.944
+    },
+    {
+      "word": "Valdris",
+      "start": 13.628,
+      "end": 14.108,
+      "score": 0.708
+    },
+    {
+      "word": "arbeitet",
+      "start": 14.188,
+      "end": 14.589,
+      "score": 0.881
+    },
+    {
+      "word": "er",
+      "start": 14.649,
+      "end": 14.769,
+      "score": 0.607
+    },
+    {
+      "word": "nicht",
+      "start": 14.789,
+      "end": 14.969,
+      "score": 0.869
+    },
+    {
+      "word": "mehr",
+      "start": 15.009,
+      "end": 15.149,
+      "score": 0.927
+    },
+    {
+      "word": "—",
+      "start": 15.609,
+      "end": 15.629,
+      "score": 0.481
+    },
+    {
+      "word": "er",
+      "start": 15.669,
+      "end": 15.789,
+      "score": 0.87
+    },
+    {
+      "word": "ist",
+      "start": 15.829,
+      "end": 16.029,
+      "score": 0.853
+    },
+    {
+      "word": "ihm",
+      "start": 16.069,
+      "end": 16.35,
+      "score": 0.707
+    },
+    {
+      "word": "einen",
+      "start": 16.39,
+      "end": 16.67,
+      "score": 0.786
+    },
+    {
+      "word": "Schritt",
+      "start": 16.71,
+      "end": 17.03,
+      "score": 0.867
+    },
+    {
+      "word": "voraus.",
+      "start": 17.05,
+      "end": 18.291,
+      "score": 0.992
+    },
+    {
+      "word": "Und",
+      "start": 18.311,
+      "end": 18.591,
+      "score": 0.71
+    },
+    {
+      "word": "mir",
+      "start": 18.651,
+      "end": 19.071,
+      "score": 0.926
+    },
+    {
+      "word": "einen",
+      "start": 19.111,
+      "end": 19.411,
+      "score": 0.881
+    },
+    {
+      "word": "hinterher.",
+      "start": 19.431,
+      "end": 21.333,
+      "score": 0.979
+    },
+    {
+      "word": "Er",
+      "start": 21.393,
+      "end": 21.553,
+      "score": 0.628
+    },
+    {
+      "word": "kennt",
+      "start": 21.573,
+      "end": 21.833,
+      "score": 0.868
+    },
+    {
+      "word": "diese",
+      "start": 21.853,
+      "end": 22.093,
+      "score": 0.94
+    },
+    {
+      "word": "Stadt.",
+      "start": 22.133,
+      "end": 23.094,
+      "score": 0.82
+    },
+    {
+      "word": "Hier",
+      "start": 23.114,
+      "end": 23.314,
+      "score": 0.812
+    },
+    {
+      "word": "hat",
+      "start": 23.334,
+      "end": 23.494,
+      "score": 0.942
+    },
+    {
+      "word": "er",
+      "start": 23.514,
+      "end": 23.654,
+      "score": 0.646
+    },
+    {
+      "word": "einst",
+      "start": 23.694,
+      "end": 23.994,
+      "score": 0.865
+    },
+    {
+      "word": "für",
+      "start": 24.014,
+      "end": 24.214,
+      "score": 0.966
+    },
+    {
+      "word": "Valdris",
+      "start": 24.234,
+      "end": 24.695,
+      "score": 0.79
+    },
+    {
+      "word": "die",
+      "start": 24.735,
+      "end": 24.875,
+      "score": 0.772
+    },
+    {
+      "word": "Fäden",
+      "start": 24.915,
+      "end": 25.255,
+      "score": 0.904
+    },
+    {
+      "word": "geknüpft.",
+      "start": 25.295,
+      "end": 25.715,
+      "score": 0.761
+    },
+    {
+      "word": "»Jetzt",
+      "start": 27.016,
+      "end": 27.476,
+      "score": 0.794
+    },
+    {
+      "word": "weiß",
+      "start": 27.496,
+      "end": 27.736,
+      "score": 0.673
+    },
+    {
+      "word": "ich,",
+      "start": 27.756,
+      "end": 27.936,
+      "score": 0.871
+    },
+    {
+      "word": "wie",
+      "start": 27.957,
+      "end": 28.057,
+      "score": 0.863
+    },
+    {
+      "word": "sein",
+      "start": 28.137,
+      "end": 28.357,
+      "score": 0.902
+    },
+    {
+      "word": "Netz",
+      "start": 28.397,
+      "end": 28.637,
+      "score": 0.996
+    },
+    {
+      "word": "gewoben",
+      "start": 28.677,
+      "end": 29.057,
+      "score": 0.888
+    },
+    {
+      "word": "ist.",
+      "start": 29.097,
+      "end": 29.978,
+      "score": 0.969
+    },
+    {
+      "word": "Das",
+      "start": 29.998,
+      "end": 30.178,
+      "score": 0.956
+    },
+    {
+      "word": "macht",
+      "start": 30.218,
+      "end": 30.418,
+      "score": 0.8
+    },
+    {
+      "word": "mich",
+      "start": 30.438,
+      "end": 30.678,
+      "score": 0.944
+    },
+    {
+      "word": "nützlich",
+      "start": 30.698,
+      "end": 31.098,
+      "score": 0.992
+    },
+    {
+      "word": "für",
+      "start": 31.138,
+      "end": 31.238,
+      "score": 0.972
+    },
+    {
+      "word": "dich.",
+      "start": 31.258,
+      "end": 32.259,
+      "score": 0.764
+    },
+    {
+      "word": "Und",
+      "start": 32.299,
+      "end": 32.519,
+      "score": 0.918
+    },
+    {
+      "word": "gefährlich",
+      "start": 32.559,
+      "end": 33.14,
+      "score": 0.841
+    },
+    {
+      "word": "für",
+      "start": 33.18,
+      "end": 33.34,
+      "score": 0.995
+    },
+    {
+      "word": "ihn.«",
+      "start": 33.38,
+      "end": 33.5,
+      "score": 0.836
+    }
+  ]
+}

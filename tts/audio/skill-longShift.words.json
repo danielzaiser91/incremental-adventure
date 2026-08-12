@@ -1,0 +1,533 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 5.345,
+      "text": "Ich stehe auf dem Feld und schaue auf die Sonne.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.46,
+          "end": 0.641,
+          "score": 0.835
+        },
+        {
+          "word": "stehe",
+          "start": 0.701,
+          "end": 1.061,
+          "score": 0.84
+        },
+        {
+          "word": "auf",
+          "start": 1.101,
+          "end": 1.221,
+          "score": 0.805
+        },
+        {
+          "word": "dem",
+          "start": 1.241,
+          "end": 1.461,
+          "score": 0.797
+        },
+        {
+          "word": "Feld",
+          "start": 1.501,
+          "end": 2.502,
+          "score": 0.98
+        },
+        {
+          "word": "und",
+          "start": 2.542,
+          "end": 2.743,
+          "score": 0.849
+        },
+        {
+          "word": "schaue",
+          "start": 2.783,
+          "end": 3.083,
+          "score": 0.83
+        },
+        {
+          "word": "auf",
+          "start": 3.123,
+          "end": 3.263,
+          "score": 0.871
+        },
+        {
+          "word": "die",
+          "start": 3.283,
+          "end": 3.423,
+          "score": 0.829
+        },
+        {
+          "word": "Sonne.",
+          "start": 3.463,
+          "end": 5.345,
+          "score": 0.876
+        }
+      ]
+    },
+    {
+      "start": 5.365,
+      "end": 7.467,
+      "text": "Heute bleibe ich länger.",
+      "words": [
+        {
+          "word": "Heute",
+          "start": 5.365,
+          "end": 5.645,
+          "score": 0.866
+        },
+        {
+          "word": "bleibe",
+          "start": 5.665,
+          "end": 5.866,
+          "score": 0.878
+        },
+        {
+          "word": "ich",
+          "start": 5.886,
+          "end": 6.026,
+          "score": 0.846
+        },
+        {
+          "word": "länger.",
+          "start": 6.066,
+          "end": 7.467,
+          "score": 0.977
+        }
+      ]
+    },
+    {
+      "start": 7.487,
+      "end": 11.931,
+      "text": "Weil ich es kann — und weil es sich lohnt.",
+      "words": [
+        {
+          "word": "Weil",
+          "start": 7.487,
+          "end": 7.627,
+          "score": 0.874
+        },
+        {
+          "word": "ich",
+          "start": 7.667,
+          "end": 7.747,
+          "score": 0.908
+        },
+        {
+          "word": "es",
+          "start": 7.787,
+          "end": 7.907,
+          "score": 0.871
+        },
+        {
+          "word": "kann",
+          "start": 7.947,
+          "end": 9.069,
+          "score": 0.942
+        },
+        {
+          "word": "—",
+          "start": 9.089,
+          "end": 9.109,
+          "score": 0.964
+        },
+        {
+          "word": "und",
+          "start": 9.149,
+          "end": 9.329,
+          "score": 0.939
+        },
+        {
+          "word": "weil",
+          "start": 9.349,
+          "end": 9.489,
+          "score": 0.947
+        },
+        {
+          "word": "es",
+          "start": 9.529,
+          "end": 9.629,
+          "score": 0.894
+        },
+        {
+          "word": "sich",
+          "start": 9.669,
+          "end": 9.849,
+          "score": 0.989
+        },
+        {
+          "word": "lohnt.",
+          "start": 9.889,
+          "end": 11.931,
+          "score": 0.897
+        }
+      ]
+    },
+    {
+      "start": 11.951,
+      "end": 14.253,
+      "text": "Zwei Stunden statt einer.",
+      "words": [
+        {
+          "word": "Zwei",
+          "start": 11.951,
+          "end": 12.272,
+          "score": 0.823
+        },
+        {
+          "word": "Stunden",
+          "start": 12.312,
+          "end": 12.732,
+          "score": 0.92
+        },
+        {
+          "word": "statt",
+          "start": 12.752,
+          "end": 13.032,
+          "score": 0.917
+        },
+        {
+          "word": "einer.",
+          "start": 13.072,
+          "end": 14.253,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 14.273,
+      "end": 20.8,
+      "text": "Mehr Erschöpfung, mehr Gold, und das Gefühl: Heute habe ich wirklich etwas geschafft.",
+      "words": [
+        {
+          "word": "Mehr",
+          "start": 14.273,
+          "end": 14.474,
+          "score": 0.898
+        },
+        {
+          "word": "Erschöpfung,",
+          "start": 14.514,
+          "end": 15.415,
+          "score": 0.856
+        },
+        {
+          "word": "mehr",
+          "start": 15.435,
+          "end": 15.675,
+          "score": 0.897
+        },
+        {
+          "word": "Gold,",
+          "start": 15.715,
+          "end": 16.756,
+          "score": 0.98
+        },
+        {
+          "word": "und",
+          "start": 16.776,
+          "end": 16.896,
+          "score": 0.955
+        },
+        {
+          "word": "das",
+          "start": 16.936,
+          "end": 17.096,
+          "score": 0.912
+        },
+        {
+          "word": "Gefühl:",
+          "start": 17.136,
+          "end": 18.758,
+          "score": 0.926
+        },
+        {
+          "word": "Heute",
+          "start": 18.778,
+          "end": 19.098,
+          "score": 0.9
+        },
+        {
+          "word": "habe",
+          "start": 19.138,
+          "end": 19.278,
+          "score": 0.762
+        },
+        {
+          "word": "ich",
+          "start": 19.298,
+          "end": 19.558,
+          "score": 0.894
+        },
+        {
+          "word": "wirklich",
+          "start": 19.619,
+          "end": 20.059,
+          "score": 0.936
+        },
+        {
+          "word": "etwas",
+          "start": 20.099,
+          "end": 20.379,
+          "score": 0.999
+        },
+        {
+          "word": "geschafft.",
+          "start": 20.419,
+          "end": 20.8,
+          "score": 0.825
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.46,
+      "end": 0.641,
+      "score": 0.835
+    },
+    {
+      "word": "stehe",
+      "start": 0.701,
+      "end": 1.061,
+      "score": 0.84
+    },
+    {
+      "word": "auf",
+      "start": 1.101,
+      "end": 1.221,
+      "score": 0.805
+    },
+    {
+      "word": "dem",
+      "start": 1.241,
+      "end": 1.461,
+      "score": 0.797
+    },
+    {
+      "word": "Feld",
+      "start": 1.501,
+      "end": 2.502,
+      "score": 0.98
+    },
+    {
+      "word": "und",
+      "start": 2.542,
+      "end": 2.743,
+      "score": 0.849
+    },
+    {
+      "word": "schaue",
+      "start": 2.783,
+      "end": 3.083,
+      "score": 0.83
+    },
+    {
+      "word": "auf",
+      "start": 3.123,
+      "end": 3.263,
+      "score": 0.871
+    },
+    {
+      "word": "die",
+      "start": 3.283,
+      "end": 3.423,
+      "score": 0.829
+    },
+    {
+      "word": "Sonne.",
+      "start": 3.463,
+      "end": 5.345,
+      "score": 0.876
+    },
+    {
+      "word": "Heute",
+      "start": 5.365,
+      "end": 5.645,
+      "score": 0.866
+    },
+    {
+      "word": "bleibe",
+      "start": 5.665,
+      "end": 5.866,
+      "score": 0.878
+    },
+    {
+      "word": "ich",
+      "start": 5.886,
+      "end": 6.026,
+      "score": 0.846
+    },
+    {
+      "word": "länger.",
+      "start": 6.066,
+      "end": 7.467,
+      "score": 0.977
+    },
+    {
+      "word": "Weil",
+      "start": 7.487,
+      "end": 7.627,
+      "score": 0.874
+    },
+    {
+      "word": "ich",
+      "start": 7.667,
+      "end": 7.747,
+      "score": 0.908
+    },
+    {
+      "word": "es",
+      "start": 7.787,
+      "end": 7.907,
+      "score": 0.871
+    },
+    {
+      "word": "kann",
+      "start": 7.947,
+      "end": 9.069,
+      "score": 0.942
+    },
+    {
+      "word": "—",
+      "start": 9.089,
+      "end": 9.109,
+      "score": 0.964
+    },
+    {
+      "word": "und",
+      "start": 9.149,
+      "end": 9.329,
+      "score": 0.939
+    },
+    {
+      "word": "weil",
+      "start": 9.349,
+      "end": 9.489,
+      "score": 0.947
+    },
+    {
+      "word": "es",
+      "start": 9.529,
+      "end": 9.629,
+      "score": 0.894
+    },
+    {
+      "word": "sich",
+      "start": 9.669,
+      "end": 9.849,
+      "score": 0.989
+    },
+    {
+      "word": "lohnt.",
+      "start": 9.889,
+      "end": 11.931,
+      "score": 0.897
+    },
+    {
+      "word": "Zwei",
+      "start": 11.951,
+      "end": 12.272,
+      "score": 0.823
+    },
+    {
+      "word": "Stunden",
+      "start": 12.312,
+      "end": 12.732,
+      "score": 0.92
+    },
+    {
+      "word": "statt",
+      "start": 12.752,
+      "end": 13.032,
+      "score": 0.917
+    },
+    {
+      "word": "einer.",
+      "start": 13.072,
+      "end": 14.253,
+      "score": 0.936
+    },
+    {
+      "word": "Mehr",
+      "start": 14.273,
+      "end": 14.474,
+      "score": 0.898
+    },
+    {
+      "word": "Erschöpfung,",
+      "start": 14.514,
+      "end": 15.415,
+      "score": 0.856
+    },
+    {
+      "word": "mehr",
+      "start": 15.435,
+      "end": 15.675,
+      "score": 0.897
+    },
+    {
+      "word": "Gold,",
+      "start": 15.715,
+      "end": 16.756,
+      "score": 0.98
+    },
+    {
+      "word": "und",
+      "start": 16.776,
+      "end": 16.896,
+      "score": 0.955
+    },
+    {
+      "word": "das",
+      "start": 16.936,
+      "end": 17.096,
+      "score": 0.912
+    },
+    {
+      "word": "Gefühl:",
+      "start": 17.136,
+      "end": 18.758,
+      "score": 0.926
+    },
+    {
+      "word": "Heute",
+      "start": 18.778,
+      "end": 19.098,
+      "score": 0.9
+    },
+    {
+      "word": "habe",
+      "start": 19.138,
+      "end": 19.278,
+      "score": 0.762
+    },
+    {
+      "word": "ich",
+      "start": 19.298,
+      "end": 19.558,
+      "score": 0.894
+    },
+    {
+      "word": "wirklich",
+      "start": 19.619,
+      "end": 20.059,
+      "score": 0.936
+    },
+    {
+      "word": "etwas",
+      "start": 20.099,
+      "end": 20.379,
+      "score": 0.999
+    },
+    {
+      "word": "geschafft.",
+      "start": 20.419,
+      "end": 20.8,
+      "score": 0.825
+    }
+  ]
+}

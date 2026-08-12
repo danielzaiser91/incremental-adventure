@@ -1,0 +1,787 @@
+{
+  "segments": [
+    {
+      "start": 0.861,
+      "end": 2.742,
+      "text": "Zwei von drei.",
+      "words": [
+        {
+          "word": "Zwei",
+          "start": 0.861,
+          "end": 1.181,
+          "score": 0.463
+        },
+        {
+          "word": "von",
+          "start": 1.221,
+          "end": 1.481,
+          "score": 0.746
+        },
+        {
+          "word": "drei.",
+          "start": 1.501,
+          "end": 2.742,
+          "score": 0.856
+        }
+      ]
+    },
+    {
+      "start": 2.762,
+      "end": 9.426,
+      "text": "Die Stadt sieht mich mit anderen Augen an — nicht mehr als Fremden, sondern als einen, der bleibt.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 2.762,
+          "end": 2.942,
+          "score": 0.876
+        },
+        {
+          "word": "Stadt",
+          "start": 2.982,
+          "end": 3.222,
+          "score": 0.93
+        },
+        {
+          "word": "sieht",
+          "start": 3.242,
+          "end": 3.442,
+          "score": 0.851
+        },
+        {
+          "word": "mich",
+          "start": 3.462,
+          "end": 3.643,
+          "score": 0.903
+        },
+        {
+          "word": "mit",
+          "start": 3.663,
+          "end": 3.883,
+          "score": 0.867
+        },
+        {
+          "word": "anderen",
+          "start": 3.923,
+          "end": 4.323,
+          "score": 0.777
+        },
+        {
+          "word": "Augen",
+          "start": 4.363,
+          "end": 4.603,
+          "score": 0.849
+        },
+        {
+          "word": "an",
+          "start": 4.643,
+          "end": 4.763,
+          "score": 0.958
+        },
+        {
+          "word": "—",
+          "start": 5.444,
+          "end": 5.464,
+          "score": 0.34
+        },
+        {
+          "word": "nicht",
+          "start": 5.484,
+          "end": 5.664,
+          "score": 0.993
+        },
+        {
+          "word": "mehr",
+          "start": 5.684,
+          "end": 5.884,
+          "score": 0.837
+        },
+        {
+          "word": "als",
+          "start": 5.904,
+          "end": 6.124,
+          "score": 0.919
+        },
+        {
+          "word": "Fremden,",
+          "start": 6.164,
+          "end": 6.805,
+          "score": 0.861
+        },
+        {
+          "word": "sondern",
+          "start": 6.825,
+          "end": 7.225,
+          "score": 0.917
+        },
+        {
+          "word": "als",
+          "start": 7.265,
+          "end": 7.525,
+          "score": 0.989
+        },
+        {
+          "word": "einen,",
+          "start": 7.565,
+          "end": 7.845,
+          "score": 0.8
+        },
+        {
+          "word": "der",
+          "start": 7.865,
+          "end": 8.026,
+          "score": 0.969
+        },
+        {
+          "word": "bleibt.",
+          "start": 8.066,
+          "end": 9.426,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 9.467,
+      "end": 11.768,
+      "text": "Valdris setzt zum Gegenzug an.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 9.467,
+          "end": 9.887,
+          "score": 0.743
+        },
+        {
+          "word": "setzt",
+          "start": 9.907,
+          "end": 10.187,
+          "score": 0.783
+        },
+        {
+          "word": "zum",
+          "start": 10.207,
+          "end": 10.387,
+          "score": 0.859
+        },
+        {
+          "word": "Gegenzug",
+          "start": 10.427,
+          "end": 10.887,
+          "score": 0.943
+        },
+        {
+          "word": "an.",
+          "start": 10.928,
+          "end": 11.768,
+          "score": 0.967
+        }
+      ]
+    },
+    {
+      "start": 11.788,
+      "end": 17.632,
+      "text": "Kleine Dinge: ein Lieferant, der ausbleibt, ein Gespräch, das jäh verstummt.",
+      "words": [
+        {
+          "word": "Kleine",
+          "start": 11.788,
+          "end": 12.108,
+          "score": 0.837
+        },
+        {
+          "word": "Dinge:",
+          "start": 12.128,
+          "end": 12.969,
+          "score": 0.928
+        },
+        {
+          "word": "ein",
+          "start": 12.989,
+          "end": 13.169,
+          "score": 0.609
+        },
+        {
+          "word": "Lieferant,",
+          "start": 13.209,
+          "end": 13.689,
+          "score": 0.912
+        },
+        {
+          "word": "der",
+          "start": 13.709,
+          "end": 13.85,
+          "score": 0.929
+        },
+        {
+          "word": "ausbleibt,",
+          "start": 13.91,
+          "end": 14.91,
+          "score": 0.905
+        },
+        {
+          "word": "ein",
+          "start": 14.93,
+          "end": 15.11,
+          "score": 0.745
+        },
+        {
+          "word": "Gespräch,",
+          "start": 15.15,
+          "end": 15.731,
+          "score": 0.942
+        },
+        {
+          "word": "das",
+          "start": 15.751,
+          "end": 15.991,
+          "score": 0.922
+        },
+        {
+          "word": "jäh",
+          "start": 16.031,
+          "end": 16.251,
+          "score": 0.747
+        },
+        {
+          "word": "verstummt.",
+          "start": 16.291,
+          "end": 17.632,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 17.672,
+      "end": 19.513,
+      "text": "Er weiß, was ich treibe.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 17.672,
+          "end": 17.892,
+          "score": 0.802
+        },
+        {
+          "word": "weiß,",
+          "start": 17.932,
+          "end": 18.193,
+          "score": 0.983
+        },
+        {
+          "word": "was",
+          "start": 18.213,
+          "end": 18.333,
+          "score": 0.886
+        },
+        {
+          "word": "ich",
+          "start": 18.373,
+          "end": 18.493,
+          "score": 0.967
+        },
+        {
+          "word": "treibe.",
+          "start": 18.513,
+          "end": 19.513,
+          "score": 0.862
+        }
+      ]
+    },
+    {
+      "start": 19.553,
+      "end": 22.175,
+      "text": "Aufhalten kann er es noch nicht.",
+      "words": [
+        {
+          "word": "Aufhalten",
+          "start": 19.553,
+          "end": 20.134,
+          "score": 0.88
+        },
+        {
+          "word": "kann",
+          "start": 20.174,
+          "end": 20.294,
+          "score": 0.944
+        },
+        {
+          "word": "er",
+          "start": 20.334,
+          "end": 20.414,
+          "score": 0.606
+        },
+        {
+          "word": "es",
+          "start": 20.454,
+          "end": 20.574,
+          "score": 0.915
+        },
+        {
+          "word": "noch",
+          "start": 20.594,
+          "end": 20.774,
+          "score": 0.849
+        },
+        {
+          "word": "nicht.",
+          "start": 20.794,
+          "end": 22.175,
+          "score": 0.972
+        }
+      ]
+    },
+    {
+      "start": 22.215,
+      "end": 27.799,
+      "text": "Ein Netz aus Schulden hat eine Schwäche: Auch Schulden geraten irgendwann in Vergessenheit.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 22.215,
+          "end": 22.395,
+          "score": 0.808
+        },
+        {
+          "word": "Netz",
+          "start": 22.415,
+          "end": 22.656,
+          "score": 0.94
+        },
+        {
+          "word": "aus",
+          "start": 22.696,
+          "end": 22.896,
+          "score": 0.778
+        },
+        {
+          "word": "Schulden",
+          "start": 22.936,
+          "end": 23.376,
+          "score": 0.761
+        },
+        {
+          "word": "hat",
+          "start": 23.396,
+          "end": 23.716,
+          "score": 0.953
+        },
+        {
+          "word": "eine",
+          "start": 23.756,
+          "end": 23.997,
+          "score": 0.886
+        },
+        {
+          "word": "Schwäche:",
+          "start": 24.037,
+          "end": 25.137,
+          "score": 0.943
+        },
+        {
+          "word": "Auch",
+          "start": 25.177,
+          "end": 25.417,
+          "score": 0.947
+        },
+        {
+          "word": "Schulden",
+          "start": 25.458,
+          "end": 25.878,
+          "score": 0.825
+        },
+        {
+          "word": "geraten",
+          "start": 25.898,
+          "end": 26.398,
+          "score": 0.903
+        },
+        {
+          "word": "irgendwann",
+          "start": 26.458,
+          "end": 26.959,
+          "score": 0.829
+        },
+        {
+          "word": "in",
+          "start": 26.999,
+          "end": 27.139,
+          "score": 0.922
+        },
+        {
+          "word": "Vergessenheit.",
+          "start": 27.179,
+          "end": 27.799,
+          "score": 0.915
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zwei",
+      "start": 0.861,
+      "end": 1.181,
+      "score": 0.463
+    },
+    {
+      "word": "von",
+      "start": 1.221,
+      "end": 1.481,
+      "score": 0.746
+    },
+    {
+      "word": "drei.",
+      "start": 1.501,
+      "end": 2.742,
+      "score": 0.856
+    },
+    {
+      "word": "Die",
+      "start": 2.762,
+      "end": 2.942,
+      "score": 0.876
+    },
+    {
+      "word": "Stadt",
+      "start": 2.982,
+      "end": 3.222,
+      "score": 0.93
+    },
+    {
+      "word": "sieht",
+      "start": 3.242,
+      "end": 3.442,
+      "score": 0.851
+    },
+    {
+      "word": "mich",
+      "start": 3.462,
+      "end": 3.643,
+      "score": 0.903
+    },
+    {
+      "word": "mit",
+      "start": 3.663,
+      "end": 3.883,
+      "score": 0.867
+    },
+    {
+      "word": "anderen",
+      "start": 3.923,
+      "end": 4.323,
+      "score": 0.777
+    },
+    {
+      "word": "Augen",
+      "start": 4.363,
+      "end": 4.603,
+      "score": 0.849
+    },
+    {
+      "word": "an",
+      "start": 4.643,
+      "end": 4.763,
+      "score": 0.958
+    },
+    {
+      "word": "—",
+      "start": 5.444,
+      "end": 5.464,
+      "score": 0.34
+    },
+    {
+      "word": "nicht",
+      "start": 5.484,
+      "end": 5.664,
+      "score": 0.993
+    },
+    {
+      "word": "mehr",
+      "start": 5.684,
+      "end": 5.884,
+      "score": 0.837
+    },
+    {
+      "word": "als",
+      "start": 5.904,
+      "end": 6.124,
+      "score": 0.919
+    },
+    {
+      "word": "Fremden,",
+      "start": 6.164,
+      "end": 6.805,
+      "score": 0.861
+    },
+    {
+      "word": "sondern",
+      "start": 6.825,
+      "end": 7.225,
+      "score": 0.917
+    },
+    {
+      "word": "als",
+      "start": 7.265,
+      "end": 7.525,
+      "score": 0.989
+    },
+    {
+      "word": "einen,",
+      "start": 7.565,
+      "end": 7.845,
+      "score": 0.8
+    },
+    {
+      "word": "der",
+      "start": 7.865,
+      "end": 8.026,
+      "score": 0.969
+    },
+    {
+      "word": "bleibt.",
+      "start": 8.066,
+      "end": 9.426,
+      "score": 0.93
+    },
+    {
+      "word": "Valdris",
+      "start": 9.467,
+      "end": 9.887,
+      "score": 0.743
+    },
+    {
+      "word": "setzt",
+      "start": 9.907,
+      "end": 10.187,
+      "score": 0.783
+    },
+    {
+      "word": "zum",
+      "start": 10.207,
+      "end": 10.387,
+      "score": 0.859
+    },
+    {
+      "word": "Gegenzug",
+      "start": 10.427,
+      "end": 10.887,
+      "score": 0.943
+    },
+    {
+      "word": "an.",
+      "start": 10.928,
+      "end": 11.768,
+      "score": 0.967
+    },
+    {
+      "word": "Kleine",
+      "start": 11.788,
+      "end": 12.108,
+      "score": 0.837
+    },
+    {
+      "word": "Dinge:",
+      "start": 12.128,
+      "end": 12.969,
+      "score": 0.928
+    },
+    {
+      "word": "ein",
+      "start": 12.989,
+      "end": 13.169,
+      "score": 0.609
+    },
+    {
+      "word": "Lieferant,",
+      "start": 13.209,
+      "end": 13.689,
+      "score": 0.912
+    },
+    {
+      "word": "der",
+      "start": 13.709,
+      "end": 13.85,
+      "score": 0.929
+    },
+    {
+      "word": "ausbleibt,",
+      "start": 13.91,
+      "end": 14.91,
+      "score": 0.905
+    },
+    {
+      "word": "ein",
+      "start": 14.93,
+      "end": 15.11,
+      "score": 0.745
+    },
+    {
+      "word": "Gespräch,",
+      "start": 15.15,
+      "end": 15.731,
+      "score": 0.942
+    },
+    {
+      "word": "das",
+      "start": 15.751,
+      "end": 15.991,
+      "score": 0.922
+    },
+    {
+      "word": "jäh",
+      "start": 16.031,
+      "end": 16.251,
+      "score": 0.747
+    },
+    {
+      "word": "verstummt.",
+      "start": 16.291,
+      "end": 17.632,
+      "score": 0.923
+    },
+    {
+      "word": "Er",
+      "start": 17.672,
+      "end": 17.892,
+      "score": 0.802
+    },
+    {
+      "word": "weiß,",
+      "start": 17.932,
+      "end": 18.193,
+      "score": 0.983
+    },
+    {
+      "word": "was",
+      "start": 18.213,
+      "end": 18.333,
+      "score": 0.886
+    },
+    {
+      "word": "ich",
+      "start": 18.373,
+      "end": 18.493,
+      "score": 0.967
+    },
+    {
+      "word": "treibe.",
+      "start": 18.513,
+      "end": 19.513,
+      "score": 0.862
+    },
+    {
+      "word": "Aufhalten",
+      "start": 19.553,
+      "end": 20.134,
+      "score": 0.88
+    },
+    {
+      "word": "kann",
+      "start": 20.174,
+      "end": 20.294,
+      "score": 0.944
+    },
+    {
+      "word": "er",
+      "start": 20.334,
+      "end": 20.414,
+      "score": 0.606
+    },
+    {
+      "word": "es",
+      "start": 20.454,
+      "end": 20.574,
+      "score": 0.915
+    },
+    {
+      "word": "noch",
+      "start": 20.594,
+      "end": 20.774,
+      "score": 0.849
+    },
+    {
+      "word": "nicht.",
+      "start": 20.794,
+      "end": 22.175,
+      "score": 0.972
+    },
+    {
+      "word": "Ein",
+      "start": 22.215,
+      "end": 22.395,
+      "score": 0.808
+    },
+    {
+      "word": "Netz",
+      "start": 22.415,
+      "end": 22.656,
+      "score": 0.94
+    },
+    {
+      "word": "aus",
+      "start": 22.696,
+      "end": 22.896,
+      "score": 0.778
+    },
+    {
+      "word": "Schulden",
+      "start": 22.936,
+      "end": 23.376,
+      "score": 0.761
+    },
+    {
+      "word": "hat",
+      "start": 23.396,
+      "end": 23.716,
+      "score": 0.953
+    },
+    {
+      "word": "eine",
+      "start": 23.756,
+      "end": 23.997,
+      "score": 0.886
+    },
+    {
+      "word": "Schwäche:",
+      "start": 24.037,
+      "end": 25.137,
+      "score": 0.943
+    },
+    {
+      "word": "Auch",
+      "start": 25.177,
+      "end": 25.417,
+      "score": 0.947
+    },
+    {
+      "word": "Schulden",
+      "start": 25.458,
+      "end": 25.878,
+      "score": 0.825
+    },
+    {
+      "word": "geraten",
+      "start": 25.898,
+      "end": 26.398,
+      "score": 0.903
+    },
+    {
+      "word": "irgendwann",
+      "start": 26.458,
+      "end": 26.959,
+      "score": 0.829
+    },
+    {
+      "word": "in",
+      "start": 26.999,
+      "end": 27.139,
+      "score": 0.922
+    },
+    {
+      "word": "Vergessenheit.",
+      "start": 27.179,
+      "end": 27.799,
+      "score": 0.915
+    }
+  ]
+}

@@ -4,6 +4,15 @@ Alle Versionen, neueste zuerst. Patch-Versionen (Bugfix-only) werden als Unterab
 
 ---
 
+## v0.23 — Die Chronik hat eine Stimme
+
+**Neuerungen**
+- Alle 36 Story-Einträge sind vertont (Gemini-TTS, Opus): Vorlese-Steuerung im Story-Dialog mit Wort-für-Wort-Highlighting, seitenweisem Stopp und Sprung beim Blättern; Start nur per Klick
+- Audio-Dateien + Wort-Timings liegen versioniert unter `tts/audio/`; die Steuerung erscheint nur bei Einträgen mit Timing-Daten
+- Vertonungen für NPC-Dialoge, Skill-Monologe und Quests sind bereits produziert und werden in kommenden Versionen ins Spiel eingebunden
+
+---
+
 ## v0.22 — Feldarbeit-Meisterschaft & Schlaf-Feintuning
 
 **Neuerungen**

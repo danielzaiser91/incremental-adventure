@@ -1,0 +1,358 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 2.724,
+      "text": "Er grinst schief.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.401,
+          "end": 0.581,
+          "score": 0.674
+        },
+        {
+          "word": "grinst",
+          "start": 0.641,
+          "end": 1.102,
+          "score": 0.74
+        },
+        {
+          "word": "schief.",
+          "start": 1.142,
+          "end": 2.724,
+          "score": 0.681
+        }
+      ]
+    },
+    {
+      "start": 2.744,
+      "end": 5.048,
+      "text": "\"Niemand Wichtiges.",
+      "words": [
+        {
+          "word": "\"Niemand",
+          "start": 2.744,
+          "end": 3.405,
+          "score": 0.791
+        },
+        {
+          "word": "Wichtiges.",
+          "start": 3.445,
+          "end": 5.048,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 5.088,
+      "end": 7.171,
+      "text": "Noch nicht.\"",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 5.088,
+          "end": 5.488,
+          "score": 0.972
+        },
+        {
+          "word": "nicht.\"",
+          "start": 5.548,
+          "end": 7.171,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 7.231,
+      "end": 12.899,
+      "text": "Er lässt das Wort einen Moment in der Luft hängen, als wollte er sehen, ob ich verstehe, was er meint.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 7.231,
+          "end": 7.371,
+          "score": 0.788
+        },
+        {
+          "word": "lässt",
+          "start": 7.391,
+          "end": 7.632,
+          "score": 0.921
+        },
+        {
+          "word": "das",
+          "start": 7.672,
+          "end": 7.872,
+          "score": 0.939
+        },
+        {
+          "word": "Wort",
+          "start": 7.912,
+          "end": 8.212,
+          "score": 0.982
+        },
+        {
+          "word": "einen",
+          "start": 8.232,
+          "end": 8.473,
+          "score": 0.855
+        },
+        {
+          "word": "Moment",
+          "start": 8.513,
+          "end": 8.893,
+          "score": 0.894
+        },
+        {
+          "word": "in",
+          "start": 8.913,
+          "end": 8.994,
+          "score": 0.984
+        },
+        {
+          "word": "der",
+          "start": 9.014,
+          "end": 9.194,
+          "score": 0.901
+        },
+        {
+          "word": "Luft",
+          "start": 9.234,
+          "end": 9.494,
+          "score": 0.812
+        },
+        {
+          "word": "hängen,",
+          "start": 9.534,
+          "end": 10.235,
+          "score": 0.799
+        },
+        {
+          "word": "als",
+          "start": 10.276,
+          "end": 10.436,
+          "score": 0.949
+        },
+        {
+          "word": "wollte",
+          "start": 10.476,
+          "end": 10.796,
+          "score": 0.933
+        },
+        {
+          "word": "er",
+          "start": 10.836,
+          "end": 10.937,
+          "score": 0.958
+        },
+        {
+          "word": "sehen,",
+          "start": 10.997,
+          "end": 11.277,
+          "score": 0.929
+        },
+        {
+          "word": "ob",
+          "start": 11.317,
+          "end": 11.417,
+          "score": 0.988
+        },
+        {
+          "word": "ich",
+          "start": 11.457,
+          "end": 11.577,
+          "score": 0.864
+        },
+        {
+          "word": "verstehe,",
+          "start": 11.618,
+          "end": 12.238,
+          "score": 0.626
+        },
+        {
+          "word": "was",
+          "start": 12.279,
+          "end": 12.439,
+          "score": 0.838
+        },
+        {
+          "word": "er",
+          "start": 12.479,
+          "end": 12.639,
+          "score": 0.805
+        },
+        {
+          "word": "meint.",
+          "start": 12.659,
+          "end": 12.899,
+          "score": 0.724
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.401,
+      "end": 0.581,
+      "score": 0.674
+    },
+    {
+      "word": "grinst",
+      "start": 0.641,
+      "end": 1.102,
+      "score": 0.74
+    },
+    {
+      "word": "schief.",
+      "start": 1.142,
+      "end": 2.724,
+      "score": 0.681
+    },
+    {
+      "word": "\"Niemand",
+      "start": 2.744,
+      "end": 3.405,
+      "score": 0.791
+    },
+    {
+      "word": "Wichtiges.",
+      "start": 3.445,
+      "end": 5.048,
+      "score": 0.85
+    },
+    {
+      "word": "Noch",
+      "start": 5.088,
+      "end": 5.488,
+      "score": 0.972
+    },
+    {
+      "word": "nicht.\"",
+      "start": 5.548,
+      "end": 7.171,
+      "score": 0.951
+    },
+    {
+      "word": "Er",
+      "start": 7.231,
+      "end": 7.371,
+      "score": 0.788
+    },
+    {
+      "word": "lässt",
+      "start": 7.391,
+      "end": 7.632,
+      "score": 0.921
+    },
+    {
+      "word": "das",
+      "start": 7.672,
+      "end": 7.872,
+      "score": 0.939
+    },
+    {
+      "word": "Wort",
+      "start": 7.912,
+      "end": 8.212,
+      "score": 0.982
+    },
+    {
+      "word": "einen",
+      "start": 8.232,
+      "end": 8.473,
+      "score": 0.855
+    },
+    {
+      "word": "Moment",
+      "start": 8.513,
+      "end": 8.893,
+      "score": 0.894
+    },
+    {
+      "word": "in",
+      "start": 8.913,
+      "end": 8.994,
+      "score": 0.984
+    },
+    {
+      "word": "der",
+      "start": 9.014,
+      "end": 9.194,
+      "score": 0.901
+    },
+    {
+      "word": "Luft",
+      "start": 9.234,
+      "end": 9.494,
+      "score": 0.812
+    },
+    {
+      "word": "hängen,",
+      "start": 9.534,
+      "end": 10.235,
+      "score": 0.799
+    },
+    {
+      "word": "als",
+      "start": 10.276,
+      "end": 10.436,
+      "score": 0.949
+    },
+    {
+      "word": "wollte",
+      "start": 10.476,
+      "end": 10.796,
+      "score": 0.933
+    },
+    {
+      "word": "er",
+      "start": 10.836,
+      "end": 10.937,
+      "score": 0.958
+    },
+    {
+      "word": "sehen,",
+      "start": 10.997,
+      "end": 11.277,
+      "score": 0.929
+    },
+    {
+      "word": "ob",
+      "start": 11.317,
+      "end": 11.417,
+      "score": 0.988
+    },
+    {
+      "word": "ich",
+      "start": 11.457,
+      "end": 11.577,
+      "score": 0.864
+    },
+    {
+      "word": "verstehe,",
+      "start": 11.618,
+      "end": 12.238,
+      "score": 0.626
+    },
+    {
+      "word": "was",
+      "start": 12.279,
+      "end": 12.439,
+      "score": 0.838
+    },
+    {
+      "word": "er",
+      "start": 12.479,
+      "end": 12.639,
+      "score": 0.805
+    },
+    {
+      "word": "meint.",
+      "start": 12.659,
+      "end": 12.899,
+      "score": 0.724
+    }
+  ]
+}

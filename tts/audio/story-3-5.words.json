@@ -1,0 +1,811 @@
+{
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 8.485,
+      "text": "»Du bist der aus Treutheim, der Fragen über Valdris stellt.« Pereth ist geradliniger, als ich erwartet hatte.",
+      "words": [
+        {
+          "word": "»Du",
+          "start": 0.4,
+          "end": 0.62,
+          "score": 0.555
+        },
+        {
+          "word": "bist",
+          "start": 0.64,
+          "end": 0.921,
+          "score": 0.87
+        },
+        {
+          "word": "der",
+          "start": 0.961,
+          "end": 1.161,
+          "score": 0.845
+        },
+        {
+          "word": "aus",
+          "start": 1.201,
+          "end": 1.441,
+          "score": 0.885
+        },
+        {
+          "word": "Treutheim,",
+          "start": 1.481,
+          "end": 2.482,
+          "score": 0.909
+        },
+        {
+          "word": "der",
+          "start": 2.502,
+          "end": 2.702,
+          "score": 0.94
+        },
+        {
+          "word": "Fragen",
+          "start": 2.742,
+          "end": 3.142,
+          "score": 0.911
+        },
+        {
+          "word": "über",
+          "start": 3.162,
+          "end": 3.362,
+          "score": 0.786
+        },
+        {
+          "word": "Valdris",
+          "start": 3.402,
+          "end": 3.782,
+          "score": 0.836
+        },
+        {
+          "word": "stellt.«",
+          "start": 3.802,
+          "end": 5.063,
+          "score": 0.846
+        },
+        {
+          "word": "Pereth",
+          "start": 5.103,
+          "end": 5.504,
+          "score": 0.728
+        },
+        {
+          "word": "ist",
+          "start": 5.544,
+          "end": 5.804,
+          "score": 0.935
+        },
+        {
+          "word": "geradliniger,",
+          "start": 5.824,
+          "end": 6.524,
+          "score": 0.913
+        },
+        {
+          "word": "als",
+          "start": 6.544,
+          "end": 6.644,
+          "score": 0.983
+        },
+        {
+          "word": "ich",
+          "start": 6.684,
+          "end": 6.804,
+          "score": 0.824
+        },
+        {
+          "word": "erwartet",
+          "start": 6.824,
+          "end": 7.145,
+          "score": 0.895
+        },
+        {
+          "word": "hatte.",
+          "start": 7.165,
+          "end": 8.485,
+          "score": 0.915
+        }
+      ]
+    },
+    {
+      "start": 8.505,
+      "end": 10.667,
+      "text": "»Ich habe für ihn gearbeitet.",
+      "words": [
+        {
+          "word": "»Ich",
+          "start": 8.505,
+          "end": 8.726,
+          "score": 0.848
+        },
+        {
+          "word": "habe",
+          "start": 8.786,
+          "end": 9.006,
+          "score": 0.93
+        },
+        {
+          "word": "für",
+          "start": 9.046,
+          "end": 9.166,
+          "score": 0.734
+        },
+        {
+          "word": "ihn",
+          "start": 9.186,
+          "end": 9.346,
+          "score": 0.778
+        },
+        {
+          "word": "gearbeitet.",
+          "start": 9.366,
+          "end": 10.667,
+          "score": 0.968
+        }
+      ]
+    },
+    {
+      "start": 10.687,
+      "end": 14.269,
+      "text": "Einmal genügt.« Er lehnt sich zurück.",
+      "words": [
+        {
+          "word": "Einmal",
+          "start": 10.687,
+          "end": 11.047,
+          "score": 0.842
+        },
+        {
+          "word": "genügt.«",
+          "start": 11.087,
+          "end": 12.428,
+          "score": 0.931
+        },
+        {
+          "word": "Er",
+          "start": 12.448,
+          "end": 12.588,
+          "score": 0.706
+        },
+        {
+          "word": "lehnt",
+          "start": 12.628,
+          "end": 12.808,
+          "score": 0.762
+        },
+        {
+          "word": "sich",
+          "start": 12.848,
+          "end": 13.028,
+          "score": 0.914
+        },
+        {
+          "word": "zurück.",
+          "start": 13.048,
+          "end": 14.269,
+          "score": 0.972
+        }
+      ]
+    },
+    {
+      "start": 14.289,
+      "end": 20.933,
+      "text": "»Das Lagerhaus am Südtor gehört einem seiner Strohmänner.« »Was darin liegt, weiß ich nicht.",
+      "words": [
+        {
+          "word": "»Das",
+          "start": 14.289,
+          "end": 14.549,
+          "score": 0.868
+        },
+        {
+          "word": "Lagerhaus",
+          "start": 14.589,
+          "end": 15.13,
+          "score": 0.958
+        },
+        {
+          "word": "am",
+          "start": 15.17,
+          "end": 15.33,
+          "score": 0.996
+        },
+        {
+          "word": "Südtor",
+          "start": 15.37,
+          "end": 16.09,
+          "score": 0.881
+        },
+        {
+          "word": "gehört",
+          "start": 16.13,
+          "end": 16.511,
+          "score": 0.919
+        },
+        {
+          "word": "einem",
+          "start": 16.531,
+          "end": 16.771,
+          "score": 0.964
+        },
+        {
+          "word": "seiner",
+          "start": 16.811,
+          "end": 17.051,
+          "score": 0.899
+        },
+        {
+          "word": "Strohmänner.«",
+          "start": 17.091,
+          "end": 18.872,
+          "score": 0.818
+        },
+        {
+          "word": "»Was",
+          "start": 18.892,
+          "end": 19.092,
+          "score": 0.937
+        },
+        {
+          "word": "darin",
+          "start": 19.112,
+          "end": 19.412,
+          "score": 0.947
+        },
+        {
+          "word": "liegt,",
+          "start": 19.452,
+          "end": 19.733,
+          "score": 0.994
+        },
+        {
+          "word": "weiß",
+          "start": 19.753,
+          "end": 19.913,
+          "score": 0.84
+        },
+        {
+          "word": "ich",
+          "start": 19.953,
+          "end": 20.093,
+          "score": 0.868
+        },
+        {
+          "word": "nicht.",
+          "start": 20.113,
+          "end": 20.933,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 20.953,
+      "end": 22.695,
+      "text": "Aber ich will es wissen.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 20.953,
+          "end": 21.114,
+          "score": 0.975
+        },
+        {
+          "word": "ich",
+          "start": 21.174,
+          "end": 21.314,
+          "score": 0.921
+        },
+        {
+          "word": "will",
+          "start": 21.334,
+          "end": 21.494,
+          "score": 0.851
+        },
+        {
+          "word": "es",
+          "start": 21.514,
+          "end": 21.634,
+          "score": 0.806
+        },
+        {
+          "word": "wissen.",
+          "start": 21.674,
+          "end": 22.695,
+          "score": 0.875
+        }
+      ]
+    },
+    {
+      "start": 22.735,
+      "end": 28.358,
+      "text": "Und du kommst hinein, ohne aufzufallen.« Ich sage ja.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 22.735,
+          "end": 22.975,
+          "score": 0.943
+        },
+        {
+          "word": "du",
+          "start": 22.995,
+          "end": 23.175,
+          "score": 0.984
+        },
+        {
+          "word": "kommst",
+          "start": 23.215,
+          "end": 23.495,
+          "score": 0.867
+        },
+        {
+          "word": "hinein,",
+          "start": 23.535,
+          "end": 23.975,
+          "score": 0.893
+        },
+        {
+          "word": "ohne",
+          "start": 24.035,
+          "end": 24.276,
+          "score": 0.784
+        },
+        {
+          "word": "aufzufallen.«",
+          "start": 24.296,
+          "end": 26.377,
+          "score": 0.948
+        },
+        {
+          "word": "Ich",
+          "start": 26.417,
+          "end": 26.597,
+          "score": 0.764
+        },
+        {
+          "word": "sage",
+          "start": 26.637,
+          "end": 26.937,
+          "score": 0.962
+        },
+        {
+          "word": "ja.",
+          "start": 26.957,
+          "end": 28.358,
+          "score": 0.847
+        }
+      ]
+    },
+    {
+      "start": 28.398,
+      "end": 30.8,
+      "text": "Ob es klug war, weiß ich nicht.",
+      "words": [
+        {
+          "word": "Ob",
+          "start": 28.398,
+          "end": 28.498,
+          "score": 0.967
+        },
+        {
+          "word": "es",
+          "start": 28.558,
+          "end": 28.738,
+          "score": 0.92
+        },
+        {
+          "word": "klug",
+          "start": 28.778,
+          "end": 29.079,
+          "score": 0.86
+        },
+        {
+          "word": "war,",
+          "start": 29.119,
+          "end": 30.279,
+          "score": 0.989
+        },
+        {
+          "word": "weiß",
+          "start": 30.299,
+          "end": 30.48,
+          "score": 0.843
+        },
+        {
+          "word": "ich",
+          "start": 30.52,
+          "end": 30.64,
+          "score": 0.914
+        },
+        {
+          "word": "nicht.",
+          "start": 30.66,
+          "end": 30.8,
+          "score": 0.751
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "»Du",
+      "start": 0.4,
+      "end": 0.62,
+      "score": 0.555
+    },
+    {
+      "word": "bist",
+      "start": 0.64,
+      "end": 0.921,
+      "score": 0.87
+    },
+    {
+      "word": "der",
+      "start": 0.961,
+      "end": 1.161,
+      "score": 0.845
+    },
+    {
+      "word": "aus",
+      "start": 1.201,
+      "end": 1.441,
+      "score": 0.885
+    },
+    {
+      "word": "Treutheim,",
+      "start": 1.481,
+      "end": 2.482,
+      "score": 0.909
+    },
+    {
+      "word": "der",
+      "start": 2.502,
+      "end": 2.702,
+      "score": 0.94
+    },
+    {
+      "word": "Fragen",
+      "start": 2.742,
+      "end": 3.142,
+      "score": 0.911
+    },
+    {
+      "word": "über",
+      "start": 3.162,
+      "end": 3.362,
+      "score": 0.786
+    },
+    {
+      "word": "Valdris",
+      "start": 3.402,
+      "end": 3.782,
+      "score": 0.836
+    },
+    {
+      "word": "stellt.«",
+      "start": 3.802,
+      "end": 5.063,
+      "score": 0.846
+    },
+    {
+      "word": "Pereth",
+      "start": 5.103,
+      "end": 5.504,
+      "score": 0.728
+    },
+    {
+      "word": "ist",
+      "start": 5.544,
+      "end": 5.804,
+      "score": 0.935
+    },
+    {
+      "word": "geradliniger,",
+      "start": 5.824,
+      "end": 6.524,
+      "score": 0.913
+    },
+    {
+      "word": "als",
+      "start": 6.544,
+      "end": 6.644,
+      "score": 0.983
+    },
+    {
+      "word": "ich",
+      "start": 6.684,
+      "end": 6.804,
+      "score": 0.824
+    },
+    {
+      "word": "erwartet",
+      "start": 6.824,
+      "end": 7.145,
+      "score": 0.895
+    },
+    {
+      "word": "hatte.",
+      "start": 7.165,
+      "end": 8.485,
+      "score": 0.915
+    },
+    {
+      "word": "»Ich",
+      "start": 8.505,
+      "end": 8.726,
+      "score": 0.848
+    },
+    {
+      "word": "habe",
+      "start": 8.786,
+      "end": 9.006,
+      "score": 0.93
+    },
+    {
+      "word": "für",
+      "start": 9.046,
+      "end": 9.166,
+      "score": 0.734
+    },
+    {
+      "word": "ihn",
+      "start": 9.186,
+      "end": 9.346,
+      "score": 0.778
+    },
+    {
+      "word": "gearbeitet.",
+      "start": 9.366,
+      "end": 10.667,
+      "score": 0.968
+    },
+    {
+      "word": "Einmal",
+      "start": 10.687,
+      "end": 11.047,
+      "score": 0.842
+    },
+    {
+      "word": "genügt.«",
+      "start": 11.087,
+      "end": 12.428,
+      "score": 0.931
+    },
+    {
+      "word": "Er",
+      "start": 12.448,
+      "end": 12.588,
+      "score": 0.706
+    },
+    {
+      "word": "lehnt",
+      "start": 12.628,
+      "end": 12.808,
+      "score": 0.762
+    },
+    {
+      "word": "sich",
+      "start": 12.848,
+      "end": 13.028,
+      "score": 0.914
+    },
+    {
+      "word": "zurück.",
+      "start": 13.048,
+      "end": 14.269,
+      "score": 0.972
+    },
+    {
+      "word": "»Das",
+      "start": 14.289,
+      "end": 14.549,
+      "score": 0.868
+    },
+    {
+      "word": "Lagerhaus",
+      "start": 14.589,
+      "end": 15.13,
+      "score": 0.958
+    },
+    {
+      "word": "am",
+      "start": 15.17,
+      "end": 15.33,
+      "score": 0.996
+    },
+    {
+      "word": "Südtor",
+      "start": 15.37,
+      "end": 16.09,
+      "score": 0.881
+    },
+    {
+      "word": "gehört",
+      "start": 16.13,
+      "end": 16.511,
+      "score": 0.919
+    },
+    {
+      "word": "einem",
+      "start": 16.531,
+      "end": 16.771,
+      "score": 0.964
+    },
+    {
+      "word": "seiner",
+      "start": 16.811,
+      "end": 17.051,
+      "score": 0.899
+    },
+    {
+      "word": "Strohmänner.«",
+      "start": 17.091,
+      "end": 18.872,
+      "score": 0.818
+    },
+    {
+      "word": "»Was",
+      "start": 18.892,
+      "end": 19.092,
+      "score": 0.937
+    },
+    {
+      "word": "darin",
+      "start": 19.112,
+      "end": 19.412,
+      "score": 0.947
+    },
+    {
+      "word": "liegt,",
+      "start": 19.452,
+      "end": 19.733,
+      "score": 0.994
+    },
+    {
+      "word": "weiß",
+      "start": 19.753,
+      "end": 19.913,
+      "score": 0.84
+    },
+    {
+      "word": "ich",
+      "start": 19.953,
+      "end": 20.093,
+      "score": 0.868
+    },
+    {
+      "word": "nicht.",
+      "start": 20.113,
+      "end": 20.933,
+      "score": 0.94
+    },
+    {
+      "word": "Aber",
+      "start": 20.953,
+      "end": 21.114,
+      "score": 0.975
+    },
+    {
+      "word": "ich",
+      "start": 21.174,
+      "end": 21.314,
+      "score": 0.921
+    },
+    {
+      "word": "will",
+      "start": 21.334,
+      "end": 21.494,
+      "score": 0.851
+    },
+    {
+      "word": "es",
+      "start": 21.514,
+      "end": 21.634,
+      "score": 0.806
+    },
+    {
+      "word": "wissen.",
+      "start": 21.674,
+      "end": 22.695,
+      "score": 0.875
+    },
+    {
+      "word": "Und",
+      "start": 22.735,
+      "end": 22.975,
+      "score": 0.943
+    },
+    {
+      "word": "du",
+      "start": 22.995,
+      "end": 23.175,
+      "score": 0.984
+    },
+    {
+      "word": "kommst",
+      "start": 23.215,
+      "end": 23.495,
+      "score": 0.867
+    },
+    {
+      "word": "hinein,",
+      "start": 23.535,
+      "end": 23.975,
+      "score": 0.893
+    },
+    {
+      "word": "ohne",
+      "start": 24.035,
+      "end": 24.276,
+      "score": 0.784
+    },
+    {
+      "word": "aufzufallen.«",
+      "start": 24.296,
+      "end": 26.377,
+      "score": 0.948
+    },
+    {
+      "word": "Ich",
+      "start": 26.417,
+      "end": 26.597,
+      "score": 0.764
+    },
+    {
+      "word": "sage",
+      "start": 26.637,
+      "end": 26.937,
+      "score": 0.962
+    },
+    {
+      "word": "ja.",
+      "start": 26.957,
+      "end": 28.358,
+      "score": 0.847
+    },
+    {
+      "word": "Ob",
+      "start": 28.398,
+      "end": 28.498,
+      "score": 0.967
+    },
+    {
+      "word": "es",
+      "start": 28.558,
+      "end": 28.738,
+      "score": 0.92
+    },
+    {
+      "word": "klug",
+      "start": 28.778,
+      "end": 29.079,
+      "score": 0.86
+    },
+    {
+      "word": "war,",
+      "start": 29.119,
+      "end": 30.279,
+      "score": 0.989
+    },
+    {
+      "word": "weiß",
+      "start": 30.299,
+      "end": 30.48,
+      "score": 0.843
+    },
+    {
+      "word": "ich",
+      "start": 30.52,
+      "end": 30.64,
+      "score": 0.914
+    },
+    {
+      "word": "nicht.",
+      "start": 30.66,
+      "end": 30.8,
+      "score": 0.751
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.765,
+      "text": "Ich kenne inzwischen jeden Preis auf dem Marktplatz auswendig.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.481,
+          "end": 0.641,
+          "score": 0.461
+        },
+        {
+          "word": "kenne",
+          "start": 0.681,
+          "end": 0.921,
+          "score": 0.857
+        },
+        {
+          "word": "inzwischen",
+          "start": 0.961,
+          "end": 1.682,
+          "score": 0.847
+        },
+        {
+          "word": "jeden",
+          "start": 1.702,
+          "end": 2.102,
+          "score": 0.879
+        },
+        {
+          "word": "Preis",
+          "start": 2.142,
+          "end": 2.523,
+          "score": 0.959
+        },
+        {
+          "word": "auf",
+          "start": 2.543,
+          "end": 2.663,
+          "score": 0.987
+        },
+        {
+          "word": "dem",
+          "start": 2.703,
+          "end": 2.843,
+          "score": 0.954
+        },
+        {
+          "word": "Marktplatz",
+          "start": 2.863,
+          "end": 3.404,
+          "score": 0.925
+        },
+        {
+          "word": "auswendig.",
+          "start": 3.444,
+          "end": 4.765,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 4.805,
+      "end": 6.307,
+      "text": "Greta weiß das.",
+      "words": [
+        {
+          "word": "Greta",
+          "start": 4.805,
+          "end": 5.186,
+          "score": 0.802
+        },
+        {
+          "word": "weiß",
+          "start": 5.226,
+          "end": 5.426,
+          "score": 0.89
+        },
+        {
+          "word": "das.",
+          "start": 5.466,
+          "end": 6.307,
+          "score": 0.798
+        }
+      ]
+    },
+    {
+      "start": 6.327,
+      "end": 9.01,
+      "text": "Die Händler ahnen es.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 6.327,
+          "end": 6.507,
+          "score": 0.939
+        },
+        {
+          "word": "Händler",
+          "start": 6.547,
+          "end": 7.048,
+          "score": 0.989
+        },
+        {
+          "word": "ahnen",
+          "start": 7.108,
+          "end": 7.428,
+          "score": 0.909
+        },
+        {
+          "word": "es.",
+          "start": 7.468,
+          "end": 9.01,
+          "score": 0.835
+        }
+      ]
+    },
+    {
+      "start": 9.05,
+      "end": 14.056,
+      "text": "Ein ruhiges Lächeln, ein klarer Blick — der Preis gibt nach.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 9.05,
+          "end": 9.23,
+          "score": 0.654
+        },
+        {
+          "word": "ruhiges",
+          "start": 9.27,
+          "end": 9.651,
+          "score": 0.901
+        },
+        {
+          "word": "Lächeln,",
+          "start": 9.731,
+          "end": 10.512,
+          "score": 0.795
+        },
+        {
+          "word": "ein",
+          "start": 10.572,
+          "end": 10.832,
+          "score": 0.912
+        },
+        {
+          "word": "klarer",
+          "start": 10.872,
+          "end": 11.273,
+          "score": 0.902
+        },
+        {
+          "word": "Blick",
+          "start": 11.313,
+          "end": 12.094,
+          "score": 0.914
+        },
+        {
+          "word": "—",
+          "start": 12.114,
+          "end": 12.134,
+          "score": 0.996
+        },
+        {
+          "word": "der",
+          "start": 12.154,
+          "end": 12.274,
+          "score": 0.955
+        },
+        {
+          "word": "Preis",
+          "start": 12.314,
+          "end": 12.634,
+          "score": 0.816
+        },
+        {
+          "word": "gibt",
+          "start": 12.674,
+          "end": 12.934,
+          "score": 0.94
+        },
+        {
+          "word": "nach.",
+          "start": 12.975,
+          "end": 14.056,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 14.096,
+      "end": 15.858,
+      "text": "Das ist keine Kunst mehr.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 14.096,
+          "end": 14.216,
+          "score": 0.847
+        },
+        {
+          "word": "ist",
+          "start": 14.256,
+          "end": 14.436,
+          "score": 0.846
+        },
+        {
+          "word": "keine",
+          "start": 14.476,
+          "end": 14.696,
+          "score": 0.848
+        },
+        {
+          "word": "Kunst",
+          "start": 14.736,
+          "end": 15.057,
+          "score": 0.891
+        },
+        {
+          "word": "mehr.",
+          "start": 15.097,
+          "end": 15.858,
+          "score": 0.953
+        }
+      ]
+    },
+    {
+      "start": 15.878,
+      "end": 17.5,
+      "text": "Das ist Übung, die sich auszahlt.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 15.878,
+          "end": 15.998,
+          "score": 0.943
+        },
+        {
+          "word": "ist",
+          "start": 16.038,
+          "end": 16.278,
+          "score": 0.89
+        },
+        {
+          "word": "Übung,",
+          "start": 16.318,
+          "end": 16.699,
+          "score": 0.979
+        },
+        {
+          "word": "die",
+          "start": 16.719,
+          "end": 16.819,
+          "score": 0.969
+        },
+        {
+          "word": "sich",
+          "start": 16.859,
+          "end": 17.039,
+          "score": 0.983
+        },
+        {
+          "word": "auszahlt.",
+          "start": 17.079,
+          "end": 17.5,
+          "score": 0.836
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.481,
+      "end": 0.641,
+      "score": 0.461
+    },
+    {
+      "word": "kenne",
+      "start": 0.681,
+      "end": 0.921,
+      "score": 0.857
+    },
+    {
+      "word": "inzwischen",
+      "start": 0.961,
+      "end": 1.682,
+      "score": 0.847
+    },
+    {
+      "word": "jeden",
+      "start": 1.702,
+      "end": 2.102,
+      "score": 0.879
+    },
+    {
+      "word": "Preis",
+      "start": 2.142,
+      "end": 2.523,
+      "score": 0.959
+    },
+    {
+      "word": "auf",
+      "start": 2.543,
+      "end": 2.663,
+      "score": 0.987
+    },
+    {
+      "word": "dem",
+      "start": 2.703,
+      "end": 2.843,
+      "score": 0.954
+    },
+    {
+      "word": "Marktplatz",
+      "start": 2.863,
+      "end": 3.404,
+      "score": 0.925
+    },
+    {
+      "word": "auswendig.",
+      "start": 3.444,
+      "end": 4.765,
+      "score": 0.912
+    },
+    {
+      "word": "Greta",
+      "start": 4.805,
+      "end": 5.186,
+      "score": 0.802
+    },
+    {
+      "word": "weiß",
+      "start": 5.226,
+      "end": 5.426,
+      "score": 0.89
+    },
+    {
+      "word": "das.",
+      "start": 5.466,
+      "end": 6.307,
+      "score": 0.798
+    },
+    {
+      "word": "Die",
+      "start": 6.327,
+      "end": 6.507,
+      "score": 0.939
+    },
+    {
+      "word": "Händler",
+      "start": 6.547,
+      "end": 7.048,
+      "score": 0.989
+    },
+    {
+      "word": "ahnen",
+      "start": 7.108,
+      "end": 7.428,
+      "score": 0.909
+    },
+    {
+      "word": "es.",
+      "start": 7.468,
+      "end": 9.01,
+      "score": 0.835
+    },
+    {
+      "word": "Ein",
+      "start": 9.05,
+      "end": 9.23,
+      "score": 0.654
+    },
+    {
+      "word": "ruhiges",
+      "start": 9.27,
+      "end": 9.651,
+      "score": 0.901
+    },
+    {
+      "word": "Lächeln,",
+      "start": 9.731,
+      "end": 10.512,
+      "score": 0.795
+    },
+    {
+      "word": "ein",
+      "start": 10.572,
+      "end": 10.832,
+      "score": 0.912
+    },
+    {
+      "word": "klarer",
+      "start": 10.872,
+      "end": 11.273,
+      "score": 0.902
+    },
+    {
+      "word": "Blick",
+      "start": 11.313,
+      "end": 12.094,
+      "score": 0.914
+    },
+    {
+      "word": "—",
+      "start": 12.114,
+      "end": 12.134,
+      "score": 0.996
+    },
+    {
+      "word": "der",
+      "start": 12.154,
+      "end": 12.274,
+      "score": 0.955
+    },
+    {
+      "word": "Preis",
+      "start": 12.314,
+      "end": 12.634,
+      "score": 0.816
+    },
+    {
+      "word": "gibt",
+      "start": 12.674,
+      "end": 12.934,
+      "score": 0.94
+    },
+    {
+      "word": "nach.",
+      "start": 12.975,
+      "end": 14.056,
+      "score": 0.979
+    },
+    {
+      "word": "Das",
+      "start": 14.096,
+      "end": 14.216,
+      "score": 0.847
+    },
+    {
+      "word": "ist",
+      "start": 14.256,
+      "end": 14.436,
+      "score": 0.846
+    },
+    {
+      "word": "keine",
+      "start": 14.476,
+      "end": 14.696,
+      "score": 0.848
+    },
+    {
+      "word": "Kunst",
+      "start": 14.736,
+      "end": 15.057,
+      "score": 0.891
+    },
+    {
+      "word": "mehr.",
+      "start": 15.097,
+      "end": 15.858,
+      "score": 0.953
+    },
+    {
+      "word": "Das",
+      "start": 15.878,
+      "end": 15.998,
+      "score": 0.943
+    },
+    {
+      "word": "ist",
+      "start": 16.038,
+      "end": 16.278,
+      "score": 0.89
+    },
+    {
+      "word": "Übung,",
+      "start": 16.318,
+      "end": 16.699,
+      "score": 0.979
+    },
+    {
+      "word": "die",
+      "start": 16.719,
+      "end": 16.819,
+      "score": 0.969
+    },
+    {
+      "word": "sich",
+      "start": 16.859,
+      "end": 17.039,
+      "score": 0.983
+    },
+    {
+      "word": "auszahlt.",
+      "start": 17.079,
+      "end": 17.5,
+      "score": 0.836
+    }
+  ]
+}

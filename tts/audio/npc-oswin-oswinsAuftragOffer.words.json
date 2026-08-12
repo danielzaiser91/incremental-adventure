@@ -1,0 +1,681 @@
+{
+  "segments": [
+    {
+      "start": 0.74,
+      "end": 8.486,
+      "text": "Oswin schaut mich an — und dann schaut er zur Seite, als würde er prüfen, ob jemand zuhört.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 0.74,
+          "end": 1.201,
+          "score": 0.376
+        },
+        {
+          "word": "schaut",
+          "start": 1.221,
+          "end": 1.541,
+          "score": 0.618
+        },
+        {
+          "word": "mich",
+          "start": 1.561,
+          "end": 1.841,
+          "score": 0.783
+        },
+        {
+          "word": "an",
+          "start": 1.881,
+          "end": 2.582,
+          "score": 0.921
+        },
+        {
+          "word": "—",
+          "start": 2.602,
+          "end": 2.622,
+          "score": 0.689
+        },
+        {
+          "word": "und",
+          "start": 2.642,
+          "end": 2.842,
+          "score": 0.826
+        },
+        {
+          "word": "dann",
+          "start": 2.882,
+          "end": 3.102,
+          "score": 0.972
+        },
+        {
+          "word": "schaut",
+          "start": 3.142,
+          "end": 3.402,
+          "score": 0.825
+        },
+        {
+          "word": "er",
+          "start": 3.462,
+          "end": 3.582,
+          "score": 0.868
+        },
+        {
+          "word": "zur",
+          "start": 3.602,
+          "end": 3.822,
+          "score": 0.953
+        },
+        {
+          "word": "Seite,",
+          "start": 3.863,
+          "end": 4.823,
+          "score": 0.951
+        },
+        {
+          "word": "als",
+          "start": 4.843,
+          "end": 5.043,
+          "score": 0.941
+        },
+        {
+          "word": "würde",
+          "start": 5.083,
+          "end": 5.303,
+          "score": 0.881
+        },
+        {
+          "word": "er",
+          "start": 5.343,
+          "end": 5.504,
+          "score": 0.827
+        },
+        {
+          "word": "prüfen,",
+          "start": 5.564,
+          "end": 6.064,
+          "score": 0.945
+        },
+        {
+          "word": "ob",
+          "start": 6.084,
+          "end": 6.224,
+          "score": 0.954
+        },
+        {
+          "word": "jemand",
+          "start": 6.244,
+          "end": 6.664,
+          "score": 0.954
+        },
+        {
+          "word": "zuhört.",
+          "start": 6.724,
+          "end": 8.486,
+          "score": 0.946
+        }
+      ]
+    },
+    {
+      "start": 8.506,
+      "end": 10.527,
+      "text": "\"Du bist der Neue.",
+      "words": [
+        {
+          "word": "\"Du",
+          "start": 8.506,
+          "end": 8.706,
+          "score": 0.661
+        },
+        {
+          "word": "bist",
+          "start": 8.726,
+          "end": 8.986,
+          "score": 0.742
+        },
+        {
+          "word": "der",
+          "start": 9.006,
+          "end": 9.306,
+          "score": 0.982
+        },
+        {
+          "word": "Neue.",
+          "start": 9.366,
+          "end": 10.527,
+          "score": 0.911
+        }
+      ]
+    },
+    {
+      "start": 10.567,
+      "end": 14.71,
+      "text": "Unbekannt, kein Ruf, keine Verbindungen.\"",
+      "words": [
+        {
+          "word": "Unbekannt,",
+          "start": 10.567,
+          "end": 11.668,
+          "score": 0.884
+        },
+        {
+          "word": "kein",
+          "start": 11.688,
+          "end": 11.868,
+          "score": 0.855
+        },
+        {
+          "word": "Ruf,",
+          "start": 11.928,
+          "end": 12.748,
+          "score": 0.887
+        },
+        {
+          "word": "keine",
+          "start": 12.788,
+          "end": 13.069,
+          "score": 0.965
+        },
+        {
+          "word": "Verbindungen.\"",
+          "start": 13.109,
+          "end": 14.71,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 14.75,
+      "end": 16.391,
+      "text": "Eine Pause.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 14.75,
+          "end": 14.95,
+          "score": 0.954
+        },
+        {
+          "word": "Pause.",
+          "start": 14.99,
+          "end": 16.391,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 16.411,
+      "end": 18.912,
+      "text": "\"Das ist nützlich.\"",
+      "words": [
+        {
+          "word": "\"Das",
+          "start": 16.411,
+          "end": 16.591,
+          "score": 0.831
+        },
+        {
+          "word": "ist",
+          "start": 16.631,
+          "end": 16.971,
+          "score": 0.963
+        },
+        {
+          "word": "nützlich.\"",
+          "start": 17.011,
+          "end": 18.912,
+          "score": 0.858
+        }
+      ]
+    },
+    {
+      "start": 18.932,
+      "end": 23.575,
+      "text": "\"Richte Brakka aus, dass ich... ein Gespräch möchte.",
+      "words": [
+        {
+          "word": "\"Richte",
+          "start": 18.932,
+          "end": 19.333,
+          "score": 0.87
+        },
+        {
+          "word": "Brakka",
+          "start": 19.373,
+          "end": 19.833,
+          "score": 0.837
+        },
+        {
+          "word": "aus,",
+          "start": 19.873,
+          "end": 20.173,
+          "score": 0.974
+        },
+        {
+          "word": "dass",
+          "start": 20.193,
+          "end": 20.433,
+          "score": 0.934
+        },
+        {
+          "word": "ich...",
+          "start": 20.493,
+          "end": 21.474,
+          "score": 0.826
+        },
+        {
+          "word": "ein",
+          "start": 21.494,
+          "end": 21.634,
+          "score": 0.777
+        },
+        {
+          "word": "Gespräch",
+          "start": 21.674,
+          "end": 22.355,
+          "score": 0.795
+        },
+        {
+          "word": "möchte.",
+          "start": 22.395,
+          "end": 23.575,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 23.615,
+      "end": 24.876,
+      "text": "Diskret.",
+      "words": [
+        {
+          "word": "Diskret.",
+          "start": 23.615,
+          "end": 24.876,
+          "score": 0.867
+        }
+      ]
+    },
+    {
+      "start": 24.916,
+      "end": 26.657,
+      "text": "Kein großes Ding.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 24.916,
+          "end": 25.156,
+          "score": 0.717
+        },
+        {
+          "word": "großes",
+          "start": 25.176,
+          "end": 25.577,
+          "score": 0.948
+        },
+        {
+          "word": "Ding.",
+          "start": 25.637,
+          "end": 26.657,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 26.697,
+      "end": 30.04,
+      "text": "Einfach sagen: Oswin bittet um seine Zeit.\"",
+      "words": [
+        {
+          "word": "Einfach",
+          "start": 26.697,
+          "end": 27.078,
+          "score": 0.892
+        },
+        {
+          "word": "sagen:",
+          "start": 27.118,
+          "end": 28.138,
+          "score": 0.886
+        },
+        {
+          "word": "Oswin",
+          "start": 28.218,
+          "end": 28.879,
+          "score": 0.873
+        },
+        {
+          "word": "bittet",
+          "start": 28.899,
+          "end": 29.199,
+          "score": 0.929
+        },
+        {
+          "word": "um",
+          "start": 29.239,
+          "end": 29.419,
+          "score": 0.96
+        },
+        {
+          "word": "seine",
+          "start": 29.439,
+          "end": 29.759,
+          "score": 0.876
+        },
+        {
+          "word": "Zeit.\"",
+          "start": 29.799,
+          "end": 30.04,
+          "score": 0.742
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Oswin",
+      "start": 0.74,
+      "end": 1.201,
+      "score": 0.376
+    },
+    {
+      "word": "schaut",
+      "start": 1.221,
+      "end": 1.541,
+      "score": 0.618
+    },
+    {
+      "word": "mich",
+      "start": 1.561,
+      "end": 1.841,
+      "score": 0.783
+    },
+    {
+      "word": "an",
+      "start": 1.881,
+      "end": 2.582,
+      "score": 0.921
+    },
+    {
+      "word": "—",
+      "start": 2.602,
+      "end": 2.622,
+      "score": 0.689
+    },
+    {
+      "word": "und",
+      "start": 2.642,
+      "end": 2.842,
+      "score": 0.826
+    },
+    {
+      "word": "dann",
+      "start": 2.882,
+      "end": 3.102,
+      "score": 0.972
+    },
+    {
+      "word": "schaut",
+      "start": 3.142,
+      "end": 3.402,
+      "score": 0.825
+    },
+    {
+      "word": "er",
+      "start": 3.462,
+      "end": 3.582,
+      "score": 0.868
+    },
+    {
+      "word": "zur",
+      "start": 3.602,
+      "end": 3.822,
+      "score": 0.953
+    },
+    {
+      "word": "Seite,",
+      "start": 3.863,
+      "end": 4.823,
+      "score": 0.951
+    },
+    {
+      "word": "als",
+      "start": 4.843,
+      "end": 5.043,
+      "score": 0.941
+    },
+    {
+      "word": "würde",
+      "start": 5.083,
+      "end": 5.303,
+      "score": 0.881
+    },
+    {
+      "word": "er",
+      "start": 5.343,
+      "end": 5.504,
+      "score": 0.827
+    },
+    {
+      "word": "prüfen,",
+      "start": 5.564,
+      "end": 6.064,
+      "score": 0.945
+    },
+    {
+      "word": "ob",
+      "start": 6.084,
+      "end": 6.224,
+      "score": 0.954
+    },
+    {
+      "word": "jemand",
+      "start": 6.244,
+      "end": 6.664,
+      "score": 0.954
+    },
+    {
+      "word": "zuhört.",
+      "start": 6.724,
+      "end": 8.486,
+      "score": 0.946
+    },
+    {
+      "word": "\"Du",
+      "start": 8.506,
+      "end": 8.706,
+      "score": 0.661
+    },
+    {
+      "word": "bist",
+      "start": 8.726,
+      "end": 8.986,
+      "score": 0.742
+    },
+    {
+      "word": "der",
+      "start": 9.006,
+      "end": 9.306,
+      "score": 0.982
+    },
+    {
+      "word": "Neue.",
+      "start": 9.366,
+      "end": 10.527,
+      "score": 0.911
+    },
+    {
+      "word": "Unbekannt,",
+      "start": 10.567,
+      "end": 11.668,
+      "score": 0.884
+    },
+    {
+      "word": "kein",
+      "start": 11.688,
+      "end": 11.868,
+      "score": 0.855
+    },
+    {
+      "word": "Ruf,",
+      "start": 11.928,
+      "end": 12.748,
+      "score": 0.887
+    },
+    {
+      "word": "keine",
+      "start": 12.788,
+      "end": 13.069,
+      "score": 0.965
+    },
+    {
+      "word": "Verbindungen.\"",
+      "start": 13.109,
+      "end": 14.71,
+      "score": 0.948
+    },
+    {
+      "word": "Eine",
+      "start": 14.75,
+      "end": 14.95,
+      "score": 0.954
+    },
+    {
+      "word": "Pause.",
+      "start": 14.99,
+      "end": 16.391,
+      "score": 0.877
+    },
+    {
+      "word": "\"Das",
+      "start": 16.411,
+      "end": 16.591,
+      "score": 0.831
+    },
+    {
+      "word": "ist",
+      "start": 16.631,
+      "end": 16.971,
+      "score": 0.963
+    },
+    {
+      "word": "nützlich.\"",
+      "start": 17.011,
+      "end": 18.912,
+      "score": 0.858
+    },
+    {
+      "word": "\"Richte",
+      "start": 18.932,
+      "end": 19.333,
+      "score": 0.87
+    },
+    {
+      "word": "Brakka",
+      "start": 19.373,
+      "end": 19.833,
+      "score": 0.837
+    },
+    {
+      "word": "aus,",
+      "start": 19.873,
+      "end": 20.173,
+      "score": 0.974
+    },
+    {
+      "word": "dass",
+      "start": 20.193,
+      "end": 20.433,
+      "score": 0.934
+    },
+    {
+      "word": "ich...",
+      "start": 20.493,
+      "end": 21.474,
+      "score": 0.826
+    },
+    {
+      "word": "ein",
+      "start": 21.494,
+      "end": 21.634,
+      "score": 0.777
+    },
+    {
+      "word": "Gespräch",
+      "start": 21.674,
+      "end": 22.355,
+      "score": 0.795
+    },
+    {
+      "word": "möchte.",
+      "start": 22.395,
+      "end": 23.575,
+      "score": 0.933
+    },
+    {
+      "word": "Diskret.",
+      "start": 23.615,
+      "end": 24.876,
+      "score": 0.867
+    },
+    {
+      "word": "Kein",
+      "start": 24.916,
+      "end": 25.156,
+      "score": 0.717
+    },
+    {
+      "word": "großes",
+      "start": 25.176,
+      "end": 25.577,
+      "score": 0.948
+    },
+    {
+      "word": "Ding.",
+      "start": 25.637,
+      "end": 26.657,
+      "score": 0.868
+    },
+    {
+      "word": "Einfach",
+      "start": 26.697,
+      "end": 27.078,
+      "score": 0.892
+    },
+    {
+      "word": "sagen:",
+      "start": 27.118,
+      "end": 28.138,
+      "score": 0.886
+    },
+    {
+      "word": "Oswin",
+      "start": 28.218,
+      "end": 28.879,
+      "score": 0.873
+    },
+    {
+      "word": "bittet",
+      "start": 28.899,
+      "end": 29.199,
+      "score": 0.929
+    },
+    {
+      "word": "um",
+      "start": 29.239,
+      "end": 29.419,
+      "score": 0.96
+    },
+    {
+      "word": "seine",
+      "start": 29.439,
+      "end": 29.759,
+      "score": 0.876
+    },
+    {
+      "word": "Zeit.\"",
+      "start": 29.799,
+      "end": 30.04,
+      "score": 0.742
+    }
+  ]
+}

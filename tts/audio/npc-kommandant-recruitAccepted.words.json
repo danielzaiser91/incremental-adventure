@@ -1,0 +1,353 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 5.949,
+      "text": "Roswald steht auf, ohne die Hand zu reichen — Männer wie er brauchen das nicht.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.421,
+          "end": 0.861,
+          "score": 0.813
+        },
+        {
+          "word": "steht",
+          "start": 0.901,
+          "end": 1.202,
+          "score": 0.887
+        },
+        {
+          "word": "auf,",
+          "start": 1.242,
+          "end": 1.803,
+          "score": 0.953
+        },
+        {
+          "word": "ohne",
+          "start": 1.843,
+          "end": 2.063,
+          "score": 0.819
+        },
+        {
+          "word": "die",
+          "start": 2.083,
+          "end": 2.203,
+          "score": 0.959
+        },
+        {
+          "word": "Hand",
+          "start": 2.243,
+          "end": 2.424,
+          "score": 0.948
+        },
+        {
+          "word": "zu",
+          "start": 2.464,
+          "end": 2.544,
+          "score": 0.99
+        },
+        {
+          "word": "reichen",
+          "start": 2.604,
+          "end": 2.844,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 3.445,
+          "end": 3.465,
+          "score": 0.275
+        },
+        {
+          "word": "Männer",
+          "start": 3.505,
+          "end": 3.806,
+          "score": 0.85
+        },
+        {
+          "word": "wie",
+          "start": 3.846,
+          "end": 4.006,
+          "score": 0.948
+        },
+        {
+          "word": "er",
+          "start": 4.046,
+          "end": 4.267,
+          "score": 0.708
+        },
+        {
+          "word": "brauchen",
+          "start": 4.307,
+          "end": 4.647,
+          "score": 0.892
+        },
+        {
+          "word": "das",
+          "start": 4.667,
+          "end": 4.827,
+          "score": 0.959
+        },
+        {
+          "word": "nicht.",
+          "start": 4.867,
+          "end": 5.949,
+          "score": 0.803
+        }
+      ]
+    },
+    {
+      "start": 5.989,
+      "end": 8.133,
+      "text": "\"Schichtbeginn bei Sonnenaufgang.",
+      "words": [
+        {
+          "word": "\"Schichtbeginn",
+          "start": 5.989,
+          "end": 6.67,
+          "score": 0.886
+        },
+        {
+          "word": "bei",
+          "start": 6.69,
+          "end": 6.871,
+          "score": 0.984
+        },
+        {
+          "word": "Sonnenaufgang.",
+          "start": 6.911,
+          "end": 8.133,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 8.153,
+      "end": 10.316,
+      "text": "Kein Zu-Spät-Kommen.\"",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 8.153,
+          "end": 8.393,
+          "score": 0.726
+        },
+        {
+          "word": "Zu-Spät-Kommen.\"",
+          "start": 8.413,
+          "end": 10.316,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 10.376,
+      "end": 11.418,
+      "text": "Er geht.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 10.376,
+          "end": 10.556,
+          "score": 0.73
+        },
+        {
+          "word": "geht.",
+          "start": 10.596,
+          "end": 11.418,
+          "score": 0.956
+        }
+      ]
+    },
+    {
+      "start": 11.438,
+      "end": 12.659,
+      "text": "Das Gespräch ist vorbei.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 11.438,
+          "end": 11.598,
+          "score": 0.911
+        },
+        {
+          "word": "Gespräch",
+          "start": 11.638,
+          "end": 12.179,
+          "score": 0.925
+        },
+        {
+          "word": "ist",
+          "start": 12.219,
+          "end": 12.379,
+          "score": 0.996
+        },
+        {
+          "word": "vorbei.",
+          "start": 12.419,
+          "end": 12.659,
+          "score": 0.952
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.421,
+      "end": 0.861,
+      "score": 0.813
+    },
+    {
+      "word": "steht",
+      "start": 0.901,
+      "end": 1.202,
+      "score": 0.887
+    },
+    {
+      "word": "auf,",
+      "start": 1.242,
+      "end": 1.803,
+      "score": 0.953
+    },
+    {
+      "word": "ohne",
+      "start": 1.843,
+      "end": 2.063,
+      "score": 0.819
+    },
+    {
+      "word": "die",
+      "start": 2.083,
+      "end": 2.203,
+      "score": 0.959
+    },
+    {
+      "word": "Hand",
+      "start": 2.243,
+      "end": 2.424,
+      "score": 0.948
+    },
+    {
+      "word": "zu",
+      "start": 2.464,
+      "end": 2.544,
+      "score": 0.99
+    },
+    {
+      "word": "reichen",
+      "start": 2.604,
+      "end": 2.844,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 3.445,
+      "end": 3.465,
+      "score": 0.275
+    },
+    {
+      "word": "Männer",
+      "start": 3.505,
+      "end": 3.806,
+      "score": 0.85
+    },
+    {
+      "word": "wie",
+      "start": 3.846,
+      "end": 4.006,
+      "score": 0.948
+    },
+    {
+      "word": "er",
+      "start": 4.046,
+      "end": 4.267,
+      "score": 0.708
+    },
+    {
+      "word": "brauchen",
+      "start": 4.307,
+      "end": 4.647,
+      "score": 0.892
+    },
+    {
+      "word": "das",
+      "start": 4.667,
+      "end": 4.827,
+      "score": 0.959
+    },
+    {
+      "word": "nicht.",
+      "start": 4.867,
+      "end": 5.949,
+      "score": 0.803
+    },
+    {
+      "word": "\"Schichtbeginn",
+      "start": 5.989,
+      "end": 6.67,
+      "score": 0.886
+    },
+    {
+      "word": "bei",
+      "start": 6.69,
+      "end": 6.871,
+      "score": 0.984
+    },
+    {
+      "word": "Sonnenaufgang.",
+      "start": 6.911,
+      "end": 8.133,
+      "score": 0.939
+    },
+    {
+      "word": "Kein",
+      "start": 8.153,
+      "end": 8.393,
+      "score": 0.726
+    },
+    {
+      "word": "Zu-Spät-Kommen.\"",
+      "start": 8.413,
+      "end": 10.316,
+      "score": 0.933
+    },
+    {
+      "word": "Er",
+      "start": 10.376,
+      "end": 10.556,
+      "score": 0.73
+    },
+    {
+      "word": "geht.",
+      "start": 10.596,
+      "end": 11.418,
+      "score": 0.956
+    },
+    {
+      "word": "Das",
+      "start": 11.438,
+      "end": 11.598,
+      "score": 0.911
+    },
+    {
+      "word": "Gespräch",
+      "start": 11.638,
+      "end": 12.179,
+      "score": 0.925
+    },
+    {
+      "word": "ist",
+      "start": 12.219,
+      "end": 12.379,
+      "score": 0.996
+    },
+    {
+      "word": "vorbei.",
+      "start": 12.419,
+      "end": 12.659,
+      "score": 0.952
+    }
+  ]
+}

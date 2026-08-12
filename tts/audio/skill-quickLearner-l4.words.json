@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.701,
+      "end": 4.509,
+      "text": "Ich sehe den Abstand zwischen gestern und heute.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.701,
+          "end": 0.842,
+          "score": 0.595
+        },
+        {
+          "word": "sehe",
+          "start": 0.882,
+          "end": 1.182,
+          "score": 0.767
+        },
+        {
+          "word": "den",
+          "start": 1.222,
+          "end": 1.463,
+          "score": 0.896
+        },
+        {
+          "word": "Abstand",
+          "start": 1.483,
+          "end": 2.004,
+          "score": 0.935
+        },
+        {
+          "word": "zwischen",
+          "start": 2.024,
+          "end": 2.445,
+          "score": 0.807
+        },
+        {
+          "word": "gestern",
+          "start": 2.485,
+          "end": 2.886,
+          "score": 0.908
+        },
+        {
+          "word": "und",
+          "start": 2.926,
+          "end": 3.106,
+          "score": 0.945
+        },
+        {
+          "word": "heute.",
+          "start": 3.146,
+          "end": 4.509,
+          "score": 0.983
+        }
+      ]
+    },
+    {
+      "start": 4.529,
+      "end": 7.775,
+      "text": "Nicht dramatisch — aber stetig.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 4.529,
+          "end": 4.709,
+          "score": 0.883
+        },
+        {
+          "word": "dramatisch",
+          "start": 4.749,
+          "end": 5.31,
+          "score": 0.836
+        },
+        {
+          "word": "—",
+          "start": 5.972,
+          "end": 5.992,
+          "score": 0.766
+        },
+        {
+          "word": "aber",
+          "start": 6.032,
+          "end": 6.292,
+          "score": 0.932
+        },
+        {
+          "word": "stetig.",
+          "start": 6.332,
+          "end": 7.775,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 7.815,
+      "end": 9.939,
+      "text": "Jede Schicht bringt mehr als die letzte.",
+      "words": [
+        {
+          "word": "Jede",
+          "start": 7.815,
+          "end": 8.076,
+          "score": 0.991
+        },
+        {
+          "word": "Schicht",
+          "start": 8.096,
+          "end": 8.496,
+          "score": 0.835
+        },
+        {
+          "word": "bringt",
+          "start": 8.517,
+          "end": 8.937,
+          "score": 0.984
+        },
+        {
+          "word": "mehr",
+          "start": 8.977,
+          "end": 9.258,
+          "score": 0.945
+        },
+        {
+          "word": "als",
+          "start": 9.298,
+          "end": 9.498,
+          "score": 0.993
+        },
+        {
+          "word": "die",
+          "start": 9.538,
+          "end": 9.659,
+          "score": 0.837
+        },
+        {
+          "word": "letzte.",
+          "start": 9.699,
+          "end": 9.939,
+          "score": 0.854
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.701,
+      "end": 0.842,
+      "score": 0.595
+    },
+    {
+      "word": "sehe",
+      "start": 0.882,
+      "end": 1.182,
+      "score": 0.767
+    },
+    {
+      "word": "den",
+      "start": 1.222,
+      "end": 1.463,
+      "score": 0.896
+    },
+    {
+      "word": "Abstand",
+      "start": 1.483,
+      "end": 2.004,
+      "score": 0.935
+    },
+    {
+      "word": "zwischen",
+      "start": 2.024,
+      "end": 2.445,
+      "score": 0.807
+    },
+    {
+      "word": "gestern",
+      "start": 2.485,
+      "end": 2.886,
+      "score": 0.908
+    },
+    {
+      "word": "und",
+      "start": 2.926,
+      "end": 3.106,
+      "score": 0.945
+    },
+    {
+      "word": "heute.",
+      "start": 3.146,
+      "end": 4.509,
+      "score": 0.983
+    },
+    {
+      "word": "Nicht",
+      "start": 4.529,
+      "end": 4.709,
+      "score": 0.883
+    },
+    {
+      "word": "dramatisch",
+      "start": 4.749,
+      "end": 5.31,
+      "score": 0.836
+    },
+    {
+      "word": "—",
+      "start": 5.972,
+      "end": 5.992,
+      "score": 0.766
+    },
+    {
+      "word": "aber",
+      "start": 6.032,
+      "end": 6.292,
+      "score": 0.932
+    },
+    {
+      "word": "stetig.",
+      "start": 6.332,
+      "end": 7.775,
+      "score": 0.86
+    },
+    {
+      "word": "Jede",
+      "start": 7.815,
+      "end": 8.076,
+      "score": 0.991
+    },
+    {
+      "word": "Schicht",
+      "start": 8.096,
+      "end": 8.496,
+      "score": 0.835
+    },
+    {
+      "word": "bringt",
+      "start": 8.517,
+      "end": 8.937,
+      "score": 0.984
+    },
+    {
+      "word": "mehr",
+      "start": 8.977,
+      "end": 9.258,
+      "score": 0.945
+    },
+    {
+      "word": "als",
+      "start": 9.298,
+      "end": 9.498,
+      "score": 0.993
+    },
+    {
+      "word": "die",
+      "start": 9.538,
+      "end": 9.659,
+      "score": 0.837
+    },
+    {
+      "word": "letzte.",
+      "start": 9.699,
+      "end": 9.939,
+      "score": 0.854
+    }
+  ]
+}

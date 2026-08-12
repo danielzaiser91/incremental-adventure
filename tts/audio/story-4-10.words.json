@@ -1,0 +1,712 @@
+{
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 3.542,
+      "text": "Er hat es natürlich gewusst.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.46,
+          "end": 0.6,
+          "score": 0.702
+        },
+        {
+          "word": "hat",
+          "start": 0.64,
+          "end": 0.78,
+          "score": 0.8
+        },
+        {
+          "word": "es",
+          "start": 0.82,
+          "end": 1.0,
+          "score": 0.852
+        },
+        {
+          "word": "natürlich",
+          "start": 1.04,
+          "end": 1.641,
+          "score": 0.847
+        },
+        {
+          "word": "gewusst.",
+          "start": 1.681,
+          "end": 3.542,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 3.562,
+      "end": 6.243,
+      "text": "Das letzte Gespräch war kurz.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 3.562,
+          "end": 3.782,
+          "score": 0.948
+        },
+        {
+          "word": "letzte",
+          "start": 3.822,
+          "end": 4.122,
+          "score": 0.879
+        },
+        {
+          "word": "Gespräch",
+          "start": 4.162,
+          "end": 4.582,
+          "score": 0.854
+        },
+        {
+          "word": "war",
+          "start": 4.622,
+          "end": 4.822,
+          "score": 0.84
+        },
+        {
+          "word": "kurz.",
+          "start": 4.862,
+          "end": 6.243,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 6.263,
+      "end": 9.784,
+      "text": "Kürzer, als ich erwartet hatte.",
+      "words": [
+        {
+          "word": "Kürzer,",
+          "start": 6.263,
+          "end": 6.603,
+          "score": 0.838
+        },
+        {
+          "word": "als",
+          "start": 6.643,
+          "end": 6.783,
+          "score": 0.733
+        },
+        {
+          "word": "ich",
+          "start": 6.823,
+          "end": 6.943,
+          "score": 0.948
+        },
+        {
+          "word": "erwartet",
+          "start": 6.983,
+          "end": 7.343,
+          "score": 0.959
+        },
+        {
+          "word": "hatte.",
+          "start": 7.383,
+          "end": 9.784,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 9.804,
+      "end": 13.166,
+      "text": "Kein Zögern, kein Feilschen.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 9.804,
+          "end": 10.084,
+          "score": 0.771
+        },
+        {
+          "word": "Zögern,",
+          "start": 10.124,
+          "end": 11.005,
+          "score": 0.907
+        },
+        {
+          "word": "kein",
+          "start": 11.025,
+          "end": 11.285,
+          "score": 0.893
+        },
+        {
+          "word": "Feilschen.",
+          "start": 11.325,
+          "end": 13.166,
+          "score": 0.698
+        }
+      ]
+    },
+    {
+      "start": 13.226,
+      "end": 19.148,
+      "text": "Er hat die Lage erkannt — und ist gegangen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 13.226,
+          "end": 13.326,
+          "score": 0.687
+        },
+        {
+          "word": "hat",
+          "start": 13.366,
+          "end": 13.526,
+          "score": 0.967
+        },
+        {
+          "word": "die",
+          "start": 13.566,
+          "end": 13.646,
+          "score": 0.831
+        },
+        {
+          "word": "Lage",
+          "start": 13.686,
+          "end": 13.946,
+          "score": 0.877
+        },
+        {
+          "word": "erkannt",
+          "start": 13.986,
+          "end": 14.366,
+          "score": 0.964
+        },
+        {
+          "word": "—",
+          "start": 15.387,
+          "end": 15.407,
+          "score": 0.991
+        },
+        {
+          "word": "und",
+          "start": 15.427,
+          "end": 15.587,
+          "score": 0.965
+        },
+        {
+          "word": "ist",
+          "start": 15.627,
+          "end": 15.847,
+          "score": 0.938
+        },
+        {
+          "word": "gegangen.",
+          "start": 15.867,
+          "end": 19.148,
+          "score": 0.921
+        }
+      ]
+    },
+    {
+      "start": 19.188,
+      "end": 22.75,
+      "text": "Velmark gehört wieder sich selbst.",
+      "words": [
+        {
+          "word": "Velmark",
+          "start": 19.188,
+          "end": 19.909,
+          "score": 0.773
+        },
+        {
+          "word": "gehört",
+          "start": 19.949,
+          "end": 20.269,
+          "score": 0.882
+        },
+        {
+          "word": "wieder",
+          "start": 20.309,
+          "end": 20.529,
+          "score": 0.886
+        },
+        {
+          "word": "sich",
+          "start": 20.549,
+          "end": 20.729,
+          "score": 0.923
+        },
+        {
+          "word": "selbst.",
+          "start": 20.769,
+          "end": 22.75,
+          "score": 0.84
+        }
+      ]
+    },
+    {
+      "start": 22.79,
+      "end": 28.172,
+      "text": "Das Netz ist zerschnitten.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 22.79,
+          "end": 23.01,
+          "score": 0.988
+        },
+        {
+          "word": "Netz",
+          "start": 23.05,
+          "end": 23.27,
+          "score": 0.98
+        },
+        {
+          "word": "ist",
+          "start": 23.31,
+          "end": 23.51,
+          "score": 0.811
+        },
+        {
+          "word": "zerschnitten.",
+          "start": 23.53,
+          "end": 28.172,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 28.212,
+      "end": 37.536,
+      "text": "Treutheim, Lethkar, Velmark.",
+      "words": [
+        {
+          "word": "Treutheim,",
+          "start": 28.212,
+          "end": 30.053,
+          "score": 0.882
+        },
+        {
+          "word": "Lethkar,",
+          "start": 30.133,
+          "end": 32.134,
+          "score": 0.774
+        },
+        {
+          "word": "Velmark.",
+          "start": 32.154,
+          "end": 37.536,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 37.576,
+      "end": 45.9,
+      "text": "Ich bin nicht mehr der, der einst an jenem Stadttor stand.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 37.576,
+          "end": 37.716,
+          "score": 0.741
+        },
+        {
+          "word": "bin",
+          "start": 37.736,
+          "end": 37.896,
+          "score": 0.833
+        },
+        {
+          "word": "nicht",
+          "start": 37.916,
+          "end": 38.096,
+          "score": 0.858
+        },
+        {
+          "word": "mehr",
+          "start": 38.116,
+          "end": 38.296,
+          "score": 0.957
+        },
+        {
+          "word": "der,",
+          "start": 38.316,
+          "end": 38.557,
+          "score": 0.893
+        },
+        {
+          "word": "der",
+          "start": 38.577,
+          "end": 38.757,
+          "score": 0.916
+        },
+        {
+          "word": "einst",
+          "start": 38.797,
+          "end": 39.057,
+          "score": 0.905
+        },
+        {
+          "word": "an",
+          "start": 39.077,
+          "end": 39.217,
+          "score": 0.9
+        },
+        {
+          "word": "jenem",
+          "start": 39.237,
+          "end": 39.477,
+          "score": 0.955
+        },
+        {
+          "word": "Stadttor",
+          "start": 39.537,
+          "end": 39.937,
+          "score": 0.831
+        },
+        {
+          "word": "stand.",
+          "start": 39.977,
+          "end": 45.9,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 45.94,
+      "end": 46.22,
+      "text": "Gut so.",
+      "words": [
+        {
+          "word": "Gut",
+          "start": 45.94,
+          "end": 46.12,
+          "score": 0.942
+        },
+        {
+          "word": "so.",
+          "start": 46.16,
+          "end": 46.22,
+          "score": 0.337
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.46,
+      "end": 0.6,
+      "score": 0.702
+    },
+    {
+      "word": "hat",
+      "start": 0.64,
+      "end": 0.78,
+      "score": 0.8
+    },
+    {
+      "word": "es",
+      "start": 0.82,
+      "end": 1.0,
+      "score": 0.852
+    },
+    {
+      "word": "natürlich",
+      "start": 1.04,
+      "end": 1.641,
+      "score": 0.847
+    },
+    {
+      "word": "gewusst.",
+      "start": 1.681,
+      "end": 3.542,
+      "score": 0.931
+    },
+    {
+      "word": "Das",
+      "start": 3.562,
+      "end": 3.782,
+      "score": 0.948
+    },
+    {
+      "word": "letzte",
+      "start": 3.822,
+      "end": 4.122,
+      "score": 0.879
+    },
+    {
+      "word": "Gespräch",
+      "start": 4.162,
+      "end": 4.582,
+      "score": 0.854
+    },
+    {
+      "word": "war",
+      "start": 4.622,
+      "end": 4.822,
+      "score": 0.84
+    },
+    {
+      "word": "kurz.",
+      "start": 4.862,
+      "end": 6.243,
+      "score": 0.944
+    },
+    {
+      "word": "Kürzer,",
+      "start": 6.263,
+      "end": 6.603,
+      "score": 0.838
+    },
+    {
+      "word": "als",
+      "start": 6.643,
+      "end": 6.783,
+      "score": 0.733
+    },
+    {
+      "word": "ich",
+      "start": 6.823,
+      "end": 6.943,
+      "score": 0.948
+    },
+    {
+      "word": "erwartet",
+      "start": 6.983,
+      "end": 7.343,
+      "score": 0.959
+    },
+    {
+      "word": "hatte.",
+      "start": 7.383,
+      "end": 9.784,
+      "score": 0.952
+    },
+    {
+      "word": "Kein",
+      "start": 9.804,
+      "end": 10.084,
+      "score": 0.771
+    },
+    {
+      "word": "Zögern,",
+      "start": 10.124,
+      "end": 11.005,
+      "score": 0.907
+    },
+    {
+      "word": "kein",
+      "start": 11.025,
+      "end": 11.285,
+      "score": 0.893
+    },
+    {
+      "word": "Feilschen.",
+      "start": 11.325,
+      "end": 13.166,
+      "score": 0.698
+    },
+    {
+      "word": "Er",
+      "start": 13.226,
+      "end": 13.326,
+      "score": 0.687
+    },
+    {
+      "word": "hat",
+      "start": 13.366,
+      "end": 13.526,
+      "score": 0.967
+    },
+    {
+      "word": "die",
+      "start": 13.566,
+      "end": 13.646,
+      "score": 0.831
+    },
+    {
+      "word": "Lage",
+      "start": 13.686,
+      "end": 13.946,
+      "score": 0.877
+    },
+    {
+      "word": "erkannt",
+      "start": 13.986,
+      "end": 14.366,
+      "score": 0.964
+    },
+    {
+      "word": "—",
+      "start": 15.387,
+      "end": 15.407,
+      "score": 0.991
+    },
+    {
+      "word": "und",
+      "start": 15.427,
+      "end": 15.587,
+      "score": 0.965
+    },
+    {
+      "word": "ist",
+      "start": 15.627,
+      "end": 15.847,
+      "score": 0.938
+    },
+    {
+      "word": "gegangen.",
+      "start": 15.867,
+      "end": 19.148,
+      "score": 0.921
+    },
+    {
+      "word": "Velmark",
+      "start": 19.188,
+      "end": 19.909,
+      "score": 0.773
+    },
+    {
+      "word": "gehört",
+      "start": 19.949,
+      "end": 20.269,
+      "score": 0.882
+    },
+    {
+      "word": "wieder",
+      "start": 20.309,
+      "end": 20.529,
+      "score": 0.886
+    },
+    {
+      "word": "sich",
+      "start": 20.549,
+      "end": 20.729,
+      "score": 0.923
+    },
+    {
+      "word": "selbst.",
+      "start": 20.769,
+      "end": 22.75,
+      "score": 0.84
+    },
+    {
+      "word": "Das",
+      "start": 22.79,
+      "end": 23.01,
+      "score": 0.988
+    },
+    {
+      "word": "Netz",
+      "start": 23.05,
+      "end": 23.27,
+      "score": 0.98
+    },
+    {
+      "word": "ist",
+      "start": 23.31,
+      "end": 23.51,
+      "score": 0.811
+    },
+    {
+      "word": "zerschnitten.",
+      "start": 23.53,
+      "end": 28.172,
+      "score": 0.884
+    },
+    {
+      "word": "Treutheim,",
+      "start": 28.212,
+      "end": 30.053,
+      "score": 0.882
+    },
+    {
+      "word": "Lethkar,",
+      "start": 30.133,
+      "end": 32.134,
+      "score": 0.774
+    },
+    {
+      "word": "Velmark.",
+      "start": 32.154,
+      "end": 37.536,
+      "score": 0.89
+    },
+    {
+      "word": "Ich",
+      "start": 37.576,
+      "end": 37.716,
+      "score": 0.741
+    },
+    {
+      "word": "bin",
+      "start": 37.736,
+      "end": 37.896,
+      "score": 0.833
+    },
+    {
+      "word": "nicht",
+      "start": 37.916,
+      "end": 38.096,
+      "score": 0.858
+    },
+    {
+      "word": "mehr",
+      "start": 38.116,
+      "end": 38.296,
+      "score": 0.957
+    },
+    {
+      "word": "der,",
+      "start": 38.316,
+      "end": 38.557,
+      "score": 0.893
+    },
+    {
+      "word": "der",
+      "start": 38.577,
+      "end": 38.757,
+      "score": 0.916
+    },
+    {
+      "word": "einst",
+      "start": 38.797,
+      "end": 39.057,
+      "score": 0.905
+    },
+    {
+      "word": "an",
+      "start": 39.077,
+      "end": 39.217,
+      "score": 0.9
+    },
+    {
+      "word": "jenem",
+      "start": 39.237,
+      "end": 39.477,
+      "score": 0.955
+    },
+    {
+      "word": "Stadttor",
+      "start": 39.537,
+      "end": 39.937,
+      "score": 0.831
+    },
+    {
+      "word": "stand.",
+      "start": 39.977,
+      "end": 45.9,
+      "score": 0.944
+    },
+    {
+      "word": "Gut",
+      "start": 45.94,
+      "end": 46.12,
+      "score": 0.942
+    },
+    {
+      "word": "so.",
+      "start": 46.16,
+      "end": 46.22,
+      "score": 0.337
+    }
+  ]
+}

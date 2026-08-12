@@ -1,0 +1,389 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 4.205,
+      "text": "Er hebt beide Hände, gespielt unschuldig.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.461,
+          "end": 0.541,
+          "score": 0.823
+        },
+        {
+          "word": "hebt",
+          "start": 0.581,
+          "end": 0.901,
+          "score": 0.851
+        },
+        {
+          "word": "beide",
+          "start": 0.941,
+          "end": 1.322,
+          "score": 0.914
+        },
+        {
+          "word": "Hände,",
+          "start": 1.342,
+          "end": 2.123,
+          "score": 0.827
+        },
+        {
+          "word": "gespielt",
+          "start": 2.143,
+          "end": 2.743,
+          "score": 0.852
+        },
+        {
+          "word": "unschuldig.",
+          "start": 2.784,
+          "end": 4.205,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 4.225,
+      "end": 5.687,
+      "text": "\"Beobachten?",
+      "words": [
+        {
+          "word": "\"Beobachten?",
+          "start": 4.225,
+          "end": 5.687,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 5.727,
+      "end": 7.49,
+      "text": "Ich sitze hier und trinke.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 5.727,
+          "end": 5.847,
+          "score": 0.781
+        },
+        {
+          "word": "sitze",
+          "start": 5.887,
+          "end": 6.188,
+          "score": 0.942
+        },
+        {
+          "word": "hier",
+          "start": 6.228,
+          "end": 6.388,
+          "score": 0.757
+        },
+        {
+          "word": "und",
+          "start": 6.428,
+          "end": 6.608,
+          "score": 0.881
+        },
+        {
+          "word": "trinke.",
+          "start": 6.648,
+          "end": 7.49,
+          "score": 0.919
+        }
+      ]
+    },
+    {
+      "start": 7.53,
+      "end": 10.593,
+      "text": "Weiter nichts.\"",
+      "words": [
+        {
+          "word": "Weiter",
+          "start": 7.53,
+          "end": 7.87,
+          "score": 0.962
+        },
+        {
+          "word": "nichts.\"",
+          "start": 7.91,
+          "end": 10.593,
+          "score": 0.888
+        }
+      ]
+    },
+    {
+      "start": 10.633,
+      "end": 15.339,
+      "text": "Aber sein Blick sagt etwas anderes — und er senkt ihn keine Sekunde zu früh.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 10.633,
+          "end": 10.894,
+          "score": 0.938
+        },
+        {
+          "word": "sein",
+          "start": 10.914,
+          "end": 11.114,
+          "score": 0.579
+        },
+        {
+          "word": "Blick",
+          "start": 11.154,
+          "end": 11.535,
+          "score": 0.904
+        },
+        {
+          "word": "sagt",
+          "start": 11.575,
+          "end": 11.815,
+          "score": 0.944
+        },
+        {
+          "word": "etwas",
+          "start": 11.855,
+          "end": 12.155,
+          "score": 0.908
+        },
+        {
+          "word": "anderes",
+          "start": 12.175,
+          "end": 12.536,
+          "score": 0.864
+        },
+        {
+          "word": "—",
+          "start": 13.177,
+          "end": 13.197,
+          "score": 0.933
+        },
+        {
+          "word": "und",
+          "start": 13.217,
+          "end": 13.337,
+          "score": 0.793
+        },
+        {
+          "word": "er",
+          "start": 13.397,
+          "end": 13.517,
+          "score": 0.961
+        },
+        {
+          "word": "senkt",
+          "start": 13.557,
+          "end": 13.818,
+          "score": 0.886
+        },
+        {
+          "word": "ihn",
+          "start": 13.838,
+          "end": 14.118,
+          "score": 0.59
+        },
+        {
+          "word": "keine",
+          "start": 14.158,
+          "end": 14.438,
+          "score": 0.867
+        },
+        {
+          "word": "Sekunde",
+          "start": 14.458,
+          "end": 14.959,
+          "score": 0.955
+        },
+        {
+          "word": "zu",
+          "start": 14.979,
+          "end": 15.099,
+          "score": 0.998
+        },
+        {
+          "word": "früh.",
+          "start": 15.159,
+          "end": 15.339,
+          "score": 0.841
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.461,
+      "end": 0.541,
+      "score": 0.823
+    },
+    {
+      "word": "hebt",
+      "start": 0.581,
+      "end": 0.901,
+      "score": 0.851
+    },
+    {
+      "word": "beide",
+      "start": 0.941,
+      "end": 1.322,
+      "score": 0.914
+    },
+    {
+      "word": "Hände,",
+      "start": 1.342,
+      "end": 2.123,
+      "score": 0.827
+    },
+    {
+      "word": "gespielt",
+      "start": 2.143,
+      "end": 2.743,
+      "score": 0.852
+    },
+    {
+      "word": "unschuldig.",
+      "start": 2.784,
+      "end": 4.205,
+      "score": 0.932
+    },
+    {
+      "word": "\"Beobachten?",
+      "start": 4.225,
+      "end": 5.687,
+      "score": 0.91
+    },
+    {
+      "word": "Ich",
+      "start": 5.727,
+      "end": 5.847,
+      "score": 0.781
+    },
+    {
+      "word": "sitze",
+      "start": 5.887,
+      "end": 6.188,
+      "score": 0.942
+    },
+    {
+      "word": "hier",
+      "start": 6.228,
+      "end": 6.388,
+      "score": 0.757
+    },
+    {
+      "word": "und",
+      "start": 6.428,
+      "end": 6.608,
+      "score": 0.881
+    },
+    {
+      "word": "trinke.",
+      "start": 6.648,
+      "end": 7.49,
+      "score": 0.919
+    },
+    {
+      "word": "Weiter",
+      "start": 7.53,
+      "end": 7.87,
+      "score": 0.962
+    },
+    {
+      "word": "nichts.\"",
+      "start": 7.91,
+      "end": 10.593,
+      "score": 0.888
+    },
+    {
+      "word": "Aber",
+      "start": 10.633,
+      "end": 10.894,
+      "score": 0.938
+    },
+    {
+      "word": "sein",
+      "start": 10.914,
+      "end": 11.114,
+      "score": 0.579
+    },
+    {
+      "word": "Blick",
+      "start": 11.154,
+      "end": 11.535,
+      "score": 0.904
+    },
+    {
+      "word": "sagt",
+      "start": 11.575,
+      "end": 11.815,
+      "score": 0.944
+    },
+    {
+      "word": "etwas",
+      "start": 11.855,
+      "end": 12.155,
+      "score": 0.908
+    },
+    {
+      "word": "anderes",
+      "start": 12.175,
+      "end": 12.536,
+      "score": 0.864
+    },
+    {
+      "word": "—",
+      "start": 13.177,
+      "end": 13.197,
+      "score": 0.933
+    },
+    {
+      "word": "und",
+      "start": 13.217,
+      "end": 13.337,
+      "score": 0.793
+    },
+    {
+      "word": "er",
+      "start": 13.397,
+      "end": 13.517,
+      "score": 0.961
+    },
+    {
+      "word": "senkt",
+      "start": 13.557,
+      "end": 13.818,
+      "score": 0.886
+    },
+    {
+      "word": "ihn",
+      "start": 13.838,
+      "end": 14.118,
+      "score": 0.59
+    },
+    {
+      "word": "keine",
+      "start": 14.158,
+      "end": 14.438,
+      "score": 0.867
+    },
+    {
+      "word": "Sekunde",
+      "start": 14.458,
+      "end": 14.959,
+      "score": 0.955
+    },
+    {
+      "word": "zu",
+      "start": 14.979,
+      "end": 15.099,
+      "score": 0.998
+    },
+    {
+      "word": "früh.",
+      "start": 15.159,
+      "end": 15.339,
+      "score": 0.841
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 2.503,
+      "text": "Der leere Stuhl.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.481,
+          "end": 0.701,
+          "score": 0.76
+        },
+        {
+          "word": "leere",
+          "start": 0.721,
+          "end": 1.141,
+          "score": 0.843
+        },
+        {
+          "word": "Stuhl.",
+          "start": 1.201,
+          "end": 2.503,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 2.543,
+      "end": 4.745,
+      "text": "Ich denke nach.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 2.543,
+          "end": 2.723,
+          "score": 0.893
+        },
+        {
+          "word": "denke",
+          "start": 2.763,
+          "end": 3.163,
+          "score": 0.968
+        },
+        {
+          "word": "nach.",
+          "start": 3.223,
+          "end": 4.745,
+          "score": 0.907
+        }
+      ]
+    },
+    {
+      "start": 4.805,
+      "end": 11.512,
+      "text": "Oswin hat ihn einmal erwähnt — eine \"Investition in Informationen\".",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 4.805,
+          "end": 5.226,
+          "score": 0.842
+        },
+        {
+          "word": "hat",
+          "start": 5.246,
+          "end": 5.526,
+          "score": 0.833
+        },
+        {
+          "word": "ihn",
+          "start": 5.566,
+          "end": 5.786,
+          "score": 0.657
+        },
+        {
+          "word": "einmal",
+          "start": 5.826,
+          "end": 6.247,
+          "score": 0.806
+        },
+        {
+          "word": "erwähnt",
+          "start": 6.267,
+          "end": 6.627,
+          "score": 0.822
+        },
+        {
+          "word": "—",
+          "start": 7.248,
+          "end": 7.268,
+          "score": 0.594
+        },
+        {
+          "word": "eine",
+          "start": 7.308,
+          "end": 7.889,
+          "score": 0.892
+        },
+        {
+          "word": "\"Investition",
+          "start": 7.949,
+          "end": 9.13,
+          "score": 0.901
+        },
+        {
+          "word": "in",
+          "start": 9.17,
+          "end": 9.37,
+          "score": 0.996
+        },
+        {
+          "word": "Informationen\".",
+          "start": 9.43,
+          "end": 11.512,
+          "score": 0.91
+        }
+      ]
+    },
+    {
+      "start": 11.553,
+      "end": 14.936,
+      "text": "Mira war nervös, als ich von ihm sprach.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 11.553,
+          "end": 11.933,
+          "score": 0.836
+        },
+        {
+          "word": "war",
+          "start": 11.973,
+          "end": 12.053,
+          "score": 0.717
+        },
+        {
+          "word": "nervös,",
+          "start": 12.093,
+          "end": 12.694,
+          "score": 0.778
+        },
+        {
+          "word": "als",
+          "start": 12.714,
+          "end": 12.854,
+          "score": 0.873
+        },
+        {
+          "word": "ich",
+          "start": 12.894,
+          "end": 13.014,
+          "score": 0.937
+        },
+        {
+          "word": "von",
+          "start": 13.054,
+          "end": 13.194,
+          "score": 0.984
+        },
+        {
+          "word": "ihm",
+          "start": 13.234,
+          "end": 13.334,
+          "score": 0.577
+        },
+        {
+          "word": "sprach.",
+          "start": 13.375,
+          "end": 14.936,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 14.956,
+      "end": 16.918,
+      "text": "Jemand hier kennt ihn.",
+      "words": [
+        {
+          "word": "Jemand",
+          "start": 14.956,
+          "end": 15.437,
+          "score": 0.925
+        },
+        {
+          "word": "hier",
+          "start": 15.457,
+          "end": 15.697,
+          "score": 0.819
+        },
+        {
+          "word": "kennt",
+          "start": 15.737,
+          "end": 16.097,
+          "score": 0.936
+        },
+        {
+          "word": "ihn.",
+          "start": 16.158,
+          "end": 16.918,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 16.958,
+      "end": 17.919,
+      "text": "Ich muss nur fragen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 16.958,
+          "end": 17.099,
+          "score": 0.772
+        },
+        {
+          "word": "muss",
+          "start": 17.119,
+          "end": 17.339,
+          "score": 0.865
+        },
+        {
+          "word": "nur",
+          "start": 17.379,
+          "end": 17.599,
+          "score": 0.941
+        },
+        {
+          "word": "fragen.",
+          "start": 17.639,
+          "end": 17.919,
+          "score": 0.903
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.481,
+      "end": 0.701,
+      "score": 0.76
+    },
+    {
+      "word": "leere",
+      "start": 0.721,
+      "end": 1.141,
+      "score": 0.843
+    },
+    {
+      "word": "Stuhl.",
+      "start": 1.201,
+      "end": 2.503,
+      "score": 0.859
+    },
+    {
+      "word": "Ich",
+      "start": 2.543,
+      "end": 2.723,
+      "score": 0.893
+    },
+    {
+      "word": "denke",
+      "start": 2.763,
+      "end": 3.163,
+      "score": 0.968
+    },
+    {
+      "word": "nach.",
+      "start": 3.223,
+      "end": 4.745,
+      "score": 0.907
+    },
+    {
+      "word": "Oswin",
+      "start": 4.805,
+      "end": 5.226,
+      "score": 0.842
+    },
+    {
+      "word": "hat",
+      "start": 5.246,
+      "end": 5.526,
+      "score": 0.833
+    },
+    {
+      "word": "ihn",
+      "start": 5.566,
+      "end": 5.786,
+      "score": 0.657
+    },
+    {
+      "word": "einmal",
+      "start": 5.826,
+      "end": 6.247,
+      "score": 0.806
+    },
+    {
+      "word": "erwähnt",
+      "start": 6.267,
+      "end": 6.627,
+      "score": 0.822
+    },
+    {
+      "word": "—",
+      "start": 7.248,
+      "end": 7.268,
+      "score": 0.594
+    },
+    {
+      "word": "eine",
+      "start": 7.308,
+      "end": 7.889,
+      "score": 0.892
+    },
+    {
+      "word": "\"Investition",
+      "start": 7.949,
+      "end": 9.13,
+      "score": 0.901
+    },
+    {
+      "word": "in",
+      "start": 9.17,
+      "end": 9.37,
+      "score": 0.996
+    },
+    {
+      "word": "Informationen\".",
+      "start": 9.43,
+      "end": 11.512,
+      "score": 0.91
+    },
+    {
+      "word": "Mira",
+      "start": 11.553,
+      "end": 11.933,
+      "score": 0.836
+    },
+    {
+      "word": "war",
+      "start": 11.973,
+      "end": 12.053,
+      "score": 0.717
+    },
+    {
+      "word": "nervös,",
+      "start": 12.093,
+      "end": 12.694,
+      "score": 0.778
+    },
+    {
+      "word": "als",
+      "start": 12.714,
+      "end": 12.854,
+      "score": 0.873
+    },
+    {
+      "word": "ich",
+      "start": 12.894,
+      "end": 13.014,
+      "score": 0.937
+    },
+    {
+      "word": "von",
+      "start": 13.054,
+      "end": 13.194,
+      "score": 0.984
+    },
+    {
+      "word": "ihm",
+      "start": 13.234,
+      "end": 13.334,
+      "score": 0.577
+    },
+    {
+      "word": "sprach.",
+      "start": 13.375,
+      "end": 14.936,
+      "score": 0.947
+    },
+    {
+      "word": "Jemand",
+      "start": 14.956,
+      "end": 15.437,
+      "score": 0.925
+    },
+    {
+      "word": "hier",
+      "start": 15.457,
+      "end": 15.697,
+      "score": 0.819
+    },
+    {
+      "word": "kennt",
+      "start": 15.737,
+      "end": 16.097,
+      "score": 0.936
+    },
+    {
+      "word": "ihn.",
+      "start": 16.158,
+      "end": 16.918,
+      "score": 0.89
+    },
+    {
+      "word": "Ich",
+      "start": 16.958,
+      "end": 17.099,
+      "score": 0.772
+    },
+    {
+      "word": "muss",
+      "start": 17.119,
+      "end": 17.339,
+      "score": 0.865
+    },
+    {
+      "word": "nur",
+      "start": 17.379,
+      "end": 17.599,
+      "score": 0.941
+    },
+    {
+      "word": "fragen.",
+      "start": 17.639,
+      "end": 17.919,
+      "score": 0.903
+    }
+  ]
+}
