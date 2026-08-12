@@ -12,7 +12,10 @@ Alle Versionen, neueste zuerst. Patch-Versionen (Bugfix-only) werden als Unterab
 - Nachtwache-Erholungs-Malus (−40 %) wird durch Schlaf-Boni abgeschwächt; Minimum 10 % Malus bleibt
 - Körpergedächtnis-Durchbruch in Kap. 3: Feldarbeit-Stufe 5 über narrative Sequenz erreichbar
 
-**Bugfixes & Balance (v0.22.1–v0.22.9)**
+**Bugfixes & Balance (v0.22.1–v0.22.10)**
+
+### v0.22.10
+- Der letzte Button einer Dialog-Serie heißt jetzt „Schließen" statt „Weiter" (Story-Einträge, Monologe, Hinweis-Dialoge) — er kündigt an, dass der Klick den Dialog beendet
 
 ### v0.22.9
 - Yevas Handelsnetz-Quest startete nicht: Investitionsangebot nach Gilden-Quest nicht erreichbar, Wartetimer nie gestartet — behoben

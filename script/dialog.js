@@ -131,7 +131,7 @@ function showDialog({ title, text, html, buttons, boxClass, audioSrc, audioPageS
   }
 
   actionsEl.innerHTML = '';
-  (buttons && buttons.length ? buttons : [{ label: 'Weiter', onClick: closeDialog }])
+  (buttons && buttons.length ? buttons : [{ label: 'Schließen', onClick: closeDialog }])
     .forEach((btn, i) => {
       const b = document.createElement('button');
       b.className = 'action-btn dialog-btn' + (btn.disabled ? ' btn-disabled' : '');
@@ -242,7 +242,16 @@ function updateDialogAudio(audioSrc, pageStart, pageEnd) {
   // Metadaten sind GARANTIERT vorhanden, Seek passiert immer sofort/synchron.
   const applySeekNow = () => {
     if (typeof pageStart !== 'number') return;
-    try { player.currentTime = pageStart; } catch (_) {}
+    const seekable = [];
+    for (let i = 0; i < player.seekable.length; i++) seekable.push([player.seekable.start(i), player.seekable.end(i)]);
+    console.log('[TTS-DEBUG] applySeekNow: pageStart=', pageStart, 'currentTime VOR=', player.currentTime, 'readyState=', player.readyState, 'duration=', player.duration, 'seekable=', JSON.stringify(seekable), 'paused=', player.paused);
+    const onSeeking = () => console.log('[TTS-DEBUG] seeking-Event, currentTime=', player.currentTime);
+    const onSeeked  = () => { console.log('[TTS-DEBUG] seeked-Event, currentTime=', player.currentTime); player.removeEventListener('seeking', onSeeking); player.removeEventListener('seeked', onSeeked); };
+    player.addEventListener('seeking', onSeeking);
+    player.addEventListener('seeked', onSeeked);
+    try { player.currentTime = pageStart; } catch (e) { console.log('[TTS-DEBUG] Seek warf Fehler:', e); }
+    console.log('[TTS-DEBUG] applySeekNow: currentTime SOFORT NACH=', player.currentTime);
+    setTimeout(() => console.log('[TTS-DEBUG] currentTime NACH 300ms=', player.currentTime, 'paused=', player.paused), 300);
     scheduleEndPause();
   };
   // Fall B — Datei wird gerade FRISCH geladen (erster Klick/Autoplay auf
@@ -293,10 +302,13 @@ function updateDialogAudio(audioSrc, pageStart, pageEnd) {
   // JEDEN Seitenwechsel (nicht nur den allerersten Klick) — sonst bräuchte
   // es nach jeder automatisch pausierten Seite wieder einen manuellen Klick,
   // was dem Sinn von "automatisch" widerspricht (User-Feedback 19.07.2026).
+  console.log('[TTS-DEBUG] updateDialogAudio: audioSrc=', audioSrc, 'isNewSrc=', isNewSrc, 'pageStart=', pageStart, 'pageEnd=', pageEnd, 'datasetSrc(vorher)=', player.dataset.src);
+
   if (!isNewSrc) {
     // Gleicher Eintrag, neue Dialogseite: Wiedergabe auf den Anfang des jetzt
     // gezeigten Textabschnitts umsetzen — "splittet" dieselbe Datei
     // abschnittsweise, ohne pro Seite eine eigene Audiodatei zu brauchen.
+    console.log('[TTS-DEBUG] Zweig !isNewSrc: applySeekNow() wird aufgerufen');
     applySeekNow();
     if (audioSettings.narrationAutoplay) play();
   }
@@ -308,6 +320,7 @@ function updateDialogAudio(audioSrc, pageStart, pageEnd) {
   };
 
   if (isNewSrc && audioSettings.narrationAutoplay) {
+    console.log('[TTS-DEBUG] Zweig isNewSrc: load()+play()+seekWhenFreshlyLoaded()');
     load();
     player.play().catch(() => {});
     seekWhenFreshlyLoaded();
@@ -400,7 +413,8 @@ function highlightWordAt(t) {
  */
 function showMonologue(title, pages, onClose) {
   showPaginatedDialog(title, splitLongDialogPages(pages), [
-    { label: 'Weiter', onClick: () => closeDialog(onClose) }
+    // Schließt den Monolog — heißt deshalb nicht "Weiter" (Feedback 20.07.2026).
+    { label: 'Schließen', onClick: () => closeDialog(onClose) }
   ]);
 }
 

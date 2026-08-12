@@ -594,7 +594,9 @@ function showStoryEntryDialog(entry, onClose) {
       audioPageStart: pageStart,
       audioPageEnd: pageEnd,
       buttons: [{
-        label: 'Weiter',
+        // Letzte Seite schließt statt zu blättern — das Label muss das
+        // ankündigen (User-Feedback 20.07.2026: "Weiter", das schließt, irritiert).
+        label: isLast ? 'Schließen' : 'Weiter',
         onClick: () => {
           if (isLast) { if (armed) closeDialog(onClose); return; }
           i += 1;
