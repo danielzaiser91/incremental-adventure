@@ -15,7 +15,7 @@ test/walkthrough_k*.md
 # Wort-Zeitstempel (*.words.json, siehe tts/align/) sind winzige Textdateien
 # und werden bewusst NICHT ignoriert — die braucht das Wort-Highlighting auch
 # im deployten Spiel, unabhängig vom noch fehlenden Audio-Rollout.
-tts/output/*.wav
+tts/output/
 
 # TTS-Forced-Alignment: lokale Python-venv + Modell-Cache (nicht Teil des Repos)
 tts/align/.venv/
