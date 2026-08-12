@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-09T00:09:45.288Z",
+  "generated": "2026-08-12T11:16:53.955Z",
   "units": [
     {
       "id": "story-1-1",
@@ -1115,7 +1115,7 @@
       "title": "Greta, die Krämerin — turnIn",
       "voice": "Despina",
       "style": "Du sprichst eine feste Rolle: eine geschäftstüchtige, freundliche Krämerin; flüssig und zugewandt im Ton, mit hörbarer Begeisterung, sobald sie eine neue Idee hat. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
-      "text": "Greta strahlt, als ich ihr die Rohstoffe zeige. \"Genau richtig! Damit kann ich arbeiten.\"\n\n\"Ich verkaufe das an ein paar Handwerker, die mir dafür fertige Ware machen — und die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei.\""
+      "text": "Greta strahlt, als ich ihr die Rohstoffe zeige. \"Genau richtig! Damit kann ich arbeiten.\"\n\n\"Ich verkaufe das an ein paar Handwerker, die mir daraus fertige Ware machen. Die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei.\""
     },
     {
       "id": "npc-greta-idle",

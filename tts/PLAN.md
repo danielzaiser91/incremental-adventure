@@ -96,11 +96,16 @@ mit dem neuen Modell.
   - [x] Free-Tier-Limit für `gemini-3.1-flash-tts-preview` verifiziert:
         ebenfalls **10 Requests/Tag** (identische Quota-ID/-Wert wie beim
         alten Modell) — Batch-Default auf 10 zurückgesetzt
-  - [ ] WAV→Opus-Konvertierung ergänzen — *ffmpeg ist seit spätestens
-        09.08.2026 installiert (8.1.2, `Gyan.FFmpeg` via winget, im PATH);
-        es fehlt nur noch der Konvertierungsschritt im Batch*
-  - [ ] Einbau ins Spiel konzipieren (Abspiel-UI, **immer stumm starten** —
-        Entstummen nur als bewusste Spieler-Aktion, niemals Autoplay mit Ton)
+  - [x] WAV→Opus-Konvertierung — **umgesetzt 12.08.2026:** alle 163 Bestands-
+        WAVs nach `output/opus/` konvertiert (14 MB gesamt, 32 kbps voip);
+        `generate-batch.js` erledigt Opus + Alignment seit heute automatisch
+        pro neuer Einheit (`postProcess()`). ffmpeg ist in
+        `ai_agent_tools.md` dokumentiert.
+  - [ ] Einbau ins Spiel konzipieren (Abspiel-UI; das Ton-Verhalten im
+        fertigen Spiel ist eine offene Design-Entscheidung — die frühere
+        Auflage „immer stumm starten" stammte aus der alten Sound-Regel, die
+        seit der Präzisierung vom 31.07. nur noch den Claude-internen Preview
+        betrifft, nicht das Produkt)
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
@@ -120,10 +125,14 @@ mit dem neuen Modell.
       (Wirt/Korbin 7/7, Straßenkehrer 1/1, Vorarbeiter 3/3, Torben 3/3 und
       Kommandant 7/7 fertig, Greta 2/3).
       `ACTIVE_NPC_PHASES` steht auf `{3, 4}`. Offen in „failed" (Stand
-      10.08.2026): nur noch `npc-greta-turnIn` (6× HTTP 400) —
-      `npc-kommandant-offer` lief am 10.08. unverändert durch, nach 4 vorherigen
-      400ern (erneuter Beleg für die Transienz). Wird beim nächsten Lauf
-      automatisch mitgenommen, **kein** SKIP_IDS-Eintrag, siehe nächster Absatz.
+      12.08.2026): nur noch `npc-greta-turnIn` — inzwischen **8× HTTP 400 in
+      Folge** (12.08.: 7. Versuch unverändert, 8. Versuch mit umformulierter
+      Textvariante via `TTS_TEXT_OVERRIDES` in extract-manifest.js — beide
+      400). Damit ist die Transienz-These für DIESEN Knoten widerlegt und er
+      steht seit 12.08. doch in `SKIP_IDS` (Ausnahme von der 09.08.-Regel
+      „400er nicht skippen": die galt für transiente Fälle). Nächster Schritt:
+      Gratis-Diagnostik bei leerer Quota via `tts/probe.js` (Stimme/Stil/Text
+      isolieren), übernimmt die Nacht-Routine.
 - [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
       Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
       Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
@@ -257,3 +266,5 @@ nachgelagerter Extra-Lauf.
 - 09.08.2026 02:12 — Tagesbilanz: 10 Requests (5 OK, 5× HTTP 400), Quota damit ausgeschöpft, kein 429 mehr provoziert. **Widerlegt: HTTP 400 ist doch transient.** `npc-vorarbeiter-praiseFarewell` lief als erste Einheit des Batches problemlos durch — dieselbe Einheit, die am 07.08. bei nachweislich leerer Quota mit 400 scheiterte und daraufhin als „einheitsspezifisch" eingestuft wurde. Ebenso `npc-kommandant-kampfRoutineOffer` beim ersten Retry. Beide Texte sind unverändert. Der Trugschluss vom 07.08. lag darin, aus „400 auch ohne Quota" auf eine Textursache zu schließen — 400 wird schlicht vor der Quota-Prüfung ausgewertet und sagt über die Ursache nichts. Konsequenz in den Rahmendaten festgehalten: 400er kommen **nicht** in `SKIP_IDS`, nur wiederholte Leerantworten. Restlich offen: `npc-greta-turnIn` (5. 400) und `npc-kommandant-offer` (4. 400) — beide bleiben im normalen Batch. Da diese zwei allein die Tagesquota nicht füllen, wurde das Manifest um **Phase 5** erweitert (177 Einheiten: 139 Quest-Beschreibungen + 38 Zieltexte) → 331 Einheiten gesamt, damit morgen wieder 10 Slots nutzbar sind. **Nebenbefund:** ffmpeg ist inzwischen installiert und im PATH (`Gyan.FFmpeg` via winget) — der Phase-0-Punkt „WAV→Opus-Konvertierung" ist damit nicht mehr blockiert.
 - 10.08.2026 22:59 — Batch: 9 Dateien (npc-kommandant-offer … quest-miraLetter-rewarded), 68 s Audio, komplett. Gesamt: 159/331 im Manifest.
 - 10.08.2026 23:02 — Tagesbilanz: 10 Requests (9 OK, 1× HTTP 400), Quota damit ausgeschöpft, kein 429 provoziert, kein Same-Day-Retry (Leerantworten gab es keine). **Phase 5 hat begonnen** — die ersten 8 Quest-Beschreibungen (`quest-nightWatch-*`, `quest-miraLetter-*`) sind vertont. `npc-kommandant-offer` lief nach 4 vorherigen 400ern unverändert durch und bestätigt damit erneut, dass HTTP 400 transient ist. Einziger Rest aus Phase 4: `npc-greta-turnIn` (jetzt 6. 400 in Folge) — bleibt im normalen Batch, aber der Knoten ist damit der hartnäckigste 400er-Fall; falls er auch nach zwei weiteren Läufen nicht durchgeht, gezielt per Textkürzung untersuchen statt weiter blind mitzuschleifen.
+- 12.08.2026 13:15 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.
+- 12.08.2026 13:16 — Batch: 0 Dateien (– … –), 0 s Audio, komplett. Gesamt: 163/331 im Manifest.

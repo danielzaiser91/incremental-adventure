@@ -17,6 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 /* Modellwechsel 19.07.2026: gemini-2.5-flash-preview-tts klang laut
    User-Hörprobe monoton/charakterlos. gemini-3.1-flash-tts-preview liefert
@@ -37,7 +38,11 @@ const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
    Mit --only <id> lässt sich eine übersprungene Einheit weiterhin gezielt testen. */
 // Dauerhaft blockierte Knoten: würden im Batch nur einen der 10 Tages-Slots
 // verbrennen. Mit --only weiterhin gezielt testbar.
-const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog']);
+// npc-greta-turnIn seit 12.08.2026: 8× HTTP 400 in Folge über 5 Tage, auch mit
+// umformulierter Textvariante (TTS_TEXT_OVERRIDES) — im Gegensatz zu den
+// transienten 400ern vom 09.08. klar einheitsspezifisch. Nächster Schritt ist
+// die Gratis-Diagnostik bei leerer Quota (tts/probe.js), kein Batch-Slot mehr.
+const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog', 'npc-greta-turnIn']);
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');
@@ -110,6 +115,29 @@ function appendPlanLog(line) {
   fs.appendFileSync(PLAN_FILE, `- ${line}\n`);
 }
 
+/* Nachbearbeitung pro erfolgreicher Einheit — beides non-fatal (ein Fehler
+   hier lässt die Einheit trotzdem als "done" stehen, WAV ist die Wahrheit):
+   1. Opus-Kompression (ffmpeg, seit 09.08.2026 im PATH) → output/opus/<id>.opus
+   2. Forced Alignment (WhisperX-venv) → output/<id>.words.json fürs
+      Wort-Highlighting im Spiel. */
+const OPUS_DIR = path.join(OUT_DIR, 'opus');
+const ALIGN_PY = path.join(__dirname, 'align', '.venv', 'Scripts', 'python.exe');
+const ALIGN_SCRIPT = path.join(__dirname, 'align', 'align_all.py');
+
+function postProcess(unitId) {
+  const notes = [];
+  fs.mkdirSync(OPUS_DIR, { recursive: true });
+  const wav = path.join(OUT_DIR, `${unitId}.wav`);
+  const opus = spawnSync('ffmpeg', ['-y', '-i', wav, '-c:a', 'libopus',
+    '-b:a', '32k', '-application', 'voip',
+    path.join(OPUS_DIR, `${unitId}.opus`)], { stdio: 'ignore' });
+  if (opus.status !== 0) notes.push('Opus-Konvertierung fehlgeschlagen');
+  const align = spawnSync(ALIGN_PY, [ALIGN_SCRIPT, '--single', unitId],
+    { stdio: 'ignore', timeout: 300000 });
+  if (align.status !== 0) notes.push('Alignment fehlgeschlagen');
+  return notes;
+}
+
 function timestamp() {
   const d = new Date();
   const p = n => String(n).padStart(2, '0');
@@ -166,7 +194,8 @@ async function main() {
       delete progress.failed[unit.id];
       okIds.push(unit.id);
       totalSeconds += seconds;
-      console.log(`OK, ${seconds.toFixed(1)}s`);
+      const notes = postProcess(unit.id);
+      console.log(`OK, ${seconds.toFixed(1)}s${notes.length ? ' (' + notes.join('; ') + ')' : ''}`);
     } catch (e) {
       console.log(`FEHLER: ${e.message}`);
       progress.failed[unit.id] = { error: String(e.message).slice(0, 500), date: new Date().toISOString() };

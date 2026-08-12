@@ -264,6 +264,20 @@ for (const text of objectiveTexts()) {
   });
 }
 
+/* TTS-Text-Overrides: Ersatztexte NUR für die Vertonung, wenn der
+   Originaltext von der API reproduzierbar abgelehnt wird (Spieltext in den
+   script/-Dateien bleibt unverändert!). Anlass: npc-greta-turnIn scheiterte
+   7× in Folge mit HTTP 400, während inhaltsgleiche Knoten durchliefen —
+   der exakte Wortlaut ist der einzige Unterschied. */
+const TTS_TEXT_OVERRIDES = {
+  'npc-greta-turnIn':
+    'Greta strahlt, als ich ihr die Rohstoffe zeige. "Genau richtig! Damit kann ich arbeiten."\n\n' +
+    '"Ich verkaufe das an ein paar Handwerker, die mir daraus fertige Ware machen. Die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei."'
+};
+for (const u of units) {
+  if (TTS_TEXT_OVERRIDES[u.id]) u.text = TTS_TEXT_OVERRIDES[u.id];
+}
+
 const totalChars = units.reduce((s, u) => s + u.text.length, 0);
 fs.writeFileSync(
   path.join(__dirname, 'manifest.json'),
