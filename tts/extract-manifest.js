@@ -266,16 +266,38 @@ for (const text of objectiveTexts()) {
 
 /* TTS-Text-Overrides: Ersatztexte NUR für die Vertonung, wenn der
    Originaltext von der API reproduzierbar abgelehnt wird (Spieltext in den
-   script/-Dateien bleibt unverändert!). Anlass: npc-greta-turnIn scheiterte
-   7× in Folge mit HTTP 400, während inhaltsgleiche Knoten durchliefen —
-   der exakte Wortlaut ist der einzige Unterschied. */
-const TTS_TEXT_OVERRIDES = {
-  'npc-greta-turnIn':
-    'Greta strahlt, als ich ihr die Rohstoffe zeige. "Genau richtig! Damit kann ich arbeiten."\n\n' +
-    '"Ich verkaufe das an ein paar Handwerker, die mir daraus fertige Ware machen. Die verkaufe ich dann an dich weiter. Schau ab und zu wieder bei mir vorbei."'
-};
+   script/-Dateien bleibt unverändert!).
+   Aktuell leer — der Eintrag für `npc-greta-turnIn` ist am 12.08.2026 wieder
+   entfernt worden: Die Sonden-Diagnostik hat gezeigt, dass nicht der Text den
+   HTTP 400 auslöst, sondern der Persona-Stil-Prompt (siehe
+   TTS_STYLE_OVERRIDES unten). Ein Ersatztext wäre sogar schädlich, weil das
+   Wort-Highlighting die gesprochenen Wörter gegen den ANGEZEIGTEN Spieltext
+   ausrichtet — Abweichungen verschieben die Hervorhebung. */
+const TTS_TEXT_OVERRIDES = {};
 for (const u of units) {
   if (TTS_TEXT_OVERRIDES[u.id]) u.text = TTS_TEXT_OVERRIDES[u.id];
+}
+
+/* TTS-Stil-Overrides: einzelne Knoten, die NICHT mit dem Stil-Prompt ihrer
+   Kategorie generiert werden. Anlass (12.08.2026): `npc-greta-turnIn`
+   scheiterte 8× mit HTTP 400; die Gratis-Sonde mit unverändertem Text und
+   unveränderter Stimme, aber Erzähler-Stil statt Greta-Persona lieferte
+   sofort HTTP 200 mit Audio. Auslöser ist also der Prompt, nicht der Text.
+   Der Erzähler-Stil selbst taugt für Greta trotzdem nicht — er beschreibt
+   einen neunzehnjährigen jungen Mann. Deshalb hier eine umformulierte
+   Greta-Persona: gleiche Rolle, andere Worte. Die Stimme (Despina) bleibt
+   unverändert, damit Greta über alle Knoten dieselbe Person bleibt.
+   Fällt dieser Knoten erneut auf 400, ist der belegte Ausweichweg der reine
+   `NARRATOR_STYLE` (einmal mit HTTP 200 bestätigt). */
+const TTS_STYLE_OVERRIDES = {
+  /* Umformulierte Persona getestet 12.08.2026, 23:0x Uhr — erneut HTTP 400.
+     Damit liegt es nicht an der Wortwahl der Rollenzeile, sondern am
+     NPC-Prompt-Aufbau in Kombination mit genau diesem Knotentext. Es gilt
+     wieder der einzige belegte Weg: */
+  'npc-greta-turnIn': NARRATOR_STYLE
+};
+for (const u of units) {
+  if (TTS_STYLE_OVERRIDES[u.id]) u.style = TTS_STYLE_OVERRIDES[u.id];
 }
 
 const totalChars = units.reduce((s, u) => s + u.text.length, 0);

@@ -38,11 +38,12 @@ const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
    Mit --only <id> lässt sich eine übersprungene Einheit weiterhin gezielt testen. */
 // Dauerhaft blockierte Knoten: würden im Batch nur einen der 10 Tages-Slots
 // verbrennen. Mit --only weiterhin gezielt testbar.
-// npc-greta-turnIn seit 12.08.2026: 8× HTTP 400 in Folge über 5 Tage, auch mit
-// umformulierter Textvariante (TTS_TEXT_OVERRIDES) — im Gegensatz zu den
-// transienten 400ern vom 09.08. klar einheitsspezifisch. Nächster Schritt ist
-// die Gratis-Diagnostik bei leerer Quota (tts/probe.js), kein Batch-Slot mehr.
-const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog', 'npc-greta-turnIn']);
+// npc-greta-turnIn stand hier vom 12.08.2026 an (8× HTTP 400 in Folge) und ist
+// am selben Abend wieder heraus: Die Sonden-Diagnostik hat den Auslöser auf den
+// Persona-Stil-Prompt eingegrenzt, der Knoten läuft jetzt mit einem
+// Stil-Override (TTS_STYLE_OVERRIDES in extract-manifest.js) und passiert damit
+// die Validierung — bestätigt durch ein 429 statt eines 400.
+const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog']);
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');
