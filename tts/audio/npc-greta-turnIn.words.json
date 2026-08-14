@@ -1,0 +1,569 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.785,
+      "text": "Greta strahlt, als ich ihr die Rohstoffe zeige.",
+      "words": [
+        {
+          "word": "Greta",
+          "start": 0.461,
+          "end": 0.901,
+          "score": 0.66
+        },
+        {
+          "word": "strahlt,",
+          "start": 0.961,
+          "end": 1.502,
+          "score": 0.675
+        },
+        {
+          "word": "als",
+          "start": 1.542,
+          "end": 1.662,
+          "score": 0.974
+        },
+        {
+          "word": "ich",
+          "start": 1.702,
+          "end": 1.822,
+          "score": 0.794
+        },
+        {
+          "word": "ihr",
+          "start": 1.842,
+          "end": 1.922,
+          "score": 0.518
+        },
+        {
+          "word": "die",
+          "start": 1.962,
+          "end": 2.103,
+          "score": 0.706
+        },
+        {
+          "word": "Rohstoffe",
+          "start": 2.123,
+          "end": 2.623,
+          "score": 0.85
+        },
+        {
+          "word": "zeige.",
+          "start": 2.663,
+          "end": 3.785,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 3.805,
+      "end": 5.046,
+      "text": "\"Genau richtig!",
+      "words": [
+        {
+          "word": "\"Genau",
+          "start": 3.805,
+          "end": 4.325,
+          "score": 0.831
+        },
+        {
+          "word": "richtig!",
+          "start": 4.366,
+          "end": 5.046,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 5.066,
+      "end": 7.129,
+      "text": "Damit kann ich arbeiten.\"",
+      "words": [
+        {
+          "word": "Damit",
+          "start": 5.066,
+          "end": 5.347,
+          "score": 0.939
+        },
+        {
+          "word": "kann",
+          "start": 5.367,
+          "end": 5.507,
+          "score": 0.854
+        },
+        {
+          "word": "ich",
+          "start": 5.547,
+          "end": 5.687,
+          "score": 0.857
+        },
+        {
+          "word": "arbeiten.\"",
+          "start": 5.727,
+          "end": 7.129,
+          "score": 0.909
+        }
+      ]
+    },
+    {
+      "start": 7.169,
+      "end": 13.998,
+      "text": "\"Ich verkaufe das an ein paar Handwerker, die mir dafür fertige Ware machen — und die verkaufe ich dann an dich weiter.",
+      "words": [
+        {
+          "word": "\"Ich",
+          "start": 7.169,
+          "end": 7.329,
+          "score": 0.754
+        },
+        {
+          "word": "verkaufe",
+          "start": 7.349,
+          "end": 7.77,
+          "score": 0.912
+        },
+        {
+          "word": "das",
+          "start": 7.79,
+          "end": 7.95,
+          "score": 0.865
+        },
+        {
+          "word": "an",
+          "start": 7.99,
+          "end": 8.07,
+          "score": 0.762
+        },
+        {
+          "word": "ein",
+          "start": 8.09,
+          "end": 8.21,
+          "score": 0.666
+        },
+        {
+          "word": "paar",
+          "start": 8.23,
+          "end": 8.391,
+          "score": 0.738
+        },
+        {
+          "word": "Handwerker,",
+          "start": 8.411,
+          "end": 9.212,
+          "score": 0.955
+        },
+        {
+          "word": "die",
+          "start": 9.232,
+          "end": 9.352,
+          "score": 0.83
+        },
+        {
+          "word": "mir",
+          "start": 9.372,
+          "end": 9.492,
+          "score": 0.793
+        },
+        {
+          "word": "dafür",
+          "start": 9.532,
+          "end": 9.892,
+          "score": 0.941
+        },
+        {
+          "word": "fertige",
+          "start": 9.913,
+          "end": 10.273,
+          "score": 0.938
+        },
+        {
+          "word": "Ware",
+          "start": 10.313,
+          "end": 10.553,
+          "score": 0.926
+        },
+        {
+          "word": "machen",
+          "start": 10.573,
+          "end": 10.774,
+          "score": 0.863
+        },
+        {
+          "word": "—",
+          "start": 11.194,
+          "end": 11.214,
+          "score": 0.988
+        },
+        {
+          "word": "und",
+          "start": 11.234,
+          "end": 11.535,
+          "score": 0.877
+        },
+        {
+          "word": "die",
+          "start": 11.555,
+          "end": 11.855,
+          "score": 0.851
+        },
+        {
+          "word": "verkaufe",
+          "start": 11.875,
+          "end": 12.275,
+          "score": 0.895
+        },
+        {
+          "word": "ich",
+          "start": 12.296,
+          "end": 12.416,
+          "score": 0.9
+        },
+        {
+          "word": "dann",
+          "start": 12.456,
+          "end": 12.576,
+          "score": 0.834
+        },
+        {
+          "word": "an",
+          "start": 12.616,
+          "end": 12.716,
+          "score": 0.705
+        },
+        {
+          "word": "dich",
+          "start": 12.756,
+          "end": 12.896,
+          "score": 0.651
+        },
+        {
+          "word": "weiter.",
+          "start": 12.936,
+          "end": 13.998,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 14.038,
+      "end": 15.62,
+      "text": "Schau ab und zu wieder bei mir vorbei.\"",
+      "words": [
+        {
+          "word": "Schau",
+          "start": 14.038,
+          "end": 14.358,
+          "score": 0.838
+        },
+        {
+          "word": "ab",
+          "start": 14.378,
+          "end": 14.498,
+          "score": 0.831
+        },
+        {
+          "word": "und",
+          "start": 14.538,
+          "end": 14.679,
+          "score": 0.864
+        },
+        {
+          "word": "zu",
+          "start": 14.699,
+          "end": 14.819,
+          "score": 0.442
+        },
+        {
+          "word": "wieder",
+          "start": 14.859,
+          "end": 15.039,
+          "score": 0.94
+        },
+        {
+          "word": "bei",
+          "start": 15.059,
+          "end": 15.179,
+          "score": 0.925
+        },
+        {
+          "word": "mir",
+          "start": 15.199,
+          "end": 15.319,
+          "score": 0.936
+        },
+        {
+          "word": "vorbei.\"",
+          "start": 15.339,
+          "end": 15.62,
+          "score": 0.812
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Greta",
+      "start": 0.461,
+      "end": 0.901,
+      "score": 0.66
+    },
+    {
+      "word": "strahlt,",
+      "start": 0.961,
+      "end": 1.502,
+      "score": 0.675
+    },
+    {
+      "word": "als",
+      "start": 1.542,
+      "end": 1.662,
+      "score": 0.974
+    },
+    {
+      "word": "ich",
+      "start": 1.702,
+      "end": 1.822,
+      "score": 0.794
+    },
+    {
+      "word": "ihr",
+      "start": 1.842,
+      "end": 1.922,
+      "score": 0.518
+    },
+    {
+      "word": "die",
+      "start": 1.962,
+      "end": 2.103,
+      "score": 0.706
+    },
+    {
+      "word": "Rohstoffe",
+      "start": 2.123,
+      "end": 2.623,
+      "score": 0.85
+    },
+    {
+      "word": "zeige.",
+      "start": 2.663,
+      "end": 3.785,
+      "score": 0.882
+    },
+    {
+      "word": "\"Genau",
+      "start": 3.805,
+      "end": 4.325,
+      "score": 0.831
+    },
+    {
+      "word": "richtig!",
+      "start": 4.366,
+      "end": 5.046,
+      "score": 0.898
+    },
+    {
+      "word": "Damit",
+      "start": 5.066,
+      "end": 5.347,
+      "score": 0.939
+    },
+    {
+      "word": "kann",
+      "start": 5.367,
+      "end": 5.507,
+      "score": 0.854
+    },
+    {
+      "word": "ich",
+      "start": 5.547,
+      "end": 5.687,
+      "score": 0.857
+    },
+    {
+      "word": "arbeiten.\"",
+      "start": 5.727,
+      "end": 7.129,
+      "score": 0.909
+    },
+    {
+      "word": "\"Ich",
+      "start": 7.169,
+      "end": 7.329,
+      "score": 0.754
+    },
+    {
+      "word": "verkaufe",
+      "start": 7.349,
+      "end": 7.77,
+      "score": 0.912
+    },
+    {
+      "word": "das",
+      "start": 7.79,
+      "end": 7.95,
+      "score": 0.865
+    },
+    {
+      "word": "an",
+      "start": 7.99,
+      "end": 8.07,
+      "score": 0.762
+    },
+    {
+      "word": "ein",
+      "start": 8.09,
+      "end": 8.21,
+      "score": 0.666
+    },
+    {
+      "word": "paar",
+      "start": 8.23,
+      "end": 8.391,
+      "score": 0.738
+    },
+    {
+      "word": "Handwerker,",
+      "start": 8.411,
+      "end": 9.212,
+      "score": 0.955
+    },
+    {
+      "word": "die",
+      "start": 9.232,
+      "end": 9.352,
+      "score": 0.83
+    },
+    {
+      "word": "mir",
+      "start": 9.372,
+      "end": 9.492,
+      "score": 0.793
+    },
+    {
+      "word": "dafür",
+      "start": 9.532,
+      "end": 9.892,
+      "score": 0.941
+    },
+    {
+      "word": "fertige",
+      "start": 9.913,
+      "end": 10.273,
+      "score": 0.938
+    },
+    {
+      "word": "Ware",
+      "start": 10.313,
+      "end": 10.553,
+      "score": 0.926
+    },
+    {
+      "word": "machen",
+      "start": 10.573,
+      "end": 10.774,
+      "score": 0.863
+    },
+    {
+      "word": "—",
+      "start": 11.194,
+      "end": 11.214,
+      "score": 0.988
+    },
+    {
+      "word": "und",
+      "start": 11.234,
+      "end": 11.535,
+      "score": 0.877
+    },
+    {
+      "word": "die",
+      "start": 11.555,
+      "end": 11.855,
+      "score": 0.851
+    },
+    {
+      "word": "verkaufe",
+      "start": 11.875,
+      "end": 12.275,
+      "score": 0.895
+    },
+    {
+      "word": "ich",
+      "start": 12.296,
+      "end": 12.416,
+      "score": 0.9
+    },
+    {
+      "word": "dann",
+      "start": 12.456,
+      "end": 12.576,
+      "score": 0.834
+    },
+    {
+      "word": "an",
+      "start": 12.616,
+      "end": 12.716,
+      "score": 0.705
+    },
+    {
+      "word": "dich",
+      "start": 12.756,
+      "end": 12.896,
+      "score": 0.651
+    },
+    {
+      "word": "weiter.",
+      "start": 12.936,
+      "end": 13.998,
+      "score": 0.923
+    },
+    {
+      "word": "Schau",
+      "start": 14.038,
+      "end": 14.358,
+      "score": 0.838
+    },
+    {
+      "word": "ab",
+      "start": 14.378,
+      "end": 14.498,
+      "score": 0.831
+    },
+    {
+      "word": "und",
+      "start": 14.538,
+      "end": 14.679,
+      "score": 0.864
+    },
+    {
+      "word": "zu",
+      "start": 14.699,
+      "end": 14.819,
+      "score": 0.442
+    },
+    {
+      "word": "wieder",
+      "start": 14.859,
+      "end": 15.039,
+      "score": 0.94
+    },
+    {
+      "word": "bei",
+      "start": 15.059,
+      "end": 15.179,
+      "score": 0.925
+    },
+    {
+      "word": "mir",
+      "start": 15.199,
+      "end": 15.319,
+      "score": 0.936
+    },
+    {
+      "word": "vorbei.\"",
+      "start": 15.339,
+      "end": 15.62,
+      "score": 0.812
+    }
+  ]
+}

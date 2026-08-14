@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 3.632,
+      "text": "Mira hat mehr verraten, als sie wollte.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.462,
+          "end": 0.903,
+          "score": 0.894
+        },
+        {
+          "word": "hat",
+          "start": 0.923,
+          "end": 1.224,
+          "score": 0.995
+        },
+        {
+          "word": "mehr",
+          "start": 1.264,
+          "end": 1.525,
+          "score": 0.842
+        },
+        {
+          "word": "verraten,",
+          "start": 1.565,
+          "end": 2.127,
+          "score": 0.893
+        },
+        {
+          "word": "als",
+          "start": 2.147,
+          "end": 2.308,
+          "score": 0.817
+        },
+        {
+          "word": "sie",
+          "start": 2.328,
+          "end": 2.448,
+          "score": 0.797
+        },
+        {
+          "word": "wollte.",
+          "start": 2.468,
+          "end": 3.632,
+          "score": 0.978
+        }
+      ]
+    },
+    {
+      "start": 3.672,
+      "end": 5.619,
+      "text": "Brakka soll den Täter kennen.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 3.672,
+          "end": 4.515,
+          "score": 0.733
+        },
+        {
+          "word": "soll",
+          "start": 4.535,
+          "end": 4.736,
+          "score": 0.987
+        },
+        {
+          "word": "den",
+          "start": 4.756,
+          "end": 4.977,
+          "score": 0.777
+        },
+        {
+          "word": "Täter",
+          "start": 5.017,
+          "end": 5.398,
+          "score": 0.907
+        },
+        {
+          "word": "kennen.",
+          "start": 5.418,
+          "end": 5.619,
+          "score": 0.808
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.462,
+      "end": 0.903,
+      "score": 0.894
+    },
+    {
+      "word": "hat",
+      "start": 0.923,
+      "end": 1.224,
+      "score": 0.995
+    },
+    {
+      "word": "mehr",
+      "start": 1.264,
+      "end": 1.525,
+      "score": 0.842
+    },
+    {
+      "word": "verraten,",
+      "start": 1.565,
+      "end": 2.127,
+      "score": 0.893
+    },
+    {
+      "word": "als",
+      "start": 2.147,
+      "end": 2.308,
+      "score": 0.817
+    },
+    {
+      "word": "sie",
+      "start": 2.328,
+      "end": 2.448,
+      "score": 0.797
+    },
+    {
+      "word": "wollte.",
+      "start": 2.468,
+      "end": 3.632,
+      "score": 0.978
+    },
+    {
+      "word": "Brakka",
+      "start": 3.672,
+      "end": 4.515,
+      "score": 0.733
+    },
+    {
+      "word": "soll",
+      "start": 4.535,
+      "end": 4.736,
+      "score": 0.987
+    },
+    {
+      "word": "den",
+      "start": 4.756,
+      "end": 4.977,
+      "score": 0.777
+    },
+    {
+      "word": "Täter",
+      "start": 5.017,
+      "end": 5.398,
+      "score": 0.907
+    },
+    {
+      "word": "kennen.",
+      "start": 5.418,
+      "end": 5.619,
+      "score": 0.808
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 4.779,
+      "text": "Abgeschlossen — ich kann jetzt für die Nachtwache aufleveln (siehe Erfahrung).",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.462,
+          "end": 1.064,
+          "score": 0.859
+        },
+        {
+          "word": "—",
+          "start": 1.546,
+          "end": 1.566,
+          "score": 0.968
+        },
+        {
+          "word": "ich",
+          "start": 1.586,
+          "end": 1.687,
+          "score": 0.671
+        },
+        {
+          "word": "kann",
+          "start": 1.707,
+          "end": 1.887,
+          "score": 0.883
+        },
+        {
+          "word": "jetzt",
+          "start": 1.928,
+          "end": 2.169,
+          "score": 0.808
+        },
+        {
+          "word": "für",
+          "start": 2.189,
+          "end": 2.309,
+          "score": 0.896
+        },
+        {
+          "word": "die",
+          "start": 2.329,
+          "end": 2.45,
+          "score": 0.792
+        },
+        {
+          "word": "Nachtwache",
+          "start": 2.49,
+          "end": 2.992,
+          "score": 0.947
+        },
+        {
+          "word": "aufleveln",
+          "start": 3.032,
+          "end": 3.956,
+          "score": 0.893
+        },
+        {
+          "word": "(siehe",
+          "start": 3.976,
+          "end": 4.317,
+          "score": 0.752
+        },
+        {
+          "word": "Erfahrung).",
+          "start": 4.357,
+          "end": 4.779,
+          "score": 0.804
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.462,
+      "end": 1.064,
+      "score": 0.859
+    },
+    {
+      "word": "—",
+      "start": 1.546,
+      "end": 1.566,
+      "score": 0.968
+    },
+    {
+      "word": "ich",
+      "start": 1.586,
+      "end": 1.687,
+      "score": 0.671
+    },
+    {
+      "word": "kann",
+      "start": 1.707,
+      "end": 1.887,
+      "score": 0.883
+    },
+    {
+      "word": "jetzt",
+      "start": 1.928,
+      "end": 2.169,
+      "score": 0.808
+    },
+    {
+      "word": "für",
+      "start": 2.189,
+      "end": 2.309,
+      "score": 0.896
+    },
+    {
+      "word": "die",
+      "start": 2.329,
+      "end": 2.45,
+      "score": 0.792
+    },
+    {
+      "word": "Nachtwache",
+      "start": 2.49,
+      "end": 2.992,
+      "score": 0.947
+    },
+    {
+      "word": "aufleveln",
+      "start": 3.032,
+      "end": 3.956,
+      "score": 0.893
+    },
+    {
+      "word": "(siehe",
+      "start": 3.976,
+      "end": 4.317,
+      "score": 0.752
+    },
+    {
+      "word": "Erfahrung).",
+      "start": 4.357,
+      "end": 4.779,
+      "score": 0.804
+    }
+  ]
+}

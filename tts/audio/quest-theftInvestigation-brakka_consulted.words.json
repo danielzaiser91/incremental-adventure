@@ -1,0 +1,260 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 6.494,
+      "text": "Brakka hat gesprochen: Der Mann in der Taverne ist der Voraussucher des Schattens.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.441,
+          "end": 0.902,
+          "score": 0.924
+        },
+        {
+          "word": "hat",
+          "start": 0.942,
+          "end": 1.183,
+          "score": 0.959
+        },
+        {
+          "word": "gesprochen:",
+          "start": 1.223,
+          "end": 2.385,
+          "score": 0.905
+        },
+        {
+          "word": "Der",
+          "start": 2.425,
+          "end": 2.586,
+          "score": 0.952
+        },
+        {
+          "word": "Mann",
+          "start": 2.626,
+          "end": 2.826,
+          "score": 0.965
+        },
+        {
+          "word": "in",
+          "start": 2.866,
+          "end": 2.946,
+          "score": 0.892
+        },
+        {
+          "word": "der",
+          "start": 2.986,
+          "end": 3.107,
+          "score": 0.832
+        },
+        {
+          "word": "Taverne",
+          "start": 3.147,
+          "end": 3.668,
+          "score": 0.885
+        },
+        {
+          "word": "ist",
+          "start": 3.708,
+          "end": 3.868,
+          "score": 0.952
+        },
+        {
+          "word": "der",
+          "start": 3.888,
+          "end": 4.049,
+          "score": 0.877
+        },
+        {
+          "word": "Voraussucher",
+          "start": 4.069,
+          "end": 4.931,
+          "score": 0.861
+        },
+        {
+          "word": "des",
+          "start": 4.971,
+          "end": 5.111,
+          "score": 0.994
+        },
+        {
+          "word": "Schattens.",
+          "start": 5.171,
+          "end": 6.494,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 6.514,
+      "end": 8.759,
+      "text": "Stark genug werden, um ihn zu konfrontieren.",
+      "words": [
+        {
+          "word": "Stark",
+          "start": 6.514,
+          "end": 6.855,
+          "score": 0.933
+        },
+        {
+          "word": "genug",
+          "start": 6.875,
+          "end": 7.196,
+          "score": 0.907
+        },
+        {
+          "word": "werden,",
+          "start": 7.216,
+          "end": 7.536,
+          "score": 0.935
+        },
+        {
+          "word": "um",
+          "start": 7.576,
+          "end": 7.677,
+          "score": 0.998
+        },
+        {
+          "word": "ihn",
+          "start": 7.717,
+          "end": 7.897,
+          "score": 0.711
+        },
+        {
+          "word": "zu",
+          "start": 7.937,
+          "end": 8.058,
+          "score": 1.0
+        },
+        {
+          "word": "konfrontieren.",
+          "start": 8.098,
+          "end": 8.759,
+          "score": 0.819
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.441,
+      "end": 0.902,
+      "score": 0.924
+    },
+    {
+      "word": "hat",
+      "start": 0.942,
+      "end": 1.183,
+      "score": 0.959
+    },
+    {
+      "word": "gesprochen:",
+      "start": 1.223,
+      "end": 2.385,
+      "score": 0.905
+    },
+    {
+      "word": "Der",
+      "start": 2.425,
+      "end": 2.586,
+      "score": 0.952
+    },
+    {
+      "word": "Mann",
+      "start": 2.626,
+      "end": 2.826,
+      "score": 0.965
+    },
+    {
+      "word": "in",
+      "start": 2.866,
+      "end": 2.946,
+      "score": 0.892
+    },
+    {
+      "word": "der",
+      "start": 2.986,
+      "end": 3.107,
+      "score": 0.832
+    },
+    {
+      "word": "Taverne",
+      "start": 3.147,
+      "end": 3.668,
+      "score": 0.885
+    },
+    {
+      "word": "ist",
+      "start": 3.708,
+      "end": 3.868,
+      "score": 0.952
+    },
+    {
+      "word": "der",
+      "start": 3.888,
+      "end": 4.049,
+      "score": 0.877
+    },
+    {
+      "word": "Voraussucher",
+      "start": 4.069,
+      "end": 4.931,
+      "score": 0.861
+    },
+    {
+      "word": "des",
+      "start": 4.971,
+      "end": 5.111,
+      "score": 0.994
+    },
+    {
+      "word": "Schattens.",
+      "start": 5.171,
+      "end": 6.494,
+      "score": 0.924
+    },
+    {
+      "word": "Stark",
+      "start": 6.514,
+      "end": 6.855,
+      "score": 0.933
+    },
+    {
+      "word": "genug",
+      "start": 6.875,
+      "end": 7.196,
+      "score": 0.907
+    },
+    {
+      "word": "werden,",
+      "start": 7.216,
+      "end": 7.536,
+      "score": 0.935
+    },
+    {
+      "word": "um",
+      "start": 7.576,
+      "end": 7.677,
+      "score": 0.998
+    },
+    {
+      "word": "ihn",
+      "start": 7.717,
+      "end": 7.897,
+      "score": 0.711
+    },
+    {
+      "word": "zu",
+      "start": 7.937,
+      "end": 8.058,
+      "score": 1.0
+    },
+    {
+      "word": "konfrontieren.",
+      "start": 8.098,
+      "end": 8.759,
+      "score": 0.819
+    }
+  ]
+}

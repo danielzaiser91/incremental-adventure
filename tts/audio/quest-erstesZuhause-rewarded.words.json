@@ -1,0 +1,145 @@
+{
+  "segments": [
+    {
+      "start": 0.763,
+      "end": 5.419,
+      "text": "Abgeschlossen — ein ordentlicher Schlafplatz ist mehr wert, als man denkt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.763,
+          "end": 1.325,
+          "score": 0.917
+        },
+        {
+          "word": "—",
+          "start": 2.428,
+          "end": 2.448,
+          "score": 0.676
+        },
+        {
+          "word": "ein",
+          "start": 2.489,
+          "end": 2.689,
+          "score": 0.838
+        },
+        {
+          "word": "ordentlicher",
+          "start": 2.749,
+          "end": 3.291,
+          "score": 0.93
+        },
+        {
+          "word": "Schlafplatz",
+          "start": 3.331,
+          "end": 3.974,
+          "score": 0.87
+        },
+        {
+          "word": "ist",
+          "start": 4.014,
+          "end": 4.295,
+          "score": 0.82
+        },
+        {
+          "word": "mehr",
+          "start": 4.315,
+          "end": 4.516,
+          "score": 0.799
+        },
+        {
+          "word": "wert,",
+          "start": 4.576,
+          "end": 4.837,
+          "score": 0.938
+        },
+        {
+          "word": "als",
+          "start": 4.857,
+          "end": 5.017,
+          "score": 0.945
+        },
+        {
+          "word": "man",
+          "start": 5.057,
+          "end": 5.198,
+          "score": 0.939
+        },
+        {
+          "word": "denkt.",
+          "start": 5.238,
+          "end": 5.419,
+          "score": 0.83
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.763,
+      "end": 1.325,
+      "score": 0.917
+    },
+    {
+      "word": "—",
+      "start": 2.428,
+      "end": 2.448,
+      "score": 0.676
+    },
+    {
+      "word": "ein",
+      "start": 2.489,
+      "end": 2.689,
+      "score": 0.838
+    },
+    {
+      "word": "ordentlicher",
+      "start": 2.749,
+      "end": 3.291,
+      "score": 0.93
+    },
+    {
+      "word": "Schlafplatz",
+      "start": 3.331,
+      "end": 3.974,
+      "score": 0.87
+    },
+    {
+      "word": "ist",
+      "start": 4.014,
+      "end": 4.295,
+      "score": 0.82
+    },
+    {
+      "word": "mehr",
+      "start": 4.315,
+      "end": 4.516,
+      "score": 0.799
+    },
+    {
+      "word": "wert,",
+      "start": 4.576,
+      "end": 4.837,
+      "score": 0.938
+    },
+    {
+      "word": "als",
+      "start": 4.857,
+      "end": 5.017,
+      "score": 0.945
+    },
+    {
+      "word": "man",
+      "start": 5.057,
+      "end": 5.198,
+      "score": 0.939
+    },
+    {
+      "word": "denkt.",
+      "start": 5.238,
+      "end": 5.419,
+      "score": 0.83
+    }
+  ]
+}

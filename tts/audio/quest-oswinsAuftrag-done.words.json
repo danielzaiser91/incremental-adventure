@@ -1,0 +1,104 @@
+{
+  "segments": [
+    {
+      "start": 0.422,
+      "end": 2.151,
+      "text": "Brakka hat nickt.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.422,
+          "end": 0.844,
+          "score": 0.843
+        },
+        {
+          "word": "hat",
+          "start": 0.885,
+          "end": 1.146,
+          "score": 0.896
+        },
+        {
+          "word": "nickt.",
+          "start": 1.166,
+          "end": 2.151,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 2.171,
+      "end": 3.458,
+      "text": "Jetzt Oswin Bescheid geben.",
+      "words": [
+        {
+          "word": "Jetzt",
+          "start": 2.171,
+          "end": 2.493,
+          "score": 0.876
+        },
+        {
+          "word": "Oswin",
+          "start": 2.553,
+          "end": 2.855,
+          "score": 0.84
+        },
+        {
+          "word": "Bescheid",
+          "start": 2.895,
+          "end": 3.237,
+          "score": 0.887
+        },
+        {
+          "word": "geben.",
+          "start": 3.277,
+          "end": 3.458,
+          "score": 0.738
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.422,
+      "end": 0.844,
+      "score": 0.843
+    },
+    {
+      "word": "hat",
+      "start": 0.885,
+      "end": 1.146,
+      "score": 0.896
+    },
+    {
+      "word": "nickt.",
+      "start": 1.166,
+      "end": 2.151,
+      "score": 0.93
+    },
+    {
+      "word": "Jetzt",
+      "start": 2.171,
+      "end": 2.493,
+      "score": 0.876
+    },
+    {
+      "word": "Oswin",
+      "start": 2.553,
+      "end": 2.855,
+      "score": 0.84
+    },
+    {
+      "word": "Bescheid",
+      "start": 2.895,
+      "end": 3.237,
+      "score": 0.887
+    },
+    {
+      "word": "geben.",
+      "start": 3.277,
+      "end": 3.458,
+      "score": 0.738
+    }
+  ]
+}

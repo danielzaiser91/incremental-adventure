@@ -854,6 +854,96 @@
       "file": "quest-commanderTraining-active.wav",
       "seconds": 5.5,
       "date": "2026-08-12T20:15:14.539Z"
+    },
+    "npc-greta-turnIn": {
+      "file": "npc-greta-turnIn.wav",
+      "seconds": 15.8,
+      "date": "2026-08-14T06:20:19.468Z"
+    },
+    "quest-commanderTraining-rewarded": {
+      "file": "quest-commanderTraining-rewarded.wav",
+      "seconds": 5.1,
+      "date": "2026-08-14T06:21:11.267Z"
+    },
+    "quest-oswinsAuftrag-unstarted": {
+      "file": "quest-oswinsAuftrag-unstarted.wav",
+      "seconds": 2.2,
+      "date": "2026-08-14T06:21:44.182Z"
+    },
+    "quest-oswinsAuftrag-active": {
+      "file": "quest-oswinsAuftrag-active.wav",
+      "seconds": 7,
+      "date": "2026-08-14T06:22:18.528Z"
+    },
+    "quest-oswinsAuftrag-done": {
+      "file": "quest-oswinsAuftrag-done.wav",
+      "seconds": 3.8,
+      "date": "2026-08-14T06:22:51.229Z"
+    },
+    "quest-oswinsAuftrag-rewarded": {
+      "file": "quest-oswinsAuftrag-rewarded.wav",
+      "seconds": 7.4,
+      "date": "2026-08-14T06:23:25.691Z"
+    },
+    "quest-erstesZuhause-unstarted": {
+      "file": "quest-erstesZuhause-unstarted.wav",
+      "seconds": 2,
+      "date": "2026-08-14T06:23:57.346Z"
+    },
+    "quest-erstesZuhause-active": {
+      "file": "quest-erstesZuhause-active.wav",
+      "seconds": 8,
+      "date": "2026-08-14T06:24:32.324Z"
+    },
+    "quest-erstesZuhause-rewarded": {
+      "file": "quest-erstesZuhause-rewarded.wav",
+      "seconds": 5.8,
+      "date": "2026-08-14T20:26:03.816Z"
+    },
+    "quest-theftInvestigation-unstarted": {
+      "file": "quest-theftInvestigation-unstarted.wav",
+      "seconds": 1.9,
+      "date": "2026-08-14T20:27:00.633Z"
+    },
+    "quest-theftInvestigation-active": {
+      "file": "quest-theftInvestigation-active.wav",
+      "seconds": 9,
+      "date": "2026-08-14T20:27:35.813Z"
+    },
+    "quest-theftInvestigation-investigating": {
+      "file": "quest-theftInvestigation-investigating.wav",
+      "seconds": 7.2,
+      "date": "2026-08-14T20:28:12.064Z"
+    },
+    "quest-theftInvestigation-mira_consulted": {
+      "file": "quest-theftInvestigation-mira_consulted.wav",
+      "seconds": 5.9,
+      "date": "2026-08-14T20:28:46.723Z"
+    },
+    "quest-theftInvestigation-brakka_consulted": {
+      "file": "quest-theftInvestigation-brakka_consulted.wav",
+      "seconds": 9.2,
+      "date": "2026-08-14T20:29:22.996Z"
+    },
+    "quest-theftInvestigation-confronted": {
+      "file": "quest-theftInvestigation-confronted.wav",
+      "seconds": 6.3,
+      "date": "2026-08-14T20:29:58.232Z"
+    },
+    "quest-theftInvestigation-rewarded": {
+      "file": "quest-theftInvestigation-rewarded.wav",
+      "seconds": 7.5,
+      "date": "2026-08-14T20:30:33.835Z"
+    },
+    "quest-gildePruefung-unstarted": {
+      "file": "quest-gildePruefung-unstarted.wav",
+      "seconds": 1.9,
+      "date": "2026-08-14T20:31:05.805Z"
+    },
+    "quest-gildePruefung-done": {
+      "file": "quest-gildePruefung-done.wav",
+      "seconds": 5.4,
+      "date": "2026-08-14T20:31:39.687Z"
     }
   },
   "failed": {
@@ -864,14 +954,6 @@
     "npc-fremder-finaleDialog": {
       "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 349,\n    \"candidatesTokenCount\": 1033,\n    \"totalTokenCount\": 1382,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 349\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 1033\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  }",
       "date": "2026-08-07T16:22:21.524Z"
-    },
-    "npc-greta-turnIn": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 36.103482382s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-08-12T21:05:26.712Z"
-    },
-    "quest-commanderTraining-rewarded": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 18.023233585s.\",\n    \"status\": \"RESOURCE_EXH",
-      "date": "2026-08-12T20:15:44.823Z"
     }
   }
 }

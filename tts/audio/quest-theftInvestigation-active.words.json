@@ -1,0 +1,248 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 4.891,
+      "text": "Korbin erzählte von einer Serie von Raubüberfällen in Treutheim.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.381,
+          "end": 0.862,
+          "score": 0.882
+        },
+        {
+          "word": "erzählte",
+          "start": 0.902,
+          "end": 1.383,
+          "score": 0.978
+        },
+        {
+          "word": "von",
+          "start": 1.423,
+          "end": 1.584,
+          "score": 0.991
+        },
+        {
+          "word": "einer",
+          "start": 1.624,
+          "end": 1.864,
+          "score": 0.917
+        },
+        {
+          "word": "Serie",
+          "start": 1.904,
+          "end": 2.345,
+          "score": 0.947
+        },
+        {
+          "word": "von",
+          "start": 2.365,
+          "end": 2.526,
+          "score": 0.986
+        },
+        {
+          "word": "Raubüberfällen",
+          "start": 2.586,
+          "end": 3.468,
+          "score": 0.945
+        },
+        {
+          "word": "in",
+          "start": 3.488,
+          "end": 3.628,
+          "score": 0.98
+        },
+        {
+          "word": "Treutheim.",
+          "start": 3.668,
+          "end": 4.891,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 4.911,
+      "end": 8.579,
+      "text": "Ich sollte das Jagdgebiet erkunden und die Augen offen halten.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.911,
+          "end": 5.091,
+          "score": 0.887
+        },
+        {
+          "word": "sollte",
+          "start": 5.131,
+          "end": 5.432,
+          "score": 0.878
+        },
+        {
+          "word": "das",
+          "start": 5.472,
+          "end": 5.653,
+          "score": 0.85
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 5.693,
+          "end": 6.294,
+          "score": 0.906
+        },
+        {
+          "word": "erkunden",
+          "start": 6.314,
+          "end": 7.236,
+          "score": 0.949
+        },
+        {
+          "word": "und",
+          "start": 7.256,
+          "end": 7.456,
+          "score": 0.828
+        },
+        {
+          "word": "die",
+          "start": 7.477,
+          "end": 7.697,
+          "score": 0.857
+        },
+        {
+          "word": "Augen",
+          "start": 7.737,
+          "end": 8.038,
+          "score": 0.978
+        },
+        {
+          "word": "offen",
+          "start": 8.078,
+          "end": 8.298,
+          "score": 0.954
+        },
+        {
+          "word": "halten.",
+          "start": 8.338,
+          "end": 8.579,
+          "score": 0.87
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.381,
+      "end": 0.862,
+      "score": 0.882
+    },
+    {
+      "word": "erzählte",
+      "start": 0.902,
+      "end": 1.383,
+      "score": 0.978
+    },
+    {
+      "word": "von",
+      "start": 1.423,
+      "end": 1.584,
+      "score": 0.991
+    },
+    {
+      "word": "einer",
+      "start": 1.624,
+      "end": 1.864,
+      "score": 0.917
+    },
+    {
+      "word": "Serie",
+      "start": 1.904,
+      "end": 2.345,
+      "score": 0.947
+    },
+    {
+      "word": "von",
+      "start": 2.365,
+      "end": 2.526,
+      "score": 0.986
+    },
+    {
+      "word": "Raubüberfällen",
+      "start": 2.586,
+      "end": 3.468,
+      "score": 0.945
+    },
+    {
+      "word": "in",
+      "start": 3.488,
+      "end": 3.628,
+      "score": 0.98
+    },
+    {
+      "word": "Treutheim.",
+      "start": 3.668,
+      "end": 4.891,
+      "score": 0.896
+    },
+    {
+      "word": "Ich",
+      "start": 4.911,
+      "end": 5.091,
+      "score": 0.887
+    },
+    {
+      "word": "sollte",
+      "start": 5.131,
+      "end": 5.432,
+      "score": 0.878
+    },
+    {
+      "word": "das",
+      "start": 5.472,
+      "end": 5.653,
+      "score": 0.85
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 5.693,
+      "end": 6.294,
+      "score": 0.906
+    },
+    {
+      "word": "erkunden",
+      "start": 6.314,
+      "end": 7.236,
+      "score": 0.949
+    },
+    {
+      "word": "und",
+      "start": 7.256,
+      "end": 7.456,
+      "score": 0.828
+    },
+    {
+      "word": "die",
+      "start": 7.477,
+      "end": 7.697,
+      "score": 0.857
+    },
+    {
+      "word": "Augen",
+      "start": 7.737,
+      "end": 8.038,
+      "score": 0.978
+    },
+    {
+      "word": "offen",
+      "start": 8.078,
+      "end": 8.298,
+      "score": 0.954
+    },
+    {
+      "word": "halten.",
+      "start": 8.338,
+      "end": 8.579,
+      "score": 0.87
+    }
+  ]
+}

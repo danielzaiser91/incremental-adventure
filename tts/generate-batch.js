@@ -32,9 +32,7 @@ const BATCH_LIMIT_DEFAULT = 10;
 const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
 /* Einheiten, die reproduzierbar an einem NICHT-Quota-Fehler scheitern und
    deshalb keinen Batch-Slot mehr blockieren sollen (sie zählen sonst gegen
-   --limit und drücken die Tagesausbeute unter 10). npc-mira-greet: 3× HTTP 400
-   "Request contains an invalid argument" (26./27.07.2026) — Verdacht:
-   inhaltlicher Filter auf dieser Textkombination, siehe PLAN.md.
+   --limit und drücken die Tagesausbeute unter 10).
    Mit --only <id> lässt sich eine übersprungene Einheit weiterhin gezielt testen. */
 // Dauerhaft blockierte Knoten: würden im Batch nur einen der 10 Tages-Slots
 // verbrennen. Mit --only weiterhin gezielt testbar.
@@ -42,8 +40,12 @@ const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
 // am selben Abend wieder heraus: Die Sonden-Diagnostik hat den Auslöser auf den
 // Persona-Stil-Prompt eingegrenzt, der Knoten läuft jetzt mit einem
 // Stil-Override (TTS_STYLE_OVERRIDES in extract-manifest.js) und passiert damit
-// die Validierung — bestätigt durch ein 429 statt eines 400.
-const SKIP_IDS = new Set(['npc-mira-greet', 'npc-fremder-finaleDialog']);
+// die Validierung — bestätigt durch ein 429 statt eines 400. Am 14.08.2026 lief
+// er so tatsächlich durch (HTTP 200).
+// npc-mira-greet ist am 14.08.2026 aus demselben Grund heraus: zwei kostenlose
+// Sonden bei leerer Quota zeigten Original-Stil → 400, Erzähler-Stil → 429.
+// Er hat jetzt ebenfalls einen Stil-Override.
+const SKIP_IDS = new Set(['npc-fremder-finaleDialog']);
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');

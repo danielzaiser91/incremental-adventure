@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.582,
+      "end": 3.55,
+      "text": "Abgeschlossen — Oswin schuldet mir was.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.582,
+          "end": 1.103,
+          "score": 0.631
+        },
+        {
+          "word": "—",
+          "start": 1.123,
+          "end": 2.266,
+          "score": 0.542
+        },
+        {
+          "word": "Oswin",
+          "start": 2.306,
+          "end": 2.768,
+          "score": 0.445
+        },
+        {
+          "word": "schuldet",
+          "start": 2.808,
+          "end": 3.189,
+          "score": 0.686
+        },
+        {
+          "word": "mir",
+          "start": 3.209,
+          "end": 3.349,
+          "score": 0.554
+        },
+        {
+          "word": "was.",
+          "start": 3.429,
+          "end": 3.55,
+          "score": 0.296
+        }
+      ]
+    },
+    {
+      "start": 3.61,
+      "end": 4.653,
+      "text": "Und Brakka kennt mich jetzt anders.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 3.61,
+          "end": 3.83,
+          "score": 0.267
+        },
+        {
+          "word": "Brakka",
+          "start": 3.85,
+          "end": 4.031,
+          "score": 0.102
+        },
+        {
+          "word": "kennt",
+          "start": 4.051,
+          "end": 4.171,
+          "score": 0.107
+        },
+        {
+          "word": "mich",
+          "start": 4.191,
+          "end": 4.272,
+          "score": 0.021
+        },
+        {
+          "word": "jetzt",
+          "start": 4.292,
+          "end": 4.392,
+          "score": 0.038
+        },
+        {
+          "word": "anders.",
+          "start": 4.412,
+          "end": 4.653,
+          "score": 0.338
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.582,
+      "end": 1.103,
+      "score": 0.631
+    },
+    {
+      "word": "—",
+      "start": 1.123,
+      "end": 2.266,
+      "score": 0.542
+    },
+    {
+      "word": "Oswin",
+      "start": 2.306,
+      "end": 2.768,
+      "score": 0.445
+    },
+    {
+      "word": "schuldet",
+      "start": 2.808,
+      "end": 3.189,
+      "score": 0.686
+    },
+    {
+      "word": "mir",
+      "start": 3.209,
+      "end": 3.349,
+      "score": 0.554
+    },
+    {
+      "word": "was.",
+      "start": 3.429,
+      "end": 3.55,
+      "score": 0.296
+    },
+    {
+      "word": "Und",
+      "start": 3.61,
+      "end": 3.83,
+      "score": 0.267
+    },
+    {
+      "word": "Brakka",
+      "start": 3.85,
+      "end": 4.031,
+      "score": 0.102
+    },
+    {
+      "word": "kennt",
+      "start": 4.051,
+      "end": 4.171,
+      "score": 0.107
+    },
+    {
+      "word": "mich",
+      "start": 4.191,
+      "end": 4.272,
+      "score": 0.021
+    },
+    {
+      "word": "jetzt",
+      "start": 4.292,
+      "end": 4.392,
+      "score": 0.038
+    },
+    {
+      "word": "anders.",
+      "start": 4.412,
+      "end": 4.653,
+      "score": 0.338
+    }
+  ]
+}

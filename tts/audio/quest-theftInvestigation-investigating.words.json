@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.602,
+      "end": 6.077,
+      "text": "Meine eigene Münze zwischen Räuber-Habe — das ist kein Zufall.",
+      "words": [
+        {
+          "word": "Meine",
+          "start": 0.602,
+          "end": 1.003,
+          "score": 0.826
+        },
+        {
+          "word": "eigene",
+          "start": 1.063,
+          "end": 1.484,
+          "score": 0.9
+        },
+        {
+          "word": "Münze",
+          "start": 1.544,
+          "end": 1.965,
+          "score": 0.89
+        },
+        {
+          "word": "zwischen",
+          "start": 2.006,
+          "end": 2.346,
+          "score": 0.934
+        },
+        {
+          "word": "Räuber-Habe",
+          "start": 2.407,
+          "end": 3.089,
+          "score": 0.893
+        },
+        {
+          "word": "—",
+          "start": 4.071,
+          "end": 4.091,
+          "score": 0.276
+        },
+        {
+          "word": "das",
+          "start": 4.111,
+          "end": 4.272,
+          "score": 0.865
+        },
+        {
+          "word": "ist",
+          "start": 4.312,
+          "end": 4.472,
+          "score": 0.915
+        },
+        {
+          "word": "kein",
+          "start": 4.492,
+          "end": 4.693,
+          "score": 0.798
+        },
+        {
+          "word": "Zufall.",
+          "start": 4.713,
+          "end": 6.077,
+          "score": 0.836
+        }
+      ]
+    },
+    {
+      "start": 6.097,
+      "end": 6.919,
+      "text": "Mit Mira reden.",
+      "words": [
+        {
+          "word": "Mit",
+          "start": 6.097,
+          "end": 6.257,
+          "score": 0.989
+        },
+        {
+          "word": "Mira",
+          "start": 6.317,
+          "end": 6.658,
+          "score": 0.932
+        },
+        {
+          "word": "reden.",
+          "start": 6.699,
+          "end": 6.919,
+          "score": 0.827
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Meine",
+      "start": 0.602,
+      "end": 1.003,
+      "score": 0.826
+    },
+    {
+      "word": "eigene",
+      "start": 1.063,
+      "end": 1.484,
+      "score": 0.9
+    },
+    {
+      "word": "Münze",
+      "start": 1.544,
+      "end": 1.965,
+      "score": 0.89
+    },
+    {
+      "word": "zwischen",
+      "start": 2.006,
+      "end": 2.346,
+      "score": 0.934
+    },
+    {
+      "word": "Räuber-Habe",
+      "start": 2.407,
+      "end": 3.089,
+      "score": 0.893
+    },
+    {
+      "word": "—",
+      "start": 4.071,
+      "end": 4.091,
+      "score": 0.276
+    },
+    {
+      "word": "das",
+      "start": 4.111,
+      "end": 4.272,
+      "score": 0.865
+    },
+    {
+      "word": "ist",
+      "start": 4.312,
+      "end": 4.472,
+      "score": 0.915
+    },
+    {
+      "word": "kein",
+      "start": 4.492,
+      "end": 4.693,
+      "score": 0.798
+    },
+    {
+      "word": "Zufall.",
+      "start": 4.713,
+      "end": 6.077,
+      "score": 0.836
+    },
+    {
+      "word": "Mit",
+      "start": 6.097,
+      "end": 6.257,
+      "score": 0.989
+    },
+    {
+      "word": "Mira",
+      "start": 6.317,
+      "end": 6.658,
+      "score": 0.932
+    },
+    {
+      "word": "reden.",
+      "start": 6.699,
+      "end": 6.919,
+      "score": 0.827
+    }
+  ]
+}

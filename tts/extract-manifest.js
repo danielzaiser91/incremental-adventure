@@ -294,7 +294,15 @@ const TTS_STYLE_OVERRIDES = {
      Damit liegt es nicht an der Wortwahl der Rollenzeile, sondern am
      NPC-Prompt-Aufbau in Kombination mit genau diesem Knotentext. Es gilt
      wieder der einzige belegte Weg: */
-  'npc-greta-turnIn': NARRATOR_STYLE
+  'npc-greta-turnIn': NARRATOR_STYLE,
+  /* `npc-mira-greet` — derselbe Befund, belegt am 14.08.2026 mit zwei
+     kostenlosen Sonden bei erschöpfter Quota: Original-Stil → HTTP 400,
+     Erzähler-Stil bei unveränderter Stimme (Aoede) → HTTP 429, die
+     Kombination passiert also die Validierung. Der Knoten scheiterte seit
+     26.07.2026 an 3× HTTP 400 und stand seither in `SKIP_IDS`; er ist dort
+     jetzt heraus und läuft mit Erzähler-Stil regulär mit. Die Stimme bleibt
+     Aoede, damit Mira über alle Knoten dieselbe Person bleibt. */
+  'npc-mira-greet': NARRATOR_STYLE
 };
 for (const u of units) {
   if (TTS_STYLE_OVERRIDES[u.id]) u.style = TTS_STYLE_OVERRIDES[u.id];

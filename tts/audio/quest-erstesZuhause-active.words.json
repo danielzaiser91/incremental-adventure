@@ -1,0 +1,248 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.494,
+      "text": "Dreimal auf der Straße zu schlafen zieht die Aufmerksamkeit der Katze auf mich.",
+      "words": [
+        {
+          "word": "Dreimal",
+          "start": 0.481,
+          "end": 1.043,
+          "score": 0.782
+        },
+        {
+          "word": "auf",
+          "start": 1.063,
+          "end": 1.203,
+          "score": 0.771
+        },
+        {
+          "word": "der",
+          "start": 1.223,
+          "end": 1.343,
+          "score": 0.952
+        },
+        {
+          "word": "Straße",
+          "start": 1.383,
+          "end": 1.825,
+          "score": 0.926
+        },
+        {
+          "word": "zu",
+          "start": 1.845,
+          "end": 1.965,
+          "score": 0.92
+        },
+        {
+          "word": "schlafen",
+          "start": 1.985,
+          "end": 2.586,
+          "score": 0.898
+        },
+        {
+          "word": "zieht",
+          "start": 2.627,
+          "end": 2.867,
+          "score": 0.665
+        },
+        {
+          "word": "die",
+          "start": 2.887,
+          "end": 3.048,
+          "score": 0.852
+        },
+        {
+          "word": "Aufmerksamkeit",
+          "start": 3.088,
+          "end": 3.87,
+          "score": 0.924
+        },
+        {
+          "word": "der",
+          "start": 3.89,
+          "end": 3.99,
+          "score": 0.941
+        },
+        {
+          "word": "Katze",
+          "start": 4.03,
+          "end": 4.331,
+          "score": 0.813
+        },
+        {
+          "word": "auf",
+          "start": 4.351,
+          "end": 4.531,
+          "score": 0.942
+        },
+        {
+          "word": "mich.",
+          "start": 4.551,
+          "end": 5.494,
+          "score": 0.829
+        }
+      ]
+    },
+    {
+      "start": 5.514,
+      "end": 7.358,
+      "text": "Aber ich brauche ein echtes Bett.",
+      "words": [
+        {
+          "word": "Aber",
+          "start": 5.514,
+          "end": 5.754,
+          "score": 0.807
+        },
+        {
+          "word": "ich",
+          "start": 5.795,
+          "end": 5.935,
+          "score": 0.9
+        },
+        {
+          "word": "brauche",
+          "start": 5.975,
+          "end": 6.396,
+          "score": 0.898
+        },
+        {
+          "word": "ein",
+          "start": 6.436,
+          "end": 6.717,
+          "score": 0.807
+        },
+        {
+          "word": "echtes",
+          "start": 6.777,
+          "end": 7.098,
+          "score": 0.869
+        },
+        {
+          "word": "Bett.",
+          "start": 7.198,
+          "end": 7.358,
+          "score": 0.557
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Dreimal",
+      "start": 0.481,
+      "end": 1.043,
+      "score": 0.782
+    },
+    {
+      "word": "auf",
+      "start": 1.063,
+      "end": 1.203,
+      "score": 0.771
+    },
+    {
+      "word": "der",
+      "start": 1.223,
+      "end": 1.343,
+      "score": 0.952
+    },
+    {
+      "word": "Straße",
+      "start": 1.383,
+      "end": 1.825,
+      "score": 0.926
+    },
+    {
+      "word": "zu",
+      "start": 1.845,
+      "end": 1.965,
+      "score": 0.92
+    },
+    {
+      "word": "schlafen",
+      "start": 1.985,
+      "end": 2.586,
+      "score": 0.898
+    },
+    {
+      "word": "zieht",
+      "start": 2.627,
+      "end": 2.867,
+      "score": 0.665
+    },
+    {
+      "word": "die",
+      "start": 2.887,
+      "end": 3.048,
+      "score": 0.852
+    },
+    {
+      "word": "Aufmerksamkeit",
+      "start": 3.088,
+      "end": 3.87,
+      "score": 0.924
+    },
+    {
+      "word": "der",
+      "start": 3.89,
+      "end": 3.99,
+      "score": 0.941
+    },
+    {
+      "word": "Katze",
+      "start": 4.03,
+      "end": 4.331,
+      "score": 0.813
+    },
+    {
+      "word": "auf",
+      "start": 4.351,
+      "end": 4.531,
+      "score": 0.942
+    },
+    {
+      "word": "mich.",
+      "start": 4.551,
+      "end": 5.494,
+      "score": 0.829
+    },
+    {
+      "word": "Aber",
+      "start": 5.514,
+      "end": 5.754,
+      "score": 0.807
+    },
+    {
+      "word": "ich",
+      "start": 5.795,
+      "end": 5.935,
+      "score": 0.9
+    },
+    {
+      "word": "brauche",
+      "start": 5.975,
+      "end": 6.396,
+      "score": 0.898
+    },
+    {
+      "word": "ein",
+      "start": 6.436,
+      "end": 6.717,
+      "score": 0.807
+    },
+    {
+      "word": "echtes",
+      "start": 6.777,
+      "end": 7.098,
+      "score": 0.869
+    },
+    {
+      "word": "Bett.",
+      "start": 7.198,
+      "end": 7.358,
+      "score": 0.557
+    }
+  ]
+}

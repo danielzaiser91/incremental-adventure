@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 2.99,
+      "text": "Die Konfrontation liegt hinter mir.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.401,
+          "end": 0.522,
+          "score": 0.845
+        },
+        {
+          "word": "Konfrontation",
+          "start": 0.542,
+          "end": 1.404,
+          "score": 0.832
+        },
+        {
+          "word": "liegt",
+          "start": 1.445,
+          "end": 1.685,
+          "score": 0.887
+        },
+        {
+          "word": "hinter",
+          "start": 1.705,
+          "end": 1.986,
+          "score": 0.985
+        },
+        {
+          "word": "mir.",
+          "start": 2.026,
+          "end": 2.99,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 3.01,
+      "end": 5.939,
+      "text": "Die Spur ist kälter als gedacht — und reicher.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.01,
+          "end": 3.13,
+          "score": 0.967
+        },
+        {
+          "word": "Spur",
+          "start": 3.17,
+          "end": 3.551,
+          "score": 0.888
+        },
+        {
+          "word": "ist",
+          "start": 3.612,
+          "end": 3.852,
+          "score": 0.987
+        },
+        {
+          "word": "kälter",
+          "start": 3.892,
+          "end": 4.213,
+          "score": 0.858
+        },
+        {
+          "word": "als",
+          "start": 4.254,
+          "end": 4.434,
+          "score": 0.937
+        },
+        {
+          "word": "gedacht",
+          "start": 4.454,
+          "end": 4.755,
+          "score": 0.98
+        },
+        {
+          "word": "—",
+          "start": 5.397,
+          "end": 5.417,
+          "score": 0.998
+        },
+        {
+          "word": "und",
+          "start": 5.437,
+          "end": 5.638,
+          "score": 0.991
+        },
+        {
+          "word": "reicher.",
+          "start": 5.698,
+          "end": 5.939,
+          "score": 0.812
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.401,
+      "end": 0.522,
+      "score": 0.845
+    },
+    {
+      "word": "Konfrontation",
+      "start": 0.542,
+      "end": 1.404,
+      "score": 0.832
+    },
+    {
+      "word": "liegt",
+      "start": 1.445,
+      "end": 1.685,
+      "score": 0.887
+    },
+    {
+      "word": "hinter",
+      "start": 1.705,
+      "end": 1.986,
+      "score": 0.985
+    },
+    {
+      "word": "mir.",
+      "start": 2.026,
+      "end": 2.99,
+      "score": 0.899
+    },
+    {
+      "word": "Die",
+      "start": 3.01,
+      "end": 3.13,
+      "score": 0.967
+    },
+    {
+      "word": "Spur",
+      "start": 3.17,
+      "end": 3.551,
+      "score": 0.888
+    },
+    {
+      "word": "ist",
+      "start": 3.612,
+      "end": 3.852,
+      "score": 0.987
+    },
+    {
+      "word": "kälter",
+      "start": 3.892,
+      "end": 4.213,
+      "score": 0.858
+    },
+    {
+      "word": "als",
+      "start": 4.254,
+      "end": 4.434,
+      "score": 0.937
+    },
+    {
+      "word": "gedacht",
+      "start": 4.454,
+      "end": 4.755,
+      "score": 0.98
+    },
+    {
+      "word": "—",
+      "start": 5.397,
+      "end": 5.417,
+      "score": 0.998
+    },
+    {
+      "word": "und",
+      "start": 5.437,
+      "end": 5.638,
+      "score": 0.991
+    },
+    {
+      "word": "reicher.",
+      "start": 5.698,
+      "end": 5.939,
+      "score": 0.812
+    }
+  ]
+}

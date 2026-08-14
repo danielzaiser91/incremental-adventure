@@ -52,14 +52,21 @@ mit dem neuen Modell.
   `SKIP_IDS` — sie kosten zwar einen Tages-Slot, holen sich aber irgendwann
   selbst. Nur reproduzierbare Leerantworten (`finishReason: OTHER`) rechtfertigen
   einen SKIP-Eintrag.
-  **Ausnahme (12.08.2026): `npc-greta-turnIn`** — 8× 400 in Folge über 5 Tage,
-  auch mit umformulierter Textvariante (`TTS_TEXT_OVERRIDES`). Das ist keine
-  Transienz mehr; der Knoten steht doch in `SKIP_IDS`, die Ursachen-Isolation
-  (Text vs. Stimme vs. Stil) übernimmt die Gratis-Diagnostik `tts/probe.js`
-  bei leerer Quota (Schritt 3 der Nacht-Routine). **Aufgeklärt 12.08.2026:**
-  Derselbe Text mit derselben Stimme, aber Erzähler-Stil statt Greta-Persona,
-  lief sofort mit HTTP 200 durch → Auslöser ist der Persona-Stil-Prompt, nicht
-  der Knotentext. Siehe Phase 4.
+  **Ausnahme — hartnäckige 400er sind eine Stil-Text-Wechselwirkung
+  (14.08.2026 an zwei Fällen belegt).** Scheitert ein NPC-Knoten *dauerhaft*
+  mit 400 (Greta `turnIn`: 9×, Mira `greet`: 3×), liegt es weder am Text noch
+  an der Stimme, sondern am **Persona-Stil-Prompt aus `NPC_PROFILES` in
+  Kombination mit genau diesem Knotentext** — Nachbarknoten desselben NPC mit
+  demselben Prompt-Aufbau laufen durch. **Rezept:** Bei leerer Tagesquota zwei
+  kostenlose Sonden (`tts/probe.js <id>` und `… --narrator-style`, Stimme
+  unverändert); 400 → 429 im Vergleich beweist den Stil als Auslöser. Fix ist
+  ein Eintrag in `TTS_STYLE_OVERRIDES` (`extract-manifest.js`) auf
+  `NARRATOR_STYLE` und Streichung aus `SKIP_IDS`. Nicht funktioniert hat in
+  beiden Fällen das Naheliegende: umformulierte Persona-Rollenzeile (erneut
+  400) und Ersatztext (`TTS_TEXT_OVERRIDES` — zusätzlich schädlich fürs
+  Wort-Highlighting, das gegen den ANGEZEIGTEN Spieltext ausrichtet). Preis
+  des Fixes: Der Knoten klingt neutraler als die übrigen Knoten desselben NPC
+  (Stimme bleibt gleich, Spielweise wird zur Erzählerstimme) → Hörprobe.
 - Erzählerstimme: `Iapetus` (alle Ich-Texte: Story, Monologe, Objectives)
 - Style-Prompt (v3, "Mitte" zwischen monoton und overacted) in
   `extract-manifest.js` — Konsistenz-Anker + maßvolle Emotions-Dynamik +
@@ -124,33 +131,33 @@ mit dem neuen Modell.
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
       Oswin 12, Fremder 12, Sivert 6) — *abgeschlossen 02.08.2026, 63/65*
-      (alle NPCs fertig bis auf zwei dauerhaft blockierte Knoten:
+      (alle NPCs fertig bis auf zwei damals blockierte Knoten:
       `npc-mira-greet` — 3× HTTP 400 „invalid argument", und
       `npc-fremder-finaleDialog` — 3× Leerantwort `finishReason: OTHER`.
-      Beide brauchen eine gezielte Untersuchung, nicht weitere Blind-Retries;
-      Verdacht in beiden Fällen: inhaltlicher Filter auf dem Knotentext).
+      **Stand 14.08.2026:** `npc-mira-greet` ist aufgeklärt und wieder im
+      Batch — zwei kostenlose Sonden bei leerer Quota zeigten Original-Stil
+      → 400, Erzähler-Stil bei unveränderter Stimme Aoede → 429. Damit
+      derselbe Mechanismus wie bei `npc-greta-turnIn`: der Persona-Stil-Prompt
+      ist der Auslöser, nicht der Text. Der Knoten hat jetzt einen
+      Stil-Override und ist aus `SKIP_IDS` heraus; **Hörprobe durch Daniel
+      offen**. Dauerhaft blockiert bleibt nur `npc-fremder-finaleDialog`
+      (Leerantwort, für die die Sonde nichts hergibt: sie passiert die
+      Validierung und liefert bei leerer Quota nur ein 429)).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
       hängt vom Spielstand ab → nicht statisch vertonbar).
-- [ ] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
+- [x] **Phase 4 — Neben-NPCs** (24 statische Knoten: Korbin 7, Roswald 7,
       Greta 3, Vorarbeiter 3, Torben 3, Straßenkehrer 1 — je ein dynamischer
-      Knoten bei Roswald und Greta fällt weg) — *läuft seit 02.08.2026, 23/24*
-      (Wirt/Korbin 7/7, Straßenkehrer 1/1, Vorarbeiter 3/3, Torben 3/3 und
-      Kommandant 7/7 fertig, Greta 2/3).
-      `ACTIVE_NPC_PHASES` steht auf `{3, 4}`. Offen in „failed" (Stand
-      12.08.2026): nur noch `npc-greta-turnIn` — inzwischen **8× HTTP 400 in
-      Folge** (12.08.: 7. Versuch unverändert, 8. Versuch mit umformulierter
-      Textvariante via `TTS_TEXT_OVERRIDES` in extract-manifest.js — beide
-      400). Damit ist die Transienz-These für DIESEN Knoten widerlegt und er
-      steht seit 12.08. doch in `SKIP_IDS` (Ausnahme von der 09.08.-Regel
-      „400er nicht skippen": die galt für transiente Fälle).
-      **Diagnostik gelaufen (12.08.2026, 22:19):** Erste Sonde
-      (`--narrator-style`, Stimme Despina unverändert) lieferte **HTTP 200 mit
-      Audio** — Text und Stimme sind also unschuldig, ausgelöst hat den 400 der
-      **Greta-Persona-Stil-Prompt** aus `NPC_PROFILES`. Nächster Schritt:
-      Stil-Prompt für Greta umformulieren (oder gezielter Style-Override für
-      diesen Knoten) und `npc-greta-turnIn` aus `SKIP_IDS` nehmen.
+      Knoten bei Roswald und Greta fällt weg) — *komplett 24/24 (14.08.2026)*.
+      Der letzte offene Knoten `npc-greta-turnIn` (9 HTTP 400 in Folge über
+      6 Tage) lief am 14.08.2026, 08:20 Uhr mit dem am 12.08. eingebauten
+      Stil-Override (`TTS_STYLE_OVERRIDES` → `NARRATOR_STYLE`, Stimme Despina
+      unverändert) auf Anhieb mit HTTP 200 durch. **Offen für Daniel:
+      Hörprobe** — klingt Greta in `turnIn` neben `offer`/`idle` zu neutral,
+      ist der nächste Hebel eine Umformulierung des KNOTENTEXTES in
+      `script/npc.js` (mit der Dialog-KI), kein weiterer Prompt-Versuch.
+      `ACTIVE_NPC_PHASES` steht auf `{3, 4}`.
 - [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
       Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
       Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
@@ -162,8 +169,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten. *Stand 12.08.2026: 20/177
-      (Quests 20/139, Objectives 0/38).*
+      Manifest umfasst damit 331 Einheiten. *Stand 14.08.2026: 37/177
+      (Quests 37/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -305,3 +312,8 @@ nachgelagerter Extra-Lauf.
 - 12.08.2026 23:05 — Batch: 0 Dateien (– … –), 0 s Audio, 429-Limit erreicht (Quota-Details siehe Konsole). Gesamt: 171/331 im Manifest.
 - 12.08.2026 23:05 — **Greta-Fix vorbereitet, Hörprobe scheitert an der Quota.** Zwei Erkenntnisse aus drei Requests: (1) Eine *umformulierte Greta-Persona* im gleichen NPC-Prompt-Aufbau (`npcStyle(...)`, Rollenzeile neu getextet) liefert erneut **HTTP 400** — es liegt also nicht an der Wortwahl der Rollenzeile, sondern am NPC-Prompt-Aufbau in Kombination mit genau diesem Knotentext. Bemerkenswert: Greta-`offer` und -`idle` liefen mit exakt demselben Aufbau problemlos durch, es ist also eine Text-Stil-Wechselwirkung, kein reiner Prompt- und kein reiner Textfehler. (2) Derselbe Knoten mit `NARRATOR_STYLE` bekam **429 statt 400** — die Kombination passiert die Validierung, es fehlt nur Quota. Umgesetzt: `TTS_TEXT_OVERRIDES` ist wieder leer (der Ersatztext wäre für das Wort-Highlighting sogar schädlich, weil ausgerichtet wird gegen den ANGEZEIGTEN Spieltext), neu ist `TTS_STYLE_OVERRIDES` mit `npc-greta-turnIn → NARRATOR_STYLE`, und der Knoten ist aus `SKIP_IDS` heraus. Der nächste Batch generiert ihn als erste Einheit; **Daniel prüft die Aufnahme per Gehör** — der Erzähler-Stil beschreibt einen neunzehnjährigen jungen Mann, die Stimme bleibt aber Despina. Klingt sie zu neutral neben Gretas zwei anderen Knoten, ist der nächste Hebel eine Umformulierung des KNOTENTEXTES in `script/npc.js` (Spieltext, mit der Dialog-KI), nicht ein weiterer Prompt-Versuch.
 - 12.08.2026 23:07 — Greta-Bestand geklärt: Sie hat 5 Dialogknoten, davon 3 statisch und damit vertonbar (`offer`, `turnIn`, `idle`) — `reminder` und `petCatch` bauen ihren Text zur Laufzeit aus dem Spielstand und bleiben ausgelassen. `offer` und `idle` sind fertig; **es fehlt genau eine Zeile**, `turnIn`.
+- 14.08.2026 08:24 — **Nachgetragener Lauf (Log-Zeile fehlte).** Zwischen 08:20 und 08:24 Uhr sind 8 Einheiten entstanden (`npc-greta-turnIn`, `quest-commanderTraining-rewarded`, `quest-oswinsAuftrag-*` 4 Stück, `quest-erstesZuhause-unstarted`/`-active`) — belegt durch die Dateizeitstempel in `tts/output/` und die Einträge in `progress.json`; im Aktivitäts-Log stand dazu **nichts**, veröffentlicht und committet war ebenfalls nichts. Vermutlich der wegen geschlossener App verschobene Nachtlauf vom 13.08., dessen Sitzung nach dem Batch abbrach (`generate-batch.js` hängt die Log-Zeile selbst an, sie fehlt aber im Arbeitsverzeichnis und im Commit). **Merksatz für künftige Läufe: erst `progress.json`/Dateizeitstempel gegen die letzte Log-Zeile abgleichen, sonst verschwindet ein ganzer Tagesertrag lautlos aus der Chronik.** Wichtigstes Ergebnis des Laufs: `npc-greta-turnIn` lief mit dem Stil-Override auf Anhieb durch (HTTP 200) — **Phase 4 ist damit komplett (24/24)**.
+- 14.08.2026 22:31 — Batch: 10 Dateien (quest-erstesZuhause-rewarded … quest-gildePruefung-done), 60 s Audio, komplett. Gesamt: 189/331 im Manifest.
+- 14.08.2026 22:32 — `publish-audio.js`: 18 neue Paare nach `tts/audio/` veröffentlicht (die 8 aus dem Morgenlauf + die 10 aus dem Abendbatch), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 18 Einheiten fehlerfrei.
+- 14.08.2026 22:35 — **`npc-mira-greet` aufgeklärt — derselbe Mechanismus wie bei Greta.** Zwei kostenlose Sonden nach dem Batch (Quota erschöpft): `node tts/probe.js npc-mira-greet --narrator-style` → **HTTP 429** („wäre gültig"), Kontrollsonde mit Original-Stil → **HTTP 400** („Auslöser"). Stimme in beiden Fällen unverändert Aoede, Text unverändert. Damit ist der **Mira-Persona-Stil-Prompt** der Auslöser der drei 400er vom 26./27.07., nicht der Knotentext — und die Kontrollsonde schließt aus, dass es bloß Transienz war. Umgesetzt: `TTS_STYLE_OVERRIDES` um `npc-mira-greet → NARRATOR_STYLE` ergänzt, Knoten aus `SKIP_IDS` genommen, Manifest neu erzeugt. Der nächste Batch generiert ihn als erste Einheit. **Daniel prüft beide Ausnahme-Aufnahmen per Gehör** (Greta `turnIn`, Mira `greet`): die Stimme bleibt jeweils dieselbe, die Spielweise wird neutraler. Übrig als einziger dauerhaft blockierter Knoten: `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`) — dort hilft die Sonde nicht, weil sie nur 400 gegen 429 unterscheidet und dieser Knoten die Validierung passiert.
+- 14.08.2026 22:36 — Tagesbilanz: 18 erfolgreiche Generierungen an einem Kalendertag (8 um 08:20, 10 um 22:26) plus 2 kostenlose Sonden. **Das Tageslimit von 10 hängt an einem Quota-Fenster, das nicht um Mitternacht deutscher Zeit umschlägt** (Verdacht: Pacific-Mitternacht ≈ 09:00 unserer Zeit) — der Morgenlauf zählte offenbar noch zum Vortag. Praktische Folge: Ein Nachlauf am frühen Morgen ist kein verschwendeter Slot, sondern schöpft das Kontingent des Vortages nach. Nicht überinterpretieren, aber im Blick behalten.

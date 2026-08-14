@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 4.632,
+      "text": "Abgeschlossen — ich kenne die Wahrheit hinter dem Raub.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.461,
+          "end": 1.003,
+          "score": 0.847
+        },
+        {
+          "word": "—",
+          "start": 1.705,
+          "end": 1.725,
+          "score": 0.97
+        },
+        {
+          "word": "ich",
+          "start": 1.745,
+          "end": 1.985,
+          "score": 0.873
+        },
+        {
+          "word": "kenne",
+          "start": 2.045,
+          "end": 2.346,
+          "score": 0.969
+        },
+        {
+          "word": "die",
+          "start": 2.386,
+          "end": 2.507,
+          "score": 0.733
+        },
+        {
+          "word": "Wahrheit",
+          "start": 2.547,
+          "end": 2.928,
+          "score": 0.944
+        },
+        {
+          "word": "hinter",
+          "start": 2.948,
+          "end": 3.189,
+          "score": 0.926
+        },
+        {
+          "word": "dem",
+          "start": 3.209,
+          "end": 3.309,
+          "score": 0.972
+        },
+        {
+          "word": "Raub.",
+          "start": 3.369,
+          "end": 4.632,
+          "score": 0.884
+        }
+      ]
+    },
+    {
+      "start": 4.672,
+      "end": 7.079,
+      "text": "Was ich damit anfange, liegt bei mir.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 4.672,
+          "end": 4.813,
+          "score": 0.952
+        },
+        {
+          "word": "ich",
+          "start": 4.853,
+          "end": 4.973,
+          "score": 0.934
+        },
+        {
+          "word": "damit",
+          "start": 5.013,
+          "end": 5.314,
+          "score": 0.909
+        },
+        {
+          "word": "anfange,",
+          "start": 5.354,
+          "end": 6.417,
+          "score": 0.936
+        },
+        {
+          "word": "liegt",
+          "start": 6.457,
+          "end": 6.698,
+          "score": 0.919
+        },
+        {
+          "word": "bei",
+          "start": 6.718,
+          "end": 6.898,
+          "score": 0.943
+        },
+        {
+          "word": "mir.",
+          "start": 6.939,
+          "end": 7.079,
+          "score": 0.784
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.461,
+      "end": 1.003,
+      "score": 0.847
+    },
+    {
+      "word": "—",
+      "start": 1.705,
+      "end": 1.725,
+      "score": 0.97
+    },
+    {
+      "word": "ich",
+      "start": 1.745,
+      "end": 1.985,
+      "score": 0.873
+    },
+    {
+      "word": "kenne",
+      "start": 2.045,
+      "end": 2.346,
+      "score": 0.969
+    },
+    {
+      "word": "die",
+      "start": 2.386,
+      "end": 2.507,
+      "score": 0.733
+    },
+    {
+      "word": "Wahrheit",
+      "start": 2.547,
+      "end": 2.928,
+      "score": 0.944
+    },
+    {
+      "word": "hinter",
+      "start": 2.948,
+      "end": 3.189,
+      "score": 0.926
+    },
+    {
+      "word": "dem",
+      "start": 3.209,
+      "end": 3.309,
+      "score": 0.972
+    },
+    {
+      "word": "Raub.",
+      "start": 3.369,
+      "end": 4.632,
+      "score": 0.884
+    },
+    {
+      "word": "Was",
+      "start": 4.672,
+      "end": 4.813,
+      "score": 0.952
+    },
+    {
+      "word": "ich",
+      "start": 4.853,
+      "end": 4.973,
+      "score": 0.934
+    },
+    {
+      "word": "damit",
+      "start": 5.013,
+      "end": 5.314,
+      "score": 0.909
+    },
+    {
+      "word": "anfange,",
+      "start": 5.354,
+      "end": 6.417,
+      "score": 0.936
+    },
+    {
+      "word": "liegt",
+      "start": 6.457,
+      "end": 6.698,
+      "score": 0.919
+    },
+    {
+      "word": "bei",
+      "start": 6.718,
+      "end": 6.898,
+      "score": 0.943
+    },
+    {
+      "word": "mir.",
+      "start": 6.939,
+      "end": 7.079,
+      "score": 0.784
+    }
+  ]
+}
