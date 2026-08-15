@@ -1,0 +1,147 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 2.389,
+      "text": "Mira könnte ihn kennen.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.502,
+          "end": 0.944,
+          "score": 0.898
+        },
+        {
+          "word": "könnte",
+          "start": 0.984,
+          "end": 1.265,
+          "score": 0.886
+        },
+        {
+          "word": "ihn",
+          "start": 1.305,
+          "end": 1.466,
+          "score": 0.673
+        },
+        {
+          "word": "kennen.",
+          "start": 1.506,
+          "end": 2.389,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 2.449,
+      "end": 4.096,
+      "text": "Oswin mit Sicherheit.",
+      "words": [
+        {
+          "word": "Oswin",
+          "start": 2.449,
+          "end": 2.851,
+          "score": 0.853
+        },
+        {
+          "word": "mit",
+          "start": 2.891,
+          "end": 3.032,
+          "score": 0.948
+        },
+        {
+          "word": "Sicherheit.",
+          "start": 3.052,
+          "end": 4.096,
+          "score": 0.816
+        }
+      ]
+    },
+    {
+      "start": 4.136,
+      "end": 4.799,
+      "text": "Ich frage beide.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.136,
+          "end": 4.236,
+          "score": 0.859
+        },
+        {
+          "word": "frage",
+          "start": 4.277,
+          "end": 4.558,
+          "score": 0.871
+        },
+        {
+          "word": "beide.",
+          "start": 4.598,
+          "end": 4.799,
+          "score": 0.833
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.502,
+      "end": 0.944,
+      "score": 0.898
+    },
+    {
+      "word": "könnte",
+      "start": 0.984,
+      "end": 1.265,
+      "score": 0.886
+    },
+    {
+      "word": "ihn",
+      "start": 1.305,
+      "end": 1.466,
+      "score": 0.673
+    },
+    {
+      "word": "kennen.",
+      "start": 1.506,
+      "end": 2.389,
+      "score": 0.896
+    },
+    {
+      "word": "Oswin",
+      "start": 2.449,
+      "end": 2.851,
+      "score": 0.853
+    },
+    {
+      "word": "mit",
+      "start": 2.891,
+      "end": 3.032,
+      "score": 0.948
+    },
+    {
+      "word": "Sicherheit.",
+      "start": 3.052,
+      "end": 4.096,
+      "score": 0.816
+    },
+    {
+      "word": "Ich",
+      "start": 4.136,
+      "end": 4.236,
+      "score": 0.859
+    },
+    {
+      "word": "frage",
+      "start": 4.277,
+      "end": 4.558,
+      "score": 0.871
+    },
+    {
+      "word": "beide.",
+      "start": 4.598,
+      "end": 4.799,
+      "score": 0.833
+    }
+  ]
+}

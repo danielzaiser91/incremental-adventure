@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.582,
+      "end": 4.613,
+      "text": "Abgeschlossen — er ist kein gewöhnlicher Durchreisender.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.582,
+          "end": 1.103,
+          "score": 0.769
+        },
+        {
+          "word": "—",
+          "start": 1.865,
+          "end": 1.885,
+          "score": 0.227
+        },
+        {
+          "word": "er",
+          "start": 1.946,
+          "end": 2.126,
+          "score": 0.86
+        },
+        {
+          "word": "ist",
+          "start": 2.166,
+          "end": 2.367,
+          "score": 0.848
+        },
+        {
+          "word": "kein",
+          "start": 2.407,
+          "end": 2.567,
+          "score": 0.839
+        },
+        {
+          "word": "gewöhnlicher",
+          "start": 2.607,
+          "end": 3.169,
+          "score": 0.864
+        },
+        {
+          "word": "Durchreisender.",
+          "start": 3.209,
+          "end": 4.613,
+          "score": 0.87
+        }
+      ]
+    },
+    {
+      "start": 4.653,
+      "end": 6.639,
+      "text": "Sein Name ist in Lethkar bekannt.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 4.653,
+          "end": 4.894,
+          "score": 0.91
+        },
+        {
+          "word": "Name",
+          "start": 4.934,
+          "end": 5.295,
+          "score": 0.926
+        },
+        {
+          "word": "ist",
+          "start": 5.335,
+          "end": 5.536,
+          "score": 0.983
+        },
+        {
+          "word": "in",
+          "start": 5.576,
+          "end": 5.736,
+          "score": 0.961
+        },
+        {
+          "word": "Lethkar",
+          "start": 5.777,
+          "end": 6.258,
+          "score": 0.853
+        },
+        {
+          "word": "bekannt.",
+          "start": 6.298,
+          "end": 6.639,
+          "score": 0.868
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.582,
+      "end": 1.103,
+      "score": 0.769
+    },
+    {
+      "word": "—",
+      "start": 1.865,
+      "end": 1.885,
+      "score": 0.227
+    },
+    {
+      "word": "er",
+      "start": 1.946,
+      "end": 2.126,
+      "score": 0.86
+    },
+    {
+      "word": "ist",
+      "start": 2.166,
+      "end": 2.367,
+      "score": 0.848
+    },
+    {
+      "word": "kein",
+      "start": 2.407,
+      "end": 2.567,
+      "score": 0.839
+    },
+    {
+      "word": "gewöhnlicher",
+      "start": 2.607,
+      "end": 3.169,
+      "score": 0.864
+    },
+    {
+      "word": "Durchreisender.",
+      "start": 3.209,
+      "end": 4.613,
+      "score": 0.87
+    },
+    {
+      "word": "Sein",
+      "start": 4.653,
+      "end": 4.894,
+      "score": 0.91
+    },
+    {
+      "word": "Name",
+      "start": 4.934,
+      "end": 5.295,
+      "score": 0.926
+    },
+    {
+      "word": "ist",
+      "start": 5.335,
+      "end": 5.536,
+      "score": 0.983
+    },
+    {
+      "word": "in",
+      "start": 5.576,
+      "end": 5.736,
+      "score": 0.961
+    },
+    {
+      "word": "Lethkar",
+      "start": 5.777,
+      "end": 6.258,
+      "score": 0.853
+    },
+    {
+      "word": "bekannt.",
+      "start": 6.298,
+      "end": 6.639,
+      "score": 0.868
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "segments": [
+    {
+      "start": 0.802,
+      "end": 7.699,
+      "text": "Mira hat mir einen verschlüsselten Brief mitgegeben und gebeten, mich nach dem Namen \"Valdris\" umzuhören.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.802,
+          "end": 1.283,
+          "score": 0.86
+        },
+        {
+          "word": "hat",
+          "start": 1.303,
+          "end": 1.484,
+          "score": 0.766
+        },
+        {
+          "word": "mir",
+          "start": 1.524,
+          "end": 1.704,
+          "score": 0.923
+        },
+        {
+          "word": "einen",
+          "start": 1.724,
+          "end": 2.005,
+          "score": 0.593
+        },
+        {
+          "word": "verschlüsselten",
+          "start": 2.025,
+          "end": 2.787,
+          "score": 0.816
+        },
+        {
+          "word": "Brief",
+          "start": 2.827,
+          "end": 3.168,
+          "score": 0.88
+        },
+        {
+          "word": "mitgegeben",
+          "start": 3.188,
+          "end": 4.21,
+          "score": 0.86
+        },
+        {
+          "word": "und",
+          "start": 4.25,
+          "end": 4.451,
+          "score": 0.91
+        },
+        {
+          "word": "gebeten,",
+          "start": 4.471,
+          "end": 4.952,
+          "score": 0.883
+        },
+        {
+          "word": "mich",
+          "start": 4.972,
+          "end": 5.132,
+          "score": 0.878
+        },
+        {
+          "word": "nach",
+          "start": 5.172,
+          "end": 5.333,
+          "score": 0.885
+        },
+        {
+          "word": "dem",
+          "start": 5.373,
+          "end": 5.573,
+          "score": 0.947
+        },
+        {
+          "word": "Namen",
+          "start": 5.613,
+          "end": 6.335,
+          "score": 0.956
+        },
+        {
+          "word": "\"Valdris\"",
+          "start": 6.355,
+          "end": 7.097,
+          "score": 0.764
+        },
+        {
+          "word": "umzuhören.",
+          "start": 7.137,
+          "end": 7.699,
+          "score": 0.647
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.802,
+      "end": 1.283,
+      "score": 0.86
+    },
+    {
+      "word": "hat",
+      "start": 1.303,
+      "end": 1.484,
+      "score": 0.766
+    },
+    {
+      "word": "mir",
+      "start": 1.524,
+      "end": 1.704,
+      "score": 0.923
+    },
+    {
+      "word": "einen",
+      "start": 1.724,
+      "end": 2.005,
+      "score": 0.593
+    },
+    {
+      "word": "verschlüsselten",
+      "start": 2.025,
+      "end": 2.787,
+      "score": 0.816
+    },
+    {
+      "word": "Brief",
+      "start": 2.827,
+      "end": 3.168,
+      "score": 0.88
+    },
+    {
+      "word": "mitgegeben",
+      "start": 3.188,
+      "end": 4.21,
+      "score": 0.86
+    },
+    {
+      "word": "und",
+      "start": 4.25,
+      "end": 4.451,
+      "score": 0.91
+    },
+    {
+      "word": "gebeten,",
+      "start": 4.471,
+      "end": 4.952,
+      "score": 0.883
+    },
+    {
+      "word": "mich",
+      "start": 4.972,
+      "end": 5.132,
+      "score": 0.878
+    },
+    {
+      "word": "nach",
+      "start": 5.172,
+      "end": 5.333,
+      "score": 0.885
+    },
+    {
+      "word": "dem",
+      "start": 5.373,
+      "end": 5.573,
+      "score": 0.947
+    },
+    {
+      "word": "Namen",
+      "start": 5.613,
+      "end": 6.335,
+      "score": 0.956
+    },
+    {
+      "word": "\"Valdris\"",
+      "start": 6.355,
+      "end": 7.097,
+      "score": 0.764
+    },
+    {
+      "word": "umzuhören.",
+      "start": 7.137,
+      "end": 7.699,
+      "score": 0.647
+    }
+  ]
+}

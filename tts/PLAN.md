@@ -130,17 +130,19 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *abgeschlossen 02.08.2026, 63/65*
+      Oswin 12, Fremder 12, Sivert 6) — *abgeschlossen 02.08.2026,
+      seit 15.08.2026 bei 64/65*
       (alle NPCs fertig bis auf zwei damals blockierte Knoten:
       `npc-mira-greet` — 3× HTTP 400 „invalid argument", und
       `npc-fremder-finaleDialog` — 3× Leerantwort `finishReason: OTHER`.
-      **Stand 14.08.2026:** `npc-mira-greet` ist aufgeklärt und wieder im
-      Batch — zwei kostenlose Sonden bei leerer Quota zeigten Original-Stil
-      → 400, Erzähler-Stil bei unveränderter Stimme Aoede → 429. Damit
-      derselbe Mechanismus wie bei `npc-greta-turnIn`: der Persona-Stil-Prompt
-      ist der Auslöser, nicht der Text. Der Knoten hat jetzt einen
-      Stil-Override und ist aus `SKIP_IDS` heraus; **Hörprobe durch Daniel
-      offen**. Dauerhaft blockiert bleibt nur `npc-fremder-finaleDialog`
+      **Stand 15.08.2026:** `npc-mira-greet` ist vertont — die Sonden vom
+      14.08. zeigten Original-Stil → 400, Erzähler-Stil bei unveränderter
+      Stimme Aoede → 429; mit dem daraufhin gesetzten Stil-Override lief der
+      Knoten am 15.08. als erste Einheit des Batches auf Anhieb mit HTTP 200
+      durch. Damit derselbe Mechanismus und derselbe Fix wie bei
+      `npc-greta-turnIn`: der Persona-Stil-Prompt ist der Auslöser, nicht der
+      Text. **Hörprobe durch Daniel offen.**
+      Dauerhaft blockiert bleibt nur `npc-fremder-finaleDialog`
       (Leerantwort, für die die Sonde nichts hergibt: sie passiert die
       Validierung und liefert bei leerer Quota nur ein 429)).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
@@ -169,8 +171,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten. *Stand 14.08.2026: 37/177
-      (Quests 37/139, Objectives 0/38).*
+      Manifest umfasst damit 331 Einheiten. *Stand 15.08.2026: 46/177
+      (Quests 46/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -317,3 +319,7 @@ nachgelagerter Extra-Lauf.
 - 14.08.2026 22:32 — `publish-audio.js`: 18 neue Paare nach `tts/audio/` veröffentlicht (die 8 aus dem Morgenlauf + die 10 aus dem Abendbatch), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 18 Einheiten fehlerfrei.
 - 14.08.2026 22:35 — **`npc-mira-greet` aufgeklärt — derselbe Mechanismus wie bei Greta.** Zwei kostenlose Sonden nach dem Batch (Quota erschöpft): `node tts/probe.js npc-mira-greet --narrator-style` → **HTTP 429** („wäre gültig"), Kontrollsonde mit Original-Stil → **HTTP 400** („Auslöser"). Stimme in beiden Fällen unverändert Aoede, Text unverändert. Damit ist der **Mira-Persona-Stil-Prompt** der Auslöser der drei 400er vom 26./27.07., nicht der Knotentext — und die Kontrollsonde schließt aus, dass es bloß Transienz war. Umgesetzt: `TTS_STYLE_OVERRIDES` um `npc-mira-greet → NARRATOR_STYLE` ergänzt, Knoten aus `SKIP_IDS` genommen, Manifest neu erzeugt. Der nächste Batch generiert ihn als erste Einheit. **Daniel prüft beide Ausnahme-Aufnahmen per Gehör** (Greta `turnIn`, Mira `greet`): die Stimme bleibt jeweils dieselbe, die Spielweise wird neutraler. Übrig als einziger dauerhaft blockierter Knoten: `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`) — dort hilft die Sonde nicht, weil sie nur 400 gegen 429 unterscheidet und dieser Knoten die Validierung passiert.
 - 14.08.2026 22:36 — Tagesbilanz: 18 erfolgreiche Generierungen an einem Kalendertag (8 um 08:20, 10 um 22:26) plus 2 kostenlose Sonden. **Das Tageslimit von 10 hängt an einem Quota-Fenster, das nicht um Mitternacht deutscher Zeit umschlägt** (Verdacht: Pacific-Mitternacht ≈ 09:00 unserer Zeit) — der Morgenlauf zählte offenbar noch zum Vortag. Praktische Folge: Ein Nachlauf am frühen Morgen ist kein verschwendeter Slot, sondern schöpft das Kontingent des Vortages nach. Nicht überinterpretieren, aber im Blick behalten.
+- 15.08.2026 22:16 — Batch: 10 Dateien (npc-mira-greet … quest-miraSuche-rewarded), 66 s Audio, komplett. Gesamt: 199/331 im Manifest.
+- 15.08.2026 22:17 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
+- 15.08.2026 22:18 — **Der Stil-Override-Fix ist jetzt an beiden Fällen bestätigt.** `npc-mira-greet` lief als erste Einheit des Batches mit HTTP 200 durch — nach 3 HTTP 400 am 26./27.07. und ohne jede Änderung an Text oder Stimme (Aoede), nur mit `TTS_STYLE_OVERRIDES → NARRATOR_STYLE`. Damit ist das am 12.08. an Greta entdeckte Rezept zweimal unabhängig belegt: Bei einem *dauerhaft* mit 400 scheiternden NPC-Knoten ist der Persona-Stil-Prompt der Auslöser, und zwei kostenlose Sonden bei leerer Quota (400 gegen 429) reichen als Beweis. **Phase 3 steht damit bei 64/65**, dauerhaft blockiert bleibt allein `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`, für die die Sonde nichts hergibt). **Offen für Daniel: Hörprobe** der beiden Ausnahme-Aufnahmen (Greta `turnIn`, Mira `greet`) — Stimme unverändert, Spielweise neutraler.
+- 15.08.2026 22:19 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — der erste vollständig fehlerfreie Zehnerlauf seit dem 29.07. Keine Sonden nötig: Die 400er-Diagnostik für `npc-greta-turnIn` und `npc-mira-greet` ist abgeschlossen und geloggt (12.08. bzw. 14.08.), der Schritt entfällt in künftigen Läufen. Phase 5 steht bei 46/177 (Quests 46/139, Objectives 0/38); bei 10/Tag ist sie um den 28.08. herum durch, danach folgt Phase 6 (Welt-Flavor, Extraktion steht noch aus).

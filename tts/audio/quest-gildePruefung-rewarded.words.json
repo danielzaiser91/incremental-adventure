@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 4.473,
+      "text": "Abgeschlossen — das tiefere Jagdgebiet ist zugänglich.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.501,
+          "end": 0.983,
+          "score": 0.897
+        },
+        {
+          "word": "—",
+          "start": 1.585,
+          "end": 1.605,
+          "score": 0.338
+        },
+        {
+          "word": "das",
+          "start": 1.625,
+          "end": 1.886,
+          "score": 0.925
+        },
+        {
+          "word": "tiefere",
+          "start": 1.946,
+          "end": 2.407,
+          "score": 0.94
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 2.447,
+          "end": 3.029,
+          "score": 0.944
+        },
+        {
+          "word": "ist",
+          "start": 3.069,
+          "end": 3.29,
+          "score": 0.956
+        },
+        {
+          "word": "zugänglich.",
+          "start": 3.31,
+          "end": 4.473,
+          "score": 0.954
+        }
+      ]
+    },
+    {
+      "start": 4.493,
+      "end": 6.379,
+      "text": "Und mein Ruf in der Gilde ist gefestigt.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 4.493,
+          "end": 4.674,
+          "score": 0.975
+        },
+        {
+          "word": "mein",
+          "start": 4.714,
+          "end": 4.854,
+          "score": 0.796
+        },
+        {
+          "word": "Ruf",
+          "start": 4.894,
+          "end": 5.095,
+          "score": 0.938
+        },
+        {
+          "word": "in",
+          "start": 5.115,
+          "end": 5.215,
+          "score": 0.889
+        },
+        {
+          "word": "der",
+          "start": 5.256,
+          "end": 5.356,
+          "score": 0.973
+        },
+        {
+          "word": "Gilde",
+          "start": 5.396,
+          "end": 5.657,
+          "score": 0.919
+        },
+        {
+          "word": "ist",
+          "start": 5.677,
+          "end": 5.857,
+          "score": 0.873
+        },
+        {
+          "word": "gefestigt.",
+          "start": 5.897,
+          "end": 6.379,
+          "score": 0.873
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.501,
+      "end": 0.983,
+      "score": 0.897
+    },
+    {
+      "word": "—",
+      "start": 1.585,
+      "end": 1.605,
+      "score": 0.338
+    },
+    {
+      "word": "das",
+      "start": 1.625,
+      "end": 1.886,
+      "score": 0.925
+    },
+    {
+      "word": "tiefere",
+      "start": 1.946,
+      "end": 2.407,
+      "score": 0.94
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 2.447,
+      "end": 3.029,
+      "score": 0.944
+    },
+    {
+      "word": "ist",
+      "start": 3.069,
+      "end": 3.29,
+      "score": 0.956
+    },
+    {
+      "word": "zugänglich.",
+      "start": 3.31,
+      "end": 4.473,
+      "score": 0.954
+    },
+    {
+      "word": "Und",
+      "start": 4.493,
+      "end": 4.674,
+      "score": 0.975
+    },
+    {
+      "word": "mein",
+      "start": 4.714,
+      "end": 4.854,
+      "score": 0.796
+    },
+    {
+      "word": "Ruf",
+      "start": 4.894,
+      "end": 5.095,
+      "score": 0.938
+    },
+    {
+      "word": "in",
+      "start": 5.115,
+      "end": 5.215,
+      "score": 0.889
+    },
+    {
+      "word": "der",
+      "start": 5.256,
+      "end": 5.356,
+      "score": 0.973
+    },
+    {
+      "word": "Gilde",
+      "start": 5.396,
+      "end": 5.657,
+      "score": 0.919
+    },
+    {
+      "word": "ist",
+      "start": 5.677,
+      "end": 5.857,
+      "score": 0.873
+    },
+    {
+      "word": "gefestigt.",
+      "start": 5.897,
+      "end": 6.379,
+      "score": 0.873
+    }
+  ]
+}

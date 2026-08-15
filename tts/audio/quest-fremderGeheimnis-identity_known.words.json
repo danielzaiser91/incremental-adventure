@@ -1,0 +1,236 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.474,
+      "text": "Ich weiß jetzt, wer er ist — oder zumindest, woher er kommt.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.481,
+          "end": 0.662,
+          "score": 0.8
+        },
+        {
+          "word": "weiß",
+          "start": 0.702,
+          "end": 0.982,
+          "score": 0.944
+        },
+        {
+          "word": "jetzt,",
+          "start": 1.002,
+          "end": 1.263,
+          "score": 0.884
+        },
+        {
+          "word": "wer",
+          "start": 1.283,
+          "end": 1.444,
+          "score": 0.825
+        },
+        {
+          "word": "er",
+          "start": 1.484,
+          "end": 1.624,
+          "score": 0.916
+        },
+        {
+          "word": "ist",
+          "start": 1.664,
+          "end": 1.784,
+          "score": 0.854
+        },
+        {
+          "word": "—",
+          "start": 2.566,
+          "end": 2.586,
+          "score": 0.997
+        },
+        {
+          "word": "oder",
+          "start": 2.606,
+          "end": 3.007,
+          "score": 0.897
+        },
+        {
+          "word": "zumindest,",
+          "start": 3.048,
+          "end": 3.609,
+          "score": 0.863
+        },
+        {
+          "word": "woher",
+          "start": 3.649,
+          "end": 4.01,
+          "score": 0.885
+        },
+        {
+          "word": "er",
+          "start": 4.05,
+          "end": 4.17,
+          "score": 0.97
+        },
+        {
+          "word": "kommt.",
+          "start": 4.23,
+          "end": 5.474,
+          "score": 0.849
+        }
+      ]
+    },
+    {
+      "start": 5.494,
+      "end": 7.659,
+      "text": "Den Fremden ein letztes Mal ansprechen.",
+      "words": [
+        {
+          "word": "Den",
+          "start": 5.494,
+          "end": 5.674,
+          "score": 0.827
+        },
+        {
+          "word": "Fremden",
+          "start": 5.714,
+          "end": 6.155,
+          "score": 0.852
+        },
+        {
+          "word": "ein",
+          "start": 6.195,
+          "end": 6.356,
+          "score": 0.763
+        },
+        {
+          "word": "letztes",
+          "start": 6.396,
+          "end": 6.777,
+          "score": 0.957
+        },
+        {
+          "word": "Mal",
+          "start": 6.837,
+          "end": 7.118,
+          "score": 0.97
+        },
+        {
+          "word": "ansprechen.",
+          "start": 7.158,
+          "end": 7.659,
+          "score": 0.97
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.481,
+      "end": 0.662,
+      "score": 0.8
+    },
+    {
+      "word": "weiß",
+      "start": 0.702,
+      "end": 0.982,
+      "score": 0.944
+    },
+    {
+      "word": "jetzt,",
+      "start": 1.002,
+      "end": 1.263,
+      "score": 0.884
+    },
+    {
+      "word": "wer",
+      "start": 1.283,
+      "end": 1.444,
+      "score": 0.825
+    },
+    {
+      "word": "er",
+      "start": 1.484,
+      "end": 1.624,
+      "score": 0.916
+    },
+    {
+      "word": "ist",
+      "start": 1.664,
+      "end": 1.784,
+      "score": 0.854
+    },
+    {
+      "word": "—",
+      "start": 2.566,
+      "end": 2.586,
+      "score": 0.997
+    },
+    {
+      "word": "oder",
+      "start": 2.606,
+      "end": 3.007,
+      "score": 0.897
+    },
+    {
+      "word": "zumindest,",
+      "start": 3.048,
+      "end": 3.609,
+      "score": 0.863
+    },
+    {
+      "word": "woher",
+      "start": 3.649,
+      "end": 4.01,
+      "score": 0.885
+    },
+    {
+      "word": "er",
+      "start": 4.05,
+      "end": 4.17,
+      "score": 0.97
+    },
+    {
+      "word": "kommt.",
+      "start": 4.23,
+      "end": 5.474,
+      "score": 0.849
+    },
+    {
+      "word": "Den",
+      "start": 5.494,
+      "end": 5.674,
+      "score": 0.827
+    },
+    {
+      "word": "Fremden",
+      "start": 5.714,
+      "end": 6.155,
+      "score": 0.852
+    },
+    {
+      "word": "ein",
+      "start": 6.195,
+      "end": 6.356,
+      "score": 0.763
+    },
+    {
+      "word": "letztes",
+      "start": 6.396,
+      "end": 6.777,
+      "score": 0.957
+    },
+    {
+      "word": "Mal",
+      "start": 6.837,
+      "end": 7.118,
+      "score": 0.97
+    },
+    {
+      "word": "ansprechen.",
+      "start": 7.158,
+      "end": 7.659,
+      "score": 0.97
+    }
+  ]
+}

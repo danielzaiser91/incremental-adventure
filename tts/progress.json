@@ -944,13 +944,59 @@
       "file": "quest-gildePruefung-done.wav",
       "seconds": 5.4,
       "date": "2026-08-14T20:31:39.687Z"
+    },
+    "npc-mira-greet": {
+      "file": "npc-mira-greet.wav",
+      "seconds": 9,
+      "date": "2026-08-15T20:10:46.092Z"
+    },
+    "quest-gildePruefung-rewarded": {
+      "file": "quest-gildePruefung-rewarded.wav",
+      "seconds": 6.8,
+      "date": "2026-08-15T20:11:48.580Z"
+    },
+    "quest-fremderGeheimnis-unstarted": {
+      "file": "quest-fremderGeheimnis-unstarted.wav",
+      "seconds": 1.8,
+      "date": "2026-08-15T20:12:19.979Z"
+    },
+    "quest-fremderGeheimnis-curious": {
+      "file": "quest-fremderGeheimnis-curious.wav",
+      "seconds": 8,
+      "date": "2026-08-15T20:12:55.161Z"
+    },
+    "quest-fremderGeheimnis-asking_around": {
+      "file": "quest-fremderGeheimnis-asking_around.wav",
+      "seconds": 5.2,
+      "date": "2026-08-15T20:13:29.546Z"
+    },
+    "quest-fremderGeheimnis-identity_known": {
+      "file": "quest-fremderGeheimnis-identity_known.wav",
+      "seconds": 8.1,
+      "date": "2026-08-15T20:14:05.146Z"
+    },
+    "quest-fremderGeheimnis-rewarded": {
+      "file": "quest-fremderGeheimnis-rewarded.wav",
+      "seconds": 7,
+      "date": "2026-08-15T20:14:43.205Z"
+    },
+    "quest-miraSuche-unstarted": {
+      "file": "quest-miraSuche-unstarted.wav",
+      "seconds": 2,
+      "date": "2026-08-15T20:15:15.509Z"
+    },
+    "quest-miraSuche-active": {
+      "file": "quest-miraSuche-active.wav",
+      "seconds": 8.3,
+      "date": "2026-08-15T20:15:50.671Z"
+    },
+    "quest-miraSuche-rewarded": {
+      "file": "quest-miraSuche-rewarded.wav",
+      "seconds": 9.5,
+      "date": "2026-08-15T20:16:26.714Z"
     }
   },
   "failed": {
-    "npc-mira-greet": {
-      "error": "HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n",
-      "date": "2026-07-27T20:10:44.449Z"
-    },
     "npc-fremder-finaleDialog": {
       "error": "Keine Audio-Daten in Antwort: {\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finishReason\": \"OTHER\",\n      \"index\": 0\n    }\n  ],\n  \"usageMetadata\": {\n    \"promptTokenCount\": 349,\n    \"candidatesTokenCount\": 1033,\n    \"totalTokenCount\": 1382,\n    \"promptTokensDetails\": [\n      {\n        \"modality\": \"TEXT\",\n        \"tokenCount\": 349\n      }\n    ],\n    \"candidatesTokensDetails\": [\n      {\n        \"modality\": \"AUDIO\",\n        \"tokenCount\": 1033\n      }\n    ],\n    \"serviceTier\": \"standard\"\n  }",
       "date": "2026-08-07T16:22:21.524Z"

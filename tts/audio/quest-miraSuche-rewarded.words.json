@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 1.182,
+      "end": 5.612,
+      "text": "Abgeschlossen — der Brief führt nach Lethkar.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 1.182,
+          "end": 1.844,
+          "score": 0.834
+        },
+        {
+          "word": "—",
+          "start": 2.766,
+          "end": 2.786,
+          "score": 0.193
+        },
+        {
+          "word": "der",
+          "start": 2.806,
+          "end": 2.966,
+          "score": 0.794
+        },
+        {
+          "word": "Brief",
+          "start": 3.006,
+          "end": 3.367,
+          "score": 0.933
+        },
+        {
+          "word": "führt",
+          "start": 3.407,
+          "end": 3.688,
+          "score": 0.867
+        },
+        {
+          "word": "nach",
+          "start": 3.708,
+          "end": 3.948,
+          "score": 0.978
+        },
+        {
+          "word": "Lethkar.",
+          "start": 3.988,
+          "end": 5.612,
+          "score": 0.755
+        }
+      ]
+    },
+    {
+      "start": 5.652,
+      "end": 9.039,
+      "text": "Was auch immer Valdris dort tut, Mira will es wissen.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 5.652,
+          "end": 5.812,
+          "score": 0.806
+        },
+        {
+          "word": "auch",
+          "start": 5.832,
+          "end": 6.073,
+          "score": 0.828
+        },
+        {
+          "word": "immer",
+          "start": 6.113,
+          "end": 6.373,
+          "score": 0.983
+        },
+        {
+          "word": "Valdris",
+          "start": 6.414,
+          "end": 6.774,
+          "score": 0.638
+        },
+        {
+          "word": "dort",
+          "start": 6.794,
+          "end": 7.015,
+          "score": 0.949
+        },
+        {
+          "word": "tut,",
+          "start": 7.055,
+          "end": 7.897,
+          "score": 0.784
+        },
+        {
+          "word": "Mira",
+          "start": 7.917,
+          "end": 8.338,
+          "score": 0.88
+        },
+        {
+          "word": "will",
+          "start": 8.358,
+          "end": 8.538,
+          "score": 0.814
+        },
+        {
+          "word": "es",
+          "start": 8.578,
+          "end": 8.758,
+          "score": 0.86
+        },
+        {
+          "word": "wissen.",
+          "start": 8.779,
+          "end": 9.039,
+          "score": 0.696
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 1.182,
+      "end": 1.844,
+      "score": 0.834
+    },
+    {
+      "word": "—",
+      "start": 2.766,
+      "end": 2.786,
+      "score": 0.193
+    },
+    {
+      "word": "der",
+      "start": 2.806,
+      "end": 2.966,
+      "score": 0.794
+    },
+    {
+      "word": "Brief",
+      "start": 3.006,
+      "end": 3.367,
+      "score": 0.933
+    },
+    {
+      "word": "führt",
+      "start": 3.407,
+      "end": 3.688,
+      "score": 0.867
+    },
+    {
+      "word": "nach",
+      "start": 3.708,
+      "end": 3.948,
+      "score": 0.978
+    },
+    {
+      "word": "Lethkar.",
+      "start": 3.988,
+      "end": 5.612,
+      "score": 0.755
+    },
+    {
+      "word": "Was",
+      "start": 5.652,
+      "end": 5.812,
+      "score": 0.806
+    },
+    {
+      "word": "auch",
+      "start": 5.832,
+      "end": 6.073,
+      "score": 0.828
+    },
+    {
+      "word": "immer",
+      "start": 6.113,
+      "end": 6.373,
+      "score": 0.983
+    },
+    {
+      "word": "Valdris",
+      "start": 6.414,
+      "end": 6.774,
+      "score": 0.638
+    },
+    {
+      "word": "dort",
+      "start": 6.794,
+      "end": 7.015,
+      "score": 0.949
+    },
+    {
+      "word": "tut,",
+      "start": 7.055,
+      "end": 7.897,
+      "score": 0.784
+    },
+    {
+      "word": "Mira",
+      "start": 7.917,
+      "end": 8.338,
+      "score": 0.88
+    },
+    {
+      "word": "will",
+      "start": 8.358,
+      "end": 8.538,
+      "score": 0.814
+    },
+    {
+      "word": "es",
+      "start": 8.578,
+      "end": 8.758,
+      "score": 0.86
+    },
+    {
+      "word": "wissen.",
+      "start": 8.779,
+      "end": 9.039,
+      "score": 0.696
+    }
+  ]
+}

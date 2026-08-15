@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 3.83,
+      "text": "Dieser Mann sitzt jede Nacht in derselben Ecke.",
+      "words": [
+        {
+          "word": "Dieser",
+          "start": 0.441,
+          "end": 0.722,
+          "score": 0.87
+        },
+        {
+          "word": "Mann",
+          "start": 0.762,
+          "end": 0.982,
+          "score": 0.936
+        },
+        {
+          "word": "sitzt",
+          "start": 1.003,
+          "end": 1.444,
+          "score": 0.945
+        },
+        {
+          "word": "jede",
+          "start": 1.484,
+          "end": 1.845,
+          "score": 0.82
+        },
+        {
+          "word": "Nacht",
+          "start": 1.885,
+          "end": 2.105,
+          "score": 0.901
+        },
+        {
+          "word": "in",
+          "start": 2.145,
+          "end": 2.246,
+          "score": 0.79
+        },
+        {
+          "word": "derselben",
+          "start": 2.266,
+          "end": 2.867,
+          "score": 0.923
+        },
+        {
+          "word": "Ecke.",
+          "start": 2.927,
+          "end": 3.83,
+          "score": 0.905
+        }
+      ]
+    },
+    {
+      "start": 3.85,
+      "end": 6.095,
+      "text": "Dreimal habe ich ihn jetzt beobachtet.",
+      "words": [
+        {
+          "word": "Dreimal",
+          "start": 3.85,
+          "end": 4.331,
+          "score": 0.933
+        },
+        {
+          "word": "habe",
+          "start": 4.351,
+          "end": 4.491,
+          "score": 0.913
+        },
+        {
+          "word": "ich",
+          "start": 4.511,
+          "end": 4.591,
+          "score": 0.786
+        },
+        {
+          "word": "ihn",
+          "start": 4.612,
+          "end": 4.732,
+          "score": 0.746
+        },
+        {
+          "word": "jetzt",
+          "start": 4.752,
+          "end": 4.912,
+          "score": 0.872
+        },
+        {
+          "word": "beobachtet.",
+          "start": 4.932,
+          "end": 6.095,
+          "score": 0.966
+        }
+      ]
+    },
+    {
+      "start": 6.135,
+      "end": 7.519,
+      "text": "Ich will wissen, wer er ist.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.135,
+          "end": 6.276,
+          "score": 0.875
+        },
+        {
+          "word": "will",
+          "start": 6.316,
+          "end": 6.617,
+          "score": 0.902
+        },
+        {
+          "word": "wissen,",
+          "start": 6.657,
+          "end": 6.917,
+          "score": 0.728
+        },
+        {
+          "word": "wer",
+          "start": 6.957,
+          "end": 7.038,
+          "score": 0.168
+        },
+        {
+          "word": "er",
+          "start": 7.098,
+          "end": 7.318,
+          "score": 0.775
+        },
+        {
+          "word": "ist.",
+          "start": 7.378,
+          "end": 7.519,
+          "score": 0.527
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Dieser",
+      "start": 0.441,
+      "end": 0.722,
+      "score": 0.87
+    },
+    {
+      "word": "Mann",
+      "start": 0.762,
+      "end": 0.982,
+      "score": 0.936
+    },
+    {
+      "word": "sitzt",
+      "start": 1.003,
+      "end": 1.444,
+      "score": 0.945
+    },
+    {
+      "word": "jede",
+      "start": 1.484,
+      "end": 1.845,
+      "score": 0.82
+    },
+    {
+      "word": "Nacht",
+      "start": 1.885,
+      "end": 2.105,
+      "score": 0.901
+    },
+    {
+      "word": "in",
+      "start": 2.145,
+      "end": 2.246,
+      "score": 0.79
+    },
+    {
+      "word": "derselben",
+      "start": 2.266,
+      "end": 2.867,
+      "score": 0.923
+    },
+    {
+      "word": "Ecke.",
+      "start": 2.927,
+      "end": 3.83,
+      "score": 0.905
+    },
+    {
+      "word": "Dreimal",
+      "start": 3.85,
+      "end": 4.331,
+      "score": 0.933
+    },
+    {
+      "word": "habe",
+      "start": 4.351,
+      "end": 4.491,
+      "score": 0.913
+    },
+    {
+      "word": "ich",
+      "start": 4.511,
+      "end": 4.591,
+      "score": 0.786
+    },
+    {
+      "word": "ihn",
+      "start": 4.612,
+      "end": 4.732,
+      "score": 0.746
+    },
+    {
+      "word": "jetzt",
+      "start": 4.752,
+      "end": 4.912,
+      "score": 0.872
+    },
+    {
+      "word": "beobachtet.",
+      "start": 4.932,
+      "end": 6.095,
+      "score": 0.966
+    },
+    {
+      "word": "Ich",
+      "start": 6.135,
+      "end": 6.276,
+      "score": 0.875
+    },
+    {
+      "word": "will",
+      "start": 6.316,
+      "end": 6.617,
+      "score": 0.902
+    },
+    {
+      "word": "wissen,",
+      "start": 6.657,
+      "end": 6.917,
+      "score": 0.728
+    },
+    {
+      "word": "wer",
+      "start": 6.957,
+      "end": 7.038,
+      "score": 0.168
+    },
+    {
+      "word": "er",
+      "start": 7.098,
+      "end": 7.318,
+      "score": 0.775
+    },
+    {
+      "word": "ist.",
+      "start": 7.378,
+      "end": 7.519,
+      "score": 0.527
+    }
+  ]
+}
