@@ -118,7 +118,7 @@ mit dem neuen Modell.
         `generate-batch.js` erledigt Opus + Alignment seit heute automatisch
         pro neuer Einheit (`postProcess()`). ffmpeg ist in
         `ai_agent_tools.md` dokumentiert.
-  - [ ] Einbau ins Spiel — **Entscheidung 12.08.2026 (Daniel): direkt
+  - [x] Einbau ins Spiel — **Entscheidung 12.08.2026 (Daniel): direkt
         umsetzen.** Umsetzungsstand: Story-Audio lädt jetzt aus dem
         committeten `tts/audio/` (Opus + words.json, befüllt über
         `tts/publish-audio.js`); die Audio-UI erscheint NUR bei Einträgen
@@ -126,7 +126,11 @@ mit dem neuen Modell.
         `test/story-audio-gating.js`). Offen bis zum Abhaken: Alignment-
         Backlog fertig → restliche Paare veröffentlichen → Minor-Release
         v0.23.0 mit pending-patchnotes (Discord-Freigabe durch Daniel laut
-        Release-Checkliste)
+        Release-Checkliste). **Abgehakt 15.08.2026:** alle drei Bedingungen
+        erfüllt — v0.23.0 ist draußen (Spielstand heute 0.23.2-alpha), und
+        alle 199 vertonten Einheiten liegen als vollständiges Paar in
+        `tts/audio/` (0 mangels Wort-Timing zurückgehalten). Neue Einheiten
+        werden ab jetzt im laufenden Batch-Betrieb mitveröffentlicht.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
