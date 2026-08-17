@@ -175,8 +175,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten. *Stand 15.08.2026: 46/177
-      (Quests 46/139, Objectives 0/38).*
+      Manifest umfasst damit 331 Einheiten. *Stand 17.08.2026: 56/177
+      (Quests 56/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -327,3 +327,6 @@ nachgelagerter Extra-Lauf.
 - 15.08.2026 22:17 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
 - 15.08.2026 22:18 — **Der Stil-Override-Fix ist jetzt an beiden Fällen bestätigt.** `npc-mira-greet` lief als erste Einheit des Batches mit HTTP 200 durch — nach 3 HTTP 400 am 26./27.07. und ohne jede Änderung an Text oder Stimme (Aoede), nur mit `TTS_STYLE_OVERRIDES → NARRATOR_STYLE`. Damit ist das am 12.08. an Greta entdeckte Rezept zweimal unabhängig belegt: Bei einem *dauerhaft* mit 400 scheiternden NPC-Knoten ist der Persona-Stil-Prompt der Auslöser, und zwei kostenlose Sonden bei leerer Quota (400 gegen 429) reichen als Beweis. **Phase 3 steht damit bei 64/65**, dauerhaft blockiert bleibt allein `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`, für die die Sonde nichts hergibt). **Offen für Daniel: Hörprobe** der beiden Ausnahme-Aufnahmen (Greta `turnIn`, Mira `greet`) — Stimme unverändert, Spielweise neutraler.
 - 15.08.2026 22:19 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — der erste vollständig fehlerfreie Zehnerlauf seit dem 29.07. Keine Sonden nötig: Die 400er-Diagnostik für `npc-greta-turnIn` und `npc-mira-greet` ist abgeschlossen und geloggt (12.08. bzw. 14.08.), der Schritt entfällt in künftigen Läufen. Phase 5 steht bei 46/177 (Quests 46/139, Objectives 0/38); bei 10/Tag ist sie um den 28.08. herum durch, danach folgt Phase 6 (Welt-Flavor, Extraktion steht noch aus).
+- 17.08.2026 22:16 — Batch: 10 Dateien (quest-kampfRoutine-unstarted … quest-gildaAufstieg-active), 53 s Audio, komplett. Gesamt: 209/331 im Manifest.
+- 17.08.2026 22:17 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
+- 18.08.2026 01:22 — Tagesbilanz zum Lauf vom 17.08.: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — zweiter fehlerfreier Zehnerlauf in Folge. Keine Sonden (400er-Diagnostik ist seit 14.08. abgeschlossen und geloggt). Am 16.08. lief kein Batch (kein Log-Eintrag, keine neuen Dateien in `tts/output/` — App war vermutlich zu); der Gegencheck `progress.json`/Dateizeitstempel gegen die letzte Log-Zeile zeigt keinen verschwundenen Tagesertrag. Phase 5 steht bei 56/177 (Quests 56/139, Objectives 0/38); bei 10/Tag ist sie um den 30.08. herum durch, danach Phase 6 (Welt-Flavor, Extraktion steht noch aus). Nachtrag zur Chronik: Die Abschluss-Schritte dieses Laufs (Veröffentlichen, Log, Commit) liefen erst gegen 01:20, weil die Sitzung zwischen Batch und Abschluss pausierte — Batch und Audio-Dateien stammen belegt aus 22:15/22:16.

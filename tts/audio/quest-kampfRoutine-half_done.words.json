@@ -1,0 +1,92 @@
+{
+  "segments": [
+    {
+      "start": 0.884,
+      "end": 3.133,
+      "text": "Stadtwache geleistet.",
+      "words": [
+        {
+          "word": "Stadtwache",
+          "start": 0.884,
+          "end": 1.446,
+          "score": 0.915
+        },
+        {
+          "word": "geleistet.",
+          "start": 1.466,
+          "end": 3.133,
+          "score": 0.848
+        }
+      ]
+    },
+    {
+      "start": 3.153,
+      "end": 4.298,
+      "text": "Jetzt noch fünf Kämpfe.",
+      "words": [
+        {
+          "word": "Jetzt",
+          "start": 3.153,
+          "end": 3.394,
+          "score": 0.71
+        },
+        {
+          "word": "noch",
+          "start": 3.414,
+          "end": 3.675,
+          "score": 0.834
+        },
+        {
+          "word": "fünf",
+          "start": 3.716,
+          "end": 3.997,
+          "score": 0.847
+        },
+        {
+          "word": "Kämpfe.",
+          "start": 4.037,
+          "end": 4.298,
+          "score": 0.727
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Stadtwache",
+      "start": 0.884,
+      "end": 1.446,
+      "score": 0.915
+    },
+    {
+      "word": "geleistet.",
+      "start": 1.466,
+      "end": 3.133,
+      "score": 0.848
+    },
+    {
+      "word": "Jetzt",
+      "start": 3.153,
+      "end": 3.394,
+      "score": 0.71
+    },
+    {
+      "word": "noch",
+      "start": 3.414,
+      "end": 3.675,
+      "score": 0.834
+    },
+    {
+      "word": "fünf",
+      "start": 3.716,
+      "end": 3.997,
+      "score": 0.847
+    },
+    {
+      "word": "Kämpfe.",
+      "start": 4.037,
+      "end": 4.298,
+      "score": 0.727
+    }
+  ]
+}

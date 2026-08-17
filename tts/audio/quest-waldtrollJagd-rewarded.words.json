@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.915,
+      "text": "Abgeschlossen — das tiefe Jagdgebiet ist jetzt sicher.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.866,
+          "score": 0.896
+        },
+        {
+          "word": "—",
+          "start": 1.886,
+          "end": 1.906,
+          "score": 0.992
+        },
+        {
+          "word": "das",
+          "start": 1.926,
+          "end": 2.167,
+          "score": 0.906
+        },
+        {
+          "word": "tiefe",
+          "start": 2.207,
+          "end": 2.508,
+          "score": 0.863
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 2.548,
+          "end": 3.15,
+          "score": 0.866
+        },
+        {
+          "word": "ist",
+          "start": 3.17,
+          "end": 3.33,
+          "score": 0.783
+        },
+        {
+          "word": "jetzt",
+          "start": 3.35,
+          "end": 3.611,
+          "score": 0.96
+        },
+        {
+          "word": "sicher.",
+          "start": 3.631,
+          "end": 4.915,
+          "score": 0.898
+        }
+      ]
+    },
+    {
+      "start": 4.935,
+      "end": 6.079,
+      "text": "Brakka hat sich bedankt.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 4.935,
+          "end": 5.397,
+          "score": 0.8
+        },
+        {
+          "word": "hat",
+          "start": 5.417,
+          "end": 5.557,
+          "score": 0.987
+        },
+        {
+          "word": "sich",
+          "start": 5.597,
+          "end": 5.758,
+          "score": 0.921
+        },
+        {
+          "word": "bedankt.",
+          "start": 5.798,
+          "end": 6.079,
+          "score": 0.853
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.866,
+      "score": 0.896
+    },
+    {
+      "word": "—",
+      "start": 1.886,
+      "end": 1.906,
+      "score": 0.992
+    },
+    {
+      "word": "das",
+      "start": 1.926,
+      "end": 2.167,
+      "score": 0.906
+    },
+    {
+      "word": "tiefe",
+      "start": 2.207,
+      "end": 2.508,
+      "score": 0.863
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 2.548,
+      "end": 3.15,
+      "score": 0.866
+    },
+    {
+      "word": "ist",
+      "start": 3.17,
+      "end": 3.33,
+      "score": 0.783
+    },
+    {
+      "word": "jetzt",
+      "start": 3.35,
+      "end": 3.611,
+      "score": 0.96
+    },
+    {
+      "word": "sicher.",
+      "start": 3.631,
+      "end": 4.915,
+      "score": 0.898
+    },
+    {
+      "word": "Brakka",
+      "start": 4.935,
+      "end": 5.397,
+      "score": 0.8
+    },
+    {
+      "word": "hat",
+      "start": 5.417,
+      "end": 5.557,
+      "score": 0.987
+    },
+    {
+      "word": "sich",
+      "start": 5.597,
+      "end": 5.758,
+      "score": 0.921
+    },
+    {
+      "word": "bedankt.",
+      "start": 5.798,
+      "end": 6.079,
+      "score": 0.853
+    }
+  ]
+}

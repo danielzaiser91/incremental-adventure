@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.321,
+      "end": 6.556,
+      "text": "Brakka hat Gerüchte gehört — ein schwerfälliges Wesen im tiefen Wald.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.321,
+          "end": 1.022,
+          "score": 0.851
+        },
+        {
+          "word": "hat",
+          "start": 1.063,
+          "end": 1.283,
+          "score": 0.961
+        },
+        {
+          "word": "Gerüchte",
+          "start": 1.303,
+          "end": 1.784,
+          "score": 0.9
+        },
+        {
+          "word": "gehört",
+          "start": 1.844,
+          "end": 2.927,
+          "score": 0.986
+        },
+        {
+          "word": "—",
+          "start": 2.947,
+          "end": 2.967,
+          "score": 0.997
+        },
+        {
+          "word": "ein",
+          "start": 3.007,
+          "end": 3.288,
+          "score": 0.738
+        },
+        {
+          "word": "schwerfälliges",
+          "start": 3.328,
+          "end": 4.31,
+          "score": 0.879
+        },
+        {
+          "word": "Wesen",
+          "start": 4.37,
+          "end": 4.731,
+          "score": 0.88
+        },
+        {
+          "word": "im",
+          "start": 4.791,
+          "end": 4.992,
+          "score": 0.9
+        },
+        {
+          "word": "tiefen",
+          "start": 5.032,
+          "end": 5.473,
+          "score": 0.875
+        },
+        {
+          "word": "Wald.",
+          "start": 5.513,
+          "end": 6.556,
+          "score": 0.939
+        }
+      ]
+    },
+    {
+      "start": 6.596,
+      "end": 7.979,
+      "text": "Ich soll es finden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.596,
+          "end": 7.297,
+          "score": 0.825
+        },
+        {
+          "word": "soll",
+          "start": 7.317,
+          "end": 7.478,
+          "score": 0.942
+        },
+        {
+          "word": "es",
+          "start": 7.538,
+          "end": 7.678,
+          "score": 0.826
+        },
+        {
+          "word": "finden.",
+          "start": 7.718,
+          "end": 7.979,
+          "score": 0.696
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.321,
+      "end": 1.022,
+      "score": 0.851
+    },
+    {
+      "word": "hat",
+      "start": 1.063,
+      "end": 1.283,
+      "score": 0.961
+    },
+    {
+      "word": "Gerüchte",
+      "start": 1.303,
+      "end": 1.784,
+      "score": 0.9
+    },
+    {
+      "word": "gehört",
+      "start": 1.844,
+      "end": 2.927,
+      "score": 0.986
+    },
+    {
+      "word": "—",
+      "start": 2.947,
+      "end": 2.967,
+      "score": 0.997
+    },
+    {
+      "word": "ein",
+      "start": 3.007,
+      "end": 3.288,
+      "score": 0.738
+    },
+    {
+      "word": "schwerfälliges",
+      "start": 3.328,
+      "end": 4.31,
+      "score": 0.879
+    },
+    {
+      "word": "Wesen",
+      "start": 4.37,
+      "end": 4.731,
+      "score": 0.88
+    },
+    {
+      "word": "im",
+      "start": 4.791,
+      "end": 4.992,
+      "score": 0.9
+    },
+    {
+      "word": "tiefen",
+      "start": 5.032,
+      "end": 5.473,
+      "score": 0.875
+    },
+    {
+      "word": "Wald.",
+      "start": 5.513,
+      "end": 6.556,
+      "score": 0.939
+    },
+    {
+      "word": "Ich",
+      "start": 6.596,
+      "end": 7.297,
+      "score": 0.825
+    },
+    {
+      "word": "soll",
+      "start": 7.317,
+      "end": 7.478,
+      "score": 0.942
+    },
+    {
+      "word": "es",
+      "start": 7.538,
+      "end": 7.678,
+      "score": 0.826
+    },
+    {
+      "word": "finden.",
+      "start": 7.718,
+      "end": 7.979,
+      "score": 0.696
+    }
+  ]
+}

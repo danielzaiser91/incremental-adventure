@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 3.87,
+      "text": "Gildenvorsteher Torben erwartet mich in der Taverne.",
+      "words": [
+        {
+          "word": "Gildenvorsteher",
+          "start": 0.401,
+          "end": 1.363,
+          "score": 0.825
+        },
+        {
+          "word": "Torben",
+          "start": 1.403,
+          "end": 1.945,
+          "score": 0.973
+        },
+        {
+          "word": "erwartet",
+          "start": 1.985,
+          "end": 2.366,
+          "score": 0.989
+        },
+        {
+          "word": "mich",
+          "start": 2.386,
+          "end": 2.526,
+          "score": 0.863
+        },
+        {
+          "word": "in",
+          "start": 2.566,
+          "end": 2.627,
+          "score": 0.997
+        },
+        {
+          "word": "der",
+          "start": 2.667,
+          "end": 2.767,
+          "score": 0.8
+        },
+        {
+          "word": "Taverne.",
+          "start": 2.787,
+          "end": 3.87,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 3.89,
+      "end": 7.679,
+      "text": "Der Diebstahl-Fall und die bewiesene Stärke haben sich herumgesprochen.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 3.89,
+          "end": 4.05,
+          "score": 0.924
+        },
+        {
+          "word": "Diebstahl-Fall",
+          "start": 4.11,
+          "end": 5.073,
+          "score": 0.929
+        },
+        {
+          "word": "und",
+          "start": 5.113,
+          "end": 5.293,
+          "score": 0.968
+        },
+        {
+          "word": "die",
+          "start": 5.313,
+          "end": 5.434,
+          "score": 0.91
+        },
+        {
+          "word": "bewiesene",
+          "start": 5.474,
+          "end": 6.035,
+          "score": 0.92
+        },
+        {
+          "word": "Stärke",
+          "start": 6.075,
+          "end": 6.576,
+          "score": 0.953
+        },
+        {
+          "word": "haben",
+          "start": 6.616,
+          "end": 6.857,
+          "score": 0.956
+        },
+        {
+          "word": "sich",
+          "start": 6.877,
+          "end": 6.997,
+          "score": 0.941
+        },
+        {
+          "word": "herumgesprochen.",
+          "start": 7.017,
+          "end": 7.679,
+          "score": 0.863
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Gildenvorsteher",
+      "start": 0.401,
+      "end": 1.363,
+      "score": 0.825
+    },
+    {
+      "word": "Torben",
+      "start": 1.403,
+      "end": 1.945,
+      "score": 0.973
+    },
+    {
+      "word": "erwartet",
+      "start": 1.985,
+      "end": 2.366,
+      "score": 0.989
+    },
+    {
+      "word": "mich",
+      "start": 2.386,
+      "end": 2.526,
+      "score": 0.863
+    },
+    {
+      "word": "in",
+      "start": 2.566,
+      "end": 2.627,
+      "score": 0.997
+    },
+    {
+      "word": "der",
+      "start": 2.667,
+      "end": 2.767,
+      "score": 0.8
+    },
+    {
+      "word": "Taverne.",
+      "start": 2.787,
+      "end": 3.87,
+      "score": 0.916
+    },
+    {
+      "word": "Der",
+      "start": 3.89,
+      "end": 4.05,
+      "score": 0.924
+    },
+    {
+      "word": "Diebstahl-Fall",
+      "start": 4.11,
+      "end": 5.073,
+      "score": 0.929
+    },
+    {
+      "word": "und",
+      "start": 5.113,
+      "end": 5.293,
+      "score": 0.968
+    },
+    {
+      "word": "die",
+      "start": 5.313,
+      "end": 5.434,
+      "score": 0.91
+    },
+    {
+      "word": "bewiesene",
+      "start": 5.474,
+      "end": 6.035,
+      "score": 0.92
+    },
+    {
+      "word": "Stärke",
+      "start": 6.075,
+      "end": 6.576,
+      "score": 0.953
+    },
+    {
+      "word": "haben",
+      "start": 6.616,
+      "end": 6.857,
+      "score": 0.956
+    },
+    {
+      "word": "sich",
+      "start": 6.877,
+      "end": 6.997,
+      "score": 0.941
+    },
+    {
+      "word": "herumgesprochen.",
+      "start": 7.017,
+      "end": 7.679,
+      "score": 0.863
+    }
+  ]
+}

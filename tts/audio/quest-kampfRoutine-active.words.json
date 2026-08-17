@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.662,
+      "end": 3.469,
+      "text": "Roswald hat Potenzial in mir gesehen.",
+      "words": [
+        {
+          "word": "Roswald",
+          "start": 0.662,
+          "end": 1.183,
+          "score": 0.907
+        },
+        {
+          "word": "hat",
+          "start": 1.203,
+          "end": 1.464,
+          "score": 0.9
+        },
+        {
+          "word": "Potenzial",
+          "start": 1.484,
+          "end": 2.106,
+          "score": 0.941
+        },
+        {
+          "word": "in",
+          "start": 2.146,
+          "end": 2.226,
+          "score": 0.912
+        },
+        {
+          "word": "mir",
+          "start": 2.266,
+          "end": 2.427,
+          "score": 0.909
+        },
+        {
+          "word": "gesehen.",
+          "start": 2.467,
+          "end": 3.469,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 3.51,
+      "end": 6.758,
+      "text": "Zweimal Stadtwache + fünf weitere Kämpfe beweisen es.",
+      "words": [
+        {
+          "word": "Zweimal",
+          "start": 3.51,
+          "end": 3.951,
+          "score": 0.904
+        },
+        {
+          "word": "Stadtwache",
+          "start": 3.991,
+          "end": 4.693,
+          "score": 0.9
+        },
+        {
+          "word": "+",
+          "start": 4.713,
+          "end": 5.154,
+          "score": 0.858
+        },
+        {
+          "word": "fünf",
+          "start": 5.194,
+          "end": 5.475,
+          "score": 0.975
+        },
+        {
+          "word": "weitere",
+          "start": 5.515,
+          "end": 5.856,
+          "score": 0.902
+        },
+        {
+          "word": "Kämpfe",
+          "start": 5.876,
+          "end": 6.257,
+          "score": 0.97
+        },
+        {
+          "word": "beweisen",
+          "start": 6.297,
+          "end": 6.638,
+          "score": 0.696
+        },
+        {
+          "word": "es.",
+          "start": 6.698,
+          "end": 6.758,
+          "score": 0.22
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Roswald",
+      "start": 0.662,
+      "end": 1.183,
+      "score": 0.907
+    },
+    {
+      "word": "hat",
+      "start": 1.203,
+      "end": 1.464,
+      "score": 0.9
+    },
+    {
+      "word": "Potenzial",
+      "start": 1.484,
+      "end": 2.106,
+      "score": 0.941
+    },
+    {
+      "word": "in",
+      "start": 2.146,
+      "end": 2.226,
+      "score": 0.912
+    },
+    {
+      "word": "mir",
+      "start": 2.266,
+      "end": 2.427,
+      "score": 0.909
+    },
+    {
+      "word": "gesehen.",
+      "start": 2.467,
+      "end": 3.469,
+      "score": 0.901
+    },
+    {
+      "word": "Zweimal",
+      "start": 3.51,
+      "end": 3.951,
+      "score": 0.904
+    },
+    {
+      "word": "Stadtwache",
+      "start": 3.991,
+      "end": 4.693,
+      "score": 0.9
+    },
+    {
+      "word": "+",
+      "start": 4.713,
+      "end": 5.154,
+      "score": 0.858
+    },
+    {
+      "word": "fünf",
+      "start": 5.194,
+      "end": 5.475,
+      "score": 0.975
+    },
+    {
+      "word": "weitere",
+      "start": 5.515,
+      "end": 5.856,
+      "score": 0.902
+    },
+    {
+      "word": "Kämpfe",
+      "start": 5.876,
+      "end": 6.257,
+      "score": 0.97
+    },
+    {
+      "word": "beweisen",
+      "start": 6.297,
+      "end": 6.638,
+      "score": 0.696
+    },
+    {
+      "word": "es.",
+      "start": 6.698,
+      "end": 6.758,
+      "score": 0.22
+    }
+  ]
+}

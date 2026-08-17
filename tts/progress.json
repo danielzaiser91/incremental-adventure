@@ -994,6 +994,56 @@
       "file": "quest-miraSuche-rewarded.wav",
       "seconds": 9.5,
       "date": "2026-08-15T20:16:26.714Z"
+    },
+    "quest-kampfRoutine-unstarted": {
+      "file": "quest-kampfRoutine-unstarted.wav",
+      "seconds": 2.1,
+      "date": "2026-08-17T20:10:22.130Z"
+    },
+    "quest-kampfRoutine-active": {
+      "file": "quest-kampfRoutine-active.wav",
+      "seconds": 7.3,
+      "date": "2026-08-17T20:11:22.772Z"
+    },
+    "quest-kampfRoutine-half_done": {
+      "file": "quest-kampfRoutine-half_done.wav",
+      "seconds": 4.8,
+      "date": "2026-08-17T20:11:55.536Z"
+    },
+    "quest-kampfRoutine-rewarded": {
+      "file": "quest-kampfRoutine-rewarded.wav",
+      "seconds": 6.1,
+      "date": "2026-08-17T20:12:30.895Z"
+    },
+    "quest-waldtrollJagd-unstarted": {
+      "file": "quest-waldtrollJagd-unstarted.wav",
+      "seconds": 1.8,
+      "date": "2026-08-17T20:13:03.517Z"
+    },
+    "quest-waldtrollJagd-active": {
+      "file": "quest-waldtrollJagd-active.wav",
+      "seconds": 8.4,
+      "date": "2026-08-17T20:13:40.956Z"
+    },
+    "quest-waldtrollJagd-done": {
+      "file": "quest-waldtrollJagd-done.wav",
+      "seconds": 5.1,
+      "date": "2026-08-17T20:14:14.771Z"
+    },
+    "quest-waldtrollJagd-rewarded": {
+      "file": "quest-waldtrollJagd-rewarded.wav",
+      "seconds": 6.5,
+      "date": "2026-08-17T20:14:50.747Z"
+    },
+    "quest-gildaAufstieg-unstarted": {
+      "file": "quest-gildaAufstieg-unstarted.wav",
+      "seconds": 2.7,
+      "date": "2026-08-17T20:15:23.337Z"
+    },
+    "quest-gildaAufstieg-active": {
+      "file": "quest-gildaAufstieg-active.wav",
+      "seconds": 8,
+      "date": "2026-08-17T20:15:58.668Z"
     }
   },
   "failed": {

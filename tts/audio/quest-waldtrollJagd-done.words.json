@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.402,
+      "end": 3.373,
+      "text": "Der Waldtroll liegt am Boden.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.402,
+          "end": 0.643,
+          "score": 0.873
+        },
+        {
+          "word": "Waldtroll",
+          "start": 0.683,
+          "end": 1.325,
+          "score": 0.831
+        },
+        {
+          "word": "liegt",
+          "start": 1.345,
+          "end": 1.586,
+          "score": 0.98
+        },
+        {
+          "word": "am",
+          "start": 1.646,
+          "end": 1.827,
+          "score": 0.93
+        },
+        {
+          "word": "Boden.",
+          "start": 1.867,
+          "end": 3.373,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 3.393,
+      "end": 4.718,
+      "text": "Brakka Bericht erstatten.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 3.393,
+          "end": 3.875,
+          "score": 0.844
+        },
+        {
+          "word": "Bericht",
+          "start": 3.895,
+          "end": 4.257,
+          "score": 0.989
+        },
+        {
+          "word": "erstatten.",
+          "start": 4.297,
+          "end": 4.718,
+          "score": 0.836
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.402,
+      "end": 0.643,
+      "score": 0.873
+    },
+    {
+      "word": "Waldtroll",
+      "start": 0.683,
+      "end": 1.325,
+      "score": 0.831
+    },
+    {
+      "word": "liegt",
+      "start": 1.345,
+      "end": 1.586,
+      "score": 0.98
+    },
+    {
+      "word": "am",
+      "start": 1.646,
+      "end": 1.827,
+      "score": 0.93
+    },
+    {
+      "word": "Boden.",
+      "start": 1.867,
+      "end": 3.373,
+      "score": 0.973
+    },
+    {
+      "word": "Brakka",
+      "start": 3.393,
+      "end": 3.875,
+      "score": 0.844
+    },
+    {
+      "word": "Bericht",
+      "start": 3.895,
+      "end": 4.257,
+      "score": 0.989
+    },
+    {
+      "word": "erstatten.",
+      "start": 4.297,
+      "end": 4.718,
+      "score": 0.836
+    }
+  ]
+}

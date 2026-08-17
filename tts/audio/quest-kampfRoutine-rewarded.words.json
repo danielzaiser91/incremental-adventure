@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.482,
+      "end": 3.732,
+      "text": "Abgeschlossen — dauerhaft robuster.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.482,
+          "end": 0.983,
+          "score": 0.838
+        },
+        {
+          "word": "—",
+          "start": 1.645,
+          "end": 1.665,
+          "score": 0.798
+        },
+        {
+          "word": "dauerhaft",
+          "start": 1.706,
+          "end": 2.288,
+          "score": 0.821
+        },
+        {
+          "word": "robuster.",
+          "start": 2.348,
+          "end": 3.732,
+          "score": 0.909
+        }
+      ]
+    },
+    {
+      "start": 3.772,
+      "end": 5.719,
+      "text": "Und Roswald sieht mich jetzt anders an.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 3.772,
+          "end": 3.913,
+          "score": 0.964
+        },
+        {
+          "word": "Roswald",
+          "start": 3.973,
+          "end": 4.435,
+          "score": 0.86
+        },
+        {
+          "word": "sieht",
+          "start": 4.455,
+          "end": 4.675,
+          "score": 0.622
+        },
+        {
+          "word": "mich",
+          "start": 4.695,
+          "end": 4.856,
+          "score": 0.853
+        },
+        {
+          "word": "jetzt",
+          "start": 4.876,
+          "end": 5.197,
+          "score": 0.88
+        },
+        {
+          "word": "anders",
+          "start": 5.237,
+          "end": 5.578,
+          "score": 0.859
+        },
+        {
+          "word": "an.",
+          "start": 5.639,
+          "end": 5.719,
+          "score": 0.783
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.482,
+      "end": 0.983,
+      "score": 0.838
+    },
+    {
+      "word": "—",
+      "start": 1.645,
+      "end": 1.665,
+      "score": 0.798
+    },
+    {
+      "word": "dauerhaft",
+      "start": 1.706,
+      "end": 2.288,
+      "score": 0.821
+    },
+    {
+      "word": "robuster.",
+      "start": 2.348,
+      "end": 3.732,
+      "score": 0.909
+    },
+    {
+      "word": "Und",
+      "start": 3.772,
+      "end": 3.913,
+      "score": 0.964
+    },
+    {
+      "word": "Roswald",
+      "start": 3.973,
+      "end": 4.435,
+      "score": 0.86
+    },
+    {
+      "word": "sieht",
+      "start": 4.455,
+      "end": 4.675,
+      "score": 0.622
+    },
+    {
+      "word": "mich",
+      "start": 4.695,
+      "end": 4.856,
+      "score": 0.853
+    },
+    {
+      "word": "jetzt",
+      "start": 4.876,
+      "end": 5.197,
+      "score": 0.88
+    },
+    {
+      "word": "anders",
+      "start": 5.237,
+      "end": 5.578,
+      "score": 0.859
+    },
+    {
+      "word": "an.",
+      "start": 5.639,
+      "end": 5.719,
+      "score": 0.783
+    }
+  ]
+}
