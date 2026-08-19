@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.402,
+      "end": 3.353,
+      "text": "Er hat mir Koordinaten gegeben.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 0.402,
+          "end": 0.542,
+          "score": 0.859
+        },
+        {
+          "word": "hat",
+          "start": 0.582,
+          "end": 0.783,
+          "score": 0.961
+        },
+        {
+          "word": "mir",
+          "start": 0.803,
+          "end": 1.024,
+          "score": 0.94
+        },
+        {
+          "word": "Koordinaten",
+          "start": 1.064,
+          "end": 1.807,
+          "score": 0.91
+        },
+        {
+          "word": "gegeben.",
+          "start": 1.847,
+          "end": 3.353,
+          "score": 0.906
+        }
+      ]
+    },
+    {
+      "start": 3.413,
+      "end": 4.779,
+      "text": "Ich muss die Weltkarte öffnen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.413,
+          "end": 3.534,
+          "score": 0.891
+        },
+        {
+          "word": "muss",
+          "start": 3.554,
+          "end": 3.795,
+          "score": 0.938
+        },
+        {
+          "word": "die",
+          "start": 3.815,
+          "end": 3.915,
+          "score": 0.904
+        },
+        {
+          "word": "Weltkarte",
+          "start": 3.935,
+          "end": 4.477,
+          "score": 0.994
+        },
+        {
+          "word": "öffnen.",
+          "start": 4.518,
+          "end": 4.779,
+          "score": 0.818
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Er",
+      "start": 0.402,
+      "end": 0.542,
+      "score": 0.859
+    },
+    {
+      "word": "hat",
+      "start": 0.582,
+      "end": 0.783,
+      "score": 0.961
+    },
+    {
+      "word": "mir",
+      "start": 0.803,
+      "end": 1.024,
+      "score": 0.94
+    },
+    {
+      "word": "Koordinaten",
+      "start": 1.064,
+      "end": 1.807,
+      "score": 0.91
+    },
+    {
+      "word": "gegeben.",
+      "start": 1.847,
+      "end": 3.353,
+      "score": 0.906
+    },
+    {
+      "word": "Ich",
+      "start": 3.413,
+      "end": 3.534,
+      "score": 0.891
+    },
+    {
+      "word": "muss",
+      "start": 3.554,
+      "end": 3.795,
+      "score": 0.938
+    },
+    {
+      "word": "die",
+      "start": 3.815,
+      "end": 3.915,
+      "score": 0.904
+    },
+    {
+      "word": "Weltkarte",
+      "start": 3.935,
+      "end": 4.477,
+      "score": 0.994
+    },
+    {
+      "word": "öffnen.",
+      "start": 4.518,
+      "end": 4.779,
+      "score": 0.818
+    }
+  ]
+}

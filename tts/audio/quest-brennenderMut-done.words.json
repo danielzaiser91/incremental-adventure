@@ -1,0 +1,97 @@
+{
+  "segments": [
+    {
+      "start": 0.743,
+      "end": 3.998,
+      "text": "Drei Schichten durchgehalten — Brakka Bescheid geben.",
+      "words": [
+        {
+          "word": "Drei",
+          "start": 0.743,
+          "end": 0.964,
+          "score": 0.615
+        },
+        {
+          "word": "Schichten",
+          "start": 1.004,
+          "end": 1.466,
+          "score": 0.761
+        },
+        {
+          "word": "durchgehalten",
+          "start": 1.487,
+          "end": 2.109,
+          "score": 0.648
+        },
+        {
+          "word": "—",
+          "start": 2.993,
+          "end": 3.013,
+          "score": 0.312
+        },
+        {
+          "word": "Brakka",
+          "start": 3.033,
+          "end": 3.395,
+          "score": 0.655
+        },
+        {
+          "word": "Bescheid",
+          "start": 3.415,
+          "end": 3.797,
+          "score": 0.466
+        },
+        {
+          "word": "geben.",
+          "start": 3.817,
+          "end": 3.998,
+          "score": 0.409
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Drei",
+      "start": 0.743,
+      "end": 0.964,
+      "score": 0.615
+    },
+    {
+      "word": "Schichten",
+      "start": 1.004,
+      "end": 1.466,
+      "score": 0.761
+    },
+    {
+      "word": "durchgehalten",
+      "start": 1.487,
+      "end": 2.109,
+      "score": 0.648
+    },
+    {
+      "word": "—",
+      "start": 2.993,
+      "end": 3.013,
+      "score": 0.312
+    },
+    {
+      "word": "Brakka",
+      "start": 3.033,
+      "end": 3.395,
+      "score": 0.655
+    },
+    {
+      "word": "Bescheid",
+      "start": 3.415,
+      "end": 3.797,
+      "score": 0.466
+    },
+    {
+      "word": "geben.",
+      "start": 3.817,
+      "end": 3.998,
+      "score": 0.409
+    }
+  ]
+}

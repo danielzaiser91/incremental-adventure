@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 1.183,
+      "end": 5.714,
+      "text": "Abgeschlossen — ich bin jetzt vollwertiges Gildenmitglied.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 1.183,
+          "end": 1.824,
+          "score": 0.65
+        },
+        {
+          "word": "—",
+          "start": 2.586,
+          "end": 2.606,
+          "score": 0.585
+        },
+        {
+          "word": "ich",
+          "start": 2.646,
+          "end": 2.787,
+          "score": 0.869
+        },
+        {
+          "word": "bin",
+          "start": 2.807,
+          "end": 3.007,
+          "score": 0.961
+        },
+        {
+          "word": "jetzt",
+          "start": 3.027,
+          "end": 3.388,
+          "score": 0.872
+        },
+        {
+          "word": "vollwertiges",
+          "start": 3.428,
+          "end": 4.23,
+          "score": 0.971
+        },
+        {
+          "word": "Gildenmitglied.",
+          "start": 4.27,
+          "end": 5.714,
+          "score": 0.794
+        }
+      ]
+    },
+    {
+      "start": 5.734,
+      "end": 7.418,
+      "text": "Der Weg nach Norden liegt offen.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 5.734,
+          "end": 5.914,
+          "score": 0.948
+        },
+        {
+          "word": "Weg",
+          "start": 5.954,
+          "end": 6.195,
+          "score": 0.963
+        },
+        {
+          "word": "nach",
+          "start": 6.215,
+          "end": 6.456,
+          "score": 0.925
+        },
+        {
+          "word": "Norden",
+          "start": 6.496,
+          "end": 6.877,
+          "score": 0.967
+        },
+        {
+          "word": "liegt",
+          "start": 6.917,
+          "end": 7.177,
+          "score": 0.773
+        },
+        {
+          "word": "offen.",
+          "start": 7.218,
+          "end": 7.418,
+          "score": 0.77
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 1.183,
+      "end": 1.824,
+      "score": 0.65
+    },
+    {
+      "word": "—",
+      "start": 2.586,
+      "end": 2.606,
+      "score": 0.585
+    },
+    {
+      "word": "ich",
+      "start": 2.646,
+      "end": 2.787,
+      "score": 0.869
+    },
+    {
+      "word": "bin",
+      "start": 2.807,
+      "end": 3.007,
+      "score": 0.961
+    },
+    {
+      "word": "jetzt",
+      "start": 3.027,
+      "end": 3.388,
+      "score": 0.872
+    },
+    {
+      "word": "vollwertiges",
+      "start": 3.428,
+      "end": 4.23,
+      "score": 0.971
+    },
+    {
+      "word": "Gildenmitglied.",
+      "start": 4.27,
+      "end": 5.714,
+      "score": 0.794
+    },
+    {
+      "word": "Der",
+      "start": 5.734,
+      "end": 5.914,
+      "score": 0.948
+    },
+    {
+      "word": "Weg",
+      "start": 5.954,
+      "end": 6.195,
+      "score": 0.963
+    },
+    {
+      "word": "nach",
+      "start": 6.215,
+      "end": 6.456,
+      "score": 0.925
+    },
+    {
+      "word": "Norden",
+      "start": 6.496,
+      "end": 6.877,
+      "score": 0.967
+    },
+    {
+      "word": "liegt",
+      "start": 6.917,
+      "end": 7.177,
+      "score": 0.773
+    },
+    {
+      "word": "offen.",
+      "start": 7.218,
+      "end": 7.418,
+      "score": 0.77
+    }
+  ]
+}

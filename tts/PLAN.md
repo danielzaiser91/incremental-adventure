@@ -175,8 +175,8 @@ mit dem neuen Modell.
       `gildeSchulden.active`, `bruderschaftBeweis.active`,
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
-      Manifest umfasst damit 331 Einheiten. *Stand 17.08.2026: 56/177
-      (Quests 56/139, Objectives 0/38).*
+      Manifest umfasst damit 331 Einheiten. *Stand 19.08.2026: 66/177
+      (Quests 66/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -330,3 +330,6 @@ nachgelagerter Extra-Lauf.
 - 17.08.2026 22:16 — Batch: 10 Dateien (quest-kampfRoutine-unstarted … quest-gildaAufstieg-active), 53 s Audio, komplett. Gesamt: 209/331 im Manifest.
 - 17.08.2026 22:17 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
 - 18.08.2026 01:22 — Tagesbilanz zum Lauf vom 17.08.: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — zweiter fehlerfreier Zehnerlauf in Folge. Keine Sonden (400er-Diagnostik ist seit 14.08. abgeschlossen und geloggt). Am 16.08. lief kein Batch (kein Log-Eintrag, keine neuen Dateien in `tts/output/` — App war vermutlich zu); der Gegencheck `progress.json`/Dateizeitstempel gegen die letzte Log-Zeile zeigt keinen verschwundenen Tagesertrag. Phase 5 steht bei 56/177 (Quests 56/139, Objectives 0/38); bei 10/Tag ist sie um den 30.08. herum durch, danach Phase 6 (Welt-Flavor, Extraktion steht noch aus). Nachtrag zur Chronik: Die Abschluss-Schritte dieses Laufs (Veröffentlichen, Log, Commit) liefen erst gegen 01:20, weil die Sitzung zwischen Batch und Abschluss pausierte — Batch und Audio-Dateien stammen belegt aus 22:15/22:16.
+- 19.08.2026 06:39 — Batch: 10 Dateien (quest-gildaAufstieg-done … quest-varenaErstkontakt-unstarted), 53 s Audio, komplett. Gesamt: 219/331 im Manifest.
+- 19.08.2026 06:41 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
+- 19.08.2026 06:42 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — dritter fehlerfreier Zehnerlauf in Folge. Keine Sonden (400er-Diagnostik ist seit 14.08. abgeschlossen und geloggt). **Am 18.08. lief kein Batch** (keine Log-Zeile, keine Einträge mit diesem Datum in `progress.json`, keine neuen Dateien in `tts/output/`) — App war zu; dieser Lauf ist der nachgeholte. Der Gegencheck `progress.json` gegen die letzte Log-Zeile zeigt keinen verschwundenen Tagesertrag. **Folge aus der Quota-Fenster-Notiz vom 14.08.:** Ein Lauf um 06:39 fällt vermutlich noch ins Kontingent des Vortags (Pacific-Mitternacht ≈ 09:00 unserer Zeit) — der reguläre Nachtlauf um 22:00 kann heute also erneut 10 Einheiten schaffen. Phase 5 steht bei 66/177 (Quests 66/139, Objectives 0/38); bei 10/Tag ist sie um den 30.08. herum durch, danach Phase 6 (Welt-Flavor, Extraktion steht noch aus). Dauerhaft blockiert bleibt allein `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`, in `SKIP_IDS`).

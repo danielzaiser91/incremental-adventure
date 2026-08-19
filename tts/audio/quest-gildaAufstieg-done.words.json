@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.422,
+      "end": 3.413,
+      "text": "Torben hat mich offiziell aufgenommen.",
+      "words": [
+        {
+          "word": "Torben",
+          "start": 0.422,
+          "end": 0.984,
+          "score": 0.851
+        },
+        {
+          "word": "hat",
+          "start": 1.024,
+          "end": 1.205,
+          "score": 0.854
+        },
+        {
+          "word": "mich",
+          "start": 1.245,
+          "end": 1.506,
+          "score": 0.865
+        },
+        {
+          "word": "offiziell",
+          "start": 1.566,
+          "end": 2.048,
+          "score": 0.915
+        },
+        {
+          "word": "aufgenommen.",
+          "start": 2.088,
+          "end": 3.413,
+          "score": 0.844
+        }
+      ]
+    },
+    {
+      "start": 3.453,
+      "end": 4.698,
+      "text": "Das Kapitel schließt sich.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 3.453,
+          "end": 3.634,
+          "score": 0.832
+        },
+        {
+          "word": "Kapitel",
+          "start": 3.654,
+          "end": 4.176,
+          "score": 0.909
+        },
+        {
+          "word": "schließt",
+          "start": 4.216,
+          "end": 4.558,
+          "score": 0.609
+        },
+        {
+          "word": "sich.",
+          "start": 4.578,
+          "end": 4.698,
+          "score": 0.473
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Torben",
+      "start": 0.422,
+      "end": 0.984,
+      "score": 0.851
+    },
+    {
+      "word": "hat",
+      "start": 1.024,
+      "end": 1.205,
+      "score": 0.854
+    },
+    {
+      "word": "mich",
+      "start": 1.245,
+      "end": 1.506,
+      "score": 0.865
+    },
+    {
+      "word": "offiziell",
+      "start": 1.566,
+      "end": 2.048,
+      "score": 0.915
+    },
+    {
+      "word": "aufgenommen.",
+      "start": 2.088,
+      "end": 3.413,
+      "score": 0.844
+    },
+    {
+      "word": "Das",
+      "start": 3.453,
+      "end": 3.634,
+      "score": 0.832
+    },
+    {
+      "word": "Kapitel",
+      "start": 3.654,
+      "end": 4.176,
+      "score": 0.909
+    },
+    {
+      "word": "schließt",
+      "start": 4.216,
+      "end": 4.558,
+      "score": 0.609
+    },
+    {
+      "word": "sich.",
+      "start": 4.578,
+      "end": 4.698,
+      "score": 0.473
+    }
+  ]
+}

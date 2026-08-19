@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 5.013,
+      "text": "Abgeschlossen — Treutheim ist Vergangenheit.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.521,
+          "end": 1.063,
+          "score": 0.837
+        },
+        {
+          "word": "—",
+          "start": 2.065,
+          "end": 2.085,
+          "score": 0.288
+        },
+        {
+          "word": "Treutheim",
+          "start": 2.105,
+          "end": 3.048,
+          "score": 0.841
+        },
+        {
+          "word": "ist",
+          "start": 3.108,
+          "end": 3.309,
+          "score": 0.895
+        },
+        {
+          "word": "Vergangenheit.",
+          "start": 3.329,
+          "end": 5.013,
+          "score": 0.904
+        }
+      ]
+    },
+    {
+      "start": 5.033,
+      "end": 7.439,
+      "text": "Der Weg nach Lethkar liegt vor mir.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 5.033,
+          "end": 5.214,
+          "score": 0.981
+        },
+        {
+          "word": "Weg",
+          "start": 5.254,
+          "end": 5.514,
+          "score": 0.998
+        },
+        {
+          "word": "nach",
+          "start": 5.554,
+          "end": 5.775,
+          "score": 0.879
+        },
+        {
+          "word": "Lethkar",
+          "start": 5.815,
+          "end": 6.818,
+          "score": 0.872
+        },
+        {
+          "word": "liegt",
+          "start": 6.878,
+          "end": 7.098,
+          "score": 0.873
+        },
+        {
+          "word": "vor",
+          "start": 7.138,
+          "end": 7.279,
+          "score": 0.797
+        },
+        {
+          "word": "mir.",
+          "start": 7.299,
+          "end": 7.439,
+          "score": 0.737
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.521,
+      "end": 1.063,
+      "score": 0.837
+    },
+    {
+      "word": "—",
+      "start": 2.065,
+      "end": 2.085,
+      "score": 0.288
+    },
+    {
+      "word": "Treutheim",
+      "start": 2.105,
+      "end": 3.048,
+      "score": 0.841
+    },
+    {
+      "word": "ist",
+      "start": 3.108,
+      "end": 3.309,
+      "score": 0.895
+    },
+    {
+      "word": "Vergangenheit.",
+      "start": 3.329,
+      "end": 5.013,
+      "score": 0.904
+    },
+    {
+      "word": "Der",
+      "start": 5.033,
+      "end": 5.214,
+      "score": 0.981
+    },
+    {
+      "word": "Weg",
+      "start": 5.254,
+      "end": 5.514,
+      "score": 0.998
+    },
+    {
+      "word": "nach",
+      "start": 5.554,
+      "end": 5.775,
+      "score": 0.879
+    },
+    {
+      "word": "Lethkar",
+      "start": 5.815,
+      "end": 6.818,
+      "score": 0.872
+    },
+    {
+      "word": "liegt",
+      "start": 6.878,
+      "end": 7.098,
+      "score": 0.873
+    },
+    {
+      "word": "vor",
+      "start": 7.138,
+      "end": 7.279,
+      "score": 0.797
+    },
+    {
+      "word": "mir.",
+      "start": 7.299,
+      "end": 7.439,
+      "score": 0.737
+    }
+  ]
+}

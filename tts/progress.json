@@ -1044,6 +1044,56 @@
       "file": "quest-gildaAufstieg-active.wav",
       "seconds": 8,
       "date": "2026-08-17T20:15:58.668Z"
+    },
+    "quest-gildaAufstieg-done": {
+      "file": "quest-gildaAufstieg-done.wav",
+      "seconds": 5.2,
+      "date": "2026-08-19T04:34:11.566Z"
+    },
+    "quest-gildaAufstieg-rewarded": {
+      "file": "quest-gildaAufstieg-rewarded.wav",
+      "seconds": 8.2,
+      "date": "2026-08-19T04:35:13.890Z"
+    },
+    "quest-brennenderMut-unstarted": {
+      "file": "quest-brennenderMut-unstarted.wav",
+      "seconds": 1.8,
+      "date": "2026-08-19T04:35:47.706Z"
+    },
+    "quest-brennenderMut-done": {
+      "file": "quest-brennenderMut-done.wav",
+      "seconds": 4.5,
+      "date": "2026-08-19T04:36:22.575Z"
+    },
+    "quest-brennenderMut-rewarded": {
+      "file": "quest-brennenderMut-rewarded.wav",
+      "seconds": 6.6,
+      "date": "2026-08-19T04:36:59.253Z"
+    },
+    "quest-kapitel2Finale-unstarted": {
+      "file": "quest-kapitel2Finale-unstarted.wav",
+      "seconds": 2,
+      "date": "2026-08-19T04:37:31.017Z"
+    },
+    "quest-kapitel2Finale-active": {
+      "file": "quest-kapitel2Finale-active.wav",
+      "seconds": 9.6,
+      "date": "2026-08-19T04:38:07.609Z"
+    },
+    "quest-kapitel2Finale-done": {
+      "file": "quest-kapitel2Finale-done.wav",
+      "seconds": 5.2,
+      "date": "2026-08-19T04:38:41.464Z"
+    },
+    "quest-kapitel2Finale-rewarded": {
+      "file": "quest-kapitel2Finale-rewarded.wav",
+      "seconds": 7.7,
+      "date": "2026-08-19T04:39:17.138Z"
+    },
+    "quest-varenaErstkontakt-unstarted": {
+      "file": "quest-varenaErstkontakt-unstarted.wav",
+      "seconds": 1.9,
+      "date": "2026-08-19T04:39:48.713Z"
     }
   },
   "failed": {

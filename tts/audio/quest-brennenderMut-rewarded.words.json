@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.534,
+      "text": "Abgeschlossen — Brakka vertraut mir jetzt anders.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.043,
+          "score": 0.816
+        },
+        {
+          "word": "—",
+          "start": 1.725,
+          "end": 1.745,
+          "score": 0.767
+        },
+        {
+          "word": "Brakka",
+          "start": 1.785,
+          "end": 2.227,
+          "score": 0.874
+        },
+        {
+          "word": "vertraut",
+          "start": 2.267,
+          "end": 2.688,
+          "score": 0.916
+        },
+        {
+          "word": "mir",
+          "start": 2.708,
+          "end": 2.869,
+          "score": 0.933
+        },
+        {
+          "word": "jetzt",
+          "start": 2.889,
+          "end": 3.19,
+          "score": 0.872
+        },
+        {
+          "word": "anders.",
+          "start": 3.23,
+          "end": 4.534,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 4.574,
+      "end": 6.239,
+      "text": "Und ich vertraue mir selbst.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 4.574,
+          "end": 4.815,
+          "score": 0.949
+        },
+        {
+          "word": "ich",
+          "start": 4.855,
+          "end": 5.316,
+          "score": 0.945
+        },
+        {
+          "word": "vertraue",
+          "start": 5.356,
+          "end": 5.777,
+          "score": 0.915
+        },
+        {
+          "word": "mir",
+          "start": 5.818,
+          "end": 5.978,
+          "score": 0.982
+        },
+        {
+          "word": "selbst.",
+          "start": 6.018,
+          "end": 6.239,
+          "score": 0.828
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.043,
+      "score": 0.816
+    },
+    {
+      "word": "—",
+      "start": 1.725,
+      "end": 1.745,
+      "score": 0.767
+    },
+    {
+      "word": "Brakka",
+      "start": 1.785,
+      "end": 2.227,
+      "score": 0.874
+    },
+    {
+      "word": "vertraut",
+      "start": 2.267,
+      "end": 2.688,
+      "score": 0.916
+    },
+    {
+      "word": "mir",
+      "start": 2.708,
+      "end": 2.869,
+      "score": 0.933
+    },
+    {
+      "word": "jetzt",
+      "start": 2.889,
+      "end": 3.19,
+      "score": 0.872
+    },
+    {
+      "word": "anders.",
+      "start": 3.23,
+      "end": 4.534,
+      "score": 0.86
+    },
+    {
+      "word": "Und",
+      "start": 4.574,
+      "end": 4.815,
+      "score": 0.949
+    },
+    {
+      "word": "ich",
+      "start": 4.855,
+      "end": 5.316,
+      "score": 0.945
+    },
+    {
+      "word": "vertraue",
+      "start": 5.356,
+      "end": 5.777,
+      "score": 0.915
+    },
+    {
+      "word": "mir",
+      "start": 5.818,
+      "end": 5.978,
+      "score": 0.982
+    },
+    {
+      "word": "selbst.",
+      "start": 6.018,
+      "end": 6.239,
+      "score": 0.828
+    }
+  ]
+}
