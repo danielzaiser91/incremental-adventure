@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 5.374,
+      "text": "Abgeschlossen — Valdris' Netzwerk ist real und aktiv.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.461,
+          "end": 1.003,
+          "score": 0.913
+        },
+        {
+          "word": "—",
+          "start": 1.945,
+          "end": 1.965,
+          "score": 0.975
+        },
+        {
+          "word": "Valdris'",
+          "start": 1.985,
+          "end": 2.487,
+          "score": 0.689
+        },
+        {
+          "word": "Netzwerk",
+          "start": 2.507,
+          "end": 3.048,
+          "score": 0.924
+        },
+        {
+          "word": "ist",
+          "start": 3.088,
+          "end": 3.289,
+          "score": 0.963
+        },
+        {
+          "word": "real",
+          "start": 3.329,
+          "end": 3.87,
+          "score": 0.986
+        },
+        {
+          "word": "und",
+          "start": 3.89,
+          "end": 4.111,
+          "score": 0.693
+        },
+        {
+          "word": "aktiv.",
+          "start": 4.131,
+          "end": 5.374,
+          "score": 0.857
+        }
+      ]
+    },
+    {
+      "start": 5.395,
+      "end": 7.099,
+      "text": "Die Spur führt nach Velmark.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 5.395,
+          "end": 5.575,
+          "score": 0.982
+        },
+        {
+          "word": "Spur",
+          "start": 5.615,
+          "end": 6.096,
+          "score": 0.9
+        },
+        {
+          "word": "führt",
+          "start": 6.136,
+          "end": 6.377,
+          "score": 0.741
+        },
+        {
+          "word": "nach",
+          "start": 6.397,
+          "end": 6.598,
+          "score": 0.861
+        },
+        {
+          "word": "Velmark.",
+          "start": 6.638,
+          "end": 7.099,
+          "score": 0.741
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.461,
+      "end": 1.003,
+      "score": 0.913
+    },
+    {
+      "word": "—",
+      "start": 1.945,
+      "end": 1.965,
+      "score": 0.975
+    },
+    {
+      "word": "Valdris'",
+      "start": 1.985,
+      "end": 2.487,
+      "score": 0.689
+    },
+    {
+      "word": "Netzwerk",
+      "start": 2.507,
+      "end": 3.048,
+      "score": 0.924
+    },
+    {
+      "word": "ist",
+      "start": 3.088,
+      "end": 3.289,
+      "score": 0.963
+    },
+    {
+      "word": "real",
+      "start": 3.329,
+      "end": 3.87,
+      "score": 0.986
+    },
+    {
+      "word": "und",
+      "start": 3.89,
+      "end": 4.111,
+      "score": 0.693
+    },
+    {
+      "word": "aktiv.",
+      "start": 4.131,
+      "end": 5.374,
+      "score": 0.857
+    },
+    {
+      "word": "Die",
+      "start": 5.395,
+      "end": 5.575,
+      "score": 0.982
+    },
+    {
+      "word": "Spur",
+      "start": 5.615,
+      "end": 6.096,
+      "score": 0.9
+    },
+    {
+      "word": "führt",
+      "start": 6.136,
+      "end": 6.377,
+      "score": 0.741
+    },
+    {
+      "word": "nach",
+      "start": 6.397,
+      "end": 6.598,
+      "score": 0.861
+    },
+    {
+      "word": "Velmark.",
+      "start": 6.638,
+      "end": 7.099,
+      "score": 0.741
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 2.589,
+      "text": "Zweiter Hinweis am Markt.",
+      "words": [
+        {
+          "word": "Zweiter",
+          "start": 0.522,
+          "end": 0.843,
+          "score": 0.831
+        },
+        {
+          "word": "Hinweis",
+          "start": 0.883,
+          "end": 1.285,
+          "score": 0.85
+        },
+        {
+          "word": "am",
+          "start": 1.325,
+          "end": 1.465,
+          "score": 0.993
+        },
+        {
+          "word": "Markt.",
+          "start": 1.505,
+          "end": 2.589,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 2.609,
+      "end": 5.319,
+      "text": "Noch ein Ort: der Stadtrand von Lethkar.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 2.609,
+          "end": 2.83,
+          "score": 0.976
+        },
+        {
+          "word": "ein",
+          "start": 2.87,
+          "end": 3.031,
+          "score": 0.829
+        },
+        {
+          "word": "Ort:",
+          "start": 3.071,
+          "end": 3.854,
+          "score": 0.952
+        },
+        {
+          "word": "der",
+          "start": 3.894,
+          "end": 4.074,
+          "score": 0.96
+        },
+        {
+          "word": "Stadtrand",
+          "start": 4.115,
+          "end": 4.677,
+          "score": 0.937
+        },
+        {
+          "word": "von",
+          "start": 4.717,
+          "end": 4.877,
+          "score": 0.981
+        },
+        {
+          "word": "Lethkar.",
+          "start": 4.917,
+          "end": 5.319,
+          "score": 0.633
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zweiter",
+      "start": 0.522,
+      "end": 0.843,
+      "score": 0.831
+    },
+    {
+      "word": "Hinweis",
+      "start": 0.883,
+      "end": 1.285,
+      "score": 0.85
+    },
+    {
+      "word": "am",
+      "start": 1.325,
+      "end": 1.465,
+      "score": 0.993
+    },
+    {
+      "word": "Markt.",
+      "start": 1.505,
+      "end": 2.589,
+      "score": 0.868
+    },
+    {
+      "word": "Noch",
+      "start": 2.609,
+      "end": 2.83,
+      "score": 0.976
+    },
+    {
+      "word": "ein",
+      "start": 2.87,
+      "end": 3.031,
+      "score": 0.829
+    },
+    {
+      "word": "Ort:",
+      "start": 3.071,
+      "end": 3.854,
+      "score": 0.952
+    },
+    {
+      "word": "der",
+      "start": 3.894,
+      "end": 4.074,
+      "score": 0.96
+    },
+    {
+      "word": "Stadtrand",
+      "start": 4.115,
+      "end": 4.677,
+      "score": 0.937
+    },
+    {
+      "word": "von",
+      "start": 4.717,
+      "end": 4.877,
+      "score": 0.981
+    },
+    {
+      "word": "Lethkar.",
+      "start": 4.917,
+      "end": 5.319,
+      "score": 0.633
+    }
+  ]
+}

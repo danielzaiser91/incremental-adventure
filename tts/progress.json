@@ -1144,6 +1144,56 @@
       "file": "quest-thessaGeheimnis-rewarded.wav",
       "seconds": 8,
       "date": "2026-08-20T04:55:20.726Z"
+    },
+    "quest-tier2Boss-unstarted": {
+      "file": "quest-tier2Boss-unstarted.wav",
+      "seconds": 2.8,
+      "date": "2026-08-20T20:11:07.721Z"
+    },
+    "quest-tier2Boss-active": {
+      "file": "quest-tier2Boss-active.wav",
+      "seconds": 12.2,
+      "date": "2026-08-20T20:12:15.519Z"
+    },
+    "quest-tier2Boss-rewarded": {
+      "file": "quest-tier2Boss-rewarded.wav",
+      "seconds": 9.8,
+      "date": "2026-08-20T20:12:53.057Z"
+    },
+    "quest-wissensdurst10-unstarted": {
+      "file": "quest-wissensdurst10-unstarted.wav",
+      "seconds": 1.7,
+      "date": "2026-08-20T20:13:26.442Z"
+    },
+    "quest-wissensdurst10-rewarded": {
+      "file": "quest-wissensdurst10-rewarded.wav",
+      "seconds": 6.5,
+      "date": "2026-08-20T20:14:02.588Z"
+    },
+    "quest-valdrisSpuren-unstarted": {
+      "file": "quest-valdrisSpuren-unstarted.wav",
+      "seconds": 2.2,
+      "date": "2026-08-20T20:14:35.003Z"
+    },
+    "quest-valdrisSpuren-ort1": {
+      "file": "quest-valdrisSpuren-ort1.wav",
+      "seconds": 6.8,
+      "date": "2026-08-20T20:15:09.764Z"
+    },
+    "quest-valdrisSpuren-ort2": {
+      "file": "quest-valdrisSpuren-ort2.wav",
+      "seconds": 5.6,
+      "date": "2026-08-20T20:15:44.171Z"
+    },
+    "quest-valdrisSpuren-ort3": {
+      "file": "quest-valdrisSpuren-ort3.wav",
+      "seconds": 6,
+      "date": "2026-08-20T20:16:19.907Z"
+    },
+    "quest-valdrisSpuren-rewarded": {
+      "file": "quest-valdrisSpuren-rewarded.wav",
+      "seconds": 7.4,
+      "date": "2026-08-20T20:16:56.891Z"
     }
   },
   "failed": {

@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 4.795,
+      "text": "Abgeschlossen — der zweite Wissensdurst-Skill ist zugänglich.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.461,
+          "end": 0.943,
+          "score": 0.878
+        },
+        {
+          "word": "—",
+          "start": 1.545,
+          "end": 1.565,
+          "score": 0.799
+        },
+        {
+          "word": "der",
+          "start": 1.585,
+          "end": 1.806,
+          "score": 0.983
+        },
+        {
+          "word": "zweite",
+          "start": 1.866,
+          "end": 2.347,
+          "score": 0.94
+        },
+        {
+          "word": "Wissensdurst-Skill",
+          "start": 2.367,
+          "end": 3.411,
+          "score": 0.787
+        },
+        {
+          "word": "ist",
+          "start": 3.451,
+          "end": 3.671,
+          "score": 0.787
+        },
+        {
+          "word": "zugänglich.",
+          "start": 3.691,
+          "end": 4.795,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 4.815,
+      "end": 6.059,
+      "text": "Varena ist beeindruckt.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 4.815,
+          "end": 5.336,
+          "score": 0.861
+        },
+        {
+          "word": "ist",
+          "start": 5.377,
+          "end": 5.537,
+          "score": 0.982
+        },
+        {
+          "word": "beeindruckt.",
+          "start": 5.577,
+          "end": 6.059,
+          "score": 0.848
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.461,
+      "end": 0.943,
+      "score": 0.878
+    },
+    {
+      "word": "—",
+      "start": 1.545,
+      "end": 1.565,
+      "score": 0.799
+    },
+    {
+      "word": "der",
+      "start": 1.585,
+      "end": 1.806,
+      "score": 0.983
+    },
+    {
+      "word": "zweite",
+      "start": 1.866,
+      "end": 2.347,
+      "score": 0.94
+    },
+    {
+      "word": "Wissensdurst-Skill",
+      "start": 2.367,
+      "end": 3.411,
+      "score": 0.787
+    },
+    {
+      "word": "ist",
+      "start": 3.451,
+      "end": 3.671,
+      "score": 0.787
+    },
+    {
+      "word": "zugänglich.",
+      "start": 3.691,
+      "end": 4.795,
+      "score": 0.958
+    },
+    {
+      "word": "Varena",
+      "start": 4.815,
+      "end": 5.336,
+      "score": 0.861
+    },
+    {
+      "word": "ist",
+      "start": 5.377,
+      "end": 5.537,
+      "score": 0.982
+    },
+    {
+      "word": "beeindruckt.",
+      "start": 5.577,
+      "end": 6.059,
+      "score": 0.848
+    }
+  ]
+}

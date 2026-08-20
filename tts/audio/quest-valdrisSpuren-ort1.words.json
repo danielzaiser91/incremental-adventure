@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 3.049,
+      "text": "Erster Hinweis in der Taverne.",
+      "words": [
+        {
+          "word": "Erster",
+          "start": 0.522,
+          "end": 0.923,
+          "score": 0.77
+        },
+        {
+          "word": "Hinweis",
+          "start": 0.963,
+          "end": 1.384,
+          "score": 0.914
+        },
+        {
+          "word": "in",
+          "start": 1.424,
+          "end": 1.504,
+          "score": 0.994
+        },
+        {
+          "word": "der",
+          "start": 1.545,
+          "end": 1.645,
+          "score": 0.744
+        },
+        {
+          "word": "Taverne.",
+          "start": 1.685,
+          "end": 3.049,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "start": 3.089,
+      "end": 6.339,
+      "text": "Noch zwei Orte zu untersuchen: Markt und Stadtrand.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 3.089,
+          "end": 3.31,
+          "score": 0.96
+        },
+        {
+          "word": "zwei",
+          "start": 3.35,
+          "end": 3.571,
+          "score": 0.919
+        },
+        {
+          "word": "Orte",
+          "start": 3.611,
+          "end": 3.892,
+          "score": 0.942
+        },
+        {
+          "word": "zu",
+          "start": 3.912,
+          "end": 4.012,
+          "score": 0.897
+        },
+        {
+          "word": "untersuchen:",
+          "start": 4.032,
+          "end": 5.075,
+          "score": 0.894
+        },
+        {
+          "word": "Markt",
+          "start": 5.095,
+          "end": 5.697,
+          "score": 0.988
+        },
+        {
+          "word": "und",
+          "start": 5.717,
+          "end": 5.877,
+          "score": 0.926
+        },
+        {
+          "word": "Stadtrand.",
+          "start": 5.918,
+          "end": 6.339,
+          "score": 0.752
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Erster",
+      "start": 0.522,
+      "end": 0.923,
+      "score": 0.77
+    },
+    {
+      "word": "Hinweis",
+      "start": 0.963,
+      "end": 1.384,
+      "score": 0.914
+    },
+    {
+      "word": "in",
+      "start": 1.424,
+      "end": 1.504,
+      "score": 0.994
+    },
+    {
+      "word": "der",
+      "start": 1.545,
+      "end": 1.645,
+      "score": 0.744
+    },
+    {
+      "word": "Taverne.",
+      "start": 1.685,
+      "end": 3.049,
+      "score": 0.9
+    },
+    {
+      "word": "Noch",
+      "start": 3.089,
+      "end": 3.31,
+      "score": 0.96
+    },
+    {
+      "word": "zwei",
+      "start": 3.35,
+      "end": 3.571,
+      "score": 0.919
+    },
+    {
+      "word": "Orte",
+      "start": 3.611,
+      "end": 3.892,
+      "score": 0.942
+    },
+    {
+      "word": "zu",
+      "start": 3.912,
+      "end": 4.012,
+      "score": 0.897
+    },
+    {
+      "word": "untersuchen:",
+      "start": 4.032,
+      "end": 5.075,
+      "score": 0.894
+    },
+    {
+      "word": "Markt",
+      "start": 5.095,
+      "end": 5.697,
+      "score": 0.988
+    },
+    {
+      "word": "und",
+      "start": 5.717,
+      "end": 5.877,
+      "score": 0.926
+    },
+    {
+      "word": "Stadtrand.",
+      "start": 5.918,
+      "end": 6.339,
+      "score": 0.752
+    }
+  ]
+}

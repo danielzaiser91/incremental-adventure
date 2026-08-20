@@ -1,0 +1,236 @@
+{
+  "segments": [
+    {
+      "start": 0.942,
+      "end": 5.07,
+      "text": "Abgeschlossen — der Nordbär liegt besiegt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.942,
+          "end": 1.503,
+          "score": 0.826
+        },
+        {
+          "word": "—",
+          "start": 2.305,
+          "end": 2.325,
+          "score": 0.955
+        },
+        {
+          "word": "der",
+          "start": 2.345,
+          "end": 2.525,
+          "score": 0.953
+        },
+        {
+          "word": "Nordbär",
+          "start": 2.565,
+          "end": 3.106,
+          "score": 0.837
+        },
+        {
+          "word": "liegt",
+          "start": 3.146,
+          "end": 3.427,
+          "score": 0.962
+        },
+        {
+          "word": "besiegt.",
+          "start": 3.447,
+          "end": 5.07,
+          "score": 0.934
+        }
+      ]
+    },
+    {
+      "start": 5.09,
+      "end": 9.479,
+      "text": "Varena hat mir gesagt, was das bedeutet: Ich bin kein Anfänger mehr.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 5.09,
+          "end": 5.531,
+          "score": 0.929
+        },
+        {
+          "word": "hat",
+          "start": 5.551,
+          "end": 5.732,
+          "score": 0.986
+        },
+        {
+          "word": "mir",
+          "start": 5.752,
+          "end": 5.912,
+          "score": 0.884
+        },
+        {
+          "word": "gesagt,",
+          "start": 5.952,
+          "end": 6.253,
+          "score": 0.938
+        },
+        {
+          "word": "was",
+          "start": 6.293,
+          "end": 6.413,
+          "score": 0.98
+        },
+        {
+          "word": "das",
+          "start": 6.453,
+          "end": 6.613,
+          "score": 0.854
+        },
+        {
+          "word": "bedeutet:",
+          "start": 6.654,
+          "end": 7.996,
+          "score": 0.942
+        },
+        {
+          "word": "Ich",
+          "start": 8.036,
+          "end": 8.177,
+          "score": 0.816
+        },
+        {
+          "word": "bin",
+          "start": 8.217,
+          "end": 8.477,
+          "score": 0.843
+        },
+        {
+          "word": "kein",
+          "start": 8.497,
+          "end": 8.798,
+          "score": 0.88
+        },
+        {
+          "word": "Anfänger",
+          "start": 8.838,
+          "end": 9.299,
+          "score": 0.866
+        },
+        {
+          "word": "mehr.",
+          "start": 9.339,
+          "end": 9.479,
+          "score": 0.733
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.942,
+      "end": 1.503,
+      "score": 0.826
+    },
+    {
+      "word": "—",
+      "start": 2.305,
+      "end": 2.325,
+      "score": 0.955
+    },
+    {
+      "word": "der",
+      "start": 2.345,
+      "end": 2.525,
+      "score": 0.953
+    },
+    {
+      "word": "Nordbär",
+      "start": 2.565,
+      "end": 3.106,
+      "score": 0.837
+    },
+    {
+      "word": "liegt",
+      "start": 3.146,
+      "end": 3.427,
+      "score": 0.962
+    },
+    {
+      "word": "besiegt.",
+      "start": 3.447,
+      "end": 5.07,
+      "score": 0.934
+    },
+    {
+      "word": "Varena",
+      "start": 5.09,
+      "end": 5.531,
+      "score": 0.929
+    },
+    {
+      "word": "hat",
+      "start": 5.551,
+      "end": 5.732,
+      "score": 0.986
+    },
+    {
+      "word": "mir",
+      "start": 5.752,
+      "end": 5.912,
+      "score": 0.884
+    },
+    {
+      "word": "gesagt,",
+      "start": 5.952,
+      "end": 6.253,
+      "score": 0.938
+    },
+    {
+      "word": "was",
+      "start": 6.293,
+      "end": 6.413,
+      "score": 0.98
+    },
+    {
+      "word": "das",
+      "start": 6.453,
+      "end": 6.613,
+      "score": 0.854
+    },
+    {
+      "word": "bedeutet:",
+      "start": 6.654,
+      "end": 7.996,
+      "score": 0.942
+    },
+    {
+      "word": "Ich",
+      "start": 8.036,
+      "end": 8.177,
+      "score": 0.816
+    },
+    {
+      "word": "bin",
+      "start": 8.217,
+      "end": 8.477,
+      "score": 0.843
+    },
+    {
+      "word": "kein",
+      "start": 8.497,
+      "end": 8.798,
+      "score": 0.88
+    },
+    {
+      "word": "Anfänger",
+      "start": 8.838,
+      "end": 9.299,
+      "score": 0.866
+    },
+    {
+      "word": "mehr.",
+      "start": 9.339,
+      "end": 9.479,
+      "score": 0.733
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.601,
+      "end": 6.571,
+      "text": "Varena nennt ihn den \"Silberbären\" — den Nordbär.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.601,
+          "end": 1.723,
+          "score": 0.917
+        },
+        {
+          "word": "nennt",
+          "start": 1.783,
+          "end": 2.083,
+          "score": 0.883
+        },
+        {
+          "word": "ihn",
+          "start": 2.123,
+          "end": 2.344,
+          "score": 0.698
+        },
+        {
+          "word": "den",
+          "start": 2.384,
+          "end": 2.704,
+          "score": 0.946
+        },
+        {
+          "word": "\"Silberbären\"",
+          "start": 2.724,
+          "end": 3.506,
+          "score": 0.757
+        },
+        {
+          "word": "—",
+          "start": 3.526,
+          "end": 4.407,
+          "score": 0.974
+        },
+        {
+          "word": "den",
+          "start": 4.427,
+          "end": 4.708,
+          "score": 0.962
+        },
+        {
+          "word": "Nordbär.",
+          "start": 4.748,
+          "end": 6.571,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 6.611,
+      "end": 10.357,
+      "text": "Ein Tier, das kein gewöhnlicher Kämpfer besiegt.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 6.611,
+          "end": 6.811,
+          "score": 0.783
+        },
+        {
+          "word": "Tier,",
+          "start": 6.851,
+          "end": 7.172,
+          "score": 0.811
+        },
+        {
+          "word": "das",
+          "start": 7.192,
+          "end": 7.572,
+          "score": 0.911
+        },
+        {
+          "word": "kein",
+          "start": 7.592,
+          "end": 7.853,
+          "score": 0.764
+        },
+        {
+          "word": "gewöhnlicher",
+          "start": 7.873,
+          "end": 8.554,
+          "score": 0.835
+        },
+        {
+          "word": "Kämpfer",
+          "start": 8.594,
+          "end": 8.955,
+          "score": 0.837
+        },
+        {
+          "word": "besiegt.",
+          "start": 8.995,
+          "end": 10.357,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 10.397,
+      "end": 11.839,
+      "text": "Es soll mein Maßstab werden.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 10.397,
+          "end": 10.517,
+          "score": 0.964
+        },
+        {
+          "word": "soll",
+          "start": 10.557,
+          "end": 10.838,
+          "score": 0.93
+        },
+        {
+          "word": "mein",
+          "start": 10.878,
+          "end": 11.098,
+          "score": 0.933
+        },
+        {
+          "word": "Maßstab",
+          "start": 11.138,
+          "end": 11.599,
+          "score": 0.943
+        },
+        {
+          "word": "werden.",
+          "start": 11.619,
+          "end": 11.839,
+          "score": 0.787
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.601,
+      "end": 1.723,
+      "score": 0.917
+    },
+    {
+      "word": "nennt",
+      "start": 1.783,
+      "end": 2.083,
+      "score": 0.883
+    },
+    {
+      "word": "ihn",
+      "start": 2.123,
+      "end": 2.344,
+      "score": 0.698
+    },
+    {
+      "word": "den",
+      "start": 2.384,
+      "end": 2.704,
+      "score": 0.946
+    },
+    {
+      "word": "\"Silberbären\"",
+      "start": 2.724,
+      "end": 3.506,
+      "score": 0.757
+    },
+    {
+      "word": "—",
+      "start": 3.526,
+      "end": 4.407,
+      "score": 0.974
+    },
+    {
+      "word": "den",
+      "start": 4.427,
+      "end": 4.708,
+      "score": 0.962
+    },
+    {
+      "word": "Nordbär.",
+      "start": 4.748,
+      "end": 6.571,
+      "score": 0.913
+    },
+    {
+      "word": "Ein",
+      "start": 6.611,
+      "end": 6.811,
+      "score": 0.783
+    },
+    {
+      "word": "Tier,",
+      "start": 6.851,
+      "end": 7.172,
+      "score": 0.811
+    },
+    {
+      "word": "das",
+      "start": 7.192,
+      "end": 7.572,
+      "score": 0.911
+    },
+    {
+      "word": "kein",
+      "start": 7.592,
+      "end": 7.853,
+      "score": 0.764
+    },
+    {
+      "word": "gewöhnlicher",
+      "start": 7.873,
+      "end": 8.554,
+      "score": 0.835
+    },
+    {
+      "word": "Kämpfer",
+      "start": 8.594,
+      "end": 8.955,
+      "score": 0.837
+    },
+    {
+      "word": "besiegt.",
+      "start": 8.995,
+      "end": 10.357,
+      "score": 0.947
+    },
+    {
+      "word": "Es",
+      "start": 10.397,
+      "end": 10.517,
+      "score": 0.964
+    },
+    {
+      "word": "soll",
+      "start": 10.557,
+      "end": 10.838,
+      "score": 0.93
+    },
+    {
+      "word": "mein",
+      "start": 10.878,
+      "end": 11.098,
+      "score": 0.933
+    },
+    {
+      "word": "Maßstab",
+      "start": 11.138,
+      "end": 11.599,
+      "score": 0.943
+    },
+    {
+      "word": "werden.",
+      "start": 11.619,
+      "end": 11.839,
+      "score": 0.787
+    }
+  ]
+}

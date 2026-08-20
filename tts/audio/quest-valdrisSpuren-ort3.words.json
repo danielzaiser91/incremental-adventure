@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 2.95,
+      "text": "Alle drei Orte untersucht.",
+      "words": [
+        {
+          "word": "Alle",
+          "start": 0.502,
+          "end": 0.763,
+          "score": 0.855
+        },
+        {
+          "word": "drei",
+          "start": 0.803,
+          "end": 1.124,
+          "score": 0.914
+        },
+        {
+          "word": "Orte",
+          "start": 1.204,
+          "end": 1.525,
+          "score": 0.977
+        },
+        {
+          "word": "untersucht.",
+          "start": 1.565,
+          "end": 2.95,
+          "score": 0.901
+        }
+      ]
+    },
+    {
+      "start": 2.97,
+      "end": 5.539,
+      "text": "Mit Varena sprechen — sie soll das einordnen.",
+      "words": [
+        {
+          "word": "Mit",
+          "start": 2.97,
+          "end": 3.11,
+          "score": 0.972
+        },
+        {
+          "word": "Varena",
+          "start": 3.171,
+          "end": 3.632,
+          "score": 0.897
+        },
+        {
+          "word": "sprechen",
+          "start": 3.672,
+          "end": 4.013,
+          "score": 0.974
+        },
+        {
+          "word": "—",
+          "start": 4.455,
+          "end": 4.475,
+          "score": 0.364
+        },
+        {
+          "word": "sie",
+          "start": 4.515,
+          "end": 4.636,
+          "score": 0.923
+        },
+        {
+          "word": "soll",
+          "start": 4.656,
+          "end": 4.836,
+          "score": 0.937
+        },
+        {
+          "word": "das",
+          "start": 4.856,
+          "end": 5.017,
+          "score": 0.983
+        },
+        {
+          "word": "einordnen.",
+          "start": 5.077,
+          "end": 5.539,
+          "score": 0.922
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alle",
+      "start": 0.502,
+      "end": 0.763,
+      "score": 0.855
+    },
+    {
+      "word": "drei",
+      "start": 0.803,
+      "end": 1.124,
+      "score": 0.914
+    },
+    {
+      "word": "Orte",
+      "start": 1.204,
+      "end": 1.525,
+      "score": 0.977
+    },
+    {
+      "word": "untersucht.",
+      "start": 1.565,
+      "end": 2.95,
+      "score": 0.901
+    },
+    {
+      "word": "Mit",
+      "start": 2.97,
+      "end": 3.11,
+      "score": 0.972
+    },
+    {
+      "word": "Varena",
+      "start": 3.171,
+      "end": 3.632,
+      "score": 0.897
+    },
+    {
+      "word": "sprechen",
+      "start": 3.672,
+      "end": 4.013,
+      "score": 0.974
+    },
+    {
+      "word": "—",
+      "start": 4.455,
+      "end": 4.475,
+      "score": 0.364
+    },
+    {
+      "word": "sie",
+      "start": 4.515,
+      "end": 4.636,
+      "score": 0.923
+    },
+    {
+      "word": "soll",
+      "start": 4.656,
+      "end": 4.836,
+      "score": 0.937
+    },
+    {
+      "word": "das",
+      "start": 4.856,
+      "end": 5.017,
+      "score": 0.983
+    },
+    {
+      "word": "einordnen.",
+      "start": 5.077,
+      "end": 5.539,
+      "score": 0.922
+    }
+  ]
+}
