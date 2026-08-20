@@ -1094,6 +1094,56 @@
       "file": "quest-varenaErstkontakt-unstarted.wav",
       "seconds": 1.9,
       "date": "2026-08-19T04:39:48.713Z"
+    },
+    "quest-varenaErstkontakt-active": {
+      "file": "quest-varenaErstkontakt-active.wav",
+      "seconds": 6.7,
+      "date": "2026-08-20T04:49:39.951Z"
+    },
+    "quest-varenaErstkontakt-done": {
+      "file": "quest-varenaErstkontakt-done.wav",
+      "seconds": 4.5,
+      "date": "2026-08-20T04:50:42.492Z"
+    },
+    "quest-varenaErstkontakt-rewarded": {
+      "file": "quest-varenaErstkontakt-rewarded.wav",
+      "seconds": 7.4,
+      "date": "2026-08-20T04:51:18.262Z"
+    },
+    "quest-alchemieInitiierung-unstarted": {
+      "file": "quest-alchemieInitiierung-unstarted.wav",
+      "seconds": 1.8,
+      "date": "2026-08-20T04:51:50.615Z"
+    },
+    "quest-alchemieInitiierung-active": {
+      "file": "quest-alchemieInitiierung-active.wav",
+      "seconds": 9.4,
+      "date": "2026-08-20T04:52:26.825Z"
+    },
+    "quest-alchemieInitiierung-rewarded": {
+      "file": "quest-alchemieInitiierung-rewarded.wav",
+      "seconds": 8.2,
+      "date": "2026-08-20T04:53:02.281Z"
+    },
+    "quest-thessaGeheimnis-unstarted": {
+      "file": "quest-thessaGeheimnis-unstarted.wav",
+      "seconds": 2,
+      "date": "2026-08-20T04:53:34.807Z"
+    },
+    "quest-thessaGeheimnis-talk1": {
+      "file": "quest-thessaGeheimnis-talk1.wav",
+      "seconds": 5.4,
+      "date": "2026-08-20T04:54:09.368Z"
+    },
+    "quest-thessaGeheimnis-talk2": {
+      "file": "quest-thessaGeheimnis-talk2.wav",
+      "seconds": 6.2,
+      "date": "2026-08-20T04:54:44.552Z"
+    },
+    "quest-thessaGeheimnis-rewarded": {
+      "file": "quest-thessaGeheimnis-rewarded.wav",
+      "seconds": 8,
+      "date": "2026-08-20T04:55:20.726Z"
     }
   },
   "failed": {

@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 4.473,
+      "text": "Varena benötigt fünf Büschel Wildkraut für ihre Arbeit.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.421,
+          "end": 1.003,
+          "score": 0.726
+        },
+        {
+          "word": "benötigt",
+          "start": 1.023,
+          "end": 1.665,
+          "score": 0.929
+        },
+        {
+          "word": "fünf",
+          "start": 1.705,
+          "end": 1.986,
+          "score": 0.988
+        },
+        {
+          "word": "Büschel",
+          "start": 2.026,
+          "end": 2.407,
+          "score": 0.722
+        },
+        {
+          "word": "Wildkraut",
+          "start": 2.447,
+          "end": 3.009,
+          "score": 0.875
+        },
+        {
+          "word": "für",
+          "start": 3.049,
+          "end": 3.19,
+          "score": 0.896
+        },
+        {
+          "word": "ihre",
+          "start": 3.23,
+          "end": 3.43,
+          "score": 0.822
+        },
+        {
+          "word": "Arbeit.",
+          "start": 3.47,
+          "end": 4.473,
+          "score": 0.93
+        }
+      ]
+    },
+    {
+      "start": 4.514,
+      "end": 6.319,
+      "text": "In der Umgebung von Lethkar sammeln.",
+      "words": [
+        {
+          "word": "In",
+          "start": 4.514,
+          "end": 4.614,
+          "score": 0.972
+        },
+        {
+          "word": "der",
+          "start": 4.654,
+          "end": 4.774,
+          "score": 0.85
+        },
+        {
+          "word": "Umgebung",
+          "start": 4.794,
+          "end": 5.336,
+          "score": 0.917
+        },
+        {
+          "word": "von",
+          "start": 5.356,
+          "end": 5.537,
+          "score": 0.997
+        },
+        {
+          "word": "Lethkar",
+          "start": 5.577,
+          "end": 6.018,
+          "score": 0.808
+        },
+        {
+          "word": "sammeln.",
+          "start": 6.038,
+          "end": 6.319,
+          "score": 0.663
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.421,
+      "end": 1.003,
+      "score": 0.726
+    },
+    {
+      "word": "benötigt",
+      "start": 1.023,
+      "end": 1.665,
+      "score": 0.929
+    },
+    {
+      "word": "fünf",
+      "start": 1.705,
+      "end": 1.986,
+      "score": 0.988
+    },
+    {
+      "word": "Büschel",
+      "start": 2.026,
+      "end": 2.407,
+      "score": 0.722
+    },
+    {
+      "word": "Wildkraut",
+      "start": 2.447,
+      "end": 3.009,
+      "score": 0.875
+    },
+    {
+      "word": "für",
+      "start": 3.049,
+      "end": 3.19,
+      "score": 0.896
+    },
+    {
+      "word": "ihre",
+      "start": 3.23,
+      "end": 3.43,
+      "score": 0.822
+    },
+    {
+      "word": "Arbeit.",
+      "start": 3.47,
+      "end": 4.473,
+      "score": 0.93
+    },
+    {
+      "word": "In",
+      "start": 4.514,
+      "end": 4.614,
+      "score": 0.972
+    },
+    {
+      "word": "der",
+      "start": 4.654,
+      "end": 4.774,
+      "score": 0.85
+    },
+    {
+      "word": "Umgebung",
+      "start": 4.794,
+      "end": 5.336,
+      "score": 0.917
+    },
+    {
+      "word": "von",
+      "start": 5.356,
+      "end": 5.537,
+      "score": 0.997
+    },
+    {
+      "word": "Lethkar",
+      "start": 5.577,
+      "end": 6.018,
+      "score": 0.808
+    },
+    {
+      "word": "sammeln.",
+      "start": 6.038,
+      "end": 6.319,
+      "score": 0.663
+    }
+  ]
+}

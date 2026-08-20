@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 1.163,
+      "end": 5.694,
+      "text": "Abgeschlossen — der erste Wissensdurst-Skill ist zugänglich.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 1.163,
+          "end": 1.724,
+          "score": 0.865
+        },
+        {
+          "word": "—",
+          "start": 2.386,
+          "end": 2.406,
+          "score": 0.893
+        },
+        {
+          "word": "der",
+          "start": 2.426,
+          "end": 2.646,
+          "score": 0.855
+        },
+        {
+          "word": "erste",
+          "start": 2.707,
+          "end": 3.067,
+          "score": 0.958
+        },
+        {
+          "word": "Wissensdurst-Skill",
+          "start": 3.108,
+          "end": 4.15,
+          "score": 0.79
+        },
+        {
+          "word": "ist",
+          "start": 4.19,
+          "end": 4.411,
+          "score": 0.905
+        },
+        {
+          "word": "zugänglich.",
+          "start": 4.451,
+          "end": 5.694,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 5.734,
+      "end": 7.699,
+      "text": "Ich begreife, was diese Kunst bedeutet.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 5.734,
+          "end": 5.894,
+          "score": 0.912
+        },
+        {
+          "word": "begreife,",
+          "start": 5.914,
+          "end": 6.516,
+          "score": 0.915
+        },
+        {
+          "word": "was",
+          "start": 6.536,
+          "end": 6.696,
+          "score": 0.843
+        },
+        {
+          "word": "diese",
+          "start": 6.736,
+          "end": 6.957,
+          "score": 0.897
+        },
+        {
+          "word": "Kunst",
+          "start": 6.997,
+          "end": 7.298,
+          "score": 0.947
+        },
+        {
+          "word": "bedeutet.",
+          "start": 7.318,
+          "end": 7.699,
+          "score": 0.819
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 1.163,
+      "end": 1.724,
+      "score": 0.865
+    },
+    {
+      "word": "—",
+      "start": 2.386,
+      "end": 2.406,
+      "score": 0.893
+    },
+    {
+      "word": "der",
+      "start": 2.426,
+      "end": 2.646,
+      "score": 0.855
+    },
+    {
+      "word": "erste",
+      "start": 2.707,
+      "end": 3.067,
+      "score": 0.958
+    },
+    {
+      "word": "Wissensdurst-Skill",
+      "start": 3.108,
+      "end": 4.15,
+      "score": 0.79
+    },
+    {
+      "word": "ist",
+      "start": 4.19,
+      "end": 4.411,
+      "score": 0.905
+    },
+    {
+      "word": "zugänglich.",
+      "start": 4.451,
+      "end": 5.694,
+      "score": 0.923
+    },
+    {
+      "word": "Ich",
+      "start": 5.734,
+      "end": 5.894,
+      "score": 0.912
+    },
+    {
+      "word": "begreife,",
+      "start": 5.914,
+      "end": 6.516,
+      "score": 0.915
+    },
+    {
+      "word": "was",
+      "start": 6.536,
+      "end": 6.696,
+      "score": 0.843
+    },
+    {
+      "word": "diese",
+      "start": 6.736,
+      "end": 6.957,
+      "score": 0.897
+    },
+    {
+      "word": "Kunst",
+      "start": 6.997,
+      "end": 7.298,
+      "score": 0.947
+    },
+    {
+      "word": "bedeutet.",
+      "start": 7.318,
+      "end": 7.699,
+      "score": 0.819
+    }
+  ]
+}

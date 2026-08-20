@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 5.875,
+      "text": "Abgeschlossen — Thessa hat mir verraten, was sie über Valdris weiß.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.521,
+          "end": 2.105,
+          "score": 0.851
+        },
+        {
+          "word": "—",
+          "start": 2.125,
+          "end": 2.145,
+          "score": 0.941
+        },
+        {
+          "word": "Thessa",
+          "start": 2.185,
+          "end": 2.546,
+          "score": 0.804
+        },
+        {
+          "word": "hat",
+          "start": 2.586,
+          "end": 2.747,
+          "score": 0.967
+        },
+        {
+          "word": "mir",
+          "start": 2.767,
+          "end": 2.927,
+          "score": 0.92
+        },
+        {
+          "word": "verraten,",
+          "start": 2.947,
+          "end": 3.489,
+          "score": 0.909
+        },
+        {
+          "word": "was",
+          "start": 3.529,
+          "end": 3.629,
+          "score": 0.981
+        },
+        {
+          "word": "sie",
+          "start": 3.649,
+          "end": 3.809,
+          "score": 0.81
+        },
+        {
+          "word": "über",
+          "start": 3.83,
+          "end": 4.01,
+          "score": 0.852
+        },
+        {
+          "word": "Valdris",
+          "start": 4.05,
+          "end": 4.471,
+          "score": 0.746
+        },
+        {
+          "word": "weiß.",
+          "start": 4.511,
+          "end": 5.875,
+          "score": 0.976
+        }
+      ]
+    },
+    {
+      "start": 5.915,
+      "end": 7.659,
+      "text": "Wenig, aber genug.",
+      "words": [
+        {
+          "word": "Wenig,",
+          "start": 5.915,
+          "end": 7.098,
+          "score": 0.88
+        },
+        {
+          "word": "aber",
+          "start": 7.158,
+          "end": 7.398,
+          "score": 0.905
+        },
+        {
+          "word": "genug.",
+          "start": 7.418,
+          "end": 7.659,
+          "score": 0.898
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.521,
+      "end": 2.105,
+      "score": 0.851
+    },
+    {
+      "word": "—",
+      "start": 2.125,
+      "end": 2.145,
+      "score": 0.941
+    },
+    {
+      "word": "Thessa",
+      "start": 2.185,
+      "end": 2.546,
+      "score": 0.804
+    },
+    {
+      "word": "hat",
+      "start": 2.586,
+      "end": 2.747,
+      "score": 0.967
+    },
+    {
+      "word": "mir",
+      "start": 2.767,
+      "end": 2.927,
+      "score": 0.92
+    },
+    {
+      "word": "verraten,",
+      "start": 2.947,
+      "end": 3.489,
+      "score": 0.909
+    },
+    {
+      "word": "was",
+      "start": 3.529,
+      "end": 3.629,
+      "score": 0.981
+    },
+    {
+      "word": "sie",
+      "start": 3.649,
+      "end": 3.809,
+      "score": 0.81
+    },
+    {
+      "word": "über",
+      "start": 3.83,
+      "end": 4.01,
+      "score": 0.852
+    },
+    {
+      "word": "Valdris",
+      "start": 4.05,
+      "end": 4.471,
+      "score": 0.746
+    },
+    {
+      "word": "weiß.",
+      "start": 4.511,
+      "end": 5.875,
+      "score": 0.976
+    },
+    {
+      "word": "Wenig,",
+      "start": 5.915,
+      "end": 7.098,
+      "score": 0.88
+    },
+    {
+      "word": "aber",
+      "start": 7.158,
+      "end": 7.398,
+      "score": 0.905
+    },
+    {
+      "word": "genug.",
+      "start": 7.418,
+      "end": 7.659,
+      "score": 0.898
+    }
+  ]
+}

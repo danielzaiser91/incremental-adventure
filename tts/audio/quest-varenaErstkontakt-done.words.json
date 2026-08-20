@@ -1,0 +1,104 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 2.973,
+      "text": "Fünf Büschel Wildkraut gesammelt.",
+      "words": [
+        {
+          "word": "Fünf",
+          "start": 0.462,
+          "end": 0.763,
+          "score": 0.968
+        },
+        {
+          "word": "Büschel",
+          "start": 0.804,
+          "end": 1.225,
+          "score": 0.815
+        },
+        {
+          "word": "Wildkraut",
+          "start": 1.266,
+          "end": 1.788,
+          "score": 0.922
+        },
+        {
+          "word": "gesammelt.",
+          "start": 1.828,
+          "end": 2.973,
+          "score": 0.951
+        }
+      ]
+    },
+    {
+      "start": 2.993,
+      "end": 4.118,
+      "text": "Zu Varena zurückkehren.",
+      "words": [
+        {
+          "word": "Zu",
+          "start": 2.993,
+          "end": 3.094,
+          "score": 0.796
+        },
+        {
+          "word": "Varena",
+          "start": 3.154,
+          "end": 3.616,
+          "score": 0.875
+        },
+        {
+          "word": "zurückkehren.",
+          "start": 3.656,
+          "end": 4.118,
+          "score": 0.848
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Fünf",
+      "start": 0.462,
+      "end": 0.763,
+      "score": 0.968
+    },
+    {
+      "word": "Büschel",
+      "start": 0.804,
+      "end": 1.225,
+      "score": 0.815
+    },
+    {
+      "word": "Wildkraut",
+      "start": 1.266,
+      "end": 1.788,
+      "score": 0.922
+    },
+    {
+      "word": "gesammelt.",
+      "start": 1.828,
+      "end": 2.973,
+      "score": 0.951
+    },
+    {
+      "word": "Zu",
+      "start": 2.993,
+      "end": 3.094,
+      "score": 0.796
+    },
+    {
+      "word": "Varena",
+      "start": 3.154,
+      "end": 3.616,
+      "score": 0.875
+    },
+    {
+      "word": "zurückkehren.",
+      "start": 3.656,
+      "end": 4.118,
+      "score": 0.848
+    }
+  ]
+}

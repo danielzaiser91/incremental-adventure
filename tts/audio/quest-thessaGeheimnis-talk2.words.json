@@ -1,0 +1,183 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 2.267,
+      "text": "Schon zwei Gespräche.",
+      "words": [
+        {
+          "word": "Schon",
+          "start": 0.461,
+          "end": 0.742,
+          "score": 0.819
+        },
+        {
+          "word": "zwei",
+          "start": 0.783,
+          "end": 1.023,
+          "score": 0.974
+        },
+        {
+          "word": "Gespräche.",
+          "start": 1.063,
+          "end": 2.267,
+          "score": 0.962
+        }
+      ]
+    },
+    {
+      "start": 2.287,
+      "end": 4.073,
+      "text": "Sie prüft mich noch.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 2.287,
+          "end": 2.468,
+          "score": 0.895
+        },
+        {
+          "word": "prüft",
+          "start": 2.508,
+          "end": 2.809,
+          "score": 0.959
+        },
+        {
+          "word": "mich",
+          "start": 2.829,
+          "end": 2.99,
+          "score": 0.898
+        },
+        {
+          "word": "noch.",
+          "start": 3.03,
+          "end": 4.073,
+          "score": 0.793
+        }
+      ]
+    },
+    {
+      "start": 4.093,
+      "end": 5.859,
+      "text": "Ein letztes Gespräch sollte es klären.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 4.093,
+          "end": 4.274,
+          "score": 0.689
+        },
+        {
+          "word": "letztes",
+          "start": 4.294,
+          "end": 4.695,
+          "score": 0.926
+        },
+        {
+          "word": "Gespräch",
+          "start": 4.735,
+          "end": 5.137,
+          "score": 0.84
+        },
+        {
+          "word": "sollte",
+          "start": 5.177,
+          "end": 5.417,
+          "score": 0.909
+        },
+        {
+          "word": "es",
+          "start": 5.458,
+          "end": 5.598,
+          "score": 0.771
+        },
+        {
+          "word": "klären.",
+          "start": 5.618,
+          "end": 5.859,
+          "score": 0.831
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Schon",
+      "start": 0.461,
+      "end": 0.742,
+      "score": 0.819
+    },
+    {
+      "word": "zwei",
+      "start": 0.783,
+      "end": 1.023,
+      "score": 0.974
+    },
+    {
+      "word": "Gespräche.",
+      "start": 1.063,
+      "end": 2.267,
+      "score": 0.962
+    },
+    {
+      "word": "Sie",
+      "start": 2.287,
+      "end": 2.468,
+      "score": 0.895
+    },
+    {
+      "word": "prüft",
+      "start": 2.508,
+      "end": 2.809,
+      "score": 0.959
+    },
+    {
+      "word": "mich",
+      "start": 2.829,
+      "end": 2.99,
+      "score": 0.898
+    },
+    {
+      "word": "noch.",
+      "start": 3.03,
+      "end": 4.073,
+      "score": 0.793
+    },
+    {
+      "word": "Ein",
+      "start": 4.093,
+      "end": 4.274,
+      "score": 0.689
+    },
+    {
+      "word": "letztes",
+      "start": 4.294,
+      "end": 4.695,
+      "score": 0.926
+    },
+    {
+      "word": "Gespräch",
+      "start": 4.735,
+      "end": 5.137,
+      "score": 0.84
+    },
+    {
+      "word": "sollte",
+      "start": 5.177,
+      "end": 5.417,
+      "score": 0.909
+    },
+    {
+      "word": "es",
+      "start": 5.458,
+      "end": 5.598,
+      "score": 0.771
+    },
+    {
+      "word": "klären.",
+      "start": 5.618,
+      "end": 5.859,
+      "score": 0.831
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.442,
+      "end": 4.075,
+      "text": "Thessa hat etwas auf dem Herzen — das merkt man.",
+      "words": [
+        {
+          "word": "Thessa",
+          "start": 0.442,
+          "end": 0.743,
+          "score": 0.759
+        },
+        {
+          "word": "hat",
+          "start": 0.783,
+          "end": 0.964,
+          "score": 0.994
+        },
+        {
+          "word": "etwas",
+          "start": 1.004,
+          "end": 1.225,
+          "score": 0.913
+        },
+        {
+          "word": "auf",
+          "start": 1.265,
+          "end": 1.365,
+          "score": 0.858
+        },
+        {
+          "word": "dem",
+          "start": 1.405,
+          "end": 1.546,
+          "score": 0.975
+        },
+        {
+          "word": "Herzen",
+          "start": 1.586,
+          "end": 1.907,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 2.429,
+          "end": 2.449,
+          "score": 0.841
+        },
+        {
+          "word": "das",
+          "start": 2.469,
+          "end": 2.67,
+          "score": 0.955
+        },
+        {
+          "word": "merkt",
+          "start": 2.71,
+          "end": 2.951,
+          "score": 0.911
+        },
+        {
+          "word": "man.",
+          "start": 2.991,
+          "end": 4.075,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 4.115,
+      "end": 5.039,
+      "text": "Morgen wieder ansprechen.",
+      "words": [
+        {
+          "word": "Morgen",
+          "start": 4.115,
+          "end": 4.396,
+          "score": 0.974
+        },
+        {
+          "word": "wieder",
+          "start": 4.436,
+          "end": 4.597,
+          "score": 0.993
+        },
+        {
+          "word": "ansprechen.",
+          "start": 4.637,
+          "end": 5.039,
+          "score": 0.846
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Thessa",
+      "start": 0.442,
+      "end": 0.743,
+      "score": 0.759
+    },
+    {
+      "word": "hat",
+      "start": 0.783,
+      "end": 0.964,
+      "score": 0.994
+    },
+    {
+      "word": "etwas",
+      "start": 1.004,
+      "end": 1.225,
+      "score": 0.913
+    },
+    {
+      "word": "auf",
+      "start": 1.265,
+      "end": 1.365,
+      "score": 0.858
+    },
+    {
+      "word": "dem",
+      "start": 1.405,
+      "end": 1.546,
+      "score": 0.975
+    },
+    {
+      "word": "Herzen",
+      "start": 1.586,
+      "end": 1.907,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 2.429,
+      "end": 2.449,
+      "score": 0.841
+    },
+    {
+      "word": "das",
+      "start": 2.469,
+      "end": 2.67,
+      "score": 0.955
+    },
+    {
+      "word": "merkt",
+      "start": 2.71,
+      "end": 2.951,
+      "score": 0.911
+    },
+    {
+      "word": "man.",
+      "start": 2.991,
+      "end": 4.075,
+      "score": 0.902
+    },
+    {
+      "word": "Morgen",
+      "start": 4.115,
+      "end": 4.396,
+      "score": 0.974
+    },
+    {
+      "word": "wieder",
+      "start": 4.436,
+      "end": 4.597,
+      "score": 0.993
+    },
+    {
+      "word": "ansprechen.",
+      "start": 4.637,
+      "end": 5.039,
+      "score": 0.846
+    }
+  ]
+}

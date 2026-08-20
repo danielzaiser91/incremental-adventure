@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.842,
+      "end": 6.073,
+      "text": "Varena will, dass ich einen Alchemie-Aspekt auf Stufe 5 bringe.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.842,
+          "end": 1.423,
+          "score": 0.811
+        },
+        {
+          "word": "will,",
+          "start": 1.443,
+          "end": 1.664,
+          "score": 0.832
+        },
+        {
+          "word": "dass",
+          "start": 1.684,
+          "end": 1.824,
+          "score": 0.965
+        },
+        {
+          "word": "ich",
+          "start": 1.864,
+          "end": 2.064,
+          "score": 0.793
+        },
+        {
+          "word": "einen",
+          "start": 2.084,
+          "end": 2.325,
+          "score": 0.823
+        },
+        {
+          "word": "Alchemie-Aspekt",
+          "start": 2.365,
+          "end": 3.447,
+          "score": 0.827
+        },
+        {
+          "word": "auf",
+          "start": 3.487,
+          "end": 3.608,
+          "score": 0.887
+        },
+        {
+          "word": "Stufe",
+          "start": 3.648,
+          "end": 4.069,
+          "score": 0.795
+        },
+        {
+          "word": "5",
+          "start": 4.109,
+          "end": 4.369,
+          "score": 0.775
+        },
+        {
+          "word": "bringe.",
+          "start": 4.389,
+          "end": 6.073,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 6.093,
+      "end": 8.839,
+      "text": "Die Elemente reagieren auf meine Konzentration.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 6.093,
+          "end": 6.273,
+          "score": 0.826
+        },
+        {
+          "word": "Elemente",
+          "start": 6.313,
+          "end": 6.935,
+          "score": 0.99
+        },
+        {
+          "word": "reagieren",
+          "start": 6.995,
+          "end": 7.636,
+          "score": 0.772
+        },
+        {
+          "word": "auf",
+          "start": 7.676,
+          "end": 7.857,
+          "score": 0.91
+        },
+        {
+          "word": "meine",
+          "start": 7.877,
+          "end": 8.097,
+          "score": 0.956
+        },
+        {
+          "word": "Konzentration.",
+          "start": 8.137,
+          "end": 8.839,
+          "score": 0.924
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.842,
+      "end": 1.423,
+      "score": 0.811
+    },
+    {
+      "word": "will,",
+      "start": 1.443,
+      "end": 1.664,
+      "score": 0.832
+    },
+    {
+      "word": "dass",
+      "start": 1.684,
+      "end": 1.824,
+      "score": 0.965
+    },
+    {
+      "word": "ich",
+      "start": 1.864,
+      "end": 2.064,
+      "score": 0.793
+    },
+    {
+      "word": "einen",
+      "start": 2.084,
+      "end": 2.325,
+      "score": 0.823
+    },
+    {
+      "word": "Alchemie-Aspekt",
+      "start": 2.365,
+      "end": 3.447,
+      "score": 0.827
+    },
+    {
+      "word": "auf",
+      "start": 3.487,
+      "end": 3.608,
+      "score": 0.887
+    },
+    {
+      "word": "Stufe",
+      "start": 3.648,
+      "end": 4.069,
+      "score": 0.795
+    },
+    {
+      "word": "5",
+      "start": 4.109,
+      "end": 4.369,
+      "score": 0.775
+    },
+    {
+      "word": "bringe.",
+      "start": 4.389,
+      "end": 6.073,
+      "score": 0.894
+    },
+    {
+      "word": "Die",
+      "start": 6.093,
+      "end": 6.273,
+      "score": 0.826
+    },
+    {
+      "word": "Elemente",
+      "start": 6.313,
+      "end": 6.935,
+      "score": 0.99
+    },
+    {
+      "word": "reagieren",
+      "start": 6.995,
+      "end": 7.636,
+      "score": 0.772
+    },
+    {
+      "word": "auf",
+      "start": 7.676,
+      "end": 7.857,
+      "score": 0.91
+    },
+    {
+      "word": "meine",
+      "start": 7.877,
+      "end": 8.097,
+      "score": 0.956
+    },
+    {
+      "word": "Konzentration.",
+      "start": 8.137,
+      "end": 8.839,
+      "score": 0.924
+    }
+  ]
+}
