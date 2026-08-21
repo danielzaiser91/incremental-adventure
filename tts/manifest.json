@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T20:35:47.222Z",
+  "generated": "2026-08-21T23:00:34.521Z",
   "units": [
     {
       "id": "story-1-1",
@@ -1303,7 +1303,7 @@
       "category": "npc-dialog",
       "title": "Ein zwielichtiger Mann — finaleDialog",
       "voice": "Enceladus",
-      "style": "Du sprichst eine feste Rolle: ein zwielichtiger Mann am Rand des Schankraums, dessen Blick ständig wandert. Er spricht leise und gedämpft, halb verschluckt, immer auf der Hut — lauernd und ausweichend, niemals laut. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nDer Text mischt kurze Regie-/Beschreibungssätze mit wörtlicher Rede in Anführungszeichen. Sprich beides in derselben Rollenstimme: die Beschreibungssätze etwas ruhiger und zurückgenommen, die wörtliche Rede voll in der Rolle. Anführungszeichen selbst werden nicht mitgesprochen.\nSprich niemals monoton, aber auch nicht theatralisch überzogen — glaubwürdig und natürlich. Lass die Stimmung der Szene maßvoll durchscheinen und wechsle die Färbung, sobald sie sich im Text ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
       "text": "Er sitzt an seinem üblichen Platz. Aber heute kommt er mir entgegen, bevor ich ihn ansprich.\n\n\"Du hast dir einen Ruf gemacht, Serin... verzeiht. Alten Reflex.\"\n\n\"Treutheim hat dir alles gegeben, was es hat. Der Rest liegt woanders.\"\n\n\"Lethkar. Nördlich, durch den Bergpass. Du wirst nicht leicht hinkommen — aber du wirst ankommen.\"\n\nEr schiebt mir ein kleines, gefaltetes Stück Pergament zu. Keine Worte mehr."
     },
     {

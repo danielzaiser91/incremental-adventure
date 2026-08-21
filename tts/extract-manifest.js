@@ -302,7 +302,17 @@ const TTS_STYLE_OVERRIDES = {
      26.07.2026 an 3× HTTP 400 und stand seither in `SKIP_IDS`; er ist dort
      jetzt heraus und läuft mit Erzähler-Stil regulär mit. Die Stimme bleibt
      Aoede, damit Mira über alle Knoten dieselbe Person bleibt. */
-  'npc-mira-greet': NARRATOR_STYLE
+  'npc-mira-greet': NARRATOR_STYLE,
+  /* `npc-fremder-finaleDialog` — anderer Fehlermodus als die beiden oben:
+     4× Leerantwort (`finishReason: OTHER`, Audio-Tokens gezählt, aber kein
+     Audio geliefert) statt HTTP 400. Die Gratis-Sonde hilft hier nicht, weil
+     der Knoten die Validierung passiert und bei leerer Quota nur ein 429
+     zurückgibt. Der Stil-Override ist damit unbelegt, aber der einzige Hebel,
+     der bei den zwei anderen Dauer-Ausfällen zweimal funktioniert hat — und er
+     kostet höchstens einen Tages-Slot. Gesetzt 22.08.2026; scheitert er zwei
+     weitere Male, ist der nächste Schritt eine Umformulierung des
+     KNOTENTEXTES in `script/npc.js`. */
+  'npc-fremder-finaleDialog': NARRATOR_STYLE
 };
 for (const u of units) {
   if (TTS_STYLE_OVERRIDES[u.id]) u.style = TTS_STYLE_OVERRIDES[u.id];

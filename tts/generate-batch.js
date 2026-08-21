@@ -45,7 +45,9 @@ const REQUEST_SPACING_MS = 21000; // 3 RPM mit Puffer
 // npc-mira-greet ist am 14.08.2026 aus demselben Grund heraus: zwei kostenlose
 // Sonden bei leerer Quota zeigten Original-Stil → 400, Erzähler-Stil → 429.
 // Er hat jetzt ebenfalls einen Stil-Override.
-const SKIP_IDS = new Set(['npc-fremder-finaleDialog']);
+// Leer seit 22.08.2026: der letzte Dauer-Ausfall `npc-fremder-finaleDialog` läuft
+// mit Stil-Override (siehe TTS_STYLE_OVERRIDES) wieder regulär mit.
+const SKIP_IDS = new Set();
 const OUT_DIR = path.join(__dirname, 'output');
 const PROGRESS_FILE = path.join(__dirname, 'progress.json');
 const PLAN_FILE = path.join(__dirname, 'PLAN.md');

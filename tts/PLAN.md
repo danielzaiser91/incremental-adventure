@@ -145,10 +145,11 @@ mit dem neuen Modell.
       Knoten am 15.08. als erste Einheit des Batches auf Anhieb mit HTTP 200
       durch. Damit derselbe Mechanismus und derselbe Fix wie bei
       `npc-greta-turnIn`: der Persona-Stil-Prompt ist der Auslöser, nicht der
-      Text. **Hörprobe durch Daniel offen.**
-      Dauerhaft blockiert bleibt nur `npc-fremder-finaleDialog`
-      (Leerantwort, für die die Sonde nichts hergibt: sie passiert die
-      Validierung und liefert bei leerer Quota nur ein 429)).
+      Text. (Hörprobe zurückgestellt, siehe unten.)
+      `npc-fremder-finaleDialog` (Leerantwort, für die die Sonde nichts
+      hergibt: sie passiert die Validierung und liefert bei leerer Quota nur
+      ein 429) stand bis 22.08.2026 in `SKIP_IDS`; seither läuft er mit
+      Stil-Override regulär mit, `SKIP_IDS` ist leer).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
@@ -159,10 +160,10 @@ mit dem neuen Modell.
       Der letzte offene Knoten `npc-greta-turnIn` (9 HTTP 400 in Folge über
       6 Tage) lief am 14.08.2026, 08:20 Uhr mit dem am 12.08. eingebauten
       Stil-Override (`TTS_STYLE_OVERRIDES` → `NARRATOR_STYLE`, Stimme Despina
-      unverändert) auf Anhieb mit HTTP 200 durch. **Offen für Daniel:
-      Hörprobe** — klingt Greta in `turnIn` neben `offer`/`idle` zu neutral,
-      ist der nächste Hebel eine Umformulierung des KNOTENTEXTES in
-      `script/npc.js` (mit der Dialog-KI), kein weiterer Prompt-Versuch.
+      unverändert) auf Anhieb mit HTTP 200 durch. (Hörprobe zurückgestellt,
+      siehe unten — klingt Greta in `turnIn` neben `offer`/`idle` irgendwann
+      zu neutral, ist der nächste Hebel eine Umformulierung des KNOTENTEXTES
+      in `script/npc.js` mit der Dialog-KI, kein weiterer Prompt-Versuch.)
       `ACTIVE_NPC_PHASES` steht auf `{3, 4}`.
 - [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
       Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
@@ -187,15 +188,32 @@ Grobe Zeitschätzung bei 10/Tag (Stand 26.07.2026, nach Korrektur der
 Phase-3-Knotenzahl von ~143 auf 65): Phase 1–2 erledigt, Phase 3 bis ~02.08.,
 Phase 4 bis ~05.08., Phase 5 bis ~24.08., Phase 6–7 bis ~Ende September 2026.
 
+## Zurückgestellt — kein aktives Todo (Entscheidung Daniel, 22.08.2026)
+
+Daniel: „ich will nichts gegenhören, es soll einfach nur alles vertont werden,
+todos können raus, irgendwann kommt die probe und feedback, aber erstmal nicht
+als aktives todo." Diese drei Punkte stehen deshalb hier und **nicht** mehr im
+Footer oder in der Meilenstein-Checkliste. Sie kommen zurück, wenn er von sich
+aus eine Hörrunde ansetzt:
+
+- Hörprobe der zwei Ausnahme-Aufnahmen (Greta `turnIn`, Mira `greet`) — Stimme
+  jeweils unverändert, Spielweise durch den Stil-Override neutraler.
+- Gegencheck des Wort-Highlightings im laufenden Spiel (Hervorhebung, Seek,
+  Seitenende-Stopp), jetzt wo Audio aus `tts/audio/` geladen wird.
+- Allgemeine Qualitätsrunde über den vertonten Bestand.
+
+Bis dahin gilt: Der Batch läuft durch, alles wird vertont, nichts wartet auf
+eine Freigabe.
+
 ## TODO — Wort-Highlighting-Prototyp, offene Bugs (Test 20.07.2026, 00:23 Uhr)
 
 **Stand 12.08.2026 — Großteil erledigt:** Alignment-Rückstand läuft seit heute
 als Backlog-Lauf (`align_all.py`, Idle-Priorität) und ist ins Batch-Skript
 integriert (kein manueller Nachzieh-Schritt mehr). Die Fallback-Frage ist
 entschieden und umgesetzt: keine Audio-UI ohne Wort-Timing. Der letzte
-„Weiter"-Button heißt jetzt „Schließen" (v0.22.10). Offen aus diesem Abschnitt
-bleibt nur der Gegencheck des Wort-Highlightings durch einen echten Hör-Test,
-sobald v0.23.0 (Audio aus `tts/audio/`) live ist.
+„Weiter"-Button heißt jetzt „Schließen" (v0.22.10). Aus diesem Abschnitt steht
+nur noch der Gegencheck des Wort-Highlightings per Hör-Test aus — und der ist
+seit 22.08.2026 zurückgestellt (siehe Abschnitt darüber).
 
 Manueller Test durch User (nicht Browser-Automation) bei story-1.3 (Schlafplatz,
 Nacht, "Die erste Nacht") — **keine Code-Änderungen vorgenommen, nur notiert.**
@@ -342,3 +360,4 @@ nachgelagerter Extra-Lauf.
 - 22.08.2026 00:36 — Batch: 10 Dateien (quest-lethkarMarkt-unstarted … quest-alchemieGeselle-rewarded), 54 s Audio, komplett. Gesamt: 249/331 im Manifest.
 - 22.08.2026 00:37 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
 - 22.08.2026 00:40 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — sechster fehlerfreier Zehnerlauf in Folge. Keine Sonden (400er-Diagnostik ist seit 14.08. abgeschlossen und geloggt). **Am 21.08. lief kein Batch um 22:00**; die geplante Aufgabe startete zwar um 22:09, der Batch selbst lief erst um 00:36 des Folgetages, weil die Sitzung dazwischen pausierte (dasselbe Muster wie in der Nacht 17./18.08.). Für die Quota ist das folgenlos: Nach der am 20.08. belegten Fenster-Regel (Umschlag ~09:00 unserer Zeit) fiel dieser Lauf noch ins Kontingent des 21.08., das sonst ungenutzt verfallen wäre — und der reguläre Nachtlauf heute um 22:00 hat wieder volle 10 Slots. Der Gegencheck `progress.json` (239 Einträge) gegen die letzte Log-Zeile und die 239 WAVs vor dem Lauf zeigt keinen verschwundenen Tagesertrag. Phase 5 steht bei 96/177 (Quests 96/139, Objectives 0/38); bei 10/Tag ist sie um den 30.08. herum durch, danach Phase 6 (Welt-Flavor, Extraktion steht noch aus). Dauerhaft blockiert bleibt allein `npc-fremder-finaleDialog` (Leerantwort `finishReason: OTHER`, in `SKIP_IDS`).
+- 22.08.2026 01:05 — **Zwei Entscheidungen von Daniel, beide vollzogen.** (1) *Keine Hörproben als aktives Todo:* „ich will nichts gegenhören, es soll einfach nur alles vertont werden, todos können raus, irgendwann kommt die probe und feedback, aber erstmal nicht als aktives todo." Die drei Rückmelde-Punkte (Ausnahme-Aufnahmen Greta/Mira, Wort-Highlighting-Gegencheck, allgemeine Qualitätsrunde) stehen ab jetzt im neuen Abschnitt „Zurückgestellt" und tauchen weder im Footer noch in der Checkliste auf. (2) *Letzten Dauer-Ausfall wieder mitlaufen lassen:* `npc-fremder-finaleDialog` (4× Leerantwort `finishReason: OTHER`, seit 07.08. in `SKIP_IDS`) bekommt einen Eintrag in `TTS_STYLE_OVERRIDES` auf `NARRATOR_STYLE` und ist aus `SKIP_IDS` heraus — `SKIP_IDS` ist damit leer. Belegt ist der Hebel für diesen Fehlermodus **nicht**: Bei Greta und Mira löste er HTTP 400 ab, hier liegt eine Leerantwort vor, und die Gratis-Sonde kann darüber nichts sagen, weil der Knoten die Validierung passiert. Er kostet aber höchstens einen Tages-Slot, und Daniels Vorgabe ist, dass am Ende alles vertont ist. Scheitert er zwei weitere Male, ist der nächste Schritt eine Umformulierung des KNOTENTEXTES in `script/npc.js` mit der Dialog-KI — kein weiterer Prompt-Versuch. Der nächste Batch nimmt ihn als erste Einheit.
