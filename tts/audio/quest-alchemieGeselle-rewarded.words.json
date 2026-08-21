@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.353,
+      "text": "Abgeschlossen — Varena nennt mich jetzt Geselle.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.825,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 1.845,
+          "end": 1.865,
+          "score": 0.992
+        },
+        {
+          "word": "Varena",
+          "start": 1.886,
+          "end": 2.407,
+          "score": 0.858
+        },
+        {
+          "word": "nennt",
+          "start": 2.427,
+          "end": 2.648,
+          "score": 0.801
+        },
+        {
+          "word": "mich",
+          "start": 2.668,
+          "end": 2.828,
+          "score": 0.828
+        },
+        {
+          "word": "jetzt",
+          "start": 2.848,
+          "end": 3.129,
+          "score": 0.773
+        },
+        {
+          "word": "Geselle.",
+          "start": 3.169,
+          "end": 4.353,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 4.393,
+      "end": 6.419,
+      "text": "Das Alchemie-Tempo steigt dauerhaft.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 4.393,
+          "end": 4.573,
+          "score": 0.898
+        },
+        {
+          "word": "Alchemie-Tempo",
+          "start": 4.614,
+          "end": 5.516,
+          "score": 0.789
+        },
+        {
+          "word": "steigt",
+          "start": 5.556,
+          "end": 5.897,
+          "score": 0.926
+        },
+        {
+          "word": "dauerhaft.",
+          "start": 5.917,
+          "end": 6.419,
+          "score": 0.918
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.825,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 1.845,
+      "end": 1.865,
+      "score": 0.992
+    },
+    {
+      "word": "Varena",
+      "start": 1.886,
+      "end": 2.407,
+      "score": 0.858
+    },
+    {
+      "word": "nennt",
+      "start": 2.427,
+      "end": 2.648,
+      "score": 0.801
+    },
+    {
+      "word": "mich",
+      "start": 2.668,
+      "end": 2.828,
+      "score": 0.828
+    },
+    {
+      "word": "jetzt",
+      "start": 2.848,
+      "end": 3.129,
+      "score": 0.773
+    },
+    {
+      "word": "Geselle.",
+      "start": 3.169,
+      "end": 4.353,
+      "score": 0.912
+    },
+    {
+      "word": "Das",
+      "start": 4.393,
+      "end": 4.573,
+      "score": 0.898
+    },
+    {
+      "word": "Alchemie-Tempo",
+      "start": 4.614,
+      "end": 5.516,
+      "score": 0.789
+    },
+    {
+      "word": "steigt",
+      "start": 5.556,
+      "end": 5.897,
+      "score": 0.926
+    },
+    {
+      "word": "dauerhaft.",
+      "start": 5.917,
+      "end": 6.419,
+      "score": 0.918
+    }
+  ]
+}

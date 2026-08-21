@@ -1,0 +1,104 @@
+{
+  "segments": [
+    {
+      "start": 0.623,
+      "end": 2.212,
+      "text": "Zehn Level erreicht.",
+      "words": [
+        {
+          "word": "Zehn",
+          "start": 0.623,
+          "end": 0.885,
+          "score": 0.769
+        },
+        {
+          "word": "Level",
+          "start": 0.925,
+          "end": 1.267,
+          "score": 0.949
+        },
+        {
+          "word": "erreicht.",
+          "start": 1.287,
+          "end": 2.212,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 2.252,
+      "end": 3.238,
+      "text": "Varena soll es wissen.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 2.252,
+          "end": 2.695,
+          "score": 0.742
+        },
+        {
+          "word": "soll",
+          "start": 2.735,
+          "end": 2.856,
+          "score": 0.886
+        },
+        {
+          "word": "es",
+          "start": 2.896,
+          "end": 3.017,
+          "score": 0.854
+        },
+        {
+          "word": "wissen.",
+          "start": 3.037,
+          "end": 3.238,
+          "score": 0.777
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zehn",
+      "start": 0.623,
+      "end": 0.885,
+      "score": 0.769
+    },
+    {
+      "word": "Level",
+      "start": 0.925,
+      "end": 1.267,
+      "score": 0.949
+    },
+    {
+      "word": "erreicht.",
+      "start": 1.287,
+      "end": 2.212,
+      "score": 0.877
+    },
+    {
+      "word": "Varena",
+      "start": 2.252,
+      "end": 2.695,
+      "score": 0.742
+    },
+    {
+      "word": "soll",
+      "start": 2.735,
+      "end": 2.856,
+      "score": 0.886
+    },
+    {
+      "word": "es",
+      "start": 2.896,
+      "end": 3.017,
+      "score": 0.854
+    },
+    {
+      "word": "wissen.",
+      "start": 3.037,
+      "end": 3.238,
+      "score": 0.777
+    }
+  ]
+}

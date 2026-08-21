@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.333,
+      "text": "Abgeschlossen — die Händler kennen mich jetzt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.481,
+          "end": 1.043,
+          "score": 0.863
+        },
+        {
+          "word": "—",
+          "start": 2.026,
+          "end": 2.046,
+          "score": 0.178
+        },
+        {
+          "word": "die",
+          "start": 2.066,
+          "end": 2.247,
+          "score": 0.944
+        },
+        {
+          "word": "Händler",
+          "start": 2.287,
+          "end": 2.708,
+          "score": 0.893
+        },
+        {
+          "word": "kennen",
+          "start": 2.748,
+          "end": 2.969,
+          "score": 0.879
+        },
+        {
+          "word": "mich",
+          "start": 3.009,
+          "end": 3.19,
+          "score": 0.944
+        },
+        {
+          "word": "jetzt.",
+          "start": 3.21,
+          "end": 4.333,
+          "score": 0.843
+        }
+      ]
+    },
+    {
+      "start": 4.373,
+      "end": 6.079,
+      "text": "Kleine Rabatte, aber doch.",
+      "words": [
+        {
+          "word": "Kleine",
+          "start": 4.373,
+          "end": 4.634,
+          "score": 0.889
+        },
+        {
+          "word": "Rabatte,",
+          "start": 4.674,
+          "end": 5.637,
+          "score": 0.923
+        },
+        {
+          "word": "aber",
+          "start": 5.657,
+          "end": 5.918,
+          "score": 0.857
+        },
+        {
+          "word": "doch.",
+          "start": 5.958,
+          "end": 6.079,
+          "score": 0.525
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.481,
+      "end": 1.043,
+      "score": 0.863
+    },
+    {
+      "word": "—",
+      "start": 2.026,
+      "end": 2.046,
+      "score": 0.178
+    },
+    {
+      "word": "die",
+      "start": 2.066,
+      "end": 2.247,
+      "score": 0.944
+    },
+    {
+      "word": "Händler",
+      "start": 2.287,
+      "end": 2.708,
+      "score": 0.893
+    },
+    {
+      "word": "kennen",
+      "start": 2.748,
+      "end": 2.969,
+      "score": 0.879
+    },
+    {
+      "word": "mich",
+      "start": 3.009,
+      "end": 3.19,
+      "score": 0.944
+    },
+    {
+      "word": "jetzt.",
+      "start": 3.21,
+      "end": 4.333,
+      "score": 0.843
+    },
+    {
+      "word": "Kleine",
+      "start": 4.373,
+      "end": 4.634,
+      "score": 0.889
+    },
+    {
+      "word": "Rabatte,",
+      "start": 4.674,
+      "end": 5.637,
+      "score": 0.923
+    },
+    {
+      "word": "aber",
+      "start": 5.657,
+      "end": 5.918,
+      "score": 0.857
+    },
+    {
+      "word": "doch.",
+      "start": 5.958,
+      "end": 6.079,
+      "score": 0.525
+    }
+  ]
+}

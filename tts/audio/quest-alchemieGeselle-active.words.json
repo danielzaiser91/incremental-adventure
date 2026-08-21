@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.682,
+      "end": 6.896,
+      "text": "Zehn Alchemie-Level gesamt — das ist Varenas Messlatte für einen Gesellen.",
+      "words": [
+        {
+          "word": "Zehn",
+          "start": 0.682,
+          "end": 1.062,
+          "score": 0.844
+        },
+        {
+          "word": "Alchemie-Level",
+          "start": 1.123,
+          "end": 2.225,
+          "score": 0.854
+        },
+        {
+          "word": "gesamt",
+          "start": 2.265,
+          "end": 2.626,
+          "score": 0.919
+        },
+        {
+          "word": "—",
+          "start": 3.408,
+          "end": 3.428,
+          "score": 0.985
+        },
+        {
+          "word": "das",
+          "start": 3.468,
+          "end": 3.769,
+          "score": 0.994
+        },
+        {
+          "word": "ist",
+          "start": 3.829,
+          "end": 3.969,
+          "score": 0.997
+        },
+        {
+          "word": "Varenas",
+          "start": 4.029,
+          "end": 4.671,
+          "score": 0.755
+        },
+        {
+          "word": "Messlatte",
+          "start": 4.691,
+          "end": 5.252,
+          "score": 0.907
+        },
+        {
+          "word": "für",
+          "start": 5.272,
+          "end": 5.412,
+          "score": 0.919
+        },
+        {
+          "word": "einen",
+          "start": 5.433,
+          "end": 5.593,
+          "score": 0.939
+        },
+        {
+          "word": "Gesellen.",
+          "start": 5.613,
+          "end": 6.896,
+          "score": 0.914
+        }
+      ]
+    },
+    {
+      "start": 6.956,
+      "end": 8.339,
+      "text": "Aspekte weitertreiben.",
+      "words": [
+        {
+          "word": "Aspekte",
+          "start": 6.956,
+          "end": 7.638,
+          "score": 0.99
+        },
+        {
+          "word": "weitertreiben.",
+          "start": 7.678,
+          "end": 8.339,
+          "score": 0.859
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zehn",
+      "start": 0.682,
+      "end": 1.062,
+      "score": 0.844
+    },
+    {
+      "word": "Alchemie-Level",
+      "start": 1.123,
+      "end": 2.225,
+      "score": 0.854
+    },
+    {
+      "word": "gesamt",
+      "start": 2.265,
+      "end": 2.626,
+      "score": 0.919
+    },
+    {
+      "word": "—",
+      "start": 3.408,
+      "end": 3.428,
+      "score": 0.985
+    },
+    {
+      "word": "das",
+      "start": 3.468,
+      "end": 3.769,
+      "score": 0.994
+    },
+    {
+      "word": "ist",
+      "start": 3.829,
+      "end": 3.969,
+      "score": 0.997
+    },
+    {
+      "word": "Varenas",
+      "start": 4.029,
+      "end": 4.671,
+      "score": 0.755
+    },
+    {
+      "word": "Messlatte",
+      "start": 4.691,
+      "end": 5.252,
+      "score": 0.907
+    },
+    {
+      "word": "für",
+      "start": 5.272,
+      "end": 5.412,
+      "score": 0.919
+    },
+    {
+      "word": "einen",
+      "start": 5.433,
+      "end": 5.593,
+      "score": 0.939
+    },
+    {
+      "word": "Gesellen.",
+      "start": 5.613,
+      "end": 6.896,
+      "score": 0.914
+    },
+    {
+      "word": "Aspekte",
+      "start": 6.956,
+      "end": 7.638,
+      "score": 0.99
+    },
+    {
+      "word": "weitertreiben.",
+      "start": 7.678,
+      "end": 8.339,
+      "score": 0.859
+    }
+  ]
+}

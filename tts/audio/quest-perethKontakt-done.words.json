@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.442,
+      "end": 2.148,
+      "text": "Pereth gefunden.",
+      "words": [
+        {
+          "word": "Pereth",
+          "start": 0.442,
+          "end": 0.863,
+          "score": 0.687
+        },
+        {
+          "word": "gefunden.",
+          "start": 0.903,
+          "end": 2.148,
+          "score": 0.879
+        }
+      ]
+    },
+    {
+      "start": 2.188,
+      "end": 5.098,
+      "text": "Er weiß von Velmark und bietet an, mir den Weg zu zeigen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 2.188,
+          "end": 2.288,
+          "score": 0.86
+        },
+        {
+          "word": "weiß",
+          "start": 2.328,
+          "end": 2.549,
+          "score": 0.807
+        },
+        {
+          "word": "von",
+          "start": 2.569,
+          "end": 2.79,
+          "score": 0.922
+        },
+        {
+          "word": "Velmark",
+          "start": 2.81,
+          "end": 3.272,
+          "score": 0.758
+        },
+        {
+          "word": "und",
+          "start": 3.312,
+          "end": 3.512,
+          "score": 0.917
+        },
+        {
+          "word": "bietet",
+          "start": 3.532,
+          "end": 3.874,
+          "score": 0.815
+        },
+        {
+          "word": "an,",
+          "start": 3.914,
+          "end": 4.054,
+          "score": 0.561
+        },
+        {
+          "word": "mir",
+          "start": 4.074,
+          "end": 4.235,
+          "score": 0.751
+        },
+        {
+          "word": "den",
+          "start": 4.255,
+          "end": 4.395,
+          "score": 0.917
+        },
+        {
+          "word": "Weg",
+          "start": 4.416,
+          "end": 4.636,
+          "score": 0.829
+        },
+        {
+          "word": "zu",
+          "start": 4.676,
+          "end": 4.797,
+          "score": 0.86
+        },
+        {
+          "word": "zeigen.",
+          "start": 4.837,
+          "end": 5.098,
+          "score": 0.742
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Pereth",
+      "start": 0.442,
+      "end": 0.863,
+      "score": 0.687
+    },
+    {
+      "word": "gefunden.",
+      "start": 0.903,
+      "end": 2.148,
+      "score": 0.879
+    },
+    {
+      "word": "Er",
+      "start": 2.188,
+      "end": 2.288,
+      "score": 0.86
+    },
+    {
+      "word": "weiß",
+      "start": 2.328,
+      "end": 2.549,
+      "score": 0.807
+    },
+    {
+      "word": "von",
+      "start": 2.569,
+      "end": 2.79,
+      "score": 0.922
+    },
+    {
+      "word": "Velmark",
+      "start": 2.81,
+      "end": 3.272,
+      "score": 0.758
+    },
+    {
+      "word": "und",
+      "start": 3.312,
+      "end": 3.512,
+      "score": 0.917
+    },
+    {
+      "word": "bietet",
+      "start": 3.532,
+      "end": 3.874,
+      "score": 0.815
+    },
+    {
+      "word": "an,",
+      "start": 3.914,
+      "end": 4.054,
+      "score": 0.561
+    },
+    {
+      "word": "mir",
+      "start": 4.074,
+      "end": 4.235,
+      "score": 0.751
+    },
+    {
+      "word": "den",
+      "start": 4.255,
+      "end": 4.395,
+      "score": 0.917
+    },
+    {
+      "word": "Weg",
+      "start": 4.416,
+      "end": 4.636,
+      "score": 0.829
+    },
+    {
+      "word": "zu",
+      "start": 4.676,
+      "end": 4.797,
+      "score": 0.86
+    },
+    {
+      "word": "zeigen.",
+      "start": 4.837,
+      "end": 5.098,
+      "score": 0.742
+    }
+  ]
+}

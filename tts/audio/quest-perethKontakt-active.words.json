@@ -1,0 +1,267 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 5.651,
+      "text": "Varena erwähnte einen Händler, der diskret arbeitet — Pereth.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.441,
+          "end": 0.962,
+          "score": 0.762
+        },
+        {
+          "word": "erwähnte",
+          "start": 1.002,
+          "end": 1.403,
+          "score": 0.926
+        },
+        {
+          "word": "einen",
+          "start": 1.443,
+          "end": 1.683,
+          "score": 0.975
+        },
+        {
+          "word": "Händler,",
+          "start": 1.723,
+          "end": 2.124,
+          "score": 0.875
+        },
+        {
+          "word": "der",
+          "start": 2.144,
+          "end": 2.405,
+          "score": 0.965
+        },
+        {
+          "word": "diskret",
+          "start": 2.445,
+          "end": 3.126,
+          "score": 0.895
+        },
+        {
+          "word": "arbeitet",
+          "start": 3.186,
+          "end": 3.647,
+          "score": 0.956
+        },
+        {
+          "word": "—",
+          "start": 4.329,
+          "end": 4.349,
+          "score": 0.965
+        },
+        {
+          "word": "Pereth.",
+          "start": 4.389,
+          "end": 5.651,
+          "score": 0.869
+        }
+      ]
+    },
+    {
+      "start": 5.712,
+      "end": 8.678,
+      "text": "Er soll ab und zu in Lethkar auftauchen.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 5.712,
+          "end": 5.872,
+          "score": 0.878
+        },
+        {
+          "word": "soll",
+          "start": 5.912,
+          "end": 6.152,
+          "score": 0.992
+        },
+        {
+          "word": "ab",
+          "start": 6.193,
+          "end": 6.313,
+          "score": 0.872
+        },
+        {
+          "word": "und",
+          "start": 6.353,
+          "end": 6.473,
+          "score": 0.878
+        },
+        {
+          "word": "zu",
+          "start": 6.513,
+          "end": 6.613,
+          "score": 0.806
+        },
+        {
+          "word": "in",
+          "start": 6.653,
+          "end": 6.794,
+          "score": 0.882
+        },
+        {
+          "word": "Lethkar",
+          "start": 6.834,
+          "end": 7.275,
+          "score": 0.828
+        },
+        {
+          "word": "auftauchen.",
+          "start": 7.315,
+          "end": 8.678,
+          "score": 0.97
+        }
+      ]
+    },
+    {
+      "start": 8.698,
+      "end": 9.499,
+      "text": "Augen offen halten.",
+      "words": [
+        {
+          "word": "Augen",
+          "start": 8.698,
+          "end": 8.958,
+          "score": 0.968
+        },
+        {
+          "word": "offen",
+          "start": 8.998,
+          "end": 9.219,
+          "score": 0.891
+        },
+        {
+          "word": "halten.",
+          "start": 9.259,
+          "end": 9.499,
+          "score": 0.835
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.441,
+      "end": 0.962,
+      "score": 0.762
+    },
+    {
+      "word": "erwähnte",
+      "start": 1.002,
+      "end": 1.403,
+      "score": 0.926
+    },
+    {
+      "word": "einen",
+      "start": 1.443,
+      "end": 1.683,
+      "score": 0.975
+    },
+    {
+      "word": "Händler,",
+      "start": 1.723,
+      "end": 2.124,
+      "score": 0.875
+    },
+    {
+      "word": "der",
+      "start": 2.144,
+      "end": 2.405,
+      "score": 0.965
+    },
+    {
+      "word": "diskret",
+      "start": 2.445,
+      "end": 3.126,
+      "score": 0.895
+    },
+    {
+      "word": "arbeitet",
+      "start": 3.186,
+      "end": 3.647,
+      "score": 0.956
+    },
+    {
+      "word": "—",
+      "start": 4.329,
+      "end": 4.349,
+      "score": 0.965
+    },
+    {
+      "word": "Pereth.",
+      "start": 4.389,
+      "end": 5.651,
+      "score": 0.869
+    },
+    {
+      "word": "Er",
+      "start": 5.712,
+      "end": 5.872,
+      "score": 0.878
+    },
+    {
+      "word": "soll",
+      "start": 5.912,
+      "end": 6.152,
+      "score": 0.992
+    },
+    {
+      "word": "ab",
+      "start": 6.193,
+      "end": 6.313,
+      "score": 0.872
+    },
+    {
+      "word": "und",
+      "start": 6.353,
+      "end": 6.473,
+      "score": 0.878
+    },
+    {
+      "word": "zu",
+      "start": 6.513,
+      "end": 6.613,
+      "score": 0.806
+    },
+    {
+      "word": "in",
+      "start": 6.653,
+      "end": 6.794,
+      "score": 0.882
+    },
+    {
+      "word": "Lethkar",
+      "start": 6.834,
+      "end": 7.275,
+      "score": 0.828
+    },
+    {
+      "word": "auftauchen.",
+      "start": 7.315,
+      "end": 8.678,
+      "score": 0.97
+    },
+    {
+      "word": "Augen",
+      "start": 8.698,
+      "end": 8.958,
+      "score": 0.968
+    },
+    {
+      "word": "offen",
+      "start": 8.998,
+      "end": 9.219,
+      "score": 0.891
+    },
+    {
+      "word": "halten.",
+      "start": 9.259,
+      "end": 9.499,
+      "score": 0.835
+    }
+  ]
+}
