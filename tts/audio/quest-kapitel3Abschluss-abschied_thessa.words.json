@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.422,
+      "end": 2.17,
+      "text": "Thessa verabschieden.",
+      "words": [
+        {
+          "word": "Thessa",
+          "start": 0.422,
+          "end": 0.824,
+          "score": 0.827
+        },
+        {
+          "word": "verabschieden.",
+          "start": 0.864,
+          "end": 2.17,
+          "score": 0.74
+        }
+      ]
+    },
+    {
+      "start": 2.19,
+      "end": 3.998,
+      "text": "Dann ist der Weg nach Velmark frei.",
+      "words": [
+        {
+          "word": "Dann",
+          "start": 2.19,
+          "end": 2.391,
+          "score": 0.93
+        },
+        {
+          "word": "ist",
+          "start": 2.431,
+          "end": 2.592,
+          "score": 0.799
+        },
+        {
+          "word": "der",
+          "start": 2.612,
+          "end": 2.732,
+          "score": 0.849
+        },
+        {
+          "word": "Weg",
+          "start": 2.772,
+          "end": 2.993,
+          "score": 0.995
+        },
+        {
+          "word": "nach",
+          "start": 3.034,
+          "end": 3.255,
+          "score": 0.878
+        },
+        {
+          "word": "Velmark",
+          "start": 3.295,
+          "end": 3.797,
+          "score": 0.815
+        },
+        {
+          "word": "frei.",
+          "start": 3.837,
+          "end": 3.998,
+          "score": 0.742
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Thessa",
+      "start": 0.422,
+      "end": 0.824,
+      "score": 0.827
+    },
+    {
+      "word": "verabschieden.",
+      "start": 0.864,
+      "end": 2.17,
+      "score": 0.74
+    },
+    {
+      "word": "Dann",
+      "start": 2.19,
+      "end": 2.391,
+      "score": 0.93
+    },
+    {
+      "word": "ist",
+      "start": 2.431,
+      "end": 2.592,
+      "score": 0.799
+    },
+    {
+      "word": "der",
+      "start": 2.612,
+      "end": 2.732,
+      "score": 0.849
+    },
+    {
+      "word": "Weg",
+      "start": 2.772,
+      "end": 2.993,
+      "score": 0.995
+    },
+    {
+      "word": "nach",
+      "start": 3.034,
+      "end": 3.255,
+      "score": 0.878
+    },
+    {
+      "word": "Velmark",
+      "start": 3.295,
+      "end": 3.797,
+      "score": 0.815
+    },
+    {
+      "word": "frei.",
+      "start": 3.837,
+      "end": 3.998,
+      "score": 0.742
+    }
+  ]
+}

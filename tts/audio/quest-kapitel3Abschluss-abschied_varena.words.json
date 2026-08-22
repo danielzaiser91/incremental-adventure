@@ -1,0 +1,109 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 4.517,
+      "text": "Varena verabschieden — sie verdient ein letztes Gespräch.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.502,
+          "end": 1.124,
+          "score": 0.67
+        },
+        {
+          "word": "verabschieden",
+          "start": 1.144,
+          "end": 1.787,
+          "score": 0.809
+        },
+        {
+          "word": "—",
+          "start": 2.69,
+          "end": 2.871,
+          "score": 0.514
+        },
+        {
+          "word": "sie",
+          "start": 2.891,
+          "end": 3.032,
+          "score": 0.442
+        },
+        {
+          "word": "verdient",
+          "start": 3.072,
+          "end": 3.453,
+          "score": 0.51
+        },
+        {
+          "word": "ein",
+          "start": 3.493,
+          "end": 3.654,
+          "score": 0.577
+        },
+        {
+          "word": "letztes",
+          "start": 3.694,
+          "end": 4.076,
+          "score": 0.614
+        },
+        {
+          "word": "Gespräch.",
+          "start": 4.116,
+          "end": 4.517,
+          "score": 0.617
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.502,
+      "end": 1.124,
+      "score": 0.67
+    },
+    {
+      "word": "verabschieden",
+      "start": 1.144,
+      "end": 1.787,
+      "score": 0.809
+    },
+    {
+      "word": "—",
+      "start": 2.69,
+      "end": 2.871,
+      "score": 0.514
+    },
+    {
+      "word": "sie",
+      "start": 2.891,
+      "end": 3.032,
+      "score": 0.442
+    },
+    {
+      "word": "verdient",
+      "start": 3.072,
+      "end": 3.453,
+      "score": 0.51
+    },
+    {
+      "word": "ein",
+      "start": 3.493,
+      "end": 3.654,
+      "score": 0.577
+    },
+    {
+      "word": "letztes",
+      "start": 3.694,
+      "end": 4.076,
+      "score": 0.614
+    },
+    {
+      "word": "Gespräch.",
+      "start": 4.116,
+      "end": 4.517,
+      "score": 0.617
+    }
+  ]
+}

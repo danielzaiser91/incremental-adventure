@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 3.651,
+      "text": "Abgeschlossen — Lethkar liegt hinter mir.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.502,
+          "end": 1.023,
+          "score": 0.81
+        },
+        {
+          "word": "—",
+          "start": 2.006,
+          "end": 2.026,
+          "score": 0.501
+        },
+        {
+          "word": "Lethkar",
+          "start": 2.066,
+          "end": 2.929,
+          "score": 0.551
+        },
+        {
+          "word": "liegt",
+          "start": 2.949,
+          "end": 3.19,
+          "score": 0.433
+        },
+        {
+          "word": "hinter",
+          "start": 3.23,
+          "end": 3.511,
+          "score": 0.663
+        },
+        {
+          "word": "mir.",
+          "start": 3.531,
+          "end": 3.651,
+          "score": 0.45
+        }
+      ]
+    },
+    {
+      "start": 3.691,
+      "end": 3.992,
+      "text": "Velmark wartet.",
+      "words": [
+        {
+          "word": "Velmark",
+          "start": 3.691,
+          "end": 3.832,
+          "score": 0.026
+        },
+        {
+          "word": "wartet.",
+          "start": 3.852,
+          "end": 3.992,
+          "score": 0.042
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.502,
+      "end": 1.023,
+      "score": 0.81
+    },
+    {
+      "word": "—",
+      "start": 2.006,
+      "end": 2.026,
+      "score": 0.501
+    },
+    {
+      "word": "Lethkar",
+      "start": 2.066,
+      "end": 2.929,
+      "score": 0.551
+    },
+    {
+      "word": "liegt",
+      "start": 2.949,
+      "end": 3.19,
+      "score": 0.433
+    },
+    {
+      "word": "hinter",
+      "start": 3.23,
+      "end": 3.511,
+      "score": 0.663
+    },
+    {
+      "word": "mir.",
+      "start": 3.531,
+      "end": 3.651,
+      "score": 0.45
+    },
+    {
+      "word": "Velmark",
+      "start": 3.691,
+      "end": 3.832,
+      "score": 0.026
+    },
+    {
+      "word": "wartet.",
+      "start": 3.852,
+      "end": 3.992,
+      "score": 0.042
+    }
+  ]
+}

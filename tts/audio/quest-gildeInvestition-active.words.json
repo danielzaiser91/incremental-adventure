@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.582,
+      "end": 6.076,
+      "text": "Yeva schlägt eine Investition vor: 500 Gold in ihr Handelsnetz.",
+      "words": [
+        {
+          "word": "Yeva",
+          "start": 0.582,
+          "end": 0.983,
+          "score": 0.756
+        },
+        {
+          "word": "schlägt",
+          "start": 1.023,
+          "end": 1.404,
+          "score": 0.906
+        },
+        {
+          "word": "eine",
+          "start": 1.444,
+          "end": 1.664,
+          "score": 0.854
+        },
+        {
+          "word": "Investition",
+          "start": 1.724,
+          "end": 2.507,
+          "score": 0.886
+        },
+        {
+          "word": "vor:",
+          "start": 2.547,
+          "end": 3.429,
+          "score": 0.906
+        },
+        {
+          "word": "500",
+          "start": 3.549,
+          "end": 4.03,
+          "score": 0.809
+        },
+        {
+          "word": "Gold",
+          "start": 4.071,
+          "end": 4.411,
+          "score": 0.884
+        },
+        {
+          "word": "in",
+          "start": 4.432,
+          "end": 4.572,
+          "score": 0.912
+        },
+        {
+          "word": "ihr",
+          "start": 4.612,
+          "end": 4.772,
+          "score": 0.81
+        },
+        {
+          "word": "Handelsnetz.",
+          "start": 4.813,
+          "end": 6.076,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 6.116,
+      "end": 7.239,
+      "text": "Einen Spieltag warten.",
+      "words": [
+        {
+          "word": "Einen",
+          "start": 6.116,
+          "end": 6.397,
+          "score": 0.902
+        },
+        {
+          "word": "Spieltag",
+          "start": 6.437,
+          "end": 6.918,
+          "score": 0.977
+        },
+        {
+          "word": "warten.",
+          "start": 6.978,
+          "end": 7.239,
+          "score": 0.809
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Yeva",
+      "start": 0.582,
+      "end": 0.983,
+      "score": 0.756
+    },
+    {
+      "word": "schlägt",
+      "start": 1.023,
+      "end": 1.404,
+      "score": 0.906
+    },
+    {
+      "word": "eine",
+      "start": 1.444,
+      "end": 1.664,
+      "score": 0.854
+    },
+    {
+      "word": "Investition",
+      "start": 1.724,
+      "end": 2.507,
+      "score": 0.886
+    },
+    {
+      "word": "vor:",
+      "start": 2.547,
+      "end": 3.429,
+      "score": 0.906
+    },
+    {
+      "word": "500",
+      "start": 3.549,
+      "end": 4.03,
+      "score": 0.809
+    },
+    {
+      "word": "Gold",
+      "start": 4.071,
+      "end": 4.411,
+      "score": 0.884
+    },
+    {
+      "word": "in",
+      "start": 4.432,
+      "end": 4.572,
+      "score": 0.912
+    },
+    {
+      "word": "ihr",
+      "start": 4.612,
+      "end": 4.772,
+      "score": 0.81
+    },
+    {
+      "word": "Handelsnetz.",
+      "start": 4.813,
+      "end": 6.076,
+      "score": 0.923
+    },
+    {
+      "word": "Einen",
+      "start": 6.116,
+      "end": 6.397,
+      "score": 0.902
+    },
+    {
+      "word": "Spieltag",
+      "start": 6.437,
+      "end": 6.918,
+      "score": 0.977
+    },
+    {
+      "word": "warten.",
+      "start": 6.978,
+      "end": 7.239,
+      "score": 0.809
+    }
+  ]
+}

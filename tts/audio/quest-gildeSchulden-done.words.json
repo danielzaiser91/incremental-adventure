@@ -1,0 +1,80 @@
+{
+  "segments": [
+    {
+      "start": 0.382,
+      "end": 2.493,
+      "text": "Drei Dienste geleistet.",
+      "words": [
+        {
+          "word": "Drei",
+          "start": 0.382,
+          "end": 0.724,
+          "score": 0.881
+        },
+        {
+          "word": "Dienste",
+          "start": 0.764,
+          "end": 1.146,
+          "score": 0.836
+        },
+        {
+          "word": "geleistet.",
+          "start": 1.186,
+          "end": 2.493,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 2.533,
+      "end": 3.578,
+      "text": "Harro konfrontieren.",
+      "words": [
+        {
+          "word": "Harro",
+          "start": 2.533,
+          "end": 2.915,
+          "score": 0.857
+        },
+        {
+          "word": "konfrontieren.",
+          "start": 2.935,
+          "end": 3.578,
+          "score": 0.877
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Drei",
+      "start": 0.382,
+      "end": 0.724,
+      "score": 0.881
+    },
+    {
+      "word": "Dienste",
+      "start": 0.764,
+      "end": 1.146,
+      "score": 0.836
+    },
+    {
+      "word": "geleistet.",
+      "start": 1.186,
+      "end": 2.493,
+      "score": 0.923
+    },
+    {
+      "word": "Harro",
+      "start": 2.533,
+      "end": 2.915,
+      "score": 0.857
+    },
+    {
+      "word": "konfrontieren.",
+      "start": 2.935,
+      "end": 3.578,
+      "score": 0.877
+    }
+  ]
+}

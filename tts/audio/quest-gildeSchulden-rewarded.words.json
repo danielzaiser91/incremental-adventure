@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.872,
+      "text": "Abgeschlossen — Harro hat bezahlt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.461,
+          "end": 1.023,
+          "score": 0.86
+        },
+        {
+          "word": "—",
+          "start": 1.846,
+          "end": 1.866,
+          "score": 0.923
+        },
+        {
+          "word": "Harro",
+          "start": 1.886,
+          "end": 2.207,
+          "score": 0.926
+        },
+        {
+          "word": "hat",
+          "start": 2.227,
+          "end": 2.448,
+          "score": 0.956
+        },
+        {
+          "word": "bezahlt.",
+          "start": 2.488,
+          "end": 3.872,
+          "score": 0.962
+        }
+      ]
+    },
+    {
+      "start": 3.892,
+      "end": 5.919,
+      "text": "Die Händlergilde respektiert mich jetzt.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.892,
+          "end": 4.073,
+          "score": 0.778
+        },
+        {
+          "word": "Händlergilde",
+          "start": 4.093,
+          "end": 4.835,
+          "score": 0.927
+        },
+        {
+          "word": "respektiert",
+          "start": 4.875,
+          "end": 5.537,
+          "score": 0.803
+        },
+        {
+          "word": "mich",
+          "start": 5.557,
+          "end": 5.718,
+          "score": 0.899
+        },
+        {
+          "word": "jetzt.",
+          "start": 5.738,
+          "end": 5.919,
+          "score": 0.823
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.461,
+      "end": 1.023,
+      "score": 0.86
+    },
+    {
+      "word": "—",
+      "start": 1.846,
+      "end": 1.866,
+      "score": 0.923
+    },
+    {
+      "word": "Harro",
+      "start": 1.886,
+      "end": 2.207,
+      "score": 0.926
+    },
+    {
+      "word": "hat",
+      "start": 2.227,
+      "end": 2.448,
+      "score": 0.956
+    },
+    {
+      "word": "bezahlt.",
+      "start": 2.488,
+      "end": 3.872,
+      "score": 0.962
+    },
+    {
+      "word": "Die",
+      "start": 3.892,
+      "end": 4.073,
+      "score": 0.778
+    },
+    {
+      "word": "Händlergilde",
+      "start": 4.093,
+      "end": 4.835,
+      "score": 0.927
+    },
+    {
+      "word": "respektiert",
+      "start": 4.875,
+      "end": 5.537,
+      "score": 0.803
+    },
+    {
+      "word": "mich",
+      "start": 5.557,
+      "end": 5.718,
+      "score": 0.899
+    },
+    {
+      "word": "jetzt.",
+      "start": 5.738,
+      "end": 5.919,
+      "score": 0.823
+    }
+  ]
+}
