@@ -50,8 +50,12 @@ mit dem neuen Modell.
   ein 400 bei leerer Quota **nichts** über die Ursache aus, es beweist nur, dass
   die Validierung zuerst läuft. Konsequenz: 400er-Einheiten gehören **nicht** in
   `SKIP_IDS` — sie kosten zwar einen Tages-Slot, holen sich aber irgendwann
-  selbst. Nur reproduzierbare Leerantworten (`finishReason: OTHER`) rechtfertigen
-  einen SKIP-Eintrag.
+  selbst. Reproduzierbare Leerantworten (`finishReason: OTHER`) rechtfertigten
+  bis 22.08.2026 einen SKIP-Eintrag — **auch das ist überholt:** Der
+  Stil-Override hat `npc-fremder-finaleDialog` nach 4 Leerantworten auf Anhieb
+  gelöst (22.08., siehe Log). Der Persona-Stil-Prompt ist damit Auslöser
+  **beider** Dauer-Fehlerbilder, 400 wie Leerantwort; `SKIP_IDS` braucht es
+  vor einem Override-Versuch nicht mehr.
   **Ausnahme — hartnäckige 400er sind eine Stil-Text-Wechselwirkung
   (14.08.2026 an zwei Fällen belegt).** Scheitert ein NPC-Knoten *dauerhaft*
   mit 400 (Greta `turnIn`: 9×, Mira `greet`: 3×), liegt es weder am Text noch
@@ -134,9 +138,8 @@ mit dem neuen Modell.
 - [x] **Phase 1 — Story-Chronik** (36 Einträge, story.js, Kapitel 1→4) — *komplett (23.07.2026)*
 - [x] **Phase 2 — Skill-Monologe** (29 `learnDialogs`, experience.js) — *komplett (26.07.2026)*
 - [x] **Phase 3 — Story-kritische NPCs** (65 Knoten: Brakka 23, Mira 12,
-      Oswin 12, Fremder 12, Sivert 6) — *abgeschlossen 02.08.2026,
-      seit 15.08.2026 bei 64/65*
-      (alle NPCs fertig bis auf zwei damals blockierte Knoten:
+      Oswin 12, Fremder 12, Sivert 6) — *komplett 65/65 (22.08.2026)*
+      (zwei zeitweise blockierte Knoten, beide inzwischen vertont:
       `npc-mira-greet` — 3× HTTP 400 „invalid argument", und
       `npc-fremder-finaleDialog` — 3× Leerantwort `finishReason: OTHER`.
       **Stand 15.08.2026:** `npc-mira-greet` ist vertont — die Sonden vom
@@ -146,10 +149,14 @@ mit dem neuen Modell.
       durch. Damit derselbe Mechanismus und derselbe Fix wie bei
       `npc-greta-turnIn`: der Persona-Stil-Prompt ist der Auslöser, nicht der
       Text. (Hörprobe zurückgestellt, siehe unten.)
-      `npc-fremder-finaleDialog` (Leerantwort, für die die Sonde nichts
-      hergibt: sie passiert die Validierung und liefert bei leerer Quota nur
-      ein 429) stand bis 22.08.2026 in `SKIP_IDS`; seither läuft er mit
-      Stil-Override regulär mit, `SKIP_IDS` ist leer).
+      `npc-fremder-finaleDialog` (4× Leerantwort `finishReason: OTHER`, für
+      die die Sonde nichts hergibt: sie passiert die Validierung und liefert
+      bei leerer Quota nur ein 429) stand vom 07.08. bis 22.08.2026 in
+      `SKIP_IDS`. Mit dem am 22.08. gesetzten Stil-Override lief er am selben
+      Abend als erste Einheit des Batches mit HTTP 200 durch — damit ist der
+      Override auch für den Leerantwort-Fehlermodus belegt, nicht nur für 400.
+      `SKIP_IDS` ist leer, `progress.json` führt keine fehlgeschlagene
+      Einheit mehr).
       Extraktion aus npc.js ist in `extract-manifest.js` ergänzt; die frühere
       Schätzung „~143 Knoten, Sivert 84" war falsch (Zeilen statt Knoten
       gezählt). Ausgelassen: `oswin.business` (dynamischer Text als Funktion,
@@ -177,7 +184,7 @@ mit dem neuen Modell.
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
       Manifest umfasst damit 331 Einheiten. *Stand 22.08.2026 (Nachtlauf):
-      96/177 (Quests 96/139, Objectives 0/38).*
+      105/177 (Quests 105/139, Objectives 0/38).*
 - [ ] **Phase 6 — Welt-Flavor** (~250 Einheiten: Monster, Orte, Markt,
       Expedition, Pets, Alchemie — vorher kuratieren, `${...}`-Strings auslassen)
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
@@ -363,3 +370,4 @@ nachgelagerter Extra-Lauf.
 - 22.08.2026 01:05 — **Zwei Entscheidungen von Daniel, beide vollzogen.** (1) *Keine Hörproben als aktives Todo:* „ich will nichts gegenhören, es soll einfach nur alles vertont werden, todos können raus, irgendwann kommt die probe und feedback, aber erstmal nicht als aktives todo." Die drei Rückmelde-Punkte (Ausnahme-Aufnahmen Greta/Mira, Wort-Highlighting-Gegencheck, allgemeine Qualitätsrunde) stehen ab jetzt im neuen Abschnitt „Zurückgestellt" und tauchen weder im Footer noch in der Checkliste auf. (2) *Letzten Dauer-Ausfall wieder mitlaufen lassen:* `npc-fremder-finaleDialog` (4× Leerantwort `finishReason: OTHER`, seit 07.08. in `SKIP_IDS`) bekommt einen Eintrag in `TTS_STYLE_OVERRIDES` auf `NARRATOR_STYLE` und ist aus `SKIP_IDS` heraus — `SKIP_IDS` ist damit leer. Belegt ist der Hebel für diesen Fehlermodus **nicht**: Bei Greta und Mira löste er HTTP 400 ab, hier liegt eine Leerantwort vor, und die Gratis-Sonde kann darüber nichts sagen, weil der Knoten die Validierung passiert. Er kostet aber höchstens einen Tages-Slot, und Daniels Vorgabe ist, dass am Ende alles vertont ist. Scheitert er zwei weitere Male, ist der nächste Schritt eine Umformulierung des KNOTENTEXTES in `script/npc.js` mit der Dialog-KI — kein weiterer Prompt-Versuch. Der nächste Batch nimmt ihn als erste Einheit.
 - 22.08.2026 01:20 — **Nachtlauf läuft ab jetzt über `tts/nightly.js` (ein Befehl statt acht).** Anlass ist die Verzögerung des 21.08.-Laufs um über zwei Stunden: Die geplante Aufgabe startet im Claude-Client immer im manuellen Berechtigungsmodus, und `.claude/settings.local.json` erlaubt bisher nur `Edit(tts/**)` — jeder einzelne `node`- und `git`-Aufruf löste deshalb eine eigene Rückfrage aus, die Daniel erst bemerken und genehmigen musste. Das neue Skript führt Batch, Veröffentlichen, Zählung und Commit+Push nacheinander aus und ruft node/git über absolute Pfade auf, damit kein PATH-Export davorsteht (sonst wäre es kein einzelner Befehl mehr und keine Präfix-Regel würde greifen). `--skip-batch` lässt die Generierung aus, `--push` schaltet Commit und Push zu. Die Tagesbilanz im Log schreibt weiterhin der Agent von Hand — sie ist Deutung, keine Buchhaltung. **Nebenbefund mit Erkenntniswert:** `git push` als Kindprozess von node läuft mit dem normalen Credential-Helper durch (Exit 0). Die Exit-128-Falle aus Kategorie 1 der Learnings gilt also nur für git, das direkt aus dem Bash-Werkzeug gestartet wird; das `GIT_ASKPASS`-Rezept bleibt im Skript nur als zweiter Versuch stehen und erzeugt seine Hilfsdatei im Temp-Verzeichnis, nicht im Repo.
 - 22.08.2026 22:28 — Batch: 10 Dateien (npc-fremder-finaleDialog … quest-gildeInvestition-active), 76 s Audio, komplett. Gesamt: 259/331 im Manifest.
+- 22.08.2026 22:30 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — siebter fehlerfreier Zehnerlauf in Folge. `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht, 0 zurückgehalten; Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei. Erster Lauf komplett über `tts/nightly.js --push` (ein Befehl, eine Freigabe) — der Ablauf lief ohne Zwischenfall durch, Batch 22:10–22:28, Commit `ad56344` gepusht. **Der Tagesertrag ist `npc-fremder-finaleDialog`:** Der seit 07.08. blockierte Knoten (4× Leerantwort `finishReason: OTHER`) lief mit dem gestern gesetzten Stil-Override als erste Einheit auf Anhieb mit HTTP 200 durch. Damit ist der Override-Hebel **auch für den Leerantwort-Fehlermodus** belegt, nicht nur für die 400er von Greta und Mira — die gestern notierte Einschränkung („belegt ist er für diesen Fehlermodus nicht") ist eingelöst, die Umformulierung des Knotentextes in `script/npc.js` entfällt. Konsequenz für künftige Dauer-Ausfälle: Vor jedem SKIP-Eintrag steht erst ein `TTS_STYLE_OVERRIDES`-Versuch, unabhängig davon, ob der Knoten mit 400 oder mit Leerantwort scheitert. **Phase 3 ist damit komplett (65/65)**, `progress.json` führt keine fehlgeschlagene Einheit mehr, `SKIP_IDS` ist leer — erstmals seit dem 26.07. steht kein einziger Knoten mehr aus. Der Gegencheck vor dem Lauf (249 Einträge in `progress.json`, 249 WAVs in `tts/output/`, neuester vom 22.08. 00:36) deckt sich mit der letzten Log-Zeile; kein verschwundener Tagesertrag. Phase 5 steht bei 105/177 (Quests 105/139, Objectives 0/38); bei 10/Tag ist sie um den 29.08. herum durch, danach Phase 6 (Welt-Flavor, Extraktion steht noch aus).
