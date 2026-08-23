@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.605,
+      "end": 1.533,
+      "text": "Noch nicht begonnen.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 0.605,
+          "end": 0.847,
+          "score": 0.902
+        },
+        {
+          "word": "nicht",
+          "start": 0.888,
+          "end": 1.15,
+          "score": 0.834
+        },
+        {
+          "word": "begonnen.",
+          "start": 1.19,
+          "end": 1.533,
+          "score": 0.718
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Noch",
+      "start": 0.605,
+      "end": 0.847,
+      "score": 0.902
+    },
+    {
+      "word": "nicht",
+      "start": 0.888,
+      "end": 1.15,
+      "score": 0.834
+    },
+    {
+      "word": "begonnen.",
+      "start": 1.19,
+      "end": 1.533,
+      "score": 0.718
+    }
+  ]
+}

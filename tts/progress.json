@@ -1294,6 +1294,56 @@
       "file": "quest-gildeInvestition-active.wav",
       "seconds": 7.7,
       "date": "2026-08-22T20:28:18.557Z"
+    },
+    "quest-gildeInvestition-invested": {
+      "file": "quest-gildeInvestition-invested.wav",
+      "seconds": 5.5,
+      "date": "2026-08-23T20:11:07.084Z"
+    },
+    "quest-gildeInvestition-waiting": {
+      "file": "quest-gildeInvestition-waiting.wav",
+      "seconds": 6,
+      "date": "2026-08-23T20:12:14.127Z"
+    },
+    "quest-gildeInvestition-rewarded": {
+      "file": "quest-gildeInvestition-rewarded.wav",
+      "seconds": 6.3,
+      "date": "2026-08-23T20:12:49.426Z"
+    },
+    "quest-gildeKorruption-unstarted": {
+      "file": "quest-gildeKorruption-unstarted.wav",
+      "seconds": 2.3,
+      "date": "2026-08-23T20:13:22.815Z"
+    },
+    "quest-gildeKorruption-active": {
+      "file": "quest-gildeKorruption-active.wav",
+      "seconds": 6.6,
+      "date": "2026-08-23T20:13:57.818Z"
+    },
+    "quest-gildeKorruption-done": {
+      "file": "quest-gildeKorruption-done.wav",
+      "seconds": 5.4,
+      "date": "2026-08-23T20:14:31.221Z"
+    },
+    "quest-gildeKorruption-rewarded": {
+      "file": "quest-gildeKorruption-rewarded.wav",
+      "seconds": 4.8,
+      "date": "2026-08-23T20:15:04.239Z"
+    },
+    "quest-bruderschaftBeweis-unstarted": {
+      "file": "quest-bruderschaftBeweis-unstarted.wav",
+      "seconds": 1.5,
+      "date": "2026-08-23T20:15:36.590Z"
+    },
+    "quest-bruderschaftBeweis-rewarded": {
+      "file": "quest-bruderschaftBeweis-rewarded.wav",
+      "seconds": 6.6,
+      "date": "2026-08-23T20:16:10.702Z"
+    },
+    "quest-gorrsVergangenheit-unstarted": {
+      "file": "quest-gorrsVergangenheit-unstarted.wav",
+      "seconds": 2.1,
+      "date": "2026-08-23T20:16:43.639Z"
     }
   },
   "failed": {}

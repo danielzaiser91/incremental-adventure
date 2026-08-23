@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.442,
+      "end": 2.61,
+      "text": "Das Dokument ist gesichert.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.442,
+          "end": 0.622,
+          "score": 0.944
+        },
+        {
+          "word": "Dokument",
+          "start": 0.662,
+          "end": 1.144,
+          "score": 0.929
+        },
+        {
+          "word": "ist",
+          "start": 1.184,
+          "end": 1.385,
+          "score": 0.984
+        },
+        {
+          "word": "gesichert.",
+          "start": 1.425,
+          "end": 2.61,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 2.63,
+      "end": 4.959,
+      "text": "Yeva aufsuchen und die Beweise übergeben.",
+      "words": [
+        {
+          "word": "Yeva",
+          "start": 2.63,
+          "end": 3.011,
+          "score": 0.556
+        },
+        {
+          "word": "aufsuchen",
+          "start": 3.031,
+          "end": 3.794,
+          "score": 0.973
+        },
+        {
+          "word": "und",
+          "start": 3.834,
+          "end": 3.975,
+          "score": 0.817
+        },
+        {
+          "word": "die",
+          "start": 3.995,
+          "end": 4.095,
+          "score": 0.844
+        },
+        {
+          "word": "Beweise",
+          "start": 4.135,
+          "end": 4.537,
+          "score": 0.958
+        },
+        {
+          "word": "übergeben.",
+          "start": 4.577,
+          "end": 4.959,
+          "score": 0.889
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.442,
+      "end": 0.622,
+      "score": 0.944
+    },
+    {
+      "word": "Dokument",
+      "start": 0.662,
+      "end": 1.144,
+      "score": 0.929
+    },
+    {
+      "word": "ist",
+      "start": 1.184,
+      "end": 1.385,
+      "score": 0.984
+    },
+    {
+      "word": "gesichert.",
+      "start": 1.425,
+      "end": 2.61,
+      "score": 0.912
+    },
+    {
+      "word": "Yeva",
+      "start": 2.63,
+      "end": 3.011,
+      "score": 0.556
+    },
+    {
+      "word": "aufsuchen",
+      "start": 3.031,
+      "end": 3.794,
+      "score": 0.973
+    },
+    {
+      "word": "und",
+      "start": 3.834,
+      "end": 3.975,
+      "score": 0.817
+    },
+    {
+      "word": "die",
+      "start": 3.995,
+      "end": 4.095,
+      "score": 0.844
+    },
+    {
+      "word": "Beweise",
+      "start": 4.135,
+      "end": 4.537,
+      "score": 0.958
+    },
+    {
+      "word": "übergeben.",
+      "start": 4.577,
+      "end": 4.959,
+      "score": 0.889
+    }
+  ]
+}

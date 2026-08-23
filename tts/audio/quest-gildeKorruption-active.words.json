@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.301,
+      "end": 2.829,
+      "text": "Valdris hat einen Buchhalter bestochen.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 0.301,
+          "end": 0.843,
+          "score": 0.816
+        },
+        {
+          "word": "hat",
+          "start": 0.883,
+          "end": 1.083,
+          "score": 0.929
+        },
+        {
+          "word": "einen",
+          "start": 1.123,
+          "end": 1.284,
+          "score": 0.771
+        },
+        {
+          "word": "Buchhalter",
+          "start": 1.304,
+          "end": 1.765,
+          "score": 0.931
+        },
+        {
+          "word": "bestochen.",
+          "start": 1.805,
+          "end": 2.829,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 2.849,
+      "end": 6.239,
+      "text": "Beweis liegt beim Stadtarchiv — Sele um Hilfe bitten.",
+      "words": [
+        {
+          "word": "Beweis",
+          "start": 2.849,
+          "end": 3.27,
+          "score": 0.983
+        },
+        {
+          "word": "liegt",
+          "start": 3.29,
+          "end": 3.471,
+          "score": 0.976
+        },
+        {
+          "word": "beim",
+          "start": 3.491,
+          "end": 3.671,
+          "score": 0.772
+        },
+        {
+          "word": "Stadtarchiv",
+          "start": 3.691,
+          "end": 4.233,
+          "score": 0.806
+        },
+        {
+          "word": "—",
+          "start": 5.156,
+          "end": 5.176,
+          "score": 0.983
+        },
+        {
+          "word": "Sele",
+          "start": 5.196,
+          "end": 5.537,
+          "score": 0.898
+        },
+        {
+          "word": "um",
+          "start": 5.557,
+          "end": 5.697,
+          "score": 0.974
+        },
+        {
+          "word": "Hilfe",
+          "start": 5.737,
+          "end": 5.998,
+          "score": 0.987
+        },
+        {
+          "word": "bitten.",
+          "start": 6.018,
+          "end": 6.239,
+          "score": 0.803
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Valdris",
+      "start": 0.301,
+      "end": 0.843,
+      "score": 0.816
+    },
+    {
+      "word": "hat",
+      "start": 0.883,
+      "end": 1.083,
+      "score": 0.929
+    },
+    {
+      "word": "einen",
+      "start": 1.123,
+      "end": 1.284,
+      "score": 0.771
+    },
+    {
+      "word": "Buchhalter",
+      "start": 1.304,
+      "end": 1.765,
+      "score": 0.931
+    },
+    {
+      "word": "bestochen.",
+      "start": 1.805,
+      "end": 2.829,
+      "score": 0.902
+    },
+    {
+      "word": "Beweis",
+      "start": 2.849,
+      "end": 3.27,
+      "score": 0.983
+    },
+    {
+      "word": "liegt",
+      "start": 3.29,
+      "end": 3.471,
+      "score": 0.976
+    },
+    {
+      "word": "beim",
+      "start": 3.491,
+      "end": 3.671,
+      "score": 0.772
+    },
+    {
+      "word": "Stadtarchiv",
+      "start": 3.691,
+      "end": 4.233,
+      "score": 0.806
+    },
+    {
+      "word": "—",
+      "start": 5.156,
+      "end": 5.176,
+      "score": 0.983
+    },
+    {
+      "word": "Sele",
+      "start": 5.196,
+      "end": 5.537,
+      "score": 0.898
+    },
+    {
+      "word": "um",
+      "start": 5.557,
+      "end": 5.697,
+      "score": 0.974
+    },
+    {
+      "word": "Hilfe",
+      "start": 5.737,
+      "end": 5.998,
+      "score": 0.987
+    },
+    {
+      "word": "bitten.",
+      "start": 6.018,
+      "end": 6.239,
+      "score": 0.803
+    }
+  ]
+}

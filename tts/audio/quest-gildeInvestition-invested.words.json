@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.562,
+      "end": 2.951,
+      "text": "Investition getätigt.",
+      "words": [
+        {
+          "word": "Investition",
+          "start": 0.562,
+          "end": 1.285,
+          "score": 0.874
+        },
+        {
+          "word": "getätigt.",
+          "start": 1.325,
+          "end": 2.951,
+          "score": 0.982
+        }
+      ]
+    },
+    {
+      "start": 3.031,
+      "end": 5.078,
+      "text": "Warten, dass das Netz Früchte trägt.",
+      "words": [
+        {
+          "word": "Warten,",
+          "start": 3.031,
+          "end": 3.693,
+          "score": 0.935
+        },
+        {
+          "word": "dass",
+          "start": 3.713,
+          "end": 3.894,
+          "score": 0.934
+        },
+        {
+          "word": "das",
+          "start": 3.934,
+          "end": 4.095,
+          "score": 0.917
+        },
+        {
+          "word": "Netz",
+          "start": 4.135,
+          "end": 4.416,
+          "score": 0.896
+        },
+        {
+          "word": "Früchte",
+          "start": 4.456,
+          "end": 4.797,
+          "score": 0.86
+        },
+        {
+          "word": "trägt.",
+          "start": 4.838,
+          "end": 5.078,
+          "score": 0.835
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Investition",
+      "start": 0.562,
+      "end": 1.285,
+      "score": 0.874
+    },
+    {
+      "word": "getätigt.",
+      "start": 1.325,
+      "end": 2.951,
+      "score": 0.982
+    },
+    {
+      "word": "Warten,",
+      "start": 3.031,
+      "end": 3.693,
+      "score": 0.935
+    },
+    {
+      "word": "dass",
+      "start": 3.713,
+      "end": 3.894,
+      "score": 0.934
+    },
+    {
+      "word": "das",
+      "start": 3.934,
+      "end": 4.095,
+      "score": 0.917
+    },
+    {
+      "word": "Netz",
+      "start": 4.135,
+      "end": 4.416,
+      "score": 0.896
+    },
+    {
+      "word": "Früchte",
+      "start": 4.456,
+      "end": 4.797,
+      "score": 0.86
+    },
+    {
+      "word": "trägt.",
+      "start": 4.838,
+      "end": 5.078,
+      "score": 0.835
+    }
+  ]
+}

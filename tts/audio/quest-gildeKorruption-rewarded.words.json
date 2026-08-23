@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.318,
+      "text": "Abgeschlossen — die Händlergilde ist vollständig auf meiner Seite.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.064,
+          "score": 0.85
+        },
+        {
+          "word": "—",
+          "start": 1.707,
+          "end": 1.727,
+          "score": 0.514
+        },
+        {
+          "word": "die",
+          "start": 1.747,
+          "end": 1.868,
+          "score": 0.933
+        },
+        {
+          "word": "Händlergilde",
+          "start": 1.908,
+          "end": 2.631,
+          "score": 0.927
+        },
+        {
+          "word": "ist",
+          "start": 2.671,
+          "end": 2.992,
+          "score": 0.706
+        },
+        {
+          "word": "vollständig",
+          "start": 3.013,
+          "end": 3.635,
+          "score": 0.938
+        },
+        {
+          "word": "auf",
+          "start": 3.675,
+          "end": 3.816,
+          "score": 0.972
+        },
+        {
+          "word": "meiner",
+          "start": 3.856,
+          "end": 4.077,
+          "score": 0.846
+        },
+        {
+          "word": "Seite.",
+          "start": 4.117,
+          "end": 4.318,
+          "score": 0.794
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.064,
+      "score": 0.85
+    },
+    {
+      "word": "—",
+      "start": 1.707,
+      "end": 1.727,
+      "score": 0.514
+    },
+    {
+      "word": "die",
+      "start": 1.747,
+      "end": 1.868,
+      "score": 0.933
+    },
+    {
+      "word": "Händlergilde",
+      "start": 1.908,
+      "end": 2.631,
+      "score": 0.927
+    },
+    {
+      "word": "ist",
+      "start": 2.671,
+      "end": 2.992,
+      "score": 0.706
+    },
+    {
+      "word": "vollständig",
+      "start": 3.013,
+      "end": 3.635,
+      "score": 0.938
+    },
+    {
+      "word": "auf",
+      "start": 3.675,
+      "end": 3.816,
+      "score": 0.972
+    },
+    {
+      "word": "meiner",
+      "start": 3.856,
+      "end": 4.077,
+      "score": 0.846
+    },
+    {
+      "word": "Seite.",
+      "start": 4.117,
+      "end": 4.318,
+      "score": 0.794
+    }
+  ]
+}

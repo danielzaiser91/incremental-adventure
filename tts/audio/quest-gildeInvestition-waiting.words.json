@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 2.709,
+      "text": "Das Handelsnetz arbeitet.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.381,
+          "end": 0.582,
+          "score": 0.823
+        },
+        {
+          "word": "Handelsnetz",
+          "start": 0.622,
+          "end": 1.244,
+          "score": 0.905
+        },
+        {
+          "word": "arbeitet.",
+          "start": 1.304,
+          "end": 2.709,
+          "score": 0.942
+        }
+      ]
+    },
+    {
+      "start": 2.749,
+      "end": 5.639,
+      "text": "Morgen Yeva ansprechen, um die Rendite abzuholen.",
+      "words": [
+        {
+          "word": "Morgen",
+          "start": 2.749,
+          "end": 3.211,
+          "score": 0.945
+        },
+        {
+          "word": "Yeva",
+          "start": 3.231,
+          "end": 3.652,
+          "score": 0.699
+        },
+        {
+          "word": "ansprechen,",
+          "start": 3.692,
+          "end": 4.395,
+          "score": 0.9
+        },
+        {
+          "word": "um",
+          "start": 4.415,
+          "end": 4.535,
+          "score": 0.948
+        },
+        {
+          "word": "die",
+          "start": 4.555,
+          "end": 4.656,
+          "score": 0.688
+        },
+        {
+          "word": "Rendite",
+          "start": 4.676,
+          "end": 5.097,
+          "score": 0.896
+        },
+        {
+          "word": "abzuholen.",
+          "start": 5.137,
+          "end": 5.639,
+          "score": 0.89
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.381,
+      "end": 0.582,
+      "score": 0.823
+    },
+    {
+      "word": "Handelsnetz",
+      "start": 0.622,
+      "end": 1.244,
+      "score": 0.905
+    },
+    {
+      "word": "arbeitet.",
+      "start": 1.304,
+      "end": 2.709,
+      "score": 0.942
+    },
+    {
+      "word": "Morgen",
+      "start": 2.749,
+      "end": 3.211,
+      "score": 0.945
+    },
+    {
+      "word": "Yeva",
+      "start": 3.231,
+      "end": 3.652,
+      "score": 0.699
+    },
+    {
+      "word": "ansprechen,",
+      "start": 3.692,
+      "end": 4.395,
+      "score": 0.9
+    },
+    {
+      "word": "um",
+      "start": 4.415,
+      "end": 4.535,
+      "score": 0.948
+    },
+    {
+      "word": "die",
+      "start": 4.555,
+      "end": 4.656,
+      "score": 0.688
+    },
+    {
+      "word": "Rendite",
+      "start": 4.676,
+      "end": 5.097,
+      "score": 0.896
+    },
+    {
+      "word": "abzuholen.",
+      "start": 5.137,
+      "end": 5.639,
+      "score": 0.89
+    }
+  ]
+}

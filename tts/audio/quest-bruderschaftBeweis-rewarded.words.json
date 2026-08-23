@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.373,
+      "text": "Abgeschlossen — die Bruderschaft respektiert mich.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.522,
+          "end": 1.043,
+          "score": 0.877
+        },
+        {
+          "word": "—",
+          "start": 1.866,
+          "end": 1.886,
+          "score": 0.907
+        },
+        {
+          "word": "die",
+          "start": 1.906,
+          "end": 2.026,
+          "score": 0.949
+        },
+        {
+          "word": "Bruderschaft",
+          "start": 2.066,
+          "end": 2.728,
+          "score": 0.807
+        },
+        {
+          "word": "respektiert",
+          "start": 2.768,
+          "end": 3.39,
+          "score": 0.946
+        },
+        {
+          "word": "mich.",
+          "start": 3.41,
+          "end": 4.373,
+          "score": 0.908
+        }
+      ]
+    },
+    {
+      "start": 4.433,
+      "end": 6.259,
+      "text": "Gorr spricht jetzt direkt mit mir.",
+      "words": [
+        {
+          "word": "Gorr",
+          "start": 4.433,
+          "end": 4.835,
+          "score": 0.741
+        },
+        {
+          "word": "spricht",
+          "start": 4.875,
+          "end": 5.156,
+          "score": 0.931
+        },
+        {
+          "word": "jetzt",
+          "start": 5.196,
+          "end": 5.416,
+          "score": 0.951
+        },
+        {
+          "word": "direkt",
+          "start": 5.456,
+          "end": 5.858,
+          "score": 0.99
+        },
+        {
+          "word": "mit",
+          "start": 5.898,
+          "end": 6.078,
+          "score": 0.867
+        },
+        {
+          "word": "mir.",
+          "start": 6.118,
+          "end": 6.259,
+          "score": 0.864
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.522,
+      "end": 1.043,
+      "score": 0.877
+    },
+    {
+      "word": "—",
+      "start": 1.866,
+      "end": 1.886,
+      "score": 0.907
+    },
+    {
+      "word": "die",
+      "start": 1.906,
+      "end": 2.026,
+      "score": 0.949
+    },
+    {
+      "word": "Bruderschaft",
+      "start": 2.066,
+      "end": 2.728,
+      "score": 0.807
+    },
+    {
+      "word": "respektiert",
+      "start": 2.768,
+      "end": 3.39,
+      "score": 0.946
+    },
+    {
+      "word": "mich.",
+      "start": 3.41,
+      "end": 4.373,
+      "score": 0.908
+    },
+    {
+      "word": "Gorr",
+      "start": 4.433,
+      "end": 4.835,
+      "score": 0.741
+    },
+    {
+      "word": "spricht",
+      "start": 4.875,
+      "end": 5.156,
+      "score": 0.931
+    },
+    {
+      "word": "jetzt",
+      "start": 5.196,
+      "end": 5.416,
+      "score": 0.951
+    },
+    {
+      "word": "direkt",
+      "start": 5.456,
+      "end": 5.858,
+      "score": 0.99
+    },
+    {
+      "word": "mit",
+      "start": 5.898,
+      "end": 6.078,
+      "score": 0.867
+    },
+    {
+      "word": "mir.",
+      "start": 6.118,
+      "end": 6.259,
+      "score": 0.864
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.542,
+      "end": 5.879,
+      "text": "Abgeschlossen — 800 Gold zurück und ein dauerhafter Händlerbonus.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.542,
+          "end": 1.926,
+          "score": 0.885
+        },
+        {
+          "word": "—",
+          "start": 2.046,
+          "end": 2.107,
+          "score": 0.687
+        },
+        {
+          "word": "800",
+          "start": 2.287,
+          "end": 2.588,
+          "score": 0.76
+        },
+        {
+          "word": "Gold",
+          "start": 2.628,
+          "end": 2.889,
+          "score": 0.906
+        },
+        {
+          "word": "zurück",
+          "start": 2.929,
+          "end": 3.852,
+          "score": 0.968
+        },
+        {
+          "word": "und",
+          "start": 3.892,
+          "end": 4.093,
+          "score": 0.989
+        },
+        {
+          "word": "ein",
+          "start": 4.133,
+          "end": 4.374,
+          "score": 0.811
+        },
+        {
+          "word": "dauerhafter",
+          "start": 4.414,
+          "end": 5.116,
+          "score": 0.875
+        },
+        {
+          "word": "Händlerbonus.",
+          "start": 5.156,
+          "end": 5.879,
+          "score": 0.87
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.542,
+      "end": 1.926,
+      "score": 0.885
+    },
+    {
+      "word": "—",
+      "start": 2.046,
+      "end": 2.107,
+      "score": 0.687
+    },
+    {
+      "word": "800",
+      "start": 2.287,
+      "end": 2.588,
+      "score": 0.76
+    },
+    {
+      "word": "Gold",
+      "start": 2.628,
+      "end": 2.889,
+      "score": 0.906
+    },
+    {
+      "word": "zurück",
+      "start": 2.929,
+      "end": 3.852,
+      "score": 0.968
+    },
+    {
+      "word": "und",
+      "start": 3.892,
+      "end": 4.093,
+      "score": 0.989
+    },
+    {
+      "word": "ein",
+      "start": 4.133,
+      "end": 4.374,
+      "score": 0.811
+    },
+    {
+      "word": "dauerhafter",
+      "start": 4.414,
+      "end": 5.116,
+      "score": 0.875
+    },
+    {
+      "word": "Händlerbonus.",
+      "start": 5.156,
+      "end": 5.879,
+      "score": 0.87
+    }
+  ]
+}
