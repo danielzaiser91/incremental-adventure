@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 4.714,
+      "text": "Gorr will abends reden — wenn die anderen weg sind.",
+      "words": [
+        {
+          "word": "Gorr",
+          "start": 0.421,
+          "end": 0.722,
+          "score": 0.758
+        },
+        {
+          "word": "will",
+          "start": 0.762,
+          "end": 1.083,
+          "score": 0.922
+        },
+        {
+          "word": "abends",
+          "start": 1.123,
+          "end": 1.545,
+          "score": 0.892
+        },
+        {
+          "word": "reden",
+          "start": 1.605,
+          "end": 1.866,
+          "score": 0.914
+        },
+        {
+          "word": "—",
+          "start": 2.648,
+          "end": 2.668,
+          "score": 0.456
+        },
+        {
+          "word": "wenn",
+          "start": 2.688,
+          "end": 2.869,
+          "score": 0.935
+        },
+        {
+          "word": "die",
+          "start": 2.909,
+          "end": 3.029,
+          "score": 0.918
+        },
+        {
+          "word": "anderen",
+          "start": 3.069,
+          "end": 3.41,
+          "score": 0.933
+        },
+        {
+          "word": "weg",
+          "start": 3.451,
+          "end": 3.591,
+          "score": 0.712
+        },
+        {
+          "word": "sind.",
+          "start": 3.631,
+          "end": 4.714,
+          "score": 0.665
+        }
+      ]
+    },
+    {
+      "start": 4.734,
+      "end": 6.099,
+      "text": "Bei Nacht wieder zu ihm.",
+      "words": [
+        {
+          "word": "Bei",
+          "start": 4.734,
+          "end": 5.055,
+          "score": 0.807
+        },
+        {
+          "word": "Nacht",
+          "start": 5.096,
+          "end": 5.417,
+          "score": 0.954
+        },
+        {
+          "word": "wieder",
+          "start": 5.457,
+          "end": 5.717,
+          "score": 0.94
+        },
+        {
+          "word": "zu",
+          "start": 5.758,
+          "end": 5.938,
+          "score": 0.998
+        },
+        {
+          "word": "ihm.",
+          "start": 5.978,
+          "end": 6.099,
+          "score": 0.727
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Gorr",
+      "start": 0.421,
+      "end": 0.722,
+      "score": 0.758
+    },
+    {
+      "word": "will",
+      "start": 0.762,
+      "end": 1.083,
+      "score": 0.922
+    },
+    {
+      "word": "abends",
+      "start": 1.123,
+      "end": 1.545,
+      "score": 0.892
+    },
+    {
+      "word": "reden",
+      "start": 1.605,
+      "end": 1.866,
+      "score": 0.914
+    },
+    {
+      "word": "—",
+      "start": 2.648,
+      "end": 2.668,
+      "score": 0.456
+    },
+    {
+      "word": "wenn",
+      "start": 2.688,
+      "end": 2.869,
+      "score": 0.935
+    },
+    {
+      "word": "die",
+      "start": 2.909,
+      "end": 3.029,
+      "score": 0.918
+    },
+    {
+      "word": "anderen",
+      "start": 3.069,
+      "end": 3.41,
+      "score": 0.933
+    },
+    {
+      "word": "weg",
+      "start": 3.451,
+      "end": 3.591,
+      "score": 0.712
+    },
+    {
+      "word": "sind.",
+      "start": 3.631,
+      "end": 4.714,
+      "score": 0.665
+    },
+    {
+      "word": "Bei",
+      "start": 4.734,
+      "end": 5.055,
+      "score": 0.807
+    },
+    {
+      "word": "Nacht",
+      "start": 5.096,
+      "end": 5.417,
+      "score": 0.954
+    },
+    {
+      "word": "wieder",
+      "start": 5.457,
+      "end": 5.717,
+      "score": 0.94
+    },
+    {
+      "word": "zu",
+      "start": 5.758,
+      "end": 5.938,
+      "score": 0.998
+    },
+    {
+      "word": "ihm.",
+      "start": 5.978,
+      "end": 6.099,
+      "score": 0.727
+    }
+  ]
+}

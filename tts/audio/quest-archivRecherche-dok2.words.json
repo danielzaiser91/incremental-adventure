@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.505,
+      "end": 1.676,
+      "text": "Zweites Dokument gefunden.",
+      "words": [
+        {
+          "word": "Zweites",
+          "start": 0.505,
+          "end": 0.848,
+          "score": 0.95
+        },
+        {
+          "word": "Dokument",
+          "start": 0.889,
+          "end": 1.292,
+          "score": 0.895
+        },
+        {
+          "word": "gefunden.",
+          "start": 1.313,
+          "end": 1.676,
+          "score": 0.978
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zweites",
+      "start": 0.505,
+      "end": 0.848,
+      "score": 0.95
+    },
+    {
+      "word": "Dokument",
+      "start": 0.889,
+      "end": 1.292,
+      "score": 0.895
+    },
+    {
+      "word": "gefunden.",
+      "start": 1.313,
+      "end": 1.676,
+      "score": 0.978
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 5.335,
+      "text": "Abgeschlossen — Gorrs Vergangenheit ist Valdris' Schwachstelle.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.441,
+          "end": 1.023,
+          "score": 0.829
+        },
+        {
+          "word": "—",
+          "start": 1.043,
+          "end": 1.885,
+          "score": 0.969
+        },
+        {
+          "word": "Gorrs",
+          "start": 1.925,
+          "end": 2.347,
+          "score": 0.885
+        },
+        {
+          "word": "Vergangenheit",
+          "start": 2.367,
+          "end": 3.189,
+          "score": 0.94
+        },
+        {
+          "word": "ist",
+          "start": 3.229,
+          "end": 3.49,
+          "score": 0.839
+        },
+        {
+          "word": "Valdris'",
+          "start": 3.53,
+          "end": 3.951,
+          "score": 0.762
+        },
+        {
+          "word": "Schwachstelle.",
+          "start": 3.991,
+          "end": 5.335,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 5.375,
+      "end": 6.819,
+      "text": "Das Profil wird klarer.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 5.375,
+          "end": 5.596,
+          "score": 0.895
+        },
+        {
+          "word": "Profil",
+          "start": 5.636,
+          "end": 6.137,
+          "score": 0.894
+        },
+        {
+          "word": "wird",
+          "start": 6.177,
+          "end": 6.458,
+          "score": 0.96
+        },
+        {
+          "word": "klarer.",
+          "start": 6.498,
+          "end": 6.819,
+          "score": 0.752
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.441,
+      "end": 1.023,
+      "score": 0.829
+    },
+    {
+      "word": "—",
+      "start": 1.043,
+      "end": 1.885,
+      "score": 0.969
+    },
+    {
+      "word": "Gorrs",
+      "start": 1.925,
+      "end": 2.347,
+      "score": 0.885
+    },
+    {
+      "word": "Vergangenheit",
+      "start": 2.367,
+      "end": 3.189,
+      "score": 0.94
+    },
+    {
+      "word": "ist",
+      "start": 3.229,
+      "end": 3.49,
+      "score": 0.839
+    },
+    {
+      "word": "Valdris'",
+      "start": 3.53,
+      "end": 3.951,
+      "score": 0.762
+    },
+    {
+      "word": "Schwachstelle.",
+      "start": 3.991,
+      "end": 5.335,
+      "score": 0.923
+    },
+    {
+      "word": "Das",
+      "start": 5.375,
+      "end": 5.596,
+      "score": 0.895
+    },
+    {
+      "word": "Profil",
+      "start": 5.636,
+      "end": 6.137,
+      "score": 0.894
+    },
+    {
+      "word": "wird",
+      "start": 6.177,
+      "end": 6.458,
+      "score": 0.96
+    },
+    {
+      "word": "klarer.",
+      "start": 6.498,
+      "end": 6.819,
+      "score": 0.752
+    }
+  ]
+}

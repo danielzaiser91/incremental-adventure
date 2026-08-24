@@ -1,0 +1,147 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 2.147,
+      "text": "Gorr hat gesprochen.",
+      "words": [
+        {
+          "word": "Gorr",
+          "start": 0.421,
+          "end": 0.702,
+          "score": 0.539
+        },
+        {
+          "word": "hat",
+          "start": 0.722,
+          "end": 0.943,
+          "score": 0.947
+        },
+        {
+          "word": "gesprochen.",
+          "start": 0.983,
+          "end": 2.147,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 2.187,
+      "end": 4.555,
+      "text": "Er kannte Valdris früher.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 2.187,
+          "end": 2.308,
+          "score": 0.935
+        },
+        {
+          "word": "kannte",
+          "start": 2.328,
+          "end": 2.749,
+          "score": 0.886
+        },
+        {
+          "word": "Valdris",
+          "start": 2.769,
+          "end": 3.211,
+          "score": 0.845
+        },
+        {
+          "word": "früher.",
+          "start": 3.251,
+          "end": 4.555,
+          "score": 0.873
+        }
+      ]
+    },
+    {
+      "start": 4.575,
+      "end": 5.579,
+      "text": "Etwas davon klären.",
+      "words": [
+        {
+          "word": "Etwas",
+          "start": 4.575,
+          "end": 4.856,
+          "score": 0.913
+        },
+        {
+          "word": "davon",
+          "start": 4.896,
+          "end": 5.237,
+          "score": 0.951
+        },
+        {
+          "word": "klären.",
+          "start": 5.278,
+          "end": 5.579,
+          "score": 0.776
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Gorr",
+      "start": 0.421,
+      "end": 0.702,
+      "score": 0.539
+    },
+    {
+      "word": "hat",
+      "start": 0.722,
+      "end": 0.943,
+      "score": 0.947
+    },
+    {
+      "word": "gesprochen.",
+      "start": 0.983,
+      "end": 2.147,
+      "score": 0.892
+    },
+    {
+      "word": "Er",
+      "start": 2.187,
+      "end": 2.308,
+      "score": 0.935
+    },
+    {
+      "word": "kannte",
+      "start": 2.328,
+      "end": 2.749,
+      "score": 0.886
+    },
+    {
+      "word": "Valdris",
+      "start": 2.769,
+      "end": 3.211,
+      "score": 0.845
+    },
+    {
+      "word": "früher.",
+      "start": 3.251,
+      "end": 4.555,
+      "score": 0.873
+    },
+    {
+      "word": "Etwas",
+      "start": 4.575,
+      "end": 4.856,
+      "score": 0.913
+    },
+    {
+      "word": "davon",
+      "start": 4.896,
+      "end": 5.237,
+      "score": 0.951
+    },
+    {
+      "word": "klären.",
+      "start": 5.278,
+      "end": 5.579,
+      "score": 0.776
+    }
+  ]
+}

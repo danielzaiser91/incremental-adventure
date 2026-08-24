@@ -1,0 +1,248 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 7.215,
+      "text": "Gorr fordert ein Duell — er muss sicher sein, dass ich Valdris gegenüber nicht einknicke.",
+      "words": [
+        {
+          "word": "Gorr",
+          "start": 0.401,
+          "end": 0.722,
+          "score": 0.869
+        },
+        {
+          "word": "fordert",
+          "start": 0.762,
+          "end": 1.142,
+          "score": 0.893
+        },
+        {
+          "word": "ein",
+          "start": 1.183,
+          "end": 1.303,
+          "score": 0.864
+        },
+        {
+          "word": "Duell",
+          "start": 1.343,
+          "end": 2.726,
+          "score": 0.949
+        },
+        {
+          "word": "—",
+          "start": 2.746,
+          "end": 2.766,
+          "score": 0.826
+        },
+        {
+          "word": "er",
+          "start": 2.806,
+          "end": 2.946,
+          "score": 0.722
+        },
+        {
+          "word": "muss",
+          "start": 2.986,
+          "end": 3.227,
+          "score": 0.934
+        },
+        {
+          "word": "sicher",
+          "start": 3.267,
+          "end": 3.588,
+          "score": 0.826
+        },
+        {
+          "word": "sein,",
+          "start": 3.608,
+          "end": 3.788,
+          "score": 0.974
+        },
+        {
+          "word": "dass",
+          "start": 3.808,
+          "end": 3.948,
+          "score": 0.976
+        },
+        {
+          "word": "ich",
+          "start": 3.988,
+          "end": 4.129,
+          "score": 0.864
+        },
+        {
+          "word": "Valdris",
+          "start": 4.149,
+          "end": 4.55,
+          "score": 0.857
+        },
+        {
+          "word": "gegenüber",
+          "start": 4.57,
+          "end": 4.991,
+          "score": 0.887
+        },
+        {
+          "word": "nicht",
+          "start": 5.011,
+          "end": 5.271,
+          "score": 0.841
+        },
+        {
+          "word": "einknicke.",
+          "start": 5.311,
+          "end": 7.215,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 7.255,
+      "end": 8.999,
+      "text": "Der stärkste Söldner wartet.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 7.255,
+          "end": 7.456,
+          "score": 0.965
+        },
+        {
+          "word": "stärkste",
+          "start": 7.516,
+          "end": 8.097,
+          "score": 0.918
+        },
+        {
+          "word": "Söldner",
+          "start": 8.137,
+          "end": 8.598,
+          "score": 0.854
+        },
+        {
+          "word": "wartet.",
+          "start": 8.658,
+          "end": 8.999,
+          "score": 0.83
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Gorr",
+      "start": 0.401,
+      "end": 0.722,
+      "score": 0.869
+    },
+    {
+      "word": "fordert",
+      "start": 0.762,
+      "end": 1.142,
+      "score": 0.893
+    },
+    {
+      "word": "ein",
+      "start": 1.183,
+      "end": 1.303,
+      "score": 0.864
+    },
+    {
+      "word": "Duell",
+      "start": 1.343,
+      "end": 2.726,
+      "score": 0.949
+    },
+    {
+      "word": "—",
+      "start": 2.746,
+      "end": 2.766,
+      "score": 0.826
+    },
+    {
+      "word": "er",
+      "start": 2.806,
+      "end": 2.946,
+      "score": 0.722
+    },
+    {
+      "word": "muss",
+      "start": 2.986,
+      "end": 3.227,
+      "score": 0.934
+    },
+    {
+      "word": "sicher",
+      "start": 3.267,
+      "end": 3.588,
+      "score": 0.826
+    },
+    {
+      "word": "sein,",
+      "start": 3.608,
+      "end": 3.788,
+      "score": 0.974
+    },
+    {
+      "word": "dass",
+      "start": 3.808,
+      "end": 3.948,
+      "score": 0.976
+    },
+    {
+      "word": "ich",
+      "start": 3.988,
+      "end": 4.129,
+      "score": 0.864
+    },
+    {
+      "word": "Valdris",
+      "start": 4.149,
+      "end": 4.55,
+      "score": 0.857
+    },
+    {
+      "word": "gegenüber",
+      "start": 4.57,
+      "end": 4.991,
+      "score": 0.887
+    },
+    {
+      "word": "nicht",
+      "start": 5.011,
+      "end": 5.271,
+      "score": 0.841
+    },
+    {
+      "word": "einknicke.",
+      "start": 5.311,
+      "end": 7.215,
+      "score": 0.932
+    },
+    {
+      "word": "Der",
+      "start": 7.255,
+      "end": 7.456,
+      "score": 0.965
+    },
+    {
+      "word": "stärkste",
+      "start": 7.516,
+      "end": 8.097,
+      "score": 0.918
+    },
+    {
+      "word": "Söldner",
+      "start": 8.137,
+      "end": 8.598,
+      "score": 0.854
+    },
+    {
+      "word": "wartet.",
+      "start": 8.658,
+      "end": 8.999,
+      "score": 0.83
+    }
+  ]
+}

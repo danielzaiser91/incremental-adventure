@@ -1344,6 +1344,56 @@
       "file": "quest-gorrsVergangenheit-unstarted.wav",
       "seconds": 2.1,
       "date": "2026-08-23T20:16:43.639Z"
+    },
+    "quest-gorrsVergangenheit-active": {
+      "file": "quest-gorrsVergangenheit-active.wav",
+      "seconds": 6.6,
+      "date": "2026-08-24T21:01:10.090Z"
+    },
+    "quest-gorrsVergangenheit-night_talk": {
+      "file": "quest-gorrsVergangenheit-night_talk.wav",
+      "seconds": 6,
+      "date": "2026-08-24T21:02:11.622Z"
+    },
+    "quest-gorrsVergangenheit-rewarded": {
+      "file": "quest-gorrsVergangenheit-rewarded.wav",
+      "seconds": 7.2,
+      "date": "2026-08-24T21:02:46.531Z"
+    },
+    "quest-gorrsEid-unstarted": {
+      "file": "quest-gorrsEid-unstarted.wav",
+      "seconds": 1.6,
+      "date": "2026-08-24T21:03:18.886Z"
+    },
+    "quest-gorrsEid-active": {
+      "file": "quest-gorrsEid-active.wav",
+      "seconds": 9.4,
+      "date": "2026-08-24T21:03:55.203Z"
+    },
+    "quest-gorrsEid-duell_won": {
+      "file": "quest-gorrsEid-duell_won.wav",
+      "seconds": 5.8,
+      "date": "2026-08-24T21:04:29.166Z"
+    },
+    "quest-gorrsEid-rewarded": {
+      "file": "quest-gorrsEid-rewarded.wav",
+      "seconds": 7.4,
+      "date": "2026-08-24T21:05:03.199Z"
+    },
+    "quest-archivRecherche-unstarted": {
+      "file": "quest-archivRecherche-unstarted.wav",
+      "seconds": 2.1,
+      "date": "2026-08-24T21:05:34.859Z"
+    },
+    "quest-archivRecherche-dok1": {
+      "file": "quest-archivRecherche-dok1.wav",
+      "seconds": 2.2,
+      "date": "2026-08-24T21:06:06.411Z"
+    },
+    "quest-archivRecherche-dok2": {
+      "file": "quest-archivRecherche-dok2.wav",
+      "seconds": 2.1,
+      "date": "2026-08-24T21:06:38.181Z"
     }
   },
   "failed": {}

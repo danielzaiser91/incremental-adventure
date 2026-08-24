@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.444,
+      "end": 1.776,
+      "text": "Erstes Dokument gefunden.",
+      "words": [
+        {
+          "word": "Erstes",
+          "start": 0.444,
+          "end": 0.848,
+          "score": 0.961
+        },
+        {
+          "word": "Dokument",
+          "start": 0.888,
+          "end": 1.372,
+          "score": 0.959
+        },
+        {
+          "word": "gefunden.",
+          "start": 1.393,
+          "end": 1.776,
+          "score": 0.873
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Erstes",
+      "start": 0.444,
+      "end": 0.848,
+      "score": 0.961
+    },
+    {
+      "word": "Dokument",
+      "start": 0.888,
+      "end": 1.372,
+      "score": 0.959
+    },
+    {
+      "word": "gefunden.",
+      "start": 1.393,
+      "end": 1.776,
+      "score": 0.873
+    }
+  ]
+}

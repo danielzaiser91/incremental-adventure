@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.742,
+      "end": 5.154,
+      "text": "Abgeschlossen — die Bruderschaft sperrt Velmarks Südtor ab.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.742,
+          "end": 1.304,
+          "score": 0.81
+        },
+        {
+          "word": "—",
+          "start": 1.965,
+          "end": 1.985,
+          "score": 0.989
+        },
+        {
+          "word": "die",
+          "start": 2.005,
+          "end": 2.146,
+          "score": 0.875
+        },
+        {
+          "word": "Bruderschaft",
+          "start": 2.166,
+          "end": 2.788,
+          "score": 0.821
+        },
+        {
+          "word": "sperrt",
+          "start": 2.828,
+          "end": 3.149,
+          "score": 0.912
+        },
+        {
+          "word": "Velmarks",
+          "start": 3.169,
+          "end": 3.59,
+          "score": 0.774
+        },
+        {
+          "word": "Südtor",
+          "start": 3.65,
+          "end": 4.031,
+          "score": 0.874
+        },
+        {
+          "word": "ab.",
+          "start": 4.071,
+          "end": 5.154,
+          "score": 0.95
+        }
+      ]
+    },
+    {
+      "start": 5.194,
+      "end": 7.079,
+      "text": "Valdris hat keinen Fluchtweg mehr.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 5.194,
+          "end": 5.816,
+          "score": 0.737
+        },
+        {
+          "word": "hat",
+          "start": 5.856,
+          "end": 6.137,
+          "score": 0.963
+        },
+        {
+          "word": "keinen",
+          "start": 6.157,
+          "end": 6.457,
+          "score": 0.812
+        },
+        {
+          "word": "Fluchtweg",
+          "start": 6.498,
+          "end": 6.939,
+          "score": 0.885
+        },
+        {
+          "word": "mehr.",
+          "start": 6.959,
+          "end": 7.079,
+          "score": 0.798
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.742,
+      "end": 1.304,
+      "score": 0.81
+    },
+    {
+      "word": "—",
+      "start": 1.965,
+      "end": 1.985,
+      "score": 0.989
+    },
+    {
+      "word": "die",
+      "start": 2.005,
+      "end": 2.146,
+      "score": 0.875
+    },
+    {
+      "word": "Bruderschaft",
+      "start": 2.166,
+      "end": 2.788,
+      "score": 0.821
+    },
+    {
+      "word": "sperrt",
+      "start": 2.828,
+      "end": 3.149,
+      "score": 0.912
+    },
+    {
+      "word": "Velmarks",
+      "start": 3.169,
+      "end": 3.59,
+      "score": 0.774
+    },
+    {
+      "word": "Südtor",
+      "start": 3.65,
+      "end": 4.031,
+      "score": 0.874
+    },
+    {
+      "word": "ab.",
+      "start": 4.071,
+      "end": 5.154,
+      "score": 0.95
+    },
+    {
+      "word": "Valdris",
+      "start": 5.194,
+      "end": 5.816,
+      "score": 0.737
+    },
+    {
+      "word": "hat",
+      "start": 5.856,
+      "end": 6.137,
+      "score": 0.963
+    },
+    {
+      "word": "keinen",
+      "start": 6.157,
+      "end": 6.457,
+      "score": 0.812
+    },
+    {
+      "word": "Fluchtweg",
+      "start": 6.498,
+      "end": 6.939,
+      "score": 0.885
+    },
+    {
+      "word": "mehr.",
+      "start": 6.959,
+      "end": 7.079,
+      "score": 0.798
+    }
+  ]
+}

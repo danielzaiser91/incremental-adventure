@@ -1,0 +1,135 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 2.308,
+      "text": "Duell gewonnen.",
+      "words": [
+        {
+          "word": "Duell",
+          "start": 0.381,
+          "end": 0.903,
+          "score": 0.904
+        },
+        {
+          "word": "gewonnen.",
+          "start": 0.923,
+          "end": 2.308,
+          "score": 0.937
+        }
+      ]
+    },
+    {
+      "start": 2.348,
+      "end": 4.857,
+      "text": "Gorr leistet den Eid.",
+      "words": [
+        {
+          "word": "Gorr",
+          "start": 2.348,
+          "end": 2.85,
+          "score": 0.798
+        },
+        {
+          "word": "leistet",
+          "start": 2.89,
+          "end": 3.311,
+          "score": 0.937
+        },
+        {
+          "word": "den",
+          "start": 3.351,
+          "end": 3.532,
+          "score": 0.963
+        },
+        {
+          "word": "Eid.",
+          "start": 3.612,
+          "end": 4.857,
+          "score": 0.608
+        }
+      ]
+    },
+    {
+      "start": 4.897,
+      "end": 5.479,
+      "text": "Zurück zu ihm.",
+      "words": [
+        {
+          "word": "Zurück",
+          "start": 4.897,
+          "end": 5.158,
+          "score": 0.913
+        },
+        {
+          "word": "zu",
+          "start": 5.198,
+          "end": 5.318,
+          "score": 0.988
+        },
+        {
+          "word": "ihm.",
+          "start": 5.358,
+          "end": 5.479,
+          "score": 0.776
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Duell",
+      "start": 0.381,
+      "end": 0.903,
+      "score": 0.904
+    },
+    {
+      "word": "gewonnen.",
+      "start": 0.923,
+      "end": 2.308,
+      "score": 0.937
+    },
+    {
+      "word": "Gorr",
+      "start": 2.348,
+      "end": 2.85,
+      "score": 0.798
+    },
+    {
+      "word": "leistet",
+      "start": 2.89,
+      "end": 3.311,
+      "score": 0.937
+    },
+    {
+      "word": "den",
+      "start": 3.351,
+      "end": 3.532,
+      "score": 0.963
+    },
+    {
+      "word": "Eid.",
+      "start": 3.612,
+      "end": 4.857,
+      "score": 0.608
+    },
+    {
+      "word": "Zurück",
+      "start": 4.897,
+      "end": 5.158,
+      "score": 0.913
+    },
+    {
+      "word": "zu",
+      "start": 5.198,
+      "end": 5.318,
+      "score": 0.988
+    },
+    {
+      "word": "ihm.",
+      "start": 5.358,
+      "end": 5.479,
+      "score": 0.776
+    }
+  ]
+}
