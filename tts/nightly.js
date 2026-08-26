@@ -47,28 +47,43 @@ function report() {
   const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'manifest.json'), 'utf8'));
   const done = Object.keys(progress.done);
   const total = manifest.units.length;
-  const phase5Done = done.filter(id => id.startsWith('quest-') || id.startsWith('objective-')).length;
-  const phase5Total = manifest.units.filter(u => u.id.startsWith('quest-') || u.id.startsWith('objective-')).length;
+  /* Die laufende Phase ist die niedrigste, die noch offene Einheiten hat.
+     Bis 26.08.2026 stand hier fest "Phase 5", erkannt am ID-Präfix
+     `quest-`/`objective-`. Mit der Phase-6-Extraktion vom selben Tag hätte
+     diese Zeile ab Ende August eine längst fertige Phase gemeldet statt der
+     laufenden; `u.phase` steht ohnehin in jeder Manifest-Einheit. */
+  const doneSet = new Set(done);
+  const open = manifest.units.filter(u => !doneSet.has(u.id));
+  const phase = open.length ? Math.min(...open.map(u => u.phase)) : null;
+  const phaseDone = phase === null ? 0 : manifest.units.filter(u => u.phase === phase && doneSet.has(u.id)).length;
+  const phaseTotal = phase === null ? 0 : manifest.units.filter(u => u.phase === phase).length;
   const failed = Object.keys(progress.failed || {});
 
   console.log(`\n=== Stand ===`);
   console.log(`Gesamt: ${done.length}/${total} — offen ${total - done.length}`);
-  console.log(`Phase 5: ${phase5Done}/${phase5Total}`);
+  console.log(phase === null ? 'Alle Phasen komplett.' : `Phase ${phase}: ${phaseDone}/${phaseTotal}`);
   console.log(failed.length ? `Fehlgeschlagen (läuft morgen erneut mit): ${failed.join(', ')}` : 'Keine fehlgeschlagenen Einheiten.');
-  return { done: done.length, total, phase5Done, phase5Total };
+  return { done: done.length, total, phase, phaseDone, phaseTotal };
 }
 
 /* Committet ausschließlich die TTS-Dateien — fremde Änderungen im Arbeitsbaum
    bleiben ungestaged. */
 function commitAndPush(stand) {
-  const PATHS = ['tts/PLAN.md', 'tts/progress.json', 'tts/audio', 'tts/manifest.json'];
+  /* Das ganze tts/-Verzeichnis: `tts/output/` und `tts/align/`-Arbeitsdateien
+     hält .gitignore ohnehin draußen, und so bleibt keine Änderung an den
+     TTS-Skripten mehr liegen (bis 26.08.2026 standen hier nur die vier
+     Datendateien, weshalb ein Skript-Patch stumm ungestaged blieb).
+     Fremde Änderungen außerhalb von tts/ bleiben unangetastet. */
+  const PATHS = ['tts'];
   run(GIT, ['add', ...PATHS]);
 
   const staged = run(GIT, ['diff', '--cached', '--name-only']).stdout.trim();
   if (!staged) { console.log('\nNichts zu committen.'); return; }
 
   const msg = `tts: Nachtlauf — Stand ${stand.done}/${stand.total}\n\n`
-    + `Phase 5 bei ${stand.phase5Done}/${stand.phase5Total}.\n\n`
+    + (stand.phase === null
+        ? 'Alle Phasen komplett.\n\n'
+        : `Phase ${stand.phase} bei ${stand.phaseDone}/${stand.phaseTotal}.\n\n`)
     + 'Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>';
   const c = run(GIT, ['commit', '-m', msg]);
   if (c.status !== 0) { console.log(c.stdout + c.stderr); throw new Error('Commit fehlgeschlagen'); }

@@ -6,7 +6,9 @@
    - Phase 3/4: NPC-Dialogknoten (script/npc.js), siehe `ACTIVE_NPC_PHASES`
    - Phase 5: Quest-Beschreibungen (script/quests.js) + Zieltexte
      (script/objective.js)
-   Spätere Phasen (Welt-Flavor, Achievements) werden hier ergänzt.
+   - Phase 6: Welt-Flavor (Monster, Orte, Markt, Expedition, Pets,
+     Alchemie) — kuratierte Auswahl, siehe `WORLD_SOURCES`
+   Phase 7 (Achievements) ist gestrichen (Entscheidung 12.08.2026).
    Idempotent: bestehende manifest.json wird überschrieben, die
    Fortschritts-Daten liegen separat in progress.json.
    ══════════════════════════════════════════════════════════════ */
@@ -264,6 +266,91 @@ for (const text of objectiveTexts()) {
   });
 }
 
+
+/* ── Phase 6 — Welt-Flavor ─────────────────────────────────────
+   Kuratierte Auswahl der Beschreibungstexte, die der Spieler beim
+   Erkunden liest: Monster, Orte, Markt-Waren, Expeditionen, Haustiere,
+   Alchemie. Alle in Ich-Perspektive bzw. Erzählerton → Iapetus.
+
+   Zwei Extraktionswege, weil die Quellen unterschiedlich gebaut sind:
+   (a) Konstanten-Listen (`WORLD_SOURCES`) — direkt auslesbar, `id` als
+       stabiler Schlüssel.
+   (b) `script/content.js` — die Ortskarten stecken in den Render-
+       Funktionen, nicht in Konstanten (`const places = [...(flag ? [{…}]
+       : [])]`), sind aber durchgehend statische Literale. Sie werden per
+       Textmuster gezogen; die ID ist wie bei den Objectives ein Kurz-Hash
+       des Textes, weil `id:` dort teils eine Variable ist
+       (`CONTENT.VELMARK_MARKT`) und damit kein Literal hergibt.
+
+   Bewusst ausgelassen (Stand 26.08.2026):
+   - `WILD_PET_DEFS` (pets.js) — trägt kein `desc`, nur `hint`-Labels
+     („Seltener Drop aus dem Jagdgebiet — Greta fragen") und `bonusFn`-
+     Template-Literale. Spielhinweise, kein Flavor.
+   - `ALCHEMIE_MILESTONES` (alchemie.js) — reine Zahlenanzeigen
+     („+10 % Kampf-Schaden"), wie `getExplicitGoalText()` in Phase 5.
+   - `VENDORS` (market.js) und alle Einträge ohne statisches `desc`.
+   Was hier fehlt, taucht in der `übersprungen`-Zeile der Konsole auf. */
+const WORLD_SOURCES = [
+  ['script/combat.js',     'MONSTER_DEFS',        'monster'],
+  ['script/market.js',     'TOOL_ITEMS',          'markt'],
+  ['script/market.js',     'FOOD_ITEMS',          'markt'],
+  ['script/market.js',     'LETHKAR_FOOD_ITEMS',  'markt'],
+  ['script/market.js',     'VELMARK_FOOD_ITEMS',  'markt'],
+  ['script/expedition.js', 'EXPEDITION_STORY',    'expedition'],
+  ['script/expedition.js', 'EXPEDITION_GRIND',    'expedition'],
+  ['script/pets.js',       'PET_DEFS',            'pet'],
+  ['script/alchemie.js',   'ALCHEMIE_ASPECTS',    'alchemie'],
+  ['script/alchemie.js',   'WISSENSDURST_SKILLS', 'alchemie']
+];
+
+const worldSkipped = [];
+for (const [file, constName, category] of WORLD_SOURCES) {
+  const value = evalGameFile(file, constName, stubSandbox());
+  /* Objekt-Maps (PET_DEFS) und Arrays (MONSTER_DEFS) gleich behandeln. */
+  const entries = Array.isArray(value)
+    ? value
+    : Object.entries(value).map(([id, v]) => ({ id, ...v }));
+  for (const entry of entries) {
+    if (!entry || typeof entry.desc !== 'string' || !entry.desc.trim()) {
+      worldSkipped.push(`${constName}.${(entry && entry.id) || '?'} (kein statischer Text)`);
+      continue;
+    }
+    units.push({
+      id: `world-${category}-${entry.id}`,
+      phase: 6,
+      category: `world-${category}`,
+      title: entry.name || entry.id,
+      voice: NARRATOR_VOICE,
+      style: NARRATOR_STYLE,
+      text: entry.desc
+    });
+  }
+}
+
+/* Ortskarten aus content.js: `name:` bzw. `label:` (Valdris-Dossier)
+   gefolgt von `desc:`, beides einfach gequotete Literale. Das Fenster
+   dazwischen ist auf 200 Zeichen begrenzt, damit ein Eintrag ohne `desc`
+   nicht mit dem `desc` des nächsten verheiratet wird. */
+function contentPlaceTexts() {
+  const src = fs.readFileSync(path.join(ROOT, 'script/content.js'), 'utf8');
+  const pattern = /(?:name|label): *'((?:[^'\\]|\\.)*)'[^\n]{0,200}\n?\s{0,10}desc: *'((?:[^'\\]|\\.)*)'/g;
+  const unquote = s => s.replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+  return [...src.matchAll(pattern)].map(m => ({ name: unquote(m[1]), desc: unquote(m[2]) }));
+}
+
+for (const place of contentPlaceTexts()) {
+  const hash = crypto.createHash('sha1').update(place.desc).digest('hex').slice(0, 8);
+  units.push({
+    id: `world-ort-${hash}`,
+    phase: 6,
+    category: 'world-ort',
+    title: place.name,
+    voice: NARRATOR_VOICE,
+    style: NARRATOR_STYLE,
+    text: place.desc
+  });
+}
+
 /* TTS-Text-Overrides: Ersatztexte NUR für die Vertonung, wenn der
    Originaltext von der API reproduzierbar abgelehnt wird (Spieltext in den
    script/-Dateien bleibt unverändert!).
@@ -327,5 +414,5 @@ console.log(`manifest.json: ${units.length} Einheiten, ${totalChars} Zeichen`);
 const byPhase = {};
 for (const u of units) byPhase[u.phase] = (byPhase[u.phase] || 0) + 1;
 for (const [p, n] of Object.entries(byPhase)) console.log(`  Phase ${p}: ${n} Einheiten`);
-const skipped = [...npcSkipped, ...questSkipped];
+const skipped = [...npcSkipped, ...questSkipped, ...worldSkipped];
 if (skipped.length) console.log(`  übersprungen: ${skipped.join(', ')}`);

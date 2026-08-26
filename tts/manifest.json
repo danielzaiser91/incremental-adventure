@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T23:00:34.521Z",
+  "generated": "2026-08-26T20:26:27.533Z",
   "units": [
     {
       "id": "story-1-1",
@@ -2979,6 +2979,663 @@
       "voice": "Iapetus",
       "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
       "text": "Ich sollte mich umsehen."
+    },
+    {
+      "id": "world-monster-wolf",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Hungriger Wolf",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein magerer Wolf, der mich mit gelben Augen fixiert. Hungrig. Gefährlich."
+    },
+    {
+      "id": "world-monster-wildschwein",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Wilder Eber",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein massiver Eber mit scharfen Hauern. Schneller als er aussieht."
+    },
+    {
+      "id": "world-monster-baer",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Schwarzbär",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein breiter Bär, doppelt so groß wie ich erwartet hatte. Sein Blick ist schwer und ruhig."
+    },
+    {
+      "id": "world-monster-bandit",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Wegelagerer",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein schlecht gekleideter Mann mit einem rostigen Messer. Er wirkt hungrig — und verzweifelt."
+    },
+    {
+      "id": "world-monster-waldtroll",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Waldtroll",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein graues, schwerfälliges Wesen aus Moos und Fels — langsam, aber wenn er trifft, spüre ich es noch Tage später."
+    },
+    {
+      "id": "world-monster-sumpfwesen",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Sumpfwesen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Halb Tier, halb Schlamm. Riecht schlimmer als es aussieht — und es sieht bereits schrecklich aus."
+    },
+    {
+      "id": "world-monster-steingolem",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Steingolem",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Uralt. Aus dem Fels gemeißelt oder aus ihm erwacht — ich kann es nicht sagen. Er bewegt sich langsam, aber unaufhaltsam."
+    },
+    {
+      "id": "world-monster-schattenwolf",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Schattenwolf",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Schwarz wie Tinte, kaum sichtbar zwischen den Nordbäumen. Schnell. Sehr schnell."
+    },
+    {
+      "id": "world-monster-nordbaer",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Nordbär",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Größer als jeder Bär, den ich in Treutheim gesehen habe. Fellfarbe weiß-grau, fast silbern. Nicht angreifbar ohne Plan."
+    },
+    {
+      "id": "world-monster-eisengolem",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Eisengolem",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Schwerer als Stein, kälter als Eisen. Bewegt sich wie ein Traum — so langsam, dass man glaubt, man hätte Zeit. Man hat sie nicht."
+    },
+    {
+      "id": "world-monster-giftschlange",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Riesengiftschlange",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Länger als ich groß bin. Ihre Augen folgen mir, auch wenn ich mich nicht bewege."
+    },
+    {
+      "id": "world-monster-kanalratte",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Kanalratte",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Klein, schnell, bissig — und sie kennt die Kanäle besser als ich. Unterschätzt wird sie nur einmal."
+    },
+    {
+      "id": "world-monster-soeldner",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Söldner des Netzwerks",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Valdris' Handlanger. Gut bezahlt, gut ausgerüstet. Redet nicht viel."
+    },
+    {
+      "id": "world-monster-schattenkämpfer",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Schattenkämpfer",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wer ihn schickt, bleibt unbekannt. Er hat keine Farben, keine Abzeichen — nur ein Messer und den Auftrag."
+    },
+    {
+      "id": "world-monster-hafenwächter",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Hafenwächter",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Breit, ruhig, mit Augen, die alles registrieren. Harro's Mann. Redet nicht — bewegt sich einfach in den Weg."
+    },
+    {
+      "id": "world-monster-valdrisAgent",
+      "phase": 6,
+      "category": "world-monster",
+      "title": "Valdris' Agent",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Kein Name. Keine Farben. Nur der Auftrag. Ich weiß, dass er von Valdris persönlich geschickt wurde."
+    },
+    {
+      "id": "world-markt-axt",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Axt",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Zum Holzhacken am Waldrand."
+    },
+    {
+      "id": "world-markt-spitzhacke",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Spitzhacke",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Zum Lösen von Steinen im Geröll."
+    },
+    {
+      "id": "world-markt-sichel",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Sichel",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Zum Ernten von Wildkraut am Wegrand."
+    },
+    {
+      "id": "world-markt-brot",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Brot",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Frisch gebacken, noch warm. Stillt den größten Hunger."
+    },
+    {
+      "id": "world-markt-fisch",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Geräucherter Fisch",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Herzhaft und sättigend — hält länger vor als Brot."
+    },
+    {
+      "id": "world-markt-honigkuchen",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Honigkuchen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein süßer Genuss von reisenden Händlern. Stärkt Leib und Geist."
+    },
+    {
+      "id": "world-markt-kaffee",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Schwarzer Kaffee",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Bitter und stark, in einem kleinen Tonbecher. Vertreibt die Müdigkeit, wenn Schlaf keine Option ist."
+    },
+    {
+      "id": "world-markt-lethkar_suppe",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Lethkarer Suppe",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Herzhaft, warm, mit getrockneten Kräutern. Füllt den Magen für den ganzen Tag."
+    },
+    {
+      "id": "world-markt-lethkar_brot",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Mehrkornbrot",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Dunkles, schweres Brot. Sättigt länger als Treutheimer Weißbrot."
+    },
+    {
+      "id": "world-markt-lethkar_wein",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Kräuterwein",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein Glas zum Abend. Löst die Anspannung — und füllt den Magen ein wenig."
+    },
+    {
+      "id": "world-markt-velmark_hafenfisch",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Hafenfisch",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Frisch aus dem Hafen, heute Morgen angeliefert. Salzig und sättigend."
+    },
+    {
+      "id": "world-markt-velmark_brot",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Stadtbrot",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Das Brot der Stadt — dicht, dunkel, mit Sonnenblumenkernen."
+    },
+    {
+      "id": "world-markt-velmark_kaviar",
+      "phase": 6,
+      "category": "world-markt",
+      "title": "Kaviar-Häppchen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Teuer, aber es lohnt sich. Die Schwere des Tages bleibt zurück."
+    },
+    {
+      "id": "world-expedition-ruins_of_aethren",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Ruinen von Äthren",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Westlich des Waldes sollen alte Ruinen liegen. Händler erwähnen Geschichten — Mauerreste aus einer untergegangenen Siedlung, vor dem Krieg."
+    },
+    {
+      "id": "world-expedition-old_road_north",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Die alte Nordstraße",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Eine alte Handelsroute, die kaum noch jemand benutzt. Sie führt, heißt es, einst nach Lethkar."
+    },
+    {
+      "id": "world-expedition-patrol_outskirts",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Stadtrand-Patrouille",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Den Rand der Stadt abgehen, nach Unruhestiftern Ausschau halten. Keine Helden-Arbeit — aber solide bezahlt."
+    },
+    {
+      "id": "world-expedition-herb_gathering",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Wildkraut-Sammlung",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Weiter draußen wachsen Kräuter, die in der Stadt gut verkäuflich sind. Zeitaufwändig, aber lohnenswert."
+    },
+    {
+      "id": "world-expedition-woodcutting_run",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Holzfäller-Ausflug",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Einen halben Tag im Wald Holz schlagen. Schweiß-treibend — und eine gute Übung für den Arm."
+    },
+    {
+      "id": "world-expedition-bounty_hunt",
+      "phase": 6,
+      "category": "world-expedition",
+      "title": "Kopfgeld-Jagd",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Der Stadtrat zahlt für gesuchte Banditen. Gefährlich — aber die Belohnung macht den Kopf klar."
+    },
+    {
+      "id": "world-pet-streetCat",
+      "phase": 6,
+      "category": "world-pet",
+      "title": "Straßenkatze",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Sie ist mir zugelaufen, in einer kalten Nacht, in der ich sie nicht erwartet hatte."
+    },
+    {
+      "id": "world-pet-wolfWelpe",
+      "phase": 6,
+      "category": "world-pet",
+      "title": "Wolf-Welpe",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er folgte mir aus dem tiefen Wald — nach dem Kampf mit dem Waldtroll war er plötzlich einfach da."
+    },
+    {
+      "id": "world-pet-stadtfalke",
+      "phase": 6,
+      "category": "world-pet",
+      "title": "Stadtfalke",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Er kreist über Velmark und bringt mir Nachrichten, noch bevor meine Informanten zurückkehren."
+    },
+    {
+      "id": "world-alchemie-feuer",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Feuer",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Transformation, Zerstörung, Reinigung."
+    },
+    {
+      "id": "world-alchemie-wasser",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Wasser",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Fluss, Anpassung, Heilung."
+    },
+    {
+      "id": "world-alchemie-erde",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Erde",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Beständigkeit, Geduld, Grundlage."
+    },
+    {
+      "id": "world-alchemie-luft",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Luft",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Bewegung, Freiheit, Verbindung."
+    },
+    {
+      "id": "world-alchemie-aether",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Äther",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Das Fünfte Element. Verbindet alle anderen — schwer zu greifen."
+    },
+    {
+      "id": "world-alchemie-forschungsinstinkt",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Forschungsinstinkt",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wissen zieht weiteres Wissen an."
+    },
+    {
+      "id": "world-alchemie-wissensspeicher",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Wissensspeicher",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Manche Erkenntnisse brennen sich ein — für immer."
+    },
+    {
+      "id": "world-alchemie-doppelteErkenntnis",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Doppelte Erkenntnis",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein Level-Up bringt oft mehr mit sich als gedacht."
+    },
+    {
+      "id": "world-alchemie-aspektmeister",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Aspektmeister",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wenn man erst versteht, wie Wissen fließt, fließt es schneller."
+    },
+    {
+      "id": "world-alchemie-alchemistischesGedaechtnis",
+      "phase": 6,
+      "category": "world-alchemie",
+      "title": "Alch. Gedächtnis",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Der Körper vergisst. Das Wissen nicht."
+    },
+    {
+      "id": "world-ort-48b3dd21",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Die Felder",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Vor den Stadtmauern erstrecken sich Felder, auf denen Tagelöhner wie ich für ein paar Münzen schuften."
+    },
+    {
+      "id": "world-ort-f5380d03",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Der Marktplatz",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Händler rufen ihre Waren aus. Es riecht nach frischem Brot, kaltem Metall und Schweiß."
+    },
+    {
+      "id": "world-ort-25d1b769",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Die Taverne",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Hinter verrauchten Fenstern hallen Stimmen und Gelächter. Hier hört man, was wirklich in der Stadt los ist."
+    },
+    {
+      "id": "world-ort-fa5859b4",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Ein Platz zum Schlafen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wenn die Nacht kommt, brauche ich irgendwo ein Dach über dem Kopf — oder zumindest eine ruhige Ecke."
+    },
+    {
+      "id": "world-ort-3c2e19b6",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Sammelplatz",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Jenseits der Felder liegt ein Streifen Wildnis — Holz, Stein und Kräuter für jeden, der sie sammeln will."
+    },
+    {
+      "id": "world-ort-a110ca31",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Das Laboratorium",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein Raum voller dampfender Tiegel und seltsamer Gerüche. Varena hat mir die Tür geöffnet."
+    },
+    {
+      "id": "world-ort-2251b8af",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Die Silberne Glocke",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ruhiger als in Treutheim. Hier treffen sich Gelehrte, Händler und Leute, die beides vorgeben."
+    },
+    {
+      "id": "world-ort-2675029b",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Der Markt der Zutaten",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Alchemistische Rohstoffe, seltene Kräuter, abgefüllte Essenzen. Eine andere Welt als der Treutheimer Markt."
+    },
+    {
+      "id": "world-ort-5131dd2c",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Schlafplatz",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein einfaches Zimmer in einer Pension nahe der Stadtmitte. Nicht billig — aber sicher."
+    },
+    {
+      "id": "world-ort-1a025b06",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Pension \"Zum ruhigen Mond\"",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Ein sauberes Bett, Stille, keine Fremden nebenan. Dafür muss man zahlen."
+    },
+    {
+      "id": "world-ort-92529cb3",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Fraktionen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Händlergilde, Eiserne Bruderschaft, Stadtarchiv — drei Kräfte, die diese Stadt zusammenhalten."
+    },
+    {
+      "id": "world-ort-6b05e34e",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Velmarks Unterwelt",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "In den Gassen und Lagerhäusern patrouillieren Valdris' Leute. Ein riskanter Ort — aber mit Einfluss zu gewinnen."
+    },
+    {
+      "id": "world-ort-93d25be3",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Der Große Markt",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Größer als alles in Lethkar. Informationen, Waffen, Alchemie-Rohmaterialien."
+    },
+    {
+      "id": "world-ort-41360c20",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Velmarks Hafen",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Der Hafen schläft nie — Waren, Gerüchte und Arbeit fließen hier rund um die Uhr."
+    },
+    {
+      "id": "world-ort-88be7e6e",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Händlergilde",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Die älteste Institution Velmarks. Wer in dieser Stadt handelt, handelt mit ihrer Erlaubnis."
+    },
+    {
+      "id": "world-ort-01c9b9b3",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Eiserne Bruderschaft",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Söldner, Wachen, Männer mit Muskeln und kurzen Gedächtnissen. Sie hören auf Stärke."
+    },
+    {
+      "id": "world-ort-632c91b5",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Stadtarchiv",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Die leiseste der drei Kräfte — und wahrscheinlich die mächtigste. Aufzeichnungen sind dauerhafte Waffen."
+    },
+    {
+      "id": "world-ort-7535bd07",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Hafenpension \"Morgenwind\"",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Eine ruhige Kammer mit Blick aufs Wasser. Geräuschloser als das Hafen-Treiben unten."
+    },
+    {
+      "id": "world-ort-c67ec071",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Herrschaftliche Suite",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Für Leute, die sich das leisten können. Weiche Matratze, keine Nachbarn, keine Fragen."
+    },
+    {
+      "id": "world-ort-73b9df3e",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Herkunft",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Woher kommt Valdris — und was hat ihn geformt?"
+    },
+    {
+      "id": "world-ort-dee54fc0",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Netzwerk",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wer arbeitet für ihn — und wie tief geht das Netz?"
+    },
+    {
+      "id": "world-ort-0c9f81e3",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Motive",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Was will Valdris wirklich?"
+    },
+    {
+      "id": "world-ort-39881056",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Schlüsselkontakte",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Die wichtigsten Personen in seiner Struktur."
+    },
+    {
+      "id": "world-ort-40cccd39",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Schwäche",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Jede Struktur hat eine Schwachstelle — welche hat er?"
+    },
+    {
+      "id": "world-ort-40a78454",
+      "phase": 6,
+      "category": "world-ort",
+      "title": "Aufenthaltsort",
+      "voice": "Iapetus",
+      "style": "Du bist ein junger Mann von neunzehn Jahren mit einer kräftigen, präsenten Stimme voller Charakter — kein leises, zurückhaltendes Vorlesen, sondern ein Erzähler, der mit echter innerer Beteiligung spricht. Dieses Timbre und diese Sprechweise bleiben über alle Aufnahmen hinweg exakt gleich, unabhängig vom Inhalt — es ist immer dieselbe Person.\nSprich niemals monoton oder gleichförmig, aber auch nicht theatralisch oder überzogen — glaubwürdig und natürlich, wie ein echter Mensch, der seine eigene Geschichte erzählt. Lass die Stimmung der jeweiligen Szene spürbar, aber maßvoll durchscheinen: Angst klingt angespannt und mit leicht stockendem Atem; Wut wird fester und schärfer im Ton, nicht laut schreiend; Hoffnung klingt wärmer und offener; Verzweiflung leiser und brüchig; ruhige Reflexion langsamer und nachdenklich; Erleichterung hörbar gelöster. Wechsle diese Färbung innerhalb des Textes, sobald sich die Stimmung des Ich-Erzählers ändert.\nLies den folgenden Text auf Deutsch exakt wortwörtlich vor, ohne Wörter zu verändern, hinzuzufügen oder wegzulassen:",
+      "text": "Wo befindet sich Valdris?"
     }
   ]
 }
