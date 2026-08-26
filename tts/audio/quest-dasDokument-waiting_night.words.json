@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.542,
+      "end": 2.389,
+      "text": "Sele übersetzt.",
+      "words": [
+        {
+          "word": "Sele",
+          "start": 0.542,
+          "end": 0.964,
+          "score": 0.955
+        },
+        {
+          "word": "übersetzt.",
+          "start": 1.004,
+          "end": 2.389,
+          "score": 0.916
+        }
+      ]
+    },
+    {
+      "start": 2.429,
+      "end": 5.079,
+      "text": "Über Nacht warten, dann zu ihr zurückkehren.",
+      "words": [
+        {
+          "word": "Über",
+          "start": 2.429,
+          "end": 2.67,
+          "score": 0.993
+        },
+        {
+          "word": "Nacht",
+          "start": 2.71,
+          "end": 3.011,
+          "score": 0.899
+        },
+        {
+          "word": "warten,",
+          "start": 3.071,
+          "end": 3.894,
+          "score": 0.975
+        },
+        {
+          "word": "dann",
+          "start": 3.934,
+          "end": 4.195,
+          "score": 0.956
+        },
+        {
+          "word": "zu",
+          "start": 4.215,
+          "end": 4.316,
+          "score": 0.779
+        },
+        {
+          "word": "ihr",
+          "start": 4.356,
+          "end": 4.537,
+          "score": 0.859
+        },
+        {
+          "word": "zurückkehren.",
+          "start": 4.577,
+          "end": 5.079,
+          "score": 0.845
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sele",
+      "start": 0.542,
+      "end": 0.964,
+      "score": 0.955
+    },
+    {
+      "word": "übersetzt.",
+      "start": 1.004,
+      "end": 2.389,
+      "score": 0.916
+    },
+    {
+      "word": "Über",
+      "start": 2.429,
+      "end": 2.67,
+      "score": 0.993
+    },
+    {
+      "word": "Nacht",
+      "start": 2.71,
+      "end": 3.011,
+      "score": 0.899
+    },
+    {
+      "word": "warten,",
+      "start": 3.071,
+      "end": 3.894,
+      "score": 0.975
+    },
+    {
+      "word": "dann",
+      "start": 3.934,
+      "end": 4.195,
+      "score": 0.956
+    },
+    {
+      "word": "zu",
+      "start": 4.215,
+      "end": 4.316,
+      "score": 0.779
+    },
+    {
+      "word": "ihr",
+      "start": 4.356,
+      "end": 4.537,
+      "score": 0.859
+    },
+    {
+      "word": "zurückkehren.",
+      "start": 4.577,
+      "end": 5.079,
+      "score": 0.845
+    }
+  ]
+}

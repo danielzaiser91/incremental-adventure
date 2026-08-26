@@ -1,0 +1,92 @@
+{
+  "segments": [
+    {
+      "start": 0.503,
+      "end": 2.452,
+      "text": "Alle drei Dokumente.",
+      "words": [
+        {
+          "word": "Alle",
+          "start": 0.503,
+          "end": 0.744,
+          "score": 0.816
+        },
+        {
+          "word": "drei",
+          "start": 0.784,
+          "end": 1.025,
+          "score": 0.905
+        },
+        {
+          "word": "Dokumente.",
+          "start": 1.065,
+          "end": 2.452,
+          "score": 0.955
+        }
+      ]
+    },
+    {
+      "start": 2.493,
+      "end": 3.558,
+      "text": "Sele Bericht erstatten.",
+      "words": [
+        {
+          "word": "Sele",
+          "start": 2.493,
+          "end": 2.834,
+          "score": 0.878
+        },
+        {
+          "word": "Bericht",
+          "start": 2.875,
+          "end": 3.176,
+          "score": 0.925
+        },
+        {
+          "word": "erstatten.",
+          "start": 3.216,
+          "end": 3.558,
+          "score": 0.863
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alle",
+      "start": 0.503,
+      "end": 0.744,
+      "score": 0.816
+    },
+    {
+      "word": "drei",
+      "start": 0.784,
+      "end": 1.025,
+      "score": 0.905
+    },
+    {
+      "word": "Dokumente.",
+      "start": 1.065,
+      "end": 2.452,
+      "score": 0.955
+    },
+    {
+      "word": "Sele",
+      "start": 2.493,
+      "end": 2.834,
+      "score": 0.878
+    },
+    {
+      "word": "Bericht",
+      "start": 2.875,
+      "end": 3.176,
+      "score": 0.925
+    },
+    {
+      "word": "erstatten.",
+      "start": 3.216,
+      "end": 3.558,
+      "score": 0.863
+    }
+  ]
+}

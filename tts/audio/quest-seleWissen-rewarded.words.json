@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.642,
+      "end": 4.692,
+      "text": "Abgeschlossen — Sele ist beeindruckt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.642,
+          "end": 1.203,
+          "score": 0.876
+        },
+        {
+          "word": "—",
+          "start": 2.346,
+          "end": 2.366,
+          "score": 0.05
+        },
+        {
+          "word": "Sele",
+          "start": 2.406,
+          "end": 2.747,
+          "score": 0.938
+        },
+        {
+          "word": "ist",
+          "start": 2.787,
+          "end": 2.987,
+          "score": 0.98
+        },
+        {
+          "word": "beeindruckt.",
+          "start": 3.027,
+          "end": 4.692,
+          "score": 0.921
+        }
+      ]
+    },
+    {
+      "start": 4.732,
+      "end": 7.719,
+      "text": "Zwei weitere Wissensdurst-Skills sind zugänglich.",
+      "words": [
+        {
+          "word": "Zwei",
+          "start": 4.732,
+          "end": 5.053,
+          "score": 0.918
+        },
+        {
+          "word": "weitere",
+          "start": 5.093,
+          "end": 5.574,
+          "score": 0.933
+        },
+        {
+          "word": "Wissensdurst-Skills",
+          "start": 5.594,
+          "end": 6.937,
+          "score": 0.828
+        },
+        {
+          "word": "sind",
+          "start": 6.957,
+          "end": 7.198,
+          "score": 0.983
+        },
+        {
+          "word": "zugänglich.",
+          "start": 7.238,
+          "end": 7.719,
+          "score": 0.85
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.642,
+      "end": 1.203,
+      "score": 0.876
+    },
+    {
+      "word": "—",
+      "start": 2.346,
+      "end": 2.366,
+      "score": 0.05
+    },
+    {
+      "word": "Sele",
+      "start": 2.406,
+      "end": 2.747,
+      "score": 0.938
+    },
+    {
+      "word": "ist",
+      "start": 2.787,
+      "end": 2.987,
+      "score": 0.98
+    },
+    {
+      "word": "beeindruckt.",
+      "start": 3.027,
+      "end": 4.692,
+      "score": 0.921
+    },
+    {
+      "word": "Zwei",
+      "start": 4.732,
+      "end": 5.053,
+      "score": 0.918
+    },
+    {
+      "word": "weitere",
+      "start": 5.093,
+      "end": 5.574,
+      "score": 0.933
+    },
+    {
+      "word": "Wissensdurst-Skills",
+      "start": 5.594,
+      "end": 6.937,
+      "score": 0.828
+    },
+    {
+      "word": "sind",
+      "start": 6.957,
+      "end": 7.198,
+      "score": 0.983
+    },
+    {
+      "word": "zugänglich.",
+      "start": 7.238,
+      "end": 7.719,
+      "score": 0.85
+    }
+  ]
+}

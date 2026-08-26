@@ -1394,7 +1394,57 @@
       "file": "quest-archivRecherche-dok2.wav",
       "seconds": 2.1,
       "date": "2026-08-24T21:06:38.181Z"
+    },
+    "quest-archivRecherche-dok3": {
+      "file": "quest-archivRecherche-dok3.wav",
+      "seconds": 4,
+      "date": "2026-08-26T20:16:34.348Z"
+    },
+    "quest-archivRecherche-rewarded": {
+      "file": "quest-archivRecherche-rewarded.wav",
+      "seconds": 6.4,
+      "date": "2026-08-26T20:17:42.640Z"
+    },
+    "quest-seleWissen-unstarted": {
+      "file": "quest-seleWissen-unstarted.wav",
+      "seconds": 1.9,
+      "date": "2026-08-26T20:18:15.993Z"
+    },
+    "quest-seleWissen-rewarded": {
+      "file": "quest-seleWissen-rewarded.wav",
+      "seconds": 8.1,
+      "date": "2026-08-26T20:19:13.890Z"
+    },
+    "quest-dasDokument-unstarted": {
+      "file": "quest-dasDokument-unstarted.wav",
+      "seconds": 2,
+      "date": "2026-08-26T20:19:46.458Z"
+    },
+    "quest-dasDokument-active": {
+      "file": "quest-dasDokument-active.wav",
+      "seconds": 9.2,
+      "date": "2026-08-26T20:20:23.513Z"
+    },
+    "quest-dasDokument-waiting_night": {
+      "file": "quest-dasDokument-waiting_night.wav",
+      "seconds": 5.5,
+      "date": "2026-08-26T20:21:04.236Z"
+    },
+    "quest-dasDokument-rewarded": {
+      "file": "quest-dasDokument-rewarded.wav",
+      "seconds": 7.3,
+      "date": "2026-08-26T20:21:40.740Z"
+    },
+    "quest-dieKonfrontation-unstarted": {
+      "file": "quest-dieKonfrontation-unstarted.wav",
+      "seconds": 1.8,
+      "date": "2026-08-26T20:22:13.272Z"
     }
   },
-  "failed": {}
+  "failed": {
+    "quest-seleWissen-active": {
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "date": "2026-08-26T20:18:47.023Z"
+    }
+  }
 }

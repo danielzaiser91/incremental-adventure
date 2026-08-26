@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.642,
+      "end": 4.873,
+      "text": "Abgeschlossen — das Valdris-Profil ist vollständig.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.642,
+          "end": 1.183,
+          "score": 0.945
+        },
+        {
+          "word": "—",
+          "start": 1.945,
+          "end": 1.965,
+          "score": 0.356
+        },
+        {
+          "word": "das",
+          "start": 1.985,
+          "end": 2.226,
+          "score": 0.903
+        },
+        {
+          "word": "Valdris-Profil",
+          "start": 2.246,
+          "end": 3.249,
+          "score": 0.85
+        },
+        {
+          "word": "ist",
+          "start": 3.289,
+          "end": 3.59,
+          "score": 0.949
+        },
+        {
+          "word": "vollständig.",
+          "start": 3.61,
+          "end": 4.873,
+          "score": 0.98
+        }
+      ]
+    },
+    {
+      "start": 4.893,
+      "end": 6.899,
+      "text": "Die Konfrontation ist möglich.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 4.893,
+          "end": 5.014,
+          "score": 0.922
+        },
+        {
+          "word": "Konfrontation",
+          "start": 5.054,
+          "end": 6.137,
+          "score": 0.945
+        },
+        {
+          "word": "ist",
+          "start": 6.177,
+          "end": 6.458,
+          "score": 0.93
+        },
+        {
+          "word": "möglich.",
+          "start": 6.498,
+          "end": 6.899,
+          "score": 0.849
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.642,
+      "end": 1.183,
+      "score": 0.945
+    },
+    {
+      "word": "—",
+      "start": 1.945,
+      "end": 1.965,
+      "score": 0.356
+    },
+    {
+      "word": "das",
+      "start": 1.985,
+      "end": 2.226,
+      "score": 0.903
+    },
+    {
+      "word": "Valdris-Profil",
+      "start": 2.246,
+      "end": 3.249,
+      "score": 0.85
+    },
+    {
+      "word": "ist",
+      "start": 3.289,
+      "end": 3.59,
+      "score": 0.949
+    },
+    {
+      "word": "vollständig.",
+      "start": 3.61,
+      "end": 4.873,
+      "score": 0.98
+    },
+    {
+      "word": "Die",
+      "start": 4.893,
+      "end": 5.014,
+      "score": 0.922
+    },
+    {
+      "word": "Konfrontation",
+      "start": 5.054,
+      "end": 6.137,
+      "score": 0.945
+    },
+    {
+      "word": "ist",
+      "start": 6.177,
+      "end": 6.458,
+      "score": 0.93
+    },
+    {
+      "word": "möglich.",
+      "start": 6.498,
+      "end": 6.899,
+      "score": 0.849
+    }
+  ]
+}

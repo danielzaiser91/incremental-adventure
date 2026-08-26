@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 6.975,
+      "text": "Sele hat das finale Dokument gefunden — Valdris' Name und Aufenthaltsort.",
+      "words": [
+        {
+          "word": "Sele",
+          "start": 0.501,
+          "end": 0.942,
+          "score": 0.93
+        },
+        {
+          "word": "hat",
+          "start": 0.982,
+          "end": 1.142,
+          "score": 0.854
+        },
+        {
+          "word": "das",
+          "start": 1.163,
+          "end": 1.343,
+          "score": 0.925
+        },
+        {
+          "word": "finale",
+          "start": 1.403,
+          "end": 2.024,
+          "score": 0.948
+        },
+        {
+          "word": "Dokument",
+          "start": 2.064,
+          "end": 2.546,
+          "score": 0.926
+        },
+        {
+          "word": "gefunden",
+          "start": 2.586,
+          "end": 3.808,
+          "score": 0.995
+        },
+        {
+          "word": "—",
+          "start": 3.828,
+          "end": 3.848,
+          "score": 0.999
+        },
+        {
+          "word": "Valdris'",
+          "start": 3.888,
+          "end": 4.49,
+          "score": 0.778
+        },
+        {
+          "word": "Name",
+          "start": 4.53,
+          "end": 5.011,
+          "score": 0.974
+        },
+        {
+          "word": "und",
+          "start": 5.031,
+          "end": 5.312,
+          "score": 0.861
+        },
+        {
+          "word": "Aufenthaltsort.",
+          "start": 5.352,
+          "end": 6.975,
+          "score": 0.85
+        }
+      ]
+    },
+    {
+      "start": 7.015,
+      "end": 8.839,
+      "text": "Sie braucht eine Nacht zum Übersetzen.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 7.015,
+          "end": 7.136,
+          "score": 0.825
+        },
+        {
+          "word": "braucht",
+          "start": 7.156,
+          "end": 7.597,
+          "score": 0.857
+        },
+        {
+          "word": "eine",
+          "start": 7.637,
+          "end": 7.877,
+          "score": 0.888
+        },
+        {
+          "word": "Nacht",
+          "start": 7.917,
+          "end": 8.138,
+          "score": 0.85
+        },
+        {
+          "word": "zum",
+          "start": 8.178,
+          "end": 8.358,
+          "score": 0.993
+        },
+        {
+          "word": "Übersetzen.",
+          "start": 8.398,
+          "end": 8.839,
+          "score": 0.914
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sele",
+      "start": 0.501,
+      "end": 0.942,
+      "score": 0.93
+    },
+    {
+      "word": "hat",
+      "start": 0.982,
+      "end": 1.142,
+      "score": 0.854
+    },
+    {
+      "word": "das",
+      "start": 1.163,
+      "end": 1.343,
+      "score": 0.925
+    },
+    {
+      "word": "finale",
+      "start": 1.403,
+      "end": 2.024,
+      "score": 0.948
+    },
+    {
+      "word": "Dokument",
+      "start": 2.064,
+      "end": 2.546,
+      "score": 0.926
+    },
+    {
+      "word": "gefunden",
+      "start": 2.586,
+      "end": 3.808,
+      "score": 0.995
+    },
+    {
+      "word": "—",
+      "start": 3.828,
+      "end": 3.848,
+      "score": 0.999
+    },
+    {
+      "word": "Valdris'",
+      "start": 3.888,
+      "end": 4.49,
+      "score": 0.778
+    },
+    {
+      "word": "Name",
+      "start": 4.53,
+      "end": 5.011,
+      "score": 0.974
+    },
+    {
+      "word": "und",
+      "start": 5.031,
+      "end": 5.312,
+      "score": 0.861
+    },
+    {
+      "word": "Aufenthaltsort.",
+      "start": 5.352,
+      "end": 6.975,
+      "score": 0.85
+    },
+    {
+      "word": "Sie",
+      "start": 7.015,
+      "end": 7.136,
+      "score": 0.825
+    },
+    {
+      "word": "braucht",
+      "start": 7.156,
+      "end": 7.597,
+      "score": 0.857
+    },
+    {
+      "word": "eine",
+      "start": 7.637,
+      "end": 7.877,
+      "score": 0.888
+    },
+    {
+      "word": "Nacht",
+      "start": 7.917,
+      "end": 8.138,
+      "score": 0.85
+    },
+    {
+      "word": "zum",
+      "start": 8.178,
+      "end": 8.358,
+      "score": 0.993
+    },
+    {
+      "word": "Übersetzen.",
+      "start": 8.398,
+      "end": 8.839,
+      "score": 0.914
+    }
+  ]
+}

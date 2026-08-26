@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.534,
+      "text": "Abgeschlossen — Valdris' Herkunft ist bekannt.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.481,
+          "end": 1.083,
+          "score": 0.84
+        },
+        {
+          "word": "—",
+          "start": 1.866,
+          "end": 1.886,
+          "score": 0.776
+        },
+        {
+          "word": "Valdris'",
+          "start": 1.926,
+          "end": 2.488,
+          "score": 0.821
+        },
+        {
+          "word": "Herkunft",
+          "start": 2.508,
+          "end": 3.13,
+          "score": 0.903
+        },
+        {
+          "word": "ist",
+          "start": 3.17,
+          "end": 3.37,
+          "score": 0.956
+        },
+        {
+          "word": "bekannt.",
+          "start": 3.391,
+          "end": 4.534,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 4.554,
+      "end": 6.059,
+      "text": "Sele schaut mich anders an.",
+      "words": [
+        {
+          "word": "Sele",
+          "start": 4.554,
+          "end": 4.895,
+          "score": 0.947
+        },
+        {
+          "word": "schaut",
+          "start": 4.935,
+          "end": 5.236,
+          "score": 0.867
+        },
+        {
+          "word": "mich",
+          "start": 5.256,
+          "end": 5.497,
+          "score": 0.819
+        },
+        {
+          "word": "anders",
+          "start": 5.537,
+          "end": 5.938,
+          "score": 0.944
+        },
+        {
+          "word": "an.",
+          "start": 5.979,
+          "end": 6.059,
+          "score": 0.908
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.481,
+      "end": 1.083,
+      "score": 0.84
+    },
+    {
+      "word": "—",
+      "start": 1.866,
+      "end": 1.886,
+      "score": 0.776
+    },
+    {
+      "word": "Valdris'",
+      "start": 1.926,
+      "end": 2.488,
+      "score": 0.821
+    },
+    {
+      "word": "Herkunft",
+      "start": 2.508,
+      "end": 3.13,
+      "score": 0.903
+    },
+    {
+      "word": "ist",
+      "start": 3.17,
+      "end": 3.37,
+      "score": 0.956
+    },
+    {
+      "word": "bekannt.",
+      "start": 3.391,
+      "end": 4.534,
+      "score": 0.979
+    },
+    {
+      "word": "Sele",
+      "start": 4.554,
+      "end": 4.895,
+      "score": 0.947
+    },
+    {
+      "word": "schaut",
+      "start": 4.935,
+      "end": 5.236,
+      "score": 0.867
+    },
+    {
+      "word": "mich",
+      "start": 5.256,
+      "end": 5.497,
+      "score": 0.819
+    },
+    {
+      "word": "anders",
+      "start": 5.537,
+      "end": 5.938,
+      "score": 0.944
+    },
+    {
+      "word": "an.",
+      "start": 5.979,
+      "end": 6.059,
+      "score": 0.908
+    }
+  ]
+}
