@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.442,
+      "end": 4.177,
+      "text": "Ich sollte das Stadttor betreten und die Stadt erkunden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.442,
+          "end": 0.663,
+          "score": 0.874
+        },
+        {
+          "word": "sollte",
+          "start": 0.683,
+          "end": 1.044,
+          "score": 0.839
+        },
+        {
+          "word": "das",
+          "start": 1.064,
+          "end": 1.325,
+          "score": 0.9
+        },
+        {
+          "word": "Stadttor",
+          "start": 1.366,
+          "end": 1.928,
+          "score": 0.925
+        },
+        {
+          "word": "betreten",
+          "start": 1.948,
+          "end": 2.832,
+          "score": 0.889
+        },
+        {
+          "word": "und",
+          "start": 2.872,
+          "end": 3.052,
+          "score": 0.87
+        },
+        {
+          "word": "die",
+          "start": 3.093,
+          "end": 3.253,
+          "score": 0.856
+        },
+        {
+          "word": "Stadt",
+          "start": 3.293,
+          "end": 3.615,
+          "score": 0.832
+        },
+        {
+          "word": "erkunden.",
+          "start": 3.655,
+          "end": 4.177,
+          "score": 0.796
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.442,
+      "end": 0.663,
+      "score": 0.874
+    },
+    {
+      "word": "sollte",
+      "start": 0.683,
+      "end": 1.044,
+      "score": 0.839
+    },
+    {
+      "word": "das",
+      "start": 1.064,
+      "end": 1.325,
+      "score": 0.9
+    },
+    {
+      "word": "Stadttor",
+      "start": 1.366,
+      "end": 1.928,
+      "score": 0.925
+    },
+    {
+      "word": "betreten",
+      "start": 1.948,
+      "end": 2.832,
+      "score": 0.889
+    },
+    {
+      "word": "und",
+      "start": 2.872,
+      "end": 3.052,
+      "score": 0.87
+    },
+    {
+      "word": "die",
+      "start": 3.093,
+      "end": 3.253,
+      "score": 0.856
+    },
+    {
+      "word": "Stadt",
+      "start": 3.293,
+      "end": 3.615,
+      "score": 0.832
+    },
+    {
+      "word": "erkunden.",
+      "start": 3.655,
+      "end": 4.177,
+      "score": 0.796
+    }
+  ]
+}

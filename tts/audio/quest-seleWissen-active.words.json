@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.542,
+      "end": 3.671,
+      "text": "Sele testet meine Alchemie-Kenntnisse.",
+      "words": [
+        {
+          "word": "Sele",
+          "start": 0.542,
+          "end": 1.043,
+          "score": 0.915
+        },
+        {
+          "word": "testet",
+          "start": 1.083,
+          "end": 1.545,
+          "score": 0.978
+        },
+        {
+          "word": "meine",
+          "start": 1.565,
+          "end": 1.806,
+          "score": 0.782
+        },
+        {
+          "word": "Alchemie-Kenntnisse.",
+          "start": 1.846,
+          "end": 3.671,
+          "score": 0.802
+        }
+      ]
+    },
+    {
+      "start": 3.732,
+      "end": 6.119,
+      "text": "Einen Aspekt auf Stufe 15 bringen.",
+      "words": [
+        {
+          "word": "Einen",
+          "start": 3.732,
+          "end": 4.113,
+          "score": 0.821
+        },
+        {
+          "word": "Aspekt",
+          "start": 4.173,
+          "end": 4.675,
+          "score": 0.908
+        },
+        {
+          "word": "auf",
+          "start": 4.715,
+          "end": 4.895,
+          "score": 0.879
+        },
+        {
+          "word": "Stufe",
+          "start": 4.935,
+          "end": 5.357,
+          "score": 0.994
+        },
+        {
+          "word": "15",
+          "start": 5.638,
+          "end": 5.838,
+          "score": 0.718
+        },
+        {
+          "word": "bringen.",
+          "start": 5.878,
+          "end": 6.119,
+          "score": 0.821
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sele",
+      "start": 0.542,
+      "end": 1.043,
+      "score": 0.915
+    },
+    {
+      "word": "testet",
+      "start": 1.083,
+      "end": 1.545,
+      "score": 0.978
+    },
+    {
+      "word": "meine",
+      "start": 1.565,
+      "end": 1.806,
+      "score": 0.782
+    },
+    {
+      "word": "Alchemie-Kenntnisse.",
+      "start": 1.846,
+      "end": 3.671,
+      "score": 0.802
+    },
+    {
+      "word": "Einen",
+      "start": 3.732,
+      "end": 4.113,
+      "score": 0.821
+    },
+    {
+      "word": "Aspekt",
+      "start": 4.173,
+      "end": 4.675,
+      "score": 0.908
+    },
+    {
+      "word": "auf",
+      "start": 4.715,
+      "end": 4.895,
+      "score": 0.879
+    },
+    {
+      "word": "Stufe",
+      "start": 4.935,
+      "end": 5.357,
+      "score": 0.994
+    },
+    {
+      "word": "15",
+      "start": 5.638,
+      "end": 5.838,
+      "score": 0.718
+    },
+    {
+      "word": "bringen.",
+      "start": 5.878,
+      "end": 6.119,
+      "score": 0.821
+    }
+  ]
+}

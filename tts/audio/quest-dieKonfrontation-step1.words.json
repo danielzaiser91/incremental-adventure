@@ -1,0 +1,92 @@
+{
+  "segments": [
+    {
+      "start": 0.463,
+      "end": 2.395,
+      "text": "Valdris hat sich gestellt.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 0.463,
+          "end": 0.885,
+          "score": 0.736
+        },
+        {
+          "word": "hat",
+          "start": 0.926,
+          "end": 1.067,
+          "score": 0.833
+        },
+        {
+          "word": "sich",
+          "start": 1.087,
+          "end": 1.268,
+          "score": 0.87
+        },
+        {
+          "word": "gestellt.",
+          "start": 1.308,
+          "end": 2.395,
+          "score": 0.936
+        }
+      ]
+    },
+    {
+      "start": 2.435,
+      "end": 2.918,
+      "text": "Er redet.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 2.435,
+          "end": 2.576,
+          "score": 0.932
+        },
+        {
+          "word": "redet.",
+          "start": 2.636,
+          "end": 2.918,
+          "score": 0.83
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Valdris",
+      "start": 0.463,
+      "end": 0.885,
+      "score": 0.736
+    },
+    {
+      "word": "hat",
+      "start": 0.926,
+      "end": 1.067,
+      "score": 0.833
+    },
+    {
+      "word": "sich",
+      "start": 1.087,
+      "end": 1.268,
+      "score": 0.87
+    },
+    {
+      "word": "gestellt.",
+      "start": 1.308,
+      "end": 2.395,
+      "score": 0.936
+    },
+    {
+      "word": "Er",
+      "start": 2.435,
+      "end": 2.576,
+      "score": 0.932
+    },
+    {
+      "word": "redet.",
+      "start": 2.636,
+      "end": 2.918,
+      "score": 0.83
+    }
+  ]
+}

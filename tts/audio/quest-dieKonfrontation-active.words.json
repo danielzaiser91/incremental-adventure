@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 3.612,
+      "text": "Alle drei Fraktionen stehen hinter mir.",
+      "words": [
+        {
+          "word": "Alle",
+          "start": 0.502,
+          "end": 0.783,
+          "score": 0.734
+        },
+        {
+          "word": "drei",
+          "start": 0.803,
+          "end": 1.124,
+          "score": 0.696
+        },
+        {
+          "word": "Fraktionen",
+          "start": 1.164,
+          "end": 1.866,
+          "score": 0.726
+        },
+        {
+          "word": "stehen",
+          "start": 1.906,
+          "end": 2.308,
+          "score": 0.851
+        },
+        {
+          "word": "hinter",
+          "start": 2.328,
+          "end": 2.609,
+          "score": 0.959
+        },
+        {
+          "word": "mir.",
+          "start": 2.649,
+          "end": 3.612,
+          "score": 0.985
+        }
+      ]
+    },
+    {
+      "start": 3.672,
+      "end": 5.539,
+      "text": "Es ist Zeit, Valdris zu stellen.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 3.672,
+          "end": 3.793,
+          "score": 0.796
+        },
+        {
+          "word": "ist",
+          "start": 3.833,
+          "end": 4.094,
+          "score": 0.92
+        },
+        {
+          "word": "Zeit,",
+          "start": 4.114,
+          "end": 4.555,
+          "score": 0.927
+        },
+        {
+          "word": "Valdris",
+          "start": 4.596,
+          "end": 5.057,
+          "score": 0.735
+        },
+        {
+          "word": "zu",
+          "start": 5.077,
+          "end": 5.198,
+          "score": 0.992
+        },
+        {
+          "word": "stellen.",
+          "start": 5.258,
+          "end": 5.539,
+          "score": 0.838
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alle",
+      "start": 0.502,
+      "end": 0.783,
+      "score": 0.734
+    },
+    {
+      "word": "drei",
+      "start": 0.803,
+      "end": 1.124,
+      "score": 0.696
+    },
+    {
+      "word": "Fraktionen",
+      "start": 1.164,
+      "end": 1.866,
+      "score": 0.726
+    },
+    {
+      "word": "stehen",
+      "start": 1.906,
+      "end": 2.308,
+      "score": 0.851
+    },
+    {
+      "word": "hinter",
+      "start": 2.328,
+      "end": 2.609,
+      "score": 0.959
+    },
+    {
+      "word": "mir.",
+      "start": 2.649,
+      "end": 3.612,
+      "score": 0.985
+    },
+    {
+      "word": "Es",
+      "start": 3.672,
+      "end": 3.793,
+      "score": 0.796
+    },
+    {
+      "word": "ist",
+      "start": 3.833,
+      "end": 4.094,
+      "score": 0.92
+    },
+    {
+      "word": "Zeit,",
+      "start": 4.114,
+      "end": 4.555,
+      "score": 0.927
+    },
+    {
+      "word": "Valdris",
+      "start": 4.596,
+      "end": 5.057,
+      "score": 0.735
+    },
+    {
+      "word": "zu",
+      "start": 5.077,
+      "end": 5.198,
+      "score": 0.992
+    },
+    {
+      "word": "stellen.",
+      "start": 5.258,
+      "end": 5.539,
+      "score": 0.838
+    }
+  ]
+}

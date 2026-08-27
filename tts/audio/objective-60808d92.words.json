@@ -1,0 +1,97 @@
+{
+  "segments": [
+    {
+      "start": 0.503,
+      "end": 2.537,
+      "text": "Mit dem Wirt in der Taverne sprechen.",
+      "words": [
+        {
+          "word": "Mit",
+          "start": 0.503,
+          "end": 0.644,
+          "score": 0.892
+        },
+        {
+          "word": "dem",
+          "start": 0.665,
+          "end": 0.906,
+          "score": 0.952
+        },
+        {
+          "word": "Wirt",
+          "start": 0.967,
+          "end": 1.309,
+          "score": 0.876
+        },
+        {
+          "word": "in",
+          "start": 1.349,
+          "end": 1.43,
+          "score": 0.99
+        },
+        {
+          "word": "der",
+          "start": 1.47,
+          "end": 1.571,
+          "score": 0.892
+        },
+        {
+          "word": "Taverne",
+          "start": 1.611,
+          "end": 2.175,
+          "score": 0.888
+        },
+        {
+          "word": "sprechen.",
+          "start": 2.195,
+          "end": 2.537,
+          "score": 0.87
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mit",
+      "start": 0.503,
+      "end": 0.644,
+      "score": 0.892
+    },
+    {
+      "word": "dem",
+      "start": 0.665,
+      "end": 0.906,
+      "score": 0.952
+    },
+    {
+      "word": "Wirt",
+      "start": 0.967,
+      "end": 1.309,
+      "score": 0.876
+    },
+    {
+      "word": "in",
+      "start": 1.349,
+      "end": 1.43,
+      "score": 0.99
+    },
+    {
+      "word": "der",
+      "start": 1.47,
+      "end": 1.571,
+      "score": 0.892
+    },
+    {
+      "word": "Taverne",
+      "start": 1.611,
+      "end": 2.175,
+      "score": 0.888
+    },
+    {
+      "word": "sprechen.",
+      "start": 2.195,
+      "end": 2.537,
+      "score": 0.87
+    }
+  ]
+}

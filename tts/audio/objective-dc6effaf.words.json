@@ -1,0 +1,97 @@
+{
+  "segments": [
+    {
+      "start": 0.362,
+      "end": 2.674,
+      "text": "Auf dem Feld arbeiten und Gold verdienen.",
+      "words": [
+        {
+          "word": "Auf",
+          "start": 0.362,
+          "end": 0.462,
+          "score": 0.903
+        },
+        {
+          "word": "dem",
+          "start": 0.503,
+          "end": 0.704,
+          "score": 0.982
+        },
+        {
+          "word": "Feld",
+          "start": 0.744,
+          "end": 1.005,
+          "score": 0.982
+        },
+        {
+          "word": "arbeiten",
+          "start": 1.065,
+          "end": 1.628,
+          "score": 0.986
+        },
+        {
+          "word": "und",
+          "start": 1.648,
+          "end": 1.93,
+          "score": 0.98
+        },
+        {
+          "word": "Gold",
+          "start": 1.95,
+          "end": 2.251,
+          "score": 0.946
+        },
+        {
+          "word": "verdienen.",
+          "start": 2.292,
+          "end": 2.674,
+          "score": 0.66
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Auf",
+      "start": 0.362,
+      "end": 0.462,
+      "score": 0.903
+    },
+    {
+      "word": "dem",
+      "start": 0.503,
+      "end": 0.704,
+      "score": 0.982
+    },
+    {
+      "word": "Feld",
+      "start": 0.744,
+      "end": 1.005,
+      "score": 0.982
+    },
+    {
+      "word": "arbeiten",
+      "start": 1.065,
+      "end": 1.628,
+      "score": 0.986
+    },
+    {
+      "word": "und",
+      "start": 1.648,
+      "end": 1.93,
+      "score": 0.98
+    },
+    {
+      "word": "Gold",
+      "start": 1.95,
+      "end": 2.251,
+      "score": 0.946
+    },
+    {
+      "word": "verdienen.",
+      "start": 2.292,
+      "end": 2.674,
+      "score": 0.66
+    }
+  ]
+}

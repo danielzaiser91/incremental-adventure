@@ -1439,12 +1439,57 @@
       "file": "quest-dieKonfrontation-unstarted.wav",
       "seconds": 1.8,
       "date": "2026-08-26T20:22:13.272Z"
+    },
+    "quest-seleWissen-active": {
+      "file": "quest-seleWissen-active.wav",
+      "seconds": 6.4,
+      "date": "2026-08-27T21:05:54.218Z"
+    },
+    "quest-dieKonfrontation-active": {
+      "file": "quest-dieKonfrontation-active.wav",
+      "seconds": 5.9,
+      "date": "2026-08-27T21:06:56.914Z"
+    },
+    "quest-dieKonfrontation-step1": {
+      "file": "quest-dieKonfrontation-step1.wav",
+      "seconds": 3.3,
+      "date": "2026-08-27T21:07:29.709Z"
+    },
+    "quest-dieKonfrontation-step2": {
+      "file": "quest-dieKonfrontation-step2.wav",
+      "seconds": 5.2,
+      "date": "2026-08-27T21:08:03.449Z"
+    },
+    "quest-dieKonfrontation-rewarded": {
+      "file": "quest-dieKonfrontation-rewarded.wav",
+      "seconds": 5.6,
+      "date": "2026-08-27T21:08:39.092Z"
+    },
+    "objective-7b63704f": {
+      "file": "objective-7b63704f.wav",
+      "seconds": 4.9,
+      "date": "2026-08-27T21:09:11.791Z"
+    },
+    "objective-8cf9a39f": {
+      "file": "objective-8cf9a39f.wav",
+      "seconds": 5.6,
+      "date": "2026-08-27T21:09:46.108Z"
+    },
+    "objective-cdab1363": {
+      "file": "objective-cdab1363.wav",
+      "seconds": 4.1,
+      "date": "2026-08-27T21:10:19.158Z"
+    },
+    "objective-60808d92": {
+      "file": "objective-60808d92.wav",
+      "seconds": 2.9,
+      "date": "2026-08-27T21:10:50.814Z"
+    },
+    "objective-dc6effaf": {
+      "file": "objective-dc6effaf.wav",
+      "seconds": 3.9,
+      "date": "2026-08-27T21:11:23.861Z"
     }
   },
-  "failed": {
-    "quest-seleWissen-active": {
-      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "date": "2026-08-26T20:18:47.023Z"
-    }
-  }
+  "failed": {}
 }

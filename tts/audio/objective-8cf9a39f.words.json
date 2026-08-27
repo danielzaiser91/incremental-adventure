@@ -1,0 +1,157 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 5.259,
+      "text": "Einen Job finden, Gold verdienen — das ist mein Plan in Treutheim.",
+      "words": [
+        {
+          "word": "Einen",
+          "start": 0.462,
+          "end": 0.723,
+          "score": 0.884
+        },
+        {
+          "word": "Job",
+          "start": 0.783,
+          "end": 1.004,
+          "score": 0.995
+        },
+        {
+          "word": "finden,",
+          "start": 1.064,
+          "end": 2.027,
+          "score": 0.907
+        },
+        {
+          "word": "Gold",
+          "start": 2.067,
+          "end": 2.368,
+          "score": 0.962
+        },
+        {
+          "word": "verdienen",
+          "start": 2.429,
+          "end": 3.432,
+          "score": 0.874
+        },
+        {
+          "word": "—",
+          "start": 3.452,
+          "end": 3.472,
+          "score": 0.989
+        },
+        {
+          "word": "das",
+          "start": 3.492,
+          "end": 3.733,
+          "score": 0.836
+        },
+        {
+          "word": "ist",
+          "start": 3.773,
+          "end": 3.994,
+          "score": 0.84
+        },
+        {
+          "word": "mein",
+          "start": 4.034,
+          "end": 4.235,
+          "score": 0.76
+        },
+        {
+          "word": "Plan",
+          "start": 4.275,
+          "end": 4.616,
+          "score": 0.93
+        },
+        {
+          "word": "in",
+          "start": 4.657,
+          "end": 4.757,
+          "score": 0.864
+        },
+        {
+          "word": "Treutheim.",
+          "start": 4.797,
+          "end": 5.259,
+          "score": 0.784
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Einen",
+      "start": 0.462,
+      "end": 0.723,
+      "score": 0.884
+    },
+    {
+      "word": "Job",
+      "start": 0.783,
+      "end": 1.004,
+      "score": 0.995
+    },
+    {
+      "word": "finden,",
+      "start": 1.064,
+      "end": 2.027,
+      "score": 0.907
+    },
+    {
+      "word": "Gold",
+      "start": 2.067,
+      "end": 2.368,
+      "score": 0.962
+    },
+    {
+      "word": "verdienen",
+      "start": 2.429,
+      "end": 3.432,
+      "score": 0.874
+    },
+    {
+      "word": "—",
+      "start": 3.452,
+      "end": 3.472,
+      "score": 0.989
+    },
+    {
+      "word": "das",
+      "start": 3.492,
+      "end": 3.733,
+      "score": 0.836
+    },
+    {
+      "word": "ist",
+      "start": 3.773,
+      "end": 3.994,
+      "score": 0.84
+    },
+    {
+      "word": "mein",
+      "start": 4.034,
+      "end": 4.235,
+      "score": 0.76
+    },
+    {
+      "word": "Plan",
+      "start": 4.275,
+      "end": 4.616,
+      "score": 0.93
+    },
+    {
+      "word": "in",
+      "start": 4.657,
+      "end": 4.757,
+      "score": 0.864
+    },
+    {
+      "word": "Treutheim.",
+      "start": 4.797,
+      "end": 5.259,
+      "score": 0.784
+    }
+  ]
+}

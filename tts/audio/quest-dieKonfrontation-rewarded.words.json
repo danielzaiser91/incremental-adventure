@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.642,
+      "end": 5.098,
+      "text": "Abgeschlossen — die Chroniken des vergessenen Weges sind vollständig.",
+      "words": [
+        {
+          "word": "Abgeschlossen",
+          "start": 0.642,
+          "end": 2.027,
+          "score": 0.846
+        },
+        {
+          "word": "—",
+          "start": 2.047,
+          "end": 2.067,
+          "score": 0.998
+        },
+        {
+          "word": "die",
+          "start": 2.088,
+          "end": 2.228,
+          "score": 0.906
+        },
+        {
+          "word": "Chroniken",
+          "start": 2.268,
+          "end": 2.79,
+          "score": 0.857
+        },
+        {
+          "word": "des",
+          "start": 2.81,
+          "end": 2.971,
+          "score": 0.977
+        },
+        {
+          "word": "vergessenen",
+          "start": 3.011,
+          "end": 3.593,
+          "score": 0.91
+        },
+        {
+          "word": "Weges",
+          "start": 3.633,
+          "end": 4.115,
+          "score": 0.959
+        },
+        {
+          "word": "sind",
+          "start": 4.155,
+          "end": 4.496,
+          "score": 0.979
+        },
+        {
+          "word": "vollständig.",
+          "start": 4.516,
+          "end": 5.098,
+          "score": 0.893
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Abgeschlossen",
+      "start": 0.642,
+      "end": 2.027,
+      "score": 0.846
+    },
+    {
+      "word": "—",
+      "start": 2.047,
+      "end": 2.067,
+      "score": 0.998
+    },
+    {
+      "word": "die",
+      "start": 2.088,
+      "end": 2.228,
+      "score": 0.906
+    },
+    {
+      "word": "Chroniken",
+      "start": 2.268,
+      "end": 2.79,
+      "score": 0.857
+    },
+    {
+      "word": "des",
+      "start": 2.81,
+      "end": 2.971,
+      "score": 0.977
+    },
+    {
+      "word": "vergessenen",
+      "start": 3.011,
+      "end": 3.593,
+      "score": 0.91
+    },
+    {
+      "word": "Weges",
+      "start": 3.633,
+      "end": 4.115,
+      "score": 0.959
+    },
+    {
+      "word": "sind",
+      "start": 4.155,
+      "end": 4.496,
+      "score": 0.979
+    },
+    {
+      "word": "vollständig.",
+      "start": 4.516,
+      "end": 5.098,
+      "score": 0.893
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 3.534,
+      "text": "Sein letztes Wort liegt hinter mir.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 0.462,
+          "end": 0.743,
+          "score": 0.519
+        },
+        {
+          "word": "letztes",
+          "start": 0.783,
+          "end": 1.164,
+          "score": 0.814
+        },
+        {
+          "word": "Wort",
+          "start": 1.205,
+          "end": 1.425,
+          "score": 0.97
+        },
+        {
+          "word": "liegt",
+          "start": 1.446,
+          "end": 1.686,
+          "score": 0.934
+        },
+        {
+          "word": "hinter",
+          "start": 1.727,
+          "end": 2.008,
+          "score": 0.907
+        },
+        {
+          "word": "mir.",
+          "start": 2.028,
+          "end": 3.534,
+          "score": 0.889
+        }
+      ]
+    },
+    {
+      "start": 3.574,
+      "end": 4.839,
+      "text": "Die Entscheidung ist gefallen.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.574,
+          "end": 3.694,
+          "score": 0.858
+        },
+        {
+          "word": "Entscheidung",
+          "start": 3.734,
+          "end": 4.216,
+          "score": 0.882
+        },
+        {
+          "word": "ist",
+          "start": 4.256,
+          "end": 4.437,
+          "score": 0.919
+        },
+        {
+          "word": "gefallen.",
+          "start": 4.457,
+          "end": 4.839,
+          "score": 0.83
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sein",
+      "start": 0.462,
+      "end": 0.743,
+      "score": 0.519
+    },
+    {
+      "word": "letztes",
+      "start": 0.783,
+      "end": 1.164,
+      "score": 0.814
+    },
+    {
+      "word": "Wort",
+      "start": 1.205,
+      "end": 1.425,
+      "score": 0.97
+    },
+    {
+      "word": "liegt",
+      "start": 1.446,
+      "end": 1.686,
+      "score": 0.934
+    },
+    {
+      "word": "hinter",
+      "start": 1.727,
+      "end": 2.008,
+      "score": 0.907
+    },
+    {
+      "word": "mir.",
+      "start": 2.028,
+      "end": 3.534,
+      "score": 0.889
+    },
+    {
+      "word": "Die",
+      "start": 3.574,
+      "end": 3.694,
+      "score": 0.858
+    },
+    {
+      "word": "Entscheidung",
+      "start": 3.734,
+      "end": 4.216,
+      "score": 0.882
+    },
+    {
+      "word": "ist",
+      "start": 4.256,
+      "end": 4.437,
+      "score": 0.919
+    },
+    {
+      "word": "gefallen.",
+      "start": 4.457,
+      "end": 4.839,
+      "score": 0.83
+    }
+  ]
+}

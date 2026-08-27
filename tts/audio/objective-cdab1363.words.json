@@ -1,0 +1,157 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 3.798,
+      "text": "Ich sollte zur Taverne — dort weiß man, wo man Arbeit findet.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.462,
+          "end": 0.583,
+          "score": 0.843
+        },
+        {
+          "word": "sollte",
+          "start": 0.603,
+          "end": 0.884,
+          "score": 0.922
+        },
+        {
+          "word": "zur",
+          "start": 0.924,
+          "end": 1.085,
+          "score": 0.731
+        },
+        {
+          "word": "Taverne",
+          "start": 1.125,
+          "end": 2.171,
+          "score": 0.939
+        },
+        {
+          "word": "—",
+          "start": 2.191,
+          "end": 2.211,
+          "score": 0.912
+        },
+        {
+          "word": "dort",
+          "start": 2.231,
+          "end": 2.472,
+          "score": 0.989
+        },
+        {
+          "word": "weiß",
+          "start": 2.512,
+          "end": 2.733,
+          "score": 0.926
+        },
+        {
+          "word": "man,",
+          "start": 2.773,
+          "end": 2.914,
+          "score": 0.912
+        },
+        {
+          "word": "wo",
+          "start": 2.954,
+          "end": 3.075,
+          "score": 0.893
+        },
+        {
+          "word": "man",
+          "start": 3.095,
+          "end": 3.236,
+          "score": 0.984
+        },
+        {
+          "word": "Arbeit",
+          "start": 3.276,
+          "end": 3.517,
+          "score": 0.836
+        },
+        {
+          "word": "findet.",
+          "start": 3.577,
+          "end": 3.798,
+          "score": 0.854
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.462,
+      "end": 0.583,
+      "score": 0.843
+    },
+    {
+      "word": "sollte",
+      "start": 0.603,
+      "end": 0.884,
+      "score": 0.922
+    },
+    {
+      "word": "zur",
+      "start": 0.924,
+      "end": 1.085,
+      "score": 0.731
+    },
+    {
+      "word": "Taverne",
+      "start": 1.125,
+      "end": 2.171,
+      "score": 0.939
+    },
+    {
+      "word": "—",
+      "start": 2.191,
+      "end": 2.211,
+      "score": 0.912
+    },
+    {
+      "word": "dort",
+      "start": 2.231,
+      "end": 2.472,
+      "score": 0.989
+    },
+    {
+      "word": "weiß",
+      "start": 2.512,
+      "end": 2.733,
+      "score": 0.926
+    },
+    {
+      "word": "man,",
+      "start": 2.773,
+      "end": 2.914,
+      "score": 0.912
+    },
+    {
+      "word": "wo",
+      "start": 2.954,
+      "end": 3.075,
+      "score": 0.893
+    },
+    {
+      "word": "man",
+      "start": 3.095,
+      "end": 3.236,
+      "score": 0.984
+    },
+    {
+      "word": "Arbeit",
+      "start": 3.276,
+      "end": 3.517,
+      "score": 0.836
+    },
+    {
+      "word": "findet.",
+      "start": 3.577,
+      "end": 3.798,
+      "score": 0.854
+    }
+  ]
+}
