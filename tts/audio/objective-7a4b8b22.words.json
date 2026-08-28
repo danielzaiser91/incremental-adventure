@@ -1,0 +1,322 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 2.324,
+      "text": "Dreimal.",
+      "words": [
+        {
+          "word": "Dreimal.",
+          "start": 0.541,
+          "end": 2.324,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 2.344,
+      "end": 8.233,
+      "text": "Jemand zieht im Hintergrund die Fäden und wartet, bis ich genug angehäuft habe.",
+      "words": [
+        {
+          "word": "Jemand",
+          "start": 2.344,
+          "end": 2.784,
+          "score": 0.942
+        },
+        {
+          "word": "zieht",
+          "start": 2.844,
+          "end": 3.085,
+          "score": 0.881
+        },
+        {
+          "word": "im",
+          "start": 3.125,
+          "end": 3.305,
+          "score": 0.818
+        },
+        {
+          "word": "Hintergrund",
+          "start": 3.345,
+          "end": 3.866,
+          "score": 0.873
+        },
+        {
+          "word": "die",
+          "start": 3.886,
+          "end": 4.066,
+          "score": 0.928
+        },
+        {
+          "word": "Fäden",
+          "start": 4.126,
+          "end": 4.847,
+          "score": 0.926
+        },
+        {
+          "word": "und",
+          "start": 4.868,
+          "end": 5.088,
+          "score": 0.862
+        },
+        {
+          "word": "wartet,",
+          "start": 5.128,
+          "end": 5.549,
+          "score": 0.901
+        },
+        {
+          "word": "bis",
+          "start": 5.569,
+          "end": 5.689,
+          "score": 0.873
+        },
+        {
+          "word": "ich",
+          "start": 5.729,
+          "end": 5.929,
+          "score": 0.94
+        },
+        {
+          "word": "genug",
+          "start": 5.949,
+          "end": 6.37,
+          "score": 0.906
+        },
+        {
+          "word": "angehäuft",
+          "start": 6.41,
+          "end": 6.951,
+          "score": 0.969
+        },
+        {
+          "word": "habe.",
+          "start": 6.971,
+          "end": 8.233,
+          "score": 0.971
+        }
+      ]
+    },
+    {
+      "start": 8.293,
+      "end": 11.958,
+      "text": "Ich weiß es — und mache trotzdem weiter.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 8.293,
+          "end": 8.493,
+          "score": 0.88
+        },
+        {
+          "word": "weiß",
+          "start": 8.533,
+          "end": 8.794,
+          "score": 0.848
+        },
+        {
+          "word": "es",
+          "start": 8.854,
+          "end": 8.934,
+          "score": 0.849
+        },
+        {
+          "word": "—",
+          "start": 9.655,
+          "end": 9.675,
+          "score": 0.843
+        },
+        {
+          "word": "und",
+          "start": 9.695,
+          "end": 9.895,
+          "score": 0.803
+        },
+        {
+          "word": "mache",
+          "start": 9.915,
+          "end": 10.216,
+          "score": 0.848
+        },
+        {
+          "word": "trotzdem",
+          "start": 10.236,
+          "end": 10.676,
+          "score": 0.93
+        },
+        {
+          "word": "weiter.",
+          "start": 10.737,
+          "end": 11.958,
+          "score": 0.831
+        }
+      ]
+    },
+    {
+      "start": 11.999,
+      "end": 12.459,
+      "text": "Noch mehr.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 11.999,
+          "end": 12.299,
+          "score": 0.946
+        },
+        {
+          "word": "mehr.",
+          "start": 12.319,
+          "end": 12.459,
+          "score": 0.733
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Dreimal.",
+      "start": 0.541,
+      "end": 2.324,
+      "score": 0.859
+    },
+    {
+      "word": "Jemand",
+      "start": 2.344,
+      "end": 2.784,
+      "score": 0.942
+    },
+    {
+      "word": "zieht",
+      "start": 2.844,
+      "end": 3.085,
+      "score": 0.881
+    },
+    {
+      "word": "im",
+      "start": 3.125,
+      "end": 3.305,
+      "score": 0.818
+    },
+    {
+      "word": "Hintergrund",
+      "start": 3.345,
+      "end": 3.866,
+      "score": 0.873
+    },
+    {
+      "word": "die",
+      "start": 3.886,
+      "end": 4.066,
+      "score": 0.928
+    },
+    {
+      "word": "Fäden",
+      "start": 4.126,
+      "end": 4.847,
+      "score": 0.926
+    },
+    {
+      "word": "und",
+      "start": 4.868,
+      "end": 5.088,
+      "score": 0.862
+    },
+    {
+      "word": "wartet,",
+      "start": 5.128,
+      "end": 5.549,
+      "score": 0.901
+    },
+    {
+      "word": "bis",
+      "start": 5.569,
+      "end": 5.689,
+      "score": 0.873
+    },
+    {
+      "word": "ich",
+      "start": 5.729,
+      "end": 5.929,
+      "score": 0.94
+    },
+    {
+      "word": "genug",
+      "start": 5.949,
+      "end": 6.37,
+      "score": 0.906
+    },
+    {
+      "word": "angehäuft",
+      "start": 6.41,
+      "end": 6.951,
+      "score": 0.969
+    },
+    {
+      "word": "habe.",
+      "start": 6.971,
+      "end": 8.233,
+      "score": 0.971
+    },
+    {
+      "word": "Ich",
+      "start": 8.293,
+      "end": 8.493,
+      "score": 0.88
+    },
+    {
+      "word": "weiß",
+      "start": 8.533,
+      "end": 8.794,
+      "score": 0.848
+    },
+    {
+      "word": "es",
+      "start": 8.854,
+      "end": 8.934,
+      "score": 0.849
+    },
+    {
+      "word": "—",
+      "start": 9.655,
+      "end": 9.675,
+      "score": 0.843
+    },
+    {
+      "word": "und",
+      "start": 9.695,
+      "end": 9.895,
+      "score": 0.803
+    },
+    {
+      "word": "mache",
+      "start": 9.915,
+      "end": 10.216,
+      "score": 0.848
+    },
+    {
+      "word": "trotzdem",
+      "start": 10.236,
+      "end": 10.676,
+      "score": 0.93
+    },
+    {
+      "word": "weiter.",
+      "start": 10.737,
+      "end": 11.958,
+      "score": 0.831
+    },
+    {
+      "word": "Noch",
+      "start": 11.999,
+      "end": 12.299,
+      "score": 0.946
+    },
+    {
+      "word": "mehr.",
+      "start": 12.319,
+      "end": 12.459,
+      "score": 0.733
+    }
+  ]
+}

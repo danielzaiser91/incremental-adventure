@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 3.753,
+      "text": "Das Jagdgebiet südlich der Stadt wartet.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.421,
+          "end": 0.622,
+          "score": 0.875
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 0.662,
+          "end": 1.425,
+          "score": 0.872
+        },
+        {
+          "word": "südlich",
+          "start": 1.465,
+          "end": 1.927,
+          "score": 0.844
+        },
+        {
+          "word": "der",
+          "start": 1.947,
+          "end": 2.107,
+          "score": 0.936
+        },
+        {
+          "word": "Stadt",
+          "start": 2.147,
+          "end": 2.529,
+          "score": 0.897
+        },
+        {
+          "word": "wartet.",
+          "start": 2.569,
+          "end": 3.753,
+          "score": 0.977
+        }
+      ]
+    },
+    {
+      "start": 3.793,
+      "end": 5.579,
+      "text": "Ich werde zeigen, was ich drauf habe.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.793,
+          "end": 3.933,
+          "score": 0.8
+        },
+        {
+          "word": "werde",
+          "start": 3.973,
+          "end": 4.335,
+          "score": 0.981
+        },
+        {
+          "word": "zeigen,",
+          "start": 4.375,
+          "end": 4.736,
+          "score": 0.873
+        },
+        {
+          "word": "was",
+          "start": 4.756,
+          "end": 4.876,
+          "score": 0.918
+        },
+        {
+          "word": "ich",
+          "start": 4.917,
+          "end": 5.057,
+          "score": 0.848
+        },
+        {
+          "word": "drauf",
+          "start": 5.077,
+          "end": 5.338,
+          "score": 0.805
+        },
+        {
+          "word": "habe.",
+          "start": 5.378,
+          "end": 5.579,
+          "score": 0.797
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.421,
+      "end": 0.622,
+      "score": 0.875
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 0.662,
+      "end": 1.425,
+      "score": 0.872
+    },
+    {
+      "word": "südlich",
+      "start": 1.465,
+      "end": 1.927,
+      "score": 0.844
+    },
+    {
+      "word": "der",
+      "start": 1.947,
+      "end": 2.107,
+      "score": 0.936
+    },
+    {
+      "word": "Stadt",
+      "start": 2.147,
+      "end": 2.529,
+      "score": 0.897
+    },
+    {
+      "word": "wartet.",
+      "start": 2.569,
+      "end": 3.753,
+      "score": 0.977
+    },
+    {
+      "word": "Ich",
+      "start": 3.793,
+      "end": 3.933,
+      "score": 0.8
+    },
+    {
+      "word": "werde",
+      "start": 3.973,
+      "end": 4.335,
+      "score": 0.981
+    },
+    {
+      "word": "zeigen,",
+      "start": 4.375,
+      "end": 4.736,
+      "score": 0.873
+    },
+    {
+      "word": "was",
+      "start": 4.756,
+      "end": 4.876,
+      "score": 0.918
+    },
+    {
+      "word": "ich",
+      "start": 4.917,
+      "end": 5.057,
+      "score": 0.848
+    },
+    {
+      "word": "drauf",
+      "start": 5.077,
+      "end": 5.338,
+      "score": 0.805
+    },
+    {
+      "word": "habe.",
+      "start": 5.378,
+      "end": 5.579,
+      "score": 0.797
+    }
+  ]
+}

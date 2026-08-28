@@ -1,0 +1,387 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 5.87,
+      "text": "Ausgeraubt und wieder bei Null — aber das Erlebnis steckt jetzt in meinen Händen.",
+      "words": [
+        {
+          "word": "Ausgeraubt",
+          "start": 0.501,
+          "end": 1.182,
+          "score": 0.873
+        },
+        {
+          "word": "und",
+          "start": 1.222,
+          "end": 1.483,
+          "score": 0.895
+        },
+        {
+          "word": "wieder",
+          "start": 1.503,
+          "end": 1.703,
+          "score": 0.982
+        },
+        {
+          "word": "bei",
+          "start": 1.743,
+          "end": 1.943,
+          "score": 0.927
+        },
+        {
+          "word": "Null",
+          "start": 1.983,
+          "end": 2.825,
+          "score": 0.942
+        },
+        {
+          "word": "—",
+          "start": 2.845,
+          "end": 2.865,
+          "score": 0.964
+        },
+        {
+          "word": "aber",
+          "start": 2.885,
+          "end": 3.045,
+          "score": 0.932
+        },
+        {
+          "word": "das",
+          "start": 3.065,
+          "end": 3.226,
+          "score": 0.874
+        },
+        {
+          "word": "Erlebnis",
+          "start": 3.266,
+          "end": 3.726,
+          "score": 0.912
+        },
+        {
+          "word": "steckt",
+          "start": 3.766,
+          "end": 4.087,
+          "score": 0.804
+        },
+        {
+          "word": "jetzt",
+          "start": 4.127,
+          "end": 4.368,
+          "score": 0.868
+        },
+        {
+          "word": "in",
+          "start": 4.408,
+          "end": 4.488,
+          "score": 0.996
+        },
+        {
+          "word": "meinen",
+          "start": 4.528,
+          "end": 4.788,
+          "score": 0.865
+        },
+        {
+          "word": "Händen.",
+          "start": 4.828,
+          "end": 5.87,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 5.89,
+      "end": 8.996,
+      "text": "Die Arbeit fühlt sich leichter an als beim ersten Mal.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 5.89,
+          "end": 6.03,
+          "score": 0.867
+        },
+        {
+          "word": "Arbeit",
+          "start": 6.07,
+          "end": 6.351,
+          "score": 0.946
+        },
+        {
+          "word": "fühlt",
+          "start": 6.391,
+          "end": 6.591,
+          "score": 0.763
+        },
+        {
+          "word": "sich",
+          "start": 6.611,
+          "end": 6.812,
+          "score": 0.842
+        },
+        {
+          "word": "leichter",
+          "start": 6.832,
+          "end": 7.112,
+          "score": 0.944
+        },
+        {
+          "word": "an",
+          "start": 7.152,
+          "end": 7.273,
+          "score": 0.911
+        },
+        {
+          "word": "als",
+          "start": 7.293,
+          "end": 7.433,
+          "score": 0.883
+        },
+        {
+          "word": "beim",
+          "start": 7.453,
+          "end": 7.673,
+          "score": 0.918
+        },
+        {
+          "word": "ersten",
+          "start": 7.713,
+          "end": 7.954,
+          "score": 0.957
+        },
+        {
+          "word": "Mal.",
+          "start": 8.014,
+          "end": 8.996,
+          "score": 0.97
+        }
+      ]
+    },
+    {
+      "start": 9.016,
+      "end": 11.179,
+      "text": "Weitermachen und das nächste Polster aufbauen.",
+      "words": [
+        {
+          "word": "Weitermachen",
+          "start": 9.016,
+          "end": 9.777,
+          "score": 0.939
+        },
+        {
+          "word": "und",
+          "start": 9.797,
+          "end": 9.917,
+          "score": 0.867
+        },
+        {
+          "word": "das",
+          "start": 9.957,
+          "end": 10.097,
+          "score": 0.909
+        },
+        {
+          "word": "nächste",
+          "start": 10.137,
+          "end": 10.418,
+          "score": 0.816
+        },
+        {
+          "word": "Polster",
+          "start": 10.458,
+          "end": 10.799,
+          "score": 0.818
+        },
+        {
+          "word": "aufbauen.",
+          "start": 10.839,
+          "end": 11.179,
+          "score": 0.916
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ausgeraubt",
+      "start": 0.501,
+      "end": 1.182,
+      "score": 0.873
+    },
+    {
+      "word": "und",
+      "start": 1.222,
+      "end": 1.483,
+      "score": 0.895
+    },
+    {
+      "word": "wieder",
+      "start": 1.503,
+      "end": 1.703,
+      "score": 0.982
+    },
+    {
+      "word": "bei",
+      "start": 1.743,
+      "end": 1.943,
+      "score": 0.927
+    },
+    {
+      "word": "Null",
+      "start": 1.983,
+      "end": 2.825,
+      "score": 0.942
+    },
+    {
+      "word": "—",
+      "start": 2.845,
+      "end": 2.865,
+      "score": 0.964
+    },
+    {
+      "word": "aber",
+      "start": 2.885,
+      "end": 3.045,
+      "score": 0.932
+    },
+    {
+      "word": "das",
+      "start": 3.065,
+      "end": 3.226,
+      "score": 0.874
+    },
+    {
+      "word": "Erlebnis",
+      "start": 3.266,
+      "end": 3.726,
+      "score": 0.912
+    },
+    {
+      "word": "steckt",
+      "start": 3.766,
+      "end": 4.087,
+      "score": 0.804
+    },
+    {
+      "word": "jetzt",
+      "start": 4.127,
+      "end": 4.368,
+      "score": 0.868
+    },
+    {
+      "word": "in",
+      "start": 4.408,
+      "end": 4.488,
+      "score": 0.996
+    },
+    {
+      "word": "meinen",
+      "start": 4.528,
+      "end": 4.788,
+      "score": 0.865
+    },
+    {
+      "word": "Händen.",
+      "start": 4.828,
+      "end": 5.87,
+      "score": 0.958
+    },
+    {
+      "word": "Die",
+      "start": 5.89,
+      "end": 6.03,
+      "score": 0.867
+    },
+    {
+      "word": "Arbeit",
+      "start": 6.07,
+      "end": 6.351,
+      "score": 0.946
+    },
+    {
+      "word": "fühlt",
+      "start": 6.391,
+      "end": 6.591,
+      "score": 0.763
+    },
+    {
+      "word": "sich",
+      "start": 6.611,
+      "end": 6.812,
+      "score": 0.842
+    },
+    {
+      "word": "leichter",
+      "start": 6.832,
+      "end": 7.112,
+      "score": 0.944
+    },
+    {
+      "word": "an",
+      "start": 7.152,
+      "end": 7.273,
+      "score": 0.911
+    },
+    {
+      "word": "als",
+      "start": 7.293,
+      "end": 7.433,
+      "score": 0.883
+    },
+    {
+      "word": "beim",
+      "start": 7.453,
+      "end": 7.673,
+      "score": 0.918
+    },
+    {
+      "word": "ersten",
+      "start": 7.713,
+      "end": 7.954,
+      "score": 0.957
+    },
+    {
+      "word": "Mal.",
+      "start": 8.014,
+      "end": 8.996,
+      "score": 0.97
+    },
+    {
+      "word": "Weitermachen",
+      "start": 9.016,
+      "end": 9.777,
+      "score": 0.939
+    },
+    {
+      "word": "und",
+      "start": 9.797,
+      "end": 9.917,
+      "score": 0.867
+    },
+    {
+      "word": "das",
+      "start": 9.957,
+      "end": 10.097,
+      "score": 0.909
+    },
+    {
+      "word": "nächste",
+      "start": 10.137,
+      "end": 10.418,
+      "score": 0.816
+    },
+    {
+      "word": "Polster",
+      "start": 10.458,
+      "end": 10.799,
+      "score": 0.818
+    },
+    {
+      "word": "aufbauen.",
+      "start": 10.839,
+      "end": 11.179,
+      "score": 0.916
+    }
+  ]
+}

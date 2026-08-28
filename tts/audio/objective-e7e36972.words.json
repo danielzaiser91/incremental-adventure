@@ -1,0 +1,296 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 6.174,
+      "text": "Im Jagdgebiet werde ich stärker — und die Wahrheit über den Raub werde ich auch herausfinden.",
+      "words": [
+        {
+          "word": "Im",
+          "start": 0.421,
+          "end": 0.541,
+          "score": 0.86
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 0.561,
+          "end": 1.163,
+          "score": 0.869
+        },
+        {
+          "word": "werde",
+          "start": 1.203,
+          "end": 1.343,
+          "score": 0.931
+        },
+        {
+          "word": "ich",
+          "start": 1.363,
+          "end": 1.544,
+          "score": 0.943
+        },
+        {
+          "word": "stärker",
+          "start": 1.584,
+          "end": 1.924,
+          "score": 0.988
+        },
+        {
+          "word": "—",
+          "start": 2.546,
+          "end": 2.566,
+          "score": 0.491
+        },
+        {
+          "word": "und",
+          "start": 2.586,
+          "end": 2.807,
+          "score": 0.945
+        },
+        {
+          "word": "die",
+          "start": 2.827,
+          "end": 3.007,
+          "score": 0.642
+        },
+        {
+          "word": "Wahrheit",
+          "start": 3.027,
+          "end": 3.428,
+          "score": 0.853
+        },
+        {
+          "word": "über",
+          "start": 3.448,
+          "end": 3.568,
+          "score": 0.998
+        },
+        {
+          "word": "den",
+          "start": 3.608,
+          "end": 3.729,
+          "score": 0.947
+        },
+        {
+          "word": "Raub",
+          "start": 3.809,
+          "end": 4.029,
+          "score": 0.872
+        },
+        {
+          "word": "werde",
+          "start": 4.049,
+          "end": 4.21,
+          "score": 0.587
+        },
+        {
+          "word": "ich",
+          "start": 4.23,
+          "end": 4.39,
+          "score": 0.635
+        },
+        {
+          "word": "auch",
+          "start": 4.43,
+          "end": 4.611,
+          "score": 0.948
+        },
+        {
+          "word": "herausfinden.",
+          "start": 4.631,
+          "end": 6.174,
+          "score": 0.933
+        }
+      ]
+    },
+    {
+      "start": 6.235,
+      "end": 8.159,
+      "text": "Ich sollte Korbin in der Taverne ansprechen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.235,
+          "end": 6.395,
+          "score": 0.892
+        },
+        {
+          "word": "sollte",
+          "start": 6.415,
+          "end": 6.716,
+          "score": 0.97
+        },
+        {
+          "word": "Korbin",
+          "start": 6.756,
+          "end": 7.077,
+          "score": 0.658
+        },
+        {
+          "word": "in",
+          "start": 7.097,
+          "end": 7.157,
+          "score": 0.992
+        },
+        {
+          "word": "der",
+          "start": 7.197,
+          "end": 7.297,
+          "score": 0.835
+        },
+        {
+          "word": "Taverne",
+          "start": 7.317,
+          "end": 7.718,
+          "score": 0.85
+        },
+        {
+          "word": "ansprechen.",
+          "start": 7.758,
+          "end": 8.159,
+          "score": 0.878
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Im",
+      "start": 0.421,
+      "end": 0.541,
+      "score": 0.86
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 0.561,
+      "end": 1.163,
+      "score": 0.869
+    },
+    {
+      "word": "werde",
+      "start": 1.203,
+      "end": 1.343,
+      "score": 0.931
+    },
+    {
+      "word": "ich",
+      "start": 1.363,
+      "end": 1.544,
+      "score": 0.943
+    },
+    {
+      "word": "stärker",
+      "start": 1.584,
+      "end": 1.924,
+      "score": 0.988
+    },
+    {
+      "word": "—",
+      "start": 2.546,
+      "end": 2.566,
+      "score": 0.491
+    },
+    {
+      "word": "und",
+      "start": 2.586,
+      "end": 2.807,
+      "score": 0.945
+    },
+    {
+      "word": "die",
+      "start": 2.827,
+      "end": 3.007,
+      "score": 0.642
+    },
+    {
+      "word": "Wahrheit",
+      "start": 3.027,
+      "end": 3.428,
+      "score": 0.853
+    },
+    {
+      "word": "über",
+      "start": 3.448,
+      "end": 3.568,
+      "score": 0.998
+    },
+    {
+      "word": "den",
+      "start": 3.608,
+      "end": 3.729,
+      "score": 0.947
+    },
+    {
+      "word": "Raub",
+      "start": 3.809,
+      "end": 4.029,
+      "score": 0.872
+    },
+    {
+      "word": "werde",
+      "start": 4.049,
+      "end": 4.21,
+      "score": 0.587
+    },
+    {
+      "word": "ich",
+      "start": 4.23,
+      "end": 4.39,
+      "score": 0.635
+    },
+    {
+      "word": "auch",
+      "start": 4.43,
+      "end": 4.611,
+      "score": 0.948
+    },
+    {
+      "word": "herausfinden.",
+      "start": 4.631,
+      "end": 6.174,
+      "score": 0.933
+    },
+    {
+      "word": "Ich",
+      "start": 6.235,
+      "end": 6.395,
+      "score": 0.892
+    },
+    {
+      "word": "sollte",
+      "start": 6.415,
+      "end": 6.716,
+      "score": 0.97
+    },
+    {
+      "word": "Korbin",
+      "start": 6.756,
+      "end": 7.077,
+      "score": 0.658
+    },
+    {
+      "word": "in",
+      "start": 7.097,
+      "end": 7.157,
+      "score": 0.992
+    },
+    {
+      "word": "der",
+      "start": 7.197,
+      "end": 7.297,
+      "score": 0.835
+    },
+    {
+      "word": "Taverne",
+      "start": 7.317,
+      "end": 7.718,
+      "score": 0.85
+    },
+    {
+      "word": "ansprechen.",
+      "start": 7.758,
+      "end": 8.159,
+      "score": 0.878
+    }
+  ]
+}

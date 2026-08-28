@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 4.055,
+      "text": "Die Spur des Diebs führt ins Jagdgebiet.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.401,
+          "end": 0.562,
+          "score": 0.804
+        },
+        {
+          "word": "Spur",
+          "start": 0.622,
+          "end": 1.024,
+          "score": 0.897
+        },
+        {
+          "word": "des",
+          "start": 1.044,
+          "end": 1.244,
+          "score": 0.996
+        },
+        {
+          "word": "Diebs",
+          "start": 1.305,
+          "end": 2.047,
+          "score": 0.743
+        },
+        {
+          "word": "führt",
+          "start": 2.108,
+          "end": 2.328,
+          "score": 0.766
+        },
+        {
+          "word": "ins",
+          "start": 2.369,
+          "end": 2.609,
+          "score": 0.867
+        },
+        {
+          "word": "Jagdgebiet.",
+          "start": 2.65,
+          "end": 4.055,
+          "score": 0.908
+        }
+      ]
+    },
+    {
+      "start": 4.075,
+      "end": 5.239,
+      "text": "Ich halte die Augen offen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 4.075,
+          "end": 4.195,
+          "score": 0.774
+        },
+        {
+          "word": "halte",
+          "start": 4.235,
+          "end": 4.496,
+          "score": 0.968
+        },
+        {
+          "word": "die",
+          "start": 4.536,
+          "end": 4.697,
+          "score": 0.889
+        },
+        {
+          "word": "Augen",
+          "start": 4.717,
+          "end": 4.998,
+          "score": 0.93
+        },
+        {
+          "word": "offen.",
+          "start": 5.038,
+          "end": 5.239,
+          "score": 0.907
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.401,
+      "end": 0.562,
+      "score": 0.804
+    },
+    {
+      "word": "Spur",
+      "start": 0.622,
+      "end": 1.024,
+      "score": 0.897
+    },
+    {
+      "word": "des",
+      "start": 1.044,
+      "end": 1.244,
+      "score": 0.996
+    },
+    {
+      "word": "Diebs",
+      "start": 1.305,
+      "end": 2.047,
+      "score": 0.743
+    },
+    {
+      "word": "führt",
+      "start": 2.108,
+      "end": 2.328,
+      "score": 0.766
+    },
+    {
+      "word": "ins",
+      "start": 2.369,
+      "end": 2.609,
+      "score": 0.867
+    },
+    {
+      "word": "Jagdgebiet.",
+      "start": 2.65,
+      "end": 4.055,
+      "score": 0.908
+    },
+    {
+      "word": "Ich",
+      "start": 4.075,
+      "end": 4.195,
+      "score": 0.774
+    },
+    {
+      "word": "halte",
+      "start": 4.235,
+      "end": 4.496,
+      "score": 0.968
+    },
+    {
+      "word": "die",
+      "start": 4.536,
+      "end": 4.697,
+      "score": 0.889
+    },
+    {
+      "word": "Augen",
+      "start": 4.717,
+      "end": 4.998,
+      "score": 0.93
+    },
+    {
+      "word": "offen.",
+      "start": 5.038,
+      "end": 5.239,
+      "score": 0.907
+    }
+  ]
+}

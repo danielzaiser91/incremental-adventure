@@ -1,0 +1,334 @@
+{
+  "segments": [
+    {
+      "start": 0.701,
+      "end": 2.324,
+      "text": "Schon wieder.",
+      "words": [
+        {
+          "word": "Schon",
+          "start": 0.701,
+          "end": 0.982,
+          "score": 0.73
+        },
+        {
+          "word": "wieder.",
+          "start": 1.022,
+          "end": 2.324,
+          "score": 0.837
+        }
+      ]
+    },
+    {
+      "start": 2.364,
+      "end": 6.03,
+      "text": "Das ist kein Zufall mehr — ich weiß es.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 2.364,
+          "end": 2.524,
+          "score": 0.967
+        },
+        {
+          "word": "ist",
+          "start": 2.564,
+          "end": 2.824,
+          "score": 0.982
+        },
+        {
+          "word": "kein",
+          "start": 2.845,
+          "end": 3.105,
+          "score": 0.832
+        },
+        {
+          "word": "Zufall",
+          "start": 3.145,
+          "end": 3.486,
+          "score": 0.988
+        },
+        {
+          "word": "mehr",
+          "start": 3.526,
+          "end": 3.666,
+          "score": 0.932
+        },
+        {
+          "word": "—",
+          "start": 4.066,
+          "end": 4.086,
+          "score": 0.954
+        },
+        {
+          "word": "ich",
+          "start": 4.127,
+          "end": 4.347,
+          "score": 0.931
+        },
+        {
+          "word": "weiß",
+          "start": 4.387,
+          "end": 4.607,
+          "score": 0.975
+        },
+        {
+          "word": "es.",
+          "start": 4.667,
+          "end": 6.03,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 6.07,
+      "end": 10.176,
+      "text": "Ich bin wütend, aber aufgeben kommt nicht infrage.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.07,
+          "end": 6.23,
+          "score": 0.91
+        },
+        {
+          "word": "bin",
+          "start": 6.27,
+          "end": 6.51,
+          "score": 0.979
+        },
+        {
+          "word": "wütend,",
+          "start": 6.55,
+          "end": 7.572,
+          "score": 0.905
+        },
+        {
+          "word": "aber",
+          "start": 7.592,
+          "end": 7.933,
+          "score": 0.954
+        },
+        {
+          "word": "aufgeben",
+          "start": 7.953,
+          "end": 8.453,
+          "score": 0.95
+        },
+        {
+          "word": "kommt",
+          "start": 8.473,
+          "end": 8.694,
+          "score": 0.926
+        },
+        {
+          "word": "nicht",
+          "start": 8.734,
+          "end": 8.894,
+          "score": 0.891
+        },
+        {
+          "word": "infrage.",
+          "start": 8.934,
+          "end": 10.176,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 10.216,
+      "end": 12.299,
+      "text": "Noch mehr zusammentragen, schneller als zuvor.",
+      "words": [
+        {
+          "word": "Noch",
+          "start": 10.216,
+          "end": 10.376,
+          "score": 0.992
+        },
+        {
+          "word": "mehr",
+          "start": 10.416,
+          "end": 10.617,
+          "score": 0.914
+        },
+        {
+          "word": "zusammentragen,",
+          "start": 10.637,
+          "end": 11.458,
+          "score": 0.892
+        },
+        {
+          "word": "schneller",
+          "start": 11.478,
+          "end": 11.779,
+          "score": 0.9
+        },
+        {
+          "word": "als",
+          "start": 11.819,
+          "end": 12.019,
+          "score": 0.978
+        },
+        {
+          "word": "zuvor.",
+          "start": 12.059,
+          "end": 12.299,
+          "score": 0.825
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Schon",
+      "start": 0.701,
+      "end": 0.982,
+      "score": 0.73
+    },
+    {
+      "word": "wieder.",
+      "start": 1.022,
+      "end": 2.324,
+      "score": 0.837
+    },
+    {
+      "word": "Das",
+      "start": 2.364,
+      "end": 2.524,
+      "score": 0.967
+    },
+    {
+      "word": "ist",
+      "start": 2.564,
+      "end": 2.824,
+      "score": 0.982
+    },
+    {
+      "word": "kein",
+      "start": 2.845,
+      "end": 3.105,
+      "score": 0.832
+    },
+    {
+      "word": "Zufall",
+      "start": 3.145,
+      "end": 3.486,
+      "score": 0.988
+    },
+    {
+      "word": "mehr",
+      "start": 3.526,
+      "end": 3.666,
+      "score": 0.932
+    },
+    {
+      "word": "—",
+      "start": 4.066,
+      "end": 4.086,
+      "score": 0.954
+    },
+    {
+      "word": "ich",
+      "start": 4.127,
+      "end": 4.347,
+      "score": 0.931
+    },
+    {
+      "word": "weiß",
+      "start": 4.387,
+      "end": 4.607,
+      "score": 0.975
+    },
+    {
+      "word": "es.",
+      "start": 4.667,
+      "end": 6.03,
+      "score": 0.913
+    },
+    {
+      "word": "Ich",
+      "start": 6.07,
+      "end": 6.23,
+      "score": 0.91
+    },
+    {
+      "word": "bin",
+      "start": 6.27,
+      "end": 6.51,
+      "score": 0.979
+    },
+    {
+      "word": "wütend,",
+      "start": 6.55,
+      "end": 7.572,
+      "score": 0.905
+    },
+    {
+      "word": "aber",
+      "start": 7.592,
+      "end": 7.933,
+      "score": 0.954
+    },
+    {
+      "word": "aufgeben",
+      "start": 7.953,
+      "end": 8.453,
+      "score": 0.95
+    },
+    {
+      "word": "kommt",
+      "start": 8.473,
+      "end": 8.694,
+      "score": 0.926
+    },
+    {
+      "word": "nicht",
+      "start": 8.734,
+      "end": 8.894,
+      "score": 0.891
+    },
+    {
+      "word": "infrage.",
+      "start": 8.934,
+      "end": 10.176,
+      "score": 0.932
+    },
+    {
+      "word": "Noch",
+      "start": 10.216,
+      "end": 10.376,
+      "score": 0.992
+    },
+    {
+      "word": "mehr",
+      "start": 10.416,
+      "end": 10.617,
+      "score": 0.914
+    },
+    {
+      "word": "zusammentragen,",
+      "start": 10.637,
+      "end": 11.458,
+      "score": 0.892
+    },
+    {
+      "word": "schneller",
+      "start": 11.478,
+      "end": 11.779,
+      "score": 0.9
+    },
+    {
+      "word": "als",
+      "start": 11.819,
+      "end": 12.019,
+      "score": 0.978
+    },
+    {
+      "word": "zuvor.",
+      "start": 12.059,
+      "end": 12.299,
+      "score": 0.825
+    }
+  ]
+}

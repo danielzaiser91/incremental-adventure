@@ -1,0 +1,332 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 4.647,
+      "text": "Mein Gold ist fort — bewusst zurückgelassen.",
+      "words": [
+        {
+          "word": "Mein",
+          "start": 0.441,
+          "end": 0.701,
+          "score": 0.788
+        },
+        {
+          "word": "Gold",
+          "start": 0.721,
+          "end": 1.002,
+          "score": 0.963
+        },
+        {
+          "word": "ist",
+          "start": 1.042,
+          "end": 1.282,
+          "score": 0.962
+        },
+        {
+          "word": "fort",
+          "start": 1.342,
+          "end": 2.444,
+          "score": 0.961
+        },
+        {
+          "word": "—",
+          "start": 2.464,
+          "end": 2.484,
+          "score": 0.988
+        },
+        {
+          "word": "bewusst",
+          "start": 2.504,
+          "end": 3.005,
+          "score": 0.981
+        },
+        {
+          "word": "zurückgelassen.",
+          "start": 3.045,
+          "end": 4.647,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 4.668,
+      "end": 12.079,
+      "text": "Die Rückschläge haben mich verändert; jetzt muss ich daraus echte Stärke machen und den Weg zur Abenteurergilde ernsthaft angehen.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 4.668,
+          "end": 4.828,
+          "score": 0.936
+        },
+        {
+          "word": "Rückschläge",
+          "start": 4.868,
+          "end": 5.309,
+          "score": 0.932
+        },
+        {
+          "word": "haben",
+          "start": 5.349,
+          "end": 5.529,
+          "score": 0.96
+        },
+        {
+          "word": "mich",
+          "start": 5.549,
+          "end": 5.709,
+          "score": 0.841
+        },
+        {
+          "word": "verändert;",
+          "start": 5.749,
+          "end": 6.791,
+          "score": 0.953
+        },
+        {
+          "word": "jetzt",
+          "start": 6.811,
+          "end": 7.131,
+          "score": 0.834
+        },
+        {
+          "word": "muss",
+          "start": 7.151,
+          "end": 7.392,
+          "score": 0.976
+        },
+        {
+          "word": "ich",
+          "start": 7.432,
+          "end": 7.612,
+          "score": 0.781
+        },
+        {
+          "word": "daraus",
+          "start": 7.632,
+          "end": 8.053,
+          "score": 0.91
+        },
+        {
+          "word": "echte",
+          "start": 8.113,
+          "end": 8.454,
+          "score": 0.793
+        },
+        {
+          "word": "Stärke",
+          "start": 8.514,
+          "end": 8.894,
+          "score": 0.994
+        },
+        {
+          "word": "machen",
+          "start": 8.934,
+          "end": 9.335,
+          "score": 0.909
+        },
+        {
+          "word": "und",
+          "start": 9.375,
+          "end": 9.515,
+          "score": 0.86
+        },
+        {
+          "word": "den",
+          "start": 9.535,
+          "end": 9.696,
+          "score": 0.87
+        },
+        {
+          "word": "Weg",
+          "start": 9.716,
+          "end": 9.936,
+          "score": 0.991
+        },
+        {
+          "word": "zur",
+          "start": 9.976,
+          "end": 10.196,
+          "score": 0.946
+        },
+        {
+          "word": "Abenteurergilde",
+          "start": 10.236,
+          "end": 11.178,
+          "score": 0.859
+        },
+        {
+          "word": "ernsthaft",
+          "start": 11.218,
+          "end": 11.719,
+          "score": 0.92
+        },
+        {
+          "word": "angehen.",
+          "start": 11.759,
+          "end": 12.079,
+          "score": 0.874
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mein",
+      "start": 0.441,
+      "end": 0.701,
+      "score": 0.788
+    },
+    {
+      "word": "Gold",
+      "start": 0.721,
+      "end": 1.002,
+      "score": 0.963
+    },
+    {
+      "word": "ist",
+      "start": 1.042,
+      "end": 1.282,
+      "score": 0.962
+    },
+    {
+      "word": "fort",
+      "start": 1.342,
+      "end": 2.444,
+      "score": 0.961
+    },
+    {
+      "word": "—",
+      "start": 2.464,
+      "end": 2.484,
+      "score": 0.988
+    },
+    {
+      "word": "bewusst",
+      "start": 2.504,
+      "end": 3.005,
+      "score": 0.981
+    },
+    {
+      "word": "zurückgelassen.",
+      "start": 3.045,
+      "end": 4.647,
+      "score": 0.947
+    },
+    {
+      "word": "Die",
+      "start": 4.668,
+      "end": 4.828,
+      "score": 0.936
+    },
+    {
+      "word": "Rückschläge",
+      "start": 4.868,
+      "end": 5.309,
+      "score": 0.932
+    },
+    {
+      "word": "haben",
+      "start": 5.349,
+      "end": 5.529,
+      "score": 0.96
+    },
+    {
+      "word": "mich",
+      "start": 5.549,
+      "end": 5.709,
+      "score": 0.841
+    },
+    {
+      "word": "verändert;",
+      "start": 5.749,
+      "end": 6.791,
+      "score": 0.953
+    },
+    {
+      "word": "jetzt",
+      "start": 6.811,
+      "end": 7.131,
+      "score": 0.834
+    },
+    {
+      "word": "muss",
+      "start": 7.151,
+      "end": 7.392,
+      "score": 0.976
+    },
+    {
+      "word": "ich",
+      "start": 7.432,
+      "end": 7.612,
+      "score": 0.781
+    },
+    {
+      "word": "daraus",
+      "start": 7.632,
+      "end": 8.053,
+      "score": 0.91
+    },
+    {
+      "word": "echte",
+      "start": 8.113,
+      "end": 8.454,
+      "score": 0.793
+    },
+    {
+      "word": "Stärke",
+      "start": 8.514,
+      "end": 8.894,
+      "score": 0.994
+    },
+    {
+      "word": "machen",
+      "start": 8.934,
+      "end": 9.335,
+      "score": 0.909
+    },
+    {
+      "word": "und",
+      "start": 9.375,
+      "end": 9.515,
+      "score": 0.86
+    },
+    {
+      "word": "den",
+      "start": 9.535,
+      "end": 9.696,
+      "score": 0.87
+    },
+    {
+      "word": "Weg",
+      "start": 9.716,
+      "end": 9.936,
+      "score": 0.991
+    },
+    {
+      "word": "zur",
+      "start": 9.976,
+      "end": 10.196,
+      "score": 0.946
+    },
+    {
+      "word": "Abenteurergilde",
+      "start": 10.236,
+      "end": 11.178,
+      "score": 0.859
+    },
+    {
+      "word": "ernsthaft",
+      "start": 11.218,
+      "end": 11.719,
+      "score": 0.92
+    },
+    {
+      "word": "angehen.",
+      "start": 11.759,
+      "end": 12.079,
+      "score": 0.874
+    }
+  ]
+}

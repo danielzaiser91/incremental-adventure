@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 2.688,
+      "text": "Ich habe meinen Kopf wieder klar.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.381,
+          "end": 0.502,
+          "score": 0.667
+        },
+        {
+          "word": "habe",
+          "start": 0.542,
+          "end": 0.802,
+          "score": 0.956
+        },
+        {
+          "word": "meinen",
+          "start": 0.822,
+          "end": 1.043,
+          "score": 0.675
+        },
+        {
+          "word": "Kopf",
+          "start": 1.063,
+          "end": 1.324,
+          "score": 0.827
+        },
+        {
+          "word": "wieder",
+          "start": 1.344,
+          "end": 1.605,
+          "score": 0.895
+        },
+        {
+          "word": "klar.",
+          "start": 1.645,
+          "end": 2.688,
+          "score": 0.95
+        }
+      ]
+    },
+    {
+      "start": 2.708,
+      "end": 6.319,
+      "text": "Ein bewusster Neuanfang liegt vor mir — klüger diesmal.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 2.708,
+          "end": 2.869,
+          "score": 0.533
+        },
+        {
+          "word": "bewusster",
+          "start": 2.909,
+          "end": 3.591,
+          "score": 0.943
+        },
+        {
+          "word": "Neuanfang",
+          "start": 3.631,
+          "end": 4.253,
+          "score": 0.97
+        },
+        {
+          "word": "liegt",
+          "start": 4.293,
+          "end": 4.494,
+          "score": 0.946
+        },
+        {
+          "word": "vor",
+          "start": 4.534,
+          "end": 4.694,
+          "score": 0.987
+        },
+        {
+          "word": "mir",
+          "start": 4.734,
+          "end": 4.875,
+          "score": 0.888
+        },
+        {
+          "word": "—",
+          "start": 5.497,
+          "end": 5.517,
+          "score": 0.781
+        },
+        {
+          "word": "klüger",
+          "start": 5.557,
+          "end": 5.938,
+          "score": 0.894
+        },
+        {
+          "word": "diesmal.",
+          "start": 5.958,
+          "end": 6.319,
+          "score": 0.795
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.381,
+      "end": 0.502,
+      "score": 0.667
+    },
+    {
+      "word": "habe",
+      "start": 0.542,
+      "end": 0.802,
+      "score": 0.956
+    },
+    {
+      "word": "meinen",
+      "start": 0.822,
+      "end": 1.043,
+      "score": 0.675
+    },
+    {
+      "word": "Kopf",
+      "start": 1.063,
+      "end": 1.324,
+      "score": 0.827
+    },
+    {
+      "word": "wieder",
+      "start": 1.344,
+      "end": 1.605,
+      "score": 0.895
+    },
+    {
+      "word": "klar.",
+      "start": 1.645,
+      "end": 2.688,
+      "score": 0.95
+    },
+    {
+      "word": "Ein",
+      "start": 2.708,
+      "end": 2.869,
+      "score": 0.533
+    },
+    {
+      "word": "bewusster",
+      "start": 2.909,
+      "end": 3.591,
+      "score": 0.943
+    },
+    {
+      "word": "Neuanfang",
+      "start": 3.631,
+      "end": 4.253,
+      "score": 0.97
+    },
+    {
+      "word": "liegt",
+      "start": 4.293,
+      "end": 4.494,
+      "score": 0.946
+    },
+    {
+      "word": "vor",
+      "start": 4.534,
+      "end": 4.694,
+      "score": 0.987
+    },
+    {
+      "word": "mir",
+      "start": 4.734,
+      "end": 4.875,
+      "score": 0.888
+    },
+    {
+      "word": "—",
+      "start": 5.497,
+      "end": 5.517,
+      "score": 0.781
+    },
+    {
+      "word": "klüger",
+      "start": 5.557,
+      "end": 5.938,
+      "score": 0.894
+    },
+    {
+      "word": "diesmal.",
+      "start": 5.958,
+      "end": 6.319,
+      "score": 0.795
+    }
+  ]
+}
