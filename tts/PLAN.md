@@ -97,6 +97,12 @@ mit dem neuen Modell.
 - **Automatisiert:** Geplante Aufgabe `tts-daily-batch-incremental-adventure`
   (Claude-Desktop, täglich ~22:00 Uhr) führt den Batch aus, pflegt diese Datei
   und pusht. Läuft nur, wenn die App offen ist — sonst beim nächsten App-Start.
+- **Aufruf des Nachtlaufs im Bash-Werkzeug (29.08.2026 belegt):** `node` steht
+  dort nicht im PATH, `node tts/nightly.js --push` scheitert mit Exit 127
+  („command not found"). Der Lauf bleibt trotzdem **ein** Befehl — statt eines
+  PATH-Exports davor wird node über seinen absoluten Pfad aufgerufen:
+  `cd "C:/code/ai/incremental adventure" && "/c/Program Files/nodejs/node.exe" tts/nightly.js --push`.
+  Innerhalb des Skripts ändert das nichts, es ruft node und git ohnehin absolut auf.
 - **Umgebungs-Stolperfalle im Bash-Werkzeug (10.08.2026):** Dort fehlen `node`
   und die Kernwerkzeuge im PATH, und `git push` stirbt still mit Exit 128, weil
   die Credential-Helper nicht anlaufen. Rezept (PATH-Export + `GIT_ASKPASS`-Bat
@@ -184,9 +190,9 @@ mit dem neuen Modell.
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
       Manifest umfasste damit 331 Einheiten; seit der Phase-6-Extraktion
-      vom 26.08.2026 sind es **404**. *Stand 28.08.2026 (Nachtlauf):
-      154/177 — die 139 Quest-Beschreibungen sind komplett, es laufen nur
-      noch die Objectives (15/38). Restliche 23 Objectives bei 10/Tag am
+      vom 26.08.2026 sind es **404**. *Stand 29.08.2026 (Nachtlauf):
+      164/177 — die 139 Quest-Beschreibungen sind komplett, es laufen nur
+      noch die Objectives (25/38). Restliche 13 Objectives bei 10/Tag am
       31.08.2026 durch.*
 - [ ] **Phase 6 — Welt-Flavor** (**73 Einheiten**, extrahiert und kuratiert
       am 26.08.2026): Monster 16, Orte 25, Markt 13, Alchemie 10,
@@ -407,3 +413,4 @@ nachgelagerter Extra-Lauf.
 - 28.08.2026 22:20 — `publish-audio.js`: 10 neue Paare nach `tts/audio/` veröffentlicht (Opus + words.json), 0 zurückgehalten. Opus-Konvertierung und Alignment liefen für alle 10 Einheiten fehlerfrei.
 - 28.08.2026 22:21 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — **zweiter fehlerfreier Zehnerlauf in Folge** seit dem 503 vom 26.08. `progress.failed` bleibt leer. Sechster Lauf komplett über `tts/nightly.js --push`, eine Freigabe, kein Zwischenfall; Commit `fc67a55` gepusht. Der Gegencheck vor dem Lauf (298 Einträge in `progress.json`, 298 WAVs in `tts/output/`, neuester vom 27.08. 23:11, 596 Dateien = 298 vollständige Paare in `tts/audio/`, 0 fehlgeschlagene) deckt sich mit der letzten Log-Zeile — kein verschwundener Tagesertrag. **Erster Lauf seit dem 22.08. ohne die Sitzungspause:** Die geplante Aufgabe startete um 22:10, der Batch lief 22:16–22:20 — die Verzögerungen von rund einer Stunde in den Nächten 17./18., 21./22. und 27./28.08. sind damit kein Dauerzustand, sondern Ausreißer; für die Quota war ohnehin keiner davon folgenreich (Fenster-Umschlag ~09:00). Der Tagesertrag ist reine Fließarbeit: zehn Objectives am Stück, 105 s Audio auf 10 Einheiten (Ø 10,5 s) — spürbar länger als die Quest-Kurztexte der Vorwochen (Ø 5 s), weil Zieltexte ganze Sätze in Ich-Perspektive sind statt Zwei-Wort-Zuständen. Phase 5 steht bei 154/177 (Quests 139/139, Objectives 15/38); die 96 offenen Einheiten des Manifests sind 23 Objectives und 73 Welt-Flavor-Texte aus Phase 6. Bei 10/Tag ist Phase 5 am 31.08. durch (nicht am 30.08., wie die Chronik des 27.08. rechnete — 33 offene Objectives bei 10/Tag brauchen vier Läufe, nicht drei), Phase 6 um den 07.09. — der Plan endet dann.
 - 29.08.2026 23:52 — Batch: 10 Dateien (objective-72b652f8 … objective-b167ce60), 79 s Audio, komplett. Gesamt: 318/404 im Manifest.
+- 29.08.2026 22:16 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — **dritter fehlerfreier Zehnerlauf in Folge** seit dem 503 vom 26.08. `progress.failed` bleibt leer. Siebter Lauf komplett über `tts/nightly.js --push`, eine Freigabe, kein Zwischenfall; `publish-audio.js` veröffentlichte alle 10 neuen Paare nach `tts/audio/`, 0 zurückgehalten, Opus-Konvertierung und Alignment fehlerfrei; Commit `84d5d14` gepusht. Der Gegencheck vor dem Lauf (308 Einträge in `progress.json`, 308 WAVs in `tts/output/`, neuester vom 28.08. 22:20, 616 Dateien = 308 vollständige Paare in `tts/audio/`, 0 fehlgeschlagene) deckt sich mit der letzten Log-Zeile — kein verschwundener Tagesertrag. Zweiter Lauf in Folge ohne Sitzungspause: geplante Aufgabe 22:09, Batch 22:10–22:16. **Der einzige Zwischenfall lag vor dem Batch, nicht in ihm:** `node tts/nightly.js --push` starb mit Exit 127, weil `node` im Bash-Werkzeug nicht im PATH steht — dieselbe Umgebungs-Stolperfalle wie am 10.08., nur diesmal am Nachtlauf selbst. Der Ausweg wahrt die Ein-Befehl-Regel und ist als Rahmendatum oben festgehalten: node über den absoluten Pfad `/c/Program Files/nodejs/node.exe` aufrufen statt einen PATH-Export davorzusetzen (ein Export wäre ein zweiter Befehl und damit eine zweite Freigabe). Der Tagesertrag ist reine Fließarbeit: zehn Objectives am Stück, 79 s Audio auf 10 Einheiten (Ø 7,9 s), Texte 80–111 Zeichen — kürzer als die 105 s des Vortags, weil dort mehrere längere Zieltexte lagen; die Ich-Sätze der Objectives bleiben insgesamt rund doppelt so lang wie die Quest-Kurztexte (Ø 5 s). Phase 5 steht bei 164/177 (Quests 139/139, Objectives 25/38); die 86 offenen Einheiten des Manifests sind 13 Objectives und 73 Welt-Flavor-Texte aus Phase 6. Bei 10/Tag ist Phase 5 am 31.08. durch, Phase 6 um den 07.09. — der Plan endet dann.
