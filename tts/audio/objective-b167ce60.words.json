@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 1.984,
+      "text": "Ich habe abgelehnt.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.421,
+          "end": 0.541,
+          "score": 0.715
+        },
+        {
+          "word": "habe",
+          "start": 0.581,
+          "end": 0.842,
+          "score": 0.961
+        },
+        {
+          "word": "abgelehnt.",
+          "start": 0.882,
+          "end": 1.984,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 2.165,
+      "end": 6.655,
+      "text": "Jetzt ist es kein Gespräch mehr — jetzt ist es ein Endspiel.",
+      "words": [
+        {
+          "word": "Jetzt",
+          "start": 2.165,
+          "end": 2.385,
+          "score": 0.751
+        },
+        {
+          "word": "ist",
+          "start": 2.425,
+          "end": 2.566,
+          "score": 0.781
+        },
+        {
+          "word": "es",
+          "start": 2.626,
+          "end": 2.786,
+          "score": 0.719
+        },
+        {
+          "word": "kein",
+          "start": 2.806,
+          "end": 2.987,
+          "score": 0.821
+        },
+        {
+          "word": "Gespräch",
+          "start": 3.027,
+          "end": 3.488,
+          "score": 0.983
+        },
+        {
+          "word": "mehr",
+          "start": 3.508,
+          "end": 3.668,
+          "score": 0.8
+        },
+        {
+          "word": "—",
+          "start": 4.129,
+          "end": 4.149,
+          "score": 0.871
+        },
+        {
+          "word": "jetzt",
+          "start": 4.189,
+          "end": 4.43,
+          "score": 0.939
+        },
+        {
+          "word": "ist",
+          "start": 4.47,
+          "end": 4.59,
+          "score": 0.831
+        },
+        {
+          "word": "es",
+          "start": 4.63,
+          "end": 4.791,
+          "score": 0.502
+        },
+        {
+          "word": "ein",
+          "start": 4.831,
+          "end": 5.091,
+          "score": 0.916
+        },
+        {
+          "word": "Endspiel.",
+          "start": 5.152,
+          "end": 6.655,
+          "score": 0.868
+        }
+      ]
+    },
+    {
+      "start": 6.675,
+      "end": 8.439,
+      "text": "Dritte Fraktion vollenden.",
+      "words": [
+        {
+          "word": "Dritte",
+          "start": 6.675,
+          "end": 7.096,
+          "score": 0.988
+        },
+        {
+          "word": "Fraktion",
+          "start": 7.156,
+          "end": 7.838,
+          "score": 0.903
+        },
+        {
+          "word": "vollenden.",
+          "start": 7.878,
+          "end": 8.439,
+          "score": 0.926
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.421,
+      "end": 0.541,
+      "score": 0.715
+    },
+    {
+      "word": "habe",
+      "start": 0.581,
+      "end": 0.842,
+      "score": 0.961
+    },
+    {
+      "word": "abgelehnt.",
+      "start": 0.882,
+      "end": 1.984,
+      "score": 0.887
+    },
+    {
+      "word": "Jetzt",
+      "start": 2.165,
+      "end": 2.385,
+      "score": 0.751
+    },
+    {
+      "word": "ist",
+      "start": 2.425,
+      "end": 2.566,
+      "score": 0.781
+    },
+    {
+      "word": "es",
+      "start": 2.626,
+      "end": 2.786,
+      "score": 0.719
+    },
+    {
+      "word": "kein",
+      "start": 2.806,
+      "end": 2.987,
+      "score": 0.821
+    },
+    {
+      "word": "Gespräch",
+      "start": 3.027,
+      "end": 3.488,
+      "score": 0.983
+    },
+    {
+      "word": "mehr",
+      "start": 3.508,
+      "end": 3.668,
+      "score": 0.8
+    },
+    {
+      "word": "—",
+      "start": 4.129,
+      "end": 4.149,
+      "score": 0.871
+    },
+    {
+      "word": "jetzt",
+      "start": 4.189,
+      "end": 4.43,
+      "score": 0.939
+    },
+    {
+      "word": "ist",
+      "start": 4.47,
+      "end": 4.59,
+      "score": 0.831
+    },
+    {
+      "word": "es",
+      "start": 4.63,
+      "end": 4.791,
+      "score": 0.502
+    },
+    {
+      "word": "ein",
+      "start": 4.831,
+      "end": 5.091,
+      "score": 0.916
+    },
+    {
+      "word": "Endspiel.",
+      "start": 5.152,
+      "end": 6.655,
+      "score": 0.868
+    },
+    {
+      "word": "Dritte",
+      "start": 6.675,
+      "end": 7.096,
+      "score": 0.988
+    },
+    {
+      "word": "Fraktion",
+      "start": 7.156,
+      "end": 7.838,
+      "score": 0.903
+    },
+    {
+      "word": "vollenden.",
+      "start": 7.878,
+      "end": 8.439,
+      "score": 0.926
+    }
+  ]
+}

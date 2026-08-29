@@ -1,0 +1,195 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 3.809,
+      "text": "Alle drei Fraktionen stehen hinter mir.",
+      "words": [
+        {
+          "word": "Alle",
+          "start": 0.501,
+          "end": 0.782,
+          "score": 0.8
+        },
+        {
+          "word": "drei",
+          "start": 0.802,
+          "end": 1.143,
+          "score": 0.769
+        },
+        {
+          "word": "Fraktionen",
+          "start": 1.203,
+          "end": 1.864,
+          "score": 0.744
+        },
+        {
+          "word": "stehen",
+          "start": 1.924,
+          "end": 2.225,
+          "score": 0.94
+        },
+        {
+          "word": "hinter",
+          "start": 2.245,
+          "end": 2.506,
+          "score": 0.856
+        },
+        {
+          "word": "mir.",
+          "start": 2.546,
+          "end": 3.809,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 3.849,
+      "end": 6.675,
+      "text": "Valdris ist eingekreist.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 3.849,
+          "end": 4.37,
+          "score": 0.807
+        },
+        {
+          "word": "ist",
+          "start": 4.41,
+          "end": 4.61,
+          "score": 0.975
+        },
+        {
+          "word": "eingekreist.",
+          "start": 4.65,
+          "end": 6.675,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 6.715,
+      "end": 8.539,
+      "text": "Zeit für das letzte Gespräch.",
+      "words": [
+        {
+          "word": "Zeit",
+          "start": 6.715,
+          "end": 7.356,
+          "score": 0.96
+        },
+        {
+          "word": "für",
+          "start": 7.397,
+          "end": 7.497,
+          "score": 0.937
+        },
+        {
+          "word": "das",
+          "start": 7.517,
+          "end": 7.737,
+          "score": 0.763
+        },
+        {
+          "word": "letzte",
+          "start": 7.757,
+          "end": 8.078,
+          "score": 0.924
+        },
+        {
+          "word": "Gespräch.",
+          "start": 8.118,
+          "end": 8.539,
+          "score": 0.784
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alle",
+      "start": 0.501,
+      "end": 0.782,
+      "score": 0.8
+    },
+    {
+      "word": "drei",
+      "start": 0.802,
+      "end": 1.143,
+      "score": 0.769
+    },
+    {
+      "word": "Fraktionen",
+      "start": 1.203,
+      "end": 1.864,
+      "score": 0.744
+    },
+    {
+      "word": "stehen",
+      "start": 1.924,
+      "end": 2.225,
+      "score": 0.94
+    },
+    {
+      "word": "hinter",
+      "start": 2.245,
+      "end": 2.506,
+      "score": 0.856
+    },
+    {
+      "word": "mir.",
+      "start": 2.546,
+      "end": 3.809,
+      "score": 0.918
+    },
+    {
+      "word": "Valdris",
+      "start": 3.849,
+      "end": 4.37,
+      "score": 0.807
+    },
+    {
+      "word": "ist",
+      "start": 4.41,
+      "end": 4.61,
+      "score": 0.975
+    },
+    {
+      "word": "eingekreist.",
+      "start": 4.65,
+      "end": 6.675,
+      "score": 0.958
+    },
+    {
+      "word": "Zeit",
+      "start": 6.715,
+      "end": 7.356,
+      "score": 0.96
+    },
+    {
+      "word": "für",
+      "start": 7.397,
+      "end": 7.497,
+      "score": 0.937
+    },
+    {
+      "word": "das",
+      "start": 7.517,
+      "end": 7.737,
+      "score": 0.763
+    },
+    {
+      "word": "letzte",
+      "start": 7.757,
+      "end": 8.078,
+      "score": 0.924
+    },
+    {
+      "word": "Gespräch.",
+      "start": 8.118,
+      "end": 8.539,
+      "score": 0.784
+    }
+  ]
+}

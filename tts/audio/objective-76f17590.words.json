@@ -1,0 +1,181 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 5.399,
+      "text": "Ich bin bereit — den zwielichtigen Mann in der Taverne mit den Beweisen stellen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.462,
+          "end": 0.602,
+          "score": 0.861
+        },
+        {
+          "word": "bin",
+          "start": 0.642,
+          "end": 0.823,
+          "score": 0.972
+        },
+        {
+          "word": "bereit",
+          "start": 0.883,
+          "end": 1.204,
+          "score": 0.895
+        },
+        {
+          "word": "—",
+          "start": 2.167,
+          "end": 2.188,
+          "score": 0.964
+        },
+        {
+          "word": "den",
+          "start": 2.208,
+          "end": 2.428,
+          "score": 0.921
+        },
+        {
+          "word": "zwielichtigen",
+          "start": 2.489,
+          "end": 3.311,
+          "score": 0.887
+        },
+        {
+          "word": "Mann",
+          "start": 3.352,
+          "end": 3.572,
+          "score": 0.898
+        },
+        {
+          "word": "in",
+          "start": 3.612,
+          "end": 3.693,
+          "score": 0.88
+        },
+        {
+          "word": "der",
+          "start": 3.713,
+          "end": 3.813,
+          "score": 0.911
+        },
+        {
+          "word": "Taverne",
+          "start": 3.853,
+          "end": 4.315,
+          "score": 0.874
+        },
+        {
+          "word": "mit",
+          "start": 4.335,
+          "end": 4.435,
+          "score": 0.774
+        },
+        {
+          "word": "den",
+          "start": 4.455,
+          "end": 4.596,
+          "score": 0.928
+        },
+        {
+          "word": "Beweisen",
+          "start": 4.636,
+          "end": 5.078,
+          "score": 0.94
+        },
+        {
+          "word": "stellen.",
+          "start": 5.118,
+          "end": 5.399,
+          "score": 0.961
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.462,
+      "end": 0.602,
+      "score": 0.861
+    },
+    {
+      "word": "bin",
+      "start": 0.642,
+      "end": 0.823,
+      "score": 0.972
+    },
+    {
+      "word": "bereit",
+      "start": 0.883,
+      "end": 1.204,
+      "score": 0.895
+    },
+    {
+      "word": "—",
+      "start": 2.167,
+      "end": 2.188,
+      "score": 0.964
+    },
+    {
+      "word": "den",
+      "start": 2.208,
+      "end": 2.428,
+      "score": 0.921
+    },
+    {
+      "word": "zwielichtigen",
+      "start": 2.489,
+      "end": 3.311,
+      "score": 0.887
+    },
+    {
+      "word": "Mann",
+      "start": 3.352,
+      "end": 3.572,
+      "score": 0.898
+    },
+    {
+      "word": "in",
+      "start": 3.612,
+      "end": 3.693,
+      "score": 0.88
+    },
+    {
+      "word": "der",
+      "start": 3.713,
+      "end": 3.813,
+      "score": 0.911
+    },
+    {
+      "word": "Taverne",
+      "start": 3.853,
+      "end": 4.315,
+      "score": 0.874
+    },
+    {
+      "word": "mit",
+      "start": 4.335,
+      "end": 4.435,
+      "score": 0.774
+    },
+    {
+      "word": "den",
+      "start": 4.455,
+      "end": 4.596,
+      "score": 0.928
+    },
+    {
+      "word": "Beweisen",
+      "start": 4.636,
+      "end": 5.078,
+      "score": 0.94
+    },
+    {
+      "word": "stellen.",
+      "start": 5.118,
+      "end": 5.399,
+      "score": 0.961
+    }
+  ]
+}

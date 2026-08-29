@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.268,
+      "text": "Korbin weiß von einer Raubserie.",
+      "words": [
+        {
+          "word": "Korbin",
+          "start": 0.461,
+          "end": 0.982,
+          "score": 0.904
+        },
+        {
+          "word": "weiß",
+          "start": 1.023,
+          "end": 1.303,
+          "score": 0.952
+        },
+        {
+          "word": "von",
+          "start": 1.343,
+          "end": 1.484,
+          "score": 0.928
+        },
+        {
+          "word": "einer",
+          "start": 1.504,
+          "end": 1.664,
+          "score": 0.807
+        },
+        {
+          "word": "Raubserie.",
+          "start": 1.744,
+          "end": 3.268,
+          "score": 0.971
+        }
+      ]
+    },
+    {
+      "start": 3.308,
+      "end": 7.779,
+      "text": "Ich sollte das Jagdgebiet weiter erkunden — die Antworten liegen dort draußen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.308,
+          "end": 3.428,
+          "score": 0.876
+        },
+        {
+          "word": "sollte",
+          "start": 3.448,
+          "end": 3.709,
+          "score": 0.92
+        },
+        {
+          "word": "das",
+          "start": 3.749,
+          "end": 3.89,
+          "score": 0.952
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 3.93,
+          "end": 4.511,
+          "score": 0.895
+        },
+        {
+          "word": "weiter",
+          "start": 4.551,
+          "end": 4.792,
+          "score": 0.95
+        },
+        {
+          "word": "erkunden",
+          "start": 4.832,
+          "end": 5.253,
+          "score": 0.903
+        },
+        {
+          "word": "—",
+          "start": 6.035,
+          "end": 6.055,
+          "score": 0.997
+        },
+        {
+          "word": "die",
+          "start": 6.075,
+          "end": 6.255,
+          "score": 0.864
+        },
+        {
+          "word": "Antworten",
+          "start": 6.295,
+          "end": 6.817,
+          "score": 0.835
+        },
+        {
+          "word": "liegen",
+          "start": 6.857,
+          "end": 7.158,
+          "score": 0.919
+        },
+        {
+          "word": "dort",
+          "start": 7.178,
+          "end": 7.378,
+          "score": 0.928
+        },
+        {
+          "word": "draußen.",
+          "start": 7.418,
+          "end": 7.779,
+          "score": 0.92
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Korbin",
+      "start": 0.461,
+      "end": 0.982,
+      "score": 0.904
+    },
+    {
+      "word": "weiß",
+      "start": 1.023,
+      "end": 1.303,
+      "score": 0.952
+    },
+    {
+      "word": "von",
+      "start": 1.343,
+      "end": 1.484,
+      "score": 0.928
+    },
+    {
+      "word": "einer",
+      "start": 1.504,
+      "end": 1.664,
+      "score": 0.807
+    },
+    {
+      "word": "Raubserie.",
+      "start": 1.744,
+      "end": 3.268,
+      "score": 0.971
+    },
+    {
+      "word": "Ich",
+      "start": 3.308,
+      "end": 3.428,
+      "score": 0.876
+    },
+    {
+      "word": "sollte",
+      "start": 3.448,
+      "end": 3.709,
+      "score": 0.92
+    },
+    {
+      "word": "das",
+      "start": 3.749,
+      "end": 3.89,
+      "score": 0.952
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 3.93,
+      "end": 4.511,
+      "score": 0.895
+    },
+    {
+      "word": "weiter",
+      "start": 4.551,
+      "end": 4.792,
+      "score": 0.95
+    },
+    {
+      "word": "erkunden",
+      "start": 4.832,
+      "end": 5.253,
+      "score": 0.903
+    },
+    {
+      "word": "—",
+      "start": 6.035,
+      "end": 6.055,
+      "score": 0.997
+    },
+    {
+      "word": "die",
+      "start": 6.075,
+      "end": 6.255,
+      "score": 0.864
+    },
+    {
+      "word": "Antworten",
+      "start": 6.295,
+      "end": 6.817,
+      "score": 0.835
+    },
+    {
+      "word": "liegen",
+      "start": 6.857,
+      "end": 7.158,
+      "score": 0.919
+    },
+    {
+      "word": "dort",
+      "start": 7.178,
+      "end": 7.378,
+      "score": 0.928
+    },
+    {
+      "word": "draußen.",
+      "start": 7.418,
+      "end": 7.779,
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 2.387,
+      "text": "Mira hat gesprochen.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 0.461,
+          "end": 0.863,
+          "score": 0.97
+        },
+        {
+          "word": "hat",
+          "start": 0.903,
+          "end": 1.123,
+          "score": 0.971
+        },
+        {
+          "word": "gesprochen.",
+          "start": 1.164,
+          "end": 2.387,
+          "score": 0.931
+        }
+      ]
+    },
+    {
+      "start": 2.427,
+      "end": 6.059,
+      "text": "Brakka kennt den Namen — ich suche ihn in der Schmiede auf.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 2.427,
+          "end": 2.949,
+          "score": 0.912
+        },
+        {
+          "word": "kennt",
+          "start": 2.989,
+          "end": 3.25,
+          "score": 0.85
+        },
+        {
+          "word": "den",
+          "start": 3.27,
+          "end": 3.431,
+          "score": 0.844
+        },
+        {
+          "word": "Namen",
+          "start": 3.471,
+          "end": 3.691,
+          "score": 0.935
+        },
+        {
+          "word": "—",
+          "start": 3.711,
+          "end": 4.474,
+          "score": 0.976
+        },
+        {
+          "word": "ich",
+          "start": 4.534,
+          "end": 4.674,
+          "score": 0.838
+        },
+        {
+          "word": "suche",
+          "start": 4.715,
+          "end": 4.975,
+          "score": 0.891
+        },
+        {
+          "word": "ihn",
+          "start": 5.015,
+          "end": 5.176,
+          "score": 0.663
+        },
+        {
+          "word": "in",
+          "start": 5.216,
+          "end": 5.296,
+          "score": 0.833
+        },
+        {
+          "word": "der",
+          "start": 5.316,
+          "end": 5.437,
+          "score": 0.872
+        },
+        {
+          "word": "Schmiede",
+          "start": 5.457,
+          "end": 5.918,
+          "score": 0.818
+        },
+        {
+          "word": "auf.",
+          "start": 5.938,
+          "end": 6.059,
+          "score": 0.965
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Mira",
+      "start": 0.461,
+      "end": 0.863,
+      "score": 0.97
+    },
+    {
+      "word": "hat",
+      "start": 0.903,
+      "end": 1.123,
+      "score": 0.971
+    },
+    {
+      "word": "gesprochen.",
+      "start": 1.164,
+      "end": 2.387,
+      "score": 0.931
+    },
+    {
+      "word": "Brakka",
+      "start": 2.427,
+      "end": 2.949,
+      "score": 0.912
+    },
+    {
+      "word": "kennt",
+      "start": 2.989,
+      "end": 3.25,
+      "score": 0.85
+    },
+    {
+      "word": "den",
+      "start": 3.27,
+      "end": 3.431,
+      "score": 0.844
+    },
+    {
+      "word": "Namen",
+      "start": 3.471,
+      "end": 3.691,
+      "score": 0.935
+    },
+    {
+      "word": "—",
+      "start": 3.711,
+      "end": 4.474,
+      "score": 0.976
+    },
+    {
+      "word": "ich",
+      "start": 4.534,
+      "end": 4.674,
+      "score": 0.838
+    },
+    {
+      "word": "suche",
+      "start": 4.715,
+      "end": 4.975,
+      "score": 0.891
+    },
+    {
+      "word": "ihn",
+      "start": 5.015,
+      "end": 5.176,
+      "score": 0.663
+    },
+    {
+      "word": "in",
+      "start": 5.216,
+      "end": 5.296,
+      "score": 0.833
+    },
+    {
+      "word": "der",
+      "start": 5.316,
+      "end": 5.437,
+      "score": 0.872
+    },
+    {
+      "word": "Schmiede",
+      "start": 5.457,
+      "end": 5.918,
+      "score": 0.818
+    },
+    {
+      "word": "auf.",
+      "start": 5.938,
+      "end": 6.059,
+      "score": 0.965
+    }
+  ]
+}

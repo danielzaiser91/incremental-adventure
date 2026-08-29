@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 3.189,
+      "text": "Die Konfrontation liegt hinter mir.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.401,
+          "end": 0.582,
+          "score": 0.832
+        },
+        {
+          "word": "Konfrontation",
+          "start": 0.622,
+          "end": 1.585,
+          "score": 0.874
+        },
+        {
+          "word": "liegt",
+          "start": 1.605,
+          "end": 1.825,
+          "score": 0.801
+        },
+        {
+          "word": "hinter",
+          "start": 1.865,
+          "end": 2.146,
+          "score": 0.98
+        },
+        {
+          "word": "mir.",
+          "start": 2.166,
+          "end": 3.189,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 3.209,
+      "end": 6.579,
+      "text": "Ich sollte Brakka und Mira berichten, was ich herausgefunden habe.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.209,
+          "end": 3.33,
+          "score": 0.917
+        },
+        {
+          "word": "sollte",
+          "start": 3.37,
+          "end": 3.731,
+          "score": 0.975
+        },
+        {
+          "word": "Brakka",
+          "start": 3.771,
+          "end": 4.172,
+          "score": 0.79
+        },
+        {
+          "word": "und",
+          "start": 4.192,
+          "end": 4.413,
+          "score": 0.945
+        },
+        {
+          "word": "Mira",
+          "start": 4.453,
+          "end": 4.814,
+          "score": 0.85
+        },
+        {
+          "word": "berichten,",
+          "start": 4.854,
+          "end": 5.355,
+          "score": 0.868
+        },
+        {
+          "word": "was",
+          "start": 5.396,
+          "end": 5.496,
+          "score": 0.955
+        },
+        {
+          "word": "ich",
+          "start": 5.536,
+          "end": 5.656,
+          "score": 0.928
+        },
+        {
+          "word": "herausgefunden",
+          "start": 5.696,
+          "end": 6.358,
+          "score": 0.94
+        },
+        {
+          "word": "habe.",
+          "start": 6.398,
+          "end": 6.579,
+          "score": 0.827
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.401,
+      "end": 0.582,
+      "score": 0.832
+    },
+    {
+      "word": "Konfrontation",
+      "start": 0.622,
+      "end": 1.585,
+      "score": 0.874
+    },
+    {
+      "word": "liegt",
+      "start": 1.605,
+      "end": 1.825,
+      "score": 0.801
+    },
+    {
+      "word": "hinter",
+      "start": 1.865,
+      "end": 2.146,
+      "score": 0.98
+    },
+    {
+      "word": "mir.",
+      "start": 2.166,
+      "end": 3.189,
+      "score": 0.833
+    },
+    {
+      "word": "Ich",
+      "start": 3.209,
+      "end": 3.33,
+      "score": 0.917
+    },
+    {
+      "word": "sollte",
+      "start": 3.37,
+      "end": 3.731,
+      "score": 0.975
+    },
+    {
+      "word": "Brakka",
+      "start": 3.771,
+      "end": 4.172,
+      "score": 0.79
+    },
+    {
+      "word": "und",
+      "start": 4.192,
+      "end": 4.413,
+      "score": 0.945
+    },
+    {
+      "word": "Mira",
+      "start": 4.453,
+      "end": 4.814,
+      "score": 0.85
+    },
+    {
+      "word": "berichten,",
+      "start": 4.854,
+      "end": 5.355,
+      "score": 0.868
+    },
+    {
+      "word": "was",
+      "start": 5.396,
+      "end": 5.496,
+      "score": 0.955
+    },
+    {
+      "word": "ich",
+      "start": 5.536,
+      "end": 5.656,
+      "score": 0.928
+    },
+    {
+      "word": "herausgefunden",
+      "start": 5.696,
+      "end": 6.358,
+      "score": 0.94
+    },
+    {
+      "word": "habe.",
+      "start": 6.398,
+      "end": 6.579,
+      "score": 0.827
+    }
+  ]
+}

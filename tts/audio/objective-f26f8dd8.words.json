@@ -1,0 +1,207 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 2.605,
+      "text": "Das Netz ist zerschnitten.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.501,
+          "end": 0.701,
+          "score": 0.933
+        },
+        {
+          "word": "Netz",
+          "start": 0.762,
+          "end": 1.042,
+          "score": 0.99
+        },
+        {
+          "word": "ist",
+          "start": 1.082,
+          "end": 1.283,
+          "score": 0.863
+        },
+        {
+          "word": "zerschnitten.",
+          "start": 1.323,
+          "end": 2.605,
+          "score": 0.888
+        }
+      ]
+    },
+    {
+      "start": 2.625,
+      "end": 5.251,
+      "text": "Velmark ist frei.",
+      "words": [
+        {
+          "word": "Velmark",
+          "start": 2.625,
+          "end": 3.146,
+          "score": 0.859
+        },
+        {
+          "word": "ist",
+          "start": 3.186,
+          "end": 3.447,
+          "score": 0.819
+        },
+        {
+          "word": "frei.",
+          "start": 3.487,
+          "end": 5.251,
+          "score": 0.838
+        }
+      ]
+    },
+    {
+      "start": 5.271,
+      "end": 9.439,
+      "text": "Der Weg hat ein Ende gefunden — vorläufig.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 5.271,
+          "end": 5.471,
+          "score": 0.947
+        },
+        {
+          "word": "Weg",
+          "start": 5.511,
+          "end": 5.932,
+          "score": 0.979
+        },
+        {
+          "word": "hat",
+          "start": 5.952,
+          "end": 6.153,
+          "score": 0.941
+        },
+        {
+          "word": "ein",
+          "start": 6.173,
+          "end": 6.353,
+          "score": 0.735
+        },
+        {
+          "word": "Ende",
+          "start": 6.393,
+          "end": 6.613,
+          "score": 0.871
+        },
+        {
+          "word": "gefunden",
+          "start": 6.654,
+          "end": 7.094,
+          "score": 0.921
+        },
+        {
+          "word": "—",
+          "start": 8.778,
+          "end": 8.798,
+          "score": 0.349
+        },
+        {
+          "word": "vorläufig.",
+          "start": 8.858,
+          "end": 9.439,
+          "score": 0.878
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.501,
+      "end": 0.701,
+      "score": 0.933
+    },
+    {
+      "word": "Netz",
+      "start": 0.762,
+      "end": 1.042,
+      "score": 0.99
+    },
+    {
+      "word": "ist",
+      "start": 1.082,
+      "end": 1.283,
+      "score": 0.863
+    },
+    {
+      "word": "zerschnitten.",
+      "start": 1.323,
+      "end": 2.605,
+      "score": 0.888
+    },
+    {
+      "word": "Velmark",
+      "start": 2.625,
+      "end": 3.146,
+      "score": 0.859
+    },
+    {
+      "word": "ist",
+      "start": 3.186,
+      "end": 3.447,
+      "score": 0.819
+    },
+    {
+      "word": "frei.",
+      "start": 3.487,
+      "end": 5.251,
+      "score": 0.838
+    },
+    {
+      "word": "Der",
+      "start": 5.271,
+      "end": 5.471,
+      "score": 0.947
+    },
+    {
+      "word": "Weg",
+      "start": 5.511,
+      "end": 5.932,
+      "score": 0.979
+    },
+    {
+      "word": "hat",
+      "start": 5.952,
+      "end": 6.153,
+      "score": 0.941
+    },
+    {
+      "word": "ein",
+      "start": 6.173,
+      "end": 6.353,
+      "score": 0.735
+    },
+    {
+      "word": "Ende",
+      "start": 6.393,
+      "end": 6.613,
+      "score": 0.871
+    },
+    {
+      "word": "gefunden",
+      "start": 6.654,
+      "end": 7.094,
+      "score": 0.921
+    },
+    {
+      "word": "—",
+      "start": 8.778,
+      "end": 8.798,
+      "score": 0.349
+    },
+    {
+      "word": "vorläufig.",
+      "start": 8.858,
+      "end": 9.439,
+      "score": 0.878
+    }
+  ]
+}

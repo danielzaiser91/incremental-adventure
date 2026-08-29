@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 4.031,
+      "text": "Meine eigene Münze unter Räuberhabe.",
+      "words": [
+        {
+          "word": "Meine",
+          "start": 0.501,
+          "end": 0.862,
+          "score": 0.777
+        },
+        {
+          "word": "eigene",
+          "start": 0.922,
+          "end": 1.324,
+          "score": 0.838
+        },
+        {
+          "word": "Münze",
+          "start": 1.364,
+          "end": 1.805,
+          "score": 0.879
+        },
+        {
+          "word": "unter",
+          "start": 1.845,
+          "end": 2.126,
+          "score": 0.911
+        },
+        {
+          "word": "Räuberhabe.",
+          "start": 2.226,
+          "end": 4.031,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 4.051,
+      "end": 7.079,
+      "text": "Mira weiß mehr — ich muss sie in der Taverne ansprechen.",
+      "words": [
+        {
+          "word": "Mira",
+          "start": 4.051,
+          "end": 4.372,
+          "score": 0.762
+        },
+        {
+          "word": "weiß",
+          "start": 4.392,
+          "end": 4.633,
+          "score": 0.957
+        },
+        {
+          "word": "mehr",
+          "start": 4.673,
+          "end": 4.813,
+          "score": 0.846
+        },
+        {
+          "word": "—",
+          "start": 5.515,
+          "end": 5.535,
+          "score": 0.875
+        },
+        {
+          "word": "ich",
+          "start": 5.575,
+          "end": 5.695,
+          "score": 0.797
+        },
+        {
+          "word": "muss",
+          "start": 5.715,
+          "end": 5.856,
+          "score": 0.828
+        },
+        {
+          "word": "sie",
+          "start": 5.876,
+          "end": 5.976,
+          "score": 0.876
+        },
+        {
+          "word": "in",
+          "start": 6.016,
+          "end": 6.076,
+          "score": 0.937
+        },
+        {
+          "word": "der",
+          "start": 6.096,
+          "end": 6.197,
+          "score": 0.667
+        },
+        {
+          "word": "Taverne",
+          "start": 6.217,
+          "end": 6.638,
+          "score": 0.866
+        },
+        {
+          "word": "ansprechen.",
+          "start": 6.678,
+          "end": 7.079,
+          "score": 0.865
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Meine",
+      "start": 0.501,
+      "end": 0.862,
+      "score": 0.777
+    },
+    {
+      "word": "eigene",
+      "start": 0.922,
+      "end": 1.324,
+      "score": 0.838
+    },
+    {
+      "word": "Münze",
+      "start": 1.364,
+      "end": 1.805,
+      "score": 0.879
+    },
+    {
+      "word": "unter",
+      "start": 1.845,
+      "end": 2.126,
+      "score": 0.911
+    },
+    {
+      "word": "Räuberhabe.",
+      "start": 2.226,
+      "end": 4.031,
+      "score": 0.947
+    },
+    {
+      "word": "Mira",
+      "start": 4.051,
+      "end": 4.372,
+      "score": 0.762
+    },
+    {
+      "word": "weiß",
+      "start": 4.392,
+      "end": 4.633,
+      "score": 0.957
+    },
+    {
+      "word": "mehr",
+      "start": 4.673,
+      "end": 4.813,
+      "score": 0.846
+    },
+    {
+      "word": "—",
+      "start": 5.515,
+      "end": 5.535,
+      "score": 0.875
+    },
+    {
+      "word": "ich",
+      "start": 5.575,
+      "end": 5.695,
+      "score": 0.797
+    },
+    {
+      "word": "muss",
+      "start": 5.715,
+      "end": 5.856,
+      "score": 0.828
+    },
+    {
+      "word": "sie",
+      "start": 5.876,
+      "end": 5.976,
+      "score": 0.876
+    },
+    {
+      "word": "in",
+      "start": 6.016,
+      "end": 6.076,
+      "score": 0.937
+    },
+    {
+      "word": "der",
+      "start": 6.096,
+      "end": 6.197,
+      "score": 0.667
+    },
+    {
+      "word": "Taverne",
+      "start": 6.217,
+      "end": 6.638,
+      "score": 0.866
+    },
+    {
+      "word": "ansprechen.",
+      "start": 6.678,
+      "end": 7.079,
+      "score": 0.865
+    }
+  ]
+}

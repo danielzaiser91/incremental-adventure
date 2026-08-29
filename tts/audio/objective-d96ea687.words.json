@@ -1,0 +1,193 @@
+{
+  "segments": [
+    {
+      "start": 0.361,
+      "end": 6.959,
+      "text": "Brakka warnt: Ich muss erst stark genug werden (Stärke 3+), bevor ich den Fremden stelle.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.361,
+          "end": 0.882,
+          "score": 0.894
+        },
+        {
+          "word": "warnt:",
+          "start": 0.923,
+          "end": 2.026,
+          "score": 0.904
+        },
+        {
+          "word": "Ich",
+          "start": 2.086,
+          "end": 2.226,
+          "score": 0.867
+        },
+        {
+          "word": "muss",
+          "start": 2.246,
+          "end": 2.527,
+          "score": 0.903
+        },
+        {
+          "word": "erst",
+          "start": 2.567,
+          "end": 2.828,
+          "score": 0.758
+        },
+        {
+          "word": "stark",
+          "start": 2.848,
+          "end": 3.129,
+          "score": 0.927
+        },
+        {
+          "word": "genug",
+          "start": 3.149,
+          "end": 3.429,
+          "score": 0.882
+        },
+        {
+          "word": "werden",
+          "start": 3.47,
+          "end": 4.212,
+          "score": 0.952
+        },
+        {
+          "word": "(Stärke",
+          "start": 4.232,
+          "end": 4.532,
+          "score": 0.827
+        },
+        {
+          "word": "3+),",
+          "start": 4.573,
+          "end": 5.615,
+          "score": 0.904
+        },
+        {
+          "word": "bevor",
+          "start": 5.635,
+          "end": 5.976,
+          "score": 0.949
+        },
+        {
+          "word": "ich",
+          "start": 5.996,
+          "end": 6.137,
+          "score": 0.911
+        },
+        {
+          "word": "den",
+          "start": 6.177,
+          "end": 6.297,
+          "score": 0.804
+        },
+        {
+          "word": "Fremden",
+          "start": 6.337,
+          "end": 6.698,
+          "score": 0.898
+        },
+        {
+          "word": "stelle.",
+          "start": 6.718,
+          "end": 6.959,
+          "score": 0.934
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.361,
+      "end": 0.882,
+      "score": 0.894
+    },
+    {
+      "word": "warnt:",
+      "start": 0.923,
+      "end": 2.026,
+      "score": 0.904
+    },
+    {
+      "word": "Ich",
+      "start": 2.086,
+      "end": 2.226,
+      "score": 0.867
+    },
+    {
+      "word": "muss",
+      "start": 2.246,
+      "end": 2.527,
+      "score": 0.903
+    },
+    {
+      "word": "erst",
+      "start": 2.567,
+      "end": 2.828,
+      "score": 0.758
+    },
+    {
+      "word": "stark",
+      "start": 2.848,
+      "end": 3.129,
+      "score": 0.927
+    },
+    {
+      "word": "genug",
+      "start": 3.149,
+      "end": 3.429,
+      "score": 0.882
+    },
+    {
+      "word": "werden",
+      "start": 3.47,
+      "end": 4.212,
+      "score": 0.952
+    },
+    {
+      "word": "(Stärke",
+      "start": 4.232,
+      "end": 4.532,
+      "score": 0.827
+    },
+    {
+      "word": "3+),",
+      "start": 4.573,
+      "end": 5.615,
+      "score": 0.904
+    },
+    {
+      "word": "bevor",
+      "start": 5.635,
+      "end": 5.976,
+      "score": 0.949
+    },
+    {
+      "word": "ich",
+      "start": 5.996,
+      "end": 6.137,
+      "score": 0.911
+    },
+    {
+      "word": "den",
+      "start": 6.177,
+      "end": 6.297,
+      "score": 0.804
+    },
+    {
+      "word": "Fremden",
+      "start": 6.337,
+      "end": 6.698,
+      "score": 0.898
+    },
+    {
+      "word": "stelle.",
+      "start": 6.718,
+      "end": 6.959,
+      "score": 0.934
+    }
+  ]
+}

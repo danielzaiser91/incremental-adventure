@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.172,
+      "text": "Brakka warnt: Der Voraussucher respektiert nur Stärke.",
+      "words": [
+        {
+          "word": "Brakka",
+          "start": 0.481,
+          "end": 1.022,
+          "score": 0.872
+        },
+        {
+          "word": "warnt:",
+          "start": 1.062,
+          "end": 1.924,
+          "score": 0.933
+        },
+        {
+          "word": "Der",
+          "start": 1.944,
+          "end": 2.105,
+          "score": 0.879
+        },
+        {
+          "word": "Voraussucher",
+          "start": 2.125,
+          "end": 2.907,
+          "score": 0.859
+        },
+        {
+          "word": "respektiert",
+          "start": 2.947,
+          "end": 3.688,
+          "score": 0.957
+        },
+        {
+          "word": "nur",
+          "start": 3.728,
+          "end": 4.049,
+          "score": 0.839
+        },
+        {
+          "word": "Stärke.",
+          "start": 4.089,
+          "end": 5.172,
+          "score": 0.904
+        }
+      ]
+    },
+    {
+      "start": 5.212,
+      "end": 8.339,
+      "text": "Ich muss den Waldtroll im tiefen Jagdgebiet besiegen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 5.212,
+          "end": 5.432,
+          "score": 0.879
+        },
+        {
+          "word": "muss",
+          "start": 5.452,
+          "end": 5.733,
+          "score": 0.973
+        },
+        {
+          "word": "den",
+          "start": 5.773,
+          "end": 5.974,
+          "score": 0.947
+        },
+        {
+          "word": "Waldtroll",
+          "start": 6.014,
+          "end": 6.655,
+          "score": 0.931
+        },
+        {
+          "word": "im",
+          "start": 6.695,
+          "end": 6.896,
+          "score": 0.933
+        },
+        {
+          "word": "tiefen",
+          "start": 6.936,
+          "end": 7.337,
+          "score": 0.96
+        },
+        {
+          "word": "Jagdgebiet",
+          "start": 7.377,
+          "end": 7.978,
+          "score": 0.936
+        },
+        {
+          "word": "besiegen.",
+          "start": 7.998,
+          "end": 8.339,
+          "score": 0.8
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Brakka",
+      "start": 0.481,
+      "end": 1.022,
+      "score": 0.872
+    },
+    {
+      "word": "warnt:",
+      "start": 1.062,
+      "end": 1.924,
+      "score": 0.933
+    },
+    {
+      "word": "Der",
+      "start": 1.944,
+      "end": 2.105,
+      "score": 0.879
+    },
+    {
+      "word": "Voraussucher",
+      "start": 2.125,
+      "end": 2.907,
+      "score": 0.859
+    },
+    {
+      "word": "respektiert",
+      "start": 2.947,
+      "end": 3.688,
+      "score": 0.957
+    },
+    {
+      "word": "nur",
+      "start": 3.728,
+      "end": 4.049,
+      "score": 0.839
+    },
+    {
+      "word": "Stärke.",
+      "start": 4.089,
+      "end": 5.172,
+      "score": 0.904
+    },
+    {
+      "word": "Ich",
+      "start": 5.212,
+      "end": 5.432,
+      "score": 0.879
+    },
+    {
+      "word": "muss",
+      "start": 5.452,
+      "end": 5.733,
+      "score": 0.973
+    },
+    {
+      "word": "den",
+      "start": 5.773,
+      "end": 5.974,
+      "score": 0.947
+    },
+    {
+      "word": "Waldtroll",
+      "start": 6.014,
+      "end": 6.655,
+      "score": 0.931
+    },
+    {
+      "word": "im",
+      "start": 6.695,
+      "end": 6.896,
+      "score": 0.933
+    },
+    {
+      "word": "tiefen",
+      "start": 6.936,
+      "end": 7.337,
+      "score": 0.96
+    },
+    {
+      "word": "Jagdgebiet",
+      "start": 7.377,
+      "end": 7.978,
+      "score": 0.936
+    },
+    {
+      "word": "besiegen.",
+      "start": 7.998,
+      "end": 8.339,
+      "score": 0.8
+    }
+  ]
+}
