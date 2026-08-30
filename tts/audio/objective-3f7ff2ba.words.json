@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.862,
+      "end": 3.447,
+      "text": "Die erste Allianz steht.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.862,
+          "end": 1.102,
+          "score": 0.884
+        },
+        {
+          "word": "erste",
+          "start": 1.162,
+          "end": 1.543,
+          "score": 0.896
+        },
+        {
+          "word": "Allianz",
+          "start": 1.583,
+          "end": 2.084,
+          "score": 0.893
+        },
+        {
+          "word": "steht.",
+          "start": 2.144,
+          "end": 3.447,
+          "score": 0.986
+        }
+      ]
+    },
+    {
+      "start": 3.487,
+      "end": 7.816,
+      "text": "Valdris hat reagiert — ein Brief liegt vor mir.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 3.487,
+          "end": 3.908,
+          "score": 0.714
+        },
+        {
+          "word": "hat",
+          "start": 3.928,
+          "end": 4.128,
+          "score": 0.881
+        },
+        {
+          "word": "reagiert",
+          "start": 4.168,
+          "end": 4.609,
+          "score": 0.867
+        },
+        {
+          "word": "—",
+          "start": 5.491,
+          "end": 5.511,
+          "score": 0.835
+        },
+        {
+          "word": "ein",
+          "start": 5.551,
+          "end": 5.691,
+          "score": 0.643
+        },
+        {
+          "word": "Brief",
+          "start": 5.732,
+          "end": 5.952,
+          "score": 0.895
+        },
+        {
+          "word": "liegt",
+          "start": 5.992,
+          "end": 6.172,
+          "score": 0.857
+        },
+        {
+          "word": "vor",
+          "start": 6.212,
+          "end": 6.373,
+          "score": 0.927
+        },
+        {
+          "word": "mir.",
+          "start": 6.393,
+          "end": 7.816,
+          "score": 0.833
+        }
+      ]
+    },
+    {
+      "start": 7.856,
+      "end": 9.499,
+      "text": "Weiter zu den anderen Fraktionen.",
+      "words": [
+        {
+          "word": "Weiter",
+          "start": 7.856,
+          "end": 8.216,
+          "score": 0.945
+        },
+        {
+          "word": "zu",
+          "start": 8.237,
+          "end": 8.337,
+          "score": 0.998
+        },
+        {
+          "word": "den",
+          "start": 8.377,
+          "end": 8.637,
+          "score": 0.984
+        },
+        {
+          "word": "anderen",
+          "start": 8.697,
+          "end": 9.018,
+          "score": 0.904
+        },
+        {
+          "word": "Fraktionen.",
+          "start": 9.058,
+          "end": 9.499,
+          "score": 0.76
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.862,
+      "end": 1.102,
+      "score": 0.884
+    },
+    {
+      "word": "erste",
+      "start": 1.162,
+      "end": 1.543,
+      "score": 0.896
+    },
+    {
+      "word": "Allianz",
+      "start": 1.583,
+      "end": 2.084,
+      "score": 0.893
+    },
+    {
+      "word": "steht.",
+      "start": 2.144,
+      "end": 3.447,
+      "score": 0.986
+    },
+    {
+      "word": "Valdris",
+      "start": 3.487,
+      "end": 3.908,
+      "score": 0.714
+    },
+    {
+      "word": "hat",
+      "start": 3.928,
+      "end": 4.128,
+      "score": 0.881
+    },
+    {
+      "word": "reagiert",
+      "start": 4.168,
+      "end": 4.609,
+      "score": 0.867
+    },
+    {
+      "word": "—",
+      "start": 5.491,
+      "end": 5.511,
+      "score": 0.835
+    },
+    {
+      "word": "ein",
+      "start": 5.551,
+      "end": 5.691,
+      "score": 0.643
+    },
+    {
+      "word": "Brief",
+      "start": 5.732,
+      "end": 5.952,
+      "score": 0.895
+    },
+    {
+      "word": "liegt",
+      "start": 5.992,
+      "end": 6.172,
+      "score": 0.857
+    },
+    {
+      "word": "vor",
+      "start": 6.212,
+      "end": 6.373,
+      "score": 0.927
+    },
+    {
+      "word": "mir.",
+      "start": 6.393,
+      "end": 7.816,
+      "score": 0.833
+    },
+    {
+      "word": "Weiter",
+      "start": 7.856,
+      "end": 8.216,
+      "score": 0.945
+    },
+    {
+      "word": "zu",
+      "start": 8.237,
+      "end": 8.337,
+      "score": 0.998
+    },
+    {
+      "word": "den",
+      "start": 8.377,
+      "end": 8.637,
+      "score": 0.984
+    },
+    {
+      "word": "anderen",
+      "start": 8.697,
+      "end": 9.018,
+      "score": 0.904
+    },
+    {
+      "word": "Fraktionen.",
+      "start": 9.058,
+      "end": 9.499,
+      "score": 0.76
+    }
+  ]
+}

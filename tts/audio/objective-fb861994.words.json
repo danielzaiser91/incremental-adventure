@@ -1,0 +1,303 @@
+{
+  "segments": [
+    {
+      "start": 0.641,
+      "end": 2.985,
+      "text": "Der Brief ist entschlüsselt.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.641,
+          "end": 0.761,
+          "score": 0.644
+        },
+        {
+          "word": "Brief",
+          "start": 0.801,
+          "end": 1.002,
+          "score": 0.86
+        },
+        {
+          "word": "ist",
+          "start": 1.062,
+          "end": 1.262,
+          "score": 0.48
+        },
+        {
+          "word": "entschlüsselt.",
+          "start": 1.282,
+          "end": 2.985,
+          "score": 0.791
+        }
+      ]
+    },
+    {
+      "start": 3.025,
+      "end": 9.434,
+      "text": "Lethkar hält mehr bereit als ich gedacht hatte — Varena, Thessa, Pereth.",
+      "words": [
+        {
+          "word": "Lethkar",
+          "start": 3.025,
+          "end": 3.505,
+          "score": 0.664
+        },
+        {
+          "word": "hält",
+          "start": 3.545,
+          "end": 3.846,
+          "score": 0.664
+        },
+        {
+          "word": "mehr",
+          "start": 3.866,
+          "end": 4.066,
+          "score": 0.732
+        },
+        {
+          "word": "bereit",
+          "start": 4.106,
+          "end": 4.347,
+          "score": 0.862
+        },
+        {
+          "word": "als",
+          "start": 4.387,
+          "end": 4.507,
+          "score": 0.697
+        },
+        {
+          "word": "ich",
+          "start": 4.547,
+          "end": 4.687,
+          "score": 0.865
+        },
+        {
+          "word": "gedacht",
+          "start": 4.727,
+          "end": 4.988,
+          "score": 0.84
+        },
+        {
+          "word": "hatte",
+          "start": 5.008,
+          "end": 5.208,
+          "score": 0.747
+        },
+        {
+          "word": "—",
+          "start": 5.989,
+          "end": 6.009,
+          "score": 0.667
+        },
+        {
+          "word": "Varena,",
+          "start": 6.049,
+          "end": 7.051,
+          "score": 0.742
+        },
+        {
+          "word": "Thessa,",
+          "start": 7.091,
+          "end": 7.972,
+          "score": 0.685
+        },
+        {
+          "word": "Pereth.",
+          "start": 8.012,
+          "end": 9.434,
+          "score": 0.575
+        }
+      ]
+    },
+    {
+      "start": 9.474,
+      "end": 11.698,
+      "text": "Und irgendwo nördlich des Markts: ein Haus.",
+      "words": [
+        {
+          "word": "Und",
+          "start": 9.474,
+          "end": 9.775,
+          "score": 0.541
+        },
+        {
+          "word": "irgendwo",
+          "start": 9.815,
+          "end": 10.396,
+          "score": 0.854
+        },
+        {
+          "word": "nördlich",
+          "start": 10.436,
+          "end": 10.836,
+          "score": 0.788
+        },
+        {
+          "word": "des",
+          "start": 10.856,
+          "end": 11.057,
+          "score": 0.844
+        },
+        {
+          "word": "Markts:",
+          "start": 11.117,
+          "end": 11.457,
+          "score": 0.662
+        },
+        {
+          "word": "ein",
+          "start": 11.517,
+          "end": 11.578,
+          "score": 0.045
+        },
+        {
+          "word": "Haus.",
+          "start": 11.598,
+          "end": 11.698,
+          "score": 0.036
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.641,
+      "end": 0.761,
+      "score": 0.644
+    },
+    {
+      "word": "Brief",
+      "start": 0.801,
+      "end": 1.002,
+      "score": 0.86
+    },
+    {
+      "word": "ist",
+      "start": 1.062,
+      "end": 1.262,
+      "score": 0.48
+    },
+    {
+      "word": "entschlüsselt.",
+      "start": 1.282,
+      "end": 2.985,
+      "score": 0.791
+    },
+    {
+      "word": "Lethkar",
+      "start": 3.025,
+      "end": 3.505,
+      "score": 0.664
+    },
+    {
+      "word": "hält",
+      "start": 3.545,
+      "end": 3.846,
+      "score": 0.664
+    },
+    {
+      "word": "mehr",
+      "start": 3.866,
+      "end": 4.066,
+      "score": 0.732
+    },
+    {
+      "word": "bereit",
+      "start": 4.106,
+      "end": 4.347,
+      "score": 0.862
+    },
+    {
+      "word": "als",
+      "start": 4.387,
+      "end": 4.507,
+      "score": 0.697
+    },
+    {
+      "word": "ich",
+      "start": 4.547,
+      "end": 4.687,
+      "score": 0.865
+    },
+    {
+      "word": "gedacht",
+      "start": 4.727,
+      "end": 4.988,
+      "score": 0.84
+    },
+    {
+      "word": "hatte",
+      "start": 5.008,
+      "end": 5.208,
+      "score": 0.747
+    },
+    {
+      "word": "—",
+      "start": 5.989,
+      "end": 6.009,
+      "score": 0.667
+    },
+    {
+      "word": "Varena,",
+      "start": 6.049,
+      "end": 7.051,
+      "score": 0.742
+    },
+    {
+      "word": "Thessa,",
+      "start": 7.091,
+      "end": 7.972,
+      "score": 0.685
+    },
+    {
+      "word": "Pereth.",
+      "start": 8.012,
+      "end": 9.434,
+      "score": 0.575
+    },
+    {
+      "word": "Und",
+      "start": 9.474,
+      "end": 9.775,
+      "score": 0.541
+    },
+    {
+      "word": "irgendwo",
+      "start": 9.815,
+      "end": 10.396,
+      "score": 0.854
+    },
+    {
+      "word": "nördlich",
+      "start": 10.436,
+      "end": 10.836,
+      "score": 0.788
+    },
+    {
+      "word": "des",
+      "start": 10.856,
+      "end": 11.057,
+      "score": 0.844
+    },
+    {
+      "word": "Markts:",
+      "start": 11.117,
+      "end": 11.457,
+      "score": 0.662
+    },
+    {
+      "word": "ein",
+      "start": 11.517,
+      "end": 11.578,
+      "score": 0.045
+    },
+    {
+      "word": "Haus.",
+      "start": 11.598,
+      "end": 11.698,
+      "score": 0.036
+    }
+  ]
+}

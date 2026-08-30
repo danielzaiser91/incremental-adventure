@@ -1,0 +1,207 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 2.607,
+      "text": "Lethkar liegt hinter mir.",
+      "words": [
+        {
+          "word": "Lethkar",
+          "start": 0.521,
+          "end": 1.043,
+          "score": 0.808
+        },
+        {
+          "word": "liegt",
+          "start": 1.063,
+          "end": 1.344,
+          "score": 0.827
+        },
+        {
+          "word": "hinter",
+          "start": 1.364,
+          "end": 1.644,
+          "score": 0.978
+        },
+        {
+          "word": "mir.",
+          "start": 1.664,
+          "end": 2.607,
+          "score": 0.945
+        }
+      ]
+    },
+    {
+      "start": 2.647,
+      "end": 5.715,
+      "text": "Valdris zieht sich zurück — nach Osten.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 2.647,
+          "end": 3.249,
+          "score": 0.811
+        },
+        {
+          "word": "zieht",
+          "start": 3.289,
+          "end": 3.489,
+          "score": 0.893
+        },
+        {
+          "word": "sich",
+          "start": 3.529,
+          "end": 3.69,
+          "score": 0.998
+        },
+        {
+          "word": "zurück",
+          "start": 3.73,
+          "end": 4.011,
+          "score": 0.93
+        },
+        {
+          "word": "—",
+          "start": 4.372,
+          "end": 4.392,
+          "score": 0.811
+        },
+        {
+          "word": "nach",
+          "start": 4.412,
+          "end": 4.572,
+          "score": 0.992
+        },
+        {
+          "word": "Osten.",
+          "start": 4.632,
+          "end": 5.715,
+          "score": 0.94
+        }
+      ]
+    },
+    {
+      "start": 5.735,
+      "end": 7.019,
+      "text": "Der nächste Schritt wartet.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 5.735,
+          "end": 5.936,
+          "score": 0.923
+        },
+        {
+          "word": "nächste",
+          "start": 5.976,
+          "end": 6.337,
+          "score": 0.859
+        },
+        {
+          "word": "Schritt",
+          "start": 6.377,
+          "end": 6.678,
+          "score": 0.917
+        },
+        {
+          "word": "wartet.",
+          "start": 6.738,
+          "end": 7.019,
+          "score": 0.853
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Lethkar",
+      "start": 0.521,
+      "end": 1.043,
+      "score": 0.808
+    },
+    {
+      "word": "liegt",
+      "start": 1.063,
+      "end": 1.344,
+      "score": 0.827
+    },
+    {
+      "word": "hinter",
+      "start": 1.364,
+      "end": 1.644,
+      "score": 0.978
+    },
+    {
+      "word": "mir.",
+      "start": 1.664,
+      "end": 2.607,
+      "score": 0.945
+    },
+    {
+      "word": "Valdris",
+      "start": 2.647,
+      "end": 3.249,
+      "score": 0.811
+    },
+    {
+      "word": "zieht",
+      "start": 3.289,
+      "end": 3.489,
+      "score": 0.893
+    },
+    {
+      "word": "sich",
+      "start": 3.529,
+      "end": 3.69,
+      "score": 0.998
+    },
+    {
+      "word": "zurück",
+      "start": 3.73,
+      "end": 4.011,
+      "score": 0.93
+    },
+    {
+      "word": "—",
+      "start": 4.372,
+      "end": 4.392,
+      "score": 0.811
+    },
+    {
+      "word": "nach",
+      "start": 4.412,
+      "end": 4.572,
+      "score": 0.992
+    },
+    {
+      "word": "Osten.",
+      "start": 4.632,
+      "end": 5.715,
+      "score": 0.94
+    },
+    {
+      "word": "Der",
+      "start": 5.735,
+      "end": 5.936,
+      "score": 0.923
+    },
+    {
+      "word": "nächste",
+      "start": 5.976,
+      "end": 6.337,
+      "score": 0.859
+    },
+    {
+      "word": "Schritt",
+      "start": 6.377,
+      "end": 6.678,
+      "score": 0.917
+    },
+    {
+      "word": "wartet.",
+      "start": 6.738,
+      "end": 7.019,
+      "score": 0.853
+    }
+  ]
+}

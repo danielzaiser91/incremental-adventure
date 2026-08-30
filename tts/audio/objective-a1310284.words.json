@@ -1,0 +1,128 @@
+{
+  "segments": [
+    {
+      "start": 0.863,
+      "end": 3.574,
+      "text": "Valdris hat mir ein Angebot gemacht.",
+      "words": [
+        {
+          "word": "Valdris",
+          "start": 0.863,
+          "end": 1.325,
+          "score": 0.758
+        },
+        {
+          "word": "hat",
+          "start": 1.365,
+          "end": 1.506,
+          "score": 0.932
+        },
+        {
+          "word": "mir",
+          "start": 1.526,
+          "end": 1.667,
+          "score": 0.9
+        },
+        {
+          "word": "ein",
+          "start": 1.687,
+          "end": 1.847,
+          "score": 0.599
+        },
+        {
+          "word": "Angebot",
+          "start": 1.887,
+          "end": 2.289,
+          "score": 0.984
+        },
+        {
+          "word": "gemacht.",
+          "start": 2.329,
+          "end": 3.574,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 3.634,
+      "end": 4.618,
+      "text": "Ich muss entscheiden.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 3.634,
+          "end": 3.956,
+          "score": 0.714
+        },
+        {
+          "word": "muss",
+          "start": 3.976,
+          "end": 4.217,
+          "score": 0.905
+        },
+        {
+          "word": "entscheiden.",
+          "start": 4.237,
+          "end": 4.618,
+          "score": 0.874
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Valdris",
+      "start": 0.863,
+      "end": 1.325,
+      "score": 0.758
+    },
+    {
+      "word": "hat",
+      "start": 1.365,
+      "end": 1.506,
+      "score": 0.932
+    },
+    {
+      "word": "mir",
+      "start": 1.526,
+      "end": 1.667,
+      "score": 0.9
+    },
+    {
+      "word": "ein",
+      "start": 1.687,
+      "end": 1.847,
+      "score": 0.599
+    },
+    {
+      "word": "Angebot",
+      "start": 1.887,
+      "end": 2.289,
+      "score": 0.984
+    },
+    {
+      "word": "gemacht.",
+      "start": 2.329,
+      "end": 3.574,
+      "score": 0.924
+    },
+    {
+      "word": "Ich",
+      "start": 3.634,
+      "end": 3.956,
+      "score": 0.714
+    },
+    {
+      "word": "muss",
+      "start": 3.976,
+      "end": 4.217,
+      "score": 0.905
+    },
+    {
+      "word": "entscheiden.",
+      "start": 4.237,
+      "end": 4.618,
+      "score": 0.874
+    }
+  ]
+}

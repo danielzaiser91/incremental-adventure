@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.442,
+      "end": 2.712,
+      "text": "Ich weiß, wo das Lager ist.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.442,
+          "end": 0.623,
+          "score": 0.883
+        },
+        {
+          "word": "weiß,",
+          "start": 0.663,
+          "end": 0.944,
+          "score": 0.95
+        },
+        {
+          "word": "wo",
+          "start": 0.964,
+          "end": 1.085,
+          "score": 0.988
+        },
+        {
+          "word": "das",
+          "start": 1.125,
+          "end": 1.306,
+          "score": 0.892
+        },
+        {
+          "word": "Lager",
+          "start": 1.326,
+          "end": 1.647,
+          "score": 0.804
+        },
+        {
+          "word": "ist.",
+          "start": 1.687,
+          "end": 2.712,
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "start": 2.772,
+      "end": 4.198,
+      "text": "Es ist Zeit, dorthin zu gehen.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 2.772,
+          "end": 2.873,
+          "score": 0.778
+        },
+        {
+          "word": "ist",
+          "start": 2.913,
+          "end": 3.134,
+          "score": 0.722
+        },
+        {
+          "word": "Zeit,",
+          "start": 3.174,
+          "end": 3.435,
+          "score": 0.811
+        },
+        {
+          "word": "dorthin",
+          "start": 3.475,
+          "end": 3.837,
+          "score": 0.978
+        },
+        {
+          "word": "zu",
+          "start": 3.897,
+          "end": 3.977,
+          "score": 0.98
+        },
+        {
+          "word": "gehen.",
+          "start": 4.018,
+          "end": 4.198,
+          "score": 0.907
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.442,
+      "end": 0.623,
+      "score": 0.883
+    },
+    {
+      "word": "weiß,",
+      "start": 0.663,
+      "end": 0.944,
+      "score": 0.95
+    },
+    {
+      "word": "wo",
+      "start": 0.964,
+      "end": 1.085,
+      "score": 0.988
+    },
+    {
+      "word": "das",
+      "start": 1.125,
+      "end": 1.306,
+      "score": 0.892
+    },
+    {
+      "word": "Lager",
+      "start": 1.326,
+      "end": 1.647,
+      "score": 0.804
+    },
+    {
+      "word": "ist.",
+      "start": 1.687,
+      "end": 2.712,
+      "score": 0.811
+    },
+    {
+      "word": "Es",
+      "start": 2.772,
+      "end": 2.873,
+      "score": 0.778
+    },
+    {
+      "word": "ist",
+      "start": 2.913,
+      "end": 3.134,
+      "score": 0.722
+    },
+    {
+      "word": "Zeit,",
+      "start": 3.174,
+      "end": 3.435,
+      "score": 0.811
+    },
+    {
+      "word": "dorthin",
+      "start": 3.475,
+      "end": 3.837,
+      "score": 0.978
+    },
+    {
+      "word": "zu",
+      "start": 3.897,
+      "end": 3.977,
+      "score": 0.98
+    },
+    {
+      "word": "gehen.",
+      "start": 4.018,
+      "end": 4.198,
+      "score": 0.907
+    }
+  ]
+}

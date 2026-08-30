@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 3.808,
+      "text": "Varena hat das Bild vervollständigt.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 0.461,
+          "end": 1.062,
+          "score": 0.966
+        },
+        {
+          "word": "hat",
+          "start": 1.102,
+          "end": 1.283,
+          "score": 0.861
+        },
+        {
+          "word": "das",
+          "start": 1.303,
+          "end": 1.503,
+          "score": 0.98
+        },
+        {
+          "word": "Bild",
+          "start": 1.543,
+          "end": 1.824,
+          "score": 0.964
+        },
+        {
+          "word": "vervollständigt.",
+          "start": 1.864,
+          "end": 3.808,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 3.828,
+      "end": 8.999,
+      "text": "Die Alchemie vertieft mein Verständnis — ich bin nah an einem Durchbruch.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.828,
+          "end": 4.029,
+          "score": 0.897
+        },
+        {
+          "word": "Alchemie",
+          "start": 4.069,
+          "end": 4.87,
+          "score": 0.817
+        },
+        {
+          "word": "vertieft",
+          "start": 4.91,
+          "end": 5.512,
+          "score": 0.956
+        },
+        {
+          "word": "mein",
+          "start": 5.552,
+          "end": 5.772,
+          "score": 0.808
+        },
+        {
+          "word": "Verständnis",
+          "start": 5.812,
+          "end": 6.414,
+          "score": 0.895
+        },
+        {
+          "word": "—",
+          "start": 7.235,
+          "end": 7.255,
+          "score": 0.434
+        },
+        {
+          "word": "ich",
+          "start": 7.295,
+          "end": 7.476,
+          "score": 0.822
+        },
+        {
+          "word": "bin",
+          "start": 7.516,
+          "end": 7.756,
+          "score": 0.964
+        },
+        {
+          "word": "nah",
+          "start": 7.797,
+          "end": 8.057,
+          "score": 0.949
+        },
+        {
+          "word": "an",
+          "start": 8.097,
+          "end": 8.237,
+          "score": 0.997
+        },
+        {
+          "word": "einem",
+          "start": 8.278,
+          "end": 8.558,
+          "score": 0.791
+        },
+        {
+          "word": "Durchbruch.",
+          "start": 8.578,
+          "end": 8.999,
+          "score": 0.783
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Varena",
+      "start": 0.461,
+      "end": 1.062,
+      "score": 0.966
+    },
+    {
+      "word": "hat",
+      "start": 1.102,
+      "end": 1.283,
+      "score": 0.861
+    },
+    {
+      "word": "das",
+      "start": 1.303,
+      "end": 1.503,
+      "score": 0.98
+    },
+    {
+      "word": "Bild",
+      "start": 1.543,
+      "end": 1.824,
+      "score": 0.964
+    },
+    {
+      "word": "vervollständigt.",
+      "start": 1.864,
+      "end": 3.808,
+      "score": 0.892
+    },
+    {
+      "word": "Die",
+      "start": 3.828,
+      "end": 4.029,
+      "score": 0.897
+    },
+    {
+      "word": "Alchemie",
+      "start": 4.069,
+      "end": 4.87,
+      "score": 0.817
+    },
+    {
+      "word": "vertieft",
+      "start": 4.91,
+      "end": 5.512,
+      "score": 0.956
+    },
+    {
+      "word": "mein",
+      "start": 5.552,
+      "end": 5.772,
+      "score": 0.808
+    },
+    {
+      "word": "Verständnis",
+      "start": 5.812,
+      "end": 6.414,
+      "score": 0.895
+    },
+    {
+      "word": "—",
+      "start": 7.235,
+      "end": 7.255,
+      "score": 0.434
+    },
+    {
+      "word": "ich",
+      "start": 7.295,
+      "end": 7.476,
+      "score": 0.822
+    },
+    {
+      "word": "bin",
+      "start": 7.516,
+      "end": 7.756,
+      "score": 0.964
+    },
+    {
+      "word": "nah",
+      "start": 7.797,
+      "end": 8.057,
+      "score": 0.949
+    },
+    {
+      "word": "an",
+      "start": 8.097,
+      "end": 8.237,
+      "score": 0.997
+    },
+    {
+      "word": "einem",
+      "start": 8.278,
+      "end": 8.558,
+      "score": 0.791
+    },
+    {
+      "word": "Durchbruch.",
+      "start": 8.578,
+      "end": 8.999,
+      "score": 0.783
+    }
+  ]
+}

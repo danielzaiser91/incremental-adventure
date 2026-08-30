@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 4.855,
+      "text": "Das Lager war leer — aber nicht ohne Spuren.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.441,
+          "end": 0.642,
+          "score": 0.828
+        },
+        {
+          "word": "Lager",
+          "start": 0.682,
+          "end": 1.063,
+          "score": 0.978
+        },
+        {
+          "word": "war",
+          "start": 1.103,
+          "end": 1.284,
+          "score": 0.971
+        },
+        {
+          "word": "leer",
+          "start": 1.324,
+          "end": 1.565,
+          "score": 0.804
+        },
+        {
+          "word": "—",
+          "start": 2.387,
+          "end": 2.407,
+          "score": 0.961
+        },
+        {
+          "word": "aber",
+          "start": 2.447,
+          "end": 2.688,
+          "score": 0.947
+        },
+        {
+          "word": "nicht",
+          "start": 2.728,
+          "end": 3.049,
+          "score": 0.995
+        },
+        {
+          "word": "ohne",
+          "start": 3.109,
+          "end": 3.39,
+          "score": 0.822
+        },
+        {
+          "word": "Spuren.",
+          "start": 3.43,
+          "end": 4.855,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 4.875,
+      "end": 6.179,
+      "text": "Varena sollte das wissen.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 4.875,
+          "end": 5.457,
+          "score": 0.726
+        },
+        {
+          "word": "sollte",
+          "start": 5.477,
+          "end": 5.737,
+          "score": 0.917
+        },
+        {
+          "word": "das",
+          "start": 5.778,
+          "end": 5.938,
+          "score": 0.951
+        },
+        {
+          "word": "wissen.",
+          "start": 5.978,
+          "end": 6.179,
+          "score": 0.974
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.441,
+      "end": 0.642,
+      "score": 0.828
+    },
+    {
+      "word": "Lager",
+      "start": 0.682,
+      "end": 1.063,
+      "score": 0.978
+    },
+    {
+      "word": "war",
+      "start": 1.103,
+      "end": 1.284,
+      "score": 0.971
+    },
+    {
+      "word": "leer",
+      "start": 1.324,
+      "end": 1.565,
+      "score": 0.804
+    },
+    {
+      "word": "—",
+      "start": 2.387,
+      "end": 2.407,
+      "score": 0.961
+    },
+    {
+      "word": "aber",
+      "start": 2.447,
+      "end": 2.688,
+      "score": 0.947
+    },
+    {
+      "word": "nicht",
+      "start": 2.728,
+      "end": 3.049,
+      "score": 0.995
+    },
+    {
+      "word": "ohne",
+      "start": 3.109,
+      "end": 3.39,
+      "score": 0.822
+    },
+    {
+      "word": "Spuren.",
+      "start": 3.43,
+      "end": 4.855,
+      "score": 0.947
+    },
+    {
+      "word": "Varena",
+      "start": 4.875,
+      "end": 5.457,
+      "score": 0.726
+    },
+    {
+      "word": "sollte",
+      "start": 5.477,
+      "end": 5.737,
+      "score": 0.917
+    },
+    {
+      "word": "das",
+      "start": 5.778,
+      "end": 5.938,
+      "score": 0.951
+    },
+    {
+      "word": "wissen.",
+      "start": 5.978,
+      "end": 6.179,
+      "score": 0.974
+    }
+  ]
+}

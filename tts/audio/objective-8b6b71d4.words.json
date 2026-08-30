@@ -1,0 +1,219 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 1.944,
+      "text": "Velmark.",
+      "words": [
+        {
+          "word": "Velmark.",
+          "start": 0.561,
+          "end": 1.944,
+          "score": 0.902
+        }
+      ]
+    },
+    {
+      "start": 1.964,
+      "end": 8.156,
+      "text": "Drei Fraktionen, ein Netz aus Schulden, und irgendwo: Valdris.",
+      "words": [
+        {
+          "word": "Drei",
+          "start": 1.964,
+          "end": 2.265,
+          "score": 0.874
+        },
+        {
+          "word": "Fraktionen,",
+          "start": 2.305,
+          "end": 3.407,
+          "score": 0.871
+        },
+        {
+          "word": "ein",
+          "start": 3.427,
+          "end": 3.647,
+          "score": 0.675
+        },
+        {
+          "word": "Netz",
+          "start": 3.687,
+          "end": 3.988,
+          "score": 0.964
+        },
+        {
+          "word": "aus",
+          "start": 4.008,
+          "end": 4.208,
+          "score": 0.883
+        },
+        {
+          "word": "Schulden,",
+          "start": 4.248,
+          "end": 5.07,
+          "score": 0.789
+        },
+        {
+          "word": "und",
+          "start": 5.11,
+          "end": 5.431,
+          "score": 0.96
+        },
+        {
+          "word": "irgendwo:",
+          "start": 5.471,
+          "end": 6.593,
+          "score": 0.825
+        },
+        {
+          "word": "Valdris.",
+          "start": 6.613,
+          "end": 8.156,
+          "score": 0.787
+        }
+      ]
+    },
+    {
+      "start": 8.216,
+      "end": 9.699,
+      "text": "Ich fange bei einer Fraktion an.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 8.216,
+          "end": 8.337,
+          "score": 0.82
+        },
+        {
+          "word": "fange",
+          "start": 8.377,
+          "end": 8.577,
+          "score": 0.889
+        },
+        {
+          "word": "bei",
+          "start": 8.617,
+          "end": 8.818,
+          "score": 0.98
+        },
+        {
+          "word": "einer",
+          "start": 8.878,
+          "end": 9.098,
+          "score": 0.969
+        },
+        {
+          "word": "Fraktion",
+          "start": 9.138,
+          "end": 9.579,
+          "score": 0.807
+        },
+        {
+          "word": "an.",
+          "start": 9.619,
+          "end": 9.699,
+          "score": 0.845
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Velmark.",
+      "start": 0.561,
+      "end": 1.944,
+      "score": 0.902
+    },
+    {
+      "word": "Drei",
+      "start": 1.964,
+      "end": 2.265,
+      "score": 0.874
+    },
+    {
+      "word": "Fraktionen,",
+      "start": 2.305,
+      "end": 3.407,
+      "score": 0.871
+    },
+    {
+      "word": "ein",
+      "start": 3.427,
+      "end": 3.647,
+      "score": 0.675
+    },
+    {
+      "word": "Netz",
+      "start": 3.687,
+      "end": 3.988,
+      "score": 0.964
+    },
+    {
+      "word": "aus",
+      "start": 4.008,
+      "end": 4.208,
+      "score": 0.883
+    },
+    {
+      "word": "Schulden,",
+      "start": 4.248,
+      "end": 5.07,
+      "score": 0.789
+    },
+    {
+      "word": "und",
+      "start": 5.11,
+      "end": 5.431,
+      "score": 0.96
+    },
+    {
+      "word": "irgendwo:",
+      "start": 5.471,
+      "end": 6.593,
+      "score": 0.825
+    },
+    {
+      "word": "Valdris.",
+      "start": 6.613,
+      "end": 8.156,
+      "score": 0.787
+    },
+    {
+      "word": "Ich",
+      "start": 8.216,
+      "end": 8.337,
+      "score": 0.82
+    },
+    {
+      "word": "fange",
+      "start": 8.377,
+      "end": 8.577,
+      "score": 0.889
+    },
+    {
+      "word": "bei",
+      "start": 8.617,
+      "end": 8.818,
+      "score": 0.98
+    },
+    {
+      "word": "einer",
+      "start": 8.878,
+      "end": 9.098,
+      "score": 0.969
+    },
+    {
+      "word": "Fraktion",
+      "start": 9.138,
+      "end": 9.579,
+      "score": 0.807
+    },
+    {
+      "word": "an.",
+      "start": 9.619,
+      "end": 9.699,
+      "score": 0.845
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 1.784,
+      "text": "Valdris.",
+      "words": [
+        {
+          "word": "Valdris.",
+          "start": 0.561,
+          "end": 1.784,
+          "score": 0.791
+        }
+      ]
+    },
+    {
+      "start": 1.804,
+      "end": 5.994,
+      "text": "Ein Name, eine Struktur, ein Netzwerk.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 1.804,
+          "end": 1.985,
+          "score": 0.81
+        },
+        {
+          "word": "Name,",
+          "start": 2.005,
+          "end": 2.847,
+          "score": 0.994
+        },
+        {
+          "word": "eine",
+          "start": 2.887,
+          "end": 3.067,
+          "score": 0.89
+        },
+        {
+          "word": "Struktur,",
+          "start": 3.127,
+          "end": 4.27,
+          "score": 0.881
+        },
+        {
+          "word": "ein",
+          "start": 4.31,
+          "end": 4.47,
+          "score": 0.744
+        },
+        {
+          "word": "Netzwerk.",
+          "start": 4.51,
+          "end": 5.994,
+          "score": 0.995
+        }
+      ]
+    },
+    {
+      "start": 6.014,
+      "end": 8.339,
+      "text": "Was ich damit anfange, liegt bei mir.",
+      "words": [
+        {
+          "word": "Was",
+          "start": 6.014,
+          "end": 6.114,
+          "score": 0.959
+        },
+        {
+          "word": "ich",
+          "start": 6.154,
+          "end": 6.254,
+          "score": 0.813
+        },
+        {
+          "word": "damit",
+          "start": 6.275,
+          "end": 6.575,
+          "score": 0.958
+        },
+        {
+          "word": "anfange,",
+          "start": 6.615,
+          "end": 7.758,
+          "score": 0.993
+        },
+        {
+          "word": "liegt",
+          "start": 7.798,
+          "end": 7.999,
+          "score": 0.91
+        },
+        {
+          "word": "bei",
+          "start": 8.039,
+          "end": 8.179,
+          "score": 0.992
+        },
+        {
+          "word": "mir.",
+          "start": 8.219,
+          "end": 8.339,
+          "score": 0.764
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Valdris.",
+      "start": 0.561,
+      "end": 1.784,
+      "score": 0.791
+    },
+    {
+      "word": "Ein",
+      "start": 1.804,
+      "end": 1.985,
+      "score": 0.81
+    },
+    {
+      "word": "Name,",
+      "start": 2.005,
+      "end": 2.847,
+      "score": 0.994
+    },
+    {
+      "word": "eine",
+      "start": 2.887,
+      "end": 3.067,
+      "score": 0.89
+    },
+    {
+      "word": "Struktur,",
+      "start": 3.127,
+      "end": 4.27,
+      "score": 0.881
+    },
+    {
+      "word": "ein",
+      "start": 4.31,
+      "end": 4.47,
+      "score": 0.744
+    },
+    {
+      "word": "Netzwerk.",
+      "start": 4.51,
+      "end": 5.994,
+      "score": 0.995
+    },
+    {
+      "word": "Was",
+      "start": 6.014,
+      "end": 6.114,
+      "score": 0.959
+    },
+    {
+      "word": "ich",
+      "start": 6.154,
+      "end": 6.254,
+      "score": 0.813
+    },
+    {
+      "word": "damit",
+      "start": 6.275,
+      "end": 6.575,
+      "score": 0.958
+    },
+    {
+      "word": "anfange,",
+      "start": 6.615,
+      "end": 7.758,
+      "score": 0.993
+    },
+    {
+      "word": "liegt",
+      "start": 7.798,
+      "end": 7.999,
+      "score": 0.91
+    },
+    {
+      "word": "bei",
+      "start": 8.039,
+      "end": 8.179,
+      "score": 0.992
+    },
+    {
+      "word": "mir.",
+      "start": 8.219,
+      "end": 8.339,
+      "score": 0.764
+    }
+  ]
+}

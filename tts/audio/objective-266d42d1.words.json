@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.682,
+      "end": 2.67,
+      "text": "Zwei Fraktionen auf meiner Seite.",
+      "words": [
+        {
+          "word": "Zwei",
+          "start": 0.682,
+          "end": 1.044,
+          "score": 0.483
+        },
+        {
+          "word": "Fraktionen",
+          "start": 1.084,
+          "end": 1.887,
+          "score": 0.768
+        },
+        {
+          "word": "auf",
+          "start": 1.927,
+          "end": 2.108,
+          "score": 0.694
+        },
+        {
+          "word": "meiner",
+          "start": 2.128,
+          "end": 2.368,
+          "score": 0.851
+        },
+        {
+          "word": "Seite.",
+          "start": 2.429,
+          "end": 2.67,
+          "score": 0.654
+        }
+      ]
+    },
+    {
+      "start": 2.73,
+      "end": 3.051,
+      "text": "Eine fehlt noch.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 2.73,
+          "end": 2.81,
+          "score": 0.071
+        },
+        {
+          "word": "fehlt",
+          "start": 2.83,
+          "end": 2.93,
+          "score": 0.032
+        },
+        {
+          "word": "noch.",
+          "start": 2.951,
+          "end": 3.051,
+          "score": 0.043
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zwei",
+      "start": 0.682,
+      "end": 1.044,
+      "score": 0.483
+    },
+    {
+      "word": "Fraktionen",
+      "start": 1.084,
+      "end": 1.887,
+      "score": 0.768
+    },
+    {
+      "word": "auf",
+      "start": 1.927,
+      "end": 2.108,
+      "score": 0.694
+    },
+    {
+      "word": "meiner",
+      "start": 2.128,
+      "end": 2.368,
+      "score": 0.851
+    },
+    {
+      "word": "Seite.",
+      "start": 2.429,
+      "end": 2.67,
+      "score": 0.654
+    },
+    {
+      "word": "Eine",
+      "start": 2.73,
+      "end": 2.81,
+      "score": 0.071
+    },
+    {
+      "word": "fehlt",
+      "start": 2.83,
+      "end": 2.93,
+      "score": 0.032
+    },
+    {
+      "word": "noch.",
+      "start": 2.951,
+      "end": 3.051,
+      "score": 0.043
+    }
+  ]
+}
