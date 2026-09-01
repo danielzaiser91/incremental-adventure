@@ -178,8 +178,8 @@ mit dem neuen Modell.
       zu neutral, ist der nächste Hebel eine Umformulierung des KNOTENTEXTES
       in `script/npc.js` mit der Dialog-KI, kein weiterer Prompt-Versuch.)
       `ACTIVE_NPC_PHASES` steht auf `{3, 4}`.
-- [ ] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *ab 09.08.2026 im
-      Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
+- [x] **Phase 5 — Quests & Objectives** (177 Kurztexte) — *komplett 177/177
+      (01.09.2026)*, *ab 09.08.2026 im Manifest*: 139 Quest-Beschreibungen (`descByState` aus quests.js, ein
       Eintrag pro Zustand, ID `quest-<questId>-<state>`) + 38 Zieltexte aus
       `getObjectiveText()` (objective.js). Beides Ich-Perspektive → Erzähler-
       stimme Iapetus. Objective-IDs sind ein Kurz-Hash des Textes
@@ -190,11 +190,10 @@ mit dem neuen Modell.
       `archivRecherche.active`), das Template-Literal in `getObjectiveText()`
       (Mut-Zähler) und `getExplicitGoalText()` (reine Funktionslabels/Zahlen).
       Manifest umfasste damit 331 Einheiten; seit der Phase-6-Extraktion
-      vom 26.08.2026 sind es **404**. *Stand 30.08.2026 (Nachtlauf):
-      174/177 — die 139 Quest-Beschreibungen sind komplett, es laufen nur
-      noch die Objectives (35/38). Die letzten 3 Objectives laufen im
-      Batch vom 31.08.2026 mit; im selben Lauf geht der Batch in Phase 6
-      über.*
+      vom 26.08.2026 sind es **404**. *Abgeschlossen im Nachtlauf vom
+      01.09.2026: 139 Quest-Beschreibungen + 38 Objectives = 177/177, ohne
+      eine einzige dauerhaft blockierte Einheit. Der Phasenwechsel fand
+      mitten im selben Batch statt (Position 3 → 4).*
 - [ ] **Phase 6 — Welt-Flavor** (**73 Einheiten**, extrahiert und kuratiert
       am 26.08.2026): Monster 16, Orte 25, Markt 13, Alchemie 10,
       Expedition 6, Pets 3 — alle Ich-Perspektive bzw. Erzählerton, daher
@@ -209,6 +208,8 @@ mit dem neuen Modell.
       `ALCHEMIE_MILESTONES` (reine Zahlenanzeigen), `VENDORS`. Kein
       einziger `${...}`-Rest im Ergebnis, keine doppelte ID, keine der
       288 bereits vertonten IDs verlorengegangen (gegengeprüft).
+      *Stand 01.09.2026 (Nachtlauf): 7/73 — die Monster laufen als erste
+      Gruppe, danach Orte, Markt, Alchemie, Expedition, Pets.*
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
       (Entscheidung Daniel: Achievements liest man eher, als dass man sie
       hört; der Plan endet mit Phase 6)
@@ -418,3 +419,4 @@ nachgelagerter Extra-Lauf.
 - 30.08.2026 22:22 — Batch: 10 Dateien (objective-a1310284 … objective-fb861994), 81 s Audio, komplett. Gesamt: 328/404 im Manifest.
 - 30.08.2026 22:23 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — **vierter fehlerfreier Zehnerlauf in Folge** seit dem 503 vom 26.08. `progress.failed` bleibt leer. Achter Lauf komplett über `tts/nightly.js --push`, eine Freigabe, kein Zwischenfall; `publish-audio.js` veröffentlichte alle 10 neuen Paare nach `tts/audio/`, 0 zurückgehalten, Opus-Konvertierung und Alignment fehlerfrei; Commit `8ec763d` gepusht. Der Gegencheck vor dem Lauf (318 Einträge in `progress.json`, 318 WAVs in `tts/output/`, neuester vom 29.08. 23:51, 0 fehlgeschlagene) deckt sich mit der Batch-Zeile des Vortags. **Korrektur an der Chronik des 29.08.:** Die dortige Tagesbilanz trägt den Zeitstempel „22:16" und behauptet „Batch 22:10–22:16" — beides ist falsch. Die vom Skript selbst geschriebene Batch-Zeile (23:52) und die Dateizeitstempel in `tts/output/` (23:46–23:51) belegen, dass der Lauf erst kurz vor Mitternacht stattfand; die Sitzung pausierte also doch, rund anderthalb Stunden, und die Zeiten in der Bilanz waren aus der Startzeit der geplanten Aufgabe geschätzt statt aus den Dateien abgelesen. Für die Quota ist das folgenlos — nach der Fenster-Regel vom 20.08. (Umschlag ~09:00) fiel der Lauf noch in den Quota-Tag des 29.08., und der heutige hatte volle 10 Slots. Es ist aber genau der Fehler, gegen den die Regel „Zeitangaben aus zwei echten Zeitstempeln" steht: Zwei Log-Zeilen desselben Laufs widersprachen sich um anderthalb Stunden, und nur die maschinell geschriebene stimmte. Der heutige Lauf lief wieder ohne Pause: geplante Aufgabe 22:09, Batch 22:16–22:22 (abgelesen an den Dateizeitstempeln in `tts/output/`, nicht geschätzt). Der Tagesertrag ist reine Fließarbeit — zehn Objectives am Stück, 81 s Audio auf 10 Einheiten (Ø 8,1 s), Texte 50–145 Zeichen. Phase 5 steht bei 174/177 (Quests 139/139, Objectives 35/38); die 76 offenen Einheiten des Manifests sind 3 Objectives und 73 Welt-Flavor-Texte aus Phase 6. **Morgen läuft Phase 5 nach drei Einheiten leer, und der Batch geht im selben Lauf in Phase 6 über** — der erste Phasenwechsel überhaupt, bei dem die Standzeile ihn selbst erkennen muss (Nachbesserung vom 26.08.: niedrigste Phase mit offenen Einheiten statt ID-Präfix). Phase 6 ist bei 10/Tag um den 07.09. durch, der Plan endet dann.
 - 01.09.2026 23:29 — Batch: 10 Dateien (objective-a3defac7 … world-monster-steingolem), 77 s Audio, komplett. Gesamt: 338/404 im Manifest.
+- 01.09.2026 23:29 — Tagesbilanz: 10 Requests, 10 erfolgreich, kein 400, kein 503, keine Leerantwort — **fünfter fehlerfreier Zehnerlauf in Folge** seit dem 503 vom 26.08. `progress.failed` bleibt leer. Neunter Lauf komplett über `tts/nightly.js --push`, eine Freigabe, kein Zwischenfall; `publish-audio.js` veröffentlichte alle 10 neuen Paare nach `tts/audio/`, 0 zurückgehalten, Opus-Konvertierung und Alignment fehlerfrei; Commit `2713e6e` gepusht. Der Gegencheck vor dem Lauf (328 Einträge in `progress.json`, 328 WAVs in `tts/output/`, 656 Dateien = 328 vollständige Paare in `tts/audio/`, 0 fehlgeschlagene, neuester Eintrag 30.08. 22:22) deckt sich mit der Batch-Zeile des Vortags — kein verschwundener Tagesertrag. **Phase 5 ist mit diesem Lauf komplett (177/177)**, und zwar nach Position 3: `objective-629e47af` war das letzte der 38 Objectives, ab Position 4 lief der Batch in Phase 6 weiter (sieben Monster-Beschreibungen). Es ist der **erste Phasenwechsel mitten in einem Batch** — die Standzeile hat ihn selbst erkannt und „Phase 6: 7/73" gemeldet statt stur „Phase 5: 177/177"; die Nachbesserung vom 26.08. (niedrigste Phase mit offenen Einheiten aus `u.phase` statt ID-Präfix `quest-`/`objective-`) hat damit ihren einzigen echten Prüffall bestanden. Phase 5 lief über 23 Kalendertage (09.08.–01.09.) ohne eine einzige dauerhaft blockierte Einheit; die letzten drei Objectives sind mit 98, 82 und 24 Zeichen typische Kurztexte, das 24-Zeichen-Ziel dauert 2,1 s. **Am 31.08. lief kein Batch** (keine Log-Zeile, keine Dateien mit diesem Zeitstempel in `tts/output/` — der jüngste vor diesem Lauf stammte vom 30.08. 22:22); da auch kein Lauf vor 09:00 des 01.09. stattfand, ist sein Kontingent nach der Fenster-Regel vom 20.08. ungenutzt verfallen — derselbe Fall wie am 25.08. Die Sitzung pausierte wieder: geplante Aufgabe 22:09, Batch aber erst 23:23–23:29 (abgelesen an den Dateizeitstempeln in `tts/output/`, nicht geschätzt — siehe die Korrektur vom 30.08.). Folgenlos für die Quota, der Lauf fiel noch in den Quota-Tag des 01.09. Der Tagesertrag ist im zweiten Teil erstmals Welt-Flavor statt Quest-Text: 77 s Audio auf 10 Einheiten (Ø 7,7 s), die Monster-Beschreibungen mit 65–120 Zeichen und 6–11,5 s — spürbar länger als die Quest-Kurztexte (Ø 5 s) und auf einer Höhe mit den Objectives. Phase 6 steht bei 7/73; die 66 offenen Einheiten des Manifests sind ausnahmslos Welt-Flavor (9 Monster, 25 Orte, 13 Markt, 10 Alchemie, 6 Expedition, 3 Pets). Bei 10/Tag ist Phase 6 um den 08.09. durch — **und damit der ganze Plan**, denn Phase 7 ist seit dem 12.08. gestrichen.
