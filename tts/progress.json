@@ -1639,6 +1639,56 @@
       "file": "objective-fb861994.wav",
       "seconds": 13.2,
       "date": "2026-08-30T20:22:12.714Z"
+    },
+    "objective-a3defac7": {
+      "file": "objective-a3defac7.wav",
+      "seconds": 8.6,
+      "date": "2026-09-01T21:23:17.964Z"
+    },
+    "objective-1ea28bcb": {
+      "file": "objective-1ea28bcb.wav",
+      "seconds": 6.5,
+      "date": "2026-09-01T21:24:20.427Z"
+    },
+    "objective-629e47af": {
+      "file": "objective-629e47af.wav",
+      "seconds": 2.1,
+      "date": "2026-09-01T21:24:52.037Z"
+    },
+    "world-monster-wolf": {
+      "file": "world-monster-wolf.wav",
+      "seconds": 7.3,
+      "date": "2026-09-01T21:25:26.505Z"
+    },
+    "world-monster-wildschwein": {
+      "file": "world-monster-wildschwein.wav",
+      "seconds": 6,
+      "date": "2026-09-01T21:26:01.553Z"
+    },
+    "world-monster-baer": {
+      "file": "world-monster-baer.wav",
+      "seconds": 8,
+      "date": "2026-09-01T21:26:37.534Z"
+    },
+    "world-monster-bandit": {
+      "file": "world-monster-bandit.wav",
+      "seconds": 8.5,
+      "date": "2026-09-01T21:27:13.163Z"
+    },
+    "world-monster-waldtroll": {
+      "file": "world-monster-waldtroll.wav",
+      "seconds": 10.2,
+      "date": "2026-09-01T21:27:48.903Z"
+    },
+    "world-monster-sumpfwesen": {
+      "file": "world-monster-sumpfwesen.wav",
+      "seconds": 7.9,
+      "date": "2026-09-01T21:28:24.213Z"
+    },
+    "world-monster-steingolem": {
+      "file": "world-monster-steingolem.wav",
+      "seconds": 11.5,
+      "date": "2026-09-01T21:29:02.042Z"
     }
   },
   "failed": {}

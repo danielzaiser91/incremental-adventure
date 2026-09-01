@@ -1,0 +1,159 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.974,
+      "text": "Ein magerer Wolf, der mich mit gelben Augen fixiert.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.481,
+          "end": 0.742,
+          "score": 0.859
+        },
+        {
+          "word": "magerer",
+          "start": 0.782,
+          "end": 1.404,
+          "score": 0.973
+        },
+        {
+          "word": "Wolf,",
+          "start": 1.444,
+          "end": 1.825,
+          "score": 0.95
+        },
+        {
+          "word": "der",
+          "start": 1.845,
+          "end": 1.985,
+          "score": 0.988
+        },
+        {
+          "word": "mich",
+          "start": 2.026,
+          "end": 2.206,
+          "score": 0.815
+        },
+        {
+          "word": "mit",
+          "start": 2.226,
+          "end": 2.547,
+          "score": 0.965
+        },
+        {
+          "word": "gelben",
+          "start": 2.587,
+          "end": 3.129,
+          "score": 0.882
+        },
+        {
+          "word": "Augen",
+          "start": 3.169,
+          "end": 3.49,
+          "score": 0.997
+        },
+        {
+          "word": "fixiert.",
+          "start": 3.55,
+          "end": 4.974,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 5.014,
+      "end": 6.317,
+      "text": "Hungrig.",
+      "words": [
+        {
+          "word": "Hungrig.",
+          "start": 5.014,
+          "end": 6.317,
+          "score": 0.818
+        }
+      ]
+    },
+    {
+      "start": 6.357,
+      "end": 6.919,
+      "text": "Gefährlich.",
+      "words": [
+        {
+          "word": "Gefährlich.",
+          "start": 6.357,
+          "end": 6.919,
+          "score": 0.817
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.481,
+      "end": 0.742,
+      "score": 0.859
+    },
+    {
+      "word": "magerer",
+      "start": 0.782,
+      "end": 1.404,
+      "score": 0.973
+    },
+    {
+      "word": "Wolf,",
+      "start": 1.444,
+      "end": 1.825,
+      "score": 0.95
+    },
+    {
+      "word": "der",
+      "start": 1.845,
+      "end": 1.985,
+      "score": 0.988
+    },
+    {
+      "word": "mich",
+      "start": 2.026,
+      "end": 2.206,
+      "score": 0.815
+    },
+    {
+      "word": "mit",
+      "start": 2.226,
+      "end": 2.547,
+      "score": 0.965
+    },
+    {
+      "word": "gelben",
+      "start": 2.587,
+      "end": 3.129,
+      "score": 0.882
+    },
+    {
+      "word": "Augen",
+      "start": 3.169,
+      "end": 3.49,
+      "score": 0.997
+    },
+    {
+      "word": "fixiert.",
+      "start": 3.55,
+      "end": 4.974,
+      "score": 0.892
+    },
+    {
+      "word": "Hungrig.",
+      "start": 5.014,
+      "end": 6.317,
+      "score": 0.818
+    },
+    {
+      "word": "Gefährlich.",
+      "start": 6.357,
+      "end": 6.919,
+      "score": 0.817
+    }
+  ]
+}

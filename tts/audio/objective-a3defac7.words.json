@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 1.945,
+      "text": "Lethkar.",
+      "words": [
+        {
+          "word": "Lethkar.",
+          "start": 0.501,
+          "end": 1.945,
+          "score": 0.562
+        }
+      ]
+    },
+    {
+      "start": 1.965,
+      "end": 4.591,
+      "text": "Die Adresse aus dem Brief ist hier.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 1.965,
+          "end": 2.105,
+          "score": 0.846
+        },
+        {
+          "word": "Adresse",
+          "start": 2.125,
+          "end": 2.546,
+          "score": 0.89
+        },
+        {
+          "word": "aus",
+          "start": 2.586,
+          "end": 2.706,
+          "score": 0.907
+        },
+        {
+          "word": "dem",
+          "start": 2.746,
+          "end": 2.867,
+          "score": 0.973
+        },
+        {
+          "word": "Brief",
+          "start": 2.907,
+          "end": 3.207,
+          "score": 0.852
+        },
+        {
+          "word": "ist",
+          "start": 3.248,
+          "end": 3.448,
+          "score": 0.736
+        },
+        {
+          "word": "hier.",
+          "start": 3.468,
+          "end": 4.591,
+          "score": 0.806
+        }
+      ]
+    },
+    {
+      "start": 4.611,
+      "end": 8.099,
+      "text": "Varena kann mir helfen — wenn ich ihr vertrauen kann.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 4.611,
+          "end": 5.092,
+          "score": 0.788
+        },
+        {
+          "word": "kann",
+          "start": 5.112,
+          "end": 5.312,
+          "score": 0.796
+        },
+        {
+          "word": "mir",
+          "start": 5.352,
+          "end": 5.573,
+          "score": 0.863
+        },
+        {
+          "word": "helfen",
+          "start": 5.613,
+          "end": 5.854,
+          "score": 0.74
+        },
+        {
+          "word": "—",
+          "start": 6.956,
+          "end": 6.976,
+          "score": 0.142
+        },
+        {
+          "word": "wenn",
+          "start": 6.996,
+          "end": 7.157,
+          "score": 0.877
+        },
+        {
+          "word": "ich",
+          "start": 7.197,
+          "end": 7.277,
+          "score": 0.908
+        },
+        {
+          "word": "ihr",
+          "start": 7.317,
+          "end": 7.457,
+          "score": 0.836
+        },
+        {
+          "word": "vertrauen",
+          "start": 7.497,
+          "end": 7.918,
+          "score": 0.884
+        },
+        {
+          "word": "kann.",
+          "start": 7.958,
+          "end": 8.099,
+          "score": 0.491
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Lethkar.",
+      "start": 0.501,
+      "end": 1.945,
+      "score": 0.562
+    },
+    {
+      "word": "Die",
+      "start": 1.965,
+      "end": 2.105,
+      "score": 0.846
+    },
+    {
+      "word": "Adresse",
+      "start": 2.125,
+      "end": 2.546,
+      "score": 0.89
+    },
+    {
+      "word": "aus",
+      "start": 2.586,
+      "end": 2.706,
+      "score": 0.907
+    },
+    {
+      "word": "dem",
+      "start": 2.746,
+      "end": 2.867,
+      "score": 0.973
+    },
+    {
+      "word": "Brief",
+      "start": 2.907,
+      "end": 3.207,
+      "score": 0.852
+    },
+    {
+      "word": "ist",
+      "start": 3.248,
+      "end": 3.448,
+      "score": 0.736
+    },
+    {
+      "word": "hier.",
+      "start": 3.468,
+      "end": 4.591,
+      "score": 0.806
+    },
+    {
+      "word": "Varena",
+      "start": 4.611,
+      "end": 5.092,
+      "score": 0.788
+    },
+    {
+      "word": "kann",
+      "start": 5.112,
+      "end": 5.312,
+      "score": 0.796
+    },
+    {
+      "word": "mir",
+      "start": 5.352,
+      "end": 5.573,
+      "score": 0.863
+    },
+    {
+      "word": "helfen",
+      "start": 5.613,
+      "end": 5.854,
+      "score": 0.74
+    },
+    {
+      "word": "—",
+      "start": 6.956,
+      "end": 6.976,
+      "score": 0.142
+    },
+    {
+      "word": "wenn",
+      "start": 6.996,
+      "end": 7.157,
+      "score": 0.877
+    },
+    {
+      "word": "ich",
+      "start": 7.197,
+      "end": 7.277,
+      "score": 0.908
+    },
+    {
+      "word": "ihr",
+      "start": 7.317,
+      "end": 7.457,
+      "score": 0.836
+    },
+    {
+      "word": "vertrauen",
+      "start": 7.497,
+      "end": 7.918,
+      "score": 0.884
+    },
+    {
+      "word": "kann.",
+      "start": 7.958,
+      "end": 8.099,
+      "score": 0.491
+    }
+  ]
+}

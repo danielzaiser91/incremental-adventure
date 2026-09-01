@@ -1,0 +1,253 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 9.859,
+      "text": "Ein graues, schwerfälliges Wesen aus Moos und Fels — langsam, aber wenn er trifft, spüre ich es noch Tage später.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.561,
+          "end": 0.802,
+          "score": 0.865
+        },
+        {
+          "word": "graues,",
+          "start": 0.862,
+          "end": 1.844,
+          "score": 0.801
+        },
+        {
+          "word": "schwerfälliges",
+          "start": 1.884,
+          "end": 2.906,
+          "score": 0.919
+        },
+        {
+          "word": "Wesen",
+          "start": 2.966,
+          "end": 3.367,
+          "score": 0.849
+        },
+        {
+          "word": "aus",
+          "start": 3.387,
+          "end": 3.747,
+          "score": 0.946
+        },
+        {
+          "word": "Moos",
+          "start": 3.807,
+          "end": 4.168,
+          "score": 0.746
+        },
+        {
+          "word": "und",
+          "start": 4.188,
+          "end": 4.469,
+          "score": 0.863
+        },
+        {
+          "word": "Fels",
+          "start": 4.509,
+          "end": 5.651,
+          "score": 0.875
+        },
+        {
+          "word": "—",
+          "start": 5.671,
+          "end": 5.691,
+          "score": 0.762
+        },
+        {
+          "word": "langsam,",
+          "start": 5.731,
+          "end": 6.613,
+          "score": 0.902
+        },
+        {
+          "word": "aber",
+          "start": 6.673,
+          "end": 6.914,
+          "score": 0.906
+        },
+        {
+          "word": "wenn",
+          "start": 6.934,
+          "end": 7.154,
+          "score": 0.932
+        },
+        {
+          "word": "er",
+          "start": 7.194,
+          "end": 7.394,
+          "score": 0.878
+        },
+        {
+          "word": "trifft,",
+          "start": 7.455,
+          "end": 8.036,
+          "score": 0.822
+        },
+        {
+          "word": "spüre",
+          "start": 8.076,
+          "end": 8.417,
+          "score": 0.957
+        },
+        {
+          "word": "ich",
+          "start": 8.437,
+          "end": 8.537,
+          "score": 0.86
+        },
+        {
+          "word": "es",
+          "start": 8.577,
+          "end": 8.737,
+          "score": 0.54
+        },
+        {
+          "word": "noch",
+          "start": 8.757,
+          "end": 9.018,
+          "score": 0.951
+        },
+        {
+          "word": "Tage",
+          "start": 9.038,
+          "end": 9.398,
+          "score": 0.967
+        },
+        {
+          "word": "später.",
+          "start": 9.439,
+          "end": 9.859,
+          "score": 0.815
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.561,
+      "end": 0.802,
+      "score": 0.865
+    },
+    {
+      "word": "graues,",
+      "start": 0.862,
+      "end": 1.844,
+      "score": 0.801
+    },
+    {
+      "word": "schwerfälliges",
+      "start": 1.884,
+      "end": 2.906,
+      "score": 0.919
+    },
+    {
+      "word": "Wesen",
+      "start": 2.966,
+      "end": 3.367,
+      "score": 0.849
+    },
+    {
+      "word": "aus",
+      "start": 3.387,
+      "end": 3.747,
+      "score": 0.946
+    },
+    {
+      "word": "Moos",
+      "start": 3.807,
+      "end": 4.168,
+      "score": 0.746
+    },
+    {
+      "word": "und",
+      "start": 4.188,
+      "end": 4.469,
+      "score": 0.863
+    },
+    {
+      "word": "Fels",
+      "start": 4.509,
+      "end": 5.651,
+      "score": 0.875
+    },
+    {
+      "word": "—",
+      "start": 5.671,
+      "end": 5.691,
+      "score": 0.762
+    },
+    {
+      "word": "langsam,",
+      "start": 5.731,
+      "end": 6.613,
+      "score": 0.902
+    },
+    {
+      "word": "aber",
+      "start": 6.673,
+      "end": 6.914,
+      "score": 0.906
+    },
+    {
+      "word": "wenn",
+      "start": 6.934,
+      "end": 7.154,
+      "score": 0.932
+    },
+    {
+      "word": "er",
+      "start": 7.194,
+      "end": 7.394,
+      "score": 0.878
+    },
+    {
+      "word": "trifft,",
+      "start": 7.455,
+      "end": 8.036,
+      "score": 0.822
+    },
+    {
+      "word": "spüre",
+      "start": 8.076,
+      "end": 8.417,
+      "score": 0.957
+    },
+    {
+      "word": "ich",
+      "start": 8.437,
+      "end": 8.537,
+      "score": 0.86
+    },
+    {
+      "word": "es",
+      "start": 8.577,
+      "end": 8.737,
+      "score": 0.54
+    },
+    {
+      "word": "noch",
+      "start": 8.757,
+      "end": 9.018,
+      "score": 0.951
+    },
+    {
+      "word": "Tage",
+      "start": 9.038,
+      "end": 9.398,
+      "score": 0.967
+    },
+    {
+      "word": "später.",
+      "start": 9.439,
+      "end": 9.859,
+      "score": 0.815
+    }
+  ]
+}

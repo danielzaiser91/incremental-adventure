@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 5.454,
+      "text": "Ein breiter Bär, doppelt so groß wie ich erwartet hatte.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.461,
+          "end": 0.862,
+          "score": 0.776
+        },
+        {
+          "word": "breiter",
+          "start": 0.922,
+          "end": 1.564,
+          "score": 0.935
+        },
+        {
+          "word": "Bär,",
+          "start": 1.604,
+          "end": 2.586,
+          "score": 0.77
+        },
+        {
+          "word": "doppelt",
+          "start": 2.627,
+          "end": 3.008,
+          "score": 0.756
+        },
+        {
+          "word": "so",
+          "start": 3.028,
+          "end": 3.148,
+          "score": 0.688
+        },
+        {
+          "word": "groß",
+          "start": 3.168,
+          "end": 3.389,
+          "score": 0.982
+        },
+        {
+          "word": "wie",
+          "start": 3.429,
+          "end": 3.529,
+          "score": 0.975
+        },
+        {
+          "word": "ich",
+          "start": 3.569,
+          "end": 3.709,
+          "score": 0.873
+        },
+        {
+          "word": "erwartet",
+          "start": 3.749,
+          "end": 4.13,
+          "score": 0.916
+        },
+        {
+          "word": "hatte.",
+          "start": 4.15,
+          "end": 5.454,
+          "score": 0.882
+        }
+      ]
+    },
+    {
+      "start": 5.474,
+      "end": 7.419,
+      "text": "Sein Blick ist schwer und ruhig.",
+      "words": [
+        {
+          "word": "Sein",
+          "start": 5.474,
+          "end": 5.694,
+          "score": 0.781
+        },
+        {
+          "word": "Blick",
+          "start": 5.714,
+          "end": 5.975,
+          "score": 0.846
+        },
+        {
+          "word": "ist",
+          "start": 6.015,
+          "end": 6.276,
+          "score": 0.834
+        },
+        {
+          "word": "schwer",
+          "start": 6.316,
+          "end": 6.757,
+          "score": 0.768
+        },
+        {
+          "word": "und",
+          "start": 6.797,
+          "end": 7.038,
+          "score": 0.811
+        },
+        {
+          "word": "ruhig.",
+          "start": 7.098,
+          "end": 7.419,
+          "score": 0.607
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.461,
+      "end": 0.862,
+      "score": 0.776
+    },
+    {
+      "word": "breiter",
+      "start": 0.922,
+      "end": 1.564,
+      "score": 0.935
+    },
+    {
+      "word": "Bär,",
+      "start": 1.604,
+      "end": 2.586,
+      "score": 0.77
+    },
+    {
+      "word": "doppelt",
+      "start": 2.627,
+      "end": 3.008,
+      "score": 0.756
+    },
+    {
+      "word": "so",
+      "start": 3.028,
+      "end": 3.148,
+      "score": 0.688
+    },
+    {
+      "word": "groß",
+      "start": 3.168,
+      "end": 3.389,
+      "score": 0.982
+    },
+    {
+      "word": "wie",
+      "start": 3.429,
+      "end": 3.529,
+      "score": 0.975
+    },
+    {
+      "word": "ich",
+      "start": 3.569,
+      "end": 3.709,
+      "score": 0.873
+    },
+    {
+      "word": "erwartet",
+      "start": 3.749,
+      "end": 4.13,
+      "score": 0.916
+    },
+    {
+      "word": "hatte.",
+      "start": 4.15,
+      "end": 5.454,
+      "score": 0.882
+    },
+    {
+      "word": "Sein",
+      "start": 5.474,
+      "end": 5.694,
+      "score": 0.781
+    },
+    {
+      "word": "Blick",
+      "start": 5.714,
+      "end": 5.975,
+      "score": 0.846
+    },
+    {
+      "word": "ist",
+      "start": 6.015,
+      "end": 6.276,
+      "score": 0.834
+    },
+    {
+      "word": "schwer",
+      "start": 6.316,
+      "end": 6.757,
+      "score": 0.768
+    },
+    {
+      "word": "und",
+      "start": 6.797,
+      "end": 7.038,
+      "score": 0.811
+    },
+    {
+      "word": "ruhig.",
+      "start": 7.098,
+      "end": 7.419,
+      "score": 0.607
+    }
+  ]
+}

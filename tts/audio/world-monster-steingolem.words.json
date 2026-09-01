@@ -1,0 +1,279 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 2.064,
+      "text": "Uralt.",
+      "words": [
+        {
+          "word": "Uralt.",
+          "start": 0.561,
+          "end": 2.064,
+          "score": 0.767
+        }
+      ]
+    },
+    {
+      "start": 2.104,
+      "end": 7.513,
+      "text": "Aus dem Fels gemeißelt oder aus ihm erwacht — ich kann es nicht sagen.",
+      "words": [
+        {
+          "word": "Aus",
+          "start": 2.104,
+          "end": 2.224,
+          "score": 0.987
+        },
+        {
+          "word": "dem",
+          "start": 2.264,
+          "end": 2.484,
+          "score": 0.876
+        },
+        {
+          "word": "Fels",
+          "start": 2.544,
+          "end": 2.885,
+          "score": 0.866
+        },
+        {
+          "word": "gemeißelt",
+          "start": 2.925,
+          "end": 3.606,
+          "score": 0.913
+        },
+        {
+          "word": "oder",
+          "start": 3.626,
+          "end": 4.127,
+          "score": 0.881
+        },
+        {
+          "word": "aus",
+          "start": 4.167,
+          "end": 4.308,
+          "score": 0.954
+        },
+        {
+          "word": "ihm",
+          "start": 4.348,
+          "end": 4.508,
+          "score": 0.864
+        },
+        {
+          "word": "erwacht",
+          "start": 4.548,
+          "end": 4.989,
+          "score": 0.834
+        },
+        {
+          "word": "—",
+          "start": 5.009,
+          "end": 5.449,
+          "score": 0.926
+        },
+        {
+          "word": "ich",
+          "start": 5.49,
+          "end": 5.65,
+          "score": 0.823
+        },
+        {
+          "word": "kann",
+          "start": 5.69,
+          "end": 5.83,
+          "score": 0.893
+        },
+        {
+          "word": "es",
+          "start": 5.87,
+          "end": 5.97,
+          "score": 0.916
+        },
+        {
+          "word": "nicht",
+          "start": 6.01,
+          "end": 6.191,
+          "score": 0.896
+        },
+        {
+          "word": "sagen.",
+          "start": 6.211,
+          "end": 7.513,
+          "score": 0.89
+        }
+      ]
+    },
+    {
+      "start": 7.533,
+      "end": 10.899,
+      "text": "Er bewegt sich langsam, aber unaufhaltsam.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 7.533,
+          "end": 7.673,
+          "score": 0.851
+        },
+        {
+          "word": "bewegt",
+          "start": 7.713,
+          "end": 8.094,
+          "score": 0.994
+        },
+        {
+          "word": "sich",
+          "start": 8.114,
+          "end": 8.515,
+          "score": 0.909
+        },
+        {
+          "word": "langsam,",
+          "start": 8.555,
+          "end": 9.236,
+          "score": 0.941
+        },
+        {
+          "word": "aber",
+          "start": 9.276,
+          "end": 9.737,
+          "score": 0.976
+        },
+        {
+          "word": "unaufhaltsam.",
+          "start": 9.777,
+          "end": 10.899,
+          "score": 0.863
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Uralt.",
+      "start": 0.561,
+      "end": 2.064,
+      "score": 0.767
+    },
+    {
+      "word": "Aus",
+      "start": 2.104,
+      "end": 2.224,
+      "score": 0.987
+    },
+    {
+      "word": "dem",
+      "start": 2.264,
+      "end": 2.484,
+      "score": 0.876
+    },
+    {
+      "word": "Fels",
+      "start": 2.544,
+      "end": 2.885,
+      "score": 0.866
+    },
+    {
+      "word": "gemeißelt",
+      "start": 2.925,
+      "end": 3.606,
+      "score": 0.913
+    },
+    {
+      "word": "oder",
+      "start": 3.626,
+      "end": 4.127,
+      "score": 0.881
+    },
+    {
+      "word": "aus",
+      "start": 4.167,
+      "end": 4.308,
+      "score": 0.954
+    },
+    {
+      "word": "ihm",
+      "start": 4.348,
+      "end": 4.508,
+      "score": 0.864
+    },
+    {
+      "word": "erwacht",
+      "start": 4.548,
+      "end": 4.989,
+      "score": 0.834
+    },
+    {
+      "word": "—",
+      "start": 5.009,
+      "end": 5.449,
+      "score": 0.926
+    },
+    {
+      "word": "ich",
+      "start": 5.49,
+      "end": 5.65,
+      "score": 0.823
+    },
+    {
+      "word": "kann",
+      "start": 5.69,
+      "end": 5.83,
+      "score": 0.893
+    },
+    {
+      "word": "es",
+      "start": 5.87,
+      "end": 5.97,
+      "score": 0.916
+    },
+    {
+      "word": "nicht",
+      "start": 6.01,
+      "end": 6.191,
+      "score": 0.896
+    },
+    {
+      "word": "sagen.",
+      "start": 6.211,
+      "end": 7.513,
+      "score": 0.89
+    },
+    {
+      "word": "Er",
+      "start": 7.533,
+      "end": 7.673,
+      "score": 0.851
+    },
+    {
+      "word": "bewegt",
+      "start": 7.713,
+      "end": 8.094,
+      "score": 0.994
+    },
+    {
+      "word": "sich",
+      "start": 8.114,
+      "end": 8.515,
+      "score": 0.909
+    },
+    {
+      "word": "langsam,",
+      "start": 8.555,
+      "end": 9.236,
+      "score": 0.941
+    },
+    {
+      "word": "aber",
+      "start": 9.276,
+      "end": 9.737,
+      "score": 0.976
+    },
+    {
+      "word": "unaufhaltsam.",
+      "start": 9.777,
+      "end": 10.899,
+      "score": 0.863
+    }
+  ]
+}

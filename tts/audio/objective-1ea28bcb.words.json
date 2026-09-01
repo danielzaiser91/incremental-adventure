@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.381,
+      "end": 2.267,
+      "text": "Der Mut ist da.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.381,
+          "end": 0.602,
+          "score": 0.755
+        },
+        {
+          "word": "Mut",
+          "start": 0.642,
+          "end": 0.883,
+          "score": 0.992
+        },
+        {
+          "word": "ist",
+          "start": 0.923,
+          "end": 1.144,
+          "score": 0.98
+        },
+        {
+          "word": "da.",
+          "start": 1.184,
+          "end": 2.267,
+          "score": 0.937
+        }
+      ]
+    },
+    {
+      "start": 2.287,
+      "end": 6.159,
+      "text": "Der Weg nach Lethkar liegt offen — auf der Weltkarte weiterziehen.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 2.287,
+          "end": 2.427,
+          "score": 0.911
+        },
+        {
+          "word": "Weg",
+          "start": 2.448,
+          "end": 2.648,
+          "score": 0.887
+        },
+        {
+          "word": "nach",
+          "start": 2.688,
+          "end": 2.889,
+          "score": 0.98
+        },
+        {
+          "word": "Lethkar",
+          "start": 2.949,
+          "end": 3.451,
+          "score": 0.859
+        },
+        {
+          "word": "liegt",
+          "start": 3.471,
+          "end": 3.711,
+          "score": 0.954
+        },
+        {
+          "word": "offen",
+          "start": 3.752,
+          "end": 4.775,
+          "score": 0.994
+        },
+        {
+          "word": "—",
+          "start": 4.795,
+          "end": 4.815,
+          "score": 0.817
+        },
+        {
+          "word": "auf",
+          "start": 4.835,
+          "end": 4.975,
+          "score": 0.762
+        },
+        {
+          "word": "der",
+          "start": 4.995,
+          "end": 5.096,
+          "score": 0.848
+        },
+        {
+          "word": "Weltkarte",
+          "start": 5.136,
+          "end": 5.637,
+          "score": 0.899
+        },
+        {
+          "word": "weiterziehen.",
+          "start": 5.657,
+          "end": 6.159,
+          "score": 0.852
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.381,
+      "end": 0.602,
+      "score": 0.755
+    },
+    {
+      "word": "Mut",
+      "start": 0.642,
+      "end": 0.883,
+      "score": 0.992
+    },
+    {
+      "word": "ist",
+      "start": 0.923,
+      "end": 1.144,
+      "score": 0.98
+    },
+    {
+      "word": "da.",
+      "start": 1.184,
+      "end": 2.267,
+      "score": 0.937
+    },
+    {
+      "word": "Der",
+      "start": 2.287,
+      "end": 2.427,
+      "score": 0.911
+    },
+    {
+      "word": "Weg",
+      "start": 2.448,
+      "end": 2.648,
+      "score": 0.887
+    },
+    {
+      "word": "nach",
+      "start": 2.688,
+      "end": 2.889,
+      "score": 0.98
+    },
+    {
+      "word": "Lethkar",
+      "start": 2.949,
+      "end": 3.451,
+      "score": 0.859
+    },
+    {
+      "word": "liegt",
+      "start": 3.471,
+      "end": 3.711,
+      "score": 0.954
+    },
+    {
+      "word": "offen",
+      "start": 3.752,
+      "end": 4.775,
+      "score": 0.994
+    },
+    {
+      "word": "—",
+      "start": 4.795,
+      "end": 4.815,
+      "score": 0.817
+    },
+    {
+      "word": "auf",
+      "start": 4.835,
+      "end": 4.975,
+      "score": 0.762
+    },
+    {
+      "word": "der",
+      "start": 4.995,
+      "end": 5.096,
+      "score": 0.848
+    },
+    {
+      "word": "Weltkarte",
+      "start": 5.136,
+      "end": 5.637,
+      "score": 0.899
+    },
+    {
+      "word": "weiterziehen.",
+      "start": 5.657,
+      "end": 6.159,
+      "score": 0.852
+    }
+  ]
+}

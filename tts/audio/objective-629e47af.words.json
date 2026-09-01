@@ -1,0 +1,61 @@
+{
+  "segments": [
+    {
+      "start": 0.485,
+      "end": 1.757,
+      "text": "Ich sollte mich umsehen.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 0.485,
+          "end": 0.666,
+          "score": 0.747
+        },
+        {
+          "word": "sollte",
+          "start": 0.686,
+          "end": 1.01,
+          "score": 0.887
+        },
+        {
+          "word": "mich",
+          "start": 1.03,
+          "end": 1.292,
+          "score": 0.942
+        },
+        {
+          "word": "umsehen.",
+          "start": 1.333,
+          "end": 1.757,
+          "score": 0.772
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ich",
+      "start": 0.485,
+      "end": 0.666,
+      "score": 0.747
+    },
+    {
+      "word": "sollte",
+      "start": 0.686,
+      "end": 1.01,
+      "score": 0.887
+    },
+    {
+      "word": "mich",
+      "start": 1.03,
+      "end": 1.292,
+      "score": 0.942
+    },
+    {
+      "word": "umsehen.",
+      "start": 1.333,
+      "end": 1.757,
+      "score": 0.772
+    }
+  ]
+}

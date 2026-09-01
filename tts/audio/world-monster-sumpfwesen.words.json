@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 3.369,
+      "text": "Halb Tier, halb Schlamm.",
+      "words": [
+        {
+          "word": "Halb",
+          "start": 0.501,
+          "end": 1.003,
+          "score": 0.864
+        },
+        {
+          "word": "Tier,",
+          "start": 1.063,
+          "end": 1.624,
+          "score": 0.78
+        },
+        {
+          "word": "halb",
+          "start": 1.664,
+          "end": 1.985,
+          "score": 0.969
+        },
+        {
+          "word": "Schlamm.",
+          "start": 2.025,
+          "end": 3.369,
+          "score": 0.805
+        }
+      ]
+    },
+    {
+      "start": 3.429,
+      "end": 7.459,
+      "text": "Riecht schlimmer als es aussieht — und es sieht bereits schrecklich aus.",
+      "words": [
+        {
+          "word": "Riecht",
+          "start": 3.429,
+          "end": 3.689,
+          "score": 0.742
+        },
+        {
+          "word": "schlimmer",
+          "start": 3.75,
+          "end": 4.13,
+          "score": 0.88
+        },
+        {
+          "word": "als",
+          "start": 4.171,
+          "end": 4.311,
+          "score": 0.872
+        },
+        {
+          "word": "es",
+          "start": 4.371,
+          "end": 4.612,
+          "score": 0.894
+        },
+        {
+          "word": "aussieht",
+          "start": 4.632,
+          "end": 5.073,
+          "score": 0.878
+        },
+        {
+          "word": "—",
+          "start": 5.514,
+          "end": 5.534,
+          "score": 0.072
+        },
+        {
+          "word": "und",
+          "start": 5.554,
+          "end": 5.755,
+          "score": 0.967
+        },
+        {
+          "word": "es",
+          "start": 5.795,
+          "end": 5.955,
+          "score": 0.698
+        },
+        {
+          "word": "sieht",
+          "start": 5.995,
+          "end": 6.256,
+          "score": 0.98
+        },
+        {
+          "word": "bereits",
+          "start": 6.296,
+          "end": 6.637,
+          "score": 0.99
+        },
+        {
+          "word": "schrecklich",
+          "start": 6.677,
+          "end": 7.218,
+          "score": 0.891
+        },
+        {
+          "word": "aus.",
+          "start": 7.258,
+          "end": 7.459,
+          "score": 0.751
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Halb",
+      "start": 0.501,
+      "end": 1.003,
+      "score": 0.864
+    },
+    {
+      "word": "Tier,",
+      "start": 1.063,
+      "end": 1.624,
+      "score": 0.78
+    },
+    {
+      "word": "halb",
+      "start": 1.664,
+      "end": 1.985,
+      "score": 0.969
+    },
+    {
+      "word": "Schlamm.",
+      "start": 2.025,
+      "end": 3.369,
+      "score": 0.805
+    },
+    {
+      "word": "Riecht",
+      "start": 3.429,
+      "end": 3.689,
+      "score": 0.742
+    },
+    {
+      "word": "schlimmer",
+      "start": 3.75,
+      "end": 4.13,
+      "score": 0.88
+    },
+    {
+      "word": "als",
+      "start": 4.171,
+      "end": 4.311,
+      "score": 0.872
+    },
+    {
+      "word": "es",
+      "start": 4.371,
+      "end": 4.612,
+      "score": 0.894
+    },
+    {
+      "word": "aussieht",
+      "start": 4.632,
+      "end": 5.073,
+      "score": 0.878
+    },
+    {
+      "word": "—",
+      "start": 5.514,
+      "end": 5.534,
+      "score": 0.072
+    },
+    {
+      "word": "und",
+      "start": 5.554,
+      "end": 5.755,
+      "score": 0.967
+    },
+    {
+      "word": "es",
+      "start": 5.795,
+      "end": 5.955,
+      "score": 0.698
+    },
+    {
+      "word": "sieht",
+      "start": 5.995,
+      "end": 6.256,
+      "score": 0.98
+    },
+    {
+      "word": "bereits",
+      "start": 6.296,
+      "end": 6.637,
+      "score": 0.99
+    },
+    {
+      "word": "schrecklich",
+      "start": 6.677,
+      "end": 7.218,
+      "score": 0.891
+    },
+    {
+      "word": "aus.",
+      "start": 7.258,
+      "end": 7.459,
+      "score": 0.751
+    }
+  ]
+}

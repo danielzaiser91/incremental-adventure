@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.012,
+      "text": "Ein schlecht gekleideter Mann mit einem rostigen Messer.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.481,
+          "end": 0.742,
+          "score": 0.698
+        },
+        {
+          "word": "schlecht",
+          "start": 0.802,
+          "end": 1.283,
+          "score": 0.775
+        },
+        {
+          "word": "gekleideter",
+          "start": 1.323,
+          "end": 2.125,
+          "score": 0.868
+        },
+        {
+          "word": "Mann",
+          "start": 2.165,
+          "end": 2.767,
+          "score": 0.946
+        },
+        {
+          "word": "mit",
+          "start": 2.787,
+          "end": 2.927,
+          "score": 0.989
+        },
+        {
+          "word": "einem",
+          "start": 2.967,
+          "end": 3.167,
+          "score": 0.893
+        },
+        {
+          "word": "rostigen",
+          "start": 3.268,
+          "end": 3.829,
+          "score": 0.924
+        },
+        {
+          "word": "Messer.",
+          "start": 3.869,
+          "end": 5.012,
+          "score": 0.911
+        }
+      ]
+    },
+    {
+      "start": 5.032,
+      "end": 8.059,
+      "text": "Er wirkt hungrig — und verzweifelt.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 5.032,
+          "end": 5.112,
+          "score": 0.975
+        },
+        {
+          "word": "wirkt",
+          "start": 5.152,
+          "end": 5.473,
+          "score": 0.971
+        },
+        {
+          "word": "hungrig",
+          "start": 5.513,
+          "end": 5.914,
+          "score": 0.835
+        },
+        {
+          "word": "—",
+          "start": 6.535,
+          "end": 6.555,
+          "score": 0.806
+        },
+        {
+          "word": "und",
+          "start": 6.596,
+          "end": 7.297,
+          "score": 0.958
+        },
+        {
+          "word": "verzweifelt.",
+          "start": 7.337,
+          "end": 8.059,
+          "score": 0.848
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.481,
+      "end": 0.742,
+      "score": 0.698
+    },
+    {
+      "word": "schlecht",
+      "start": 0.802,
+      "end": 1.283,
+      "score": 0.775
+    },
+    {
+      "word": "gekleideter",
+      "start": 1.323,
+      "end": 2.125,
+      "score": 0.868
+    },
+    {
+      "word": "Mann",
+      "start": 2.165,
+      "end": 2.767,
+      "score": 0.946
+    },
+    {
+      "word": "mit",
+      "start": 2.787,
+      "end": 2.927,
+      "score": 0.989
+    },
+    {
+      "word": "einem",
+      "start": 2.967,
+      "end": 3.167,
+      "score": 0.893
+    },
+    {
+      "word": "rostigen",
+      "start": 3.268,
+      "end": 3.829,
+      "score": 0.924
+    },
+    {
+      "word": "Messer.",
+      "start": 3.869,
+      "end": 5.012,
+      "score": 0.911
+    },
+    {
+      "word": "Er",
+      "start": 5.032,
+      "end": 5.112,
+      "score": 0.975
+    },
+    {
+      "word": "wirkt",
+      "start": 5.152,
+      "end": 5.473,
+      "score": 0.971
+    },
+    {
+      "word": "hungrig",
+      "start": 5.513,
+      "end": 5.914,
+      "score": 0.835
+    },
+    {
+      "word": "—",
+      "start": 6.535,
+      "end": 6.555,
+      "score": 0.806
+    },
+    {
+      "word": "und",
+      "start": 6.596,
+      "end": 7.297,
+      "score": 0.958
+    },
+    {
+      "word": "verzweifelt.",
+      "start": 7.337,
+      "end": 8.059,
+      "score": 0.848
+    }
+  ]
+}

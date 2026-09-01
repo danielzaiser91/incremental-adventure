@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.415,
+      "text": "Ein massiver Eber mit scharfen Hauern.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.522,
+          "end": 0.742,
+          "score": 0.617
+        },
+        {
+          "word": "massiver",
+          "start": 0.783,
+          "end": 1.666,
+          "score": 0.835
+        },
+        {
+          "word": "Eber",
+          "start": 1.746,
+          "end": 2.268,
+          "score": 0.987
+        },
+        {
+          "word": "mit",
+          "start": 2.288,
+          "end": 2.528,
+          "score": 0.888
+        },
+        {
+          "word": "scharfen",
+          "start": 2.549,
+          "end": 3.07,
+          "score": 0.839
+        },
+        {
+          "word": "Hauern.",
+          "start": 3.11,
+          "end": 4.415,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 4.435,
+      "end": 5.579,
+      "text": "Schneller als er aussieht.",
+      "words": [
+        {
+          "word": "Schneller",
+          "start": 4.435,
+          "end": 4.856,
+          "score": 0.79
+        },
+        {
+          "word": "als",
+          "start": 4.896,
+          "end": 5.017,
+          "score": 0.989
+        },
+        {
+          "word": "er",
+          "start": 5.057,
+          "end": 5.197,
+          "score": 0.919
+        },
+        {
+          "word": "aussieht.",
+          "start": 5.238,
+          "end": 5.579,
+          "score": 0.854
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.522,
+      "end": 0.742,
+      "score": 0.617
+    },
+    {
+      "word": "massiver",
+      "start": 0.783,
+      "end": 1.666,
+      "score": 0.835
+    },
+    {
+      "word": "Eber",
+      "start": 1.746,
+      "end": 2.268,
+      "score": 0.987
+    },
+    {
+      "word": "mit",
+      "start": 2.288,
+      "end": 2.528,
+      "score": 0.888
+    },
+    {
+      "word": "scharfen",
+      "start": 2.549,
+      "end": 3.07,
+      "score": 0.839
+    },
+    {
+      "word": "Hauern.",
+      "start": 3.11,
+      "end": 4.415,
+      "score": 0.871
+    },
+    {
+      "word": "Schneller",
+      "start": 4.435,
+      "end": 4.856,
+      "score": 0.79
+    },
+    {
+      "word": "als",
+      "start": 4.896,
+      "end": 5.017,
+      "score": 0.989
+    },
+    {
+      "word": "er",
+      "start": 5.057,
+      "end": 5.197,
+      "score": 0.919
+    },
+    {
+      "word": "aussieht.",
+      "start": 5.238,
+      "end": 5.579,
+      "score": 0.854
+    }
+  ]
+}
