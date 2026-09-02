@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 6.074,
+      "text": "Klein, schnell, bissig — und sie kennt die Kanäle besser als ich.",
+      "words": [
+        {
+          "word": "Klein,",
+          "start": 0.541,
+          "end": 1.263,
+          "score": 0.772
+        },
+        {
+          "word": "schnell,",
+          "start": 1.323,
+          "end": 2.366,
+          "score": 0.811
+        },
+        {
+          "word": "bissig",
+          "start": 2.406,
+          "end": 2.787,
+          "score": 0.847
+        },
+        {
+          "word": "—",
+          "start": 3.488,
+          "end": 3.508,
+          "score": 0.61
+        },
+        {
+          "word": "und",
+          "start": 3.528,
+          "end": 3.669,
+          "score": 0.907
+        },
+        {
+          "word": "sie",
+          "start": 3.689,
+          "end": 3.769,
+          "score": 0.986
+        },
+        {
+          "word": "kennt",
+          "start": 3.809,
+          "end": 3.969,
+          "score": 0.89
+        },
+        {
+          "word": "die",
+          "start": 3.989,
+          "end": 4.07,
+          "score": 0.825
+        },
+        {
+          "word": "Kanäle",
+          "start": 4.11,
+          "end": 4.531,
+          "score": 0.873
+        },
+        {
+          "word": "besser",
+          "start": 4.551,
+          "end": 4.751,
+          "score": 0.762
+        },
+        {
+          "word": "als",
+          "start": 4.791,
+          "end": 4.932,
+          "score": 0.811
+        },
+        {
+          "word": "ich.",
+          "start": 4.972,
+          "end": 6.074,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 6.114,
+      "end": 8.179,
+      "text": "Unterschätzt wird sie nur einmal.",
+      "words": [
+        {
+          "word": "Unterschätzt",
+          "start": 6.114,
+          "end": 6.756,
+          "score": 0.872
+        },
+        {
+          "word": "wird",
+          "start": 6.776,
+          "end": 6.976,
+          "score": 0.934
+        },
+        {
+          "word": "sie",
+          "start": 6.996,
+          "end": 7.257,
+          "score": 0.833
+        },
+        {
+          "word": "nur",
+          "start": 7.297,
+          "end": 7.658,
+          "score": 0.833
+        },
+        {
+          "word": "einmal.",
+          "start": 7.698,
+          "end": 8.179,
+          "score": 0.829
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Klein,",
+      "start": 0.541,
+      "end": 1.263,
+      "score": 0.772
+    },
+    {
+      "word": "schnell,",
+      "start": 1.323,
+      "end": 2.366,
+      "score": 0.811
+    },
+    {
+      "word": "bissig",
+      "start": 2.406,
+      "end": 2.787,
+      "score": 0.847
+    },
+    {
+      "word": "—",
+      "start": 3.488,
+      "end": 3.508,
+      "score": 0.61
+    },
+    {
+      "word": "und",
+      "start": 3.528,
+      "end": 3.669,
+      "score": 0.907
+    },
+    {
+      "word": "sie",
+      "start": 3.689,
+      "end": 3.769,
+      "score": 0.986
+    },
+    {
+      "word": "kennt",
+      "start": 3.809,
+      "end": 3.969,
+      "score": 0.89
+    },
+    {
+      "word": "die",
+      "start": 3.989,
+      "end": 4.07,
+      "score": 0.825
+    },
+    {
+      "word": "Kanäle",
+      "start": 4.11,
+      "end": 4.531,
+      "score": 0.873
+    },
+    {
+      "word": "besser",
+      "start": 4.551,
+      "end": 4.751,
+      "score": 0.762
+    },
+    {
+      "word": "als",
+      "start": 4.791,
+      "end": 4.932,
+      "score": 0.811
+    },
+    {
+      "word": "ich.",
+      "start": 4.972,
+      "end": 6.074,
+      "score": 0.958
+    },
+    {
+      "word": "Unterschätzt",
+      "start": 6.114,
+      "end": 6.756,
+      "score": 0.872
+    },
+    {
+      "word": "wird",
+      "start": 6.776,
+      "end": 6.976,
+      "score": 0.934
+    },
+    {
+      "word": "sie",
+      "start": 6.996,
+      "end": 7.257,
+      "score": 0.833
+    },
+    {
+      "word": "nur",
+      "start": 7.297,
+      "end": 7.658,
+      "score": 0.833
+    },
+    {
+      "word": "einmal.",
+      "start": 7.698,
+      "end": 8.179,
+      "score": 0.829
+    }
+  ]
+}

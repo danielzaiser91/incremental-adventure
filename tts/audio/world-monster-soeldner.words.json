@@ -1,0 +1,135 @@
+{
+  "segments": [
+    {
+      "start": 0.562,
+      "end": 2.387,
+      "text": "Valdris' Handlanger.",
+      "words": [
+        {
+          "word": "Valdris'",
+          "start": 0.562,
+          "end": 1.103,
+          "score": 0.685
+        },
+        {
+          "word": "Handlanger.",
+          "start": 1.144,
+          "end": 2.387,
+          "score": 0.937
+        }
+      ]
+    },
+    {
+      "start": 2.408,
+      "end": 5.196,
+      "text": "Gut bezahlt, gut ausgerüstet.",
+      "words": [
+        {
+          "word": "Gut",
+          "start": 2.408,
+          "end": 2.628,
+          "score": 0.896
+        },
+        {
+          "word": "bezahlt,",
+          "start": 2.668,
+          "end": 3.591,
+          "score": 0.944
+        },
+        {
+          "word": "gut",
+          "start": 3.611,
+          "end": 3.832,
+          "score": 0.943
+        },
+        {
+          "word": "ausgerüstet.",
+          "start": 3.872,
+          "end": 5.196,
+          "score": 0.918
+        }
+      ]
+    },
+    {
+      "start": 5.297,
+      "end": 5.999,
+      "text": "Redet nicht viel.",
+      "words": [
+        {
+          "word": "Redet",
+          "start": 5.297,
+          "end": 5.597,
+          "score": 0.963
+        },
+        {
+          "word": "nicht",
+          "start": 5.618,
+          "end": 5.838,
+          "score": 0.914
+        },
+        {
+          "word": "viel.",
+          "start": 5.878,
+          "end": 5.999,
+          "score": 0.893
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Valdris'",
+      "start": 0.562,
+      "end": 1.103,
+      "score": 0.685
+    },
+    {
+      "word": "Handlanger.",
+      "start": 1.144,
+      "end": 2.387,
+      "score": 0.937
+    },
+    {
+      "word": "Gut",
+      "start": 2.408,
+      "end": 2.628,
+      "score": 0.896
+    },
+    {
+      "word": "bezahlt,",
+      "start": 2.668,
+      "end": 3.591,
+      "score": 0.944
+    },
+    {
+      "word": "gut",
+      "start": 3.611,
+      "end": 3.832,
+      "score": 0.943
+    },
+    {
+      "word": "ausgerüstet.",
+      "start": 3.872,
+      "end": 5.196,
+      "score": 0.918
+    },
+    {
+      "word": "Redet",
+      "start": 5.297,
+      "end": 5.597,
+      "score": 0.963
+    },
+    {
+      "word": "nicht",
+      "start": 5.618,
+      "end": 5.838,
+      "score": 0.914
+    },
+    {
+      "word": "viel.",
+      "start": 5.878,
+      "end": 5.999,
+      "score": 0.893
+    }
+  ]
+}

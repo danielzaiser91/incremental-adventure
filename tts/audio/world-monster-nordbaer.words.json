@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.348,
+      "text": "Größer als jeder Bär, den ich in Treutheim gesehen habe.",
+      "words": [
+        {
+          "word": "Größer",
+          "start": 0.481,
+          "end": 0.942,
+          "score": 0.872
+        },
+        {
+          "word": "als",
+          "start": 0.982,
+          "end": 1.302,
+          "score": 0.974
+        },
+        {
+          "word": "jeder",
+          "start": 1.342,
+          "end": 1.683,
+          "score": 0.959
+        },
+        {
+          "word": "Bär,",
+          "start": 1.723,
+          "end": 1.984,
+          "score": 0.838
+        },
+        {
+          "word": "den",
+          "start": 2.004,
+          "end": 2.124,
+          "score": 0.802
+        },
+        {
+          "word": "ich",
+          "start": 2.164,
+          "end": 2.264,
+          "score": 0.844
+        },
+        {
+          "word": "in",
+          "start": 2.304,
+          "end": 2.424,
+          "score": 0.94
+        },
+        {
+          "word": "Treutheim",
+          "start": 2.445,
+          "end": 2.905,
+          "score": 0.859
+        },
+        {
+          "word": "gesehen",
+          "start": 2.945,
+          "end": 3.246,
+          "score": 0.899
+        },
+        {
+          "word": "habe.",
+          "start": 3.266,
+          "end": 4.348,
+          "score": 0.912
+        }
+      ]
+    },
+    {
+      "start": 4.388,
+      "end": 8.816,
+      "text": "Fellfarbe weiß-grau, fast silbern.",
+      "words": [
+        {
+          "word": "Fellfarbe",
+          "start": 4.388,
+          "end": 5.21,
+          "score": 0.862
+        },
+        {
+          "word": "weiß-grau,",
+          "start": 5.25,
+          "end": 6.512,
+          "score": 0.872
+        },
+        {
+          "word": "fast",
+          "start": 6.552,
+          "end": 6.893,
+          "score": 0.884
+        },
+        {
+          "word": "silbern.",
+          "start": 6.933,
+          "end": 8.816,
+          "score": 0.883
+        }
+      ]
+    },
+    {
+      "start": 8.856,
+      "end": 10.399,
+      "text": "Nicht angreifbar ohne Plan.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 8.856,
+          "end": 9.177,
+          "score": 0.977
+        },
+        {
+          "word": "angreifbar",
+          "start": 9.217,
+          "end": 9.898,
+          "score": 0.88
+        },
+        {
+          "word": "ohne",
+          "start": 9.938,
+          "end": 10.119,
+          "score": 0.968
+        },
+        {
+          "word": "Plan.",
+          "start": 10.159,
+          "end": 10.399,
+          "score": 0.925
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Größer",
+      "start": 0.481,
+      "end": 0.942,
+      "score": 0.872
+    },
+    {
+      "word": "als",
+      "start": 0.982,
+      "end": 1.302,
+      "score": 0.974
+    },
+    {
+      "word": "jeder",
+      "start": 1.342,
+      "end": 1.683,
+      "score": 0.959
+    },
+    {
+      "word": "Bär,",
+      "start": 1.723,
+      "end": 1.984,
+      "score": 0.838
+    },
+    {
+      "word": "den",
+      "start": 2.004,
+      "end": 2.124,
+      "score": 0.802
+    },
+    {
+      "word": "ich",
+      "start": 2.164,
+      "end": 2.264,
+      "score": 0.844
+    },
+    {
+      "word": "in",
+      "start": 2.304,
+      "end": 2.424,
+      "score": 0.94
+    },
+    {
+      "word": "Treutheim",
+      "start": 2.445,
+      "end": 2.905,
+      "score": 0.859
+    },
+    {
+      "word": "gesehen",
+      "start": 2.945,
+      "end": 3.246,
+      "score": 0.899
+    },
+    {
+      "word": "habe.",
+      "start": 3.266,
+      "end": 4.348,
+      "score": 0.912
+    },
+    {
+      "word": "Fellfarbe",
+      "start": 4.388,
+      "end": 5.21,
+      "score": 0.862
+    },
+    {
+      "word": "weiß-grau,",
+      "start": 5.25,
+      "end": 6.512,
+      "score": 0.872
+    },
+    {
+      "word": "fast",
+      "start": 6.552,
+      "end": 6.893,
+      "score": 0.884
+    },
+    {
+      "word": "silbern.",
+      "start": 6.933,
+      "end": 8.816,
+      "score": 0.883
+    },
+    {
+      "word": "Nicht",
+      "start": 8.856,
+      "end": 9.177,
+      "score": 0.977
+    },
+    {
+      "word": "angreifbar",
+      "start": 9.217,
+      "end": 9.898,
+      "score": 0.88
+    },
+    {
+      "word": "ohne",
+      "start": 9.938,
+      "end": 10.119,
+      "score": 0.968
+    },
+    {
+      "word": "Plan.",
+      "start": 10.159,
+      "end": 10.399,
+      "score": 0.925
+    }
+  ]
+}

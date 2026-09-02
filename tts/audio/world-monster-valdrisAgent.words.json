@@ -1,0 +1,226 @@
+{
+  "segments": [
+    {
+      "start": 0.601,
+      "end": 1.904,
+      "text": "Kein Name.",
+      "words": [
+        {
+          "word": "Kein",
+          "start": 0.601,
+          "end": 0.862,
+          "score": 0.749
+        },
+        {
+          "word": "Name.",
+          "start": 0.902,
+          "end": 1.904,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 1.924,
+      "end": 3.708,
+      "text": "Keine Farben.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 1.924,
+          "end": 2.245,
+          "score": 0.902
+        },
+        {
+          "word": "Farben.",
+          "start": 2.305,
+          "end": 3.708,
+          "score": 0.947
+        }
+      ]
+    },
+    {
+      "start": 3.728,
+      "end": 5.973,
+      "text": "Nur der Auftrag.",
+      "words": [
+        {
+          "word": "Nur",
+          "start": 3.728,
+          "end": 3.989,
+          "score": 0.995
+        },
+        {
+          "word": "der",
+          "start": 4.029,
+          "end": 4.249,
+          "score": 0.974
+        },
+        {
+          "word": "Auftrag.",
+          "start": 4.31,
+          "end": 5.973,
+          "score": 0.979
+        }
+      ]
+    },
+    {
+      "start": 6.013,
+      "end": 8.579,
+      "text": "Ich weiß, dass er von Valdris persönlich geschickt wurde.",
+      "words": [
+        {
+          "word": "Ich",
+          "start": 6.013,
+          "end": 6.214,
+          "score": 0.814
+        },
+        {
+          "word": "weiß,",
+          "start": 6.234,
+          "end": 6.494,
+          "score": 0.795
+        },
+        {
+          "word": "dass",
+          "start": 6.514,
+          "end": 6.655,
+          "score": 0.954
+        },
+        {
+          "word": "er",
+          "start": 6.695,
+          "end": 6.815,
+          "score": 0.832
+        },
+        {
+          "word": "von",
+          "start": 6.835,
+          "end": 7.056,
+          "score": 0.982
+        },
+        {
+          "word": "Valdris",
+          "start": 7.076,
+          "end": 7.517,
+          "score": 0.76
+        },
+        {
+          "word": "persönlich",
+          "start": 7.557,
+          "end": 8.078,
+          "score": 0.867
+        },
+        {
+          "word": "geschickt",
+          "start": 8.098,
+          "end": 8.399,
+          "score": 0.915
+        },
+        {
+          "word": "wurde.",
+          "start": 8.439,
+          "end": 8.579,
+          "score": 0.876
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Kein",
+      "start": 0.601,
+      "end": 0.862,
+      "score": 0.749
+    },
+    {
+      "word": "Name.",
+      "start": 0.902,
+      "end": 1.904,
+      "score": 0.941
+    },
+    {
+      "word": "Keine",
+      "start": 1.924,
+      "end": 2.245,
+      "score": 0.902
+    },
+    {
+      "word": "Farben.",
+      "start": 2.305,
+      "end": 3.708,
+      "score": 0.947
+    },
+    {
+      "word": "Nur",
+      "start": 3.728,
+      "end": 3.989,
+      "score": 0.995
+    },
+    {
+      "word": "der",
+      "start": 4.029,
+      "end": 4.249,
+      "score": 0.974
+    },
+    {
+      "word": "Auftrag.",
+      "start": 4.31,
+      "end": 5.973,
+      "score": 0.979
+    },
+    {
+      "word": "Ich",
+      "start": 6.013,
+      "end": 6.214,
+      "score": 0.814
+    },
+    {
+      "word": "weiß,",
+      "start": 6.234,
+      "end": 6.494,
+      "score": 0.795
+    },
+    {
+      "word": "dass",
+      "start": 6.514,
+      "end": 6.655,
+      "score": 0.954
+    },
+    {
+      "word": "er",
+      "start": 6.695,
+      "end": 6.815,
+      "score": 0.832
+    },
+    {
+      "word": "von",
+      "start": 6.835,
+      "end": 7.056,
+      "score": 0.982
+    },
+    {
+      "word": "Valdris",
+      "start": 7.076,
+      "end": 7.517,
+      "score": 0.76
+    },
+    {
+      "word": "persönlich",
+      "start": 7.557,
+      "end": 8.078,
+      "score": 0.867
+    },
+    {
+      "word": "geschickt",
+      "start": 8.098,
+      "end": 8.399,
+      "score": 0.915
+    },
+    {
+      "word": "wurde.",
+      "start": 8.439,
+      "end": 8.579,
+      "score": 0.876
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.542,
+      "end": 3.249,
+      "text": "Länger als ich groß bin.",
+      "words": [
+        {
+          "word": "Länger",
+          "start": 0.542,
+          "end": 0.923,
+          "score": 0.936
+        },
+        {
+          "word": "als",
+          "start": 0.963,
+          "end": 1.143,
+          "score": 0.892
+        },
+        {
+          "word": "ich",
+          "start": 1.183,
+          "end": 1.424,
+          "score": 0.925
+        },
+        {
+          "word": "groß",
+          "start": 1.464,
+          "end": 1.785,
+          "score": 0.95
+        },
+        {
+          "word": "bin.",
+          "start": 1.825,
+          "end": 3.249,
+          "score": 0.996
+        }
+      ]
+    },
+    {
+      "start": 3.269,
+      "end": 6.579,
+      "text": "Ihre Augen folgen mir, auch wenn ich mich nicht bewege.",
+      "words": [
+        {
+          "word": "Ihre",
+          "start": 3.269,
+          "end": 3.51,
+          "score": 0.767
+        },
+        {
+          "word": "Augen",
+          "start": 3.55,
+          "end": 3.951,
+          "score": 0.946
+        },
+        {
+          "word": "folgen",
+          "start": 4.011,
+          "end": 4.352,
+          "score": 0.967
+        },
+        {
+          "word": "mir,",
+          "start": 4.372,
+          "end": 5.195,
+          "score": 0.873
+        },
+        {
+          "word": "auch",
+          "start": 5.215,
+          "end": 5.436,
+          "score": 0.792
+        },
+        {
+          "word": "wenn",
+          "start": 5.456,
+          "end": 5.596,
+          "score": 0.894
+        },
+        {
+          "word": "ich",
+          "start": 5.616,
+          "end": 5.736,
+          "score": 0.668
+        },
+        {
+          "word": "mich",
+          "start": 5.777,
+          "end": 5.957,
+          "score": 0.71
+        },
+        {
+          "word": "nicht",
+          "start": 5.997,
+          "end": 6.238,
+          "score": 0.891
+        },
+        {
+          "word": "bewege.",
+          "start": 6.258,
+          "end": 6.579,
+          "score": 0.992
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Länger",
+      "start": 0.542,
+      "end": 0.923,
+      "score": 0.936
+    },
+    {
+      "word": "als",
+      "start": 0.963,
+      "end": 1.143,
+      "score": 0.892
+    },
+    {
+      "word": "ich",
+      "start": 1.183,
+      "end": 1.424,
+      "score": 0.925
+    },
+    {
+      "word": "groß",
+      "start": 1.464,
+      "end": 1.785,
+      "score": 0.95
+    },
+    {
+      "word": "bin.",
+      "start": 1.825,
+      "end": 3.249,
+      "score": 0.996
+    },
+    {
+      "word": "Ihre",
+      "start": 3.269,
+      "end": 3.51,
+      "score": 0.767
+    },
+    {
+      "word": "Augen",
+      "start": 3.55,
+      "end": 3.951,
+      "score": 0.946
+    },
+    {
+      "word": "folgen",
+      "start": 4.011,
+      "end": 4.352,
+      "score": 0.967
+    },
+    {
+      "word": "mir,",
+      "start": 4.372,
+      "end": 5.195,
+      "score": 0.873
+    },
+    {
+      "word": "auch",
+      "start": 5.215,
+      "end": 5.436,
+      "score": 0.792
+    },
+    {
+      "word": "wenn",
+      "start": 5.456,
+      "end": 5.596,
+      "score": 0.894
+    },
+    {
+      "word": "ich",
+      "start": 5.616,
+      "end": 5.736,
+      "score": 0.668
+    },
+    {
+      "word": "mich",
+      "start": 5.777,
+      "end": 5.957,
+      "score": 0.71
+    },
+    {
+      "word": "nicht",
+      "start": 5.997,
+      "end": 6.238,
+      "score": 0.891
+    },
+    {
+      "word": "bewege.",
+      "start": 6.258,
+      "end": 6.579,
+      "score": 0.992
+    }
+  ]
+}

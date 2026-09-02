@@ -1,0 +1,236 @@
+{
+  "segments": [
+    {
+      "start": 0.561,
+      "end": 3.548,
+      "text": "Wer ihn schickt, bleibt unbekannt.",
+      "words": [
+        {
+          "word": "Wer",
+          "start": 0.561,
+          "end": 0.762,
+          "score": 0.89
+        },
+        {
+          "word": "ihn",
+          "start": 0.782,
+          "end": 1.002,
+          "score": 0.491
+        },
+        {
+          "word": "schickt,",
+          "start": 1.062,
+          "end": 1.844,
+          "score": 0.862
+        },
+        {
+          "word": "bleibt",
+          "start": 1.884,
+          "end": 2.185,
+          "score": 0.874
+        },
+        {
+          "word": "unbekannt.",
+          "start": 2.225,
+          "end": 3.548,
+          "score": 0.894
+        }
+      ]
+    },
+    {
+      "start": 3.588,
+      "end": 8.939,
+      "text": "Er hat keine Farben, keine Abzeichen — nur ein Messer und den Auftrag.",
+      "words": [
+        {
+          "word": "Er",
+          "start": 3.588,
+          "end": 3.688,
+          "score": 0.972
+        },
+        {
+          "word": "hat",
+          "start": 3.728,
+          "end": 3.948,
+          "score": 0.992
+        },
+        {
+          "word": "keine",
+          "start": 3.989,
+          "end": 4.229,
+          "score": 0.863
+        },
+        {
+          "word": "Farben,",
+          "start": 4.289,
+          "end": 4.971,
+          "score": 0.914
+        },
+        {
+          "word": "keine",
+          "start": 4.991,
+          "end": 5.211,
+          "score": 0.907
+        },
+        {
+          "word": "Abzeichen",
+          "start": 5.271,
+          "end": 5.812,
+          "score": 0.841
+        },
+        {
+          "word": "—",
+          "start": 6.534,
+          "end": 6.554,
+          "score": 0.998
+        },
+        {
+          "word": "nur",
+          "start": 6.574,
+          "end": 6.895,
+          "score": 0.996
+        },
+        {
+          "word": "ein",
+          "start": 6.935,
+          "end": 7.135,
+          "score": 0.857
+        },
+        {
+          "word": "Messer",
+          "start": 7.175,
+          "end": 7.957,
+          "score": 0.991
+        },
+        {
+          "word": "und",
+          "start": 7.997,
+          "end": 8.178,
+          "score": 0.935
+        },
+        {
+          "word": "den",
+          "start": 8.218,
+          "end": 8.418,
+          "score": 0.842
+        },
+        {
+          "word": "Auftrag.",
+          "start": 8.478,
+          "end": 8.939,
+          "score": 0.809
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wer",
+      "start": 0.561,
+      "end": 0.762,
+      "score": 0.89
+    },
+    {
+      "word": "ihn",
+      "start": 0.782,
+      "end": 1.002,
+      "score": 0.491
+    },
+    {
+      "word": "schickt,",
+      "start": 1.062,
+      "end": 1.844,
+      "score": 0.862
+    },
+    {
+      "word": "bleibt",
+      "start": 1.884,
+      "end": 2.185,
+      "score": 0.874
+    },
+    {
+      "word": "unbekannt.",
+      "start": 2.225,
+      "end": 3.548,
+      "score": 0.894
+    },
+    {
+      "word": "Er",
+      "start": 3.588,
+      "end": 3.688,
+      "score": 0.972
+    },
+    {
+      "word": "hat",
+      "start": 3.728,
+      "end": 3.948,
+      "score": 0.992
+    },
+    {
+      "word": "keine",
+      "start": 3.989,
+      "end": 4.229,
+      "score": 0.863
+    },
+    {
+      "word": "Farben,",
+      "start": 4.289,
+      "end": 4.971,
+      "score": 0.914
+    },
+    {
+      "word": "keine",
+      "start": 4.991,
+      "end": 5.211,
+      "score": 0.907
+    },
+    {
+      "word": "Abzeichen",
+      "start": 5.271,
+      "end": 5.812,
+      "score": 0.841
+    },
+    {
+      "word": "—",
+      "start": 6.534,
+      "end": 6.554,
+      "score": 0.998
+    },
+    {
+      "word": "nur",
+      "start": 6.574,
+      "end": 6.895,
+      "score": 0.996
+    },
+    {
+      "word": "ein",
+      "start": 6.935,
+      "end": 7.135,
+      "score": 0.857
+    },
+    {
+      "word": "Messer",
+      "start": 7.175,
+      "end": 7.957,
+      "score": 0.991
+    },
+    {
+      "word": "und",
+      "start": 7.997,
+      "end": 8.178,
+      "score": 0.935
+    },
+    {
+      "word": "den",
+      "start": 8.218,
+      "end": 8.418,
+      "score": 0.842
+    },
+    {
+      "word": "Auftrag.",
+      "start": 8.478,
+      "end": 8.939,
+      "score": 0.809
+    }
+  ]
+}

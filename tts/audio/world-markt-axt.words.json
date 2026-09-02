@@ -1,0 +1,61 @@
+{
+  "segments": [
+    {
+      "start": 0.845,
+      "end": 2.596,
+      "text": "Zum Holzhacken am Waldrand.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 0.845,
+          "end": 1.087,
+          "score": 0.554
+        },
+        {
+          "word": "Holzhacken",
+          "start": 1.107,
+          "end": 1.912,
+          "score": 0.617
+        },
+        {
+          "word": "am",
+          "start": 1.972,
+          "end": 2.153,
+          "score": 0.488
+        },
+        {
+          "word": "Waldrand.",
+          "start": 2.194,
+          "end": 2.596,
+          "score": 0.303
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zum",
+      "start": 0.845,
+      "end": 1.087,
+      "score": 0.554
+    },
+    {
+      "word": "Holzhacken",
+      "start": 1.107,
+      "end": 1.912,
+      "score": 0.617
+    },
+    {
+      "word": "am",
+      "start": 1.972,
+      "end": 2.153,
+      "score": 0.488
+    },
+    {
+      "word": "Waldrand.",
+      "start": 2.194,
+      "end": 2.596,
+      "score": 0.303
+    }
+  ]
+}

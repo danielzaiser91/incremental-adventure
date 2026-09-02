@@ -1,0 +1,243 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 5.75,
+      "text": "Breit, ruhig, mit Augen, die alles registrieren.",
+      "words": [
+        {
+          "word": "Breit,",
+          "start": 0.461,
+          "end": 1.683,
+          "score": 0.851
+        },
+        {
+          "word": "ruhig,",
+          "start": 1.743,
+          "end": 2.845,
+          "score": 0.837
+        },
+        {
+          "word": "mit",
+          "start": 2.865,
+          "end": 3.126,
+          "score": 0.976
+        },
+        {
+          "word": "Augen,",
+          "start": 3.166,
+          "end": 3.486,
+          "score": 0.924
+        },
+        {
+          "word": "die",
+          "start": 3.506,
+          "end": 3.807,
+          "score": 0.875
+        },
+        {
+          "word": "alles",
+          "start": 3.847,
+          "end": 4.188,
+          "score": 0.957
+        },
+        {
+          "word": "registrieren.",
+          "start": 4.228,
+          "end": 5.75,
+          "score": 0.907
+        }
+      ]
+    },
+    {
+      "start": 5.771,
+      "end": 7.534,
+      "text": "Harro's Mann.",
+      "words": [
+        {
+          "word": "Harro's",
+          "start": 5.771,
+          "end": 6.231,
+          "score": 0.873
+        },
+        {
+          "word": "Mann.",
+          "start": 6.271,
+          "end": 7.534,
+          "score": 0.922
+        }
+      ]
+    },
+    {
+      "start": 7.594,
+      "end": 10.519,
+      "text": "Redet nicht — bewegt sich einfach in den Weg.",
+      "words": [
+        {
+          "word": "Redet",
+          "start": 7.594,
+          "end": 7.934,
+          "score": 0.925
+        },
+        {
+          "word": "nicht",
+          "start": 7.975,
+          "end": 8.175,
+          "score": 0.857
+        },
+        {
+          "word": "—",
+          "start": 8.916,
+          "end": 8.936,
+          "score": 0.998
+        },
+        {
+          "word": "bewegt",
+          "start": 8.956,
+          "end": 9.337,
+          "score": 0.92
+        },
+        {
+          "word": "sich",
+          "start": 9.357,
+          "end": 9.658,
+          "score": 0.906
+        },
+        {
+          "word": "einfach",
+          "start": 9.698,
+          "end": 10.078,
+          "score": 0.911
+        },
+        {
+          "word": "in",
+          "start": 10.118,
+          "end": 10.199,
+          "score": 0.836
+        },
+        {
+          "word": "den",
+          "start": 10.219,
+          "end": 10.359,
+          "score": 0.93
+        },
+        {
+          "word": "Weg.",
+          "start": 10.399,
+          "end": 10.519,
+          "score": 0.754
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Breit,",
+      "start": 0.461,
+      "end": 1.683,
+      "score": 0.851
+    },
+    {
+      "word": "ruhig,",
+      "start": 1.743,
+      "end": 2.845,
+      "score": 0.837
+    },
+    {
+      "word": "mit",
+      "start": 2.865,
+      "end": 3.126,
+      "score": 0.976
+    },
+    {
+      "word": "Augen,",
+      "start": 3.166,
+      "end": 3.486,
+      "score": 0.924
+    },
+    {
+      "word": "die",
+      "start": 3.506,
+      "end": 3.807,
+      "score": 0.875
+    },
+    {
+      "word": "alles",
+      "start": 3.847,
+      "end": 4.188,
+      "score": 0.957
+    },
+    {
+      "word": "registrieren.",
+      "start": 4.228,
+      "end": 5.75,
+      "score": 0.907
+    },
+    {
+      "word": "Harro's",
+      "start": 5.771,
+      "end": 6.231,
+      "score": 0.873
+    },
+    {
+      "word": "Mann.",
+      "start": 6.271,
+      "end": 7.534,
+      "score": 0.922
+    },
+    {
+      "word": "Redet",
+      "start": 7.594,
+      "end": 7.934,
+      "score": 0.925
+    },
+    {
+      "word": "nicht",
+      "start": 7.975,
+      "end": 8.175,
+      "score": 0.857
+    },
+    {
+      "word": "—",
+      "start": 8.916,
+      "end": 8.936,
+      "score": 0.998
+    },
+    {
+      "word": "bewegt",
+      "start": 8.956,
+      "end": 9.337,
+      "score": 0.92
+    },
+    {
+      "word": "sich",
+      "start": 9.357,
+      "end": 9.658,
+      "score": 0.906
+    },
+    {
+      "word": "einfach",
+      "start": 9.698,
+      "end": 10.078,
+      "score": 0.911
+    },
+    {
+      "word": "in",
+      "start": 10.118,
+      "end": 10.199,
+      "score": 0.836
+    },
+    {
+      "word": "den",
+      "start": 10.219,
+      "end": 10.359,
+      "score": 0.93
+    },
+    {
+      "word": "Weg.",
+      "start": 10.399,
+      "end": 10.519,
+      "score": 0.754
+    }
+  ]
+}

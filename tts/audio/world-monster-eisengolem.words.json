@@ -1,0 +1,315 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.768,
+      "text": "Schwerer als Stein, kälter als Eisen.",
+      "words": [
+        {
+          "word": "Schwerer",
+          "start": 0.481,
+          "end": 0.962,
+          "score": 0.801
+        },
+        {
+          "word": "als",
+          "start": 1.002,
+          "end": 1.222,
+          "score": 0.845
+        },
+        {
+          "word": "Stein,",
+          "start": 1.282,
+          "end": 2.504,
+          "score": 0.994
+        },
+        {
+          "word": "kälter",
+          "start": 2.544,
+          "end": 2.985,
+          "score": 0.874
+        },
+        {
+          "word": "als",
+          "start": 3.005,
+          "end": 3.286,
+          "score": 0.996
+        },
+        {
+          "word": "Eisen.",
+          "start": 3.366,
+          "end": 4.768,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 4.788,
+      "end": 10.598,
+      "text": "Bewegt sich wie ein Traum — so langsam, dass man glaubt, man hätte Zeit.",
+      "words": [
+        {
+          "word": "Bewegt",
+          "start": 4.788,
+          "end": 5.169,
+          "score": 0.994
+        },
+        {
+          "word": "sich",
+          "start": 5.209,
+          "end": 5.369,
+          "score": 0.833
+        },
+        {
+          "word": "wie",
+          "start": 5.389,
+          "end": 5.549,
+          "score": 0.92
+        },
+        {
+          "word": "ein",
+          "start": 5.569,
+          "end": 5.79,
+          "score": 0.602
+        },
+        {
+          "word": "Traum",
+          "start": 5.83,
+          "end": 6.17,
+          "score": 0.889
+        },
+        {
+          "word": "—",
+          "start": 6.771,
+          "end": 6.791,
+          "score": 0.674
+        },
+        {
+          "word": "so",
+          "start": 6.831,
+          "end": 7.072,
+          "score": 0.971
+        },
+        {
+          "word": "langsam,",
+          "start": 7.112,
+          "end": 7.533,
+          "score": 0.874
+        },
+        {
+          "word": "dass",
+          "start": 7.553,
+          "end": 7.733,
+          "score": 0.929
+        },
+        {
+          "word": "man",
+          "start": 7.753,
+          "end": 7.933,
+          "score": 0.822
+        },
+        {
+          "word": "glaubt,",
+          "start": 7.973,
+          "end": 8.334,
+          "score": 0.932
+        },
+        {
+          "word": "man",
+          "start": 8.354,
+          "end": 8.534,
+          "score": 0.949
+        },
+        {
+          "word": "hätte",
+          "start": 8.574,
+          "end": 8.935,
+          "score": 0.955
+        },
+        {
+          "word": "Zeit.",
+          "start": 8.975,
+          "end": 10.598,
+          "score": 0.877
+        }
+      ]
+    },
+    {
+      "start": 10.618,
+      "end": 11.479,
+      "text": "Man hat sie nicht.",
+      "words": [
+        {
+          "word": "Man",
+          "start": 10.618,
+          "end": 10.838,
+          "score": 0.755
+        },
+        {
+          "word": "hat",
+          "start": 10.878,
+          "end": 11.099,
+          "score": 0.943
+        },
+        {
+          "word": "sie",
+          "start": 11.119,
+          "end": 11.279,
+          "score": 0.949
+        },
+        {
+          "word": "nicht.",
+          "start": 11.319,
+          "end": 11.479,
+          "score": 0.834
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Schwerer",
+      "start": 0.481,
+      "end": 0.962,
+      "score": 0.801
+    },
+    {
+      "word": "als",
+      "start": 1.002,
+      "end": 1.222,
+      "score": 0.845
+    },
+    {
+      "word": "Stein,",
+      "start": 1.282,
+      "end": 2.504,
+      "score": 0.994
+    },
+    {
+      "word": "kälter",
+      "start": 2.544,
+      "end": 2.985,
+      "score": 0.874
+    },
+    {
+      "word": "als",
+      "start": 3.005,
+      "end": 3.286,
+      "score": 0.996
+    },
+    {
+      "word": "Eisen.",
+      "start": 3.366,
+      "end": 4.768,
+      "score": 0.86
+    },
+    {
+      "word": "Bewegt",
+      "start": 4.788,
+      "end": 5.169,
+      "score": 0.994
+    },
+    {
+      "word": "sich",
+      "start": 5.209,
+      "end": 5.369,
+      "score": 0.833
+    },
+    {
+      "word": "wie",
+      "start": 5.389,
+      "end": 5.549,
+      "score": 0.92
+    },
+    {
+      "word": "ein",
+      "start": 5.569,
+      "end": 5.79,
+      "score": 0.602
+    },
+    {
+      "word": "Traum",
+      "start": 5.83,
+      "end": 6.17,
+      "score": 0.889
+    },
+    {
+      "word": "—",
+      "start": 6.771,
+      "end": 6.791,
+      "score": 0.674
+    },
+    {
+      "word": "so",
+      "start": 6.831,
+      "end": 7.072,
+      "score": 0.971
+    },
+    {
+      "word": "langsam,",
+      "start": 7.112,
+      "end": 7.533,
+      "score": 0.874
+    },
+    {
+      "word": "dass",
+      "start": 7.553,
+      "end": 7.733,
+      "score": 0.929
+    },
+    {
+      "word": "man",
+      "start": 7.753,
+      "end": 7.933,
+      "score": 0.822
+    },
+    {
+      "word": "glaubt,",
+      "start": 7.973,
+      "end": 8.334,
+      "score": 0.932
+    },
+    {
+      "word": "man",
+      "start": 8.354,
+      "end": 8.534,
+      "score": 0.949
+    },
+    {
+      "word": "hätte",
+      "start": 8.574,
+      "end": 8.935,
+      "score": 0.955
+    },
+    {
+      "word": "Zeit.",
+      "start": 8.975,
+      "end": 10.598,
+      "score": 0.877
+    },
+    {
+      "word": "Man",
+      "start": 10.618,
+      "end": 10.838,
+      "score": 0.755
+    },
+    {
+      "word": "hat",
+      "start": 10.878,
+      "end": 11.099,
+      "score": 0.943
+    },
+    {
+      "word": "sie",
+      "start": 11.119,
+      "end": 11.279,
+      "score": 0.949
+    },
+    {
+      "word": "nicht.",
+      "start": 11.319,
+      "end": 11.479,
+      "score": 0.834
+    }
+  ]
+}

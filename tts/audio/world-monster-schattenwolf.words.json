@@ -1,0 +1,159 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 5.154,
+      "text": "Schwarz wie Tinte, kaum sichtbar zwischen den Nordbäumen.",
+      "words": [
+        {
+          "word": "Schwarz",
+          "start": 0.441,
+          "end": 0.842,
+          "score": 0.818
+        },
+        {
+          "word": "wie",
+          "start": 0.862,
+          "end": 1.063,
+          "score": 0.944
+        },
+        {
+          "word": "Tinte,",
+          "start": 1.103,
+          "end": 2.306,
+          "score": 0.985
+        },
+        {
+          "word": "kaum",
+          "start": 2.346,
+          "end": 2.667,
+          "score": 0.966
+        },
+        {
+          "word": "sichtbar",
+          "start": 2.707,
+          "end": 3.229,
+          "score": 0.935
+        },
+        {
+          "word": "zwischen",
+          "start": 3.269,
+          "end": 3.55,
+          "score": 0.815
+        },
+        {
+          "word": "den",
+          "start": 3.59,
+          "end": 3.71,
+          "score": 0.789
+        },
+        {
+          "word": "Nordbäumen.",
+          "start": 3.73,
+          "end": 5.154,
+          "score": 0.981
+        }
+      ]
+    },
+    {
+      "start": 5.174,
+      "end": 6.377,
+      "text": "Schnell.",
+      "words": [
+        {
+          "word": "Schnell.",
+          "start": 5.174,
+          "end": 6.377,
+          "score": 0.86
+        }
+      ]
+    },
+    {
+      "start": 6.417,
+      "end": 6.959,
+      "text": "Sehr schnell.",
+      "words": [
+        {
+          "word": "Sehr",
+          "start": 6.417,
+          "end": 6.658,
+          "score": 0.918
+        },
+        {
+          "word": "schnell.",
+          "start": 6.698,
+          "end": 6.959,
+          "score": 0.795
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Schwarz",
+      "start": 0.441,
+      "end": 0.842,
+      "score": 0.818
+    },
+    {
+      "word": "wie",
+      "start": 0.862,
+      "end": 1.063,
+      "score": 0.944
+    },
+    {
+      "word": "Tinte,",
+      "start": 1.103,
+      "end": 2.306,
+      "score": 0.985
+    },
+    {
+      "word": "kaum",
+      "start": 2.346,
+      "end": 2.667,
+      "score": 0.966
+    },
+    {
+      "word": "sichtbar",
+      "start": 2.707,
+      "end": 3.229,
+      "score": 0.935
+    },
+    {
+      "word": "zwischen",
+      "start": 3.269,
+      "end": 3.55,
+      "score": 0.815
+    },
+    {
+      "word": "den",
+      "start": 3.59,
+      "end": 3.71,
+      "score": 0.789
+    },
+    {
+      "word": "Nordbäumen.",
+      "start": 3.73,
+      "end": 5.154,
+      "score": 0.981
+    },
+    {
+      "word": "Schnell.",
+      "start": 5.174,
+      "end": 6.377,
+      "score": 0.86
+    },
+    {
+      "word": "Sehr",
+      "start": 6.417,
+      "end": 6.658,
+      "score": 0.918
+    },
+    {
+      "word": "schnell.",
+      "start": 6.698,
+      "end": 6.959,
+      "score": 0.795
+    }
+  ]
+}
