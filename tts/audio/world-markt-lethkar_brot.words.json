@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.763,
+      "end": 3.271,
+      "text": "Dunkles, schweres Brot.",
+      "words": [
+        {
+          "word": "Dunkles,",
+          "start": 0.763,
+          "end": 1.445,
+          "score": 0.878
+        },
+        {
+          "word": "schweres",
+          "start": 1.505,
+          "end": 2.047,
+          "score": 0.757
+        },
+        {
+          "word": "Brot.",
+          "start": 2.107,
+          "end": 3.271,
+          "score": 0.871
+        }
+      ]
+    },
+    {
+      "start": 3.311,
+      "end": 5.478,
+      "text": "Sättigt länger als Treutheimer Weißbrot.",
+      "words": [
+        {
+          "word": "Sättigt",
+          "start": 3.311,
+          "end": 3.753,
+          "score": 0.701
+        },
+        {
+          "word": "länger",
+          "start": 3.793,
+          "end": 4.114,
+          "score": 0.872
+        },
+        {
+          "word": "als",
+          "start": 4.154,
+          "end": 4.395,
+          "score": 0.961
+        },
+        {
+          "word": "Treutheimer",
+          "start": 4.435,
+          "end": 4.977,
+          "score": 0.89
+        },
+        {
+          "word": "Weißbrot.",
+          "start": 5.017,
+          "end": 5.478,
+          "score": 0.792
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Dunkles,",
+      "start": 0.763,
+      "end": 1.445,
+      "score": 0.878
+    },
+    {
+      "word": "schweres",
+      "start": 1.505,
+      "end": 2.047,
+      "score": 0.757
+    },
+    {
+      "word": "Brot.",
+      "start": 2.107,
+      "end": 3.271,
+      "score": 0.871
+    },
+    {
+      "word": "Sättigt",
+      "start": 3.311,
+      "end": 3.753,
+      "score": 0.701
+    },
+    {
+      "word": "länger",
+      "start": 3.793,
+      "end": 4.114,
+      "score": 0.872
+    },
+    {
+      "word": "als",
+      "start": 4.154,
+      "end": 4.395,
+      "score": 0.961
+    },
+    {
+      "word": "Treutheimer",
+      "start": 4.435,
+      "end": 4.977,
+      "score": 0.89
+    },
+    {
+      "word": "Weißbrot.",
+      "start": 5.017,
+      "end": 5.478,
+      "score": 0.792
+    }
+  ]
+}

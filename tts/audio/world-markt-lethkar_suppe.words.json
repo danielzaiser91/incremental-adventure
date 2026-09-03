@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.713,
+      "text": "Herzhaft, warm, mit getrockneten Kräutern.",
+      "words": [
+        {
+          "word": "Herzhaft,",
+          "start": 0.481,
+          "end": 1.645,
+          "score": 0.873
+        },
+        {
+          "word": "warm,",
+          "start": 1.685,
+          "end": 2.467,
+          "score": 0.885
+        },
+        {
+          "word": "mit",
+          "start": 2.487,
+          "end": 2.688,
+          "score": 0.98
+        },
+        {
+          "word": "getrockneten",
+          "start": 2.728,
+          "end": 3.37,
+          "score": 0.934
+        },
+        {
+          "word": "Kräutern.",
+          "start": 3.41,
+          "end": 4.713,
+          "score": 0.72
+        }
+      ]
+    },
+    {
+      "start": 4.753,
+      "end": 6.358,
+      "text": "Füllt den Magen für den ganzen Tag.",
+      "words": [
+        {
+          "word": "Füllt",
+          "start": 4.753,
+          "end": 4.954,
+          "score": 0.636
+        },
+        {
+          "word": "den",
+          "start": 4.974,
+          "end": 5.114,
+          "score": 0.842
+        },
+        {
+          "word": "Magen",
+          "start": 5.155,
+          "end": 5.536,
+          "score": 0.848
+        },
+        {
+          "word": "für",
+          "start": 5.556,
+          "end": 5.656,
+          "score": 0.849
+        },
+        {
+          "word": "den",
+          "start": 5.676,
+          "end": 5.836,
+          "score": 0.923
+        },
+        {
+          "word": "ganzen",
+          "start": 5.877,
+          "end": 6.177,
+          "score": 0.954
+        },
+        {
+          "word": "Tag.",
+          "start": 6.218,
+          "end": 6.358,
+          "score": 0.79
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Herzhaft,",
+      "start": 0.481,
+      "end": 1.645,
+      "score": 0.873
+    },
+    {
+      "word": "warm,",
+      "start": 1.685,
+      "end": 2.467,
+      "score": 0.885
+    },
+    {
+      "word": "mit",
+      "start": 2.487,
+      "end": 2.688,
+      "score": 0.98
+    },
+    {
+      "word": "getrockneten",
+      "start": 2.728,
+      "end": 3.37,
+      "score": 0.934
+    },
+    {
+      "word": "Kräutern.",
+      "start": 3.41,
+      "end": 4.713,
+      "score": 0.72
+    },
+    {
+      "word": "Füllt",
+      "start": 4.753,
+      "end": 4.954,
+      "score": 0.636
+    },
+    {
+      "word": "den",
+      "start": 4.974,
+      "end": 5.114,
+      "score": 0.842
+    },
+    {
+      "word": "Magen",
+      "start": 5.155,
+      "end": 5.536,
+      "score": 0.848
+    },
+    {
+      "word": "für",
+      "start": 5.556,
+      "end": 5.656,
+      "score": 0.849
+    },
+    {
+      "word": "den",
+      "start": 5.676,
+      "end": 5.836,
+      "score": 0.923
+    },
+    {
+      "word": "ganzen",
+      "start": 5.877,
+      "end": 6.177,
+      "score": 0.954
+    },
+    {
+      "word": "Tag.",
+      "start": 6.218,
+      "end": 6.358,
+      "score": 0.79
+    }
+  ]
+}

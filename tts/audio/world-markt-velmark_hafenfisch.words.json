@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 4.514,
+      "text": "Frisch aus dem Hafen, heute Morgen angeliefert.",
+      "words": [
+        {
+          "word": "Frisch",
+          "start": 0.481,
+          "end": 0.762,
+          "score": 0.728
+        },
+        {
+          "word": "aus",
+          "start": 0.782,
+          "end": 0.883,
+          "score": 0.833
+        },
+        {
+          "word": "dem",
+          "start": 0.923,
+          "end": 1.023,
+          "score": 0.968
+        },
+        {
+          "word": "Hafen,",
+          "start": 1.063,
+          "end": 2.086,
+          "score": 0.923
+        },
+        {
+          "word": "heute",
+          "start": 2.106,
+          "end": 2.407,
+          "score": 0.956
+        },
+        {
+          "word": "Morgen",
+          "start": 2.427,
+          "end": 2.728,
+          "score": 0.98
+        },
+        {
+          "word": "angeliefert.",
+          "start": 2.768,
+          "end": 4.514,
+          "score": 0.859
+        }
+      ]
+    },
+    {
+      "start": 4.554,
+      "end": 6.199,
+      "text": "Salzig und sättigend.",
+      "words": [
+        {
+          "word": "Salzig",
+          "start": 4.554,
+          "end": 5.376,
+          "score": 0.747
+        },
+        {
+          "word": "und",
+          "start": 5.416,
+          "end": 5.697,
+          "score": 0.946
+        },
+        {
+          "word": "sättigend.",
+          "start": 5.737,
+          "end": 6.199,
+          "score": 0.743
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Frisch",
+      "start": 0.481,
+      "end": 0.762,
+      "score": 0.728
+    },
+    {
+      "word": "aus",
+      "start": 0.782,
+      "end": 0.883,
+      "score": 0.833
+    },
+    {
+      "word": "dem",
+      "start": 0.923,
+      "end": 1.023,
+      "score": 0.968
+    },
+    {
+      "word": "Hafen,",
+      "start": 1.063,
+      "end": 2.086,
+      "score": 0.923
+    },
+    {
+      "word": "heute",
+      "start": 2.106,
+      "end": 2.407,
+      "score": 0.956
+    },
+    {
+      "word": "Morgen",
+      "start": 2.427,
+      "end": 2.728,
+      "score": 0.98
+    },
+    {
+      "word": "angeliefert.",
+      "start": 2.768,
+      "end": 4.514,
+      "score": 0.859
+    },
+    {
+      "word": "Salzig",
+      "start": 4.554,
+      "end": 5.376,
+      "score": 0.747
+    },
+    {
+      "word": "und",
+      "start": 5.416,
+      "end": 5.697,
+      "score": 0.946
+    },
+    {
+      "word": "sättigend.",
+      "start": 5.737,
+      "end": 6.199,
+      "score": 0.743
+    }
+  ]
+}

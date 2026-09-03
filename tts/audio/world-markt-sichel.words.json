@@ -1,0 +1,85 @@
+{
+  "segments": [
+    {
+      "start": 0.503,
+      "end": 2.878,
+      "text": "Zum Ernten von Wildkraut am Wegrand.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 0.503,
+          "end": 0.724,
+          "score": 0.847
+        },
+        {
+          "word": "Ernten",
+          "start": 0.765,
+          "end": 1.248,
+          "score": 0.91
+        },
+        {
+          "word": "von",
+          "start": 1.288,
+          "end": 1.57,
+          "score": 0.858
+        },
+        {
+          "word": "Wildkraut",
+          "start": 1.61,
+          "end": 2.274,
+          "score": 0.796
+        },
+        {
+          "word": "am",
+          "start": 2.314,
+          "end": 2.475,
+          "score": 0.936
+        },
+        {
+          "word": "Wegrand.",
+          "start": 2.495,
+          "end": 2.878,
+          "score": 0.75
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zum",
+      "start": 0.503,
+      "end": 0.724,
+      "score": 0.847
+    },
+    {
+      "word": "Ernten",
+      "start": 0.765,
+      "end": 1.248,
+      "score": 0.91
+    },
+    {
+      "word": "von",
+      "start": 1.288,
+      "end": 1.57,
+      "score": 0.858
+    },
+    {
+      "word": "Wildkraut",
+      "start": 1.61,
+      "end": 2.274,
+      "score": 0.796
+    },
+    {
+      "word": "am",
+      "start": 2.314,
+      "end": 2.475,
+      "score": 0.936
+    },
+    {
+      "word": "Wegrand.",
+      "start": 2.495,
+      "end": 2.878,
+      "score": 0.75
+    }
+  ]
+}

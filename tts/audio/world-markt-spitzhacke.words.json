@@ -1,0 +1,85 @@
+{
+  "segments": [
+    {
+      "start": 0.463,
+      "end": 2.418,
+      "text": "Zum Lösen von Steinen im Geröll.",
+      "words": [
+        {
+          "word": "Zum",
+          "start": 0.463,
+          "end": 0.645,
+          "score": 0.957
+        },
+        {
+          "word": "Lösen",
+          "start": 0.705,
+          "end": 1.088,
+          "score": 0.983
+        },
+        {
+          "word": "von",
+          "start": 1.128,
+          "end": 1.33,
+          "score": 0.964
+        },
+        {
+          "word": "Steinen",
+          "start": 1.37,
+          "end": 1.874,
+          "score": 0.938
+        },
+        {
+          "word": "im",
+          "start": 1.914,
+          "end": 2.075,
+          "score": 0.98
+        },
+        {
+          "word": "Geröll.",
+          "start": 2.095,
+          "end": 2.418,
+          "score": 0.774
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Zum",
+      "start": 0.463,
+      "end": 0.645,
+      "score": 0.957
+    },
+    {
+      "word": "Lösen",
+      "start": 0.705,
+      "end": 1.088,
+      "score": 0.983
+    },
+    {
+      "word": "von",
+      "start": 1.128,
+      "end": 1.33,
+      "score": 0.964
+    },
+    {
+      "word": "Steinen",
+      "start": 1.37,
+      "end": 1.874,
+      "score": 0.938
+    },
+    {
+      "word": "im",
+      "start": 1.914,
+      "end": 2.075,
+      "score": 0.98
+    },
+    {
+      "word": "Geröll.",
+      "start": 2.095,
+      "end": 2.418,
+      "score": 0.774
+    }
+  ]
+}

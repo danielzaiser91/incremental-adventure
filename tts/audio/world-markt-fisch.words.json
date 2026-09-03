@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 4.058,
+      "text": "Herzhaft und sättigend — hält länger vor als Brot.",
+      "words": [
+        {
+          "word": "Herzhaft",
+          "start": 0.462,
+          "end": 1.286,
+          "score": 0.917
+        },
+        {
+          "word": "und",
+          "start": 1.326,
+          "end": 1.527,
+          "score": 0.884
+        },
+        {
+          "word": "sättigend",
+          "start": 1.587,
+          "end": 2.069,
+          "score": 0.831
+        },
+        {
+          "word": "—",
+          "start": 2.632,
+          "end": 2.652,
+          "score": 0.28
+        },
+        {
+          "word": "hält",
+          "start": 2.692,
+          "end": 2.953,
+          "score": 0.858
+        },
+        {
+          "word": "länger",
+          "start": 2.974,
+          "end": 3.275,
+          "score": 0.933
+        },
+        {
+          "word": "vor",
+          "start": 3.315,
+          "end": 3.536,
+          "score": 0.945
+        },
+        {
+          "word": "als",
+          "start": 3.576,
+          "end": 3.717,
+          "score": 0.937
+        },
+        {
+          "word": "Brot.",
+          "start": 3.757,
+          "end": 4.058,
+          "score": 0.753
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Herzhaft",
+      "start": 0.462,
+      "end": 1.286,
+      "score": 0.917
+    },
+    {
+      "word": "und",
+      "start": 1.326,
+      "end": 1.527,
+      "score": 0.884
+    },
+    {
+      "word": "sättigend",
+      "start": 1.587,
+      "end": 2.069,
+      "score": 0.831
+    },
+    {
+      "word": "—",
+      "start": 2.632,
+      "end": 2.652,
+      "score": 0.28
+    },
+    {
+      "word": "hält",
+      "start": 2.692,
+      "end": 2.953,
+      "score": 0.858
+    },
+    {
+      "word": "länger",
+      "start": 2.974,
+      "end": 3.275,
+      "score": 0.933
+    },
+    {
+      "word": "vor",
+      "start": 3.315,
+      "end": 3.536,
+      "score": 0.945
+    },
+    {
+      "word": "als",
+      "start": 3.576,
+      "end": 3.717,
+      "score": 0.937
+    },
+    {
+      "word": "Brot.",
+      "start": 3.757,
+      "end": 4.058,
+      "score": 0.753
+    }
+  ]
+}

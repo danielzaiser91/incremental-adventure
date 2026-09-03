@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 2.748,
+      "text": "Ein Glas zum Abend.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.502,
+          "end": 0.702,
+          "score": 0.676
+        },
+        {
+          "word": "Glas",
+          "start": 0.742,
+          "end": 1.164,
+          "score": 0.948
+        },
+        {
+          "word": "zum",
+          "start": 1.224,
+          "end": 1.444,
+          "score": 0.983
+        },
+        {
+          "word": "Abend.",
+          "start": 1.505,
+          "end": 2.748,
+          "score": 0.952
+        }
+      ]
+    },
+    {
+      "start": 2.789,
+      "end": 5.998,
+      "text": "Löst die Anspannung — und füllt den Magen ein wenig.",
+      "words": [
+        {
+          "word": "Löst",
+          "start": 2.789,
+          "end": 3.069,
+          "score": 0.971
+        },
+        {
+          "word": "die",
+          "start": 3.11,
+          "end": 3.23,
+          "score": 0.913
+        },
+        {
+          "word": "Anspannung",
+          "start": 3.29,
+          "end": 3.792,
+          "score": 0.905
+        },
+        {
+          "word": "—",
+          "start": 4.393,
+          "end": 4.414,
+          "score": 0.691
+        },
+        {
+          "word": "und",
+          "start": 4.434,
+          "end": 4.674,
+          "score": 0.754
+        },
+        {
+          "word": "füllt",
+          "start": 4.694,
+          "end": 4.915,
+          "score": 0.875
+        },
+        {
+          "word": "den",
+          "start": 4.955,
+          "end": 5.136,
+          "score": 0.922
+        },
+        {
+          "word": "Magen",
+          "start": 5.176,
+          "end": 5.497,
+          "score": 0.955
+        },
+        {
+          "word": "ein",
+          "start": 5.537,
+          "end": 5.697,
+          "score": 0.653
+        },
+        {
+          "word": "wenig.",
+          "start": 5.738,
+          "end": 5.998,
+          "score": 0.76
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.502,
+      "end": 0.702,
+      "score": 0.676
+    },
+    {
+      "word": "Glas",
+      "start": 0.742,
+      "end": 1.164,
+      "score": 0.948
+    },
+    {
+      "word": "zum",
+      "start": 1.224,
+      "end": 1.444,
+      "score": 0.983
+    },
+    {
+      "word": "Abend.",
+      "start": 1.505,
+      "end": 2.748,
+      "score": 0.952
+    },
+    {
+      "word": "Löst",
+      "start": 2.789,
+      "end": 3.069,
+      "score": 0.971
+    },
+    {
+      "word": "die",
+      "start": 3.11,
+      "end": 3.23,
+      "score": 0.913
+    },
+    {
+      "word": "Anspannung",
+      "start": 3.29,
+      "end": 3.792,
+      "score": 0.905
+    },
+    {
+      "word": "—",
+      "start": 4.393,
+      "end": 4.414,
+      "score": 0.691
+    },
+    {
+      "word": "und",
+      "start": 4.434,
+      "end": 4.674,
+      "score": 0.754
+    },
+    {
+      "word": "füllt",
+      "start": 4.694,
+      "end": 4.915,
+      "score": 0.875
+    },
+    {
+      "word": "den",
+      "start": 4.955,
+      "end": 5.136,
+      "score": 0.922
+    },
+    {
+      "word": "Magen",
+      "start": 5.176,
+      "end": 5.497,
+      "score": 0.955
+    },
+    {
+      "word": "ein",
+      "start": 5.537,
+      "end": 5.697,
+      "score": 0.653
+    },
+    {
+      "word": "wenig.",
+      "start": 5.738,
+      "end": 5.998,
+      "score": 0.76
+    }
+  ]
+}

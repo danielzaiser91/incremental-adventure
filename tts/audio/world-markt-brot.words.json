@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 2.933,
+      "text": "Frisch gebacken, noch warm.",
+      "words": [
+        {
+          "word": "Frisch",
+          "start": 0.522,
+          "end": 0.824,
+          "score": 0.823
+        },
+        {
+          "word": "gebacken,",
+          "start": 0.864,
+          "end": 1.768,
+          "score": 0.91
+        },
+        {
+          "word": "noch",
+          "start": 1.788,
+          "end": 2.029,
+          "score": 0.949
+        },
+        {
+          "word": "warm.",
+          "start": 2.069,
+          "end": 2.933,
+          "score": 0.782
+        }
+      ]
+    },
+    {
+      "start": 2.973,
+      "end": 4.178,
+      "text": "Stillt den größten Hunger.",
+      "words": [
+        {
+          "word": "Stillt",
+          "start": 2.973,
+          "end": 3.274,
+          "score": 0.878
+        },
+        {
+          "word": "den",
+          "start": 3.294,
+          "end": 3.475,
+          "score": 0.833
+        },
+        {
+          "word": "größten",
+          "start": 3.515,
+          "end": 3.937,
+          "score": 0.939
+        },
+        {
+          "word": "Hunger.",
+          "start": 3.977,
+          "end": 4.178,
+          "score": 0.814
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Frisch",
+      "start": 0.522,
+      "end": 0.824,
+      "score": 0.823
+    },
+    {
+      "word": "gebacken,",
+      "start": 0.864,
+      "end": 1.768,
+      "score": 0.91
+    },
+    {
+      "word": "noch",
+      "start": 1.788,
+      "end": 2.029,
+      "score": 0.949
+    },
+    {
+      "word": "warm.",
+      "start": 2.069,
+      "end": 2.933,
+      "score": 0.782
+    },
+    {
+      "word": "Stillt",
+      "start": 2.973,
+      "end": 3.274,
+      "score": 0.878
+    },
+    {
+      "word": "den",
+      "start": 3.294,
+      "end": 3.475,
+      "score": 0.833
+    },
+    {
+      "word": "größten",
+      "start": 3.515,
+      "end": 3.937,
+      "score": 0.939
+    },
+    {
+      "word": "Hunger.",
+      "start": 3.977,
+      "end": 4.178,
+      "score": 0.814
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.402,
+      "end": 3.192,
+      "text": "Ein süßer Genuss von reisenden Händlern.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.402,
+          "end": 0.602,
+          "score": 0.534
+        },
+        {
+          "word": "süßer",
+          "start": 0.642,
+          "end": 0.984,
+          "score": 0.92
+        },
+        {
+          "word": "Genuss",
+          "start": 1.004,
+          "end": 1.425,
+          "score": 0.962
+        },
+        {
+          "word": "von",
+          "start": 1.445,
+          "end": 1.666,
+          "score": 0.996
+        },
+        {
+          "word": "reisenden",
+          "start": 1.727,
+          "end": 2.228,
+          "score": 0.895
+        },
+        {
+          "word": "Händlern.",
+          "start": 2.269,
+          "end": 3.192,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 3.252,
+      "end": 4.838,
+      "text": "Stärkt Leib und Geist.",
+      "words": [
+        {
+          "word": "Stärkt",
+          "start": 3.252,
+          "end": 3.654,
+          "score": 0.938
+        },
+        {
+          "word": "Leib",
+          "start": 3.714,
+          "end": 4.196,
+          "score": 0.931
+        },
+        {
+          "word": "und",
+          "start": 4.236,
+          "end": 4.517,
+          "score": 0.889
+        },
+        {
+          "word": "Geist.",
+          "start": 4.557,
+          "end": 4.838,
+          "score": 0.833
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.402,
+      "end": 0.602,
+      "score": 0.534
+    },
+    {
+      "word": "süßer",
+      "start": 0.642,
+      "end": 0.984,
+      "score": 0.92
+    },
+    {
+      "word": "Genuss",
+      "start": 1.004,
+      "end": 1.425,
+      "score": 0.962
+    },
+    {
+      "word": "von",
+      "start": 1.445,
+      "end": 1.666,
+      "score": 0.996
+    },
+    {
+      "word": "reisenden",
+      "start": 1.727,
+      "end": 2.228,
+      "score": 0.895
+    },
+    {
+      "word": "Händlern.",
+      "start": 2.269,
+      "end": 3.192,
+      "score": 0.944
+    },
+    {
+      "word": "Stärkt",
+      "start": 3.252,
+      "end": 3.654,
+      "score": 0.938
+    },
+    {
+      "word": "Leib",
+      "start": 3.714,
+      "end": 4.196,
+      "score": 0.931
+    },
+    {
+      "word": "und",
+      "start": 4.236,
+      "end": 4.517,
+      "score": 0.889
+    },
+    {
+      "word": "Geist.",
+      "start": 4.557,
+      "end": 4.838,
+      "score": 0.833
+    }
+  ]
+}

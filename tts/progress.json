@@ -1739,6 +1739,56 @@
       "file": "world-markt-axt.wav",
       "seconds": 3.2,
       "date": "2026-09-02T20:16:35.148Z"
+    },
+    "world-markt-spitzhacke": {
+      "file": "world-markt-spitzhacke.wav",
+      "seconds": 2.7,
+      "date": "2026-09-03T20:10:29.985Z"
+    },
+    "world-markt-sichel": {
+      "file": "world-markt-sichel.wav",
+      "seconds": 3.2,
+      "date": "2026-09-03T20:11:22.726Z"
+    },
+    "world-markt-brot": {
+      "file": "world-markt-brot.wav",
+      "seconds": 4.6,
+      "date": "2026-09-03T20:11:56.454Z"
+    },
+    "world-markt-fisch": {
+      "file": "world-markt-fisch.wav",
+      "seconds": 4.4,
+      "date": "2026-09-03T20:12:30.026Z"
+    },
+    "world-markt-honigkuchen": {
+      "file": "world-markt-honigkuchen.wav",
+      "seconds": 5.3,
+      "date": "2026-09-03T20:13:04.246Z"
+    },
+    "world-markt-kaffee": {
+      "file": "world-markt-kaffee.wav",
+      "seconds": 13.5,
+      "date": "2026-09-03T20:13:41.883Z"
+    },
+    "world-markt-lethkar_suppe": {
+      "file": "world-markt-lethkar_suppe.wav",
+      "seconds": 7.1,
+      "date": "2026-09-03T20:14:17.664Z"
+    },
+    "world-markt-lethkar_brot": {
+      "file": "world-markt-lethkar_brot.wav",
+      "seconds": 6,
+      "date": "2026-09-03T20:14:52.335Z"
+    },
+    "world-markt-lethkar_wein": {
+      "file": "world-markt-lethkar_wein.wav",
+      "seconds": 6.5,
+      "date": "2026-09-03T20:15:28.762Z"
+    },
+    "world-markt-velmark_hafenfisch": {
+      "file": "world-markt-velmark_hafenfisch.wav",
+      "seconds": 6.6,
+      "date": "2026-09-03T20:16:06.630Z"
     }
   },
   "failed": {}
