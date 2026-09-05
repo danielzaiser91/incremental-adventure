@@ -1789,6 +1789,56 @@
       "file": "world-markt-velmark_hafenfisch.wav",
       "seconds": 6.6,
       "date": "2026-09-03T20:16:06.630Z"
+    },
+    "world-markt-velmark_brot": {
+      "file": "world-markt-velmark_brot.wav",
+      "seconds": 5.5,
+      "date": "2026-09-05T20:35:28.597Z"
+    },
+    "world-markt-velmark_kaviar": {
+      "file": "world-markt-velmark_kaviar.wav",
+      "seconds": 5.9,
+      "date": "2026-09-05T20:36:24.604Z"
+    },
+    "world-expedition-ruins_of_aethren": {
+      "file": "world-expedition-ruins_of_aethren.wav",
+      "seconds": 12,
+      "date": "2026-09-05T20:37:03.151Z"
+    },
+    "world-expedition-old_road_north": {
+      "file": "world-expedition-old_road_north.wav",
+      "seconds": 8.8,
+      "date": "2026-09-05T20:37:39.852Z"
+    },
+    "world-expedition-patrol_outskirts": {
+      "file": "world-expedition-patrol_outskirts.wav",
+      "seconds": 9.5,
+      "date": "2026-09-05T20:38:16.034Z"
+    },
+    "world-expedition-herb_gathering": {
+      "file": "world-expedition-herb_gathering.wav",
+      "seconds": 7.6,
+      "date": "2026-09-05T20:38:51.374Z"
+    },
+    "world-expedition-woodcutting_run": {
+      "file": "world-expedition-woodcutting_run.wav",
+      "seconds": 7,
+      "date": "2026-09-05T20:39:26.729Z"
+    },
+    "world-expedition-bounty_hunt": {
+      "file": "world-expedition-bounty_hunt.wav",
+      "seconds": 7.7,
+      "date": "2026-09-05T20:40:01.696Z"
+    },
+    "world-pet-streetCat": {
+      "file": "world-pet-streetCat.wav",
+      "seconds": 6.5,
+      "date": "2026-09-05T20:40:35.949Z"
+    },
+    "world-pet-wolfWelpe": {
+      "file": "world-pet-wolfWelpe.wav",
+      "seconds": 6.9,
+      "date": "2026-09-05T20:41:10.284Z"
     }
   },
   "failed": {}

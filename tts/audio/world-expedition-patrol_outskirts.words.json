@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 1.062,
+      "end": 6.393,
+      "text": "Den Rand der Stadt abgehen, nach Unruhestiftern Ausschau halten.",
+      "words": [
+        {
+          "word": "Den",
+          "start": 1.062,
+          "end": 1.203,
+          "score": 0.921
+        },
+        {
+          "word": "Rand",
+          "start": 1.283,
+          "end": 1.503,
+          "score": 0.975
+        },
+        {
+          "word": "der",
+          "start": 1.523,
+          "end": 1.684,
+          "score": 0.833
+        },
+        {
+          "word": "Stadt",
+          "start": 1.724,
+          "end": 2.004,
+          "score": 0.968
+        },
+        {
+          "word": "abgehen,",
+          "start": 2.044,
+          "end": 3.046,
+          "score": 0.924
+        },
+        {
+          "word": "nach",
+          "start": 3.066,
+          "end": 3.307,
+          "score": 0.785
+        },
+        {
+          "word": "Unruhestiftern",
+          "start": 3.367,
+          "end": 4.269,
+          "score": 0.859
+        },
+        {
+          "word": "Ausschau",
+          "start": 4.289,
+          "end": 4.67,
+          "score": 0.764
+        },
+        {
+          "word": "halten.",
+          "start": 4.71,
+          "end": 6.393,
+          "score": 0.987
+        }
+      ]
+    },
+    {
+      "start": 6.413,
+      "end": 9.139,
+      "text": "Keine Helden-Arbeit — aber solide bezahlt.",
+      "words": [
+        {
+          "word": "Keine",
+          "start": 6.413,
+          "end": 6.674,
+          "score": 0.927
+        },
+        {
+          "word": "Helden-Arbeit",
+          "start": 6.714,
+          "end": 7.917,
+          "score": 0.951
+        },
+        {
+          "word": "—",
+          "start": 7.937,
+          "end": 7.957,
+          "score": 0.962
+        },
+        {
+          "word": "aber",
+          "start": 7.997,
+          "end": 8.317,
+          "score": 0.868
+        },
+        {
+          "word": "solide",
+          "start": 8.338,
+          "end": 8.738,
+          "score": 0.948
+        },
+        {
+          "word": "bezahlt.",
+          "start": 8.778,
+          "end": 9.139,
+          "score": 0.826
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Den",
+      "start": 1.062,
+      "end": 1.203,
+      "score": 0.921
+    },
+    {
+      "word": "Rand",
+      "start": 1.283,
+      "end": 1.503,
+      "score": 0.975
+    },
+    {
+      "word": "der",
+      "start": 1.523,
+      "end": 1.684,
+      "score": 0.833
+    },
+    {
+      "word": "Stadt",
+      "start": 1.724,
+      "end": 2.004,
+      "score": 0.968
+    },
+    {
+      "word": "abgehen,",
+      "start": 2.044,
+      "end": 3.046,
+      "score": 0.924
+    },
+    {
+      "word": "nach",
+      "start": 3.066,
+      "end": 3.307,
+      "score": 0.785
+    },
+    {
+      "word": "Unruhestiftern",
+      "start": 3.367,
+      "end": 4.269,
+      "score": 0.859
+    },
+    {
+      "word": "Ausschau",
+      "start": 4.289,
+      "end": 4.67,
+      "score": 0.764
+    },
+    {
+      "word": "halten.",
+      "start": 4.71,
+      "end": 6.393,
+      "score": 0.987
+    },
+    {
+      "word": "Keine",
+      "start": 6.413,
+      "end": 6.674,
+      "score": 0.927
+    },
+    {
+      "word": "Helden-Arbeit",
+      "start": 6.714,
+      "end": 7.917,
+      "score": 0.951
+    },
+    {
+      "word": "—",
+      "start": 7.937,
+      "end": 7.957,
+      "score": 0.962
+    },
+    {
+      "word": "aber",
+      "start": 7.997,
+      "end": 8.317,
+      "score": 0.868
+    },
+    {
+      "word": "solide",
+      "start": 8.338,
+      "end": 8.738,
+      "score": 0.948
+    },
+    {
+      "word": "bezahlt.",
+      "start": 8.778,
+      "end": 9.139,
+      "score": 0.826
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 4.951,
+      "text": "Eine alte Handelsroute, die kaum noch jemand benutzt.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 0.501,
+          "end": 0.802,
+          "score": 0.702
+        },
+        {
+          "word": "alte",
+          "start": 0.842,
+          "end": 1.243,
+          "score": 0.931
+        },
+        {
+          "word": "Handelsroute,",
+          "start": 1.283,
+          "end": 2.426,
+          "score": 0.855
+        },
+        {
+          "word": "die",
+          "start": 2.446,
+          "end": 2.606,
+          "score": 0.946
+        },
+        {
+          "word": "kaum",
+          "start": 2.646,
+          "end": 2.867,
+          "score": 0.927
+        },
+        {
+          "word": "noch",
+          "start": 2.907,
+          "end": 3.087,
+          "score": 0.883
+        },
+        {
+          "word": "jemand",
+          "start": 3.107,
+          "end": 3.388,
+          "score": 0.844
+        },
+        {
+          "word": "benutzt.",
+          "start": 3.428,
+          "end": 4.951,
+          "score": 0.892
+        }
+      ]
+    },
+    {
+      "start": 4.991,
+      "end": 8.399,
+      "text": "Sie führt, heißt es, einst nach Lethkar.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 4.991,
+          "end": 5.172,
+          "score": 0.889
+        },
+        {
+          "word": "führt,",
+          "start": 5.232,
+          "end": 6.014,
+          "score": 0.812
+        },
+        {
+          "word": "heißt",
+          "start": 6.054,
+          "end": 6.294,
+          "score": 0.872
+        },
+        {
+          "word": "es,",
+          "start": 6.355,
+          "end": 7.196,
+          "score": 0.972
+        },
+        {
+          "word": "einst",
+          "start": 7.237,
+          "end": 7.637,
+          "score": 0.917
+        },
+        {
+          "word": "nach",
+          "start": 7.678,
+          "end": 7.898,
+          "score": 0.978
+        },
+        {
+          "word": "Lethkar.",
+          "start": 7.938,
+          "end": 8.399,
+          "score": 0.764
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Eine",
+      "start": 0.501,
+      "end": 0.802,
+      "score": 0.702
+    },
+    {
+      "word": "alte",
+      "start": 0.842,
+      "end": 1.243,
+      "score": 0.931
+    },
+    {
+      "word": "Handelsroute,",
+      "start": 1.283,
+      "end": 2.426,
+      "score": 0.855
+    },
+    {
+      "word": "die",
+      "start": 2.446,
+      "end": 2.606,
+      "score": 0.946
+    },
+    {
+      "word": "kaum",
+      "start": 2.646,
+      "end": 2.867,
+      "score": 0.927
+    },
+    {
+      "word": "noch",
+      "start": 2.907,
+      "end": 3.087,
+      "score": 0.883
+    },
+    {
+      "word": "jemand",
+      "start": 3.107,
+      "end": 3.388,
+      "score": 0.844
+    },
+    {
+      "word": "benutzt.",
+      "start": 3.428,
+      "end": 4.951,
+      "score": 0.892
+    },
+    {
+      "word": "Sie",
+      "start": 4.991,
+      "end": 5.172,
+      "score": 0.889
+    },
+    {
+      "word": "führt,",
+      "start": 5.232,
+      "end": 6.014,
+      "score": 0.812
+    },
+    {
+      "word": "heißt",
+      "start": 6.054,
+      "end": 6.294,
+      "score": 0.872
+    },
+    {
+      "word": "es,",
+      "start": 6.355,
+      "end": 7.196,
+      "score": 0.972
+    },
+    {
+      "word": "einst",
+      "start": 7.237,
+      "end": 7.637,
+      "score": 0.917
+    },
+    {
+      "word": "nach",
+      "start": 7.678,
+      "end": 7.898,
+      "score": 0.978
+    },
+    {
+      "word": "Lethkar.",
+      "start": 7.938,
+      "end": 8.399,
+      "score": 0.764
+    }
+  ]
+}

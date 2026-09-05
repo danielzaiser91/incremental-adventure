@@ -1,0 +1,248 @@
+{
+  "segments": [
+    {
+      "start": 0.801,
+      "end": 5.028,
+      "text": "Westlich des Waldes sollen alte Ruinen liegen.",
+      "words": [
+        {
+          "word": "Westlich",
+          "start": 0.801,
+          "end": 1.302,
+          "score": 0.944
+        },
+        {
+          "word": "des",
+          "start": 1.322,
+          "end": 1.563,
+          "score": 0.953
+        },
+        {
+          "word": "Waldes",
+          "start": 1.623,
+          "end": 2.083,
+          "score": 0.988
+        },
+        {
+          "word": "sollen",
+          "start": 2.124,
+          "end": 2.584,
+          "score": 0.934
+        },
+        {
+          "word": "alte",
+          "start": 2.644,
+          "end": 2.985,
+          "score": 0.92
+        },
+        {
+          "word": "Ruinen",
+          "start": 3.005,
+          "end": 3.546,
+          "score": 0.803
+        },
+        {
+          "word": "liegen.",
+          "start": 3.606,
+          "end": 5.028,
+          "score": 0.989
+        }
+      ]
+    },
+    {
+      "start": 5.048,
+      "end": 11.619,
+      "text": "Händler erwähnen Geschichten — Mauerreste aus einer untergegangenen Siedlung, vor dem Krieg.",
+      "words": [
+        {
+          "word": "Händler",
+          "start": 5.048,
+          "end": 5.509,
+          "score": 0.905
+        },
+        {
+          "word": "erwähnen",
+          "start": 5.549,
+          "end": 5.97,
+          "score": 0.797
+        },
+        {
+          "word": "Geschichten",
+          "start": 5.99,
+          "end": 6.491,
+          "score": 0.871
+        },
+        {
+          "word": "—",
+          "start": 7.573,
+          "end": 7.593,
+          "score": 0.999
+        },
+        {
+          "word": "Mauerreste",
+          "start": 7.613,
+          "end": 8.294,
+          "score": 0.876
+        },
+        {
+          "word": "aus",
+          "start": 8.314,
+          "end": 8.474,
+          "score": 0.954
+        },
+        {
+          "word": "einer",
+          "start": 8.514,
+          "end": 8.775,
+          "score": 0.89
+        },
+        {
+          "word": "untergegangenen",
+          "start": 8.835,
+          "end": 9.636,
+          "score": 0.983
+        },
+        {
+          "word": "Siedlung,",
+          "start": 9.696,
+          "end": 11.018,
+          "score": 0.992
+        },
+        {
+          "word": "vor",
+          "start": 11.038,
+          "end": 11.199,
+          "score": 0.944
+        },
+        {
+          "word": "dem",
+          "start": 11.219,
+          "end": 11.379,
+          "score": 0.992
+        },
+        {
+          "word": "Krieg.",
+          "start": 11.419,
+          "end": 11.619,
+          "score": 0.644
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Westlich",
+      "start": 0.801,
+      "end": 1.302,
+      "score": 0.944
+    },
+    {
+      "word": "des",
+      "start": 1.322,
+      "end": 1.563,
+      "score": 0.953
+    },
+    {
+      "word": "Waldes",
+      "start": 1.623,
+      "end": 2.083,
+      "score": 0.988
+    },
+    {
+      "word": "sollen",
+      "start": 2.124,
+      "end": 2.584,
+      "score": 0.934
+    },
+    {
+      "word": "alte",
+      "start": 2.644,
+      "end": 2.985,
+      "score": 0.92
+    },
+    {
+      "word": "Ruinen",
+      "start": 3.005,
+      "end": 3.546,
+      "score": 0.803
+    },
+    {
+      "word": "liegen.",
+      "start": 3.606,
+      "end": 5.028,
+      "score": 0.989
+    },
+    {
+      "word": "Händler",
+      "start": 5.048,
+      "end": 5.509,
+      "score": 0.905
+    },
+    {
+      "word": "erwähnen",
+      "start": 5.549,
+      "end": 5.97,
+      "score": 0.797
+    },
+    {
+      "word": "Geschichten",
+      "start": 5.99,
+      "end": 6.491,
+      "score": 0.871
+    },
+    {
+      "word": "—",
+      "start": 7.573,
+      "end": 7.593,
+      "score": 0.999
+    },
+    {
+      "word": "Mauerreste",
+      "start": 7.613,
+      "end": 8.294,
+      "score": 0.876
+    },
+    {
+      "word": "aus",
+      "start": 8.314,
+      "end": 8.474,
+      "score": 0.954
+    },
+    {
+      "word": "einer",
+      "start": 8.514,
+      "end": 8.775,
+      "score": 0.89
+    },
+    {
+      "word": "untergegangenen",
+      "start": 8.835,
+      "end": 9.636,
+      "score": 0.983
+    },
+    {
+      "word": "Siedlung,",
+      "start": 9.696,
+      "end": 11.018,
+      "score": 0.992
+    },
+    {
+      "word": "vor",
+      "start": 11.038,
+      "end": 11.199,
+      "score": 0.944
+    },
+    {
+      "word": "dem",
+      "start": 11.219,
+      "end": 11.379,
+      "score": 0.992
+    },
+    {
+      "word": "Krieg.",
+      "start": 11.419,
+      "end": 11.619,
+      "score": 0.644
+    }
+  ]
+}

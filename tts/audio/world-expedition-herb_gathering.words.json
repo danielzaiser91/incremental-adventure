@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 5.133,
+      "text": "Weiter draußen wachsen Kräuter, die in der Stadt gut verkäuflich sind.",
+      "words": [
+        {
+          "word": "Weiter",
+          "start": 0.541,
+          "end": 0.862,
+          "score": 0.966
+        },
+        {
+          "word": "draußen",
+          "start": 0.902,
+          "end": 1.384,
+          "score": 0.865
+        },
+        {
+          "word": "wachsen",
+          "start": 1.424,
+          "end": 1.845,
+          "score": 0.873
+        },
+        {
+          "word": "Kräuter,",
+          "start": 1.885,
+          "end": 2.707,
+          "score": 0.83
+        },
+        {
+          "word": "die",
+          "start": 2.727,
+          "end": 2.827,
+          "score": 0.997
+        },
+        {
+          "word": "in",
+          "start": 2.868,
+          "end": 2.928,
+          "score": 0.755
+        },
+        {
+          "word": "der",
+          "start": 2.968,
+          "end": 3.048,
+          "score": 0.901
+        },
+        {
+          "word": "Stadt",
+          "start": 3.088,
+          "end": 3.389,
+          "score": 0.989
+        },
+        {
+          "word": "gut",
+          "start": 3.429,
+          "end": 3.609,
+          "score": 0.899
+        },
+        {
+          "word": "verkäuflich",
+          "start": 3.65,
+          "end": 4.191,
+          "score": 0.95
+        },
+        {
+          "word": "sind.",
+          "start": 4.231,
+          "end": 5.133,
+          "score": 0.992
+        }
+      ]
+    },
+    {
+      "start": 5.174,
+      "end": 7.259,
+      "text": "Zeitaufwändig, aber lohnenswert.",
+      "words": [
+        {
+          "word": "Zeitaufwändig,",
+          "start": 5.174,
+          "end": 6.036,
+          "score": 0.728
+        },
+        {
+          "word": "aber",
+          "start": 6.076,
+          "end": 6.698,
+          "score": 0.879
+        },
+        {
+          "word": "lohnenswert.",
+          "start": 6.738,
+          "end": 7.259,
+          "score": 0.825
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Weiter",
+      "start": 0.541,
+      "end": 0.862,
+      "score": 0.966
+    },
+    {
+      "word": "draußen",
+      "start": 0.902,
+      "end": 1.384,
+      "score": 0.865
+    },
+    {
+      "word": "wachsen",
+      "start": 1.424,
+      "end": 1.845,
+      "score": 0.873
+    },
+    {
+      "word": "Kräuter,",
+      "start": 1.885,
+      "end": 2.707,
+      "score": 0.83
+    },
+    {
+      "word": "die",
+      "start": 2.727,
+      "end": 2.827,
+      "score": 0.997
+    },
+    {
+      "word": "in",
+      "start": 2.868,
+      "end": 2.928,
+      "score": 0.755
+    },
+    {
+      "word": "der",
+      "start": 2.968,
+      "end": 3.048,
+      "score": 0.901
+    },
+    {
+      "word": "Stadt",
+      "start": 3.088,
+      "end": 3.389,
+      "score": 0.989
+    },
+    {
+      "word": "gut",
+      "start": 3.429,
+      "end": 3.609,
+      "score": 0.899
+    },
+    {
+      "word": "verkäuflich",
+      "start": 3.65,
+      "end": 4.191,
+      "score": 0.95
+    },
+    {
+      "word": "sind.",
+      "start": 4.231,
+      "end": 5.133,
+      "score": 0.992
+    },
+    {
+      "word": "Zeitaufwändig,",
+      "start": 5.174,
+      "end": 6.036,
+      "score": 0.728
+    },
+    {
+      "word": "aber",
+      "start": 6.076,
+      "end": 6.698,
+      "score": 0.879
+    },
+    {
+      "word": "lohnenswert.",
+      "start": 6.738,
+      "end": 7.259,
+      "score": 0.825
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "start": 0.521,
+      "end": 3.711,
+      "text": "Einen halben Tag im Wald Holz schlagen.",
+      "words": [
+        {
+          "word": "Einen",
+          "start": 0.521,
+          "end": 0.822,
+          "score": 0.736
+        },
+        {
+          "word": "halben",
+          "start": 0.862,
+          "end": 1.304,
+          "score": 0.918
+        },
+        {
+          "word": "Tag",
+          "start": 1.364,
+          "end": 1.665,
+          "score": 0.959
+        },
+        {
+          "word": "im",
+          "start": 1.705,
+          "end": 1.885,
+          "score": 0.998
+        },
+        {
+          "word": "Wald",
+          "start": 1.925,
+          "end": 2.226,
+          "score": 0.986
+        },
+        {
+          "word": "Holz",
+          "start": 2.266,
+          "end": 2.507,
+          "score": 0.883
+        },
+        {
+          "word": "schlagen.",
+          "start": 2.527,
+          "end": 3.711,
+          "score": 0.87
+        }
+      ]
+    },
+    {
+      "start": 3.751,
+      "end": 6.679,
+      "text": "Schweiß-treibend — und eine gute Übung für den Arm.",
+      "words": [
+        {
+          "word": "Schweiß-treibend",
+          "start": 3.751,
+          "end": 4.493,
+          "score": 0.896
+        },
+        {
+          "word": "—",
+          "start": 5.014,
+          "end": 5.034,
+          "score": 0.995
+        },
+        {
+          "word": "und",
+          "start": 5.054,
+          "end": 5.255,
+          "score": 0.983
+        },
+        {
+          "word": "eine",
+          "start": 5.295,
+          "end": 5.496,
+          "score": 0.898
+        },
+        {
+          "word": "gute",
+          "start": 5.516,
+          "end": 5.817,
+          "score": 0.851
+        },
+        {
+          "word": "Übung",
+          "start": 5.877,
+          "end": 6.137,
+          "score": 0.956
+        },
+        {
+          "word": "für",
+          "start": 6.178,
+          "end": 6.278,
+          "score": 0.762
+        },
+        {
+          "word": "den",
+          "start": 6.298,
+          "end": 6.458,
+          "score": 0.882
+        },
+        {
+          "word": "Arm.",
+          "start": 6.519,
+          "end": 6.679,
+          "score": 0.72
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Einen",
+      "start": 0.521,
+      "end": 0.822,
+      "score": 0.736
+    },
+    {
+      "word": "halben",
+      "start": 0.862,
+      "end": 1.304,
+      "score": 0.918
+    },
+    {
+      "word": "Tag",
+      "start": 1.364,
+      "end": 1.665,
+      "score": 0.959
+    },
+    {
+      "word": "im",
+      "start": 1.705,
+      "end": 1.885,
+      "score": 0.998
+    },
+    {
+      "word": "Wald",
+      "start": 1.925,
+      "end": 2.226,
+      "score": 0.986
+    },
+    {
+      "word": "Holz",
+      "start": 2.266,
+      "end": 2.507,
+      "score": 0.883
+    },
+    {
+      "word": "schlagen.",
+      "start": 2.527,
+      "end": 3.711,
+      "score": 0.87
+    },
+    {
+      "word": "Schweiß-treibend",
+      "start": 3.751,
+      "end": 4.493,
+      "score": 0.896
+    },
+    {
+      "word": "—",
+      "start": 5.014,
+      "end": 5.034,
+      "score": 0.995
+    },
+    {
+      "word": "und",
+      "start": 5.054,
+      "end": 5.255,
+      "score": 0.983
+    },
+    {
+      "word": "eine",
+      "start": 5.295,
+      "end": 5.496,
+      "score": 0.898
+    },
+    {
+      "word": "gute",
+      "start": 5.516,
+      "end": 5.817,
+      "score": 0.851
+    },
+    {
+      "word": "Übung",
+      "start": 5.877,
+      "end": 6.137,
+      "score": 0.956
+    },
+    {
+      "word": "für",
+      "start": 6.178,
+      "end": 6.278,
+      "score": 0.762
+    },
+    {
+      "word": "den",
+      "start": 6.298,
+      "end": 6.458,
+      "score": 0.882
+    },
+    {
+      "word": "Arm.",
+      "start": 6.519,
+      "end": 6.679,
+      "score": 0.72
+    }
+  ]
+}

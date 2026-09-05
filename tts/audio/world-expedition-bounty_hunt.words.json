@@ -1,0 +1,200 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 4.191,
+      "text": "Der Stadtrat zahlt für gesuchte Banditen.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.441,
+          "end": 0.662,
+          "score": 0.801
+        },
+        {
+          "word": "Stadtrat",
+          "start": 0.682,
+          "end": 1.444,
+          "score": 0.927
+        },
+        {
+          "word": "zahlt",
+          "start": 1.504,
+          "end": 1.865,
+          "score": 0.968
+        },
+        {
+          "word": "für",
+          "start": 1.885,
+          "end": 2.045,
+          "score": 0.793
+        },
+        {
+          "word": "gesuchte",
+          "start": 2.085,
+          "end": 2.567,
+          "score": 0.986
+        },
+        {
+          "word": "Banditen.",
+          "start": 2.607,
+          "end": 4.191,
+          "score": 0.941
+        }
+      ]
+    },
+    {
+      "start": 4.231,
+      "end": 7.339,
+      "text": "Gefährlich — aber die Belohnung macht den Kopf klar.",
+      "words": [
+        {
+          "word": "Gefährlich",
+          "start": 4.231,
+          "end": 4.712,
+          "score": 0.886
+        },
+        {
+          "word": "—",
+          "start": 5.434,
+          "end": 5.454,
+          "score": 0.948
+        },
+        {
+          "word": "aber",
+          "start": 5.474,
+          "end": 5.655,
+          "score": 0.946
+        },
+        {
+          "word": "die",
+          "start": 5.675,
+          "end": 5.755,
+          "score": 0.991
+        },
+        {
+          "word": "Belohnung",
+          "start": 5.795,
+          "end": 6.517,
+          "score": 0.914
+        },
+        {
+          "word": "macht",
+          "start": 6.537,
+          "end": 6.697,
+          "score": 0.951
+        },
+        {
+          "word": "den",
+          "start": 6.737,
+          "end": 6.878,
+          "score": 0.949
+        },
+        {
+          "word": "Kopf",
+          "start": 6.918,
+          "end": 7.138,
+          "score": 0.895
+        },
+        {
+          "word": "klar.",
+          "start": 7.179,
+          "end": 7.339,
+          "score": 0.772
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.441,
+      "end": 0.662,
+      "score": 0.801
+    },
+    {
+      "word": "Stadtrat",
+      "start": 0.682,
+      "end": 1.444,
+      "score": 0.927
+    },
+    {
+      "word": "zahlt",
+      "start": 1.504,
+      "end": 1.865,
+      "score": 0.968
+    },
+    {
+      "word": "für",
+      "start": 1.885,
+      "end": 2.045,
+      "score": 0.793
+    },
+    {
+      "word": "gesuchte",
+      "start": 2.085,
+      "end": 2.567,
+      "score": 0.986
+    },
+    {
+      "word": "Banditen.",
+      "start": 2.607,
+      "end": 4.191,
+      "score": 0.941
+    },
+    {
+      "word": "Gefährlich",
+      "start": 4.231,
+      "end": 4.712,
+      "score": 0.886
+    },
+    {
+      "word": "—",
+      "start": 5.434,
+      "end": 5.454,
+      "score": 0.948
+    },
+    {
+      "word": "aber",
+      "start": 5.474,
+      "end": 5.655,
+      "score": 0.946
+    },
+    {
+      "word": "die",
+      "start": 5.675,
+      "end": 5.755,
+      "score": 0.991
+    },
+    {
+      "word": "Belohnung",
+      "start": 5.795,
+      "end": 6.517,
+      "score": 0.914
+    },
+    {
+      "word": "macht",
+      "start": 6.537,
+      "end": 6.697,
+      "score": 0.951
+    },
+    {
+      "word": "den",
+      "start": 6.737,
+      "end": 6.878,
+      "score": 0.949
+    },
+    {
+      "word": "Kopf",
+      "start": 6.918,
+      "end": 7.138,
+      "score": 0.895
+    },
+    {
+      "word": "klar.",
+      "start": 7.179,
+      "end": 7.339,
+      "score": 0.772
+    }
+  ]
+}

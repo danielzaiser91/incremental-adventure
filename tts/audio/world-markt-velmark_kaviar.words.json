@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.482,
+      "end": 3.351,
+      "text": "Teuer, aber es lohnt sich.",
+      "words": [
+        {
+          "word": "Teuer,",
+          "start": 0.482,
+          "end": 1.304,
+          "score": 0.893
+        },
+        {
+          "word": "aber",
+          "start": 1.345,
+          "end": 1.565,
+          "score": 0.972
+        },
+        {
+          "word": "es",
+          "start": 1.605,
+          "end": 1.806,
+          "score": 0.875
+        },
+        {
+          "word": "lohnt",
+          "start": 1.846,
+          "end": 2.127,
+          "score": 0.85
+        },
+        {
+          "word": "sich.",
+          "start": 2.167,
+          "end": 3.351,
+          "score": 0.973
+        }
+      ]
+    },
+    {
+      "start": 3.371,
+      "end": 5.519,
+      "text": "Die Schwere des Tages bleibt zurück.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 3.371,
+          "end": 3.552,
+          "score": 0.776
+        },
+        {
+          "word": "Schwere",
+          "start": 3.592,
+          "end": 4.074,
+          "score": 0.763
+        },
+        {
+          "word": "des",
+          "start": 4.114,
+          "end": 4.335,
+          "score": 0.947
+        },
+        {
+          "word": "Tages",
+          "start": 4.375,
+          "end": 4.816,
+          "score": 0.908
+        },
+        {
+          "word": "bleibt",
+          "start": 4.836,
+          "end": 5.157,
+          "score": 0.917
+        },
+        {
+          "word": "zurück.",
+          "start": 5.177,
+          "end": 5.519,
+          "score": 0.642
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Teuer,",
+      "start": 0.482,
+      "end": 1.304,
+      "score": 0.893
+    },
+    {
+      "word": "aber",
+      "start": 1.345,
+      "end": 1.565,
+      "score": 0.972
+    },
+    {
+      "word": "es",
+      "start": 1.605,
+      "end": 1.806,
+      "score": 0.875
+    },
+    {
+      "word": "lohnt",
+      "start": 1.846,
+      "end": 2.127,
+      "score": 0.85
+    },
+    {
+      "word": "sich.",
+      "start": 2.167,
+      "end": 3.351,
+      "score": 0.973
+    },
+    {
+      "word": "Die",
+      "start": 3.371,
+      "end": 3.552,
+      "score": 0.776
+    },
+    {
+      "word": "Schwere",
+      "start": 3.592,
+      "end": 4.074,
+      "score": 0.763
+    },
+    {
+      "word": "des",
+      "start": 4.114,
+      "end": 4.335,
+      "score": 0.947
+    },
+    {
+      "word": "Tages",
+      "start": 4.375,
+      "end": 4.816,
+      "score": 0.908
+    },
+    {
+      "word": "bleibt",
+      "start": 4.836,
+      "end": 5.157,
+      "score": 0.917
+    },
+    {
+      "word": "zurück.",
+      "start": 5.177,
+      "end": 5.519,
+      "score": 0.642
+    }
+  ]
+}

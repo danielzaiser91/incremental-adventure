@@ -1,0 +1,193 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.938,
+      "text": "Sie ist mir zugelaufen, in einer kalten Nacht, in der ich sie nicht erwartet hatte.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 0.481,
+          "end": 0.622,
+          "score": 0.736
+        },
+        {
+          "word": "ist",
+          "start": 0.682,
+          "end": 0.903,
+          "score": 0.642
+        },
+        {
+          "word": "mir",
+          "start": 0.923,
+          "end": 1.204,
+          "score": 0.784
+        },
+        {
+          "word": "zugelaufen,",
+          "start": 1.264,
+          "end": 2.728,
+          "score": 0.811
+        },
+        {
+          "word": "in",
+          "start": 2.748,
+          "end": 2.869,
+          "score": 0.942
+        },
+        {
+          "word": "einer",
+          "start": 2.909,
+          "end": 3.11,
+          "score": 0.969
+        },
+        {
+          "word": "kalten",
+          "start": 3.19,
+          "end": 3.591,
+          "score": 0.847
+        },
+        {
+          "word": "Nacht,",
+          "start": 3.631,
+          "end": 4.353,
+          "score": 0.797
+        },
+        {
+          "word": "in",
+          "start": 4.373,
+          "end": 4.434,
+          "score": 0.858
+        },
+        {
+          "word": "der",
+          "start": 4.474,
+          "end": 4.574,
+          "score": 0.874
+        },
+        {
+          "word": "ich",
+          "start": 4.614,
+          "end": 4.735,
+          "score": 0.841
+        },
+        {
+          "word": "sie",
+          "start": 4.755,
+          "end": 4.935,
+          "score": 0.934
+        },
+        {
+          "word": "nicht",
+          "start": 4.955,
+          "end": 5.216,
+          "score": 0.816
+        },
+        {
+          "word": "erwartet",
+          "start": 5.256,
+          "end": 5.678,
+          "score": 0.612
+        },
+        {
+          "word": "hatte.",
+          "start": 5.718,
+          "end": 5.938,
+          "score": 0.432
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Sie",
+      "start": 0.481,
+      "end": 0.622,
+      "score": 0.736
+    },
+    {
+      "word": "ist",
+      "start": 0.682,
+      "end": 0.903,
+      "score": 0.642
+    },
+    {
+      "word": "mir",
+      "start": 0.923,
+      "end": 1.204,
+      "score": 0.784
+    },
+    {
+      "word": "zugelaufen,",
+      "start": 1.264,
+      "end": 2.728,
+      "score": 0.811
+    },
+    {
+      "word": "in",
+      "start": 2.748,
+      "end": 2.869,
+      "score": 0.942
+    },
+    {
+      "word": "einer",
+      "start": 2.909,
+      "end": 3.11,
+      "score": 0.969
+    },
+    {
+      "word": "kalten",
+      "start": 3.19,
+      "end": 3.591,
+      "score": 0.847
+    },
+    {
+      "word": "Nacht,",
+      "start": 3.631,
+      "end": 4.353,
+      "score": 0.797
+    },
+    {
+      "word": "in",
+      "start": 4.373,
+      "end": 4.434,
+      "score": 0.858
+    },
+    {
+      "word": "der",
+      "start": 4.474,
+      "end": 4.574,
+      "score": 0.874
+    },
+    {
+      "word": "ich",
+      "start": 4.614,
+      "end": 4.735,
+      "score": 0.841
+    },
+    {
+      "word": "sie",
+      "start": 4.755,
+      "end": 4.935,
+      "score": 0.934
+    },
+    {
+      "word": "nicht",
+      "start": 4.955,
+      "end": 5.216,
+      "score": 0.816
+    },
+    {
+      "word": "erwartet",
+      "start": 5.256,
+      "end": 5.678,
+      "score": 0.612
+    },
+    {
+      "word": "hatte.",
+      "start": 5.718,
+      "end": 5.938,
+      "score": 0.432
+    }
+  ]
+}

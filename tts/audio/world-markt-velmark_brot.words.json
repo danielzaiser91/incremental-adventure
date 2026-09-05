@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 5.079,
+      "text": "Das Brot der Stadt — dicht, dunkel, mit Sonnenblumenkernen.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.401,
+          "end": 0.602,
+          "score": 0.86
+        },
+        {
+          "word": "Brot",
+          "start": 0.622,
+          "end": 0.943,
+          "score": 0.892
+        },
+        {
+          "word": "der",
+          "start": 0.964,
+          "end": 1.124,
+          "score": 0.988
+        },
+        {
+          "word": "Stadt",
+          "start": 1.164,
+          "end": 1.445,
+          "score": 0.983
+        },
+        {
+          "word": "—",
+          "start": 2.108,
+          "end": 2.128,
+          "score": 0.983
+        },
+        {
+          "word": "dicht,",
+          "start": 2.168,
+          "end": 2.931,
+          "score": 0.901
+        },
+        {
+          "word": "dunkel,",
+          "start": 2.991,
+          "end": 3.834,
+          "score": 0.968
+        },
+        {
+          "word": "mit",
+          "start": 3.854,
+          "end": 4.015,
+          "score": 0.965
+        },
+        {
+          "word": "Sonnenblumenkernen.",
+          "start": 4.055,
+          "end": 5.079,
+          "score": 0.899
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.401,
+      "end": 0.602,
+      "score": 0.86
+    },
+    {
+      "word": "Brot",
+      "start": 0.622,
+      "end": 0.943,
+      "score": 0.892
+    },
+    {
+      "word": "der",
+      "start": 0.964,
+      "end": 1.124,
+      "score": 0.988
+    },
+    {
+      "word": "Stadt",
+      "start": 1.164,
+      "end": 1.445,
+      "score": 0.983
+    },
+    {
+      "word": "—",
+      "start": 2.108,
+      "end": 2.128,
+      "score": 0.983
+    },
+    {
+      "word": "dicht,",
+      "start": 2.168,
+      "end": 2.931,
+      "score": 0.901
+    },
+    {
+      "word": "dunkel,",
+      "start": 2.991,
+      "end": 3.834,
+      "score": 0.968
+    },
+    {
+      "word": "mit",
+      "start": 3.854,
+      "end": 4.015,
+      "score": 0.965
+    },
+    {
+      "word": "Sonnenblumenkernen.",
+      "start": 4.055,
+      "end": 5.079,
+      "score": 0.899
+    }
+  ]
+}
