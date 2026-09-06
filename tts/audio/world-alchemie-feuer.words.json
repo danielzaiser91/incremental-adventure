@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.618,
+      "text": "Transformation, Zerstörung, Reinigung.",
+      "words": [
+        {
+          "word": "Transformation,",
+          "start": 0.522,
+          "end": 2.209,
+          "score": 0.876
+        },
+        {
+          "word": "Zerstörung,",
+          "start": 2.269,
+          "end": 3.835,
+          "score": 0.884
+        },
+        {
+          "word": "Reinigung.",
+          "start": 4.016,
+          "end": 4.618,
+          "score": 0.857
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Transformation,",
+      "start": 0.522,
+      "end": 2.209,
+      "score": 0.876
+    },
+    {
+      "word": "Zerstörung,",
+      "start": 2.269,
+      "end": 3.835,
+      "score": 0.884
+    },
+    {
+      "word": "Reinigung.",
+      "start": 4.016,
+      "end": 4.618,
+      "score": 0.857
+    }
+  ]
+}

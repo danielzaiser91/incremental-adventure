@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.522,
+      "text": "Fluss, Anpassung, Heilung.",
+      "words": [
+        {
+          "word": "Fluss,",
+          "start": 0.0,
+          "end": 0.12,
+          "score": 0.059
+        },
+        {
+          "word": "Anpassung,",
+          "start": 0.141,
+          "end": 0.341,
+          "score": 0.036
+        },
+        {
+          "word": "Heilung.",
+          "start": 0.361,
+          "end": 0.522,
+          "score": 0.07
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Fluss,",
+      "start": 0.0,
+      "end": 0.12,
+      "score": 0.059
+    },
+    {
+      "word": "Anpassung,",
+      "start": 0.141,
+      "end": 0.341,
+      "score": 0.036
+    },
+    {
+      "word": "Heilung.",
+      "start": 0.361,
+      "end": 0.522,
+      "score": 0.07
+    }
+  ]
+}

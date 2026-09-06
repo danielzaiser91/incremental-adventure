@@ -1,0 +1,133 @@
+{
+  "segments": [
+    {
+      "start": 0.462,
+      "end": 4.959,
+      "text": "Wenn man erst versteht, wie Wissen fließt, fließt es schneller.",
+      "words": [
+        {
+          "word": "Wenn",
+          "start": 0.462,
+          "end": 0.622,
+          "score": 0.989
+        },
+        {
+          "word": "man",
+          "start": 0.662,
+          "end": 0.903,
+          "score": 0.994
+        },
+        {
+          "word": "erst",
+          "start": 0.944,
+          "end": 1.204,
+          "score": 0.938
+        },
+        {
+          "word": "versteht,",
+          "start": 1.245,
+          "end": 2.068,
+          "score": 0.906
+        },
+        {
+          "word": "wie",
+          "start": 2.108,
+          "end": 2.389,
+          "score": 0.832
+        },
+        {
+          "word": "Wissen",
+          "start": 2.429,
+          "end": 2.79,
+          "score": 0.962
+        },
+        {
+          "word": "fließt,",
+          "start": 2.851,
+          "end": 3.995,
+          "score": 0.776
+        },
+        {
+          "word": "fließt",
+          "start": 4.055,
+          "end": 4.356,
+          "score": 0.939
+        },
+        {
+          "word": "es",
+          "start": 4.416,
+          "end": 4.577,
+          "score": 0.733
+        },
+        {
+          "word": "schneller.",
+          "start": 4.617,
+          "end": 4.959,
+          "score": 0.758
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wenn",
+      "start": 0.462,
+      "end": 0.622,
+      "score": 0.989
+    },
+    {
+      "word": "man",
+      "start": 0.662,
+      "end": 0.903,
+      "score": 0.994
+    },
+    {
+      "word": "erst",
+      "start": 0.944,
+      "end": 1.204,
+      "score": 0.938
+    },
+    {
+      "word": "versteht,",
+      "start": 1.245,
+      "end": 2.068,
+      "score": 0.906
+    },
+    {
+      "word": "wie",
+      "start": 2.108,
+      "end": 2.389,
+      "score": 0.832
+    },
+    {
+      "word": "Wissen",
+      "start": 2.429,
+      "end": 2.79,
+      "score": 0.962
+    },
+    {
+      "word": "fließt,",
+      "start": 2.851,
+      "end": 3.995,
+      "score": 0.776
+    },
+    {
+      "word": "fließt",
+      "start": 4.055,
+      "end": 4.356,
+      "score": 0.939
+    },
+    {
+      "word": "es",
+      "start": 4.416,
+      "end": 4.577,
+      "score": 0.733
+    },
+    {
+      "word": "schneller.",
+      "start": 4.617,
+      "end": 4.959,
+      "score": 0.758
+    }
+  ]
+}

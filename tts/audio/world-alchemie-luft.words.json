@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 4.298,
+      "text": "Bewegung, Freiheit, Verbindung.",
+      "words": [
+        {
+          "word": "Bewegung,",
+          "start": 0.502,
+          "end": 2.189,
+          "score": 0.813
+        },
+        {
+          "word": "Freiheit,",
+          "start": 2.229,
+          "end": 3.615,
+          "score": 0.75
+        },
+        {
+          "word": "Verbindung.",
+          "start": 3.635,
+          "end": 4.298,
+          "score": 0.693
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Bewegung,",
+      "start": 0.502,
+      "end": 2.189,
+      "score": 0.813
+    },
+    {
+      "word": "Freiheit,",
+      "start": 2.229,
+      "end": 3.615,
+      "score": 0.75
+    },
+    {
+      "word": "Verbindung.",
+      "start": 3.635,
+      "end": 4.298,
+      "score": 0.693
+    }
+  ]
+}

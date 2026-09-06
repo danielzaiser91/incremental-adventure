@@ -1,0 +1,49 @@
+{
+  "segments": [
+    {
+      "start": 0.422,
+      "end": 1.726,
+      "text": "Beständigkeit, Geduld, Grundlage.",
+      "words": [
+        {
+          "word": "Beständigkeit,",
+          "start": 0.422,
+          "end": 1.345,
+          "score": 0.625
+        },
+        {
+          "word": "Geduld,",
+          "start": 1.365,
+          "end": 1.506,
+          "score": 0.037
+        },
+        {
+          "word": "Grundlage.",
+          "start": 1.526,
+          "end": 1.726,
+          "score": 0.044
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Beständigkeit,",
+      "start": 0.422,
+      "end": 1.345,
+      "score": 0.625
+    },
+    {
+      "word": "Geduld,",
+      "start": 1.365,
+      "end": 1.506,
+      "score": 0.037
+    },
+    {
+      "word": "Grundlage.",
+      "start": 1.526,
+      "end": 1.726,
+      "score": 0.044
+    }
+  ]
+}

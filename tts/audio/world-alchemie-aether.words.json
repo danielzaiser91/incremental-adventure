@@ -1,0 +1,140 @@
+{
+  "segments": [
+    {
+      "start": 0.502,
+      "end": 2.588,
+      "text": "Das Fünfte Element.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 0.502,
+          "end": 0.803,
+          "score": 0.915
+        },
+        {
+          "word": "Fünfte",
+          "start": 0.843,
+          "end": 1.284,
+          "score": 0.968
+        },
+        {
+          "word": "Element.",
+          "start": 1.324,
+          "end": 2.588,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 2.628,
+      "end": 5.979,
+      "text": "Verbindet alle anderen — schwer zu greifen.",
+      "words": [
+        {
+          "word": "Verbindet",
+          "start": 2.628,
+          "end": 3.27,
+          "score": 0.965
+        },
+        {
+          "word": "alle",
+          "start": 3.31,
+          "end": 3.551,
+          "score": 0.87
+        },
+        {
+          "word": "anderen",
+          "start": 3.591,
+          "end": 3.892,
+          "score": 0.866
+        },
+        {
+          "word": "—",
+          "start": 5.116,
+          "end": 5.136,
+          "score": 0.998
+        },
+        {
+          "word": "schwer",
+          "start": 5.156,
+          "end": 5.497,
+          "score": 0.812
+        },
+        {
+          "word": "zu",
+          "start": 5.517,
+          "end": 5.618,
+          "score": 0.748
+        },
+        {
+          "word": "greifen.",
+          "start": 5.658,
+          "end": 5.979,
+          "score": 0.831
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Das",
+      "start": 0.502,
+      "end": 0.803,
+      "score": 0.915
+    },
+    {
+      "word": "Fünfte",
+      "start": 0.843,
+      "end": 1.284,
+      "score": 0.968
+    },
+    {
+      "word": "Element.",
+      "start": 1.324,
+      "end": 2.588,
+      "score": 0.887
+    },
+    {
+      "word": "Verbindet",
+      "start": 2.628,
+      "end": 3.27,
+      "score": 0.965
+    },
+    {
+      "word": "alle",
+      "start": 3.31,
+      "end": 3.551,
+      "score": 0.87
+    },
+    {
+      "word": "anderen",
+      "start": 3.591,
+      "end": 3.892,
+      "score": 0.866
+    },
+    {
+      "word": "—",
+      "start": 5.116,
+      "end": 5.136,
+      "score": 0.998
+    },
+    {
+      "word": "schwer",
+      "start": 5.156,
+      "end": 5.497,
+      "score": 0.812
+    },
+    {
+      "word": "zu",
+      "start": 5.517,
+      "end": 5.618,
+      "score": 0.748
+    },
+    {
+      "word": "greifen.",
+      "start": 5.658,
+      "end": 5.979,
+      "score": 0.831
+    }
+  ]
+}

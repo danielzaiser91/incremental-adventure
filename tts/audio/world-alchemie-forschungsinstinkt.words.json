@@ -1,0 +1,73 @@
+{
+  "segments": [
+    {
+      "start": 0.564,
+      "end": 2.577,
+      "text": "Wissen zieht weiteres Wissen an.",
+      "words": [
+        {
+          "word": "Wissen",
+          "start": 0.564,
+          "end": 1.168,
+          "score": 0.974
+        },
+        {
+          "word": "zieht",
+          "start": 1.228,
+          "end": 1.57,
+          "score": 0.973
+        },
+        {
+          "word": "weiteres",
+          "start": 1.611,
+          "end": 2.114,
+          "score": 0.962
+        },
+        {
+          "word": "Wissen",
+          "start": 2.154,
+          "end": 2.456,
+          "score": 0.872
+        },
+        {
+          "word": "an.",
+          "start": 2.497,
+          "end": 2.577,
+          "score": 0.598
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wissen",
+      "start": 0.564,
+      "end": 1.168,
+      "score": 0.974
+    },
+    {
+      "word": "zieht",
+      "start": 1.228,
+      "end": 1.57,
+      "score": 0.973
+    },
+    {
+      "word": "weiteres",
+      "start": 1.611,
+      "end": 2.114,
+      "score": 0.962
+    },
+    {
+      "word": "Wissen",
+      "start": 2.154,
+      "end": 2.456,
+      "score": 0.872
+    },
+    {
+      "word": "an.",
+      "start": 2.497,
+      "end": 2.577,
+      "score": 0.598
+    }
+  ]
+}
