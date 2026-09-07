@@ -1,0 +1,92 @@
+{
+  "segments": [
+    {
+      "start": 0.422,
+      "end": 2.372,
+      "text": "Der Körper vergisst.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.422,
+          "end": 0.583,
+          "score": 0.765
+        },
+        {
+          "word": "Körper",
+          "start": 0.623,
+          "end": 1.025,
+          "score": 0.851
+        },
+        {
+          "word": "vergisst.",
+          "start": 1.066,
+          "end": 2.372,
+          "score": 0.699
+        }
+      ]
+    },
+    {
+      "start": 2.393,
+      "end": 3.297,
+      "text": "Das Wissen nicht.",
+      "words": [
+        {
+          "word": "Das",
+          "start": 2.393,
+          "end": 2.674,
+          "score": 0.748
+        },
+        {
+          "word": "Wissen",
+          "start": 2.714,
+          "end": 3.096,
+          "score": 0.745
+        },
+        {
+          "word": "nicht.",
+          "start": 3.137,
+          "end": 3.297,
+          "score": 0.571
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.422,
+      "end": 0.583,
+      "score": 0.765
+    },
+    {
+      "word": "Körper",
+      "start": 0.623,
+      "end": 1.025,
+      "score": 0.851
+    },
+    {
+      "word": "vergisst.",
+      "start": 1.066,
+      "end": 2.372,
+      "score": 0.699
+    },
+    {
+      "word": "Das",
+      "start": 2.393,
+      "end": 2.674,
+      "score": 0.748
+    },
+    {
+      "word": "Wissen",
+      "start": 2.714,
+      "end": 3.096,
+      "score": 0.745
+    },
+    {
+      "word": "nicht.",
+      "start": 3.137,
+      "end": 3.297,
+      "score": 0.571
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 7.859,
+      "text": "Jenseits der Felder liegt ein Streifen Wildnis — Holz, Stein und Kräuter für jeden, der sie sammeln will.",
+      "words": [
+        {
+          "word": "Jenseits",
+          "start": 0.501,
+          "end": 0.982,
+          "score": 0.923
+        },
+        {
+          "word": "der",
+          "start": 1.022,
+          "end": 1.163,
+          "score": 0.925
+        },
+        {
+          "word": "Felder",
+          "start": 1.223,
+          "end": 1.824,
+          "score": 0.927
+        },
+        {
+          "word": "liegt",
+          "start": 1.865,
+          "end": 2.065,
+          "score": 0.996
+        },
+        {
+          "word": "ein",
+          "start": 2.105,
+          "end": 2.286,
+          "score": 0.699
+        },
+        {
+          "word": "Streifen",
+          "start": 2.326,
+          "end": 2.807,
+          "score": 0.933
+        },
+        {
+          "word": "Wildnis",
+          "start": 2.847,
+          "end": 3.348,
+          "score": 0.88
+        },
+        {
+          "word": "—",
+          "start": 4.15,
+          "end": 4.17,
+          "score": 0.973
+        },
+        {
+          "word": "Holz,",
+          "start": 4.21,
+          "end": 4.892,
+          "score": 0.907
+        },
+        {
+          "word": "Stein",
+          "start": 4.932,
+          "end": 5.333,
+          "score": 0.948
+        },
+        {
+          "word": "und",
+          "start": 5.353,
+          "end": 5.533,
+          "score": 0.99
+        },
+        {
+          "word": "Kräuter",
+          "start": 5.574,
+          "end": 6.576,
+          "score": 0.878
+        },
+        {
+          "word": "für",
+          "start": 6.616,
+          "end": 6.797,
+          "score": 0.938
+        },
+        {
+          "word": "jeden,",
+          "start": 6.817,
+          "end": 7.057,
+          "score": 0.778
+        },
+        {
+          "word": "der",
+          "start": 7.077,
+          "end": 7.198,
+          "score": 0.965
+        },
+        {
+          "word": "sie",
+          "start": 7.238,
+          "end": 7.338,
+          "score": 0.889
+        },
+        {
+          "word": "sammeln",
+          "start": 7.378,
+          "end": 7.679,
+          "score": 0.943
+        },
+        {
+          "word": "will.",
+          "start": 7.719,
+          "end": 7.859,
+          "score": 0.577
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Jenseits",
+      "start": 0.501,
+      "end": 0.982,
+      "score": 0.923
+    },
+    {
+      "word": "der",
+      "start": 1.022,
+      "end": 1.163,
+      "score": 0.925
+    },
+    {
+      "word": "Felder",
+      "start": 1.223,
+      "end": 1.824,
+      "score": 0.927
+    },
+    {
+      "word": "liegt",
+      "start": 1.865,
+      "end": 2.065,
+      "score": 0.996
+    },
+    {
+      "word": "ein",
+      "start": 2.105,
+      "end": 2.286,
+      "score": 0.699
+    },
+    {
+      "word": "Streifen",
+      "start": 2.326,
+      "end": 2.807,
+      "score": 0.933
+    },
+    {
+      "word": "Wildnis",
+      "start": 2.847,
+      "end": 3.348,
+      "score": 0.88
+    },
+    {
+      "word": "—",
+      "start": 4.15,
+      "end": 4.17,
+      "score": 0.973
+    },
+    {
+      "word": "Holz,",
+      "start": 4.21,
+      "end": 4.892,
+      "score": 0.907
+    },
+    {
+      "word": "Stein",
+      "start": 4.932,
+      "end": 5.333,
+      "score": 0.948
+    },
+    {
+      "word": "und",
+      "start": 5.353,
+      "end": 5.533,
+      "score": 0.99
+    },
+    {
+      "word": "Kräuter",
+      "start": 5.574,
+      "end": 6.576,
+      "score": 0.878
+    },
+    {
+      "word": "für",
+      "start": 6.616,
+      "end": 6.797,
+      "score": 0.938
+    },
+    {
+      "word": "jeden,",
+      "start": 6.817,
+      "end": 7.057,
+      "score": 0.778
+    },
+    {
+      "word": "der",
+      "start": 7.077,
+      "end": 7.198,
+      "score": 0.965
+    },
+    {
+      "word": "sie",
+      "start": 7.238,
+      "end": 7.338,
+      "score": 0.889
+    },
+    {
+      "word": "sammeln",
+      "start": 7.378,
+      "end": 7.679,
+      "score": 0.943
+    },
+    {
+      "word": "will.",
+      "start": 7.719,
+      "end": 7.859,
+      "score": 0.577
+    }
+  ]
+}

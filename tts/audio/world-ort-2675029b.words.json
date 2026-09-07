@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.421,
+      "end": 6.354,
+      "text": "Alchemistische Rohstoffe, seltene Kräuter, abgefüllte Essenzen.",
+      "words": [
+        {
+          "word": "Alchemistische",
+          "start": 0.421,
+          "end": 1.303,
+          "score": 0.725
+        },
+        {
+          "word": "Rohstoffe,",
+          "start": 1.343,
+          "end": 2.626,
+          "score": 0.953
+        },
+        {
+          "word": "seltene",
+          "start": 2.646,
+          "end": 3.207,
+          "score": 0.966
+        },
+        {
+          "word": "Kräuter,",
+          "start": 3.267,
+          "end": 4.269,
+          "score": 0.897
+        },
+        {
+          "word": "abgefüllte",
+          "start": 4.29,
+          "end": 4.871,
+          "score": 0.919
+        },
+        {
+          "word": "Essenzen.",
+          "start": 4.931,
+          "end": 6.354,
+          "score": 0.924
+        }
+      ]
+    },
+    {
+      "start": 6.374,
+      "end": 8.599,
+      "text": "Eine andere Welt als der Treutheimer Markt.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 6.374,
+          "end": 6.635,
+          "score": 0.808
+        },
+        {
+          "word": "andere",
+          "start": 6.695,
+          "end": 7.056,
+          "score": 0.829
+        },
+        {
+          "word": "Welt",
+          "start": 7.116,
+          "end": 7.416,
+          "score": 0.977
+        },
+        {
+          "word": "als",
+          "start": 7.457,
+          "end": 7.637,
+          "score": 0.914
+        },
+        {
+          "word": "der",
+          "start": 7.657,
+          "end": 7.777,
+          "score": 0.983
+        },
+        {
+          "word": "Treutheimer",
+          "start": 7.817,
+          "end": 8.359,
+          "score": 0.884
+        },
+        {
+          "word": "Markt.",
+          "start": 8.399,
+          "end": 8.599,
+          "score": 0.878
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Alchemistische",
+      "start": 0.421,
+      "end": 1.303,
+      "score": 0.725
+    },
+    {
+      "word": "Rohstoffe,",
+      "start": 1.343,
+      "end": 2.626,
+      "score": 0.953
+    },
+    {
+      "word": "seltene",
+      "start": 2.646,
+      "end": 3.207,
+      "score": 0.966
+    },
+    {
+      "word": "Kräuter,",
+      "start": 3.267,
+      "end": 4.269,
+      "score": 0.897
+    },
+    {
+      "word": "abgefüllte",
+      "start": 4.29,
+      "end": 4.871,
+      "score": 0.919
+    },
+    {
+      "word": "Essenzen.",
+      "start": 4.931,
+      "end": 6.354,
+      "score": 0.924
+    },
+    {
+      "word": "Eine",
+      "start": 6.374,
+      "end": 6.635,
+      "score": 0.808
+    },
+    {
+      "word": "andere",
+      "start": 6.695,
+      "end": 7.056,
+      "score": 0.829
+    },
+    {
+      "word": "Welt",
+      "start": 7.116,
+      "end": 7.416,
+      "score": 0.977
+    },
+    {
+      "word": "als",
+      "start": 7.457,
+      "end": 7.637,
+      "score": 0.914
+    },
+    {
+      "word": "der",
+      "start": 7.657,
+      "end": 7.777,
+      "score": 0.983
+    },
+    {
+      "word": "Treutheimer",
+      "start": 7.817,
+      "end": 8.359,
+      "score": 0.884
+    },
+    {
+      "word": "Markt.",
+      "start": 8.399,
+      "end": 8.599,
+      "score": 0.878
+    }
+  ]
+}

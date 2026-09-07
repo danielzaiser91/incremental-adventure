@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 4.874,
+      "text": "Ein Raum voller dampfender Tiegel und seltsamer Gerüche.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.461,
+          "end": 0.602,
+          "score": 0.713
+        },
+        {
+          "word": "Raum",
+          "start": 0.642,
+          "end": 1.083,
+          "score": 0.917
+        },
+        {
+          "word": "voller",
+          "start": 1.123,
+          "end": 1.484,
+          "score": 0.978
+        },
+        {
+          "word": "dampfender",
+          "start": 1.544,
+          "end": 2.146,
+          "score": 0.874
+        },
+        {
+          "word": "Tiegel",
+          "start": 2.226,
+          "end": 2.708,
+          "score": 0.872
+        },
+        {
+          "word": "und",
+          "start": 2.748,
+          "end": 3.009,
+          "score": 0.956
+        },
+        {
+          "word": "seltsamer",
+          "start": 3.049,
+          "end": 3.55,
+          "score": 0.936
+        },
+        {
+          "word": "Gerüche.",
+          "start": 3.59,
+          "end": 4.874,
+          "score": 0.948
+        }
+      ]
+    },
+    {
+      "start": 4.934,
+      "end": 6.459,
+      "text": "Varena hat mir die Tür geöffnet.",
+      "words": [
+        {
+          "word": "Varena",
+          "start": 4.934,
+          "end": 5.396,
+          "score": 0.841
+        },
+        {
+          "word": "hat",
+          "start": 5.416,
+          "end": 5.556,
+          "score": 0.963
+        },
+        {
+          "word": "mir",
+          "start": 5.576,
+          "end": 5.717,
+          "score": 0.989
+        },
+        {
+          "word": "die",
+          "start": 5.757,
+          "end": 5.837,
+          "score": 0.871
+        },
+        {
+          "word": "Tür",
+          "start": 5.877,
+          "end": 6.058,
+          "score": 0.895
+        },
+        {
+          "word": "geöffnet.",
+          "start": 6.078,
+          "end": 6.459,
+          "score": 0.776
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.461,
+      "end": 0.602,
+      "score": 0.713
+    },
+    {
+      "word": "Raum",
+      "start": 0.642,
+      "end": 1.083,
+      "score": 0.917
+    },
+    {
+      "word": "voller",
+      "start": 1.123,
+      "end": 1.484,
+      "score": 0.978
+    },
+    {
+      "word": "dampfender",
+      "start": 1.544,
+      "end": 2.146,
+      "score": 0.874
+    },
+    {
+      "word": "Tiegel",
+      "start": 2.226,
+      "end": 2.708,
+      "score": 0.872
+    },
+    {
+      "word": "und",
+      "start": 2.748,
+      "end": 3.009,
+      "score": 0.956
+    },
+    {
+      "word": "seltsamer",
+      "start": 3.049,
+      "end": 3.55,
+      "score": 0.936
+    },
+    {
+      "word": "Gerüche.",
+      "start": 3.59,
+      "end": 4.874,
+      "score": 0.948
+    },
+    {
+      "word": "Varena",
+      "start": 4.934,
+      "end": 5.396,
+      "score": 0.841
+    },
+    {
+      "word": "hat",
+      "start": 5.416,
+      "end": 5.556,
+      "score": 0.963
+    },
+    {
+      "word": "mir",
+      "start": 5.576,
+      "end": 5.717,
+      "score": 0.989
+    },
+    {
+      "word": "die",
+      "start": 5.757,
+      "end": 5.837,
+      "score": 0.871
+    },
+    {
+      "word": "Tür",
+      "start": 5.877,
+      "end": 6.058,
+      "score": 0.895
+    },
+    {
+      "word": "geöffnet.",
+      "start": 6.078,
+      "end": 6.459,
+      "score": 0.776
+    }
+  ]
+}

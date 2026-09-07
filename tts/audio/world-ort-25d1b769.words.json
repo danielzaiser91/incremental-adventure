@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 4.572,
+      "text": "Hinter verrauchten Fenstern hallen Stimmen und Gelächter.",
+      "words": [
+        {
+          "word": "Hinter",
+          "start": 0.501,
+          "end": 0.822,
+          "score": 0.905
+        },
+        {
+          "word": "verrauchten",
+          "start": 0.842,
+          "end": 1.464,
+          "score": 0.925
+        },
+        {
+          "word": "Fenstern",
+          "start": 1.504,
+          "end": 2.106,
+          "score": 0.898
+        },
+        {
+          "word": "hallen",
+          "start": 2.126,
+          "end": 2.466,
+          "score": 0.95
+        },
+        {
+          "word": "Stimmen",
+          "start": 2.527,
+          "end": 2.948,
+          "score": 0.972
+        },
+        {
+          "word": "und",
+          "start": 2.988,
+          "end": 3.168,
+          "score": 0.942
+        },
+        {
+          "word": "Gelächter.",
+          "start": 3.208,
+          "end": 4.572,
+          "score": 0.887
+        }
+      ]
+    },
+    {
+      "start": 4.592,
+      "end": 7.119,
+      "text": "Hier hört man, was wirklich in der Stadt los ist.",
+      "words": [
+        {
+          "word": "Hier",
+          "start": 4.592,
+          "end": 4.893,
+          "score": 0.854
+        },
+        {
+          "word": "hört",
+          "start": 4.933,
+          "end": 5.194,
+          "score": 0.904
+        },
+        {
+          "word": "man,",
+          "start": 5.214,
+          "end": 5.434,
+          "score": 0.831
+        },
+        {
+          "word": "was",
+          "start": 5.454,
+          "end": 5.755,
+          "score": 0.859
+        },
+        {
+          "word": "wirklich",
+          "start": 5.795,
+          "end": 6.196,
+          "score": 0.945
+        },
+        {
+          "word": "in",
+          "start": 6.216,
+          "end": 6.276,
+          "score": 0.92
+        },
+        {
+          "word": "der",
+          "start": 6.296,
+          "end": 6.437,
+          "score": 0.816
+        },
+        {
+          "word": "Stadt",
+          "start": 6.477,
+          "end": 6.698,
+          "score": 0.991
+        },
+        {
+          "word": "los",
+          "start": 6.738,
+          "end": 6.958,
+          "score": 0.992
+        },
+        {
+          "word": "ist.",
+          "start": 7.018,
+          "end": 7.119,
+          "score": 0.639
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Hinter",
+      "start": 0.501,
+      "end": 0.822,
+      "score": 0.905
+    },
+    {
+      "word": "verrauchten",
+      "start": 0.842,
+      "end": 1.464,
+      "score": 0.925
+    },
+    {
+      "word": "Fenstern",
+      "start": 1.504,
+      "end": 2.106,
+      "score": 0.898
+    },
+    {
+      "word": "hallen",
+      "start": 2.126,
+      "end": 2.466,
+      "score": 0.95
+    },
+    {
+      "word": "Stimmen",
+      "start": 2.527,
+      "end": 2.948,
+      "score": 0.972
+    },
+    {
+      "word": "und",
+      "start": 2.988,
+      "end": 3.168,
+      "score": 0.942
+    },
+    {
+      "word": "Gelächter.",
+      "start": 3.208,
+      "end": 4.572,
+      "score": 0.887
+    },
+    {
+      "word": "Hier",
+      "start": 4.592,
+      "end": 4.893,
+      "score": 0.854
+    },
+    {
+      "word": "hört",
+      "start": 4.933,
+      "end": 5.194,
+      "score": 0.904
+    },
+    {
+      "word": "man,",
+      "start": 5.214,
+      "end": 5.434,
+      "score": 0.831
+    },
+    {
+      "word": "was",
+      "start": 5.454,
+      "end": 5.755,
+      "score": 0.859
+    },
+    {
+      "word": "wirklich",
+      "start": 5.795,
+      "end": 6.196,
+      "score": 0.945
+    },
+    {
+      "word": "in",
+      "start": 6.216,
+      "end": 6.276,
+      "score": 0.92
+    },
+    {
+      "word": "der",
+      "start": 6.296,
+      "end": 6.437,
+      "score": 0.816
+    },
+    {
+      "word": "Stadt",
+      "start": 6.477,
+      "end": 6.698,
+      "score": 0.991
+    },
+    {
+      "word": "los",
+      "start": 6.738,
+      "end": 6.958,
+      "score": 0.992
+    },
+    {
+      "word": "ist.",
+      "start": 7.018,
+      "end": 7.119,
+      "score": 0.639
+    }
+  ]
+}

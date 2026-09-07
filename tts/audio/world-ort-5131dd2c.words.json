@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.622,
+      "end": 5.154,
+      "text": "Ein einfaches Zimmer in einer Pension nahe der Stadtmitte.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.622,
+          "end": 0.882,
+          "score": 0.765
+        },
+        {
+          "word": "einfaches",
+          "start": 0.923,
+          "end": 1.444,
+          "score": 0.787
+        },
+        {
+          "word": "Zimmer",
+          "start": 1.504,
+          "end": 1.905,
+          "score": 0.988
+        },
+        {
+          "word": "in",
+          "start": 1.925,
+          "end": 2.106,
+          "score": 0.802
+        },
+        {
+          "word": "einer",
+          "start": 2.146,
+          "end": 2.366,
+          "score": 0.878
+        },
+        {
+          "word": "Pension",
+          "start": 2.407,
+          "end": 3.249,
+          "score": 0.951
+        },
+        {
+          "word": "nahe",
+          "start": 3.289,
+          "end": 3.55,
+          "score": 0.926
+        },
+        {
+          "word": "der",
+          "start": 3.57,
+          "end": 3.71,
+          "score": 0.916
+        },
+        {
+          "word": "Stadtmitte.",
+          "start": 3.75,
+          "end": 5.154,
+          "score": 0.958
+        }
+      ]
+    },
+    {
+      "start": 5.174,
+      "end": 6.919,
+      "text": "Nicht billig — aber sicher.",
+      "words": [
+        {
+          "word": "Nicht",
+          "start": 5.174,
+          "end": 5.495,
+          "score": 0.874
+        },
+        {
+          "word": "billig",
+          "start": 5.535,
+          "end": 6.297,
+          "score": 0.937
+        },
+        {
+          "word": "—",
+          "start": 6.317,
+          "end": 6.337,
+          "score": 0.995
+        },
+        {
+          "word": "aber",
+          "start": 6.357,
+          "end": 6.678,
+          "score": 0.988
+        },
+        {
+          "word": "sicher.",
+          "start": 6.698,
+          "end": 6.919,
+          "score": 0.813
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.622,
+      "end": 0.882,
+      "score": 0.765
+    },
+    {
+      "word": "einfaches",
+      "start": 0.923,
+      "end": 1.444,
+      "score": 0.787
+    },
+    {
+      "word": "Zimmer",
+      "start": 1.504,
+      "end": 1.905,
+      "score": 0.988
+    },
+    {
+      "word": "in",
+      "start": 1.925,
+      "end": 2.106,
+      "score": 0.802
+    },
+    {
+      "word": "einer",
+      "start": 2.146,
+      "end": 2.366,
+      "score": 0.878
+    },
+    {
+      "word": "Pension",
+      "start": 2.407,
+      "end": 3.249,
+      "score": 0.951
+    },
+    {
+      "word": "nahe",
+      "start": 3.289,
+      "end": 3.55,
+      "score": 0.926
+    },
+    {
+      "word": "der",
+      "start": 3.57,
+      "end": 3.71,
+      "score": 0.916
+    },
+    {
+      "word": "Stadtmitte.",
+      "start": 3.75,
+      "end": 5.154,
+      "score": 0.958
+    },
+    {
+      "word": "Nicht",
+      "start": 5.174,
+      "end": 5.495,
+      "score": 0.874
+    },
+    {
+      "word": "billig",
+      "start": 5.535,
+      "end": 6.297,
+      "score": 0.937
+    },
+    {
+      "word": "—",
+      "start": 6.317,
+      "end": 6.337,
+      "score": 0.995
+    },
+    {
+      "word": "aber",
+      "start": 6.357,
+      "end": 6.678,
+      "score": 0.988
+    },
+    {
+      "word": "sicher.",
+      "start": 6.698,
+      "end": 6.919,
+      "score": 0.813
+    }
+  ]
+}

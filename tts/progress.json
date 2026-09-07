@@ -1889,6 +1889,56 @@
       "file": "world-alchemie-aspektmeister.wav",
       "seconds": 5.4,
       "date": "2026-09-06T20:28:58.179Z"
+    },
+    "world-alchemie-alchemistischesGedaechtnis": {
+      "file": "world-alchemie-alchemistischesGedaechtnis.wav",
+      "seconds": 3.8,
+      "date": "2026-09-07T20:27:15.605Z"
+    },
+    "world-ort-48b3dd21": {
+      "file": "world-ort-48b3dd21.wav",
+      "seconds": 6.5,
+      "date": "2026-09-07T20:28:10.539Z"
+    },
+    "world-ort-f5380d03": {
+      "file": "world-ort-f5380d03.wav",
+      "seconds": 7.3,
+      "date": "2026-09-07T20:28:45.710Z"
+    },
+    "world-ort-25d1b769": {
+      "file": "world-ort-25d1b769.wav",
+      "seconds": 7.6,
+      "date": "2026-09-07T20:29:22.786Z"
+    },
+    "world-ort-fa5859b4": {
+      "file": "world-ort-fa5859b4.wav",
+      "seconds": 6.4,
+      "date": "2026-09-07T20:29:58.563Z"
+    },
+    "world-ort-3c2e19b6": {
+      "file": "world-ort-3c2e19b6.wav",
+      "seconds": 8.2,
+      "date": "2026-09-07T20:30:33.936Z"
+    },
+    "world-ort-a110ca31": {
+      "file": "world-ort-a110ca31.wav",
+      "seconds": 6.9,
+      "date": "2026-09-07T20:31:10.313Z"
+    },
+    "world-ort-2251b8af": {
+      "file": "world-ort-2251b8af.wav",
+      "seconds": 8.2,
+      "date": "2026-09-07T20:31:45.233Z"
+    },
+    "world-ort-2675029b": {
+      "file": "world-ort-2675029b.wav",
+      "seconds": 9,
+      "date": "2026-09-07T20:32:21.542Z"
+    },
+    "world-ort-5131dd2c": {
+      "file": "world-ort-5131dd2c.wav",
+      "seconds": 7.3,
+      "date": "2026-09-07T20:32:56.725Z"
     }
   },
   "failed": {}

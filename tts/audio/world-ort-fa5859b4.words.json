@@ -1,0 +1,229 @@
+{
+  "segments": [
+    {
+      "start": 0.401,
+      "end": 6.019,
+      "text": "Wenn die Nacht kommt, brauche ich irgendwo ein Dach über dem Kopf — oder zumindest eine ruhige Ecke.",
+      "words": [
+        {
+          "word": "Wenn",
+          "start": 0.401,
+          "end": 0.582,
+          "score": 0.866
+        },
+        {
+          "word": "die",
+          "start": 0.622,
+          "end": 0.722,
+          "score": 0.865
+        },
+        {
+          "word": "Nacht",
+          "start": 0.762,
+          "end": 0.983,
+          "score": 0.922
+        },
+        {
+          "word": "kommt,",
+          "start": 1.023,
+          "end": 1.786,
+          "score": 0.986
+        },
+        {
+          "word": "brauche",
+          "start": 1.806,
+          "end": 2.046,
+          "score": 0.825
+        },
+        {
+          "word": "ich",
+          "start": 2.087,
+          "end": 2.307,
+          "score": 0.959
+        },
+        {
+          "word": "irgendwo",
+          "start": 2.367,
+          "end": 2.829,
+          "score": 0.908
+        },
+        {
+          "word": "ein",
+          "start": 2.849,
+          "end": 3.009,
+          "score": 0.68
+        },
+        {
+          "word": "Dach",
+          "start": 3.03,
+          "end": 3.25,
+          "score": 0.996
+        },
+        {
+          "word": "über",
+          "start": 3.29,
+          "end": 3.431,
+          "score": 0.929
+        },
+        {
+          "word": "dem",
+          "start": 3.451,
+          "end": 3.591,
+          "score": 0.903
+        },
+        {
+          "word": "Kopf",
+          "start": 3.631,
+          "end": 3.792,
+          "score": 0.87
+        },
+        {
+          "word": "—",
+          "start": 4.454,
+          "end": 4.474,
+          "score": 0.06
+        },
+        {
+          "word": "oder",
+          "start": 4.514,
+          "end": 4.775,
+          "score": 0.97
+        },
+        {
+          "word": "zumindest",
+          "start": 4.815,
+          "end": 5.277,
+          "score": 0.865
+        },
+        {
+          "word": "eine",
+          "start": 5.297,
+          "end": 5.477,
+          "score": 0.86
+        },
+        {
+          "word": "ruhige",
+          "start": 5.517,
+          "end": 5.838,
+          "score": 0.926
+        },
+        {
+          "word": "Ecke.",
+          "start": 5.878,
+          "end": 6.019,
+          "score": 0.745
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wenn",
+      "start": 0.401,
+      "end": 0.582,
+      "score": 0.866
+    },
+    {
+      "word": "die",
+      "start": 0.622,
+      "end": 0.722,
+      "score": 0.865
+    },
+    {
+      "word": "Nacht",
+      "start": 0.762,
+      "end": 0.983,
+      "score": 0.922
+    },
+    {
+      "word": "kommt,",
+      "start": 1.023,
+      "end": 1.786,
+      "score": 0.986
+    },
+    {
+      "word": "brauche",
+      "start": 1.806,
+      "end": 2.046,
+      "score": 0.825
+    },
+    {
+      "word": "ich",
+      "start": 2.087,
+      "end": 2.307,
+      "score": 0.959
+    },
+    {
+      "word": "irgendwo",
+      "start": 2.367,
+      "end": 2.829,
+      "score": 0.908
+    },
+    {
+      "word": "ein",
+      "start": 2.849,
+      "end": 3.009,
+      "score": 0.68
+    },
+    {
+      "word": "Dach",
+      "start": 3.03,
+      "end": 3.25,
+      "score": 0.996
+    },
+    {
+      "word": "über",
+      "start": 3.29,
+      "end": 3.431,
+      "score": 0.929
+    },
+    {
+      "word": "dem",
+      "start": 3.451,
+      "end": 3.591,
+      "score": 0.903
+    },
+    {
+      "word": "Kopf",
+      "start": 3.631,
+      "end": 3.792,
+      "score": 0.87
+    },
+    {
+      "word": "—",
+      "start": 4.454,
+      "end": 4.474,
+      "score": 0.06
+    },
+    {
+      "word": "oder",
+      "start": 4.514,
+      "end": 4.775,
+      "score": 0.97
+    },
+    {
+      "word": "zumindest",
+      "start": 4.815,
+      "end": 5.277,
+      "score": 0.865
+    },
+    {
+      "word": "eine",
+      "start": 5.297,
+      "end": 5.477,
+      "score": 0.86
+    },
+    {
+      "word": "ruhige",
+      "start": 5.517,
+      "end": 5.838,
+      "score": 0.926
+    },
+    {
+      "word": "Ecke.",
+      "start": 5.878,
+      "end": 6.019,
+      "score": 0.745
+    }
+  ]
+}

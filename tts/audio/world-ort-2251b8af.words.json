@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.541,
+      "end": 2.987,
+      "text": "Ruhiger als in Treutheim.",
+      "words": [
+        {
+          "word": "Ruhiger",
+          "start": 0.541,
+          "end": 1.022,
+          "score": 0.717
+        },
+        {
+          "word": "als",
+          "start": 1.063,
+          "end": 1.223,
+          "score": 0.912
+        },
+        {
+          "word": "in",
+          "start": 1.263,
+          "end": 1.403,
+          "score": 0.749
+        },
+        {
+          "word": "Treutheim.",
+          "start": 1.444,
+          "end": 2.987,
+          "score": 0.861
+        }
+      ]
+    },
+    {
+      "start": 3.027,
+      "end": 7.839,
+      "text": "Hier treffen sich Gelehrte, Händler und Leute, die beides vorgeben.",
+      "words": [
+        {
+          "word": "Hier",
+          "start": 3.027,
+          "end": 3.288,
+          "score": 0.89
+        },
+        {
+          "word": "treffen",
+          "start": 3.308,
+          "end": 3.629,
+          "score": 0.911
+        },
+        {
+          "word": "sich",
+          "start": 3.669,
+          "end": 3.91,
+          "score": 0.882
+        },
+        {
+          "word": "Gelehrte,",
+          "start": 3.95,
+          "end": 5.072,
+          "score": 0.851
+        },
+        {
+          "word": "Händler",
+          "start": 5.112,
+          "end": 6.295,
+          "score": 0.972
+        },
+        {
+          "word": "und",
+          "start": 6.335,
+          "end": 6.536,
+          "score": 0.942
+        },
+        {
+          "word": "Leute,",
+          "start": 6.576,
+          "end": 6.857,
+          "score": 0.957
+        },
+        {
+          "word": "die",
+          "start": 6.877,
+          "end": 6.977,
+          "score": 0.897
+        },
+        {
+          "word": "beides",
+          "start": 7.017,
+          "end": 7.398,
+          "score": 0.969
+        },
+        {
+          "word": "vorgeben.",
+          "start": 7.438,
+          "end": 7.839,
+          "score": 0.79
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ruhiger",
+      "start": 0.541,
+      "end": 1.022,
+      "score": 0.717
+    },
+    {
+      "word": "als",
+      "start": 1.063,
+      "end": 1.223,
+      "score": 0.912
+    },
+    {
+      "word": "in",
+      "start": 1.263,
+      "end": 1.403,
+      "score": 0.749
+    },
+    {
+      "word": "Treutheim.",
+      "start": 1.444,
+      "end": 2.987,
+      "score": 0.861
+    },
+    {
+      "word": "Hier",
+      "start": 3.027,
+      "end": 3.288,
+      "score": 0.89
+    },
+    {
+      "word": "treffen",
+      "start": 3.308,
+      "end": 3.629,
+      "score": 0.911
+    },
+    {
+      "word": "sich",
+      "start": 3.669,
+      "end": 3.91,
+      "score": 0.882
+    },
+    {
+      "word": "Gelehrte,",
+      "start": 3.95,
+      "end": 5.072,
+      "score": 0.851
+    },
+    {
+      "word": "Händler",
+      "start": 5.112,
+      "end": 6.295,
+      "score": 0.972
+    },
+    {
+      "word": "und",
+      "start": 6.335,
+      "end": 6.536,
+      "score": 0.942
+    },
+    {
+      "word": "Leute,",
+      "start": 6.576,
+      "end": 6.857,
+      "score": 0.957
+    },
+    {
+      "word": "die",
+      "start": 6.877,
+      "end": 6.977,
+      "score": 0.897
+    },
+    {
+      "word": "beides",
+      "start": 7.017,
+      "end": 7.398,
+      "score": 0.969
+    },
+    {
+      "word": "vorgeben.",
+      "start": 7.438,
+      "end": 7.839,
+      "score": 0.79
+    }
+  ]
+}

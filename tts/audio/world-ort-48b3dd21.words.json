@@ -1,0 +1,205 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 6.099,
+      "text": "Vor den Stadtmauern erstrecken sich Felder, auf denen Tagelöhner wie ich für ein paar Münzen schuften.",
+      "words": [
+        {
+          "word": "Vor",
+          "start": 0.481,
+          "end": 0.662,
+          "score": 0.934
+        },
+        {
+          "word": "den",
+          "start": 0.682,
+          "end": 0.843,
+          "score": 0.88
+        },
+        {
+          "word": "Stadtmauern",
+          "start": 0.903,
+          "end": 1.605,
+          "score": 0.869
+        },
+        {
+          "word": "erstrecken",
+          "start": 1.625,
+          "end": 2.086,
+          "score": 0.91
+        },
+        {
+          "word": "sich",
+          "start": 2.127,
+          "end": 2.327,
+          "score": 0.926
+        },
+        {
+          "word": "Felder,",
+          "start": 2.367,
+          "end": 3.09,
+          "score": 0.964
+        },
+        {
+          "word": "auf",
+          "start": 3.11,
+          "end": 3.25,
+          "score": 0.976
+        },
+        {
+          "word": "denen",
+          "start": 3.27,
+          "end": 3.531,
+          "score": 0.792
+        },
+        {
+          "word": "Tagelöhner",
+          "start": 3.571,
+          "end": 4.213,
+          "score": 0.862
+        },
+        {
+          "word": "wie",
+          "start": 4.253,
+          "end": 4.373,
+          "score": 0.926
+        },
+        {
+          "word": "ich",
+          "start": 4.414,
+          "end": 4.654,
+          "score": 0.893
+        },
+        {
+          "word": "für",
+          "start": 4.694,
+          "end": 4.835,
+          "score": 0.784
+        },
+        {
+          "word": "ein",
+          "start": 4.855,
+          "end": 4.995,
+          "score": 0.673
+        },
+        {
+          "word": "paar",
+          "start": 5.015,
+          "end": 5.276,
+          "score": 0.797
+        },
+        {
+          "word": "Münzen",
+          "start": 5.296,
+          "end": 5.678,
+          "score": 0.918
+        },
+        {
+          "word": "schuften.",
+          "start": 5.718,
+          "end": 6.099,
+          "score": 0.832
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Vor",
+      "start": 0.481,
+      "end": 0.662,
+      "score": 0.934
+    },
+    {
+      "word": "den",
+      "start": 0.682,
+      "end": 0.843,
+      "score": 0.88
+    },
+    {
+      "word": "Stadtmauern",
+      "start": 0.903,
+      "end": 1.605,
+      "score": 0.869
+    },
+    {
+      "word": "erstrecken",
+      "start": 1.625,
+      "end": 2.086,
+      "score": 0.91
+    },
+    {
+      "word": "sich",
+      "start": 2.127,
+      "end": 2.327,
+      "score": 0.926
+    },
+    {
+      "word": "Felder,",
+      "start": 2.367,
+      "end": 3.09,
+      "score": 0.964
+    },
+    {
+      "word": "auf",
+      "start": 3.11,
+      "end": 3.25,
+      "score": 0.976
+    },
+    {
+      "word": "denen",
+      "start": 3.27,
+      "end": 3.531,
+      "score": 0.792
+    },
+    {
+      "word": "Tagelöhner",
+      "start": 3.571,
+      "end": 4.213,
+      "score": 0.862
+    },
+    {
+      "word": "wie",
+      "start": 4.253,
+      "end": 4.373,
+      "score": 0.926
+    },
+    {
+      "word": "ich",
+      "start": 4.414,
+      "end": 4.654,
+      "score": 0.893
+    },
+    {
+      "word": "für",
+      "start": 4.694,
+      "end": 4.835,
+      "score": 0.784
+    },
+    {
+      "word": "ein",
+      "start": 4.855,
+      "end": 4.995,
+      "score": 0.673
+    },
+    {
+      "word": "paar",
+      "start": 5.015,
+      "end": 5.276,
+      "score": 0.797
+    },
+    {
+      "word": "Münzen",
+      "start": 5.296,
+      "end": 5.678,
+      "score": 0.918
+    },
+    {
+      "word": "schuften.",
+      "start": 5.718,
+      "end": 6.099,
+      "score": 0.832
+    }
+  ]
+}

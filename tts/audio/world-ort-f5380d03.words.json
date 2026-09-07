@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 2.768,
+      "text": "Händler rufen ihre Waren aus.",
+      "words": [
+        {
+          "word": "Händler",
+          "start": 0.441,
+          "end": 0.842,
+          "score": 0.918
+        },
+        {
+          "word": "rufen",
+          "start": 0.882,
+          "end": 1.183,
+          "score": 0.945
+        },
+        {
+          "word": "ihre",
+          "start": 1.223,
+          "end": 1.404,
+          "score": 0.85
+        },
+        {
+          "word": "Waren",
+          "start": 1.444,
+          "end": 1.765,
+          "score": 0.962
+        },
+        {
+          "word": "aus.",
+          "start": 1.825,
+          "end": 2.768,
+          "score": 0.961
+        }
+      ]
+    },
+    {
+      "start": 2.808,
+      "end": 6.919,
+      "text": "Es riecht nach frischem Brot, kaltem Metall und Schweiß.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 2.808,
+          "end": 2.928,
+          "score": 0.856
+        },
+        {
+          "word": "riecht",
+          "start": 2.988,
+          "end": 3.249,
+          "score": 0.788
+        },
+        {
+          "word": "nach",
+          "start": 3.289,
+          "end": 3.51,
+          "score": 0.994
+        },
+        {
+          "word": "frischem",
+          "start": 3.57,
+          "end": 3.951,
+          "score": 0.869
+        },
+        {
+          "word": "Brot,",
+          "start": 3.971,
+          "end": 4.934,
+          "score": 0.944
+        },
+        {
+          "word": "kaltem",
+          "start": 4.954,
+          "end": 5.335,
+          "score": 0.94
+        },
+        {
+          "word": "Metall",
+          "start": 5.355,
+          "end": 6.317,
+          "score": 0.92
+        },
+        {
+          "word": "und",
+          "start": 6.357,
+          "end": 6.538,
+          "score": 0.913
+        },
+        {
+          "word": "Schweiß.",
+          "start": 6.578,
+          "end": 6.919,
+          "score": 0.785
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Händler",
+      "start": 0.441,
+      "end": 0.842,
+      "score": 0.918
+    },
+    {
+      "word": "rufen",
+      "start": 0.882,
+      "end": 1.183,
+      "score": 0.945
+    },
+    {
+      "word": "ihre",
+      "start": 1.223,
+      "end": 1.404,
+      "score": 0.85
+    },
+    {
+      "word": "Waren",
+      "start": 1.444,
+      "end": 1.765,
+      "score": 0.962
+    },
+    {
+      "word": "aus.",
+      "start": 1.825,
+      "end": 2.768,
+      "score": 0.961
+    },
+    {
+      "word": "Es",
+      "start": 2.808,
+      "end": 2.928,
+      "score": 0.856
+    },
+    {
+      "word": "riecht",
+      "start": 2.988,
+      "end": 3.249,
+      "score": 0.788
+    },
+    {
+      "word": "nach",
+      "start": 3.289,
+      "end": 3.51,
+      "score": 0.994
+    },
+    {
+      "word": "frischem",
+      "start": 3.57,
+      "end": 3.951,
+      "score": 0.869
+    },
+    {
+      "word": "Brot,",
+      "start": 3.971,
+      "end": 4.934,
+      "score": 0.944
+    },
+    {
+      "word": "kaltem",
+      "start": 4.954,
+      "end": 5.335,
+      "score": 0.94
+    },
+    {
+      "word": "Metall",
+      "start": 5.355,
+      "end": 6.317,
+      "score": 0.92
+    },
+    {
+      "word": "und",
+      "start": 6.357,
+      "end": 6.538,
+      "score": 0.913
+    },
+    {
+      "word": "Schweiß.",
+      "start": 6.578,
+      "end": 6.919,
+      "score": 0.785
+    }
+  ]
+}
