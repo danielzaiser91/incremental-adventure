@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.481,
+      "end": 5.836,
+      "text": "Söldner, Wachen, Männer mit Muskeln und kurzen Gedächtnissen.",
+      "words": [
+        {
+          "word": "Söldner,",
+          "start": 0.481,
+          "end": 1.604,
+          "score": 0.898
+        },
+        {
+          "word": "Wachen,",
+          "start": 1.644,
+          "end": 2.567,
+          "score": 0.891
+        },
+        {
+          "word": "Männer",
+          "start": 2.607,
+          "end": 2.928,
+          "score": 0.968
+        },
+        {
+          "word": "mit",
+          "start": 2.948,
+          "end": 3.209,
+          "score": 0.941
+        },
+        {
+          "word": "Muskeln",
+          "start": 3.249,
+          "end": 3.69,
+          "score": 0.843
+        },
+        {
+          "word": "und",
+          "start": 3.71,
+          "end": 3.931,
+          "score": 0.936
+        },
+        {
+          "word": "kurzen",
+          "start": 3.991,
+          "end": 4.312,
+          "score": 0.899
+        },
+        {
+          "word": "Gedächtnissen.",
+          "start": 4.352,
+          "end": 5.836,
+          "score": 0.932
+        }
+      ]
+    },
+    {
+      "start": 5.856,
+      "end": 7.079,
+      "text": "Sie hören auf Stärke.",
+      "words": [
+        {
+          "word": "Sie",
+          "start": 5.856,
+          "end": 6.036,
+          "score": 0.978
+        },
+        {
+          "word": "hören",
+          "start": 6.076,
+          "end": 6.457,
+          "score": 0.918
+        },
+        {
+          "word": "auf",
+          "start": 6.477,
+          "end": 6.718,
+          "score": 0.994
+        },
+        {
+          "word": "Stärke.",
+          "start": 6.758,
+          "end": 7.079,
+          "score": 0.795
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Söldner,",
+      "start": 0.481,
+      "end": 1.604,
+      "score": 0.898
+    },
+    {
+      "word": "Wachen,",
+      "start": 1.644,
+      "end": 2.567,
+      "score": 0.891
+    },
+    {
+      "word": "Männer",
+      "start": 2.607,
+      "end": 2.928,
+      "score": 0.968
+    },
+    {
+      "word": "mit",
+      "start": 2.948,
+      "end": 3.209,
+      "score": 0.941
+    },
+    {
+      "word": "Muskeln",
+      "start": 3.249,
+      "end": 3.69,
+      "score": 0.843
+    },
+    {
+      "word": "und",
+      "start": 3.71,
+      "end": 3.931,
+      "score": 0.936
+    },
+    {
+      "word": "kurzen",
+      "start": 3.991,
+      "end": 4.312,
+      "score": 0.899
+    },
+    {
+      "word": "Gedächtnissen.",
+      "start": 4.352,
+      "end": 5.836,
+      "score": 0.932
+    },
+    {
+      "word": "Sie",
+      "start": 5.856,
+      "end": 6.036,
+      "score": 0.978
+    },
+    {
+      "word": "hören",
+      "start": 6.076,
+      "end": 6.457,
+      "score": 0.918
+    },
+    {
+      "word": "auf",
+      "start": 6.477,
+      "end": 6.718,
+      "score": 0.994
+    },
+    {
+      "word": "Stärke.",
+      "start": 6.758,
+      "end": 7.079,
+      "score": 0.795
+    }
+  ]
+}

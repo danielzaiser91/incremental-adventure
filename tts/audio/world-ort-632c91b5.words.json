@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 0.782,
+      "end": 6.194,
+      "text": "Die leiseste der drei Kräfte — und wahrscheinlich die mächtigste.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.782,
+          "end": 1.022,
+          "score": 0.655
+        },
+        {
+          "word": "leiseste",
+          "start": 1.082,
+          "end": 1.704,
+          "score": 0.94
+        },
+        {
+          "word": "der",
+          "start": 1.744,
+          "end": 1.864,
+          "score": 0.911
+        },
+        {
+          "word": "drei",
+          "start": 1.904,
+          "end": 2.145,
+          "score": 0.763
+        },
+        {
+          "word": "Kräfte",
+          "start": 2.165,
+          "end": 2.486,
+          "score": 0.879
+        },
+        {
+          "word": "—",
+          "start": 3.167,
+          "end": 3.187,
+          "score": 0.879
+        },
+        {
+          "word": "und",
+          "start": 3.227,
+          "end": 3.668,
+          "score": 0.837
+        },
+        {
+          "word": "wahrscheinlich",
+          "start": 3.708,
+          "end": 4.43,
+          "score": 0.732
+        },
+        {
+          "word": "die",
+          "start": 4.45,
+          "end": 4.59,
+          "score": 0.862
+        },
+        {
+          "word": "mächtigste.",
+          "start": 4.63,
+          "end": 6.194,
+          "score": 0.844
+        }
+      ]
+    },
+    {
+      "start": 6.254,
+      "end": 8.459,
+      "text": "Aufzeichnungen sind dauerhafte Waffen.",
+      "words": [
+        {
+          "word": "Aufzeichnungen",
+          "start": 6.254,
+          "end": 7.176,
+          "score": 0.868
+        },
+        {
+          "word": "sind",
+          "start": 7.196,
+          "end": 7.517,
+          "score": 0.941
+        },
+        {
+          "word": "dauerhafte",
+          "start": 7.557,
+          "end": 8.198,
+          "score": 0.898
+        },
+        {
+          "word": "Waffen.",
+          "start": 8.239,
+          "end": 8.459,
+          "score": 0.913
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.782,
+      "end": 1.022,
+      "score": 0.655
+    },
+    {
+      "word": "leiseste",
+      "start": 1.082,
+      "end": 1.704,
+      "score": 0.94
+    },
+    {
+      "word": "der",
+      "start": 1.744,
+      "end": 1.864,
+      "score": 0.911
+    },
+    {
+      "word": "drei",
+      "start": 1.904,
+      "end": 2.145,
+      "score": 0.763
+    },
+    {
+      "word": "Kräfte",
+      "start": 2.165,
+      "end": 2.486,
+      "score": 0.879
+    },
+    {
+      "word": "—",
+      "start": 3.167,
+      "end": 3.187,
+      "score": 0.879
+    },
+    {
+      "word": "und",
+      "start": 3.227,
+      "end": 3.668,
+      "score": 0.837
+    },
+    {
+      "word": "wahrscheinlich",
+      "start": 3.708,
+      "end": 4.43,
+      "score": 0.732
+    },
+    {
+      "word": "die",
+      "start": 4.45,
+      "end": 4.59,
+      "score": 0.862
+    },
+    {
+      "word": "mächtigste.",
+      "start": 4.63,
+      "end": 6.194,
+      "score": 0.844
+    },
+    {
+      "word": "Aufzeichnungen",
+      "start": 6.254,
+      "end": 7.176,
+      "score": 0.868
+    },
+    {
+      "word": "sind",
+      "start": 7.196,
+      "end": 7.517,
+      "score": 0.941
+    },
+    {
+      "word": "dauerhafte",
+      "start": 7.557,
+      "end": 8.198,
+      "score": 0.898
+    },
+    {
+      "word": "Waffen.",
+      "start": 8.239,
+      "end": 8.459,
+      "score": 0.913
+    }
+  ]
+}

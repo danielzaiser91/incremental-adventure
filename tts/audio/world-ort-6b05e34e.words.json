@@ -1,0 +1,224 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 4.931,
+      "text": "In den Gassen und Lagerhäusern patrouillieren Valdris' Leute.",
+      "words": [
+        {
+          "word": "In",
+          "start": 0.461,
+          "end": 0.521,
+          "score": 0.99
+        },
+        {
+          "word": "den",
+          "start": 0.561,
+          "end": 0.762,
+          "score": 0.822
+        },
+        {
+          "word": "Gassen",
+          "start": 0.822,
+          "end": 1.283,
+          "score": 0.921
+        },
+        {
+          "word": "und",
+          "start": 1.323,
+          "end": 1.564,
+          "score": 0.97
+        },
+        {
+          "word": "Lagerhäusern",
+          "start": 1.604,
+          "end": 2.486,
+          "score": 0.86
+        },
+        {
+          "word": "patrouillieren",
+          "start": 2.506,
+          "end": 3.227,
+          "score": 0.75
+        },
+        {
+          "word": "Valdris'",
+          "start": 3.267,
+          "end": 3.728,
+          "score": 0.739
+        },
+        {
+          "word": "Leute.",
+          "start": 3.748,
+          "end": 4.931,
+          "score": 0.944
+        }
+      ]
+    },
+    {
+      "start": 4.971,
+      "end": 8.639,
+      "text": "Ein riskanter Ort — aber mit Einfluss zu gewinnen.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 4.971,
+          "end": 5.132,
+          "score": 0.793
+        },
+        {
+          "word": "riskanter",
+          "start": 5.172,
+          "end": 5.953,
+          "score": 0.931
+        },
+        {
+          "word": "Ort",
+          "start": 6.034,
+          "end": 6.895,
+          "score": 0.928
+        },
+        {
+          "word": "—",
+          "start": 6.916,
+          "end": 6.936,
+          "score": 0.996
+        },
+        {
+          "word": "aber",
+          "start": 6.976,
+          "end": 7.457,
+          "score": 0.943
+        },
+        {
+          "word": "mit",
+          "start": 7.477,
+          "end": 7.717,
+          "score": 0.804
+        },
+        {
+          "word": "Einfluss",
+          "start": 7.757,
+          "end": 8.218,
+          "score": 0.92
+        },
+        {
+          "word": "zu",
+          "start": 8.259,
+          "end": 8.339,
+          "score": 0.999
+        },
+        {
+          "word": "gewinnen.",
+          "start": 8.379,
+          "end": 8.639,
+          "score": 0.737
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "In",
+      "start": 0.461,
+      "end": 0.521,
+      "score": 0.99
+    },
+    {
+      "word": "den",
+      "start": 0.561,
+      "end": 0.762,
+      "score": 0.822
+    },
+    {
+      "word": "Gassen",
+      "start": 0.822,
+      "end": 1.283,
+      "score": 0.921
+    },
+    {
+      "word": "und",
+      "start": 1.323,
+      "end": 1.564,
+      "score": 0.97
+    },
+    {
+      "word": "Lagerhäusern",
+      "start": 1.604,
+      "end": 2.486,
+      "score": 0.86
+    },
+    {
+      "word": "patrouillieren",
+      "start": 2.506,
+      "end": 3.227,
+      "score": 0.75
+    },
+    {
+      "word": "Valdris'",
+      "start": 3.267,
+      "end": 3.728,
+      "score": 0.739
+    },
+    {
+      "word": "Leute.",
+      "start": 3.748,
+      "end": 4.931,
+      "score": 0.944
+    },
+    {
+      "word": "Ein",
+      "start": 4.971,
+      "end": 5.132,
+      "score": 0.793
+    },
+    {
+      "word": "riskanter",
+      "start": 5.172,
+      "end": 5.953,
+      "score": 0.931
+    },
+    {
+      "word": "Ort",
+      "start": 6.034,
+      "end": 6.895,
+      "score": 0.928
+    },
+    {
+      "word": "—",
+      "start": 6.916,
+      "end": 6.936,
+      "score": 0.996
+    },
+    {
+      "word": "aber",
+      "start": 6.976,
+      "end": 7.457,
+      "score": 0.943
+    },
+    {
+      "word": "mit",
+      "start": 7.477,
+      "end": 7.717,
+      "score": 0.804
+    },
+    {
+      "word": "Einfluss",
+      "start": 7.757,
+      "end": 8.218,
+      "score": 0.92
+    },
+    {
+      "word": "zu",
+      "start": 8.259,
+      "end": 8.339,
+      "score": 0.999
+    },
+    {
+      "word": "gewinnen.",
+      "start": 8.379,
+      "end": 8.639,
+      "score": 0.737
+    }
+  ]
+}

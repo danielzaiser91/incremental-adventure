@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 3.712,
+      "text": "Eine ruhige Kammer mit Blick aufs Wasser.",
+      "words": [
+        {
+          "word": "Eine",
+          "start": 0.441,
+          "end": 0.642,
+          "score": 0.857
+        },
+        {
+          "word": "ruhige",
+          "start": 0.702,
+          "end": 1.123,
+          "score": 0.908
+        },
+        {
+          "word": "Kammer",
+          "start": 1.164,
+          "end": 1.685,
+          "score": 0.925
+        },
+        {
+          "word": "mit",
+          "start": 1.725,
+          "end": 1.946,
+          "score": 0.934
+        },
+        {
+          "word": "Blick",
+          "start": 1.966,
+          "end": 2.327,
+          "score": 0.895
+        },
+        {
+          "word": "aufs",
+          "start": 2.347,
+          "end": 2.588,
+          "score": 0.866
+        },
+        {
+          "word": "Wasser.",
+          "start": 2.648,
+          "end": 3.712,
+          "score": 0.997
+        }
+      ]
+    },
+    {
+      "start": 3.752,
+      "end": 6.059,
+      "text": "Geräuschloser als das Hafen-Treiben unten.",
+      "words": [
+        {
+          "word": "Geräuschloser",
+          "start": 3.752,
+          "end": 4.534,
+          "score": 0.934
+        },
+        {
+          "word": "als",
+          "start": 4.574,
+          "end": 4.755,
+          "score": 0.964
+        },
+        {
+          "word": "das",
+          "start": 4.795,
+          "end": 4.975,
+          "score": 0.987
+        },
+        {
+          "word": "Hafen-Treiben",
+          "start": 5.016,
+          "end": 5.738,
+          "score": 0.889
+        },
+        {
+          "word": "unten.",
+          "start": 5.798,
+          "end": 6.059,
+          "score": 0.691
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Eine",
+      "start": 0.441,
+      "end": 0.642,
+      "score": 0.857
+    },
+    {
+      "word": "ruhige",
+      "start": 0.702,
+      "end": 1.123,
+      "score": 0.908
+    },
+    {
+      "word": "Kammer",
+      "start": 1.164,
+      "end": 1.685,
+      "score": 0.925
+    },
+    {
+      "word": "mit",
+      "start": 1.725,
+      "end": 1.946,
+      "score": 0.934
+    },
+    {
+      "word": "Blick",
+      "start": 1.966,
+      "end": 2.327,
+      "score": 0.895
+    },
+    {
+      "word": "aufs",
+      "start": 2.347,
+      "end": 2.588,
+      "score": 0.866
+    },
+    {
+      "word": "Wasser.",
+      "start": 2.648,
+      "end": 3.712,
+      "score": 0.997
+    },
+    {
+      "word": "Geräuschloser",
+      "start": 3.752,
+      "end": 4.534,
+      "score": 0.934
+    },
+    {
+      "word": "als",
+      "start": 4.574,
+      "end": 4.755,
+      "score": 0.964
+    },
+    {
+      "word": "das",
+      "start": 4.795,
+      "end": 4.975,
+      "score": 0.987
+    },
+    {
+      "word": "Hafen-Treiben",
+      "start": 5.016,
+      "end": 5.738,
+      "score": 0.889
+    },
+    {
+      "word": "unten.",
+      "start": 5.798,
+      "end": 6.059,
+      "score": 0.691
+    }
+  ]
+}

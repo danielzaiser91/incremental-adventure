@@ -1,0 +1,116 @@
+{
+  "segments": [
+    {
+      "start": 0.501,
+      "end": 2.768,
+      "text": "Größer als alles in Lethkar.",
+      "words": [
+        {
+          "word": "Größer",
+          "start": 0.501,
+          "end": 0.943,
+          "score": 0.88
+        },
+        {
+          "word": "als",
+          "start": 0.983,
+          "end": 1.304,
+          "score": 0.888
+        },
+        {
+          "word": "alles",
+          "start": 1.364,
+          "end": 1.665,
+          "score": 0.855
+        },
+        {
+          "word": "in",
+          "start": 1.685,
+          "end": 1.825,
+          "score": 0.69
+        },
+        {
+          "word": "Lethkar.",
+          "start": 1.866,
+          "end": 2.768,
+          "score": 0.772
+        }
+      ]
+    },
+    {
+      "start": 2.808,
+      "end": 6.379,
+      "text": "Informationen, Waffen, Alchemie-Rohmaterialien.",
+      "words": [
+        {
+          "word": "Informationen,",
+          "start": 2.808,
+          "end": 4.052,
+          "score": 0.921
+        },
+        {
+          "word": "Waffen,",
+          "start": 4.092,
+          "end": 4.975,
+          "score": 0.919
+        },
+        {
+          "word": "Alchemie-Rohmaterialien.",
+          "start": 4.995,
+          "end": 6.379,
+          "score": 0.874
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Größer",
+      "start": 0.501,
+      "end": 0.943,
+      "score": 0.88
+    },
+    {
+      "word": "als",
+      "start": 0.983,
+      "end": 1.304,
+      "score": 0.888
+    },
+    {
+      "word": "alles",
+      "start": 1.364,
+      "end": 1.665,
+      "score": 0.855
+    },
+    {
+      "word": "in",
+      "start": 1.685,
+      "end": 1.825,
+      "score": 0.69
+    },
+    {
+      "word": "Lethkar.",
+      "start": 1.866,
+      "end": 2.768,
+      "score": 0.772
+    },
+    {
+      "word": "Informationen,",
+      "start": 2.808,
+      "end": 4.052,
+      "score": 0.921
+    },
+    {
+      "word": "Waffen,",
+      "start": 4.092,
+      "end": 4.975,
+      "score": 0.919
+    },
+    {
+      "word": "Alchemie-Rohmaterialien.",
+      "start": 4.995,
+      "end": 6.379,
+      "score": 0.874
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "segments": [
+    {
+      "start": 0.441,
+      "end": 6.439,
+      "text": "Der Hafen schläft nie — Waren, Gerüchte und Arbeit fließen hier rund um die Uhr.",
+      "words": [
+        {
+          "word": "Der",
+          "start": 0.441,
+          "end": 0.582,
+          "score": 0.753
+        },
+        {
+          "word": "Hafen",
+          "start": 0.622,
+          "end": 1.043,
+          "score": 0.895
+        },
+        {
+          "word": "schläft",
+          "start": 1.083,
+          "end": 1.625,
+          "score": 0.873
+        },
+        {
+          "word": "nie",
+          "start": 1.665,
+          "end": 2.808,
+          "score": 0.908
+        },
+        {
+          "word": "—",
+          "start": 2.828,
+          "end": 2.848,
+          "score": 0.998
+        },
+        {
+          "word": "Waren,",
+          "start": 2.888,
+          "end": 3.57,
+          "score": 0.967
+        },
+        {
+          "word": "Gerüchte",
+          "start": 3.59,
+          "end": 4.212,
+          "score": 0.903
+        },
+        {
+          "word": "und",
+          "start": 4.232,
+          "end": 4.513,
+          "score": 0.909
+        },
+        {
+          "word": "Arbeit",
+          "start": 4.553,
+          "end": 4.995,
+          "score": 0.895
+        },
+        {
+          "word": "fließen",
+          "start": 5.055,
+          "end": 5.416,
+          "score": 0.958
+        },
+        {
+          "word": "hier",
+          "start": 5.436,
+          "end": 5.636,
+          "score": 0.804
+        },
+        {
+          "word": "rund",
+          "start": 5.697,
+          "end": 5.937,
+          "score": 0.958
+        },
+        {
+          "word": "um",
+          "start": 5.977,
+          "end": 6.118,
+          "score": 0.997
+        },
+        {
+          "word": "die",
+          "start": 6.158,
+          "end": 6.258,
+          "score": 0.986
+        },
+        {
+          "word": "Uhr.",
+          "start": 6.318,
+          "end": 6.439,
+          "score": 0.628
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Der",
+      "start": 0.441,
+      "end": 0.582,
+      "score": 0.753
+    },
+    {
+      "word": "Hafen",
+      "start": 0.622,
+      "end": 1.043,
+      "score": 0.895
+    },
+    {
+      "word": "schläft",
+      "start": 1.083,
+      "end": 1.625,
+      "score": 0.873
+    },
+    {
+      "word": "nie",
+      "start": 1.665,
+      "end": 2.808,
+      "score": 0.908
+    },
+    {
+      "word": "—",
+      "start": 2.828,
+      "end": 2.848,
+      "score": 0.998
+    },
+    {
+      "word": "Waren,",
+      "start": 2.888,
+      "end": 3.57,
+      "score": 0.967
+    },
+    {
+      "word": "Gerüchte",
+      "start": 3.59,
+      "end": 4.212,
+      "score": 0.903
+    },
+    {
+      "word": "und",
+      "start": 4.232,
+      "end": 4.513,
+      "score": 0.909
+    },
+    {
+      "word": "Arbeit",
+      "start": 4.553,
+      "end": 4.995,
+      "score": 0.895
+    },
+    {
+      "word": "fließen",
+      "start": 5.055,
+      "end": 5.416,
+      "score": 0.958
+    },
+    {
+      "word": "hier",
+      "start": 5.436,
+      "end": 5.636,
+      "score": 0.804
+    },
+    {
+      "word": "rund",
+      "start": 5.697,
+      "end": 5.937,
+      "score": 0.958
+    },
+    {
+      "word": "um",
+      "start": 5.977,
+      "end": 6.118,
+      "score": 0.997
+    },
+    {
+      "word": "die",
+      "start": 6.158,
+      "end": 6.258,
+      "score": 0.986
+    },
+    {
+      "word": "Uhr.",
+      "start": 6.318,
+      "end": 6.439,
+      "score": 0.628
+    }
+  ]
+}

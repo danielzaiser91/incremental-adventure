@@ -1,0 +1,152 @@
+{
+  "segments": [
+    {
+      "start": 0.461,
+      "end": 7.417,
+      "text": "Ein sauberes Bett, Stille, keine Fremden nebenan.",
+      "words": [
+        {
+          "word": "Ein",
+          "start": 0.461,
+          "end": 0.661,
+          "score": 0.701
+        },
+        {
+          "word": "sauberes",
+          "start": 0.722,
+          "end": 1.263,
+          "score": 0.822
+        },
+        {
+          "word": "Bett,",
+          "start": 1.323,
+          "end": 2.365,
+          "score": 0.871
+        },
+        {
+          "word": "Stille,",
+          "start": 2.405,
+          "end": 3.809,
+          "score": 0.938
+        },
+        {
+          "word": "keine",
+          "start": 3.849,
+          "end": 4.149,
+          "score": 0.778
+        },
+        {
+          "word": "Fremden",
+          "start": 4.189,
+          "end": 4.65,
+          "score": 0.856
+        },
+        {
+          "word": "nebenan.",
+          "start": 4.691,
+          "end": 7.417,
+          "score": 0.913
+        }
+      ]
+    },
+    {
+      "start": 7.437,
+      "end": 8.519,
+      "text": "Dafür muss man zahlen.",
+      "words": [
+        {
+          "word": "Dafür",
+          "start": 7.437,
+          "end": 7.777,
+          "score": 0.889
+        },
+        {
+          "word": "muss",
+          "start": 7.797,
+          "end": 7.978,
+          "score": 0.81
+        },
+        {
+          "word": "man",
+          "start": 8.018,
+          "end": 8.198,
+          "score": 0.991
+        },
+        {
+          "word": "zahlen.",
+          "start": 8.238,
+          "end": 8.519,
+          "score": 0.733
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Ein",
+      "start": 0.461,
+      "end": 0.661,
+      "score": 0.701
+    },
+    {
+      "word": "sauberes",
+      "start": 0.722,
+      "end": 1.263,
+      "score": 0.822
+    },
+    {
+      "word": "Bett,",
+      "start": 1.323,
+      "end": 2.365,
+      "score": 0.871
+    },
+    {
+      "word": "Stille,",
+      "start": 2.405,
+      "end": 3.809,
+      "score": 0.938
+    },
+    {
+      "word": "keine",
+      "start": 3.849,
+      "end": 4.149,
+      "score": 0.778
+    },
+    {
+      "word": "Fremden",
+      "start": 4.189,
+      "end": 4.65,
+      "score": 0.856
+    },
+    {
+      "word": "nebenan.",
+      "start": 4.691,
+      "end": 7.417,
+      "score": 0.913
+    },
+    {
+      "word": "Dafür",
+      "start": 7.437,
+      "end": 7.777,
+      "score": 0.889
+    },
+    {
+      "word": "muss",
+      "start": 7.797,
+      "end": 7.978,
+      "score": 0.81
+    },
+    {
+      "word": "man",
+      "start": 8.018,
+      "end": 8.198,
+      "score": 0.991
+    },
+    {
+      "word": "zahlen.",
+      "start": 8.238,
+      "end": 8.519,
+      "score": 0.733
+    }
+  ]
+}
