@@ -111,7 +111,7 @@ mit dem neuen Modell.
 
 ## Meilenstein-Checkliste
 
-- [ ] **Phase 0 — Setup**
+- [x] **Phase 0 — Setup**
   - [x] API-Key in `.env.local` (`GEMINI_API_KEY`)
   - [x] Extraktions-Skript (`extract-manifest.js`) für Story + Skill-Monologe
   - [x] Batch-Skript (`generate-batch.js`) mit Rate-Limit + Progress-Tracking
@@ -194,7 +194,7 @@ mit dem neuen Modell.
       01.09.2026: 139 Quest-Beschreibungen + 38 Objectives = 177/177, ohne
       eine einzige dauerhaft blockierte Einheit. Der Phasenwechsel fand
       mitten im selben Batch statt (Position 3 → 4).*
-- [ ] **Phase 6 — Welt-Flavor** (**73 Einheiten**, extrahiert und kuratiert
+- [x] **Phase 6 — Welt-Flavor** (**73 Einheiten**, extrahiert und kuratiert
       am 26.08.2026): Monster 16, Orte 25, Markt 13, Alchemie 10,
       Expedition 6, Pets 3 — alle Ich-Perspektive bzw. Erzählerton, daher
       Iapetus. Die frühere Schätzung „~250“ war deutlich zu hoch; das
@@ -208,10 +208,12 @@ mit dem neuen Modell.
       `ALCHEMIE_MILESTONES` (reine Zahlenanzeigen), `VENDORS`. Kein
       einziger `${...}`-Rest im Ergebnis, keine doppelte ID, keine der
       288 bereits vertonten IDs verlorengegangen (gegengeprüft).
-      *Stand 09.09.2026 (Tageslauf): 66/73 — Monster (16), Markt (13),
-      Alchemie (10), Expedition (6) und Haustiere (3) sind komplett.
-      Offen: allein die Ortskarten, 7 von 25 — eine davon
-      (`world-ort-c67ec071`) nur wegen des 429 am Tagesende.*
+      *Komplett 73/73 (10.09.2026): Die letzten sieben Ortskarten liefen im
+      Lauf um 09:07 fehlerfrei durch, darunter die am Vortag per 429
+      verschobene `world-ort-c67ec071`. Damit ist der Extraktionsweg über
+      `script/content.js` über alle 25 Ortskarten ohne einen einzigen
+      Fehlschlag geblieben — und der Plan endet hier, Phase 7 ist seit dem
+      12.08. gestrichen.*
 - ~~**Phase 7 — Achievements** (79 Einheiten)~~ — **gestrichen 12.08.2026**
       (Entscheidung Daniel: Achievements liest man eher, als dass man sie
       hört; der Plan endet mit Phase 6)
@@ -439,3 +441,6 @@ nachgelagerter Extra-Lauf.
 - 09.09.2026 14:19 — **Auffälligkeit: Das Tagesbudget trug nur neun Requests, nicht zehn.** Der zehnte wurde abgelehnt, obwohl `generate-batch.js` keinerlei Wiederholungslogik enthält (`grep` nach retry/attempt/erneut: kein Treffer) — es gingen also exakt zehn Requests raus, und der Zähler stand beim zehnten bereits auf dem Limit. Eine Ursache ist von hier aus nicht messbar: Innerhalb dieses Quota-Fensters (ab 09.09. 09:00 deutscher Zeit) hat kein anderer Lauf stattgefunden, und die letzten Requests davor liegen mit dem 07.09. 22:33 mehr als 24 Stunden zurück — ein Nachhall des Vortagsfensters scheidet damit auch bei rollierender Zählung aus. **Prüfstein für den nächsten Lauf:** Bleibt es bei neun Erfolgen und einem 429, ist das nutzbare Budget effektiv 9 und die Batchgröße in `generate-batch.js` gehört auf 9 gesenkt — ein 429 kostet keinen Schaden, aber er verbrennt jedes Mal eine Einheit in `progress.failed`. Trägt der nächste Lauf wieder zehn, war es ein Einzelfall des verfallenen Fensters.
 - 09.09.2026 14:19 — Alle neun Einheiten sind **Ortskarten**, die per Textmuster aus `script/content.js` extrahierte Gruppe: vollständige Sätze zwischen 72 und 112 Zeichen, kein `${…}`-Rest, kein abgeschnittenes Satzende, keine durchgefallene Plausibilitätsprüfung — der zweite Extraktionsweg bleibt damit über 18 von 25 Ortskarten fehlerfrei. Das Verhältnis liegt bei Ø 11,4 Zeichen/s und damit zurück im üblichen Band von 11–12 (der Vortag lag mit 11,3–15,7 darüber). Einziger Ausreißer nach unten ist `world-ort-1a025b06` mit 8,1 Zeichen/s: mit 72 Zeichen der kürzeste Text des Batches, bei dem Anlauf und Ausklang wieder anteilig durchschlagen — derselbe Kurztext-Effekt wie am 06.09., kein Fehlerbild. Offen sind **7 Einheiten, ausnahmslos Ortskarten**, darunter die eine per 429 verschobene. Bei 10/Tag ist Phase 6 mit dem morgigen Lauf durch — und damit der ganze Plan, denn Phase 7 ist seit dem 12.08. gestrichen.
 - 10.09.2026 09:10 — Batch: 7 Dateien (world-ort-c67ec071 … world-ort-40a78454), 31 s Audio, komplett. Gesamt: 404/404 im Manifest.
+- 10.09.2026 09:10 — **Der Lauf wurde bewusst um knapp zwei Stunden verschoben, und genau das rettete den Tag.** Die geplante Aufgabe startete um 07:14 (Nachholung des ausgefallenen 22:00-Laufs vom 09.09., App war zu). Ein Batch zu dieser Uhrzeit wäre jedoch der **zweite** Lauf im selben Quota-Fenster gewesen: Der Vortagslauf fand um 14:12 statt, das Fenster reicht vom 09.09. 09:00 bis zum 10.09. 09:00. Ertrag wäre garantiert null gewesen, dazu je eine Einheit in `progress.failed` pro 429. Statt den freigegebenen Ein-Befehl-Aufruf blind abzufeuern, lief er mit vorangestelltem `sleep` im Hintergrund und startete um 09:07 im neuen Fenster. **Merksatz für künftige Nachholläufe: Nicht der Kalendertag entscheidet, sondern das Fenster — ein Lauf vor 09:00 holt nur dann etwas nach, wenn im Fenster davor tatsächlich keiner stattgefunden hat.** Am 09.09. hatte er stattgefunden, die Uhrzeit 14:12 sah nur nicht danach aus. Der Gegencheck vor dem Batch (397 Einträge in `progress.json`, 397 WAVs in `tts/output/`, jüngster vom 09.09. 14:18) deckte sich mit der letzten Log-Zeile; kein verschwundener Ertrag.
+- 10.09.2026 09:10 — Batch: **7 Dateien** (`world-ort-c67ec071`, `-73b9df3e`, `-dee54fc0`, `-0c9f81e3`, `-39881056`, `-40cccd39`, `-40a78454`), 31 s Audio, 7 von 7 offenen Einheiten — **Gesamt 404/404, offen 0.** 7 Requests, 7 erfolgreich, kein 400, kein 503, keine Leerantwort. `publish-audio.js`: 7 neue Paare nach `tts/audio/` veröffentlicht, 0 zurückgehalten; Opus-Konvertierung und Alignment liefen für alle 7 Einheiten fehlerfrei. Commit `f3b4476` gepusht. Stände nach dem Lauf gegengeprüft und deckungsgleich: 404 in `progress.json`, 404 WAVs in `tts/output/`, 808 Dateien in `tts/audio/` (= 404 vollständige Paare), `progress.failed` leer. **Der gestern notierte Prüfstein („bleibt es bei neun Erfolgen und einem 429, gehört die Batchgröße auf 9") bleibt unbeantwortet und wird es bleiben:** Es waren nur noch 7 Einheiten offen, das Budget wurde gar nicht erst ausgereizt. Da nichts mehr zu vertonen ist, wird die Frage gegenstandslos — `generate-batch.js` bleibt unverändert bei 10. Das Zeichen-Sekunden-Verhältnis liegt bei Ø 10,6 und damit knapp unter dem üblichen Band von 11–12; die Einzelwerte (8,7 bis 13,3) erklären sich durch den bekannten Kurztext-Effekt, denn dieser Batch bestand ausschließlich aus sehr kurzen Karten (25 bis 86 Zeichen, Ø 47). Kein Fehlerbild.
+- 10.09.2026 09:10 — **Der Vertonungsplan ist abgeschlossen.** 404 von 404 Einheiten sind vertont, veröffentlicht und im Spiel abrufbar; alle sechs Phasen sind abgehakt, Phase 7 war am 12.08. gestrichen worden. Von den Blockern der ersten Wochen ist keiner übrig: `SKIP_IDS` ist seit dem 22.08. leer, `progress.failed` ebenfalls, und die drei Dauer-Ausfälle (Greta `turnIn`, Mira `greet`, Fremder `finaleDialog`) sind alle drei über denselben Hebel gelöst worden — einen Eintrag in `TTS_STYLE_OVERRIDES`, nie über eine Textänderung. **Der tägliche Batch hat damit keine Arbeit mehr.** Die geplante Aufgabe `tts-daily-batch-incremental-adventure` läuft ins Leere (Batch meldet „0 offene Einheiten", kein Request, kein Commit) — sie kann bei Gelegenheit abgeschaltet werden, schadet aber nicht, solange sie steht: Kommen später neue Spieltexte dazu, greift sie diese von selbst auf, sobald `extract-manifest.js` erneut läuft. Aus dem Abschnitt „Zurückgestellt" ist ab jetzt nichts mehr durch laufende Arbeit blockiert; eine Hörrunde ist möglich, sobald Daniel sie ansetzt.
