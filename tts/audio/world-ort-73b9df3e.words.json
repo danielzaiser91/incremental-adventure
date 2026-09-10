@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.583,
+      "end": 4.078,
+      "text": "Woher kommt Valdris — und was hat ihn geformt?",
+      "words": [
+        {
+          "word": "Woher",
+          "start": 0.583,
+          "end": 1.125,
+          "score": 0.887
+        },
+        {
+          "word": "kommt",
+          "start": 1.165,
+          "end": 1.507,
+          "score": 0.98
+        },
+        {
+          "word": "Valdris",
+          "start": 1.547,
+          "end": 2.531,
+          "score": 0.785
+        },
+        {
+          "word": "—",
+          "start": 2.551,
+          "end": 2.572,
+          "score": 0.979
+        },
+        {
+          "word": "und",
+          "start": 2.592,
+          "end": 3.094,
+          "score": 0.973
+        },
+        {
+          "word": "was",
+          "start": 3.134,
+          "end": 3.275,
+          "score": 0.896
+        },
+        {
+          "word": "hat",
+          "start": 3.295,
+          "end": 3.456,
+          "score": 0.946
+        },
+        {
+          "word": "ihn",
+          "start": 3.496,
+          "end": 3.656,
+          "score": 0.778
+        },
+        {
+          "word": "geformt?",
+          "start": 3.677,
+          "end": 4.078,
+          "score": 0.83
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Woher",
+      "start": 0.583,
+      "end": 1.125,
+      "score": 0.887
+    },
+    {
+      "word": "kommt",
+      "start": 1.165,
+      "end": 1.507,
+      "score": 0.98
+    },
+    {
+      "word": "Valdris",
+      "start": 1.547,
+      "end": 2.531,
+      "score": 0.785
+    },
+    {
+      "word": "—",
+      "start": 2.551,
+      "end": 2.572,
+      "score": 0.979
+    },
+    {
+      "word": "und",
+      "start": 2.592,
+      "end": 3.094,
+      "score": 0.973
+    },
+    {
+      "word": "was",
+      "start": 3.134,
+      "end": 3.275,
+      "score": 0.896
+    },
+    {
+      "word": "hat",
+      "start": 3.295,
+      "end": 3.456,
+      "score": 0.946
+    },
+    {
+      "word": "ihn",
+      "start": 3.496,
+      "end": 3.656,
+      "score": 0.778
+    },
+    {
+      "word": "geformt?",
+      "start": 3.677,
+      "end": 4.078,
+      "score": 0.83
+    }
+  ]
+}

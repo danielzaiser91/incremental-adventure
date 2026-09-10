@@ -1984,12 +1984,42 @@
       "file": "world-ort-7535bd07.wav",
       "seconds": 6.4,
       "date": "2026-09-09T12:18:27.919Z"
+    },
+    "world-ort-c67ec071": {
+      "file": "world-ort-c67ec071.wav",
+      "seconds": 7.4,
+      "date": "2026-09-10T07:06:42.866Z"
+    },
+    "world-ort-73b9df3e": {
+      "file": "world-ort-73b9df3e.wav",
+      "seconds": 4.4,
+      "date": "2026-09-10T07:07:33.673Z"
+    },
+    "world-ort-dee54fc0": {
+      "file": "world-ort-dee54fc0.wav",
+      "seconds": 4.8,
+      "date": "2026-09-10T07:08:06.503Z"
+    },
+    "world-ort-0c9f81e3": {
+      "file": "world-ort-0c9f81e3.wav",
+      "seconds": 3,
+      "date": "2026-09-10T07:08:38.914Z"
+    },
+    "world-ort-39881056": {
+      "file": "world-ort-39881056.wav",
+      "seconds": 3.3,
+      "date": "2026-09-10T07:09:11.845Z"
+    },
+    "world-ort-40cccd39": {
+      "file": "world-ort-40cccd39.wav",
+      "seconds": 5.2,
+      "date": "2026-09-10T07:09:45.750Z"
+    },
+    "world-ort-40a78454": {
+      "file": "world-ort-40a78454.wav",
+      "seconds": 2.6,
+      "date": "2026-09-10T07:10:19.335Z"
     }
   },
-  "failed": {
-    "world-ort-c67ec071": {
-      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts\\nPlease retry in 6.860913622s.\",\n    \"status\": \"RESOURCE_EXHA",
-      "date": "2026-09-09T12:18:57.670Z"
-    }
-  }
+  "failed": {}
 }

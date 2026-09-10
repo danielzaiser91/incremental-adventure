@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.802,
+      "end": 3.289,
+      "text": "Für Leute, die sich das leisten können.",
+      "words": [
+        {
+          "word": "Für",
+          "start": 0.802,
+          "end": 1.003,
+          "score": 0.871
+        },
+        {
+          "word": "Leute,",
+          "start": 1.043,
+          "end": 1.324,
+          "score": 0.925
+        },
+        {
+          "word": "die",
+          "start": 1.344,
+          "end": 1.424,
+          "score": 0.879
+        },
+        {
+          "word": "sich",
+          "start": 1.444,
+          "end": 1.584,
+          "score": 0.843
+        },
+        {
+          "word": "das",
+          "start": 1.624,
+          "end": 1.805,
+          "score": 0.955
+        },
+        {
+          "word": "leisten",
+          "start": 1.845,
+          "end": 2.206,
+          "score": 0.893
+        },
+        {
+          "word": "können.",
+          "start": 2.226,
+          "end": 3.289,
+          "score": 0.896
+        }
+      ]
+    },
+    {
+      "start": 3.329,
+      "end": 6.999,
+      "text": "Weiche Matratze, keine Nachbarn, keine Fragen.",
+      "words": [
+        {
+          "word": "Weiche",
+          "start": 3.329,
+          "end": 3.63,
+          "score": 0.906
+        },
+        {
+          "word": "Matratze,",
+          "start": 3.67,
+          "end": 4.893,
+          "score": 0.846
+        },
+        {
+          "word": "keine",
+          "start": 4.913,
+          "end": 5.194,
+          "score": 0.886
+        },
+        {
+          "word": "Nachbarn,",
+          "start": 5.234,
+          "end": 6.297,
+          "score": 0.931
+        },
+        {
+          "word": "keine",
+          "start": 6.337,
+          "end": 6.638,
+          "score": 0.853
+        },
+        {
+          "word": "Fragen.",
+          "start": 6.678,
+          "end": 6.999,
+          "score": 0.895
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Für",
+      "start": 0.802,
+      "end": 1.003,
+      "score": 0.871
+    },
+    {
+      "word": "Leute,",
+      "start": 1.043,
+      "end": 1.324,
+      "score": 0.925
+    },
+    {
+      "word": "die",
+      "start": 1.344,
+      "end": 1.424,
+      "score": 0.879
+    },
+    {
+      "word": "sich",
+      "start": 1.444,
+      "end": 1.584,
+      "score": 0.843
+    },
+    {
+      "word": "das",
+      "start": 1.624,
+      "end": 1.805,
+      "score": 0.955
+    },
+    {
+      "word": "leisten",
+      "start": 1.845,
+      "end": 2.206,
+      "score": 0.893
+    },
+    {
+      "word": "können.",
+      "start": 2.226,
+      "end": 3.289,
+      "score": 0.896
+    },
+    {
+      "word": "Weiche",
+      "start": 3.329,
+      "end": 3.63,
+      "score": 0.906
+    },
+    {
+      "word": "Matratze,",
+      "start": 3.67,
+      "end": 4.893,
+      "score": 0.846
+    },
+    {
+      "word": "keine",
+      "start": 4.913,
+      "end": 5.194,
+      "score": 0.886
+    },
+    {
+      "word": "Nachbarn,",
+      "start": 5.234,
+      "end": 6.297,
+      "score": 0.931
+    },
+    {
+      "word": "keine",
+      "start": 6.337,
+      "end": 6.638,
+      "score": 0.853
+    },
+    {
+      "word": "Fragen.",
+      "start": 6.678,
+      "end": 6.999,
+      "score": 0.895
+    }
+  ]
+}

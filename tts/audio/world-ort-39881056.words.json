@@ -1,0 +1,85 @@
+{
+  "segments": [
+    {
+      "start": 0.483,
+      "end": 2.877,
+      "text": "Die wichtigsten Personen in seiner Struktur.",
+      "words": [
+        {
+          "word": "Die",
+          "start": 0.483,
+          "end": 0.684,
+          "score": 0.755
+        },
+        {
+          "word": "wichtigsten",
+          "start": 0.724,
+          "end": 1.328,
+          "score": 0.817
+        },
+        {
+          "word": "Personen",
+          "start": 1.388,
+          "end": 1.992,
+          "score": 0.876
+        },
+        {
+          "word": "in",
+          "start": 2.032,
+          "end": 2.133,
+          "score": 0.752
+        },
+        {
+          "word": "seiner",
+          "start": 2.173,
+          "end": 2.394,
+          "score": 0.891
+        },
+        {
+          "word": "Struktur.",
+          "start": 2.435,
+          "end": 2.877,
+          "score": 0.863
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Die",
+      "start": 0.483,
+      "end": 0.684,
+      "score": 0.755
+    },
+    {
+      "word": "wichtigsten",
+      "start": 0.724,
+      "end": 1.328,
+      "score": 0.817
+    },
+    {
+      "word": "Personen",
+      "start": 1.388,
+      "end": 1.992,
+      "score": 0.876
+    },
+    {
+      "word": "in",
+      "start": 2.032,
+      "end": 2.133,
+      "score": 0.752
+    },
+    {
+      "word": "seiner",
+      "start": 2.173,
+      "end": 2.394,
+      "score": 0.891
+    },
+    {
+      "word": "Struktur.",
+      "start": 2.435,
+      "end": 2.877,
+      "score": 0.863
+    }
+  ]
+}

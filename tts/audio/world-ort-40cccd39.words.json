@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 0.582,
+      "end": 4.819,
+      "text": "Jede Struktur hat eine Schwachstelle — welche hat er?",
+      "words": [
+        {
+          "word": "Jede",
+          "start": 0.582,
+          "end": 0.863,
+          "score": 0.945
+        },
+        {
+          "word": "Struktur",
+          "start": 0.903,
+          "end": 1.747,
+          "score": 0.827
+        },
+        {
+          "word": "hat",
+          "start": 1.787,
+          "end": 1.988,
+          "score": 0.989
+        },
+        {
+          "word": "eine",
+          "start": 2.028,
+          "end": 2.249,
+          "score": 0.812
+        },
+        {
+          "word": "Schwachstelle",
+          "start": 2.289,
+          "end": 2.992,
+          "score": 0.854
+        },
+        {
+          "word": "—",
+          "start": 3.975,
+          "end": 3.995,
+          "score": 0.895
+        },
+        {
+          "word": "welche",
+          "start": 4.015,
+          "end": 4.317,
+          "score": 0.887
+        },
+        {
+          "word": "hat",
+          "start": 4.357,
+          "end": 4.618,
+          "score": 0.954
+        },
+        {
+          "word": "er?",
+          "start": 4.678,
+          "end": 4.819,
+          "score": 0.549
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Jede",
+      "start": 0.582,
+      "end": 0.863,
+      "score": 0.945
+    },
+    {
+      "word": "Struktur",
+      "start": 0.903,
+      "end": 1.747,
+      "score": 0.827
+    },
+    {
+      "word": "hat",
+      "start": 1.787,
+      "end": 1.988,
+      "score": 0.989
+    },
+    {
+      "word": "eine",
+      "start": 2.028,
+      "end": 2.249,
+      "score": 0.812
+    },
+    {
+      "word": "Schwachstelle",
+      "start": 2.289,
+      "end": 2.992,
+      "score": 0.854
+    },
+    {
+      "word": "—",
+      "start": 3.975,
+      "end": 3.995,
+      "score": 0.895
+    },
+    {
+      "word": "welche",
+      "start": 4.015,
+      "end": 4.317,
+      "score": 0.887
+    },
+    {
+      "word": "hat",
+      "start": 4.357,
+      "end": 4.618,
+      "score": 0.954
+    },
+    {
+      "word": "er?",
+      "start": 4.678,
+      "end": 4.819,
+      "score": 0.549
+    }
+  ]
+}

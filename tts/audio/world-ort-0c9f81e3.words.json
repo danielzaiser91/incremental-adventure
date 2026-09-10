@@ -1,0 +1,61 @@
+{
+  "segments": [
+    {
+      "start": 0.483,
+      "end": 2.416,
+      "text": "Was will Valdris wirklich?",
+      "words": [
+        {
+          "word": "Was",
+          "start": 0.483,
+          "end": 0.826,
+          "score": 0.562
+        },
+        {
+          "word": "will",
+          "start": 0.846,
+          "end": 1.268,
+          "score": 0.557
+        },
+        {
+          "word": "Valdris",
+          "start": 1.309,
+          "end": 2.013,
+          "score": 0.444
+        },
+        {
+          "word": "wirklich?",
+          "start": 2.054,
+          "end": 2.416,
+          "score": 0.473
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Was",
+      "start": 0.483,
+      "end": 0.826,
+      "score": 0.562
+    },
+    {
+      "word": "will",
+      "start": 0.846,
+      "end": 1.268,
+      "score": 0.557
+    },
+    {
+      "word": "Valdris",
+      "start": 1.309,
+      "end": 2.013,
+      "score": 0.444
+    },
+    {
+      "word": "wirklich?",
+      "start": 2.054,
+      "end": 2.416,
+      "score": 0.473
+    }
+  ]
+}

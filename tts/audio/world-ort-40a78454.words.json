@@ -1,0 +1,61 @@
+{
+  "segments": [
+    {
+      "start": 0.504,
+      "end": 2.217,
+      "text": "Wo befindet sich Valdris?",
+      "words": [
+        {
+          "word": "Wo",
+          "start": 0.504,
+          "end": 0.705,
+          "score": 0.877
+        },
+        {
+          "word": "befindet",
+          "start": 0.725,
+          "end": 1.391,
+          "score": 0.922
+        },
+        {
+          "word": "sich",
+          "start": 1.411,
+          "end": 1.673,
+          "score": 0.97
+        },
+        {
+          "word": "Valdris?",
+          "start": 1.713,
+          "end": 2.217,
+          "score": 0.677
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wo",
+      "start": 0.504,
+      "end": 0.705,
+      "score": 0.877
+    },
+    {
+      "word": "befindet",
+      "start": 0.725,
+      "end": 1.391,
+      "score": 0.922
+    },
+    {
+      "word": "sich",
+      "start": 1.411,
+      "end": 1.673,
+      "score": 0.97
+    },
+    {
+      "word": "Valdris?",
+      "start": 1.713,
+      "end": 2.217,
+      "score": 0.677
+    }
+  ]
+}

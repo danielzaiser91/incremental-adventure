@@ -1,0 +1,145 @@
+{
+  "segments": [
+    {
+      "start": 0.522,
+      "end": 4.418,
+      "text": "Wer arbeitet für ihn — und wie tief geht das Netz?",
+      "words": [
+        {
+          "word": "Wer",
+          "start": 0.522,
+          "end": 0.884,
+          "score": 0.969
+        },
+        {
+          "word": "arbeitet",
+          "start": 0.964,
+          "end": 1.406,
+          "score": 0.969
+        },
+        {
+          "word": "für",
+          "start": 1.446,
+          "end": 1.587,
+          "score": 0.951
+        },
+        {
+          "word": "ihn",
+          "start": 1.647,
+          "end": 1.727,
+          "score": 0.981
+        },
+        {
+          "word": "—",
+          "start": 1.767,
+          "end": 2.43,
+          "score": 0.994
+        },
+        {
+          "word": "und",
+          "start": 2.47,
+          "end": 2.812,
+          "score": 0.99
+        },
+        {
+          "word": "wie",
+          "start": 2.852,
+          "end": 3.133,
+          "score": 0.99
+        },
+        {
+          "word": "tief",
+          "start": 3.233,
+          "end": 3.615,
+          "score": 0.9
+        },
+        {
+          "word": "geht",
+          "start": 3.655,
+          "end": 3.896,
+          "score": 0.913
+        },
+        {
+          "word": "das",
+          "start": 3.936,
+          "end": 4.197,
+          "score": 0.985
+        },
+        {
+          "word": "Netz?",
+          "start": 4.238,
+          "end": 4.418,
+          "score": 0.848
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Wer",
+      "start": 0.522,
+      "end": 0.884,
+      "score": 0.969
+    },
+    {
+      "word": "arbeitet",
+      "start": 0.964,
+      "end": 1.406,
+      "score": 0.969
+    },
+    {
+      "word": "für",
+      "start": 1.446,
+      "end": 1.587,
+      "score": 0.951
+    },
+    {
+      "word": "ihn",
+      "start": 1.647,
+      "end": 1.727,
+      "score": 0.981
+    },
+    {
+      "word": "—",
+      "start": 1.767,
+      "end": 2.43,
+      "score": 0.994
+    },
+    {
+      "word": "und",
+      "start": 2.47,
+      "end": 2.812,
+      "score": 0.99
+    },
+    {
+      "word": "wie",
+      "start": 2.852,
+      "end": 3.133,
+      "score": 0.99
+    },
+    {
+      "word": "tief",
+      "start": 3.233,
+      "end": 3.615,
+      "score": 0.9
+    },
+    {
+      "word": "geht",
+      "start": 3.655,
+      "end": 3.896,
+      "score": 0.913
+    },
+    {
+      "word": "das",
+      "start": 3.936,
+      "end": 4.197,
+      "score": 0.985
+    },
+    {
+      "word": "Netz?",
+      "start": 4.238,
+      "end": 4.418,
+      "score": 0.848
+    }
+  ]
+}
